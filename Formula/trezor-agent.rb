@@ -9,12 +9,12 @@ class TrezorAgent < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a3c0407e4a2171cb1001c39af67ff449963eccef917469b5051feecba3a42bc5"
-    sha256 cellar: :any,                 arm64_big_sur:  "18480abac54aa833d8894c22e079acbe0d2df6d2a9814128250454189f22e13e"
-    sha256 cellar: :any,                 monterey:       "d53ec50296446ef209a150650c9390f8c9ecbe3198b0de08bce1b1179e1e1469"
-    sha256 cellar: :any,                 big_sur:        "8c1c258be622a2fb5c1ddbe9d04e1bceff426665e4c48e2d3c8ce2224c886faf"
-    sha256 cellar: :any,                 catalina:       "8427e4ed7c31bcc8062f094500a74d6da7682609d3846b86ac5d9f6e8df5e999"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9501573cdedb54b1bc69ead7467b2d091b443aafc831c158850131bb201b1ba2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "666d3e2543cfb907285819bfd62ddcc1ca3643d12f010f364c50ce0a1a481ae1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cae8aa2c3c5623dfee0ed219e0c90c48e74538f171252edc6324c5311aca1c7e"
+    sha256 cellar: :any_skip_relocation, monterey:       "12bad8a0c99e20efd6cf90d058feaaa1133c2967aa36b9bd42f0605de0a5b0e8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8fb57c40458f0fa8cbbe69611d941e7aef5a81b73c166b031c9f578954bec240"
+    sha256 cellar: :any_skip_relocation, catalina:       "1aadd10c1d0cd9ed913282ac854240e75cd655b59d7eafa51d85942fe553b0c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "18ff3329dec6e948afb13a76eab2574f896b37f17db082d7952ef2debee6dfc3"
   end
 
   depends_on "rust" => :build # python-daemon resource depends on cryptography
