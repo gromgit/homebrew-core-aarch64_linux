@@ -6,12 +6,12 @@ class QalculateGtk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "edf88ad9b92a3c30017882a92f86b7f6a91dd4ff01e0afb147f8863bbc8ee558"
-    sha256 arm64_big_sur:  "7f9080a5408202557708fad7f7f651c0e1a855cdc425eb805867513bcdbc5ee2"
-    sha256 monterey:       "1d300cd87fa01c25e5d1ca70162ac86b17f1f0dcced83a2a093cdb159f38fb8f"
-    sha256 big_sur:        "b8ddc53272e7509148711b58d14176200903f03522772900101da2b91126c61a"
-    sha256 catalina:       "0f7e937b29ccabfbe69803daf803e2b98cfd4278633f47af1c85e0261b58e068"
-    sha256 x86_64_linux:   "c5a26b87a0b06a00a97b3cf8e0ba36f611717645df00ef6d4bb78b10cfc2fe02"
+    sha256 arm64_monterey: "4ba400fc634794bc2b3cfbfd574408910495e0015394c8e031cdef3f75afffaa"
+    sha256 arm64_big_sur:  "ff598e93d2687d61fbc0edda7ad7400d0f271c3434fb65d5870b3874a42413d3"
+    sha256 monterey:       "2d3c9f989b13752d51a02c909cd559b13de798cdd5b488d04a77adc2505e188e"
+    sha256 big_sur:        "b3c82ffd307806f743c9674ffcf4caef3d08beae456e459a576e5d7f921491b7"
+    sha256 catalina:       "90fc39aee49357dfa12a63434afa01a4bc32565485e3f26bf8f0bfcd0b8f3872"
+    sha256 x86_64_linux:   "9c4f0bf59943b79f9920b5ebf32f9525f14a2a0a2dd21e58e8b338a8c506374b"
   end
 
   depends_on "intltool" => :build
