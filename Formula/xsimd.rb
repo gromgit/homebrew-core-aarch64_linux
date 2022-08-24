@@ -6,7 +6,7 @@ class Xsimd < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1bdbce654f7c9a3c36cf1dcdc132e5fb971aec1c91244efd41a2d7bd818cd238"
+    sha256 cellar: :any_skip_relocation, all: "3e92fd44649f53a06782630c667ca93f0b380fe724b59947da3ba966a0d89769"
   end
 
   depends_on "cmake" => :build
