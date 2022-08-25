@@ -6,8 +6,8 @@ class OpenshiftCli < Formula
 
   stable do
     url "https://github.com/openshift/oc.git",
-        tag:      "openshift-clients-4.11.0-202204020828",
-        revision: "f1f09a392fd18029f681c06c3bd0c44420684efa"
+        tag:      "openshift-clients-4.12.0-202208031327",
+        revision: "3c85519af6c4979c02ebb1886f45b366bbccbf55"
   end
 
   livecheck do
@@ -25,8 +25,7 @@ class OpenshiftCli < Formula
   end
 
   depends_on "coreutils" => :build
-  # Bump to 1.18 on the next release.
-  depends_on "go@1.17" => :build
+  depends_on "go@1.18" => :build
   depends_on "socat"
 
   uses_from_macos "krb5"
