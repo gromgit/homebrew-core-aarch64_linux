@@ -11,12 +11,12 @@ class BareosClient < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "4c198f919032742794f8f141d3417e2e5d0d00c780796a407a521a8f1de667f6"
-    sha256 cellar: :any, arm64_big_sur:  "510815a1a30adf00f990a482ff3b57708f0a57456d0d8a4027f241d145a2bdd1"
-    sha256 cellar: :any, monterey:       "fdf7374d281ab4847660c4aa7b9195fd862ad3d113517781e5f9454d78190c76"
-    sha256 cellar: :any, big_sur:        "108e203dd29a4549b0e3f4ef84f210a74d771bc85ad30f0e078f1f9293b2b3a4"
-    sha256 cellar: :any, catalina:       "b6cb4d213407c2723b5de8b226e7d13c65b2f303154c6b672424e3ff342bc437"
-    sha256               x86_64_linux:   "6f1e70e35203abbe06f7ef4bd2c115213a3d79a06da87077541e1a6b6982ea4a"
+    sha256 cellar: :any, arm64_monterey: "070415ec259f5509f1930194e4add8be5ebdce1078a4e431b6d654790af76b1a"
+    sha256 cellar: :any, arm64_big_sur:  "d691d0c6582988202fa81d8dd01e10420b61de2ddd383965f811516848df3c78"
+    sha256 cellar: :any, monterey:       "9af0c42007122fd390c7d9395dacd6120f94180a0fd15df3e0255a02b487481d"
+    sha256 cellar: :any, big_sur:        "19d9308e849f60602163ec54c0b372ab5f779bb98002fef4a1870d45b0a066a0"
+    sha256 cellar: :any, catalina:       "7c35043594e6a10486d956f5717342fbf731884c151f2506a14abbc3299b52a6"
+    sha256               x86_64_linux:   "092fcde0d57ebc062213811dd2b734b39b3d6d91f6956061180d88f49f23f044"
   end
 
   depends_on "cmake" => :build
