@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://github.com/dolthub/dolt/archive/v0.40.28.tar.gz"
-  sha256 "4f16e4bb21e84c6a0fc009287bfc38feb6809b2f2ea0f1aefe91b39f0a2e9433"
+  url "https://github.com/dolthub/dolt/archive/v0.40.29.tar.gz"
+  sha256 "71e081f79ba537fcbf47e80124224fb9a27b8772b30fcebe88db18fd6d97c2cc"
   license "Apache-2.0"
 
   livecheck do
@@ -24,8 +24,6 @@ class Dolt < Formula
   def install
     chdir "go" do
       system "go", "build", *std_go_args, "./cmd/dolt"
-      system "go", "build", *std_go_args(output: bin/"git-dolt"), "./cmd/git-dolt"
-      system "go", "build", *std_go_args(output: bin/"git-dolt-smudge"), "./cmd/git-dolt-smudge"
     end
   end
 
