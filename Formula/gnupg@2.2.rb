@@ -11,12 +11,12 @@ class GnupgAT22 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "53ab35b6a092a7846d0fa8409f540f712d5b6d7044e0b0d8b762087e6c640ced"
-    sha256 arm64_big_sur:  "2037c66b74dfb1a2d7c6e30df4b19c10b7da5e8f338fd0bc5b433512dc6ac306"
-    sha256 monterey:       "0d476bc63d4f8defb02dc2b9b33f4112ef4fd16e3c19ac86ca9208cc74abc13b"
-    sha256 big_sur:        "e541cba8dac2fd43727e0119a7e0f6dd04c2a28888a791454cf44dddd1884c32"
-    sha256 catalina:       "84775ab011fd99aa15ceb4bee9f202307f3a40c340deec2e928ddcb18eec275b"
-    sha256 x86_64_linux:   "b6d822a10eacd0895226707ce62f5e2ddc9880a6ee618f46559c7ec452215933"
+    sha256 arm64_monterey: "42ee5c8c7e3149d053d2240ee0b1713a3ffdfaad64e5f07670d1a06b39b6c69f"
+    sha256 arm64_big_sur:  "a5ca695d2b2afabe3fce220349cafb753fdd842590e2956143608374abed0601"
+    sha256 monterey:       "48716cd9872215b077b6b0520cee3cd2377396d8e6b754ad3f4486de05bb103d"
+    sha256 big_sur:        "9770385e8c14f3e3dc899df6a4a912051def9ec5f78558b7a1bb87034626fd46"
+    sha256 catalina:       "8eb692549e0d5de08be1e4d207fe56705dba61128017158733ffacde7de5fd46"
+    sha256 x86_64_linux:   "7c3223ce6cf86a106da91b58c7eaaf45f0b8522affb4aaf1addc60202b76acbf"
   end
 
   keg_only :versioned_formula
