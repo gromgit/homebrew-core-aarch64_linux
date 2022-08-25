@@ -6,12 +6,12 @@ class Libimagequant < Formula
   license :cannot_represent
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "74b7fd22a5ff6788d52758658836e7e93756a8c6fa8fbe7e34240cdfdf94ae6d"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd2253e25c4fba04129d2f53a50ed94864c9967cdbd5299b12a42c28308135c9"
-    sha256 cellar: :any,                 monterey:       "090bc081fe040553880f0f8d2eab3ef0890d4526a7f16b9726dd27cd802d32dd"
-    sha256 cellar: :any,                 big_sur:        "6f20f0085b640a8fdc8c47ddc547045af6c9280084861d3f6cbceb94cc757944"
-    sha256 cellar: :any,                 catalina:       "0511ae447a072b7e9e3052d47d93158417e1d478c6ab91aa8b1e72345eca65a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d8228771a3befffd9b999c2d444411a0672813fe2a9a44303af1ad8b235e4f5"
+    sha256 cellar: :any,                 arm64_monterey: "2cc9dc452441dcbda9a7148aa4a499df01da6ebd9ab8503fc6b904098a51ceb2"
+    sha256 cellar: :any,                 arm64_big_sur:  "52af38599a5b23e03e15a62585f371a68d719f74989f806aa2cec2be859ee9f8"
+    sha256 cellar: :any,                 monterey:       "c1e3bd9e9a63213b48edbbff00d1a79aa195e868a8b6e531a48b887540804fde"
+    sha256 cellar: :any,                 big_sur:        "2b4ad2c624c2cdcccf6763fe598652e0a424e8a123f6ffac05366cc99d1ae731"
+    sha256 cellar: :any,                 catalina:       "20fbb37b6901a9ee68a6f528264418562e48bb9d116230d864daf854b5f7d112"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f847c27c7e3799c35fa83376dff52bfa5033f0adc7e2304940b20b585ba75539"
   end
 
   depends_on "cargo-c" => :build
