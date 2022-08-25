@@ -7,13 +7,7 @@ class TranslateShell < Formula
   head "https://github.com/soimort/translate-shell.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7cec38b70fbd8dbe6a45d76eb290b6c906e00e32029487c2cd6328bc5d6108e2"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d45fe158215b99a8f120db0b02fd139ab0401154cb910ff9b79664a1c1e1d64e"
-    sha256 cellar: :any_skip_relocation, catalina:      "858d52386202bbcb1313a72b642d9d5f4cbfe2ca35fd9556f6cf5275d7d2b9a1"
-    sha256 cellar: :any_skip_relocation, mojave:        "858d52386202bbcb1313a72b642d9d5f4cbfe2ca35fd9556f6cf5275d7d2b9a1"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "858d52386202bbcb1313a72b642d9d5f4cbfe2ca35fd9556f6cf5275d7d2b9a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58c6925d91ce326635abb6614b951e33aa14c7b565a3c73cc854870d3f896c59"
-    sha256 cellar: :any_skip_relocation, all:           "58c6925d91ce326635abb6614b951e33aa14c7b565a3c73cc854870d3f896c59"
+    sha256 cellar: :any_skip_relocation, all: "9ffbfa24a9eb1bb089abe076cf7ae261d9f907f691c6aba360ea528ae00ab3cc"
   end
 
   depends_on "fribidi"
