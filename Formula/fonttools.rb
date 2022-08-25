@@ -9,12 +9,12 @@ class Fonttools < Formula
   head "https://github.com/fonttools/fonttools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac9b2ad08856501803f72f744da89d448dc5f42bc7a449b2bfe3d6a741c3e375"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a6bf0ac97c2b882ab48d875bbdfa2a340efb671dc87cbd6ab4648285e42ca22"
-    sha256 cellar: :any_skip_relocation, monterey:       "0055e4a50fe0c0c22b71a9e43ebedcab42f500008ef9a190f528be221cadafd6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9e37dff95d3781336248d8ac242543126f7a505e57fce63a42be6ef7269aaf81"
-    sha256 cellar: :any_skip_relocation, catalina:       "9d5f299f54f80aae55389647fdbe605d7efb0300f50bbe3c61249f74587caffc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b2444f61d5487bf58fccf4865cead4bf4ef4a229b403a81e2c694489fd99dad"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b2645ecaf4d4b80996373dc84a003d209034fdbf7d6f592f680d4a3d1a7e5b6c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "968a4be3c4839338826fda2362eea6447f4bb47964282e97f9267c3ebb2181fc"
+    sha256 cellar: :any_skip_relocation, monterey:       "cff7eb5014b606688248ef2536e5b807ff7510df8999c3bc0bd888d085ecfd96"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8e9f71de9e5ae7dad5af04dfa3bbb43ff553d4ff1c1f53a5a4a5e693a638c9f3"
+    sha256 cellar: :any_skip_relocation, catalina:       "2cd406163d4e482d48dcf4b9a6210b5773787cd572b2a28da47bb526e0c8eb69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d7d950c9cc950ec21cdc6f9d71917e23df2e6936b22113f0db847f64abdc701"
   end
 
   depends_on "python@3.10"
