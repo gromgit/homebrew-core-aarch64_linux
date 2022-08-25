@@ -13,12 +13,12 @@ class Dust < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5757e9fd044750fe69b85a45006cb01a5f15303df1b9fd5a5c15e5b295bacc86"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c56c62f9792c2e05ba693941e7c8e01b59c990246651ea01e8992ced236bb2c"
-    sha256 cellar: :any_skip_relocation, monterey:       "07d1a0f50138bb3b27cbd7753ad0ccc6f5cbe253d114441d54616bacef0a9173"
-    sha256 cellar: :any_skip_relocation, big_sur:        "04bd25cca9751adc20bb632037a34fe8f7a8fec8e5a58921dda4a8ace8437441"
-    sha256 cellar: :any_skip_relocation, catalina:       "380058259f2a13e39066b5725a976cdc9ea29c2ac6f16fd14fc5fbd8c1f3848d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53f0b28a72f091b733af5547ca47e304eaa4f0b058170b3fc6996879e6c4ccae"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d11c987e9212abab48e2d8181f4c7c0c0d7643e10fae9a80c4628d26252342f1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "324f6daf723a7667906c4929a7676959908d490ff2f8172e01d80002ca4a9928"
+    sha256 cellar: :any_skip_relocation, monterey:       "f501c9625ec7e9e137d26445cf060f0d2dfa3eb961eace0a397a85f8901a20cd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "df9740dfa5ba908598af62bbed19c51da45a95a8a9f1734649cfeb12189ff0b6"
+    sha256 cellar: :any_skip_relocation, catalina:       "c3b34a576b08a9f6077e72867838dbeadeced2805f0098ecd1320b9a16ecbd3d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "07e4591c6db357142330cecdba01de52917be0b472bd35fb557cde2be5fb152e"
   end
 
   depends_on "rust" => :build
