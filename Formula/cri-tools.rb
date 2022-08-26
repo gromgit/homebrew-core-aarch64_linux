@@ -7,12 +7,12 @@ class CriTools < Formula
   head "https://github.com/kubernetes-sigs/cri-tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd320fc241012fbe9df7f22c82357a5f9bf70b9613e1e18c6e40e0018fa65c1b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd320fc241012fbe9df7f22c82357a5f9bf70b9613e1e18c6e40e0018fa65c1b"
-    sha256 cellar: :any_skip_relocation, monterey:       "065c4ea941a93e5cd0daf3f3bae1fa332af41b71b34d3ecb5d0d2c63e537145d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "065c4ea941a93e5cd0daf3f3bae1fa332af41b71b34d3ecb5d0d2c63e537145d"
-    sha256 cellar: :any_skip_relocation, catalina:       "065c4ea941a93e5cd0daf3f3bae1fa332af41b71b34d3ecb5d0d2c63e537145d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6734a23f6cb20b736d5df7d1dc1b67a1a61ffff99171a92a08507eee77be6bdb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd5f657da6cea82cde45f04a6d72c28fb25e6f5870f9be5aa47ce7ff7c964129"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd5f657da6cea82cde45f04a6d72c28fb25e6f5870f9be5aa47ce7ff7c964129"
+    sha256 cellar: :any_skip_relocation, monterey:       "eb45b4db58267183690c0fb42b88c9b3101ee00eeaa6bf2792d49727f3043f22"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eb45b4db58267183690c0fb42b88c9b3101ee00eeaa6bf2792d49727f3043f22"
+    sha256 cellar: :any_skip_relocation, catalina:       "eb45b4db58267183690c0fb42b88c9b3101ee00eeaa6bf2792d49727f3043f22"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d47c5cd871564a585cb68bf9d5a399704bf3bbbfa7372c856fbc7ca97f0f8446"
   end
 
   depends_on "go" => :build
