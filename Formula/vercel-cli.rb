@@ -8,12 +8,12 @@ class VercelCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "681f10d1a6edfc23dbcd993c7a4a1400d9d044e24a1d3a00122475cea69bdceb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "681f10d1a6edfc23dbcd993c7a4a1400d9d044e24a1d3a00122475cea69bdceb"
-    sha256 cellar: :any_skip_relocation, monterey:       "aba0a875e88c84855f2e8cbcf86753cc7198d8de422e5350847e5845d7a7c0e5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aafeb34c20454553545a54d740852b23f1c7ebb11ebe365ab21b10d0f6b1b6e2"
-    sha256 cellar: :any_skip_relocation, catalina:       "aafeb34c20454553545a54d740852b23f1c7ebb11ebe365ab21b10d0f6b1b6e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "757ac07b6de4499c9fe4155798d5d229a8bea72cc651358aa662fd72213cdfc2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "835053faf056f1053cca68f58fff7a7f134e3ebdbf5743390c9413de4b0d5f17"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "835053faf056f1053cca68f58fff7a7f134e3ebdbf5743390c9413de4b0d5f17"
+    sha256 cellar: :any_skip_relocation, monterey:       "fc16094315e34a1c1e21b72a2fa52b303a75b691b1cc5997cff1d030e11b0901"
+    sha256 cellar: :any_skip_relocation, big_sur:        "55f6a1194cc3d6ab3f6bc5448b106d408878232a6f6088c5a32c4187dbecbc45"
+    sha256 cellar: :any_skip_relocation, catalina:       "55f6a1194cc3d6ab3f6bc5448b106d408878232a6f6088c5a32c4187dbecbc45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffeeb63cc4f5dc8d49ab5b1275826fd594f183dc08f0e02ac2ef15943f109a7f"
   end
 
   depends_on "node"
