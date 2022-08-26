@@ -2,8 +2,8 @@ class K3sup < Formula
   desc "Utility to create k3s clusters on any local or remote VM"
   homepage "https://k3sup.dev"
   url "https://github.com/alexellis/k3sup.git",
-      tag:      "0.12.0",
-      revision: "c59d67b63ec76d5d5e399808cf4b11a1e02ddbc8"
+      tag:      "0.12.3",
+      revision: "c0a48331967e1c1e6b10dbd997b65c1496fbd32d"
   license "MIT"
   head "https://github.com/alexellis/k3sup.git", branch: "master"
 
