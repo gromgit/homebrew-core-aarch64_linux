@@ -1,9 +1,9 @@
 class Doxygen < Formula
   desc "Generate documentation for several programming languages"
   homepage "https://www.doxygen.nl/"
-  url "https://doxygen.nl/files/doxygen-1.9.4.src.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.4/doxygen-1.9.4.src.tar.gz"
-  sha256 "a15e9cd8c0d02b7888bc8356eac200222ecff1defd32f3fe05257d81227b1f37"
+  url "https://doxygen.nl/files/doxygen-1.9.5.src.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.5/doxygen-1.9.5.src.tar.gz"
+  sha256 "55b454b35d998229a96f3d5485d57a0a517ce2b78d025efb79d57b5a2e4b2eec"
   license "GPL-2.0-only"
   head "https://github.com/doxygen/doxygen.git", branch: "master"
 
@@ -23,9 +23,8 @@ class Doxygen < Formula
 
   depends_on "bison" => :build
   depends_on "cmake" => :build
-
+  depends_on "python@3.10" => :build # Fails to build with macOS Python3
   uses_from_macos "flex" => :build, since: :big_sur
-  uses_from_macos "python" => :build
 
   on_linux do
     depends_on "gcc"
@@ -36,17 +35,16 @@ class Doxygen < Formula
   fails_with gcc: "6"
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make"
-      system "make", "install"
-      system "cmake", "-Dbuild_doc=1", "..", *std_cmake_args
-      man1.install Dir["man/*.1"]
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+
+    system "cmake", "-S", ".", "-B", "build", "-Dbuild_doc=1", *std_cmake_args
+    man1.install buildpath.glob("build/man/*.1")
   end
 
   test do
-    system "#{bin}/doxygen", "-g"
-    system "#{bin}/doxygen", "Doxyfile"
+    system bin/"doxygen", "-g"
+    system bin/"doxygen", "Doxyfile"
   end
 end
