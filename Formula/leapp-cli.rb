@@ -8,12 +8,12 @@ class LeappCli < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256                               arm64_monterey: "93685581610c00a3b4d5f5b8baf05af117c18607d58e46132f749353a71080b6"
-    sha256                               arm64_big_sur:  "f4475628d66d4ef66cc00509a65d3b30c0105e786bfcf900359c9ac7fcb4359c"
-    sha256                               monterey:       "4b51822851e08ceb6c58cf204d4e58255b56d3fdb50095e6cadaf0c4b1e6aab8"
-    sha256                               big_sur:        "87b0aad180ab1ef53cf55639dc6dae0748da4151bde5da56b28905a9c07e2f8f"
-    sha256                               catalina:       "fb8e202d2f6d5696a303ba60db25d85cea6a3a2f8d9e10feb1ac380314bde3f9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "244fe2762d2a011dc7ecf53958a786ee7ded3d12bee75fbb7ab31c2a651ce8df"
+    sha256                               arm64_monterey: "aaacdb50cc3cbeda27782e0febff06efffd9813bddd40d5f3673575a29e441f3"
+    sha256                               arm64_big_sur:  "f7550a966fb7970f6c576ceced1d3ff0d2cb6b9e2f42e6a0c50a049374324992"
+    sha256                               monterey:       "8570299f75c26af3e4b16bdb05616fc945d4a4d49913d3b8758a03d55bf056f4"
+    sha256                               big_sur:        "4635bf340456e5672de322cc7780f67800cdabd4a278fa93bf2802fef5f03213"
+    sha256                               catalina:       "4ae3b6de2981b6a0d03b9623e7ea6c69ea3dd77714bd178211c4c202a7092245"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "996dee64bd19a2c0f8ed81de89798f41f8d4d38420eb7afca5eba52466aef184"
   end
 
   depends_on "pkg-config" => :build
