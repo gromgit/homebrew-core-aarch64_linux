@@ -6,12 +6,12 @@ class Clash < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1be46daf0faa5044effd1e975acc07be3e4a87d60e196416bfa7782e8672693c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43b0f96c4898d3a98337a8c834751e23587725bbb5afec90cd725048c7d6509a"
-    sha256 cellar: :any_skip_relocation, monterey:       "bfe0d44f0eb832c93f92c2a0f7c21114a60c4da23b920296f9f19e87a5ad8e26"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb9a2179d93de8d1bd19a0b3b349576ee83b3335563af11753fa25f7aa455b92"
-    sha256 cellar: :any_skip_relocation, catalina:       "a3313b2c2697561cdaef4c2b3ac6b5c86de87127b8cfee2f75d46ee71fdd788d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ccf2e521516101467e022f5cc60e0e0989d68804aa2a21140840d3514b59fdf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f497627bfc920ab5be613c1046aad44d21c8504e4231c12f02d4e069b0fb1c53"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fc1169b117fc0169d329b29e784f9da217372886f58fe727f203ba6552222d7d"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe1ee5f41d56b631eb58c7119323729b38c648c2001afaef5d150ddb9a1ddab1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dc9ddb4b7929ebf0e340b1c34e2059208121ffdcb12f59782a0225e6f2bdfa0d"
+    sha256 cellar: :any_skip_relocation, catalina:       "8148404c9490f83b5bb942c0605f522ef179389e728f6fe6a57b23b37d7a28b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1643ca6e61f1e624161e8ed80387d956c8f1f2c864c4dcd3c3d35d3bdad7c327"
   end
 
   depends_on "go" => :build
