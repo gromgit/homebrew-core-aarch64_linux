@@ -8,12 +8,12 @@ class Micropython < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e7fd34409baf3ae9294b4955ac01ef03f8c6e9694d8b8da1df33931b5571e56c"
-    sha256 cellar: :any,                 arm64_big_sur:  "6af82d621b4ada013f9a67e350ffa3d8d9778790fb52e43c9bcc3976537d2ff3"
-    sha256 cellar: :any,                 monterey:       "b7bfacd192d122d6d425eb4c9b99f7ddb094d9d8802a9966b168eee839a0a514"
-    sha256 cellar: :any,                 big_sur:        "07388c9d6c41a2b848b7b8408dbb92a547ab8420c09d25ad353a6698287cc0a8"
-    sha256 cellar: :any,                 catalina:       "1f3b7891caa5737bb035e680c0a13186bb9e97c1717db959145bab347ad97bec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf8248af0e360223b5cadd07d567f3d443f9aa917e825ee2c94407b3ba6a6d19"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc5514807c9010a80d3224606dfc0cfe9c6b8c135a14093b85ce348b2a8bbb82"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ba97c0bdedad351506ca6247a24c3bb9e60c42b4b4a2a940b19a969c3cc9cd4"
+    sha256 cellar: :any_skip_relocation, monterey:       "f0e87718ca44c30f75514b61afd66e8e1c521402487c99dcc2460b3ae670f10e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ed948a56f6d4bc32ecbe528085bc052b4fdc150311efe7c8058edb7312b29940"
+    sha256 cellar: :any_skip_relocation, catalina:       "3519c3b72905df1d1e6e1a966c7065e80c1ead3cebb3da50dbfd37115488c8e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10e202b63ee0424cd5efd86694d048aa99ce7d264c2e96dc883d679fd32bac94"
   end
 
   depends_on "pkg-config" => :build
