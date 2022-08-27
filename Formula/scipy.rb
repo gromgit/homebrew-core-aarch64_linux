@@ -7,12 +7,12 @@ class Scipy < Formula
   head "https://github.com/scipy/scipy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "3528ab6186ecf5273aded8d18d31eab44ccc92f7201d694f389a17ea481fd3bc"
-    sha256 cellar: :any, arm64_big_sur:  "c76c3df52f9e7ae22aa5b867458257b327df90f39607e390e30bdb27a15459cb"
-    sha256 cellar: :any, monterey:       "7c041f9662128640a2f0a44973097cf9f8aee3a0f5f167232c4a4daeeb1cd0f2"
-    sha256 cellar: :any, big_sur:        "8aeb092a37958c6e0b6110e0b0e943f302cd44b1022ba1557ad925f85eda6220"
-    sha256 cellar: :any, catalina:       "85237422385c8490d3c9d6b7f44d9e854508f171a6d8b66011c9710cffef4b0a"
-    sha256               x86_64_linux:   "d857d59b03c3bcf5b60e7f91256a56513c983120a8224224ddf02ad5c950735e"
+    sha256 cellar: :any, arm64_monterey: "eb6578a423f0d00416c3c5447174eb35a602cd603a6546a40cae70fe040682b0"
+    sha256 cellar: :any, arm64_big_sur:  "2e9f46e809492c5b0c701d20f712f4238a7b86b7e42778963fc3d2cb6d63696b"
+    sha256 cellar: :any, monterey:       "d421491023e80bad4be3da789a847993818ddfb0bf06c074db0b20120b855039"
+    sha256 cellar: :any, big_sur:        "b2168d5dbbef232c844a155039e2f6e86f19ddfca2065063616f2f06faed6934"
+    sha256 cellar: :any, catalina:       "eaa71d7f7bf55ddff604048ccec41e5d2640224fdde4ee9c62e0a8f9bc1248c8"
+    sha256               x86_64_linux:   "1d4efe1f0132710ecbb2e89be57c106ef7f13be2c7b69009df6f0e9046b675e1"
   end
 
   depends_on "libcython" => :build
