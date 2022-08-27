@@ -7,12 +7,12 @@ class Helmfile < Formula
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6e7bfa18780228a9b74465bb773af2d472006a146901e1fd3261c2612b928cef"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8097938b6d0c6cf98b8bde4c2e9b44bbfaa2a31e283fa1793ca1c9e981612a37"
-    sha256 cellar: :any_skip_relocation, monterey:       "b369ba93a13dc96dd2a69c7bf73fa35689c6209e4c6081f820eeb394f9e76380"
-    sha256 cellar: :any_skip_relocation, big_sur:        "892b5448a3af1753611a3489348596f7622c6194c71a906008153adba7ae994b"
-    sha256 cellar: :any_skip_relocation, catalina:       "ab66f0a8cec7ef16edc9bd51037f80f3f5a596c53a5223c2b0cd58f87e5bea06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85461da96fbeaa4f820a21a051dd9e70faf5eaf1434568eda87228df626b388f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1b5dd60c80e31aaf2af80dc1f5685964f3ddb0fbeef0349ffeff25c5a7646f4e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5561ed7ded9ec37d12ac59971bdc888d75252e3b1ac8106088231d0ab9b89895"
+    sha256 cellar: :any_skip_relocation, monterey:       "3d45fdbb8cebf21a03c0ce975c05ef5a140d1415d96aa2d135bdc75acb5f1580"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b31e01504b0ab296dcc2d25720e3689d4e164e5d2ab446f752dfe96f8c8f0c8f"
+    sha256 cellar: :any_skip_relocation, catalina:       "d808dd9d8a0bfaa31a03e4ae635216074f3bc605cdb202391b30060036d305c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c0f341d6c13c89134a90909e3ee83154ef51d486c7b114456d7373a5cde25f9"
   end
 
   depends_on "go" => :build
