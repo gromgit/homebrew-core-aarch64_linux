@@ -6,12 +6,12 @@ class Libtcod < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f975f175cace10522bf03f9525fce0dc470f5440adb85390192e3a5c44860294"
-    sha256 cellar: :any,                 arm64_big_sur:  "4bdd43d12fc779650ebc1d13d18cc10671ffb580bd082070b979ce96847733f5"
-    sha256 cellar: :any,                 monterey:       "8fb58fee4b28729b34dc6f36b09140885184bdfeabe7974647d2023b6fa6f6f4"
-    sha256 cellar: :any,                 big_sur:        "97cfc0147fa2235768a542e265eb03d587a4d705588b215bc31d33c163163455"
-    sha256 cellar: :any,                 catalina:       "5cd8a6b85f802ba2f75e186ab0177f1a2d61f0db19d4391a7088e2b718137942"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d361445036eb2dc299f250dc51b91887722618320eaf5024af2889aa5598a2e9"
+    sha256 cellar: :any,                 arm64_monterey: "c605abec2c995c60ee9ca13c5fdec4c167257cf24c9fe6a2fbf9195b47e8928b"
+    sha256 cellar: :any,                 arm64_big_sur:  "cd2d77c7c1904f9ed7aba1c6a6dadf945e10c5ca15bf691920eb8610283a6be0"
+    sha256 cellar: :any,                 monterey:       "1ee5f17ffb63c30a5b9d593a0db5ec8ee0d7a18c75a5dd28af28ec367b8c05a1"
+    sha256 cellar: :any,                 big_sur:        "5dce8ecf88a934d7ead445002509dc45c55c90a1745487590c2a294caa5126de"
+    sha256 cellar: :any,                 catalina:       "58641b98b27edcbcc654c3d25a40e6fa23d37b78ee2fd4f608521ceb66c99cfd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb78f54b7a97d26d8b18766fc58af18dd3f81612cf0130200ecea06f5d273e77"
   end
 
   depends_on "autoconf" => :build
