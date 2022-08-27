@@ -7,12 +7,12 @@ class Youtubeuploader < Formula
   head "https://github.com/porjo/youtubeuploader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ba8ca719866091a696b942f55e488c4962470f24502f48154f302b4c352a490"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71f1e8ad1382105e54528d21e7e163c09fa1a4298f86e5980a7ec45b5cc70132"
-    sha256 cellar: :any_skip_relocation, monterey:       "54819745c9d22d5d8619137a29a14ec4e51abc72338daa25ce4906ed45475da6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2103c3cfd9fee6ad17fe82de4badf9e9460cda5741359e61fd59880975d3cc5c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2275c70931257b1cdf56181ea5ba7ac4078ed91ad22b3c8435aaf7160826bc38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "316e30ac7cbb2004c08aad54869776a000f4891e91d917f04cba0115b85f8431"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "30f7e5ae721da535e957767a5d90effea1207f7bb33088afbc71916ccce644f1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6c646d0777513146dbbd385475135e75d79c0db8ea65ab1b19efd83caa774f1"
+    sha256 cellar: :any_skip_relocation, monterey:       "b1b3411312848def235b2bcb7621947f50954f95d126f32a7b61d2dcbceacc4a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c8e7b4db1c565158b547a534fe783bbe4b520b68cab78f030d9c51cb94bba794"
+    sha256 cellar: :any_skip_relocation, catalina:       "9ec6d96d62ba3740c636d633b1caee6a7d7717c7a60e0642e1351991cdbed98a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c7ffcc51bebef2de4747bd1a328bfb9bb0b05f40f36da7af712fb22af8916f7"
   end
 
   depends_on "go" => :build
