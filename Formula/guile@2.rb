@@ -7,13 +7,12 @@ class GuileAT2 < Formula
   revision 2
 
   bottle do
-    sha256 arm64_monterey: "ff0c7976f8d78bbcb0ee5f6425b2c937dcd2fd82b711a0eea116dcd2321fb1fd"
-    sha256 arm64_big_sur:  "cc8e116bdef0157cc6ec1a353464d4d9b0441aad4d3056f843bbcfae7590e51b"
-    sha256 monterey:       "239da930db7fc29d675df66a5d615ae55b278aa0e8889b08c9b71219ae20d874"
-    sha256 big_sur:        "f64b911916df32bf5b566f563d49d72fad81c9fac5ba564d761c779137abc750"
-    sha256 catalina:       "580931e21ffeaeb0c3d86e97a7356f098a1b23bcabd7757fcb49a9501698f422"
-    sha256 mojave:         "8c06caa2fd6aa55edc961ca1fb0df5865139e983ea6f331dd469215fab3d3661"
-    sha256 x86_64_linux:   "8ec924ab98052343af654b8ae9f75f21ebb81267b44bcc0b796b24f0731435ee"
+    sha256 arm64_monterey: "1de3f7d4c718fd2122bd3360eb8317b9df884799b80c7df0aa22bce7a8747f1b"
+    sha256 arm64_big_sur:  "c781109b4f185f2398a88e947b2b295ee8f19d345286b66c288dc10d12eae491"
+    sha256 monterey:       "4761b93580c0728f4f24b710aad17f6e00c5ad8db43068fbf59aa1ff8836897c"
+    sha256 big_sur:        "aef48eb8b76fe89a8562a05aea4d749b40e229f15171975e07450c6b0c3b97ff"
+    sha256 catalina:       "400b13228b43277fda50549b52a7c7416a81072fb512c2d2caafd54a35646b53"
+    sha256 x86_64_linux:   "e494b466134fd8d9b2a0dc512dd8814192c9a621fdb52bbdd45e6aeac29c1a3f"
   end
 
   keg_only :versioned_formula
