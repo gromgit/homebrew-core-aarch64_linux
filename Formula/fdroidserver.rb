@@ -9,12 +9,13 @@ class Fdroidserver < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5e823e4380daa9c170d5accaff433d04b0f106ba753159fc7106839ed1fc0730"
-    sha256 cellar: :any,                 arm64_big_sur:  "9cea7a23c81135b54da868a5ed7f6f6b6e555a1fef74c8d0f9d417b9dc78abd4"
-    sha256 cellar: :any,                 monterey:       "f139e9ad866de19e93d53da8eaf3be62f55b671e2464cbd0c90cc766c6cb8dd9"
-    sha256 cellar: :any,                 big_sur:        "ab7479e16d46c3862158a7b6aca79b45b0f14d5fff711cd9a2752cd043a4eff7"
-    sha256 cellar: :any,                 catalina:       "7cbe026690ebe2e92e3ff34ae34f206b10830771ebb2dcef0efc257753bb9cd8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ef1a5aabba767d5eb2104aa3c87f7b71f212ab2d154d0b4a2323b0e7c02830d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "b8701fe545a36be904ee15abd9d91ac6c6f323c72a3b21b3ca37cb8d92bf3e60"
+    sha256 cellar: :any,                 arm64_big_sur:  "eb7b52ec3191d4caabc4ee0944d79d67d164c1059013476100cc63e1b1de3c89"
+    sha256 cellar: :any,                 monterey:       "31bce5722a17a9c1513d17c183ccb253747bf9783a73f294594a9806d82b2062"
+    sha256 cellar: :any,                 big_sur:        "40626cad0fa1b703ff94f293a0df51a64444ca34046a6a8ed503713166fdb44c"
+    sha256 cellar: :any,                 catalina:       "bca749f27fa1644dde78477be1c9af8da2140ad9be97273ca55a6fdf08e4548c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "263956d04e7a1d7df32c3292108b81cc23c218be7159222f359744510db79179"
   end
 
   depends_on "pkg-config" => :build
