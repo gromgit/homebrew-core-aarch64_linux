@@ -11,6 +11,15 @@ class PostgresqlAT14 < Formula
     regex(%r{href=["']?v?(14+(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    sha256 arm64_monterey: "7de4e2fa72473ee92a2380496fa0d479b2afa1b500d0db0c48e379ed26506884"
+    sha256 arm64_big_sur:  "8579858ca521e44777131827f335db0de705aadad6f7fc83fc343572424ab2ef"
+    sha256 monterey:       "1f510876b086a7696294298d9c8572813c91745bf706aad06efd3395b8f47505"
+    sha256 big_sur:        "3af2b8cf4ce3056af9d6ec63bc0fdd40d0132f80f9e58d2b1043cba8e479badd"
+    sha256 catalina:       "c168e4df71b1d8bd833d9a44d3f2c0fc555597ccf64b3d2e0fa144e53b2cb54d"
+    sha256 x86_64_linux:   "c3f08966cb882241078288c3328b63a732038a9168aca9db0f6c7f78f51032e7"
+  end
+
   # https://www.postgresql.org/support/versioning/
   deprecate! date: "2026-11-12", because: :unsupported
 
