@@ -7,12 +7,12 @@ class PgPartman < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d30c2f67029fef09fc8a7c50d518a1cef89a62b42de03e5a95a832e2a724dde2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a91a6bcbdafaddcd93952f2eb55b64b99f25b5d80107ee0c1a8019af4e2d82a7"
-    sha256 cellar: :any_skip_relocation, monterey:       "58816573d271ccb9cebdaa5605e12cbb55c80fae30e3d9072d2c7c78976a9e7f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "600a43c52f8d030ca8cbfb852a1df9831b535a10ce0ae323ad0448bf20518f24"
-    sha256 cellar: :any_skip_relocation, catalina:       "b050f9e5be1652a54cc2e6efb22112689fa315ccbbfc419e5ef73d6fb4d9c595"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba38a04262870382a5bb6e986852beac780a922def9857456eafa92b43b98aa1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7bda61839005e90abb9a1252cd2513799383e3adb774671f4f7a344779fb6e1d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dfaa66325cabcf164e540c429cea58f53156fcdcb7e86c025d9efe027c7bb4c0"
+    sha256 cellar: :any_skip_relocation, monterey:       "3bea059b38d700b7aba3f581a5c6ce4869038f52e517e1f8af19721206f90579"
+    sha256 cellar: :any_skip_relocation, big_sur:        "af1176ae5df7c0a65f6552400adf8237009454976bb5ef1914841f3b219a9321"
+    sha256 cellar: :any_skip_relocation, catalina:       "b5831b399ae0dd0f64d6e1958968f4215a4524b8d844ee6d00aeda4aac31d898"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c33bb4b71f821d6868a467ca7cd057c5fd7507e45851889470f91b318a002d2e"
   end
 
   depends_on "postgresql@14"
