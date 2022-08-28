@@ -26,6 +26,15 @@ class Shaderc < Formula
     end
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "6910dfdccbcfc9092e8d645b5e66d265e290b5e7c82411fb711a8b2747d235fb"
+    sha256 cellar: :any,                 arm64_big_sur:  "3afe734884220af44d741483c11c0168b46caf3b8c569a76e1d90475d0c55eb5"
+    sha256 cellar: :any,                 monterey:       "cd400f3167c434505425f27540924cacb654e2efc3c34774c1ed1827fdc8700b"
+    sha256 cellar: :any,                 big_sur:        "19d0467ae8b31be08fe38f0c366170e1b5d562553f2ebd607ca826fe1f4b4c81"
+    sha256 cellar: :any,                 catalina:       "042e6e2b2ae01104cbd38941b3eac2d43c0eb18b36a8692216b152436240a654"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70925765348d09b68bf56d300086dc064a2f558a5e3697d6229ad880f04fff8b"
+  end
+
   head do
     url "https://github.com/google/shaderc.git", branch: "main"
 
