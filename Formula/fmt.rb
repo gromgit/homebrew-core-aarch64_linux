@@ -7,12 +7,12 @@ class Fmt < Formula
   head "https://github.com/fmtlib/fmt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "874c6516db35f84fa5570ad821a41e4cc6273f33db0b47db51cc9f74c86eef7a"
-    sha256 cellar: :any,                 arm64_big_sur:  "279ffdb934f456f8f92bba5328a626b21a25dd2625d2cfaa5eb3858910c85d3d"
-    sha256 cellar: :any,                 monterey:       "05bdf220753ccd28c98b0b83fc039e36588bd913f5e495cc61283f9e5ff339ba"
-    sha256 cellar: :any,                 big_sur:        "803d851c3003ebc7be27679e4210a1cfc8d1385486dc5ff33142a27d39b84054"
-    sha256 cellar: :any,                 catalina:       "90b510bfb7c3544332afff9ece2057a4042d2756d98ac644872955b6458d19bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c565959b75715990c270eebd9e77d41ab8fe4ab46e8bb2dc836ee503f92ef0f7"
+    sha256 cellar: :any,                 arm64_monterey: "dfd44ffca7165995a6cdca2191e4e5bb6563385a71375fcd22a002e5e63d3133"
+    sha256 cellar: :any,                 arm64_big_sur:  "20658415047bbd2856d1d4b5cd4886daeab829948a4f546e24bd176ba17d9e97"
+    sha256 cellar: :any,                 monterey:       "324344e5048ea4bf92352dcdfae63832d447c0d27cc01d45eecc6a2bebee6b5d"
+    sha256 cellar: :any,                 big_sur:        "3616cabdb7e41f47275dac7bd60bc3496f375550eb0462f96edb5736c31d6c90"
+    sha256 cellar: :any,                 catalina:       "d99a9571471d998a20f654f32499096037b4db5c33819d1c324cd29cea8f04bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "978a0685bf616cf383c4ffacf8210ad881f0f2d3ab94207005604648316dc32c"
   end
 
   depends_on "cmake" => :build
