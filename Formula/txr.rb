@@ -11,11 +11,12 @@ class Txr < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "a48c7648139899b3a4206ca33a137e1dc6aa950007e9574f835390d83e17fcf7"
-    sha256 cellar: :any, arm64_big_sur:  "18ba3a85c4139936c362598592e8a21f269ef0ce874fc6730fd723e2542f5be8"
-    sha256 cellar: :any, monterey:       "6edeecea280c203fa68ce8430b748c3985f728ad93b823674c1f7c2fabcb2be9"
-    sha256 cellar: :any, big_sur:        "38d6ed9eeeae27c911a7082435b624e2f725ec3755211828ed5a1694e82cfab1"
-    sha256 cellar: :any, catalina:       "166ac7a487e200f42cc6dc5752b6750c5e8e35458b5fdd2f8d996e6b8467e7f5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f6200e6eee84022d6de21df3b7f37a6950ac703c042a4f52187dc422185875c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d87c04cc49760cd85996ed4eff4b7f23e5f396b0ca0e87e02fc5d4474315ba3"
+    sha256 cellar: :any_skip_relocation, monterey:       "768154426e58bbb4e5d510e7a8682f89e86a10ffd5b5107645c01548230b6baf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b9a25b29efb07d0ee4657d3a03dc6284553b1a33cde9a9b217f52b3e5c5b17ce"
+    sha256 cellar: :any_skip_relocation, catalina:       "eb695c1ac9bb884442ce8e42a902f7d7d6c0c518b6b95c132a3c049ac5f22d13"
   end
 
   depends_on "pkg-config" => :build
