@@ -11,12 +11,12 @@ class IrcdHybrid < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "268075f11e23a5d819d75d7dd98881c4c0441bbd44fa3ae8b3f799155206073a"
-    sha256 arm64_big_sur:  "a6d6a0a26185264577aa3f794fd2a90d215f0a2b63fa84f45b58a74955ca1156"
-    sha256 monterey:       "fc209d6f30c7a7ba30a7c856e4893ebe6be74d3c74eecb22e61b87b8606cc58f"
-    sha256 big_sur:        "e0de415a58502410f642497c3d857b0f9ccff5400457de66a07214836daf0229"
-    sha256 catalina:       "59a906eb2f528eb84ccbc18193ddfab0c47dedd3ca94f4c2b73cdaaa7d4453bb"
-    sha256 x86_64_linux:   "5c45e00bfae1c00c4909144592b46ce21755d20eb7287f179b69d0147b159ed5"
+    sha256 arm64_monterey: "bc1082345514784eafae874e118a3aff0fc5b0669b3ab69b215131462a20d459"
+    sha256 arm64_big_sur:  "0847773f47674d9f00933e7eb1b0a9cc63c9a073af509bfa16622c5c067023d4"
+    sha256 monterey:       "fda21a2a7afec87bf4dbd463e9f9a560a50fca9fc73841f129485445d9ad7941"
+    sha256 big_sur:        "661750c01fc31c696d5999912d051edae7f9bad6e56a2ae10f7a6adfeff5c8cd"
+    sha256 catalina:       "db175e65833d8b0b4eb9c9245128f0435f35e70299b2f58cd684a313e25936aa"
+    sha256 x86_64_linux:   "9cd7af7a3f61430e947d9d0e55b4e169ace7e166bd2cf6b6a974a9fdd69aa1f8"
   end
 
   depends_on "openssl@3"
