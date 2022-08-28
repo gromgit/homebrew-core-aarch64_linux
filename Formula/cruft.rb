@@ -9,12 +9,12 @@ class Cruft < Formula
   head "https://github.com/cruft/cruft.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec1b843dbbfe2b00b8b7f89d3a26ce1dcb3d12c6775cf52da15cc49e99625371"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "887fdaff3e1875e14566b2b5360b6a52cfac303e89cdde23bdf4ca25f7cf32a2"
-    sha256 cellar: :any_skip_relocation, monterey:       "31c735d3ff76ea4d7fe9cdb801ec094624e844a1f4a17cc6138826eb6591b3de"
-    sha256 cellar: :any_skip_relocation, big_sur:        "967970b60e500d45599b5b8d64101dee498ac4253a009cb9aabb04abea6ba977"
-    sha256 cellar: :any_skip_relocation, catalina:       "3ffd55125cbba087a37cdce5e4b1460632698e512824d238f10260e7bc70d75b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70af71291471656f500a40f1f3a29b101d1ad3f2a2396f0ff2b92f884f1d1d59"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "04b124c2f7eb6c8f82f2178030cd6466a4feeeb8e2fa0009093363f63ad036bc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6fefe4a7d231dc304bf2f1588adface9723b71339ccaab6d28be8231c16c0399"
+    sha256 cellar: :any_skip_relocation, monterey:       "0203ef80d321c786e91c0728952018fa26636a6259abc09851d5456b110d76b2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "27b0782bb49b8014afdc1a4cbcb2d2fdfb5033fb1df65e6af5d23a65cd454f5a"
+    sha256 cellar: :any_skip_relocation, catalina:       "340fb4026c0c05c7029ac3bc2aa37687fc1c4a3ddaa03f07e2812f95b25464c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d86fbf2aa5601951c2d876197d8066f18e9938fa79580e2c78b68b7aca3f5e8"
   end
 
   depends_on "python@3.10"
