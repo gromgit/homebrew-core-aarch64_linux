@@ -6,12 +6,12 @@ class Fennel < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "45a17c2e474fdd8c601ea77e5bc52d2c2e07b094d99916872952b1646bbcf5fc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "113bcdf641420a750971fd68048300eedc034153840e00ccd898ff5dd6e14569"
-    sha256 cellar: :any_skip_relocation, monterey:       "acc0ef368c737bc11e0f1aaf50d05812113c7203b3da04471d73f53e91045517"
-    sha256 cellar: :any_skip_relocation, big_sur:        "55673aafb83cb341ab0d09b6ac85306718714112b72248c71ee8cd3e999e83bd"
-    sha256 cellar: :any_skip_relocation, catalina:       "cf4789db2ba53d5a6521853646195b3a9ad51c7ca5146cf005abe38e3e496ef9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf4e121f4b4e5c9e7b1af9942ae1be720ea167edb1d45b95bec89ddcbc00a18a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d4915471c4f52fe963468da35c79079d7db0cdef08a3c09be811687e54ec29f9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c00667b3e84013c67b6e251dff2c091baf6599b48bb4ff787a761f0dd1be0f5e"
+    sha256 cellar: :any_skip_relocation, monterey:       "9aace69fdc70c35aaa9f08ed825f9f7be9cace850c8a305584b0e223bf90f0fa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7c53cf4aa6c9f7b5ccbb6bd40722a0ce636ee8881aef386d03a60025b3226b05"
+    sha256 cellar: :any_skip_relocation, catalina:       "7fa35cabbdbea8df9c43565e97fb13f402914279c0933a129b6719a7d88504b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e6a49be68d5c396cc2142ee954855cd4970abae8a35af6e7e7988915b0eb41d"
   end
 
   depends_on "lua"
