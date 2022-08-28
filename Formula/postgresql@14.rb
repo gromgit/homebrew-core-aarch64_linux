@@ -144,7 +144,7 @@ class PostgresqlAT14 < Formula
         Previous versions of postgresql shared the same data directory.
 
         You can migrate to a versioned data directory by running:
-          mv -v "#{old_postgres_data_dir}" "#{postgresql_datadir}"
+          mv -v "#{old_postgres_data_dir}" "#{var/name}"
 
         (Make sure PostgreSQL is stopped before executing this command)
 
