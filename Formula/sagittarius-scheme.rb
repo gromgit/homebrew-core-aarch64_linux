@@ -7,11 +7,11 @@ class SagittariusScheme < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "0e3bc5c34bd1acc50c8ba8d98b474c329068d3ff1a911bf1d8d7e3c4f02c115e"
-    sha256 cellar: :any,                 big_sur:      "a44076e41f030ddccfed6768ada1ff0201ff6ffb86cce425c3fbabda799883a0"
-    sha256 cellar: :any,                 catalina:     "aa2fbe6b306de8d985d0e93f12d9f896b4f7ae5403778508d077bdf975868bcb"
-    sha256 cellar: :any,                 mojave:       "dccfa0d38b7096e3c27676fd09d8984009128c1017948d711087dc9d66f44f6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1b527a2abacbc00092ddabd94995149367ac2f388ec739b90a462160d29cbe78"
+    rebuild 1
+    sha256 cellar: :any,                 monterey:     "1300d4bd72c1346dbe1bc97b1c10b77f60ad4661bfd1e7d9a47144094f9d618d"
+    sha256 cellar: :any,                 big_sur:      "23712f37ba7e82eccad3164e823c047b6530d20c016ec3e36e4619d26d7c61c8"
+    sha256 cellar: :any,                 catalina:     "052b33c74e74a5a70c6f2c693263c51e4565eab9efc662b250eec00f2eb26537"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5d717c5e87fd9d42f0d766a5b9bf7cc1076ef6e3a4458bf7aa787d1ae61bd886"
   end
 
   depends_on "cmake" => :build
