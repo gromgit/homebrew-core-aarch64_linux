@@ -7,7 +7,7 @@ class Iptables < Formula
   revision 1
 
   bottle do
-    sha256 x86_64_linux: "3924660d88ad974260e7b6b5d2bac9a724a94daa2b1a301f457db368fe1cd2fa"
+    sha256 x86_64_linux: "55ab232eefa2576a6a92bef15a4231515afc2b1f942acc96dcf11d4637caeeee"
   end
 
   depends_on "linux-headers@5.15" => :build
