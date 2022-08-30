@@ -12,12 +12,12 @@ class Flatbuffers < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4273d6223ff753501784c64c2048cc876216ea348b18f6890d0233bb6f5a3eb2"
-    sha256 cellar: :any,                 arm64_big_sur:  "beff22245cd0ff9f648b566f7e20bf397c1b954c5b35474392fc5f91ffce865b"
-    sha256 cellar: :any,                 monterey:       "da9d10bd95796d269f4911cda927d38c93a0e357c3e95419450d9d06da68ed48"
-    sha256 cellar: :any,                 big_sur:        "b2e98c4e93068ca3cfd73e528ba82b2c5e17cbed9e74570d5f427ebae46e5940"
-    sha256 cellar: :any,                 catalina:       "d624797c773abe5b1681b5ee1e47aebc119ef1e121babe00ca5e33d359d06b22"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2997a1ef21af93fba688c0cc257080cd3832e0bf3f9bdcdd1ed6d9929a01091"
+    sha256 cellar: :any,                 arm64_monterey: "cbe115fdd3ad2a51b390049dd29c9cfe0ca1fde327ff4cdc1e695920f4ca26dc"
+    sha256 cellar: :any,                 arm64_big_sur:  "400cd4e592180a130953391370c6401996b046fd502d9674b0cc3a9b4b7a2988"
+    sha256 cellar: :any,                 monterey:       "85bc64d4481927fe45ae9be89bc6b7bfa3119a73473589fc7dacd6805257b8f8"
+    sha256 cellar: :any,                 big_sur:        "c49ad3a0896e13aee915da94fff43492c166c2037d4b638ae236ce83e9e4dfbe"
+    sha256 cellar: :any,                 catalina:       "1bc32cb31d07c392a63bbb5be4a3b8d4fbba7ea52b9df6564051fda444e00324"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56a447e4f79cd3b75db0692f3b3082a841d35be1d5c82c326f30631ff22cdeaf"
   end
 
   depends_on "cmake" => :build
