@@ -11,12 +11,12 @@ class Immudb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "47a0a7ded0ecefb90fbb45eac377e1407540d6e7da6b91ffb9abbec759547548"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5c0a3dd56e8b011e8e42d813828c61ddd46c6f5203be05ff457c63bc7c745315"
-    sha256 cellar: :any_skip_relocation, monterey:       "0e37e307fc0585bc9868876fe7e92d332a744aedbfffb1bd077b7924882669d6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e59414b861d4766632688b6f33f98fd834933e90bfe317492ad51db04a94fdc"
-    sha256 cellar: :any_skip_relocation, catalina:       "ce905a8dd1b841027cd2e79eff684af1e2b1207046f63a3f8ab3ed9c1903e532"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64b809adca6510ce7879397985ca33f8e1de676bb5453f594b0b753314cb2483"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "97139315a3ab470c04d1021690088af8212867d85cd5731004a514f39f27590e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87e2bd8a2e8a5f3ffe5f70783978281498545c70bf632fa614d3ac261d98833a"
+    sha256 cellar: :any_skip_relocation, monterey:       "15988eb0216ad85edda4130fdf33a7c7b19176d6af60138484c1aa0e1d990b6d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "62e81659ab0ad5af8c6c1c5db2a31e887be8121267d1222d6e474e5a7a4055d0"
+    sha256 cellar: :any_skip_relocation, catalina:       "ecc23dfdff28eca475818277847711387b548b1568be4015fa3452b63823a4d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e13aa5c9b96bf1e5741c5fe0ac6769a5bbdf80dce63ede3b78ca15ee2cb2d181"
   end
 
   depends_on "go" => :build
