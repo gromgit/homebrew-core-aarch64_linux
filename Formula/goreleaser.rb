@@ -8,12 +8,12 @@ class Goreleaser < Formula
   head "https://github.com/goreleaser/goreleaser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5cd16f2a05539d857d5889631cea6a606c86f9155e4b2b71b28f13472e4aea80"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "65d4525873a5ba559ac22c107c3b8aec40a7a9f0c9d34e49a6906fefe76cae35"
-    sha256 cellar: :any_skip_relocation, monterey:       "d5ed3fdb6910832059a1fd64602e43e03ecadc37c1b4717f0ba1255ca4643c8a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "80ee5709a3d925cf2815c6d6989d049b544ae74ec07cf14dfb4712e2a14c1c99"
-    sha256 cellar: :any_skip_relocation, catalina:       "ce2f80a795d59ea5ae3f9036551486d1e2e35363aad4b7954b6cf9bf2fbd181d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c92e120dc085e1baacf1bc4477161b18e154d75e068dd3d7bca4a2ed161e8bb6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "28cc477c831f95d7ffe61ab8aab0a151295ba8aa866ca6634d5e389aa4444800"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "984b292e4c692b4acbbcc39bd35c56d034faa2279add407b86a0427f6b9b6c76"
+    sha256 cellar: :any_skip_relocation, monterey:       "b6adfc1b2550642dbd9ac932fd616b4801bfb3989b6a138ec740f1f6ecf28969"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f5f0be5bfa5eae7695f822e51e87f41abe8584a82ea74a4ae4993cfe5b69b02"
+    sha256 cellar: :any_skip_relocation, catalina:       "2b1f8fa32141884a71c3282797815e8976d90fb96326f47cfba94ea10735fad8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c86a2fb4b5385403c14dc3c2cfe6880a6dec44feeb187ef1e7de62b76e80d7fc"
   end
 
   depends_on "go" => :build
