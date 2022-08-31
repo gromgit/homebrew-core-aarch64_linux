@@ -6,12 +6,12 @@ class Ucloud < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "77b3b55b46726375f370344a27774217967370557a32e4788ae22ecbbab27871"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6a379c8b60b05243c72eea9d53bd3c946b10188abe9f049d237bb295b6f220e"
-    sha256 cellar: :any_skip_relocation, monterey:       "a44eace64637ae94807526b557020d47b9008a3dc1f2df14157132ee327a8baa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f2731c2e7a1f6fb0c3a263205224e771aa61df91fa6c51c82d681139d0e86989"
-    sha256 cellar: :any_skip_relocation, catalina:       "17934f41b92c713c06176465dc04ba890a0cfa773d4ef346cc176eaf3805792c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5f979af4b6fcbb73aecb8fcbafaff493cb5be558652df3c8c26e53b46b7de63"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe13e3873b5238b391eff28a723b78d7efba937e6e12c7775dbde1a978f8a2df"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be739c5a28212b1d3b38ed7703d9429b3918c1827b26abd02ab2c4e311bd60d3"
+    sha256 cellar: :any_skip_relocation, monterey:       "c453634ad09c1ebdc8525b9b2e82668af044b8c619880b72adb5fc7b89940297"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e0695c00458fc3e849b77947782a191effc3c7933d67c9ebefc4d2bbad5290d5"
+    sha256 cellar: :any_skip_relocation, catalina:       "41da7a34c266e528be198b7798dd94c92354f80e37bf6dc8bf3d4bd14e8d8e59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80e2fbdc7a7b717b71d2704fa7ab24b769449304091d8e00aa3b48fc4a22b920"
   end
 
   # Bump to 1.18 on the next release, if possible.
