@@ -10,12 +10,12 @@ class Urh < Formula
   head "https://github.com/jopohl/urh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d88fd08049e3eb1fb74ad3adaca2e00a3a7f6bd38ce54cbd38a4ae5bc611f362"
-    sha256 cellar: :any,                 arm64_big_sur:  "9424a7749801f6715bd090550243c8648476fd7a9341478601ecc97733479694"
-    sha256 cellar: :any,                 monterey:       "de9494a90a16e95c9b56c8a8c6754a4bca1ec8877b80c4ea8fd74cbfa6c155ed"
-    sha256 cellar: :any,                 big_sur:        "e9d8335313cd3438bb1f3f3cc15876e25550f6b9e9a06c190f53bd28c24f9e19"
-    sha256 cellar: :any,                 catalina:       "8251c7319b097610a58503876afe9b72b6af903cd89e9f06cac863f4ca318c59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc49d62af0b2ddb9b6a3cca62f44cb734b5f49c3b99c10a88715f2af19dc2ef8"
+    sha256 cellar: :any,                 arm64_monterey: "7d862994902ccc7634d09ebd4a6194f5e893fbaa00ad843b13dfe49626a8ee09"
+    sha256 cellar: :any,                 arm64_big_sur:  "fe3a55526c47c81f8ddf1b2f97ef9e904c55b4925e28e1584fe91afb6f57c370"
+    sha256 cellar: :any,                 monterey:       "48efdeda0d8a26c00167a373ce77ab7453c29b5c0c084a89274904bff4d29208"
+    sha256 cellar: :any,                 big_sur:        "b0b45ccf33181e64d4fd9e6015b91a89fe982d88b0e52ce77a6762afad796d42"
+    sha256 cellar: :any,                 catalina:       "437efab97a5e4c0f3a58f2558255753ee10650b8dc4909c91eb48d5c3ee5fac1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d0a6260a67f91ae789d1aff64263ad53665558bc766356726bd0a4817f21c5a"
   end
 
   depends_on "pkg-config" => :build
