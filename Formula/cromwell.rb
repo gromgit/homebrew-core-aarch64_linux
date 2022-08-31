@@ -6,7 +6,7 @@ class Cromwell < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "00ff6bef7c8fc31647e0bd7f937ab07234f6f632dd8c68e435f7c40a28854d75"
+    sha256 cellar: :any_skip_relocation, all: "2aacb5acac2682c8437112b65935980ead16dfe5344ad0a02395ed9fe7484ce7"
   end
 
   head do
