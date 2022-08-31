@@ -9,8 +9,6 @@ class LinuxHeadersAT515 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "adb558844cfbf7fb8af6bd8134bc61120218246bd40b4746250fba1ae0a7933a"
   end
 
-  keg_only :versioned_formula
-
   depends_on :linux
 
   def install
