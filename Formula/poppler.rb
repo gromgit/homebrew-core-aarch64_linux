@@ -38,7 +38,7 @@ class Poppler < Formula
   depends_on "openjpeg"
 
   uses_from_macos "gperf" => :build
-  uses_from_macos "curl"
+  uses_from_macos "curl", since: :catalina # 7.55.0 required by poppler
   uses_from_macos "zlib"
 
   on_linux do
@@ -57,6 +57,9 @@ class Poppler < Formula
 
   def install
     ENV.cxx11
+
+    # removes /usr/include from CFLAGS (not clear why)
+    ENV["PKG_CONFIG_SYSTEM_INCLUDE_PATH"] = "/usr/include" if MacOS.version < :mojave
 
     args = std_cmake_args + %W[
       -DBUILD_GTK_TESTS=OFF
