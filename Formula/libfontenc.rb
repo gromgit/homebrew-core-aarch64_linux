@@ -6,12 +6,12 @@ class Libfontenc < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f23f0279bc054bde576d3293be23816daccdd26ee4762d5205939263ad2d49f8"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7686ee1ce6e835a5d77a19ed8465d616540f9d265b2cb78c6570d88c2067846"
-    sha256 cellar: :any,                 monterey:       "14a5217c02e866e05ddabc921afa63221d9a819e49eef226e8763f46ad17d158"
-    sha256 cellar: :any,                 big_sur:        "b79028b9bd6cef0360242c108cd1448d233581d61b3b7ff5cfd193d11859a64c"
-    sha256 cellar: :any,                 catalina:       "4cd9ff461d62102e81f811d50433a653fae4074eff499a0774fb1d6dc8573284"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e23824b3f78b547a79e23d411120141db1e8bc9a803f0ef84db417d066b8c41a"
+    sha256 cellar: :any,                 arm64_monterey: "1702ab755edeefdc9cf36a96083102cad9f031db459d5d520013ba5e3d3a7d57"
+    sha256 cellar: :any,                 arm64_big_sur:  "672d73aa82907db7954f09fbacee489a7e0cfb8de53000f76cb0ca5b42a7c494"
+    sha256 cellar: :any,                 monterey:       "defb274f7857f09d3df493d44e9deddcb98e3adf11e6702072ebf467589c51f6"
+    sha256 cellar: :any,                 big_sur:        "fe8c98d47e6a7fc8eb0ed31e227f6de34542e4abb96e8240a8056346a041106a"
+    sha256 cellar: :any,                 catalina:       "e5aa804c290150835e12655cca2de2046b56c1045e5ebd17743cc41b6d15456e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "007491088ac92cc2a280b1ccb7d142a9d7e8ab3eae987314d9ef68e5dfd47eeb"
   end
 
   depends_on "font-util" => :build
