@@ -1,10 +1,9 @@
 class Poppler < Formula
   desc "PDF rendering library (based on the xpdf-3.0 code base)"
   homepage "https://poppler.freedesktop.org/"
-  url "https://poppler.freedesktop.org/poppler-22.06.0.tar.xz"
-  sha256 "a0f9aaa3918bad781039fc307a635652a14d1b391cd559b66edec4bedba3c5d7"
+  url "https://poppler.freedesktop.org/poppler-22.08.0.tar.xz"
+  sha256 "b493328721402f25cb7523f9cdc2f7d7c59f45ad999bde75c63c90604db0f20b"
   license "GPL-2.0-only"
-  revision 2
   head "https://gitlab.freedesktop.org/poppler/poppler.git", branch: "master"
 
   livecheck do
@@ -57,6 +56,10 @@ class Poppler < Formula
 
   def install
     ENV.cxx11
+
+    # Fix for BSD sed. Reported upstream at:
+    # https://gitlab.freedesktop.org/poppler/poppler/-/issues/1290
+    inreplace "CMakeLists.txt", "${SED} -i", "\\0 -e"
 
     # removes /usr/include from CFLAGS (not clear why)
     ENV["PKG_CONFIG_SYSTEM_INCLUDE_PATH"] = "/usr/include" if MacOS.version < :mojave
