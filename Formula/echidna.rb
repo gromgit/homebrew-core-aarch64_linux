@@ -6,6 +6,15 @@ class Echidna < Formula
   license "AGPL-3.0-only"
   head "https://github.com/crytic/echidna.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "f824fb087daa0510609545dcd039b64b45632a5d33ad40877f86ee4eeb5d0223"
+    sha256 cellar: :any,                 arm64_big_sur:  "b1253ae03416bb1d0d54a083c98fff0e68eee584df18a4ba4cf563af0dfeb3ed"
+    sha256 cellar: :any,                 monterey:       "988aed91e01be93981b6af2178e57cbd99fa73bd415aa801cb5ed8081e93521d"
+    sha256 cellar: :any,                 big_sur:        "bd56181a5ab3aa08e3873cb33f3594b02101283d0fc2b21d4cb0ad6b79b023cf"
+    sha256 cellar: :any,                 catalina:       "485ae8b9dcc8270e01a116ed903e0c26ebbd20506726c6b1a80adf2a73089d4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4acf4152b058040edff48a064be7357c534e937265a25b43eed303c779e4e139"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "ghc" => :build
