@@ -1,21 +1,10 @@
 class Qemu < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
+  url "https://download.qemu.org/qemu-7.1.0.tar.xz"
+  sha256 "a0634e536bded57cf38ec8a751adb124b89c776fe0846f21ab6c6728f1cbbbe6"
   license "GPL-2.0-only"
-  revision 2
   head "https://git.qemu.org/git/qemu.git", branch: "master"
-
-  stable do
-    url "https://download.qemu.org/qemu-7.0.0.tar.xz"
-    sha256 "f6b375c7951f728402798b0baabb2d86478ca53d44cedbefabbe1c46bf46f839"
-
-    # Fixes RDTSCP not being exposed to hosts
-    # See https://gitlab.com/qemu-project/qemu/-/issues/1011
-    patch do
-      url "https://gitlab.com/qemu-project/qemu/-/commit/d8cf2c29cc1077cd8f8ab0580b285bff92f09d1c.diff"
-      sha256 "b7c0db81e136fb3b9692e56f4c95abbcbd196dc0b7feb517241dda20d9ec3166"
-    end
-  end
 
   bottle do
     sha256 arm64_monterey: "bf9391d255ad137ddef0d1c27a1e8617736ce92a67564f2e1bb005737a5665ef"
