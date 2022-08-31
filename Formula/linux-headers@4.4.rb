@@ -9,6 +9,8 @@ class LinuxHeadersAT44 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "b3821c05a871c143c38d75b7494380f8f7a5725090528d849d2c066956a93344"
   end
 
+  keg_only :versioned_formula
+
   depends_on :linux
 
   def install
