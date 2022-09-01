@@ -7,12 +7,12 @@ class LdFindCodeRefs < Formula
   head "https://github.com/launchdarkly/ld-find-code-refs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f937afbbea914b382be20c2f53fc05ee34f65e87349c88fff1fafecf41c1f0a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4e5ee566d067ccb7a86dce2b3f20f591ef6f9d3adec003a3e8a4de397dc9bba"
-    sha256 cellar: :any_skip_relocation, monterey:       "e3ba8e56e49046e0893ee8d9f8f921e07b63be0353b75331455999f5b197a83e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cced99b03bd880e04cfb95b276be736efc40c10515049a696c3ef1de10858e6e"
-    sha256 cellar: :any_skip_relocation, catalina:       "04aadbc6e02c39aac751025e3b2112e4763e3ba799a218c0d0fc3a2164b1725a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9f14d4a3b374b7c9c76f82098a9093dbd520d4c0652c1745929bf17416b5cbf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "badb91b262f990919f4cea6de16b3e58c0d981f8937a5c5cff00953e9c0f03de"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7469a1ec8a0a1732367b1bb968af7adb4577768e221db111f1ddd143acabd7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "3c9059356699116f9ef7673744a88ec0361fa18a55c6be771743353cd87b8b01"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c9e56dd9ccfc504affed64860b3e5d821dcef3d4592a56258843d8baeecb3c4a"
+    sha256 cellar: :any_skip_relocation, catalina:       "cf1e24ac162b3021036fc4a3216dc5c4f0cb70397f2588037f8f87f2e7ffd02c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d74a6aca65d50a15f614c772d94de0c64f805ac080ad6929e72174c39e8e691a"
   end
 
   depends_on "go" => :build
