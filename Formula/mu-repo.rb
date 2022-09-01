@@ -8,12 +8,12 @@ class MuRepo < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9bfa8b88548cb8bde371ba82d961023fb6380097fc0f9725738a3e8ef9e2c5ca"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9bfa8b88548cb8bde371ba82d961023fb6380097fc0f9725738a3e8ef9e2c5ca"
-    sha256 cellar: :any_skip_relocation, monterey:       "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
-    sha256 cellar: :any_skip_relocation, catalina:       "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "753d0bded50ce2ea748a30779ff838e56dd6436a85d3f608386f3517c04568b4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "973ee265fba3e84c33d91f4fac3c50bbe16fd0509d400a7dff96a076126610f9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "973ee265fba3e84c33d91f4fac3c50bbe16fd0509d400a7dff96a076126610f9"
+    sha256 cellar: :any_skip_relocation, monterey:       "6bce8c91e5a6555bf90de8b3d9944f9fb4b68a4dd7f309a732aa05369d8283b1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6bce8c91e5a6555bf90de8b3d9944f9fb4b68a4dd7f309a732aa05369d8283b1"
+    sha256 cellar: :any_skip_relocation, catalina:       "6bce8c91e5a6555bf90de8b3d9944f9fb4b68a4dd7f309a732aa05369d8283b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c21cdd623c9daa1193ac0b70ca5fe1287fd7e851639d4bbaf7f15a38b34a8ede"
   end
 
   depends_on "python@3.10"
