@@ -6,6 +6,10 @@ class Distrobox < Formula
   license "GPL-3.0-only"
   head "https://github.com/89luca89/distrobox.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b738dfe47d736a722fcd5b9d3617d7e92a661341da553e17ac02a5ebef8627eb"
+  end
+
   depends_on :linux
 
   def install
