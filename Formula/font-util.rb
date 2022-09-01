@@ -7,12 +7,12 @@ class FontUtil < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e2205892be19c7afd594a119f156c34be0bbb2ff558e27f607a1abfd4aa39e4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0493ee9b21dd723d64b310c0e1155b78d580c3f51b9aedfc03f064fdfa8b4231"
-    sha256 cellar: :any_skip_relocation, monterey:       "4abf110cc5d3f23041b1b13f743f86984dd764a53f1b769d98c2330cdbe01e41"
-    sha256 cellar: :any_skip_relocation, big_sur:        "735dff962371dc31717a0401bebbf06fd3b243f7387525ceb18be858e87fc3b7"
-    sha256 cellar: :any_skip_relocation, catalina:       "37dc2a615d64130304086369728deece1b35ed5ad28a7053d0ff6ebfd01256d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af731bff16e8e79be7bef74b083bf19c1310d194801feca4fd92dc9d0925be0b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57edda9390b2123b1f9b31651b5ad03e8888ccd7a1f5409d7795c18f9fa6a31d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c668bc56ced30ffb6ac8838ed40fd219538b2155cd810d5978ac5ce4b34d6992"
+    sha256 cellar: :any_skip_relocation, monterey:       "cd192a5dfbc1dc6667caacc87445fb028905141d059c33c61124f544a17f6838"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6b7d236e3d49b24292959ccfd78bf2479887eef9d7c0a7ac670008c9f410af5b"
+    sha256 cellar: :any_skip_relocation, catalina:       "198d4383e2e254f2c81f0227e416635a8435ea4cf2fd6a8ce814315ecadd2a80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1225cda3cc0e81f7a85285b12ebba475b219041749de9b0e8a31af87ef651f46"
   end
 
   depends_on "pkg-config" => [:build, :test]
