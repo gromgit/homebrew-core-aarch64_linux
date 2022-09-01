@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/3d/df/147892d13ca9ac39a2a38f451caf2dc33c959d765ee3405685f1a1373044/esphome-2022.8.0.tar.gz"
-  sha256 "3c78b88d75924898f2630df4b34deb5d7c1873bd63ff1d296237fd173a8ac8c1"
+  url "https://files.pythonhosted.org/packages/72/de/2b98619e7844355a5cf5bb6edf375e9e3e05ad76e690abcdba083455ff79/esphome-2022.8.1.tar.gz"
+  sha256 "f9ad25b0b431df4c53a7038dee0aebb6dd38c32997e907607b0bb7d757af9438"
   license "MIT"
 
   bottle do
@@ -73,8 +73,8 @@ class Esphome < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
-    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
+    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
+    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
   end
 
   resource "click" do
@@ -128,8 +128,8 @@ class Esphome < Formula
   end
 
   resource "marshmallow" do
-    url "https://files.pythonhosted.org/packages/50/23/cd717da7c1a78845b3127ba053c2a561d1193b8a0392ca1b4a4e61a5d7d4/marshmallow-3.17.0.tar.gz"
-    sha256 "635fb65a3285a31a30f276f30e958070f5214c7196202caa5c7ecf28f5274bc7"
+    url "https://files.pythonhosted.org/packages/fa/12/f69c512928f2974f050cfb08c437b57b643586447ba0baaa99ef1fc44c7a/marshmallow-3.17.1.tar.gz"
+    sha256 "48e2d88d4ab431ad5a17c25556d9da529ea6e966876f2a38d274082e270287f0"
   end
 
   resource "noiseprotocol" do
@@ -223,8 +223,8 @@ class Esphome < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/6d/d5/e8258b334c9eb8eb78e31be92ea0d5da83ddd9385dc967dd92737604d239/urllib3-1.26.11.tar.gz"
-    sha256 "ea6e8fb210b19d950fab93b60c9009226c63a28808bc8386e05301e25883ac0a"
+    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
+    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
   end
 
   resource "uvicorn" do
