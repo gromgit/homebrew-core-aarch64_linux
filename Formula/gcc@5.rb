@@ -12,7 +12,7 @@ class GccAT5 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "14a5443ed549cc911a8b589f5fa2cda7cfe97c1ffe8c87674d67836406d25878"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a3e52eeea5f2dc3fa99e021ee2e06034efd5ad27ccc331e751cf7f92110c7434"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
