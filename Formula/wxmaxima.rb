@@ -1,10 +1,9 @@
 class Wxmaxima < Formula
   desc "Cross platform GUI for Maxima"
   homepage "https://wxmaxima-developers.github.io/wxmaxima/"
-  url "https://github.com/wxMaxima-developers/wxmaxima/archive/Version-22.05.0.tar.gz"
-  sha256 "a0140b9f6171540556bd40c6b5617eb9ea224debe592014cbfabd0c095594b93"
+  url "https://github.com/wxMaxima-developers/wxmaxima/archive/Version-22.09.0.tar.gz"
+  sha256 "dbe6b1cba9a14116c4d79b0811f042b318b362eb2cc5b41533967693c0caae95"
   license "GPL-2.0-or-later"
-  revision 2
   head "https://github.com/wxMaxima-developers/wxmaxima.git", branch: "main"
 
   bottle do
@@ -13,7 +12,6 @@ class Wxmaxima < Formula
     sha256 monterey:       "2e9c6669e599f27521441335baf9c2f0080b6c046e6bb25b04938175ef600f8d"
     sha256 big_sur:        "7853c4c1e1edb1781cfe06f62b4bfb99e2b75c19452393594c7834ed97046fba"
     sha256 catalina:       "c4849f6ed0a27363d6b3d3ecb8303887ad8d8e2e7841483cbae8bee3ecae2d4b"
-    sha256 x86_64_linux:   "46115cdf5170522d9ec330253e6ad97c98b10dc75c0b4b3b8fb4978a6c155090"
   end
 
   depends_on "cmake" => :build
@@ -23,17 +21,15 @@ class Wxmaxima < Formula
   depends_on "wxwidgets"
 
   def install
-    mkdir "build-wxm" do
-      system "cmake", "..", "-GNinja", *std_cmake_args
-      system "ninja"
-      system "ninja", "install"
-
-      prefix.install "src/wxMaxima.app" if OS.mac?
-    end
-
+    system "cmake", "-S", ".", "-B", "build-wxm", "-G", "Ninja", *std_cmake_args
+    system "cmake", "--build", "build-wxm"
+    system "cmake", "--install", "build-wxm"
     bash_completion.install "data/wxmaxima"
 
-    bin.write_exec_script "#{prefix}/wxMaxima.app/Contents/MacOS/wxmaxima" if OS.mac?
+    return unless OS.mac?
+
+    prefix.install "build-wxm/src/wxMaxima.app"
+    bin.write_exec_script prefix/"wxMaxima.app/Contents/MacOS/wxmaxima"
   end
 
   def caveats
