@@ -12,12 +12,12 @@ class GitSvn < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7462ebae084fca838e81e26c73d35ba5339eb977b3edf923c3350039b584cf73"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "657ecedffe99cbdcdd14c462009ebb8692ee72c5a9b94bbd4d1f5135d4c59b08"
-    sha256 cellar: :any_skip_relocation, monterey:       "7462ebae084fca838e81e26c73d35ba5339eb977b3edf923c3350039b584cf73"
-    sha256 cellar: :any_skip_relocation, big_sur:        "657ecedffe99cbdcdd14c462009ebb8692ee72c5a9b94bbd4d1f5135d4c59b08"
-    sha256 cellar: :any_skip_relocation, catalina:       "416232f1f967e9ca0c22ce63ce0720a952381a0308ff785821e29d4e0f5b1c48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73d40b8598b71d2c45427faec9a8fc75daec830752f721272577389f7ad8c27e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a54faf3c9f04acdbf422dbb81721fd871b387a8535c8716d2886bc09cc907b3b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c6d0c0edafdf5de860e2dfccd058de644e87020fb06161b2a5736634596c7c7b"
+    sha256 cellar: :any_skip_relocation, monterey:       "a54faf3c9f04acdbf422dbb81721fd871b387a8535c8716d2886bc09cc907b3b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c6d0c0edafdf5de860e2dfccd058de644e87020fb06161b2a5736634596c7c7b"
+    sha256 cellar: :any_skip_relocation, catalina:       "7266ffbab19efcaa9d40a8f3159bf7032c8c2bc99daa26a9cbf183c2a82a24d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "656959c9cb47146837622f05d14027f2cb7eecffae8c32567276984694c29fba"
   end
 
   depends_on "git"
