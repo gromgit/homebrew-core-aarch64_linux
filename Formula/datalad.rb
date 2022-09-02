@@ -8,10 +8,10 @@ class Datalad < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "cc121ccc9050fdb7938a21bf1a480ef7ee0a9ee0ac574b04678013bd9bdc0c75"
-    sha256 cellar: :any,                 big_sur:      "9622708c28f1bbf8f8426ceb49c6055ec66f555ebf900148def5a4e1d0344428"
-    sha256 cellar: :any,                 catalina:     "5693c507b2245a7f75fdcfa44ea241b0f6296ec05eb4a25300675a7973069efc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d2212fdb75a647e6f8ea9bc9471eb19b7b394914aee05ac9e0ea3fbea7483014"
+    sha256 cellar: :any_skip_relocation, monterey:     "6605faad94f70e212b00ff8840ba349d169ace70ed83fd4f4ea1db72d44a7567"
+    sha256 cellar: :any_skip_relocation, big_sur:      "64f67bde2644bd1042de5592a96d2944e9f40d091d8ae043873206db0ea8da7b"
+    sha256 cellar: :any_skip_relocation, catalina:     "da54fc6ade2ac00838fe0deb5f393dde09bad9ff9bdd3a3f2c8734f45ceeb1e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1df661b2f442f08e92410663788a49384362a09bb67f82096e635f114f48d731"
   end
 
   depends_on "rust" => :build # for cryptography
