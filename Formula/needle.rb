@@ -1,9 +1,10 @@
 class Needle < Formula
   desc "Compile-time safe Swift dependency injection framework with real code"
   homepage "https://github.com/uber/needle"
+  # TODO: Check if a GitHub tarball is sufficient here.
   url "https://github.com/uber/needle.git",
-      tag:      "v0.17.2",
-      revision: "6a2d5e25cd3c77ddfa57835e991469db791c4744"
+      tag:      "v0.19.0",
+      revision: "9d15211866bd307c7bfef789fe77ce1e97aeb978"
   license "Apache-2.0"
 
   bottle do
@@ -12,13 +13,22 @@ class Needle < Formula
     sha256 cellar: :any, catalina:      "f45fa77b9e00be408206fc2cf945f41ca3f4661bbb06c8d2aadd015f4d75dfdd"
   end
 
-  depends_on xcode: ["12.2", :build]
+  depends_on xcode: ["13.0", :build] # Swift 5.5+
   depends_on :macos
 
   def install
-    system "make", "install", "BINARY_FOLDER_PREFIX=#{prefix}"
+    # Avoid building a universal binary.
+    swift_build_flags = (buildpath/"Makefile").read[/^SWIFT_BUILD_FLAGS=(.*)$/, 1].split
+    %w[--arch arm64 x86_64].each do |flag|
+      swift_build_flags.delete(flag)
+    end
+
+    system "make", "install", "BINARY_FOLDER_PREFIX=#{prefix}", "SWIFT_BUILD_FLAGS=#{swift_build_flags.join(" ")}"
     bin.install "./Generator/bin/needle"
     libexec.install "./Generator/bin/lib_InternalSwiftSyntaxParser.dylib"
+
+    # lib_InternalSwiftSyntaxParser is taken from Xcode, so it's a universal binary.
+    deuniversalize_machos(libexec/"lib_InternalSwiftSyntaxParser.dylib")
   end
 
   test do
