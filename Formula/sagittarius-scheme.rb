@@ -6,11 +6,10 @@ class SagittariusScheme < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 monterey:     "1300d4bd72c1346dbe1bc97b1c10b77f60ad4661bfd1e7d9a47144094f9d618d"
-    sha256 cellar: :any,                 big_sur:      "23712f37ba7e82eccad3164e823c047b6530d20c016ec3e36e4619d26d7c61c8"
-    sha256 cellar: :any,                 catalina:     "052b33c74e74a5a70c6f2c693263c51e4565eab9efc662b250eec00f2eb26537"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5d717c5e87fd9d42f0d766a5b9bf7cc1076ef6e3a4458bf7aa787d1ae61bd886"
+    sha256 cellar: :any,                 monterey:     "8e484bed19b121d1290f9498965d236422548c350150fce878e30831247b0e49"
+    sha256 cellar: :any,                 big_sur:      "83e532ea9baf7353b69eee3cef275fde3c6deb35333abbf4982fa92a6c40d9bb"
+    sha256 cellar: :any,                 catalina:     "61358c5b04f3fb9acb8752eafb515e1bc6bc1e3054495f974a6376b3dd795249"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1a09b312240733e744a0acbf2257766091c668eed670791f244ee0f492cd0833"
   end
 
   depends_on "cmake" => :build
