@@ -1,8 +1,8 @@
 class Nmap < Formula
   desc "Port scanning utility for large networks"
   homepage "https://nmap.org/"
-  url "https://nmap.org/dist/nmap-7.92.tar.bz2"
-  sha256 "a5479f2f8a6b0b2516767d2f7189c386c1dc858d997167d7ec5cfc798c7571a1"
+  url "https://nmap.org/dist/nmap-7.93.tar.bz2"
+  sha256 "55bcfe4793e25acc96ba4274d8c4228db550b8e8efd72004b38ec55a2dd16651"
   license :cannot_represent
   head "https://svn.nmap.org/nmap/"
 
@@ -35,10 +35,17 @@ class Nmap < Formula
   conflicts_with "ndiff", because: "both install `ndiff` binaries"
 
   def install
+    # Needed for compatibility with `openssl@1.1`.
+    # https://www.openssl.org/docs/manmaster/man7/OPENSSL_API_COMPAT.html
+    # TODO: Remove when resolved upstream, or switching to `openssl@3`.
+    #   https://github.com/nmap/nmap/issues/2516
+    ENV.append_to_cflags "-DOPENSSL_API_COMPAT=10101"
+
     (buildpath/"configure").read.lines.grep(/lua/) do |line|
       lua_minor_version = line[%r{lua/?5\.?(\d+)}, 1]
       next if lua_minor_version.blank?
-      raise "Lua dependency needs updating!" if lua_minor_version.to_i > 3
+
+      odie "Lua dependency needs updating!" if lua_minor_version.to_i > 3
     end
 
     ENV.deparallelize
@@ -57,10 +64,10 @@ class Nmap < Formula
     system "make" # separate steps required otherwise the build fails
     system "make", "install"
 
-    rm_f Dir[bin/"uninstall_*"] # Users should use brew uninstall.
+    bin.glob("uninstall_*").map(&:unlink) # Users should use brew uninstall.
   end
 
   test do
-    system "#{bin}/nmap", "-p80,443", "google.com"
+    system bin/"nmap", "-p80,443", "google.com"
   end
 end
