@@ -8,12 +8,12 @@ class Ijq < Formula
   head "https://git.sr.ht/~gpanders/ijq", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a81009cc8896c8f0e4e3913cfb15c0abec6dc1d6bd7cedbaf6e9e1f282aad14b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c84ae1e5d2a6947754f6ea4c781deb79c1d5f83629cbe7bc739317ca1c258acd"
-    sha256 cellar: :any_skip_relocation, monterey:       "b3e5371d6d94ae47d0db2134e516d4b36e3948e1d07dd96e588d734d0f3db6f1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "103e78eb9bfae3f35e75b285e78919d4aec337e7b652c8a4cd529707b8c34ebe"
-    sha256 cellar: :any_skip_relocation, catalina:       "30cf0caa810fe9122fd9f9c2fa5e0a447eef3fadfc8a1b39c490b6392272497e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "049216e8a10b91e825fb7d50565a6b70b78e6341d19eed93e0c86749d01779a6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9a7ea5d89f9eb6e575d2b4f3a5667364d03fccb1373207e6f6f226544f23a3d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f215c334ffea9e2ddf51319ac5b80a9b0ecab7e1d652ac8b72eb22534a8dae05"
+    sha256 cellar: :any_skip_relocation, monterey:       "47a030fd33f08d4888a73b3ac03135fb8493bfabeaeea13231143393cfb42be3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "16b7b6a8c95d9a8ba5b2f5610438c70b0b139e279910f88e823bb1239e53ed7d"
+    sha256 cellar: :any_skip_relocation, catalina:       "022500c720f8926ae3e758f20c3290d60e0bdd4393ed118dc0c38c140d59cedf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d748a577f085a1c6a7a1ee841c95b4805604f8e42b6531ada40ee82907e89cd0"
   end
 
   depends_on "go" => :build
