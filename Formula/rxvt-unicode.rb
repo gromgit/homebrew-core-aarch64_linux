@@ -12,12 +12,12 @@ class RxvtUnicode < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "3f7bf25606213515d14a794a47fbb9843d7b93a05eebe3c9811e4690964f0d75"
-    sha256 arm64_big_sur:  "323e9de530d90736b2e9696191c63a886b917b366587d0e751e323b2c98357f2"
-    sha256 monterey:       "eebf1bb059ef21b86b5f78068e8d09177a4ef134357561748c24a06e3315b808"
-    sha256 big_sur:        "3b4b6b8748e2a7273c393eb581055acdfcc034c386676d48cc8b2b1ee045bdec"
-    sha256 catalina:       "20124df7ce3f99991a32ac808a055f91ab317b4864b27c87ea650c4178352c84"
-    sha256 x86_64_linux:   "07c529a6fd59c5e8d73341d78ba945cba0f6a885dd0814aa0a0e66c1aa3e13c8"
+    sha256 arm64_monterey: "4ac854e93851fe31407e5c934336b133c4a76a9d90f38fdd60c39fb3ce455b79"
+    sha256 arm64_big_sur:  "fb2e647f7edf6a0afca21b8878bfacaae81d8c763910af3e4e581b194dfe74d8"
+    sha256 monterey:       "019c86e65c76bc79004260602ce5e627c767adb928cf201b85ee9ab12ef13c40"
+    sha256 big_sur:        "e5ca7e455eba32191fe9ee695ab2517f4dce5af02e98564714e2c5af8ada8c5f"
+    sha256 catalina:       "684b8e5786b87ff7bc6b087220f8a82778e75c15eaca521078f24b7d0f6dfee3"
+    sha256 x86_64_linux:   "d89215dc54fa3709cbc4c4f597f5535029a725c3aef49a787270f7631edba5dd"
   end
 
   depends_on "cmake" => :build
