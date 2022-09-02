@@ -6,12 +6,12 @@ class Librem < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e5f8a521da904deffef99314ed36c6c43888a999dfbf465c52dee9cb05452ef6"
-    sha256 cellar: :any,                 arm64_big_sur:  "2200670c86080f78d23c1adb9b1f2229c91dcc94f0f309a7594eaf7304c5d45b"
-    sha256 cellar: :any,                 monterey:       "1454c2f9eba38d761f4f99e45d766bdd30507f6a59a68ba095dc516ff5545e0f"
-    sha256 cellar: :any,                 big_sur:        "4c097ba26f1374bb892d5134661042d8518a57a4b59ec87b5a8328311aaaf7e7"
-    sha256 cellar: :any,                 catalina:       "ec13bba6c8d857c5f06cca994ce4048c97589ebe8943bb1d1f40605199a3c1e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "176e84e3c75d0c4c723f1ea8d980d8694ef18933073142e4b40cba593ec5082a"
+    sha256 cellar: :any,                 arm64_monterey: "7c6902c502a33f9a9bacc022bfe081bc50e8922896b57aa9bd81c091136a4066"
+    sha256 cellar: :any,                 arm64_big_sur:  "e8a6c3bdcc439b49c07f4603b2ee16f1de0f864c2f51344ffafdedfe17753703"
+    sha256 cellar: :any,                 monterey:       "de771bea5ab62f1ced16d90c47a1549aa7491ffd053107b8b77968ecb568f452"
+    sha256 cellar: :any,                 big_sur:        "afbd8866f9bcdd51231c6972cc0693aa2418ea15874797ea9211be94a27528de"
+    sha256 cellar: :any,                 catalina:       "9188c351610c147aac6af685f1c92daa2506bc115a74280b05693d5f10a6cc79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "443de5d51a38df0f387e5c6db80ed4533026e9742a5bf6e927f1f1676c3c8742"
   end
 
   depends_on "libre"
