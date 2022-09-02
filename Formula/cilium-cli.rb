@@ -6,12 +6,12 @@ class CiliumCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "652145fc79817c2e9fbf3a765bdad641e486053ce9cfe4ccda58593350255fc9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "917481b8b08e6d5a2e1b862a9dff719f9f8c3266c878cf724bd2166fc4dd13b6"
-    sha256 cellar: :any_skip_relocation, monterey:       "24101b6f3917e2a8f4cd884d5f0ba0cff7bc6147a49ad75451df733509fab350"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2f95fb377a1adfb5ae46bee3e6db1069c45bed1a0e9167436173884736874a2d"
-    sha256 cellar: :any_skip_relocation, catalina:       "cb7b22f068cfda1c118dcc5e9c110c643bd07510809759ca1291162a3947a035"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "893a2b52622b34bb7254469c2deedf23efaa34ed2a0b1678b8b05ebfa35d8b7e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d56ee17bb64125cdc0b21576bdec3c78bc56430bf865e459f47c0f0a086ba6e2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4090bdf29715d8414c7a26654302f095b22c81827d18eab2c9e81643dece1eb8"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b97794f0db710d193a7adec386297a9b884d70be21e61441fea9b96def9c09c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c0185a941d5ac51e96d55e0e64153cba47ffd20ef1ef16694d08dc87673f7c5c"
+    sha256 cellar: :any_skip_relocation, catalina:       "be41977f31e1dbb4f35ca740c64c1534ad7ce233714805782a008bbe00661257"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47d1791ce90fd04c3ac4d1ad111d816e83e0d4b2730c10a75e387704fee78a27"
   end
 
   depends_on "go" => :build
