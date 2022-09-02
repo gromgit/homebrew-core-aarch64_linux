@@ -6,12 +6,12 @@ class Vitess < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "35e551f0848cc94229ed8c6de897c41abe77be0cf6223bbaab0168265a224238"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8be9fa730390cd0b0eae609b38c8cb5cb514d9082beb0cdd00e7ec9d4a90706f"
-    sha256 cellar: :any_skip_relocation, monterey:       "1d4182ead3e32bc826fd26957a53a45528fa19340844e67bdebb2bb328025016"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e9ea294791e6c8f997ded8aed3291271d437f64c23d2c49066addb09760364fa"
-    sha256 cellar: :any_skip_relocation, catalina:       "560aa762df3042d7e9134945847b7a8a457ed9ebe62b1671760c02aa39181bbb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54cc14edcbf055ecede0cb9743143ceaf6b89fa0e005cfa415e43d0ff4441d11"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0941341f66d3a6080acec1ae051ba41a23eff2920d0b5ea28613010f7944fb3c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e42569bda5970732c90ca421f54dbff1fd0566f62f604c518fdb0c9aa0db9969"
+    sha256 cellar: :any_skip_relocation, monterey:       "874b8f51b421951bed01a7285aafc483dd13d2871cb92a0b96993c2cffe5b294"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7cf46a0e20c4f013a4bf4901da4e3c80ccc596cf9f038cdd1e2cb3ec32a81494"
+    sha256 cellar: :any_skip_relocation, catalina:       "6af3734265dac7fd2ec6b9968a83040a20a393ae2952886628695ad1e5401c1f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61d5ae2c2119d207909bdbbecd04daa992418764fb08db9263e422b689e9a7ae"
   end
 
   # Try to switch to the latest go on the next release
