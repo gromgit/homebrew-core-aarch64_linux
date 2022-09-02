@@ -12,13 +12,12 @@ class Nmap < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "7debf45813bcc5d01562e2191219173e5faf37669790f208068b5a97935c7910"
-    sha256 arm64_big_sur:  "9395c62aa5b48e2dc6ad2f1071080ae14ac38a7a75c2c031208a2c02b67f56d6"
-    sha256 monterey:       "d42ac93fe1e777c3460377ec94992397c32a0ab61a7c98fb54637d3f0442a151"
-    sha256 big_sur:        "4930a59d6546c229c90c7680560822fe2609a7f2d12425d40af4f4fb6e660de9"
-    sha256 catalina:       "c2ab40d041d915b8ef99ab7049931af23d99a44c5a8970aa420bfe3156dee3e9"
-    sha256 x86_64_linux:   "77946dc2f15a7c0dc98587016a1d1961a456ca61079361233455ba8db69a54d5"
+    sha256 arm64_monterey: "fcda26d55da7618f8085ef42ac88e268704d85abdebdd6335885d66d53e481b3"
+    sha256 arm64_big_sur:  "7bb55a3cf90dec4eb58b7cc64ac271423c2399b0326fcf65825eaee980f6fb1b"
+    sha256 monterey:       "48442b1126bd29ff0d1912452ffff383f9569f69fc3dd06d8cebb728ee6c80eb"
+    sha256 big_sur:        "06725befa856ced25c575cf50b3cb87872a0d5bd3b54f2332c239c24fecae634"
+    sha256 catalina:       "6b8c3d04da2a2fc81ac7f228c8791a5f39bf41f2b43845b858a73e14d620ef81"
+    sha256 x86_64_linux:   "6dd2b2fbddd08529dce573560637af486b51796c2e85eb110fcf344c5830f3a8"
   end
 
   depends_on "liblinear"
