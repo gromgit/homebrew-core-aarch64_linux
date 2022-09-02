@@ -5,7 +5,8 @@ class Rfcstrip < Formula
   sha256 "bba42a64535f55bfd1eae0cf0b85f781dacf5f3ce323b16515f32cefff920c6b"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4756e7bca511bbeaeea367e84a845854cd86079ec2d66c6a505b91e7431313a0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "30eac8c00df4eb27fa9c8b6bacf48ec6145e7bad5699832f56a38a4967501ecc"
   end
 
   resource "rfc1149" do
