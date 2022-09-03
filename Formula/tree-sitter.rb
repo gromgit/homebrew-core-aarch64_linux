@@ -3,10 +3,9 @@ require "language/node"
 class TreeSitter < Formula
   desc "Parser generator tool and incremental parsing library"
   homepage "https://tree-sitter.github.io/"
-  url "https://github.com/tree-sitter/tree-sitter/archive/v0.20.6.tar.gz"
-  sha256 "4d37eaef8a402a385998ff9aca3e1043b4a3bba899bceeff27a7178e1165b9de"
+  url "https://github.com/tree-sitter/tree-sitter/archive/v0.20.7.tar.gz"
+  sha256 "b355e968ec2d0241bbd96748e00a9038f83968f85d822ecb9940cbe4c42e182e"
   license "MIT"
-  revision 1
   head "https://github.com/tree-sitter/tree-sitter.git", branch: "master"
 
   bottle do
@@ -21,13 +20,6 @@ class TreeSitter < Formula
   depends_on "emscripten" => [:build, :test]
   depends_on "node" => [:build, :test]
   depends_on "rust" => :build
-
-  # fix build with emscripten 3.1.11
-  # remove in next release
-  patch do
-    url "https://github.com/chenrui333/tree-sitter/commit/9e9462538f2fa30fb8c7a3386c1cb2a8ded3d0eb.patch?full_index=1"
-    sha256 "ce6e2305da20848aa20399c36a170f03ec0a0a7624f695b158403babbe15ee30"
-  end
 
   def install
     system "make", "AMALGAMATED=1"
