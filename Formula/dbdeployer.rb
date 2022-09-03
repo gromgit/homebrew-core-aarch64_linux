@@ -7,12 +7,12 @@ class Dbdeployer < Formula
   head "https://github.com/datacharmer/dbdeployer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6976de8058384a5ca31fc26927c41686a3da4d0180256ba70baab7916ce3c2b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e19707fd9720749daf5fc19d92a52d74f3665f30d5c662433087df4b6904b2e"
-    sha256 cellar: :any_skip_relocation, monterey:       "e140949974c93178df3fbed166f1467853bd3dd9d287f5aa9753079ca3909f31"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1afb2d60b7e418a356855b9f8ef306db97729cf336c174c1b72eba18b8adf0d"
-    sha256 cellar: :any_skip_relocation, catalina:       "99665abd33ae2a5c4c7c0aca3311f8b27c1aae542dbec7bd13b86759292b5183"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b36735f2f67cbc4962ba8cfa3d7583ae6ee404249c97c29c6c0fe9414edd4fa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f78f872f16e5b79b69ece7ff73eccd7394e1a2cf234a242fa3f753b0028c798"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "781895af0c3ae9e496073f0a69e7d461a9ffffe75a395e8ef99c053315bf17e0"
+    sha256 cellar: :any_skip_relocation, monterey:       "5bba9dc7589acd9c6fce3a95537c79cd335a334e763a4ea8a111ad8d424ed313"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e0a55f65f4ee4bc4b62d525f933845c9794d4124a974eb0db7df3b0f6c4b9aa8"
+    sha256 cellar: :any_skip_relocation, catalina:       "fbde301245fe963d7ef5b9daef6518e4e6fa9e93b17b5ff01135382d66634d17"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8db6ff5fbad2a4c6bbab877970ed81ea7ed86ade8eed5ec57b3a56ce6b01840"
   end
 
   depends_on "go" => :build
