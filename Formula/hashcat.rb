@@ -14,12 +14,12 @@ class Hashcat < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d3ad60ae56bebbf00bd3717694899fd71a5f722cb848e1c555da7da1a4a23877"
-    sha256 arm64_big_sur:  "b2588f27613a40648587cd20eea4e1c91cdb5fb30a5b9fde7bd768862bb393c4"
-    sha256 monterey:       "53fd4349f2026bea928aa771a355ef003d15e58a04fc2f3d1516148e9b13b8b2"
-    sha256 big_sur:        "241b1fce035f7aec87d216733c6c317345e17acfd423b5b991c5b27a18dde435"
-    sha256 catalina:       "ce02a7f928c64a0ea397d60272ea0156f49ea1012c0bcf49608f53d7f0df0473"
-    sha256 x86_64_linux:   "5fef95ceec066e31d3fa137827c1338fc728aa1bfe6059e1978797bb19dcd477"
+    sha256 arm64_monterey: "3537c38c984f8c0856e18a9c5ec7fd96790d121f71a0ebafd206abe8fc770043"
+    sha256 arm64_big_sur:  "d2eba35d2cf35657998adbe73dcda9ce607d9c8d30147736495ff40bba311e35"
+    sha256 monterey:       "c1f6dc856692c00d1b70e943a11f61e9e25bcaf2187628b2ad9b990d40be7417"
+    sha256 big_sur:        "bda8f3382145b5e91dea67605398d55f89c85cf2253975cb918b27432e1b23aa"
+    sha256 catalina:       "543c7620bc617933bfc2f2dea6eff0d408b0a6e4c12bd71f213ff7af8b0b434a"
+    sha256 x86_64_linux:   "bc09b5c303b00ae131939b048ebd80f63c56213e85e662248205c55779cd286a"
   end
 
   depends_on "gnu-sed" => :build
