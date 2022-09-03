@@ -6,12 +6,12 @@ class Samtools < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7a69d8838724a151eaff8e8fe14f5f97caf854f5de52d67d3e4fa391380aaec3"
-    sha256 cellar: :any,                 arm64_big_sur:  "cc0d0126599d102e81a5c033576c8c1b8d59779b49a61e24a999a618f9e3ca64"
-    sha256 cellar: :any,                 monterey:       "d35d8aad87428d47a6926226a5032a0722dba57ccd4e29b6a2614d54f43d00a4"
-    sha256 cellar: :any,                 big_sur:        "d819e80d01c567a2209ef9f8dfc70babf6307d312af725d287095474fabd405c"
-    sha256 cellar: :any,                 catalina:       "4ce2b9ddf8d768b64be522e2712f7ba1d9387d9ee1d7de7839347065ebd7c7a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6a4f449d97437988b9b99e2e0c76e394550566b7cd6041e55050153943fa592"
+    sha256 cellar: :any,                 arm64_monterey: "38860f7c351411db8e3eb78b23206330750d88bafb7cdc2e75d7d3a60e437757"
+    sha256 cellar: :any,                 arm64_big_sur:  "84ac40b23832a34b8f6a92dee46d0ab45bdd30d5ec0363acf568c9ead7f7567e"
+    sha256 cellar: :any,                 monterey:       "867f9b877cdcaa6b463add1a9b41eda14f20cf66ba4fe73ce00c405e1310b081"
+    sha256 cellar: :any,                 big_sur:        "5c49374e4eb83be2be7e6254086c66b4e1c5d9ad270938f8a45f0bdde1f32346"
+    sha256 cellar: :any,                 catalina:       "298a55bff49d78150c34c540254a36eb8474ae7074a96a6ade1ee59be62777a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ca3c73d28cd214b8595eef79f72c7c0069009e126eefa099e584684a9ddd82e"
   end
 
   depends_on "htslib"
