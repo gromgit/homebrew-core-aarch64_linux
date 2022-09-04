@@ -6,12 +6,12 @@ class Nvc < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "b2371ba0d077946c69d5c14c8314d2a63683c94257aff81d9c1c5997d5f4e329"
-    sha256 arm64_big_sur:  "e3defcbfdbb1793c8d65eedf1e1112f970fa6342a3087bd87658be0b73f2d3a8"
-    sha256 monterey:       "b463ff4781f3bd1268e2188f78ebc808198e85bc80404287f230384ee00787ed"
-    sha256 big_sur:        "322252e7cdad7ff41a870942d04c5831c9db34f26446fa1b5bfe32208370c62a"
-    sha256 catalina:       "29b35a7c9107639a318c57220d789c55cbe149f34a233997d34e05d60ed46ee2"
-    sha256 x86_64_linux:   "b5bae3a503a28b18228332204768d41fd9e6afebfa5a032cb8978b7581ec37c5"
+    sha256 arm64_monterey: "47f4565675ba508d16b63a1bf59765ace9a92cdd2efbe78e2efea097b5787b63"
+    sha256 arm64_big_sur:  "fe26f9e3111fbe819388721317e00916a03595a4e5b4c04341e13b0eee5e016c"
+    sha256 monterey:       "83748aae1ad1bf2b464baf7d0b0ff14e78cfd19d4a4d05e835d2b3dae4521c9a"
+    sha256 big_sur:        "a1337d00b56e1c7ff0e6e68ada6118995f63d59d38771ddd3e81f409ebd44d07"
+    sha256 catalina:       "0b9d4d69a5846df688cf2952b0148d0fdd17959846c6bbe0de8bf81b73cd0dba"
+    sha256 x86_64_linux:   "f8cdac2e2da7c03f212718cf184aa627eceb2113dea1d02a6b6f1c1a4aa49df1"
   end
 
   head do
