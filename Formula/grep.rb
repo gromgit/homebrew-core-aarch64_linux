@@ -8,12 +8,12 @@ class Grep < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "19f74ff07a70ef50f90ce31a4f02967146469a94c2a3a4136221fc770a4a2e68"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cc76d72561e72794f61057e4cc0328f623a5daebfa38b8380ed24aae66e25de3"
-    sha256 cellar: :any_skip_relocation, monterey:       "bc7030cf18110af5f5fc6b53bd55a0f71330c1ee69ebf4624232d26b87ca90c1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f73e2394802d0f7cd969207947b1b86d6b9e555e87260bfc2be0be141614c6fc"
-    sha256 cellar: :any_skip_relocation, catalina:       "4ff6c0cb194f1358a94f694f7025f98c04ca64ec517f64994bd2b9b3e7560a4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1340ba7891712b5d050abdd12de4dd8646953656d693b5080045872d3c2e5656"
+    sha256 cellar: :any,                 arm64_monterey: "2a97d1431a8c367299b3ec1a62836136ad0474f78bd515f29b2210cc85591a66"
+    sha256 cellar: :any,                 arm64_big_sur:  "b23c8e00f85e4a10c1827619248a117ab2df3bd1503b5191c4467533fd299bec"
+    sha256 cellar: :any,                 monterey:       "5b13dfd3339908dedfb233c3ba77a45fff7f55569b9252979349eb7fb0a45b5a"
+    sha256 cellar: :any,                 big_sur:        "f3b4b34263e59e4dfe427381ddecb820189f8336c464d97e5ab4e8b624d65484"
+    sha256 cellar: :any,                 catalina:       "bbb952d77089ccca022c170c295b48dea9d5afc90c3da65ee447adb04593c2c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f771443ddfadac7158cd0bb2f4f1e682a2cc9b69e99c8ed0f77e41f546838067"
   end
 
   depends_on "pkg-config" => :build
