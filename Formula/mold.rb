@@ -1,28 +1,10 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
+  url "https://github.com/rui314/mold/archive/v1.4.2.tar.gz"
+  sha256 "47e6c48d20f49e5b47dfb8197dd9ffcb11a8833d614f7a03bd29741c658a69cd"
   license "AGPL-3.0-only"
   head "https://github.com/rui314/mold.git", branch: "main"
-
-  # Remove `stable` block and `python` dep at next release.
-  stable do
-    url "https://github.com/rui314/mold/archive/v1.4.1.tar.gz"
-    sha256 "394036d299c50f936ff77ce9c6cf44a5b24bfcabf65ae7db9679f89c11a70b3f"
-
-    # Use a portable shebang in `update-git-hash.py`.
-    # https://github.com/rui314/mold/pull/637
-    # Remove at next release.
-    patch do
-      url "https://github.com/rui314/mold/commit/dea48143db46e759682dbd12ae5dd51591056a45.patch?full_index=1"
-      sha256 "831a5170544b02a01d9b31728a4c92af833993e35fa83fe675495f46affb3119"
-    end
-
-    # Fix installation of `mold-wrapper.so` on Linux. Remove at next release.
-    patch do
-      url "https://github.com/rui314/mold/commit/9c61fc648d52d93ca2c04241c202ebfa8a017b0c.patch?full_index=1"
-      sha256 "4c7f67423aea6058aabaff60bde52e2a48d8951ac3204c2721ddcd559180ff6c"
-    end
-  end
 
   bottle do
     sha256 cellar: :any, arm64_monterey: "1769f0f31daaa8c9001f5a3926e4c5dcc304e22e9560e9c22984677538e14b65"
@@ -35,9 +17,6 @@ class Mold < Formula
 
   depends_on "cmake" => :build
   depends_on "tbb"
-  # FIXME: Remove at next release.
-  # https://github.com/rui314/mold/issues/636
-  uses_from_macos "python" => :build, since: :catalina # needed to run update-git-hash.py
   uses_from_macos "zlib"
 
   on_macos do
@@ -80,8 +59,9 @@ class Mold < Formula
 
     inreplace buildpath.glob("test/macho/*.sh"), "./ld64", bin/"ld64.mold", false
     inreplace buildpath.glob("test/elf/*.sh") do |s|
-      s.gsub!(%r{(\.|`pwd`)/mold }, "#{bin}/mold ", false)
       s.gsub!(%r{(`pwd`/)?mold-wrapper}, lib/"mold/mold-wrapper", false)
+      s.gsub!(%r{(\.|`pwd`)/mold}, bin/"mold", false)
+      s.gsub!(/-B[^\s]+/, "-B#{libexec}/mold", false)
     end
     pkgshare.install "test"
   end
@@ -105,16 +85,11 @@ class Mold < Formula
 
     system ENV.cc, linker_flag, "test.c"
     system "./a.out"
-    # Lots of tests fail on ARM Big Sur for some reason.
-    return if MacOS.version == :big_sur && Hardware::CPU.arm?
+    # Tests use `--ld-path`, which is not supported on old versions of Apple Clang.
+    return if OS.mac? && MacOS.version < :big_sur
 
     if OS.mac?
       cp_r pkgshare/"test", testpath
-      # Remove some failing tests.
-      untested = %w[headerpad* pagezero-size basic response-file]
-      homebrew_clang = Utils.safe_popen_read("clang", "--version").include?("Homebrew")
-      untested << "syslibroot" if homebrew_clang
-      testpath.glob("test/macho/{#{untested.join(",")}}.sh").map(&:unlink)
       testpath.glob("test/macho/*.sh").each { |t| system t }
     else
       system bin/"mold", "-run", ENV.cc, "test.c", "-o", "test"
