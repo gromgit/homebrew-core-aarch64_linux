@@ -7,12 +7,12 @@ class Gsasl < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "dbe49591e9788dc2c44090bbae030d3541d527d1245eb739f213b16a2e04ffba"
-    sha256 cellar: :any, arm64_big_sur:  "b9ed09d62ce6512a251f0f2854ea8b9ca1ffa55dc60295d734aa3b6657067960"
-    sha256 cellar: :any, monterey:       "455b3d081fdd6975bb912c0e98c0aad7847e832d290257746a2877d77044fafc"
-    sha256 cellar: :any, big_sur:        "e227dc44fb334144a7227819b63b2ca3b874ef3c65a1c42baece683769a50bc5"
-    sha256 cellar: :any, catalina:       "bdafb4164a5d387abf68523afae178d0646624002f1df628c1a20dd27f82d282"
-    sha256               x86_64_linux:   "5da4b3ddd5711f42eaf0fd27278489408122c3896337f8bec1a38fdd95344675"
+    sha256 cellar: :any, arm64_monterey: "126a0ded684a9349c873c37caa3d36779a9389891ad50fe8ff042add39d64374"
+    sha256 cellar: :any, arm64_big_sur:  "de5f7a8910fbc88acdde0fa7513a86b492a5a6bbb9ab05934d690a59ac17a90b"
+    sha256 cellar: :any, monterey:       "bee461c1291a0341f1a02df6daab52ea23eccf1f5aeed77e0ec846a5252be02c"
+    sha256 cellar: :any, big_sur:        "06238f587cee9d327614299a30577b01c64c49a037754c893ff05146fc3ad167"
+    sha256 cellar: :any, catalina:       "2b6cad9f39e375aa026c2b7b4bbe774a4c6cd6cd5319ae8500111000f85e3575"
+    sha256               x86_64_linux:   "2ad19aa5ffdcf833602a2761b40492be8cfed8fb185713eaaa39c4b35d8cd68f"
   end
 
   depends_on "libgcrypt"
