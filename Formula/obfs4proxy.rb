@@ -11,12 +11,12 @@ class Obfs4proxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed1aa9be83a50078397b3f8197b993edb9ad483016cbca4c48a763c36422b3b2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "91c4ac96b8887773ee92127f0e2bb106241da8a772dc4b65127f1934ac7c0079"
-    sha256 cellar: :any_skip_relocation, monterey:       "c2b8c65b95e87e92cd42b0f9d7ef9de95ed916952ea077ef383fa77d6f0e1b89"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cc9ff421b761f41bb71fa9e0a6836ed2e53221220cd27db52b3fa17931217264"
-    sha256 cellar: :any_skip_relocation, catalina:       "14ca207dcd1c53cce9c0586a731b79fc79259af386765e5405ba2451f892b5b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fdac3ecf99f7e09533e4b78427bd23610225bd13cc363fbd5d49004db9c371d5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "95285e769376c5e715cafbb68aacffc785765a638212d9d4bbfef593d65b42cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ac853ab274e5754ee091c84217be2618d4381200ecef0f3b1a0c0a3845dcc31d"
+    sha256 cellar: :any_skip_relocation, monterey:       "54d52bb6d65f47e8076c15a38f07e5b3e0f9545944ea627960ce2037913723b1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b2015fe28393b6794fc18d8090732ce733d14c9b331fd0f8f123eeb87760bbc8"
+    sha256 cellar: :any_skip_relocation, catalina:       "dcafd8b0d2cbcd4f22ccea0761a532220d40af53c95164173d7ce3c25331ecd4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae4f95197e4ffd99a2a8e43f674eea3087cd43bbbe4a5ea38a396c32e3a97bb1"
   end
 
   depends_on "go" => :build
