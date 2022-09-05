@@ -8,12 +8,12 @@ class Volk < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "ae6e2c945311f017392c7548c324be5125961871f3cb45a4a35e35691bc71452"
-    sha256 arm64_big_sur:  "092d71d862d5ea0e280ed4054b5518bb9dc3abe811b9fdb761c963415c1a58a3"
-    sha256 monterey:       "dbe656e0a904327315768de793ad217e037aca3c923a30690bc60a397b995aa9"
-    sha256 big_sur:        "07e1f824ce18879911add5bf1daa7ad56a46acb287d537bffda7e0f2124887ae"
-    sha256 catalina:       "1af0e5dfda38f5e784aec81108adde59be60c681c95c5ebba467ea5d08d70b6c"
-    sha256 x86_64_linux:   "5258900d6945fbad99afd6d4382ecead141bcd728b32a5fc6521dfffa974131e"
+    sha256 arm64_monterey: "da9599f4d5011bd2b77442d72e2310114da8333bb50199ba6cb250ff4004c0b7"
+    sha256 arm64_big_sur:  "aaa8e8718a34c2c0f63fae59451f819ed2b05fd236c6030a3ee9ea097d92eaad"
+    sha256 monterey:       "7bc78a7916cca7a07c8465566a7d44d5e6d6ba2d458e6f93939960c0ea1c8846"
+    sha256 big_sur:        "216eaf5b947e2c67bd35ad5775cc6b62c917937829e76d76234d7ae986f59748"
+    sha256 catalina:       "dcb073b744df9431a99d0ef1c9fa3662d9788497b9253a2c11433e75af61a14c"
+    sha256 x86_64_linux:   "67a28b60dce85baaac4a4d750fda3ae329918ee65e2f9f6086d891648bef050d"
   end
 
   depends_on "cmake" => :build
