@@ -8,12 +8,12 @@ class Bazelisk < Formula
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4d574d5392f3591846aae824ee7d2ee5a20fb3d1feee371967bffece27e2b18f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "012894f14f31ed70a3db288f52ec3b2c1f20533d13373171b874ce5579e6fcc6"
-    sha256 cellar: :any_skip_relocation, monterey:       "d59c4064e0af2704a4d8eed3c42d13510973b784aa1812671e5a990e286ce8b2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b2f522e9a8a6343ec60148071a13c00a4eb6c4ab45ba7f0285026e28744bac8a"
-    sha256 cellar: :any_skip_relocation, catalina:       "181319801ff905d2a5bbc6b6c57ac291c043e9df838332015f214eee94927410"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c9738e2a1911db7218eb8f52ba6e5e949d3bdfa402de96c0dd15681b8c34b10"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "29c4d5f28182b08e6916f9c468b4c267bfe33b267235019613b8ea18813ea61f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f77bcf9323361986313e425d16b143df8388704ffdd5bd7506077f16a52ed7f7"
+    sha256 cellar: :any_skip_relocation, monterey:       "af1d136e99a61508604cb3659a6edffd289d8d6f7d51443059ad7f33c2daed8c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8ee212e276d0ebb578ee0e92efa3c639291837a81641b45ef537b3a74091baf1"
+    sha256 cellar: :any_skip_relocation, catalina:       "245ff17db871117a2dfa0e5f43530b209de659fd540be057458d3cefc24414d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "118d389afc38c568ebfe5b4b15db966170f8caa783216ed7d7172b92fc9de9c7"
   end
 
   depends_on "go" => :build
