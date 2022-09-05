@@ -6,12 +6,12 @@ class Libofx < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "8f7250faec67d50542f6f2cb045411b184ea422d36c4c6a1376d663cca3905ac"
-    sha256 arm64_big_sur:  "9fefe346a497717fd525530bf249796b796a7926ce8bd263d8c01c6e0cc08e8f"
-    sha256 monterey:       "8f8f85bc670a1e5c17114f5b49ff8f5fa0ba97d95ac00249fee652d46fadb55f"
-    sha256 big_sur:        "e4feea6f79cc945d1a62838655133c6fcd26e82fb9db49c2a12e94e2ec84b529"
-    sha256 catalina:       "b97732a6d64cecf91e711d3ce1d6539b4678ef57c4cbd08d51551bd869593b2c"
-    sha256 x86_64_linux:   "8cbdc7e82d067c3ee16993c3741cee5a84deb0621f9c5a28ab55bb260dc6c4f9"
+    sha256 arm64_monterey: "9e52fd668e692f42890245b779db4f3a0c20aa0f6db3b7e91564403d48dbb3b4"
+    sha256 arm64_big_sur:  "41bcb495cfa95ecf60a0b95e399e6909eb0f269ffc47296fb7829f556b2c527d"
+    sha256 monterey:       "e402ebeec4d7163e2d2df048bd7606c55496deabf6b38e654cab1216371f1dca"
+    sha256 big_sur:        "cf015dd1e3c074be5f9e33c74f821c12f6f81caa4e318b4d8eb0a746b768d95d"
+    sha256 catalina:       "8290d086df46116172032bfd5baae4c687a290d43be7af293178ffac7b3d5d62"
+    sha256 x86_64_linux:   "45974346ba1d9b017e20bdf0944de0813bc7498cca1fc692470d519c3c456995"
   end
 
   head do
