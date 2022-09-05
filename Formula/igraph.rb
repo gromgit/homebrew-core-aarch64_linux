@@ -1,8 +1,8 @@
 class Igraph < Formula
   desc "Network analysis package"
   homepage "https://igraph.org/"
-  url "https://github.com/igraph/igraph/releases/download/0.9.10/igraph-0.9.10.tar.gz"
-  sha256 "3e10eb2e0588bf6a2e1e730fb1a685f7591cbe589326f4ac1f5bb45b36664dbe"
+  url "https://github.com/igraph/igraph/releases/download/0.10.0/igraph-0.10.0.tar.gz"
+  sha256 "62e3c9e51ac5b0f1871142aac23956f3a6a337fee980bf5474bd4ac3d76e1a68"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -62,13 +62,13 @@ class Igraph < Formula
         igraph_t graph;
         igraph_rng_seed(igraph_rng_default(), 42);
         igraph_erdos_renyi_game(&graph, IGRAPH_ERDOS_RENYI_GNP, 1000, 5.0/1000, IGRAPH_UNDIRECTED, IGRAPH_NO_LOOPS);
-        igraph_diameter(&graph, &diameter, 0, 0, 0, IGRAPH_UNDIRECTED, 1);
+        igraph_diameter(&graph, &diameter, 0, 0, 0, 0, IGRAPH_UNDIRECTED, 1);
         printf("Diameter = %f\\n", (double) diameter);
         igraph_destroy(&graph);
       }
     EOS
     system ENV.cc, "test.c", "-I#{include}/igraph", "-L#{lib}",
                    "-ligraph", "-lm", "-o", "test"
-    assert_match "Diameter = 9", shell_output("./test")
+    assert_match "Diameter = 8", shell_output("./test")
   end
 end
