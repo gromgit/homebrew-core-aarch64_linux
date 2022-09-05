@@ -6,6 +6,10 @@ class C < Formula
   license "MIT"
   head "https://github.com/ryanmjacobs/c.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "61a07ffb8d1f341bf995e6aae382b6053d2cb8ba7864c02d6832e988f3df795f"
+  end
+
   def install
     bin.install "c"
   end
