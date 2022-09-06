@@ -6,8 +6,8 @@ class Julia < Formula
 
   stable do
     # Use the `-full` tarball to avoid having to download during the build.
-    url "https://github.com/JuliaLang/julia/releases/download/v1.8.0/julia-1.8.0-full.tar.gz"
-    sha256 "fe278b2e8d59bb60abfd64cfad4074e23ee0353c26615423d70a5085de4124e1"
+    url "https://github.com/JuliaLang/julia/releases/download/v1.8.1/julia-1.8.1-full.tar.gz"
+    sha256 "31e4655f4b377e73d6f583c539d0221ed7b480a3ea091833d0005316185c5b61"
 
     # Fix compatibility with LibGit2 1.4.0+
     patch do
@@ -109,31 +109,18 @@ class Julia < Formula
     args << "JULIA_CPU_TARGET=#{cpu_targets.join(";")}" if build.stable?
     args << "TAGGED_RELEASE_BANNER=Built by #{tap.user} (v#{pkg_version})"
 
-    # Prepare directories we install things into for the build
-    (buildpath/"usr/lib").mkpath
-    (buildpath/"usr/lib/julia").mkpath
-    (buildpath/"usr/share/julia").mkpath
-
     # Help Julia find keg-only dependencies
     deps.map(&:to_formula).select(&:keg_only?).map(&:opt_lib).each do |libdir|
       ENV.append "LDFLAGS", "-Wl,-rpath,#{libdir}"
-
-      next unless OS.linux?
-
-      libdir.glob(shared_library("*")) do |so|
-        cp so, buildpath/"usr/lib"
-        cp so, buildpath/"usr/lib/julia"
-        chmod "u+w", [buildpath/"usr/lib"/so.basename, buildpath/"usr/lib/julia"/so.basename]
-      end
     end
 
     gcc = Formula["gcc"]
-    gcclibdir = gcc.opt_lib/"gcc"/gcc.any_installed_version.major
+    gcclibdir = gcc.opt_lib/"gcc/current"
     if OS.mac?
       ENV.append "LDFLAGS", "-Wl,-rpath,#{gcclibdir}"
       # List these two last, since we want keg-only libraries to be found first
       ENV.append "LDFLAGS", "-Wl,-rpath,#{HOMEBREW_PREFIX}/lib"
-      ENV.append "LDFLAGS", "-Wl,-rpath,/usr/lib"
+      ENV.append "LDFLAGS", "-Wl,-rpath,/usr/lib" # Needed to find macOS zlib.
     else
       ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}"
       ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/julia"
@@ -149,7 +136,7 @@ class Julia < Formula
     end
 
     # Make Julia use a CA cert from `ca-certificates`
-    cp Formula["ca-certificates"].pkgetc/"cert.pem", buildpath/"usr/share/julia"
+    (buildpath/"usr/share/julia").install_symlink Formula["ca-certificates"].pkgetc/"cert.pem"
 
     system "make", *args, "install"
 
@@ -215,11 +202,7 @@ class Julia < Formula
                         .map(&:basename)
                         .map(&:to_s)
                         .reject do |name|
-                          next true if name.start_with? "sys"
-                          next true if name.start_with? "libjulia-internal"
-                          next true if name.start_with? "libccalltest"
-
-                          false
+                          name.start_with?("sys", "libjulia-internal", "libccalltest")
                         end
 
     (testpath/"library_test.jl").write <<~EOS
