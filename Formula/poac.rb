@@ -8,12 +8,12 @@ class Poac < Formula
   head "https://github.com/poacpm/poac.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9f0db4443983c815b98429e668f8d7d0fdf143876eb57e9a16bc769cb7b3f797"
-    sha256 cellar: :any,                 arm64_big_sur:  "b6c74adbd8a5dd5773f46aeda390db16f48e3a48112dad1af5707809ece6f556"
-    sha256 cellar: :any,                 monterey:       "88d05562ee26ed90a2958b2f957d83661c8231e05019469001d958ba79032c7e"
-    sha256 cellar: :any,                 big_sur:        "c4b414c7a0634f2e5cd605c154d714e1a70a63b34dcf7f1de1ae86b816e188af"
-    sha256 cellar: :any,                 catalina:       "4a3d7a94885150f390acac3f709fadf55a9996e44554cc10f0d9f6f253abad6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c77c222c0d87bf25bdc18930b7a4ebb01d718eab06f2a1047bef7a11f85c3bb0"
+    sha256 cellar: :any,                 arm64_monterey: "172b32c97477417429b1bbb52f26982702bd8f9b4e170a64557302d365927b94"
+    sha256 cellar: :any,                 arm64_big_sur:  "ac048ae45cf0aaa3dc2d62cbbdaa157510184fb2001440f95f924f6ba58fd45b"
+    sha256 cellar: :any,                 monterey:       "836ff1bb37c3b927e99c5e50f22333e1c166e150aba7843d38751746b1bfcec7"
+    sha256 cellar: :any,                 big_sur:        "478f8405d11592d81e6dac54e465bcebadd9f4a6cec94396917ae9303d536436"
+    sha256 cellar: :any,                 catalina:       "33c8cd587f69f1fa577aafc10fc7bb537eca3c7728e1659fe26a553de2d34687"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1636e55ef9142ed54a1bee793b8ab814b16f992d5ddeb0bc0a7779d45cdc0dbf"
   end
 
   depends_on "cmake" => :build
