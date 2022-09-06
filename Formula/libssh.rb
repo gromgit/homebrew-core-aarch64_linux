@@ -7,12 +7,12 @@ class Libssh < Formula
   head "https://git.libssh.org/projects/libssh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8c2380956d61bf6828e25252ca7e3a48369d38009ab1d64c763be0353333bb71"
-    sha256 cellar: :any,                 arm64_big_sur:  "6aa3355f54c60adbca9c907847d9f5b4fbc9ca159f37134a04654bf000d6faa5"
-    sha256 cellar: :any,                 monterey:       "3128ca5096b1a1fabc6a6dbfeaa937ba72fe5bc41cfe94cb07c597641280a305"
-    sha256 cellar: :any,                 big_sur:        "4a0fc0bad5938696f8d6aca28461c65ec3f3025129cceb499913ff1318ea7470"
-    sha256 cellar: :any,                 catalina:       "6d20e7f1ad8050e3190240b769512c74f140e3cb79ad4d36b83a467434bb2aca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46af6cb9b5476cac086abd815aa24d6b5404678a053abc3348346501b1f1854f"
+    sha256 cellar: :any,                 arm64_monterey: "d267476dae9acc87a0ce409bddc289719f05f8c36c13ff2e0e89111552176107"
+    sha256 cellar: :any,                 arm64_big_sur:  "c5a7c1b78b7cd551910d0252061336701fb5f8a9e5e298dbc5213cf469e98300"
+    sha256 cellar: :any,                 monterey:       "bb2b352265ad303a481e3a209c9ac94a9d77e2e0bb338c272a0efcaf086328d0"
+    sha256 cellar: :any,                 big_sur:        "c200671622e618c3c74973089b6df4d45c3df02e410c9d69136ce5d2ceb56f46"
+    sha256 cellar: :any,                 catalina:       "d367597bfaa35eb12b5f955ed0b18604e72b7359ef516537f2518f2357c769ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "140ff80136378bf2ee57b3d92ff93eab794f2bf02e90450147323d51fd699741"
   end
 
   depends_on "cmake" => :build
