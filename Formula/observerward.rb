@@ -6,12 +6,12 @@ class Observerward < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4310a01bc54a2893ee99f85dcf27abfe5ad2eb3501295d62f80166f32dd0f0a5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "574082e5bb6705ce929f2dea540104b89654f3c1ff9907b08baed87cb4463cc0"
-    sha256 cellar: :any_skip_relocation, monterey:       "8eeddd95d28a3ed6c4d3bb378c02363fe4fa7894a7ea2dd2fb4cf7be065c7ec3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c8aff746fc6438be586bcc8352856dfc6abb95b66a2d1869589e22ad1968a65"
-    sha256 cellar: :any_skip_relocation, catalina:       "b97a4faef14b45f27218a1f4a371e7d0994f8e35e1043220abaa2487c00716a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a902074c66b9b1f6be9b2063bf51d3e5b434659a36e16331ccfef94acb24b3fe"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "836c84e485eedba1d490e01a93bdc85f950726cd06f8f26e8a2ab1ea8b1fe119"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4553443818834c718c51cb87209e35ecfbd8b87e7330384d02167320a0e4cf9c"
+    sha256 cellar: :any_skip_relocation, monterey:       "d750842037ca841a11c76652dd4df54a6b3d979af7d16f296ef52eda9b896661"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3a9bf3fc2d4c840e5b2a98ea0089ac97ed96220f0c80d4c899fa550c6c3ea2e1"
+    sha256 cellar: :any_skip_relocation, catalina:       "48d825f7179beed39599370307de30c76ce2fe32eb5b8ab8fa7af9fb179ede19"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7a5bd8abcae89d19a137bf08fb57338c16681f2e9641e1b1e7fae148664aa69"
   end
 
   depends_on "rust" => :build
