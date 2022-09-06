@@ -8,12 +8,12 @@ class Apidoc < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5d356018c90d6077128ee94005504e0a2ec1f30a916c4831d8754d16b34e71b6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5d356018c90d6077128ee94005504e0a2ec1f30a916c4831d8754d16b34e71b6"
-    sha256 cellar: :any_skip_relocation, monterey:       "6a27d70d89e4ba41f4e07565b561b80cae8524562ed05a35577817ce31ded4e0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6a27d70d89e4ba41f4e07565b561b80cae8524562ed05a35577817ce31ded4e0"
-    sha256 cellar: :any_skip_relocation, catalina:       "6a27d70d89e4ba41f4e07565b561b80cae8524562ed05a35577817ce31ded4e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8bf3ad951c38fc9e40c4908579293fea187094222c1ac7dd94b48972b9896820"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "274334eb704290224d7af282ea2b7bbeb9b91e94ce6da3ef803fd9440acb7e98"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "274334eb704290224d7af282ea2b7bbeb9b91e94ce6da3ef803fd9440acb7e98"
+    sha256 cellar: :any_skip_relocation, monterey:       "ffcb3e06b8873fa7d64ae1b07395d9fdbf24d24c0a03f0dd76440c571ce67600"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ffcb3e06b8873fa7d64ae1b07395d9fdbf24d24c0a03f0dd76440c571ce67600"
+    sha256 cellar: :any_skip_relocation, catalina:       "ffcb3e06b8873fa7d64ae1b07395d9fdbf24d24c0a03f0dd76440c571ce67600"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "323628a8c237a9f56391a898977a9c2b0fa47c4830ababef95b9cb2fe9267786"
   end
 
   depends_on "node"
