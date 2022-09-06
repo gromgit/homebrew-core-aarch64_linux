@@ -7,13 +7,12 @@ class GnuUnits < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "ff23e0b56f0d894c43fbdf4752045b2ff355953e23f7074218fec7d03b3bf98b"
-    sha256 arm64_big_sur:  "843af59e54203a4235dd3522d10fa7d5b6aad5e7326b3ef858c35df7e3e35b84"
-    sha256 monterey:       "4f06e478e37881dd36a7526d054b02694d1d487ad91248832c25a8cd727c1aa8"
-    sha256 big_sur:        "67c4941efc8a2b0b2b76193f28a83381cea01b74a2e981fb51222cc87e497aca"
-    sha256 catalina:       "9a3735d1c7a52c9c4a1e2f81e1b0219a2621c3d32be663a085c5a1c48299a6d5"
-    sha256 mojave:         "720dc5aea47a82932ca0cb33b4a45ec3b4ac5c7910274c0dc925a371493f3b32"
-    sha256 x86_64_linux:   "d5a3a5af1eeb39c44a19c10af79f557cc926a686753674c42424365eb4f6cc1c"
+    sha256 arm64_monterey: "642c474a2809e0d9db1d0db76e37f02913da673cfc4fdc337d3b4f4412dd9058"
+    sha256 arm64_big_sur:  "c7a080c4aba8efa918476470972561d4a8e3ead5d808f02fcbf41c50226d5602"
+    sha256 monterey:       "07de02b9e3aa4e1dae47247a30a29c4e8b09013778d6efd040a0774136996a75"
+    sha256 big_sur:        "ed207519d9523dffa34a8000d8d40f2488a439c29527a07dd0d00a29aa093b3c"
+    sha256 catalina:       "fb2ec95d8a26caf1a11accecc6b93f825ebe07c098b249a876e257a066b7f836"
+    sha256 x86_64_linux:   "86b47abf6076ba0dfbbc413eb6cb6031636d097e276fb8526d3cb62227bfd8ea"
   end
 
   depends_on "readline"
