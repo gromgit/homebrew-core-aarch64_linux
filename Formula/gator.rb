@@ -6,6 +6,15 @@ class Gator < Formula
   license "Apache-2.0"
   head "https://github.com/open-policy-agent/gatekeeper.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9ef490b51392c801bd233c948203f292f3492051b612b94e1bf3fb08d20b26b7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cfabcc4e79037aa8f612e451591278d228890a224de1039784a21428403bdc11"
+    sha256 cellar: :any_skip_relocation, monterey:       "2b62f4add0ef218d9de1ca0e2f44e9084b7639760bb3b961ac89dd543ed76156"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1324d3b313ebb5270db7a03935687d7c7dd3fd8fee2098bc8b6558c1b3da50b9"
+    sha256 cellar: :any_skip_relocation, catalina:       "91c41fa5f027c12cf7cdfd7e5d93eac3b02191f8f07b8f79fc596bbe71dd18d6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8fc5249c48af682abae97eb41398378fd1ff8acf07be506d4d75a24c648cc00f"
+  end
+
   depends_on "go" => :build
 
   def install
