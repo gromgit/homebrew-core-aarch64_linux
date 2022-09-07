@@ -13,20 +13,13 @@ class IslAT018 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "17cdb6a0c6341f4ac4b5d373b94a2f24da71e618a5e8bfd1c0ac9d9156019072"
-    sha256 cellar: :any,                 arm64_big_sur:  "44fe4a7f5ed00ff3b3ba06a37d3b6d4633e7532c841d4e02fa1cb2678afc018c"
-    sha256 cellar: :any,                 monterey:       "37dead6875dfc23c15fb2a45c6f307a6b12bc362152ee3e6a44474b07f9aaff1"
-    sha256 cellar: :any,                 big_sur:        "4d22193093ee43ec29988ecadd20b01359291475c78a43d9053e00b78991fc7f"
-    sha256 cellar: :any,                 catalina:       "728e3b1ab4e7c7cf6298e80c398dfdb8012c1b5c77fb54261d618d094bd9a1bb"
-    sha256 cellar: :any,                 mojave:         "efcde3c18baf1ee3e76312758ab5a95cb4df68267d7273003d519abce2ad6c87"
-    sha256 cellar: :any,                 high_sierra:    "0525751dc4fd778bf8be05f743d798d9229e9955999d06a1cfbecee33d737a38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d90ca0810ac78ac9357f86cf245ec9dfdc7c2171646d4993972d36c1b84e35b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/isl@0.18"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e416556e42c4871e77a328cf8d146ab857e73cbb88ff4bdfc36156290746055d"
   end
 
   keg_only :versioned_formula
 
-  # Commented out while this formula still has dependents.
-  # deprecate! date: "2020-11-05", because: :versioned_formula
+  deprecate! date: "2020-11-05", because: :versioned_formula
 
   depends_on "gmp"
 
