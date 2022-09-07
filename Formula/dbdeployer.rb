@@ -1,18 +1,14 @@
 class Dbdeployer < Formula
   desc "Tool to deploy sandboxed MySQL database servers"
   homepage "https://github.com/datacharmer/dbdeployer"
-  url "https://github.com/datacharmer/dbdeployer/archive/v1.69.1.tar.gz"
-  sha256 "165950a32760a5e0f32f951eaa0c67a6956cb2cea75ac0381c65f39b7e9789c7"
+  url "https://github.com/datacharmer/dbdeployer/archive/v1.64.0.tar.gz"
+  sha256 "8065d2700f870d10e58af7b2764ffa0838254402f874294dbc39845356d6f069"
   license "Apache-2.0"
   head "https://github.com/datacharmer/dbdeployer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f78f872f16e5b79b69ece7ff73eccd7394e1a2cf234a242fa3f753b0028c798"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "781895af0c3ae9e496073f0a69e7d461a9ffffe75a395e8ef99c053315bf17e0"
-    sha256 cellar: :any_skip_relocation, monterey:       "5bba9dc7589acd9c6fce3a95537c79cd335a334e763a4ea8a111ad8d424ed313"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e0a55f65f4ee4bc4b62d525f933845c9794d4124a974eb0db7df3b0f6c4b9aa8"
-    sha256 cellar: :any_skip_relocation, catalina:       "fbde301245fe963d7ef5b9daef6518e4e6fa9e93b17b5ff01135382d66634d17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8db6ff5fbad2a4c6bbab877970ed81ea7ed86ade8eed5ec57b3a56ce6b01840"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dbdeployer"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "93511a87ec7e1cd9c1b789a088f247ff2597b104aeb65e2401ae911841892141"
   end
 
   depends_on "go" => :build
