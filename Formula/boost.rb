@@ -1,10 +1,10 @@
 class Boost < Formula
   desc "Collection of portable C++ source libraries"
   homepage "https://www.boost.org/"
-  url "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.bz2"
-  sha256 "475d589d51a7f8b3ba2ba4eda022b170e562ca3b760ee922c146b6c65856ef39"
+  url "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2"
+  sha256 "8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc"
   license "BSL-1.0"
-  revision 2
+  revision 1
   head "https://github.com/boostorg/boost.git", branch: "master"
 
   livecheck do
@@ -16,20 +16,21 @@ class Boost < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0d9c01b3a721dea9799d80908f4c844f97eb12dc2ac5ac1a075264ca8a387bc8"
-    sha256 cellar: :any,                 arm64_big_sur:  "cbdb8f401792700b78546e6345c6e68bff3f1ab2c690168bb2783d98d0141da7"
-    sha256 cellar: :any,                 monterey:       "99d46af21309a6df674a3fb8f870cd4da81f8bb4e75b02b56c506161f89dd7a4"
-    sha256 cellar: :any,                 big_sur:        "e0dc7e421e9b8359399729f9092edfbd4c1c90f64e8504edbcd0bfdbd747d5ac"
-    sha256 cellar: :any,                 catalina:       "40180c497e090fcb6e3494bd639534d7427372a2276015f7c67dbd08ea753456"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fca78d431ee8a68474967ffaa3e1796eece997a2379fe9c851fd2dcc4038245"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "633bcf946edd757a62d3b65d1c0f171da125bec6ea7f368797e709b9b83121b3"
   end
 
   depends_on "icu4c"
-  depends_on "xz"
-  depends_on "zstd"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
+
+  # Fix some library installations being skipped in some cases.
+  # Remove with the next release.
+  patch do
+    url "https://www.boost.org/patches/1_78_0/0001-b2-fix-install.patch"
+    sha256 "71e5b96e72e534670043e0fa7743fd34671715e21c3ddb41908a3da284a8920a"
+  end
 
   def install
     # Force boost to compile with the desired compiler
@@ -66,6 +67,8 @@ class Boost < Formula
       -j#{ENV.make_jobs}
       --layout=tagged-1.66
       --user-config=user-config.jam
+      -sNO_LZMA=1
+      -sNO_ZSTD=1
       install
       threading=multi,single
       link=shared,static
@@ -84,19 +87,10 @@ class Boost < Formula
   test do
     (testpath/"test.cpp").write <<~EOS
       #include <boost/algorithm/string.hpp>
-      #include <boost/iostreams/device/array.hpp>
-      #include <boost/iostreams/device/back_inserter.hpp>
-      #include <boost/iostreams/filter/zstd.hpp>
-      #include <boost/iostreams/filtering_stream.hpp>
-      #include <boost/iostreams/stream.hpp>
-
       #include <string>
-      #include <iostream>
       #include <vector>
       #include <assert.h>
-
       using namespace boost::algorithm;
-      using namespace boost::iostreams;
       using namespace std;
 
       int main()
@@ -107,30 +101,10 @@ class Boost < Formula
         assert(strVec.size()==2);
         assert(strVec[0]=="a");
         assert(strVec[1]=="b");
-
-        // Test boost::iostreams::zstd_compressor() linking
-        std::vector<char> v;
-        back_insert_device<std::vector<char>> snk{v};
-        filtering_ostream os;
-        os.push(zstd_compressor());
-        os.push(snk);
-        os << "Boost" << std::flush;
-        os.pop();
-
-        array_source src{v.data(), v.size()};
-        filtering_istream is;
-        is.push(zstd_decompressor());
-        is.push(src);
-        std::string s;
-        is >> s;
-
-        assert(s == "Boost");
-
         return 0;
       }
     EOS
-    system ENV.cxx, "test.cpp", "-std=c++14", "-o", "test", "-L#{lib}", "-lboost_iostreams",
-                    "-L#{Formula["zstd"].opt_lib}", "-lzstd"
+    system ENV.cxx, "test.cpp", "-std=c++14", "-o", "test"
     system "./test"
   end
 end
