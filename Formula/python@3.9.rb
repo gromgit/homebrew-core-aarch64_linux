@@ -12,7 +12,7 @@ class PythonAT39 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python@3.9"
-    sha256 aarch64_linux: "01a6db011931e1914dfdf16dcb386565877d29decdbef8523838d4451c414c29"
+    sha256 aarch64_linux: "c8d2850163e40cec034c89837b7280fc7a3d85326518b4f83d8db2729e83b580"
   end
 
   # setuptools remembers the build flags python is built with and uses them to
