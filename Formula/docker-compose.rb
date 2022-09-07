@@ -1,18 +1,14 @@
 class DockerCompose < Formula
   desc "Isolated development environments using Docker"
   homepage "https://docs.docker.com/compose/"
-  url "https://github.com/docker/compose/archive/v2.10.2.tar.gz"
-  sha256 "74c86d544fcfb80bb2d3b58187bd017adb0e62863d22114a66c14fc94fdbc421"
+  url "https://github.com/docker/compose/archive/v2.5.0.tar.gz"
+  sha256 "e002f4f50bfb1b3c937dc0a86a8a59395182fe1288e4ed3429db5771f68f7320"
   license "Apache-2.0"
   head "https://github.com/docker/compose.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "056ab56dbfb2ccf80adfdeade5a2e4d538cf4df94d5cda1d4c5daaf59737f999"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "056ab56dbfb2ccf80adfdeade5a2e4d538cf4df94d5cda1d4c5daaf59737f999"
-    sha256 cellar: :any_skip_relocation, monterey:       "e53ad8d98f9cae5bf9d8e2ebe094b9508c693bdad0f727a2f00d05e0d7fdc5e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e53ad8d98f9cae5bf9d8e2ebe094b9508c693bdad0f727a2f00d05e0d7fdc5e3"
-    sha256 cellar: :any_skip_relocation, catalina:       "e53ad8d98f9cae5bf9d8e2ebe094b9508c693bdad0f727a2f00d05e0d7fdc5e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fad64189a85d45fd75b641ce41961e5e1e6cbb305401b1cfce09e495279fdc05"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docker-compose"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d5c7170b73054f7041ee9a441091cf7a1947a659deb22b81d87c86a325080e82"
   end
 
   depends_on "go" => :build
