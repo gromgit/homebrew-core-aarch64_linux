@@ -1,11 +1,11 @@
 class Proftpd < Formula
   desc "Highly configurable GPL-licensed FTP server software"
   homepage "http://www.proftpd.org/"
-  url "https://github.com/proftpd/proftpd/archive/v1.3.7e.tar.gz"
-  mirror "https://fossies.org/linux/misc/proftpd-1.3.7e.tar.gz"
-  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.7e.tar.gz"
-  version "1.3.7e"
-  sha256 "6e716a3b53ee069290399fce6dccf4c229fafe6ec2cb14db3778b7aa3f9a8c92"
+  url "https://github.com/proftpd/proftpd/archive/v1.3.7d.tar.gz"
+  mirror "https://fossies.org/linux/misc/proftpd-1.3.7d.tar.gz"
+  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.7d.tar.gz"
+  version "1.3.7d"
+  sha256 "b231536e2978116801d06278e805b18e5240568d2bc921693ac7147652e267e4"
   license "GPL-2.0-or-later"
 
   # Proftpd uses an incrementing letter after the numeric version for
@@ -18,15 +18,9 @@ class Proftpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "af16db8ab4261d0daa4ee5e5f51046045a20b017dc854adb1421f26407688982"
-    sha256 arm64_big_sur:  "07fadba73d0440b08846a2e3a5ddca07b2b398ef949d71931acf384c7d607181"
-    sha256 monterey:       "1cb51eb56dab1081f6c64ac75904e38e59065ba1ec78f43cd761ab88c0de0117"
-    sha256 big_sur:        "429dc14ebcbf7b31e4073578522fab149c08abc8986ca39b9e0c6a698e2c4a69"
-    sha256 catalina:       "23aaeb1f2c8f08fd561cb9e2a4fac400b1176365726bb3044487a0658b0cdb24"
-    sha256 x86_64_linux:   "f88d9dbcb70b79b0c008e23ddfeb7f72211116c7d89759dc9324dca3d348b3ed"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/proftpd"
+    sha256 aarch64_linux: "6868270669ade5a7d9dc53ce40a645493f1bebaaaeb72f31a63efc3276a0227a"
   end
-
-  uses_from_macos "libxcrypt"
 
   def install
     # fixes unknown group 'nogroup'
@@ -38,7 +32,7 @@ class Proftpd < Formula
                           "--localstatedir=#{var}"
     ENV.deparallelize
     install_user = ENV["USER"]
-    install_group = Utils.safe_popen_read("groups").split.first
+    install_group = `groups`.split[0]
     system "make", "INSTALL_USER=#{install_user}", "INSTALL_GROUP=#{install_group}", "install"
   end
 
