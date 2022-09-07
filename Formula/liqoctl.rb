@@ -1,20 +1,16 @@
 class Liqoctl < Formula
   desc "Is a CLI tool to install and manage Liqo-enabled clusters"
   homepage "https://liqo.io"
-  url "https://github.com/liqotech/liqo/archive/refs/tags/v0.5.4.tar.gz"
-  sha256 "f4ed993012d2315080a758e683ebe5f36eff6f389b2e68b2857f380bf1049228"
+  url "https://github.com/liqotech/liqo/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "2e91ff96e1edc2d11dc76d7f869d7ec82d9e9f9c43be4cb9a7c1bd08aae62a08"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2029554bca65b3e6af4b3e1876eeb86858b6ced6b08bfc14df228068c4c852c1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2029554bca65b3e6af4b3e1876eeb86858b6ced6b08bfc14df228068c4c852c1"
-    sha256 cellar: :any_skip_relocation, monterey:       "1fc1bebc4b9f5f2e86227fb48406d674e7769c43f75c648dece31f8679946eac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1fc1bebc4b9f5f2e86227fb48406d674e7769c43f75c648dece31f8679946eac"
-    sha256 cellar: :any_skip_relocation, catalina:       "1fc1bebc4b9f5f2e86227fb48406d674e7769c43f75c648dece31f8679946eac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a64309ad6fc1c7c52f82eb2437538564009bf5d197be2b84bcc69d7deafd6137"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/liqoctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1947b1eba74a967952dbca6b97d570e651f82a35cd4b4fbddaaa34ed66874a65"
   end
 
-  depends_on "go" => :build
+  depends_on "go@1.17" => :build
 
   def install
     ENV["CGO_ENABLED"] = "0"
@@ -26,12 +22,17 @@ class Liqoctl < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/liqoctl"
 
-    generate_completions_from_executable(bin/"liqoctl", "completion")
+    output = Utils.safe_popen_read(bin/"liqoctl", "completion", "bash")
+    (bash_completion/"liqoctl").write output
+    output = Utils.safe_popen_read(bin/"liqoctl", "completion", "zsh")
+    (zsh_completion/"_liqoctl").write output
+    output = Utils.safe_popen_read(bin/"liqoctl", "completion", "fish")
+    (fish_completion/"liqoctl").write output
   end
 
   test do
     run_output = shell_output("#{bin}/liqoctl 2>&1")
-    assert_match "liqoctl is a CLI tool to install and manage Liqo.", run_output
-    assert_match version.to_s, shell_output("#{bin}/liqoctl version --client")
+    assert_match "liqoctl is a CLI tool to install and manage Liqo-enabled clusters.", run_output
+    assert_match version.to_s, shell_output("#{bin}/liqoctl version")
   end
 end
