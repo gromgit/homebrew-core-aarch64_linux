@@ -11,16 +11,8 @@ class Prodigal < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcf9c5deb46b542d95f4bcca4f4f947d60fee5138b76eab5018b61eb6f86279d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "abcf0f632ae6187b7b29e2ebd9680717c3678d3e2694b87840591a0f51d4db09"
-    sha256 cellar: :any_skip_relocation, monterey:       "19a6b172b25f41612c11427cb12b19cca27580935c756ac5337c9bce27e3b4a5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5f61811f05bc3e784428dd1ece760e6375f2624b103393e1809ece54659d440c"
-    sha256 cellar: :any_skip_relocation, catalina:       "5cebc25d98ba4439aa810c4e05c9f30e7ecf768035d135d0989cf58c18517a87"
-    sha256 cellar: :any_skip_relocation, mojave:         "8751eedad40b08714b52a78b9cf48e4101ffa4b871a0ab943830a59137a67e53"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "c120fed8e29bb3b1a4ff69d5ca05e051a0fe3822784b3d585e142da3452d1ac1"
-    sha256 cellar: :any_skip_relocation, sierra:         "a27fe5316181d4826e5aa5291d0fc1b1a7087c32c7b4e6aedabf1209d5a8ac36"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "70b432e3d3da1f4089680b06c0745b7dac3611f05d8ec9440faa918bc82d6fe5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9974eaeb5029133abe08d54412f419ea1159eda1dba47a6c89ee661e865285b2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/prodigal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b07f2dc85ce3b086e1a69c2a38ec4648a418df71eb8f4213ba48f26f51e0cb6"
   end
 
   # Prodigal will have incorrect output if compiled with certain compilers.
@@ -28,8 +20,8 @@ class Prodigal < Formula
   # https://github.com/hyattpd/Prodigal/issues/34
   # https://github.com/hyattpd/Prodigal/issues/41
   # https://github.com/hyattpd/Prodigal/pull/35
-  patch do
-    on_linux do
+  on_linux do
+    patch do
       url "https://github.com/hyattpd/Prodigal/commit/cbbb5db21d120f100724b69d5212cf1275ab3759.patch?full_index=1"
       sha256 "fd292c0a98412a7f2ed06d86e0e3f96a9ad698f6772990321ad56985323b99a6"
     end
