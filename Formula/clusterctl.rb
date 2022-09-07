@@ -2,10 +2,10 @@ class Clusterctl < Formula
   desc "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle"
   homepage "https://cluster-api.sigs.k8s.io"
   url "https://github.com/kubernetes-sigs/cluster-api.git",
-      tag:      "v1.2.1",
-      revision: "8b4214d72762394144b83dd6d14986ff7e274095"
+      tag:      "v1.1.3",
+      revision: "31146bd17a220ef6214c4c7a21f1aa57380b6b1f"
   license "Apache-2.0"
-  head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "main"
+  head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "master"
 
   # Upstream creates releases on GitHub for the two most recent major/minor
   # versions (e.g., 0.3.x, 0.4.x), so the "latest" release can be incorrect. We
@@ -19,12 +19,8 @@ class Clusterctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "015627feab7d1acbe8baff52b572ef3be06963efb4509a1fc5fb809a1f54004e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dcaf595b1b771d87adf48c0e2ab9e4d3939ad30551790775dbf00f65e869884b"
-    sha256 cellar: :any_skip_relocation, monterey:       "ecc719a57c557097e64510fb19d294dc7f9511e8cfe21100e12511f6f4ee1df6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fe734eb81c57839e02b067d3a1c8fad3ee63e62ca882b124ae7e286dc52de5ff"
-    sha256 cellar: :any_skip_relocation, catalina:       "b096ba26191b6f719a340b66a44e12f8ea49d0d2e7cf450a9ecff10938908e89"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "221329a5494e979f0fd6ac65e93651f25fddf62a4f47a5673347ace95ae599be"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clusterctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b984d475ca7f5be1a51707441672462d035fa36e39feafa76d29f80c0d2aa6c8"
   end
 
   depends_on "go" => :build
@@ -36,7 +32,11 @@ class Clusterctl < Formula
     system "make", "clusterctl"
     prefix.install "bin"
 
-    generate_completions_from_executable(bin/"clusterctl", "completion", shells: [:bash, :zsh])
+    bash_output = Utils.safe_popen_read(bin/"clusterctl", "completion", "bash")
+    (bash_completion/"clusterctl").write bash_output
+
+    zsh_output = Utils.safe_popen_read(bin/"clusterctl", "completion", "zsh")
+    (zsh_completion/"_clusterctl").write zsh_output
   end
 
   test do
