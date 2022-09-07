@@ -8,22 +8,21 @@ class Jp2a < Formula
   url "https://downloads.sourceforge.net/project/jp2a/jp2a/1.0.6/jp2a-1.0.6.tar.gz"
   sha256 "0930ac8a9545c8a8a65dd30ff80b1ae0d3b603f2ef83b04226da0475c7ccce1c"
   license "GPL-2.0"
-  revision 2
+  revision 1
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9da454ebb89a11e1074e54975b9bae9f93c4bc38a53025a48c2f7e78c2d59765"
-    sha256 cellar: :any,                 arm64_big_sur:  "81e6bcf5a143c3867f9f883e7e5c5a5c7c38743a646ce6f5fac36eb54ec95c02"
-    sha256 cellar: :any,                 monterey:       "0088d29ea1ec66a0f5ce9f9249b2922fe32d1c3e8c37f32656a444ddae004aa5"
-    sha256 cellar: :any,                 big_sur:        "1e24bbf2f7aa650f995992f6b8ae80938873dfc396ecd23341984188c285c6f9"
-    sha256 cellar: :any,                 catalina:       "438f6b2d10513c8960f67db6e688599ef42282287ae64d8e366815bd4f545e9d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdd434fbaabfb9b2f5d10a1cb47b95cc1838c2d91e5e0a25b4fd8ae592055782"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jp2a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "77a1d5c4788a09f2c65b48c09a9a3fb72fe7358a3e8a196293b257066eac86b4"
   end
 
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
 
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 
