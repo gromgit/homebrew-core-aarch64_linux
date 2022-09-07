@@ -1,8 +1,8 @@
 class Xorgproto < Formula
   desc "X.Org: Protocol Headers"
   homepage "https://www.x.org/"
-  url "https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2022.2.tar.gz"
-  sha256 "da351a403d07a7006d7bdc8dcfc14ddc1b588b38fb81adab9989a8eef605757b"
+  url "https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2022.1.tar.bz2"
+  sha256 "1d2dcc66963f234d2c1e1f8d98a0d3e8725149cdac0a263df4097593c48bc2a6"
   license "MIT"
 
   livecheck do
@@ -11,12 +11,8 @@ class Xorgproto < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, catalina:       "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7517927867f2f59362eb06cb2b5dda1241a8f2765603197aae24d85b086dc645"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xorgproto"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0cf281bdfe9544d28ab48a5fbbad64259ad3551389ffef144207d554db582046"
   end
 
   depends_on "pkg-config" => [:build, :test]
