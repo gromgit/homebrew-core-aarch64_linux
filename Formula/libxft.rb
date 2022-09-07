@@ -6,13 +6,12 @@ class Libxft < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "df14d3422f930c8339a90745ea96ac4ed19dbd320e79bfea4870dae1d2b9bf2a"
-    sha256 cellar: :any,                 arm64_big_sur:  "78a5e3d5795d9a95a012e1b9cbdc431373d1a2b9215dd4cc467ed8fe8833c8fd"
-    sha256 cellar: :any,                 monterey:       "e5e3c477b818f83abb22998e773b850a63ac57011549c2d7cb7e3fd36099dfe6"
-    sha256 cellar: :any,                 big_sur:        "1409b0b789f87502f146806ca110c91de010d4815a02d2a2b01a1fca8a9b34e1"
-    sha256 cellar: :any,                 catalina:       "59ee89bf143385cf4d64b79b2b324874cbe8b5a1ecdaef2a9739fe6104bf240e"
-    sha256 cellar: :any,                 mojave:         "b192514f22f8e6fe250afc95e471512622942dd02d3e58b7fbb0b085a281c667"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32e3761cd7474d9f427959ce47db1b7449a1d210e51ad08d664a2f6b2092e229"
+    sha256 cellar: :any,                 arm64_monterey: "295a354aeac393fd30498499ff9541c4f237fbecf0259ddd611015c153fa505f"
+    sha256 cellar: :any,                 arm64_big_sur:  "84ab0e299c671c1873e6e0555a9961e1d49c2b07c59d46257e46ec316fd337c5"
+    sha256 cellar: :any,                 monterey:       "332f0d5ca3fd2009a2f8d2bfb39edc4a285acfc8607eee344b47181e6313dd9b"
+    sha256 cellar: :any,                 big_sur:        "955d7574fb678d9a9b8b205846a716f6eb04af6471d11cc1fda2b2c294ec6969"
+    sha256 cellar: :any,                 catalina:       "3d18dd85206abfdfd6c9300602c814590275412f7024da2267faad91836ce1fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "705ee186ddb01dd7bccbcbb88cc54649dcdf191e39bc669e9715e1799ee72dd6"
   end
 
   depends_on "pkg-config" => :build
