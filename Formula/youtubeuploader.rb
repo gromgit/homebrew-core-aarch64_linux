@@ -1,18 +1,14 @@
 class Youtubeuploader < Formula
   desc "Scripted uploads to Youtube"
   homepage "https://github.com/porjo/youtubeuploader"
-  url "https://github.com/porjo/youtubeuploader/archive/22.03.tar.gz"
-  sha256 "cdf4857dd9a9ae15f47d46f35f4f7395e0fd759e128ea8bca057d3f08de78243"
+  url "https://github.com/porjo/youtubeuploader/archive/22.02.tar.gz"
+  sha256 "56f586277935c99c33512234ece24b763a9f7b417bc1cfddd601945365058b58"
   license "Apache-2.0"
   head "https://github.com/porjo/youtubeuploader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "30f7e5ae721da535e957767a5d90effea1207f7bb33088afbc71916ccce644f1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6c646d0777513146dbbd385475135e75d79c0db8ea65ab1b19efd83caa774f1"
-    sha256 cellar: :any_skip_relocation, monterey:       "b1b3411312848def235b2bcb7621947f50954f95d126f32a7b61d2dcbceacc4a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c8e7b4db1c565158b547a534fe783bbe4b520b68cab78f030d9c51cb94bba794"
-    sha256 cellar: :any_skip_relocation, catalina:       "9ec6d96d62ba3740c636d633b1caee6a7d7717c7a60e0642e1351991cdbed98a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c7ffcc51bebef2de4747bd1a328bfb9bb0b05f40f36da7af712fb22af8916f7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/youtubeuploader"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0af97e6b2ebec8dc0353fcae8d9d0af168f5ac2fde6ecc81bb1a8137456cc3de"
   end
 
   depends_on "go" => :build
