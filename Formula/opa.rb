@@ -1,18 +1,14 @@
 class Opa < Formula
   desc "Open source, general-purpose policy engine"
   homepage "https://www.openpolicyagent.org"
-  url "https://github.com/open-policy-agent/opa/archive/v0.43.0.tar.gz"
-  sha256 "c5ac0f4a2c50e347cbcdf97f711ef70f9d7bd8594f8d92036fdea78d34c8400e"
+  url "https://github.com/open-policy-agent/opa/archive/v0.40.0.tar.gz"
+  sha256 "d5087651c0738b9925ecec0e545599b3b2cbf8c7e15791641b1dbc7fdeb23f6c"
   license "Apache-2.0"
   head "https://github.com/open-policy-agent/opa.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c68155af2f6afc87b61a98838d2fab8284c78e3f41a0f616d4a15e11aa240832"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba66295f566128c5838324efae88af81be43c526b9f14c37b8ba69aef2ec7ee1"
-    sha256 cellar: :any_skip_relocation, monterey:       "10842bf307e0d6f84d57ec5fec49784cecb4b6862e6ff4fc3c718c65b1807d32"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9b0f9b195a78e02b798ea9764d7169d215e1330af3fd387c83174ab9731c36a6"
-    sha256 cellar: :any_skip_relocation, catalina:       "ed9dcf67936893a51152fa54384c035e8929cb4e04f029684835cb1ccafe2041"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b54128e385823fa8cfef681abc2dcc1abe076b9b44d24e6eb69c3a252f3d4064"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/opa"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc2c60316a07e0b898bf0a88fe761ea6fed538464ac0e6b6988adfaf73194147"
   end
 
   depends_on "go" => :build
@@ -23,7 +19,14 @@ class Opa < Formula
     system "./build/gen-man.sh", "man1"
     man.install "man1"
 
-    generate_completions_from_executable(bin/"opa", "completion")
+    bash_output = Utils.safe_popen_read(bin/"opa", "completion", "bash")
+    (bash_completion/"opa").write bash_output
+
+    zsh_output = Utils.safe_popen_read(bin/"opa", "completion", "zsh")
+    (zsh_completion/"_opa").write zsh_output
+
+    fish_output = Utils.safe_popen_read(bin/"opa", "completion", "fish")
+    (fish_completion/"opa.fish").write fish_output
   end
 
   test do
