@@ -11,16 +11,8 @@ class Mikmod < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "bb54632a522875765adad5cab06af5329387f9ae1c5c7e96097ad7bc01e10526"
-    sha256 arm64_big_sur:  "db291715ff28e243fcd0c1a5933bb5dc3c4bdf93368df9f66654d45e0003ea8c"
-    sha256 monterey:       "e6722e94ac1051373437dd424178a21f821f1275c5fcc41547959549383364fc"
-    sha256 big_sur:        "d36db8a1221871140e8053654f1dd7fd6433f7fa50e15b42b239137ede527cb8"
-    sha256 catalina:       "6d6794da1daf749a56cf55738f796fe5b6a7b337456730b21a5efba2fab60f38"
-    sha256 mojave:         "6812f223d67d763208eaf21ab6e1ebfaf50e349852cb6820010010ed0524b2f2"
-    sha256 high_sierra:    "5907f92b40ddc0ba15cddd60269a9f9a8e9fcf6295a099df4145818536431427"
-    sha256 sierra:         "a9586a9306006e8fd451aecb6c3259fc57cb0bb328a2b0ce8c064e5518f943bc"
-    sha256 el_capitan:     "ae0b4480b6b34327b9c99601d7e2cbc9648ece54344bd4bda3582ef048e1f1de"
-    sha256 x86_64_linux:   "4e4b77ce15ebf81c0bbaf79ca476bc05de760eaeedc28ffbfbcfdb33df94127d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mikmod"
+    sha256 aarch64_linux: "b892b292908223ba9e84c7becc7f1f08ff43d5dbd94c435de4c430a44fff944c"
   end
 
   depends_on "libmikmod"
