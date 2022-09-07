@@ -8,9 +8,7 @@ class CassandraAT21 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "ba43927921cfc8c4540736eec7472dcb5fb78efbd0fb7e948df64cedc243d2b5"
-    sha256 cellar: :any_skip_relocation, mojave:      "cbe96bf658b154f84a1ad7188ca3ea667f3f3201e46452f2e95f8d4a1c946af8"
-    sha256 cellar: :any_skip_relocation, high_sierra: "7a0183c65df7ad2f04c6d53f781150af2540d52a80d4f349e59087d35c418399"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   keg_only :versioned_formula
