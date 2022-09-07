@@ -1,12 +1,13 @@
 class Kmod < Formula
   desc "Linux kernel module handling"
   homepage "https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git"
-  url "https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-30.tar.xz"
-  sha256 "f897dd72698dc6ac1ef03255cd0a5734ad932318e4adbaebc7338ef2f5202f9f"
+  url "https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-29.tar.xz"
+  sha256 "0b80eea7aa184ac6fd20cafa2a1fdf290ffecc70869a797079e2cc5c6225a52a"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fd2381a295cd23ad7ed2c8ea088d4a23b48071cc71c8c385418fb80ee822cb1a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kmod"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "947621ce3b66f7306506b0e08e574c4f96cc2aa8a4823bae8a0c10135f921f71"
   end
 
   depends_on :linux
