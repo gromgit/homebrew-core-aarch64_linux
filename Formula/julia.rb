@@ -17,12 +17,12 @@ class Julia < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cf13fbd2b78a4ee0826788432ecb8018c22c31863355a3cec834b7a3030961a5"
-    sha256 cellar: :any,                 arm64_big_sur:  "51ff3aa7f88335c2a33d28e4bb8ac6b4460a6aea31dda5f0f4606a3814ef9cc0"
-    sha256 cellar: :any,                 monterey:       "ba5d07d81db47f45cf7e7ece28e5dff57c984fb4afff1adc454c2dff8f113975"
-    sha256 cellar: :any,                 big_sur:        "4535bf04d0a801126e7e662efd0aceab67568c1e98a32b9847aa8fdae2a540d9"
-    sha256 cellar: :any,                 catalina:       "89022df59545d014861454c41b7fefe38f519ed7eb4fb71bb7f4103a70858a14"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4abfbcb44e5177226506e25e8e5120e74698c7fc52b81110587163468890022e"
+    sha256 cellar: :any,                 arm64_monterey: "6a61899a2f2e94ebcc4c4f6f70a3d85f21c4a7fa0bb6ece7cd2b6809e25b817e"
+    sha256 cellar: :any,                 arm64_big_sur:  "968e55a73943ddf670a99727fb4f662b0325e876cd55de56163ef942ccfe7ece"
+    sha256 cellar: :any,                 monterey:       "354d7b69770ab247abbafb79f9bebec2b79f02754c7bca5509b10c99272c9b33"
+    sha256 cellar: :any,                 big_sur:        "7988fffd9f05f5137452ba67bc4bd3af38b5d9a04d2008943d66f853e423dee4"
+    sha256 cellar: :any,                 catalina:       "9aaffd3b178899e11e6d5c991c9ca7081c72380077df48e0fb46e8fc62427666"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ce64434ed5b9576a57b7f194efea4028ab8945371ebd6fc479503d93a06b249"
   end
 
   depends_on "cmake" => :build # Needed to build LLVM
