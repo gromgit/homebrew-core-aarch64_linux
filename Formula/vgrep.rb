@@ -1,8 +1,8 @@
 class Vgrep < Formula
   desc "User-friendly pager for grep"
   homepage "https://github.com/vrothberg/vgrep"
-  url "https://github.com/vrothberg/vgrep/archive/v2.6.1.tar.gz"
-  sha256 "61ffc1dc7445bd890a25a8bb733f7b33dc4de45388ae51c87db484def1c6f391"
+  url "https://github.com/vrothberg/vgrep/archive/v2.6.0.tar.gz"
+  sha256 "4cbd912189397b08897fcc1709787ec60ed42275059f900463055211e1f6d689"
   license "GPL-3.0-only"
   version_scheme 1
   head "https://github.com/vrothberg/vgrep.git", branch: "main"
@@ -19,11 +19,8 @@ class Vgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "535140983985f51fc0aa1d4f0e2536596d8f6f621b8b051525d9e1a5297eac4a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d636d0c3519f258615c5bfe6c1c5d19287e82673df0f4f9b7537a58fa255a5dd"
-    sha256 cellar: :any_skip_relocation, monterey:       "955f7b40061f709f7b6d508776ac670e5ec9a41609fd1cabae130260d2de8f6a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d797ec24b06eaebcdeda87a6b1e8880f0f067428f6f35943fe0134ec4392ec95"
-    sha256 cellar: :any_skip_relocation, catalina:       "df09022412dbf0ede1c3680e73466bb848c5383ea0a9e2d57476805d9d266248"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vgrep"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b91000cf31f7ad62b51e0c600b42ec4c3a0f808ce5431b87804a5c6400e8bb24"
   end
 
   depends_on "go" => :build
