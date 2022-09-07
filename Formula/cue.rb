@@ -7,12 +7,8 @@ class Cue < Formula
   head "https://github.com/cue-lang/cue.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f770a065ca36acedeb4d7db3063c4c1b5c2a4a54a9891b6587a112f7e638a651"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f4af3195f21ed20f27bc1015a415835728b32e06f39e84fdeb2c01b14932ffb7"
-    sha256 cellar: :any_skip_relocation, monterey:       "b633119259d30ab942c77eac991f3423980ec4d90b56ae2226f6934b692d33f9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "12db70d65d25aedc67b730918450fb0162f3a1127e5763322f12f8c48d89c2e5"
-    sha256 cellar: :any_skip_relocation, catalina:       "2cd3e2ca353ee6e2e6616d5a9ed3112a1b9a2c742b2f30e9ada35850aa60d60e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf1e2ef060f30c188077f17eac919ebd8b3c2581fb93ac171baf028b5acc5b10"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cue"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "24eac5e1288604c83b61e29a916cbb05632cac326c0e16012b3f2fa22667e4be"
   end
 
   depends_on "go" => :build
@@ -20,7 +16,12 @@ class Cue < Formula
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X cuelang.org/go/cmd/cue/cmd.version=v#{version}"), "./cmd/cue"
 
-    generate_completions_from_executable(bin/"cue", "completion")
+    bash_output = Utils.safe_popen_read(bin/"cue", "completion", "bash")
+    (bash_completion/"cue").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"cue", "completion", "zsh")
+    (zsh_completion/"_cue").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"cue", "completion", "fish")
+    (fish_completion/"cue.fish").write fish_output
   end
 
   test do
