@@ -6,16 +6,8 @@ class Cfv < Formula
   license "GPL-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "38eaeb7bfcf83dbf9ab48ad9a1a0d4a71a91ae830792397c5424e8cd743ad5de"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "09dd4b6432d6cac583e1ac82d2d65c10f2d3549f4d7a1017dbcce07ae6123238"
-    sha256 cellar: :any_skip_relocation, monterey:       "a71d821fcf88da93b92fc6c8443a63e1bf14474e74bcff47026474146c8c58a3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8ce1654aa4805deb6a80b9ec470306b879b79d5e25e151df1e4c78e498c0e214"
-    sha256 cellar: :any_skip_relocation, catalina:       "cd4fac08aac6490ade28d8b370e006c720bab5df939caadb92b25af278a4384a"
-    sha256 cellar: :any_skip_relocation, mojave:         "251348813c0a811e6ac298432967d19e42bfa73bbc3217eaa0b63bec4b78d98d"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "7452ead7901f4f4ab2683cd391af82f856eba1a57c11d07c038ca18507535dac"
-    sha256 cellar: :any_skip_relocation, sierra:         "449f4b10a0371005f04bffa6271364824a83fbb68cb15208168c19457b987b6e"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "49b83783b5737a364504fdd9fd09672134e0103c7bb8152741d67fca455fde04"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cfv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2b0e26746fbb4d3363337d8d1e5af2553c0ef925846845f38bb12b7ae8763936"
   end
 
   def install
