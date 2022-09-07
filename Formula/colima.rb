@@ -1,9 +1,9 @@
 class Colima < Formula
-  desc "Container runtimes on MacOS (and Linux) with minimal setup"
+  desc "Container runtimes on MacOS with minimal setup"
   homepage "https://github.com/abiosoft/colima/blob/main/README.md"
   url "https://github.com/abiosoft/colima.git",
-      tag:      "v0.4.4",
-      revision: "8bb1101a861a8b6d2ef6e16aca97a835f65c4f8f"
+      tag:      "v0.3.4",
+      revision: "5a4a70481ca8d1e794677f22524e3c1b79a9b4ae"
   license "MIT"
   head "https://github.com/abiosoft/colima.git", branch: "main"
 
@@ -13,18 +13,12 @@ class Colima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f28fc747423e8c5679fdba280c6cc7a3816b59dc9a8b77369b23abe1c09afe37"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1eaa675ae8556fcde77ac19e6ff531e05d45dc4f1ad26b9b4d025ad71ee60ae7"
-    sha256 cellar: :any_skip_relocation, monterey:       "a1bbfe934659a9f6f24d08009d06e42f0f97bd07453e035b8a11e6a5f00ac8d9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d673a769d5008e95513cdbe27e9191cd6d511762f4d8a33ee171b9b5bb7489e4"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4891f258ec55835e4474cc7a988891057d20cd36ad6d20c697a2a35eaa42c79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16a92215d353ae0e2550ec2272edbb68bde22dc1d2e35d15b3c0bb12efabc328"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
-  # Required latest gvisor.dev/gvisor/pkg/gohacks
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
   depends_on "lima"
+  depends_on :macos
 
   def install
     project = "github.com/abiosoft/colima"
@@ -34,7 +28,9 @@ class Colima < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/colima"
 
-    generate_completions_from_executable(bin/"colima", "completion")
+    (bash_completion/"colima").write Utils.safe_popen_read(bin/"colima", "completion", "bash")
+    (zsh_completion/"_colima").write Utils.safe_popen_read(bin/"colima", "completion", "zsh")
+    (fish_completion/"colima.fish").write Utils.safe_popen_read(bin/"colima", "completion", "fish")
   end
 
   test do
