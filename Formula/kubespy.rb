@@ -1,8 +1,8 @@
 class Kubespy < Formula
   desc "Tools for observing Kubernetes resources in realtime"
   homepage "https://github.com/pulumi/kubespy"
-  url "https://github.com/pulumi/kubespy/archive/v0.6.0.tar.gz"
-  sha256 "ff8f54a2a495d8ebb57242989238a96c2c07d26601c382a25419498170fc3351"
+  url "https://github.com/pulumi/kubespy/archive/v0.6.1.tar.gz"
+  sha256 "431f4b54ac3cc890cd3ddd0c83d4e8ae8a36cf036dfb6950b76577a68b6d2157"
   license "Apache-2.0"
 
   bottle do
@@ -16,8 +16,7 @@ class Kubespy < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa4dd3522e26e234773a2cdd5ba837ccadcbe4babb7f5889faf8c11dda1bb10d"
   end
 
-  # Bump to 1.18 on the next release, if possible.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build", *std_go_args(ldflags: "-X github.com/pulumi/kubespy/version.Version=#{version}")
@@ -26,6 +25,7 @@ class Kubespy < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/kubespy version")
 
-    assert_match "Unable to read kubectl config", shell_output("#{bin}/kubespy status v1 Pod nginx 2>&1", 1)
+    assert_match "invalid configuration: no configuration has been provided",
+                 shell_output("#{bin}/kubespy status v1 Pod nginx 2>&1", 1)
   end
 end
