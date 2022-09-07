@@ -1,23 +1,15 @@
 class Kubescape < Formula
   desc "Kubernetes testing according to Hardening Guidance by NSA and CISA"
   homepage "https://github.com/armosec/kubescape"
-  url "https://github.com/armosec/kubescape/archive/v2.0.161.tar.gz"
-  sha256 "165222d24db46b70a664fd70e8918f478c39c05ef30bbcbfb57c05307d88ce6a"
+  url "https://github.com/armosec/kubescape/archive/v2.0.153.tar.gz"
+  sha256 "2dd96ca4d78789c75491fb4babcbd2848bf134ad22426eeb84f305316b28ce84"
   license "Apache-2.0"
   head "https://github.com/armosec/kubescape.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "69ef7dc344edda8dc0cf2cebdf86169a63675fd0fbe08c9e57707add42839a3a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "264415412177372be6ce2e92673a7469115ff6ce6c29a6efec1eb2a733821695"
-    sha256 cellar: :any_skip_relocation, monterey:       "b33d66b12dbd461c7038a53fde23f027046ca30efe51bf66407abe96abf5d934"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b38436d3d186c443b5deb669ac7be828296618d0f938dd68dc97340517d58f8b"
-    sha256 cellar: :any_skip_relocation, catalina:       "520774f9ca98acc82a4f86d2cc36e83684ad411f41bed5c262296647e1787b5d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8f380152c0c592450d46da3f3731853a452de6fe0a2fe824212465711ff6a9d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubescape"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0788ee8d97b0f199c378b26f4aaf4d9c84e4e063e6817f664c509c7cff82807d"
   end
-
-  # Kubescape has been disabled since it fails to build with libgit2 upstream
-  # https://github.com/Homebrew/homebrew-core/pull/106523
-  disable! date: "2022-08-11", because: :does_not_build
 
   depends_on "go" => :build
 
@@ -29,11 +21,16 @@ class Kubescape < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags)
 
-    generate_completions_from_executable(bin/"kubescape", "completion")
+    output = Utils.safe_popen_read(bin/"kubescape", "completion", "bash")
+    (bash_completion/"kubescape").write output
+    output = Utils.safe_popen_read(bin/"kubescape", "completion", "zsh")
+    (zsh_completion/"_kubescape").write output
+    output = Utils.safe_popen_read(bin/"kubescape", "completion", "fish")
+    (fish_completion/"kubescape.fish").write output
   end
 
   test do
-    manifest = "https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml"
+    manifest = "https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/b8fe8900ca1da10c85c9a203d9832b2ee33cc85f/release/kubernetes-manifests.yaml"
     assert_match "FAILED RESOURCES", shell_output("#{bin}/kubescape scan framework nsa #{manifest}")
 
     assert_match version.to_s, shell_output("#{bin}/kubescape version")
