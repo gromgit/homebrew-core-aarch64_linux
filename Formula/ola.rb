@@ -4,16 +4,15 @@ class Ola < Formula
   url "https://github.com/OpenLightingProject/ola/releases/download/0.10.8/ola-0.10.8.tar.gz"
   sha256 "102aa3114562a2a71dbf7f77d2a0fb9fc47acc35d6248a70b6e831365ca71b13"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 6
+  revision 5
   head "https://github.com/OpenLightingProject/ola.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "da5cec4bdcc4e8fe6c322aaa77dbf9a24cf180fa3b72f57731a9ea7e1c5400fa"
-    sha256 arm64_big_sur:  "02dda582adcdc9a76e093c98c40988892a280b875fd63ec00288cdaf5328ff7a"
-    sha256 monterey:       "faea2e6dc970007ac903bc7bf10a847d1ffb55924e6040bd5e18da591411ac71"
-    sha256 big_sur:        "873616e87caad74f8479ce3aa6dfb9d1dff865f616a097a6fd7992770f98e5b7"
-    sha256 catalina:       "bdd790d4f5fed6db1c3e3ec65aac6f542737909e65e1cd6e90e9b33e56db51fe"
-    sha256 x86_64_linux:   "f222379485424174bb5e2cb0341e395fa8d7fada09efb9f2b0fc33b090ae8b6b"
+    sha256 arm64_monterey: "208e70aa0fe7dd9a39ebad95760c40d46f7d41be874d18b4d348ad8b9516e448"
+    sha256 arm64_big_sur:  "cd431fcb424fe265a2b66e1a52fe3a3fade6b8d90d1afb2fbf9cd27ee20753a5"
+    sha256 monterey:       "97168b89b1b78943d492f98e236d56c250b29fce5e19fce3299508420933d055"
+    sha256 big_sur:        "d2733da8c041854c4417ac2f5d7ad28906f597ecfe9276cfad3f7cfe7b8e1a2b"
+    sha256 catalina:       "4d8a96f00dbef138b8c679cbaa0a54d84cb5c97c24d108ca46b0639b19202b1e"
   end
 
   depends_on "autoconf" => :build
@@ -27,9 +26,6 @@ class Ola < Formula
   depends_on "protobuf"
   depends_on "python@3.10"
 
-  uses_from_macos "bison" => :build
-  uses_from_macos "flex" => :build
-
   # remove in version 0.10.9
   patch do
     url "https://raw.githubusercontent.com/Homebrew/formula-patches/add0354bf13253a4cc89e151438a630314df0efa/ola/protobuf3.diff"
@@ -37,9 +33,6 @@ class Ola < Formula
   end
 
   def install
-    # https://github.com/protocolbuffers/protobuf/issues/9947
-    ENV.append_to_cflags "-DNDEBUG"
-
     args = %W[
       --disable-fatal-warnings
       --disable-dependency-tracking

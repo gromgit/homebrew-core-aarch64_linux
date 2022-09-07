@@ -2,9 +2,9 @@ class Vgmstream < Formula
   desc "Library for playing streamed audio formats from video games"
   homepage "https://vgmstream.org"
   url "https://github.com/vgmstream/vgmstream.git",
-      tag:      "r1776",
-      revision: "bcdba525bdcda370085f76ad0f48f5388c6ddef4"
-  version "r1776"
+      tag:      "r1745",
+      revision: "72eb0e6b6fe2863be24650414a34ad504f56f2f8"
+  version "r1745"
   license "ISC"
   version_scheme 1
   head "https://github.com/vgmstream/vgmstream.git", branch: "master"
@@ -16,12 +16,12 @@ class Vgmstream < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "35280e6c396dfe15a627a6a5af8080fc23d9f5f5603cdd2e348003d96c93b2ee"
-    sha256 cellar: :any,                 arm64_big_sur:  "a0d2a305b0863e5e1a437781042fb5d1b86c25ab1e5bfbbfeb59f2888faf7787"
-    sha256 cellar: :any,                 monterey:       "495cc3df390e60ce6794c3249672fac28d89e623c730df4250e656975153d2d2"
-    sha256 cellar: :any,                 big_sur:        "925c342e95ed3da0d73dcd5d20b5fe75da4f2ae02a1a146ce0714ac27471ace8"
-    sha256 cellar: :any,                 catalina:       "9b65ffe21b4018aa5d81f3b9e1d5b7b793a1963e9550a466bb8b48442f21b3b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74f9db45bc8e531c8bea0e98c37558f796971dd52e81e8f4527c986173ad783e"
+    sha256 cellar: :any,                 arm64_monterey: "f57ddf0e086737b2ca84e5f07940a2cc5e70abe8e1e0d53e757211165a8f8598"
+    sha256 cellar: :any,                 arm64_big_sur:  "e6a1df2a246d2cd9bfba5fad07bbe16375c8bf532e4d02c1d4aa44afc4fd6d45"
+    sha256 cellar: :any,                 monterey:       "ca9659ab9397511f0ba33662d599152cbed0c6aa0f510b1de5ef30c6532b0442"
+    sha256 cellar: :any,                 big_sur:        "cda923350cb2ad199ebcb69d4a8af3a0512b766f58b575bf97dfbbc346617b73"
+    sha256 cellar: :any,                 catalina:       "f9646009f868b5a338740f2aab8e8f7deccb0c2bd6009998f4427ba0349639c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c08aeb195df59c70f044381afb8527686204eac958b21fb3a8761887bdd83466"
   end
 
   depends_on "autoconf" => :build

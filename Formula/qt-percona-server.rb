@@ -1,8 +1,8 @@
 class QtPerconaServer < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.3/6.3.1/submodules/qtbase-everywhere-src-6.3.1.tar.xz"
-  sha256 "0a64421d9c2469c2c48490a032ab91d547017c9cc171f3f8070bc31888f24e03"
+  url "https://download.qt.io/official_releases/qt/6.2/6.2.3/submodules/qtbase-everywhere-src-6.2.3.tar.xz"
+  sha256 "34d6d0072e197241463c417ad72610c3d44e2efd6062868e9a95283103d75df4"
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
   livecheck do
@@ -10,12 +10,11 @@ class QtPerconaServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "44bc31d7293c0993d89541fc05c869c97443d860ce04f6f63d341c970a1df478"
-    sha256 cellar: :any,                 arm64_big_sur:  "953cebb7345dec1f9f9e5750af87485dd5b9ccbe7be966fe4b5e4d21dac8cc68"
-    sha256 cellar: :any,                 monterey:       "a6ee1f8324d106ad14f85028e0cb366bd6c95c8089bd2be670e94272d6742a52"
-    sha256 cellar: :any,                 big_sur:        "d05415c40d72d425440a6a821614bd820421bc2224edfdc4989a0ae6d8bd7ba3"
-    sha256 cellar: :any,                 catalina:       "d45217cda34a5264aaba74b1423710b9c12a7a434c9f2b7d5be1aeb4eec4ae1f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cca60f9f55ae457c696321641e4fda3804c3aba2e9f969abb64ad300956bfdb"
+    sha256 cellar: :any, arm64_monterey: "34cac8a9cc3c92b8bb6f944c8776f1a424a2f0095ec5928eec8c62a5a0406f4d"
+    sha256 cellar: :any, arm64_big_sur:  "008c58e0a3dd4bef623f1a3f38b08d29324bd967ad153161365f419d69f79c7a"
+    sha256 cellar: :any, monterey:       "4e929c850c2c9bb54a6d950bb9587de0c56cacfeecca085859b4e73521d2f073"
+    sha256 cellar: :any, big_sur:        "2b8092a7ad5324045358cc0ecb62c342d9edba17008a0995ecc1b7c28f683688"
+    sha256 cellar: :any, catalina:       "e7fd8e3cd0d9e66260bd3ae91c04614d57a6c8f9462ba0915cc12c2707075ca3"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -24,14 +23,8 @@ class QtPerconaServer < Formula
   depends_on "percona-server"
   depends_on "qt"
 
-  on_linux do
-    depends_on "gcc"
-  end
-
   conflicts_with "qt-mysql", "qt-mariadb",
     because: "qt-mysql, qt-mariadb, and qt-percona-server install the same binaries"
-
-  fails_with gcc: "5"
 
   def install
     args = std_cmake_args + %W[
@@ -86,7 +79,6 @@ class QtPerconaServer < Formula
       #include <cassert>
       int main(int argc, char *argv[])
       {
-        QCoreApplication::addLibraryPath("#{share}/qt/plugins");
         QCoreApplication a(argc, argv);
         QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
         assert(db.isValid());

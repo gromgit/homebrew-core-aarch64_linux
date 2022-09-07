@@ -1,23 +1,23 @@
 class ImagemagickAT6 < Formula
   desc "Tools and libraries to manipulate images in many formats"
   homepage "https://legacy.imagemagick.org/"
-  url "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-62.tar.xz"
-  sha256 "fdacd02f4c1b4490fb6cc4aac00462aa77dbb91da9733d5485a03a1c77475daf"
+  url "https://www.imagemagick.org/download/releases/ImageMagick-6.9.12-48.tar.xz"
+  sha256 "8bf31cb269a8a26ad1cfd537ffabe55819ff719b7d269f1387a6164b93722323"
   license "ImageMagick"
   head "https://github.com/imagemagick/imagemagick6.git", branch: "main"
 
   livecheck do
-    url "https://imagemagick.org/archive/"
-    regex(/href=.*?ImageMagick[._-]v?(6(?:[.-]\d+)+)\.t/i)
+    url "https://download.imagemagick.org/ImageMagick/download/"
+    regex(/href=.*?ImageMagick[._-]v?(6(?:\.\d+)+(?:-\d+)?)\.t/i)
   end
 
   bottle do
-    sha256 arm64_monterey: "45685b465dab7e937866602fb916b19eaace1fdd7a608153ac7a864a98aac4d3"
-    sha256 arm64_big_sur:  "b0fd41905b43d93de73cc39d08de057edc245705b0e0aaf28f24ed4f78b4271e"
-    sha256 monterey:       "4ff824832dbf31c871353788e7e8386a5741e9a67345fe9c0347c9a04c1f687d"
-    sha256 big_sur:        "bf2c64913c842dded1336ece25203dc096d8857c8159c587c278cf6a12de66d8"
-    sha256 catalina:       "b76686f44bc11dcd6d742220e467af5b577a9f6cb908920964c2026e63b694c3"
-    sha256 x86_64_linux:   "524aa11ab200525c21efaa63388e02bb16a104dc34daaa34b5106b1639e87f49"
+    sha256 arm64_monterey: "46834b7632a03ae11d47e0177067edad99a862ad196b0c840364421373f21f6d"
+    sha256 arm64_big_sur:  "b056a194ee5cc3927e5beb373beb6f386478732a031f799b66c777618f0793df"
+    sha256 monterey:       "cba3fba0ac99eca8b127eaf0b00688d9d662002212cfac62cbd8c6cffca843fc"
+    sha256 big_sur:        "0e1b64f6ed9e9918ebbbb6b3a054970de03398a30c36beb54aa76380a92d4040"
+    sha256 catalina:       "161b53bcd2f9e3ebb599ca3a2c919b4625a1c962556c358d57f757b87f6707cf"
+    sha256 x86_64_linux:   "e7771fd50a95d0cb798566984c7c1cce57d2cabf02ca17ddfa6870bc55c6b22b"
   end
 
   keg_only :versioned_formula
@@ -26,7 +26,7 @@ class ImagemagickAT6 < Formula
 
   depends_on "freetype"
   depends_on "ghostscript"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libtool"

@@ -3,8 +3,7 @@ class Libwmf < Formula
   homepage "https://wvware.sourceforge.io/libwmf.html"
   url "https://downloads.sourceforge.net/project/wvware/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz"
   sha256 "5b345c69220545d003ad52bfd035d5d6f4f075e65204114a9e875e84895a7cf8"
-  license "LGPL-2.1-only" # http://wvware.sourceforge.net/libwmf.html#download
-  revision 3
+  revision 2
 
   livecheck do
     url :stable
@@ -12,25 +11,30 @@ class Libwmf < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "3e48bed98b30b6740c80267498806123a035d100711c6ed8afcb5399dabd2d06"
-    sha256 arm64_big_sur:  "544befd86f2efc9ba73b08b2724c0e1951d88c8fe753aa568e442df449d55192"
-    sha256 monterey:       "f83417389f14343ca059d9c13c91b01cef4b5fa8ecccee254bbbcf830a6c0c2f"
-    sha256 big_sur:        "5886a1a89f5a13f4b1d6e3b9bf5d6d9bbc237833e9ff0347679cf17a6b5d40f8"
-    sha256 catalina:       "5a79438b49930e82ab4761644daa03d4843041ed4e245b47a208301a4a88d35e"
-    sha256 x86_64_linux:   "a18467741b4b8a3b995017473f8481d46023e36f5af44b28be538aa306007962"
+    sha256 arm64_monterey: "1f89c6e1b24e93fd7da667bef0e58476e8db973bbdff90803f45ce45a58df0fc"
+    sha256 arm64_big_sur:  "641d8c9c953f8b1e5c5b122a38582ccfdeeb37f92d11dbe0f353bed473053c92"
+    sha256 monterey:       "e149c022245668436bcab7911f8344468c270ee437012edad17ca3c4db42fd7d"
+    sha256 big_sur:        "2c1e4e481c00fdc9a6590bb65d39df1b87bbd054a1ecf20369049127b198c3a9"
+    sha256 catalina:       "4fa5b3dc0b38f72ac7c4d15f4e23bc96c0808d48de28005c4dc74d50292ddf62"
+    sha256 mojave:         "3e0e8ecd7072819856393b472017d1e7fc3995a6d8568c6ad65b7d1055efc2e7"
+    sha256 high_sierra:    "a96fe2e0aef8cd0f8eecce05b8789c2637f973a6ae358924c451b8f36b3a70ef"
+    sha256 sierra:         "9df806eb6a4a3ca1a2b4b656ff02623175892981fbf136c89d4df5b5853bd20c"
+    sha256 el_capitan:     "205bf519460576ecf73e9314ba1171542be58ea22cea81c26424d661734f2d2f"
+    sha256 yosemite:       "3554c19cc80eb6435ad630587a38dd094a3f33008c11a93a622f1eb62b2a3e2e"
+    sha256 x86_64_linux:   "601eaf0675dc226c04cb3b52179f8af294317b51307de9067d6506ae60e0dbbb"
   end
 
   depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "gd"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
 
   def install
-    system "./configure", *std_configure_args,
+    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
                           "--with-png=#{Formula["libpng"].opt_prefix}",
-                          "--with-freetype=#{Formula["freetype"].opt_prefix}",
-                          "--with-jpeg=#{Formula["jpeg-turbo"].opt_prefix}"
+                          "--with-freetype=#{Formula["freetype"].opt_prefix}"
     system "make"
     ENV.deparallelize # yet another rubbish Makefile
     system "make", "install"

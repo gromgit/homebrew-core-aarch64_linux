@@ -1,10 +1,9 @@
 class NodeAT14 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v14.20.0/node-v14.20.0.tar.xz"
-  sha256 "2b5098498889d1e6a9709d63f3d6f94e696a5ad8221618c5d51159cee363996a"
+  url "https://nodejs.org/dist/v14.19.2/node-v14.19.2.tar.xz"
+  sha256 "ef4375a9152ff69f2823d7b20a3b53767a046164bbac7824429cb216d1688cf0"
   license "MIT"
-  revision 1
 
   livecheck do
     url "https://nodejs.org/dist/"
@@ -12,17 +11,17 @@ class NodeAT14 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f2fff457b29cafd78671a8860e2bd945e8d90e24075957dfd3bb130a48938467"
-    sha256 cellar: :any,                 arm64_big_sur:  "b97b63612564750924571a1c70972d765c8831db144ce220cd20385bbe526293"
-    sha256 cellar: :any,                 monterey:       "00d40002a5261bcd0219d8bc633dca75641c9aaf6392e920139f10b097019a6c"
-    sha256 cellar: :any,                 big_sur:        "51608493843eb94c8e111c89a4b70b63df443729abb5f42a111ccf268c2be6af"
-    sha256 cellar: :any,                 catalina:       "82354b2e4ba958a5567dc5f6ec91411dcf1023f19519ce6c0cb0ea544bd60c2c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd0991e3978cd3b9d81f5070eac74aa4f3be74b209f50f9a930b4c414f01e3d2"
+    sha256 cellar: :any, arm64_monterey: "65968f3500dae69c05e9c596624b97b5ba6165103759a3b0fab3f07085a0dd17"
+    sha256 cellar: :any, arm64_big_sur:  "2e3e408186ba11e59317d17f94c102cd04ff7198fdb0a1f80415b889e910f4fd"
+    sha256 cellar: :any, monterey:       "afb9738a882eba4f7a2f7779d32e8bde7135abedf1e9c45ca1d9af415d5e8d6e"
+    sha256 cellar: :any, big_sur:        "b9754256b4ca8e50eb9176351ab9a6cd82d15c3ef16b45317496bc0453c87511"
+    sha256 cellar: :any, catalina:       "a9eecfcce4e5d6a47d0feb754a0080cd74064ecf30f5b3372c82ec1ea8621064"
   end
 
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
+  depends_on "python@3.10" => :build
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "icu4c"
@@ -30,21 +29,15 @@ class NodeAT14 < Formula
   depends_on "libuv"
   depends_on "openssl@1.1"
 
-  uses_from_macos "python"
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "python@3.10" => [:build, :test]
     depends_on "macos-term-size"
-  end
-
-  def python3
-    Formula["python@3.10"]
   end
 
   def install
     # make sure subprocesses spawned by make are using our Python 3
-    ENV["PYTHON"] = python = python3.opt_bin/"python3.10"
+    ENV["PYTHON"] = which("python3")
 
     args = %W[
       --prefix=#{prefix}
@@ -67,7 +60,7 @@ class NodeAT14 < Formula
       --shared-cares-libpath=#{Formula["c-ares"].lib}
       --openssl-use-def-ca-store
     ]
-    system python, "configure.py", *args
+    system "python3", "configure.py", *args
     system "make", "install"
 
     term_size_vendor_dir = lib/"node_modules/npm/node_modules/term-size/vendor"
@@ -97,9 +90,8 @@ class NodeAT14 < Formula
     output = shell_output("#{bin}/node -e 'console.log(new Intl.NumberFormat(\"de-DE\").format(1234.56))'").strip
     assert_equal "1.234,56", output
 
-    # make sure npm can find node and python
+    # make sure npm can find node
     ENV.prepend_path "PATH", opt_bin
-    ENV.prepend_path "PATH", python3.opt_libexec/"bin" if OS.mac?
     ENV.delete "NVM_NODEJS_ORG_MIRROR"
     assert_equal which("node"), opt_bin/"node"
     assert_predicate bin/"npm", :exist?, "npm must exist"

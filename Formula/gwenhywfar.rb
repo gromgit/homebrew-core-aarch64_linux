@@ -1,8 +1,8 @@
 class Gwenhywfar < Formula
   desc "Utility library required by aqbanking and related software"
   homepage "https://www.aquamaniac.de/rdm/projects/gwenhywfar"
-  url "https://www.aquamaniac.de/rdm/attachments/download/465/gwenhywfar-5.10.1.tar.gz"
-  sha256 "a2f60a9dde5da27e57e0e5ef5f8931f495c1d541ad90a841e2b6231565547160"
+  url "https://www.aquamaniac.de/rdm/attachments/download/415/gwenhywfar-5.9.0.tar.gz"
+  sha256 "e88c7d3383a3cbbe46cb3b2299f71dfb9e6fa565f5a1668b4297391c874b0e12"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Gwenhywfar < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c7b83b62888d39c6f1e18f603152db650b6d72e6f81a7cb061cc8bcbd998a80d"
-    sha256 arm64_big_sur:  "273495183704bead4fa1077be3e057d1be7a86be76bae3f70b0d30cf6d0eae26"
-    sha256 monterey:       "c8adb5792cd60ef01af64c0a2c3542246a0e7e5588a8c780fa4542ca157b790d"
-    sha256 big_sur:        "c3a687c6a0b498a6ce19a9fef1ec9dd18cad56b733b53153ca4ccff6e73415c2"
-    sha256 catalina:       "4c8a467bf4405f6591b49614c3b12b28c4f44b6b667fb92054e0126b52c62e0a"
-    sha256 x86_64_linux:   "46b55d7ef906d5f814c5995943b5d555094f36b1c0bae588c5c8fe6ccfadbb22"
+    sha256 arm64_monterey: "fff0a9c1b61acc58e4916356b8ae9790d6390f92793cd6b19acd19c41db5aee4"
+    sha256 arm64_big_sur:  "6df6fd8af83a216de5bc80c5beaa2cb1e79a043d13ee63b16de50a9709c09944"
+    sha256 monterey:       "7ae5f189ba9ba9b89585ad98c9222262921ff7426d626f3f4a63a3fad605831d"
+    sha256 big_sur:        "d07022854cd1f1d9155d1840d31d88079368f17661e328e7204354f38ec9a960"
+    sha256 catalina:       "87f3d218ac732ef0be68decfaf0e230c5bf40f98916d623ee85f2a81f7d95be3"
+    sha256 x86_64_linux:   "1aa388288fe7fd86bb667e5b778839de858571a08de78051148b049e694cfa82"
   end
 
   depends_on "autoconf" => :build
@@ -37,8 +37,7 @@ class Gwenhywfar < Formula
 
   def install
     inreplace "gwenhywfar-config.in.in", "@PKG_CONFIG@", "pkg-config"
-    # Fix `-flat_namespace` flag on Big Sur and later.
-    system "autoreconf", "--force", "--install", "--verbose"
+    system "autoreconf", "-fiv" # needed because of the patch. Otherwise only needed for head build (if build.head?)
     guis = ["cpp", "qt5"]
     guis << "cocoa" if OS.mac?
     system "./configure", "--disable-debug",

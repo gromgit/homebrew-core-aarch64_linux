@@ -1,18 +1,18 @@
 class Duckscript < Formula
   desc "Simple, extendable and embeddable scripting language"
   homepage "https://sagiegurari.github.io/duckscript"
-  url "https://github.com/sagiegurari/duckscript/archive/0.8.14.tar.gz"
-  sha256 "34c9a0fda9c635706a2b82dcaf11f6536cba6f24c6ff403fdf377e323f8f6272"
+  url "https://github.com/sagiegurari/duckscript/archive/0.8.11.tar.gz"
+  sha256 "5ee95309840140713b82ef1dadad91372734dc2fd2bd9d3a02d85f83c8d790eb"
   license "Apache-2.0"
   head "https://github.com/sagiegurari/duckscript.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a70fa8674ac556a2818039dc5d04dd009912d146e4ce75a9d6d040a21a5f7738"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7b924b953d5e6051000bd9f5468c8596312e8703aa841d3c7e6fc9210e965c7"
-    sha256 cellar: :any_skip_relocation, monterey:       "bab14e845c401a54a349b8066f0d17facff32f0b8a8b35a7b390bb2cc0806751"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ce3af414a15f43f5138a624f732505866ad133b20b398bb57963778816deea83"
-    sha256 cellar: :any_skip_relocation, catalina:       "ad416566cc2488d0983336498b7aca59a0a6d4d71fbf352540628faf0ad88dca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f484a0a45bbdc073c9ebd81fc5e54b5dd770683fb8e59b277069936bf5f4d2c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f01a85bb047d967ed007cde3daac4e75ee6b8d04be498e11cad6016140c547e3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69850a4e593a7775bec19527c7f5a963edf73b8555f331e23fa08621ebeafb99"
+    sha256 cellar: :any_skip_relocation, monterey:       "3c4035b7bd8bb37f3488e235d917658cc63c76d00a0c78345aa9c886971dbe45"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9edd09f0997c8985fda2d10d5bae5c6166f0d6c2a0d79b2bd078f195f70cb44a"
+    sha256 cellar: :any_skip_relocation, catalina:       "cefce92ed7ace51a984b1c4fe90c0269fad4a39abf9f381e1164e6d4a1535ea2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0a2e5250516ea13bb74c9379447ffe1871999e7f4ad318fbcd01d8bdca4fb4c"
   end
 
   depends_on "rust" => :build

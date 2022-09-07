@@ -1,8 +1,8 @@
 class Latex2html < Formula
   desc "LaTeX-to-HTML translator"
   homepage "https://www.latex2html.org"
-  url "https://github.com/latex2html/latex2html/archive/v2022.2.tar.gz"
-  sha256 "b1d5bba7bab7d0369d1241f2d8294137a52b7cb7df11239bfa15ec0a2546c093"
+  url "https://github.com/latex2html/latex2html/archive/v2022.tar.gz"
+  sha256 "9b3ba484226a2e39fb20695729370372b355f71bd65eeb4dd14f2c78699ed59a"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Latex2html < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe79732ce4286367899079a9f454c57db16c65d46851093ea7b74cd7fcee070b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b8249d8a5645594a8514c0454bd4eabf2cc3e3ba4f2fbf0ee13acfde88a8bd6"
-    sha256 cellar: :any_skip_relocation, monterey:       "ca570902e67d6bed65c699855d3644e9601f24208788d4cf57b45b6be98c5fc5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2de5fd65a590c0ba97c992ae00d50138059b3dc0b25824d8de4c0d6cec0c1c03"
-    sha256 cellar: :any_skip_relocation, catalina:       "ec0a808f4b5e62f702f941849063f9290d05522b5039f006a8ba58e7ef029353"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6eeb77576c366020b2c5a5b57a2255641632f9129b6491a3389f56d875bf7de"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6641561f400242f33c0aa593dafdca76d2c1914bdfa37338907969d1e21c0b16"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "16c4b37f5a8ed8ba3535b4dd6f310763e75423079793ed18653bff59fa9ddfdd"
+    sha256 cellar: :any_skip_relocation, monterey:       "d7fe8a4deeccc36569dc7635a651364055b5dbb8aa0f1fa38141c3fcf6a83657"
+    sha256 cellar: :any_skip_relocation, big_sur:        "70f14cb4a800970e48f2bdccb22162793bd650a308617fd83a90011542c4f2e6"
+    sha256 cellar: :any_skip_relocation, catalina:       "09624775c9cfa2fd114e9a32915a5330e2d55102076e1bdd2e7eebefa6f89600"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7d37099d9ed061779a20ff667cc71229ae8f52cadf737bda0af1b7da9b7cbd5"
   end
 
   depends_on "ghostscript"

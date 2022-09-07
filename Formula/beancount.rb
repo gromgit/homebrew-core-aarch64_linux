@@ -6,16 +6,15 @@ class Beancount < Formula
   url "https://files.pythonhosted.org/packages/77/51/2acc2741fa2937a3a1123fd00e6e76e6d6f27c46579ea53705c49bd221ec/beancount-2.3.5.tar.gz"
   sha256 "14e35625a2e9cbd43cae6178da08cb3f1224f6261e541ca6726df35d98e9c36a"
   license "GPL-2.0-only"
-  revision 2
   head "https://github.com/beancount/beancount.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f87abb98c2a55e01d7c8f6f99d8aeb5d86bf6992c5a41405ef4a36eddfc815b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "da4185597bbe09d66a0c041c6031ac8f3c41ebc11f171e17bcc918f3d7b95b59"
-    sha256 cellar: :any_skip_relocation, monterey:       "86662be13b7c732f005e05c3db39e116a7e85ac4bdf111e311cf7968650b5132"
-    sha256 cellar: :any_skip_relocation, big_sur:        "500712eee74a07c90c40940f2080bd445806b0ca5bdf49bce113e7928d87cc67"
-    sha256 cellar: :any_skip_relocation, catalina:       "2a66ba276361aa3c7fa94486e857c3ee27433edddb4e18166a11413798f21ca5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a3ccc39266549f5cd980649c63dea3e52d9aec4667123cadd7ce2e295a70cdb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e85524497ac038b133e89d6e83ee0b9179bf0ef3bd1e99f4d772ad1f91d138fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7cc22f6e62d3de83049d760f99a38b33b229b5c57bc7bd1f94a8d1b1986e970"
+    sha256 cellar: :any_skip_relocation, monterey:       "ece9853993b839982f9d0a4760b13d0bc50be75e8f35a527797ed81e7c572df5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "421d60b5b13e82bbb320f7e15e048af57155a7f3203693653eb51ee0f8cac40f"
+    sha256 cellar: :any_skip_relocation, catalina:       "ea438513d7777a7cded46bec31a7e57956fb8329d494aa449fccca1e8c446990"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fefe7a295981197dcec31b0c15402d696ac5ef8c242692dd4235d2edddabffd0"
   end
 
   depends_on "python@3.10"
@@ -29,48 +28,48 @@ class Beancount < Formula
   end
 
   resource "beautifulsoup4" do
-    url "https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz"
-    sha256 "ad9aa55b65ef2808eb405f46cf74df7fcb7044d5cbc26487f96eb2ef2e436693"
+    url "https://files.pythonhosted.org/packages/a1/69/daeee6d8f22c997e522cdbeb59641c4d31ab120aba0f2c799500f7456b7e/beautifulsoup4-4.10.0.tar.gz"
+    sha256 "c23ad23c521d818955a4151a67d81580319d4bf548d3d49f4223ae041ff98891"
   end
 
   resource "bottle" do
-    url "https://files.pythonhosted.org/packages/95/e3/5749d7657b6fb38d65afb3c0b345514a783de7a9feb4fab594fa0bacc2a0/bottle-0.12.21.tar.gz"
-    sha256 "787c61b6cc02b9c229bf2663011fac53dd8fc197f7f8ad2eeede29d888d7887e"
+    url "https://files.pythonhosted.org/packages/ea/80/3d2dca1562ffa1929017c74635b4cb3645a352588de89e90d0bb53af3317/bottle-0.12.19.tar.gz"
+    sha256 "a9d73ffcbc6a1345ca2d7949638db46349f5b2b77dac65d6494d45c23628da2c"
   end
 
   resource "cachetools" do
-    url "https://files.pythonhosted.org/packages/c2/6f/278225c5a070a18a76f85db5f1238f66476579fa9b04cda3722331dcc90f/cachetools-5.2.0.tar.gz"
-    sha256 "6a94c6402995a99c3970cc7e4884bb60b4a8639938157eeed436098bf9831757"
+    url "https://files.pythonhosted.org/packages/ad/81/539036a8716b4e0a96f77540194bb1e863a24b8e9bc9ddd74e30f1653df5/cachetools-5.0.0.tar.gz"
+    sha256 "486471dfa8799eb7ec503a8059e263db000cdda20075ce5e48903087f79d5fd6"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
-    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "chardet" do
-    url "https://files.pythonhosted.org/packages/31/a2/12c090713b3d0e141f367236d3a8bdc3e5fca0d83ff3647af4892c16c205/chardet-5.0.0.tar.gz"
-    sha256 "0368df2bfd78b5fc20572bb4e9bb7fb53e2c094f60ae9993339e8671d0afb8aa"
+    url "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz"
+    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
-    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
+    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
+    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
   end
 
   resource "google-api-core" do
-    url "https://files.pythonhosted.org/packages/22/39/29c386863def9088b05b1d4632b5fce8b9546ddd234dd6bff8bb871015e9/google-api-core-2.8.2.tar.gz"
-    sha256 "06f7244c640322b508b125903bb5701bebabce8832f85aba9335ec00b3d02edc"
+    url "https://files.pythonhosted.org/packages/1f/cf/40aa6664a959be91a76cf99f3875f421e0307a8eb1f5d6b7dd1cc18f29a1/google-api-core-2.5.0.tar.gz"
+    sha256 "f33863a6709651703b8b18b67093514838c79f2b04d02aa501203079f24b8018"
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/a2/e5/44cac8e47820a9a8b4231305119becc15ec94568f55954a759276b74fb8f/google-api-python-client-2.52.0.tar.gz"
-    sha256 "0ae3fa7cad2102e24a587986cee53afdbc95bd69b58f2c08f8fd881a20da5f14"
+    url "https://files.pythonhosted.org/packages/45/b6/2fdce4c193d4d63e5f70586b2b650e9ec2b9c427e239aa5aff812bf00e79/google-api-python-client-2.37.0.tar.gz"
+    sha256 "39bb945d00ce5f70207a312b32418c238f3ae16559e30c4ff10dac1e0ed69244"
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/ae/bc/b79ffd264b657a2ab59bbfe4786cfbd8d7105e69eea8dcbd3e4ceb71ff71/google-auth-2.9.0.tar.gz"
-    sha256 "3b2f9d2f436cc7c3b363d0ac66470f42fede249c3bafcc504e9f0bcbe983cff0"
+    url "https://files.pythonhosted.org/packages/f8/42/abd9c0c192314f8ec494c9ee7b5bde4348dff986fe0e8f26c8c59e9897e4/google-auth-2.6.0.tar.gz"
+    sha256 "ad160fc1ea8f19e331a16a14a79f3d643d813a69534ba9611d2c80dc10439dad"
   end
 
   resource "google-auth-httplib2" do
@@ -79,8 +78,8 @@ class Beancount < Formula
   end
 
   resource "googleapis-common-protos" do
-    url "https://files.pythonhosted.org/packages/56/36/f981fb5e86a4a72b7820f6250335f0bb059ca392f19b89e198f7915af1f9/googleapis-common-protos-1.56.3.tar.gz"
-    sha256 "6f1369b58ed6cf3a4b7054a44ebe8d03b29c309257583a2bbdc064cd1e4a1442"
+    url "https://files.pythonhosted.org/packages/97/94/e55c0151d6665a5ff7305fef38c7e8f1defa4679f884aaf9812fb42a1109/googleapis-common-protos-1.54.0.tar.gz"
+    sha256 "a4031d6ec6c2b1b6dc3e0be7e10a1bd72fb0b18b07ef9be7b51f2c1004ce2437"
   end
 
   resource "httplib2" do
@@ -99,8 +98,8 @@ class Beancount < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz"
-    sha256 "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
+    url "https://files.pythonhosted.org/packages/3b/94/e2b1b3bad91d15526c7e38918795883cee18b93f6785ea8ecf13f8ffa01e/lxml-4.8.0.tar.gz"
+    sha256 "f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"
   end
 
   resource "packaging" do
@@ -119,8 +118,8 @@ class Beancount < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/28/01/d85a74fb076a172519f9d24cc68cdcf9a0cdc7c62ec6ae27feb33a88b602/protobuf-4.21.2.tar.gz"
-    sha256 "863f65e137d9de4a76cac39ae731a19bea1c30997f512ecf0dc9348112313401"
+    url "https://files.pythonhosted.org/packages/6c/49/f864b9fd6310d9a15ddae5b37d78dff1df0e2e1da476442fee062c6032b2/protobuf-3.19.4.tar.gz"
+    sha256 "9df0c10adf3e83015ced42a9a7bd64e13d06c4cf45c340d2c63020ea04499d0a"
   end
 
   resource "py" do
@@ -139,13 +138,13 @@ class Beancount < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/d6/60/9bed18f43275b34198eb9720d4c1238c68b3755620d20df0afd89424d32b/pyparsing-3.0.7.tar.gz"
+    sha256 "18ee9022775d270c55187733956460083db60b37d0d0fb357445f3094eed3eea"
   end
 
   resource "pytest" do
-    url "https://files.pythonhosted.org/packages/4e/1f/34657c6ac56f3c58df650ba41f8ffb2620281ead8e11bcdc7db63cf72a78/pytest-7.1.2.tar.gz"
-    sha256 "a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"
+    url "https://files.pythonhosted.org/packages/3e/2c/a67ad48759051c7abf82ce182a4e6d766de371b183182d2dde03089e8dfb/pytest-7.0.1.tar.gz"
+    sha256 "e30905a0c131d3d94b89624a1cc5afec3e0ba2fbdb151867d8e0ebd49850f171"
   end
 
   resource "python-dateutil" do
@@ -154,13 +153,13 @@ class Beancount < Formula
   end
 
   resource "python-magic" do
-    url "https://files.pythonhosted.org/packages/da/db/0b3e28ac047452d079d375ec6798bf76a036a08182dbb39ed38116a49130/python-magic-0.4.27.tar.gz"
-    sha256 "c1ba14b08e4a5f5c31a302b7721239695b2f0f058d125bd5ce1ee36b9d9d3c3b"
+    url "https://files.pythonhosted.org/packages/f7/46/fecfd32c126d26c8dd5287095cad01356ec0a761205f0b9255998bff96d1/python-magic-0.4.25.tar.gz"
+    sha256 "21f5f542aa0330f5c8a64442528542f6215c8e18d2466b399b0d9d39356d83fc"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
+    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
   end
 
   resource "rsa" do
@@ -174,8 +173,8 @@ class Beancount < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/f3/03/bac179d539362319b4779a00764e95f7542f4920084163db6b0fd4742d38/soupsieve-2.3.2.post1.tar.gz"
-    sha256 "fc53893b3da2c33de295667a0e19f078c14bf86544af307354de5fcf12a3f30d"
+    url "https://files.pythonhosted.org/packages/e1/25/a3005eedafb34e1258458e8a4b94900a60a41a2b4e459e0e19631648a2a0/soupsieve-2.3.1.tar.gz"
+    sha256 "b8d49b1cd4f037c7082a9683dfa1801aa2597fb11c3a1155b7a5b94829b4f1f9"
   end
 
   resource "tomli" do
@@ -189,8 +188,8 @@ class Beancount < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/25/36/f056e5f1389004cf886bb7a8514077f24224238a7534497c014a6b9ac770/urllib3-1.26.10.tar.gz"
-    sha256 "879ba4d1e89654d9769ce13121e0f94310ea32e8d2f8cf587b77c08bbcdb30d6"
+    url "https://files.pythonhosted.org/packages/b0/b1/7bbf5181f8e3258efae31702f5eab87d8a74a72a0aa78bc8c08c1466e243/urllib3-1.26.8.tar.gz"
+    sha256 "0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"
   end
 
   def install

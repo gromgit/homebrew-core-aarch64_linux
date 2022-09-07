@@ -1,21 +1,29 @@
 class Fmt < Formula
   desc "Open-source formatting library for C++"
   homepage "https://fmt.dev/"
-  url "https://github.com/fmtlib/fmt/archive/9.1.0.tar.gz"
-  sha256 "5dea48d1fcddc3ec571ce2058e13910a0d4a6bab4cc09a809d8b1dd1c88ae6f2"
+  url "https://github.com/fmtlib/fmt/archive/8.1.1.tar.gz"
+  sha256 "3d794d3cf67633b34b2771eb9f073bde87e846e0d395d254df7b211ef1ec7346"
   license "MIT"
+  revision 1
   head "https://github.com/fmtlib/fmt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dfd44ffca7165995a6cdca2191e4e5bb6563385a71375fcd22a002e5e63d3133"
-    sha256 cellar: :any,                 arm64_big_sur:  "20658415047bbd2856d1d4b5cd4886daeab829948a4f546e24bd176ba17d9e97"
-    sha256 cellar: :any,                 monterey:       "324344e5048ea4bf92352dcdfae63832d447c0d27cc01d45eecc6a2bebee6b5d"
-    sha256 cellar: :any,                 big_sur:        "3616cabdb7e41f47275dac7bd60bc3496f375550eb0462f96edb5736c31d6c90"
-    sha256 cellar: :any,                 catalina:       "d99a9571471d998a20f654f32499096037b4db5c33819d1c324cd29cea8f04bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "978a0685bf616cf383c4ffacf8210ad881f0f2d3ab94207005604648316dc32c"
+    sha256 cellar: :any,                 arm64_monterey: "47866137bfcc88428ad11fb6b1a6815a3e23343a01b87532921f9606c8079df0"
+    sha256 cellar: :any,                 arm64_big_sur:  "9e6672c625f0a4ef5f493d0354d61cb37544c3462393050515dfda94e8cea3d7"
+    sha256 cellar: :any,                 monterey:       "adc6bcafd5a51853ee1263c965780e22562f0ac551c59776f2ed3271eb91e2d5"
+    sha256 cellar: :any,                 big_sur:        "e704728001d94f2b8a25656ae8f06099c1f6ca4b36a26a5b05f2946226a62077"
+    sha256 cellar: :any,                 catalina:       "ec6ed03041add5859c98d14a604b9dbbc78f33b5c30bc1bd462560523970a4c6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ce6065175c67d5fbba475c74b1efce928566d9df76dc7bb51e9baa1f3a3c6b2"
   end
 
   depends_on "cmake" => :build
+
+  # Fix Watchman build.
+  # https://github.com/fmtlib/fmt/issues/2717
+  patch do
+    url "https://github.com/fmtlib/fmt/commit/8f8a1a02d5c5cb967d240feee3ffac00d66f22a2.patch?full_index=1"
+    sha256 "ac5d7a8f9eabd40e34f21b1e0034fbc4147008f13b7bf2314131239fb3a7bdab"
+  end
 
   def install
     system "cmake", ".", "-DBUILD_SHARED_LIBS=TRUE", *std_cmake_args

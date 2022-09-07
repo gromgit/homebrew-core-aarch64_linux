@@ -6,15 +6,14 @@ class GobjectIntrospection < Formula
   url "https://download.gnome.org/sources/gobject-introspection/1.72/gobject-introspection-1.72.0.tar.xz"
   sha256 "02fe8e590861d88f83060dd39cda5ccaa60b2da1d21d0f95499301b186beaabc"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later", "MIT"]
-  revision 2
 
   bottle do
-    sha256 arm64_monterey: "976be484265bde8641d3f9f06561d22b17bc4dd060642fe8b871919a026cfb46"
-    sha256 arm64_big_sur:  "9a7893449cedf64c11871e59966b9914f54f9d55d57720df70b8d1c9d62c4e6a"
-    sha256 monterey:       "9a8e926c80de7098e14449c7f7b54c3a34945ce99c509cbf112302dab569508e"
-    sha256 big_sur:        "0d3cf02bd57ca2cd8754dd1326dcec7c559bc9bad831906b8fc510e951223763"
-    sha256 catalina:       "d416a917d6cb8aa2dfd00c5eafec6263397f51f85382f70a59b5ae13f203ef48"
-    sha256 x86_64_linux:   "027aad7e8d9c0aadfd9bfc0a2b6446a3f797df3e66077388025a34cea0ae2515"
+    sha256 arm64_monterey: "f99f2db1c00cdde18f0cbfa00e70604dfaea7aa512256750eabc31cbb0181204"
+    sha256 arm64_big_sur:  "49ce2c6051e3e993326f45e8d29ee9c5ad4827acc7a49f69726e33c4c49e035f"
+    sha256 monterey:       "691d417a183544a9b772e10d51c4279d153e3e0261ccfaff592b44099d02d843"
+    sha256 big_sur:        "5cb0f78a5c9b1bd0c834b073ad8fffe0349a3b34428244374cb04eef05b88097"
+    sha256 catalina:       "aa6e5ba50fc0702af44f8d43539447d1fc8d2a018c41fca919564308d91ae634"
+    sha256 x86_64_linux:   "a5fa6b022fa051a18dc59c4bdd92411bc15cfc2bb6c768da5d62dd302ca24974"
   end
 
   depends_on "bison" => :build
@@ -22,12 +21,11 @@ class GobjectIntrospection < Formula
   depends_on "ninja" => :build
   depends_on "cairo"
   depends_on "glib"
+  depends_on "libffi"
   depends_on "pkg-config"
-  # Ships a `_giscanner.cpython-310-darwin.so`, so needs a specific version.
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   uses_from_macos "flex" => :build
-  uses_from_macos "libffi", since: :catalina
 
   resource "tutorial" do
     url "https://gist.github.com/7a0023656ccfe309337a.git",
@@ -49,16 +47,19 @@ class GobjectIntrospection < Formula
       "config.set_quoted('GOBJECT_INTROSPECTION_LIBDIR', join_paths(get_option('prefix'), get_option('libdir')))",
       "config.set_quoted('GOBJECT_INTROSPECTION_LIBDIR', '#{HOMEBREW_PREFIX}/lib')"
 
-    system "meson", "setup", "build", "-Dpython=#{Formula["python@3.10"].opt_bin}/python3.10",
-                                      "-Dextra_library_paths=#{HOMEBREW_PREFIX}/lib",
-                                      *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
-
-    rewrite_shebang detected_python_shebang, *bin.children
+    mkdir "build" do
+      system "meson", *std_meson_args,
+        "-Dpython=#{Formula["python@3.9"].opt_bin}/python3",
+        "-Dextra_library_paths=#{HOMEBREW_PREFIX}/lib",
+        ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+      rewrite_shebang detected_python_shebang, *bin.children
+    end
   end
 
   test do
+    ENV.prepend_path "PKG_CONFIG_PATH", Formula["libffi"].opt_lib/"pkgconfig"
     resource("tutorial").stage testpath
     system "make"
     assert_predicate testpath/"Tut-0.1.typelib", :exist?

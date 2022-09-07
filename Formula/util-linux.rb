@@ -1,8 +1,8 @@
 class UtilLinux < Formula
   desc "Collection of Linux utilities"
   homepage "https://github.com/util-linux/util-linux"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.38/util-linux-2.38.1.tar.xz"
-  sha256 "60492a19b44e6cf9a3ddff68325b333b8b52b6c59ce3ebd6a0ecaa4c5117e84f"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.38/util-linux-2.38.tar.xz"
+  sha256 "6d111cbe4d55b336db2f1fbeffbc65b89908704c01136371d32aa9bec373eb64"
   license all_of: [
     "BSD-3-Clause",
     "BSD-4-Clause-UC",
@@ -14,12 +14,12 @@ class UtilLinux < Formula
   ]
 
   bottle do
-    sha256 arm64_monterey: "b0b3c6d674a5ddc13707ac4af2ba34745b7dea8048b6b12034f3685cb017cadc"
-    sha256 arm64_big_sur:  "1b806803757b40e4ffed44f68364cb45386ff96d467fa94d6d776b1f41c1d5bc"
-    sha256 monterey:       "0c66175a5324b3a5a31bfbe2b6c2154666cbbddd1203182a661f6f6cb1095799"
-    sha256 big_sur:        "237a36c3eb5250d0b71d5cac628c364d2a753174ad8b891cdb1f548b60c182b7"
-    sha256 catalina:       "3d52e89f1e08a9d93462d2008289379784842ff8caa538eeaf653ea689500993"
-    sha256 x86_64_linux:   "27177c2a258f719de1236fc0eafa5e45021f7997e332dd9d345c28d0c4354c36"
+    sha256 arm64_monterey: "be2925aad03237bfdb1fd53158c9235d649d9e5fcd8f2b0689d8ce8d3273c04e"
+    sha256 arm64_big_sur:  "89ec9e96b6de3362e75bc20df071a5d5e4df117df38823dc6935135914c56bc7"
+    sha256 monterey:       "4385125676f6c50e205a7cd0016d9836416a8ad615c30d40735b5137b50a5d30"
+    sha256 big_sur:        "bbef173b8c11b3ad59036324b81621ea8272ec776d03a634c1fd146736975545"
+    sha256 catalina:       "5e95506d7c96393a44db68f804dbef580b6ba32365152827679c843b642d4aed"
+    sha256 x86_64_linux:   "f52e145ee56a685c717c6adc7db269b84f0ee7dcb01ff3d9d1f30f424e733ca5"
   end
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
@@ -27,7 +27,6 @@ class UtilLinux < Formula
   depends_on "asciidoctor" => :build
   depends_on "gettext"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
@@ -39,6 +38,12 @@ class UtilLinux < Formula
     depends_on "gtk-doc" => :build
     depends_on "libtool" => :build
     depends_on "pkg-config" => :build
+
+    # Fix ./include/statfs_magic.h:4:10: fatal error: 'sys/statfs.h' file not found
+    patch do
+      url "https://github.com/util-linux/util-linux/commit/478b9d477ecdd8f4e3a7b488524e1d4c6a113525.patch?full_index=1"
+      sha256 "576c26c3d15642f1c44548d0120b192b855cceeebf8ad97fb5e300350e88a3f7"
+    end
 
     # Fix lib/procfs.c:9:10: fatal error: 'sys/vfs.h' file not found
     patch do

@@ -2,12 +2,11 @@ class FreeradiusServer < Formula
   desc "High-performance and highly configurable RADIUS server"
   homepage "https://freeradius.org/"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 2
   head "https://github.com/FreeRADIUS/freeradius-server.git", branch: "master"
 
   stable do
-    url "https://github.com/FreeRADIUS/freeradius-server/archive/refs/tags/release_3_2_0.tar.gz"
-    sha256 "2b8817472847e0b49395facd670be97071133730ffa825bb56386c89c18174f5"
+    url "https://github.com/FreeRADIUS/freeradius-server/archive/release_3_0_25.tar.gz"
+    sha256 "493b0b9bef3d9f0e6949fcfd6aa282164f6b8e6404231f2b0d1353739199ffcd"
 
     # Fix -flat_namespace being used
     patch do
@@ -22,21 +21,18 @@ class FreeradiusServer < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "9e9dea579267e8dcf6d69cb874f601dcc692f58e7ccb7d11d88380f7933ea376"
-    sha256 arm64_big_sur:  "5860266a3795b68fc118e19d6a2ea68bd445cc17b0869894f37decc77bb963a3"
-    sha256 monterey:       "4c595dab52d2a47da202656a38031aa51edba53c89369f0eb4afb32b70aec65e"
-    sha256 big_sur:        "c90fb82e17c159134073411bb5edf8b02346188db8a593b04b45a608dceb7ba6"
-    sha256 catalina:       "fe6289989dcb46376ebce0ab3df3db16e52da01f86c4f5b9a9c28e152e9a83b5"
-    sha256 x86_64_linux:   "7c3f7ab8b3b40bdb16f22c9d2a3e8ed9b05d5154cd8cd00ba773489dcfd8433f"
+    sha256 arm64_monterey: "2c4a942fb9f20633bf947ec0b8551731677fa0bdc54b7054be9c367bec8c1fcd"
+    sha256 arm64_big_sur:  "f4ed69d19363b792ffba75c41b703bd6f068a2d65d76a3046ba6947832b6a6b3"
+    sha256 monterey:       "afe19281cfa3f33f2836cea24c1efd2d98d3e185f9cab5faabd45addc34fdf20"
+    sha256 big_sur:        "a28e06a16084beb496edcb341dcf5aaf7f6da6ef995bd7383545d59aac76f393"
+    sha256 catalina:       "6fe8001066708fc01ba0c71a7a0246aee4af4910a68f155d82fd411a7a826c1b"
+    sha256 mojave:         "660eb25588c2d0c68aae1684bfc9f9174c6c6d4d721d196a6232c981718e9ebf"
+    sha256 x86_64_linux:   "d71cb20afdd11e9793b6299e241474f8f4d07174625809f07f228ec06cfeb950"
   end
 
-  depends_on "collectd"
   depends_on "openssl@1.1"
   depends_on "talloc"
 
-  uses_from_macos "krb5"
-  uses_from_macos "libpcap"
-  uses_from_macos "libxcrypt"
   uses_from_macos "perl"
   uses_from_macos "sqlite"
 

@@ -1,45 +1,34 @@
 class Apngasm < Formula
   desc "Next generation of apngasm, the APNG assembler"
   homepage "https://github.com/apngasm/apngasm"
-  url "https://github.com/apngasm/apngasm/archive/3.1.10.tar.gz"
-  sha256 "8171e2c1d37ab231a2061320cb1e5d15cee37642e3ce78e8ab0b8dfc45b80f6c"
+  url "https://github.com/apngasm/apngasm/archive/3.1.6.tar.gz"
+  sha256 "0068e31cd878e07f3dffa4c6afba6242a753dac83b3799470149d2e816c1a2a7"
   license "Zlib"
-  revision 2
+  revision 5
   head "https://github.com/apngasm/apngasm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "417ef627abddb455da5fda0eb6615b1c23fe0b0fe6f2920cffa6eb73f0a7930e"
-    sha256 cellar: :any,                 arm64_big_sur:  "b20fcddf36955cc5233687bb2090f95877970501f63569c5b0cae6f743063373"
-    sha256 cellar: :any,                 monterey:       "d44e728d2f8000e6e46ad8f231f047cc21da5be3f2734faf043fe54d92f24c2c"
-    sha256 cellar: :any,                 big_sur:        "973092d55f2cdc1e30030c73c6f90b5ab5622f4c63e285233aaeff73f05fc690"
-    sha256 cellar: :any,                 catalina:       "c576196db665297b539c284175b7fc76e04d7b2e71d64602e3d81259331e8193"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5308106ba734492bd70672e601539937771e254ec43c0ca747fe30245d53a71"
+    sha256 cellar: :any,                 arm64_monterey: "266deabd148a65334b8267e4e5a2cd7be59ae83d08cd098cf5c7b4f78f7541ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "b561e57d6d4d3f4b62133a977dcd455acc847a283bc3a61eac50cb6204fe7274"
+    sha256 cellar: :any,                 monterey:       "6aa9726bb6fd25e72ab310d3d37407208106f4ee18cb74c987d225736016f44e"
+    sha256 cellar: :any,                 big_sur:        "2f249a0c49b15b99322f83fc3d77d33e160279e14a993e1336b04c2d0b84b574"
+    sha256 cellar: :any,                 catalina:       "24a3a9319c7c61ec5c9a44ae287209a6f1d8ecce90ca84d22d278abdc1b0d5e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e254b0e751186dc0ffc9575454e289d3e2cca907b672943d3dd1c1f012b1bea9"
   end
 
   depends_on "cmake" => :build
   depends_on "boost"
-  depends_on "icu4c"
   depends_on "libpng"
   depends_on "lzlib"
-  depends_on macos: :catalina
-
-  on_linux do
-    depends_on "gcc"
-  end
-
-  fails_with :gcc do
-    version "7"
-    cause "Requires C++17 filesystem"
-  end
 
   def install
     inreplace "cli/CMakeLists.txt", "${CMAKE_INSTALL_PREFIX}/man/man1",
                                     "${CMAKE_INSTALL_PREFIX}/share/man/man1"
-    ENV.cxx11
-    ENV.deparallelize # Build error: ld: library not found for -lapngasm
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      ENV.cxx11
+      system "cmake", "..", *std_cmake_args
+      system "make", "install"
+    end
     (pkgshare/"test").install "test/samples"
   end
 

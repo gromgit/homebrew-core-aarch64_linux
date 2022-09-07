@@ -1,10 +1,9 @@
 class Allegro < Formula
   desc "C/C++ multimedia library for cross-platform game development"
   homepage "https://liballeg.org/"
-  url "https://github.com/liballeg/allegro5/releases/download/5.2.8.0/allegro-5.2.8.0.tar.gz"
-  sha256 "089fcbfab0543caa282cd61bd364793d0929876e3d2bf629380ae77b014e4aa4"
+  url "https://github.com/liballeg/allegro5/releases/download/5.2.7.0/allegro-5.2.7.0.tar.gz"
+  sha256 "c1e3b319d99cb453b39d393572ba2b9f3de42a96de424aee7d4a1abceaaa970c"
   license "Zlib"
-  revision 1
   head "https://github.com/liballeg/allegro5.git", branch: "master"
 
   livecheck do
@@ -13,12 +12,10 @@ class Allegro < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d837a297e5b7a4b135831b2549a9388250de130fb86201c9c160c1211f1ff773"
-    sha256 cellar: :any,                 arm64_big_sur:  "674a59e675e01fb444a806ec712cef6de9d42be7ff07a35811a80bc4259c3bdc"
-    sha256 cellar: :any,                 monterey:       "0f8f973ab20f49f58f84d61aa5238c83c46ea7ced40cc426c55efc5a5dbfc4be"
-    sha256 cellar: :any,                 big_sur:        "42a27ed5656e9ddb3a4cc8b84e1684063cdd87229c3979f0efad7a5cf30077a3"
-    sha256 cellar: :any,                 catalina:       "8e271ed2ef392df9cf6bf0d491be1ec8a303099ffe6634000407869969c2d85c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0c3f329f2a98021d677a6eaf3812e5d198f27417d52da22df7e1854f6afafa0"
+    sha256 cellar: :any, arm64_big_sur: "111f5e8474a0abd37641c2db543664b53f89d83201493a6e22d846a25290a16e"
+    sha256 cellar: :any, big_sur:       "d681ad8e081082bbb8ac3036b4697ce03cbfc139037977c3d45880cd3b9f8396"
+    sha256 cellar: :any, catalina:      "dc2b03c9441a55e8501a1e330a1c0d673756ca06efbbcd8970012ace01c7d232"
+    sha256 cellar: :any, mojave:        "b9b9dfdb3d26e50ee7f67a678fb20c6874366fe9eeeaf1300b6fb020050e6b37"
   end
 
   depends_on "cmake" => :build
@@ -32,27 +29,11 @@ class Allegro < Formula
   depends_on "theora"
   depends_on "webp"
 
-  on_linux do
-    depends_on "gcc"
-    depends_on "jpeg-turbo"
-    depends_on "libpng"
-    depends_on "libx11"
-    depends_on "libxcursor"
-    depends_on "mesa"
-    depends_on "mesa-glu"
-  end
-
-  fails_with gcc: "5"
-
   def install
-    cmake_args = std_cmake_args + %W[
-      -DWANT_DOCS=OFF
-      -DCMAKE_INSTALL_RPATH=#{rpath}
-    ]
-
-    system "cmake", "-S", ".", "-B", "build", *cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DWANT_DOCS=OFF"
+      system "make", "install"
+    end
   end
 
   test do

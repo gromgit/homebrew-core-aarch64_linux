@@ -4,15 +4,14 @@ class Xkbcomp < Formula
   url "https://www.x.org/releases/individual/app/xkbcomp-1.4.5.tar.bz2"
   sha256 "6851086c4244b6fd0cc562880d8ff193fb2bbf1e141c73632e10731b31d4b05e"
   license all_of: ["HPND", "MIT-open-group"]
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e79078be650b291c1a4608b8db62c94e69a0ffc7471fc74ea5769ab93de284dc"
-    sha256 cellar: :any,                 arm64_big_sur:  "32ee8ba2516d310be9f003dc991adf20d34bc4c3456451bee40405abd503c14b"
-    sha256 cellar: :any,                 monterey:       "727c2cb08d05bde6848a8cbbcab5749e2305422dc40b1e9464dac8f3838f2fdb"
-    sha256 cellar: :any,                 big_sur:        "1753d5b515d66d0ffc26c28489e5d3de045780a1b5173e224916b16e66fd9438"
-    sha256 cellar: :any,                 catalina:       "9149259223ec54b0b62302cf4290a954b8ca3bab31352f73ec59cc46401b7f42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "750bfcb9ab5d92656277f0fe1810d0a41a5b6836f740e7cc83158e745838911b"
+    sha256 cellar: :any,                 arm64_monterey: "da94cb771debb09217e45550470e2299982cd7a01ecb648d3ea0ddd940c80f04"
+    sha256 cellar: :any,                 arm64_big_sur:  "c2007073201bb91ad1fa13fb49aef7ef2a89c2eec3d5812f98414eeb7c2198b7"
+    sha256 cellar: :any,                 monterey:       "2c78f64a5b041ae4c98d993a9640802b55c4424292c5fe22effc5df6a7668b80"
+    sha256 cellar: :any,                 big_sur:        "0890c9c6ba0c4eaedb5d5d241a751af3f40d45a4f8fa5c3487c2674fb0db02b8"
+    sha256 cellar: :any,                 catalina:       "9836909cc79f81d13fbe2f4a361f07d9013f16ab6ddcab8ebced35ebdf158790"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "503bab67d583ae0ad8ae02b5e1bced7c6db9804ff57aad88eca351e83ec230e3"
   end
 
   depends_on "pkg-config" => :build
@@ -21,11 +20,9 @@ class Xkbcomp < Formula
   depends_on "libxkbfile"
 
   def install
-    system "./configure", *std_configure_args, "--with-xkb-config-root=#{HOMEBREW_PREFIX}/share/X11/xkb"
+    system "./configure", *std_configure_args
     system "make"
     system "make", "install"
-    # avoid cellar in bindir
-    inreplace lib/"pkgconfig/xkbcomp.pc", prefix, opt_prefix
   end
 
   test do

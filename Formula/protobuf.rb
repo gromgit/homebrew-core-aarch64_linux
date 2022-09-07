@@ -1,8 +1,8 @@
 class Protobuf < Formula
   desc "Protocol buffers (Google's data interchange format)"
   homepage "https://github.com/protocolbuffers/protobuf/"
-  url "https://github.com/protocolbuffers/protobuf/releases/download/v21.5/protobuf-all-21.5.tar.gz"
-  sha256 "7ba0cb2ecfd9e5d44a6fa9ce05f254b7e5cd70ec89fafba0b07448f3e258310c"
+  url "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.4/protobuf-all-3.19.4.tar.gz"
+  sha256 "ba0650be1b169d24908eeddbe6107f011d8df0da5b1a5a4449a913b10e578faf"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,16 +11,16 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "65db16092c200e43b2022ac85e595e01d1f63231075fb45cf1575a9527dacb28"
-    sha256 cellar: :any,                 arm64_big_sur:  "27ab263b5f859f05f799d367fe2c27dbc27af9b8a0bb8fa0634d380ea055e09f"
-    sha256 cellar: :any,                 monterey:       "0cc9eb3374db9ddaeaa91c814705639731f3966b0399b041bb9022f47a20a079"
-    sha256 cellar: :any,                 big_sur:        "09e243ee08872ea442554ef705fbd55e0643da1124d9ea06757053ccaeca9792"
-    sha256 cellar: :any,                 catalina:       "cd30f382dddb31b7fd1d36555cbf65d8b1880bdec0394fb68769a2d57c334ef1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df6092eefc2554ea52282bed1500254cd1adfc7f98c2c9a50362e38c36c4327b"
+    sha256 cellar: :any,                 arm64_monterey: "a467da7231471d7913ed291e83852e1ca950db86d142b2a67e0839743dc132b7"
+    sha256 cellar: :any,                 arm64_big_sur:  "188863a706dd31a59ce0f4bdcf7d77d46e681ed8e72a8ab9ba28e771b52b58fd"
+    sha256 cellar: :any,                 monterey:       "ca9840b58a314543c0f45490e6a543eb330eb772f0db385ef005d82b6b169047"
+    sha256 cellar: :any,                 big_sur:        "a6e39ca1c9418561aa2e576a62c86fe11674b81c922a8f610c75aa9211646863"
+    sha256 cellar: :any,                 catalina:       "5cc145bfca99db8fbe89d8b24394297bde7075aaa3d564cd24478c5762563ef6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c3e53cb5448c38183693262da84e5e100a11c3d08de6b5088ed2d1a7f00e106"
   end
 
   head do
-    url "https://github.com/protocolbuffers/protobuf.git", branch: "main"
+    url "https://github.com/protocolbuffers/protobuf.git"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -28,6 +28,7 @@ class Protobuf < Formula
   end
 
   depends_on "python@3.10" => [:build, :test]
+  # The Python3.9 bindings can be removed when Python3.9 is made keg-only.
   depends_on "python@3.9" => [:build, :test]
 
   uses_from_macos "zlib"
@@ -55,7 +56,10 @@ class Protobuf < Formula
 
     cd "python" do
       ["3.9", "3.10"].each do |xy|
-        system "python#{xy}", *Language::Python.setup_install_args(prefix, "python#{xy}"), "--cpp_implementation"
+        site_packages = prefix/Language::Python.site_packages("python#{xy}")
+        system "python#{xy}", *Language::Python.setup_install_args(prefix),
+                              "--install-lib=#{site_packages}",
+                              "--cpp_implementation"
       end
     end
   end
@@ -73,8 +77,7 @@ class Protobuf < Formula
     EOS
     (testpath/"test.proto").write testdata
     system bin/"protoc", "test.proto", "--cpp_out=."
-
-    system Formula["python@3.9"].opt_bin/"python3.9", "-c", "import google.protobuf"
-    system Formula["python@3.10"].opt_bin/"python3.10", "-c", "import google.protobuf"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import google.protobuf"
+    system Formula["python@3.10"].opt_bin/"python3", "-c", "import google.protobuf"
   end
 end

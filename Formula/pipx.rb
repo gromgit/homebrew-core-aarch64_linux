@@ -3,18 +3,18 @@ class Pipx < Formula
 
   desc "Execute binaries from Python packages in isolated environments"
   homepage "https://pypa.github.io/pipx"
-  url "https://files.pythonhosted.org/packages/cf/3c/df5a75794cfb58cc58329823d766da51decdfc76f6942bedfd7e0d06275b/pipx-1.1.0.tar.gz"
-  sha256 "4d2f70daf15f121e90b7394b0730ee82fc39d7da514e50a7bbf8066be88883bb"
+  url "https://files.pythonhosted.org/packages/28/ea/0e826dc4cf82ed929a3bdcd4e0d2918ee53af6b8c6b0cbc5809630526b36/pipx-1.0.0.tar.gz"
+  sha256 "91e2bca934a5e82785d7b4ae44b95553611311691bd87da31915d08a0ad2df1c"
   license "MIT"
   head "https://github.com/pypa/pipx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2c0c04c39e04cae843d2a69f3a8d626a32d10301bbfb4ebd61d0b67febe088c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "89bd301b9f7c1cc0559da700b80267e9a50a172738e127b765fbb5b251e3cbaa"
-    sha256 cellar: :any_skip_relocation, monterey:       "5bc3dbcd8d973a6f0da3ce6b4ca47d6fd04bd9fa3d3373f57c83dba01d441375"
-    sha256 cellar: :any_skip_relocation, big_sur:        "93ac23379caff5b9fbf39ec95bd8975b7e5bf541586b026c6330820fd4e98b48"
-    sha256 cellar: :any_skip_relocation, catalina:       "f21fef78a11ba1a22d228420dc816262960a60aae890354830401baa853ec906"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b34814c228a304938156fcb7638e5fd69a14dea4c190c4bd9bfb8c3404c728c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e140cb960d366318e2eca2afbab20cbe8bb57365090033e7e8d2678b11383890"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5bcb73c85da6959c7530a809a17a60d239d9764b890cd389acfeefe71462b78e"
+    sha256 cellar: :any_skip_relocation, monterey:       "00b7e1ab842c1ae0ce37fffde172b127f98a52774865caedfea88f425dbf6aba"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5fb22284e65575a43b3d64353398c117a5257a3931c1f281a15633defffb7e84"
+    sha256 cellar: :any_skip_relocation, catalina:       "3adc526f451df55ab5aebb23e48293345fb64ebeabe5fdbe4721232e2c467620"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "973586416833bf99a9cb0b386ffab057aeff7d1e1221661858c80a1b09eb2021"
   end
 
   depends_on "python@3.10"
@@ -25,8 +25,8 @@ class Pipx < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/f4/09/ad003f1e3428017d1c3da4ccc9547591703ffea548626f47ec74509c5824/click-8.0.3.tar.gz"
+    sha256 "410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b"
   end
 
   resource "packaging" do
@@ -35,21 +35,25 @@ class Pipx < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/ab/61/1a1613e3dcca483a7aa9d446cb4614e6425eb853b90db131c305bd9674cb/pyparsing-3.0.6.tar.gz"
+    sha256 "d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81"
   end
 
   resource "userpath" do
-    url "https://files.pythonhosted.org/packages/85/ee/820c8e5f0a5b4b27fdbf6f40d6c216b6919166780128b6714adf3c201644/userpath-1.8.0.tar.gz"
-    sha256 "04233d2fcfe5cff911c1e4fb7189755640e1524ff87a4b82ab9d6b875fee5787"
+    url "https://files.pythonhosted.org/packages/60/2c/0620bacd069a14a601b0a5ba4578b223fa6ae34b9dd97e5508798b7f3dee/userpath-1.7.0.tar.gz"
+    sha256 "dcd66c5fa9b1a3c12362f309bbb5bc7992bac8af86d17b4e6b1a4b166a11c43f"
   end
 
   def install
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/register-python-argcomplete"
 
-    generate_completions_from_executable(libexec/"bin/register-python-argcomplete", "pipx", "--shell",
-                                         shells: [:bash, :fish])
+    # Install shell completions
+    output = Utils.safe_popen_read(libexec/"bin/register-python-argcomplete", "--shell=bash", "pipx")
+    (bash_completion/"pipx").write output
+
+    output = Utils.safe_popen_read(libexec/"bin/register-python-argcomplete", "--shell=fish", "pipx")
+    (fish_completion/"pipx.fish").write output
   end
 
   test do

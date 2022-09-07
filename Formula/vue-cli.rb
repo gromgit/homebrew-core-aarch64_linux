@@ -3,17 +3,17 @@ require "language/node"
 class VueCli < Formula
   desc "Standard Tooling for Vue.js Development"
   homepage "https://cli.vuejs.org/"
-  url "https://registry.npmjs.org/@vue/cli/-/cli-5.0.8.tgz"
-  sha256 "29aa4eb0ba827624e42683e1339ebd40e663ad09836dd027df30e3d2108b0b71"
+  url "https://registry.npmjs.org/@vue/cli/-/cli-5.0.4.tgz"
+  sha256 "07aba062833f861b86b83e04a70633e8f2f05e56b1db0105477fdc9363a15d4b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "44b550780fa0274fd769599d39e267e47f1ae8e3508ca935afd739c389d75a17"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44b550780fa0274fd769599d39e267e47f1ae8e3508ca935afd739c389d75a17"
-    sha256 cellar: :any_skip_relocation, monterey:       "6daa1544d8d602d0291c7206aa8833bc62a9b2f0c5a2b5c016d5cae3ce2bb1c5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6daa1544d8d602d0291c7206aa8833bc62a9b2f0c5a2b5c016d5cae3ce2bb1c5"
-    sha256 cellar: :any_skip_relocation, catalina:       "6daa1544d8d602d0291c7206aa8833bc62a9b2f0c5a2b5c016d5cae3ce2bb1c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "918bbe94743ae4eb7124cdfb5f9d42017602e19fbdf899b88795c6e367a6dc5c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e8bb2ad59e7ef40ece213c0eddef9ccaf5283a3d503dd03ef7932b6684cd9a0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e8bb2ad59e7ef40ece213c0eddef9ccaf5283a3d503dd03ef7932b6684cd9a0"
+    sha256 cellar: :any_skip_relocation, monterey:       "baa32409749212b3adc451a6c17d38398073ffd00320be588e2d109abb74e94a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "baa32409749212b3adc451a6c17d38398073ffd00320be588e2d109abb74e94a"
+    sha256 cellar: :any_skip_relocation, catalina:       "baa32409749212b3adc451a6c17d38398073ffd00320be588e2d109abb74e94a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f64e095aabfcec021a63afb561cb624615edcf4327b51ea05c510dd07967d9d"
   end
 
   depends_on "node"

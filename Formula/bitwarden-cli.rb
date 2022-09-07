@@ -3,17 +3,17 @@ require "language/node"
 class BitwardenCli < Formula
   desc "Secure and free password manager for all of your devices"
   homepage "https://bitwarden.com/"
-  url "https://registry.npmjs.org/@bitwarden/cli/-/cli-2022.8.0.tgz"
-  sha256 "6a9f6f2be0c8ed08ee7a35aefb15b31889a4dac83bf49ba95e67542ba682e153"
+  url "https://registry.npmjs.org/@bitwarden/cli/-/cli-1.22.1.tgz"
+  sha256 "3bddf569de988fbf5a3c1b433f0df69a329be795b42860d84ebf8ba5cbd67c81"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7e7ed331859a3097e3d1e991c3f41089c8426f3469e6c317b3f4feed69036186"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7e7ed331859a3097e3d1e991c3f41089c8426f3469e6c317b3f4feed69036186"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f608066b25d6f473c9feb584d5fead9934a3bda79210afaf94e22729893d093"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4f608066b25d6f473c9feb584d5fead9934a3bda79210afaf94e22729893d093"
-    sha256 cellar: :any_skip_relocation, catalina:       "4f608066b25d6f473c9feb584d5fead9934a3bda79210afaf94e22729893d093"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e7ed331859a3097e3d1e991c3f41089c8426f3469e6c317b3f4feed69036186"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba8e456c8e91937a693453955c1705ae62e294c20cba7bfb7d4655556254873b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba8e456c8e91937a693453955c1705ae62e294c20cba7bfb7d4655556254873b"
+    sha256 cellar: :any_skip_relocation, monterey:       "cae7542642baec6fbde1753709a2d85eb8367e9f6a826eccb17e4ac7114cac2c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cae7542642baec6fbde1753709a2d85eb8367e9f6a826eccb17e4ac7114cac2c"
+    sha256 cellar: :any_skip_relocation, catalina:       "cae7542642baec6fbde1753709a2d85eb8367e9f6a826eccb17e4ac7114cac2c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba8e456c8e91937a693453955c1705ae62e294c20cba7bfb7d4655556254873b"
   end
 
   depends_on "node"

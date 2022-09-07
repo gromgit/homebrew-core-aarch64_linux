@@ -7,13 +7,8 @@ class Pwnat < Formula
   head "https://github.com/samyk/pwnat.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a54673faf81eda9764a05196c50daa8c5b078d171bbf94b9b3213c478b265a4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b529e5fb4cbb41a4ecbccaaeb3f5801b52036c61d1d7d747e8001c327ae9bba7"
-    sha256 cellar: :any_skip_relocation, monterey:       "d68b2a2bd9f47b349bd50fca156330eac3abd07ab7704da5ea4c9fb5be120605"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5b2649eef333edd35081d7aa05b128cc7957fedc7037383ef986cbffe4d4f1be"
-    sha256 cellar: :any_skip_relocation, catalina:       "ba13960f81cbb1e739807717b54f7232b8ae5658b112c6a943d9560f9d68114f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d00f8d395764951d6f77834e4fab75bed808679e85f7fe9cd939657481da51c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pwnat"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d1f80e3ec1daa061a4051fc71a09503681441f70642ee07ddd51a87d7fd20c0a"
   end
 
   def install

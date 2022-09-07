@@ -2,15 +2,15 @@ class Audacious < Formula
   desc "Free and advanced audio player based on GTK+"
   homepage "https://audacious-media-player.org/"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
 
   stable do
-    url "https://distfiles.audacious-media-player.org/audacious-4.2.tar.bz2"
-    sha256 "feb304e470a481fe2b3c4ca1c9cb3b23ec262540c12d0d1e6c22a5eb625e04b3"
+    url "https://distfiles.audacious-media-player.org/audacious-4.1.tar.bz2"
+    sha256 "1f58858f9789e867c513b5272987f13bdfb09332b03c2814ad4c6e29f525e35c"
 
     resource "plugins" do
-      url "https://distfiles.audacious-media-player.org/audacious-plugins-4.2.tar.bz2"
-      sha256 "6fa0f69c3a1041eb877c37109513ab4a2a0a56a77d9e8c13a1581cf1439a417f"
+      url "https://distfiles.audacious-media-player.org/audacious-plugins-4.1.tar.bz2"
+      sha256 "dad6fc625055349d589e36e8e5c8ae7dfafcddfe96894806509696d82bb61d4c"
     end
   end
 
@@ -20,19 +20,19 @@ class Audacious < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4676c483e85f47cc80ac94550a38b7d6396f8be11fb6926c0a1d91d04b644bb7"
-    sha256 arm64_big_sur:  "d342eb99eacde6f98e72f02be860833e40c3f73abf83e07bc7a67f1dd6c7ca5a"
-    sha256 monterey:       "a47955e6dfaa371506e0fa8c2d630864325253f1fcdc0e24811efc9a9bc5866c"
-    sha256 big_sur:        "896bd9223537e4b00cc4a887cc8204c6193973517020d01aabf0f260f4d89f49"
-    sha256 catalina:       "04b4249d93ad6ea99475a306f53e7148e5358207ba204886f47ce216ca0a6cf1"
-    sha256 x86_64_linux:   "bf92a6849ede5d4e16400d72f001ef1acbf70db63dadaf5b504538f0f1535402"
+    sha256 arm64_monterey: "0b7a74c191a1867d442e0c370516010a7fb7757530942408538b83367cc65a93"
+    sha256 arm64_big_sur:  "819afa4489c4f26017ce6966291d3b82b859ceb96476edf963973d4b75c010a8"
+    sha256 monterey:       "0415bc32ce00ab3c6413496c1a8c3748a44d4a23c6ba27d0d62991b0c4a96c9a"
+    sha256 big_sur:        "8b29082bd4c5dd088db4d990b1c965f80022037e7b8f4cd5abcf0fbd111211fe"
+    sha256 catalina:       "7f7bea293e9f75013b2dd6dbf376644578a35165f2cb7e84a2c2634971a3bf9c"
+    sha256 x86_64_linux:   "a5883bc3e84402141c2e0effac40850fd8ca91f71ef33ac3f4140741e1349f1e"
   end
 
   head do
-    url "https://github.com/audacious-media-player/audacious.git", branch: "master"
+    url "https://github.com/audacious-media-player/audacious.git"
 
     resource "plugins" do
-      url "https://github.com/audacious-media-player/audacious-plugins.git", branch: "master"
+      url "https://github.com/audacious-media-player/audacious-plugins.git"
     end
   end
 
@@ -41,7 +41,7 @@ class Audacious < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "faad2"
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   depends_on "flac"
   depends_on "fluid-synth"
   depends_on "glib"

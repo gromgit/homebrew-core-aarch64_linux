@@ -4,16 +4,16 @@ class Pcl < Formula
   url "https://github.com/PointCloudLibrary/pcl/archive/pcl-1.12.1.tar.gz"
   sha256 "dc0ac26f094eafa7b26c3653838494cc0a012bd1bdc1f1b0dc79b16c2de0125a"
   license "BSD-3-Clause"
-  revision 3
+  revision 2
   head "https://github.com/PointCloudLibrary/pcl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8cc4232822ff0809a1c28c77b86be152cdf641153c7aabf9493517a5f96bb000"
-    sha256 cellar: :any,                 arm64_big_sur:  "6cb3f4914ed6a1f658545c94d2517fc29b24c13aaedf0ea8284659819e7fd61a"
-    sha256 cellar: :any,                 monterey:       "2dd1ee60e206db46ca8ceca41c59649c53824ec63835b540e9549af0e645c898"
-    sha256 cellar: :any,                 big_sur:        "41a3aa58ef57a64194edfa85da969b86e75157ae8c6bf7d77f6214b84d85b1ca"
-    sha256 cellar: :any,                 catalina:       "e2a1320bb8e99bce217145914f482eb686db68d53bd7b9dbb6c90580d4e00d8a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "856249a7b7637982e482a6502b47e59b36eb7c2d9ecac8afa403ca8e5e8c40e9"
+    sha256 cellar: :any,                 arm64_monterey: "506ae8aa44c231fee8cf4d066ea8e887d79c715061b3350c77d1525821e156b9"
+    sha256 cellar: :any,                 arm64_big_sur:  "70314d35cc85b9cc971a03c8e7b24c3ce5fd15034863aada8b43516243523151"
+    sha256 cellar: :any,                 monterey:       "30ab2097f58b8eb99de71640a110776d519339bc636de51d2b9f9ac083ff50b1"
+    sha256 cellar: :any,                 big_sur:        "d2bf3b0c51fb5214f079f1816f86bf944472c689a5ce7383277f67d05f178a04"
+    sha256 cellar: :any,                 catalina:       "f4f7c9ae6c3d46c43af1b56454a75a5ae293edd628bb7d841efc6a15512f59f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad772e3f05d40a6314c6d6539036b0ba0e92a2719e4e5ec676e94ee897b19b2b"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -23,26 +23,18 @@ class Pcl < Formula
   depends_on "eigen"
   depends_on "flann"
   depends_on "glew"
+  depends_on "libomp"
   depends_on "libpcap"
   depends_on "libusb"
   depends_on "qhull"
   depends_on "qt@5"
   depends_on "vtk"
 
-  on_macos do
-    depends_on "libomp"
-  end
-
   on_linux do
     depends_on "gcc"
   end
 
   fails_with gcc: "5" # qt@5 is built with GCC
-
-  patch do
-    url "https://github.com/PointCloudLibrary/pcl/commit/e964409b4accfd9070093dbc3c9cf5fb216cd877.patch?full_index=1"
-    sha256 "78c77388e6c82105d028d5e42662a37c497c35982622a6f8bc875b1c411ab375"
-  end
 
   def install
     args = std_cmake_args + %w[
@@ -60,7 +52,6 @@ class Pcl < Formula
       -DWITH_CUDA:BOOL=OFF
       -DWITH_DOCS:BOOL=OFF
       -DWITH_TUTORIALS:BOOL=OFF
-      -DBoost_USE_DEBUG_RUNTIME:BOOL=OFF
     ]
 
     args << if build.head?

@@ -2,11 +2,10 @@ class Php < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-  url "https://www.php.net/distributions/php-8.1.10.tar.xz"
-  mirror "https://fossies.org/linux/www/php-8.1.10.tar.xz"
-  sha256 "90e7120c77ee83630e6ac928d23bc6396603d62d83a3cf5df8a450d2e3070162"
+  url "https://www.php.net/distributions/php-8.1.5.tar.xz"
+  mirror "https://fossies.org/linux/www/php-8.1.5.tar.xz"
+  sha256 "7647734b4dcecd56b7e4bd0bc55e54322fa3518299abcdc68eb557a7464a2e8a"
   license "PHP-3.01"
-  revision 1
 
   livecheck do
     url "https://www.php.net/downloads"
@@ -14,12 +13,12 @@ class Php < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "dcee33c9f445db3026a7e867805eb8f6d82e9e5599599b8c6cd8645475f7961c"
-    sha256 arm64_big_sur:  "e0590064cd32f2baa4102fa49c80056f3886a0a89aec0589d0134ecbf0e7923e"
-    sha256 monterey:       "62481320613b19c6ff310bf6ed50c7d2a2253cdbf403af12ec97bccd8a97a84c"
-    sha256 big_sur:        "b34d96f7aad3c580a7cbdaadb8054fb9b6872111a5eec8e1bcb4a529970c8e03"
-    sha256 catalina:       "cc0b85dcfdd60e1d8d7fa74c9f53be5d249d068835dbc7a81edacb7a076b6c76"
-    sha256 x86_64_linux:   "b934a5a4ad2d29b629f83962b57f638a654801d1ba21ba659a42da2e5afe3fae"
+    sha256 arm64_monterey: "fdc6a8835ee47f89b9ce2fb01448d9a3d001b0b739004ffd32ce7c284e44fc46"
+    sha256 arm64_big_sur:  "e3a8b45379de4fa91cf7ae83aedd294bdd850e35415738061fd3105ed4f7159a"
+    sha256 monterey:       "54cb48ab35090e5f9e3ccde8a82aea56c0d26d851bd0bd2bc1a6b77cf1a1e632"
+    sha256 big_sur:        "3da9e02153a59ebeda7bc76a4dd823850d06ac29d39a413c74e40edd2808a88a"
+    sha256 catalina:       "9550e8727a306f539dc35a82e8675ff7cf0638ed8aa677bbeef89603f4b80543"
+    sha256 x86_64_linux:   "3bea1da191c36c4d658cb2750800ea98e93b7a74b924c1d1f4d2ecf7daf03ccd"
   end
 
   head do
@@ -88,8 +87,8 @@ class Php < Formula
     # possible to recompile as suggested in the original message
     inreplace "sapi/apache2handler/sapi_apache2.c",
               "You need to recompile PHP.",
-              "Homebrew PHP does not support a thread-safe php binary. " \
-              "To use the PHP apache sapi please change " \
+              "Homebrew PHP does not support a thread-safe php binary. "\
+              "To use the PHP apache sapi please change "\
               "your httpd config to use the prefork MPM"
 
     inreplace "sapi/fpm/php-fpm.conf.in", ";daemonize = yes", "daemonize = no"
@@ -254,7 +253,6 @@ class Php < Formula
 
     # Custom location for extensions installed via pecl
     pecl_path = HOMEBREW_PREFIX/"lib/php/pecl"
-    pecl_path.mkpath
     ln_s pecl_path, prefix/"pecl" unless (prefix/"pecl").exist?
     extension_dir = Utils.safe_popen_read("#{bin}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)

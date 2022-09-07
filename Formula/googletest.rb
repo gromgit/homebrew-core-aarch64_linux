@@ -1,20 +1,23 @@
 class Googletest < Formula
   desc "Google Testing and Mocking Framework"
   homepage "https://github.com/google/googletest"
-  url "https://github.com/google/googletest/archive/release-1.12.1.tar.gz"
-  sha256 "81964fe578e9bd7c94dfdb09c8e4d6e6759e19967e397dbea48d1c10e45d0df2"
+  url "https://github.com/google/googletest/archive/release-1.11.0.tar.gz"
+  sha256 "b4870bf121ff7795ba20d20bcdd8627b8e088f2d1dab299a031c1034eddc93d5"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c75a394780e2dbc934c42e0d35beeff272000cf0ef6773e7a84683b8630f39b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee80ba6764c5fb3e6e981ea9e2c2a9b9724f3c24ef854848dc7a9e335017b194"
-    sha256 cellar: :any_skip_relocation, monterey:       "1341457013ac427bd7dcc1ac453c069dd5a056cf7105374f96f9cd0ff08955ea"
-    sha256 cellar: :any_skip_relocation, big_sur:        "83141b7b3b0a40183fb989362ed5d5b2d8f450075e9693496b69b6d26871e7f8"
-    sha256 cellar: :any_skip_relocation, catalina:       "86d3dd9b4ee70fedb9b91a46c8807cdcd45b1cc3a2ee12eab26f2f07b2425030"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db955b5cef20c15e3084d8f97dc066985c47db8555d5c97a78c69ec3770f4916"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5643998289368581eb4c81fd36e4cc3311ab92782db116d1f46c659d609523f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "53a1b277842358ceae62800c9af78271a0a33043eff7f007110353941ace54d6"
+    sha256 cellar: :any_skip_relocation, monterey:       "65d52d92904a3167ae1dc2a420dd56da5c81f3c4bd394f45ab4b8fd6b620a209"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7ff36ee689017d9f973acbc0407eaf8135d983028e85d1e6375a6a144c829e7e"
+    sha256 cellar: :any_skip_relocation, catalina:       "38290ffd89c69da85af50bb3e1c1e670440b59a342865a64ce50b7abb1e424aa"
+    sha256 cellar: :any_skip_relocation, mojave:         "0581f86b3dd88e39339b4cf3b6b0174109491e2d4aa97cd49369381c6611cff0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "929f3a916ff562ab210129b6e45c06f10dbdecbce115f2b55e482cda29ae50bf"
   end
 
   depends_on "cmake" => :build
+
+  conflicts_with "nss", because: "both install `libgtest.a`"
 
   def install
     system "cmake", ".", *std_cmake_args

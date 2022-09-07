@@ -1,18 +1,10 @@
 class Neovim < Formula
   desc "Ambitious Vim-fork focused on extensibility and agility"
   homepage "https://neovim.io/"
+  url "https://github.com/neovim/neovim/archive/v0.7.0.tar.gz"
+  sha256 "792a9c55d5d5f4a5148d475847267df309d65fb20f05523f21c1319ea8a6c7df"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/neovim/neovim.git", branch: "master"
-
-  # Remove `stable` block when `gperf` is no longer needed.
-  stable do
-    url "https://github.com/neovim/neovim/archive/v0.7.2.tar.gz"
-    sha256 "ccab8ca02a0c292de9ea14b39f84f90b635a69282de38a6b4ccc8565bc65d096"
-    # GPerf was removed in https://github.com/neovim/neovim/pull/18544.
-    # Remove dependency when relevant commits are in a stable release.
-    uses_from_macos "gperf" => :build
-  end
 
   livecheck do
     url :stable
@@ -20,13 +12,12 @@ class Neovim < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "94d4c819d426aad050bfcf17fabc3debc053911fcbed214a04a4dbbce0d1bece"
-    sha256 arm64_big_sur:  "82daa8d3738bd331a6f9afa52989b12b98d8038ca03f83ddcbb0be6f3e033fbf"
-    sha256 monterey:       "fedc9b9ffdaaf160d4f91ed88a9532c696d1b3226b347e96afe9e54089d4832e"
-    sha256 big_sur:        "463dc2636ebd9ce5d0f44369dddbd3d5715dc00466a4869e282d0c8dc2f565ee"
-    sha256 catalina:       "b9f6078ef504308896213a3e979733ccb93dca8c4873a8c686b6d3f607fcd8d8"
-    sha256 x86_64_linux:   "be762f679f83c41fb982d32f067229ca3480f991fdcbc7b15147fdef932312a1"
+    sha256 arm64_monterey: "21da7566b9dc34a1a99a82e7a36e446b9dc17dad9bdf107d5fc46aeaea83879b"
+    sha256 arm64_big_sur:  "81bddcbf646911e46bcf4853ec29c2eae48776a72c29e2b0f4d1ff36959be025"
+    sha256 monterey:       "451c1643c6a01779c6443794c12ed41bc5629ab35059bea98ad54ea2459b4d48"
+    sha256 big_sur:        "d234249fbe80c3a75cb563ff88d841cb9c1df9bbcc99b0a2e0981eb5acf26eca"
+    sha256 catalina:       "137e5229d2322ad0f0662915db67cbb21e0581e3767b4648f6c7cbde51f8b54f"
+    sha256 x86_64_linux:   "0676404738239fdb2d03a2af7c5c381240ad7beaa7b42038d8e2b11519357163"
   end
 
   depends_on "cmake" => :build
@@ -38,12 +29,13 @@ class Neovim < Formula
   depends_on "gettext"
   depends_on "libtermkey"
   depends_on "libuv"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
   depends_on "luv"
   depends_on "msgpack"
   depends_on "tree-sitter"
   depends_on "unibilium"
 
+  uses_from_macos "gperf" => :build
   uses_from_macos "unzip" => :build
 
   on_linux do
@@ -81,7 +73,7 @@ class Neovim < Formula
     # Don't clobber the default search path
     ENV.append "LUA_PATH", ";", ";"
     ENV.append "LUA_CPATH", ";", ";"
-    lua_path = "--lua-dir=#{Formula["luajit"].opt_prefix}"
+    lua_path = "--lua-dir=#{Formula["luajit-openresty"].opt_prefix}"
 
     cd "deps-build/build/src" do
       %w[
@@ -105,25 +97,12 @@ class Neovim < Formula
       end
     end
 
-    # Point system locations inside `HOMEBREW_PREFIX`.
-    inreplace "src/nvim/os/stdpaths.c" do |s|
-      s.gsub! "/etc/xdg/", "#{etc}/xdg/:\\0"
-
-      unless HOMEBREW_PREFIX.to_s == HOMEBREW_DEFAULT_PREFIX
-        s.gsub! "/usr/local/share/:/usr/share/", "#{HOMEBREW_PREFIX}/share/:\\0"
-      end
-    end
-
     system "cmake", "-S", ".", "-B", "build",
                     "-DLIBLUV_LIBRARY=#{Formula["luv"].opt_lib/shared_library("libluv")}",
-                    "-DLIBUV_LIBRARY=#{Formula["libuv"].opt_lib/shared_library("libuv")}",
                     *std_cmake_args
 
     # Patch out references to Homebrew shims
-    # TODO: Remove conditional when the following PR is included in a release.
-    # https://github.com/neovim/neovim/pull/19120
-    config_dir_prefix = build.head? ? "cmake." : ""
-    inreplace "build/#{config_dir_prefix}config/auto/versiondef.h", Superenv.shims_path/ENV.cc, ENV.cc
+    inreplace "build/config/auto/versiondef.h", Superenv.shims_path/ENV.cc, ENV.cc
 
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

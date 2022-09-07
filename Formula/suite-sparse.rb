@@ -1,8 +1,8 @@
 class SuiteSparse < Formula
   desc "Suite of Sparse Matrix Software"
   homepage "https://people.engr.tamu.edu/davis/suitesparse.html"
-  url "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/v5.13.0.tar.gz"
-  sha256 "59c6ca2959623f0c69226cf9afb9a018d12a37fab3a8869db5f6d7f83b6b147d"
+  url "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/v5.12.0.tar.gz"
+  sha256 "5fb0064a3398111976f30c5908a8c0b40df44c6dd8f0cc4bfa7b9e45d8c647de"
   license all_of: [
     "BSD-3-Clause",
     "LGPL-2.1-or-later",
@@ -18,12 +18,12 @@ class SuiteSparse < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f9a227434a76d41665032eab22d00590ec3cea9d331ded561d9f634d2964e033"
-    sha256 cellar: :any,                 arm64_big_sur:  "8bd3133802f6ed63805a8deb96a7b42f7b6bfe675a37a271a01579e31e0c1551"
-    sha256 cellar: :any,                 monterey:       "c0efff893c632622b771e9655416da6f99461b95f8bcc891598c1fb572f5833a"
-    sha256 cellar: :any,                 big_sur:        "b139b693b4dc71b613cdc6a334bc54a01d12948bf785654d5e985ba7bd8c6b73"
-    sha256 cellar: :any,                 catalina:       "9df968f3674e21101e9018c57d6f7d1a2a60a76f13e7520b506e1396f82765b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1cac2166f91aa6e103afed16a9b050898f6e3e0bf3c877740f1c1c14e085bc4"
+    sha256 cellar: :any,                 arm64_monterey: "d5b574cfaaf805d7551e4c53c63be76894cb203cbf023233f4319979c497ff82"
+    sha256 cellar: :any,                 arm64_big_sur:  "1f38820a7a22ab471398656416c55fe1f9640353d7f39d4280b320b02f0f44d1"
+    sha256 cellar: :any,                 monterey:       "f258fe66db7f42f7a37df007e7869c13d86897b222e98969d8ca85535fc485f4"
+    sha256 cellar: :any,                 big_sur:        "82c4221826d5aa01e9767598da7155ebf41bf2add188cd684456c188c4ee647e"
+    sha256 cellar: :any,                 catalina:       "f21dfb630d3b05c13474d315776825bd4508e8bcca52d8527e112f48781b1531"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac0e65f3f30a84769cd093fef6afa7bbcb080fb5770f94f27a4d1115f7c09e8b"
   end
 
   depends_on "cmake" => :build

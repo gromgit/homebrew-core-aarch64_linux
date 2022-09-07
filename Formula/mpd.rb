@@ -1,10 +1,9 @@
 class Mpd < Formula
   desc "Music Player Daemon"
   homepage "https://www.musicpd.org/"
-  url "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.9.tar.xz"
-  sha256 "2becaba980402e8dc7972ccc3476e493b7ae2eeb720d31fa6712472ed48e9f2d"
+  url "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.6.tar.xz"
+  sha256 "cbc5928ee3ee1ef7ff6a58f6ba4afaee16c07e9eb42d0107bcc098010f4f26ed"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"
 
   livecheck do
@@ -13,12 +12,12 @@ class Mpd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0887974e31f59b03c5601c6d052ca1c32d412c77b8aa1facedf0f0bfe5087aca"
-    sha256 cellar: :any, arm64_big_sur:  "cf013b984382dfb1abe29a28ae3894f84539314f09af24b9f77a9efba0543b00"
-    sha256 cellar: :any, monterey:       "77c538094f8b8fa4557c107743fba8d68e0b05521b96b141dbdb235503db7843"
-    sha256 cellar: :any, big_sur:        "bf7abe4ea63d2c36f7e4e5cb64f788af100073f08b95911990f2ba345f275f81"
-    sha256 cellar: :any, catalina:       "64bb99376fb006b907d0c215514abec46c23776f1d5788cb6154bed517c23e78"
-    sha256               x86_64_linux:   "34f42f8ca0b82b708814bef095b8f8b176f4d371f1a087dbe3c107d47815deaf"
+    sha256 cellar: :any, arm64_monterey: "53d1e2e5265ae152438c0dd6bf7add88f97383651351050f7a240536a70ad282"
+    sha256 cellar: :any, arm64_big_sur:  "c99d2f275d6f0412e8f0de48df6a43ffaf1b9c1fcb23bcac2b706c7a2313168c"
+    sha256 cellar: :any, monterey:       "7ce24984d226d46a5312e5c44b850d2b69b03fee8acd2a5382310e6889aa922d"
+    sha256 cellar: :any, big_sur:        "dca4d1c83bb289d68f0c3f1cda7abd0b7a8b65e4e8c49b2767cd3110f3565038"
+    sha256 cellar: :any, catalina:       "05fdd73fba1d2a32f5e0c9643a470bb9df754a097a01ba6386788e3bd7fb5fb4"
+    sha256               x86_64_linux:   "0b2ceadf8b29cc437da40f48e8f6d7c2d7a1210559c57577180c91b6d9c91905"
   end
 
   depends_on "boost" => :build
@@ -61,7 +60,7 @@ class Mpd < Formula
     # The build is fine with G++.
     ENV.libcxx
 
-    args = %W[
+    args = std_meson_args + %W[
       --sysconfdir=#{etc}
       -Dmad=disabled
       -Dmpcdec=disabled
@@ -77,12 +76,12 @@ class Mpd < Formula
       -Dvorbisenc=enabled
     ]
 
-    system "meson", "setup", "output/release", *args, *std_meson_args
-    system "meson", "compile", "-C", "output/release"
+    system "meson", *args, "output/release", "."
+    system "ninja", "-C", "output/release"
     ENV.deparallelize # Directories are created in parallel, so let's not do that
-    system "meson", "install", "-C", "output/release"
+    system "ninja", "-C", "output/release", "install"
 
-    pkgetc.install "doc/mpdconf.example" => "mpd.conf"
+    (etc/"mpd").install "doc/mpdconf.example" => "mpd.conf"
   end
 
   def caveats

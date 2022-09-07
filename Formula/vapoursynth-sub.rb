@@ -35,10 +35,6 @@ class VapoursynthSub < Formula
   end
 
   test do
-    python = Formula["vapoursynth"].deps
-                                   .find { |d| d.name.match?(/^python@\d\.\d+$/) }
-                                   .to_formula
-                                   .opt_bin/"python3"
-    system python, "-c", "from vapoursynth import core; core.sub"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "from vapoursynth import core; core.sub"
   end
 end

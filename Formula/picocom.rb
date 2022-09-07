@@ -7,12 +7,8 @@ class Picocom < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f286430d43b8e36f2abefdf1765e960f76e2bf2c3e04f3e6fa500fa0b8dafeb2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ea502c2c427d1e389d7dd0822e6f01d6ac7b7eed6f856ee9f9e60fbd598ee845"
-    sha256 cellar: :any_skip_relocation, monterey:       "0b964f92ff9ba91ad3107dc9c435de2198bf8f37f72414ec71d6f269293144a3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bcf999f8a55184741845fe1dbab36597c3be6723f4fa4f603ee453558bfd6170"
-    sha256 cellar: :any_skip_relocation, catalina:       "dbbf7829cd18b6fc0b4cf2296de575e7399702fcad52a6da94280e30e3abc341"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c765edf56732a7dd0631c12068fd17ba7800c98ceb24f98fa65990e7fa13dadc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/picocom"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c9745fe282303638d5dc39e9d58df02a9c9a834931706ec04a136d0148a13e39"
   end
 
   # Upstream picocom supports arbitrary baud-rate settings on macOS out of the

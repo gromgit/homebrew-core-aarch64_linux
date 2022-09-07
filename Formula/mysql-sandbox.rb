@@ -17,7 +17,7 @@ class MysqlSandbox < Formula
   end
 
   # Replaced by dbdeployer: https://github.com/datacharmer/dbdeployer
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2021-05-24", because: :repo_archived
 
   uses_from_macos "perl"
 

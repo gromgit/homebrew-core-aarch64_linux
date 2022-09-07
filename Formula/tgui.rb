@@ -1,33 +1,29 @@
 class Tgui < Formula
   desc "GUI library for use with sfml"
   homepage "https://tgui.eu"
-  url "https://github.com/texus/TGUI/archive/v0.9.5.tar.gz"
-  sha256 "819865bf13661050161bce1e1ad68530a1f234becd3358c96d8701ea4e76bcc1"
+  url "https://github.com/texus/TGUI/archive/v0.9.3.tar.gz"
+  sha256 "187acfa850e24e3676e656a7dbe53736c98ca2577d756e9c96c9dad6374ffa0e"
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b9df36b637acb021e6a48820d3bfc8fd8921ce2bc6e1098cbfe0020481bafdb3"
-    sha256 cellar: :any,                 arm64_big_sur:  "fc9b9d68d0eb79c88f04a936c4e2bb28c76ecf70aeadb8eb4d0397f15bf03337"
-    sha256 cellar: :any,                 monterey:       "ae814b6976689b902356e4aad9ded09431ca45ba37ab33283a4c2156591e61d9"
-    sha256 cellar: :any,                 big_sur:        "4295dbcf07ac7e2b2c3253823ea1743252db212ee81f5feddbf8ff1c14183ff1"
-    sha256 cellar: :any,                 catalina:       "bf8e0820e7909e78a7c758ba3fc745dd2b3dd1e226451a855d90b642fdf26b5a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bce36f7002bb1e2c81842cd7c683d3a5678b22f18ab8ab6636e97836ae4270d"
+    sha256 cellar: :any,                 arm64_monterey: "e694ef23f7c331e9ade5da5ba872d66eb38b662b88643ffa10586d5816cd159a"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b7c153f39dc10454b182874e8d4ffd93e52d0c14de03912dce1643e17c3ad7a"
+    sha256 cellar: :any,                 monterey:       "e07465d3dd63c15487ef251ff22e322e72d7c2f4f0eacf42514bfef7a5f7d708"
+    sha256 cellar: :any,                 big_sur:        "0fda08ecd69619a0ea7ac101e9915698a3c439a677f5c1148834d585c51e5d12"
+    sha256 cellar: :any,                 catalina:       "ba3b33488a47cfe5dedd377e0f3517feb0b052f1ee5a2d03ef92f469da6ba35a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1426f8179e7f14ef646875d610c511458bbf931c4f6f812d6c4f5ce4b3ab1e72"
   end
 
   depends_on "cmake" => :build
   depends_on "sfml"
 
   def install
-    args = std_cmake_args + %W[
-      -DTGUI_MISC_INSTALL_PREFIX=#{pkgshare}
-      -DTGUI_BUILD_FRAMEWORK=FALSE
-      -DTGUI_BUILD_EXAMPLES=TRUE
-      -DTGUI_BUILD_GUI_BUILDER=TRUE
-      -DTGUI_BUILD_TESTS=FALSE
-      -DCMAKE_INSTALL_RPATH=#{rpath}
-    ]
-
-    system "cmake", ".", *args
+    system "cmake", ".", *std_cmake_args,
+                    "-DTGUI_MISC_INSTALL_PREFIX=#{pkgshare}",
+                    "-DTGUI_BUILD_FRAMEWORK=FALSE",
+                    "-DTGUI_BUILD_EXAMPLES=TRUE",
+                    "-DTGUI_BUILD_GUI_BUILDER=TRUE",
+                    "-DTGUI_BUILD_TESTS=FALSE"
     system "make", "install"
   end
 

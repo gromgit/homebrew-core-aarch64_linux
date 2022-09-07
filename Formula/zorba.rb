@@ -4,15 +4,15 @@ class Zorba < Formula
   url "https://github.com/28msec/zorba/archive/3.1.tar.gz"
   sha256 "05eed935c0ff3626934a5a70724a42410fd93bc96aba1fa4821736210c7f1dd8"
   license "Apache-2.0"
-  revision 16
+  revision 15
 
   bottle do
-    sha256 arm64_monterey: "46f70d378fe9bb29b11e1e8c36a89d6e87a8edd31506414d7bdc898ee9a38f3b"
-    sha256 arm64_big_sur:  "1ec7839bf4f2c5c894ab97e022af5299411509da28b0591f5fa317cfd6b90cfd"
-    sha256 monterey:       "e7989cc9ae5f1f69ec450cbb266eace9e9b69040360b087dd9e1f9b960429207"
-    sha256 big_sur:        "df9a7d6bd090be66e98299e32be821425ae0618ea3f865e5a3da9967149b2fb0"
-    sha256 catalina:       "3edcef6b795ce703533f54ebe944a8f0ecfc05211e3fece3d5275d887544aa56"
-    sha256 x86_64_linux:   "4cc2c7b15623b2ba658a0a50a9556d905aeb5a4f3824f713b74709f86266a89e"
+    sha256 arm64_monterey: "d52b2aa6b6c0628c064cfb6e485b691c6fab705ef896067e22195e0cea3310b1"
+    sha256 arm64_big_sur:  "b80b156d8ee91bc06d0d813bdf9e1f4bf15c21084a6c16a1749d25fa9222e49f"
+    sha256 monterey:       "24180554c7ab32f17c200c0449cf84edc53e55fbcc7521ba54cdc664dc57d1c9"
+    sha256 big_sur:        "abd2c1bf5b37980d577e3e4813f36dfc8ed9ddb1cfbbc89d4ac4a3c84353fb43"
+    sha256 catalina:       "25f7600f74bde8eddaa0201b177e2fdf1d58d3e6642824caebf8117e69da9b53"
+    sha256 x86_64_linux:   "1ff07ad15f4ed840dcf1faa096b6c9bd30e3f78cb778e3da656323dc7ce0a598"
   end
 
   depends_on "cmake" => :build
@@ -39,7 +39,13 @@ class Zorba < Formula
 
     ENV.cxx11
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    args = std_cmake_args
+
+    # dyld: lazy symbol binding failed: Symbol not found: _clock_gettime
+    # usual superenv fix doesn't work since zorba doesn't use HAVE_CLOCK_GETTIME
+    args << "-DZORBA_HAVE_CLOCKGETTIME=OFF" if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
+
+    system "cmake", "-S", ".", "-B", "build", *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

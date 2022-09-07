@@ -12,12 +12,8 @@ class Cadical < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "56c14010ece80c5889af1c9f4f87b0e7890dad48a686c8f5c8430299812eaf48"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2ede739d74122cd47e687aab34bcaae1ed69e0c7ff41e2b8390befd0c959d31"
-    sha256 cellar: :any_skip_relocation, monterey:       "bec982b9cd3bd2ffe04b0226dd34cdde9278f1fe54184fde851d9648b0932cee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "abf51a356e0c2567a306981f4178a76279169e7040fdb0cbed914c5ef0f67c66"
-    sha256 cellar: :any_skip_relocation, catalina:       "b31d7cb63660964c6382e78f49065b67a106ba19d7ba0b0e108e7438413bb058"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a508084a9b72046fda4f6cf6543b4402626aa14705b12813f73bd343edaf57f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cadical"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2bcab5a15dc8d90b9123c1f1417a03357f59723abe4f384d81e51f8eb8b2b5e6"
   end
 
   def install

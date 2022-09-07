@@ -5,15 +5,14 @@ class Guile < Formula
   mirror "https://ftpmirror.gnu.org/guile/guile-3.0.8.tar.xz"
   sha256 "daa7060a56f2804e9b74c8d7e7fe8beed12b43aab2789a38585183fcc17b8a13"
   license "LGPL-3.0-or-later"
-  revision 2
 
   bottle do
-    sha256 arm64_monterey: "56fc54551418481510668be3665501ebae56e681856c761d2246117760e18b7a"
-    sha256 arm64_big_sur:  "e60bb58c6fdfca0d7c5f948cb75dbd2767ba12588d9e60abd55f7cc6d1b089f5"
-    sha256 monterey:       "73a962893b19f8b57f53183b6366029a65c292fa2dc8fa73ee15d13a897faf7b"
-    sha256 big_sur:        "f7b6347634567f73383b9c1d2c1a04168f8a10d352bc386b633b60cf47abaa76"
-    sha256 catalina:       "d797092caee30cc7da0e8c22c2f7416db7f317090832529926acae0a408e1ce7"
-    sha256 x86_64_linux:   "cac793bc25c769435753ac8a5ca98efe420612f8946b8fa193dc69dd45e12b58"
+    sha256 arm64_monterey: "dc6e5dccbc34d5171fba0bc0a0f96381dad52a9837b6f0a1aa6eba2851b6137d"
+    sha256 arm64_big_sur:  "f8f697d08fcdc49218fb1a5f708c465e99c0da8ab94d7af8811cd15ec3b22370"
+    sha256 monterey:       "0d57e1c9dac0badc33a6355444a09c27a5eb79d1eec1ea1afc591b09f964f125"
+    sha256 big_sur:        "e95549a938b1c83eadfd102fd1eeea423416425249825330f607dbaa9ed8bc9b"
+    sha256 catalina:       "13c2dbd3e20e04169c5bc3047b4f6bec0dd19d0fc7bf6ef5f7f48b917eff008b"
+    sha256 x86_64_linux:   "0a6685530111e6091bd640f119603b6a2f4cb70bfb8cd70532577898a9dbd91b"
   end
 
   head do
@@ -28,14 +27,13 @@ class Guile < Formula
   depends_on "gnu-sed" => :build
   depends_on "bdw-gc"
   depends_on "gmp"
+  depends_on "libffi"
   depends_on "libtool"
   depends_on "libunistring"
   depends_on "pkg-config" # guile-config is a wrapper around pkg-config.
   depends_on "readline"
 
   uses_from_macos "gperf"
-  uses_from_macos "libffi", since: :catalina
-  uses_from_macos "libxcrypt"
 
   def install
     # Avoid superenv shim
@@ -66,7 +64,7 @@ class Guile < Formula
     # of opt_prefix usage everywhere.
     inreplace lib/"pkgconfig/guile-3.0.pc" do |s|
       s.gsub! Formula["bdw-gc"].prefix.realpath, Formula["bdw-gc"].opt_prefix
-      s.gsub! Formula["libffi"].prefix.realpath, Formula["libffi"].opt_prefix if MacOS.version < :catalina
+      s.gsub! Formula["libffi"].prefix.realpath, Formula["libffi"].opt_prefix
     end
 
     (share/"gdb/auto-load").install Dir["#{lib}/*-gdb.scm"]

@@ -3,20 +3,21 @@ class Cruft < Formula
 
   desc "Utility that creates projects from templates and maintains the cruft afterwards"
   homepage "https://cruft.github.io/cruft/"
-  url "https://files.pythonhosted.org/packages/07/ea/bbddd490ec84648ad5bde447cebe57628ec8d427cfb5cf4e6ce7cb0d9d89/cruft-2.11.1.tar.gz"
-  sha256 "deae3ee097f091462d7c872df22d6ad0ac89ce870bd1665e716e0d08fd21357b"
+  url "https://files.pythonhosted.org/packages/6d/99/b1988025b0d784093da9c369fb8ffba658f0186d94877fd5ef614ca4143d/cruft-2.10.2.tar.gz"
+  sha256 "fe7aaace048df17efc0e597c8035cb0deaa7a8734a86eb8c6cca5388971a2a42"
   license "MIT"
   head "https://github.com/cruft/cruft.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "04b124c2f7eb6c8f82f2178030cd6466a4feeeb8e2fa0009093363f63ad036bc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6fefe4a7d231dc304bf2f1588adface9723b71339ccaab6d28be8231c16c0399"
-    sha256 cellar: :any_skip_relocation, monterey:       "0203ef80d321c786e91c0728952018fa26636a6259abc09851d5456b110d76b2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "27b0782bb49b8014afdc1a4cbcb2d2fdfb5033fb1df65e6af5d23a65cd454f5a"
-    sha256 cellar: :any_skip_relocation, catalina:       "340fb4026c0c05c7029ac3bc2aa37687fc1c4a3ddaa03f07e2812f95b25464c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d86fbf2aa5601951c2d876197d8066f18e9938fa79580e2c78b68b7aca3f5e8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "90df52cd4cfdf0977c06ea2fdb75730bb389143f2c901391b50ee2ec9c943fe6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41fcdf213a2dd3a72626ebb12f98e43a3444e4950f55eae370019a28813b7f25"
+    sha256 cellar: :any_skip_relocation, monterey:       "e94ac31c4cd2b50c9b2517b61dc77e220396198ba8585b9dc065e01b446abb08"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7e3ad02c82f7508c4abb2eff42e8084a3563e3e9c92f374fb7faa1f9d4e8213c"
+    sha256 cellar: :any_skip_relocation, catalina:       "b7f8c2b458882e37cc1d577c65be76eee9322e8fd3b43b8866f35330b95d6ae0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89e8752784fa125df67127d6ae43ac5b37026f9fed1378f99c62f4c6b76139da"
   end
 
+  depends_on "poetry" => :build
   depends_on "python@3.10"
   depends_on "six"
 
@@ -31,28 +32,28 @@ class Cruft < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
-    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "chardet" do
-    url "https://files.pythonhosted.org/packages/31/a2/12c090713b3d0e141f367236d3a8bdc3e5fca0d83ff3647af4892c16c205/chardet-5.0.0.tar.gz"
-    sha256 "0368df2bfd78b5fc20572bb4e9bb7fb53e2c094f60ae9993339e8671d0afb8aa"
+    url "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz"
+    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
+    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/42/e1/4cb2d3a2416bcd871ac93f12b5616f7755a6800bccae05e5a99d3673eb69/click-8.1.2.tar.gz"
+    sha256 "479707fe14d9ec9a0757618b7a100a0ae4c4e236fac5b7f80ca68028141a1a72"
   end
 
   resource "cookiecutter" do
-    url "https://files.pythonhosted.org/packages/96/43/65a3dad94dceaaaa12807ce4d4eff1064db6e91a8c6fb6945e3e61e63552/cookiecutter-2.1.1.tar.gz"
-    sha256 "f3982be8d9c53dac1261864013fdec7f83afd2e42ede6f6dd069c5e149c540d5"
+    url "https://files.pythonhosted.org/packages/58/f5/6f41fa38e6efe4a0e85771f99a4ad8c33b4c14f03b4cc53b459aac4a629a/cookiecutter-1.7.3.tar.gz"
+    sha256 "6b9a4d72882e243be077a7397d0f1f76fe66cf3df91f3115dbb5330e214fa457"
   end
 
   resource "gitdb" do
@@ -71,8 +72,8 @@ class Cruft < Formula
   end
 
   resource "Jinja2" do
-    url "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz"
-    sha256 "31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"
+    url "https://files.pythonhosted.org/packages/89/e3/b36266381ae7a1310a653bb85f4f3658c462a69634fa9b2fef76252a50ed/Jinja2-3.1.1.tar.gz"
+    sha256 "640bed4bb501cbd17194b3cace1dc2126f5b619cf068a726b98192a0fde74ae9"
   end
 
   resource "jinja2-time" do
@@ -85,24 +86,24 @@ class Cruft < Formula
     sha256 "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
   end
 
+  resource "poyo" do
+    url "https://files.pythonhosted.org/packages/7d/56/01b496f36bbd496aed9351dd1b06cf57fd2f5028480a87adbcf7a4ff1f65/poyo-0.5.0.tar.gz"
+    sha256 "e26956aa780c45f011ca9886f044590e2d8fd8b61db7b1c1cf4e0869f48ed4dd"
+  end
+
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
   end
 
   resource "python-slugify" do
-    url "https://files.pythonhosted.org/packages/5d/45/915967d7bcc28fd12f36f554e1a64aeca36214f2be9caf87158168b5a575/python-slugify-6.1.2.tar.gz"
-    sha256 "272d106cb31ab99b3496ba085e3fea0e9e76dcde967b5e9992500d1f785ce4e1"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+    url "https://files.pythonhosted.org/packages/6a/29/fb7f28cb6c0ee3cfef1e2b02f42678aafd179ac9f41833159f2f80fc7f25/python-slugify-6.1.1.tar.gz"
+    sha256 "00003397f4e31414e922ce567b3a4da28cf1436a53d332c9aeeb51c7d8c469fd"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
+    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
   end
 
   resource "smmap" do
@@ -116,17 +117,22 @@ class Cruft < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/cf/f9/27c5cd9ab067e3ece4cecb920c33f38cc986f839b12de19650fd49dc3c63/typer-0.6.1.tar.gz"
-    sha256 "2d5720a5e63f73eaf31edaa15f6ab87f35f0690f8ca233017d7d23d743a91d73"
+    url "https://files.pythonhosted.org/packages/84/f2/71a04c8aa8718570d6f7570f6871fd358c29c715035f63630dadbd460da8/typer-0.4.1.tar.gz"
+    sha256 "5646aef0d936b2c761a10393f0384ee6b5c7fe0bb3e5cd710b17134ca1d99cff"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
+    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resources
+
+    poetry = Formula["poetry"].opt_bin/"poetry"
+    system poetry, "build", "--format", "wheel", "--verbose", "--no-interaction"
+    venv.pip_install_and_link Dir["dist/cruft-*.whl"].first
   end
 
   test do

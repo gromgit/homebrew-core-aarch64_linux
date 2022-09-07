@@ -1,11 +1,10 @@
 class Spidermonkey < Formula
   desc "JavaScript-C Engine"
   homepage "https://spidermonkey.dev"
-  url "https://archive.mozilla.org/pub/firefox/releases/91.13.0esr/source/firefox-91.13.0esr.source.tar.xz"
-  version "91.13.0"
-  sha256 "53be2bcde0b5ee3ec106bd8ba06b8ae95e7d489c484e881dfbe5360e4c920762"
+  url "https://archive.mozilla.org/pub/firefox/releases/91.8.0esr/source/firefox-91.8.0esr.source.tar.xz"
+  version "91.8.0"
+  sha256 "d483a853cbf5c7f93621093432e3dc0b7ed847f2a5318b964828d19f9f087f3a"
   license "MPL-2.0"
-  revision 1
   head "https://hg.mozilla.org/mozilla-central", using: :hg
 
   # Spidermonkey versions use the same versions as Firefox, so we simply check
@@ -16,12 +15,12 @@ class Spidermonkey < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e985b3fdf8827f7d491fde110937767a30fad8b33a4a92443a7be611c3c57359"
-    sha256 cellar: :any,                 arm64_big_sur:  "f666e936df2a0114799bcf80b5324ffde8ba8efa525587c20af9c9e72ef14c4a"
-    sha256 cellar: :any,                 monterey:       "491e3c9bfa16565f5c10d1d386240abb913f7ae51e7dd57063ec9b077ab166f5"
-    sha256 cellar: :any,                 big_sur:        "28bf6ac69da070d01abf59c931eafe3c30d9a68517391e95a786166e06d49266"
-    sha256 cellar: :any,                 catalina:       "bd17e93ceba743007e62a6213e385e67dfc6282c832fa6649c20247ad0e55c99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0c02fdd3307b92699021febf74e0ccf1a73dbcb124f31c88081aab57b0f312f"
+    sha256 cellar: :any,                 arm64_monterey: "58e0d57e0b665cc299824c4aac248e4ff5600473ccfbd1337f5613487fe7b528"
+    sha256 cellar: :any,                 arm64_big_sur:  "7daf97c2fa2f451015e23ac12e299d87f0429ce3e286ba7f9686d4535dd4171e"
+    sha256 cellar: :any,                 monterey:       "0ca393a20f0b977095e145d73fffdf17e8d0935c31eb260b1998755463f59f3c"
+    sha256 cellar: :any,                 big_sur:        "e965307dfbd69600c135e79988922b075dc09c2107aedc11a4739e8103699335"
+    sha256 cellar: :any,                 catalina:       "34f6b36ad1a9f6b2c78b7317eb9b6ea3eb35c0d2a9afb36851efc47665f33cd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66a677ffad037cc900becf234826a5112735da14c4213f7b286683dd744ddd9e"
   end
 
   depends_on "autoconf@2.13" => :build
@@ -49,10 +48,6 @@ class Spidermonkey < Formula
   end
 
   def install
-    # Avoid installing into HOMEBREW_PREFIX.
-    # https://github.com/Homebrew/homebrew-core/pull/98809
-    ENV["SETUPTOOLS_USE_DISTUTILS"] = "stdlib"
-
     # Remove the broken *(for anyone but FF) install_name
     # _LOADER_PATH := @executable_path
     inreplace "config/rules.mk",

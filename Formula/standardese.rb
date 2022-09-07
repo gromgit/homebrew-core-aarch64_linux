@@ -2,31 +2,20 @@ class Standardese < Formula
   desc "Next-gen documentation generator for C++"
   homepage "https://standardese.github.io"
   # TODO: use resource blocks for vendored deps
+  url "https://github.com/standardese/standardese.git",
+      tag:      "0.5.2",
+      revision: "0b23537e235690e01ba7f8362a22d45125e7b675"
   license "MIT"
-  revision 7
+  revision 4
   head "https://github.com/standardese/standardese.git", branch: "master"
 
-  # Remove stable block when patch is no longer needed.
-  stable do
-    url "https://github.com/standardese/standardese.git",
-        tag:      "0.5.2",
-        revision: "0b23537e235690e01ba7f8362a22d45125e7b675"
-
-    # Fix build with new GCC.
-    # https://github.com/standardese/standardese/pull/233
-    patch do
-      url "https://github.com/standardese/standardese/commit/15e05be2301fe43d1e209b2f749c99a95c356e04.patch?full_index=1"
-      sha256 "e5f03ea321572dd52b9241c2a01838dfe7e6df7e363a8d19bfeac5861baf5d3f"
-    end
-  end
-
   bottle do
-    sha256                               arm64_monterey: "eb35dc236f03017dabb9679a13485bd32f247a7ff58e71240bf7eb45834ceff5"
-    sha256                               arm64_big_sur:  "6e6d22daa0f20410d0679b461c4928bac05b35c79b9fc3c437c837c195fbd7be"
-    sha256                               monterey:       "137975f243104d72cf08d5c878c3ff7618291e1fc34a5d8ef8a68380013c6bca"
-    sha256                               big_sur:        "14fd1669fa05d8b427f5702437e9565cfeb3452ed8ec9c224da5413f42525217"
-    sha256                               catalina:       "147508387e3205345b95cb2d7be9fdb2f67272da5ce3dd19946bf3864cfe598c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eecadf81535d6a600339b1303f1491528770ace473bb4d7e693e67a821d0c7bd"
+    sha256                               arm64_monterey: "2f2630b76ad5dafc35df35e35f966ee5a729ded210053a7bf2f13477f11b3441"
+    sha256                               arm64_big_sur:  "1ceba491385026c6a96cebf9b9c86d08d2dc6ac55cbf39b26aae35100196c47e"
+    sha256                               monterey:       "a4526615e78ba7361004daae63b0be173e6b942905f3d4f238ef2bbbf0e78bd1"
+    sha256                               big_sur:        "e8d20ae0ab2a8aec93368edee0318a1de1add389af915a6fc54bbb0ca3259838"
+    sha256                               catalina:       "b9f7ff2a1859d52cd4d621faec96264a0c25b03271b0a75bc47f521329ea604f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17a0edfb39d66170d406445c6ee1522bb1325c34bc395ae3a6464c4839feb1a7"
   end
 
   depends_on "cmake" => :build

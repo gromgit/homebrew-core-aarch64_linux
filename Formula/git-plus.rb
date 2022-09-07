@@ -3,18 +3,20 @@ class GitPlus < Formula
 
   desc "Git utilities: git multi, git relation, git old-branches, git recent"
   homepage "https://github.com/tkrajina/git-plus"
-  url "https://files.pythonhosted.org/packages/d3/2a/c573678f7150f35305f50727bcfd41edf1415fb1e523860f0f0788d99205/git-plus-0.4.9.tar.gz"
-  sha256 "b9a9dbbffc030a044cb7d9ee46b3fe1b683162cee52172c7349eda8216680ec6"
+  url "https://files.pythonhosted.org/packages/e5/01/f7ff2dc29fd5b8ffe1382c5e44d4be671ea00000cb216ad2b67b8e58a5b4/git-plus-v0.4.7.tar.gz"
+  sha256 "22e0e118ed94bdc4413a763774e8cf8dfd167a1209b9ee831eac1835d4bb5302"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/tkrajina/git-plus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b2f460db814de1238b256ffe8ff73e20517e818ba431226fad2c93090302d4e7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2f460db814de1238b256ffe8ff73e20517e818ba431226fad2c93090302d4e7"
-    sha256 cellar: :any_skip_relocation, monterey:       "54a3a8bf7d28d2dff77088e68eb79ed26543a7b9f93d9cd580964258d25c297e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "54a3a8bf7d28d2dff77088e68eb79ed26543a7b9f93d9cd580964258d25c297e"
-    sha256 cellar: :any_skip_relocation, catalina:       "54a3a8bf7d28d2dff77088e68eb79ed26543a7b9f93d9cd580964258d25c297e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8dbc62e560dea03502ccc9f3bdc8f7ba69a6e5abbb62d7128b4ab86c27fb83a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8bc27d01ae10334384f7bfa583f7cf3558246738d95a15969d234a3744808c61"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8bc27d01ae10334384f7bfa583f7cf3558246738d95a15969d234a3744808c61"
+    sha256 cellar: :any_skip_relocation, monterey:       "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, catalina:       "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, mojave:         "c27fdb895dfe71c44fa92aef98ccdf5d3c042e57873c9b6b98c79348199af34a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebe89d33926bdb53327c6712fac31d805a47778e103c2bfeeb532803a5f52a4c"
   end
 
   depends_on "python@3.10"

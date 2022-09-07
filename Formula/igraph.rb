@@ -1,17 +1,17 @@
 class Igraph < Formula
   desc "Network analysis package"
   homepage "https://igraph.org/"
-  url "https://github.com/igraph/igraph/releases/download/0.10.0/igraph-0.10.0.tar.gz"
-  sha256 "62e3c9e51ac5b0f1871142aac23956f3a6a337fee980bf5474bd4ac3d76e1a68"
+  url "https://github.com/igraph/igraph/releases/download/0.9.8/igraph-0.9.8.tar.gz"
+  sha256 "f9a83473cea3e037b605b79b336be656b00dcf3037b233b4b250bd9270f36397"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "874172a8540995a4bc5198f31ed8ddadd08a784fc47dfa3c390f8cf910823599"
-    sha256 cellar: :any,                 arm64_big_sur:  "4d6183036fd2c9248044d40f3459f18a2b6624a9b0985ee3a7509116a5fa9056"
-    sha256 cellar: :any,                 monterey:       "be282513b5a9b711dacc16b8c315ef3f66ae000d4e968722f95a493b8038eca1"
-    sha256 cellar: :any,                 big_sur:        "690e22739d2b1322d6a7dfc4f5f33bf84e167d9d76e5d2c3b43f156f967e9e1b"
-    sha256 cellar: :any,                 catalina:       "b367edeeca3820a19a900d0e35dc39c4f4c86b265c0a8a75dd83f24f90c5a908"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2827c742f7c999e9315ebd2553ec88191751fb18d671f6385bf3c73639a70f96"
+    sha256 cellar: :any,                 arm64_monterey: "f37f93fd54f3079ca9c85fe7f8133c8256ec4423d2c791e01614c2850c9bd6bf"
+    sha256 cellar: :any,                 arm64_big_sur:  "8a6c25ed20ada66c77b320a675ee9311dc2d9f4f49394ea05bc72b9fe0d4cedb"
+    sha256 cellar: :any,                 monterey:       "1897e0eec9e05629b7235e3367683a7eec31c5e1bd8b8943ff326e08e1e729c6"
+    sha256 cellar: :any,                 big_sur:        "f4cd3456138b4a3571e0a7c5aebe50b55f6150f471b6d395c799f388ef3a4ec2"
+    sha256 cellar: :any,                 catalina:       "65931d5fd4d0d5c275b5dcc6f8f567fb4d0633b464d5af390d682e5416453c12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a9a1d020dbc86fb7f403e69128f3ef6ed143295bc2c4162820d189e007ae143"
   end
 
   depends_on "cmake" => :build
@@ -62,13 +62,13 @@ class Igraph < Formula
         igraph_t graph;
         igraph_rng_seed(igraph_rng_default(), 42);
         igraph_erdos_renyi_game(&graph, IGRAPH_ERDOS_RENYI_GNP, 1000, 5.0/1000, IGRAPH_UNDIRECTED, IGRAPH_NO_LOOPS);
-        igraph_diameter(&graph, &diameter, 0, 0, 0, 0, IGRAPH_UNDIRECTED, 1);
+        igraph_diameter(&graph, &diameter, 0, 0, 0, IGRAPH_UNDIRECTED, 1);
         printf("Diameter = %f\\n", (double) diameter);
         igraph_destroy(&graph);
       }
     EOS
     system ENV.cc, "test.c", "-I#{include}/igraph", "-L#{lib}",
                    "-ligraph", "-lm", "-o", "test"
-    assert_match "Diameter = 8", shell_output("./test")
+    assert_match "Diameter = 9", shell_output("./test")
   end
 end

@@ -4,11 +4,10 @@ class Sslyze < Formula
   desc "SSL scanner"
   homepage "https://github.com/nabla-c0d3/sslyze"
   license "AGPL-3.0-only"
-  revision 1
 
   stable do
-    url "https://files.pythonhosted.org/packages/3d/cc/ca058d60bac78d5d2110645be0c1a03052b08c145d06c5a8008e83dd4938/sslyze-5.0.5.tar.gz"
-    sha256 "fea82ad88a030cc0978fb55f632849b3e858e03c5b97fd62459976953d3ef5d5"
+    url "https://files.pythonhosted.org/packages/7a/c5/92c28ccdd0641c3b5c59b246861f50d738ac0d4a4e0314f9f2700191c464/sslyze-5.0.4.tar.gz"
+    sha256 "369adefac083c3ef6ad60b84ffd48c5fd66cfa47d3bd6cdbdf9a546c50123d23"
 
     resource "nassl" do
       url "https://github.com/nabla-c0d3/nassl/archive/4.0.2.tar.gz"
@@ -22,10 +21,10 @@ class Sslyze < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "142ff5441e74129005a83f067735307b9e7a2ed9607af7b12241a139a876c67b"
-    sha256 cellar: :any,                 big_sur:      "e200d5cc4d35a58aa4adf83d94d28996f92fc4fc28e5c65e8f0cd876b0d335b9"
-    sha256 cellar: :any,                 catalina:     "31114e3f22cdf95678b0462e544643c631dd6a7e5639071ad604979ca5bceee1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1f62718601c7a1b278c85fc5b6d8e4b5b02b939ef4f90d88fa799151efb8d6f3"
+    sha256 cellar: :any,                 monterey:     "c55c4bea4ee7beb0320c1b12d315ae340409b036fee4e630b80e16634b0b4f27"
+    sha256 cellar: :any,                 big_sur:      "5e946542c424ed0446128a9fd0287482a4088e1f84a3393c4878e2e0151eaa9d"
+    sha256 cellar: :any,                 catalina:     "6ee55f116dd5aae0385167ae2ea634b6e66f984a93983ab2f000d405b8cf15d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "24c6d236aa6fc9f1b93f1002fc734eeee0292d24658846822a2e10c97c1c6380"
   end
 
   head do
@@ -38,9 +37,9 @@ class Sslyze < Formula
 
   depends_on "pyinvoke" => :build
   depends_on "rust" => :build # for cryptography
+  depends_on "libffi"
   depends_on "openssl@1.1"
   depends_on "python@3.10"
-  uses_from_macos "libffi", since: :catalina
 
   resource "cffi" do
     url "https://files.pythonhosted.org/packages/00/9e/92de7e1217ccc3d5f352ba21e52398372525765b2e0c4530e6eb2ba9282a/cffi-1.15.0.tar.gz"
@@ -48,8 +47,8 @@ class Sslyze < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/51/05/bb2b681f6a77276fc423d04187c39dafdb65b799c8d87b62ca82659f9ead/cryptography-37.0.2.tar.gz"
-    sha256 "f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e"
+    url "https://files.pythonhosted.org/packages/10/a7/51953e73828deef2b58ba1604de9167843ee9cd4185d8aaffcb45dd1932d/cryptography-36.0.2.tar.gz"
+    sha256 "70f8f4f7bb2ac9f340655cbac89d68c527af5bb4387522a8413e841e3e6628c9"
   end
 
   resource "pycparser" do

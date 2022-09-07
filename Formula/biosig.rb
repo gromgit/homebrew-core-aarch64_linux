@@ -1,8 +1,8 @@
 class Biosig < Formula
   desc "Tools for biomedical signal processing and data conversion"
   homepage "https://biosig.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-2.4.2.src.tar.xz"
-  sha256 "eedffd9b9c19ff0be23315b690d66754fdd73c43aacb708a56e803d558271fdb"
+  url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-2.4.1.src.tar.xz"
+  sha256 "f7426d3fd238df1c54071ca59a14c3f4f92839fe1a54cdcfed9f32598ec98080"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Biosig < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "eaa2aba06bcf5a18480ad6607f5608bb35a53870bc22ee4e15b70bbcc02c9e48"
-    sha256 cellar: :any,                 arm64_big_sur:  "b826320b92fb86236b12368bf174448f179edb2980f7fb64f37227a909181a61"
-    sha256 cellar: :any,                 monterey:       "1cb34598857ff62cb830a33f65e45406a71101455a452c78c75c8aa90dfe021c"
-    sha256 cellar: :any,                 big_sur:        "47b6bf8d8219f9d51843bbcdbbe91a33605a3681f7d7065f8591f51663cda394"
-    sha256 cellar: :any,                 catalina:       "79ba155dbf5b6d026293fe4247542a75fcf4b2cdc08428067a0fdddb2957fc83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "928577ad45fa3aa001aff0599bd526f14b097f670ae54ebe397963a2e9e9db98"
+    sha256 cellar: :any,                 arm64_monterey: "dc8e09b6bd3d7093eaff147b7480342c3ed02a59a74fa19d61b1961df4f5f3d9"
+    sha256 cellar: :any,                 arm64_big_sur:  "0fada2ab841d8519c6ca3ffab8ef38ea905a39be7a5c28733b1a591a64e946f3"
+    sha256 cellar: :any,                 monterey:       "1e73928a8839a9ee2eafe4cee53b5e17312c2e9a522a42cc5a912d6105fc5c1b"
+    sha256 cellar: :any,                 big_sur:        "3d26e04d26e94f19af1d3cb5449e19764429c6e7ed38dd072ec4feea0efa49ac"
+    sha256 cellar: :any,                 catalina:       "5729c4ab18137b45af5d746632397100645f338ad72fc7225c35385a27c325cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7daa2723d8c757eb27d83e84cab1ec7aca20cb4961e49573d4bc87848ff66fe0"
   end
 
   depends_on "gawk" => :build

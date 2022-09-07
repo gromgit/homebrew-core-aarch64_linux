@@ -2,17 +2,17 @@ class Dpp < Formula
   desc "Directly include C headers in D source code"
   homepage "https://github.com/atilaneves/dpp"
   url "https://github.com/atilaneves/dpp.git",
-      tag:      "v0.4.11",
-      revision: "4c66d7959917f8440970ac447129b7b9f691dbc0"
+      tag:      "v0.4.10",
+      revision: "40ab857b7159268800c72d3de6242c4568f5e177"
   license "BSL-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c2eb7cfae10d78fb99ea1290ea1bbc58751603aef67e18f88279a4fec36dbdf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8eca82d866ab06ee607cf656e7ae85ce5071aa9b1a2667ab5dd6194714b2b58f"
-    sha256 cellar: :any,                 monterey:       "7f366f783ee50fe0a49f4bb2e06c6243346c100d310974dd87690f854c4cb315"
-    sha256 cellar: :any,                 big_sur:        "adf314b02d371dae57b5c39a5c2b64d29e055191aa4c2e57779d330327e007c6"
-    sha256 cellar: :any,                 catalina:       "3a4d4faf920f4e24d4169caadd7947dc99fe7a53ea4660da93de5f9908d158fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfa73022f3ae3ba09c62df22a02cbb9faf54e9abb662babc0c5654baa45d5dcb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d6c36df683ebeca1cd109cc8d92417ec4c3dae163ab1cd7ea295e3b4458d534"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fc9ef5f553341fcc1f2c6bee5baf3277bf6b89e73f9d00e66b76e05d314142a7"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd1432ca96e3fe054b029645998e959471fddf1c614a105b46c7b29647b60f95"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e2aaffc50922f19a32841a49ff9b0dd75e35bbc4d3184aee303757ac1140c0ad"
+    sha256 cellar: :any_skip_relocation, catalina:       "f3ac91b1014d225c2a6028d01487f375a456ca495bba146b38e778a30621c2d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "edf62503deb31c840ff905ac369ab4ae7e82c83582c76464d2a7f8b86a1abf9c"
   end
 
   depends_on "dub" => :build

@@ -1,9 +1,9 @@
 class Freetype < Formula
   desc "Software library to render fonts"
   homepage "https://www.freetype.org/"
-  url "https://downloads.sourceforge.net/project/freetype/freetype2/2.12.1/freetype-2.12.1.tar.xz"
-  mirror "https://download.savannah.gnu.org/releases/freetype/freetype-2.12.1.tar.xz"
-  sha256 "4766f20157cc4cf0cd292f80bf917f92d1c439b243ac3018debf6b9140c41a7f"
+  url "https://downloads.sourceforge.net/project/freetype/freetype2/2.12.0/freetype-2.12.0.tar.xz"
+  mirror "https://download.savannah.gnu.org/releases/freetype/freetype-2.12.0.tar.xz"
+  sha256 "ef5c336aacc1a079ff9262d6308d6c2a066dd4d2a905301c4adda9b354399033"
   license "FTL"
 
   livecheck do
@@ -12,12 +12,8 @@ class Freetype < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3e190f2fa02702aa86e46cf33e7dde1d93e879f1de38f3d1b61e301f8367136d"
-    sha256 cellar: :any,                 arm64_big_sur:  "deb09510fb83adf76d9bb0d4ac4a3d3a2ddfff0d0154e09d3719edb73b058278"
-    sha256 cellar: :any,                 monterey:       "3d4afd3f040571ea464c7afc010be38faf77665f919a79f557369d2eceee13d1"
-    sha256 cellar: :any,                 big_sur:        "69a5d61245af56e6b088986b16c6e5b842c3d4f5896c34e013341ca94f4a45d1"
-    sha256 cellar: :any,                 catalina:       "cafa6fee3a0ca54b1659f433667a145acef2c2d2061292d2f8bc088db7f0ea4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43be70d09e51402bb453d491d69021af20f0d0c5154092bd5571b365673d4e2f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/freetype"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f1bb0a5a5ad96684d7fb7e8c608f655c132c1732ee0ae2c665b95406f11ce315"
   end
 
   depends_on "libpng"

@@ -3,18 +3,18 @@ class Vermin < Formula
 
   desc "Concurrently detect the minimum Python versions needed to run code"
   homepage "https://github.com/netromdk/vermin"
-  url "https://github.com/netromdk/vermin/archive/v1.4.2.tar.gz"
-  sha256 "c9a69420b610bfb25d5a2abd7da6edf0ae4329481a857ef6c5d71f602ed5c63d"
+  url "https://github.com/netromdk/vermin/archive/v1.3.3.tar.gz"
+  sha256 "35cd8bc3f54f651dbb162a7b35b4b091409154ce6d565df043f7f04bf9401d7d"
   license "MIT"
   head "https://github.com/netromdk/vermin.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c0b072725c7837319e3a0136a4ee56610ff734d2e4b21cd113de011412bb9067"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c0b072725c7837319e3a0136a4ee56610ff734d2e4b21cd113de011412bb9067"
-    sha256 cellar: :any_skip_relocation, monterey:       "b3010a816194fab5d82a519b82855a5a99e161355483c98361fc27b9bddd9f21"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b3010a816194fab5d82a519b82855a5a99e161355483c98361fc27b9bddd9f21"
-    sha256 cellar: :any_skip_relocation, catalina:       "b3010a816194fab5d82a519b82855a5a99e161355483c98361fc27b9bddd9f21"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42de1cb7e7aeca2c0e28a507212f4ed1984ad594ad5d118449151d3f50caa478"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "78b0ba9a707cef99046629273e048e95bdb41a5f2d58ee343d3088b509c3dc61"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "78b0ba9a707cef99046629273e048e95bdb41a5f2d58ee343d3088b509c3dc61"
+    sha256 cellar: :any_skip_relocation, monterey:       "4a31f6d451c7be3fca256f08212b838d348ca520c07e64c6921834fc4409f154"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4a31f6d451c7be3fca256f08212b838d348ca520c07e64c6921834fc4409f154"
+    sha256 cellar: :any_skip_relocation, catalina:       "4a31f6d451c7be3fca256f08212b838d348ca520c07e64c6921834fc4409f154"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9958a00ae57d114cbe0e689972e77df8074f5cc208de1a247a16f4e8566f533"
   end
 
   depends_on "python@3.10"
@@ -24,7 +24,7 @@ class Vermin < Formula
   end
 
   test do
-    path = libexec/Language::Python.site_packages("python3.10")/"vermin"
-    assert_match "Minimum required versions: 2.7, 3.0", shell_output("#{bin}/vermin #{path}")
+    path = libexec/"lib/python3.10/site-packages/vermin"
+    assert_match "Minimum required versions: 2.7, 3.0", shell_output("#{bin}/vermin -q #{path}")
   end
 end

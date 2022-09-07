@@ -4,76 +4,54 @@ class Tbb < Formula
   url "https://github.com/oneapi-src/oneTBB/archive/refs/tags/v2021.5.0.tar.gz"
   sha256 "e5b57537c741400cf6134b428fc1689a649d7d38d9bb9c1b6d64f092ea28178a"
   license "Apache-2.0"
-  revision 2
+  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "21c39944a3efe3edd84db35f4b7eb930d5e728742e96b4944489b09c85f485e0"
-    sha256 cellar: :any,                 arm64_big_sur:  "57a1754dd59fbbe2179a5747ad4dc27bc7f1a6b51fdc47d3d2dbd65c1fcf0719"
-    sha256 cellar: :any,                 monterey:       "241a6095398bad1f24343da0eedb746abce5818bebcccc7bb2d82cedde7eb454"
-    sha256 cellar: :any,                 big_sur:        "6af7f19d5dac6d86e98e29db077a76b26c18d5a187e45cdfe6f5a4b4be1006ae"
-    sha256 cellar: :any,                 catalina:       "4ddc6c91e43721325d44fd8aca57e30763cf546fba204420e797f9a6a091e225"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3f6717ebecbcaf078ebf4166f02a09e8908e89a1425370ebd4f60ea101d26af"
+    sha256 cellar: :any,                 arm64_monterey: "c70f9d3c24cb86290c6d371179f6d01afcdd13c3a9bad26ee36baa2262c142a8"
+    sha256 cellar: :any,                 arm64_big_sur:  "4e6a51639e5a92a15b5a52abf3937870536eb97273228635698a82da78757b65"
+    sha256 cellar: :any,                 monterey:       "8323879a2adfcfc50d60fa20adcfe709a00797a1bc698d8cd3b967bd5f3bee2c"
+    sha256 cellar: :any,                 big_sur:        "af411c6cabc26792c73f8605f7c22bd6ddec9405e30b32a2782592c1056b90ce"
+    sha256 cellar: :any,                 catalina:       "244bb7fd1ae57141d3cd3eb01685f7364f475778fbb51fa8aa371c24737736fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa2dca8daa7a939d9dd52162911d95dee683b42c4b1f0e9cadb5fa0b5bf1a9dc"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10" => [:build, :test]
   depends_on "swig" => :build
+  depends_on "python@3.9"
 
   # Fix installation of Python components
   # See https://github.com/oneapi-src/oneTBB/issues/343
   patch :DATA
 
-  # Fix thread creation under heavy load.
-  # https://github.com/oneapi-src/oneTBB/pull/824
-  # Needed for mold: https://github.com/rui314/mold/releases/tag/v1.4.0
-  patch do
-    url "https://github.com/oneapi-src/oneTBB/commit/f12c93efd04991bc982a27e2fa6142538c33ca82.patch?full_index=1"
-    sha256 "637a65cca11c81fa696112aca714879a2202a20e426eff2be8d2318e344ae15c"
-  end
-
   def install
-    args = %w[
+    args = *std_cmake_args + %w[
       -DTBB_TEST=OFF
       -DTBB4PY_BUILD=ON
     ]
 
-    system "cmake", "-S", ".", "-B", "build/shared",
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *args, *std_cmake_args
-    system "cmake", "--build", "build/shared"
-    system "cmake", "--install", "build/shared"
-
-    system "cmake", "-S", ".", "-B", "build/static",
-                    "-DBUILD_SHARED_LIBS=OFF",
-                    *args, *std_cmake_args
-    system "cmake", "--build", "build/static"
-    lib.install buildpath.glob("build/static/*/libtbb*.a")
+    mkdir "build" do
+      system "cmake", "..", *args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
+      system "make"
+      system "make", "install"
+      system "make", "clean"
+      system "cmake", "..", *args, "-DBUILD_SHARED_LIBS=OFF"
+      system "make"
+      lib.install Dir["**/libtbb*.a"]
+    end
 
     cd "python" do
       ENV.append_path "CMAKE_PREFIX_PATH", prefix.to_s
-      python = Formula["python@3.10"].opt_bin/"python3.10"
-
-      tbb_site_packages = prefix/Language::Python.site_packages(python)/"tbb"
-      ENV.append "LDFLAGS", "-Wl,-rpath,#{rpath(source: tbb_site_packages)}"
+      ENV["LDFLAGS"] = "-rpath #{opt_lib}" if OS.mac?
 
       ENV["TBBROOT"] = prefix
-      system python, *Language::Python.setup_install_args(prefix, python)
+      system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
     end
 
-    return unless OS.linux?
-
-    inreplace_files = prefix.glob("rml/CMakeFiles/irml.dir/{flags.make,build.make,link.txt}")
-    inreplace inreplace_files, Superenv.shims_path/ENV.cxx, ENV.cxx
+    inreplace_files = Dir[prefix/"rml/CMakeFiles/irml.dir/{flags.make,build.make,link.txt}"]
+    inreplace inreplace_files, Superenv.shims_path/ENV.cxx, "/usr/bin/c++" if OS.linux?
   end
 
   test do
-    # The glob that installs these might fail,
-    # so let's check their existence.
-    assert_path_exists lib/"libtbb.a"
-    assert_path_exists lib/"libtbbmalloc.a"
-
     (testpath/"sum1-100.cpp").write <<~EOS
       #include <iostream>
       #include <tbb/blocked_range.h>
@@ -102,7 +80,7 @@ class Tbb < Formula
     system ENV.cxx, "sum1-100.cpp", "--std=c++14", "-L#{lib}", "-ltbb", "-o", "sum1-100"
     assert_equal "5050", shell_output("./sum1-100").chomp
 
-    system Formula["python@3.10"].opt_bin/"python3.10", "-c", "import tbb"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import tbb"
   end
 end
 

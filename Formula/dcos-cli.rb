@@ -12,14 +12,8 @@ class DcosCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b7c3e8a7a0d91d84fd13cad41079bd7d718928b1acbaede6f7c5fc0f419b1bc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f86f45ed4b5244b46a83cb5bf5bc5ac869dfbae3af926f175bee78a0ebd9b47a"
-    sha256 cellar: :any_skip_relocation, monterey:       "26c6a023e4d2cf388c41f684d52f3d427f57d0a6eacd54a286c5f7c56efb7957"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1391a435f38b3a70514d0ef7f0a20f19a2d7027e64cad5c1b413730a89aaec4f"
-    sha256 cellar: :any_skip_relocation, catalina:       "3f64db455d356a65dbb8be7bce2346b9b8afec968082bdad1efafb174bbde1b8"
-    sha256 cellar: :any_skip_relocation, mojave:         "759770809a74366f84721771b18702a3d27c9e6aa9099f25895200462df17ab8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ca96957a95df6e3084eeddf3d45cd52a26bdd69446647af7e52f297c6b1f1ce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dcos-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "86332780d0446f6e2a32465e81979ea2470f682caac300ce5a49dc46e3218d0f"
   end
 
   # Bump to 1.18 on the next release, if possible.

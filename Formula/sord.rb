@@ -1,8 +1,8 @@
 class Sord < Formula
   desc "C library for storing RDF data in memory"
   homepage "https://drobilla.net/software/sord.html"
-  url "https://download.drobilla.net/sord-0.16.12.tar.xz"
-  sha256 "fde269893cb24b2ab7b75708d7a349c6e760c47a0d967aeca5b1c651294ff9f2"
+  url "https://download.drobilla.net/sord-0.16.8.tar.bz2"
+  sha256 "7c289d2eaabf82fa6ac219107ce632d704672dcfb966e1a7ff0bbc4ce93f5e14"
   license "ISC"
 
   livecheck do
@@ -11,26 +11,24 @@ class Sord < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "8eb7852e92c07a0568eb3b1078fe4b1c98a78967e132b349277778ce5a64e669"
-    sha256 cellar: :any, arm64_big_sur:  "5ad330d521065a4e6a2b4ea108351b76a5f72bc93e826b5b075ffef9bbab0f1d"
-    sha256 cellar: :any, monterey:       "ca0fee6b4bc2d71adeb56105059c37e3bf6095f1be32f1d76d8038a08e3e4b69"
-    sha256 cellar: :any, big_sur:        "cea0a3af56dd4664a8da6ccc3c17baa9fa24ac7bf133974e74f5b4f1779d5151"
-    sha256 cellar: :any, catalina:       "3ad280523cec50c8b78f5068370b4c30715ed2ac9701399ff97832779e2c6b5b"
-    sha256               x86_64_linux:   "8e32112379fb85c693042658262a7c9777cb82765be95db2c5417605358457dc"
+    sha256 cellar: :any,                 arm64_monterey: "65060c80a5f82092e950d54d4e0c161c276ab4011511c67b8045675c4a92e872"
+    sha256 cellar: :any,                 arm64_big_sur:  "ec9d443ac5fc598d0718dd33a9c19fc8f2d2f38975512ce79acabd2d5e509fd7"
+    sha256 cellar: :any,                 monterey:       "eb739359d67f246df683e696269444efda918395d3755f5b078b3a4727c5865b"
+    sha256 cellar: :any,                 big_sur:        "30fed8a7b4747de9ed632640e1b2aa326e0c5bb71030d0924b934d820fe87ef5"
+    sha256 cellar: :any,                 catalina:       "e0ca8e8fd6e2ba8ccec9cb75c8bb2f1d1fe09ba8ebce886f78eed4c87343ab93"
+    sha256 cellar: :any,                 mojave:         "2d69dca2635bf0808ce19d65e6a795d1591b5f197b2cc703fa9fa084d81d6c2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16c2362dcac47cf4f10c118678422f327c9d09d90574718c93000bd30b526ef1"
   end
 
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "python@3.10" => :build
   depends_on "pcre"
   depends_on "serd"
 
   def install
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Dtests=disabled", ".."
-      system "ninja"
-      system "ninja", "install"
-    end
+    system "python3", "./waf", "configure", "--prefix=#{prefix}"
+    system "python3", "./waf"
+    system "python3", "./waf", "install"
   end
 
   test do

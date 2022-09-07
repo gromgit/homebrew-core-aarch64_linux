@@ -1,17 +1,17 @@
 class Sngrep < Formula
   desc "Command-line tool for displaying SIP calls message flows"
   homepage "https://github.com/irontec/sngrep"
-  url "https://github.com/irontec/sngrep/archive/v1.6.0.tar.gz"
-  sha256 "fd80964d6560f2ff57b4f5bef2353d1a6f7c48d2f1a5f0a167c854bd2e801999"
+  url "https://github.com/irontec/sngrep/archive/v1.5.0.tar.gz"
+  sha256 "c41620c02982fe87a443ccc795cc8c7fe7cf3d55338b8723f345b685bc153f4e"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2bbb0e2441c8192002e427ba0b5a3e8673cee8689fd5befebd0f3ba0532e3cb2"
-    sha256 cellar: :any,                 arm64_big_sur:  "69a7368edfbff2b60ed13cf1dbd9891ca8346bc4764108441c48e28a27ff08cc"
-    sha256                               monterey:       "c0d3b02aa03ce6c44e7d0a14e06d34bea256934504fce358c0ad94308b4e410f"
-    sha256                               big_sur:        "d02e2bb89ebe085ba45d1bf9ccd3da89b4bb2b79dd69942bf56a1b3e70acfad4"
-    sha256                               catalina:       "f66d29b77e3a75b7824eccba63ee8e7c4d97e684afbb7cb1dccf79ce5ca8a273"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f787893debb7a1c5e9bfc7dd4d951f7806cfd6d0c9a04f53579f421c5f5bebc5"
+    sha256 cellar: :any,                 arm64_monterey: "d150b4b24b10111f47c0e7ba540dda9790b2a6a3c8c8db0d479323ab4517561e"
+    sha256 cellar: :any,                 arm64_big_sur:  "08602359207454d252548a9218ca1b953fa5486eb53ef7c2a5746e6f2b8e11a3"
+    sha256                               monterey:       "c8673a577a984a7fd873e4872551a7de85b9c0a91a764526d6c4e32026126c25"
+    sha256                               big_sur:        "33d2f47c4476b0d087987843f546c73ee542d09b223c28ebea4f8624fe6306b8"
+    sha256                               catalina:       "b3b23a3c3344dafcff7f5d954a99eac69fffeb77ff5ca60624c2c8f990abef18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b796a3f8b22997bdb44f1f01ab9ddfc67135e84dc365ce6902a1f5edfd7b5d0"
   end
 
   depends_on "autoconf" => :build

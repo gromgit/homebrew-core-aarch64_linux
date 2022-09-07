@@ -1,8 +1,8 @@
 class Mercury < Formula
   desc "Logic/functional programming language"
   homepage "https://mercurylang.org/"
-  url "https://dl.mercurylang.org/release/mercury-srcdist-22.01.3.tar.gz"
-  sha256 "d5b4b4b7b3a4a63a18731d97034b44f131bf589b6d1b10e8ebc4becef000d048"
+  url "https://dl.mercurylang.org/release/mercury-srcdist-22.01.1.tar.gz"
+  sha256 "0a0d22c50b699aeb3a4377ee738e4e2e178a0824e24d6df3d57273c50d4e2fa7"
   license all_of: ["GPL-2.0-only", "LGPL-2.0-only", "MIT"]
 
   livecheck do
@@ -11,12 +11,12 @@ class Mercury < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d4d7da746a3903308c29bdaf2a958a5fe2a8a39479b7915336189510daba2415"
-    sha256 cellar: :any,                 arm64_big_sur:  "ff56525679c46110bb62e291836a5f41603346a3c907d7b6c95ca9d7d9200903"
-    sha256 cellar: :any,                 monterey:       "3d8523d289526f717bcb3547492f5ab73b687b7fd93b8f93e123d993c5020f02"
-    sha256 cellar: :any,                 big_sur:        "b655f38b5eab501a46de0681b8861a98eacd26b86561c46cc3b1c9ee09a682f4"
-    sha256 cellar: :any,                 catalina:       "b28cfbfa350b95d12542948cb547bd9e93f23d9d9eb41c319e70e9eb7aa2f124"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5adad7ca5952d6548e893639c131f6fa000fc6564d077f37df1b69398ea35093"
+    sha256 cellar: :any,                 arm64_monterey: "855df991955baffa567fca232ebdb85a3ebc14ca0c1405f83cc40e77956351a2"
+    sha256 cellar: :any,                 arm64_big_sur:  "c938ab8e2686d03733c01caea06501b694e4fe4cca085613bdef63453a80ec10"
+    sha256 cellar: :any,                 monterey:       "54bb5d0f1ef77ef257ea5a8f05f4d2f9f8e55f4bebf519c3efc2f27315587db5"
+    sha256 cellar: :any,                 big_sur:        "873560ec1a1567db5ae42f751484facc58adce98a99a40372819289bf53bfe56"
+    sha256 cellar: :any,                 catalina:       "e004bccc8b21de16e6c81c96494921b25e03b5e2cb7f20247bfef381be6c3051"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9224ed7953a854a9d69ceebf9af5696f41268d61f6916a2a103296d5ae1a5ea7"
   end
 
   depends_on "openjdk"

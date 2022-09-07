@@ -1,8 +1,8 @@
 class Composer < Formula
   desc "Dependency Manager for PHP"
   homepage "https://getcomposer.org/"
-  url "https://getcomposer.org/download/2.4.1/composer.phar"
-  sha256 "ea8cf6308ec76ff9645c3818841a7588096b9dc2767345fbd4bd492dd8a6dca6"
+  url "https://getcomposer.org/download/2.3.5/composer.phar"
+  sha256 "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4"
   license "MIT"
 
   livecheck do
@@ -11,21 +11,19 @@ class Composer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7ba868aa113551ca93506cea1dce2637138aa6e711e0e5674c4a587ed471020"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7ba868aa113551ca93506cea1dce2637138aa6e711e0e5674c4a587ed471020"
-    sha256 cellar: :any_skip_relocation, monterey:       "369669ccb9415ee687987b9f39c1fd8d451b9809d9c58b07a2a823562e3e9951"
-    sha256 cellar: :any_skip_relocation, big_sur:        "369669ccb9415ee687987b9f39c1fd8d451b9809d9c58b07a2a823562e3e9951"
-    sha256 cellar: :any_skip_relocation, catalina:       "369669ccb9415ee687987b9f39c1fd8d451b9809d9c58b07a2a823562e3e9951"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7ba868aa113551ca93506cea1dce2637138aa6e711e0e5674c4a587ed471020"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f0d482df0a891ca88403b06183fd62084196d7360990c64d97ca0cb0c479bcbb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f0d482df0a891ca88403b06183fd62084196d7360990c64d97ca0cb0c479bcbb"
+    sha256 cellar: :any_skip_relocation, monterey:       "0eec2b01f0467d56df93fcfef0e9751a951c4bdcd8598f6a688fc95d68588d8e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0eec2b01f0467d56df93fcfef0e9751a951c4bdcd8598f6a688fc95d68588d8e"
+    sha256 cellar: :any_skip_relocation, catalina:       "0eec2b01f0467d56df93fcfef0e9751a951c4bdcd8598f6a688fc95d68588d8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0d482df0a891ca88403b06183fd62084196d7360990c64d97ca0cb0c479bcbb"
   end
 
   depends_on "php"
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
   on_macos do
-    on_intel do
-      pour_bottle? only_if: :default_prefix
-    end
+    pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
   end
 
   def install

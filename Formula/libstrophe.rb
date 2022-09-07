@@ -1,24 +1,25 @@
 class Libstrophe < Formula
   desc "XMPP library for C"
   homepage "https://strophe.im/libstrophe/"
-  url "https://github.com/strophe/libstrophe/archive/0.12.2.tar.gz"
-  sha256 "049232e3968ad65c65e08601cb3de171d3a25d154b6f14332c35a7bf961e2c9d"
-  license all_of: ["GPL-3.0-only", "MIT"]
+  url "https://github.com/strophe/libstrophe/archive/0.11.0.tar.gz"
+  sha256 "090185bcf5800663e18340313410e3b6e4e742e065daac9e7cfa5dbb83dab8f5"
+  license any_of: ["GPL-3.0", "MIT"]
   head "https://github.com/strophe/libstrophe.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "da9690a4006d8011fffc155eda0e6860f2c76296b24ffcebf99bda9005d901f7"
-    sha256 cellar: :any,                 arm64_big_sur:  "7898879a8407daf35cebacaee1f9bd9a282596bdf5497f49dc25f8211d9afa66"
-    sha256 cellar: :any,                 monterey:       "4be10d525522a176fdc10d37c4206eef981ecd326c4717ac43e929a0ecdbe99c"
-    sha256 cellar: :any,                 big_sur:        "7da045515977c9457f38384687bc1e3a0b271b228aa8f5f5dc737dc42aea46fa"
-    sha256 cellar: :any,                 catalina:       "a6bb42211705f771de89f0f89d007eeaabb7aa61bd41650b5e40f6add8f43027"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2bc04a0aa1e2189519bd9d9b6840dc2c22176106984f60d1a0dfae5cfe4160d"
+    sha256 cellar: :any,                 arm64_monterey: "13e67f5e28df838ffbf4bdcaded2308ae38abb6665cafa6bd36deba5c6ed2cb9"
+    sha256 cellar: :any,                 arm64_big_sur:  "db4c52347be6860ebc237f49996a177b1706a89653d4891db5041cf6b9cc9951"
+    sha256 cellar: :any,                 monterey:       "571d271187eb094a7b8ddee9e93fec77140042e279860b2ce6293d38bdaa1898"
+    sha256 cellar: :any,                 big_sur:        "9e0cf46077fc1ef4e30377e9a1d6047f542f86796b7f0e30bd6f9be307c20a6b"
+    sha256 cellar: :any,                 catalina:       "39d5bee8000fa0d133cb622b007cd050b2f1e7556a3f5e93d93ff2688abd6a1b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b74000aa583bff02c47f079b4c75940ea81803761256eda098132c0b74d369b"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
+  depends_on "check"
   depends_on "openssl@1.1"
 
   uses_from_macos "expat"

@@ -1,8 +1,8 @@
 class Asio < Formula
   desc "Cross-platform C++ Library for asynchronous programming"
   homepage "https://think-async.com/Asio"
-  url "https://downloads.sourceforge.net/project/asio/asio/1.24.0%20%28Stable%29/asio-1.24.0.tar.bz2"
-  sha256 "8976812c24a118600f6fcf071a20606630a69afe4c0abee3b0dea528e682c585"
+  url "https://downloads.sourceforge.net/project/asio/asio/1.22.1%20%28Stable%29/asio-1.22.1.tar.bz2"
+  sha256 "6874d81a863d800ee53456b1cafcdd1abf38bbbf54ecf295056b053c0d7115ce"
   license "BSL-1.0"
   head "https://github.com/chriskohlhoff/asio.git", branch: "master"
 
@@ -12,17 +12,22 @@ class Asio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e20aec9f064477c73792f6803c8e10e26c4cd4ce054b0ce459d6772368921689"
-    sha256 cellar: :any,                 arm64_big_sur:  "a6f2e2deeac5cd08a04b2bee1c526e8edc7c47f32303224ab1071471ed7e0d77"
-    sha256 cellar: :any,                 monterey:       "129fd9c1da610fec3a7a3a2fe12826f627528e105de614af9ca5d52d50a80f2e"
-    sha256 cellar: :any,                 big_sur:        "23ec57ee734521b53c0180751aacf12c44bf81f23767683a194afffd07dd295d"
-    sha256 cellar: :any,                 catalina:       "b8d84401529dd7156387686e552f267474cdebda31786f78320de6e6f6aa5b6e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ad1851fe6c46fa7440e78f0572eb23698fded2b1d80795a7558126ab7c740da"
+    sha256 cellar: :any,                 arm64_monterey: "b3ea7931fb9e539f59bbf21f4647268487036aace40cda956d08507fe87bb90b"
+    sha256 cellar: :any,                 arm64_big_sur:  "5a8c945335115a2da264ec74162e57a5d92f4064544899c4df375a3cabc5e06a"
+    sha256 cellar: :any,                 monterey:       "98f1add58eeb5d6eb9d886781ef62dd0b6572dd8252252acdaa2bc1d3674c875"
+    sha256 cellar: :any,                 big_sur:        "dc03f2f6433eadeb86832d94a241c36a5be0eb23afde03644a11a62403a9b795"
+    sha256 cellar: :any,                 catalina:       "7c8ae5863a8abf20d8d811ec943c8bff0e702b7dc4e79ebbab9310bcc7a99e44"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "723acb5f60519bdc4426ac9d6e4e5689f94c794b615b6f71759d26eda1385df1"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "openssl@1.1"
+
+  # Tarball is missing `src/examples/cpp20`, which causes error:
+  # config.status: error: cannot find input file: `src/examples/cpp20/Makefile.in'
+  # TODO: Remove in the next release
+  patch :DATA
 
   def install
     ENV.cxx11
@@ -58,3 +63,15 @@ class Asio < Formula
     end
   end
 end
+
+__END__
+diff --git a/configure.ac b/configure.ac
+index 56365c2..84045ba 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -241,4 +241,4 @@ AC_OUTPUT([
+   src/examples/cpp11/Makefile
+   src/examples/cpp14/Makefile
+   src/examples/cpp17/Makefile
+-  src/examples/cpp20/Makefile])
++])

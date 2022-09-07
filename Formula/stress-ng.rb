@@ -1,22 +1,21 @@
 class StressNg < Formula
   desc "Stress test a computer system in various selectable ways"
   homepage "https://wiki.ubuntu.com/Kernel/Reference/stress-ng"
-  url "https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.14.03.tar.gz"
-  sha256 "95012c62883ab5826e6157557a075df98cce3cbce2a48bb40851bcc968a8441a"
+  url "https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.14.01.tar.gz"
+  sha256 "cd4795166867eb4dba7cc11f246660d444b414afdb4033401ef5545a8e00776e"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "afd5be4e9de2817769fadc7ddda5049427f7a2e803c18a696fb43b970fb49dc0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ef247f9750dd248fe89255e7508bab64f488c6da5a74fa558f473b8649f4c54a"
-    sha256 cellar: :any_skip_relocation, monterey:       "f1979202ebfcc1e497a2bdee96f058dfb7bbce4e238f583024be42e1d7e4e91b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c194ab72ab397c209b0dd9eae9266d681433927a9283cebc6c55994186f7a15e"
-    sha256 cellar: :any_skip_relocation, catalina:       "c7694bcece3809234ae2152e900aaa1baf70ab5cc84975c9cc6478099f7eb9e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d28bfdc77967c3136ae6c508a6c8366d9ecb133fc49e0792500fdb2b7e42653d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4cef3fce1752f55d80c5ec17cd02884ad129cef371ab15e0d8d677a46fa54d60"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "48317638a24525fd5a1e6d4279b1a23dbb3de7922e96773cf5d43e8608ed95ce"
+    sha256 cellar: :any_skip_relocation, monterey:       "261ac1ed0712aa23b2119f4e7fcd62d8e2cdca6dc5d07ca5b14962f4a959ccd5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0e466cab2063a41cff34826b6eb95a714b9110d2b6d9ce435f2193a5c9207861"
+    sha256 cellar: :any_skip_relocation, catalina:       "19274fd86a07aa9178a8810b56e72935f39f7a8e799221efd7b0aecc39a0618b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d98573f50516cea506dc8dd2681613ebb0173ead526f543c51bbf6ac23b0f95"
   end
 
   depends_on macos: :sierra
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   def install

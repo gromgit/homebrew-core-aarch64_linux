@@ -3,18 +3,19 @@ class Mitmproxy < Formula
 
   desc "Intercept, modify, replay, save HTTP/S traffic"
   homepage "https://mitmproxy.org"
-  url "https://github.com/mitmproxy/mitmproxy/archive/v8.1.1.tar.gz"
-  sha256 "212e81bec40e1d2a894d73a337f076a3010d981249e513565e9246f29822d06c"
+  url "https://github.com/mitmproxy/mitmproxy/archive/v8.0.0.tar.gz"
+  sha256 "9bf403660169327e1b9c8b1701f9f45923e72eba935005cb357f1f4bca1815b5"
   license "MIT"
+  revision 1
   head "https://github.com/mitmproxy/mitmproxy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "39ce52a8ef28e007ea88542baf4c4bb0504a740216936823558999422ccafdf2"
-    sha256 cellar: :any,                 arm64_big_sur:  "3b7f29375cc833b6b550f70735214ee9ec085b3c5d398cc9561ae1611d693639"
-    sha256 cellar: :any,                 monterey:       "7e1d29135c9022e18b9f85c25fd896297db695f3f6c8bb711694b45e2a5a6e90"
-    sha256 cellar: :any,                 big_sur:        "3ad2484c1916ea86f4d21e65e60488858601b9b6f1b3ea6bc7d701ba154acffa"
-    sha256 cellar: :any,                 catalina:       "6580d8d2745fc7938557e25f106949d393c1fac06a9bad069a168dcdf0d12d67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ad1306df3177bdd0605f0ccac5c4a241581b85fa6a21b675253fdb5e171773e"
+    sha256 cellar: :any,                 arm64_monterey: "a460ab6f2d0c95c4600a4b737d576c4a1fb7499bcf724220fe5a685edc599a1b"
+    sha256 cellar: :any,                 arm64_big_sur:  "c7ffe4beabacdae2c13305f60120844a94eba1c5f5dcc0850bd1992b3bac1d4a"
+    sha256 cellar: :any,                 monterey:       "96bde4af07525ebe5964a19cd64d1495137b27f7023ce1d37f1cf100200bb6e7"
+    sha256 cellar: :any,                 big_sur:        "2f1c528ecf59fbd2cd82868d5c1fb0fa7a6623a1db31eaa31572ca61ee4ea9a8"
+    sha256 cellar: :any,                 catalina:       "15fa83b4af638f19497966a37c8f9d3990b1f00c42317dfbce0f7bfc43bf8b24"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f71a8a8d8c2b92547219fb1f8cce3de8075b98540baf67a9781ce4160818e0f"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -195,7 +196,7 @@ class Mitmproxy < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3")
     venv.pip_install resource("cffi")
     venv.pip_install resources
     venv.pip_install_and_link buildpath

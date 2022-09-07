@@ -2,11 +2,10 @@ class PhpAT74 < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-  url "https://www.php.net/distributions/php-7.4.30.tar.xz"
-  mirror "https://fossies.org/linux/www/php-7.4.30.tar.xz"
-  sha256 "ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d"
+  url "https://www.php.net/distributions/php-7.4.29.tar.xz"
+  mirror "https://fossies.org/linux/www/php-7.4.29.tar.xz"
+  sha256 "7d0f07869f33311ff3fe1138dc0d6c0d673c37fcb737eaed2c6c10a949f1aed6"
   license "PHP-3.01"
-  revision 1
 
   livecheck do
     url "https://www.php.net/downloads"
@@ -14,12 +13,12 @@ class PhpAT74 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "81c1fb45f945ae9663c0c48eb5d666642f8d31ac5a063c037a9d8e3265219bef"
-    sha256 arm64_big_sur:  "134ecbcc8891dc9f60432ea623311c79c217f6df7f3e732a2dec868fdc8db92f"
-    sha256 monterey:       "1dc6a0618b2cbfa569f30845fa26182d052fd87ef93699457e07d206f219505b"
-    sha256 big_sur:        "ab5ddf89459136c68242731908d9805a7fa52190c177245f47f43af57fe960af"
-    sha256 catalina:       "ed8b78c74235915da38a63216a293b540ac2a4205f02245e582dadd6a9a9d508"
-    sha256 x86_64_linux:   "8dc6f3e953752a2f968a69293f942adcefc6aaea87c066ace018007e0d8060e0"
+    sha256 arm64_monterey: "a4f6f022d003b031306b723f013da4669184e2590e39621fe9beda35b97801ad"
+    sha256 arm64_big_sur:  "4dafd47310bbb7d90695d3874ba6fa8d3e43d4c19ace2d64628da4b70242d539"
+    sha256 monterey:       "cd277a1e5cf7d0351dae9604970358f27f6b1c73bbb84f3aa727af1a19cfffd9"
+    sha256 big_sur:        "f9d18c52ecb0803db3709b014a38754210c24fe5e715b6b8f312a4f594cd5c1d"
+    sha256 catalina:       "6e00e4b70f912f10724a87db2abb75400a4f6bc6b9d32798ce11b94a3dcb526f"
+    sha256 x86_64_linux:   "70b6e4207fd8dab0621944925f43b687ebce389c0d67376f38978c2f57f379f8"
   end
 
   keg_only :versioned_formula
@@ -89,8 +88,8 @@ class PhpAT74 < Formula
     # possible to recompile as suggested in the original message
     inreplace "sapi/apache2handler/sapi_apache2.c",
               "You need to recompile PHP.",
-              "Homebrew PHP does not support a thread-safe php binary. " \
-              "To use the PHP apache sapi please change " \
+              "Homebrew PHP does not support a thread-safe php binary. "\
+              "To use the PHP apache sapi please change "\
               "your httpd config to use the prefork MPM"
 
     inreplace "sapi/fpm/php-fpm.conf.in", ";daemonize = yes", "daemonize = no"
@@ -252,7 +251,6 @@ class PhpAT74 < Formula
 
     # Custom location for extensions installed via pecl
     pecl_path = HOMEBREW_PREFIX/"lib/php/pecl"
-    pecl_path.mkpath
     ln_s pecl_path, prefix/"pecl" unless (prefix/"pecl").exist?
     extension_dir = Utils.safe_popen_read("#{bin}/php-config", "--extension-dir").chomp
     php_basename = File.basename(extension_dir)

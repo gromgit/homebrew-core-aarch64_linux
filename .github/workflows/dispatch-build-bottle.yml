@@ -19,6 +19,9 @@ on:
       upload:
         description: "Whether to upload built bottles or not (default: false)"
         required: false
+      wheezy:
+        description: Whether to build the bottle in Debian Wheezy container
+        required: false
 
 env:
   HOMEBREW_DEVELOPER: 1
@@ -26,12 +29,9 @@ env:
   HOMEBREW_NO_AUTO_UPDATE: 1
   HOMEBREW_CHANGE_ARCH_TO_ARM: 1
 
-permissions:
-  contents: read
-
 jobs:
   prepare:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     outputs:
       runners: ${{steps.runner-matrix.outputs.result}}
     steps:
@@ -40,17 +40,9 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const intelMacOSRegex = /^\d+(?:\.\d+)?$/;
             return context.payload.inputs.runner.split(",")
                                                 .map(s => s.trim())
-                                                .filter(Boolean)
-                                                .map(s => {
-              if (intelMacOSRegex.test(s)) // Ephemeral runners
-                return `${s}-${context.runId}-${process.env.GITHUB_RUN_ATTEMPT}`
-              else
-                return s
-            });
-
+                                                .filter(Boolean);
   bottle:
     needs: prepare
     strategy:
@@ -74,11 +66,14 @@ jobs:
           echo timeout=${{github.event.inputs.timeout}}
           echo issue=${{github.event.inputs.issue}}
           echo upload=${{github.event.inputs.upload}}
+          echo wheezy=${{github.event.inputs.wheezy}}
 
       - name: Set environment variables
         if: runner.os == 'macOS'
         run: |
           echo 'PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' >> $GITHUB_ENV
+          # TODO: remove the line below once set in the runner .env file
+          echo 'GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED=1' >> $GITHUB_ENV
 
       - name: Run Docker container
         if: runner.os == 'Linux'
@@ -92,7 +87,7 @@ jobs:
             --env-file <(env | egrep 'HOMEBREW|GITHUB') \
             --workdir /tmp/bottles \
             --pull always \
-            ghcr.io/homebrew/ubuntu22.04:master \
+            ${{github.event.inputs.wheezy && 'homebrew/debian7:latest' || 'ghcr.io/homebrew/ubuntu16.04:master'}} \
             sleep inf
           # Fix working directory permissions
           docker exec --user root ${{github.sha}} chmod 777 /tmp/bottles
@@ -134,27 +129,16 @@ jobs:
 
       - name: Failures summary for brew test-bot --only-formulae
         if: always()
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/steps_output.txt
-          step_name: 'Build summary on ${{ matrix.runner }}'
-
-      - name: Output brew linkage result
-        if: always()
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/linkage_output.txt
-          step_name: '`brew linkage` output on ${{ matrix.runner }}'
+        run: |
+          touch bottles/steps_output.txt
+          cat bottles/steps_output.txt
+          rm bottles/steps_output.txt
 
       - name: Output brew bottle result
         if: always()
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/bottle_output.txt
-          step_name: '`brew bottle` output on ${{ matrix.runner }}'
+        run: |
+          cat bottles/bottle_output.txt
+          rm bottles/bottle_output.txt
 
       - name: Upload logs
         if: always()
@@ -221,7 +205,7 @@ jobs:
           bot_body: ":x: Bottle request for ${{github.event.inputs.formula}} [failed](${{github.event.repository.html_url}}/actions/runs/${{github.run_id}})."
           bot: BrewTestBot
   upload:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: bottle
     if: github.event.inputs.upload
     env:

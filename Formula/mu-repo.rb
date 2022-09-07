@@ -3,17 +3,17 @@ class MuRepo < Formula
 
   desc "Tool to work with multiple git repositories"
   homepage "https://github.com/fabioz/mu-repo"
-  url "https://files.pythonhosted.org/packages/fc/3f/46e5e7a3445a46197335e769bc3bf7933b94f2fe7207cc636c15fb98ba70/mu_repo-1.8.2.tar.gz"
-  sha256 "1394e8fa05eb23efb5b1cf54660470aba6f443a35719082595d8a8b9d39b3592"
+  url "https://files.pythonhosted.org/packages/05/6b/27768e4cc1464a2b7c6b683c096edbdf38b8b994670e42814519ff067853/mu_repo-1.8.1.tar.gz"
+  sha256 "1eb67031ff9d697adce375b122e0a76beb675c5ee6dfcabc848e78bdcfb4ed3d"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "973ee265fba3e84c33d91f4fac3c50bbe16fd0509d400a7dff96a076126610f9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "973ee265fba3e84c33d91f4fac3c50bbe16fd0509d400a7dff96a076126610f9"
-    sha256 cellar: :any_skip_relocation, monterey:       "6bce8c91e5a6555bf90de8b3d9944f9fb4b68a4dd7f309a732aa05369d8283b1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6bce8c91e5a6555bf90de8b3d9944f9fb4b68a4dd7f309a732aa05369d8283b1"
-    sha256 cellar: :any_skip_relocation, catalina:       "6bce8c91e5a6555bf90de8b3d9944f9fb4b68a4dd7f309a732aa05369d8283b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c21cdd623c9daa1193ac0b70ca5fe1287fd7e851639d4bbaf7f15a38b34a8ede"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9bfa8b88548cb8bde371ba82d961023fb6380097fc0f9725738a3e8ef9e2c5ca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9bfa8b88548cb8bde371ba82d961023fb6380097fc0f9725738a3e8ef9e2c5ca"
+    sha256 cellar: :any_skip_relocation, monterey:       "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
+    sha256 cellar: :any_skip_relocation, catalina:       "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "753d0bded50ce2ea748a30779ff838e56dd6436a85d3f608386f3517c04568b4"
   end
 
   depends_on "python@3.10"

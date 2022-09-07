@@ -1,17 +1,17 @@
 class So < Formula
   desc "Terminal interface for StackOverflow"
   homepage "https://github.com/samtay/so"
-  url "https://github.com/samtay/so/archive/v0.4.9.tar.gz"
-  sha256 "b6327268acf3e9652acebea49c1dfa5d855cf25db6c7b380f1a0a85737464a4a"
+  url "https://github.com/samtay/so/archive/v0.4.6.tar.gz"
+  sha256 "47a3cf5cef9d87dea223ef1c8fae3cf8c2ae0673d9eb4c8d73d733ce8ff45619"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "968cd5e7b36fc7d677e334cfbf818f8c0a746638ba471d7f27bbcff2c9fa36b4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8291d50a5f0410c96b930081d408ff207f2d2a84912211163de32e60db3f35f0"
-    sha256 cellar: :any_skip_relocation, monterey:       "e39ac50f777618077ab74fb2e354426102b1edb7d3647d940d35b02a72a65c25"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3d7643eef9b647d2fc7651c5a3845909898fbcb186503fc808bee1b2caa32542"
-    sha256 cellar: :any_skip_relocation, catalina:       "4478bcbb919e22ef9f83ec0c6f73bc53381ed8a3588beb680f230dde53b832f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af48956239eb8eaca6666f9fa6332fa6b6bbe533b8314b7b69f4a698db274189"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "199e629ef6386f815a96b097540fdaa66e89a917a173d5f41c547e9b3b792444"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "91acaa4fdf4a518890230e765da744990ecdd9ecbf308dfbafe7cc26b5b654c8"
+    sha256 cellar: :any_skip_relocation, monterey:       "3efa45b62460e33061a77d58c040ae6ef6d235ae344a3dcfaca4e3e7f6ddd514"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3dbacd10d72b7b5ec356081908444652a964c570f93a931dcbd5e039d5547c68"
+    sha256 cellar: :any_skip_relocation, catalina:       "7f52bc1fef4395083b6eaf27b25922a621785e5f5aab0cd6ca1776f3af4ddd68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfbb7bf0c006fd09e463af561ee6d6e71c81d9684df445f636834ee64baa4214"
   end
 
   depends_on "rust" => :build

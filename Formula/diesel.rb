@@ -1,18 +1,19 @@
 class Diesel < Formula
   desc "Command-line tool for Rust ORM Diesel"
   homepage "https://diesel.rs"
-  url "https://github.com/diesel-rs/diesel/archive/v2.0.0.tar.gz"
-  sha256 "5a95e7717c32e762963db90a32f49b79ab799987434c41b7d982c85334ecc2bf"
+  url "https://github.com/diesel-rs/diesel/archive/v1.4.8.tar.gz"
+  sha256 "229b40ba777c2728430112c6e89d591a62198851890b2d0a5cab3472effba240"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/diesel-rs/diesel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ff6e40e21b2e066dce4fcdd5ab49006d3e6ca3350f09ad98124e3c97a71ceecd"
-    sha256 cellar: :any,                 arm64_big_sur:  "fe13ac2924e33651104e1aead669dcb279d9b8a2ebe91b7569b570b0b75ab69e"
-    sha256 cellar: :any,                 monterey:       "1d1a7eded645e144c881a2e73fbef512cbd554b9829c110f781a03377340229d"
-    sha256 cellar: :any,                 big_sur:        "484d3f8531ee6d4d5ba046dfc2fe5f65ed1f72b8665bdcc49f924b83352c1313"
-    sha256 cellar: :any,                 catalina:       "5402a7ba4a66129fa75951d5770307ca8b6e5de21737d4ff7aa24574c8a35f9e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09a5b484bbe79e8fb5937f2e1a35032ad064a7271ef84748c683e4f298370d54"
+    sha256 cellar: :any,                 arm64_monterey: "85be5b41c363303961b15c603535645e6b96e4824224431d08b50f668ea35aa6"
+    sha256 cellar: :any,                 arm64_big_sur:  "946e0f91a7b7875896da35c0f083364f86dfc64a963404e4d7472696930239ca"
+    sha256 cellar: :any,                 monterey:       "9bc1ce226717ad9d91ab10488d1dc1ec3d2e63d6a79e3ec8f8bbf21dbfe3afcc"
+    sha256 cellar: :any,                 big_sur:        "6e53b553c0e0db9747c2dcb8e473e3ce5bb703fabe0be39e9246fa6245691cff"
+    sha256 cellar: :any,                 catalina:       "a4d7074376cedc36497448056e42bd91e8afc5ac3b6fc754f2ec210fb96f950d"
+    sha256 cellar: :any,                 mojave:         "8d0339a55ef1391da4d3a88627f46055b9fd4f08b1cc911e20de2a7eeb7f2681"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6710efd9946f769dc65df35aa1c3e14e38757ad2fd16b3fbe9243fb4a96e4766"
   end
 
   depends_on "rust" => [:build, :test]
@@ -30,7 +31,12 @@ class Diesel < Formula
       system "cargo", "install", *std_cargo_args
     end
 
-    generate_completions_from_executable(bin/"diesel", "completions")
+    bash_output = Utils.safe_popen_read(bin/"diesel", "completions", "bash")
+    (bash_completion/"diesel").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"diesel", "completions", "zsh")
+    (zsh_completion/"_diesel").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"diesel", "completions", "fish")
+    (fish_completion/"diesel.fish").write fish_output
   end
 
   test do

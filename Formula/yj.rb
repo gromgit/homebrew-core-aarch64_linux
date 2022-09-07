@@ -7,12 +7,8 @@ class Yj < Formula
   head "https://github.com/sclevine/yj.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6006ef14b2246ac63c166b0c2e7ddd59265ab3e38d46d3f6373e4a9c33897000"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6006ef14b2246ac63c166b0c2e7ddd59265ab3e38d46d3f6373e4a9c33897000"
-    sha256 cellar: :any_skip_relocation, monterey:       "5171d044ed87a081eaa9cf71a7acad2bede581c9b451a0f21b3908e4d2e45105"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5171d044ed87a081eaa9cf71a7acad2bede581c9b451a0f21b3908e4d2e45105"
-    sha256 cellar: :any_skip_relocation, catalina:       "5171d044ed87a081eaa9cf71a7acad2bede581c9b451a0f21b3908e4d2e45105"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ca06f08696b263564c3f22ad114cca8863eb06f805a83c6b5fbf4134854a0413"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/yj"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3e45141d1b5f232a6b6c544f8817c64d4e8a0ed652de04e10c60fe15a4f3247b"
   end
 
   depends_on "go" => :build

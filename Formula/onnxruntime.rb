@@ -2,8 +2,8 @@ class Onnxruntime < Formula
   desc "Cross-platform, high performance scoring engine for ML models"
   homepage "https://github.com/microsoft/onnxruntime"
   url "https://github.com/microsoft/onnxruntime.git",
-      tag:      "v1.12.1",
-      revision: "70481649e3c2dba0f0e1728d15a00e440084a217"
+      tag:      "v1.11.1",
+      revision: "366f4ebcb425b6a47c2b0decd3b39fa14eb9dbf6"
   license "MIT"
 
   livecheck do
@@ -12,12 +12,12 @@ class Onnxruntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cdac93f2044a8ed03a0bba92156f3ea083086245d7e7e52431c47605f3d06683"
-    sha256 cellar: :any,                 arm64_big_sur:  "bf3175a3e5eca7000a64ce5c3bbbd20f19642886d75a55988a70163a7f03217a"
-    sha256 cellar: :any,                 monterey:       "e8ee54aedea8f788c66470e4d32a4cf725be72efe1451f83b1920da58596a3c2"
-    sha256 cellar: :any,                 big_sur:        "9401fd0650bc89ae510d639183a0ac0053dc0031aec64ea05105408dbdadb7e9"
-    sha256 cellar: :any,                 catalina:       "d91fe2217bf5faaa6cdb16ec7f0a58e7eb96d147018dc5f1341c0ef87f1dd7d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "123549ac2b7f9629527152d9d2711bd1e5ba09274a6fe77dab8acda705d776cd"
+    sha256 cellar: :any,                 arm64_monterey: "67395f4da47c0fe369eca4f1ddefcd3bc1ac80602e5028ae831d3ea45a501cb1"
+    sha256 cellar: :any,                 arm64_big_sur:  "0aefe3bc18e877529c4558690872dc6427668830b49b234d3dfdc0fffc5994a4"
+    sha256 cellar: :any,                 monterey:       "d605eab89cf11209f25aab6eb4f371c0b345f5927132e5ff1a3e71d40b369a13"
+    sha256 cellar: :any,                 big_sur:        "0d781494db579b7a7297840ab2a899dde515a12f2c42e2e47d6c941830692815"
+    sha256 cellar: :any,                 catalina:       "c27046441db151b7f36a23b4685b4e30de6e7b8223306e5a7837353b3f7cc077"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38ae3063265cd6fd3d177a482053e27d90891797cbc78513bcd8ed3651204e98"
   end
 
   depends_on "cmake" => :build

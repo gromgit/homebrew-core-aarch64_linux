@@ -1,18 +1,18 @@
 class Cloc < Formula
   desc "Statistics utility to count lines of code"
   homepage "https://github.com/AlDanial/cloc/"
-  url "https://github.com/AlDanial/cloc/archive/v1.94.tar.gz"
-  sha256 "c835fe343e1c25194a61eb74d7a36e98413682ed0c3b4d6b8e35a327077bf926"
+  url "https://github.com/AlDanial/cloc/archive/v1.92.tar.gz"
+  sha256 "b5f18f4dbc05eff08ada215b6c2a8cbdab397e9b4b4e25c7427d4ed86fb6e248"
   license "GPL-2.0-or-later"
   head "https://github.com/AlDanial/cloc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "775e39398333238ecc87c8ac33aaedf624015f0df21f20927b3cac4c5774724f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8852c91261cd84c264fa2b9b0790cc17b330f34a005455dac5ff6566e2ffee9a"
-    sha256 cellar: :any_skip_relocation, monterey:       "a2db66239933ccb04153b6f08eeb99adb1685cdba4dde2facd1dc79a21d0355b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "23bc48be8f921dd9d56ad3ed978036c7b1e9234d048370c78c8b90a9dcf930c9"
-    sha256 cellar: :any_skip_relocation, catalina:       "20ed206034300efcd3f689ab32aff996e550305a5cf4182763214c9bbc1e618b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1b4c754ea79bc50d46a0ab59c69b11148ce2a4ba02f41f8f85953fec90ac905"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0efc12ede2a34d0f3861223327a7e1ea559e401e567969e50d84d825cc3c90b9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05ea934d7a6ce536bbb928c9cd9a5d9ba27bc09109da8edf5ce39c39fdc71d82"
+    sha256 cellar: :any_skip_relocation, monterey:       "3e7b13dcfa8cfa88ac066471984c7966768f104085fd3384ee4948f481a1108d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "79233c01f28f7f76b4e763c2f4301297502b47b77e8f39fea10f18576d12cc62"
+    sha256 cellar: :any_skip_relocation, catalina:       "c66fde2a289083b2e121817f17f5b75769f638a4b90c0b49a3e0fc89cec9e655"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "879b082292c2ca231e4146d94867f121006494ae5331a6aee8b0f531d63918a3"
   end
 
   uses_from_macos "perl"

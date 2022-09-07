@@ -1,8 +1,8 @@
 class Z3 < Formula
   desc "High-performance theorem prover"
   homepage "https://github.com/Z3Prover/z3"
-  url "https://github.com/Z3Prover/z3/archive/z3-4.11.2.tar.gz"
-  sha256 "e3a82431b95412408a9c994466fad7252135c8ed3f719c986cd75c8c5f234c7e"
+  url "https://github.com/Z3Prover/z3/archive/z3-4.8.17.tar.gz"
+  sha256 "1e57637ce8d5212fd38453df28e2730a18e0a633f723682267be87f5b858a126"
   license "MIT"
   head "https://github.com/Z3Prover/z3.git", branch: "develop"
 
@@ -13,12 +13,12 @@ class Z3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "abc4cedf94262714a5a45f48909a6346ac8d0ee1717df35ec1b659eb4edb1eae"
-    sha256 cellar: :any,                 arm64_big_sur:  "721683d8c04b84f54408c44ee53de964d11ef33c10d92c36271a03189159fd4b"
-    sha256 cellar: :any,                 monterey:       "c649ba39e3d18097384be44a30dfab880c259dc88ec1d2ff398b53d3f5b7d702"
-    sha256 cellar: :any,                 big_sur:        "2a08d6ad960c277f90aabf328e77962f10edf4c00053147f47c0c949c0a21915"
-    sha256 cellar: :any,                 catalina:       "8f2bd926de69591c576aff590b7736ba37d4f8d7df7dfd29cf3771477ab94a25"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47a2f13c5db8e11499d6e198101d1f3286b32575eeefbca3e80f30bf78f375a1"
+    sha256 cellar: :any,                 arm64_monterey: "b8749a0b889793fb7cfa72d1d380b74bdfeba5607e60d1d1deb0080dea7115bb"
+    sha256 cellar: :any,                 arm64_big_sur:  "2f59c37465aecdfbcc50a5ba0fe627535c0ff4cffb9080bfbddc0a2af0f97b53"
+    sha256 cellar: :any,                 monterey:       "d5dc7cb5a4a51bb544531f8ef9add76f22eda73d65c5603523c3573203b48bae"
+    sha256 cellar: :any,                 big_sur:        "b71b46a3a98b756ff456a591c2cd372013fd166f7e9ee8e25ceda8f990f9880d"
+    sha256 cellar: :any,                 catalina:       "2da92fd5596dd0a2c0a0b21f63bd474872933a5910a8d9f2e93619c687418a25"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f76abc05ef9587b811f14c70f430278e47405c7d68f610e65bd2157d11c99687"
   end
 
   # Has Python bindings but are supplementary to the main library
@@ -32,7 +32,7 @@ class Z3 < Formula
   fails_with gcc: "5"
 
   def install
-    python3 = Formula["python@3.10"].opt_bin/"python3.10"
+    python3 = Formula["python@3.10"].opt_bin/"python3"
     system python3, "scripts/mk_make.py",
                      "--prefix=#{prefix}",
                      "--python",

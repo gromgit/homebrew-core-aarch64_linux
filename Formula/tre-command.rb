@@ -1,18 +1,19 @@
 class TreCommand < Formula
   desc "Tree command, improved"
   homepage "https://github.com/dduan/tre"
-  url "https://github.com/dduan/tre/archive/v0.4.0.tar.gz"
-  sha256 "280243cfa837661f0c3fff41e4a63c6768631073c9f6ce9982d9ed08e038788a"
+  url "https://github.com/dduan/tre/archive/v0.3.6.tar.gz"
+  sha256 "c372573a6325288b9b23dcd20d1cb100ad275f5b0636a7328395352b3549dd71"
   license "MIT"
   head "https://github.com/dduan/tre.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea7a96260ab0d61ca2e71c5137635625e82472fd2935280dd9420d5eee1c5744"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "838817c4d488d31f1c2f89abbde6704eba4b775b09f4a33b0de720ca1a7b1191"
-    sha256 cellar: :any_skip_relocation, monterey:       "385a5a7ea1ff28970a7ca8145868bbd7eb0efa4e5439ecb258cb66303ffcab0c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1f07d73da700d15a4cdec3c309d54c6e4bf1091ad9c42784ca395f28432ed13"
-    sha256 cellar: :any_skip_relocation, catalina:       "150205b5b64c4a27a5fc9462d0aeedc14c26719473c0d180d892505926692dd1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da73bacbf146c92851ab02ccc5fb6c643ab43fbfb8b88dae659c70604750e5c9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d1bf5a1896ba6220d8dbd16341a21086c05a17f799dde7a1c0e3ae4b026bea63"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "27cba0da0af50bba24136d9522eb88378be6a41aa08fc8e7d32d1e8a51e4a566"
+    sha256 cellar: :any_skip_relocation, monterey:       "cf873408adf07435e41ea770baadccddcf62218e80c5c658cdab2c799410e0af"
+    sha256 cellar: :any_skip_relocation, big_sur:        "95b74502a71f06fd0d836710b7fb706cc32348fe2db788b4ea4b58a39690e840"
+    sha256 cellar: :any_skip_relocation, catalina:       "65fd03a686ac215dcf9228312238b4c0447823f99c9a45074387d3322b9452df"
+    sha256 cellar: :any_skip_relocation, mojave:         "f1f321409d7785cf56267748682eae4572a99382bebf1fd187ac30e70c5cebda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c63f6f75340e4dc28ee40123dfb50f58208d65a70b6405a9673562947edc039"
   end
 
   depends_on "rust" => :build

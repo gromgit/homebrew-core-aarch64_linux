@@ -1,7 +1,7 @@
 class Tcpkali < Formula
   desc "High performance TCP and WebSocket load generator and sink"
-  homepage "https://github.com/satori-com/tcpkali"
-  url "https://github.com/satori-com/tcpkali/releases/download/v1.1.1/tcpkali-1.1.1.tar.gz"
+  homepage "https://github.com/machinezone/tcpkali"
+  url "https://github.com/machinezone/tcpkali/releases/download/v1.1.1/tcpkali-1.1.1.tar.gz"
   sha256 "a9a15a1703fc4960360a414ee282d821a7b42d4bbba89f9e72a796164ff69598"
   license "BSD-2-Clause"
 
@@ -15,6 +15,7 @@ class Tcpkali < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:    "b82b2ea3a3d17d3fd464a5e887c9cce14dce8a82bbcb350df5f7bd321893bfdb"
     sha256 cellar: :any_skip_relocation, sierra:         "f73513ed96b6436085e0941865f0cc4fd2ce1009a1d8770c740e8e97d5173cf1"
     sha256 cellar: :any_skip_relocation, el_capitan:     "2d0075b2fca885fb694660a3914362030be255c8e3dfed407bb8ca96c996bbf7"
+    sha256 cellar: :any_skip_relocation, yosemite:       "71573c4926d086721c028e73d9812475fe3a58bd8313a43ef9c6a54918334760"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae1230bcf9879d1d8f09d5e0a3b80c9baf7f59c2bfa77a296a06ed6a821d5be7"
   end
 

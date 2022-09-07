@@ -7,6 +7,14 @@ class LlvmAT12 < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
   revision 1
 
+  # This should be removed when LLVM 14 is released, so we only check the
+  # current version (the `llvm` formula) and one major version before it
+  # (to catch any patch version that may appear, however uncommon).
+  livecheck do
+    url "https://releases.llvm.org/"
+    regex(/["'](12(?:\.\d+)+)["']/i)
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "11c9ec1e717ef4ad5d4a42623bd870172fef6bbc7dc42a4877c8c49e54de9f6c"
     sha256 cellar: :any,                 arm64_big_sur:  "c62023e2c07a07cd8542e0e1b4b85565661da157db3f6268739d5d35cb548e0c"
@@ -36,10 +44,10 @@ class LlvmAT12 < Formula
   uses_from_macos "zlib"
 
   on_linux do
+    depends_on "glibc" if Formula["glibc"].any_version_installed?
     depends_on "pkg-config" => :build
     depends_on "binutils" # needed for gold
     depends_on "elfutils" # openmp requires <gelf.h>
-    depends_on "glibc" if Formula["glibc"].any_version_installed?
 
     # Apply patches slated for the 12.0.x release stream
     # to allow building with GCC 5 and 6. Upstream bug:

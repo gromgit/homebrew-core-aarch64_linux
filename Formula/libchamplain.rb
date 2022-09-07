@@ -24,7 +24,6 @@ class Libchamplain < Formula
   depends_on "clutter-gtk"
   depends_on "gtk+3"
   depends_on "libsoup@2"
-  depends_on "sqlite" # try to change to uses_from_macos after python is not a dependency
 
   on_linux do
     depends_on "vala" => :build

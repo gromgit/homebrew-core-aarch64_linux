@@ -4,15 +4,15 @@ class Sfcgal < Formula
   url "https://gitlab.com/Oslandia/SFCGAL/-/archive/v1.4.1/SFCGAL-v1.4.1.tar.gz"
   sha256 "1800c8a26241588f11cddcf433049e9b9aea902e923414d2ecef33a3295626c3"
   license "LGPL-2.0-or-later"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f833b030cc55538c801f0b569c36f9b7b5303de882a5f46c8478a4b27550fd9c"
-    sha256 cellar: :any,                 arm64_big_sur:  "04ff2155b259479a1f3e3b31fcb6881062ea29c18e955279f525bca5b4509b7d"
-    sha256 cellar: :any,                 monterey:       "14083513643fe64312a098842a3fc3e8c8f9ee3fb923307e73792d14d634d66b"
-    sha256 cellar: :any,                 big_sur:        "0c96f4ff9ef0df19ed37ea0845e2d2ee212aefb880027595fe5d678c4a384fe5"
-    sha256 cellar: :any,                 catalina:       "79611e06698fc3e7ffcebba3f228f66937eb66420e75514d1d72274b580f4b5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fb92b0564f3f78f081ad9880e68a9dae1e2963ff5884f9039dddaa9145a3e4d"
+    sha256 cellar: :any,                 arm64_monterey: "ecc07da7084fd82a31bb7f559078f0c33e3ae555a1d75b9ef4c4630442db7bf8"
+    sha256 cellar: :any,                 arm64_big_sur:  "f7011cca82cb20daa201c9a651b09e6648c1bf0b21388d3b45a4d93832e88386"
+    sha256 cellar: :any,                 monterey:       "0949359cfb9e3b10cb4e1b8287e2221e2b4aa473bd85f885a2400d56ac80b5e0"
+    sha256 cellar: :any,                 big_sur:        "744d2cc9163d8c828b97802b9f936e224a2094766ecea4a28dce3a22f5688008"
+    sha256 cellar: :any,                 catalina:       "6149c424f58cc50e2538ccfaed3e2aa664b06c720a05659bffa5e7833e69941d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6b5af527fb033f3c79ba7e47d5718cac20c89e83109aa35b452f5db7ded3d3a"
   end
 
   depends_on "cmake" => :build

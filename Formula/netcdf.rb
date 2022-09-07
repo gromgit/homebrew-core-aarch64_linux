@@ -4,7 +4,7 @@ class Netcdf < Formula
   url "https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.8.1.tar.gz"
   sha256 "bc018cc30d5da402622bf76462480664c6668b55eb16ba205a0dfb8647161dd0"
   license "BSD-3-Clause"
-  revision 3
+  revision 2
   head "https://github.com/Unidata/netcdf-c.git", branch: "main"
 
   livecheck do
@@ -13,12 +13,12 @@ class Netcdf < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "989cd4b642ae611c7a8f38dc63ff960bb99578343fc9116b7317194ba3714d7c"
-    sha256 cellar: :any,                 arm64_big_sur:  "5ac668a4450be27d2654db0a2fd9b14e0dd54914ba58064135e120280039dec9"
-    sha256 cellar: :any,                 monterey:       "a46f8045fed47d3517e49bb733988b692786fb39d8af34d6df0bedbf91aab28c"
-    sha256 cellar: :any,                 big_sur:        "9bbcfb0a745b315f5d2257954d6fe01aa762c443d1beea9b31fb4d3a393e22bd"
-    sha256 cellar: :any,                 catalina:       "ad29058ab5888e916f7fc1e38ef0a288be94dd3c3341a17e9649c9ea419219aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1a5c7443e14632b2eedaf496230799d9e5a2d82f552fe6a6a59153987592015"
+    sha256 cellar: :any,                 arm64_monterey: "d92a3204eecc153bbf9966661db110d60f7b1c84754eb5c399c09994715dabe4"
+    sha256 cellar: :any,                 arm64_big_sur:  "0a2e47a711557af0072384291301d92e3f41979e34a699715c83e3d972377605"
+    sha256 cellar: :any,                 monterey:       "d196d30c8c3dec1691c6879d4826c1a5be6736a4dfc2254fc92a05a6b3d2fe40"
+    sha256 cellar: :any,                 big_sur:        "b361f2ed89acf572442211a48e357819eb407e5087da70ce02ac7d4c83031af9"
+    sha256 cellar: :any,                 catalina:       "158be184ccf345494367384cbf53824e82af4349a9758e77e296cd72480bcb95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d25d07108941a3974fd6881e0c12df1b25f890bac13e07a06bb16767b2930ee"
   end
 
   depends_on "cmake" => :build
@@ -47,6 +47,7 @@ class Netcdf < Formula
 
     mkdir "build" do
       args = common_args.dup
+      args << "-DNC_EXTRA_DEPS=-lmpi" if Tab.for_name("hdf5").with? "mpi"
       args << "-DENABLE_TESTS=OFF" << "-DENABLE_NETCDF_4=ON" << "-DENABLE_DOXYGEN=OFF"
 
       # Extra CMake flags for compatibility with hdf5 1.12
@@ -104,7 +105,15 @@ class Netcdf < Formula
       lib/"libnetcdf.settings", lib/"libnetcdf-cxx.settings"
     ], Superenv.shims_path/ENV.cc, ENV.cc
 
-    inreplace bin/"ncxx4-config", Superenv.shims_path/ENV.cxx, ENV.cxx if OS.linux?
+    if OS.linux?
+      inreplace bin/"ncxx4-config", Superenv.shims_path/ENV.cxx, ENV.cxx
+    else
+      # SIP causes system Python not to play nicely with @rpath
+      libnetcdf = (lib/"libnetcdf.dylib").readlink
+      macho = MachO.open("#{lib}/libnetcdf-cxx4.dylib")
+      macho.change_dylib("@rpath/#{libnetcdf}", "#{lib}/#{libnetcdf}")
+      macho.write!
+    end
   end
 
   test do

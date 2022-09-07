@@ -11,12 +11,8 @@ class Di < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f0155678e6e44db1dbfbc24fff96aaee23c22a69d553457dd8ac1f9de13b527"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4fc57febb3e9e00603674540b9c90fff49df3f9b376149fd3ed37ed72d3c29b8"
-    sha256 cellar: :any_skip_relocation, monterey:       "0ec56fe7507f200c983d2bbc2ade6465b8bf26c7714bf2626513312afa2b6568"
-    sha256 cellar: :any_skip_relocation, big_sur:        "388ffea5e8416c1703aa07e2594ace704424987b1d99ee31718ef3cf6e9819d8"
-    sha256 cellar: :any_skip_relocation, catalina:       "73122a618e0a2f834311d93ba4f8d11be103ea2bd8e8616af8690c34607104e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58af16241c8439553918521e731d4164a6e570487179d65d50897f66ce932a61"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/di"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7744fd9ae53f47911f8423af3a1227499a4b02644d2bb60df53218bcbdba76ed"
   end
 
   def install

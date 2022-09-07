@@ -7,12 +7,8 @@ class Gron < Formula
   head "https://github.com/tomnomnom/gron.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "856236ceb1dbc90437bd4a214ac5cbf9618ae17bb170f5187fc0acbd8110b174"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "322c63263dead630c89ab151634b663ecf95d93a82034b3e5b75c42318912835"
-    sha256 cellar: :any_skip_relocation, monterey:       "7b03cebd6d4120718aeb3de935087981d9e234c844df866076518417dfd6e9e0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c28a8bf800179d49a5aeb52d57bac6100eee9a5755c0dc112dc7fd7e7413323f"
-    sha256 cellar: :any_skip_relocation, catalina:       "d8422ab18406e6231c4731d0f124641508175c2ee142bd5bd0d99f1a97252c3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b10089d68a7958fb52643f3813b910fb5ab3a89ffb18d5161e5f717956b6bf2c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gron"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f74e2f8106ff5888ecdf6b7e77a20d1d507f1bc986ff742d5b208c4a47f635a4"
   end
 
   depends_on "go" => :build

@@ -1,18 +1,19 @@
 class Drill < Formula
   desc "HTTP load testing application written in Rust"
   homepage "https://github.com/fcsonline/drill"
-  url "https://github.com/fcsonline/drill/archive/0.8.1.tar.gz"
-  sha256 "70e9c1b509a00da4ac23c92279cc94f6f7bd58918c187ae982fc674b66da814f"
+  url "https://github.com/fcsonline/drill/archive/0.7.2.tar.gz"
+  sha256 "cc33f5e214cf8c9c975bd2b912b87541eab2ceb34689fdc1f4882b332ad4ee44"
   license "GPL-3.0-or-later"
   head "https://github.com/fcsonline/drill.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f0b4313cb4832e360a70f570affa8de41b10c3ee811c09f8aab13f7cd7a7ce71"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3e43c6d9e3ef9ca48962b7951afbb98dd6dc38d57821d618cf8b6dc4a2ca9083"
-    sha256 cellar: :any_skip_relocation, monterey:       "4803852249e8bc6b3b8e4670e4bc4c3c7760c2ba836376a56beb1726eb5f5321"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2fcc32b1d88e24a1194a74792da6a8f3f0e914407c44a4996ad18e9f89e44559"
-    sha256 cellar: :any_skip_relocation, catalina:       "28ba37e907b166f55c3c17a0a598fcf1c56214f906c99aabcb607a4d9c40696b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cbfe9b9c63b2fa46ed44ac9823d72e3f6fa53bc7649bc9c2583b2e578fc2236e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "904576a345557bad10f8d58dd20e009b055893d55a43049db32808ddd82a3c64"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efc0e6a7ec33157683ee61e732ae5ddf6d8fa790192ed3c68403771cdc47803a"
+    sha256 cellar: :any_skip_relocation, monterey:       "6113d7ea668ecf53bd2e8a60eef51dc48eaf1e0ae5ef8b6e4b17625ade71803a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9a08286617629a63ebefc288604007facab0d3cd5a3a5b6c9caacf02db5f3452"
+    sha256 cellar: :any_skip_relocation, catalina:       "3db1f9e4e0d25d84e5aa26e2801ea399f9328b50e32c85fa198894d5e5b54c3e"
+    sha256 cellar: :any_skip_relocation, mojave:         "57509a9c9172333d4aebcc18d21476f835bb7fe240ca117c0df75b3901dda663"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e2f5a4899c09e528fa4a45bead1d9a36f344a8c012f27dd6e5aea26a13c8fa7"
   end
 
   depends_on "rust" => :build

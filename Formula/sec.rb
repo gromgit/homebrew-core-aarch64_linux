@@ -6,12 +6,8 @@ class Sec < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b9e876b09cdbcbf85df22111dfc2e9bc686dc8df21b791f8a532ca8a3794098"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b9e876b09cdbcbf85df22111dfc2e9bc686dc8df21b791f8a532ca8a3794098"
-    sha256 cellar: :any_skip_relocation, monterey:       "30b242f22b62c67d6b5e862fd9884ec05b327e33ee6d146137b3566e0d2a178b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "30b242f22b62c67d6b5e862fd9884ec05b327e33ee6d146137b3566e0d2a178b"
-    sha256 cellar: :any_skip_relocation, catalina:       "30b242f22b62c67d6b5e862fd9884ec05b327e33ee6d146137b3566e0d2a178b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b9e876b09cdbcbf85df22111dfc2e9bc686dc8df21b791f8a532ca8a3794098"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sec"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fe5bba73b46eef0146a04a9b7bb005832825b84b1d1ad7d52a66404f0162e5c8"
   end
 
   def install

@@ -8,12 +8,8 @@ class OdoDev < Formula
   head "https://github.com/redhat-developer/odo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ccd1659bef55782660366226e5c3b98d59e979c9a33e77c609ba25bb059f19b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07a113911a23917f2d797bf76fcae16fd8f7596fc2f897aa2314e8c8ec6b96e9"
-    sha256 cellar: :any_skip_relocation, monterey:       "d9e50dfaaae7aba3c10637c1a49867848409bdd83a78458a7a15933c4c0801ff"
-    sha256 cellar: :any_skip_relocation, big_sur:        "915e4475508f99bd976092ccb9982b89877d0ae87b8f9f761a650ad28acb2939"
-    sha256 cellar: :any_skip_relocation, catalina:       "7ba020986b1be4cd3b4d919320bfabea50ee575869be6f43860c7851f0078fa4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd3d5e5ffb98d731541c5da735965a4b0c65918e2999e8c62b77c0135e491d09"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/odo-dev"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f5dd73815cabd0663182db19ac649c57a15ad23f25829235d20c15304ffcb67f"
   end
 
   depends_on "go" => :build

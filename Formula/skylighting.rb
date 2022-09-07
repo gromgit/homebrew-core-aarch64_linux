@@ -1,18 +1,18 @@
 class Skylighting < Formula
   desc "Flexible syntax highlighter using KDE XML syntax descriptions"
   homepage "https://github.com/jgm/skylighting"
-  url "https://github.com/jgm/skylighting/archive/0.13.tar.gz"
-  sha256 "13af0b992cac63370b432b6709c730de56c0bfd9fae02bb1cc0bafcfd684710f"
+  url "https://github.com/jgm/skylighting/archive/0.12.3.tar.gz"
+  sha256 "50126e6589a3507f19bc5ec83a933441c6f61b95fb5754a9d7c400194dceae70"
   license "GPL-2.0-or-later"
   head "https://github.com/jgm/skylighting.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a45860beba7f6e949bdd56c2b59142b29e01b310f01253f74ff756c13d92814a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b568af8f04401f7ed3cfcc9756bb8aee712d3ac73c22ced018bce045dbb7bd47"
-    sha256 cellar: :any_skip_relocation, monterey:       "2e02b8ede6a33b96703638b877fcf12afe817701ab11352785d044e4b5053021"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9b306432b840b945936213f60157f756f5cc06504a63c39bd42a48030dde01d2"
-    sha256 cellar: :any_skip_relocation, catalina:       "1c70befd792458d299214284f61e6031b3dbfe011db9c367c7707c2dfce8622a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "769039d232e70e35e5be646f1fe392a306676662c84fcc9694085a2b2fd822b8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a6361c56a877edd985d119f47beb2f3373da15308f919f1c09fa365204812573"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f4f674513c229f92cb5ef509c63e8cc1eab96ebf891c559dc0ea63fa0109a260"
+    sha256 cellar: :any_skip_relocation, monterey:       "f6be3405550535352133fbb98008f87b733260af6cada1c34c40f1cef74345f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f86128838ce68540a2d67648e100ba3dbbd1f138b693cd6d2367170a27eb37ff"
+    sha256 cellar: :any_skip_relocation, catalina:       "5cf4fa77d96e296388409747439f034b868b93933f7b17c64edbbaa654cf2c2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cc48bc6dad6b29a12a42cdf43008f55d3c754a602fd82c87cfeb1e402f15d72"
   end
 
   depends_on "cabal-install" => :build

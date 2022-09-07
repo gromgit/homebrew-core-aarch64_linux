@@ -1,5 +1,4 @@
 class YelpTools < Formula
-  include Language::Python::Shebang
   include Language::Python::Virtualenv
 
   desc "Tools that help create and edit Mallard or DocBook documentation"
@@ -7,15 +6,14 @@ class YelpTools < Formula
   url "https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.0.tar.xz"
   sha256 "2cd43063ffa7262df15dd8d379aa3ea3999d42661f07563f4802daa1149f7df4"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6352c9b27ee153a88bbee62774b528212ac995e4215d38c7e60cd7bbcad121e6"
-    sha256 cellar: :any,                 arm64_big_sur:  "9c612a4df8148542782af73ee387053f1f4e3eebba60bc22a20df626d3affe3b"
-    sha256 cellar: :any,                 monterey:       "a3d5357411916548318c49d320b5ffbd5cc026f7927e8a9111a71a36befbb9bd"
-    sha256 cellar: :any,                 big_sur:        "24ef07e15b762e04e0324871f4b9e14a5515edc273417da62b29ec5c92c32827"
-    sha256 cellar: :any,                 catalina:       "49ce7d96da12121a1efe9b121d43629b7ddc4c64c3e36259773cafcd1fe1e28d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73569a8bdaa94ad9be25a9eaa23c47d62b2e9e69995058f595e78cafae69ab98"
+    sha256 cellar: :any,                 arm64_monterey: "ca3f4b5f6ccd93dd16c9a0ee89ebdeb706f248d8f9d07595796ca46d98d4f2c3"
+    sha256 cellar: :any,                 arm64_big_sur:  "f6d66e76d44ae461e4d1f1daf0ad41d6c48c7db0a47c8acd4b568164a74e7255"
+    sha256 cellar: :any,                 monterey:       "f3c65f220e83ba866346587345b28a9c181a35b45086960353372d912045e55c"
+    sha256 cellar: :any,                 big_sur:        "8da6622c231bfe66fa2d8018d661348555e7f114402908ff463102ef7c524bb7"
+    sha256 cellar: :any,                 catalina:       "3fd4f5cbde318c595ee805eb9c6851567cbe6f106dd2b89967e80db2094cc7dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ec11ce5badedfe5e12dd658fc5aa4323bffad28a4c991ff3769f485a00186fe"
   end
 
   depends_on "gettext" => :build
@@ -26,7 +24,7 @@ class YelpTools < Formula
   depends_on "gtk+3"
   depends_on "itstool"
   depends_on "libxml2"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   uses_from_macos "libxslt"
 
@@ -41,24 +39,26 @@ class YelpTools < Formula
   end
 
   def install
-    python = "python3.10"
-
-    venv = virtualenv_create(libexec, python)
+    venv = virtualenv_create(libexec, "python3")
     venv.pip_install resource("lxml")
     ENV.prepend_path "PATH", libexec/"bin"
 
     resource("yelp-xsl").stage do
-      system "./configure", *std_configure_args, "--disable-silent-rules"
+      system "./configure", "--disable-dependency-tracking",
+                            "--disable-silent-rules",
+                            "--prefix=#{prefix}"
       system "make", "install"
       ENV.append_path "PKG_CONFIG_PATH", "#{share}/pkgconfig"
     end
 
-    system "meson", *std_meson_args, "build"
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
 
     # Replace shebang with virtualenv python
-    rewrite_shebang python_shebang_rewrite_info("#{libexec}/bin/#{python}"), *bin.children
+    inreplace Dir[bin/"*"], "#!/usr/bin/python3", "#!#{libexec}/bin/python"
   end
 
   def post_install

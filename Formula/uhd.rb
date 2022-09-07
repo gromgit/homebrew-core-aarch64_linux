@@ -3,10 +3,9 @@ class Uhd < Formula
   homepage "https://files.ettus.com/manual/"
   # The build system uses git to recover version information
   url "https://github.com/EttusResearch/uhd.git",
-      tag:      "v4.2.0.1",
-      revision: "321295fba49fb66ede365afbd9ef62971cdfbfca"
+      tag:      "v4.2.0.0",
+      revision: "46a70d853267c40205a8cfea472056bd1aa7c04e"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later", "MIT", "BSD-3-Clause", "Apache-2.0"]
-  revision 1
   head "https://github.com/EttusResearch/uhd.git", branch: "master"
 
   livecheck do
@@ -15,12 +14,12 @@ class Uhd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0643876ee78155b69c5a3f74c20c9a250f39e149fd1ef686d6d262c3a8db7257"
-    sha256 arm64_big_sur:  "ce05ba23746f4a6e6cf0032ba0e3a89bb0469c6c6978639cb315dc437ad4c58a"
-    sha256 monterey:       "f1da72f1e2e80b77e7bed5e3de8e128f189a292612e343cd5d99695435baf2ba"
-    sha256 big_sur:        "c880ad483752e7a28ed3b908f3c9dada4dfe382dda27d1655c123a80fa54b14f"
-    sha256 catalina:       "a8a587efd44045da5a5f7c0c2a21c40c6084369902bd4c45db387f26f9a61904"
-    sha256 x86_64_linux:   "45989f1da0a5e1980fd653cb014793d80666eaffbacdf4c82ecdb35c5a0cb61f"
+    sha256 arm64_monterey: "1a10f56135f1aa9cad9cd8deb3d739dd71a7ec6104e2ed3c484fa604a7b51758"
+    sha256 arm64_big_sur:  "a77fbf7cfcb51c33a7a3fffbeac1511633e1d8df42a71255aec055afefe874bb"
+    sha256 monterey:       "1e006c2ede0dbbd0652e385981c7ffdf7fc3bab2a9f76113c33af46fc7f97c8f"
+    sha256 big_sur:        "e28eb54ea3d5254ebb6559e1a0f354c9413def8eed2f0431797b0a9adf21ed05"
+    sha256 catalina:       "8491bbbb396b96574c78d6412d429c98be07ffc68920cd1353558bb82280dcf3"
+    sha256 x86_64_linux:   "48454addb60b428ee63e144a8de36cb6ec44902a47fe4372b82017058740e50e"
   end
 
   depends_on "cmake" => :build
@@ -28,7 +27,7 @@ class Uhd < Formula
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "libusb"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   on_linux do
     depends_on "gcc"
@@ -47,18 +46,21 @@ class Uhd < Formula
   end
 
   def install
-    python = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor"/Language::Python.site_packages(python)
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{xy}/site-packages"
 
     resources.each do |r|
       r.stage do
-        system python, *Language::Python.setup_install_args(libexec/"vendor", python)
+        system Formula["python@3.9"].opt_bin/"python3",
+              *Language::Python.setup_install_args(libexec/"vendor")
       end
     end
 
-    system "cmake", "-S", "host", "-B", "host/build", "-DENABLE_TESTS=OFF", *std_cmake_args
-    system "cmake", "--build", "host/build"
-    system "cmake", "--install", "host/build"
+    mkdir "host/build" do
+      system "cmake", "..", *std_cmake_args, "-DENABLE_TESTS=OFF"
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do

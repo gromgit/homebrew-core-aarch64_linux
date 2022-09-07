@@ -1,18 +1,21 @@
 class Rhash < Formula
   desc "Utility for computing and verifying hash sums of files"
   homepage "https://sourceforge.net/projects/rhash/"
-  url "https://downloads.sourceforge.net/project/rhash/rhash/1.4.3/rhash-1.4.3-src.tar.gz"
-  sha256 "1e40fa66966306920f043866cbe8612f4b939b033ba5e2708c3f41be257c8a3e"
+  url "https://downloads.sourceforge.net/project/rhash/rhash/1.4.2/rhash-1.4.2-src.tar.gz"
+  sha256 "600d00f5f91ef04194d50903d3c79412099328c42f28ff43a0bdb777b00bec62"
   license "0BSD"
   head "https://github.com/rhash/RHash.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "83aa0e800d6dfefc04839c348c9464b6dd851377f5c9fa74ab90b5679d5ef58a"
-    sha256 arm64_big_sur:  "6a20e957a3677d2cbbea2aa6cb29e35aaadf8f64a304a6bfb8d60ae1e2385aa6"
-    sha256 monterey:       "c6004d38e08b84b53423a0ab0a5e4f258eb92f2cb88b8ecd86e2294f0a831182"
-    sha256 big_sur:        "16a9e4c548402e9e8c9568d4529b392859eb120284c2bc731f4feb5083dcd8a8"
-    sha256 catalina:       "d51a6837ae68a15319fca27e654f39262d62325bd1be7d30d0ecf97d187bb0d0"
-    sha256 x86_64_linux:   "d41278cf9e9eebc864013ceaddd4188882a8a91a6458e71155d3089a555ec1c6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rhash"
+    sha256 aarch64_linux: "fa812c253eed893385c524de30d2042cff631930fb215c9d76579c9e52b49d2e"
+  end
+
+  # configure: fix clang detection on macOS
+  # Patch accepted and merged upstream, remove on next release
+  patch do
+    url "https://github.com/rhash/RHash/commit/4dc506066cf1727b021e6352535a8bb315c3f8dc.patch?full_index=1"
+    sha256 "3fbfe4603d2ec5228fd198fc87ff3ee281e1f68d252c1afceaa15cba76e9b6b4"
   end
 
   def install

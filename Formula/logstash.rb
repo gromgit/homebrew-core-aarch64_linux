@@ -1,8 +1,8 @@
 class Logstash < Formula
   desc "Tool for managing events and logs"
   homepage "https://www.elastic.co/products/logstash"
-  url "https://github.com/elastic/logstash/archive/v8.4.1.tar.gz"
-  sha256 "0ef0a8853a93fa92374b1efd754699702e57305ec824e3e83807362b5ed5d10d"
+  url "https://github.com/elastic/logstash/archive/v8.0.1.tar.gz"
+  sha256 "61693d62bc98a787b8048c623103654cce8897eea3ffceef02145927d16e1a60"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/elastic/logstash.git", branch: "main"
@@ -13,15 +13,13 @@ class Logstash < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0ea89c50c840769931bf05cef2be95169bcaea201e907f04a2c9b1d8691fddf3"
-    sha256 cellar: :any,                 arm64_big_sur:  "ca9fddab6133c067dec4dde3ee4fb7e5c1fc9937e584f0bcb52512bcb21bc4b5"
-    sha256 cellar: :any,                 monterey:       "c8a13779ae00b526f07202198cfbd4a84f757fe694fc3ecd6dd045097ca2b2d0"
-    sha256 cellar: :any,                 big_sur:        "464a5340446d0645ec837de1fb9e89411cdf1b79514ef8064c84229b382e36df"
-    sha256 cellar: :any,                 catalina:       "88773440b00e72173f9b9d4d92b7652b518156b3f198db0a7f693991c85234ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4a56cd12c5c4f67515a201c3f843278dacdbd442cd79206ca636242a4a87d0b"
+    sha256 cellar: :any,                 monterey:     "4f0650dc1954ead75ebc78a8fa82a386b1126162c1e84f9abc018abeafc7111e"
+    sha256 cellar: :any,                 big_sur:      "16a0784cac36cac4f63ed04e5bd3c34f007184da525f7f6cf8209489ab917e95"
+    sha256 cellar: :any,                 catalina:     "51b3049ae3b47b4cfe5f2af2c4d27908e0deb084184392e7edae97e7cc2698c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "45dba95a34b5a20ccc228168735ac903996cda958c9021957eb68f30f11b4df4"
   end
 
-  depends_on "openjdk@17"
+  depends_on "openjdk@11"
 
   uses_from_macos "ruby" => :build
 
@@ -61,7 +59,7 @@ class Logstash < Formula
     (libexec/"config").rmtree
 
     bin.install libexec/"bin/logstash", libexec/"bin/logstash-plugin"
-    bin.env_script_all_files libexec/"bin", LS_JAVA_HOME: "${LS_JAVA_HOME:-#{Language::Java.java_home("17")}}"
+    bin.env_script_all_files libexec/"bin", LS_JAVA_HOME: "${LS_JAVA_HOME:-#{Language::Java.java_home("11")}}"
   end
 
   def post_install

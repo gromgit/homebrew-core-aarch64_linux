@@ -4,7 +4,7 @@ class Caffe < Formula
   url "https://github.com/BVLC/caffe/archive/1.0.tar.gz"
   sha256 "71d3c9eb8a183150f965a465824d01fe82826c22505f7aa314f700ace03fa77f"
   license "BSD-2-Clause"
-  revision 41
+  revision 38
 
   livecheck do
     url :stable
@@ -12,12 +12,12 @@ class Caffe < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0b541442a6d65a4bd33be673e3e65600e03572d2a8ba7297ce591a45dff1a936"
-    sha256 cellar: :any,                 arm64_big_sur:  "6bd1fbd55fb47274ca9a00742ce531a6489be521a1a8e5854609470403881b98"
-    sha256 cellar: :any,                 monterey:       "005bad8638ff49a119722ab5eac1c570f07fd233653a6a2de2dac546a39fc994"
-    sha256 cellar: :any,                 big_sur:        "f3296808a8390757a22c4c6bff6581e8393b22cf9fead83b9027881d22b29f0d"
-    sha256 cellar: :any,                 catalina:       "19fd2287e31575e952b735c707a050bd94a8001ebe0471a51856d60ae0a0c348"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "105f09dd49c082b65850593f88c9c39dc6f0a3aee093b3d50a7a282a8aa3235e"
+    sha256 cellar: :any,                 arm64_monterey: "e1ff10490d3319714c13dc90cebc17dd545bb7dd34fb5745294abeb0f25cd607"
+    sha256 cellar: :any,                 arm64_big_sur:  "2b0c210d2307aa2c52ebf5975a5d552ee5734b472f700f129a06b5b6b7ab6fec"
+    sha256 cellar: :any,                 monterey:       "b3d275a6e61267d377de63ebd32f2f9b38b1db5d18fbe3d38166fefb28d1da61"
+    sha256 cellar: :any,                 big_sur:        "0dc47d8b122659d527ffb131d58ed92222c80ba69848467150cb138f70767408"
+    sha256 cellar: :any,                 catalina:       "fc743dcb1ad7c5d8d8beb3b2425782699135d2d83206e46e5f4d8183c80f946c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a0f55d6ae8fa0c619bcc6a3396d93ad83ca5d2cfc480fa0928e58b9832ad823"
   end
 
   depends_on "cmake" => :build
@@ -61,7 +61,7 @@ class Caffe < Formula
   def install
     ENV.cxx11
 
-    args = %w[
+    args = std_cmake_args + %w[
       -DALLOW_LMDB_NOLOCK=OFF
       -DBUILD_SHARED_LIBS=ON
       -DBUILD_docs=OFF
@@ -77,16 +77,16 @@ class Caffe < Formula
     ]
     args << "-DBLAS=Open" if OS.linux?
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", *args
+    system "make", "install"
     pkgshare.install "models"
   end
 
   test do
     resource("homebrew-test_model").stage do
-      system bin/"caffe", "test", "-model", "lenet_train_test.prototxt",
-                                  "-weights", "lenet_iter_10000.caffemodel"
+      system "#{bin}/caffe", "test",
+             "-model", "lenet_train_test.prototxt",
+             "-weights", "lenet_iter_10000.caffemodel"
     end
   end
 end

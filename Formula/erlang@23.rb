@@ -2,8 +2,8 @@ class ErlangAT23 < Formula
   desc "Programming language for highly scalable real-time systems"
   homepage "https://www.erlang.org/"
   # Download tarball from GitHub; it is served faster than the official tarball.
-  url "https://github.com/erlang/otp/releases/download/OTP-23.3.4.17/otp_src_23.3.4.17.tar.gz"
-  sha256 "9e45974c2a44b929ded178b05e4e14a6eb34592f025957b38c7b093a67feda0b"
+  url "https://github.com/erlang/otp/releases/download/OTP-23.3.4.14/otp_src_23.3.4.14.tar.gz"
+  sha256 "35123f366ded534775a05db8ad6c06c20519ae228af1b5952132b10845621f21"
   license "Apache-2.0"
 
   livecheck do
@@ -12,12 +12,12 @@ class ErlangAT23 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8850fa16174372b91922beb7548f1f839a18b1ae83c52b842f3dc93a3bc6a2b2"
-    sha256 cellar: :any,                 arm64_big_sur:  "d7c7ab8e50e44f08ac4727a6711f577ac7833ce5e12b47ae5dd2710b9e367a33"
-    sha256 cellar: :any,                 monterey:       "1348fd6ddf3658ba18d531399ef92fa90462b2ce1ff9d76c9391776111f1cda0"
-    sha256 cellar: :any,                 big_sur:        "a6d171768f1f036a1fb871d1694318dfd553fdeeeb7a2f792a3ad6173e40785b"
-    sha256 cellar: :any,                 catalina:       "cbd430285fb864a25175f082c36a41b3756bfa7beb5ae2992cf2381a7362870d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "124305a7dcaf7e904a9bb450149e0bfa4b5df0d489f234121e78d5348b7b4151"
+    sha256 cellar: :any,                 arm64_monterey: "7a9a9a09efca63956862e4984e41aa07a3e2b686606ee6aca926f9c73c687d90"
+    sha256 cellar: :any,                 arm64_big_sur:  "8f840ab6cfb238a26c9023b807fb6d6183f951179b671a4d81c7201715cfa5f7"
+    sha256 cellar: :any,                 monterey:       "a6c9b59bfbf39bd19e33c42170a2fe87f003a53c019c72455859ea761ddf1a0d"
+    sha256 cellar: :any,                 big_sur:        "060bbd8cb7f80c37592101f6e80836a168d1ce91bc988fa2af7e05f56323eeb2"
+    sha256 cellar: :any,                 catalina:       "32d06cea0dfa89e440a2b5068f9691c3ec23f9340cf40f10745b14c4dcb52136"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4035752ccf49b2a63781a1ac06841421f52dcc1ff9dbd9374450fb8b082723d"
   end
 
   keg_only :versioned_formula
@@ -26,8 +26,8 @@ class ErlangAT23 < Formula
   depends_on "wxwidgets" # for GUI apps like observer
 
   resource "html" do
-    url "https://github.com/erlang/otp/releases/download/OTP-23.3.4.17/otp_doc_html_23.3.4.17.tar.gz"
-    sha256 "0846cf776f13decb8e10e2b28b1c07e23f53263351c07092f3778d1eec896edc"
+    url "https://github.com/erlang/otp/releases/download/OTP-23.3.4.13/otp_doc_html_23.3.4.13.tar.gz"
+    sha256 "37e2aeee06def0921aa35f4b306a42984328928caaf881171e076e95b6c8a57c"
   end
 
   def install

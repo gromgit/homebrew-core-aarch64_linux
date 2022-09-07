@@ -1,9 +1,9 @@
 class MariadbConnectorOdbc < Formula
   desc "Database driver using the industry standard ODBC API"
   homepage "https://mariadb.org/download/?tab=connector&prod=connector-odbc"
-  url "https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.1.17/mariadb-connector-odbc-3.1.17-src.tar.gz"
-  mirror "https://fossies.org/linux/misc/mariadb-connector-odbc-3.1.17-src.tar.gz/"
-  sha256 "d2eb92f1dd3eecc6e721a8172b6455afef77505a344a3d5e260ee2f7a02a6efc"
+  url "https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.1.15/mariadb-connector-odbc-3.1.15-src.tar.gz"
+  mirror "https://fossies.org/linux/misc/mariadb-connector-odbc-3.1.15-src.tar.gz/"
+  sha256 "cf35944e1bd0d3d6bd883bdda8a65abaea2375e8a8d5803840b6e2ce819a2577"
   license "LGPL-2.1-or-later"
 
   # https://mariadb.org/download/ sometimes lists an older version as newest,
@@ -15,12 +15,12 @@ class MariadbConnectorOdbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "43ab18291966567ecf2143c2c91ee62b8aea0eb5a8bf4ed3592b8a5806677649"
-    sha256 cellar: :any,                 arm64_big_sur:  "3babd69105257498323fc75469548c3666ec1b31d5f4d45b983089a7be8a10ad"
-    sha256 cellar: :any,                 monterey:       "2ee7edcaa3603bfb82fd570b5308b0a21c29c5d31ff568b1bb9b16c8164f40c0"
-    sha256 cellar: :any,                 big_sur:        "b475ebd8a0bb291256a23d3b446c1027e0f859ef9263a46bfac54140f502634f"
-    sha256 cellar: :any,                 catalina:       "2856699f88e3502d2055e7f2f7db4955e542fde5dcab7c5b1e0f8de1c38fa33f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d6c9974a94f8366c0c515d23f951c7890906d716bf3e33f4495d59cec17541b"
+    sha256 cellar: :any,                 arm64_monterey: "b42f1ff1129c849ac5cbba73424266fc19f3a3f6e17e08553e5e42a5acdb4325"
+    sha256 cellar: :any,                 arm64_big_sur:  "bfaba599e5ffe9b9012514a7da54d632d757f2bcec7f2deaefce2a8dee7231e8"
+    sha256 cellar: :any,                 monterey:       "417e39a2ed3e66fdee7263addcdc610d8c3cf440ffae2b03f2301a62fa8dff97"
+    sha256 cellar: :any,                 big_sur:        "0adf308c6438698c03832df3b4972e1007b39a76b29edf835e7f8fdd59065cb6"
+    sha256 cellar: :any,                 catalina:       "ba65e8cb114ebcd3ffa3680a24198e8c0e03a87d8f209cfae67505eb1aa6d6ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "703ad542557eedfe66091ff91c06279c1a4fcf7a77f045c6b3661b5c902652a1"
   end
 
   depends_on "cmake" => :build

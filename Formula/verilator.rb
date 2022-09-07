@@ -1,17 +1,17 @@
 class Verilator < Formula
   desc "Verilog simulator"
   homepage "https://www.veripool.org/wiki/verilator"
-  url "https://github.com/verilator/verilator/archive/refs/tags/v4.226.tar.gz"
-  sha256 "70bc941d86e4810253d51aa94898b0802d916ab76296a398f8ceb8798122c9be"
+  url "https://github.com/verilator/verilator/archive/refs/tags/v4.222.tar.gz"
+  sha256 "15c60175807c0f3536c3c5b435f131c2b1e8725aefd30645efd946bf401b4c84"
   license any_of: ["LGPL-3.0-only", "Artistic-2.0"]
 
   bottle do
-    sha256 arm64_monterey: "ef87fc6399d3f6da48ff60b67c1e009202f19c42fb7f1d59737ccc1743c92be2"
-    sha256 arm64_big_sur:  "10c1c488e94765f5531281f4dc4fd4640938d1db83947f8c5a55f7db85c6bff2"
-    sha256 monterey:       "9dfee8b25d4ba52111c841ef109b0aabd7f27089aaeb5ec689a59fd97b442aa4"
-    sha256 big_sur:        "7ff4ff84a34df0c65da91b144aa7a3b0e1194f3960c264d201b3305d77f9abb9"
-    sha256 catalina:       "c47ed2b560a824281e2a8af2a4d301556cd2ad4830e9a11c3d5e5fdd365730ea"
-    sha256 x86_64_linux:   "bb2b488c700f8bc421a3cc217d018dda191bc2a4201f9b99b8aaf7cbbefa38f2"
+    sha256 arm64_monterey: "5a48bc3e58b0499750fdc8f3d926e29af8afc27ba0ecac7f2f79b503297b62af"
+    sha256 arm64_big_sur:  "f1953605d3898a939a10fa152162d50b4e8e9589c618c074fdb98f948efd6c65"
+    sha256 monterey:       "a950ad2b221808fdde684e2e24f5fd50f0ce6ee0c1b2ce6e752e4fb2a2759369"
+    sha256 big_sur:        "dde40b13efcd5a4d794ef151b081a4dfdb388838aa7cf6e4b200719dc1b7d63a"
+    sha256 catalina:       "b0c0d73fd8dc0ee7616b249f4be4df0737d9173f543340a6866539dd51889280"
+    sha256 x86_64_linux:   "5e0b36efd56d4e12b67bc783aa467523be74355a9c22cb10030a9419cacfdf57"
   end
 
   head do
@@ -41,18 +41,6 @@ class Verilator < Formula
     # `make` and `make install` need to be separate for parallel builds
     system "make"
     system "make", "install"
-  end
-
-  def post_install
-    return if OS.mac?
-
-    # Ensure the hard-coded versioned `gcc` reference does not go stale.
-    ohai "Fixing up GCC references..."
-    gcc_version = Formula["gcc"].any_installed_version.major
-    inreplace(pkgshare/"include/verilated.mk") do |s|
-      s.change_make_var! "CXX", "g++-#{gcc_version}"
-      s.change_make_var! "LINK", "g++-#{gcc_version}"
-    end
   end
 
   test do

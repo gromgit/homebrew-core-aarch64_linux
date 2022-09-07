@@ -1,9 +1,20 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  url "https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz"
-  sha256 "e4fd347843bd0772c4f48d6dde625b0b109b7a380ff15db21e97c11a4dcdf93f"
   license "ISC"
+  revision 1
+
+  stable do
+    url "https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz"
+    sha256 "551553a4f82beaa8dadc9256800bcc284d7c000081e47aa6ecbb6ff36eacd05f"
+
+    # Fix occasional crash on exit.
+    # Remove with the next release (3.3).
+    patch do
+      url "https://github.com/tmux/tmux/commit/5fdea440cede1690db9a242a091df72f16e53d24.patch?full_index=1"
+      sha256 "3752098eb9ec21f4711b12d399eaa1a7dcebe9c66afc147790fba217edcf340f"
+    end
+  end
 
   livecheck do
     url :stable
@@ -12,13 +23,12 @@ class Tmux < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "0ca53c250a3e70d97ca511edd13f2d16660e4e94a41465a8708306e03b231b76"
-    sha256 cellar: :any,                 arm64_big_sur:  "89a9edfec5e665df5b9e2e0f47e1721c1e074725846705819042a9c691683981"
-    sha256 cellar: :any,                 monterey:       "c0489c25fa963b14fd5d3c53eb50f681e85bb7a5716883afe77c1efbdea7c882"
-    sha256 cellar: :any,                 big_sur:        "85eb7ec949aad04ad0a550a4a8151bc4453e229d813fda0be724f17fd8cf40e1"
-    sha256 cellar: :any,                 catalina:       "3cb3c779b9e62f0f5f5d9204309d194148ee66e3bc930480cabf7bee1b897623"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2eed5059099ba7ffeb68260c3163184b5d9b6a09e3b9b80d33ab2bf007513d8"
+    sha256 cellar: :any,                 arm64_monterey: "4da34b9c32b6b0dd4e8aef086747ccb8dd7aa1999a2a1d7677f2f91133b1be59"
+    sha256 cellar: :any,                 arm64_big_sur:  "18f4e6035641e97503c879fd95cd5e259fa227ac65b0da4d7c0dacbd2f24c0a5"
+    sha256 cellar: :any,                 monterey:       "7f80505f93b54c479a49a976a483055eb074e886719147b22a75448684abe439"
+    sha256 cellar: :any,                 big_sur:        "61f8428fdc23cc03c5a364e5b3bb9980bd0ce520fcd861f0fabfad87144b766e"
+    sha256 cellar: :any,                 catalina:       "fb7c8499af5ba6e879befd0fc92aac90faf806acc54209f44ec95309d9fdaf65"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40710fd6865425f2d9fc8333fd08ac7705ad32b0d0686dcf57a3f4a9e53c4ead"
   end
 
   head do
@@ -37,9 +47,7 @@ class Tmux < Formula
 
   # Old versions of macOS libc disagree with utf8proc character widths.
   # https://github.com/tmux/tmux/issues/2223
-  on_high_sierra :or_newer do
-    depends_on "utf8proc"
-  end
+  depends_on "utf8proc" if MacOS.version >= :high_sierra
 
   resource "completion" do
     url "https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/f5d53239f7658f8e8fbaf02535cc369009c436d6/completions/tmux"
@@ -55,11 +63,6 @@ class Tmux < Formula
       --sysconfdir=#{etc}
     ]
 
-    # tmux finds the `tmux-256color` terminfo provided by our ncurses
-    # and uses that as the default `TERM`, but this causes issues for
-    # tools that link with the very old ncurses provided by macOS.
-    # https://github.com/Homebrew/homebrew-core/issues/102748
-    args << "--with-TERM=screen-256color" if OS.mac?
     args << "--enable-utf8proc" if MacOS.version >= :high_sierra
 
     ENV.append "LDFLAGS", "-lresolv"

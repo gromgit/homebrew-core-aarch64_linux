@@ -3,18 +3,18 @@ class Ipython < Formula
 
   desc "Interactive computing in Python"
   homepage "https://ipython.org/"
-  url "https://files.pythonhosted.org/packages/be/06/c0d9ff653f260fe4659b41d509f8e4d6e4bf1f07be594de2d7fd5979c688/ipython-8.4.0.tar.gz"
-  sha256 "f2db3a10254241d9b447232cec8b424847f338d9d36f9a577a6192c332a46abd"
+  url "https://files.pythonhosted.org/packages/8d/ac/8edb1be743c86b10e0da94d770db673028f3e0f1159741500ba9d1b57465/ipython-8.3.0.tar.gz"
+  sha256 "807ae3cf43b84693c9272f70368440a9a7eaa2e7e6882dad943c32fbf7e51402"
   license "BSD-3-Clause"
   head "https://github.com/ipython/ipython.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "71b1d6ab408a4b69f9612fa0d34f790564eeeac8a6546e532f6782ab86b118c7"
-    sha256 cellar: :any,                 arm64_big_sur:  "1249479a71e2efd3a5b257c6b7a074aab122641a89393e17bc358ccc16f0ff63"
-    sha256 cellar: :any,                 monterey:       "4c149b634ac5e19c6c49e8d3566abd1826eb055b055833c8f936a751d4e778bf"
-    sha256 cellar: :any,                 big_sur:        "d9b139b6a8cc5c85087ca34c3307a30f4e5c6807d65caca45e4fbedec1f38bea"
-    sha256 cellar: :any,                 catalina:       "7a5fc780cfc4f5bdfe4a7657f83b5b8c5e44a1f20b44bdebd77b00f740299d18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90d5daa2bb222cf71285353e98cf129760317396fe2e3bd1ebb13c73034a2199"
+    sha256 cellar: :any,                 arm64_monterey: "2c0dd0a6fc3e04a483cfa9d69f9f3698c2df83f3a7b1247a276837ed4a7956b4"
+    sha256 cellar: :any,                 arm64_big_sur:  "6ff32c5b0878197542770911f5c7ae37d4b1aab56e0ad3d289e59c7eb2ad84d3"
+    sha256 cellar: :any,                 monterey:       "63472817d41cece1b2f2b8be1f2579b6f8ecf557eea2b9cadca1b69f080d0b82"
+    sha256 cellar: :any,                 big_sur:        "7122c37919d96e0ed96f5a46f4c01939c89f3a69fd3510f8f7b2b2a27f9eb320"
+    sha256 cellar: :any,                 catalina:       "4c65486f72014c702bf9232d9ae4ead2d7a2c6b34292eb7a6107ab6b84a12b5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc01a4889bd26f2f795089ae309ff66253dbdddd05579bfebf4a0a48df44504d"
   end
 
   depends_on "python@3.10"
@@ -67,8 +67,8 @@ class Ipython < Formula
   end
 
   resource "jupyter-client" do
-    url "https://files.pythonhosted.org/packages/2c/d6/db61927064a9781d7e61163b3ea5f630d21a3af4bdeedb9d91738f9df487/jupyter_client-7.3.1.tar.gz"
-    sha256 "05d4ff6a0ade25138c6bb0fbeac7ddc26b5fe835e7dd816b64b4a45b931bdc0b"
+    url "https://files.pythonhosted.org/packages/1c/5e/0a37aa86e56ef815ca8ea4f2fb09386db2bbd19f733ee0fb977069fe7319/jupyter_client-7.3.0.tar.gz"
+    sha256 "3bcc8e08a294d0fa9406e48cfe17e11ef0efdb7c504fe8cc335128e3ef8f3dac"
   end
 
   resource "jupyter-core" do
@@ -112,8 +112,8 @@ class Ipython < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/d6/de/0999ea2562b96d7165812606b18f7169307b60cd378bc29cf3673322c7e9/psutil-5.9.1.tar.gz"
-    sha256 "57f1819b5d9e95cdfb0c881a8a5b7d542ed0b7c522d575706a80bedc848c8954"
+    url "https://files.pythonhosted.org/packages/47/b6/ea8a7728f096a597f0032564e8013b705aa992a0990becd773dcc4d7b4a7/psutil-5.9.0.tar.gz"
+    sha256 "869842dbd66bb80c3217158e629d6fceaecc3a3166d3d1faee515b05dd26ca25"
   end
 
   resource "ptyprocess" do
@@ -132,8 +132,8 @@ class Ipython < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "python-dateutil" do
@@ -142,8 +142,8 @@ class Ipython < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/5c/35/44e33d61923d603713387c1be6ab10b7b3e1893c0afdcd685915ff7ed058/pyzmq-23.0.0.tar.gz"
-    sha256 "a45f5c0477d12df05ef2e2922b49b7c0ae9d0f4ff9b6bb0d666558df0ef37122"
+    url "https://files.pythonhosted.org/packages/6c/95/d37e7db364d7f569e71068882b1848800f221c58026670e93a4c6d50efe7/pyzmq-22.3.0.tar.gz"
+    sha256 "8eddc033e716f8c91c6a2112f0a8ebc5e00532b4a6ae1eb0ccc48e027f9c671c"
   end
 
   resource "stack-data" do
@@ -157,8 +157,8 @@ class Ipython < Formula
   end
 
   resource "traitlets" do
-    url "https://files.pythonhosted.org/packages/9b/26/5e5f9002f939d54663d244a260d0453b2baf4f767697da5968aa474f04e7/traitlets-5.2.1.post0.tar.gz"
-    sha256 "70815ecb20ec619d1af28910ade523383be13754283aef90528eb3d47b77c5db"
+    url "https://files.pythonhosted.org/packages/db/cf/e6cbf07ce2d21a17c8379f3f2f12db413a38da5ee20809638226b1490e48/traitlets-5.1.1.tar.gz"
+    sha256 "059f456c5a7c1c82b98c2e8c799f39c9b8128f6d0d46941ee118daace9eb70c7"
   end
 
   resource "wcwidth" do
@@ -167,8 +167,7 @@ class Ipython < Formula
   end
 
   def install
-    python3 = "python3.10"
-    venv = virtualenv_create(libexec, python3)
+    venv = virtualenv_create(libexec, "python3")
     res = resources.reject { |r| r.name == "appnope" && OS.linux? }
     venv.pip_install res
     venv.pip_install_and_link buildpath
@@ -178,7 +177,7 @@ class Ipython < Formula
 
     # Enable the kernel to be shared across envs (see also `post_install`)
     # https://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments
-    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
+    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages("python3")
     Dir.mktmpdir do |tmpdir|
       system libexec/"bin/ipython", "kernel", "install", "--prefix", tmpdir
       (share/"jupyter/kernels/python3").install Dir["#{tmpdir}/share/jupyter/kernels/python3/*"]

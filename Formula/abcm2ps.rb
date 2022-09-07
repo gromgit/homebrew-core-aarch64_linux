@@ -6,12 +6,8 @@ class Abcm2ps < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "66fc98754086e61de352bde7d193516ad03ab7dba6acad7819448d90d8cf1e4a"
-    sha256 arm64_big_sur:  "d7acbc60c7dfc12b7f2d915cd2e4f694fc4cb1e54eb32d561a2a2e3c03cb8e0b"
-    sha256 monterey:       "1dbdf6fc8c90837550bb710d97c546cfe8b8d0a2b37d54086c24a232bffed044"
-    sha256 big_sur:        "07759b5ddeab313116502465116dfe940718c71dfd0867bad82b6d8457537ce7"
-    sha256 catalina:       "c50589d7f7cdf5a0ad7cf8468c619a64f0fd3a801803aeb727e9beaee2fa04d3"
-    sha256 x86_64_linux:   "6ba0c5819c9058230e8af293302616c42aa07a04e0ab2cfb1f3934ceba8a846c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/abcm2ps"
+    sha256 aarch64_linux: "811962b2e9912bdab823921d006fb95a0c0a12bc25c81f4bc59ecb14a098db80"
   end
 
   depends_on "pkg-config" => :build

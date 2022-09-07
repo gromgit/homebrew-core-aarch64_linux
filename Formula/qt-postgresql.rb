@@ -1,33 +1,26 @@
 class QtPostgresql < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.3/6.3.1/submodules/qtbase-everywhere-src-6.3.1.tar.xz"
-  sha256 "0a64421d9c2469c2c48490a032ab91d547017c9cc171f3f8070bc31888f24e03"
+  url "https://download.qt.io/official_releases/qt/6.2/6.2.3/submodules/qtbase-everywhere-src-6.2.3.tar.xz"
+  sha256 "34d6d0072e197241463c417ad72610c3d44e2efd6062868e9a95283103d75df4"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
-  revision 1
 
   livecheck do
     formula "qt"
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "04287a1cb16a674c9201e5e2d566fb82f32154708a4442a697e130c13db708da"
-    sha256 cellar: :any, arm64_big_sur:  "25722b12d564c57701067aea781e14d1ddf3481e1749d7daaeb13a4784a7b42c"
-    sha256 cellar: :any, monterey:       "db1ccf0327f8fb3e259d8bffaa529c6143228130cf95e278921b902a35be5630"
-    sha256 cellar: :any, big_sur:        "eb0aec2a32e84eb4061c8f2af114ef0cb4296ad66a28d1026753bc13e992e093"
-    sha256 cellar: :any, catalina:       "30bc980bfa86ce6a5f15d4e4400a912d7a63eeedd41622b6f25635b0d5aa5e78"
+    sha256 cellar: :any, arm64_monterey: "95508eb11de8771ede01c98ec45ca19fbf79a1767deac2ffebcf05472d4d3893"
+    sha256 cellar: :any, arm64_big_sur:  "9a3625ccf4fc232f58846420211043a74fda76319af2d7398709ad602bc714d9"
+    sha256 cellar: :any, monterey:       "bdead761d0304dc9f8f1b29830028da13cdec56fcc109f801d31cd7b8b126af7"
+    sha256 cellar: :any, big_sur:        "ff35b43c422f97065123b0086a878cb61189de9d46c127305fc2fd0b6e1f9b52"
+    sha256 cellar: :any, catalina:       "abc763d462cf61b789d13ea8a9c8e2a9512b7807e28fc3f291154d59f1db6d17"
   end
 
   depends_on "cmake" => [:build, :test]
 
-  depends_on "libpq"
+  depends_on "postgresql"
   depends_on "qt"
-
-  on_linux do
-    depends_on "gcc"
-  end
-
-  fails_with gcc: "5"
 
   def install
     args = std_cmake_args + %W[
@@ -80,7 +73,6 @@ class QtPostgresql < Formula
       #include <cassert>
       int main(int argc, char *argv[])
       {
-        QCoreApplication::addLibraryPath("#{share}/qt/plugins");
         QCoreApplication a(argc, argv);
         QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
         assert(db.isValid());

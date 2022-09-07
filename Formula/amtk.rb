@@ -1,32 +1,30 @@
 class Amtk < Formula
   desc "Actions, Menus and Toolbars Kit for GNOME"
-  homepage "https://gitlab.gnome.org/World/amtk"
-  url "https://gitlab.gnome.org/World/amtk.git",
-      tag:      "5.5.1",
-      revision: "fa2835b2e60d60c924fc722a330524a378446a7d"
+  homepage "https://wiki.gnome.org/Projects/Amtk"
+  url "https://download.gnome.org/sources/amtk/5.2/amtk-5.2.0.tar.xz"
+  sha256 "820545bb4cf87ecebc2c3638d6b6e58b8dbd60a419a9b43cf020124e5dad7078"
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "250b5e388086f70a283e63dc2287d2e9df377f05aeab3b7fd80466fe4100ecd1"
-    sha256 arm64_big_sur:  "dea3d30885c8f6d1d826d5751998ed4a455402a41c59d6906b6fd9a36008a782"
-    sha256 monterey:       "9c8c733791c295dbefd5c8ef7e097254823bd29dff3c0cc2b1a1caaa1c2c89d3"
-    sha256 big_sur:        "325fa265fca221b9109873195f97c17be39334e8e4e997bac062f70dc190b090"
-    sha256 catalina:       "9f9a3c3164918a49c3c92e6a209e51e7e966a7c96d43c981cd536b9abdc22ab1"
-    sha256 x86_64_linux:   "51c6f9585fb645073a645697b971bc73eda5f23eaeaf392d0fcc0c76eaf5b101"
+    sha256 arm64_monterey: "63effad091e0f6f472dc0aeec62cf1623eff536542ecb91a08ea018b796a538f"
+    sha256 arm64_big_sur:  "d540852fa3ee1d9af33c5c1effe96547a98c7e03d20064b508662b14c6da202f"
+    sha256 monterey:       "09d224f622a97da7897d6c2bd12eeb301b99bd18f53da33ef2b816673d5095ee"
+    sha256 big_sur:        "6ab887f121458fad7c480b897bb296d48daf01e3379b96098ce18ca2ae9da7b7"
+    sha256 catalina:       "89e24e19e0614b13d387b9c0d2ccf89ac15f485edf49c7c39bcaa4f80deba3c1"
+    sha256 mojave:         "004425110c03c91144cfd53df0f6141b05e38d86b64e96303cd6760db9e66a42"
+    sha256 high_sierra:    "67ad617a78c6922647c2af49225a5f4b8fd7eff3635d0e7f8b4320687b896b60"
+    sha256 x86_64_linux:   "816d3b14c924a5024ba23409a3af828a578325c0fe3eaeff9e4f81b553142ca9"
   end
 
   depends_on "gobject-introspection" => :build
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gtk+3"
 
   def install
-    cd "build" do
-      system "meson", *std_meson_args, "-Dgtk_doc=false", ".."
-      system "ninja", "-v"
-      system "ninja", "install", "-v"
-    end
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
+    system "make", "install"
   end
 
   test do

@@ -2,25 +2,23 @@ class Dscanner < Formula
   desc "Analyses e.g. the style and syntax of D code"
   homepage "https://github.com/dlang-community/D-Scanner"
   url "https://github.com/dlang-community/D-Scanner.git",
-      tag:      "v0.12.2",
-      revision: "8761fa1e38c4461e0dda1782b859d46172cc3676"
+      tag:      "v0.12.1",
+      revision: "e027965176499b578b297e8bead32a0400d07a6d"
   license "BSL-1.0"
   head "https://github.com/dlang-community/D-Scanner.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cdad16d21b13b420b6d3f51a5edac74a65bc3b6587fccb4035e7f286463132d1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1647cc20df2c97376c99ecb6be4f82e16fe4587228741024cefe775278b5a86"
-    sha256 cellar: :any_skip_relocation, monterey:       "8461f57853911057d829e5bff0cfe2abbdaa2a36ebb73e4c97f5fe3e633f989a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c178b23fbb7f83b7573cbb0baafe848e3ceefce2c701cdae694786111746b948"
-    sha256 cellar: :any_skip_relocation, catalina:       "238fe917c7a62c9bda4f390349d870437775b3fa17a93fa685d2845a9670e40b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5cf437aaf0802ae3aab2a37476e0506351b1da609c6470acded10962537a639b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b5d0c35d95ebfb026a56d523b754ce1d872cadcee2f7ea031459f929cb54755e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23838b253d81dc344dc222e4e3b020021cf1ccdfbc32ffae5458a9cbe0584f81"
+    sha256 cellar: :any_skip_relocation, monterey:       "0d48ae238ece9f6e2919117e20ce07a9b9d3d02ef50e14397cff8688ecc7594c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8240e6a2d9f8f18e7a4d9a1f561b701181917745a867204a7449496b4bddfe4e"
+    sha256 cellar: :any_skip_relocation, catalina:       "58984bf1dbe3703f5dab362774773d4ee7bbc7e87bc09939f825da2feaafc867"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60efa9016af0bb078a47e3608a192d25203843166346caa27a6a71141b37a100"
   end
 
-  on_arm do
+  if Hardware::CPU.arm?
     depends_on "ldc" => :build
-  end
-
-  on_intel do
+  else
     depends_on "dmd" => :build
   end
 

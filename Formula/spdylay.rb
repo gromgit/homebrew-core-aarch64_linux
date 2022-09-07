@@ -19,7 +19,7 @@ class Spdylay < Formula
   end
 
   # The SPDY protocol itself is deprecated and most websites no longer support it
-  disable! date: "2022-07-31", because: "is deprecated and not supported by most websites"
+  deprecate! date: "2020-07-05", because: "is deprecated and not supported by most websites"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -28,10 +28,11 @@ class Spdylay < Formula
   depends_on "libevent"
   depends_on "openssl@1.1"
 
-  uses_from_macos "xz"
   uses_from_macos "zlib"
 
   def install
+    ENV["ac_cv_search_clock_gettime"] = "no" if MacOS.version == "10.11" && MacOS::Xcode.version >= "8.0"
+
     Formula["libxml2"].stable.stage { (buildpath/"m4").install "libxml.m4" }
 
     system "autoreconf", "-fiv"

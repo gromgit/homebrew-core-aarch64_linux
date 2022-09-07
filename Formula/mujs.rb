@@ -9,12 +9,8 @@ class Mujs < Formula
   head "https://github.com/ccxvii/mujs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5a94e31250222ad2105bb9ada248540edf2709980dc7f160909416f067744647"
-    sha256 cellar: :any,                 arm64_big_sur:  "e7bb9ec701b195dc73bdcea8c888745811b3e1c5ea0db69fd6f5c13d4500b11e"
-    sha256 cellar: :any,                 monterey:       "e77cc955e112e39425ace8bc18456cb5271db4d1f8d1aa730fd8e60a5b1cbfd6"
-    sha256 cellar: :any,                 big_sur:        "0631602182949a2efaa1848b960d182099b426b22f4697744ef2a4708780af91"
-    sha256 cellar: :any,                 catalina:       "0548c920d09d53c3c3da0ecf98cc24e5b47491e41e4d9ccf1c00ebbd6a19083c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8df7e22cd7528ce683daf23345ea3b0b1d32debcb190fad3236ef7ee0533a78"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mujs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4f6910352834fa92781482b2533d196b2f36f6058c260755e616fa349bde8aa7"
   end
 
   on_linux do

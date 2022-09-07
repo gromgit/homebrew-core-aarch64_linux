@@ -1,17 +1,19 @@
 class Libxaw3d < Formula
   desc "X.Org: 3D Athena widget set based on the Xt library"
   homepage "https://www.x.org"
-  url "https://xorg.freedesktop.org/archive/individual/lib/libXaw3d-1.6.4.tar.gz"
-  sha256 "09fecfdab9d7d5953567883e2074eb231bc7a122a06e5055f9c119090f1f76a7"
+  url "https://www.x.org/archive/individual/lib/libXaw3d-1.6.3.tar.bz2"
+  sha256 "2dba993f04429ec3d7e99341e91bf46be265cc482df25963058c15f1901ec544"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c27632e71c51d1e02478695a3cf86a33e1495962be23d89c6d26337ef0139884"
-    sha256 cellar: :any,                 arm64_big_sur:  "79af9b3b321e268b4433fddcc2b1d1da5914bd3d5aba03c207ba2d598d42018f"
-    sha256 cellar: :any,                 monterey:       "89cd3f70c15b1dcbb054c9489b7e290a616b5846d55fd21c85344eb1d63ed6b5"
-    sha256 cellar: :any,                 big_sur:        "135322539b609862efc73f0da4fc205ce554f7cc2e66c123fb4e043a738968aa"
-    sha256 cellar: :any,                 catalina:       "1a0ea4ec35a674744dd8e0fe1c16b6be5998752845a152edf2f7e56da208eeb4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef88521dc9a085da28737de639fa4e652a03dfb1f93f30a76c98f5358f9bf587"
+    sha256 cellar: :any,                 arm64_monterey: "5c1f32a02317e87c23d9e029ba9a747e3cf8e4fb8fad73650bdb5385f6da7df3"
+    sha256 cellar: :any,                 arm64_big_sur:  "7119d857a0d3c8b77967422b134fa028a6adcc136dc76a29e78997405ecc0b1c"
+    sha256 cellar: :any,                 monterey:       "65a2e31d9bf407befc1151abc1f12eb6d1e15c4d6dff29b3729e19b27cfe5a74"
+    sha256 cellar: :any,                 big_sur:        "4a5d334d3ed17d4fe8654edc1cc8e0168a282792e5a9e9c5e82b4d1ff1c260ba"
+    sha256 cellar: :any,                 catalina:       "e089705cc442b4076b7d3b9bc86a1379eb193b73cb57387d04809411876eb755"
+    sha256 cellar: :any,                 mojave:         "b5510c021114d1579116242eb88f4fbd6a9fd3d3a61292a17d6158c02ac71194"
+    sha256 cellar: :any,                 high_sierra:    "ccf2fd19db504f82ab9f280525a879bd0669934a51cdc69003238d0626735b52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6596ac50fcdcdcafdb4e3cc616826bd3b48ebb05b4bccd84c1ca10db64df6160"
   end
 
   depends_on "pkg-config" => :build

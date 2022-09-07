@@ -2,8 +2,8 @@ class Docker < Formula
   desc "Pack, ship and run any application as a lightweight container"
   homepage "https://www.docker.com/"
   url "https://github.com/docker/cli.git",
-      tag:      "v20.10.17",
-      revision: "100c70180fde3601def79a59cc3e996aa553c9b9"
+      tag:      "v20.10.15",
+      revision: "fd82621d35d2d9662854c8351976d5cc1e4186ce"
   license "Apache-2.0"
   head "https://github.com/docker/cli.git", branch: "master"
 
@@ -13,12 +13,8 @@ class Docker < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "59d72980cf778e7692c089e0fa5cb0574aaced632904691d86b31dcb925e73a8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee26d69f2b0809598012ecf8be99e47d0580561ae44ebaa62a27193b20b85958"
-    sha256 cellar: :any_skip_relocation, monterey:       "0f74d14c67d9a698638e63dfee9c8fd60fc8ea091f6652f8cc06a1b7f921ce59"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fafe17064fb6d51f509c56954bb7c8c29963f750df06f81c572e520041cf00bc"
-    sha256 cellar: :any_skip_relocation, catalina:       "1c24ca42331c71645a531fcf7e94d2f129110cefcd23a240ee1d3b51b751a0c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "700eb5ad46d661acd3f7539523451df9123728d1d3312f268e378d1827d847ea"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docker"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "03250ce48ef240224a9d742d8e6e4bdf5342d9a5998ed9ba90aedfb413da6e49"
   end
 
   depends_on "go" => :build

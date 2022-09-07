@@ -3,24 +3,24 @@ class Jello < Formula
 
   desc "Filter JSON and JSON Lines data with Python syntax"
   homepage "https://github.com/kellyjonbrazil/jello"
-  url "https://files.pythonhosted.org/packages/92/a3/44ef2dddc89de62fc248e853edbcddcf5c1d605bb89d4c741a735ca85611/jello-1.5.4.tar.gz"
-  sha256 "6e536485ffd7a30e4d187ca1e2719452e833f1939c3b34330d75a831dabfcda9"
+  url "https://files.pythonhosted.org/packages/2c/b5/1d5293540c7506296b3777656a24272d192db69e9cce5a9b155df1c74574/jello-1.5.2.tar.gz"
+  sha256 "9f52b526febf4ce6f74d6df44517d1bca7df57a1d76c81f21c7f7c9354f61643"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "add68d0e721c55d0f4dd0a4548a3413a3c85e805770332f2b8123122463b6124"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "add68d0e721c55d0f4dd0a4548a3413a3c85e805770332f2b8123122463b6124"
-    sha256 cellar: :any_skip_relocation, monterey:       "b11305e55a9e8811b9eb0a2cfdc321d7ae2448a74cf9b3a0513a8c3eb3b9d68d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b11305e55a9e8811b9eb0a2cfdc321d7ae2448a74cf9b3a0513a8c3eb3b9d68d"
-    sha256 cellar: :any_skip_relocation, catalina:       "b11305e55a9e8811b9eb0a2cfdc321d7ae2448a74cf9b3a0513a8c3eb3b9d68d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "113c409718feef3320f3a71185b5f6be6dcf015a09e13cea46f6711725d7846e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "369fefd4c22c9c012f99788336e08cd270ef1c104b3bf3f9ac606f00bc48b7e8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "369fefd4c22c9c012f99788336e08cd270ef1c104b3bf3f9ac606f00bc48b7e8"
+    sha256 cellar: :any_skip_relocation, monterey:       "08fe6d928c021346c8995b0a2694e18f32ddb1f4304b4e7ee2bcb4c3e95ab3e8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "08fe6d928c021346c8995b0a2694e18f32ddb1f4304b4e7ee2bcb4c3e95ab3e8"
+    sha256 cellar: :any_skip_relocation, catalina:       "08fe6d928c021346c8995b0a2694e18f32ddb1f4304b4e7ee2bcb4c3e95ab3e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05c07473b75ec6fb1592da8c3752d16315a8257702cf596ba061571c9b28e56a"
   end
 
   depends_on "python@3.10"
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/59/0f/eb10576eb73b5857bc22610cdfc59e424ced4004fe7132c8f2af2cc168d3/Pygments-2.12.0.tar.gz"
-    sha256 "5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb"
+    url "https://files.pythonhosted.org/packages/b7/b3/5cba26637fe43500d4568d0ee7b7362de1fb29c0e158d50b4b69e9a40422/Pygments-2.10.0.tar.gz"
+    sha256 "f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6"
   end
 
   def install

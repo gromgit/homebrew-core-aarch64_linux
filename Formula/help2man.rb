@@ -15,11 +15,9 @@ class Help2man < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "457df4779894e46898cb3ae03f9b7d2650a0bd42e75ab7cdf4aacbe0e6bb90d6"
   end
 
-  uses_from_macos "perl", since: :mojave
+  depends_on "gettext" if Hardware::CPU.intel?
 
-  on_intel do
-    depends_on "gettext"
-  end
+  uses_from_macos "perl"
 
   resource "Locale::gettext" do
     url "https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/gettext-1.07.tar.gz"

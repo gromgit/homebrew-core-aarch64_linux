@@ -8,12 +8,8 @@ class Kubeval < Formula
   head "https://github.com/instrumenta/kubeval.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6e5974f57b949750e5b87e0d8b4cd7e12c566e29bdbd00d86cb9d132ee8e50d6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "33bc6b830f27fdace62339ec2d3ac3ff01424c868e573f1d290d2f469c4986e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "01c06b669351b172306258e588e035c21d84a0385a611c7174ceee0b2809a411"
-    sha256 cellar: :any_skip_relocation, big_sur:        "542fae8921857d0adf7424fde1c08d2f4894989770515fa24591d93bd8334c65"
-    sha256 cellar: :any_skip_relocation, catalina:       "1945e1dfa19fd19f8a850156d984cb2bb8abe6bdcd29f79b674bfbce5e5abf96"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92c4fe8b9a551d9f7a4fa58b620b703db28df4b422fc7740442b062ff5fbf31a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubeval"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "50362326082579c805b1219c2316d981d6f8997b811115aeda30c8f949fe4717"
   end
 
   # Bump to 1.18 on the next release, if possible.

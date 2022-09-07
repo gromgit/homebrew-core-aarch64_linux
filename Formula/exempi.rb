@@ -1,8 +1,8 @@
 class Exempi < Formula
   desc "Library to parse XMP metadata"
   homepage "https://wiki.freedesktop.org/libopenraw/Exempi/"
-  url "https://libopenraw.freedesktop.org/download/exempi-2.6.2.tar.bz2"
-  sha256 "4d17d4c93df2a95da3e3172c45b7a5bf317dd31dafd1c7a340169728c7089d1d"
+  url "https://libopenraw.freedesktop.org/download/exempi-2.6.1.tar.bz2"
+  sha256 "072451ac1e0dc97ed69a2e5bfc235fd94fe093d837f65584d0e3581af5db18cd"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,12 +11,12 @@ class Exempi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d23e4d16f857e7c2731c0e5b4fdec93f39ae7e2efd3bf4b77f6c0ff933cd2eef"
-    sha256 cellar: :any,                 arm64_big_sur:  "b255cea38e3e87347611ba1f55701caa3237d0c4131384f39a025a0ecdaf56ec"
-    sha256 cellar: :any,                 monterey:       "0d35c08aa3a560ec56a668374b9629e1d45d77430f3a035d009257749ec2367b"
-    sha256 cellar: :any,                 big_sur:        "fdd02db94a10af5aa7ca1cc9b68f9bdade661fe0369927fb38f215ee0a60a64d"
-    sha256 cellar: :any,                 catalina:       "bc25ba91bd7448d2424526f3a514a3b0e8ba22c99e079904792af0e0da06cdd1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2ed682abe04a0958fa913ffd6a76fe21a81ddec7c506b123e0deb3171627a4d"
+    sha256 cellar: :any,                 arm64_monterey: "9b0039aab7afdf72220e267ed55d8cf7e93c6ecccfcd553b8ff15f4a4870a34b"
+    sha256 cellar: :any,                 arm64_big_sur:  "029f2d0d2fc76899e05db89a2c91b80d591797c995ed570467fa6da3e14cefb4"
+    sha256 cellar: :any,                 monterey:       "19a13f4ea1b3945dfee190b7fac9be56c191fea8c732ec262d8367ede305ee11"
+    sha256 cellar: :any,                 big_sur:        "a4e20a9d71550b11df0172f57569d783e66f051dc5f7848b18d112bdde086225"
+    sha256 cellar: :any,                 catalina:       "3ce93a31d89460a07f0fd81a7540b12001be170c56cb5b28d39b3f2f9df44582"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e383e49241a48787db09f24ce10fa0648cd0ed33030c230976c66ee1b784f40"
   end
 
   depends_on "boost"

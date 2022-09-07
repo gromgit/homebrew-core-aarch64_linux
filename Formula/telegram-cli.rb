@@ -22,7 +22,7 @@ class TelegramCli < Formula
 
   # "This project is deprecated and is no longer being maintained.
   # Last commit was in 2016
-  disable! date: "2022-07-31", because: :unmaintained
+  deprecate! date: "2021-06-30", because: :unmaintained
 
   depends_on "pkg-config" => :build
   depends_on "jansson"

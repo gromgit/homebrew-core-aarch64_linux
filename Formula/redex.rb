@@ -4,7 +4,7 @@ class Redex < Formula
   desc "Bytecode optimizer for Android apps"
   homepage "https://fbredex.com"
   license "MIT"
-  revision 9
+  revision 8
   head "https://github.com/facebook/redex.git", branch: "master"
 
   stable do
@@ -24,12 +24,12 @@ class Redex < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "dd5ec19e7919239cf3f906bb0d16ba4114945f44f1470530a3e1ab8fe219f3dc"
-    sha256 cellar: :any,                 arm64_big_sur:  "1f1942d7c6c849b2336e921f6f77db0704cbcb955c2e06af4ccdaa629423f1eb"
-    sha256 cellar: :any,                 monterey:       "19f45b260decbb885fde0107a4fed79a2ed66fa8cf1d7d2ccd7718e5560d1b6d"
-    sha256 cellar: :any,                 big_sur:        "62e35cba759963eb03e4122c3f84a423d4e42a912f5ab7d6e5a5eb3631da254e"
-    sha256 cellar: :any,                 catalina:       "98944545fb55598e013b744caa056c1f1f01ccc34b8420a1ced30f2810ca2a52"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "304251956174c7f3506f02b5ebc4b30a8942f7e0d5783df59a8f2c62dce66432"
+    sha256 cellar: :any,                 arm64_monterey: "a163d4757ff1c42ac50de19779a2b5d50c17ef4be5bc0be4c0fad6daaa267af9"
+    sha256 cellar: :any,                 arm64_big_sur:  "ae66fa7a064e03be1b6547e0f922ecb192674697df74472c24f981f551c022cb"
+    sha256 cellar: :any,                 monterey:       "b7cdcc65eb07f62e1483cf9ed47d2002d8bc315207f4071388444ec511dd0938"
+    sha256 cellar: :any,                 big_sur:        "00629b3e7e7018c6695fe2d6a8db1c26d543662a3c30db8de461c98525076542"
+    sha256 cellar: :any,                 catalina:       "9d1e529b8d4645e7d0daeedb4b16d84e9f22e14c52b91c87430e53d863688329"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f1fb9e4c3b69e8f063212416c6f6b99c6b9a877bd4d8837296fbdeaf5ff0942"
   end
 
   depends_on "autoconf" => :build

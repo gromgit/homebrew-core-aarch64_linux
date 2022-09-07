@@ -1,10 +1,9 @@
 class GitSvn < Formula
   desc "Bidirectional operation between a Subversion repository and Git"
   homepage "https://git-scm.com"
-  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.37.3.tar.xz"
-  sha256 "814641d7f61659cfbc17825d0462499ca1403e39ff53d76a8512050e6483e87a"
+  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.36.1.tar.xz"
+  sha256 "405d4a0ff6e818d1f12b3e92e1ac060f612adcb454f6299f70583058cb508370"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/git/git.git", branch: "master"
 
   livecheck do
@@ -12,12 +11,12 @@ class GitSvn < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a54faf3c9f04acdbf422dbb81721fd871b387a8535c8716d2886bc09cc907b3b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c6d0c0edafdf5de860e2dfccd058de644e87020fb06161b2a5736634596c7c7b"
-    sha256 cellar: :any_skip_relocation, monterey:       "a54faf3c9f04acdbf422dbb81721fd871b387a8535c8716d2886bc09cc907b3b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c6d0c0edafdf5de860e2dfccd058de644e87020fb06161b2a5736634596c7c7b"
-    sha256 cellar: :any_skip_relocation, catalina:       "7266ffbab19efcaa9d40a8f3159bf7032c8c2bc99daa26a9cbf183c2a82a24d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "656959c9cb47146837622f05d14027f2cb7eecffae8c32567276984694c29fba"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a9c92a602a9038f3876c93acedd436a2d880ed037b2e3b0eefb9ba891584d853"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f2bd8ca50a71ae14b96a96f6042a5163db53c3cac805df690902048a1dcf0142"
+    sha256 cellar: :any_skip_relocation, monterey:       "a9c92a602a9038f3876c93acedd436a2d880ed037b2e3b0eefb9ba891584d853"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f2bd8ca50a71ae14b96a96f6042a5163db53c3cac805df690902048a1dcf0142"
+    sha256 cellar: :any_skip_relocation, catalina:       "447710705737995382789cc973954c1b16771a52e35971a0511548fd167d808e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2f2c906f05d9f4aad36ccbd83b8008f325c4d2650a07c23270285e84eee21d7"
   end
 
   depends_on "git"
@@ -31,9 +30,7 @@ class GitSvn < Formula
                                             .match(/v((\d+\.\d+)(?:\.\d+)?)/).captures
 
     ENV["PERL_PATH"] = perl
-    subversion = Formula["subversion"]
-    os_tag = OS.mac? ? "darwin-thread-multi-2level" : "x86_64-linux-thread-multi"
-    ENV["PERLLIB_EXTRA"] = subversion.opt_lib/"perl5/site_perl"/perl_version/os_tag
+    ENV["PERLLIB_EXTRA"] = Formula["subversion"].opt_lib/"perl5/site_perl"/perl_version/"darwin-thread-multi-2level"
     if OS.mac?
       ENV["PERLLIB_EXTRA"] += ":" + %W[
         #{MacOS.active_developer_dir}

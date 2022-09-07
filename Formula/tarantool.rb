@@ -1,10 +1,9 @@
 class Tarantool < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://download.tarantool.org/tarantool/src/tarantool-2.10.2.tar.gz"
-  sha256 "2873992c88a7f549d953d9bc155e102300a78af24eb928fb40b642b2d1aca0ae"
+  url "https://download.tarantool.org/tarantool/2.8/src/tarantool-2.8.4.0.tar.gz"
+  sha256 "6fc0b70aedd00c2328aa49dbb0ae9320eabf7266927f5e0790ff1a2ca67aa988"
   license "BSD-2-Clause"
-  revision 1
   version_scheme 1
   head "https://github.com/tarantool/tarantool.git", branch: "master"
 
@@ -14,18 +13,18 @@ class Tarantool < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "68923a6eafab8d61f0e4af4cc464a87c19e25a8b5f25d80c974062d5e5b7c779"
-    sha256 cellar: :any,                 arm64_big_sur:  "d750f5fa03336aa57dd2929e179da3c2535501ba7c21ca5d785b03de14c452b3"
-    sha256                               monterey:       "1c4383b5c82344730574669cfdf0eb3686165bd6e13685d361b8c38018a4ea1d"
-    sha256                               big_sur:        "8292d82ce5bf7111ddd14889304a6880902911d9b4f4ddd850768c3ae2c93c36"
-    sha256                               catalina:       "03be144a864ff9c821f745e1dacf4645329f49e495ee8579a60a71dab13d7223"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62a9293ccdd5b30b32426c322a5dd737a53cba4ed4de1584fb75ca2d1dca9e35"
+    sha256 cellar: :any,                 arm64_monterey: "fa79d91a265eaadd770342ed9a3276b53c516da511215a11871bb79dc3eddf33"
+    sha256 cellar: :any,                 arm64_big_sur:  "dd4db0ad19a1c866a78c7ffb5cd2d87cfdc95b8a211fc4dc428834a435adf212"
+    sha256                               monterey:       "19ee9ea24c9a5a6a6dd2b11b6aba159bc3895a926f8572fe171e300ad429c06b"
+    sha256                               big_sur:        "ad4032bfd88b4dc363b177db6dce6523985af9c5cebda4fdf0b60285387f9447"
+    sha256                               catalina:       "1121a774b704ed8dd5d8ccd5f430fbbcafb91edd848e2a7dab8e44a734dc0741"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0c5a7a2dfa937156ba3a2b0ef8fc0c833e2a1eda4862d9714f3fd3873e36a1e"
   end
 
   depends_on "cmake" => :build
   depends_on "icu4c"
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
   depends_on "readline"
   depends_on "zstd"
 

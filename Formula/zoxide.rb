@@ -1,17 +1,17 @@
 class Zoxide < Formula
   desc "Shell extension to navigate your filesystem faster"
   homepage "https://github.com/ajeetdsouza/zoxide"
-  url "https://github.com/ajeetdsouza/zoxide/archive/v0.8.3.tar.gz"
-  sha256 "eb1839a4ab0ce7680c5a97dc753d006d5604b71c41a77047e981a439ac3b9de6"
+  url "https://github.com/ajeetdsouza/zoxide/archive/v0.8.1.tar.gz"
+  sha256 "89002fe436b2a268b84a7e651cfd20d4b58ebc021c4e41d650af072d1c09f1d9"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c4b765fc1f5de400790541744e2405b7419706edc380361dd55db988ebbe2a8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0bc18f6f0ccb882273a2fc13887dcc19acdb8534ea5a4b678ac7bb0d7dee25c9"
-    sha256 cellar: :any_skip_relocation, monterey:       "46ecf574f1aae6775497692e72dc23106627ff8924d055a85d1b5573c33d2a8a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9ac7190f36c3d29f98385b621d6a72274a1dba78cf7e3dd613bc2c2cec4a1c27"
-    sha256 cellar: :any_skip_relocation, catalina:       "4f0b6d0a0266fde65462dd30c676e9af066a0cf3bcc061cb70f6a80a379d402c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "518af8008a52ad206b92820ce1dca7eb713bdf63f4ba6509eca3441ef9b8b810"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b2d16f68c91366e37c2e43b848e0c60c1ba1acc0439e526a404fdb598997b31"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "505d07fcd2b5c2b0dac778f5453a6e619c4dfd79d8b4e715c57ca61384afb527"
+    sha256 cellar: :any_skip_relocation, monterey:       "dcf89db8e4bc31ea079217991fb8c60604b5b5f5b472395de3c161a288aa901d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9e3dbe9ce30a09ff75a61d88fe1f6e3b825d8953517e5cad3a1c938ef9c6898e"
+    sha256 cellar: :any_skip_relocation, catalina:       "c546ee501c536e5fd210f64f75b7c6c097cb5334e798647d5e6b22c320c10147"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4595f05c5f6ea9dde7920ef72037e167850cb4e734466ca6d3c784409cf16f06"
   end
 
   depends_on "rust" => :build
@@ -21,7 +21,6 @@ class Zoxide < Formula
     bash_completion.install "contrib/completions/zoxide.bash" => "zoxide"
     zsh_completion.install "contrib/completions/_zoxide"
     fish_completion.install "contrib/completions/zoxide.fish"
-    share.install "man"
   end
 
   test do

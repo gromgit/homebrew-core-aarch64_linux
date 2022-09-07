@@ -3,24 +3,22 @@ require "language/node"
 class Postgraphile < Formula
   desc "GraphQL schema created by reflection over a PostgreSQL schema 🐘"
   homepage "https://www.graphile.org/postgraphile/"
-  url "https://registry.npmjs.org/postgraphile/-/postgraphile-4.12.11.tgz"
-  sha256 "553191171d304b35846d8fc8c40beace5649f85982d4363da13b992fd2aad3d3"
+  url "https://registry.npmjs.org/postgraphile/-/postgraphile-4.12.10.tgz"
+  sha256 "83c7045124f3d0f60f6adba0b8d6c174af2a50b05b619387c4012931120d3283"
   license "MIT"
-  revision 1
   head "https://github.com/graphile/postgraphile.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6b0955cb25afd5de00af7cdf76795cc05e59c6e5400a4d77549d34dd491fe37"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6b0955cb25afd5de00af7cdf76795cc05e59c6e5400a4d77549d34dd491fe37"
-    sha256 cellar: :any_skip_relocation, monterey:       "691b74c540b3b2011c1717f84a1b3c15b7a875365b37e42fb71b7821e228fc89"
-    sha256 cellar: :any_skip_relocation, big_sur:        "691b74c540b3b2011c1717f84a1b3c15b7a875365b37e42fb71b7821e228fc89"
-    sha256 cellar: :any_skip_relocation, catalina:       "691b74c540b3b2011c1717f84a1b3c15b7a875365b37e42fb71b7821e228fc89"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6b0955cb25afd5de00af7cdf76795cc05e59c6e5400a4d77549d34dd491fe37"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4077e72a27adf3f1119ca5327cfd2050a5f42d5637bb2863fca73eb3fa9350a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4077e72a27adf3f1119ca5327cfd2050a5f42d5637bb2863fca73eb3fa9350a"
+    sha256 cellar: :any_skip_relocation, monterey:       "6951deaa5bdac3191c2e57314dac3a71c94ba71823ef040298e56ecb2d2122cf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6951deaa5bdac3191c2e57314dac3a71c94ba71823ef040298e56ecb2d2122cf"
+    sha256 cellar: :any_skip_relocation, catalina:       "6951deaa5bdac3191c2e57314dac3a71c94ba71823ef040298e56ecb2d2122cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4077e72a27adf3f1119ca5327cfd2050a5f42d5637bb2863fca73eb3fa9350a"
   end
 
-  depends_on "postgresql@14" => :test
   depends_on "node"
+  depends_on "postgresql"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
@@ -30,7 +28,7 @@ class Postgraphile < Formula
   test do
     assert_match "postgraphile", shell_output("#{bin}/postgraphile --help")
 
-    pg_bin = Formula["postgresql@14"].opt_bin
+    pg_bin = Formula["postgresql"].opt_bin
     system "#{pg_bin}/initdb", "-D", testpath/"test"
     pid = fork do
       exec("#{pg_bin}/postgres", "-D", testpath/"test")

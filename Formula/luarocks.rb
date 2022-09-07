@@ -1,8 +1,8 @@
 class Luarocks < Formula
   desc "Package manager for the Lua programming language"
   homepage "https://luarocks.org/"
-  url "https://luarocks.org/releases/luarocks-3.9.1.tar.gz"
-  sha256 "ffafd83b1c42aa38042166a59ac3b618c838ce4e63f4ace9d961a5679ef58253"
+  url "https://luarocks.org/releases/luarocks-3.9.0.tar.gz"
+  sha256 "5e840f0224891de96be4139e9475d3b1de7af3a32b95c1bdf05394563c60175f"
   license "MIT"
   head "https://github.com/luarocks/luarocks.git", branch: "master"
 
@@ -12,12 +12,12 @@ class Luarocks < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c2fcf803a9a182998eb4e0a674edc53fb98b75725fb390aa112b33bfab40298"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c2fcf803a9a182998eb4e0a674edc53fb98b75725fb390aa112b33bfab40298"
-    sha256 cellar: :any_skip_relocation, monterey:       "da96512ca94b72a6fb60859da82fd31f1428d5a2e016e082982a284d1873ba5b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "da96512ca94b72a6fb60859da82fd31f1428d5a2e016e082982a284d1873ba5b"
-    sha256 cellar: :any_skip_relocation, catalina:       "da96512ca94b72a6fb60859da82fd31f1428d5a2e016e082982a284d1873ba5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c2fcf803a9a182998eb4e0a674edc53fb98b75725fb390aa112b33bfab40298"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "76de7f329ce7581667043bab3d2676dcbe238167296c998881ef22621a1d157f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76de7f329ce7581667043bab3d2676dcbe238167296c998881ef22621a1d157f"
+    sha256 cellar: :any_skip_relocation, monterey:       "3d91ab635009813c54df5bc47909d29399c3c771553b25294cef3c57bd3dc0d3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3d91ab635009813c54df5bc47909d29399c3c771553b25294cef3c57bd3dc0d3"
+    sha256 cellar: :any_skip_relocation, catalina:       "3d91ab635009813c54df5bc47909d29399c3c771553b25294cef3c57bd3dc0d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76de7f329ce7581667043bab3d2676dcbe238167296c998881ef22621a1d157f"
   end
 
   depends_on "lua@5.1" => :test

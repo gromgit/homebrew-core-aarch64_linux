@@ -1,17 +1,18 @@
 class Virtuoso < Formula
   desc "High-performance object-relational SQL database"
   homepage "https://virtuoso.openlinksw.com/wiki/main/"
-  url "https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.7/virtuoso-opensource-7.2.7.tar.gz"
-  sha256 "02480b930d5fb414cb328f10cfd200faa658adc10f9c68ef7034c6aa81a5a3a0"
+  url "https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.6.1/virtuoso-opensource-7.2.6.tar.gz"
+  sha256 "38fd3c037aef62fcc7c28de5c0d6c2577d4bb19809e71421fc42093ed4d1c753"
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c30c0e74ff6eabda834e2df9c46df1b201f759b94969c811a893a78549500383"
-    sha256 cellar: :any,                 arm64_big_sur:  "4dca442e00b50e886d6fb23d6d58824a4d215611b9396c5816e30e335ef046ad"
-    sha256 cellar: :any,                 monterey:       "b64f134ad74f950684c3ecc47ad1aaf7a29f2a9e8b93c32f662c809ffc16e86c"
-    sha256 cellar: :any,                 big_sur:        "1dfdebfe41f249a57d48db33ba0a5f96a1c11671f720f0f33dbb20eb641f0a31"
-    sha256 cellar: :any,                 catalina:       "7259a7caa010744dc03e8945fd05e6f96066206a5ff54f3471a67d31b5c4357f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "383edea95dbe7e7343f9ecea389d73f864ef13d978dd05dc1f9f9db06d485f7b"
+    sha256 cellar: :any,                 arm64_monterey: "80cff43493d2981f14ec84848d5951a239a1ffe307bc030e7fed2ebc48234303"
+    sha256 cellar: :any,                 arm64_big_sur:  "07dd74a255eadcb7bf6cc41d3e07445a992069e5ab9072dc24a8f02fd98dcf74"
+    sha256 cellar: :any,                 monterey:       "dfd970140bb4e7a212d2fa8c4be8a45a75d643fa247ed185d1fc6607ff044e76"
+    sha256 cellar: :any,                 big_sur:        "d35c507e655a9b900986b609bb232f30c811cbfb4f3ec20d60d1146059ba5305"
+    sha256 cellar: :any,                 catalina:       "bb672169382bf5faa77845765420adc91f5af1e46239e1f9d45d187b2f335570"
+    sha256 cellar: :any,                 mojave:         "e19a2320912ff23b8f0a4926ee3c830d1bbbc9388fbe21634cbecf919e17f708"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d396498868d1529455ff98c3432df539f5c0acecc2f807c7d5f49e1cf10d3267"
   end
 
   head do

@@ -18,10 +18,7 @@ class X265 < Formula
   end
 
   depends_on "cmake" => :build
-
-  on_intel do
-    depends_on "nasm" => :build
-  end
+  depends_on "nasm" => :build if Hardware::CPU.intel?
 
   def install
     # Build based off the script at ./build/linux/multilib.sh

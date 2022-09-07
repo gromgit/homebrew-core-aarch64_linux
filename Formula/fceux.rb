@@ -5,16 +5,15 @@ class Fceux < Formula
       tag:      "fceux-2.6.4",
       revision: "2b8c61802029721229a26592e4578f92efe814fb"
   license "GPL-2.0-only"
-  revision 2
   head "https://github.com/TASEmulators/fceux.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "014868c8f0454c13fb6ad090a4335c8348fc630bc95f7382b811498cf8991bac"
-    sha256 cellar: :any,                 arm64_big_sur:  "530a4dd105ea8da50b1bcddc1a729b3788af6a817f8864a7af7c9bc3c1376f01"
-    sha256 cellar: :any,                 monterey:       "4c5b724f4e3466dd522f875a5419a57353e9c8dd493562dc7ae35d4ff2f976df"
-    sha256 cellar: :any,                 big_sur:        "e131aa7191a0a861b2b6c667bd0b42a2bb9e763e96a8e5ef6083d7083ebce88d"
-    sha256 cellar: :any,                 catalina:       "7e3b7db25b0357708a66d3c8fa64599cbf0128bc4cb198842958796cce9a4e45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d417b558825996c6281881206d0493d6ee914f38b51bedfdf7fc9dd3b66436e6"
+    sha256 cellar: :any,                 arm64_monterey: "a7ac18f8e1221409874e872318e229ca6ca270595ea15cb8c853427ac27ad996"
+    sha256 cellar: :any,                 arm64_big_sur:  "f7e4af1e770902a76a64fcc706fdacf9809d46f9fa092ba9f357d604f319614d"
+    sha256 cellar: :any,                 monterey:       "a6d390d50682f2d6d22aa580fcca45dcf3cff770ab19ab83406978e424f6d3b2"
+    sha256 cellar: :any,                 big_sur:        "bf62cad3e814927db5429ba30f3510bb548b847b0536e0e8b46ac542a256ed2c"
+    sha256 cellar: :any,                 catalina:       "c94d8959edef6a194bd66cbd25a7c159147ab3bcb115f9e3e02b10312c260ac0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27f5349487de04e9a322aac9d3c1fb3930b044f386b5ea6c75afdccb9aa23c0f"
   end
 
   depends_on "cmake" => :build
@@ -27,7 +26,6 @@ class Fceux < Formula
 
   on_linux do
     depends_on "gcc"
-    depends_on "mesa-glu"
   end
 
   fails_with gcc: "5"

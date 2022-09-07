@@ -10,14 +10,8 @@ class Fdclone < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "770b2d767ccfa06c3fe7a4066b59a9e067b27a2f719bac604a1588c7ec57c134"
-    sha256 arm64_big_sur:  "e4346ef1c465a9753d44998015f004ef76d49f35b57e224c4c74da48fa00a226"
-    sha256 monterey:       "6468c945d2556066eab41175891ea46918c319398a2f10767a0af4d4dc698c9f"
-    sha256 big_sur:        "c1c2dcd4d0e97e717dd9444c9ac8b37d77810c8162a481106d68be3c54f999a9"
-    sha256 catalina:       "6272d033132a7a2c355ab19629241021087c606de3114e2ebe4aa301e6bee840"
-    sha256 mojave:         "b3a56f6b62622696f4da6554a487557a57c0875c2aba28705e300b7207f6a8ce"
-    sha256 high_sierra:    "f894bed33d254c5c48341485e835f945b60e632a0ecbf484c818f12c61350122"
-    sha256 x86_64_linux:   "b7a4047ede40d7981d2496e42cf32f2886a9bb182a2275f4697b70f20ec5f7f3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fdclone"
+    sha256 aarch64_linux: "781573e4a3c934907241a8ffd6af46b431d4fa352d2a6a4f0a1b9a22167b8e1a"
   end
 
   depends_on "nkf" => :build

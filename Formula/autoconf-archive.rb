@@ -1,18 +1,18 @@
 class AutoconfArchive < Formula
   desc "Collection of over 500 reusable autoconf macros"
   homepage "https://savannah.gnu.org/projects/autoconf-archive/"
-  url "https://ftp.gnu.org/gnu/autoconf-archive/autoconf-archive-2022.09.03.tar.xz"
-  mirror "https://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2022.09.03.tar.xz"
-  sha256 "e07454f00d8cae7907bed42d0747798927809947684d94c37207a4d63a32f423"
+  url "https://ftp.gnu.org/gnu/autoconf-archive/autoconf-archive-2022.02.11.tar.xz"
+  mirror "https://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2022.02.11.tar.xz"
+  sha256 "78a61b611e2eeb55a89e0398e0ce387bcaf57fe2dd53c6fe427130f777ad1e8c"
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "07da3d145d395749125f2402925fd6995056bf303f9514ed9018cb9140b8d2fd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07da3d145d395749125f2402925fd6995056bf303f9514ed9018cb9140b8d2fd"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7e7b1edebfa9d71d86a1885139b5271986eaddb691f5a5b826337910595fe68"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7e7b1edebfa9d71d86a1885139b5271986eaddb691f5a5b826337910595fe68"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7e7b1edebfa9d71d86a1885139b5271986eaddb691f5a5b826337910595fe68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e8d9592853fb11e37c161cf4eba16e4ba34b1720ac61d016793ca5ab7d34e19"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "51d456417fb685f2b9f8a84a4ad1e2f1e37ff6f8208da706aaf5842a1ea51469"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51d456417fb685f2b9f8a84a4ad1e2f1e37ff6f8208da706aaf5842a1ea51469"
+    sha256 cellar: :any_skip_relocation, monterey:       "f3953a023045de5ffaf8d9a9b0821e3935b1e98e0bc34b38ae0f48f14e70a57f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f3953a023045de5ffaf8d9a9b0821e3935b1e98e0bc34b38ae0f48f14e70a57f"
+    sha256 cellar: :any_skip_relocation, catalina:       "f3953a023045de5ffaf8d9a9b0821e3935b1e98e0bc34b38ae0f48f14e70a57f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51d456417fb685f2b9f8a84a4ad1e2f1e37ff6f8208da706aaf5842a1ea51469"
   end
 
   # autoconf-archive is useless without autoconf

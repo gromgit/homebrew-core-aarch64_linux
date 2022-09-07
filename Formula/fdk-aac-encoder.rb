@@ -1,17 +1,18 @@
 class FdkAacEncoder < Formula
   desc "Command-line encoder frontend for libfdk-aac"
   homepage "https://github.com/nu774/fdkaac"
-  url "https://github.com/nu774/fdkaac/archive/v1.0.3.tar.gz"
-  sha256 "ee444518353833b2b8f1b106bb4d9e9c15ae4d48569be9b6c89fc38dabf364b7"
+  url "https://github.com/nu774/fdkaac/archive/v1.0.2.tar.gz"
+  sha256 "8a0b67792605fb8955d6be78a81e3a4029e9b7d0f594d8ed76e0fbcef90be0c8"
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bef622b7d5d4026b6d8615f6a747bcf0128826cfabe9bbe3cce6c0cd139591b9"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd84a279e61d463b1651f1bc2c4fef060f6bc0059cf25c798a2161123cf1368b"
-    sha256 cellar: :any,                 monterey:       "9903add3d37f84fd89d0ba40c8f719a093126dbe5f47c4639c3399109fb855e1"
-    sha256 cellar: :any,                 big_sur:        "f9103b8b675603ca90b3e7f4efb0074a1452e9852d1a1659d2f59a5a025a8c83"
-    sha256 cellar: :any,                 catalina:       "6de255d18252acbcc3e0b8214b9eb46c3c4d2a29b46e6cc15bc7cbc81cd61115"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e40141a65ef6f0c04974df102db68f08866701c9b2e018efcb2c11e84253174f"
+    sha256 cellar: :any,                 arm64_monterey: "f6f1db7001098e01b65cbf58a080895930b2e2fa51661a3554728c0edb6466da"
+    sha256 cellar: :any,                 arm64_big_sur:  "50284ef03649e17c800e516cb0f8bcbfc97f891e042e0e84b4e7c91495fcdb0d"
+    sha256 cellar: :any,                 monterey:       "dc1daeb7c994fe9f18b22c69e14bd3cecae40112a517974808ab898d84651142"
+    sha256 cellar: :any,                 big_sur:        "32240adad3bc3e6fe29d1c6a29909024a203aaa5167fd4a93b8b4383edb65186"
+    sha256 cellar: :any,                 catalina:       "c4da455a74f28dd39f1c2be168cc08711921c00a7fe2fc2779b80eb57e96af29"
+    sha256 cellar: :any,                 mojave:         "09c58b1dac4628d28a357542d9af2e000067804ad0523ece1121016172626c87"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90035c40a5fe78912b589404d5cf5c28ac2c807d5299e681def8e29226d15d8e"
   end
 
   depends_on "autoconf" => :build

@@ -1,32 +1,30 @@
 class Snort < Formula
   desc "Flexible Network Intrusion Detection System"
   homepage "https://www.snort.org"
-  url "https://github.com/snort3/snort3/archive/3.1.40.0.tar.gz"
-  mirror "https://fossies.org/linux/misc/snort3-3.1.40.0.tar.gz"
-  sha256 "d787d954f21d4cd6a048e10b8c53c78cb6287ec448108fc573b951639c8947b3"
+  url "https://github.com/snort3/snort3/archive/3.1.28.0.tar.gz"
+  mirror "https://fossies.org/linux/misc/snort3-3.1.28.0.tar.gz"
+  sha256 "0322ac1c22321eb908b46d36b53ca3eada2d4f7e48deda4eff22d648695b84ea"
   license "GPL-2.0-only"
   head "https://github.com/snort3/snort3.git", branch: "master"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1ff733b5d42a34bd7c1201cc5f44d784cc8c8b01e69f0258c85b7c8046c2c445"
-    sha256 cellar: :any,                 arm64_big_sur:  "db56d54b92b9643543c2ed91b4f3c8c606142d04c6d6c049e93129178fa9dfaf"
-    sha256 cellar: :any,                 monterey:       "20e1a444c77f26146c10cf8198288bf5c59ac7628dcfa7becf69731a4bdca67d"
-    sha256 cellar: :any,                 big_sur:        "02f8c51485ff2d931fc11bafb285641e30db34807b779484379710ea30a4c368"
-    sha256 cellar: :any,                 catalina:       "f66ce4ae431c538b08dfd2f9b2fe24fdbb30e79cb1639cb41bcf4ad020311670"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0eee8ef9668013e6cb29b1ba8629f936607740edfb23f742c02326da3d1614a8"
+    sha256 cellar: :any,                 arm64_monterey: "b1093afbc0ca0422b20db86c095ef62f3c68d79ee3be513aa7852df6705059d3"
+    sha256 cellar: :any,                 arm64_big_sur:  "08c3a2be04ac4dba1e5c03d40cf907d8444ab526b74dccb63a85563d8db7962d"
+    sha256 cellar: :any,                 monterey:       "e56f75b6104d1e3be16a70abcd6f1599acb36cf91c54880b9020b1334c5ac4ba"
+    sha256 cellar: :any,                 big_sur:        "b236989b7deef0e417617031b11f2bac69e68fc79f50706b7986e1055f764003"
+    sha256 cellar: :any,                 catalina:       "87a942941b2e52cda97f5d862ea724573b327847800541c873e04ea8d3dc3251"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d91df45fec1012771a6801c323e55271c5b89f811f50f981b981bf38b39bcaa"
   end
 
   depends_on "cmake" => :build
+  depends_on "flatbuffers" => :build
   depends_on "flex" => :build # need flex>=2.6.0
   depends_on "pkg-config" => :build
   depends_on "daq"
   depends_on "gperftools" # for tcmalloc
   depends_on "hwloc"
+  # Hyperscan improves IPS performance, but is only available for x86_64 arch.
+  depends_on "hyperscan" if Hardware::CPU.intel?
   depends_on "libdnet"
   depends_on "libpcap" # macOS version segfaults
   depends_on "luajit-openresty"
@@ -37,13 +35,8 @@ class Snort < Formula
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "gcc"
     depends_on "libunwind"
-  end
-
-  # Hyperscan improves IPS performance, but is only available for x86_64 arch.
-  on_intel do
-    depends_on "hyperscan"
+    depends_on "gcc"
   end
 
   fails_with gcc: "5"
@@ -58,6 +51,12 @@ class Snort < Formula
     # These flags are not needed for LuaJIT 2.1 (Ref: https://luajit.org/install.html).
     # On Apple ARM, building with flags results in broken binaries and they need to be removed.
     inreplace "cmake/FindLuaJIT.cmake", " -pagezero_size 10000 -image_base 100000000\"", "\""
+
+    # Starting with flatbuffers 2.0.6, the function flatbuffer_version_string was renamed to
+    # flatbuffers_version_string. Upstream issue at https://github.com/snort3/snort3/issues/235.
+    inreplace "src/utils/util.cc",
+              "flatbuffers::flatbuffer_version_string",
+              "flatbuffers::flatbuffers_version_string()"
 
     mkdir "build" do
       system "cmake", "..", *std_cmake_args, "-DENABLE_TCMALLOC=ON"

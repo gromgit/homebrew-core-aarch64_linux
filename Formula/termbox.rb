@@ -7,12 +7,8 @@ class Termbox < Formula
   head "https://github.com/termbox/termbox.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a1371f4a993d30d381ab3bf5ea2fda669e23f0ea982c3de4c6bf8b01a2ec1747"
-    sha256 cellar: :any,                 arm64_big_sur:  "ed78a6e1ccf8220eea8b25a1d836c72eb3c505f01d1886e367dd4563316f7ac3"
-    sha256 cellar: :any,                 monterey:       "b1f84d69e57749e830ca1b95c627a8a0eae4f743c5fda140f6c73df685cecd57"
-    sha256 cellar: :any,                 big_sur:        "31e50d5d18789baf3012c36fc3230e7268b044db64c7466e9c1b2ac5e0d62eb0"
-    sha256 cellar: :any,                 catalina:       "1366318342e7c939466f699a6d5116b8d5581af33bddc0724d4c9a622e1f0d75"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96b1a190d17aaf736b5a592ef9a594458d58871360af83cfea7823881d4a1a1d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/termbox"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "17babd73b935edb6223d6e821459fe612fe0cb2ab4bb85fd2cdf20c0f5bd2a74"
   end
 
   def install

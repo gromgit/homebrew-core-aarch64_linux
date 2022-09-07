@@ -38,16 +38,14 @@ class VapoursynthOcr < Formula
       "install_dir : join_paths(vapoursynth_dep.get_pkgconfig_variable('libdir'), 'vapoursynth')",
       "install_dir : '#{lib}/vapoursynth'"
 
-    system "meson", *std_meson_args, "build"
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
-    python = Formula["vapoursynth"].deps
-                                   .find { |d| d.name.match?(/^python@\d\.\d+$/) }
-                                   .to_formula
-                                   .opt_bin/"python3"
-    system python, "-c", "from vapoursynth import core; core.ocr"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "from vapoursynth import core; core.ocr"
   end
 end

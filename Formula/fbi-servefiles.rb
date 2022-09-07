@@ -16,7 +16,7 @@ class FbiServefiles < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "093d05e4e564d7dbc6bc426f573389b5ee9d20312f6be354e5dc27f1d9be08bc"
   end
 
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2020-11-12", because: :repo_archived
 
   depends_on "python@3.10"
 
@@ -25,18 +25,18 @@ class FbiServefiles < Formula
     venv.pip_install_and_link buildpath/"servefiles"
   end
 
-  def test_socket
-    server = TCPServer.new(5000)
-    client = server.accept
-    client.puts "\n"
-    client_response = client.gets
-    client.close
-    server.close
-    client_response
-  end
-
   test do
     require "socket"
+
+    def test_socket
+      server = TCPServer.new(5000)
+      client = server.accept
+      client.puts "\n"
+      client_response = client.gets
+      client.close
+      server.close
+      client_response
+    end
 
     begin
       pid = fork do

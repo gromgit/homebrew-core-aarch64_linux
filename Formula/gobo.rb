@@ -11,7 +11,6 @@ class Gobo < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "930a459b40e131dc3076dc1f4aafaa3e58dcc7173134e7f162145040ee4bfd68"
     sha256 cellar: :any_skip_relocation, big_sur:        "a26f0cf33aebe2dca17fc9ad9b1741530e789d9ab4e289245fe8886fcddf65ef"
     sha256 cellar: :any_skip_relocation, catalina:       "c8eea87acca4311c744bcd7aa7444d41728e157d778b12a6c24923173ebab77e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff95ec6c9c2a1785e6ff593ca1fcd658f2b46e080bd956bd7ece4a01db6e3ac9"
   end
 
   depends_on "eiffelstudio" => :test
@@ -19,10 +18,7 @@ class Gobo < Formula
   def install
     ENV["GOBO"] = buildpath
     ENV.prepend_path "PATH", buildpath/"bin"
-    # The value for compiler needs to be an unversioned name, but it will still use
-    # the compiler shim which will choose the correct compiler.
-    compiler = OS.mac? ? "clang" : "gcc"
-    system buildpath/"bin/install.sh", "-v", "--threads=#{ENV.make_jobs}", compiler
+    system buildpath/"bin/install.sh", "-v", "--threads=#{ENV.make_jobs}", ENV.compiler
     (prefix/"gobo").install Dir[buildpath/"*"]
     (Pathname.glob prefix/"gobo/bin/ge*").each do |p|
       (bin/p.basename).write_env_script p,

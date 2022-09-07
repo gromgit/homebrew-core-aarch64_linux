@@ -11,7 +11,8 @@ class LibnetfilterQueue < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "bdf2add88a3b0b9bd7be4498abbf4a7caa052e2bac225908cffbc2b46d39ee66"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libnetfilter-queue"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dbc2557b40379e920ae71465ef0ca507d920018b6e941d13a13b536d1cb58b28"
   end
 
   depends_on "pkg-config" => :build

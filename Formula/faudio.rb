@@ -1,18 +1,18 @@
 class Faudio < Formula
   desc "Accuracy-focused XAudio reimplementation for open platforms"
   homepage "https://fna-xna.github.io/"
-  url "https://github.com/FNA-XNA/FAudio/archive/22.09.01.tar.gz"
-  sha256 "316df7ce4067995e96d0ca0c96bbe3a73da0c0252c9923623450d07d85fc1c24"
+  url "https://github.com/FNA-XNA/FAudio/archive/22.05.tar.gz"
+  sha256 "d1e68f6cf4413aafc027c485796e9162ae5fb0df29bbf1cdb31ac7861b67f72a"
   license "Zlib"
   head "https://github.com/FNA-XNA/FAudio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "08daf37d124cabebb3f7072bc5d5f1ed13d0a39ddc79f4faf6ab5c9c8d3835cf"
-    sha256 cellar: :any,                 arm64_big_sur:  "3c9d4d22b1cd6e097a0af35d8cd99d4ee052245e2542dab1770bf9630e5c9f34"
-    sha256 cellar: :any,                 monterey:       "ade5bf3d8e61519e2ddca5d637356773b57aed450d4877d0dfa52d6a37b182d2"
-    sha256 cellar: :any,                 big_sur:        "8dc1c741b7d0611b5373a11cebcf0a8665045c04921939b1224c2a32d8064748"
-    sha256 cellar: :any,                 catalina:       "a79a258b51d2b5cbc86542d244e9c868d173fbaed2ec974074e4cb698aaca479"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e71acfdeed59a461bb2bbeec826007ae705cab6c7f7a86a1f21403fccdd48c6"
+    sha256 cellar: :any,                 arm64_monterey: "56d483f0b97246e8c207c4440e2bdaf5e93a6a3c51c15802d50040ce95ab11e8"
+    sha256 cellar: :any,                 arm64_big_sur:  "b04fd450e6c78234d0f492b442c70099c7d8544e7be97d9a1cd793302852f731"
+    sha256 cellar: :any,                 monterey:       "34e560a4bd19303bb55c70c81d2f6d975e40c1aa38a1dad1335b896fcc53410b"
+    sha256 cellar: :any,                 big_sur:        "0aa18a2af5818382ce6999d6eba103a3cedabdd47d475bd7b99479c51de47800"
+    sha256 cellar: :any,                 catalina:       "e651be8cfc29db33f34617a6544e6421cbd7a7bb9e64bad1f122105afbb62bd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff972204d9070d9835ac2d1e504ad267c86212ba4583e871988889c2bcee8eb0"
   end
 
   depends_on "cmake" => :build

@@ -1,7 +1,7 @@
 class Liblqr < Formula
   desc "C/C++ seam carving library"
   homepage "https://liblqr.wikidot.com/"
-  license "LGPL-3.0-only"
+  license "LGPL-3.0"
   revision 1
   head "https://github.com/carlobaldassi/liblqr.git", branch: "master"
 
@@ -17,43 +17,23 @@ class Liblqr < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "fb32db288c0fd8f9c45f1de75896b354542ef6a7f5cc0a24282c3b1766acfae5"
-    sha256 cellar: :any,                 arm64_big_sur:  "7e7dcc285c326d8a9a0a79c63fd7b1664be895531ff4f6457a77153605d6897e"
-    sha256 cellar: :any,                 monterey:       "7a39de7c269870d6ce8978eaa899aa378c9a02fb2e4c3ef8bdd22bb08a050f58"
-    sha256 cellar: :any,                 big_sur:        "a0e88a1ce13ce43c2bf0fb0e4bdd7e9d33a367245d2ebf0f0d8dfe283666be7c"
-    sha256 cellar: :any,                 catalina:       "cd43ea7ec18f81334585dade45d03d1bafe2039c1308d41d7049eafdad5059b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11cfab7a9ac36b9ca2d2f3984ed8c40ee4af55bc8a473ae27d5abba9e4892934"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "00c8af9f4f4818defb464b1543cdc820cf8c10c5b7ccf30a9b306ee96519ce66"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b55b5517f358ea17c882c7afcb02ef538fe032854a6a9e1f54785a35862adde"
+    sha256 cellar: :any,                 monterey:       "491fd59fd84a8bc28963dc72b04c4f98de9d835379ae5712af83ff66a6331180"
+    sha256 cellar: :any,                 big_sur:        "94977eaf2a6b9c9d52f178267ba034bb2515cb2ba0a643006c10f83ab6a532b9"
+    sha256 cellar: :any,                 catalina:       "18803ed552ae07c1998c87ba6c4ebaee1ec5eaab843c2cfa2cc3775f0b55da23"
+    sha256 cellar: :any,                 mojave:         "83054ddb4fffb94ea12f609a90082220a451bfdc793284d104f1fdeaf4aa8fd6"
+    sha256 cellar: :any,                 high_sierra:    "43e9b4f518364d436b53c89b1ac42e2cfdcafc47fad1ba711bd6456122e47d62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f4d5b2822f5ceba9fff258d869110d23e2e6f2f06dd958a7a12d6333e8944c4"
   end
 
   depends_on "pkg-config" => :build
   depends_on "glib"
 
   def install
-    system "./configure", *std_configure_args, "--enable-install-man"
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}"
     system "make", "install"
-  end
-
-  test do
-    (testpath/"test.c").write <<~EOS
-      #include <lqr.h>
-      int main() {
-        guchar* buffer = calloc(1, sizeof(guchar));
-
-        LqrCarver *carver = lqr_carver_new(buffer, 1, 1, 1);
-        if (carver == NULL) return 1;
-
-        lqr_carver_destroy(carver);
-
-        return 0;
-      }
-    EOS
-
-    system ENV.cc, "test.c",
-                   "-I#{include}/lqr-1",
-                   "-I#{Formula["glib"].opt_include}/glib-2.0",
-                   "-I#{Formula["glib"].opt_lib}/glib-2.0/include",
-                   "-L#{lib}", "-llqr-1"
-    system "./a.out"
   end
 end

@@ -1,23 +1,19 @@
 class Uni < Formula
   desc "Unicode database query tool for the command-line"
   homepage "https://github.com/arp242/uni"
-  url "https://github.com/arp242/uni/archive/v2.5.1.tar.gz"
-  sha256 "806fbba66efaa45cd5691efcd8457ba8fe88d3b2f6fd0b027f1e6ef62253d6fb"
+  url "https://github.com/arp242/uni/archive/v2.5.0.tar.gz"
+  sha256 "27833125a4097e15ec6dbce33e2798a1689a4674c0d0509c0dc1039204aa1d80"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9bad02bbe068358c07b85f7b4069cc518bd193dc31bf8bd2853ef9b3b612185"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b9bad02bbe068358c07b85f7b4069cc518bd193dc31bf8bd2853ef9b3b612185"
-    sha256 cellar: :any_skip_relocation, monterey:       "86d641d3f5fadd4b9bfb08b8791bedcc7e5545a697c2b5bedd2ddb8039e12963"
-    sha256 cellar: :any_skip_relocation, big_sur:        "86d641d3f5fadd4b9bfb08b8791bedcc7e5545a697c2b5bedd2ddb8039e12963"
-    sha256 cellar: :any_skip_relocation, catalina:       "86d641d3f5fadd4b9bfb08b8791bedcc7e5545a697c2b5bedd2ddb8039e12963"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9beb85eb77f2bd8b05bd7f49f049e9633b264da82c0ae09b041dbe56c3a8026"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/uni"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1e9c31df33193b702b3d0035f96f8dbf4d81018f71050745f9dc9373ac6b36f4"
   end
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", "-o", bin/"uni"
   end
 
   test do

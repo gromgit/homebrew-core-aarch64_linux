@@ -1,25 +1,36 @@
 class Libtensorflow < Formula
   desc "C interface for Google's OS library for Machine Intelligence"
   homepage "https://www.tensorflow.org/"
-  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.9.2.tar.gz"
-  sha256 "8cd7ed82b096dc349764c3369331751e870d39c86e73bbb5374e1664a59dcdf7"
+  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.8.0.tar.gz"
+  sha256 "66b953ae7fba61fd78969a2e24e350b26ec116cf2e6a7eb93d02c63939c6f9f7"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "36827b5a57dd467c4b9635f0f477215dfcc3c133ef5d7c231950324c650401fe"
-    sha256 cellar: :any, arm64_big_sur:  "54e3da8df882be0c5b453c7e73ed902879c0c9df0a2f3664f2ac6bbc34a58c5b"
-    sha256 cellar: :any, monterey:       "7677cf95352bd8f1467afd1ccf0aaebfd254b95da9e903b691865521ebc9ceb4"
-    sha256 cellar: :any, big_sur:        "72cdeaf4dc6fd0ed2c131c60e37a2c281a9a2522aa1d13faed6088094f1628b0"
-    sha256 cellar: :any, catalina:       "8a204435e2af819e77f178349bbcdb8d9e132dbabb96be4080802a050e4ef0e0"
+    sha256 cellar: :any, arm64_monterey: "6aa2a99c8e73733fe1fd7a26059fc70578e081a01b9629019c1c3b5ee7d61a7e"
+    sha256 cellar: :any, arm64_big_sur:  "6f3baf6c3b57c380597b889e0035152d5335f1fdb309883e8e0121afcf8df100"
+    sha256 cellar: :any, monterey:       "eb5c728c7908ff9985966372ceeaa8febe5a6a137c0b56e6d1ad7be3cbb7385d"
+    sha256 cellar: :any, big_sur:        "7159d50875021f9899d409a339fa8ca71149f2373725815c9e2f3dcd0f450494"
+    sha256 cellar: :any, catalina:       "c3a75be02233777e1187f44c75d136a985099a1351dfd733963fe2776f2e07ae"
   end
 
   depends_on "bazelisk" => :build
   depends_on "numpy" => :build
   depends_on "python@3.10" => :build
 
-  resource "homebrew-test-model" do
+  resource "test-model" do
     url "https://github.com/tensorflow/models/raw/v1.13.0/samples/languages/java/training/model/graph.pb"
     sha256 "147fab50ddc945972818516418942157de5e7053d4b67e7fca0b0ada16733ecb"
+  end
+
+  # Fix build for host without python2
+  # Remove in the next 2.9 release
+  patch do
+    url "https://github.com/tensorflow/tensorflow/commit/1dd61c1f744227ad2434a7a9813fc57f623bc9a2.patch?full_index=1"
+    sha256 "f73a590f19962c097251efa6f4f40b80dfa944e3440b298973436016aea67c70"
+  end
+  patch do
+    url "https://github.com/tensorflow/tensorflow/commit/739002567ff81d731179a4b949def7e0f14737c8.patch?full_index=1"
+    sha256 "23c96cf491a6445db18353504bdb0b01f58770f1c0da405da42b91381259ce0e"
   end
 
   def install
@@ -97,7 +108,7 @@ class Libtensorflow < Formula
     system ENV.cc, "-L#{lib}", "-ltensorflow", "-o", "test_tf", "test.c"
     assert_equal version, shell_output("./test_tf")
 
-    resource("homebrew-test-model").stage(testpath)
+    resource("test-model").stage(testpath)
 
     summarize_graph_output = shell_output("#{bin}/summarize_graph --in_graph=#{testpath}/graph.pb 2>&1")
     variables_match = /Found \d+ variables:.+$/.match(summarize_graph_output)

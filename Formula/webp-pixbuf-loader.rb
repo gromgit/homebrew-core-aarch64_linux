@@ -1,17 +1,17 @@
 class WebpPixbufLoader < Formula
   desc "WebP Image format GdkPixbuf loader"
   homepage "https://github.com/aruiz/webp-pixbuf-loader"
-  url "https://github.com/aruiz/webp-pixbuf-loader/archive/0.0.6.tar.gz"
-  sha256 "451cb6924a9aa6afaa21d5b63b402dcfcfe952a1873e078b17078c4a1964a693"
+  url "https://github.com/aruiz/webp-pixbuf-loader/archive/0.0.4.tar.gz"
+  sha256 "cd6e4ec44755e8df3e298688c0aeb72b9467bbdd03009989c0d94b219b30fb51"
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "603ebbb5dd68650a0deb2c41fc9682de704bfeb5831a93441fb07e69911355d5"
-    sha256 cellar: :any, arm64_big_sur:  "1d4c1ce0cfe5f675cc8c59a939e5b8a735237648e1c6691e94e0771c9bbf50b8"
-    sha256 cellar: :any, monterey:       "b5c40535c457150fc1654a5072f4162230b17bf661aac05a65512f13f32e94e1"
-    sha256 cellar: :any, big_sur:        "dc06cb83d1f768769e089d1227db8198ba4af1808bcd5dad50b12b3cb63fa6d7"
-    sha256 cellar: :any, catalina:       "7cd01445a1d5214530530f7338c486e6dad5b05e3d06735511c7400eb1444075"
-    sha256               x86_64_linux:   "5f23b6308a09e77a85261b187e6746aef290fdf6be1043bfac198cd6ca4a99c4"
+    sha256 cellar: :any, arm64_monterey: "584756145080d64d2c2a3433e1358f07cf769662b1cbb6f377374a53e66d0778"
+    sha256 cellar: :any, arm64_big_sur:  "d44be0867a36e1b1490553db5bb621cb1eb661aad64ad34d972462ebb20ff6fd"
+    sha256 cellar: :any, monterey:       "4c2121492916fc371fbcb4659889d2057077882e69d69c0de85929c385784d05"
+    sha256 cellar: :any, big_sur:        "8a29656d40c431596b9447e3d765bbdff63daefb26b2f71c1e2951b31ee043dc"
+    sha256 cellar: :any, catalina:       "cec7d81fa2746f6ffc9009686469814ba68f114d8521b2cf44a9ab9687fccd8e"
+    sha256               x86_64_linux:   "bcf160565b7b75972090108a32ca93cf82e114354f7713ec18b9bf65fc2b4803"
   end
 
   depends_on "meson" => :build

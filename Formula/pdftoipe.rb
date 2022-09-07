@@ -4,15 +4,15 @@ class Pdftoipe < Formula
   url "https://github.com/otfried/ipe-tools/archive/v7.2.24.1.tar.gz"
   sha256 "561b18fc2a7ae45c37c5d0390443b37f4585549f09cd7765d856456be24e5dbc"
   license "GPL-2.0-or-later"
-  revision 8
+  revision 6
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2d556cb2378d929c1d4140cda205345b2345d29f7d2469999b38dd58a054fb73"
-    sha256 cellar: :any,                 arm64_big_sur:  "f428c1107d16442bba6abfc68093f5d1cb4c39a535b5354a5689f7923c958a11"
-    sha256 cellar: :any,                 monterey:       "a85cbf34a628f403191e586fae328acc6f94125f83d62d7a2feca243ec7e2fce"
-    sha256 cellar: :any,                 big_sur:        "37f090f0f9ed6042152e23d2ff42204bae6d2844d07b65e0a4bf2fd38a04a135"
-    sha256 cellar: :any,                 catalina:       "127fb0d5b14baa3c10742426436ece48ed87630822f69ced0ac4c32c1981ca12"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41689d4506af5cd556674f6a0b2249270b54789970aa0b6b0fb8f78d891d304b"
+    sha256 cellar: :any,                 arm64_monterey: "71993ec5e573e4f8e3ff452dc7d0c3df9e2f08a542940f19578bb90649104830"
+    sha256 cellar: :any,                 arm64_big_sur:  "3c1e7a01a95419a7a85ddae59eca79c4f8add94e235f9b5274cfbbd86e8e27c0"
+    sha256 cellar: :any,                 monterey:       "1e468ddfe642edc7241437e2bae279813452d3502849bde0547e65a6efb44264"
+    sha256 cellar: :any,                 big_sur:        "9c4b5c435105469b2faf694db8343291624127adafc4d5e724431f63da17c6a6"
+    sha256 cellar: :any,                 catalina:       "6adbd859a82a139179843984e808ac2cdcc428f5204c67e01a2097a581e7de6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "964eab28db09c3895efba2d1f7200e4551eb29368997f9523fd68abdfc20798a"
   end
 
   depends_on "pkg-config" => :build

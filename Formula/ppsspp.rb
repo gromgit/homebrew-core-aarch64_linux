@@ -2,29 +2,30 @@ class Ppsspp < Formula
   desc "PlayStation Portable emulator"
   homepage "https://ppsspp.org/"
   url "https://github.com/hrydgard/ppsspp.git",
-      tag:      "v1.13.1",
-      revision: "5083b206365a226fb51288e09424f8f5f5a3392a"
+      tag:      "v1.11.3",
+      revision: "f7ace3b8ee33e97e156f3b07f416301e885472c5"
   license all_of: ["GPL-2.0-or-later", "BSD-3-Clause"]
+  revision 1
   head "https://github.com/hrydgard/ppsspp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0f56c1b7d8006f006dcb52fa17da1dac70eb75b579f7ef4747720b444b55ab59"
-    sha256 cellar: :any,                 arm64_big_sur:  "675c479f19ef32ee316d7e40a46794d1892e59a39e0d0a4a2b2393864e97286b"
-    sha256 cellar: :any,                 monterey:       "25beafe716d6c84433141371a42ba7676d4a35262d3ca8963a62d605ac78eccf"
-    sha256 cellar: :any,                 big_sur:        "ca2231ca179fb88fa754e56dfc4cab9057edc2df4e040ffd0234ae79393fd740"
-    sha256 cellar: :any,                 catalina:       "784525d911a61aeb88364eb2b73db2e947448d204c37e29d0b2a7aa3d9b4c802"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd91c2958904e972ed4969072265bde06c9ec6a61ed44c6f87ba092eefe4c05e"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "820c71423a73e7ed26f1b8d80f41e98243b3ba166e5b5873d8e8a727d5724156"
+    sha256 cellar: :any,                 arm64_big_sur:  "2d86272ee827c8b963afe31ce499e542ecdf103a31e306644ceacf1bc699abc4"
+    sha256 cellar: :any,                 monterey:       "599033f13849e0e6c787bc2cf42891cdf6d21e97e89eef26abef29705431cde2"
+    sha256 cellar: :any,                 big_sur:        "83955e43102eb47e77bcde940baf292970d70afc4c000bdc0517ce6882870fd3"
+    sha256 cellar: :any,                 catalina:       "bd285a8e382947c6cb0e2f5ff94e3e968802bb7c57f5ebc008a706b116a08f75"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee975b8d60106f1fbcc11d94edc856bf3e328820e3233c054655b7f1cd17079f"
   end
 
   depends_on "cmake" => :build
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
+  depends_on "libpng"
   depends_on "libzip"
-  depends_on "miniupnpc"
   depends_on "sdl2"
   depends_on "snappy"
-  depends_on "zstd"
 
   uses_from_macos "zlib"
 
@@ -34,12 +35,6 @@ class Ppsspp < Formula
 
   on_linux do
     depends_on "glew"
-  end
-
-  on_intel do
-    # ARM uses a bundled, unreleased libpng.
-    # Make unconditional when we have libpng 1.7.
-    depends_on "libpng"
   end
 
   def install
@@ -58,18 +53,13 @@ class Ppsspp < Formula
     end
 
     # Replace bundled MoltenVK dylib with symlink to Homebrew-managed dylib
-    vulkan_frameworks = buildpath/"ext/vulkan/macOS/Frameworks"
-    (vulkan_frameworks/"libMoltenVK.dylib").unlink
-    vulkan_frameworks.install_symlink Formula["molten-vk"].opt_lib/"libMoltenVK.dylib"
+    rm "MoltenVK/macOS/Frameworks/libMoltenVK.dylib"
+    (buildpath/"MoltenVK/macOS/Frameworks").install_symlink Formula["molten-vk"].opt_lib/"libMoltenVK.dylib"
 
     mkdir "build" do
       args = std_cmake_args + %w[
         -DUSE_SYSTEM_LIBZIP=ON
         -DUSE_SYSTEM_SNAPPY=ON
-        -DUSE_SYSTEM_LIBSDL2=ON
-        -DUSE_SYSTEM_LIBPNG=ON
-        -DUSE_SYSTEM_ZSTD=ON
-        -DUSE_SYSTEM_MINIUPNPC=ON
       ]
 
       system "cmake", "..", *args

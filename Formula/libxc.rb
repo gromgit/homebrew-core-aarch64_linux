@@ -1,18 +1,17 @@
 class Libxc < Formula
   desc "Library of exchange and correlation functionals for codes"
   homepage "https://tddft.org/programs/libxc/"
-  url "https://gitlab.com/libxc/libxc/-/archive/5.2.3/libxc-5.2.3.tar.bz2"
-  sha256 "6cd45669d7f92bdcdb6879bea232dac94ad57d025cf2edfd019182ccf6494a75"
+  url "https://gitlab.com/libxc/libxc/-/archive/5.2.2/libxc-5.2.2.tar.bz2"
+  sha256 "484115929674d7b85d9361f4f8a821e3d1c6024e31b8fa41df916c09799891a9"
   license "MPL-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "76984fead2d7c7162093695d21d7c5b5966087b60a84e9995480851cc742d002"
-    sha256 cellar: :any,                 arm64_big_sur:  "6667ca67895897ca00340ecc4164449483f46e226affae45a70ca62f1f7d8a7c"
-    sha256 cellar: :any,                 monterey:       "baabce501ca109c134573955355b005279a151e01d3dc93ad60f0d0ac8ffe104"
-    sha256 cellar: :any,                 big_sur:        "e2a9c845aef36fe679b3694cd8aa3b446b37ceec17bfaee76d5412881e61dd39"
-    sha256 cellar: :any,                 catalina:       "d0ce63f9d4f79cd42bb34b5cf53b535d96adbf527d2865c3b8b0ad52278e3249"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e08ca5a0e6a6976022c59789c27052b16b5d44cc4eab0fe3f0fa295fcee57e20"
+    sha256 cellar: :any,                 arm64_monterey: "e5023e89f8acff465eba113360911e6b666c4487f9547271da78be13ccfb9c9d"
+    sha256 cellar: :any,                 arm64_big_sur:  "4e064d20223090cc16b6a9056bca6cbd98683408c42987b7a0050016bac46b41"
+    sha256 cellar: :any,                 monterey:       "1751dc87e5235aa9854442dea65fb1355f2f847157fdae990e315fb96b3d34b0"
+    sha256 cellar: :any,                 big_sur:        "4fb029189385ada09e3c4a167257bb1e39ff02fc3fa00c4d0e03c6b45dd5cafd"
+    sha256 cellar: :any,                 catalina:       "091fc935e2496b8132bfefc25372b496af7a1c9a93952ff6ff36dbc130445808"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41cf6427cdce0071ce177114d46b588fd24a75512b005b2da0b14d2c1cc1c503"
   end
 
   depends_on "autoconf" => :build

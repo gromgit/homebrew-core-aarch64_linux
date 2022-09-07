@@ -1,17 +1,17 @@
 class Cgal < Formula
   desc "Computational Geometry Algorithms Library"
   homepage "https://www.cgal.org/"
-  url "https://github.com/CGAL/cgal/releases/download/v5.5/CGAL-5.5.tar.xz"
-  sha256 "98ac395ca08aacf38b7a8170a822b650aedf10355df41dd0e4bfb238408e08a6"
+  url "https://github.com/CGAL/cgal/releases/download/v5.4/CGAL-5.4.tar.xz"
+  sha256 "b3d735ec42fd65ac1413c70e7a197bf3d971e4499347ccfaad92cc82d62dc256"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c40b7bf645e4fd4b237700874daf73ac57fd70c40881a190e89425ba1244293"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c40b7bf645e4fd4b237700874daf73ac57fd70c40881a190e89425ba1244293"
-    sha256 cellar: :any_skip_relocation, monterey:       "5e4b5eba3494002500cbd62ca36251bd588b468717449c40cc6cefedb572b028"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5e4b5eba3494002500cbd62ca36251bd588b468717449c40cc6cefedb572b028"
-    sha256 cellar: :any_skip_relocation, catalina:       "5e4b5eba3494002500cbd62ca36251bd588b468717449c40cc6cefedb572b028"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c40b7bf645e4fd4b237700874daf73ac57fd70c40881a190e89425ba1244293"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf7ee43bd5a7bf1dc2ad90ad9d3609e4cef91555870d5608621ee5ac7a32c0b0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cf7ee43bd5a7bf1dc2ad90ad9d3609e4cef91555870d5608621ee5ac7a32c0b0"
+    sha256 cellar: :any_skip_relocation, monterey:       "f5a027eeaa1df81dcb7228a5ba735f69e2c24c721a2092632b8c1787c121ebd5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f5a027eeaa1df81dcb7228a5ba735f69e2c24c721a2092632b8c1787c121ebd5"
+    sha256 cellar: :any_skip_relocation, catalina:       "f5a027eeaa1df81dcb7228a5ba735f69e2c24c721a2092632b8c1787c121ebd5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf7ee43bd5a7bf1dc2ad90ad9d3609e4cef91555870d5608621ee5ac7a32c0b0"
   end
 
   depends_on "cmake" => [:build, :test]

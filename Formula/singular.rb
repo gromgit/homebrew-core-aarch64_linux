@@ -1,18 +1,17 @@
 class Singular < Formula
   desc "Computer algebra system for polynomial computations"
   homepage "https://www.singular.uni-kl.de/"
-  url "https://www.singular.uni-kl.de/ftp/pub/Math/Singular/SOURCES/4-3-1/singular-4.3.1p1.tar.gz"
-  version "4.3.1p1"
-  sha256 "1f1cba3ffd612b26d056859ca7f4cbeef5ce95cabd5782b035acd1c58ff01d30"
+  url "https://service.mathematik.uni-kl.de/ftp/pub/Math/Singular/src/4-2-1/singular-4.2.1.tar.gz"
+  sha256 "28a56df84f85b116e0068ffecf92fbe08fc27bd4c5ba902997f1a367db0bfe8d"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
-    sha256 arm64_monterey: "318d66e582a30a56b3174e2d951440ab97fa9258b3f45eb8a4ca2a15a6ae7a1e"
-    sha256 arm64_big_sur:  "f23f081cc23770bf1e6552201c34d77962e59129fa8ac16ae1eea150fe5a8439"
-    sha256 monterey:       "e2fe2989761b0d791ebedd0907db6dd53ce44056a1cda170bc83661410ef3563"
-    sha256 big_sur:        "00997a197b4579071d8d9e6e11e70a28668ae760b7de5629ef671b7ad4a8e6bf"
-    sha256 catalina:       "fc24449c1479823c71e7bbcf8debb4fbd69d32e8e9fef220fb6676ae0643f4b6"
-    sha256 x86_64_linux:   "49b4654b7bb7aa4a26d5c7e81a5e9ec919664566de4d7c777e0a6f89128e5d35"
+    sha256 arm64_big_sur: "abff098b3e9ee836f54f320103eb4a34b418d54dc4776ddfa391c9a698728fbb"
+    sha256 big_sur:       "6ee7ee8c292b8916c7bfdb32f8218fe629d11eeaf0fb2fdede9959c219b60726"
+    sha256 catalina:      "e28a1b276a609142eeb0d1c61b5530498f740bb840f991c18134e1c6daaeb76e"
+    sha256 mojave:        "c7e348e7558c41f959fca63f960143379b6f2c9535d3c769cfe3131f4086394a"
+    sha256 x86_64_linux:  "0b05cf52f0373c446904b561bed84b31019915bb101ad11c350736ae710ae0a5"
   end
 
   head do
@@ -28,15 +27,8 @@ class Singular < Formula
   depends_on "ntl"
   depends_on "python@3.10"
 
-  on_macos do
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
   def install
-    # Run autogen on macOS so that -flat_namespace flag is not used.
-    system "./autogen.sh" if build.head? || OS.mac?
+    system "./autogen.sh" if build.head?
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",

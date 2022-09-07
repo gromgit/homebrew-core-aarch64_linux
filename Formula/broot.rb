@@ -1,18 +1,18 @@
 class Broot < Formula
   desc "New way to see and navigate directory trees"
   homepage "https://dystroy.org/broot/"
-  url "https://github.com/Canop/broot/archive/v1.14.2.tar.gz"
-  sha256 "992e3b5c2b73a25366bf67ccc8d99a51be9c07c75ec6ea413883dd8a8857c2e4"
+  url "https://github.com/Canop/broot/archive/v1.12.0.tar.gz"
+  sha256 "94b5bc7fa79f379c2c23c23402e7a076495b4d23ca7d89e4631702dbff15fb82"
   license "MIT"
   head "https://github.com/Canop/broot.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd9551fbe5d06f4d8135ab14da388f0ab1b1563f87c0c7664f1daea3a497a1b4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64bb766c75a3ec4aef4af35f86fb2889ef8b6e8ffdb7844adb7a99fc051a3298"
-    sha256 cellar: :any_skip_relocation, monterey:       "0a0d2ca68b19d6db4a0ff4d3ef83f3f3b862297401f416c9254053db068b9f3e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "723d031140ee91feabd754ecbdd565e6a80b86174b52aaee0dd84f4a41d9ec09"
-    sha256 cellar: :any_skip_relocation, catalina:       "eeea92683b58ae57ebb6619ac54af620699f23afee6742e7a0569c7050740482"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12877ce201e9f4fb97e659e44c5cd3c473d5ab65e10f7b7c69dfe2205a02dab0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be000a80dd9a49027a9df949ec28e32b575e0f91acb05d47a218b8247711d080"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6298ef9b08b39ea02651c171f275cc536ca5f3dfb025b3fa78951ce656e926d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "a749ae15032114ce760cc8c4096b79cf2ce6b1607edf1e1313ce0895dba8c81d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e6c38089743b62ed642bd5ace7d5bada75b7dc079351b2f1926209a09aa0aaab"
+    sha256 cellar: :any_skip_relocation, catalina:       "c32447fb020fce14b72bfaa426da2b8a444b7965f5b7179b1179590649e8be8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce030b1ccbccfb0df379edc78938927f49917dce6c5d1516b601eb5196540bfd"
   end
 
   depends_on "rust" => :build
@@ -49,11 +49,10 @@ class Broot < Formula
 
     require "pty"
     require "io/console"
-    PTY.spawn(bin/"broot", "-c", ":print_tree", "--color", "no", "--outcmd", testpath/"output.txt",
-                err: :out) do |r, w, pid|
-      r.winsize = [20, 80] # broot dependency terminal requires width > 2
+    PTY.spawn(bin/"broot", "--cmd", ":pt", "--color", "no", "--out", testpath/"output.txt", err: :out) do |r, w, pid|
+      r.winsize = [20, 80] # broot dependency termimad requires width > 2
       w.write "n\r"
-      assert_match "New Configuration files written in", r.read
+      assert_match "New Configuration file written in", r.read
       Process.wait(pid)
     end
     assert_equal 0, $CHILD_STATUS.exitstatus

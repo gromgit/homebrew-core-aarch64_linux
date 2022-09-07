@@ -1,9 +1,10 @@
 class Ninja < Formula
   desc "Small build system for use with gyp or CMake"
   homepage "https://ninja-build.org/"
-  url "https://github.com/ninja-build/ninja/archive/v1.11.1.tar.gz"
-  sha256 "31747ae633213f1eda3842686f83c2aa1412e0f5691d1c14dbbcc67fe7400cea"
+  url "https://github.com/ninja-build/ninja/archive/v1.10.2.tar.gz"
+  sha256 "ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/ninja-build/ninja.git", branch: "master"
 
   livecheck do
@@ -12,12 +13,12 @@ class Ninja < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "daa36dfde4c007ccbc92a7b011fb21f475619ee72ee7b9fe4e287bbf69febcc7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3f6aeafb7814bf2a89527aae69ae64f47fd699c8bf0b5a4213a81d3fc01ff9c7"
-    sha256 cellar: :any_skip_relocation, monterey:       "15b65736bfc5c619019cabb2c0f36f2b02a031de9a8bd6c148eba0f329e907bf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ebce34e727724d140fb8c22ae3ac845c1c9e61339dc0f5a5ee13d7a04780a5e"
-    sha256 cellar: :any_skip_relocation, catalina:       "3e89d7587da0c026f88aec5490582522f9fbfee0bd0e13d1bb773724aee84c23"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0124cfd2fc96edec66111ffd30f51fa02be75e01a4b930bab17c8e980b28d14"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8efac5a9c8b7028f64f5a092eb029ff40887b9895fe4235e3fb8bade6a24cada"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c2dc001768f9e52e1f5dc30c97e8c18e3b9711075ea68890a74adb4b4a5f2551"
+    sha256 cellar: :any_skip_relocation, monterey:       "7a28d090cbec60072c3df5c35be0fa45761d18ce06567120951aa0ded80ff72d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b3e0b14cffa2d227c0b4140c1a3742a2a4e7e3966a429e1d253b0e29acfb6293"
+    sha256 cellar: :any_skip_relocation, catalina:       "11c2a3cf1cd415a81ff7206f48b77dbe851b593bd163979dfdcb11266d24307a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3837361ee7a7d2646a84db1aee70fff51f957c573e0c7a61b04a91f1ce1ae24"
   end
 
   # Ninja only needs Python for some non-core functionality.
@@ -36,7 +37,6 @@ class Ninja < Formula
   end
 
   test do
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_bin
     (testpath/"build.ninja").write <<~EOS
       cflags = -Wall
 

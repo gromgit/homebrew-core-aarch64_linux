@@ -18,12 +18,8 @@ class Perkeep < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "80b74aa6f9784371b2a2b4f79ed15fb8d998a3589f1cc85885ba60d259196dea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b02cb9968771e49d46b9f605d53f88b61bb32cd765d46146280b2426abffc00f"
-    sha256 cellar: :any_skip_relocation, monterey:       "a30e484cd077d745047fcf919d857ed2d1ca68589b7017e91e0417fa5c256b6b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "663b51444cae568b049afdc4c3bffb0dadd70dc0d63764cf6a9e9d9f5568afc1"
-    sha256 cellar: :any_skip_relocation, catalina:       "6ccd732cc142a7efb8b78b150909eb0eabde2d9fbb9683fdfaaf550c2ebbbbdb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3822eb5d2bc22fb31733101ca980db8baf8ebc4ab1994a47fc0739ab35a998d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/perkeep"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4d0aea7e635cb7fc161edc518fe326d28291f55f50f2ffa06c553916222fea76"
   end
 
   # This should match what gopherjs supports.

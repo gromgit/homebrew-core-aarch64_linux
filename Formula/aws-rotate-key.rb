@@ -7,12 +7,8 @@ class AwsRotateKey < Formula
   head "https://github.com/stefansundin/aws-rotate-key.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8803eb6dd3cc04a1ff658fe15a7a4a209a16e67ffa7e64124c83bb06ff2bb6a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "139378379b2bf12f02aa6e4efb483206dffbdddba1046c8fbead4e7c4d3d83fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "190541bbff030ea97a0e974126ede294dca660806ff3b8a07d7a5709813676f6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "220153a7b95de73d476982bdae9dfff35e4d4e98160736dd0c5a8ef20d233bc5"
-    sha256 cellar: :any_skip_relocation, catalina:       "b56158ccb02c1a7e0b1277f30768daaaf73601717e412761d19abf44102e00a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "656c139c8b8c7b080f1204d7f993ec734432eff02789115171ff2fbb8a362992"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aws-rotate-key"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "70900ca73b503a5f60c9ce719aa180889a49d66a39fb5b6c204b1b0b5cf9f117"
   end
 
   depends_on "go" => :build

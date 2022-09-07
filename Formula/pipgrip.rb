@@ -3,17 +3,17 @@ class Pipgrip < Formula
 
   desc "Lightweight pip dependency resolver"
   homepage "https://github.com/ddelange/pipgrip"
-  url "https://files.pythonhosted.org/packages/76/88/9c393d10207d80b76172a1a5e8671d81fb71db6759314bbb36b47dcd1417/pipgrip-0.8.6.tar.gz"
-  sha256 "306c624c5d2298c966cf8e6ff2d57365916782b3fc8e08d71469c87ea96e34fc"
+  url "https://files.pythonhosted.org/packages/53/b0/81ba9c4e67a283d4778e58d5469069c672a442805b1b3212ec9f7ece8cbb/pipgrip-0.8.0.tar.gz"
+  sha256 "2ecf32bc30d245145de5ae0f4ea6b7e3e1ae2deff7b6317931a4a470185560d4"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd36e61e11557631ba4b7cf6b199a2768a2afb102949d457deac20092ee51ea5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a399ee841251c2b86e8345892113f5fd657d2255516c3722d0f055e349e6221e"
-    sha256 cellar: :any_skip_relocation, monterey:       "48f8eb20cce537e447f017747f07d90108350859531cc92aab42f82399c9a743"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a1ffd3b28d4d0296bf5ecdc1c6428d7197b2dff68c229b4f1e00cfb7bd10cd6d"
-    sha256 cellar: :any_skip_relocation, catalina:       "2387bc35086fcf275a5320b0b90d0eb6f2386ba14e1c1b1e9534322f993bf0a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c327a7dd0e2b0f45f8b5ef7c3bab2950e613bce19631833ca0dae55e1201bf09"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6649e39662473dbef5835f402f0ad0a48770a665329b0fcfb4daf11bd982be95"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3bbcd0d9d08454262702b862ac2ae684b37a818d5519ce7a76e20adaca52baaf"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe6410854f180cfa11e7aa54f13211703a64d61739a2e38abe958cdf0a44dbe4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a11313b9be83d528622329acd27ff4d86741b3b50a8de57ebf843ac1d26e145a"
+    sha256 cellar: :any_skip_relocation, catalina:       "f21ba90df060ce1c93583c65b6ddbc8063758aa442a56ab186bcd612a75ea4d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "93e140231135aae6b68c9ad0c8cb791f7b3120fd9968917d9f88fa28f8b32c88"
   end
 
   depends_on "python@3.10"
@@ -25,8 +25,8 @@ class Pipgrip < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/42/e1/4cb2d3a2416bcd871ac93f12b5616f7755a6800bccae05e5a99d3673eb69/click-8.1.2.tar.gz"
+    sha256 "479707fe14d9ec9a0757618b7a100a0ae4c4e236fac5b7f80ca68028141a1a72"
   end
 
   resource "packaging" do
@@ -40,8 +40,8 @@ class Pipgrip < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "wheel" do

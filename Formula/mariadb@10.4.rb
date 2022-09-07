@@ -4,7 +4,6 @@ class MariadbAT104 < Formula
   url "https://downloads.mariadb.com/MariaDB/mariadb-10.4.22/source/mariadb-10.4.22.tar.gz"
   sha256 "44bdc36eeb02888296e961718bae808f3faab268ed49160a785248db60500c00"
   license "GPL-2.0-only"
-  revision 1
 
   # This uses a placeholder regex to satisfy the `PageMatch` strategy
   # requirement. In the future, this will be updated to use a `Json` strategy
@@ -24,12 +23,12 @@ class MariadbAT104 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c29df7c95b7e3e1fb202b097a3e112342d0f48c4578e23f8474085d9eefe6476"
-    sha256 arm64_big_sur:  "c986b585d2da8e293ca3d114107c2cdce364b93e69e4164424e19ad8533bec35"
-    sha256 monterey:       "b68624ac10b674ec8d3cfcc631e4554b9bb51d48a41755205c8c42ade3aea62e"
-    sha256 big_sur:        "c76604ed6ac6db1ba998409bfa31d8184d6cde802225d6cd695a27d2a50b41b6"
-    sha256 catalina:       "456b2205e1593d956e78a45586b93e9dd6b6a7beb23178e86e965fabec41ebcf"
-    sha256 x86_64_linux:   "ae765b190fb197bcfe373376ffa05ae1cddc98ce3cdd0d443aab14a0ee591ea8"
+    sha256 arm64_monterey: "e932eb14900a1204be737c34be2d8e1a512931d4920d7f3b661eb88b132f1c55"
+    sha256 arm64_big_sur:  "5851fd29ec3116fc8f3ba4415ae14c93cd47c1ed771a018217918b0e5d9cbdc4"
+    sha256 monterey:       "0a3ee90ceb25635eb9df8a6bd565822785461c080a62d61a711515f8a3dbef1a"
+    sha256 big_sur:        "d349170ce1e8ac3101919bf89e506fee653528ec8d24f98e5134a815e04ff79e"
+    sha256 catalina:       "a1b44b05c3c234d567c0af714e74a644a19fd1a387944d0b44dbec0a269403a7"
+    sha256 x86_64_linux:   "fb8527e0fe7177a1211818c4066fc234f7f0a86f72101d58eb11510f2048c024"
   end
 
   keg_only :versioned_formula
@@ -45,7 +44,6 @@ class MariadbAT104 < Formula
   depends_on "pcre2"
 
   uses_from_macos "bzip2"
-  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 

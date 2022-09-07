@@ -11,12 +11,8 @@ class Prips < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "50a8faf4130d6ad1b281078e788aa0bdd8a34b32fda4f9dbde6247f0dcdbcfdf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "255619fe70f19aa2f4ce8616a48bcc96892678ddba5c2b40ba0191bee5dfe28d"
-    sha256 cellar: :any_skip_relocation, monterey:       "97c8079a862f2f3957c23762eb50034de5b6317c67696a18c5a6792da2b9cfb2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "32e889ecb796175e17ad03eb59ae8e7fea9ca015e228ef2369cbc21db55a7d0e"
-    sha256 cellar: :any_skip_relocation, catalina:       "76f6e8fcbc1f60861023f6e035b04bec61d57fefb3bbfb87fbdeeafb47b68456"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2453199b92afe7e105fd95f698b5c9c7d6897f1d95d624b07c32bbfc65d44d0a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/prips"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "46eb827a01507c1a64fdd562d74a5b8e963140d579cf0ca9dba8070547b59ed8"
   end
 
   def install

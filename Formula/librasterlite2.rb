@@ -4,25 +4,25 @@ class Librasterlite2 < Formula
   url "https://www.gaia-gis.it/gaia-sins/librasterlite2-sources/librasterlite2-1.1.0-beta1.tar.gz"
   sha256 "f7284cdfc07ad343a314e4878df0300874b0145d9d331b063b096b482e7e44f4"
   license any_of: ["MPL-1.1", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "465fa76b41fa9b5bb74ac5e1cb685cb257ebcd0afc977f1d5c80b0b5a4fd36ff"
-    sha256 cellar: :any,                 arm64_big_sur:  "0b52c403552843c1d62c669a06ffc7db142ccc07d4455c2a3b06005011e1c601"
-    sha256 cellar: :any,                 monterey:       "862aaa43b27513049a7c800339b7359cbf0b353bf4aefe80e73b2cc1c05bedc5"
-    sha256 cellar: :any,                 big_sur:        "ae5159a279a6095c933e56b9473dbb8d0dfb4a7c3a289b046b02f89160abb14f"
-    sha256 cellar: :any,                 catalina:       "ac48019369d22607d83ba59dff181ab243386eeb30c83f0fe945853ae98610cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57ca97b282a779c6260f64cd65db5d017ad6fca6e2c2971fe88743614c614b16"
+    sha256 cellar: :any,                 arm64_monterey: "6926eed7e1e104406e4a815f4d9e8fab13e2735b84dda7392fca457b2940bd06"
+    sha256 cellar: :any,                 arm64_big_sur:  "82f2c1f5712023609e7568dc56abd98aedf885bbab0b6db8a3ad4430ae27c0f2"
+    sha256 cellar: :any,                 monterey:       "a1df1a6819fe44834b1c7e94dbbe6ebaf20d1ef58e4011b950127e3b967545fb"
+    sha256 cellar: :any,                 big_sur:        "9e0bbfb1741867d70f9f96b7b4b80010b772c10dcdcf6192acbb4c17c77c6946"
+    sha256 cellar: :any,                 catalina:       "57893a161c2564985466586e366ca65c27f477fba41cd6a081f3f813fbc08d57"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23befb28023f4b87d3c18e6d49a19016ce17e4d8640b9506e3b82eea84fab7b5"
   end
 
-  depends_on "pkg-config" => [:build, :test]
+  depends_on "pkg-config" => :build
   depends_on "cairo"
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "freexl"
   depends_on "geos"
   depends_on "giflib"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libgeotiff"
   depends_on "libpng"
   depends_on "librttopo"
@@ -52,11 +52,12 @@ class Librasterlite2 < Formula
     # Reported upstream at https://www.gaia-gis.it/fossil/librasterlite2/tktview?name=3e9183941f.
     # Check if this can be removed with the next release.
     inreplace "headers/rasterlite2_private.h",
-              "#ifndef DOXYGEN_SHOULD_SKIP_THIS",
-              "#include <time.h>\n\n#ifndef DOXYGEN_SHOULD_SKIP_THIS"
+      "#ifndef DOXYGEN_SHOULD_SKIP_THIS",
+      "#include <time.h>\n\n#ifndef DOXYGEN_SHOULD_SKIP_THIS"
 
     # Ensure Homebrew SQLite libraries are found before the system SQLite
-    ENV.append "LDFLAGS", "-L#{Formula["sqlite"].opt_lib} -lsqlite3"
+    sqlite = Formula["sqlite"]
+    ENV.append "LDFLAGS", "-L#{sqlite.opt_lib} -lsqlite3"
     system "./configure", *std_configure_args
     system "make", "install"
   end

@@ -11,7 +11,8 @@ class Elfutils < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "f70a0566d30f6eb37d86c909d54bd0c7b5da24433da2aa21601f83a58899e818"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/elfutils"
+    sha256 aarch64_linux: "42375a30e740fbe9c617e9937cbceb5d9211022791e795bc01d1e493a4c6615c"
   end
 
   depends_on "m4" => :build

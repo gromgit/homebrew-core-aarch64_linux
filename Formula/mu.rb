@@ -4,10 +4,9 @@
 class Mu < Formula
   desc "Tool for searching e-mail messages stored in the maildir-format"
   homepage "https://www.djcbsoftware.nl/code/mu/"
-  url "https://github.com/djcb/mu/releases/download/v1.8.9/mu-1.8.9.tar.xz"
-  sha256 "b86d2a6808fd0ee941bd7084fafcbc82992e33dcdb8a7aeee1c34a7ccba8ddb3"
+  url "https://github.com/djcb/mu/releases/download/1.6.10/mu-1.6.10.tar.xz"
+  sha256 "0bc224aab2bfe40b5209af14e0982e637789292b7979872658d4498b29e900b6"
   license "GPL-3.0-or-later"
-  head "https://github.com/djcb/mu.git", branch: "master"
 
   # We restrict matching to versions with an even-numbered minor version number,
   # as an odd-numbered minor version number indicates a development version:
@@ -18,19 +17,25 @@ class Mu < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "805880bba84234283490ecdff4b1a08b9808b7a7141ebd034e86628e6128934f"
-    sha256 arm64_big_sur:  "4f90c9a4bfc24729e58314d3202acadd1f023d4811afb60141f9bb809d7f8397"
-    sha256 monterey:       "58f03597691a5310837b095ff32caa2104c5bbeafba87d5416357557447f8014"
-    sha256 big_sur:        "c856f5474048efafb111e8f752818315ec5cfe6d4dd33e89d736e8c4ae911249"
-    sha256 catalina:       "b2a4d32b2bc99918b76c20c7d195be4dc136c34318f1a313ccdf38fe7b42a4ba"
-    sha256 x86_64_linux:   "f0b04c5ef0096e29cd6e4db07b4b5e6eb2c16847b67a21bbd9a0e94009424581"
+    sha256 cellar: :any,                 arm64_monterey: "aa8f0261f5d5feca647e4fef6918423f75b0dac0e266688efcf12fda8ff0b014"
+    sha256 cellar: :any,                 arm64_big_sur:  "073b588a7ebfe1c9139994ac3e1f775b8c3106a41625b9c5c7f0019b9d3a6524"
+    sha256 cellar: :any,                 monterey:       "317f48616821ba58b5d63161dfb73b83fdd1088147baa67af5f017608f63b166"
+    sha256 cellar: :any,                 big_sur:        "984ff5adf341446c8d7741d1413d6943e3ddf6cff86165a9af402f5c1f639bb6"
+    sha256 cellar: :any,                 catalina:       "0299242cd384e4cc8fe2ae4397c8778572fd01e726bf0fe46a756e098ee98343"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec71ae61fccf1d797994a23bb4db6fa2c28ba11fd1000bcbcc5777f1dd7ca5f2"
+  end
+
+  head do
+    url "https://github.com/djcb/mu.git"
+
+    depends_on "autoconf" => :build
+    depends_on "autoconf-archive" => :build
+    depends_on "automake" => :build
   end
 
   depends_on "emacs" => :build
   depends_on "libgpg-error" => :build
   depends_on "libtool" => :build
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "glib"
@@ -48,11 +53,13 @@ class Mu < Formula
   fails_with gcc: "5"
 
   def install
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Dlispdir=#{elisp}", ".."
-      system "ninja", "-v"
-      system "ninja", "install", "-v"
-    end
+    system "autoreconf", "-ivf" if build.head?
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-guile",
+                          "--prefix=#{prefix}",
+                          "--with-lispdir=#{elisp}"
+    system "make"
+    system "make", "install"
   end
 
   # Regression test for:

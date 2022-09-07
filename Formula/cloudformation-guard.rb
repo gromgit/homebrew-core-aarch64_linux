@@ -1,17 +1,17 @@
 class CloudformationGuard < Formula
   desc "Checks CloudFormation templates for compliance using a declarative syntax"
   homepage "https://github.com/aws-cloudformation/cloudformation-guard"
-  url "https://github.com/aws-cloudformation/cloudformation-guard/archive/2.1.0.tar.gz"
-  sha256 "8e7075e436a05d72e5c244def9765f475c07b97b432c6ed9b4cc9888a389f460"
+  url "https://github.com/aws-cloudformation/cloudformation-guard/archive/2.0.4.tar.gz"
+  sha256 "b401664363020474869a81a70d6920a3bfacec12459a601d8f9a7627000dfb56"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e679636e6f6dfb96f827f0859eca3e2482de67ac499322fbdef1b11d8c4a8c32"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64582c694ac3f8f621a4bbb11c63873d5a17c807d59cbe4fc2a5804d534ac218"
-    sha256 cellar: :any_skip_relocation, monterey:       "54c9a9abda8ba5b06f41cf21698cc68c7dad8f0ea6f4810439186b3067a6c6a0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "edefb6434aec409b1192861be0ef1d3f29c63a559ca6130ed2d2b9c5f49bd169"
-    sha256 cellar: :any_skip_relocation, catalina:       "9313f1eb7e774214cccbf541b72d050f4102d2e1cec9981b02d33e4068d2ba65"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0ec1413420eabab58c7881b1204bc49976c797789b60bd93415bf16cbeb40e5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c50249da637ab9fbf4541fd0294a1b0a5d7d09c0f99e6dcad7950abde848fb71"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "794d2e4e379ebbca544e4f7a7b119fe0e8f51299e8f23bcb9b199a1aa89ef187"
+    sha256 cellar: :any_skip_relocation, monterey:       "390fa091d14e16661bde506a27bbf75933010a5eb1ef5d912690ebce1dc4468a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e6bb75fdd97e9d94ab912591b644ec2548dbb574cbafc5dae9ed8ebbceb202df"
+    sha256 cellar: :any_skip_relocation, catalina:       "125d44d48c49c9abd3b5d5de9e7e4d203af141da3eb77fb316a2dcfc13988a3e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e651925757f84dbc6beb86b1f252b2047dc0eebdbdbf9ee36248a45c069cf2d"
   end
 
   depends_on "rust" => :build

@@ -63,9 +63,6 @@
     "extra_packages": ["certbot-apache", "certbot-nginx"],
     "exclude_packages": ["six"]
   },
-  "cfn-flip": {
-    "exclude_packages": ["six"]
-  },
   "cfn-lint": {
     "exclude_packages": ["junit-xml", "six"]
   },
@@ -95,9 +92,6 @@
     "exclude_packages": ["six"],
     "extra_packages": ["distro"]
   },
-  "cookiecutter": {
-    "exclude_packages": ["six"]
-  },
   "cppman": {
     "exclude_packages": ["six"]
   },
@@ -124,9 +118,6 @@
   "docker-squash": {
     "exclude_packages": ["six"]
   },
-  "doitlive": {
-    "exclude_packages": ["six"]
-  },
   "duplicity": {
     "extra_packages": [
       "azure-storage-blob", "b2sdk", "boto", "boto3", "boxsdk[jwt]",
@@ -145,9 +136,6 @@
   "dxpy": {
     "exclude_packages": ["six"]
   },
-  "enex2notion": {
-    "exclude_packages": ["PyMuPDF", "six"]
-  },
   "esphome": {
     "exclude_packages": ["protobuf", "six", "tabulate"]
   },
@@ -161,30 +149,18 @@
     "exclude_packages": ["six"]
   },
   "fdroidserver": {
-    "exclude_packages": ["numpy", "pillow", "six"],
+    "exclude_packages": ["numpy", "pillow"],
     "extra_packages": ["wheel"]
   },
   "flintrock": {
     "exclude_packages": ["six"]
-  },
-  "fonttools": {
-    "extra_packages": ["Brotli"]
   },
   "gimme-aws-creds": {
     "package_name": "gimme-aws-creds",
     "exclude_packages": ["six"],
     "extra_packages": ["pyobjc-framework-LocalAuthentication", "SecretStorage", "jeepney"]
   },
-  "git-cola": {
-    "exclude_packages": ["pyqt5"]
-  },
   "git-remote-codecommit": {
-    "exclude_packages": ["six"]
-  },
-  "gitlint": {
-    "exclude_packages": ["six"]
-  },
-  "hatch": {
     "exclude_packages": ["six"]
   },
   "homeassistant-cli": {
@@ -210,26 +186,13 @@
     "exclude_packages": ["six"]
   },
   "jinja2-cli": "jinja2-cli[yaml,toml,xml]",
-  "jrnl": {
-    "exclude_packages": ["six"]
-  },
   "jupyterlab": {
     "exclude_packages": ["six"]
   },
   "keepkey-agent": {
     "exclude_packages": ["six"]
   },
-  "khal": {
-    "exclude_packages": ["six"]
-  },
   "khard": {
-    "exclude_packages": ["six"]
-  },
-  "lexicon": {
-    "package_name": "dns-lexicon[full]",
-    "exclude_packages": ["six"]
-  },
-  "legit": {
     "exclude_packages": ["six"]
   },
   "litecli": {
@@ -247,10 +210,6 @@
   "magic-wormhole": {
     "exclude_packages": ["six"],
     "extra_packages": ["wheel"]
-  },
-  "mapproxy": {
-    "exclude_packages": ["pillow"],
-    "extra_packages": ["pyproj"]
   },
   "mkdocs": {
     "exclude_packages": ["six"]
@@ -282,9 +241,6 @@
   },
   "ocrmypdf": {
     "exclude_packages": ["pillow"]
-  },
-  "onlykey-agent": {
-    "exclude_packages": ["six", "Cython"]
   },
   "openstackclient": {
     "extra_packages": ["python-heatclient", "python-octaviaclient"],
@@ -357,8 +313,8 @@
     "exclude_packages": ["six"]
   },
   "regipy": {
-    "package_name": "regipy[cli]",
-    "exclude_packages": ["tabulate"]
+    "exclude_packages": ["tabulate"],
+    "extra_packages": ["click"]
   },
   "remarshal": {
     "exclude_packages": ["six"]
@@ -367,8 +323,7 @@
     "exclude_packages": ["six"]
   },
   "robot-framework": {
-    "extra_packages": ["robotframework-archivelibrary", "robotframework-selenium2library", "robotframework-sshlibrary"],
-    "exclude_packages": ["six"]
+    "extra_packages": ["robotframework-archivelibrary", "robotframework-selenium2library", "robotframework-sshlibrary"]
   },
   "s3cmd": {
     "exclude_packages": ["six"]
@@ -382,7 +337,129 @@
   },
   "salt": {
     "extra_packages": ["pycryptodome", "pygit2"],
-    "exclude_packages": ["six"]
+    "exclude_packages": [
+      "pyobjc-core",
+      "pyobjc-framework-Accounts",
+      "pyobjc-framework-AddressBook",
+      "pyobjc-framework-AdSupport",
+      "pyobjc-framework-AppleScriptKit",
+      "pyobjc-framework-AppleScriptObjC",
+      "pyobjc-framework-ApplicationServices",
+      "pyobjc-framework-AuthenticationServices",
+      "pyobjc-framework-AutomaticAssessmentConfiguration",
+      "pyobjc-framework-Automator",
+      "pyobjc-framework-AVFoundation",
+      "pyobjc-framework-AVKit",
+      "pyobjc-framework-BusinessChat",
+      "pyobjc-framework-CalendarStore",
+      "pyobjc-framework-CFNetwork",
+      "pyobjc-framework-CloudKit",
+      "pyobjc-framework-Cocoa",
+      "pyobjc-framework-Collaboration",
+      "pyobjc-framework-ColorSync",
+      "pyobjc-framework-Contacts",
+      "pyobjc-framework-ContactsUI",
+      "pyobjc-framework-CoreAudio",
+      "pyobjc-framework-CoreAudioKit",
+      "pyobjc-framework-CoreBluetooth",
+      "pyobjc-framework-CoreData",
+      "pyobjc-framework-CoreHaptics",
+      "pyobjc-framework-CoreLocation",
+      "pyobjc-framework-CoreMedia",
+      "pyobjc-framework-CoreMediaIO",
+      "pyobjc-framework-CoreML",
+      "pyobjc-framework-CoreMotion",
+      "pyobjc-framework-CoreServices",
+      "pyobjc-framework-CoreSpotlight",
+      "pyobjc-framework-CoreText",
+      "pyobjc-framework-CoreWLAN",
+      "pyobjc-framework-CryptoTokenKit",
+      "pyobjc-framework-DeviceCheck",
+      "pyobjc-framework-DictionaryServices",
+      "pyobjc-framework-DiscRecording",
+      "pyobjc-framework-DiscRecordingUI",
+      "pyobjc-framework-DiskArbitration",
+      "pyobjc-framework-DVDPlayback",
+      "pyobjc-framework-EventKit",
+      "pyobjc-framework-ExceptionHandling",
+      "pyobjc-framework-ExecutionPolicy",
+      "pyobjc-framework-ExternalAccessory",
+      "pyobjc-framework-FileProvider",
+      "pyobjc-framework-FileProviderUI",
+      "pyobjc-framework-FinderSync",
+      "pyobjc-framework-FSEvents",
+      "pyobjc-framework-GameCenter",
+      "pyobjc-framework-GameController",
+      "pyobjc-framework-GameKit",
+      "pyobjc-framework-GameplayKit",
+      "pyobjc-framework-ImageCaptureCore",
+      "pyobjc-framework-IMServicePlugIn",
+      "pyobjc-framework-InputMethodKit",
+      "pyobjc-framework-InstallerPlugins",
+      "pyobjc-framework-InstantMessage",
+      "pyobjc-framework-Intents",
+      "pyobjc-framework-InterfaceBuilderKit",
+      "pyobjc-framework-IOSurface",
+      "pyobjc-framework-iTunesLibrary",
+      "pyobjc-framework-LatentSemanticMapping",
+      "pyobjc-framework-LaunchServices",
+      "pyobjc-framework-libdispatch",
+      "pyobjc-framework-LinkPresentation",
+      "pyobjc-framework-LocalAuthentication",
+      "pyobjc-framework-MapKit",
+      "pyobjc-framework-MediaAccessibility",
+      "pyobjc-framework-MediaLibrary",
+      "pyobjc-framework-MediaPlayer",
+      "pyobjc-framework-MediaToolbox",
+      "pyobjc-framework-Message",
+      "pyobjc-framework-Metal",
+      "pyobjc-framework-MetalKit",
+      "pyobjc-framework-ModelIO",
+      "pyobjc-framework-MultipeerConnectivity",
+      "pyobjc-framework-NaturalLanguage",
+      "pyobjc-framework-NetFS",
+      "pyobjc-framework-Network",
+      "pyobjc-framework-NetworkExtension",
+      "pyobjc-framework-NotificationCenter",
+      "pyobjc-framework-OpenDirectory",
+      "pyobjc-framework-OSAKit",
+      "pyobjc-framework-OSLog",
+      "pyobjc-framework-PencilKit",
+      "pyobjc-framework-Photos",
+      "pyobjc-framework-PhotosUI",
+      "pyobjc-framework-PreferencePanes",
+      "pyobjc-framework-PubSub",
+      "pyobjc-framework-PushKit",
+      "pyobjc-framework-QTKit",
+      "pyobjc-framework-Quartz",
+      "pyobjc-framework-QuickLookThumbnailing",
+      "pyobjc-framework-SafariServices",
+      "pyobjc-framework-SceneKit",
+      "pyobjc-framework-ScreenSaver",
+      "pyobjc-framework-ScriptingBridge",
+      "pyobjc-framework-SearchKit",
+      "pyobjc-framework-Security",
+      "pyobjc-framework-SecurityFoundation",
+      "pyobjc-framework-SecurityInterface",
+      "pyobjc-framework-ServerNotification",
+      "pyobjc-framework-ServiceManagement",
+      "pyobjc-framework-Social",
+      "pyobjc-framework-SoundAnalysis",
+      "pyobjc-framework-Speech",
+      "pyobjc-framework-SpriteKit",
+      "pyobjc-framework-StoreKit",
+      "pyobjc-framework-SyncServices",
+      "pyobjc-framework-SystemConfiguration",
+      "pyobjc-framework-SystemExtensions",
+      "pyobjc-framework-UserNotifications",
+      "pyobjc-framework-VideoSubscriberAccount",
+      "pyobjc-framework-VideoToolbox",
+      "pyobjc-framework-Vision",
+      "pyobjc-framework-WebKit",
+      "pyobjc-framework-XgridFoundation",
+      "pyobjc",
+      "six"
+   	]
   },
   "rtv": {
     "exclude_packages": ["six"]
@@ -439,18 +516,11 @@
   "twine-pypi": {
     "exclude_packages": ["six"]
   },
-  "twtxt": {
-    "exclude_packages": ["six"]
-  },
-  "vdirsyncer": "vdirsyncer[google]",
   "virtualenv": {
     "exclude_packages": ["six"]
   },
   "volatility": {
     "extra_packages": ["capstone", "pycryptodome", "yara-python"]
-  },
-  "watson": {
-    "exclude_packages": ["six"]
   },
   "west": {
     "exclude_packages": ["six"]

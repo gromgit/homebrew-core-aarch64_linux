@@ -28,7 +28,12 @@ class Sn0int < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    generate_completions_from_executable(bin/"sn0int", "completions")
+    bash_output = Utils.safe_popen_read(bin/"sn0int", "completions", "bash")
+    (bash_completion/"sn0int").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"sn0int", "completions", "zsh")
+    (zsh_completion/"_sn0int").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"sn0int", "completions", "fish")
+    (fish_completion/"sn0int.fish").write fish_output
 
     system "make", "-C", "docs", "man"
     man1.install "docs/_build/man/sn0int.1"

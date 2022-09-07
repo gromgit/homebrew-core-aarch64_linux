@@ -1,8 +1,8 @@
 class Karchive < Formula
   desc "Reading, creating, and manipulating file archives"
   homepage "https://api.kde.org/frameworks/karchive/html/index.html"
-  url "https://download.kde.org/stable/frameworks/5.97/karchive-5.97.0.tar.xz"
-  sha256 "1bff8249ddbb5a38916c9e145e5027de3f18a14772e7a8bdd4a954fae7ca8d92"
+  url "https://download.kde.org/stable/frameworks/5.93/karchive-5.93.0.tar.xz"
+  sha256 "61e326a840860270b7f8b9e8966462085b4f309be5c3a84c3b265eb95694c7fb"
   license all_of: [
     "BSD-2-Clause",
     "LGPL-2.0-only",
@@ -19,12 +19,12 @@ class Karchive < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b8ea0d068ccb226233cfba1cddbde1fbb0094812bf9fba5baf8e089776da4072"
-    sha256 cellar: :any,                 arm64_big_sur:  "482a553a7e8928dc62d6ab13204139349ccaceb1916351396abae67bfadcf77f"
-    sha256 cellar: :any,                 monterey:       "0b1a5d0e5df84fd9fac3967a1d302c936ddc947193887cff012e40ef5190540b"
-    sha256 cellar: :any,                 big_sur:        "f8fbcf8d3a8dcc008eee5349395a8847b4a6c2a345d88d38b4b03351179d7159"
-    sha256 cellar: :any,                 catalina:       "e62a95e48c84b902c781ebcea4a50486138fd10b9b4da6e7bf0ce91235e874b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8175110177ddecdccde56888bfb35e2292494782f784141f4441a9365c9c83dd"
+    sha256 cellar: :any,                 arm64_monterey: "6bc52439563779a1e05ffc67760c187f0659a70035dffc24cf75bb714cc4dfd4"
+    sha256 cellar: :any,                 arm64_big_sur:  "e7a824b47579de35e1bca39be42d734ba74ba2720d01671e43f4f094aa38f544"
+    sha256 cellar: :any,                 monterey:       "153947e0dbf51534f2a6078e518b44191d82aec2e31173708b259a6dad5c3f86"
+    sha256 cellar: :any,                 big_sur:        "fd4bc921e798232204a799252be921c7f4b47dc90a01c6ce292aa13935a1b39d"
+    sha256 cellar: :any,                 catalina:       "bab04ba17dae7b50bda5c51e2c54470a257797f73e8e55a2954e2292a644fc0b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e3ab23fd759f0a37bc2a52990266d92eb17561fa34822ee424bbcec0018ae3a"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -72,17 +72,8 @@ class Karchive < Formula
        unzipper].each do |test_name|
       mkdir test_name.to_s do
         system "cmake", (pkgshare/"examples/#{test_name}"), *args
-        system "cmake", "--build", "."
+        system "make"
       end
     end
-
-    assert_match "The whole world inside a hello.", shell_output("helloworld/helloworld 2>&1")
-    assert_predicate testpath/"hello.zip", :exist?
-
-    system "unzipper/unzipper", "hello.zip"
-    assert_predicate testpath/"world", :exist?
-
-    system "tarlocalfiles/tarlocalfiles", "world"
-    assert_predicate testpath/"myFiles.tar.gz", :exist?
   end
 end

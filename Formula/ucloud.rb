@@ -1,17 +1,17 @@
 class Ucloud < Formula
   desc "Official tool for managing UCloud services"
   homepage "https://www.ucloud.cn"
-  url "https://github.com/ucloud/ucloud-cli/archive/v0.1.40.tar.gz"
-  sha256 "fb6cdd5e7291a0439d9ec5cc5403cbfa1b504fa92c576ba7acdfb2d561d92b40"
+  url "https://github.com/ucloud/ucloud-cli/archive/0.1.38.tar.gz"
+  sha256 "466197235a2d9ff5a66237813f040ef6cd0efeb9513b578bfb6b215663640b9f"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe13e3873b5238b391eff28a723b78d7efba937e6e12c7775dbde1a978f8a2df"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be739c5a28212b1d3b38ed7703d9429b3918c1827b26abd02ab2c4e311bd60d3"
-    sha256 cellar: :any_skip_relocation, monterey:       "c453634ad09c1ebdc8525b9b2e82668af044b8c619880b72adb5fc7b89940297"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e0695c00458fc3e849b77947782a191effc3c7933d67c9ebefc4d2bbad5290d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "41da7a34c266e528be198b7798dd94c92354f80e37bf6dc8bf3d4bd14e8d8e59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80e2fbdc7a7b717b71d2704fa7ab24b769449304091d8e00aa3b48fc4a22b920"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f4ad481bdabbeefaae3deb57e042a528c27ce53de516cde97fe3773d3afce446"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4254bec5ee25cc98a01e1cfa0d62ad68c02cbbf3369d9fb9e20b3e9a6785326a"
+    sha256 cellar: :any_skip_relocation, monterey:       "82824c4f847acbc5f1019f639b8835c43ea73f8846e6798ea001877f9cb67a75"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3f118aa482175e143131d1866b739e553b43ae64e0c7575345804481fc5a9cc4"
+    sha256 cellar: :any_skip_relocation, catalina:       "444e0fbaf9dcbf1a47a762621e0139fa38e240a77ad0a11fa563b463b07a6adf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "261e26cb2a77389f36b808b046d42a968660bedd2c30535ce5a12ffdabf98331"
   end
 
   # Bump to 1.18 on the next release, if possible.

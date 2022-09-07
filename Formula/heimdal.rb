@@ -4,7 +4,7 @@ class Heimdal < Formula
   url "https://github.com/heimdal/heimdal/releases/download/heimdal-7.7.0/heimdal-7.7.0.tar.gz"
   sha256 "f02d3314d634cc55eb9cf04a1eae0d96b293e45a1f837de9d894e800161b7d1b"
   license "BSD-3-Clause"
-  revision 3
+  revision 2
 
   livecheck do
     url :stable
@@ -13,12 +13,12 @@ class Heimdal < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5bf1331cbf18fbacee694aebd48cf61bcebcd170fbbbe9e9c8a2bdf9ee90fcf6"
-    sha256 arm64_big_sur:  "5c45da30c4f837fd11fa4d656ff9f92c0a7cfd1d6c7e3442d925cd4c6406b766"
-    sha256 monterey:       "f91432a5c773478e95f79aed4381d8659980e7c19358cd109d9502eeaf5d6c6f"
-    sha256 big_sur:        "b0f45237bb7226ab0c6b06ce4c2a6ce143eded7335232e1cb85133863ad96f60"
-    sha256 catalina:       "1da6cca0420efc5ccd5075b8c3076435a9e2b077261d9ad91e0e3d4e644d38d0"
-    sha256 x86_64_linux:   "6505b354257b8f5096a209eb9bc8fbfea1f3377efff1e84b4c58a308c9cf2b34"
+    sha256 arm64_monterey: "ca2abda2838279230776bba8fdb40cc49b7b94b0efb604005f7f1a168c9de32f"
+    sha256 arm64_big_sur:  "dca8fd3504c57f0825dbf60ec136292d2861d61b8a5837102689e08c72da0ff8"
+    sha256 monterey:       "ee8a3f90eabe04a9ad5ec050ad0363d1513c632479d7aa2793b77dbf8b88c19b"
+    sha256 big_sur:        "29d91fd8667d520f8061f8f3d6b2d903d916b6cbffc3794b9489172af00bf8d2"
+    sha256 catalina:       "d919e8aa4fd538bec0e26ed00623119e10631eeb2df25796fdb20849cb6e90be"
+    sha256 x86_64_linux:   "cda884fdd14cd54ff9c41866adbc31f86c3165f351b564ab93013c7ab860b8b3"
   end
 
   keg_only "conflicts with Kerberos"
@@ -30,7 +30,6 @@ class Heimdal < Formula
   depends_on "openldap"
   depends_on "openssl@1.1"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "perl"
 
   resource "JSON" do

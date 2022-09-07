@@ -4,7 +4,6 @@ class Ruby < Formula
   url "https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.2.tar.gz"
   sha256 "61843112389f02b735428b53bb64cf988ad9fb81858b8248e22e57336f24a83e"
   license "Ruby"
-  revision 1
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
@@ -12,12 +11,12 @@ class Ruby < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "31217c5ddf91622cb444b41e3fa27e91e09606a45732b84e8f680b4020c2fe6e"
-    sha256 arm64_big_sur:  "1bf22db112a85a2c3d39d8f36c2794a1023a072eb6743bd72cc7db5edc5cc46e"
-    sha256 monterey:       "519a9dca4f576cb54858ca6b8371891d4bbfa7268e3baf2839996eac0a253b10"
-    sha256 big_sur:        "49cbb1dddd7c8c7449b7df170c7ee704d36ae4aafdf985eb12d8eccaf91bea76"
-    sha256 catalina:       "e0ab84261c665f24bcd88a8ff6b9cecd7fedb92636da43518d128f4f048a7627"
-    sha256 x86_64_linux:   "4382b9a0940dbfbf8e3b8b63b1e2602e1fa0cabdd6acc7be83ef66077c7d6adc"
+    sha256 arm64_monterey: "021656bba51b864c3a2b5d4b72ae8f83ac49913fd4d576a7375be2b1338508cd"
+    sha256 arm64_big_sur:  "e92288a687e891e51e6bdedc0a020aece0c159f4d508d7a62cf6e71ab226be27"
+    sha256 monterey:       "31567181a85e0f3003358466c689142464b14cf817f8c37a6c5367e0c85bc1fc"
+    sha256 big_sur:        "5465372af478fe2babb247ef3e2440645041d7ed284393f49c3ffbf450aa98e9"
+    sha256 catalina:       "a330778c6978faea285745bbd1026322eb06f13490e164cc92068f0932087588"
+    sha256 x86_64_linux:   "fa0984bbdd14c91aed6d1b279df99a4a1a122733464a23a22bcc47095588c15a"
   end
 
   head do
@@ -33,7 +32,6 @@ class Ruby < Formula
   depends_on "readline"
 
   uses_from_macos "libffi"
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   # Should be updated only when Ruby is updated (if an update is available).

@@ -3,17 +3,17 @@ class Docutils < Formula
 
   desc "Text processing system for reStructuredText"
   homepage "https://docutils.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/docutils/docutils/0.19/docutils-0.19.tar.gz"
-  sha256 "33995a6753c30b7f577febfc2c50411fec6aac7f7ffeb7c4cfe5991072dcf9e6"
+  url "https://downloads.sourceforge.net/project/docutils/docutils/0.18.1/docutils-0.18.1.tar.gz"
+  sha256 "679987caf361a7539d76e584cbeddc311e3aee937877c87346f31debc63e9d06"
   license all_of: [:public_domain, "BSD-2-Clause", "GPL-3.0-or-later", "Python-2.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b784e47113758f9c47cfa4567a26d862fc9d0921bd6b63565b093913f86607b4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b784e47113758f9c47cfa4567a26d862fc9d0921bd6b63565b093913f86607b4"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae5ef91d15f574fd9adeb50a5b1023c45f56fb7eed85ac270fdd0fcc401b41e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ae5ef91d15f574fd9adeb50a5b1023c45f56fb7eed85ac270fdd0fcc401b41e3"
-    sha256 cellar: :any_skip_relocation, catalina:       "ae5ef91d15f574fd9adeb50a5b1023c45f56fb7eed85ac270fdd0fcc401b41e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a51a4a455f0f93c4020aa5c692df0cbee810a4967ca38708591cb91d584fe7c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7be7131a30339be430d398e605bf870d1afa6842ece2f723b9ae4539f680c9c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d7be7131a30339be430d398e605bf870d1afa6842ece2f723b9ae4539f680c9c"
+    sha256 cellar: :any_skip_relocation, monterey:       "b29fd5b105a8b42efb62815ddde41221d70aed081f2a0e8dd1f127da631a1b27"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b29fd5b105a8b42efb62815ddde41221d70aed081f2a0e8dd1f127da631a1b27"
+    sha256 cellar: :any_skip_relocation, catalina:       "b29fd5b105a8b42efb62815ddde41221d70aed081f2a0e8dd1f127da631a1b27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "204621df50ede7cc0c892dba0f23923945ef919eb0eb87b62f46963bf4a00c99"
   end
 
   depends_on "python@3.10"

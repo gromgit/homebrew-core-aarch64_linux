@@ -1,18 +1,19 @@
 class Nettle < Formula
   desc "Low-level cryptographic library"
   homepage "https://www.lysator.liu.se/~nisse/nettle/"
-  url "https://ftp.gnu.org/gnu/nettle/nettle-3.8.1.tar.gz"
-  mirror "https://ftpmirror.gnu.org/nettle/nettle-3.8.1.tar.gz"
-  sha256 "364f3e2b77cd7dcde83fd7c45219c834e54b0c75e428b6f894a23d12dd41cbfe"
+  url "https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz"
+  mirror "https://ftpmirror.gnu.org/nettle/nettle-3.7.3.tar.gz"
+  sha256 "661f5eb03f048a3b924c3a8ad2515d4068e40f67e774e8a26827658007e3bcf0"
   license any_of: ["GPL-2.0-or-later", "LGPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f2fa03ad5664fdcf8475c1490a22f66d26056779911fd92ae2cb0d36998319a4"
-    sha256 cellar: :any,                 arm64_big_sur:  "6b169f8f81ec4dae1a1137f7d8738a4acdb24806c1057039791bb58dc9fb67d8"
-    sha256 cellar: :any,                 monterey:       "19eca950c962860d44093db86226b8a07ca045973c15f7d3b0de2acd1cfad3da"
-    sha256 cellar: :any,                 big_sur:        "48493dc5881e45b030b1f39d379fe70d6d8707063766c0f223e20e190d8de4ba"
-    sha256 cellar: :any,                 catalina:       "185a433efd966756372f46bb0669eaaac9883c6f9a149d2d7e0ed33df661d1fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1901826420ae92f7998068673ec444d32550618f38ad1c074acf68be16b9b056"
+    sha256 cellar: :any,                 arm64_monterey: "c47b2e4721e5c8347194e3dad066bf00fc6b5d28cb4082f53535dba76a1ed658"
+    sha256 cellar: :any,                 arm64_big_sur:  "3cd41002e6358b07ca506ed09fb07473d61c1c2717b630f8d708c74ab5d06704"
+    sha256 cellar: :any,                 monterey:       "dccc8b4c4e02bcd485c1558ec1f01ca4c591a502b464629dc2e514add894b64b"
+    sha256 cellar: :any,                 big_sur:        "80fa0a047c3d08ccb47c8820a566d187365e8ea75e0cdf903ef0653d3aa3bb67"
+    sha256 cellar: :any,                 catalina:       "f1f1c41bf3dadabc748a34bba26b8771e4e36ae0815be4a83d1d317d90fa3c2e"
+    sha256 cellar: :any,                 mojave:         "f7900666b8d57164a5e770008390ea3fe2c519941e3f28daba9ef91dad4e5e69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7c56819e2bc18baf900853311685108aab2cda8fc4963ca095ba893235ef1cb"
   end
 
   depends_on "gmp"

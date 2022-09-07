@@ -5,7 +5,7 @@ class Wownero < Formula
       tag:      "v0.10.1.0",
       revision: "8ab87421d9321d0b61992c924cfa6e3918118ad0"
   license "BSD-3-Clause"
-  revision 3
+  revision 2
 
   # The `strategy` code below can be removed if/when this software exceeds
   # version 10.0.0. Until then, it's used to omit a malformed tag that would
@@ -24,12 +24,12 @@ class Wownero < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0646ba9aeaef3204b5e26d0879f7e98026e61e43bd17cafa41103b41a4ce15e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "c1ad435035722aecd7a6fe0638f0c9b0422dc3012e264e0e2f08384cdb5a689c"
-    sha256 cellar: :any,                 monterey:       "482dffad2aa48520403a157ea6ec528efb5b6717f3575873f21377fd470fac60"
-    sha256 cellar: :any,                 big_sur:        "58e407effcf1443a4c57e4f2c940aaf9435680cbcc8514601d2899002aa31f8f"
-    sha256 cellar: :any,                 catalina:       "615bd23d5418a2e1619fa33eb17f40736771b83a22e60f378d28a09047a09267"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb8eb6d58f4bb2824323831665bcf16a247a5b7b7c3bf855a80267e572966fdb"
+    sha256 cellar: :any,                 arm64_monterey: "d25b719116fec944ea8974444252576cd9312b095d1cbf88b82498ff63b75843"
+    sha256 cellar: :any,                 arm64_big_sur:  "bb97e22c03ad3eb74ecb8222032eb02263a902e4a5fdf51c4f8520e1686a114d"
+    sha256 cellar: :any,                 monterey:       "b547ff9d95c1286b7e52c965a049ac42adef512032913bf33c454ee63832b676"
+    sha256 cellar: :any,                 big_sur:        "16391bfe4b2f5eb2971e9d4210b1351902df6e3528e1502fc41334cd48f9e217"
+    sha256 cellar: :any,                 catalina:       "9c4b7a3b5169141e5361ab509dd734b13d0ca90c536ce3688555b934afa61c79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "338e07a45ea2bc49a91633cb8277e172eba7f015f6fef2f83d2b60aad8750246"
   end
 
   depends_on "cmake" => :build

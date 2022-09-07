@@ -1,17 +1,17 @@
 class Findomain < Formula
   desc "Cross-platform subdomain enumerator"
   homepage "https://github.com/Findomain/Findomain"
-  url "https://github.com/Findomain/Findomain/archive/8.2.1.tar.gz"
-  sha256 "93c580c9773e991e1073b9b597bb7ccf77f54cebfb9761e4b1180ff97fb15bf6"
+  url "https://github.com/Findomain/Findomain/archive/8.1.1.tar.gz"
+  sha256 "817497a17bf131afb1ea4fa53eaeeca566949360be168b393260a18ea64c0dbb"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0854489c161c180f00e4c8d551bcc06339db0c77e4fc37fbf9ba64b3457f478e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d8da7e51087b7c2d3319d514e82961802f000ac59e01d52e729dc95c2f59b17"
-    sha256 cellar: :any_skip_relocation, monterey:       "b162fe9c6dfe0f2eb152051fa409389b26e38a80ca41ebf72910d0796b1baf37"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7b825017ebd6d1fcfb69041228342e44aad0b56b93c507fe93072169c4ff8d24"
-    sha256 cellar: :any_skip_relocation, catalina:       "a6555b06978c1566e486c24106b79982fdea0006f21708646ffc5516eb9330af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5c5083e92b079524ba537ceb7542937890af5f2e321528083e44549c1a28e7c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "92e6ad129b749562bdb31486c28d05e5aabb006b5ae1aa2a86f7aa6d000a1fb7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b63a76d8a18f2d5c8946be992dbacfe9d7141f5c4a304e56a62a4f01e6637e8"
+    sha256 cellar: :any_skip_relocation, monterey:       "0e5c30da518bb1a35c8777a66cc434756bfca3efd1687b71d5cbc3e902975a3a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b20e2cc8ba3389d035aa0455cc738728ba0f4328864cc47993a76b080a6e7581"
+    sha256 cellar: :any_skip_relocation, catalina:       "512d8280ff6087b35c536e55162551099ab535cf9b1e9b21d39c805a9ad8ebbf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa3936ab295b06dddc9d79c8c18ac5f08894a1c670e69ca205d53762b6df69a8"
   end
 
   depends_on "rust" => :build

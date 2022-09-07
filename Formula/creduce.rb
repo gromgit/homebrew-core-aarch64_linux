@@ -1,22 +1,11 @@
 class Creduce < Formula
   desc "Reduce a C/C++ program while keeping a property of interest"
   homepage "https://embed.cs.utah.edu/creduce/"
+  url "https://embed.cs.utah.edu/creduce/creduce-2.10.0.tar.gz"
+  sha256 "db1c0f123967f24d620b040cebd53001bf3dcf03e400f78556a2ff2e11fea063"
   license "BSD-3-Clause"
   revision 3
-
-  # Remove when `head` and `stable` use the same LLVM version.
-  stable do
-    url "https://embed.cs.utah.edu/creduce/creduce-2.10.0.tar.gz"
-    sha256 "db1c0f123967f24d620b040cebd53001bf3dcf03e400f78556a2ff2e11fea063"
-    depends_on "llvm@9"
-
-    # Use shared libraries.
-    # Remove with the next release.
-    patch do
-      url "https://github.com/csmith-project/creduce/commit/e9bb8686c5ef83a961f63744671c5e70066cba4e.patch?full_index=1"
-      sha256 "d5878a2c8fb6ebc5a43ad25943a513ff5226e42b842bb84f466cdd07d7bd626a"
-    end
-  end
+  head "https://github.com/csmith-project/creduce.git", branch: "master"
 
   livecheck do
     url :homepage
@@ -30,13 +19,8 @@ class Creduce < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "05609defa2c67b6cc907d1c30f7f4080e03211ce918fa5d6b79c256b608805a8"
   end
 
-  head do
-    # The `llvm-13.0` branch is slightly ahead of `master` and allows use of `llvm@13`.
-    url "https://github.com/csmith-project/creduce.git", branch: "llvm-13.0"
-    depends_on "llvm@13"
-  end
-
   depends_on "astyle"
+  depends_on "llvm@9"
 
   uses_from_macos "perl"
 
@@ -67,13 +51,18 @@ class Creduce < Formula
     end
   end
 
+  # Use shared libraries.
+  # Remove with the next release.
+  patch do
+    url "https://github.com/csmith-project/creduce/commit/e9bb8686c5ef83a961f63744671c5e70066cba4e.patch?full_index=1"
+    sha256 "d5878a2c8fb6ebc5a43ad25943a513ff5226e42b842bb84f466cdd07d7bd626a"
+  end
+
   def install
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
 
-    llvm = deps.find { |dep| dep.name.match?(/^llvm(@\d+)?$/) }
-               .to_formula
     # Avoid ending up with llvm's Cellar path hard coded.
-    ENV["CLANG_FORMAT"] = llvm.opt_bin/"clang-format"
+    ENV["CLANG_FORMAT"] = Formula["llvm@9"].opt_bin/"clang-format"
 
     resources.each do |r|
       r.stage do
@@ -87,8 +76,8 @@ class Creduce < Formula
     # Undefined symbols for architecture x86_64:
     #   "std::__1::basic_stringbuf<char, std::__1::char_traits<char>, ...
     if DevelopmentTools.clang_build_version == 1316
-      ENV["CC"] = llvm.opt_bin/"clang"
-      ENV["CXX"] = llvm.opt_bin/"clang++"
+      ENV["CC"] = Formula["llvm@9"].opt_bin/"clang"
+      ENV["CXX"] = Formula["llvm@9"].opt_bin/"clang++"
     end
 
     system "./configure", "--prefix=#{prefix}",

@@ -1,18 +1,18 @@
 class Libfabric < Formula
   desc "OpenFabrics libfabric"
   homepage "https://ofiwg.github.io/libfabric/"
-  url "https://github.com/ofiwg/libfabric/releases/download/v1.15.2/libfabric-1.15.2.tar.bz2"
-  sha256 "8d050b88bee62e8512a88f5aa25f532f46bef587bc3f91022ecdb9b3b2676c7e"
+  url "https://github.com/ofiwg/libfabric/releases/download/v1.15.0/libfabric-1.15.0.tar.bz2"
+  sha256 "70982c58eadeeb5b1ddb28413fd645e40b206618b56fbb2b18ab1e7f607c9bea"
   license any_of: ["BSD-2-Clause", "GPL-2.0-only"]
   head "https://github.com/ofiwg/libfabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2c53e73dfcd784dac33295e84ef45d35794260812f522dbb861d6fbb48f9970e"
-    sha256 cellar: :any,                 arm64_big_sur:  "ed9144b5cb03292a358f4f89e2a7bf7c84d9974dc3dc39162648f70bd0c7c812"
-    sha256 cellar: :any,                 monterey:       "d682d12e279871e48aa7b220cb6907b75d102762e3ea78f876a7c8f5c278edf4"
-    sha256 cellar: :any,                 big_sur:        "e8ba210e6e61540e4a6e04550b62ba36642f9257bda038a804c1a72da1647fb3"
-    sha256 cellar: :any,                 catalina:       "7e855780f1b7e8df553edfa62e2d9b02f708b108a86d74bdc96e1cb69e2cbbe9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa089a18b7fde229d98e57c40e48f623e06870000137240d1c207f15374c8c88"
+    sha256 cellar: :any,                 arm64_monterey: "7fb98bd0eea6919a568313751f7bdf9eb6a5b15f9fcf2bfb1ef905a9b8ea4e67"
+    sha256 cellar: :any,                 arm64_big_sur:  "d82b97de57d4f0a9b349146d64f7ea26e8a0f07492abbff8068be0c36309dfd4"
+    sha256 cellar: :any,                 monterey:       "aeb1269f836ec62187a72ded9363f418c7eff706d8859365ef12faf5249b1971"
+    sha256 cellar: :any,                 big_sur:        "0695c38a8fe0cf8c5be27e6aae62f35f6e8bafdaa7efdb5a74fc721973242ace"
+    sha256 cellar: :any,                 catalina:       "6e08fc6af0323f5044624c5a6c716450cc620ba9cf10355637fc5b92fb9bee74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a368729a69fc759593d5be7625e5d0c40c53274fc6bbd3b704f048b034a484db"
   end
 
   depends_on "autoconf" => :build

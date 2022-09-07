@@ -1,18 +1,18 @@
 class Autodiff < Formula
   desc "Automatic differentiation made easier for C++"
   homepage "https://autodiff.github.io"
-  url "https://github.com/autodiff/autodiff/archive/v0.6.11.tar.gz"
-  sha256 "ac7a52387a10ecb8ba77ce5385ffb23893ff9a623467b4392bd204422a3b5c09"
+  url "https://github.com/autodiff/autodiff/archive/v0.6.7.tar.gz"
+  sha256 "1345021d74bfd34e74a58d98f4e0e16cc4666b6cd18628af0ba642a6521aadfa"
   license "MIT"
   head "https://github.com/autodiff/autodiff.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "791f4bcc0c3443bea4e021975e796a995373c24c8324eee6d87c59a2c92b52b5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe483c1c5f4e1e77869218dc0733774c69a468ac1d5a5b703bc8eb2c8350856a"
-    sha256 cellar: :any_skip_relocation, monterey:       "46e42cf85d0383662c1b1e147f8aeebd1ee7a355f62d74edfd673207f273e54f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "47ca8ddf8ce79fdc95104ddd74a2ff37473445c9d7ae3a77ff67248388c04cc1"
-    sha256 cellar: :any_skip_relocation, catalina:       "004781f0224d9bdcefcf720f2defc2d82f112338fde7229cc4f446c1108214a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5242b237a2bb5edd12d26569c7fceb9eaf3a73a48c88dc2fbe8003aa57d00632"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "73545e43853feedf25b02eea8001a489bb351b6da0a8cf4d982163522caae518"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dc281d0e3235051a65704a385e037ccff5e73f6d95b08087b2c01cd274b0cf18"
+    sha256 cellar: :any_skip_relocation, monterey:       "ce05ae2babf5af15cebe2c92142ffac7a616646a33247ebcbcfcdd065323036b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "03b6c61d9c6566630449b08af22c14378925fb49352a38412b40c44ca88e3ebc"
+    sha256 cellar: :any_skip_relocation, catalina:       "a4121ba580e4b4842f67b27bac57cfced23d81d7b253ab7117a14d4c8997a8d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16ee18662b1c50d43e8386f8752a942c2886fb13b86ac292afee25b1fbe8cd9d"
   end
 
   depends_on "cmake" => :build

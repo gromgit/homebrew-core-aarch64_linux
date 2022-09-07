@@ -1,18 +1,18 @@
 class ProtobufC < Formula
   desc "Protocol buffers library"
   homepage "https://github.com/protobuf-c/protobuf-c"
-  url "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.1/protobuf-c-1.4.1.tar.gz"
-  sha256 "4cc4facd508172f3e0a4d3a8736225d472418aee35b4ad053384b137b220339f"
+  url "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz"
+  sha256 "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
   license "BSD-2-Clause"
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "201a08aabe9bc83897b908019d7dd8aba6dcddf46224eb15bbccdd5f70f6a21b"
-    sha256 cellar: :any,                 arm64_big_sur:  "48ea3989f31b6f44c8170479f5115064ed32ccd4ccf6784ea4ad254697d4f53e"
-    sha256 cellar: :any,                 monterey:       "eeb51fce7f9a32e9c64ed31ffaa0c9e1fe747b0e047065fcd7e69cc6361b039c"
-    sha256 cellar: :any,                 big_sur:        "06b3fc06f5fe8b09353ac6aa106373833d897a960bb607a6caf84ba0043634ac"
-    sha256 cellar: :any,                 catalina:       "5c3d841771a3527b3c118abb738b2ab04345de884588cf313d8ed14fe8514288"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fd6aa2c3972f3b24248fb0a75638c61dc658cd0c2bc3005b088715e68f6a106"
+    sha256 cellar: :any,                 arm64_monterey: "4a3986d128583d41b29e369bfddeff1e369267441797b71776b8567b4eac5702"
+    sha256 cellar: :any,                 arm64_big_sur:  "8e855e301d3e6f20acb9b79f8e86ed46cba43790d03a2a82b2de7024abb721ec"
+    sha256 cellar: :any,                 monterey:       "1d380b543cfaed179de2a482212975c9bc7219da96aa939148f9c6a6a30e170c"
+    sha256 cellar: :any,                 big_sur:        "c89d06a0c0b555379f137f448cd8d25dd0a476d417ab277c572fd07c6faf0275"
+    sha256 cellar: :any,                 catalina:       "55732600c0f049e6b40bee2751dfacaadd79d62a72f6f843897e25d129cbd47f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a52bfbd47abd15484c307ae0e9d11d93bf9c98606dabaa893b75952e9db80a28"
   end
 
   depends_on "pkg-config" => :build
@@ -20,9 +20,6 @@ class ProtobufC < Formula
 
   def install
     ENV.cxx11
-
-    # https://github.com/protocolbuffers/protobuf/issues/9947
-    ENV.append_to_cflags "-DNDEBUG"
 
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make", "install"

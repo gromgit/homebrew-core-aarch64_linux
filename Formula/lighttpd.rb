@@ -1,8 +1,8 @@
 class Lighttpd < Formula
   desc "Small memory footprint, flexible web-server"
   homepage "https://www.lighttpd.net/"
-  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.66.tar.xz"
-  sha256 "47ac6e60271aa0196e65472d02d019556dc7c6d09df3b65df2c1ab6866348e3b"
+  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.64.tar.xz"
+  sha256 "e1489d9fa7496fbf2e071c338b593b2300d38c23f1e5967e52c9ef482e1b0e26"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,12 +11,12 @@ class Lighttpd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "140789716124040c00768f4010deffb6e2a50eda8013e9f596441c39631b5d56"
-    sha256 arm64_big_sur:  "fe84d698c51ff01d404aadd9de3946d6bc7bc0d30b594481c0bec95cb820e31d"
-    sha256 monterey:       "6c6725d8b14700e38bb161c0d1c899e138fddf4299dd4b5423b36c64a76137a0"
-    sha256 big_sur:        "51df7b685fe47669908fc79076b9e7c89a5219a402ae44a0cca9a92a67b0a6dd"
-    sha256 catalina:       "07116ce0b11f971e4b7d776f94dae5e40e5555e2c976e22fffbc0ad1f9a03939"
-    sha256 x86_64_linux:   "2d414974667d44f72018bedae1edac0d63a04bc931622da2a5299d746af4a07b"
+    sha256 arm64_monterey: "bcf37fd9c04f41481779f01bcc6a99b70ad92c3ce1a0b1e7420498d425fc4811"
+    sha256 arm64_big_sur:  "75560ba16722115eb40465408ad2c6e98e4045c30f57e45d0f8814652c402fc6"
+    sha256 monterey:       "e512bab9a55d348cdc6ed051c065c02cc7ba75f09c164b6d62069ae1db39ea3c"
+    sha256 big_sur:        "1f8d5019d3a0106da00e13c4ae817bf52536d7a2722b195cd79c6f2d91b36c56"
+    sha256 catalina:       "d1b54887a11604f8c36440248b50ff961f35c166b075d86c84b90e1708f9fd3d"
+    sha256 x86_64_linux:   "aa4bf269c6d1e357f4c07236e9a9c4053bd67803029aba23bf2ddfbcb0e81b65"
   end
 
   depends_on "autoconf" => :build
@@ -26,8 +26,6 @@ class Lighttpd < Formula
   depends_on "openldap"
   depends_on "openssl@1.1"
   depends_on "pcre2"
-
-  uses_from_macos "libxcrypt"
 
   # default max. file descriptors; this option will be ignored if the server is not started as root
   MAX_FDS = 512

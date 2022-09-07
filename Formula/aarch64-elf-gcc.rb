@@ -1,9 +1,9 @@
 class Aarch64ElfGcc < Formula
   desc "GNU compiler collection for aarch64-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
-  sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-12.1.0/gcc-12.1.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.1.0/gcc-12.1.0.tar.xz"
+  sha256 "62fd634889f31c02b64af2c468f064b47ad1ca78411c45abe6ac4b5f8dd19c7b"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
 
   livecheck do
@@ -11,12 +11,12 @@ class Aarch64ElfGcc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f5d9fd202404e69e3d69f59e4258896fa0b8e27f8f9cc6873b66c769ebfadaae"
-    sha256 arm64_big_sur:  "49c73ae5b7fd21768d3467465c2e0a7da1be3f414757a9a72fc6c582f91537ba"
-    sha256 monterey:       "28bd30c6e0beecd74e080bac0676916933479154e6e067409d1a45558a5e7cab"
-    sha256 big_sur:        "651f6c7cf15bd9e4751e4295b03fb2b3be7956a61593696c150bab57c8fdd64b"
-    sha256 catalina:       "89c4fde526913e9aa04fffa842f4a1e1f7a95b05a7dcc5427e44aa466cc6c4ac"
-    sha256 x86_64_linux:   "2c9a3e4a9165547f2364e15f5c642a99689c755139a8b93bdbe15344957320a1"
+    sha256 arm64_monterey: "e3e61b1ddba97ee4156243b6e4a75d2e7ab7772d7427f136d2db7f65e91c5429"
+    sha256 arm64_big_sur:  "e6f7eaabc4d43eed86b0a0b737c2bf0e922a608686ddc1d033b872bba4f766f1"
+    sha256 monterey:       "cea22bcae56ca4ab90f52d5cee01c68362a5a59cfe9e82e1e1003f5912346b72"
+    sha256 big_sur:        "db306ab8ee3a4fab34538e632a83e8adc6e71cf714a6b5f047d4d20bed4b331b"
+    sha256 catalina:       "ab2276b06f5740bdfc54f98a0469f94b9135456deaf785cf7318f622d35746e3"
+    sha256 x86_64_linux:   "0a6b4a81b2d56f4b10e82735c29a20787f9d45d93d5425031ab4f089adab2008"
   end
 
   depends_on "aarch64-elf-binutils"

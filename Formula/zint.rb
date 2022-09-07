@@ -1,8 +1,8 @@
 class Zint < Formula
   desc "Barcode encoding library supporting over 50 symbologies"
   homepage "https://www.zint.org.uk/"
-  url "https://downloads.sourceforge.net/project/zint/zint/2.11.1/zint-2.11.1-src.tar.gz"
-  sha256 "76ca84b88483744e26fb42c6191d208f75aa09ad3d07d4bdd62b1917500b8bb8"
+  url "https://downloads.sourceforge.net/project/zint/zint/2.10.0/zint-2.10.0-src.tar.gz"
+  sha256 "bb97e98a32e140c344e92c8da84a9df413dca16083f2fcdc29791bec77350339"
   license "GPL-3.0-or-later"
   head "https://git.code.sf.net/p/zint/code.git", branch: "master"
 
@@ -12,12 +12,13 @@ class Zint < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1ea226645a7ddb4ed5915a1341cf7aa163886268400f3196d81ae1c86c8d4a8c"
-    sha256 cellar: :any,                 arm64_big_sur:  "3ec3f07e1990fb95eb430a0d905370c872ba60155dbb4389932f79439d403a53"
-    sha256 cellar: :any,                 monterey:       "19f1454a31e8dca4b6d48cb29c81c596cb2e449d75481e9f5d278b7c04398b20"
-    sha256 cellar: :any,                 big_sur:        "1e140f68d1824b648f7ffca624fac788b2ec226dbba38b88de32247d2571f4cc"
-    sha256 cellar: :any,                 catalina:       "c8ebc9a9fb91bb16df70fa6d63cc7b7012563cc720e4ca91d21ffc0ad298c926"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f648339f12e34e52d0caa319e0767dd41e69873345273632bd6ba8a7499157ef"
+    sha256 cellar: :any,                 arm64_monterey: "77d13463b6479df20523bb8a2bd09214a1a1ad5c6186b8284c642031d4a460e3"
+    sha256 cellar: :any,                 arm64_big_sur:  "7e0a1464ff78c64c1be29694571dcfc6b5812ac7202706662a05fce7ba48717d"
+    sha256 cellar: :any,                 monterey:       "40a3961b5875fff1e51ae1dba0f2b7a65eabb914261b79a315fa747123c08b76"
+    sha256 cellar: :any,                 big_sur:        "aacdc432956a661f84eb7b1b31663b46f97087929a9d1f6aea3ae4a4441da56b"
+    sha256 cellar: :any,                 catalina:       "d23cc6ad59e245520ee185e971f9dab0f62630fc3b546d711716e32168967cca"
+    sha256 cellar: :any,                 mojave:         "9da4c9094f97924a5093044f6f3c59db2ccf2f6b0ff3d2c7bd75db1eac8b254d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64e38848f0b02b9eb42651b0693ab8bd0abe6b8bd69fefb8fa8fd555d1aaf265"
   end
 
   depends_on "cmake" => :build

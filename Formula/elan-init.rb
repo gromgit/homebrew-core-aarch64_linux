@@ -32,7 +32,12 @@ class ElanInit < Formula
       bin.install_symlink "elan-init" => link
     end
 
-    generate_completions_from_executable(bin/"elan", "completions", base_name: "elan")
+    bash_output = Utils.safe_popen_read(bin/"elan", "completions", "bash")
+    (bash_completion/"elan").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"elan", "completions", "zsh")
+    (zsh_completion/"_elan").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"elan", "completions", "fish")
+    (fish_completion/"elan.fish").write fish_output
   end
 
   test do

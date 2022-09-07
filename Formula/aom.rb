@@ -2,17 +2,17 @@ class Aom < Formula
   desc "Codec library for encoding and decoding AV1 video streams"
   homepage "https://aomedia.googlesource.com/aom"
   url "https://aomedia.googlesource.com/aom.git",
-      tag:      "v3.4.0",
-      revision: "fc430c57c7b0307b4c5ffb686cd90b3c010d08d2"
+      tag:      "v3.3.0",
+      revision: "87460cef80fb03def7d97df1b47bad5432e5e2e4"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f16849b3bb161a0695d5bb6677799f4d87e1db60fbaf6719f1ea0a996847d029"
-    sha256 cellar: :any,                 arm64_big_sur:  "d73c1ddd2cfdc4c53f6362b5bbbf70a6f127d5eeae5039e77a36b6fca5bcfd92"
-    sha256 cellar: :any,                 monterey:       "a06dca8e5ce52a095f6aca1dbbc5c1840465b16f7935f671e1eb0139479ccec9"
-    sha256 cellar: :any,                 big_sur:        "ba4000b61ee2966a7064fc98aea0e5f8ae231dd249edc352fb27e01756c6cac6"
-    sha256 cellar: :any,                 catalina:       "9d64c9e660e8b21ee46544e7542eb642590d1f3da72c8d107f3b3b74b362d978"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1824239b9ffaf9235c1bc73c6dddd8c53219bbe5a5bf041a143bf54c7ed58518"
+    sha256 cellar: :any,                 arm64_monterey: "621aaeb000c4ad3df7cf62af3a22f53e38d9cf0714b52cc23ee3406949c5ad0d"
+    sha256 cellar: :any,                 arm64_big_sur:  "76b0b72beb6975e6f8ebbefc256f01c2b6466e210c93172c39ef35fde3945aac"
+    sha256 cellar: :any,                 monterey:       "0a522c17ca7a108aa44860a549740f277fc6a1118b36df0bfd846e2d17fb80c8"
+    sha256 cellar: :any,                 big_sur:        "e5f4fba0b45d08db7ffe9e06884cb163dd027b18e8ef5442cc5d4d55b6489f44"
+    sha256 cellar: :any,                 catalina:       "10be5b52fb09dc2126ac5ed93e4caa805f9224833b665aebe79c2c3d40b51e0d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c59073520f70de15996b3af4c0513ff1b4bde89fb33a810a9dd7a8348afa553e"
   end
 
   depends_on "cmake" => :build
@@ -25,10 +25,14 @@ class Aom < Formula
     depends_on "libvmaf"
   end
 
-  resource "homebrew-bus_qcif_15fps.y4m" do
+  resource "bus_qcif_15fps.y4m" do
     url "https://media.xiph.org/video/derf/y4m/bus_qcif_15fps.y4m"
     sha256 "868fc3446d37d0c6959a48b68906486bd64788b2e795f0e29613cbb1fa73480e"
   end
+
+  # Fix build with `-DCONFIG_TUNE_BUTTERAUGLI=1`.
+  # https://aomedia.googlesource.com/aom.git/+/b389ce89bdb6a3097e637d947123ffc4b9aea763%5E%21/
+  patch :DATA
 
   def install
     ENV.runtime_cpu_detection unless Hardware::CPU.arm?
@@ -57,7 +61,7 @@ class Aom < Formula
   end
 
   test do
-    resource("homebrew-bus_qcif_15fps.y4m").stage do
+    resource("bus_qcif_15fps.y4m").stage do
       system "#{bin}/aomenc", "--webm",
                               "--tile-columns=2",
                               "--tile-rows=2",
@@ -70,3 +74,56 @@ class Aom < Formula
     end
   end
 end
+
+__END__
+commit b389ce89bdb6a3097e637d947123ffc4b9aea763
+Author: James Zern <jzern@google.com>
+Date:   Mon Mar 7 16:35:49 2022 -0800
+
+    fix compile w/-DCONFIG_TUNE_BUTTERAUGLI=1
+    
+    This was broken independently by:
+    
+    - av1_set_quantizer() parameter update
+      b89e8f8f7 add support for qp adjustment for HDR video
+    
+    - av1_scale_if_required -> av1_realloc_and_scale_if_required
+      dba4f0f3e Allocate scaled source buffers on the fly
+    
+    Bug: b/222461449
+    Change-Id: I521e6e20a1f9dab111f2fe63eed7122f0e5d257b
+
+diff --git a/av1/encoder/tune_butteraugli.c b/av1/encoder/tune_butteraugli.c
+index c5bbee1ae..70fa23922 100644
+--- a/av1/encoder/tune_butteraugli.c
++++ b/av1/encoder/tune_butteraugli.c
+@@ -262,13 +262,15 @@ void av1_setup_butteraugli_rdmult(AV1_COMP *cpi) {
+   av1_set_frame_size(cpi, cm->superres_upscaled_width,
+                      cm->superres_upscaled_height);
+ 
+-  cpi->source =
+-      av1_scale_if_required(cm, cpi->unscaled_source, &cpi->scaled_source,
+-                            cm->features.interp_filter, 0, false, false);
++  cpi->source = av1_realloc_and_scale_if_required(
++      cm, cpi->unscaled_source, &cpi->scaled_source, cm->features.interp_filter,
++      0, false, false, cpi->oxcf.border_in_pixels,
++      cpi->oxcf.tool_cfg.enable_global_motion);
+   if (cpi->unscaled_last_source != NULL) {
+-    cpi->last_source = av1_scale_if_required(
++    cpi->last_source = av1_realloc_and_scale_if_required(
+         cm, cpi->unscaled_last_source, &cpi->scaled_last_source,
+-        cm->features.interp_filter, 0, false, false);
++        cm->features.interp_filter, 0, false, false, cpi->oxcf.border_in_pixels,
++        cpi->oxcf.tool_cfg.enable_global_motion);
+   }
+ 
+   av1_setup_butteraugli_source(cpi);
+@@ -295,7 +297,7 @@ void av1_setup_butteraugli_rdmult(AV1_COMP *cpi) {
+   // cpi->sf.part_sf.fixed_partition_size = BLOCK_32X32;
+ 
+   av1_set_quantizer(cm, q_cfg->qm_minlevel, q_cfg->qm_maxlevel, q_index,
+-                    q_cfg->enable_chroma_deltaq);
++                    q_cfg->enable_chroma_deltaq, q_cfg->enable_hdr_deltaq);
+   av1_set_speed_features_qindex_dependent(cpi, oxcf->speed);
+   if (q_cfg->deltaq_mode != NO_DELTA_Q || q_cfg->enable_chroma_deltaq)
+     av1_init_quantizer(&cpi->enc_quant_dequant_params, &cm->quant_params,

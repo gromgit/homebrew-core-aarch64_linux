@@ -1,18 +1,19 @@
 class Libssh < Formula
   desc "C library SSHv1/SSHv2 client and server protocols"
   homepage "https://www.libssh.org/"
-  url "https://www.libssh.org/files/0.10/libssh-0.10.3.tar.xz"
-  sha256 "6e889dbe4f3eecd13a452ca868ec85525ab9c39d778519a9c141b83da738c8aa"
+  url "https://www.libssh.org/files/0.9/libssh-0.9.6.tar.xz"
+  sha256 "86bcf885bd9b80466fe0e05453c58b877df61afa8ba947a58c356d7f0fab829b"
   license "LGPL-2.1-or-later"
   head "https://git.libssh.org/projects/libssh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d267476dae9acc87a0ce409bddc289719f05f8c36c13ff2e0e89111552176107"
-    sha256 cellar: :any,                 arm64_big_sur:  "c5a7c1b78b7cd551910d0252061336701fb5f8a9e5e298dbc5213cf469e98300"
-    sha256 cellar: :any,                 monterey:       "bb2b352265ad303a481e3a209c9ac94a9d77e2e0bb338c272a0efcaf086328d0"
-    sha256 cellar: :any,                 big_sur:        "c200671622e618c3c74973089b6df4d45c3df02e410c9d69136ce5d2ceb56f46"
-    sha256 cellar: :any,                 catalina:       "d367597bfaa35eb12b5f955ed0b18604e72b7359ef516537f2518f2357c769ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "140ff80136378bf2ee57b3d92ff93eab794f2bf02e90450147323d51fd699741"
+    sha256 cellar: :any,                 arm64_monterey: "8487fa5c9e40e22b37862ac114c93e10384f2fd42b810bd290db627663b48af5"
+    sha256 cellar: :any,                 arm64_big_sur:  "d6c0de919fb07df2cc4c637eba40c85f2dd19808fae5d7dcabeeb8c9b8477de2"
+    sha256 cellar: :any,                 monterey:       "5c1830359324ebcaeca495d51af67b9653de39d00dae55c42a9647b98f85a24c"
+    sha256 cellar: :any,                 big_sur:        "cf2110fe6b71f0a5d59a2a4a7bc7badfa5bf53c59bfa2968ac1160519aa7285f"
+    sha256 cellar: :any,                 catalina:       "3aff6528d21c6844b4592862628ab197bb5e34e4c506008d24b63afacc116900"
+    sha256 cellar: :any,                 mojave:         "c230e01e4990691096acce9e33222f51f1db8fa21b93c8998b82efad871afcf3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be12ab5dbd45956b1bd8c26c3c6f5e1a8d7ee20e7e60170a693969f2734309e2"
   end
 
   depends_on "cmake" => :build

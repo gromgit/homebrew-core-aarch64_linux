@@ -1,8 +1,8 @@
 class GrpcSwift < Formula
   desc "Swift language implementation of gRPC"
   homepage "https://github.com/grpc/grpc-swift"
-  url "https://github.com/grpc/grpc-swift/archive/1.9.0.tar.gz"
-  sha256 "81b03f5233102df9f0adee75a79d84b798c9eb38eabe1ab5fd1c912d2c690b10"
+  url "https://github.com/grpc/grpc-swift/archive/1.7.3.tar.gz"
+  sha256 "833a150bdebb8ec0282fd91761aec0705a9b05645de42619b60fb6b9ec04b786"
   license "Apache-2.0"
   head "https://github.com/grpc/grpc-swift.git", branch: "main"
 
@@ -12,14 +12,15 @@ class GrpcSwift < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8707f495f9f3de586b757c60f922f3089b1847452735434e6f29686bffe9303"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a43fb0a0c1d7d15b6e6f62307ebcc6d4e46fc08abdc246adc1d69b012e7fe670"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f895d50b86e197acd7e75be2c1405082676b0ea8dd5d0081e8716e1a28e8c99"
-    sha256 cellar: :any_skip_relocation, big_sur:        "81c12794d2242d498830b3fdc9e6e67115d700544cb320d15e1401f02d970dff"
-    sha256                               x86_64_linux:   "73ce26fb7c594bcb688ed16dbc58485cf7c4405063b9c2c0398d2e0dc3cc95da"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "674d49d21bbfccaa8993f2b16418f86e468806cb0b13d59d17218efe0ce35718"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c37e18c1c408d0fc07d1c95b59d85f84d6892d79a6ba1a1696f94bf2b096d79"
+    sha256 cellar: :any_skip_relocation, monterey:       "79ea06f6257713f4db45a251671576cc657194d186f2b70c84215650134eeb90"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1c6c64eaf6282d6b82087f10d63fd9d69ad63f92f2cc198ce2854b3b87ccba8b"
+    sha256 cellar: :any_skip_relocation, catalina:       "1e30789c40b90fe40bfc7f04a6167a07807d7f157616367b3a3bb41d4b3192ed"
+    sha256                               x86_64_linux:   "5faad1ff5ff2a40e57abd972d5f951f7d41f50a874e4a21252bd3f5e73e9736d"
   end
 
-  depends_on xcode: ["12.5", :build]
+  depends_on xcode: ["12.0", :build]
   depends_on "protobuf"
   depends_on "swift-protobuf"
 

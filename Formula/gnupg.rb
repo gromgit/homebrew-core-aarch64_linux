@@ -1,10 +1,9 @@
 class Gnupg < Formula
   desc "GNU Pretty Good Privacy (PGP) package"
   homepage "https://gnupg.org/"
-  url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.7.tar.bz2"
-  sha256 "ee163a5fb9ec99ffc1b18e65faef8d086800c5713d15a672ab57d3799da83669"
+  url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.6.tar.bz2"
+  sha256 "21f7fe2fc5c2f214184ab050977ec7a8e304e58bfae2ab098fec69f8fabda9c1"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/gnupg/"
@@ -12,12 +11,12 @@ class Gnupg < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ec60821135b7e94e29698cb1899e738f493791737566799eb01db88e57536b27"
-    sha256 arm64_big_sur:  "596ca0f1d01560b51164b862dda178a36a94c426b026678fe3a68a5006222758"
-    sha256 monterey:       "ad2f839c5d117761debef2be7518ddf24b918fbe252a505d0419862b5e7cd35c"
-    sha256 big_sur:        "243073c93c8d72a79ab462a287da6177888624137276e2e524fe7f71dd301555"
-    sha256 catalina:       "803c23ba6d6fbde8e77611fe5552e3f6a5e99aa181f85d1813bc81cd4d64f201"
-    sha256 x86_64_linux:   "8290c29cd8444ee858e4f5c04c798eaa0d644581d5030aecf1183062f0c6985b"
+    sha256 arm64_monterey: "d961dff294b7bfd45a14f8f6f8d92de6acd5c384f6c04e5db445c9b4698d1aa5"
+    sha256 arm64_big_sur:  "2ac2e09be47bca4d64ffb243c3cc37dec0824315ba04627e2d183b2bafaf8855"
+    sha256 monterey:       "fc2af0aa23bcf8f7a9c5d4685f3744e6ed4f115a0d4fde0669285389ff7b679c"
+    sha256 big_sur:        "a80cd7d926b0b82a15fb956f1e2fc137fb024f318807d666dd64133538b2f977"
+    sha256 catalina:       "429ee6d3cc907fe696d8b5a6d3ba831d8e840ef2381f5d433b21e6d462276f2f"
+    sha256 x86_64_linux:   "b501ef3afcfbeb8626d438446609d5c65f8d36749cda7f6c04d183e0017fa822"
   end
 
   depends_on "pkg-config" => :build
@@ -35,14 +34,6 @@ class Gnupg < Formula
 
   on_linux do
     depends_on "libidn"
-  end
-
-  # Fixes a regression using Yubikey devices as smart cards.
-  # Committed upstream, will be in the next release.
-  # https://dev.gnupg.org/T6070
-  patch do
-    url "https://dev.gnupg.org/rGf34b9147eb3070bce80d53febaa564164cd6c977?diff=1"
-    sha256 "0a54359e00ea5e5f0e53220571a4502b28a05cf687cb73b360fb4c777e2f421b"
   end
 
   def install

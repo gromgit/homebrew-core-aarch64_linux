@@ -6,12 +6,8 @@ class Re2c < Formula
   license :public_domain
 
   bottle do
-    sha256 arm64_monterey: "ca5d1ca897627eecd7b5b6870eef54f2d86081131d25b14e05e3425f521df860"
-    sha256 arm64_big_sur:  "f776b0b800fa7915f5fe4868cb33d4eab2adcbd42c2840d4c0ba3f6e1a006e86"
-    sha256 monterey:       "51916b41839d4154a21b1f3895c21c87486eb119316c7f302f1384251dbc7d77"
-    sha256 big_sur:        "d64db8c358174100db90153d2e9a2554d3aaabd5a9107e84bf7a9538932900b1"
-    sha256 catalina:       "6b25dc91a91de111fe0b033770d8ddc095cf5fc6c81a4c67ad4e43cf57fe8758"
-    sha256 x86_64_linux:   "096ce665489902beba1c057fb899494c21915e28b5309069123cdd7ee426caa5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/re2c"
+    sha256 aarch64_linux: "6a3b1ede855ef98628be26fdf3d9d8595d6ff77ef7fc356ff8774421a5970941"
   end
 
   def install

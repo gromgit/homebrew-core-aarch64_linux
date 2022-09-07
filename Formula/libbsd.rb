@@ -11,7 +11,8 @@ class Libbsd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0c566df81d56032ca6d454c6cc7eb3895e50ea2c8f231edbfe8e1af3ec459842"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libbsd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "abccadacfce74a63f25fdf1b844370fff46fb06e6d26ec4a5c4c245b950b49df"
   end
 
   depends_on "libmd"

@@ -1,17 +1,17 @@
 class Sonic < Formula
   desc "Fast, lightweight & schema-less search backend"
   homepage "https://github.com/valeriansaliou/sonic"
-  url "https://github.com/valeriansaliou/sonic/archive/v1.3.5.tar.gz"
-  sha256 "ff6b72939e87d2172428ac302a3aa152ac8a37206b8b0d11e73ded14dcc8e858"
+  url "https://github.com/valeriansaliou/sonic/archive/v1.3.2.tar.gz"
+  sha256 "e07baccdc24dea6a6c0e6ef32e7faa3945318cfb2577127806c8558f1809283d"
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "12cd94403578b030f96f2208528abebb6269cef80e06efbeefbc8f5baa8ce782"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c52af62adf108a51d03bb005b9b161c6dc956afd80760bb2283728e66591d5ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "0c45791287c7b6908028c6048231a2c59a88f502bf47968df9013f9ded539e5b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "806778d9239d3131ab09956665d21676dc999b03c5ab1bb10bb1b2a4120a988f"
-    sha256 cellar: :any_skip_relocation, catalina:       "7925072868e77b09a96c3bcc99cf4f3f986792269cc4702a6f22ee1e7d741f83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e7332b36992b4248bcee2636e67591d58805447a97387703d53f03e88497ce4d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "54a83b70518118c60edcffeab87cfb3cba1b9aef41aabd3f5e669617891cae25"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69a14bebca8661994dc69b839f3dfce7102521ac8ddbea53d8787f0e7529cfdc"
+    sha256 cellar: :any_skip_relocation, monterey:       "6f7b0d809dfe6ba57810405827a63daabe4c342c9fc49b4be82a21b20880c226"
+    sha256 cellar: :any_skip_relocation, big_sur:        "792785661a775679892c9bafa85c35672e8d2ef2d165ea288cdcff840e156ccc"
+    sha256 cellar: :any_skip_relocation, catalina:       "bf838a42756d6b49113bc80343bfc97c86ad18d3f6535ab556dbab3fbded1974"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3f700885fd76cf4dc2df760b710e6fd20b7dd1a4d5519895f43b820224c04dd"
   end
 
   depends_on "rust" => :build

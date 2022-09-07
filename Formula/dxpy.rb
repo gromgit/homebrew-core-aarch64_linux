@@ -3,24 +3,22 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/e6/83/f662e74a4eb428259f9c4846308fe4abfcff794b4c73b9cdf13c260df8ae/dxpy-0.327.1.tar.gz"
-  sha256 "e03e807eb03b2fd1991bbcd475a4c774751d23fb8247476199624dffc10936a3"
+  url "https://files.pythonhosted.org/packages/5b/ad/64f1b34315c476ec545f757498f3dd39bce21c39868abecbf4e7dda048bf/dxpy-0.323.0.tar.gz"
+  sha256 "da869c5d86e6d16df1fb5739d8f20f8f7726ce4c80825b62889653070d7afaa4"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a30ff4b0430a9c70023cbeb3cf82f4b8b6d81d4b051496620005ab13d875f7c5"
-    sha256 cellar: :any,                 arm64_big_sur:  "c4c9166e0c639fa29b2eeec4e8777e79efcfa0ee8516b84370bbf47ecc7fefbf"
-    sha256 cellar: :any,                 monterey:       "f95eb3ba48b0bf75b6b7f9962430e322d75ab1835c6cc1f163920df6586ec279"
-    sha256 cellar: :any,                 big_sur:        "e512aa7145fcedd6556750b6b582dc430ad67a131025b2dae1004a62a921e546"
-    sha256 cellar: :any,                 catalina:       "35fa207b2a9bcc0009c200d01da18e33d7d3624f46b87ea121c4ad3d3f0cfbb9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "090e17860f497f81a2f3b23f779aedf7a68f3fe4e65d15277e3e4dd8dbd07d17"
+    sha256 cellar: :any,                 arm64_monterey: "5bcbc0d0efcbc8890fb8f36799c60c637ef73b7e53490e965b0b50f69004e260"
+    sha256 cellar: :any,                 arm64_big_sur:  "60b23971e42057748dcbce92b7f79b6a0e2b88e36eca7124670fc5853ecb95e9"
+    sha256 cellar: :any,                 monterey:       "0cf9762e308d2596d2cd3f0ad0ae62630983dbc8540e846424bea2e2ae7ab16e"
+    sha256 cellar: :any,                 big_sur:        "5aafc63d6acc37ad7a90eda7207bafc79491682216726d27bfd4140d17dca94f"
+    sha256 cellar: :any,                 catalina:       "8bed3cc96488f4102bc1a887da79a835a20a587e2f42533f5ba88a85b3ec8638"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d900a1b5209ff903feb3b850d66dec76a7f8d565edb30d641d269f6431fdcece"
   end
 
   depends_on "rust" => :build # for cryptography
   depends_on "python@3.10"
   depends_on "six"
-
-  uses_from_macos "libffi"
 
   on_macos do
     depends_on "readline"
@@ -28,6 +26,7 @@ class Dxpy < Formula
 
   on_linux do
     depends_on "pkg-config" => :build
+    depends_on "libffi"
   end
 
   resource "argcomplete" do
@@ -36,13 +35,13 @@ class Dxpy < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
-    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "cffi" do
-    url "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz"
-    sha256 "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"
+    url "https://files.pythonhosted.org/packages/00/9e/92de7e1217ccc3d5f352ba21e52398372525765b2e0c4530e6eb2ba9282a/cffi-1.15.0.tar.gz"
+    sha256 "920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954"
   end
 
   resource "charset-normalizer" do
@@ -61,8 +60,8 @@ class Dxpy < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/d6/de/0999ea2562b96d7165812606b18f7169307b60cd378bc29cf3673322c7e9/psutil-5.9.1.tar.gz"
-    sha256 "57f1819b5d9e95cdfb0c881a8a5b7d542ed0b7c522d575706a80bedc848c8954"
+    url "https://files.pythonhosted.org/packages/47/b6/ea8a7728f096a597f0032564e8013b705aa992a0990becd773dcc4d7b4a7/psutil-5.9.0.tar.gz"
+    sha256 "869842dbd66bb80c3217158e629d6fceaecc3a3166d3d1faee515b05dd26ca25"
   end
 
   resource "pycparser" do
@@ -76,13 +75,13 @@ class Dxpy < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
-    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
+    url "https://files.pythonhosted.org/packages/e7/01/3569e0b535fb2e4a6c384bdbed00c55b9d78b5084e0fb7f4d0bf523d7670/requests-2.26.0.tar.gz"
+    sha256 "b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/6d/d5/e8258b334c9eb8eb78e31be92ea0d5da83ddd9385dc967dd92737604d239/urllib3-1.26.11.tar.gz"
-    sha256 "ea6e8fb210b19d950fab93b60c9009226c63a28808bc8386e05301e25883ac0a"
+    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
+    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
   end
 
   resource "websocket-client" do

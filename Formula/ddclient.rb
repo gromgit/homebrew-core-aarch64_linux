@@ -1,28 +1,10 @@
 class Ddclient < Formula
   desc "Update dynamic DNS entries"
   homepage "https://ddclient.net/"
-  license "GPL-2.0-or-later"
-
-  # Remove `stable` block when resources are no longer needed.
-  stable do
-    url "https://github.com/ddclient/ddclient/archive/v3.9.1.tar.gz"
-    sha256 "e4969e15cc491fc52bdcd649d4c2b0e4b1bf0c9f9dba23471c634871acc52470"
-
-    on_linux do
-      # Dependency of Data::Validate::IP. Remove at next release.
-      resource "NetAddr::IP" do
-        url "https://cpan.metacpan.org/authors/id/M/MI/MIKER/NetAddr-IP-4.079.tar.gz"
-        sha256 "ec5a82dfb7028bcd28bb3d569f95d87dd4166cc19867f2184ed3a59f6d6ca0e7"
-      end
-    end
-
-    # TODO: Remove in next release. See:
-    # https://github.com/ddclient/ddclient/blob/v3.10.0_1/ChangeLog.md#compatibility-and-dependency-changes
-    resource "Data::Validate::IP" do
-      url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.27.tar.gz"
-      sha256 "e1aa92235dcb9c6fd9b6c8cda184d1af73537cc77f4f83a0f88207a8bfbfb7d6"
-    end
-  end
+  url "https://github.com/ddclient/ddclient/archive/v3.9.1.tar.gz"
+  sha256 "e4969e15cc491fc52bdcd649d4c2b0e4b1bf0c9f9dba23471c634871acc52470"
+  license "GPL-2.0"
+  head "https://github.com/wimpunk/ddclient.git", branch: "develop"
 
   livecheck do
     url :stable
@@ -37,19 +19,17 @@ class Ddclient < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "d4e32d3e5c88ea3d8b77caccd50e1a291e44934542279289f6e8e13203496214"
     sha256 cellar: :any_skip_relocation, mojave:         "05482e7ee83ff87306f35898b16748d0c3823d15c8879a4a4f8e6da341d299a5"
     sha256 cellar: :any_skip_relocation, high_sierra:    "45b2b534058896de6f98ab1da92d8a1f4ab71fc952b97129e94ae074cfa80b91"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f3f22ad8e138b394ffa78e637637a8b9dc6c9c20a4649b4030fb45705f19171"
-  end
-
-  head do
-    url "https://github.com/ddclient/ddclient.git", branch: "develop"
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
   end
 
   uses_from_macos "perl"
 
+  resource "Data::Validate::IP" do
+    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.27.tar.gz"
+    sha256 "e1aa92235dcb9c6fd9b6c8cda184d1af73537cc77f4f83a0f88207a8bfbfb7d6"
+  end
+
   def install
-    ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5" if resources.present?
+    ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
 
     resources.each do |r|
       r.stage do
@@ -59,25 +39,24 @@ class Ddclient < Formula
       end
     end
 
-    if build.head?
-      system "./autogen"
-      system "./configure", *std_configure_args, "--sysconfdir=#{etc}", "--localstatedir=#{var}", "CURL=curl"
-      system "make", "install", "CURL=curl"
-    else
-      # Adjust default paths in script
-      inreplace "ddclient" do |s|
-        s.gsub! "/etc/ddclient", "#{etc}/ddclient"
-        s.gsub! "/var/cache/ddclient", "#{var}/run/ddclient"
-      end
-
-      sbin.install "ddclient"
-      sbin.env_script_all_files(libexec/"sbin", PERL5LIB: ENV["PERL5LIB"])
+    # Adjust default paths in script
+    inreplace "ddclient" do |s|
+      s.gsub! "/etc/ddclient", "#{etc}/ddclient"
+      s.gsub! "/var/cache/ddclient", "#{var}/run/ddclient"
     end
 
+    sbin.install "ddclient"
+    sbin.env_script_all_files(libexec/"sbin", PERL5LIB: ENV["PERL5LIB"])
+
     # Install sample files
-    inreplace "sample-ddclient-wrapper.sh", "/etc/ddclient", "#{etc}/ddclient"
-    inreplace "sample-etc_cron.d_ddclient", %r{/usr/s?bin/ddclient}, "#{sbin}/ddclient"
-    inreplace "sample-etc_ddclient.conf", "/var/run/ddclient.pid", "#{var}/run/ddclient/pid"
+    inreplace "sample-ddclient-wrapper.sh",
+      "/etc/ddclient", "#{etc}/ddclient"
+
+    inreplace "sample-etc_cron.d_ddclient",
+      "/usr/sbin/ddclient", "#{sbin}/ddclient"
+
+    inreplace "sample-etc_ddclient.conf",
+      "/var/run/ddclient.pid", "#{var}/run/ddclient/pid"
 
     doc.install %w[
       sample-ddclient-wrapper.sh

@@ -12,12 +12,8 @@ class Prestd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d36101ed0dfe00423b432f2dd88bf9fb318329bb87d8707693887e7fb6ff0a0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1453c844c1b83b0cf1b1804e8dd816f67773a2748f1d6ab841c6677ba3626220"
-    sha256 cellar: :any_skip_relocation, monterey:       "8183621bcf2dd5e99b8018e0fd7bab2b1131e26359d1c3f24fce1279ae69f183"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1d6227ec3206bba71b3a54e8e3d9a0e6655c30b9faffac4cb643a544e940d33f"
-    sha256 cellar: :any_skip_relocation, catalina:       "d60f5161e40eee32173c42943c6db3f94a202771e21d8d5be299a86408cd9554"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "195f00694ec9027f6fbfc8c6321058802fe52e142336c3a7bf2828608836fa08"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/prestd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e87bf1dc7fe68b73b19b6bd417ec1634569538d3348d01da447082644d0f8d07"
   end
 
   depends_on "go" => :build

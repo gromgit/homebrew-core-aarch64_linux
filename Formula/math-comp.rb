@@ -1,18 +1,18 @@
 class MathComp < Formula
   desc "Mathematical Components for the Coq proof assistant"
   homepage "https://math-comp.github.io/math-comp/"
-  url "https://github.com/math-comp/math-comp/archive/mathcomp-1.15.0.tar.gz"
-  sha256 "33105615c937ae1661e12e9bc00e0dbad143c317a6ab78b1a15e1d28339d2d95"
+  url "https://github.com/math-comp/math-comp/archive/mathcomp-1.14.0.tar.gz"
+  sha256 "d259cc95a2f8f74c6aa5f3883858c9b79c6e87f769bde9a415115fa4876ebb31"
   license "CECILL-B"
   head "https://github.com/math-comp/math-comp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f78c660f2f55418d523e0500078bef8d3a47165e49eb30b947e3511e8e7442f3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5fd81bb0a904238aa385b11800e5295ea15d02b6076d67c1bebcef0d9ace7fd2"
-    sha256 cellar: :any_skip_relocation, monterey:       "6df9d50302667110c1f0cbaff54204639f3e695ca74eb3e109d9b5c0cbb3a3a0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0eded8904b0ced373a5102569d8d7f0f4e3b881104511922a6bb4b9c588afc0c"
-    sha256 cellar: :any_skip_relocation, catalina:       "855980b233acdad3a86e7270e414e23d0837bca3553beee01b0fb920190dac37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da5053bb6656da84d711efdac11c269ca7231ee73430bb921d70f685ba7b29fa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "faf76c24a23aef9a04311eacddae1e1a660f0fa68b253e2905fc3cc3b50c466f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "06140587c18f4ec70608f0aba5650bc7be7a7d3676a5a0bd25eab2ba75db1c3f"
+    sha256 cellar: :any_skip_relocation, monterey:       "b2fd80ea132bf150e55c1cf16ee881a685b3a4600afbc4522949299959b17606"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ae3295d93bc735374ac5792c22cd2f9429a58dad315c7cfac90c050af052d361"
+    sha256 cellar: :any_skip_relocation, catalina:       "4add343fe983aab123338059a5824ba9694c7249192e7a46c7df705835a55c0a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b5cabadd16e768783ce263c1df791aa5d82774634b345351d58d6392cf00998b"
   end
 
   depends_on "ocaml" => :build

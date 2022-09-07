@@ -3,10 +3,9 @@ class GstDevtools < Formula
 
   desc "GStreamer development and validation tools"
   homepage "https://gstreamer.freedesktop.org/modules/gstreamer.html"
-  url "https://gstreamer.freedesktop.org/src/gst-devtools/gst-devtools-1.20.3.tar.xz"
-  sha256 "bbbd45ead703367ea8f4be9b3c082d7b62bef47b240a39083f27844e28758c47"
+  url "https://gstreamer.freedesktop.org/src/gst-devtools/gst-devtools-1.20.1.tar.xz"
+  sha256 "81f1c7ef105b8bdb63412638952f6320723b3161c96a80f113b020e2de554b2b"
   license "LGPL-2.1-or-later"
-  revision 1
   head "https://gitlab.freedesktop.org/gstreamer/gst-devtools.git", branch: "master"
 
   livecheck do
@@ -15,12 +14,12 @@ class GstDevtools < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "3095ec9f22237b0c5404954ac1ff5200040eed7917b182229c31324250cc4b75"
-    sha256 arm64_big_sur:  "9d0bf56c0adaafd48d91edcd36ed78de13acf92100471af791a6b9f3b49f1789"
-    sha256 monterey:       "0358177078512fd1bde0aa1ec4d4bbf1bbcfa7578ed522e463ab707902c85cc2"
-    sha256 big_sur:        "f03b752496981a59428124478fc5dc1595137fbf8d69a3130fa2d19602801eb4"
-    sha256 catalina:       "cd0dc00c2cef759be7c1bd4ec6efd81f14258ac781696f457d80ec37fa9b2972"
-    sha256 x86_64_linux:   "c3e9c440677b235ea209c56435a95737a8a8422c2acf77d0b87d4f42395b8697"
+    sha256 arm64_monterey: "d5b04612f32ad4a8864a85f760ac35f32198451105bb3e40c3cbe4f13c443f2c"
+    sha256 arm64_big_sur:  "5b461d72973b6b7ecc1c965fe9f15736e71a1b44090bd37a636bf8caad60080a"
+    sha256 monterey:       "779b3f85e3a1c01701226556ebc2c8d47d3049d63d6e3b33e8df8aed1c7724cf"
+    sha256 big_sur:        "0f0b65caace74c66f89237416b872d9bd6e329edb7604f1523869d6d9d6517d5"
+    sha256 catalina:       "cb0501d73a7b280411e37da5f37b5453c0eabe9ebb570137d12d962191ca7c34"
+    sha256 x86_64_linux:   "78be42d6e58ea96f538018396a948aebf3e68a751a1f3a12b64621d85e9cde31"
   end
 
   depends_on "gobject-introspection" => :build
@@ -31,23 +30,25 @@ class GstDevtools < Formula
   depends_on "gst-plugins-base"
   depends_on "gstreamer"
   depends_on "json-glib"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   def install
-    args = %w[
+    args = std_meson_args + %w[
       -Dintrospection=enabled
       -Dvalidate=enabled
       -Dtests=disabled
     ]
 
-    system "meson", "setup", "build", *args, *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
 
     rewrite_shebang detected_python_shebang, bin/"gst-validate-launcher"
   end
 
   test do
-    system bin/"gst-validate-launcher", "--usage"
+    system "#{bin}/gst-validate-launcher", "--usage"
   end
 end

@@ -2,8 +2,8 @@ class Languagetool < Formula
   desc "Style and grammar checker"
   homepage "https://www.languagetool.org/"
   url "https://github.com/languagetool-org/languagetool.git",
-      tag:      "v5.8",
-      revision: "82e790a7d6aee95ca68e8212cd68706f5e6378ea"
+      tag:      "v5.7",
+      revision: "35d0d40e1e795919473563d6102df5b464ba7d29"
   license "LGPL-2.1-or-later"
   head "https://github.com/languagetool-org/languagetool.git", branch: "master"
 
@@ -13,12 +13,12 @@ class Languagetool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2831fd09e7f8c64a12c5292d6f7e8864a92001516b71e33e82ee5ffd81166760"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f79d56a4e846aa59f7b46530f11d14cdc73e8551fba2d51d144fa8a7357002e"
-    sha256 cellar: :any_skip_relocation, monterey:       "5e5d57f0b5741976fc58927498cc8a71de4d846fc336f71f42a22138aa7d2b3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9929cedd8f5632101e4b71eea5ccb69dd0f5ff94698aad9eaf0edf3193806ea3"
-    sha256 cellar: :any_skip_relocation, catalina:       "b9717fbbfdc8bbf42053ffc01f7bde2cbedb5960474a848c5ec8043ae4d9e1e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a25e2b80d402d560f6f5c0c456c36348b28340f6c22e02225a66157026655d6e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "76b6e84cbcaf6e3cff9919db0bc2c878edcedf443c121440a0a42bd4e6628e44"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "52da62ec625153b1f785103f1a3e3086f3925123a0a3f34f3203b6d2fa7707f2"
+    sha256 cellar: :any_skip_relocation, monterey:       "721a4898a93243d3ea9c3ca20bc5901b77e914d4bc98d3c4b943212adf1986b8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "03b221baba14ee0e13a6d57d1ffda7b20a657c425fd488309b0e16fec2069cac"
+    sha256 cellar: :any_skip_relocation, catalina:       "42bff670a922542770ea16acd7bc30e84e61b3e7614c4e895eec02d823b7ebfb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd8d29c7aac9805ccefc9ee6810197a5350bb6c1ebb701bfc7fd71c9333e7576"
   end
 
   depends_on "maven" => :build

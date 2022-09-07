@@ -36,13 +36,12 @@ class Hashpump < Formula
                    "CXX=#{ENV.cxx}",
                    "install"
 
-    python3 = "python3.10"
-    system python3, *Language::Python.setup_install_args(prefix, python3)
+    system "python3", *Language::Python.setup_install_args(prefix)
   end
 
   test do
-    output = `#{bin}/hashpump -s '6d5f807e23db210bc254a28be2d6759a0f5f5d99' \ \
-      -d 'count=10&lat=37.351&user_id=1&long=-119.827&waffle=eggo' \ \
+    output = `#{bin}/hashpump -s '6d5f807e23db210bc254a28be2d6759a0f5f5d99' \\
+      -d 'count=10&lat=37.351&user_id=1&long=-119.827&waffle=eggo' \\
       -a '&waffle=liege' -k 14`
     assert_match "0e41270260895979317fff3898ab85668953aaa2", output
     assert_match "&waffle=liege", output

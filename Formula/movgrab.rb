@@ -4,15 +4,16 @@ class Movgrab < Formula
   url "https://github.com/ColumPaget/Movgrab/archive/3.1.2.tar.gz"
   sha256 "30be6057ddbd9ac32f6e3d5456145b09526cc6bd5e3f3fb3999cc05283457529"
   license "GPL-3.0-or-later"
-  revision 4
+  revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9edd857ab7f43f2e1f7d39852a40f1cc136933eb32c9ad0072ad33f08f8b6388"
-    sha256 cellar: :any,                 arm64_big_sur:  "81f3186504d35016e36badc5683864d9068e8d6f8b23d950d5a5bc9b382ff2e7"
-    sha256 cellar: :any,                 monterey:       "06c004355122250c16bf93f1b004ac37b1aaa73266e110442ae607759a931060"
-    sha256 cellar: :any,                 big_sur:        "a1e93972a1b507f7d87fd7660f70c700db4df7f02f0514ea676bf8f6a6501997"
-    sha256 cellar: :any,                 catalina:       "ddd3919e6496394020a57598a002f6376cba798c096caa84468ac92066e16bc4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ae11835237821376a18084f9355cccc1f9d7b8e432655c77bf09a63a48ce43c"
+    sha256 cellar: :any,                 arm64_monterey: "fea9cd52cd0634afbd55be9028a83cd12c63f7a593874c09a30ee4c9bc08c0f2"
+    sha256 cellar: :any,                 arm64_big_sur:  "9077d56a321c79670336e9555f5fb9ad6f9f2c6ba2c126e2ce0d264931a4677b"
+    sha256 cellar: :any,                 monterey:       "723f43345aa8c9466522f8c0392da8d6c70979f647e69f955f8f324357da2a10"
+    sha256 cellar: :any,                 big_sur:        "d2e316d743c633fd84585d13beb1beeeffd3e3fd62bf2710c2ccdaf8c59f77a6"
+    sha256 cellar: :any,                 catalina:       "dec3edfeac8cd03ab450cdd0196b488401ab38d459c603b0726726b6b886a599"
+    sha256 cellar: :any,                 mojave:         "c7a2f93864d81d263606610375253820937134c9f6d90cb4c5697cf21dc7c23c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be8c01fd9136b88a5b217a8581d7d7dd969eedffeb01aea19af5a8275e9e4b5c"
   end
 
   depends_on "libressl"
@@ -73,18 +74,3 @@ index 04ea67d..5516051 100755
 
  clean:
  	@rm -f movgrab *.o libUseful-2.8/*.o libUseful-2.8/*.a libUseful-2.8/*.so config.log config.status
-diff --git a/libUseful-2.8/DataProcessing.c b/libUseful-2.8/DataProcessing.c
-index 3e188a8..56087a6 100755
---- a/libUseful-2.8/DataProcessing.c
-+++ b/libUseful-2.8/DataProcessing.c
-@@ -420,8 +420,8 @@ switch(val)
-
- if (Data->Cipher)
- {
--Data->enc_ctx=(EVP_CIPHER_CTX *) calloc(1,sizeof(EVP_CIPHER_CTX));
--Data->dec_ctx=(EVP_CIPHER_CTX *) calloc(1,sizeof(EVP_CIPHER_CTX));
-+Data->enc_ctx=EVP_CIPHER_CTX_new();
-+Data->dec_ctx=EVP_CIPHER_CTX_new();
- EVP_CIPHER_CTX_init(Data->enc_ctx);
- EVP_CIPHER_CTX_init(Data->dec_ctx);
- Data->BlockSize=EVP_CIPHER_block_size(Data->Cipher);

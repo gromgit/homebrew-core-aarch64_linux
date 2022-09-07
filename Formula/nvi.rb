@@ -3,28 +3,21 @@ class Nvi < Formula
   homepage "https://sites.google.com/a/bostic.com/keithbostic/vi/"
   url "https://deb.debian.org/debian/pool/main/n/nvi/nvi_1.81.6.orig.tar.gz"
   sha256 "8bc348889159a34cf268f80720b26f459dbd723b5616107d36739d007e4c978d"
-  license "BSD-3-Clause"
-  revision 6
+  revision 5
 
   bottle do
-    sha256                               arm64_monterey: "4172bb7673685b0e0f569ad84edbe4d568c152b419678e6146f539accd243c80"
-    sha256                               arm64_big_sur:  "0c504c79f2fd0be54ce31ee4236a1d9fb4d9e5d8f33fab07305e1acd9c4740de"
-    sha256 cellar: :any,                 monterey:       "4bbbf70becf3cfa52340027bb81f0b39b8071638dcb9f042cf314bee7a8feeac"
-    sha256 cellar: :any,                 big_sur:        "692b129c29e7018565decb9c3ece80c020028549eb571d638851bb0e8647b0d8"
-    sha256 cellar: :any,                 catalina:       "9443eb6edf1377a25a506245df2a20c0d2a7365d71eee720bb7152052b96d3e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8eb6c0c8a8eef36a09bf55e35ced6d2e2afb4d75a70d93d96e88d9cbd5c4b56"
+    rebuild 1
+    sha256                               arm64_big_sur: "fb16c60c3a71af91e1bfec9f01bd35a11844f02a50e18e7782a20f5eb2792874"
+    sha256 cellar: :any,                 big_sur:       "91d13cdd8ff35675b7d54a7cc29a2406a9fcc183e03484ee1a0cd781bca160b9"
+    sha256 cellar: :any,                 catalina:      "755290657397d76ae23d23636a6d9469447bcbc3dead65ec2859a8f9b7071f88"
+    sha256 cellar: :any,                 mojave:        "03eb1d6e82bb75219ce378e47956fc3b50ef2096e715eec42e37bcf14cde8cd7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a44c36f27b543554fe6f22002ae584fb2b599cc7e27213ef2695de416203688c"
   end
 
   depends_on "xz" => :build # Homebrew bug. Shouldn't need declaring explicitly.
-  depends_on "berkeley-db@5"
+  depends_on "berkeley-db"
 
   uses_from_macos "ncurses"
-
-  on_macos do
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
 
   # Patches per MacPorts
   # The first corrects usage of BDB flags.
@@ -58,14 +51,6 @@ class Nvi < Formula
 
   def install
     cd "dist" do
-      # Run autoreconf on macOS to rebuild configure script so that it doesn't try
-      # to build with a flat namespace.
-      if OS.mac?
-        # These files must be present for autoreconf to work.
-        %w[AUTHORS ChangeLog NEWS README].each { |f| touch f }
-        system "autoreconf", "--force", "--verbose", "--install"
-      end
-
       # Xcode 12 needs the "-Wno-implicit-function-declaration" to compile successfully
       # The usual trick of setting $CFLAGS in the environment doesn't work for this
       # configure file though, but specifying an explicit CC setting does

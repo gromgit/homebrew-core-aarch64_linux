@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk18u/archive/jdk-18.0.2.1-ga.tar.gz"
-  sha256 "06fad73665af281e36e1cc5fb0c8ed5e88e1e821989f1421539cb012065d7722"
+  url "https://github.com/openjdk/jdk18u/archive/jdk-18.0.1-ga.tar.gz"
+  sha256 "4728da4676601af35c6ad998f2283e595ca9ce9b8528a75d74fddf7d03932d71"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -11,12 +11,12 @@ class Openjdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "373ac8b65daa370d2743649a606c96e0bccba510ebc7f47173c4c023f79d5378"
-    sha256 cellar: :any, arm64_big_sur:  "00d426f801ac70668086d982147f4e87891810d530339de10950d0574b2f48e1"
-    sha256 cellar: :any, monterey:       "e36e5aeef74829d1d87dbe61bc3b93d32d39ab3f44671384fee94e61ba9c9cdc"
-    sha256 cellar: :any, big_sur:        "bd1152971889cb2eba14c686f00beaffa6c512748255448dc59b15ca28aac046"
-    sha256 cellar: :any, catalina:       "e04f43adadb60a92ce830608f77ee41359cafaa20333ae1796b9e060903a8f06"
-    sha256               x86_64_linux:   "56910e5ab2d20c44c58f7f4665b9e66e08751857ec4e6360bc1740034f2b1822"
+    sha256 cellar: :any, arm64_monterey: "61e9244f1f8f8c0c2139e1df26b9895f5508e3e7538952459b590f8bff50627f"
+    sha256 cellar: :any, arm64_big_sur:  "99fda507db67f88e289d8275ff7c37e63481c6f837a2c2c084cac1faf6e8fb2b"
+    sha256 cellar: :any, monterey:       "acb7d100bd61aa51fd0014339897dc8b6405f5c62adf8551cbffe28c1ce6aac7"
+    sha256 cellar: :any, big_sur:        "a70f028a2ad1233792eb1fd800ab0ed25d06a4d9f29250dbb1a2527685cd4ce6"
+    sha256 cellar: :any, catalina:       "e91872c557d4697ef33743dd3d161eca51c18f7dfff2c88d042ebc3d4e03e09b"
+    sha256               x86_64_linux:   "1723a239e00f76755947ff254e9ecf7b6416d49eb7690c1c9dc05a68dae09fe9"
   end
 
   keg_only :shadowed_by_macos
@@ -48,11 +48,10 @@ class Openjdk < Formula
   # From https://jdk.java.net/archive/
   resource "boot-jdk" do
     on_macos do
-      on_arm do
+      if Hardware::CPU.arm?
         url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-aarch64_bin.tar.gz"
         sha256 "602d7de72526368bb3f80d95c4427696ea639d2e0cc40455f53ff0bbb18c27c8"
-      end
-      on_intel do
+      else
         url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-x64_bin.tar.gz"
         sha256 "b85c4aaf7b141825ad3a0ea34b965e45c15d5963677e9b27235aa05f65c6df06"
       end

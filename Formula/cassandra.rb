@@ -4,18 +4,19 @@ class Cassandra < Formula
 
   desc "Eventually consistent, distributed key-value store"
   homepage "https://cassandra.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=cassandra/4.0.6/apache-cassandra-4.0.6-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/cassandra/4.0.6/apache-cassandra-4.0.6-bin.tar.gz"
-  sha256 "86d14a8e158e4e8554388b1aab598efcb879ddb09c480edecabb3c350b58fe6b"
+  url "https://www.apache.org/dyn/closer.lua?path=cassandra/4.0.3/apache-cassandra-4.0.3-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/cassandra/4.0.3/apache-cassandra-4.0.3-bin.tar.gz"
+  sha256 "33623300bef39c75c73c3b51ad45b453e40e27a0816af3a1466537aa79e5f50d"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b366a17ac367a87f153e0199ffc03c9f27660ad70bebda7f363a94492007a584"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f7e3ea8d6192df791b56b0bf8654cea3eacd05bb1f9183a018c80bd90b4d9de0"
-    sha256 cellar: :any_skip_relocation, monterey:       "950f0706dfeb0c7281798dcc74b9e00549b410f0333e71db9e80233ba2a68b71"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6f85abd368546c8593bb18a4f5c1c9d5dba6f66effdce65be5acbd299053fcdd"
-    sha256 cellar: :any_skip_relocation, catalina:       "360a5fae30e52a4f6abaf3bcbe48be34d39a89b7e4ec54096585a89b74d1a3fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "057539ded17cb290b0bde96bb6133b9a35411c5b76821bcf9245db1ec9a91e54"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1256c83e013b66dbe982e81d9ff8e06fa95a2520272bfa52d4e10a2c7a428d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aebc02c7ede741acac3cc057c88e607e995287de6402248d9be6cb9fc6f1ca2b"
+    sha256 cellar: :any_skip_relocation, monterey:       "70b355659ef990348582dec2b621b3bda5ec7ea9d35e2a51fca2fa9544f5d874"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3485e796ab2b0340e0437a674a77a32d0281952ce82b3169398bf09c118a169e"
+    sha256 cellar: :any_skip_relocation, catalina:       "e210fd11ea15a7a807f8e4cb721aabb34444c58f9313dbd4531a7eea9e94edab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65cf02dc13bc99b1563d7c9276616c4933b23d6a46e0908b51febc1611c34f2d"
   end
 
   depends_on "libcython" => :build
@@ -24,8 +25,8 @@ class Cassandra < Formula
   depends_on "six"
 
   resource "thrift" do
-    url "https://files.pythonhosted.org/packages/e4/23/dd951c9883cb49a73b750bdfe91e39d78e8a3f1f7175608634f381a197d5/thrift-0.16.0.tar.gz"
-    sha256 "2b5b6488fcded21f9d312aa23c9ff6a0195d0f6ae26ddbd5ad9e3e25dfc14408"
+    url "https://files.pythonhosted.org/packages/97/1e/3284d19d7be99305eda145b8aa46b0c33244e4a496ec66440dac19f8274d/thrift-0.13.0.tar.gz"
+    sha256 "9af1c86bf73433afc6010ed376a6c6aca2b54099cc0d61895f640870a9ae7d89"
   end
 
   resource "cql" do
@@ -39,21 +40,20 @@ class Cassandra < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/21/83/308a74ca1104fe1e3197d31693a7a2db67c2d4e668f20f43a2fca491f9f7/click-8.0.1.tar.gz"
+    sha256 "8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"
   end
 
   resource "geomet" do
-    url "https://files.pythonhosted.org/packages/be/9c/dc5a874b12bbab2981edf92d7d03b9d37de6261655b57590a166c890b148/geomet-0.3.0.tar.gz"
-    sha256 "cb52411978ee01ff104ab48f108d7333b14423ae7a15a65fee25b7d29bda2e1b"
+    url "https://files.pythonhosted.org/packages/cf/21/58251b3de99e0b5ba649ff511f7f9e8399c3059dd52a643774106e929afa/geomet-0.2.1.post1.tar.gz"
+    sha256 "91d754f7c298cbfcabd3befdb69c641c27fe75e808b27aa55028605761d17e95"
   end
 
   def install
     (var/"lib/cassandra").mkpath
     (var/"log/cassandra").mkpath
 
-    python3 = "python3.10"
-    venv = virtualenv_create(libexec/"vendor", python3)
+    venv = virtualenv_create(libexec/"vendor", "python3")
     venv.pip_install resources
 
     inreplace "conf/cassandra.yaml", "/var/lib/cassandra", var/"lib/cassandra"
@@ -126,7 +126,7 @@ class Cassandra < Formula
               pkgshare/"cassandra-tools.in.sh"
 
     venv_bin = libexec/"vendor/bin"
-    rw_info = python_shebang_rewrite_info(venv_bin/python3)
+    rw_info = python_shebang_rewrite_info(venv_bin/"python")
     rewrite_shebang rw_info, libexec/"bin/cqlsh.py"
 
     # Make sure tools are available

@@ -1,25 +1,22 @@
 class Primecount < Formula
   desc "Fast prime counting function program and C/C++ library"
   homepage "https://github.com/kimwalisch/primecount"
-  url "https://github.com/kimwalisch/primecount/archive/v7.4.tar.gz"
-  sha256 "6362887e80e849dd1c396ccec773e5a3a7904371b46f1d495d320d31f9c1ae28"
+  url "https://github.com/kimwalisch/primecount/archive/v7.3.tar.gz"
+  sha256 "471fe21461e42e5f28404e17ff840fb527b3ec4064853253ee22cf4a81656332"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1464bde983dae5fdf292b013ea6da1d43374e82ad2aa555c4aa1e08dbc9bafb2"
-    sha256 cellar: :any,                 arm64_big_sur:  "abde7f685135e6546092c82110eeb0dc5e038912a9bb3bb9f7c24dab66690a49"
-    sha256 cellar: :any,                 monterey:       "c617c84d394748a8124a6cc0ee390fd36e579d2bea0a831ba3cabc6ce43a237f"
-    sha256 cellar: :any,                 big_sur:        "6cdc5241f15fc69c9d3b1470f47a8d4f81b0d4a4364fb2482051318d407bdc29"
-    sha256 cellar: :any,                 catalina:       "393bc46ad1a90d5f4193abe8d798cd35d01a596a4f9e4b68ab57e1eb11b9ba8d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7d67797574d92545cf456f1bb78b96bfd76a5790a16f1f18947be92c743d173"
+    sha256 cellar: :any,                 arm64_monterey: "4a024848fe7f2c15cf034e77dfbdf56c2000dd7efbfd174ae1063da07f0cb8f7"
+    sha256 cellar: :any,                 arm64_big_sur:  "f4f5d8a38083b7f6fc2565632c00670992a2e29e9b882283c3ea000103e17df6"
+    sha256 cellar: :any,                 monterey:       "74e6bb9e8c6897c7fda9f5429dfb78b169e854d58aeb5f4c19430ba791af2eaf"
+    sha256 cellar: :any,                 big_sur:        "388d12fc1ac0c848ba1f51f7c496d2120de503c71657cdd5359e6e4f56571b41"
+    sha256 cellar: :any,                 catalina:       "ac6c82919085aecfb77dd0a62ab84d735f9e234736abced98874a79c0fe7098d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "037ad4deed3e4421300c9388818c61bbbe0dba3b13fe11e39508d03e48e5dc00"
   end
 
   depends_on "cmake" => :build
+  depends_on "libomp"
   depends_on "primesieve"
-
-  on_macos do
-    depends_on "libomp"
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON",

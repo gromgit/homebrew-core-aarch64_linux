@@ -6,15 +6,15 @@ class Openmodelica < Formula
       tag:      "v1.18.0",
       revision: "49be4faa5a625a18efbbd74cc2f5be86aeea37bb"
   license "GPL-3.0-only"
-  revision 5
+  revision 2
   head "https://github.com/OpenModelica/OpenModelica.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "e1dcceb4223c158ba220cc251df363ed17487a71040481c93a8841d99f033fd9"
-    sha256 cellar: :any, arm64_big_sur:  "12560cb01f7173ddce34b6eeea6b64754c80c53c5baa814bab6b7b65df64669f"
-    sha256 cellar: :any, monterey:       "7426c175af57dff3de8846c92c914a8ca15bfeb7d22613b16db3ca56cadef5af"
-    sha256 cellar: :any, big_sur:        "477776d794603c9bf0344cdb387a8b392849c34b1d57d5c2fa4a0e97974b5ceb"
-    sha256 cellar: :any, catalina:       "f6a44593ad46bf8607112c3925dd18541f72089f64bafa1ca21387c1b30e3462"
+    sha256 cellar: :any, arm64_monterey: "75002fbf9d3c198532225e4f6a37bec61d97699ed70e716b346ceef7b2193182"
+    sha256 cellar: :any, arm64_big_sur:  "7ea8eb11f80949d5c4a73edc5d763cfe45189bc1db3ea5b470ce341129d076a0"
+    sha256 cellar: :any, monterey:       "1962a20583637845546a2406580a735f0dc618ab28628293aea75e1c7800390b"
+    sha256 cellar: :any, big_sur:        "fa9307c4afd3b7b44058bd34103ca20f589d0645a37402fa535efaf73890a633"
+    sha256 cellar: :any, catalina:       "0046d95490220b162ed08423070f6912bc7fd8db770fe6b09d71e4632bf42358"
   end
 
   depends_on "autoconf" => :build

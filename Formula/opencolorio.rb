@@ -1,36 +1,38 @@
 class Opencolorio < Formula
   desc "Color management solution geared towards motion picture production"
   homepage "https://opencolorio.org/"
-  url "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/v2.1.2.tar.gz"
-  sha256 "6c6d153470a7dbe56136073e7abea42fa34d06edc519ffc0a159daf9f9962b0b"
+  url "https://github.com/imageworks/OpenColorIO/archive/v2.1.1.tar.gz"
+  sha256 "16ebc3e0f21f72dbe90fe60437eb864f4d4de9c255ef8e212f837824fc9b8d9c"
   license "BSD-3-Clause"
-  revision 1
-  head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "master"
+  head "https://github.com/imageworks/OpenColorIO.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "78b68e78e504306bb3f9e1e7f5b8cdde8a413846de0799668e6bffe2e41bdf6c"
-    sha256 cellar: :any,                 arm64_big_sur:  "ed7529684ebd94f754576862448163922998e1d5742c597ebc43a481703d618a"
-    sha256 cellar: :any,                 monterey:       "179a32959944d37a8e48570b49e0e37967a0ffd61e92ffa41bcb4105395102be"
-    sha256 cellar: :any,                 big_sur:        "10d9e4e650c38d401816cb56932b0925a9cd97b7a46eb19333329a8f5c9a0939"
-    sha256 cellar: :any,                 catalina:       "fd01e301337285b2f305f26b96f15e289694ff14fa7a608783890a389c6b5313"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa056459b6df29340ae669ef0d80603ce57a5a2c23d3276a9ee6cf2ce47edb7f"
+    sha256 cellar: :any,                 arm64_monterey: "f50d5ba3977c39c7675f9a47c6e6e8a94dde8ffaa0eff80e0a4f3f85ac60fc83"
+    sha256 cellar: :any,                 arm64_big_sur:  "a12191e6238cf29395345d5d1be49d52912a1e6a6066baa11558184122df6d31"
+    sha256 cellar: :any,                 monterey:       "e909973e5bb4f73da7feb23846bc2f1ac5dbe9de58c7f1cdbcb5cea375faac15"
+    sha256 cellar: :any,                 big_sur:        "d5569167550905603f4512ed476af45f9803d292f5de1b122e509854d24c43a7"
+    sha256 cellar: :any,                 catalina:       "b12394d8d4e9180dfcb7bb943d1d0fa25546f86f82b50863be7566320b6de9b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "919b027f1ebe994bf1e43f264a361b70183e28200e10340fc6fb56d7978e6ece"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "little-cms2"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   def install
-    args = %W[
+    args = std_cmake_args + %W[
+      -DCMAKE_VERBOSE_MAKEFILE=OFF
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DPYTHON=python3
-      -DPYTHON_EXECUTABLE=#{Formula["python@3.10"].opt_bin}/"python3"
+      -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/"python3"
     ]
 
-    system "cmake", "-S", ".", "-B", "macbuild", *args, *std_cmake_args
-    system "cmake", "--build", "macbuild"
-    system "cmake", "--install", "macbuild"
+    mkdir "macbuild" do
+      system "cmake", *args, ".."
+      system "make"
+      system "make", "install"
+    end
   end
 
   def caveats

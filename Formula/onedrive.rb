@@ -1,12 +1,12 @@
 class Onedrive < Formula
   desc "Folder synchronization with OneDrive"
   homepage "https://github.com/abraunegg/onedrive"
-  url "https://github.com/abraunegg/onedrive/archive/v2.4.20.tar.gz"
-  sha256 "116ebb0e4451cbeba4249635d8f74973c18874eae907c886dc5ed144f1f8a615"
+  url "https://github.com/abraunegg/onedrive/archive/v2.4.17.tar.gz"
+  sha256 "ee65ad33be6d0ed65234da92a3b38be47bbd2cda7821c90513ec32a27516cece"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9ffa990cb3eafb483940a6610873e2129621dc85d33a4d098a68d4922d045d42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a40e1af715f6afb00b13a73f7c70f9db907132ec7148ff90d5f432770c5a9f9a"
   end
 
   depends_on "ldc" => :build
@@ -29,7 +29,7 @@ class Onedrive < Formula
     keep_alive true
     error_log_path var/"log/onedrive.log"
     log_path var/"log/onedrive.log"
-    working_dir Dir.home
+    working_dir ENV["HOME"]
   end
 
   test do

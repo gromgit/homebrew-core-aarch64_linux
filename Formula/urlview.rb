@@ -2,7 +2,7 @@ class Urlview < Formula
   desc "URL extractor/launcher"
   homepage "https://packages.debian.org/sid/misc/urlview"
   url "https://deb.debian.org/debian/pool/main/u/urlview/urlview_0.9.orig.tar.gz"
-  version "0.9-23"
+  version "0.9-22"
   sha256 "746ff540ccf601645f500ee7743f443caf987d6380e61e5249fc15f7a455ed42"
   license "GPL-2.0-or-later"
 
@@ -15,55 +15,38 @@ class Urlview < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "79e803c2e3dd3e77fa2c7792f7ca846e2c9fa9b614540792c9fb8bac3bb03b34"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4bd54ce3f197e6a1dbeada8a9e6927a3ca00b8c304b4389879a2cb15dd4db17a"
-    sha256 cellar: :any_skip_relocation, monterey:       "c906ca088635e62fba1979b6f3a5767edf0f0649929b31900ab9513ccbbc6cc3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4ba2615a1ea02924d894084fdba9be8a6bc219dbfa852276fbcd330ad9c118ef"
-    sha256 cellar: :any_skip_relocation, catalina:       "640e2ef08bf6e065c52b0f90832774049b9e9cd4cdeede8912ad8656c9c851af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6c16bac2771c3d20aecf067223c0562ec22ed824880f64d1260023364e73d0d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec7eb261b52638ccf0a193278d606e3058ce535b977a260f987aae200151e890"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e108231d44ae30814b4028b79ab3d5cd4a96719baf1fdaf2f6ab37eb0e3a6120"
+    sha256 cellar: :any_skip_relocation, monterey:       "bcc1a471d63b9a36ff5a2866d5e7426aca87b511f9bd8020d9be0183d0cbe791"
+    sha256 cellar: :any_skip_relocation, big_sur:        "590b88c35280f2e37daacd2c510afeda9ff90c38361fa9b113a5925136dbdaa7"
+    sha256 cellar: :any_skip_relocation, catalina:       "102860ddd181af6242b7aaae841e39dc05298856e43f4c7d9f8747e6d17ad8d1"
+    sha256 cellar: :any_skip_relocation, mojave:         "2c93e736ee4b39f7567afe60fcb06ec2144ca054a819a3406caaa5c330ab4911"
   end
-
-  uses_from_macos "ncurses"
 
   on_linux do
     depends_on "automake"
   end
 
   patch do
-    url "https://deb.debian.org/debian/pool/main/u/urlview/urlview_0.9-23.diff.gz"
-    sha256 "32dcff6d032ae23f100a42cb7b23573338033b5e0613b20813324ddb417ce86f"
+    url "https://deb.debian.org/debian/pool/main/u/urlview/urlview_0.9-22.diff.gz"
+    sha256 "9a72630a6afa6b848d2c5db72f8dee8710678ff4d97145491465562c0f80ed46"
   end
 
   def install
-    url_handler = OS.mac? ? "open" : etc/"urlview/url_handler.sh"
-    inreplace "urlview.man", "/etc/urlview/url_handler.sh", url_handler
+    inreplace "urlview.man", "/etc/urlview/url_handler.sh", "open"
     inreplace "urlview.c",
       '#define DEFAULT_COMMAND "/etc/urlview/url_handler.sh %s"',
-      %Q(#define DEFAULT_COMMAND "#{url_handler} %s")
+      '#define DEFAULT_COMMAND "open %s"'
 
     man1.mkpath
 
-    unless OS.mac?
+    if OS.linux?
       touch("NEWS") # autoreconf will fail if this file does not exist
       system "autoreconf", "-i"
-
-      # Disable use of librx, since it is not needed on Linux.
-      ENV["CFLAGS"] = "-DHAVE_REGEX_H"
-      (etc/"urlview").install "url_handler.sh"
     end
 
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}",
                           "--sysconfdir=#{etc}"
     system "make", "install"
-  end
-
-  test do
-    (testpath/"test.txt").write <<~EOS
-      https://github.com/Homebrew
-    EOS
-    PTY.spawn("urlview test.txt") do |_r, w, _pid|
-      sleep 1
-      w.write("\cD")
-    end
   end
 end

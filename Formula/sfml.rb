@@ -23,6 +23,7 @@ class Sfml < Formula
   depends_on "doxygen" => :build
   depends_on "flac"
   depends_on "freetype"
+  depends_on "jpeg"
   depends_on "libogg"
   depends_on "libvorbis"
 
@@ -35,11 +36,13 @@ class Sfml < Formula
     depends_on "systemd"
   end
 
+  # https://github.com/Homebrew/homebrew/issues/40301
+
   def install
     # Fix "fatal error: 'os/availability.h' file not found" on 10.11 and
     # "error: expected function body after function declarator" on 10.12
     # Requires the CLT to be the active developer directory if Xcode is installed
-    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version <= :high_sierra
+    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version <= :sierra
 
     # Always remove the "extlibs" to avoid install_name_tool failure
     # (https://github.com/Homebrew/homebrew/pull/35279) but leave the
@@ -53,9 +56,8 @@ class Sfml < Formula
 
     args << "-DSFML_USE_SYSTEM_DEPS=ON" if OS.linux?
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", *std_cmake_args, *args
+    system "make", "install"
   end
 
   test do

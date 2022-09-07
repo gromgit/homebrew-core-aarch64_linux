@@ -1,10 +1,9 @@
 class GstPython < Formula
   desc "Python overrides for gobject-introspection-based pygst bindings"
   homepage "https://gstreamer.freedesktop.org/modules/gst-python.html"
-  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.20.3.tar.xz"
-  sha256 "db348120eae955b8cc4de3560a7ea06e36d6e1ddbaa99a7ad96b59846601cfdc"
+  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.20.1.tar.xz"
+  sha256 "ba6cd59faa3db3981d8c6982351c239d823c0b8e80b1acf58d2997b050289422"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url "https://gstreamer.freedesktop.org/src/gst-python/"
@@ -12,19 +11,19 @@ class GstPython < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c7bd54bf59d884fece2bd93a8aa87156b1711fb792769e2e824b7980fe804fbd"
-    sha256 arm64_big_sur:  "46577a49c80650c862830b1dfc739962dcf3181b03ec2af19f6e03adb3731d31"
-    sha256 monterey:       "7726dbe8e9697fc1704c7ed442fcfdcb7f5308b0b7ca573fee7d697b42978e8c"
-    sha256 big_sur:        "a12e52607ac75e19ee6712dddd5d6d27f403dd5feb4d4fa942ce432c566f2ce3"
-    sha256 catalina:       "6677dc74dee5380d456c0615390eeaefa55cdc3ec7e892c66cbb95a8c78e863c"
-    sha256 x86_64_linux:   "a3ed0216139c282fa4c8304a40c52da5e97d7a2403c9cd135fb3801d17ff82a1"
+    sha256 arm64_monterey: "a22ba5e1cba6775a21b2cbe9f26981d283d1227888b7802523f4c53a8be72d21"
+    sha256 arm64_big_sur:  "27bae7437b43b5531603ef2607ab7c25746dd939f890b97597dd56f91743ef5c"
+    sha256 monterey:       "19c0d5b057b0dfbdc9e5e07837f6cb8ef777245776064cb7a346434d4b4149c2"
+    sha256 big_sur:        "73bacb36b04c37f84765dead142c6942d53b43803904972e798b21756d6d8e66"
+    sha256 catalina:       "479c059af1957f7bab804735736196f3aa7faa6bd7f3165849da05ba7db7e838"
+    sha256 x86_64_linux:   "f2c59d74f4cd89c86d89f2f6779c459b10b5ab2786b261515caa112d639f99c5"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "gst-plugins-base"
   depends_on "pygobject3"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   # See https://gitlab.freedesktop.org/gstreamer/gst-python/-/merge_requests/41
   patch do
@@ -33,22 +32,15 @@ class GstPython < Formula
   end
 
   def install
-    python = "python3.10"
-    site_packages = prefix/Language::Python.site_packages(python)
-
-    # This shouldn't be needed, but this fails to link with libpython3.10.so.
-    # TODO: Remove this when `python@3.10` is no longer keg-only.
-    ENV.append "LDFLAGS", "-Wl,-rpath,#{Formula["python@3.10"].opt_lib}" if OS.linux?
-
-    system "meson", "setup", "build", "-Dpygi-overrides-dir=#{site_packages}/gi/overrides",
-                                      "-Dpython=#{python}",
-                                      *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
-    system Formula["python@3.10"].opt_bin/"python3.10", "-c", <<~EOS
+    system Formula["python@3.9"].opt_bin/"python3", "-c", <<~EOS
       import gi
       gi.require_version('Gst', '1.0')
       from gi.repository import Gst

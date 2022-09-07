@@ -1,8 +1,8 @@
 class Openblas < Formula
   desc "Optimized BLAS library"
   homepage "https://www.openblas.net/"
-  url "https://github.com/xianyi/OpenBLAS/archive/v0.3.21.tar.gz"
-  sha256 "f36ba3d7a60e7c8bcc54cd9aaa9b1223dd42eaf02c811791c37e8ca707c241ca"
+  url "https://github.com/xianyi/OpenBLAS/archive/v0.3.20.tar.gz"
+  sha256 "8495c9affc536253648e942908e88e097f2ec7753ede55aca52e5dead3029e3c"
   license "BSD-3-Clause"
   head "https://github.com/xianyi/OpenBLAS.git", branch: "develop"
 
@@ -12,12 +12,12 @@ class Openblas < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "87d3c5c201cffc4daf672e9976eb19daa59b690e6fa247e68ad1f0c9df95d790"
-    sha256 cellar: :any,                 arm64_big_sur:  "34e57867496112f8a0748db2d06243f7d197a171667326194cca86f7b6fb8fb4"
-    sha256 cellar: :any,                 monterey:       "fbbdca509a96aab530e9eeebb003e70213a72d06220a89a5e36b56ad89ca0bf3"
-    sha256 cellar: :any,                 big_sur:        "abe0a49a4ca741e4336a22eed745330166db8f8bce5bb21555e46ca46b9a8b6a"
-    sha256 cellar: :any,                 catalina:       "896879bedb28f8515d323cb860f925c2b569db540576e865113fc1d2a082ff1a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12a3cb2689a5b424b112e4de8f0c4af51cb3d5bd7990a17ed104294052e469cb"
+    sha256 cellar: :any,                 arm64_monterey: "e6dc1cbdb470a50abd39392d92639e0b8ccec8480790ec1bc35e7e70511f39e9"
+    sha256 cellar: :any,                 arm64_big_sur:  "a08b76f9d53d35fa5ec0484c07a097f0275c6697c790da4b33c930d56b10bf16"
+    sha256 cellar: :any,                 monterey:       "64e8434a833240ece09df09d86ba8c835d9b10c0e22e05aa8bfb6e97014f8d6f"
+    sha256 cellar: :any,                 big_sur:        "00becc271a08671bd1d59f9567fd37ddfe72bdb518d268e4452550e6ab3b9e3b"
+    sha256 cellar: :any,                 catalina:       "0de72c027ce82230482ebbc01afbfc12a5bed294b195769959cfc2e6f0befca8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db54160b4ed4032d9714336ea39d2e000ff24df7706d868b9a0ac054acb5a006"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BLAS in Accelerate.framework"
@@ -29,12 +29,7 @@ class Openblas < Formula
     ENV.runtime_cpu_detection
     ENV.deparallelize # build is parallel by default, but setting -j confuses it
 
-    # The build log has many warnings of macOS build version mismatches.
-    ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version
-    # Setting `DYNAMIC_ARCH` is broken with binutils 2.38.
-    # https://github.com/xianyi/OpenBLAS/issues/3708
-    # https://sourceware.org/bugzilla/show_bug.cgi?id=29435
-    ENV["DYNAMIC_ARCH"] = "1" if OS.mac?
+    ENV["DYNAMIC_ARCH"] = "1"
     ENV["USE_OPENMP"] = "1"
     # Force a large NUM_THREADS to support larger Macs than the VMs that build the bottles
     ENV["NUM_THREADS"] = "56"

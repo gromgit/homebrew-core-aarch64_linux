@@ -1,18 +1,18 @@
 class Arb < Formula
   desc "C library for arbitrary-precision interval arithmetic"
   homepage "https://arblib.org"
-  url "https://github.com/fredrik-johansson/arb/archive/2.23.0.tar.gz"
-  sha256 "977d41bde46f5442511d5165c705cec32c03e852c84d7d1836135d412ce702bb"
+  url "https://github.com/fredrik-johansson/arb/archive/2.22.1.tar.gz"
+  sha256 "1ef85518eee04885e8a90196498bc75e4e2410621d4184f2bc01d46b7080a243"
   license "LGPL-2.1-or-later"
   head "https://github.com/fredrik-johansson/arb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d0932b89466b24d29e519a6f3875d9f53ae632605e10bc1d473954cb40668016"
-    sha256 cellar: :any,                 arm64_big_sur:  "737cd42d550afda9fa9f0017e84fd7a9effcf475db04f8fff887c34fcc35d285"
-    sha256 cellar: :any,                 monterey:       "2f5244c00ab5acf62eb2d753c6bb1e9582d3b7e4211046192a4f1872118b0a0e"
-    sha256 cellar: :any,                 big_sur:        "23b7cdd19bf973d0d9cc8c48489ef2bc79d5bdf0b7d8e1eb19010d01093b1326"
-    sha256 cellar: :any,                 catalina:       "f726f1dd8a7c4401def57a1a0d978eb63bb5f9c0e4074afee20f3c9076b4617c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a222fdd6fb56ff3fd9499ea8b6b0626e5935af09a922bff4692988c630d7aeb7"
+    sha256 cellar: :any,                 arm64_monterey: "24821ce170b1c2429c7ace6af99b37d30c5302d0035f2692bf287d623b0333a0"
+    sha256 cellar: :any,                 arm64_big_sur:  "8592a5675e4b51be126cfa3c9611547b5636cc8307fdeceb6094b980be2f3d75"
+    sha256 cellar: :any,                 monterey:       "7187b623b29413ff46c89b8175c74fab6e3ab374a2006104bf12b409b1d7888a"
+    sha256 cellar: :any,                 big_sur:        "ec5f27ae0166f744754a5fe05dfb8f8fe563cbfcba74de5cb4b8e7e67aa23967"
+    sha256 cellar: :any,                 catalina:       "50674ecfe729634dd02adba2d45a3063879a9557c1de7fc64ea84014d2244a6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cbbb2e2aa4bf7a44732eb8d903b7c976275a341fa542621536bc60e2c4fe5cef"
   end
 
   depends_on "cmake" => :build

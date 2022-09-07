@@ -4,15 +4,17 @@ class H2o < Formula
   url "https://github.com/h2o/h2o/archive/v2.2.6.tar.gz"
   sha256 "f8cbc1b530d85ff098f6efc2c3fdbc5e29baffb30614caac59d5c710f7bda201"
   license "MIT"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 arm64_monterey: "2dbad9aa8ba17951616a2b93dfc52b707ab0e7515cb9ec6efa43fc260edd1786"
-    sha256 arm64_big_sur:  "c58c917d16ff1fcdde97c6bbf8c2bf5337120dc6c8a233f23be20096e9546af8"
-    sha256 monterey:       "f4d194b0192c88a258becd40eff437c36991fad0013afdec891e4c8fbcb5edba"
-    sha256 big_sur:        "63efa37625758c8df46dfe344b8010d8117b687d62cb2ee9ed0973d609116d85"
-    sha256 catalina:       "a60e3af7351adeebc4b93d0ae14229890734398c1b65b4198e4d6263a16d918d"
-    sha256 x86_64_linux:   "7c1a3647fc3cbe91331bc2d320b405fddeb4228a5685e6cadd499e326abd8473"
+    rebuild 1
+    sha256 arm64_monterey: "961401a86df0e09866bb9f424393642bd1df3dd60340fbbc71f3475f98a5f06f"
+    sha256 arm64_big_sur:  "235585aa8d60bdf07e3589282ae5704a7b417312e701a8774a12fbf407642aa1"
+    sha256 monterey:       "a33e81de4de46a46f3846280b32ec258e23bcec22d8c75518d1b258c993fbde5"
+    sha256 big_sur:        "44af35463fd8c70fa3cd4014dd8ec92c93e33b96a3dde07aa5e8c532f4ba15d3"
+    sha256 catalina:       "c3a59a760f51a19c8a6e946a49d7f689b81bef8f80d9157c9be5af628b6b2a1a"
+    sha256 mojave:         "7aa27f5811da60d7c51e4124ed8f54f102496c5e29585007fb2fe9cfee646bbe"
+    sha256 x86_64_linux:   "b33805c89af5cff42fd08df6fcd263a63721cbc04daf115e879fb0dc680aaa4f"
   end
 
   depends_on "cmake" => :build
@@ -26,20 +28,10 @@ class H2o < Formula
     # https://github.com/Homebrew/brew/pull/251
     ENV.delete("SDKROOT")
 
-    args = std_cmake_args + %W[
-      -DWITH_BUNDLED_SSL=OFF
-      -DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"].opt_prefix}
-    ]
-
-    # Build shared library.
-    system "cmake", "-S", ".", "-B", "build_shared", *args, "-DBUILD_SHARED_LIBS=ON"
-    system "cmake", "--build", "build_shared"
-    system "cmake", "--install", "build_shared"
-
-    # Build static library.
-    system "cmake", "-S", ".", "-B", "build_static", *args, "-DBUILD_SHARED_LIBS=OFF"
-    system "cmake", "--build", "build_static"
-    lib.install "build_static/libh2o-evloop.a"
+    system "cmake", *std_cmake_args,
+                    "-DWITH_BUNDLED_SSL=OFF",
+                    "-DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"].opt_prefix}"
+    system "make", "install"
 
     (etc/"h2o").mkpath
     (var/"h2o").install "examples/doc_root/index.html"

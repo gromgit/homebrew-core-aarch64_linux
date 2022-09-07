@@ -3,17 +3,17 @@ class Stanc3 < Formula
   homepage "https://github.com/stan-dev/stanc3"
   # git is needed for dune subst
   url "https://github.com/stan-dev/stanc3.git",
-      tag:      "v2.30.1",
-      revision: "60c5597a544771416354418d3a3dbe7f9915fcd9"
+      tag:      "v2.29.2",
+      revision: "2c254b3b11a4dbb82395f016886b557201dad130"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "178fff04f4394364eab6ce894104979832cc3157979d16f16c192d56a489275b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "784abf24eab6dea8878c1a30e25d793648e8d7b885969973db91f27c6a3a9e8a"
-    sha256 cellar: :any_skip_relocation, monterey:       "2695c1bb3960d61576e9cc70212a3597ec683dd20929653d23df4a4ceb9c3f7e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c143caa203a4ffd199af56074e3ccdb83e5ff14e8217146cc4ad00ba51e24807"
-    sha256 cellar: :any_skip_relocation, catalina:       "326b30c3aa3fc8468bd9042047c631a8abcf408e049db90d3ed7b721f51a72c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eecce590dbb2f21cd361037b981a85f6be6eaf847fd4492e7604a5fed7f7c315"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd4b41210dbcf5a6ffef5c4290ee15323dbe03b9fc79d80d9511e6900f699a6b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ab7b4f9ebd51d78882c0864ef03386060152690b8712b1b6153d5995e785430"
+    sha256 cellar: :any_skip_relocation, monterey:       "3bf2f015ff3055d27aac8cd834f946c6ab357bc7bbd4a7f6c910a90473b6ae88"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d951f0550f2f650e96b642e9fccb9722116098e07c7561075adeeb674698e3d0"
+    sha256 cellar: :any_skip_relocation, catalina:       "5010820eb8e638d588eccfe8a7de119326ed999ea63e4fc748a178ffa9bf8895"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "315bc18c788eae0d1c8498446c75949c56c95c8b9570b702606356efa9237c71"
   end
 
   depends_on "ocaml" => :build

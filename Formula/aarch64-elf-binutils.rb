@@ -1,9 +1,9 @@
 class Aarch64ElfBinutils < Formula
   desc "GNU Binutils for aarch64-elf cross development"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz"
-  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.39.tar.xz"
-  sha256 "645c25f563b8adc0a81dbd6a41cffbf4d37083a382e02d5d3df4f65c09516d00"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.xz"
+  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.38.tar.xz"
+  sha256 "e316477a914f567eccc34d5d29785b8b0f5a10208d36bbacedcc39048ecfe024"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Aarch64ElfBinutils < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "816819b80149e70c4b001ff0d68b02b2809c208bbf3f005729f0ce6522dfc6c7"
-    sha256 arm64_big_sur:  "b3f844bdbf112b87d74c2d368071d6838747252019692b6b200bf5ae4b2003d3"
-    sha256 monterey:       "039fa6a5d98e1e6c6bab7580d25afc6791cad9fbfe3b53ce388435e1c2fd2aa1"
-    sha256 big_sur:        "5cbf1bf9d0a450e79405b239b8541cedd40619259828d2dd5cc42d53f619bce4"
-    sha256 catalina:       "711d3b85605b84d64aa88cb22a0de52668e0a232345293fc3dc040fe431b9fb3"
-    sha256 x86_64_linux:   "6529ba0f0d70e67b78a3e41be1200e5330550240c84c929d843e5ffb4aa4527e"
+    sha256 arm64_monterey: "8df73acaded40e59291ce9afdc17918f655a4ceb8884f04647b90eb94d59af13"
+    sha256 arm64_big_sur:  "a86842be0ff1841bdc7666b2c6ff4143a83e18a6fc6de147e088055ef4da77a5"
+    sha256 monterey:       "80f0787d5735fa015bebde54cd449f4ca7553163c8e869315dca9c89d077801f"
+    sha256 big_sur:        "def04262f48a5bc1a5b3a9b1331c7eabde55b65c1ca4cf565bda1b075b656846"
+    sha256 catalina:       "707c2aa4f1b263090f811dfa3aba67b890ad64cab3e932266d308ce12a6ba41d"
+    sha256 x86_64_linux:   "adc92ac904443623aa1a2a27c03b5ed7f89dd07dede7f297cd4bdaa83c20850a"
   end
 
   uses_from_macos "texinfo"

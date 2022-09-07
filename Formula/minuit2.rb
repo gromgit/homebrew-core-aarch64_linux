@@ -1,8 +1,8 @@
 class Minuit2 < Formula
   desc "Physics analysis tool for function minimization"
   homepage "https://root.cern.ch/doc/master/md_math_minuit2_doc_Minuit2.html"
-  url "https://root.cern.ch/download/root_v6.26.06.source.tar.gz"
-  sha256 "b1f73c976a580a5c56c8c8a0152582a1dfc560b4dd80e1b7545237b65e6c89cb"
+  url "https://root.cern.ch/download/root_v6.26.02.source.tar.gz"
+  sha256 "7ba96772271a726079506c5bf629c3ceb21bf0682567ed6145be30606d7cd9bb"
   license "LGPL-2.1-or-later"
   head "https://github.com/root-project/root.git", branch: "master"
 
@@ -11,12 +11,12 @@ class Minuit2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6e205879629a898f1a797da87058b2cd7f727b5a5f21742af6227c74542977c0"
-    sha256 cellar: :any,                 arm64_big_sur:  "937bc1d4b5613eadde5eb9b8706509ac46fba4b213df914b3a34f0b9645f9e8a"
-    sha256 cellar: :any,                 monterey:       "4738710f5a36f8c52c56650f6a7f6b5ed9470ad9d9fa8f1a5aaf2c9292bcb269"
-    sha256 cellar: :any,                 big_sur:        "d5d4d4ce8c56607be1a02cbb2703d396cda084c04cef18be6cd6665364478ab4"
-    sha256 cellar: :any,                 catalina:       "13bf91dd19a6a1a2eb4a291cca8cc07e00b79fca07896216f15e09b2ae90a0e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b5ea379da72fbca8dc6af5079d08dcdec09879a14abb0f1a52b6a9a1cd293f1"
+    sha256 cellar: :any,                 arm64_monterey: "185a34231da8d53de0b3c1ab9ab815ba6b26f7e804fba82399b1d024dbc6858d"
+    sha256 cellar: :any,                 arm64_big_sur:  "f2734f9437135a9ac1f53f4d465c6385d360cf2adc6af5be7368c076a4566ecd"
+    sha256 cellar: :any,                 monterey:       "f8a0a3e9bc4e0effdf005c10564171221797d7d0caa3ed820340193aaf5da63a"
+    sha256 cellar: :any,                 big_sur:        "ffb7d2396bd3cc7c307c1c1258b7000816b571580515adfb88dfcad2570be8a0"
+    sha256 cellar: :any,                 catalina:       "30de75ebb11bc6f8fa2e9d092a9368c46caf712fe8e8d7deeff7752d27decf52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47905da3a5f6d0ee101b991eee1972b32cbe5f3bab2da26c10e14475370eeeff"
   end
 
   depends_on "cmake" => :build

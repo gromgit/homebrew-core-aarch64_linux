@@ -1,10 +1,9 @@
 class R < Formula
   desc "Software environment for statistical computing"
   homepage "https://www.r-project.org/"
-  url "https://cran.r-project.org/src/base/R-4/R-4.2.1.tar.gz"
-  sha256 "4d52db486d27848e54613d4ee977ad952ec08ce17807e1b525b10cd4436c643f"
+  url "https://cran.r-project.org/src/base/R-4/R-4.2.0.tar.gz"
+  sha256 "38eab7719b7ad095388f06aa090c5a2b202791945de60d3e2bb0eab1f5097488"
   license "GPL-2.0-or-later"
-  revision 3
 
   livecheck do
     url "https://cran.rstudio.com/banner.shtml"
@@ -12,19 +11,20 @@ class R < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "7d90e7cbd5a955e347c0fc16410227cec47ed6af91c61f8b6dd2d90e9bf847a4"
-    sha256 arm64_big_sur:  "7d5efc990ccfb505c65485da128d291f0892f5a3e84035090694d62e211593cb"
-    sha256 monterey:       "1194f600e6a48c48b4aaaa3f8cf1521f6f5619a2d8536c52df807e1236d1fe22"
-    sha256 big_sur:        "ebbc3a32a6c4820397036ad4eb72dce880f17d9d8c6d7691f1c071692fe4a68c"
-    sha256 catalina:       "b52ed1a424220a750954876a2740030324c377375da59f54dc4ed08ca16c99d3"
-    sha256 x86_64_linux:   "013c967a31390c789f25006d6cf0f6463a9a858f00fe5b0bc08a103f2ed795e5"
+    sha256 arm64_monterey: "1204b8d876d6aef1104d294e43485ffb6bf7fdc0806c72f28f304a0e9df6e3ee"
+    sha256 arm64_big_sur:  "757ceaf387c83395c488b4a3085ae2dc8c583105a884a52352f68942132b2831"
+    sha256 monterey:       "3b78da431cfb87ad783ee196d41a4e0fdd5b63c084b038b8b054604daa95b6bd"
+    sha256 big_sur:        "a5c00f17343545f8646e512a99ad52b17a5b4ba0cf9f976b3d091e1f60090a1a"
+    sha256 catalina:       "a846d6b2d34064ca16e545e57d31a82ef6ddc36792fada118996ea06cff9caf1"
+    sha256 x86_64_linux:   "21df0e3519c96277f20f191c949c5781ab84d29f8f03f8f99ed24991d0a276cb"
   end
 
   depends_on "pkg-config" => :build
   depends_on "cairo"
   depends_on "gcc" # for gfortran
   depends_on "gettext"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
+  depends_on "libffi"
   depends_on "libpng"
   depends_on "openblas"
   depends_on "pcre2"
@@ -34,14 +34,13 @@ class R < Formula
 
   uses_from_macos "curl"
   uses_from_macos "icu4c"
-  uses_from_macos "libffi", since: :catalina
 
   on_linux do
+    depends_on "pango"
     depends_on "libice"
-    depends_on "libtirpc"
     depends_on "libx11"
     depends_on "libxt"
-    depends_on "pango"
+    depends_on "libtirpc"
   end
 
   # needed to preserve executable permissions on files without shebangs

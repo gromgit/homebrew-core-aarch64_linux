@@ -28,7 +28,6 @@ class Austin < Formula
   end
 
   test do
-    python = Formula["python@3.10"].opt_bin/"python3.10"
-    shell_output(bin/"austin #{python} -c \"from time import sleep; sleep(1)\"", 37)
+    shell_output(bin/"austin #{Formula["python@3.10"].opt_bin}/python3 -c \"from time import sleep; sleep(1)\"", 37)
   end
 end

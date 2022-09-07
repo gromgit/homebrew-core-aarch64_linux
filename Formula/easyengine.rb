@@ -1,17 +1,17 @@
 class Easyengine < Formula
   desc "Command-line control panel to manage WordPress sites"
   homepage "https://easyengine.io/"
-  url "https://github.com/EasyEngine/easyengine/releases/download/v4.6.1/easyengine.phar"
-  sha256 "df0dc82b9c18c90dea09b3a203ad97fb05860a6febd12f720bafdf2e32dc01e7"
+  url "https://github.com/EasyEngine/easyengine/releases/download/v4.5.4/easyengine.phar"
+  sha256 "c5ea2539a0ce40d8927c36878ec7c1ebf7184397f10586c2a030ec498cafb429"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a49dbdeaa32eeb010f154fd0db1c3015a752339eafcd10657abe46bb66a89b89"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a49dbdeaa32eeb010f154fd0db1c3015a752339eafcd10657abe46bb66a89b89"
-    sha256 cellar: :any_skip_relocation, monterey:       "6fbe7dfcdba82deeaeb9552fe2e52c299add61cba3df8b5ca717dcb62333ae41"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6fbe7dfcdba82deeaeb9552fe2e52c299add61cba3df8b5ca717dcb62333ae41"
-    sha256 cellar: :any_skip_relocation, catalina:       "6fbe7dfcdba82deeaeb9552fe2e52c299add61cba3df8b5ca717dcb62333ae41"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a49dbdeaa32eeb010f154fd0db1c3015a752339eafcd10657abe46bb66a89b89"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd789e482ec01d3a81c35cf667e2e5f347ab5e4b9d25b23fc6e301dfb04ffa22"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd789e482ec01d3a81c35cf667e2e5f347ab5e4b9d25b23fc6e301dfb04ffa22"
+    sha256 cellar: :any_skip_relocation, monterey:       "718cad356c16de1833ceb664d530b8a4b9463306e2f5285bf5fa76851d6ea872"
+    sha256 cellar: :any_skip_relocation, big_sur:        "718cad356c16de1833ceb664d530b8a4b9463306e2f5285bf5fa76851d6ea872"
+    sha256 cellar: :any_skip_relocation, catalina:       "718cad356c16de1833ceb664d530b8a4b9463306e2f5285bf5fa76851d6ea872"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd789e482ec01d3a81c35cf667e2e5f347ab5e4b9d25b23fc6e301dfb04ffa22"
   end
 
   depends_on "dnsmasq"
@@ -19,9 +19,7 @@ class Easyengine < Formula
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
   on_macos do
-    on_intel do
-      pour_bottle? only_if: :default_prefix
-    end
+    pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
   end
 
   def install

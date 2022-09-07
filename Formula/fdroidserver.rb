@@ -6,33 +6,30 @@ class Fdroidserver < Formula
   url "https://files.pythonhosted.org/packages/4f/2d/7e81d5bfcc0ba8cc3da96a12e20ce02fca60cd43ee038880875dc8399540/fdroidserver-2.1.tar.gz"
   sha256 "0a8e382d4824d1caef759b8118f540438de37799b3e3a7708bc84db9766e2ebe"
   license "AGPL-3.0-or-later"
-  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "b8701fe545a36be904ee15abd9d91ac6c6f323c72a3b21b3ca37cb8d92bf3e60"
-    sha256 cellar: :any,                 arm64_big_sur:  "eb7b52ec3191d4caabc4ee0944d79d67d164c1059013476100cc63e1b1de3c89"
-    sha256 cellar: :any,                 monterey:       "31bce5722a17a9c1513d17c183ccb253747bf9783a73f294594a9806d82b2062"
-    sha256 cellar: :any,                 big_sur:        "40626cad0fa1b703ff94f293a0df51a64444ca34046a6a8ed503713166fdb44c"
-    sha256 cellar: :any,                 catalina:       "bca749f27fa1644dde78477be1c9af8da2140ad9be97273ca55a6fdf08e4548c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "263956d04e7a1d7df32c3292108b81cc23c218be7159222f359744510db79179"
+    sha256 cellar: :any,                 arm64_monterey: "c25fa3ea230a0a94e40e29277cbea4762870d0e63576880655bfb48098a1b915"
+    sha256 cellar: :any,                 arm64_big_sur:  "d4e6abb211a9eaed46345c995d816772c08f5657d3f00acd49ed50f4d4cb5745"
+    sha256 cellar: :any,                 monterey:       "7e117f38ff428aed64646b1315dce82717f54d04b852eca6df970ff00f8a4473"
+    sha256 cellar: :any,                 big_sur:        "38f20c1d9feb8a494d9593f22a7656a28154cc45930c44b054ff7499ad231a6f"
+    sha256 cellar: :any,                 catalina:       "692bc4893ebb6f9b11243c2ef3a3c8d891f6eb1cb1824c83fb35c7c6b7b89b84"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "06a9ed51337db02da96048c7e414efe92185d58fb337a9b222afae5bd7565e5d"
   end
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
+  depends_on "libffi"
   depends_on "numpy"
   depends_on "openssl@1.1"
   depends_on "pillow"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "s3cmd"
-  depends_on "six"
 
-  uses_from_macos "libffi", since: :catalina
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
 
-  resource "appnope" do
-    on_macos do
+  on_macos do
+    resource "appnope" do
       url "https://files.pythonhosted.org/packages/6a/cd/355842c0db33192ac0fc822e2dcae835669ef317fe56c795fb55fcddb26f/appnope-0.1.3.tar.gz"
       sha256 "02bd91c4de869fbb1e1c50aafc4098827a7a54ab2f39d9dcba6c9547ed920e24"
     end
@@ -296,6 +293,11 @@ class Fdroidserver < Formula
   resource "ruamel.yaml.clib" do
     url "https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz"
     sha256 "4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "smmap" do

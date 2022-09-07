@@ -3,18 +3,18 @@ class Osc < Formula
 
   desc "Command-line interface to work with an Open Build Service"
   homepage "https://openbuildservice.org"
-  url "https://github.com/openSUSE/osc/archive/0.181.0.tar.gz"
-  sha256 "ef97c1454a4c8416e3bbb3e378afde85e42fe381fff8a135ddb9c8c4fedd5697"
+  url "https://github.com/openSUSE/osc/archive/0.177.0.tar.gz"
+  sha256 "3dfeb9944f78f17a509966dd1dd89d177dd0d87856a6c8f7556d68e07521d1d4"
   license "GPL-2.0-or-later"
   head "https://github.com/openSUSE/osc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a41a38cf1fa74e77db04bba70b4eeda68d0888b078d8102506ada4bd0b4ae1fd"
-    sha256 cellar: :any,                 arm64_big_sur:  "a31848158b6ec70896eeca007df542685efa6e37e2a6791ed1698f54f9e8d5b2"
-    sha256 cellar: :any,                 monterey:       "a31f099840fc5ebeb7bf8313e4e9c3a717fc09d37b8a9edb7a71146077dcf47c"
-    sha256 cellar: :any,                 big_sur:        "cd6d6e56625416f48bf489d3cab3f97f47932aea3b628a7243db514d2b00d460"
-    sha256 cellar: :any,                 catalina:       "fa6d467c6b05dad32bca33c84c37ee5d313ad9e6ef79c01d5844ad1aff6dd74a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd8079f5718f1e59a182988dbe3007290fe444549d37b90d3766927b464232fd"
+    sha256 cellar: :any,                 arm64_monterey: "8cbbb5e963a05080ecff592388d59e896333d41f7f8416fa9670690e582a2a1a"
+    sha256 cellar: :any,                 arm64_big_sur:  "0c5e7c3eb32f6492fa802351eef8c6d3ecd98568bc42e7c7f468d4bfe5c486e9"
+    sha256 cellar: :any,                 monterey:       "6bcf28372b0620ee54688ac0bc31e6146aa217aec8f35b073cdad349cf320caf"
+    sha256 cellar: :any,                 big_sur:        "4948b942f82eb690022ecf628ef6983e70c0024e7e4ce23265e757f93ba0b1c8"
+    sha256 cellar: :any,                 catalina:       "852e256e0f08cc623fe93fed986f9438806ed29024fa5731c87eef0e39977c68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e3f5a16b0e44dd9b079e9040221fa607c3511fe50308144a643455c1ec6ce6b"
   end
 
   depends_on "swig" => :build
@@ -24,17 +24,14 @@ class Osc < Formula
   uses_from_macos "curl"
 
   resource "chardet" do
-    url "https://files.pythonhosted.org/packages/31/a2/12c090713b3d0e141f367236d3a8bdc3e5fca0d83ff3647af4892c16c205/chardet-5.0.0.tar.gz"
-    sha256 "0368df2bfd78b5fc20572bb4e9bb7fb53e2c094f60ae9993339e8671d0afb8aa"
+    url "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz"
+    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
   end
 
   resource "M2Crypto" do
     url "https://files.pythonhosted.org/packages/2c/52/c35ec79dd97a8ecf6b2bbd651df528abb47705def774a4a15b99977274e8/M2Crypto-0.38.0.tar.gz"
     sha256 "99f2260a30901c949a8dc6d5f82cd5312ffb8abc92e76633baf231bbbcb2decb"
   end
-
-  # upstream issue tracker, https://github.com/openSUSE/osc/issues/1101
-  patch :DATA
 
   def install
     openssl = Formula["openssl@1.1"]
@@ -49,25 +46,3 @@ class Osc < Formula
     system bin/"osc", "--version"
   end
 end
-
-__END__
-diff --git a/osc/util/git_version.py b/osc/util/git_version.py
-index 69022cf..67a12e4 100644
---- a/osc/util/git_version.py
-+++ b/osc/util/git_version.py
-@@ -3,6 +3,7 @@ import subprocess
-
-
- def get_git_archive_version():
-+    return None
-     """
-     Return version that is set by git during `git archive`.
-     The returned format is equal to what `git describe --tags` returns.
-@@ -18,6 +19,7 @@ def get_git_archive_version():
-
-
- def get_git_version():
-+    return None
-     """
-     Determine version from git repo by calling `git describe --tags`.
-     """

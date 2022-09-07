@@ -3,17 +3,17 @@ class Ykdl < Formula
 
   desc "Video downloader that focus on China mainland video sites"
   homepage "https://github.com/SeaHOH/ykdl"
-  url "https://files.pythonhosted.org/packages/1e/a2/8d68c0f5bfda82033fac0d36875c185241de37e1ac56f8b3f161e825a1e6/ykdl-1.8.1.post1.tar.gz"
-  sha256 "97b179ef7059685fbbb24d4f50ae6e5e01f08e9c0998b292dc1ca44c1af09dc1"
+  url "https://files.pythonhosted.org/packages/72/b1/2b860383f3568fc168f9e843d367675724f2c67feabc2207da90d7fbe47f/ykdl-1.8.0.tar.gz"
+  sha256 "29588ec771d364ed91446a5f7f0dcee914119e7e7c99c6860ac46f0ad9622790"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "efcd0011857332ef15e74cdff962bb60211200796eaca797ace08cddcd9f5ba0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05b27c56f6e69dd6bc8f914b5d614d3bc8732455e8ff3e22f6e1c099cae0476a"
-    sha256 cellar: :any_skip_relocation, monterey:       "d39d2294ad69b40a6fc0be6a7ab3f481a056d61452768319171ea079d5b7da63"
-    sha256 cellar: :any_skip_relocation, big_sur:        "73612c966a51b6fb49249ee41fe1da2d44e32a3bd3282657ce5194d6889dea7a"
-    sha256 cellar: :any_skip_relocation, catalina:       "5a7973f5eb02f8e2c19dc88ab403e2b9282be2cbc88ba19b008c41829c70380e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5d7c1b79b55252269492d73da787c3216d607b1b86b8e94e07ef895172de531"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3505a806ade983e0f51e361b436e084a2b63efba6b3fa245465eee7025126daa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "980647710cc5dcd8a7cc434ba431bcab6771c2d8e180f0724147c0ce30df2340"
+    sha256 cellar: :any_skip_relocation, monterey:       "83fa9f7ae1f8330b895d92f6a58375557558b6d4531398c662101609126d88e5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bff00bf48e76078d2d64ae55c730e2c0d4d5d4785436c9233fe1ba9f8764328d"
+    sha256 cellar: :any_skip_relocation, catalina:       "e505527a15ef8eb67df22cd6edfd6c113d7d51475f98d29e03a284ccf2b36148"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebe84e64f4690d6ede807ea533b9b4a145f9cfbeea74b26160535360f2e52454"
   end
 
   depends_on "python@3.10"
@@ -29,8 +29,8 @@ class Ykdl < Formula
   end
 
   resource "m3u8" do
-    url "https://files.pythonhosted.org/packages/0a/c1/ea98c5f109be04a745d01437f77b801192f3cf56cb834fa5e660f0a0ce03/m3u8-2.0.0.tar.gz"
-    sha256 "bd8727a74c23fd706f2dc2a53f319391589ea64bb3a5c76b1c9b5707d8f4a0b0"
+    url "https://files.pythonhosted.org/packages/23/aa/fe3796bc467b8108462854dcc12143c8f083b918028f179f02b1a7c33f79/m3u8-1.0.0.tar.gz"
+    sha256 "e9886ff0df35d81fadc522df5ef9b516708b09f8109492f1175720e006b9b8e8"
   end
 
   def install
@@ -42,6 +42,6 @@ class Ykdl < Formula
   end
 
   test do
-    system bin/"ykdl", "--info", "https://v.youku.com/v_show/id_XNTAwNjY3MjU3Mg==.html"
+    system bin/"ykdl", "--info", "https://v.youku.com/v_show/id_XNTAzNDM5NTQ5Mg==.html"
   end
 end

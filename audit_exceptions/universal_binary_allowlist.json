@@ -4,11 +4,12 @@
   "code-server",
   "contentful-cli",
   "firebase-cli",
+  "gatsby-cli",
   "infer",
+  "joplin-cli",
   "llvm",
   "llvm@11",
   "llvm@12",
-  "llvm@13",
   "llvm@7",
   "llvm@8",
   "llvm@9",
@@ -17,6 +18,7 @@
   "netlify-cli",
   "node-sass",
   "openjdk@11",
+  "serverless",
   "sourcery",
   "swift"
 ]

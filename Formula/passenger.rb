@@ -1,31 +1,23 @@
 class Passenger < Formula
   desc "Server for Ruby, Python, and Node.js apps via Apache/NGINX"
   homepage "https://www.phusionpassenger.com/"
-  url "https://github.com/phusion/passenger/releases/download/release-6.0.14/passenger-6.0.14.tar.gz"
-  sha256 "41cd40acfadca1e8adffca3b23d63a1d6d37f976d8c29e4eff0de6250f4113a2"
+  url "https://github.com/phusion/passenger/releases/download/release-6.0.13/passenger-6.0.13.tar.gz"
+  sha256 "fed2efaac02596a56298a6a97738a1d28dca41c1f1718ec57a64a3fd09776be3"
   license "MIT"
-  revision 2
   head "https://github.com/phusion/passenger.git", branch: "stable-6.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b1cf6f431fbbdde607214dac94315975737c9eda78aa97674d955d0c50f75691"
-    sha256 cellar: :any,                 arm64_big_sur:  "815500f848c77a7e87e44d7497dd9217c26714f5914ad49a478c4f615420127a"
-    sha256 cellar: :any,                 monterey:       "5b200f24398ff9f7af4ed6d8faab5617b6cd19aa600808eb922b31d7693ee1b0"
-    sha256 cellar: :any,                 big_sur:        "f8dc649b4b23ff12574a64d2377323a8ce80dce541e806a7b2cc7c156d5ed183"
-    sha256 cellar: :any,                 catalina:       "c063d99dcbef6b8ed28fbc4f77aa8705831e6649fbca4b2b171e15a95301fdcc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c80a374f194b50c8da622b9a11a00213c021903091f6470e55a102f870f49af3"
+    sha256 cellar: :any, arm64_monterey: "b1892e1befd13c80d8d5072e62a5829283b18e825a8eb7d5eb044ddf63fc9ef0"
+    sha256 cellar: :any, arm64_big_sur:  "42753ddb83a015e16dc9313af8efb921c0e5796a85486f663479cfd1f34ab511"
+    sha256 cellar: :any, monterey:       "4898248aba0ffd7950eba9dae822867f68af38006e469ac9b067e2d7e65cf1b0"
+    sha256 cellar: :any, big_sur:        "894096697439c1de37974d5f1a9b8908a5e1c941dcf78fa4a383cd107bfc973a"
+    sha256 cellar: :any, catalina:       "2254ebcd2c8f43a1fff3c800eb9ab9729ce0749ec15cda2d3408648310702799"
   end
 
-  depends_on "httpd" => :build # to build the apache2 module
-  depends_on "nginx" => [:build, :test] # to build nginx module
-  depends_on "apr"
-  depends_on "apr-util"
+  # to build nginx module
+  depends_on "nginx" => [:build, :test]
   depends_on "openssl@1.1"
   depends_on "pcre"
-
-  uses_from_macos "xz" => :build
-  uses_from_macos "curl"
-  uses_from_macos "libxcrypt"
   uses_from_macos "ruby", since: :catalina
 
   def install
