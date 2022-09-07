@@ -1,18 +1,14 @@
 class Nnn < Formula
   desc "Tiny, lightning fast, feature-packed file manager"
   homepage "https://github.com/jarun/nnn"
-  url "https://github.com/jarun/nnn/archive/v4.6.tar.gz"
-  sha256 "15acaf9a88cfb5a2a640d3ef55a48af644fba92b46aac0768efe94c4addf7e3f"
+  url "https://github.com/jarun/nnn/archive/v4.5.tar.gz"
+  sha256 "fadc15bd6d4400c06e5ccc47845b42e60774f368570e475bd882767ee18749aa"
   license "BSD-2-Clause"
   head "https://github.com/jarun/nnn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ddfc52b2869147d312f704b9bd685bf632893e4ab6d7208dc26d56e4d2189b18"
-    sha256 cellar: :any,                 arm64_big_sur:  "58acdcf48c4387489175a0623d7ad9706f61f7a7811ba1a19b3115c7943badec"
-    sha256 cellar: :any,                 monterey:       "764019065dee7ecbfaf671c4fcdd1557680dea3b613a66e388b06f366e96faa4"
-    sha256 cellar: :any,                 big_sur:        "5988f897c440cc93e3ef016af38214ea7af8ca4bc1543ee1f999e9b94a84922e"
-    sha256 cellar: :any,                 catalina:       "6090e2f17a65c2b57ee27a3f285c14c6a7d06b399b869373db41e6dd323f5bc0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8747361033237d3ffa712ec076e5478559de36e104c4625964f2ad0de1d886ab"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nnn"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4aeefa714a917da72f0094f9af62788d30ac528d5ce73df188f2eb2de4e4e0f6"
   end
 
   depends_on "gnu-sed"
