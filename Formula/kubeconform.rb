@@ -1,18 +1,14 @@
 class Kubeconform < Formula
   desc "FAST Kubernetes manifests validator, with support for Custom Resources!"
   homepage "https://github.com/yannh/kubeconform"
-  url "https://github.com/yannh/kubeconform/archive/v0.4.14.tar.gz"
-  sha256 "bdd26e68c329da4e713390eed93efd7953952bb816c9709fcd455513680017c5"
+  url "https://github.com/yannh/kubeconform/archive/v0.4.13.tar.gz"
+  sha256 "e6d161de050afa205454fd4660c465e35632ba6ee209a3481baacf410f250688"
   license "Apache-2.0"
   head "https://github.com/yannh/kubeconform.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f1c3955cd514a49b752dd0d257f3d9b9ba8e56d264ca8984b020eda2970c6f51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e79e32e43d8058963dc404ae5032a14fdb5116826604a8aa249777b7e5e242a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6a266e51b3483b03a7074e6b950ceaabc052a7178cb4c9f482a9f8b70284d688"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f1170a54e0555beb4ecce541351c133e6685d5e03abcd2af304abea6bb97cfb2"
-    sha256 cellar: :any_skip_relocation, catalina:       "c128eedeeef0e40f02c17c063c108e6138dfee50f41d6469ea8db4af24734c80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eccc7d5135322bbbcf79cffad2174ef0ae69585515640c270b2811c626549455"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubeconform"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a86d2a5144c18946f65a3d2cb4f529bb4e35222783244e908748c187887270fb"
   end
 
   depends_on "go" => :build
