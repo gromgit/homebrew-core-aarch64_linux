@@ -1,8 +1,8 @@
 class TektoncdCli < Formula
   desc "CLI for interacting with TektonCD"
   homepage "https://github.com/tektoncd/cli"
-  url "https://github.com/tektoncd/cli/archive/v0.26.0.tar.gz"
-  sha256 "6be12ab8e741bdaebfb1f8095ece38f117f884566be8ac9397eeb105d0c4906a"
+  url "https://github.com/tektoncd/cli/archive/v0.23.1.tar.gz"
+  sha256 "49ea8c907c10514e219b3536fad481c537c09b8fa264eb0c0f3c4ece61bcabc5"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,8 @@ class TektoncdCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d1e957261fab70713f7ee24080865a7fd8b5b77a6c7f2a400186b82bc809d40c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "911bf4af0ac77c81b97c6220d85da151d8cd4adb9f5fda7a2299e0c66a455574"
-    sha256 cellar: :any_skip_relocation, monterey:       "69dfce4e130d0a776cebda96fe9b8b6eebce4151ec0f958c41f8dc4cb5e024f2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1ef91383ee4deb09adc7eaa3530dac0a8a6cc08c8d8e20ef64e8aa0b3fbecb61"
-    sha256 cellar: :any_skip_relocation, catalina:       "7eeedbb88b6a0cd7192421626325148b702a15e12cfaa2e6617f9c91d208cd11"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f02028301f67c8e4fae2c335c92f46ab72bd318b411548b61eda30985ac1fa29"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tektoncd-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c9f28defc59a8d0824ec6f3f3b1e6aa12e5b90ec9f97d9f293c1d177423f5c82"
   end
 
   depends_on "go" => :build
@@ -25,7 +21,12 @@ class TektoncdCli < Formula
     system "make", "bin/tkn"
     bin.install "bin/tkn" => "tkn"
 
-    generate_completions_from_executable(bin/"tkn", "completion", base_name: "tkn")
+    output = Utils.safe_popen_read(bin/"tkn", "completion", "bash")
+    (bash_completion/"tkn").write output
+    output = Utils.safe_popen_read(bin/"tkn", "completion", "zsh")
+    (zsh_completion/"_tkn").write output
+    output = Utils.safe_popen_read(bin/"tkn", "completion", "fish")
+    (fish_completion/"tkn.fish").write output
   end
 
   test do
