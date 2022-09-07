@@ -4,23 +4,19 @@ class OpensearchDashboards < Formula
   desc "Open source visualization dashboards for OpenSearch"
   homepage "https://opensearch.org/docs/dashboards/index/"
   url "https://github.com/opensearch-project/OpenSearch-Dashboards.git",
-      tag:      "2.2.1",
-      revision: "d630bc4fb3740cdb0d18e70b4f750b856432441b"
+      tag:      "1.3.2",
+      revision: "6aa55aee1acd98035c714a46c8508a5b5ecabfd5"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "24451df323a5b5f0e3d331559f39609fcc9b19823f6739e8671f2e823a3b5b72"
-    sha256 cellar: :any_skip_relocation, big_sur:      "24451df323a5b5f0e3d331559f39609fcc9b19823f6739e8671f2e823a3b5b72"
-    sha256 cellar: :any_skip_relocation, catalina:     "24451df323a5b5f0e3d331559f39609fcc9b19823f6739e8671f2e823a3b5b72"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "741f3ab9118fd19fc98806b5bc69f7035efec59c3950eb45588d1fffa597d34a"
+    sha256 cellar: :any_skip_relocation, all: "849889b4333f56fdca11b839fa6c7dfbebe70b6cca4dafdb624f1d2c4154b2e6"
   end
 
   depends_on "yarn" => :build
-  depends_on arch: :x86_64 # https://github.com/opensearch-project/OpenSearch-Dashboards/issues/1630
-  depends_on "node@14" # use `node@16` after https://github.com/opensearch-project/OpenSearch-Dashboards/issues/406
+  depends_on "node@10" # Switch to `node` after https://github.com/opensearch-project/OpenSearch-Dashboards/issues/406
 
   def install
-    inreplace "package.json", /"node": "14\.\d+\.\d+"/, %Q("node": "#{Formula["node@14"].version}")
+    inreplace "package.json", /"node": "10\.\d+\.\d+"/, %Q("node": "#{Formula["node@10"].version}")
 
     # Do not download node and discard all actions related to this node
     inreplace "src/dev/build/build_distributables.ts" do |s|
@@ -40,12 +36,10 @@ class OpensearchDashboards < Formula
     system "yarn", "osd", "bootstrap"
     system "node", "scripts/build", "--release", "--skip-os-packages", "--skip-archives", "--skip-node-download"
 
-    os = OS.kernel_name.downcase
-    arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
-    cd "build/opensearch-dashboards-#{version}-#{os}-#{arch}" do
+    cd "build/opensearch-dashboards-#{version}-darwin-x64" do
       inreplace Dir["bin/*"],
                 "\"${DIR}/node/bin/node\"",
-                "\"#{Formula["node@14"].opt_bin/"node"}\""
+                "\"#{Formula["node@10"].opt_bin/"node"}\""
 
       inreplace "config/opensearch_dashboards.yml",
                 /#\s*pid\.file: .+$/,
