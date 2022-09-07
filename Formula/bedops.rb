@@ -1,17 +1,13 @@
 class Bedops < Formula
   desc "Set and statistical operations on genomic data of arbitrary scale"
   homepage "https://github.com/bedops/bedops"
-  url "https://github.com/bedops/bedops/archive/v2.4.41.tar.gz"
-  sha256 "3b868c820d59dd38372417efc31e9be3fbdca8cf0a6b39f13fb2b822607d6194"
-  license "GPL-2.0-or-later"
+  url "https://github.com/bedops/bedops/archive/v2.4.40.tar.gz"
+  sha256 "8c01db76669dc58c595e2e1b9bdb6d462f3363fc569b15c460a63a63b8b6bf30"
+  license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa0e42d870cb2e5fd71ecfe637ec760352eb571074aa19156564f8fd1fc0cb2f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4716026be4f889b0c6ea10e8288be373cac72224aa63376b08192ab07f440d5c"
-    sha256 cellar: :any_skip_relocation, monterey:       "044fcad68d63ce2863dc43d69cbcff7b0b8d519086565ab8a2fa654b07f78bf0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "12419efcde367c515fd963910d949141e3b95ff57c288730ba6e176499e519a2"
-    sha256 cellar: :any_skip_relocation, catalina:       "394609dcde4bcafc5ce17c92e2fa0a0a98761aa7127c697c55af8bf66ae5838c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a70293dadd6ad59de7bdb253081cb4b954b0b50008cd9f996ec81e30e043b83a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bedops"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4f717d0cb6a17047d3e5ee50a1fec2c235fe67c793aa4280a9d0c1b8653f9e39"
   end
 
   def install
