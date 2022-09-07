@@ -1,10 +1,9 @@
 class Nauty < Formula
   desc "Automorphism groups of graphs and digraphs"
   homepage "https://pallini.di.uniroma1.it/"
-  url "https://pallini.di.uniroma1.it/nauty27r4.tar.gz"
-  version "2.7r4"
-  sha256 "b810c85a6fe299f3b4c9f24aaf929cac7f9546c2f35c20e1dd0adbc7408848a6"
-  license "Apache-2.0"
+  url "https://pallini.di.uniroma1.it/nauty27r3.tar.gz"
+  version "2.7r3"
+  sha256 "4f0665b716a53f7a14ea2ae30059f23d064ce3fe4c12c013404ef6e1ee0b88c2"
   version_scheme 1
 
   livecheck do
@@ -16,12 +15,8 @@ class Nauty < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "acb78882c72f75a110350392020355667a491a719a2c99a5a22de883d4b3c229"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a090567fde94a7ee21dcaefad77260fae1bca3908784fd5b774c50da104373e"
-    sha256 cellar: :any_skip_relocation, monterey:       "943940daf353131c9c44f058600bfeebb53c5977524aaf8990ebbbc512494ad2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "415553d529e04d204d4e48f094118d13d49d960b8c5bb09bd5e85e09536bd6fd"
-    sha256 cellar: :any_skip_relocation, catalina:       "1fce01b26a7202adf02c78857f8f1385ffdd32ba40683a9329606b366bab5eda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed0b14878f7b2adee1dcdc4d8f5c9e797f972050bf163bad29d388c30cdbb46"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nauty"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f96713646bfa3c180eef0d8783d88d4373c288b003838f35e1f875bbaf1f9802"
   end
 
   def install
