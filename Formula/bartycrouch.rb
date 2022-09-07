@@ -8,10 +8,7 @@ class Bartycrouch < Formula
   head "https://github.com/FlineDev/BartyCrouch.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9cc3772fc61860a1a5f0013f9b7cfc214545dc7815e0759df68c3764885327ee"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "22c833293a3638f2fc037b8d3acde3d9470422bcd18f7d932f048f3f56d2b88f"
-    sha256 cellar: :any_skip_relocation, monterey:       "7fd5de567eda72492d0ad8488c76530a9e1ebc3770710ecb17ba2047310da247"
-    sha256 cellar: :any_skip_relocation, big_sur:        "97f91089d2c485d33fa7becac46b1f5d9d102da5c9c58233d2a2ca85524eaab5"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: ["12.5", :build]
