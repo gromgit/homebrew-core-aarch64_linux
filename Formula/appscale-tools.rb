@@ -8,10 +8,7 @@ class AppscaleTools < Formula
   head "https://github.com/AppScale/appscale-tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, big_sur:     "69c1aff6adfd929cdce565af76c67dd20e95bf6be18a2aae4f3c69cb1c498bec"
-    sha256 cellar: :any, catalina:    "dc2f20c3743a21aa5f06b3068faadf0f00c5da34728ca55af936439213b9f7ad"
-    sha256 cellar: :any, mojave:      "eb5e13b06c11ecb6a29eb79e0bcd474ee8320c5ce4d223427809b03f899aebbf"
-    sha256 cellar: :any, high_sierra: "70e89498336894ae025118e51e418528d8d73da9b1e2786559b6bcbe6055f55b"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   # Requires Python2.
