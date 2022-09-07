@@ -1,10 +1,10 @@
 class Packer < Formula
   desc "Tool for creating identical machine images for multiple platforms"
   homepage "https://packer.io"
-  url "https://github.com/hashicorp/packer/archive/v1.8.3.tar.gz"
-  sha256 "763b4c759c5113885189f484c648d19b2b2f141d3d654e9cd3125c290b188462"
+  url "https://github.com/hashicorp/packer/archive/v1.8.0.tar.gz"
+  sha256 "3df688cb488e746df529474f08a430adf0c7c839c4ed3de2022a094eadc515fd"
   license "MPL-2.0"
-  head "https://github.com/hashicorp/packer.git", branch: "main"
+  head "https://github.com/hashicorp/packer.git", branch: "master"
 
   livecheck do
     url "https://releases.hashicorp.com/packer/"
@@ -12,12 +12,8 @@ class Packer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f6450672f64004579ab0b804eb67caacb6b437465ec6fc62cff3c48ce5d7cf5b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "36dada898dab46100ddd0efdae0d931661e393a04cb205c9be6edbe426ebd9e0"
-    sha256 cellar: :any_skip_relocation, monterey:       "747daa892415e5931f4aea11de0f4f1ec0f5f795320a88f77d9576c44ccfae32"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f7d83a2d07aa2c449caab6da7716bde7ab59f630c1067b45b313a2c8b254a0a2"
-    sha256 cellar: :any_skip_relocation, catalina:       "ab3fff869e28816d9d9ded02c82d6f5da1810306bb403ee63a70aca8f42a2e17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fd00ac0214d851b7c09131326d6f2a4a193b3ef39624f56cff5c4f451e75a17"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/packer"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "47103e6de397a4fbe627e7382d447483937d4f5640325e8426d272ab9cfa51e0"
   end
 
   depends_on "go" => :build
