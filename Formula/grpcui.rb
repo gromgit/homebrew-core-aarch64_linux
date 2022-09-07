@@ -1,17 +1,13 @@
 class Grpcui < Formula
   desc "Interactive web UI for gRPC, along the lines of postman"
   homepage "https://github.com/fullstorydev/grpcui"
-  url "https://github.com/fullstorydev/grpcui/archive/v1.3.1.tar.gz"
-  sha256 "01cfa0bbaf9cfdaa61ae0341c83cde3372854133d62cb9b91c3a111eaa145815"
+  url "https://github.com/fullstorydev/grpcui/archive/v1.3.0.tar.gz"
+  sha256 "56519818d08a47339dece319cb4c8387a65bf24623f49242ef6a1201a1eb8b15"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba273507be5cfd956eca6209502841765d567470fa9fb345f7ea798edd0e813a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85fe72471da84abadc9c0856126401492c0b5adcf3ee5e130d8dc1d446ded77c"
-    sha256 cellar: :any_skip_relocation, monterey:       "6457e94f362363820b001de52fc7aaed951bc19025bb770492fac0ca781399a2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b8f838101ee7c939423536200c67c6d4b26a480cb812839d802cc93bd4224674"
-    sha256 cellar: :any_skip_relocation, catalina:       "19ebbde82058c600bb9fb9467643c7fd6b575745f0aa62dabff329c41fa0b44d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a243154ac04bccb01591b0f07c7c56dbf86e48ffbdea0d296295f7a91f18ca82"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grpcui"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd748120e4b248b9a26762d80883a42d4db8f31f844c169dcc881f8d824bc632"
   end
 
   # Bump to 1.18 on the next release, if possible.
