@@ -1,8 +1,8 @@
 class DnscryptProxy < Formula
   desc "Secure communications between a client and a DNS resolver"
   homepage "https://dnscrypt.info"
-  url "https://github.com/DNSCrypt/dnscrypt-proxy/archive/2.1.2.tar.gz"
-  sha256 "aa55fd52b9c1b983405bf98b42ec754f5d6f59b429ba9c98115df617eef5dea4"
+  url "https://github.com/DNSCrypt/dnscrypt-proxy/archive/2.1.1.tar.gz"
+  sha256 "cc4a2f274ce48c3731ff981e940e6475d912fb356a80481e91725e81d67bde14"
   license "ISC"
   head "https://github.com/DNSCrypt/dnscrypt-proxy.git", branch: "master"
 
@@ -12,12 +12,8 @@ class DnscryptProxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3ea6c1b4e59e02b601b6ac4d725823ea9e988fac26e51e11f39c953a5f218e5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb685dac6c6eede13db486d13282c119bf65ec1453bf44210db24c9fe952098b"
-    sha256 cellar: :any_skip_relocation, monterey:       "53d22657ada544f52117830389f83a3e3a9f5bb138cb0e9687befd7d5781fa8a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0bcc224c3004a27208125a6c97135a2bc1ee23b7e2254e37c1046d9bc998d418"
-    sha256 cellar: :any_skip_relocation, catalina:       "e130425e2c1000396b6b51b942e83a87c44f36c7330d37284111c6101aa67a97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "375d96ef3b1a89d3d5f1e5e340b9efc83acbefee67c080629cf567d7a6e7515d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dnscrypt-proxy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd8625af6df190ef6df41d0753ff660483c6db70752c8770a16da387355ba9e2"
   end
 
   depends_on "go" => :build
