@@ -2,18 +2,14 @@ class Helm < Formula
   desc "Kubernetes package manager"
   homepage "https://helm.sh/"
   url "https://github.com/helm/helm.git",
-      tag:      "v3.9.4",
-      revision: "dbc6d8e20fe1d58d50e6ed30f09a04a77e4c68db"
+      tag:      "v3.8.2",
+      revision: "6e3701edea09e5d55a8ca2aae03a68917630e91b"
   license "Apache-2.0"
   head "https://github.com/helm/helm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "01a042f197753d9126f920cffb5292bab41b172d8ce4d04bde8ffdb0904c75f7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "59ee669d6ac2848c93454675c0d622accd57e0d49f6e829381d436a22460229d"
-    sha256 cellar: :any_skip_relocation, monterey:       "2e4345e4e2225f9862283efc39fbf71848f796feae622ea1d6130c553c35b403"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ae77f436010a20e0e955c8ecacfeda9f486f950b9ef839ccd12d10a3edfbc6f4"
-    sha256 cellar: :any_skip_relocation, catalina:       "aadfbf3143e6b9912c0587a551cf2d77f516dfe8f36c814476a28535f03f9bd8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffb49c294b70f83c4156ed922b6862c9754affafdbdfef03fc948c4abd7dff67"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/helm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "913f1b4b8fb0dc135ee2c37e11a43d8fc9f5cac5bf6c0d8637e7912a64682137"
   end
 
   depends_on "go" => :build
@@ -30,7 +26,14 @@ class Helm < Formula
       man1.install Dir["*"]
     end
 
-    generate_completions_from_executable(bin/"helm", "completion")
+    output = Utils.safe_popen_read(bin/"helm", "completion", "bash")
+    (bash_completion/"helm").write output
+
+    output = Utils.safe_popen_read(bin/"helm", "completion", "zsh")
+    (zsh_completion/"_helm").write output
+
+    output = Utils.safe_popen_read(bin/"helm", "completion", "fish")
+    (fish_completion/"helm.fish").write output
   end
 
   test do
