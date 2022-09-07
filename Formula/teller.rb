@@ -2,18 +2,14 @@ class Teller < Formula
   desc "Secrets management tool for developers built in Go"
   homepage "https://tlr.dev/"
   url "https://github.com/SpectralOps/teller.git",
-      tag:      "v1.5.5",
-      revision: "97ef49b9e9129caefff7c3c74ac851a5d489415e"
+      tag:      "v1.5.1",
+      revision: "6c67edf1419066fb7e75d487b06b4e43f1646060"
   license "Apache-2.0"
   head "https://github.com/SpectralOps/teller.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2a875942f57f04f5a95cc6df0d438b45ac409a5a0a9707b559b262f28700d1f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c978fe39f20ae250c838865ebe9aeb58d6999862f32f80d256ea7a2d42a6697"
-    sha256 cellar: :any_skip_relocation, monterey:       "c73ded881c6a0eac5970b01006026e8ab6c94dbe69037a7486cf1264f4ced60a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7db5bc61d796e7eafee59050a68571c345b0f1b24e3d4cede371701f34cc19b9"
-    sha256 cellar: :any_skip_relocation, catalina:       "4b5d533b017988137038cf1382f4a2b9fd12de5bf6994be1be3309f0a8866657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4432101033c78c20387cfadb0ff4fd740bcd95c8bc6ec90b1a7cad316fef8d8c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/teller"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d4be44e2fc25091495eb3dd6eb43b9292067facfc3d28d5b5a834b881d95fd1b"
   end
 
   depends_on "go" => :build
@@ -35,6 +31,7 @@ class Teller < Formula
 
     (testpath/".teller.yml").write <<~EOS
       project: brewtest
+
       providers:
         # this will fuse vars with the below .env file
         # use if you'd like to grab secrets from outside of the project tree
@@ -43,7 +40,7 @@ class Teller < Formula
             path: #{testpath}/test.env
     EOS
 
-    output = shell_output("#{bin}/teller -c #{testpath}/.teller.yml show  2>&1")
+    output = shell_output("#{bin}/teller -c #{testpath}/.teller.yml show")
     assert_match "teller: loaded variables for brewtest using #{testpath}/.teller.yml", output
     assert_match "foo", output
 
