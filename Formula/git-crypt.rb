@@ -11,20 +11,15 @@ class GitCrypt < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "c3cbd37781dd58b4aad1cf13691732efe32d34f04e0e8eac3e2895821bba31b5"
-    sha256 cellar: :any,                 arm64_big_sur:  "7dd2f73df766f03acd350528daf8f91b742f7fafa0990feed4fc32db5a27b831"
-    sha256 cellar: :any,                 monterey:       "c1c9d3d31a6543b0001985753e5d9e8b59bee25e5b7546987f88ef0f8db97135"
-    sha256 cellar: :any,                 big_sur:        "f07ef5d8ce3559f23e140fdb21f31ca3ddfa29d75f35627996739e31560fec83"
-    sha256 cellar: :any,                 catalina:       "eee30c6825d5a0f0b5746ea15d393d5004f78c9594cf6eae916b4ded49874958"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "954789caa6a1822c2f2fc02248c6607c0557184c803d6b0e545907457858f3bc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-crypt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4988e561812ddfa3a70185e84a63731d8b4ed8e687de42553fc096e689132318"
   end
 
   depends_on "openssl@1.1"
-  uses_from_macos "libxslt" => :build
 
   def install
-    system "make", "ENABLE_MAN=yes", "PREFIX=#{prefix}", "install"
+    system "make"
+    bin.install "git-crypt"
   end
 
   test do
