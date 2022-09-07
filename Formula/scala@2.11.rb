@@ -13,7 +13,7 @@ class ScalaAT211 < Formula
 
   keg_only :versioned_formula
 
-  disable! date: "2022-07-31", because: :unsupported
+  deprecate! date: "2017-11-09", because: :unsupported
 
   depends_on "openjdk@8"
 
