@@ -2,18 +2,14 @@ class GolangciLint < Formula
   desc "Fast linters runner for Go"
   homepage "https://golangci-lint.run/"
   url "https://github.com/golangci/golangci-lint.git",
-      tag:      "v1.49.0",
-      revision: "cc2d97f31dea62c47c55d5b7a93637e242df7ad1"
+      tag:      "v1.45.2",
+      revision: "8bdc4d3f8044b1a20e10a9f519b5f738e8188877"
   license "GPL-3.0-only"
   head "https://github.com/golangci/golangci-lint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "790eba5d113226ccd2a5fad4ad6d5bf5aafc7a9dda6a32cd08bc032e74b98a9b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c0239bd2993c5a46f42de9f8bd30bc3700279370e9660e61d4d908a9623cb236"
-    sha256 cellar: :any_skip_relocation, monterey:       "013ea67d8c8a6bd7276bd689ed44fb7e0072f2b2e93be6029c2582803dd5fe25"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f4c69256964d8d727743870f55c7740361566fb32ed45461c3270b0436cebe53"
-    sha256 cellar: :any_skip_relocation, catalina:       "72eb2f241f8a43f9dbffbf282108345a8e1c5f41cb78edda625f9d9e0b40f84d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3656e3077a2e9fd6746c1e22c736c5e07b532d2c235829b05d12dac6062fdfe8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/golangci-lint"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b9a9f8ad6f265ff741d37d13a3a1883870c8e66cdcce1a6dd233a6c27eba7c99"
   end
 
   depends_on "go"
@@ -28,7 +24,14 @@ class GolangciLint < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/golangci-lint"
 
-    generate_completions_from_executable(bin/"golangci-lint", "completion")
+    output = Utils.safe_popen_read("#{bin}/golangci-lint", "completion", "bash")
+    (bash_completion/"golangci-lint").write output
+
+    output = Utils.safe_popen_read("#{bin}/golangci-lint", "completion", "zsh")
+    (zsh_completion/"_golangci-lint").write output
+
+    output = Utils.safe_popen_read("#{bin}/golangci-lint", "completion", "fish")
+    (fish_completion/"golangci-lint.fish").write output
   end
 
   test do
