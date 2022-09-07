@@ -2,18 +2,14 @@ class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/bazelbuild/bazelisk/"
   url "https://github.com/bazelbuild/bazelisk.git",
-      tag:      "v1.13.1",
-      revision: "5387890d03c899417a9fbc270a7014c726d0f0dd"
+      tag:      "v1.11.0",
+      revision: "618382246fae452d0d92b6086b29903c3bc71361"
   license "Apache-2.0"
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "29c4d5f28182b08e6916f9c468b4c267bfe33b267235019613b8ea18813ea61f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f77bcf9323361986313e425d16b143df8388704ffdd5bd7506077f16a52ed7f7"
-    sha256 cellar: :any_skip_relocation, monterey:       "af1d136e99a61508604cb3659a6edffd289d8d6f7d51443059ad7f33c2daed8c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8ee212e276d0ebb578ee0e92efa3c639291837a81641b45ef537b3a74091baf1"
-    sha256 cellar: :any_skip_relocation, catalina:       "245ff17db871117a2dfa0e5f43530b209de659fd540be057458d3cefc24414d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "118d389afc38c568ebfe5b4b15db966170f8caa783216ed7d7172b92fc9de9c7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bazelisk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "91dd073cd8ce3862c6e9a88ce80ec35bbc253127fff6c0ae088acb2241ce8df9"
   end
 
   depends_on "go" => :build
