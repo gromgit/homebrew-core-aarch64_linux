@@ -1,17 +1,13 @@
 class Scalingo < Formula
   desc "CLI for working with Scalingo's PaaS"
   homepage "https://doc.scalingo.com/cli"
-  url "https://github.com/Scalingo/cli/archive/1.24.2.tar.gz"
-  sha256 "b6ef956fba4c0887b257568bd742a7098f5d98ad62e64e44330c641dd94f7e51"
+  url "https://github.com/Scalingo/cli/archive/1.22.1.tar.gz"
+  sha256 "cef2766e41a21eadf8b6a00e467bfb2c9234373d5cc52a272100cefed99a2380"
   license "BSD-4-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c9c2ffa1483e9ae2143f23f70ae3afac94c6aa481f65078b5fcc1c07e70d18b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5b83274e1bb3a7e425ed79c7f06e37a8fe3653e4c8a802f5086a8d595cbed6f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "312bf5bf656ced6925045f706913344389f44cdf7a3e39ed62dfc42ad9a79249"
-    sha256 cellar: :any_skip_relocation, big_sur:        "83fb4cc288639950df602bd56a2536fc337fed4c580d97ecfb6a5b9766b1e5a5"
-    sha256 cellar: :any_skip_relocation, catalina:       "4f6076c24f2915c35a9d40f31c655b62ae9c5bdd85301924c7f7e0f21b6a64b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10c54bd56904efb5ef372be416a2bc855a859e6324df78375bb8754d3e009532"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scalingo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1c34f63ce4447fe3e7c6bff27a46bffe6e2e6b1229ac43fc88e76a0926e63ae4"
   end
 
   depends_on "go" => :build
