@@ -10,21 +10,14 @@ class Otf2bdf < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "24958a27ec3ab7c33c3a23e5617a2eee5ebf78d80df0fc0efb5da8fe4dee04b1"
-    sha256 cellar: :any,                 arm64_big_sur:  "077dfdbef2ee5d04e9101f64cfe6da40631d8ea685e2fd6dfe052bfd0374bcf0"
-    sha256 cellar: :any,                 monterey:       "9be65daed2aacb60a961236e47cb496c4afac542ce3b48fe6ff16653d8bc9454"
-    sha256 cellar: :any,                 big_sur:        "3feac6fe8b055277c8b4174415f5974fc082019ab1b82c8c582fbf9f8de581d0"
-    sha256 cellar: :any,                 catalina:       "200d4f317f5fda0c3c4a350ba773322af4a29af56a65f9e3de11b406ab517522"
-    sha256 cellar: :any,                 mojave:         "76e89f43b017f0bc2f90c3d49e70d75ac9da5260b9567d1078449f1b80af60bf"
-    sha256 cellar: :any,                 high_sierra:    "208ef317e3c51e88818c4f59ca0333a76d6efeed97b04affe66c3cd6b601bada"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "474eb191656b41d2707754f98de17c2a5691a8917981ee52155de962dc314395"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/otf2bdf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e5ea808645e4db8bbb66189ee21865a2ff4d8fa408f94b29590190f20465bd43"
   end
 
   depends_on "freetype"
 
-  resource "test-font" do
-    on_linux do
+  on_linux do
+    resource "test-font" do
       url "https://raw.githubusercontent.com/paddykontschak/finder/master/fonts/LucidaGrande.ttc"
       sha256 "e188b3f32f5b2d15dbf01e9b4480fed899605e287516d7c0de6809d8e7368934"
     end
