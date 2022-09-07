@@ -1,21 +1,18 @@
 class Gomplate < Formula
   desc "Command-line Golang template processor"
   homepage "https://gomplate.hairyhenderson.ca/"
-  url "https://github.com/hairyhenderson/gomplate/archive/v3.11.2.tar.gz"
-  sha256 "310f2ae19f409ad45f0f19a53045a3e8345e4723fa5ca9c5eeb8cbaf7cc0e195"
+  url "https://github.com/hairyhenderson/gomplate/archive/v3.10.0.tar.gz"
+  sha256 "f9a30d8e94b81eefbbe3455c21dc547ec0ebf0e010a809c72db617a4b37223a6"
   license "MIT"
   head "https://github.com/hairyhenderson/gomplate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c80f158ae60c3b417f11bcb0898809c374230c28184fe57378a9d26f19058cfd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8023b9e954959a951837b75c36562399ce387c1b08c0f92d068e1aecde04c6bd"
-    sha256 cellar: :any_skip_relocation, monterey:       "d698cce1684e05fc0d0d30c409ba7de132f00eaeb237ced4398b1344d964240f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5f266dfe2002bc249a80d38623d61c2bc73ec70fde807f28a15813656aee88d1"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d7dda05fcc79abdf48cef37e4ad0144a1ab32f7c64b4f867628c2f2e2ad9386"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a1381cb78316e34261ab5ebf575057e90b3ec6fb1744578a9921e214200a18c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gomplate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5e46c2cae5076bdf52f2d5d352594dd766b0e062b291979f40c7c38cc271bf55"
   end
 
-  depends_on "go" => :build
+  # Bump to 1.18 on the next release, if possible.
+  depends_on "go@1.17" => :build
 
   def install
     system "make", "build", "VERSION=#{version}"
