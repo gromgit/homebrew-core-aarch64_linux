@@ -35,7 +35,7 @@ class GitlabRunner < Formula
   service do
     run [opt_bin/"gitlab-runner", "run", "--syslog"]
     environment_variables PATH: std_service_path_env
-    working_dir Dir.home
+    working_dir ENV["HOME"]
     keep_alive true
     macos_legacy_timers true
     process_type :interactive

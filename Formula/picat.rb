@@ -12,9 +12,7 @@ class Picat < Formula
   end
 
   bottle do
-    # root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/picat"
-    root_url "https://ghcr.io/v2/gromgit/core-aarch64_linux/picat"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1f8cf0ccf6a2cf908967ab7c75255f2943849d087404808c0c6cb241f70e00db"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   def install
