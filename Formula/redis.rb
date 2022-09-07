@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-7.0.4.tar.gz"
-  sha256 "f0e65fda74c44a3dd4fa9d512d4d4d833dd0939c934e946a5c622a630d057f2f"
+  url "https://download.redis.io/releases/redis-7.0.0.tar.gz"
+  sha256 "284d8bd1fd85d6a55a05ee4e7c31c31977ad56cbf344ed83790beeb148baa720"
   license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", branch: "unstable"
 
@@ -12,12 +12,8 @@ class Redis < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5fd4a4cdd769fdebc82dc5ea1b06edb2464039b38c09355f29e8e70804eb8477"
-    sha256 cellar: :any,                 arm64_big_sur:  "203cea84c495237fad2c5b1e172603da5b9f5655a063972d996b45ff83155f10"
-    sha256 cellar: :any,                 monterey:       "58f58d9fe07000a83e54581dd7fbe22747701d84ba78def762ae94b341f41259"
-    sha256 cellar: :any,                 big_sur:        "a6aaf522bca22031de5bcaeb39ff41f5f1af977967e94a0dac507d2ed8fe769f"
-    sha256 cellar: :any,                 catalina:       "38c669f105a76cccf7567b4ee32dba6972c63daaf7b4c178e1f79988f846684b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc16cc18a0e19a14fdc2e47bf6244690455795d89af8445abdf7df01542e1581"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/redis"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebf1f2e0ff6e61966f494e7b7dc481f7f30d4b1593baecdb5720a0ff3ec21043"
   end
 
   depends_on "openssl@1.1"
