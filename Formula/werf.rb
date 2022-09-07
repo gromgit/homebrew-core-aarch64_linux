@@ -1,25 +1,13 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v1.2.169.tar.gz"
-  sha256 "7e3252ffb477b76c6b4651ff8e90d9b8af2a9b67d98f11fd76743974a32650d1"
+  url "https://github.com/werf/werf/archive/refs/tags/v1.2.98.tar.gz"
+  sha256 "651b8b6b148fa03be4d8c6ff2508185f2557e24f3f56e3456aca82520b9cb8ec"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
-  # This repository has some tagged versions that are higher than the newest
-  # stable release (e.g., `v1.5.2`) and the `GithubLatest` strategy is
-  # currently necessary to identify the correct latest version.
-  livecheck do
-    url :stable
-    strategy :github_latest
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f6b20fda3d63c4aca938cc6191b6d3ca6f247c7ed2444c20a32a78e99b62b67"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97b7c25574cbe118e0649b4edb2d340bb9c1cffab4be13198ca9d48db7782a00"
-    sha256 cellar: :any_skip_relocation, monterey:       "4546326917e6440cc4929a1b927905aef9bd62d4e378333bc547289eb6755d49"
-    sha256 cellar: :any_skip_relocation, big_sur:        "85e01dc2777b1ad8992d3f36bdfefd3cb772bdfa9e7cf789a3036ca680ed35ea"
-    sha256 cellar: :any_skip_relocation, catalina:       "efe1dbabce35ecf3e16b75eafec3f5c8c3b992cd37b773e3003eff2d1b863564"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on "go" => :build
@@ -32,7 +20,12 @@ class Werf < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags), "-tags", tags, "./cmd/werf"
 
-    generate_completions_from_executable(bin/"werf", "completion")
+    bash_output = Utils.safe_popen_read(bin/"werf", "completion", "bash")
+    (bash_completion/"werf").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"werf", "completion", "zsh")
+    (zsh_completion/"_werf").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"werf", "completion", "fish")
+    (fish_completion/"werf.fish").write fish_output
   end
 
   test do
