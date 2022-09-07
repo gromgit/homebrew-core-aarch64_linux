@@ -1,17 +1,13 @@
 class Xcodegen < Formula
   desc "Generate your Xcode project from a spec file and your folder structure"
   homepage "https://github.com/yonaskolb/XcodeGen"
-  url "https://github.com/yonaskolb/XcodeGen/archive/2.32.0.tar.gz"
-  sha256 "dbf6c1af134a8db4d19f11065ef4502cfe4c4b1fe488d7bf5993e56a1d545775"
+  url "https://github.com/yonaskolb/XcodeGen/archive/2.28.0.tar.gz"
+  sha256 "2061a7cdda34221cbf431e2b90fdd45690c84a340952cc5d4ae8257d0ee19908"
   license "MIT"
   head "https://github.com/yonaskolb/XcodeGen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "22d97109850126936386bc38a22459d9e8ac3ba1e00b254f5149e954f543c2ec"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ab30a37ef8e3c885b1cd05c30a844612237f52308556256cb4698784d00a2ad4"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ef4431936bc868e8026c9ddb8396fa5ac2d9d53a611a59b23fc081d3a5ad0bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4c990bf05734cbb192171079d69e996837092603985c41904ddec799aa51fcbe"
-    sha256 cellar: :any_skip_relocation, catalina:       "330bf63ef11b30bde8f32aea2d46604fd16bcfcff1b918ab95fe294ea9f3708a"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: ["10.2", :build]
