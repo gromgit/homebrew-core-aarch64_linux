@@ -1,18 +1,14 @@
 class Seqkit < Formula
   desc "Cross-platform and ultrafast toolkit for FASTA/Q file manipulation in Golang"
   homepage "https://bioinf.shenwei.me/seqkit"
-  url "https://github.com/shenwei356/seqkit/archive/v2.3.0.tar.gz"
-  sha256 "2691a2cdd83d51a447016f35206f7e47e429bbbf6b10b35c13cbdf993769578c"
+  url "https://github.com/shenwei356/seqkit/archive/v2.2.0.tar.gz"
+  sha256 "6e7e292532d78d54ac7aecb934f992c85d04b2dcb2d7a1141808bada0f5b13ba"
   license "MIT"
   head "https://github.com/shenwei356/seqkit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f57cbd62bbef0a0192b22fe821388169e4d66ab926a586241e2f3cb8913e117d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0d8852c1400079f7869a90e65a96afd846658febb841392174400a3761f9c6d7"
-    sha256 cellar: :any_skip_relocation, monterey:       "f448b6b365d9819acc7f90d8c5e5ae3663279d03669600a6dec1203820746d4e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "55611359dea6f44503232815fcad360246610c038e255f7b6113030173db9067"
-    sha256 cellar: :any_skip_relocation, catalina:       "a0117784a961caeb392ad6ea3b3cbeca41f8b358f499e250f3ef35c3bc0bc494"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5913e6bf676b8c66bfc148eccb37cc227c07c6b7b6b592f5171826bbfb5b2cfb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/seqkit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c76ae0fc3922337c1c9db94347ddc79bd07162bd28272b8dea016a8a4b8fc3f"
   end
 
   depends_on "go" => :build
