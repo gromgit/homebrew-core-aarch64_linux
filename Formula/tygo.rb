@@ -2,18 +2,14 @@ class Tygo < Formula
   desc "Generate Typescript types from Golang source code"
   homepage "https://github.com/gzuidhof/tygo"
   url "https://github.com/gzuidhof/tygo.git",
-      tag:      "v0.2.3",
-      revision: "8d1f7f32209636f2d3127ffbf56ecd50a641579f"
+      tag:      "v0.2.1",
+      revision: "21050dae270a875f2c8edf45f2d726f4c53caff9"
   license "MIT"
   head "https://github.com/gzuidhof/tygo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "31b017cc6949dc9736a0641be1080fc2f5f8bb7512448630e663b3a42f024b72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f0eb7e35881bd983e70b00675a01e53593b30bb80c548bf88ac8c8cc04e4668"
-    sha256 cellar: :any_skip_relocation, monterey:       "fc51c6ac8b9bf18f7613e699f1ff271f733b4ec319da24ffd3d5eeee9a410a54"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cc91da0b630908079c7d3dd0e571192e462e456ea39d856728e0c32a2db84874"
-    sha256 cellar: :any_skip_relocation, catalina:       "84c3da648dd1af56c149df4f187e7f285053a63306e67c0cbb0e4cf1e15794ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84f34c1a847c949db33ead1d53465cdf9f83e2b026dc626cda9f3bb2da95c3a5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tygo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6f1404a879d5fd3700446e0e517aedd25509e8557667f395738a6f3fb49a9f20"
   end
 
   depends_on "go" => [:build, :test]
@@ -28,7 +24,9 @@ class Tygo < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags)
 
-    generate_completions_from_executable(bin/"tygo", "completion")
+    (zsh_completion/"_tygo").write Utils.safe_popen_read(bin/"tygo", "completion", "zsh")
+    (bash_completion/"tygo").write Utils.safe_popen_read(bin/"tygo", "completion", "bash")
+    (fish_completion/"tygo.fish").write Utils.safe_popen_read(bin/"tygo", "completion", "fish")
     pkgshare.install "examples"
   end
 
