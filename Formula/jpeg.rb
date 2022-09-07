@@ -12,22 +12,18 @@ class Jpeg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5d4520a90181dd83b3f58b580cd3b952cacf7f7aa035d5fd7fddd98c1e6210d1"
-    sha256 cellar: :any,                 arm64_big_sur:  "27409eb75ac182025c27b4aa9c2290c40feec924cbe9edc095c754120c87bdf4"
-    sha256 cellar: :any,                 monterey:       "208af924cc7a42f53ab8ce50084eb76faadc3c1942e842484acbb2e74a54465c"
-    sha256 cellar: :any,                 big_sur:        "085e31212006e6afefc6e5141a02a06cb5bdebdbc8ca5edba50de0d95dd495fc"
-    sha256 cellar: :any,                 catalina:       "4c19f39c827ee7cdbc0f770b56c8ce553e94a5090e58da7eac3e2596b9408612"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b15c19b1cfdee81b6c3ebb96b1a743157da600030f943c9e18cbbda0612924a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jpeg"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "706718beb5b8dd97c0fcbc9dbde6ae487f3c0953c37acd557657f727834224f5"
   end
 
-  keg_only "it conflicts with `jpeg-turbo`"
-
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 
   test do
-    system bin/"djpeg", test_fixtures("test.jpg")
+    system "#{bin}/djpeg", test_fixtures("test.jpg")
   end
 end
