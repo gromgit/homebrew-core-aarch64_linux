@@ -2,8 +2,8 @@ class Buildkit < Formula
   desc "Сoncurrent, cache-efficient, and Dockerfile-agnostic builder toolkit"
   homepage "https://github.com/moby/buildkit"
   url "https://github.com/moby/buildkit.git",
-      tag:      "v0.10.4",
-      revision: "a2ba6869363812a210fcc3ded6926757ab780b5f"
+      tag:      "v0.10.3",
+      revision: "c8d25d9a103b70dc300a4fd55e7e576472284e31"
   license "Apache-2.0"
   head "https://github.com/moby/buildkit.git", branch: "master"
 
@@ -13,12 +13,8 @@ class Buildkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "baf2aa4ea607ed5d91a41ef62d348f5aea8a47fd785b1e8a596179637a3c290f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "db08c5dfb9b733616b60c4a28c5ba50244141f614365852769372e596b8e1deb"
-    sha256 cellar: :any_skip_relocation, monterey:       "98219804faec1587b401167aaf1d57cbbd132004140e2c762088e15998547cbe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cf9cdf0973ece6feb421909a5dc70c247c8a7e1e7e2aec72c8ff0fdc5f4de959"
-    sha256 cellar: :any_skip_relocation, catalina:       "29ac9c68059c58114fca3266b5e98d5744e522f2ae90255680ddf8ab028fae6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27f38699047547f1a4d0cbb68b79e243653053efdc48588362e14268c054b6b6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/buildkit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b22bfcf66b73d2fe4587f7f804d2d6b9a5d44c1aac3ac108a9d0e37b34882ea4"
   end
 
   depends_on "go" => :build
