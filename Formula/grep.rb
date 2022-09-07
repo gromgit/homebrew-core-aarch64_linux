@@ -1,23 +1,18 @@
 class Grep < Formula
   desc "GNU grep, egrep and fgrep"
   homepage "https://www.gnu.org/software/grep/"
-  url "https://ftp.gnu.org/gnu/grep/grep-3.8.tar.xz"
-  mirror "https://ftpmirror.gnu.org/grep/grep-3.8.tar.xz"
-  sha256 "498d7cc1b4fb081904d87343febb73475cf771e424fb7e6141aff66013abc382"
+  url "https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz"
+  mirror "https://ftpmirror.gnu.org/grep/grep-3.7.tar.xz"
+  sha256 "5c10da312460aec721984d5d83246d24520ec438dd48d7ab5a05dbc0d6d6823c"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2a97d1431a8c367299b3ec1a62836136ad0474f78bd515f29b2210cc85591a66"
-    sha256 cellar: :any,                 arm64_big_sur:  "b23c8e00f85e4a10c1827619248a117ab2df3bd1503b5191c4467533fd299bec"
-    sha256 cellar: :any,                 monterey:       "5b13dfd3339908dedfb233c3ba77a45fff7f55569b9252979349eb7fb0a45b5a"
-    sha256 cellar: :any,                 big_sur:        "f3b4b34263e59e4dfe427381ddecb820189f8336c464d97e5ab4e8b624d65484"
-    sha256 cellar: :any,                 catalina:       "bbb952d77089ccca022c170c295b48dea9d5afc90c3da65ee447adb04593c2c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f771443ddfadac7158cd0bb2f4f1e682a2cc9b69e99c8ed0f77e41f546838067"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grep"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "66b0f85f6968764c762a25a1b564bccab7e73b4821203ff83da4c60abb3819f9"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "pcre2"
+  depends_on "pcre"
 
   def install
     args = %W[
@@ -60,12 +55,12 @@ class Grep < Formula
     text_file.write "This line should be matched"
 
     if OS.mac?
-      grepped = shell_output("#{bin}/ggrep -P match #{text_file}")
+      grepped = shell_output("#{bin}/ggrep match #{text_file}")
       assert_match "should be matched", grepped
 
-      grepped = shell_output("#{opt_libexec}/gnubin/grep -P match #{text_file}")
+      grepped = shell_output("#{opt_libexec}/gnubin/grep match #{text_file}")
     else
-      grepped = shell_output("#{bin}/grep -P match #{text_file}")
+      grepped = shell_output("#{bin}/grep match #{text_file}")
     end
     assert_match "should be matched", grepped
   end
