@@ -2,17 +2,13 @@ class Kopia < Formula
   desc "Fast and secure open-source backup"
   homepage "https://kopia.io"
   url "https://github.com/kopia/kopia.git",
-      tag:      "v0.11.3",
-      revision: "317cc36892707ab9bdc5f6e4dea567d1e638a070"
+      tag:      "v0.10.7",
+      revision: "5d87d817335f6d547e094ab80062113dc3a1fdf4"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "538d8c8245db819eadf5160f16f9bcb832bca5b7c891053d9bd061847a823aed"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d6eb69df0675894826eabd018e747c841dab881539f44284967eef9d8c5924e"
-    sha256 cellar: :any_skip_relocation, monterey:       "fe30ed73aeff3de551e362147c73e8bf56f412f7522182a29510c1fc5ba54cd7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "64059de276db6c41f8b18f02cc04720d5862e4170dbce14a32f5839b7f104928"
-    sha256 cellar: :any_skip_relocation, catalina:       "f6c200825635c529c68cce9ba81ca52be2343b88e73ba84a90f3c707b8087677"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12ab919d8581bc457246032b974da03fe0fbaedaadcd47022094b040e408c8a5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kopia"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b6de0b2a848f590adc4499493db8ac42bf6f482608b089af55d25fd893507317"
   end
 
   depends_on "go" => :build
@@ -28,8 +24,11 @@ class Kopia < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags)
 
-    generate_completions_from_executable(bin/"kopia", shells:                 [:bash, :zsh],
-                                                      shell_parameter_format: "--completion-script-")
+    output = Utils.safe_popen_read(bin/"kopia", "--completion-script-bash")
+    (bash_completion/"kopia").write output
+
+    output = Utils.safe_popen_read(bin/"kopia", "--completion-script-zsh")
+    (zsh_completion/"_kopia").write output
 
     output = Utils.safe_popen_read(bin/"kopia", "--help-man")
     (man1/"kopia.1").write output
