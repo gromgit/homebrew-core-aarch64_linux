@@ -4,8 +4,8 @@ class Strongswan < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://download.strongswan.org/strongswan-5.9.7.tar.bz2"
-    sha256 "9e64a2ba62efeac81abff1d962522404ebc6ed6c0d352a23ab7c0b2c639e3fcf"
+    url "https://download.strongswan.org/strongswan-5.9.6.tar.bz2"
+    sha256 "91d0978ac448912759b85452d8ff0d578aafd4507aaf4f1c1719f9d0c7318ab7"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
@@ -20,11 +20,8 @@ class Strongswan < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "66ba64bc3177bfe1232ff6b52bfb71d793767328738b8d6fa26f130872362b9d"
-    sha256 arm64_big_sur:  "d89f331d900825708f8674ef96113354dac7a305386345ea86ca9041d6fc87c4"
-    sha256 monterey:       "de5ebca0e3da62662d2200136e3838ad16893ea38f7f358ae22a5230a439b10b"
-    sha256 big_sur:        "9a57d057d0ff5ca69f1ebb19402e26bf58e7f38abfb8a9bd15e710cdef2adb7e"
-    sha256 catalina:       "e04a3a26609500cc6df881796ca0e21c2beb84602d8a26515da86f97f06da3e7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/strongswan"
+    sha256 aarch64_linux: "8f381b043a741029a5fd9ba0625ea0826418d397636e20ccb3821b58da959bac"
   end
 
   head do
