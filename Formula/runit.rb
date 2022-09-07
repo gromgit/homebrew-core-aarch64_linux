@@ -10,24 +10,13 @@ class Runit < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f052bec9af60ed628dec6fd235468b4cbb88d5b02c2570d1e1cddd0596e64be"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "39e047730d34a1981348cee841295648336b6ff705a200ef5f99130dc0cfde3c"
-    sha256 cellar: :any_skip_relocation, monterey:       "80de201022723bb21ff78b50bd6dd1501ea8fb8a4d062e4974ad219d0971d1f4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a619f4f93c0a243b27e229916a5c7fc0371c7f38db7a608e5232d27eca9e9987"
-    sha256 cellar: :any_skip_relocation, catalina:       "d0e17adfaaf02589b498e362596486515b37a0fda917ee8f0e51ac8e2409afd6"
-    sha256 cellar: :any_skip_relocation, mojave:         "ec6f4b2f1b323aba830a5f26daed8615395b0f774de82e074ee699627b1c106a"
-    sha256                               x86_64_linux:   "4f36fd98073523f04cebacef60f30fae7501f351c4a885e3a7a4540e41cafb14"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/runit"
+    sha256 aarch64_linux: "830c0692f59763c2f5e174050bb06855c27120a3ffae968a526942c598dcac56"
   end
 
   def install
     # Runit untars to 'admin/runit-VERSION'
     cd "runit-#{version}" do
-      # Work around build error from root requirement: "Oops. Your getgroups() returned 0,
-      # and setgroups() failed; this means that I can't reliably do my shsgr test. Please
-      # either ``make'' as root or ``make'' while you're in one or more supplementary groups."
-      inreplace "src/Makefile", "( cat warn-shsgr; exit 1 )", "cat warn-shsgr" if OS.linux?
-
       # Per the installation doc on macOS, we need to make a couple changes.
       system "echo 'cc -Xlinker -x' >src/conf-ld"
       inreplace "src/Makefile", / -static/, ""
