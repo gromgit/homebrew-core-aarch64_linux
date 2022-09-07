@@ -1,23 +1,19 @@
 class RedisAT40 < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://github.com/redis/redis/archive/4.0.14.tar.gz"
+  url "https://github.com/antirez/redis/archive/4.0.14.tar.gz"
   sha256 "3b8c6ea4c9db944fe6ec427c1b11d912ca6c5c5e17ee4cfaea98bbda90724752"
   license "BSD-3-Clause"
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey:     "cba692eaa032feec943d96c3a47ce7c2fc72fdc10e81680edf1d8e1703a8cbd2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "baedf1761e5966fa4c25e461ad6bad3cc8ec500bc4da9aad6fa98f01d7bf651f"
-    sha256 cellar: :any_skip_relocation, catalina:     "59eea40bb4b8f05511f58eef72b3dab1966828bfdb9c776515f1f34d0c140896"
-    sha256 cellar: :any_skip_relocation, mojave:       "f7eae71970cd2ae572c9b301c5a1e1d52d63beb6fd2a979f8aa2fa8379e00397"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b6882621b76d4146b7f5884cbe6434ec4e51c0fb4553ecbed07a6ccfde6dae8a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/redis@4.0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "03cb4943b795f2ef9ef9ce981b40fe3be6c8b1b633a96bd6d2da251accb7980a"
   end
 
   keg_only :versioned_formula
 
-  disable! date: "2022-07-31", because: :versioned_formula
+  deprecate! date: "2020-04-30", because: :versioned_formula
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}"
