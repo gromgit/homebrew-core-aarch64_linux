@@ -1,17 +1,14 @@
 class Nebula < Formula
   desc "Scalable overlay networking tool for connecting computers anywhere"
   homepage "https://github.com/slackhq/nebula"
-  url "https://github.com/slackhq/nebula/archive/v1.6.0.tar.gz"
-  sha256 "b16638b99d80a4ae6373f7757a0064dc0defd3f9e165617e7b5c3be9e64d3605"
+  url "https://github.com/slackhq/nebula/archive/v1.5.2.tar.gz"
+  sha256 "391ac38161561690a65c0fa5ad65a2efb2d187323cc8ee84caa95fa24cb6c36a"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "517ffdb0b67657c2e10f3f383031e000aa78f96b8e25041031bf388673974043"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "517ffdb0b67657c2e10f3f383031e000aa78f96b8e25041031bf388673974043"
-    sha256 cellar: :any_skip_relocation, monterey:       "88a21a7022e6d3c28d3c1be689d264a40120da152fdba58c43321873fb3498dd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "88a21a7022e6d3c28d3c1be689d264a40120da152fdba58c43321873fb3498dd"
-    sha256 cellar: :any_skip_relocation, catalina:       "88a21a7022e6d3c28d3c1be689d264a40120da152fdba58c43321873fb3498dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "988df3a71be7017a69bf6a52c1f64bb25e6a1b4c014a0dea702effc8b9c3f3d1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nebula"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3599104942b5cdbbbb8f662e3e6529a6faca79674d29f3eb4ee2c1933e6a44a1"
   end
 
   depends_on "go" => :build
