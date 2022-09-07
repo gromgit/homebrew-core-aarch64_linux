@@ -7,9 +7,7 @@ class CassandraAT3 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "0b1f7fd2d534222aaf07a26540d8464b2733e0a91775e0d85f6292c82bd0e2fa"
-    sha256 cellar: :any_skip_relocation, catalina: "ff2f0d009a5976c8f660bfa5371076ce360df8e26811305116e97f982e95eb2c"
-    sha256 cellar: :any_skip_relocation, mojave:   "4f732fcd032cbb3044bcb71df062470c0c0ac980601278fc84889ea933c8a17f"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   keg_only :versioned_formula
