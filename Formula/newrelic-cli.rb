@@ -1,18 +1,14 @@
 class NewrelicCli < Formula
   desc "Command-line interface for New Relic"
   homepage "https://github.com/newrelic/newrelic-cli"
-  url "https://github.com/newrelic/newrelic-cli/archive/v0.53.3.tar.gz"
-  sha256 "eb2e870c06453e4fc73c64601873e70b4600b4e800f1ac58acede31c504581d4"
+  url "https://github.com/newrelic/newrelic-cli/archive/v0.47.1.tar.gz"
+  sha256 "f128e0f8c994393cb2de754d1cefd870b3c5292c45b225778531e2ecae243093"
   license "Apache-2.0"
   head "https://github.com/newrelic/newrelic-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c03dd612d8e0492905adb3286fa3e7d4be6d6a4f28f8a312f24c66d53f12888"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8759db3759d5059e6c1677cb852c9016303d81854f303a65f4ff9963934caea0"
-    sha256 cellar: :any_skip_relocation, monterey:       "c5e78eee57d6fd7b4968763255f6711ff76d0b1a1de95d40ab02b6e157b1780d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "df968d70287c660dc72b86d3e513fb5e682c5be6a6c7f518276b854813caadb0"
-    sha256 cellar: :any_skip_relocation, catalina:       "b1be512bfbca462aef5875c46a8b1b0a6b1ab0f6e3147eb3c30bae06341fd890"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9fd0cbd8230222d38c1bbe3488dbd55ed9e30bdb4cab175378802c630520aaa3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/newrelic-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "019398482eddcf1a52993f5bc1ee42bebef793c143b778dbcad293909a111d62"
   end
 
   depends_on "go" => :build
@@ -22,7 +18,12 @@ class NewrelicCli < Formula
     system "make", "compile-only"
     bin.install "bin/#{OS.kernel_name.downcase}/newrelic"
 
-    generate_completions_from_executable(bin/"newrelic", "completion", "--shell", base_name: "newrelic")
+    output = Utils.safe_popen_read(bin/"newrelic", "completion", "--shell", "bash")
+    (bash_completion/"newrelic").write output
+    output = Utils.safe_popen_read(bin/"newrelic", "completion", "--shell", "zsh")
+    (zsh_completion/"_newrelic").write output
+    output = Utils.safe_popen_read(bin/"newrelic", "completion", "--shell", "fish")
+    (fish_completion/"newrelic.fish").write output
   end
 
   test do
