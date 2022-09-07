@@ -2,8 +2,8 @@ class FaasCli < Formula
   desc "CLI for templating and/or deploying FaaS functions"
   homepage "https://www.openfaas.com/"
   url "https://github.com/openfaas/faas-cli.git",
-      tag:      "0.14.6",
-      revision: "fcf50cef7b3510d93dd109606fb300705bb509f2"
+      tag:      "0.14.2",
+      revision: "b1c09c0243f69990b6c81a17d7337f0fd23e7542"
   license "MIT"
   head "https://github.com/openfaas/faas-cli.git", branch: "master"
 
@@ -13,15 +13,12 @@ class FaasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6db2adb2048a2a2bb7ef3c7433f2f6c8ada3482822337055209e828f25c7c0a6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0c756ca4160e058c6e27156ab9e563bd9b0037fc7d2f954bba8212488dc233ce"
-    sha256 cellar: :any_skip_relocation, monterey:       "dbb76f9f0289ddbfdc2c2953343f9b6bd30ba66de8a514268c0df8c803db405e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c44cc610b915672084dba58968f0afe2bdff51c57818bb5d838d5ba8f91adc5"
-    sha256 cellar: :any_skip_relocation, catalina:       "c04ea99c3afd94a0844b37a4fc5de18264d1198225aa98fb3f1a866736c25297"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91468bf98e040b6fb0008d98e7c645ff594ed79c0d4c040512dd29dd1e654d09"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/faas-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "451350a1305e1447849c479ccacfd8653d2580683c1369d20f3e0d7f10fad3ee"
   end
 
-  depends_on "go" => :build
+  # Bump to 1.18 on the next release, if possible.
+  depends_on "go@1.17" => :build
 
   def install
     ENV["XC_OS"] = OS.kernel_name.downcase
@@ -35,7 +32,8 @@ class FaasCli < Formula
     system "go", "build", *std_go_args(ldflags: ldflags), "-a", "-installsuffix", "cgo"
     bin.install_symlink "faas-cli" => "faas"
 
-    generate_completions_from_executable(bin/"faas-cli", "completion", "--shell", shells: [:bash, :zsh])
+    (bash_completion/"faas-cli").write Utils.safe_popen_read(bin/"faas-cli", "completion", "--shell", "bash")
+    (zsh_completion/"_faas-cli").write Utils.safe_popen_read(bin/"faas-cli", "completion", "--shell", "zsh")
     # make zsh completions also work for `faas` symlink
     inreplace zsh_completion/"_faas-cli", "#compdef faas-cli", "#compdef faas-cli\ncompdef faas=faas-cli"
   end
