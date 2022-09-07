@@ -1,8 +1,8 @@
 class MinimalRacket < Formula
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
-  url "https://mirror.racket-lang.org/installers/8.6/racket-minimal-8.6-src.tgz"
-  sha256 "01d509d5ffd82920ff4bb41de84c07ecc6af9122953716ad43d84aa7b3939f48"
+  url "https://mirror.racket-lang.org/installers/8.5/racket-minimal-8.5-src.tgz"
+  sha256 "55d585e3ac9fbaacfbe840a6ec74ce3e7bee9fe85e32213f1b3e4f6f593cae39"
   license any_of: ["MIT", "Apache-2.0"]
 
   # File links on the download page are created using JavaScript, so we parse
@@ -15,26 +15,16 @@ class MinimalRacket < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "0b5e925451860875bcee3426d933853df22667891deab5f58af81db44c7ec64b"
-    sha256 arm64_big_sur:  "f32e1a4c7a2df5d93e160fd500df5bd9408ae3a0878469827544bb8575967127"
-    sha256 monterey:       "382691a83867d3a375900057862963904dab092dbb5923a1dbfc2b0397c4d182"
-    sha256 big_sur:        "6a6567b68a2213255d55fa9658823d2f7bea83bf9638d854ce3e87c12685fd49"
-    sha256 catalina:       "34ac8c5df8fc1ca3ae360cb63230cbe662437ebbff43724988967876e7bc894f"
-    sha256 x86_64_linux:   "5ceb281664ea1a00c477a6476757e7963e5b13db482dd57789dc474ad3ac375e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minimal-racket"
+    sha256 aarch64_linux: "8bc7767e064cb073346848e6bc9bb046cd79c85bd7e27fadb24e6b74e2b5c93e"
   end
 
   depends_on "openssl@1.1"
 
   uses_from_macos "libffi"
-  uses_from_macos "zlib"
 
   # these two files are amended when (un)installing packages
   skip_clean "lib/racket/launchers.rktd", "lib/racket/mans.rktd"
-
-  def racket_config
-    etc/"racket/config.rktd"
-  end
 
   def install
     # configure racket's package tool (raco) to do the Right Thing
@@ -60,20 +50,13 @@ class MinimalRacket < Formula
       system "make"
       system "make", "install"
     end
-
-    inreplace racket_config, prefix, opt_prefix
   end
 
   def post_install
     # Run raco setup to make sure core libraries are properly compiled.
     # Sometimes the mtimes of .rkt and .zo files are messed up after a fresh
     # install, making Racket take 15s to start up because interpreting is slow.
-    system bin/"raco", "setup"
-
-    return unless racket_config.read.include?(HOMEBREW_CELLAR)
-
-    ohai "Fixing up Cellar references in #{racket_config}..."
-    inreplace racket_config, %r{#{Regexp.escape(HOMEBREW_CELLAR)}/minimal-racket/[^/]}o, opt_prefix
+    system "#{bin}/raco", "setup"
   end
 
   def caveats
