@@ -2,8 +2,8 @@ class Flyctl < Formula
   desc "Command-line tools for fly.io services"
   homepage "https://fly.io"
   url "https://github.com/superfly/flyctl.git",
-      tag:      "v0.0.387",
-      revision: "d46c14f3ab0215de43098f1d40aa5279d85b5d5b"
+      tag:      "v0.0.325",
+      revision: "da2b63810fe3a6f777cf1ac06a2f431ee583fc21"
   license "Apache-2.0"
   head "https://github.com/superfly/flyctl.git", branch: "master"
 
@@ -13,17 +13,11 @@ class Flyctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "18680fe8cca0900a6c048a50ca03488d9e3c39911bcaf81e2199be5f56ab9427"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "18680fe8cca0900a6c048a50ca03488d9e3c39911bcaf81e2199be5f56ab9427"
-    sha256 cellar: :any_skip_relocation, monterey:       "1f8c3612c3ff76489afb4fbb7798a0bb52b2529d3108cf1fd6c16161e6eb7e66"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1f8c3612c3ff76489afb4fbb7798a0bb52b2529d3108cf1fd6c16161e6eb7e66"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f8c3612c3ff76489afb4fbb7798a0bb52b2529d3108cf1fd6c16161e6eb7e66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "037459dea22504cd6146a42bbe45220960fabe64dacdf01d19f1e984d15ef7c0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flyctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "62a03ed82cc7e5cd53f2ddcc45ffb6efaeadf2c2b907158efb5d8a0c7525cd0a"
   end
 
-  # Required latest gvisor.dev/gvisor/pkg/gohacks
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
 
   def install
     ENV["CGO_ENABLED"] = "0"
@@ -38,7 +32,12 @@ class Flyctl < Formula
 
     bin.install_symlink "flyctl" => "fly"
 
-    generate_completions_from_executable(bin/"flyctl", "completion")
+    bash_output = Utils.safe_popen_read("#{bin}/flyctl", "completion", "bash")
+    (bash_completion/"flyctl").write bash_output
+    zsh_output = Utils.safe_popen_read("#{bin}/flyctl", "completion", "zsh")
+    (zsh_completion/"_flyctl").write zsh_output
+    fish_output = Utils.safe_popen_read("#{bin}/flyctl", "completion", "fish")
+    (fish_completion/"flyctl.fish").write fish_output
   end
 
   test do
