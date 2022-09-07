@@ -1,18 +1,14 @@
 class Cloudflared < Formula
   desc "Cloudflare Tunnel client (formerly Argo Tunnel)"
   homepage "https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide"
-  url "https://github.com/cloudflare/cloudflared/archive/refs/tags/2022.8.4.tar.gz"
-  sha256 "9bdd6991e1b42a7f26262acacc66890061fed7e342321fc4108ecab810aa056a"
+  url "https://github.com/cloudflare/cloudflared/archive/refs/tags/2022.5.0.tar.gz"
+  sha256 "65ad3379f21736fbbda6bd95f23860af9491274fd25b75780ccd9693b332a3f0"
   license "Apache-2.0"
   head "https://github.com/cloudflare/cloudflared.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a92a62fbd8f59a729a0169d99d1e48dda8a1fb9588f2928ec6a5e9845f019ac9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f10704ae27c334f7f5d96fc9e9ca0b7d526bb63548133cdf0fbcd0b87c592307"
-    sha256 cellar: :any_skip_relocation, monterey:       "00a5c0221a796e71f6f223c75ff1d9415ee802b351dd499523d0243f9a6159ad"
-    sha256 cellar: :any_skip_relocation, big_sur:        "596ffe55e3475b4880f717284271705022f8775c3e2dfd6a2748f36dcef7563f"
-    sha256 cellar: :any_skip_relocation, catalina:       "09b1cf53a0637903e57486367b939bfb69ce941ac5081722cb890b9ccc269f46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1adbe041611bb5eeec95b358d314f88617c6080dc7bee0fba4ba2e28b81679dd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cloudflared"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd965c9434781071a4759a487cb3b4dd4a5ee2963f19e13e59de6f200772fdbb"
   end
 
   depends_on "go" => :build
