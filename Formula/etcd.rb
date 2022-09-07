@@ -8,12 +8,8 @@ class Etcd < Formula
   head "https://github.com/etcd-io/etcd.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4daf47ff317a297fe7e508ab74799ed4d9a133aafc30cd1ed510f7007abbc958"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be55356384e60a8a9096ac91129a185acee1b98d04a3c21faa4310f22fcc4cfe"
-    sha256 cellar: :any_skip_relocation, monterey:       "4813890404b36cb64f1c09d843a69b8938602bda2a323b1d55c70c3ea8dc987c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cd8b99b2ae658229c22f0adf9a6c2a8f0fbabfbe07d9c8418d660c329d71a560"
-    sha256 cellar: :any_skip_relocation, catalina:       "63855b1fefa7f1f64e43e1ffd7b74c79b4a04ca58973a7ed67e3d54277e3887e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea276191c22789dd1e2590bef8ced3dbf1d00432550ef4fe0a4451b7ca349862"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/etcd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6da488e316c6ba05d2b7196eccfa46526ef61cf501e9ee51e9e4c918cf739533"
   end
 
   depends_on "go" => :build
@@ -36,11 +32,13 @@ class Etcd < Formula
   test do
     test_string = "Hello from brew test!"
     etcd_pid = fork do
-      if OS.mac? && Hardware::CPU.arm?
-        # etcd isn't officially supported on arm64
-        # https://github.com/etcd-io/etcd/issues/10318
-        # https://github.com/etcd-io/etcd/issues/10677
-        ENV["ETCD_UNSUPPORTED_ARCH"]="arm64"
+      on_macos do
+        if Hardware::CPU.arm?
+          # etcd isn't officially supported on arm64
+          # https://github.com/etcd-io/etcd/issues/10318
+          # https://github.com/etcd-io/etcd/issues/10677
+          ENV["ETCD_UNSUPPORTED_ARCH"]="arm64"
+        end
       end
 
       exec bin/"etcd",
