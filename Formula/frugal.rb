@@ -1,17 +1,13 @@
 class Frugal < Formula
   desc "Cross language code generator for creating scalable microservices"
   homepage "https://github.com/Workiva/frugal"
-  url "https://github.com/Workiva/frugal/archive/v3.16.2.tar.gz"
-  sha256 "ad0b8b04dc82c30f70251bb2253f0678146c1546dbb874d01e1249d702b230bc"
+  url "https://github.com/Workiva/frugal/archive/v3.15.0.tar.gz"
+  sha256 "a7f97de2dd6765bf166d5763a44bdc30cc067b06d3f236cb1715c3bed5a0e557"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "49c749430087521db7dccf0ff152c8f030c4d51436e7fcf3a98778b0d63bc0dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "49c749430087521db7dccf0ff152c8f030c4d51436e7fcf3a98778b0d63bc0dc"
-    sha256 cellar: :any_skip_relocation, monterey:       "06c9081af8bcbe40eeecc80d0b1a106410de943a379402c95537b85d09943294"
-    sha256 cellar: :any_skip_relocation, big_sur:        "06c9081af8bcbe40eeecc80d0b1a106410de943a379402c95537b85d09943294"
-    sha256 cellar: :any_skip_relocation, catalina:       "06c9081af8bcbe40eeecc80d0b1a106410de943a379402c95537b85d09943294"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4740caa1be9e4c6aa30084a771a42e5166487e8ca80cd99bc2e76e435bf01d2a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/frugal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2e08c8d010a2d8615d4f7bcfa416eea65cc12c239a7ac7225e2c322e9c9d2a76"
   end
 
   depends_on "go" => :build
