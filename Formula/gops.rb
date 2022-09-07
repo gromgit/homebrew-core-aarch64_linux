@@ -1,18 +1,14 @@
 class Gops < Formula
   desc "Tool to list and diagnose Go processes currently running on your system"
   homepage "https://github.com/google/gops"
-  url "https://github.com/google/gops/archive/refs/tags/v0.3.25.tar.gz"
-  sha256 "48f6c37df596d4661e2594d6eadb358150e094140e752643cfb2819fa6597bcb"
+  url "https://github.com/google/gops/archive/refs/tags/v0.3.23.tar.gz"
+  sha256 "7bea1780f7175d7518fb532a7ff858bc1789b88b918965068210ad8c5b8fd746"
   license "BSD-3-Clause"
   head "https://github.com/google/gops.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3a667b5d5de1774d509cad3c9bc883f3cd47b74c20838d7fa34bc5cd1d72cda"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8b7161a19fd9070a7a95beea0b9e2909629364247e155fd01c49ec22b37b8be1"
-    sha256 cellar: :any_skip_relocation, monterey:       "3f23a3dd055cbd629212197ae27645bac34248aa78be9f5f9d3f894d52fad3bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d8a98dab812edaf828a700b96e984f1a8029f92038356c69b3891adde4f3eebb"
-    sha256 cellar: :any_skip_relocation, catalina:       "459c18679c4c53ccd7ad598308c2450e5038350770b0aa17e60c598024d20e37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cf6488fcb2af2df43c6832b851e504960a8951ea46321b14ed1f2543b3fe6fa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gops"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "73d7f1db935d3b53e4ebf78a89c458e0d85e8cc5fb42cee3f21a0094fde00da9"
   end
 
   depends_on "go" => [:build, :test]
