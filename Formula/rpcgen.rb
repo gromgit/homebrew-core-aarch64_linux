@@ -11,13 +11,7 @@ class Rpcgen < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78dfb8bb78945458e7800dcc9dec612a7b2d72dcc8f128965c3a62463641526d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9e4b76a3f59923370fd526a8d0d7c2d045e24c0fd3bc8a90520a75a0600b2b42"
-    sha256 cellar: :any_skip_relocation, monterey:       "614287949fb3eecb3109d34b8d0c8573d2b46ebf63dc1d59bf97fac5ab02942a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8168bcd5de6cb890aae1bd5deb67f732c193f6729606632d7ece185c10dd3b75"
-    sha256 cellar: :any_skip_relocation, catalina:       "4d9702a8541f7db461c81f761bd446167473d0b7ad9590370fbbd9cb775442d4"
-    sha256 cellar: :any_skip_relocation, mojave:         "6bc4a8c391b448681db323c894b07a57a22a8e4d67015f0b9be7f1cff876d23a"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "2a4a7cf95e773ee5a2721cc90832031c6d5bb6dffefd575233acccca0d446631"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   keg_only :provided_by_macos
