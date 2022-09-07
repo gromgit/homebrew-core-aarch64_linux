@@ -2,17 +2,13 @@ class ArgocdVaultPlugin < Formula
   desc "Argo CD plugin to retrieve secrets from Secret Management tools"
   homepage "https://argocd-vault-plugin.readthedocs.io"
   url "https://github.com/argoproj-labs/argocd-vault-plugin.git",
-      tag:      "v1.12.0",
-      revision: "9c7288a5b2d395fea19c1100f2cd07b547cc1ee2"
+      tag:      "v1.11.0",
+      revision: "4133295001e037b917a8884da84af42f12a51cae"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba895ae1758b44f1945e9f5b0f2021e667490c19abc327a593ae413f0e174388"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba895ae1758b44f1945e9f5b0f2021e667490c19abc327a593ae413f0e174388"
-    sha256 cellar: :any_skip_relocation, monterey:       "f55e7b1fb2509476b10cd88e06bc638f7e69022bb11eee1612fa69ff300f9232"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f55e7b1fb2509476b10cd88e06bc638f7e69022bb11eee1612fa69ff300f9232"
-    sha256 cellar: :any_skip_relocation, catalina:       "f55e7b1fb2509476b10cd88e06bc638f7e69022bb11eee1612fa69ff300f9232"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf55919acbd659b5a2627cd0014491e5627de33dfcdda196c5dd268ae2e0b6e0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/argocd-vault-plugin"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b389fee815fb2522b6735a67d1c94804d8f71d6becfaea21af4e35b307d242c2"
   end
 
   depends_on "go" => :build
