@@ -24,16 +24,8 @@ class CdDiscid < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "671ac240cb3b94484690d12ec1d85cc96d90ffbf848cfb4adeebd8f5f32c1fbd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7effbc8d5fb1325aa629f1ec607d75c64c9547b0aa70deb4f05b07e5a6b94c84"
-    sha256 cellar: :any_skip_relocation, monterey:       "d90c6640e3b67fb2140a10da27714f30a302187bb0f0b13477a53936a2a66456"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6ffa8010d3a9ebbd8475901bca190ed9fe786ff7b9ff32ff161347b10ecd87fd"
-    sha256 cellar: :any_skip_relocation, catalina:       "0a9f85136e9727175a4d861f759236d62cf24f19170e27bfd9bf8aeddbc4c8b3"
-    sha256 cellar: :any_skip_relocation, mojave:         "158d91563b2e79574c0a336f775b49033d85ce3b290f122dae853dea45841f5b"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "26b88be0312f960484625161d94adf9a44aa88ef5817ba28b61af520a6e17e03"
-    sha256 cellar: :any_skip_relocation, sierra:         "6b0d9c55a1adfce8a2c6e9eabd00c37118a05b60678564e7a9695d876bca117b"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "f0c17cfc3c345c661104a6f29562b766cac2a80747feea0c26cda04ece3c8326"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6e37cc61545d58bebb66ffffada804ca5e39e47e503684c7ed84cfa856dbb14"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cd-discid"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "70dc6943f38c5ab01bc27be8a08b0fb23a04d163af7a4cbb53803542c5e17387"
   end
 
   def install
