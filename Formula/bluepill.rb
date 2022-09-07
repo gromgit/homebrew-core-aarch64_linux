@@ -17,10 +17,7 @@ class Bluepill < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "5fdf4a0439be240af92600dfd6b22accd2e66a2615fd3039e44622d545701616"
-    sha256 cellar: :any_skip_relocation, big_sur:       "27d44ba07c149043b52f823607f63a10f16b7d94066c93ac57f1aed756e25d74"
-    sha256 cellar: :any_skip_relocation, catalina:      "e3fb55552964c2544ffafd63050d0c82463dc98ee4742d761d843272a69fc0a9"
-    sha256 cellar: :any_skip_relocation, mojave:        "9926fb42710ce7c6067603a51520b66941b3b86e4827e7e7b63ae73db460ee05"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: ["11.2", :build]
