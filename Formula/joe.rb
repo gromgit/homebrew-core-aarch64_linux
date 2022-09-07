@@ -11,16 +11,9 @@ class Joe < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "affefc197630adfb4ae357d8e144dabd0920022d9b9a9e4a3cad537629c3048b"
-    sha256 arm64_big_sur:  "24bd1c0ba2e1f70bf85d2cf403612dfefed70fa1d1441121e560184146b8a036"
-    sha256 monterey:       "4eca39a7205e80d0be7c9eacad34c1af5c2b2f7ac062b803a7245762efec9498"
-    sha256 big_sur:        "f108312e44e035b6475a7dc91096eb65cea4567cf00a9ad9b21f69da06af65ec"
-    sha256 catalina:       "ec0e97a7a7ce9b63775dcc978f23efe2780a7319f1746246b092378f04e2caf6"
-    sha256 x86_64_linux:   "ca9c9790b7d1c6b64cec4974c90d6855bd2e977b80399a7240d2a3392551a874"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/joe"
+    sha256 aarch64_linux: "81cbb27a15c542dc68e2e76f1a834b850189d802f51caf64e559c2069eae24e8"
   end
-
-  conflicts_with "jupp", because: "both install the same binaries"
 
   def install
     system "./configure", "--prefix=#{prefix}"
