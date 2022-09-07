@@ -1,21 +1,16 @@
 class Vitess < Formula
   desc "Database clustering system for horizontal scaling of MySQL"
   homepage "https://vitess.io"
-  url "https://github.com/vitessio/vitess/archive/v14.0.2.tar.gz"
-  sha256 "a29eb7cab925e2121a93d65748e3022c3e3093267f85110e34b0f8de9fa11b8e"
+  url "https://github.com/vitessio/vitess/archive/v13.0.1.tar.gz"
+  sha256 "26ebde8cd2720006510c573370fd6d77d5a573ea54e5e49e21c70906758775f2"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0941341f66d3a6080acec1ae051ba41a23eff2920d0b5ea28613010f7944fb3c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e42569bda5970732c90ca421f54dbff1fd0566f62f604c518fdb0c9aa0db9969"
-    sha256 cellar: :any_skip_relocation, monterey:       "874b8f51b421951bed01a7285aafc483dd13d2871cb92a0b96993c2cffe5b294"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7cf46a0e20c4f013a4bf4901da4e3c80ccc596cf9f038cdd1e2cb3ec32a81494"
-    sha256 cellar: :any_skip_relocation, catalina:       "6af3734265dac7fd2ec6b9968a83040a20a393ae2952886628695ad1e5401c1f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61d5ae2c2119d207909bdbbecd04daa992418764fb08db9263e422b689e9a7ae"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vitess"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d3ddb2c795ff4c710285fef81e93f86d2d180bd5e9284b399c4b780a28a94fca"
   end
 
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
   depends_on "etcd"
 
   def install
