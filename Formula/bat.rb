@@ -7,12 +7,12 @@ class Bat < Formula
   head "https://github.com/sharkdp/bat.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c2e582eafc63d7242af612bb069f3686ece8828c239232ceb15fa91b374930f9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a8a80443ce88c0aee5f734a2c59707c5de6713e88d7054d7791c10130beec0f"
-    sha256 cellar: :any_skip_relocation, monterey:       "c7e28f20c861c79ad3d696f597af3bf153a4eccad92968c1b0cbd96edaa83ed5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "54b82450955087f9029f74a1d816cc8e099357f926fffd4f9e867e15949be2cc"
-    sha256 cellar: :any_skip_relocation, catalina:       "74e48f3a0081f5fe07b7eef3c9f9a4efffbc58e1b682530ad3f4a33a5717e4fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ca0aafc35b964b69f3497cacc5612fe606c5a0205d0b887ff7ddd94b1ca62fea"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "26bd8a65f1c64d7b33762df68727667b487b1eb777a42f52466ee5416e57a0b6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2e4938525974dc9f791700ff0c908900195cf289c8d2062954be7ce81a3ab7e"
+    sha256 cellar: :any_skip_relocation, monterey:       "94b08c3b72f6e052e49288f36c02db0b72f2607f147c31b45311ec2b7c24fe0c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d57c1a429bc33e419ea0aa5cae8dbae1b32337badb22ea594306bd78e079ff16"
+    sha256 cellar: :any_skip_relocation, catalina:       "992f1d749415acf3df041c4f4a5295b21f0ad415f080e3a8ca45791c1136ee35"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cd7549c1f693534600664fe3c33678c0bcbb0b6e35087c4d6bfe2bc2979c5e5"
   end
 
   depends_on "rust" => :build
