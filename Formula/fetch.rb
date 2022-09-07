@@ -1,18 +1,14 @@
 class Fetch < Formula
   desc "Download assets from a commit, branch, or tag of GitHub repositories"
   homepage "https://www.gruntwork.io/"
-  url "https://github.com/gruntwork-io/fetch/archive/v0.4.5.tar.gz"
-  sha256 "baa14d521cf0c59668dd5e84451579f48b623e16bb4d3b2254fa3c54b504fc9b"
+  url "https://github.com/gruntwork-io/fetch/archive/v0.4.4.tar.gz"
+  sha256 "5e5af89111a2e986d7d59c156c55ca301c9f2199369c9dc89b80dc94cb62b31a"
   license "MIT"
   head "https://github.com/gruntwork-io/fetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "24c8ec351ec9dbc8f71b679e94e1d8930c761b21b3bf4168be0b8d9aab32be0e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f10cdef839a155b13ae6ade9db0033303a0651e94958ff950d7585ef76d70b3"
-    sha256 cellar: :any_skip_relocation, monterey:       "52f270c33fb1323e965aef897c8067ad993723ce1ab2269df630fc29badef701"
-    sha256 cellar: :any_skip_relocation, big_sur:        "121acdd239dfbde5c29565b6719974acfd6bf0793f163773374740a64f243f3a"
-    sha256 cellar: :any_skip_relocation, catalina:       "2e13409b0cfbfae80a0aba1f012163529e978090b8eb39dae2feb349e5063201"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35d3950442bc4c81b649a7563b2047b991aa13121b42dc47140d915f85ce4420"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fetch"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dda47e8e3eca8118a1fce54b8dbc05dcadeccc418484253e2e93b80ca91dede6"
   end
 
   depends_on "go" => :build
