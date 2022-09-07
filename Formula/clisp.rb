@@ -23,13 +23,12 @@ class Clisp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "fd0612e62737575c94b319dfeaf34a7ef598422199313cc88bf980a3e9dca8c7"
-    sha256 cellar: :any, arm64_big_sur:  "47b8617bc92bfcef6ce59ddb16ce923c49807d342c6086c41130def364f68bcd"
-    sha256 cellar: :any, monterey:       "a681906d5fc0756209090b467e642c6d0ff899c333f9e5576e539a5347775a5e"
-    sha256 cellar: :any, big_sur:        "ddb6cb44d70ff18bd12bd186679112e8f4fa1f33d4849697fa2564c51195b5fe"
-    sha256 cellar: :any, catalina:       "2011ba42953cd6363aab0b23154947d364197fb28305efdb08ebe4640447d311"
-    sha256 cellar: :any, mojave:         "2e74f9680f7b060a0d6a71b2fdae0d00fa6e6009af104f9fb7839368b109ae1f"
-    sha256               x86_64_linux:   "80d7aa1e12fb3af6a08d6a5f53c5696cfdd0d277e54fdfb18108b13c4cee55f2"
+    sha256 cellar: :any, arm64_monterey: "bfad1c6c3b4787711bc126ed360647a6ad6458dd24ff4cd9e3be5252b897ed82"
+    sha256 cellar: :any, arm64_big_sur:  "8108810c5af0ce990d9052ca96f6aa75af1f59589a103e21a86f8b1f2e801956"
+    sha256 cellar: :any, monterey:       "b2fc7c67341df7f9766f66054445e342bd61acc22c7260bac3589266ba78f8a3"
+    sha256 cellar: :any, big_sur:        "4b81399840c98918cda6447d86852ffcb96294f228cb26f6c289f22d90df5a7a"
+    sha256 cellar: :any, catalina:       "de714225b132ed2cdf971fd31befd890f336a3a917a5fd56832d6989b6c28a58"
+    sha256               x86_64_linux:   "c62c710ca923611df8d28202e49b0ca27eba36a4d0736a01e482b453d53769e1"
   end
 
   depends_on "libsigsegv"
