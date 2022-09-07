@@ -2,18 +2,14 @@ class Kubevela < Formula
   desc "Application Platform based on Kubernetes and Open Application Model"
   homepage "https://kubevela.io"
   url "https://github.com/kubevela/kubevela.git",
-      tag:      "v1.5.4",
-      revision: "17872f97050bb0d039b6f7f0f7245fe7f714fe9f"
+      tag:      "v1.3.3",
+      revision: "45e1de19dc736b10b3eb2d908d809210f470b24f"
   license "Apache-2.0"
   head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6e7210ea14bc159bf21a5e154f6cb7489a94fc70cfe4b79e543d113cd7fdc98"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6e7210ea14bc159bf21a5e154f6cb7489a94fc70cfe4b79e543d113cd7fdc98"
-    sha256 cellar: :any_skip_relocation, monterey:       "233b0d89e3508b8e35087fab11f0e825f7b0e29eb0b5b6965acf3ad0bf2fc084"
-    sha256 cellar: :any_skip_relocation, big_sur:        "233b0d89e3508b8e35087fab11f0e825f7b0e29eb0b5b6965acf3ad0bf2fc084"
-    sha256 cellar: :any_skip_relocation, catalina:       "233b0d89e3508b8e35087fab11f0e825f7b0e29eb0b5b6965acf3ad0bf2fc084"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e79e8d39e0bf6f068cebae26eebab2e48359ac8d8c88e27a04edd617fef20e9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kubevela"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f99620366c27ac3d537f01b2f1ba269dcaf48eafa3ce4450d0b8298da506a583"
   end
 
   depends_on "go" => :build
@@ -22,8 +18,8 @@ class Kubevela < Formula
     ENV["CGO_ENABLED"] = "0"
     ldflags = %W[
       -s -w
-      -X github.com/oam-dev/kubevela/version.VelaVersion=#{version}
-      -X github.com/oam-dev/kubevela/version.GitRevision=#{Utils.git_head}
+      -X github.com/kubevela/kubevela/version.VelaVersion=#{version}
+      -X github.com/kubevela/kubevela/version.GitRevision=#{Utils.git_head}
     ]
 
     system "go", "build", *std_go_args(output: bin/"vela", ldflags: ldflags), "./references/cmd/cli"
