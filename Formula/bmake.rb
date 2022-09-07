@@ -1,8 +1,8 @@
 class Bmake < Formula
   desc "Portable version of NetBSD make(1)"
   homepage "https://www.crufty.net/help/sjg/bmake.html"
-  url "https://www.crufty.net/ftp/pub/sjg/bmake-20220901.tar.gz"
-  sha256 "3f67c575ee9ae443a5f589a40acac0163743da98cb50afd1144b4246cd5063ad"
+  url "https://www.crufty.net/ftp/pub/sjg/bmake-20220418.tar.gz"
+  sha256 "6ea7de515cba74f173dc14ee17b1488ae032582028d2e86ea12f70369cc896f5"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,12 +11,8 @@ class Bmake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b980a2ef06470663a63383d93a12802dfb9af9f4661d25ffa2aa3a31633e9b86"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "972eeef3e23be540a8914fcad3479baa932f41621fdf1f9fe6db8a49f2b64794"
-    sha256                               monterey:       "838df0b198cf99be70cecd65413e3acce2f3426bd1b9c551cb8b24783cb5f12d"
-    sha256                               big_sur:        "6f142cbfc4de033ba0867676e4dd177ef3001d077f5dda26ea7bd0f09c3107a3"
-    sha256                               catalina:       "40c504f54a2127860dd54ae8a96eea8fd8c05c1e7904447b938a664d5fe3a250"
-    sha256                               x86_64_linux:   "0b0e9673cf20a44d05e9057c514b0973d0a4b9398cc1d0df9bf3b48d31be00ab"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bmake"
+    sha256 aarch64_linux: "d8d32542416e2c3e80af9951601b0a566e9eeed0ddc9412aa248bb0575028037"
   end
 
   def install
