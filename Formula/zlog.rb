@@ -1,17 +1,13 @@
 class Zlog < Formula
   desc "High-performance C logging library"
   homepage "https://github.com/HardySimpson/zlog"
-  url "https://github.com/HardySimpson/zlog/archive/1.2.16.tar.gz"
-  sha256 "742401902f2134eb272c49631fe5c38d7aeb9a2ad56fa3ec3d15219b371ba655"
+  url "https://github.com/HardySimpson/zlog/archive/1.2.15.tar.gz"
+  sha256 "00037ab8d52772a95d645f1dcfd2c292b7cea326b54e63e219a5b7fdcb7e6508"
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "16588f7d867f7426696693b19ee0221ff7483c2d7a34a856e3acb32c46c8ea41"
-    sha256 cellar: :any,                 arm64_big_sur:  "04ed8b2ebcbbf23a3e6ad76b8d80914f939e6fc6cadfd297b91c3d4d1d29b8b0"
-    sha256 cellar: :any,                 monterey:       "19cf707f5b5720aefa8f7cbb851a032a9a16900b7b17685530aa59081cbb0ee5"
-    sha256 cellar: :any,                 big_sur:        "f1384547bacef98381ae766dc90efc690a6a2a87dca0763a0572a3288ad68aee"
-    sha256 cellar: :any,                 catalina:       "62f3fbab6a72eb27a201c1c31cdb2cf8d4170053fdbfbe27130452026d01da69"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "204935c1271f0c1cca1543ba6e71f7b1fcfcb611b97c6b32057c452abc1c2478"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zlog"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "759fa86a50d83c894dc9a672ee0a9d47696fe7056c867a0e93d453bbd5222757"
   end
 
   def install
