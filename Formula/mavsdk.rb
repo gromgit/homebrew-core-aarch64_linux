@@ -4,10 +4,9 @@ class Mavsdk < Formula
   desc "API and library for MAVLink compatible systems written in C++17"
   homepage "https://mavsdk.mavlink.io"
   url "https://github.com/mavlink/MAVSDK.git",
-      tag:      "v1.4.4",
-      revision: "8b974d8df8fe3cec60ec14c5d9380c8984b6813e"
+      tag:      "v1.4.5",
+      revision: "894280e92a5bd913bc18d2c94eeb756e06fefaa9"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -40,10 +39,6 @@ class Mavsdk < Formula
 
   on_macos do
     depends_on "llvm" if DevelopmentTools.clang_build_version <= 1100
-  end
-
-  on_linux do
-    depends_on "gcc"
   end
 
   fails_with :clang do
