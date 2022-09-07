@@ -2,25 +2,20 @@ class JsonnetBundler < Formula
   desc "Package manager for Jsonnet"
   homepage "https://github.com/jsonnet-bundler/jsonnet-bundler"
   url "https://github.com/jsonnet-bundler/jsonnet-bundler.git",
-      tag:      "v0.5.1",
-      revision: "451a33c1c1f6950bc3a7d25353e35bed1b983370"
+      tag:      "v0.4.0",
+      revision: "447344d5a038562d320a3f0dca052611ade29280"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "da0e2063b13ad8a08dbfa82dc3ef8507c090ad48295d2e259486d020b016e9bb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "da0e2063b13ad8a08dbfa82dc3ef8507c090ad48295d2e259486d020b016e9bb"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c9a5ae896aca771eaa394910f56796c93422988e5f91d25222654ffd5b27ba9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4c9a5ae896aca771eaa394910f56796c93422988e5f91d25222654ffd5b27ba9"
-    sha256 cellar: :any_skip_relocation, catalina:       "4c9a5ae896aca771eaa394910f56796c93422988e5f91d25222654ffd5b27ba9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f4a145b4ab60388043e11d940b521396f341281fbaab8c7578fb0b9bcd40d43"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jsonnet-bundler"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ef7101e0711c89910cd840430272d2a9bd0d65ba7614ab3ac377c3207472d4de"
   end
 
   depends_on "go" => :build
 
   def install
-    ENV["CGO_ENABLED"] = "0"
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=#{version}", output: bin/"jb"), "./cmd/jb"
+    system "make", "static"
+    bin.install "_output/jb"
   end
 
   test do
