@@ -2,18 +2,14 @@ class Dagger < Formula
   desc "Portable devkit for CI/CD pipelines"
   homepage "https://dagger.io"
   url "https://github.com/dagger/dagger.git",
-      tag:      "v0.2.32",
-      revision: "624e5bb94696f2847c4f10b75e96694e8919acf3"
+      tag:      "v0.2.9",
+      revision: "4fc38dacb9cfc23730ad9865fcb95b7b9d9ebe69"
   license "Apache-2.0"
   head "https://github.com/dagger/dagger.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d15fd37fc33fb144ee11f8265d9c0dc0abca4d52112e9f961a20ac89c565dc0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d15fd37fc33fb144ee11f8265d9c0dc0abca4d52112e9f961a20ac89c565dc0"
-    sha256 cellar: :any_skip_relocation, monterey:       "226519cd7b90fa4759ebc694bf0792576b486b23aa7749ae619b494a23d91698"
-    sha256 cellar: :any_skip_relocation, big_sur:        "226519cd7b90fa4759ebc694bf0792576b486b23aa7749ae619b494a23d91698"
-    sha256 cellar: :any_skip_relocation, catalina:       "226519cd7b90fa4759ebc694bf0792576b486b23aa7749ae619b494a23d91698"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11cf975663a7a6e68c96e965b1d5dfb8033189cc15611a3844ad850d2242f41c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dagger"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7351b286c713c432be29fe61deb45f44cd9671592ecf0c83168dca15bec00790"
   end
 
   depends_on "go" => :build
@@ -28,7 +24,14 @@ class Dagger < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/dagger"
 
-    generate_completions_from_executable(bin/"dagger", "completion")
+    output = Utils.safe_popen_read(bin/"dagger", "completion", "bash")
+    (bash_completion/"dagger").write output
+
+    output = Utils.safe_popen_read(bin/"dagger", "completion", "zsh")
+    (zsh_completion/"_dagger").write output
+
+    output = Utils.safe_popen_read(bin/"dagger", "completion", "fish")
+    (fish_completion/"dagger.fish").write output
   end
 
   test do
