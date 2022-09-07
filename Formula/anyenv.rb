@@ -1,17 +1,13 @@
 class Anyenv < Formula
   desc "All in one for **env"
   homepage "https://anyenv.github.io/"
-  url "https://github.com/anyenv/anyenv/archive/v1.1.5.tar.gz"
-  sha256 "ed086fb8f5ee6bd8136364c94a9a76a24c65e0a950bb015e1b83389879a56ba8"
+  url "https://github.com/anyenv/anyenv/archive/v1.1.4.tar.gz"
+  sha256 "efb5663ea44ba53c692bb1db439f4b9cf69099614030d0950fdd083f07a2e3c7"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fcafa1cbde4f24bb3e88597312c279ad4ad34e5ab80b51a2e1e96afb8b97157"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6fcafa1cbde4f24bb3e88597312c279ad4ad34e5ab80b51a2e1e96afb8b97157"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7a9bd58702840c6aee47e42ff2691681721a494a47cceac00cf10e1b1748879"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7a9bd58702840c6aee47e42ff2691681721a494a47cceac00cf10e1b1748879"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7a9bd58702840c6aee47e42ff2691681721a494a47cceac00cf10e1b1748879"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fcafa1cbde4f24bb3e88597312c279ad4ad34e5ab80b51a2e1e96afb8b97157"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/anyenv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22b2acb74e6bce587f4ece88142d14c013f911cfb513ed0f3d50023ce1c6f48e"
   end
 
   def install
