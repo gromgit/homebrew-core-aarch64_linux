@@ -6,12 +6,7 @@ class Zzz < Formula
   head "https://github.com/Orc/Zzz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a1135d50a709f3c6a64316e5a92a6f269bdb865d21fa26e279c38344afde541"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e08914c722e58a5f5a43c70b395a198faf42e08bc31476fcf226ee77bd42195f"
-    sha256 cellar: :any_skip_relocation, monterey:       "086a43f796e1d9630aa6980fcca37971031e37234f065295d55f4de1f72c8c35"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3609040838445e383713a328d0838510d77c3d222f8ecd6892e0e99455668ab1"
-    sha256 cellar: :any_skip_relocation, catalina:       "10b1c9f9822b1cbadaa5774d0ee28c1016fa4477cbe3442475ad9113f0b98dd4"
-    sha256 cellar: :any_skip_relocation, mojave:         "46716ef74ec052c11d497b5192b9829d1341ebbce783c04be344a85bb9dd5a96"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on :macos
