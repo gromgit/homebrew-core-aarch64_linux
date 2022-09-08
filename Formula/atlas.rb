@@ -7,12 +7,12 @@ class Atlas < Formula
   head "https://github.com/ariga/atlas.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad8a4c88f480d2926e873d762bc93a7d270ffea585f6dfc3664c89f7f82af80b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdba659118022309a1bfbe0a433f5052a46a41b98074387d5d817e9bf5f85a21"
-    sha256 cellar: :any_skip_relocation, monterey:       "acbea82ecc6b253e9aa47b6e1ddfa07189d5bb4bc07c62e9f91bb3945c84d03d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f771f6d3bf0161037eaaf080aa668042e4ef5598c7c651c71d8d7eb269a02603"
-    sha256 cellar: :any_skip_relocation, catalina:       "4ed5a0082506c91e89cc96cfe04511bdd6ab4f843ec56d5e0f3a2db66c280a67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "948e60814e5047b97a170b73dedbfdfe74046e1596f329ab24130c2e8a1b3628"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "61ed32b280761256f1c7a6b475c95aa2cdde0ee6a3bb0869277b700d3f7be30c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7c273b6abcd1196ba07d90d0edfa3e1a259e501b94b1c4b26f6591fdd248b73e"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b4b3279f3d59e79e4c4af9fe94bfe70d7962f8713edc868f58e1263f2078454"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5915081141a6dcfd4ab76d74ef191eed257b022a8458a3975a272f9f00a3e941"
+    sha256 cellar: :any_skip_relocation, catalina:       "6644ba2e6a5639296afab989af3c744af3e51174d2adaf599f19948442ee594e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e539ba23eef1dd024ccc4498cb13998b2bf0c858ef2b7e69219ecd29ffd91be"
   end
 
   depends_on "go" => :build
