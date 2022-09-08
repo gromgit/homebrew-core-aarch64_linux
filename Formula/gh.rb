@@ -1,8 +1,8 @@
 class Gh < Formula
   desc "GitHub command-line tool"
   homepage "https://github.com/cli/cli"
-  url "https://github.com/cli/cli/archive/v2.9.0.tar.gz"
-  sha256 "730b600d33afb67d84af4dca1af80cb1fbff79d302ac4f840fc8e9e4c25fceb7"
+  url "https://github.com/cli/cli/archive/v2.14.7.tar.gz"
+  sha256 "a1a048714d7c7b237ea05f1fb51b3f3f4cdf90a16c60fa46f1df2eb5d96ce28d"
   license "MIT"
 
   head "https://github.com/cli/cli.git", branch: "trunk"
@@ -14,7 +14,7 @@ class Gh < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gh"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "d5d4d6549e32ab6b386db6d0b481a57aebcb62443678b499c7e1477e731ae6a6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1067388c00ed563e5b7b30b63dc9357c194e53c94aece836b53a603cf331c2a8"
   end
 
   depends_on "go" => :build
@@ -28,9 +28,7 @@ class Gh < Formula
     end
     bin.install "bin/gh"
     man1.install Dir["share/man/man1/gh*.1"]
-    (bash_completion/"gh").write `#{bin}/gh completion -s bash`
-    (fish_completion/"gh.fish").write `#{bin}/gh completion -s fish`
-    (zsh_completion/"_gh").write `#{bin}/gh completion -s zsh`
+    generate_completions_from_executable(bin/"gh", "completion", "-s")
   end
 
   test do
