@@ -1,8 +1,8 @@
 class Cpr < Formula
   desc "C++ Requests, a spiritual port of Python Requests"
   homepage "https://docs.libcpr.org/"
-  url "https://github.com/libcpr/cpr/archive/1.8.3.tar.gz"
-  sha256 "0784d4c2dbb93a0d3009820b7858976424c56578ce23dcd89d06a1d0bf5fd8e2"
+  url "https://github.com/libcpr/cpr/archive/1.9.2.tar.gz"
+  sha256 "3bfbffb22c51f322780d10d3ca8f79424190d7ac4b5ad6ad896de08dbd06bf31"
   license "MIT"
   head "https://github.com/libcpr/cpr.git", branch: "master"
 
@@ -16,23 +16,27 @@ class Cpr < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@1.1"
 
   uses_from_macos "curl"
 
+  on_linux do
+    depends_on "openssl@3"
+  end
+
   def install
-    args = std_cmake_args + %w[
+    args = %W[
       -DCPR_FORCE_USE_SYSTEM_CURL=ON
       -DCPR_BUILD_TESTS=OFF
-    ]
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ] + std_cmake_args
 
-    system "cmake", ".", *args, "-DBUILD_SHARED_LIBS=ON"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build-shared", "-DBUILD_SHARED_LIBS=ON", *args
+    system "cmake", "--build", "build-shared"
+    system "cmake", "--install", "build-shared"
 
-    system "make", "clean"
-    system "cmake", ".", *args, "-DBUILD_SHARED_LIBS=OFF"
-    system "make"
-    lib.install "lib/libcpr.a"
+    system "cmake", "-S", ".", "-B", "build-static", "-DBUILD_SHARED_LIBS=OFF", *args
+    system "cmake", "--build", "build-static"
+    lib.install "build-static/lib/libcpr.a"
   end
 
   test do
