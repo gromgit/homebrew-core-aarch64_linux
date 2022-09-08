@@ -22,7 +22,7 @@ class Libdrm < Formula
   depends_on :linux
 
   def install
-    system "meson", "setup", "build", "-Dcairo-tests=disabled", *std_meson_args
+    system "meson", "setup", "build", "-Dcairo-tests=disabled", "-Dvalgrind=disabled", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end
