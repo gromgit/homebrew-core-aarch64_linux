@@ -1,11 +1,14 @@
 # Upstream project has requested we use a mirror as the main URL
-# https://github.com/Homebrew/homebrew/pull/21419
+# https://github.com/Homebrew/legacy-homebrew/pull/21419
 class Xz < Formula
   desc "General-purpose data compression with high compression ratio"
   homepage "https://tukaani.org/xz/"
-  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.2.5.tar.gz"
-  mirror "https://tukaani.org/xz/xz-5.2.5.tar.gz"
-  sha256 "f6f4910fd033078738bd82bfba4f49219d03b17eb0794eb91efbae419f4aba10"
+  # The archive.org mirror below needs to be manually created at `archive.org`.
+  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.2.6.tar.gz"
+  mirror "https://tukaani.org/xz/xz-5.2.6.tar.gz"
+  mirror "https://archive.org/download/xz-5.2.6/xz-5.2.6.tar.gz"
+  mirror "http://archive.org/download/xz-5.2.6/xz-5.2.6.tar.gz"
+  sha256 "a2105abee17bcd2ebd15ced31b4f5eda6e17efd6b10f921a01cda4a44c91b3a0"
   license all_of: [
     :public_domain,
     "LGPL-2.1-or-later",
@@ -15,8 +18,9 @@ class Xz < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xz"
-    sha256 aarch64_linux: "da5e7e118ca463e353d573323d241d04f18cc6fff2069db312c6f5b143008831"
+    sha256 aarch64_linux: "6b23443653a1240c033979b56dcb8315f1cfbaa15c31c88932ebedc48e410b5f"
   end
+
 
   def install
     system "./configure", "--disable-debug",
