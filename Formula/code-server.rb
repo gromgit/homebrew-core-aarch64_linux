@@ -8,11 +8,11 @@ class CodeServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4bd021747c2bfdfdf8fd47e40b51668da739d44089ffddfe5c767dfeca7f3aa8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73526abf599150d45fd87bf6de3f724cbed2fdb756b08e86d2549aa4f808fb99"
-    sha256 cellar: :any_skip_relocation, monterey:       "ab37b348f550baa6148320f109c7e6afd9ff4d313e5fe937b07117a1ef1766e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "187924ead946962fea70215097067afc863d7a93a7e48b369b4baec5d91e893f"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ae453d7adf5d82f1f5069c333eaa03d1e08a04bea5382d2679a77b43151d697"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6ebda654ef3190bf888c650f6dfe0dafd7b5848bb5825585d186f925222b720"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e1606fb9ea802ec7eadbfdc03c2cc6bdffb32956b2fdce0c38cfe1b97c6a8b3b"
+    sha256 cellar: :any_skip_relocation, monterey:       "a01b0510b68334e6a18b359641884a0c5b659bf36cd70e294ac668094b6b3660"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9364ef16acb856aea58c6794e1f52fe6bc9415324cb495ea0ce23d9fbcddf6a1"
+    sha256 cellar: :any_skip_relocation, catalina:       "aa547654cb53b98b311f89dbe82907c2b75d83047c8eb5436aeda957e25416f4"
   end
 
   depends_on "bash" => :build
