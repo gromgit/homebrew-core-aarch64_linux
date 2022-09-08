@@ -7,17 +7,16 @@ class Help2man < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "383b411c2f38bcc248ef62253135047fcdf62d9dc53f8204d8789648705750e2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "383b411c2f38bcc248ef62253135047fcdf62d9dc53f8204d8789648705750e2"
-    sha256 cellar: :any,                 monterey:       "2fa2384e5b009445b1c22c3524c290f99097e28f513d05fc72bd34b5a2359c4c"
-    sha256 cellar: :any,                 big_sur:        "6d00cbba2327558de78a1e01fc1906ddce81a03067b3d8636f15df835290018a"
-    sha256 cellar: :any,                 catalina:       "96ff3329951b52db5e2e70f64e93a5fa291b79d70bc39a4d10d6c2cc3340a1b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "457df4779894e46898cb3ae03f9b7d2650a0bd42e75ab7cdf4aacbe0e6bb90d6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/help2man"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d8dc1e0b4e8842167d17e9a2dbb283f77a8cf97fbe16f6e55f3f2733ffe55ec0"
   end
 
-  depends_on "gettext" if Hardware::CPU.intel?
 
   uses_from_macos "perl"
+
+  on_intel do
+    depends_on "gettext"
+  end
 
   resource "Locale::gettext" do
     url "https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/gettext-1.07.tar.gz"
