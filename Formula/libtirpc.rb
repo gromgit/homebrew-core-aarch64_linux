@@ -7,7 +7,7 @@ class Libtirpc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtirpc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "349ee31ea73173ed107c112d2281f9916f2070b2d15f9a0d757e95ef68a7d320"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0cd2302439acfaeff16e2c9ef83c2c6bce6da1e760675f8cf855d4948924a7a5"
   end
 
 
