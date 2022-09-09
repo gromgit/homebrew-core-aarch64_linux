@@ -1,10 +1,10 @@
 class Cmake < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
-  url "https://github.com/Kitware/CMake/releases/download/v3.23.1/cmake-3.23.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/cmake-3.23.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.23.1.tar.gz"
-  sha256 "33fd10a8ec687a4d0d5b42473f10459bb92b3ae7def2b745dc10b192760869f3"
+  url "https://github.com/Kitware/CMake/releases/download/v3.24.1/cmake-3.24.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/cmake-3.24.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.24.1.tar.gz"
+  sha256 "4931e277a4db1a805f13baa7013a7757a0cbfe5b7932882925c7061d9d1fa82b"
   license "BSD-3-Clause"
   head "https://gitlab.kitware.com/cmake/cmake.git", branch: "master"
 
@@ -17,8 +17,9 @@ class Cmake < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cmake"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "b30d83e88329e28e42fcf78e22b55f054dc2f0fcd9daa594034dc032917dd16d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "703b692ea82a5781c6b7fc1417d53cf55baabdb716fa106ab2418088a668a957"
   end
+
 
   uses_from_macos "ncurses"
 
@@ -50,6 +51,7 @@ class Cmake < Formula
     end
 
     system "./bootstrap", *args, "--", *std_cmake_args,
+                                       "-DCMake_INSTALL_BASH_COMP_DIR=#{bash_completion}",
                                        "-DCMake_INSTALL_EMACS_DIR=#{elisp}",
                                        "-DCMake_BUILD_LTO=ON"
     system "make"
