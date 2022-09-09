@@ -1,15 +1,16 @@
 class Libtasn1 < Formula
   desc "ASN.1 structure parser library"
   homepage "https://www.gnu.org/software/libtasn1/"
-  url "https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.18.0.tar.gz"
-  mirror "https://ftpmirror.gnu.org/libtasn1/libtasn1-4.18.0.tar.gz"
-  sha256 "4365c154953563d64c67a024b607d1ee75c6db76e0d0f65709ea80a334cd1898"
+  url "https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.19.0.tar.gz"
+  mirror "https://ftpmirror.gnu.org/libtasn1/libtasn1-4.19.0.tar.gz"
+  sha256 "1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a"
   license "LGPL-2.1-or-later"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtasn1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a196dcfbda75335630fc8a0a616438b99ec4bcc2236ba7a7c759ac052bc8c2b7"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa9fe62fe807f60df312f356c9ba5846b32c2fff53068c206d1503328562bca6"
   end
+
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking",
