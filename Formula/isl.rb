@@ -10,8 +10,8 @@ class Isl < Formula
     # and update isl_version() function accordingly.  All other names will
     # result in isl_version() function returning "UNKNOWN" and hence break
     # package detection.
-    url "https://libisl.sourceforge.io/isl-0.24.tar.xz"
-    sha256 "043105cc544f416b48736fff8caf077fb0663a717d06b1113f16e391ac99ebad"
+    url "https://libisl.sourceforge.io/isl-0.25.tar.xz"
+    sha256 "be7b210647ccadf90a2f0b000fca11a4d40546374a850db67adb32fad4b230d9"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
@@ -27,8 +27,9 @@ class Isl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/isl"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "032ac13a7daa51eefbd625bd55a20998a3819fc76cd226a57b20e1245fe751b2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8fed68c1bfa87e3036a0f8193a6edab96830e4f47e07da08280b932e1dac242e"
   end
+
 
   head do
     url "https://repo.or.cz/isl.git"
