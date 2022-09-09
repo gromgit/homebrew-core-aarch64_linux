@@ -1,24 +1,28 @@
 class XcbProto < Formula
   desc "X.Org: XML-XCB protocol descriptions for libxcb code generation"
   homepage "https://www.x.org/"
-  url "https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.15.tar.xz"
-  sha256 "d34c3b264e8365d16fa9db49179cfa3e9952baaf9275badda0f413966b65955f"
+  url "https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.15.2.tar.xz"
+  sha256 "7072beb1f680a2fe3f9e535b797c146d22528990c72f63ddb49d2f350a3653ed"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ba8f85669a932e77cb5d2d280331d768d50ed2de4b85894c7066c2ca805e326d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xcb-proto"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f696a09863a322d5b9d0df13a368cbba210b7ca652195f7f5fe36bf2e9283010"
   end
+
 
   depends_on "pkg-config" => [:build, :test]
   depends_on "python@3.10" => :build
 
   def install
+    python = "python3.10"
+
     args = %W[
       --prefix=#{prefix}
       --sysconfdir=#{etc}
       --localstatedir=#{var}
       --disable-silent-rules
-      PYTHON=python3
+      PYTHON=#{python}
     ]
 
     system "./configure", *args
