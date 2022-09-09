@@ -16,8 +16,10 @@ class Flex < Formula
   end
 
   bottle do
-    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flex"
+    sha256 aarch64_linux: "ae632ea3ffdfb5adba884ff0d8521bce25859683c14a435a7ad08417c08d5745"
   end
+
 
   head do
     url "https://github.com/westes/flex.git", branch: "master"
