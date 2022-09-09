@@ -11,13 +11,10 @@ class Fontconfig < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1590366d6e44095fdb999241d64e81747215d0502378c191f73981ea4b21968a"
-    sha256 arm64_big_sur:  "c603b1b3842e3de3e0681914d01063e923c50bbb5b5f17c4f93611541b28aee5"
-    sha256 monterey:       "6bd89f45f20c5739ba53348933f843d256383eb30b28723d1a64a23ad565b1bc"
-    sha256 big_sur:        "b2d63813898c4dfa6f33d344a9f54a6ec8e31a2b326e70906bff8bc2a18411a2"
-    sha256 catalina:       "6bd0d5ba7717d89e987125e1cdde7900bcba4d116ce78b9d151a221c637188b2"
-    sha256 x86_64_linux:   "1c1706b94f8b9408ce14a9880d67e9dbd22724b85f7ba9eb625c9d91fd43323f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fontconfig"
+    sha256 aarch64_linux: "0be548f6b750243a63cfd401df354b3833306487ebfc2fe13ba8ed0c42a3238e"
   end
+
 
   head do
     url "https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
