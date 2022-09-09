@@ -1,8 +1,8 @@
 class Luau < Formula
   desc "Fast, safe, gradually typed embeddable scripting language derived from Lua"
   homepage "https://luau-lang.org"
-  url "https://github.com/Roblox/luau/archive/0.543.tar.gz"
-  sha256 "107d9408e2db71ec19434138b428f673ac1674d021f0ccae98af39b364cc2912"
+  url "https://github.com/Roblox/luau/archive/0.544.tar.gz"
+  sha256 "c1e2d4e04fe6f191192d1570bd83f96531804fc484a0bc0e00b53248a01d7dee"
   license "MIT"
   head "https://github.com/Roblox/luau.git", branch: "master"
 
@@ -17,14 +17,10 @@ class Luau < Formula
 
   depends_on "cmake" => :build
 
-  on_linux do
-    depends_on "gcc"
-  end
-
   fails_with gcc: "5"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DLUAU_BUILD_TESTS=OFF"
+    system "cmake", "-S", ".", "-B", "build", "-DLUAU_BUILD_TESTS=OFF", *std_cmake_args
     system "cmake", "--build", "build"
     bin.install "build/luau", "build/luau-analyze"
   end
