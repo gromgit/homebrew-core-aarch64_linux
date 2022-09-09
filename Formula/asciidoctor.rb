@@ -6,13 +6,10 @@ class Asciidoctor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a172e2bc9896a3f5be179381721dd4f363ab060150183c4e8323142eb61ae9c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c39047b274589e63cfe274781f7319b632b0e33b5bd263997d9a346f2fddf3fe"
-    sha256 cellar: :any_skip_relocation, monterey:       "a06072325b8a6aae36dd4a13b889bd8b194288e365f9473b0351f702de0dee63"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f86d41fccbb9e0d1b13a09d78780056ef61be028c67649afe5b02cfdf109929"
-    sha256 cellar: :any_skip_relocation, catalina:       "9f86d41fccbb9e0d1b13a09d78780056ef61be028c67649afe5b02cfdf109929"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "493ca3fac0a6b4d1399d8fd30e3add1ef34cd561bbf2ed73ebadc1e15b7b15bf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/asciidoctor"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d4485e0e7b70fc2e1829e4688e13026f5e690aac0bdead12625f026155430c4c"
   end
+
 
   uses_from_macos "ruby", since: :catalina
 
