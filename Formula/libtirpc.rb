@@ -1,13 +1,15 @@
 class Libtirpc < Formula
   desc "Port of Sun's Transport-Independent RPC library to Linux"
   homepage "https://sourceforge.net/projects/libtirpc/"
-  url "https://downloads.sourceforge.net/project/libtirpc/libtirpc/1.3.2/libtirpc-1.3.2.tar.bz2"
-  sha256 "e24eb88b8ce7db3b7ca6eb80115dd1284abc5ec32a8deccfed2224fc2532b9fd"
+  url "https://downloads.sourceforge.net/project/libtirpc/libtirpc/1.3.3/libtirpc-1.3.3.tar.bz2"
+  sha256 "6474e98851d9f6f33871957ddee9714fdcd9d8a5ee9abb5a98d63ea2e60e12f3"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9e6a05ec31016e1fe1045e6e4c82d8f337a12bfc90ff6faa4092cf48a4084f68"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtirpc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "349ee31ea73173ed107c112d2281f9916f2070b2d15f9a0d757e95ef68a7d320"
   end
+
 
   depends_on "krb5"
   depends_on :linux
