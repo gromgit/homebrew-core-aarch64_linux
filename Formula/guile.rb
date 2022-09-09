@@ -7,13 +7,10 @@ class Guile < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "dc6e5dccbc34d5171fba0bc0a0f96381dad52a9837b6f0a1aa6eba2851b6137d"
-    sha256 arm64_big_sur:  "f8f697d08fcdc49218fb1a5f708c465e99c0da8ab94d7af8811cd15ec3b22370"
-    sha256 monterey:       "0d57e1c9dac0badc33a6355444a09c27a5eb79d1eec1ea1afc591b09f964f125"
-    sha256 big_sur:        "e95549a938b1c83eadfd102fd1eeea423416425249825330f607dbaa9ed8bc9b"
-    sha256 catalina:       "13c2dbd3e20e04169c5bc3047b4f6bec0dd19d0fc7bf6ef5f7f48b917eff008b"
-    sha256 x86_64_linux:   "0a6685530111e6091bd640f119603b6a2f4cb70bfb8cd70532577898a9dbd91b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/guile"
+    sha256 aarch64_linux: "ec3de377b5fd05c39107e978bc480e6add14162d814840dd811598ffa05c3ab6"
   end
+
 
   head do
     url "https://git.savannah.gnu.org/git/guile.git", branch: "main"
