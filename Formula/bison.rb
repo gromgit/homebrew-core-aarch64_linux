@@ -10,7 +10,7 @@ class Bison < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bison"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0de643dead5485a07886abf7011b60ddab58b5db1e8e362d15738ba9d1a61956"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "75d0a1f3e2e9b74f6e75f0ac03668d5ebdaa984cb66a752d3440ca374609325b"
   end
 
   keg_only :provided_by_macos
