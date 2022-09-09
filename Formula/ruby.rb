@@ -11,13 +11,10 @@ class Ruby < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "021656bba51b864c3a2b5d4b72ae8f83ac49913fd4d576a7375be2b1338508cd"
-    sha256 arm64_big_sur:  "e92288a687e891e51e6bdedc0a020aece0c159f4d508d7a62cf6e71ab226be27"
-    sha256 monterey:       "31567181a85e0f3003358466c689142464b14cf817f8c37a6c5367e0c85bc1fc"
-    sha256 big_sur:        "5465372af478fe2babb247ef3e2440645041d7ed284393f49c3ffbf450aa98e9"
-    sha256 catalina:       "a330778c6978faea285745bbd1026322eb06f13490e164cc92068f0932087588"
-    sha256 x86_64_linux:   "fa0984bbdd14c91aed6d1b279df99a4a1a122733464a23a22bcc47095588c15a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby"
+    sha256 aarch64_linux: "833dc68b493dba9d195494e1e719f12999b4726a37b543e4d330c906ff0f6dd7"
   end
+
 
   head do
     url "https://github.com/ruby/ruby.git", branch: "trunk"
