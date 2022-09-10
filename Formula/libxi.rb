@@ -7,7 +7,7 @@ class Libxi < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxi"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7783748d1237e976919a4feaddeb479286242cb64e101dc22a6db8f6d63cb4f4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "02b64786e8f5addd2845c5993017309dc0e11dd7ab4b5255c971471b2270f130"
   end
 
 
