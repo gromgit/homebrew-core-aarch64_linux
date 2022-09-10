@@ -6,14 +6,12 @@ class Libb64 < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b96a38185041985c80316cb592fb20b2c3b24d982042441d0008efcc2ab1998"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "56d58f54a9441400aa4558ea15ced076cc3d712fbdc2801b786b923b7db2220a"
-    sha256 cellar: :any_skip_relocation, monterey:       "f21ec5a85fec4960280537fa0fad9fce59dd7544141a87576098e76b9c020e9b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "155001ff9b7e697215db86e40e861308d601c7077c6ec10ef99acf007558415c"
-    sha256 cellar: :any_skip_relocation, catalina:       "f2bdf6ee59f94515b24aaf0a2feb4fdce2b93910b9a802973434d2c7e769bc42"
-    sha256 cellar: :any_skip_relocation, mojave:         "6b4f2d282b1ed8e03c4f86a937bcdbf3c8f79679a88568462133440f06d349e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9686789b247dceb95c23ebaa41b61f2d87970e50bec70c99b413ebadd8772d1a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf8f611b34a951b0c3930f8c3714e0f24aa4074c79a3cb483810b7325461f1df"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acd1c54a87e5e659d5a2d907f650cd9a3d1f160403805d8d84f7bc620546df0b"
+    sha256 cellar: :any_skip_relocation, monterey:       "3b2acebf1e9432ef07e0035bfc410fdb8530aace59513ad9fad36fe35a661880"
+    sha256 cellar: :any_skip_relocation, big_sur:        "50dafb7c970bfd56ab7c88100df7876d1590c806295987a8268029eb87b7ca2b"
+    sha256 cellar: :any_skip_relocation, catalina:       "4f357626774a02fae97f7668665a8e41c96b4cdf041a8b8ba658dbd5f8a86bd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8da3dbc95cbf4c396038b3b71fbb2b6b583f72f46277cb6deea7b7afb410e9f7"
   end
 
   def install
