@@ -12,12 +12,13 @@ class Stockfish < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "775aa929a7068fe8c55b17658a75a09a8b3191fe95339ec8366bf4b5caf48be5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1d584b40e695a1ed4eb19b4b6e1013c580b28e74f3ca2bdb25a15ce1b5473db4"
-    sha256 cellar: :any_skip_relocation, monterey:       "6747b74d9cc107ab4d0e7b6f051a9f96a30f5dac53c2fbfbac49c0ba246326e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5336ae6cdc7d0ad712a527102209156c5a5b12ef8238606798f996b528e41d57"
-    sha256 cellar: :any_skip_relocation, catalina:       "fb242d484c460218a677549600fd51a6d82f1cc47751283d2047ae8b5dbbaa4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87210cffd22b657169dfc10428a1ab92ebfd3029f5c051fdc5006e35cc61b5fb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ea9532bb3f1686c433a62c8eb671a0cfef3a9ead7a6a5a83475826c5bcb49e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9961c12ee12480d1dcb9f72af2b735ee6c4d686e62b0554625efe0246f9a327e"
+    sha256 cellar: :any_skip_relocation, monterey:       "c29b02b056094c6f11072cf38351ad259804d97e1727c149fc8a3f6716a1d993"
+    sha256 cellar: :any_skip_relocation, big_sur:        "39efb53e1d05be75937cd9db2af59e1bfd618992b455c702a23c3628e6bbe154"
+    sha256 cellar: :any_skip_relocation, catalina:       "da786a5130e0126c86ce20fa078a3af16270a0b9649411e9ee64a28c370b3a73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9f92ead9b38a5ffcac5fc72b052a6c63953c0cd057a142ffa7f8215cb7146c6"
   end
 
   fails_with gcc: "5"
