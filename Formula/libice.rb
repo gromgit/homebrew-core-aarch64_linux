@@ -7,7 +7,7 @@ class Libice < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libice"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "12486065cc5cafa04ba2000cfeefa2a99e7ec0552e0325690168ed1525e049a3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f0595414acff88832f3f3e996e064eaf2471d0353e2f271790d252f6d9c7f072"
   end
 
 
