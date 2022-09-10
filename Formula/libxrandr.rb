@@ -7,7 +7,7 @@ class Libxrandr < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxrandr"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "23c7a9956b82f7c0deddebcb12a57794df356e689ac91659677122f24bd594f6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d9658216d814b51816ccd5617245d2f647d051ce28a813be806a104893fb11c5"
   end
 
 
