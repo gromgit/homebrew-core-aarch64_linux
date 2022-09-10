@@ -7,7 +7,7 @@ class XcbProto < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xcb-proto"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f696a09863a322d5b9d0df13a368cbba210b7ca652195f7f5fe36bf2e9283010"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "34a98d61fb41dca2c313ea7ea2384a288446363bc2f3221d443674d57419fcfd"
   end
 
 
