@@ -1,8 +1,8 @@
 class Libtcod < Formula
   desc "API for roguelike developers"
   homepage "https://github.com/libtcod/libtcod"
-  url "https://github.com/libtcod/libtcod/archive/1.22.2.tar.gz"
-  sha256 "8a19a44435bbf9ebecceb1b080cae6fb2cf4d3373fabf42536662c9f8b77acdf"
+  url "https://github.com/libtcod/libtcod/archive/1.22.3.tar.gz"
+  sha256 "a6f05f009db1f468338cf4cf984245a869ebb197b6d2524a8369c22ff9f1b9f5"
   license "BSD-3-Clause"
 
   bottle do
@@ -21,10 +21,6 @@ class Libtcod < Formula
   depends_on "python@3.10" => :build
   depends_on macos: :catalina
   depends_on "sdl2"
-
-  on_linux do
-    depends_on "gcc"
-  end
 
   conflicts_with "libzip", "minizip-ng", because: "libtcod, libzip and minizip-ng install a `zip.h` header"
 
