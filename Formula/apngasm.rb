@@ -4,7 +4,7 @@ class Apngasm < Formula
   url "https://github.com/apngasm/apngasm/archive/3.1.10.tar.gz"
   sha256 "8171e2c1d37ab231a2061320cb1e5d15cee37642e3ce78e8ab0b8dfc45b80f6c"
   license "Zlib"
-  revision 2
+  revision 3
   head "https://github.com/apngasm/apngasm.git", branch: "master"
 
   bottle do
@@ -22,10 +22,6 @@ class Apngasm < Formula
   depends_on "libpng"
   depends_on "lzlib"
   depends_on macos: :catalina
-
-  on_linux do
-    depends_on "gcc"
-  end
 
   fails_with :gcc do
     version "7"
