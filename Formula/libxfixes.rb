@@ -7,7 +7,7 @@ class Libxfixes < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxfixes"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1e7d984e4b86fa7c9e169223c7fd611332e09fcdcad17cad3e8b5ef3c7b0157e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b878875c610e146217a9f5793a596648afa50fdb915bc307a376f46276fd7c78"
   end
 
 
