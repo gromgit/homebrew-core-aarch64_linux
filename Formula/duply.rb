@@ -13,12 +13,12 @@ class Duply < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6a9be8ecb4a49a4f3ea7f4a0a79546d5731491379fe0e13adcc57edff85fe35"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6a9be8ecb4a49a4f3ea7f4a0a79546d5731491379fe0e13adcc57edff85fe35"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ea9eb0faab5669a11a13a37b6c3a0640f31671b4a1835bc34ec3622cdd1aea7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1ea9eb0faab5669a11a13a37b6c3a0640f31671b4a1835bc34ec3622cdd1aea7"
-    sha256 cellar: :any_skip_relocation, catalina:       "1ea9eb0faab5669a11a13a37b6c3a0640f31671b4a1835bc34ec3622cdd1aea7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6a9be8ecb4a49a4f3ea7f4a0a79546d5731491379fe0e13adcc57edff85fe35"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "39cdaa9f4f7d6970a081025aece74304e18f9f772f3e41014cc60899f6e41959"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "39cdaa9f4f7d6970a081025aece74304e18f9f772f3e41014cc60899f6e41959"
+    sha256 cellar: :any_skip_relocation, monterey:       "c276740735afa2f49b914fa476fab536b3491c862ffa3e9cd0ddc7e7b3ccffef"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c276740735afa2f49b914fa476fab536b3491c862ffa3e9cd0ddc7e7b3ccffef"
+    sha256 cellar: :any_skip_relocation, catalina:       "c276740735afa2f49b914fa476fab536b3491c862ffa3e9cd0ddc7e7b3ccffef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "39cdaa9f4f7d6970a081025aece74304e18f9f772f3e41014cc60899f6e41959"
   end
 
   depends_on "duplicity"
