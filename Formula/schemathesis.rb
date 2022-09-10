@@ -7,6 +7,15 @@ class Schemathesis < Formula
   sha256 "466842d680f3b59dd9cbd406cb6e19516193bd36b4c256987c306a58bfee6a5e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f282b8a7404fcd6592a0827feb33f7abf765110f97c32186253d84600457acf3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3075c6296d59dae257609e77be7e5ea1f7e74fe63b23486e482560c58492641"
+    sha256 cellar: :any_skip_relocation, monterey:       "78cb9f6d2e247647b1bf6f180eb4a1e62e079e0d4ba8f83f34a1abe65cf1ec39"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ea9bacebfb14789bb40cadd4b509a12e525d6ea2e00d9c2fe27cf6264be02d7e"
+    sha256 cellar: :any_skip_relocation, catalina:       "1b29436dce4cf6c7b921ee8d0f9bf6ee26d58f66237c31712338b0bde20811dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be8f25c6937a70d7845862fdc0d15d206fceea025ce95fa42b1b4dcf6a26cef1"
+  end
+
   depends_on "flit" => :build
   depends_on "poetry" => :build
   depends_on "jsonschema"
