@@ -7,7 +7,7 @@ class Libxcb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxcb"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4eebb264329c362fde325762342e5094c5a367122348f2b7e64f1cc42f1b06e1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "18d3c5f79ee28801e4605a01246197638b8296d2197c87ec08789add6d426d11"
   end
 
 
