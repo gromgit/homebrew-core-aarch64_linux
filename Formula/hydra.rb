@@ -1,8 +1,8 @@
 class Hydra < Formula
   desc "Network logon cracker which supports many services"
   homepage "https://github.com/vanhauser-thc/thc-hydra"
-  url "https://github.com/vanhauser-thc/thc-hydra/archive/v9.3.tar.gz"
-  sha256 "3977221a7eb176cd100298c6d47939999a920a628868ae1aceed408a21e04013"
+  url "https://github.com/vanhauser-thc/thc-hydra/archive/v9.4.tar.gz"
+  sha256 "c906e2dd959da7ea192861bc4bccddfed9bc1799826f7600255f57160fd765f8"
   license "AGPL-3.0-only"
   head "https://github.com/vanhauser-thc/thc-hydra.git", branch: "master"
 
@@ -19,17 +19,10 @@ class Hydra < Formula
   depends_on "libssh"
   depends_on "mysql-client"
   depends_on "openssl@1.1"
-  depends_on "pcre"
+  depends_on "pcre2"
   uses_from_macos "ncurses"
 
   conflicts_with "ory-hydra", because: "both install `hydra` binaries"
-
-  # Fix "non-void function 'add_header' should return a value", issue introduced in version 9.3
-  # Patch accepted upstream, remove on next release
-  patch do
-    url "https://github.com/vanhauser-thc/thc-hydra/commit/e5996654ed48b385bc7f842d84d8b2ba72d29be1.patch?full_index=1"
-    sha256 "146827f84a20a8e26e28118430c3400f23e7ca429eff62d0664e900aede207cc"
-  end
 
   def install
     inreplace "configure" do |s|
@@ -43,8 +36,8 @@ class Hydra < Formula
       s.gsub!(/^SSH_IPATH=""$/, "SSH_IPATH=#{Formula["libssh"].opt_include}")
       s.gsub!(/^MYSQL_PATH=""$/, "MYSQL_PATH=#{Formula["mysql-client"].opt_lib}")
       s.gsub!(/^MYSQL_IPATH=""$/, "MYSQL_IPATH=#{Formula["mysql-client"].opt_include}/mysql")
-      s.gsub!(/^PCRE_PATH=""$/, "PCRE_PATH=#{Formula["pcre"].opt_lib}")
-      s.gsub!(/^PCRE_IPATH=""$/, "PCRE_IPATH=#{Formula["pcre"].opt_include}")
+      s.gsub!(/^PCRE_PATH=""$/, "PCRE_PATH=#{Formula["pcre2"].opt_lib}")
+      s.gsub!(/^PCRE_IPATH=""$/, "PCRE_IPATH=#{Formula["pcre2"].opt_include}")
       if OS.mac?
         s.gsub!(/^CURSES_PATH=""$/, "CURSES_PATH=#{MacOS.sdk_path_if_needed}/usr/lib")
         s.gsub!(/^CURSES_IPATH=""$/, "CURSES_IPATH=#{MacOS.sdk_path_if_needed}/usr/include")
