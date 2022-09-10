@@ -7,7 +7,7 @@ class Libxtst < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxtst"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2da34654ae6b1a97009ca85f24773b9ae45e472df77193e1f3a6004f30cf1b42"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8a99be04069a2b60de7f9182bb95969e6d1f33704e3144a60934e1fbac18d4b2"
   end
 
 
