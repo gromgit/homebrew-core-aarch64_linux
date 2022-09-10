@@ -13,12 +13,13 @@ class Pyside < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5f207f24999088a15edb49144bede2c6705696da137d1ac181bd515eefebdebd"
-    sha256 cellar: :any,                 arm64_big_sur:  "38807029895b75f2b2d46c8a8dbf654322d979b7def4cad145e7de07640a8321"
-    sha256 cellar: :any,                 monterey:       "3370e4d2b38f920f86cd078ab5ca6e73a24f7f025afd3bff43304c0700fdac60"
-    sha256 cellar: :any,                 big_sur:        "b22f2a0e29d965cadff00e10a2ab99ace697fa6aabdb67c527c2d76b8439cd7a"
-    sha256 cellar: :any,                 catalina:       "f2d104fa3ac546bedfbe7c152584baba95fbbf15812fffdef1f51057f15e3fa4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c619b6a6b16686dcaf56c6298fada03ca42c574a70dc429983dd859d7c1ea33"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "455bbdafca9894d0d494e120a1f8b2d2dbe64af642d87821e66586f81f9f3060"
+    sha256 cellar: :any,                 arm64_big_sur:  "bebe4341db03f9b611e823636d61be229d955047ab4733c1cabe340182790576"
+    sha256 cellar: :any,                 monterey:       "83b7b49c598da90d11904fd4d6c0dece96bbb756b3b64aa29877238fdc494b40"
+    sha256 cellar: :any,                 big_sur:        "48d1b20de4529f0c28725025a70cd383ffe1e74f6e858895d5ac08681bd860d9"
+    sha256 cellar: :any,                 catalina:       "c13ae17ed807225ffea52e61cdef9a326771b9a98f77da38a60bf93996087aae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3939c1f8d28c54b9a6de4abe000816ac598c83dfd0074f684d3a1d18e4bc34ca"
   end
 
   depends_on "cmake" => :build
