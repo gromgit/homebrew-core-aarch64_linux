@@ -7,7 +7,7 @@ class Libsm < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsm"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebeb147c4c2e2806aa8997fc446d01fcd701103441af00071ed65b99944f9330"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8fa6bf8dcd9095024fb3650a3f9f72496e1155e493fe939187196dcff4eb4a85"
   end
 
 
