@@ -8,12 +8,13 @@ class TarsnapGui < Formula
   head "https://github.com/Tarsnap/tarsnap-gui.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f8f2504a74299c6fbcc41df3811498f6d4f8716ade39165f5fb8a2e611ae0aac"
-    sha256 cellar: :any,                 arm64_big_sur:  "0e8def1a5aad31ebe64570260d5c622bd350880034c26d35c0d564b2bda46a98"
-    sha256 cellar: :any,                 monterey:       "807c80d7626a0e7c1bb318e379e1e5fffe32d1f80bda8cf2cd09063434c0d447"
-    sha256 cellar: :any,                 big_sur:        "caa57be13fe93093dfd6fd275d7648f181db9508064308267bd3d5883974d00c"
-    sha256 cellar: :any,                 catalina:       "84c04aa45fbc4620b074386f5238731ad053e95b17309e27ce923c9e0439b3c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47b23d0ded49784f629d78b087dc9af73993c59aa0c00108fa41c18b9318843c"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "80bebc64d5dad7087f331f5c5e1ebecda9d0ca787903bdb9c233220b53400a5d"
+    sha256 cellar: :any,                 arm64_big_sur:  "5143f6dbbb9fadc47420f18716d62135b3e70c4de32e3cef4338c977f0a2d375"
+    sha256 cellar: :any,                 monterey:       "d46639aead1bc9920510f83bb88ca30f6fc58c82235dc4f04037b460582139d6"
+    sha256 cellar: :any,                 big_sur:        "5b913f4a300a6694e27a950a473da438dfa2846461466ae0aabc0bee09d2d431"
+    sha256 cellar: :any,                 catalina:       "f36b378d5ebee2accc759ec58bd8e554389d606ac7c8b7cf9042ae830b96bc01"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97b8a8c25cd8383218b698725c2a88cbdb55f161188de94df95406514573d34c"
   end
 
   depends_on "qt@5"
