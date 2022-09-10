@@ -7,12 +7,12 @@ class Hydra < Formula
   head "https://github.com/vanhauser-thc/thc-hydra.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d81667ed28dc2b8e38d9f44d7fd8b3aecd71a48f2f49d3005c7054872b96612a"
-    sha256 cellar: :any,                 arm64_big_sur:  "0b040b93fa5d82aea9d0158eb74e291c6cc4f7fd4c8071f96b2ab0d2324ad28b"
-    sha256 cellar: :any,                 monterey:       "08c11395c5eb20f807d57083e39472bc2408d0861aabbdf3c23cb35b15754d45"
-    sha256 cellar: :any,                 big_sur:        "f9de22a865bfa3e8f71d958b95b656c253e1c6af5f40576f6667a08f604ce0e3"
-    sha256 cellar: :any,                 catalina:       "d5bc777635381242e8c03a33cbf1da3eaf63c1abd88922e0be2075b35d93108d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "36cdb072b8118f86cc077be2d7c862e46f847f23e65fbc192968845b4c9fe8ad"
+    sha256 cellar: :any,                 arm64_monterey: "6c76b09ffc546df4bab7824046c8d94217f3f634c2df00aafe488f4d4e8474f8"
+    sha256 cellar: :any,                 arm64_big_sur:  "1cefde616d5eed48679e20dbd7159784904eddb175503216ddbb07dcb64f4e87"
+    sha256 cellar: :any,                 monterey:       "151d5a41a45193154a178726b54c2d23b1a3f4ec2837db9b90d2d6ed078aaca7"
+    sha256 cellar: :any,                 big_sur:        "8b4aaaf394f78719f98023f0ef840a4d6c47c5cf02a209c368b4648eed627c8c"
+    sha256 cellar: :any,                 catalina:       "9fc26bf7f2ffdd333595d9b5b18d199ea5146b43b79e50859be316ef1a4b57f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf7f3d55d430cd0decc4ab9cfd4b194f15d49c3276fadd8027f908634c5dc366"
   end
 
   depends_on "pkg-config" => :build
