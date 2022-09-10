@@ -9,12 +9,12 @@ class Hexo < Formula
   head "https://github.com/hexojs/hexo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "247799071e0e7e6b2ad7d99c87fa6346e79f86c01d176565373190cdff3b07d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "247799071e0e7e6b2ad7d99c87fa6346e79f86c01d176565373190cdff3b07d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "e81819487b36ddb1288988183f7b923aa5c206daf530c64b804b350aec75e08d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e81819487b36ddb1288988183f7b923aa5c206daf530c64b804b350aec75e08d"
-    sha256 cellar: :any_skip_relocation, catalina:       "e81819487b36ddb1288988183f7b923aa5c206daf530c64b804b350aec75e08d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "129c5b4637e726823ce327942b94043e98318ca45eb56d2e3c50814c0edc3806"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e8c8eb3ef1a60934230d70b1195c6bf1d708be8ae1fb7f1922f31d3e8796cf35"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e8c8eb3ef1a60934230d70b1195c6bf1d708be8ae1fb7f1922f31d3e8796cf35"
+    sha256 cellar: :any_skip_relocation, monterey:       "a5daf9b48cf25528279debdd2b1ad37baaa6d08cfd6e18e212a60a68dc3f35ef"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a5daf9b48cf25528279debdd2b1ad37baaa6d08cfd6e18e212a60a68dc3f35ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "a5daf9b48cf25528279debdd2b1ad37baaa6d08cfd6e18e212a60a68dc3f35ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95e726055fa242838fa081dce26d2ff0441d1aeef2ddd6b5065b04961441d625"
   end
 
   depends_on "node"
