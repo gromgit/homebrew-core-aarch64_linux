@@ -7,7 +7,7 @@ class Libxt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f239fcb9d48ca0d898e4e6a212863ad8e7e8c31b06a69c90dc98e97db297698a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b5bcaba0564065fe9900e854b7e556c8efaff2ba7ca9f232e0f87f37cbd8c087"
   end
 
 
