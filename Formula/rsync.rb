@@ -13,12 +13,12 @@ class Rsync < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e81cbf8b5c10a45c292323ac21d2dddc30e75b055254561e5c39ad1ecde5013d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ba293d27c4c615fe8afc1ad3bfa1e22b68856579fe75939d40a213368e769111"
-    sha256 cellar: :any,                 monterey:       "7a1103d28fe70a3e4a79d27da3b8cadef1b046f427731c5b2501e22aa17eed24"
-    sha256 cellar: :any,                 big_sur:        "801ad0f88a3db6c9339825cd3e100a2f22b756ff7c84c3f0e9874ed99cf1210e"
-    sha256 cellar: :any,                 catalina:       "ac69d4ef788e0eb998cf0c0ab128f1dba057ab87c603ac75420445cce03133c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f67e2ca6df78af1f225a415e124687992e5810c488b6846c1743bab36b79c60"
+    sha256 cellar: :any,                 arm64_monterey: "184eaa2a354031d53d8554f05e83b8c50039d14559e59fc8d558cacaaea19867"
+    sha256 cellar: :any,                 arm64_big_sur:  "f981530420a9c2a55090a9c314ad5d824b38832340551541956eaf907df38d0a"
+    sha256 cellar: :any,                 monterey:       "5bcc10544cfc7c573aca88a95329c8a1ef87c57d34bc33bf7ce79c491e37cb7b"
+    sha256 cellar: :any,                 big_sur:        "568310e2736cf2d7ea4da24f59b4f9e63756764ccee5f61390ccd518c980c546"
+    sha256 cellar: :any,                 catalina:       "7de1d3454f65f6b0d22544583de6b6ca568695adeadce54e36a3798ee0dd0ef6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ecbd308c771400561a49c9aa15a0738b3875cfe1c0b52b85744d160cca7494dc"
   end
 
   depends_on "lz4"
