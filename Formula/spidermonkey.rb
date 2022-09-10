@@ -16,12 +16,13 @@ class Spidermonkey < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e985b3fdf8827f7d491fde110937767a30fad8b33a4a92443a7be611c3c57359"
-    sha256 cellar: :any,                 arm64_big_sur:  "f666e936df2a0114799bcf80b5324ffde8ba8efa525587c20af9c9e72ef14c4a"
-    sha256 cellar: :any,                 monterey:       "491e3c9bfa16565f5c10d1d386240abb913f7ae51e7dd57063ec9b077ab166f5"
-    sha256 cellar: :any,                 big_sur:        "28bf6ac69da070d01abf59c931eafe3c30d9a68517391e95a786166e06d49266"
-    sha256 cellar: :any,                 catalina:       "bd17e93ceba743007e62a6213e385e67dfc6282c832fa6649c20247ad0e55c99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0c02fdd3307b92699021febf74e0ccf1a73dbcb124f31c88081aab57b0f312f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "d8760503883beda2a22b28075fe3dd1de5acafcd1acc50554df80339e1ca5c63"
+    sha256 cellar: :any,                 arm64_big_sur:  "0721a494f718ab24661fe956f7da3a2f6603ddd6c67af6b17c4e2fa1cf8ba4f8"
+    sha256 cellar: :any,                 monterey:       "7d33cefdfa788ba420229c49699e517b0016b9ee8ef50c15af9c65e9f9369bcd"
+    sha256 cellar: :any,                 big_sur:        "2438c36d8a413953233352bd5c12a37e89c1bd73cacf5567d5bf073b7bb58e9c"
+    sha256 cellar: :any,                 catalina:       "e74c14c4b9816b51d03bf89d635135c78c338ef60157c9955ef813458f0477aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc058f5e0db07c35247951509d61f6a562e3ad29579c9d6b5b1ed7cd80592f79"
   end
 
   depends_on "autoconf@2.13" => :build
