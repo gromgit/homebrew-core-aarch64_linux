@@ -7,7 +7,7 @@ class Libx11 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libx11"
-    sha256 aarch64_linux: "cce6c17058a31b62eadfa92dd247b836b4d7fe519989bacb68b5e2e73d0e03a7"
+    sha256 aarch64_linux: "b67d6009ce42a153d2bd39d5c476e67ddef490c1ee9983a268f0f3bfaee70931"
   end
 
 
