@@ -7,7 +7,7 @@ class Libxau < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxau"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1bb14f291ec620a18c319df54bdc67ad1fbfae8e8560f7acf939764bbbbb0d5e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "67a818014de01b3ea3b5955b06711c4a31831c3ffd2c775cf3333a9d88882de0"
   end
 
 
