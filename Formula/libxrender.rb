@@ -7,7 +7,7 @@ class Libxrender < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxrender"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "11d69954430bf52a4b6b0d4746f5ac989c008d106ee47142abd12bd524f5bcf6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0ff149debcb33615e07620b3e729b7c398d827b7866cbe9718b15a4562c5543b"
   end
 
 
