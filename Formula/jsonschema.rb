@@ -9,12 +9,12 @@ class Jsonschema < Formula
   head "https://github.com/python-jsonschema/jsonschema.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "793d71eae260c6aaa47c70a3c8c036477d51edff2a938883bfec2e73beba3e15"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee3aacf2bb26e5033f089b2c3413a06f83d0c8c0a28743ba4a811dd1c6e6513b"
-    sha256 cellar: :any_skip_relocation, monterey:       "34e5e303ca1f24926a40456dadf1ae91b6760dfe9080e9ab6c36e9f90795d082"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3829eef29b4bf938227f0d6680176252449c489c20429a52b7035d55381fdcba"
-    sha256 cellar: :any_skip_relocation, catalina:       "a6747b964a307b0daa69ea1f9419076953cdcf27753811598977aaaeb3b8916b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92d65999026c5ebb7607b3123fd87ad623b0c9a031f4849c72a9019c8e2e7ed0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f2cbc72063ebad79f42f38edad5506d31428d43c13d4d97e515675567b2121b8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dadf3a23d0852ef48a76dddac36499a43acc890a570f2b2d205de89f4ba2b650"
+    sha256 cellar: :any_skip_relocation, monterey:       "b533591c57e4e6074045a198e8be3429a79169e5dbc98755b5e36e5bbe466b06"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3ae29fab57a932bb5886b34b01064532af481ce657c1b86039f2d536e3a1a015"
+    sha256 cellar: :any_skip_relocation, catalina:       "8a91b8507042ae4f152369d7c820e33994e089a9b695277ba6fa75fdca6a42fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f10857c6d2c1a45ed0c79ba7a68e37e53df5f75e9e37914a23c172244cffd13c"
   end
 
   depends_on "python@3.10"
