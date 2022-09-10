@@ -1,9 +1,9 @@
 class Gnutls < Formula
   desc "GNU Transport Layer Security (TLS) Library"
   homepage "https://gnutls.org/"
-  url "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.4.tar.xz"
-  mirror "https://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/gnutls/v3.7/gnutls-3.7.4.tar.xz"
-  sha256 "e6adbebcfbc95867de01060d93c789938cf89cc1d1f6ef9ef661890f6217451f"
+  url "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.7.tar.xz"
+  mirror "https://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/gnutls/v3.7/gnutls-3.7.7.tar.xz"
+  sha256 "be9143d0d58eab64dba9b77114aaafac529b6c0d7e81de6bdf1c9b59027d2106"
   license all_of: ["LGPL-2.1-or-later", "GPL-3.0-only"]
 
   livecheck do
@@ -12,13 +12,10 @@ class Gnutls < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "89de6f63ccc9c03cc1d4f5d10431593408de8f6733951b14bb396b2ed11ede38"
-    sha256 arm64_big_sur:  "479fb27f653caec6dee8cab71949a48c2e78b144b8ece0c480ff0126d26d171d"
-    sha256 monterey:       "1fb816706b998a0131ea2c4aed3a71143efc8101358d6c334e5dce23cd3f08a1"
-    sha256 big_sur:        "3ec77636e41fe64b2d42fbcecb8c1aa2d3fb1c1665a410151406108bd93a857f"
-    sha256 catalina:       "25c46e2fbf84940cdc5ad321b20528e8c211124fdd6d995ec691972cf238b897"
-    sha256 x86_64_linux:   "e01881a84a775b5cc5f5c76bde81f15da2dafc1f0dffe38e5fbe004ea178d446"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnutls"
+    sha256 aarch64_linux: "4e3b25e7d8cb939e46cedc6e555ef0bc7a451accba62ccb68443574e9c0a53b4"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "ca-certificates"
@@ -32,10 +29,6 @@ class Gnutls < Formula
   depends_on "unbound"
 
   def install
-    # Fix compile crash on Apple Silicon.
-    # https://gitlab.com/gnutls/gnutls/-/issues/1347
-    inreplace "lib/accelerated/aarch64/Makefile.in", /^(AM_CCASFLAGS =) -Wa,-march=all$/, "\\1" if OS.mac?
-
     args = %W[
       --disable-dependency-tracking
       --disable-silent-rules
