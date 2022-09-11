@@ -11,12 +11,13 @@ class Openfst < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9c205f655815ece696db66cb6d951bc421187a7d5e564a5c9c147d5077ba7dba"
-    sha256 cellar: :any,                 arm64_big_sur:  "677eca1e0c86c76cf78a05d193074065e96bd121b3000f5636e596d211ce4ad8"
-    sha256 cellar: :any,                 monterey:       "35b01a7251c02f16c451a8dd961c3461bae8715289bb529f6580aaee90b0defd"
-    sha256 cellar: :any,                 big_sur:        "61788460f5d24b7feb792e36158722880048512a56b67bd93a185c613944471b"
-    sha256 cellar: :any,                 catalina:       "7a279be4687687d2aba95247292e72e9b51cdad00343478069f56d72360fde1d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d09e40d67f808e45549c67a15b4f8beca5e13dac9c30603411c3095ad07fa4e8"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "ec9cdf817cbee846c502f05800db8d5106d558cd16afa935df22877ef71f98a5"
+    sha256 cellar: :any,                 arm64_big_sur:  "277c268e760b1ea193494379b4e33e2c6d1ea0692be304f80363570dbf04aebf"
+    sha256 cellar: :any,                 monterey:       "1f8a3f063ceef921bd4517956b4706897374f71b4a179bd118704688bd90e572"
+    sha256 cellar: :any,                 big_sur:        "5d66b6cee648a6b9e29bf32b341fa57b0605d331e3a4acebb1f03fc3aa0373b3"
+    sha256 cellar: :any,                 catalina:       "0cfbe1901bd76a5e5ec5fc5a30e9d902b91e70b7305dbc0ee3945ff5e23dde27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4eb7f68ee3bf2995d4ad13203bc4de0fc4b0c7b29a4e2ff5d884d73f969613b"
   end
 
   fails_with gcc: "5" # for C++17
