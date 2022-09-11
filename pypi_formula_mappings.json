@@ -43,6 +43,9 @@
   "bandcamp-dl": {
     "exclude_packages": ["six"]
   },
+  "bandit": {
+    "exclude_packages": ["PyYAML"]
+  },
   "black": "black[d]",
   "bpython": {
     "exclude_packages": ["six"]
