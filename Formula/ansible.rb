@@ -19,9 +19,9 @@ class Ansible < Formula
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
-  depends_on "libyaml"
   depends_on "openssl@1.1"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   uses_from_macos "krb5"
@@ -444,11 +444,6 @@ class Ansible < Formula
   resource "pywinrm" do
     url "https://files.pythonhosted.org/packages/7c/ba/78329e124138f8edf40a41b4252baf20cafdbea92ea45d50ec712124e99b/pywinrm-0.4.3.tar.gz"
     sha256 "995674bf5ac64b2562c9c56540473109e530d36bde10c262d5a5296121ad5565"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "requests" do

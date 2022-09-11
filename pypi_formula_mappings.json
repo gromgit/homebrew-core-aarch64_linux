@@ -8,7 +8,7 @@
       "openshift", "passlib", "pexpect", "proxmoxer", "pysphere3", "python-consul", "python-neutronclient",
       "pywinrm", "requests-credssp", "shade", "zabbix-api"
     ],
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "ansible@2.8": false,
   "ansible@2.9": {
