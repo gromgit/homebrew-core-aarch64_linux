@@ -142,7 +142,7 @@
       "python-swiftclient", "requests[security]", "requests-oauthlib",
       "monotonic==1.5"
     ],
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "dvc": {
     "package_name": "dvc[all]",

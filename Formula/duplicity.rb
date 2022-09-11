@@ -20,12 +20,12 @@ class Duplicity < Formula
   depends_on "rust" => :build # for cryptography
   depends_on "gnupg"
   depends_on "librsync"
-  depends_on "libyaml"
   depends_on "openssl@1.1"
   # msgpack-python does not support Python 3.10. Dependency comes from pyrax:
   # pyrax -> python-novaclient==2.27.0 -> oslo-serialization<2.17.0 -> msgpack-python
   # Related issue on pyrax being deprecated: https://gitlab.com/duplicity/duplicity/-/issues/105
   depends_on "python@3.9"
+  depends_on "pyyaml"
   depends_on "six"
 
   uses_from_macos "libxml2"
@@ -439,11 +439,6 @@ class Duplicity < Formula
   resource "pytz" do
     url "https://files.pythonhosted.org/packages/2f/5f/a0f653311adff905bbcaa6d3dfaf97edcf4d26138393c6ccd37a484851fb/pytz-2022.1.tar.gz"
     sha256 "1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "rackspace-auth-openstack" do
