@@ -12,12 +12,13 @@ class Qtads < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "01775d9d59b935a88d278eafa80efc640b37b0bcca42b0209a51d5f480879ec4"
-    sha256 cellar: :any,                 arm64_big_sur:  "d6784afbd739446332a78e1f901f06bda0d27ccb55a4843f3d2aa6a2a98bd3c7"
-    sha256 cellar: :any,                 monterey:       "58e13943b5851bb624acd3b8476e332929372ca7278bed480a2472ac642be420"
-    sha256 cellar: :any,                 big_sur:        "ff20c33e9aac5f4987ccd3012857580c8aa73a4b7e12e343da8e10f60de11bf3"
-    sha256 cellar: :any,                 catalina:       "d3a01d88f22770acc001c6e3be86b0beba01086037a3d33c969d3d02abbba3bc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "291e63bf93958811dff8036f06db1bdaf06967d193b632889852834959801489"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "0e30ba9d9f377dcf72aba30d61c6afbe3c36d5c371776ef8c52115e48021ba7f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7c323cae1a69574d5b699a5c5204b3b11878c26f86ce74bb61d0a84761555331"
+    sha256 cellar: :any,                 monterey:       "b2c94ccf083bbaf35d5e2417295996d4e3cfedca0ecc403feaff940646025ad0"
+    sha256 cellar: :any,                 big_sur:        "f18e08b6d576a0d634602217c7ae797e34d39d527351e1be7b51724c069493ce"
+    sha256 cellar: :any,                 catalina:       "ae983130a47c5061331a894e8f0ae509db915bb1a3fe80bdd1c6d6639389478a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce6ce65758aeb88826b2fc92fb98419e063cf3e5dbcc19613abab7f868faefb8"
   end
 
   depends_on "pkg-config" => :build
