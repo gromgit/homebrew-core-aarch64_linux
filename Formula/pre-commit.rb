@@ -17,8 +17,8 @@ class PreCommit < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a68a56eb49337dbae9435b86fe8a734f1902f5961220c06d30ed06b597eee303"
   end
 
-  depends_on "libyaml"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   resource "cfgv" do
@@ -49,11 +49,6 @@ class PreCommit < Formula
   resource "platformdirs" do
     url "https://files.pythonhosted.org/packages/ff/7b/3613df51e6afbf2306fc2465671c03390229b55e3ef3ab9dd3f846a53be6/platformdirs-2.5.2.tar.gz"
     sha256 "58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "toml" do
