@@ -12,12 +12,13 @@ class Qsoas < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "13d591fadbb428a0fbef8090685b5d93489a5d1ea8b7414c1353ba2ff6ba0ecb"
-    sha256 cellar: :any,                 arm64_big_sur:  "025ebba3b2548d8bff4df22b14531d39ce5f43b21fb0a8ce726d0ac29f30f7fb"
-    sha256 cellar: :any,                 monterey:       "2f98550e8aa3740ef339886368cc4934a75418a4e6dfae36c72993d8e74dfaa4"
-    sha256 cellar: :any,                 big_sur:        "36f444f910ab011d56e9d109c9e1526be465efec24be4ecccf75f1232e9d115e"
-    sha256 cellar: :any,                 catalina:       "c6fac9f46c8365e23ecc2dee06c29272724039c58ebe347339da1bee9eeae149"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2385f9ae773e2c991ed4b1802d0fdb895f26136ad5ba1780c1c664828ab5544"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "a50195188c580b9114e768ea31d8494ea517c4f2206b741029cc7fb9f46e7f4d"
+    sha256 cellar: :any,                 arm64_big_sur:  "6c63199fb6691a9dd48e42469dd194f9869e45919a2f44f48a0f808f26a27ee1"
+    sha256 cellar: :any,                 monterey:       "ac5d93133c50ad22e5fbd4846254fc008a7950c91b6b549967439af172dad87a"
+    sha256 cellar: :any,                 big_sur:        "7e96786652a24b9ecbec0dec30bb3242a193b810d00d2d11ef57ac841195c761"
+    sha256 cellar: :any,                 catalina:       "07a56bd5f057f5344516298230e0bb3b1e4c83ed374e1ca07dd109137508783e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b454039a29528d8fcb8cc6230530b803ab5624f1e7602c77205b01623d8c6427"
   end
 
   depends_on "bison" => :build
