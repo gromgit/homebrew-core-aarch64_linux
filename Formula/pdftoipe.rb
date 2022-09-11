@@ -7,12 +7,13 @@ class Pdftoipe < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2d556cb2378d929c1d4140cda205345b2345d29f7d2469999b38dd58a054fb73"
-    sha256 cellar: :any,                 arm64_big_sur:  "f428c1107d16442bba6abfc68093f5d1cb4c39a535b5354a5689f7923c958a11"
-    sha256 cellar: :any,                 monterey:       "a85cbf34a628f403191e586fae328acc6f94125f83d62d7a2feca243ec7e2fce"
-    sha256 cellar: :any,                 big_sur:        "37f090f0f9ed6042152e23d2ff42204bae6d2844d07b65e0a4bf2fd38a04a135"
-    sha256 cellar: :any,                 catalina:       "127fb0d5b14baa3c10742426436ece48ed87630822f69ced0ac4c32c1981ca12"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41689d4506af5cd556674f6a0b2249270b54789970aa0b6b0fb8f78d891d304b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "49b6d7edc992d6c19211ce2f488d1a355c616878a26ba3742921f113f407ae68"
+    sha256 cellar: :any,                 arm64_big_sur:  "33571148c756d8730fc004937ca8d5a30a2d4b9275313de195d818adab327c23"
+    sha256 cellar: :any,                 monterey:       "6289d86a47fd870d5620dd45109740a8617ef8f3dc5035e198c925bf8ef67262"
+    sha256 cellar: :any,                 big_sur:        "01d90eeedd36b5554dd343d1601bda4e5cab4a3ef0b3ae758c7934cf230dc0d8"
+    sha256 cellar: :any,                 catalina:       "f49a56d0649e05fc10da4da42b0ea0ed8b54756b43117a713119176cdb5da368"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53982c2c0722d7f79dd2b06d8f74e0703e8f4b92cd5cfcbd260b94e40d9c5b8b"
   end
 
   depends_on "pkg-config" => :build
