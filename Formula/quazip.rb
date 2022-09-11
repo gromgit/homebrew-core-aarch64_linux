@@ -6,12 +6,13 @@ class Quazip < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1a90afdde6493e15734bea6d7a28ae564587f34aeb92869a64e144caa6fe9ee8"
-    sha256 cellar: :any,                 arm64_big_sur:  "2f880c097eca45aada016573e392d2f7138813b4583dce0cf7d78a64a5e57709"
-    sha256 cellar: :any,                 monterey:       "d5d59babd543adc6c638229cd727bad679543a1aac2e944c72f7c8c3a3093b6e"
-    sha256 cellar: :any,                 big_sur:        "d3c54b37b3a5666873ef96f5e58fbdddd221c096cdb502b98938a94af43b9627"
-    sha256 cellar: :any,                 catalina:       "803e17b2e45326eb8a4e534f20fddfa138fe0d3f570798ce48a8135af9604ef1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4d08d29dabd478538204972235ecbc739f1a3bf84ee9878c6ec67a2f93b465b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "46931218c7df1222282017d17ebaa4c22a05c6da6a62f605844b739c35bbef7a"
+    sha256 cellar: :any,                 arm64_big_sur:  "0e8abd2e6d2d81eb99ce309100c0e4115e364bd01344009cea7eef0d643096ee"
+    sha256 cellar: :any,                 monterey:       "81eceb5944761190fab7e3fa3ebf64be503e13858a1a5ded1130d86172b02a71"
+    sha256 cellar: :any,                 big_sur:        "753fd853f5823615f13e811e7813e5c95b1521d171bb2b612dd10a8e77bf4921"
+    sha256 cellar: :any,                 catalina:       "59181f16535ae197a7e4863961c6286995d40640cd9659adbe57f40b1f917e02"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48d4f4e9e526b91297d4e768201a1d718500da5a2b61a2508308f2d54e96dbe6"
   end
 
   depends_on "cmake" => :build
