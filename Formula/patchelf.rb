@@ -13,12 +13,13 @@ class Patchelf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ada8f7b9a01aa3a55459c8fb6553efedbfbfa6eae32ce43ff7eac949d374addd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64970a9f18153245996305d83730053b4fccf973be7a9e9f0b0da4c620487673"
-    sha256 cellar: :any_skip_relocation, monterey:       "da636e1ad15c9018334add7a509b34f557536942f0706a0cc688f9d480f0a4b6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b6c8d569d7e74d30189cfaea5c39207ed6ed9a04f41ed1818dc8a841cdc6bd92"
-    sha256 cellar: :any_skip_relocation, catalina:       "9382f4722ce6925a2af6376daafb665ab8ad3e0b6e1881752e4da0e070f4ad69"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37ebeb67ddc023af88a2e3e7ef9d84c49f40abace008d660f5ab0d6a203e91e8"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "532f4ce03bc98cb3bf22bbe10e351501dbe5960256066478256e2e1bb8035685"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a0bf5604d7868fe19329ac4666d268052bc0fd6f16a39183c7b03f164e797d42"
+    sha256 cellar: :any_skip_relocation, monterey:       "d9d256f834dbdd935acf2fa6596b362ea7691d1d88a7c45527abf51f8887c269"
+    sha256 cellar: :any_skip_relocation, big_sur:        "19fae5315b3100eed3084f1f986cd0e26fe3108ae38c33a274ecb380cbc9adae"
+    sha256 cellar: :any_skip_relocation, catalina:       "87aaca01e89114091a518b011e7ac9b0aade4280fac1d69e41b157941b1291a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2620e1de8a1d1242fb6521c434572c98803bd5a97964447f63f80b36280c4a5"
   end
 
   fails_with gcc: "5" # Needs std::optional
