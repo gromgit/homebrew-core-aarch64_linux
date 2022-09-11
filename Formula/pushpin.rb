@@ -8,10 +8,11 @@ class Pushpin < Formula
   head "https://github.com/fanout/pushpin.git", branch: "master"
 
   bottle do
-    sha256 monterey:     "cae225af2f581bc51734d14d79c01987a3513a28567041fd08e6684c7e277ba1"
-    sha256 big_sur:      "6a8c063aa71daae09e9e3112f160e3b387b50f93314f804d8aee0f14c31f6c5a"
-    sha256 catalina:     "e28a37a52295ef7f1532f469262259e15f291ff7e3ad5e7c3d47389637247e5a"
-    sha256 x86_64_linux: "2e4a7ef2e448268eb114fd600c7bde007bada0ee328fc67c44d4be9079eebbde"
+    rebuild 1
+    sha256 monterey:     "0b1119064e1e2cc338ea35d18f01a88a4aaad9408db882a898e2d4127f2358d8"
+    sha256 big_sur:      "42cf1df0a04539868418c8b3ed29fd5e9fbbd933c405e907b8262fbb7ca11dc8"
+    sha256 catalina:     "401f642b6fb4223407cd63f18967744b6b2e3d70a88b972f10da3fcb6d20a882"
+    sha256 x86_64_linux: "4acf0c75aae33b6f2469145ff7e246c85714a786c3e148923006cc91257cad1c"
   end
 
   depends_on "pkg-config" => :build
