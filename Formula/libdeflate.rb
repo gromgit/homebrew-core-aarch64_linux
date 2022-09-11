@@ -6,12 +6,12 @@ class Libdeflate < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2505ad444350caeef3571cbb15ff094cd3ed6dfa7292a3ac4631e6fd2b3efc36"
-    sha256 cellar: :any,                 arm64_big_sur:  "e506e8ceb08bdcc9631b875140d0e05f792d64632233903cd227e73ce8626669"
-    sha256 cellar: :any,                 monterey:       "81435b0f79379462ffde79e20664a6577e37b1ef0ec08e8556360174d2b363bc"
-    sha256 cellar: :any,                 big_sur:        "bed0f0ec552f57c28bbd23f7eedfaaf12d2d34e22d086fbf4aebed3d214b4a26"
-    sha256 cellar: :any,                 catalina:       "dc5405218841b06f5709b032c828a4bfd9d86ea2c8119e3878cea8a5b86288ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b8545e17892476f0f3d1f2ff043f081476496677917af79e3d38cf6421fac6c"
+    sha256 cellar: :any,                 arm64_monterey: "324ee7719635c163f1d5fb751a577cf58c0798990982284a047ad8009605bd98"
+    sha256 cellar: :any,                 arm64_big_sur:  "58846f6a35bb709a379aaa0935a3cba7c2a1152496c0ffb3faa92b3e0dcdf684"
+    sha256 cellar: :any,                 monterey:       "28b420821d6358bf36e4f8be76774bddb04a20b2167f866204df77d12c78680e"
+    sha256 cellar: :any,                 big_sur:        "7c28cefed63f6a4c68c8a923665b4450ea672ca3b83b80bb4a08f3b27e21e0c9"
+    sha256 cellar: :any,                 catalina:       "d0c47d6630933b8c68d2c2c94bd8be47c942f9a96c149e0bb8ddd81cb9e04edd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ef64ef6bc47bce68ba644f57f598dfbae1b0112ddf477c02facf691ef4dfb8c"
   end
 
   def install
