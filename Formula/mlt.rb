@@ -8,12 +8,13 @@ class Mlt < Formula
   head "https://github.com/mltframework/mlt.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "8bb4eba794b94fb65abfa87a053c6ff5ed62d0fa055591a5107d976ceba20759"
-    sha256 arm64_big_sur:  "c093eede0d92f63e5730e7412ce860d909734f0fd2266839c8aff299dd92d0c5"
-    sha256 monterey:       "0a82525c05654c1c0f83fc612a05e3764e108204d069d909f2ef4ed6b1a86ce5"
-    sha256 big_sur:        "bf5d2d5b61b8e9619f4b92f622d0b5861e6188580eb0004b9e0342c670757607"
-    sha256 catalina:       "f8998f3b0d01afc3ab67fbfa65ecfc1a2ea5f843d1b393c6914ef1ba32ebd6af"
-    sha256 x86_64_linux:   "d68540fe7c7ebdb3fca1d7f0f6f7f90930c0ec1301ab00810ac61e248cdf22c4"
+    rebuild 1
+    sha256 arm64_monterey: "2998ab596ce39b9e2765b169f6f49dc7ef73301988c1952b90bb1a17f701b8f7"
+    sha256 arm64_big_sur:  "20e65cade5bc4f2e6f58e5f343714892afa178ba5769097c01da59d719404d02"
+    sha256 monterey:       "56cbb917dfc78d1308a37a713aaa0fbe9085288b785c2bbb39bee04041cadeb6"
+    sha256 big_sur:        "c666d926739e0be20b42208a458472598137e14584fc6bc6b05a3db29e339f9c"
+    sha256 catalina:       "26959c80f7495223c31a3e607d95d09fd9c49ffd9c62be2c7d83f069c78cf96d"
+    sha256 x86_64_linux:   "9c8882eb8158298e2db065bd9f9b3f0857b499cfd7ced285955787059e68b808"
   end
 
   depends_on "cmake" => :build
