@@ -11,12 +11,13 @@ class Lnav < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "68192f036d31470c82966434ca14af6d647929e67ce58f03a549b28991f78c00"
-    sha256 cellar: :any,                 arm64_big_sur:  "bdd76d98b34fad9714ce922c951d33f5caacf8c5b7be2ffca868d4e2271245c0"
-    sha256 cellar: :any,                 monterey:       "662ef55af0f76c8f81c017178b1b0c683545fdf4516f5ad82eafe597b6ff82c3"
-    sha256 cellar: :any,                 big_sur:        "0fa0bc4dc53a31d7c8651c37679a711c2ba44dbcdf75bbd806c2b8599bfed26c"
-    sha256 cellar: :any,                 catalina:       "88850c2b768144d4722a373d48f703c99702e293563cd42b4d20771c7106978b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc94900ee6c9f3d74628c23405b3025e3953fa1c123fa37e1493e42dd8cfa439"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "e51730f08b4c25a058b5a6925d749d292f7a34eee829cd0028aae93f7b3447d7"
+    sha256 cellar: :any,                 arm64_big_sur:  "c02f6a4c62725349bb24336ee3bebd325f3615f474236f2a9ca95d2119b22283"
+    sha256 cellar: :any,                 monterey:       "ceec299dc99dc1ed5d230e9a81d4f50b86451b61827314d4e796b303e35c323c"
+    sha256 cellar: :any,                 big_sur:        "e418b8dd04fc1b7193968e4dbcad1e7652cae0649c05d99673be778594aa00fe"
+    sha256 cellar: :any,                 catalina:       "c28f62a13c4618830fd145c5b449d24f3df92d681c61dd456f0756d1620d79e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b089fd04dc4d3eac67c4890a551027325e0f583c8c0b7050cc9bf5fe7eff706"
   end
 
   head do
