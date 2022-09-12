@@ -5,6 +5,10 @@ class Antidote < Formula
   sha256 "336ea89aab33d07d5d2eaa14af2f015d7da657837f64d3e76fa5c54645210950"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "4368329545305c378145141d00466cf4a2bdb12bbfbc456f8c07655e4f02a4cd"
+  end
+
   uses_from_macos "zsh"
 
   def install
