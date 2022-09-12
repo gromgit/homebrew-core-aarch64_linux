@@ -9,12 +9,12 @@ class AwsSdkCpp < Formula
   head "https://github.com/aws/aws-sdk-cpp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "86258655b071552b36bbfbd42a5f48a2e6e6e4805b7942bf053b9863e7d27fdd"
-    sha256 cellar: :any,                 arm64_big_sur:  "2656f9fb24a1be29c8a70779fabe1717a78a0ac04dc6217069a2fa98e523bd1e"
-    sha256 cellar: :any,                 monterey:       "4e402f63c90bc99d99a5c6cda99d004c407ae9f3d029409d59d5a64c9b5792c7"
-    sha256 cellar: :any,                 big_sur:        "533a40295827e78653409f48b1d75cf05f0258cd5280f71626c64b22e4fece97"
-    sha256 cellar: :any,                 catalina:       "3ab0ccbdd143e7cfed238f96574c46e7fb26be78e07af4bb090cbb0b3a9aa96e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f4d3c3a6cf66e4303ae93c1301cc6583c7205715dbb91f5ab80a0aa6ca6dcfd"
+    sha256 cellar: :any,                 arm64_monterey: "36acd7c70f79c391a61361745f2b7538d489695d6ee4fc8da5fd682ab1c8e250"
+    sha256 cellar: :any,                 arm64_big_sur:  "6c954af60347dfac5a61209994f0e0616aa72664996b5d0883fc36e1d751afb8"
+    sha256 cellar: :any,                 monterey:       "56808c4e37547dc68c7d709a49cc088f0ab43fa30adfcc70252bcb957f4c0d16"
+    sha256 cellar: :any,                 big_sur:        "9af2ebaa7a2ff95e23bea30005834d853f7979a7b18a2a39983f7f5c0322b2ba"
+    sha256 cellar: :any,                 catalina:       "36889643c101c27131519221b89ecce45a94130c4e082bb43e8f4fefff47c9f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebb484f372f672867044f3e792f51911d628ee2591f26c18745c59b0524eec31"
   end
 
   depends_on "cmake" => :build
