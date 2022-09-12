@@ -12,12 +12,13 @@ class Libzdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "fd195f268e04cb92867eb892ce7f6c4d745d2a332d7e556ba15446c0c913df4c"
-    sha256 cellar: :any,                 arm64_big_sur:  "add84b2009e944ba199b3cebd460b8fddb31e15b594d89b5e092d7cfc433d7eb"
-    sha256 cellar: :any,                 monterey:       "c032c8f4adde4a7d1ad48276bed4a9fd1dc8d532b5abbf1d558e94382c298f17"
-    sha256 cellar: :any,                 big_sur:        "738890ada6a9d80e2e32fc4b0deee492c4932fadcc51926d7d147d9888d82065"
-    sha256 cellar: :any,                 catalina:       "949c8e505af733fab357fc76fc6f8aef95b1e6693321d2e1e8e9a8cb4c6dc62a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0290aa392b46bab411f016ec05594625507d61e7737721673fed5778b2b89c52"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "97863718c9449c76cc6c4110b0baf593e9bcdc4f32441e6606909db0f41d53d3"
+    sha256 cellar: :any,                 arm64_big_sur:  "13ff97adeda3312fa93df1307decf063970c15a422bab11b02e70f05e8fe4433"
+    sha256 cellar: :any,                 monterey:       "bd150bbf161106ac91a6f262f4ebb729633dbea3bac7443c67547b8f0580704d"
+    sha256 cellar: :any,                 big_sur:        "c7469d284a6de923bef437b86d8b0d522d99e3ac469c9c8c2e7bf922a4bc8ec4"
+    sha256 cellar: :any,                 catalina:       "64f6efd25b5b52c3622f6e1a51dd4d34b5cedecbceabac42c0b88f58225955fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17b0d8787ff8b85ba13e823d77020504d3e6259db146b12892e2316e2b5c61b0"
   end
 
   depends_on "libpq"
