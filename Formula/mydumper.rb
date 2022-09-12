@@ -6,12 +6,13 @@ class Mydumper < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e5599dca1e1ab5f7f591c8f6e3e286561065925c8413df446c1a497c34e3fa31"
-    sha256 cellar: :any,                 arm64_big_sur:  "02678d600f5e9f5b61c97f86257b17bd4ffeb16036b1f7018fbb14a09d506aee"
-    sha256 cellar: :any,                 monterey:       "5abc3e7f947d591430d659bf00126e37e6ab10865e25102dc3e64d71814eaa5a"
-    sha256 cellar: :any,                 big_sur:        "38c194f3ee2c16d038ad3f8d0201941d88ad31aa17b9003623b9e4a652fbcab3"
-    sha256 cellar: :any,                 catalina:       "d596ebed1de4da2c66302bf26edfbafae0154bfd911b5909d142e12469f80eb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f348f0a1ab90a7579da2ae42482b2013bdee1e859d7e690283216a7809ac62b7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "23abb2679cb427ac27a21eb2f861b2ff0e8473ca15ade8b8b2aae766942b2068"
+    sha256 cellar: :any,                 arm64_big_sur:  "bd42dee562319e238547fb47b353c46518f54ca910102e11e91f878dc5ad0c6d"
+    sha256 cellar: :any,                 monterey:       "4b5b22ba08c623652029bd995fed1e112132f82822eeff88e1e517e9ac43a44d"
+    sha256 cellar: :any,                 big_sur:        "79fd187e0ea1718a17906ceb42e9bec17d72ca6541525d07c699c0460360eef3"
+    sha256 cellar: :any,                 catalina:       "1bb198ec53aad994d738ef05fa09cd6ae6934b5eb5cf66a8846daa7a2d466b4f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd736845a3b6f890ba712dae3ddd4d555373b18815078dc037619bf160da320d"
   end
 
   depends_on "cmake" => :build
