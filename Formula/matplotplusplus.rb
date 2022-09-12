@@ -7,12 +7,13 @@ class Matplotplusplus < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "56afbf065a28764f8d942e504a9f60a026a27fad912ef51978db8112d07afeee"
-    sha256 cellar: :any,                 arm64_big_sur:  "94122a1e752952006952cd8a2e6e91718a6c4f3fa2eb6405df6946daccd66097"
-    sha256 cellar: :any,                 monterey:       "91901422968fdb9879863fed4a0bc16f2d7ab64e46a2c5fd0a6fa4a89030ea71"
-    sha256 cellar: :any,                 big_sur:        "743e15f040a5115d6759acfedcee64e5cc7288d6cdf58b16550235b78aa5853a"
-    sha256 cellar: :any,                 catalina:       "2deb4d4428a865e69556f26b54144e631fe2f4e0344ab3eb0da21a0b634d0fda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66fa676696d45f91544653e20b6d388f8bd878c653d465ffab8a98a3fe2d4333"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "bf944af3d150c4d06d0d5ba4c4005a36c263fa4ff63d0b6048612970bab99b39"
+    sha256 cellar: :any,                 arm64_big_sur:  "49ed10a408488bc95f3d3efddd435ef858b910b046f36615461db38efd3a04c4"
+    sha256 cellar: :any,                 monterey:       "3325d540aad16f1d48eddbe316a95f7bbe0948e36644dbd3839d25df5d647ef4"
+    sha256 cellar: :any,                 big_sur:        "b57950328175d4dbfd5c46c5f2e587227d11d5031f06eb3a31df781d425570d3"
+    sha256 cellar: :any,                 catalina:       "a0830f3c946d045384f6b91511688baafc0ea91b3e1e7f34f4c6c10173179efe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7231dfcdab4f21ff3fa9303b76a4b9b1a820a3d8debf54ac1607fc190071dd7"
   end
 
   depends_on "cmake" => :build
