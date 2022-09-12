@@ -11,12 +11,13 @@ class Ntopng < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "65efdae761d1ae845a48d304daf459af893cfeedc004ca598db3c39650c20fdf"
-    sha256 arm64_big_sur:  "ad20989ce5163ffe940e954c6eaff38cabf2e5d0922c4aba4a7a86e4e592db30"
-    sha256 monterey:       "a7523c2a2d83dc057f360a9656d1475d0cc73d3d5534beabcdd2307126c0a0e6"
-    sha256 big_sur:        "bfbbc638a791fe1e2ab951396243faae914a8249441c900b1d8db877fae376bb"
-    sha256 catalina:       "dfa4fa4fdaea595da3d102f08d5522737c931aa6a33b136480f7233bec934cbd"
-    sha256 x86_64_linux:   "420bdc0167bc229a009b030100ec612fdc57b19ca09de0896e70278081668a55"
+    rebuild 1
+    sha256 arm64_monterey: "31eaa1a7f8dda4581fb978000e3093b0188a3a2acb24bb8d41c49d75f5d52886"
+    sha256 arm64_big_sur:  "75e5926447d6cd3458972f6722ad0a40d830e5861dc8155d39dc420f6729926b"
+    sha256 monterey:       "2795c00b9e7a9cfe07b5680f19f4cef01031772698590020b2884959d70e8d7b"
+    sha256 big_sur:        "d1d0b881045256f15a9f8a48fb17751ccf82427af51d8ef53c95bb175f7af6e9"
+    sha256 catalina:       "0142b79173004b26028cd90318fddce419f435f14b801f1b5b92166b56657d61"
+    sha256 x86_64_linux:   "541e338e6aeeff76cbaee1fc6b8f7abf6513fa35275d4f3234d9b9b947866c14"
   end
 
   head do
