@@ -7,12 +7,12 @@ class Subnetcalc < Formula
   head "https://github.com/dreibh/subnetcalc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "530958e6e65c9ef4de865013c1cd937862d816ed87edfb888aa8bba38405f957"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11b113fcb125a8da85e6c3e14866c06b0d7e09e83b439b200ec4721469248694"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7663859c98118741370fedede62527215c11a2967dddc4235d059dc27082c09"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2d81c3cb134879270acfc762ae17aa653acbba88cfc258bb8c1ec574952f28f7"
-    sha256 cellar: :any_skip_relocation, catalina:       "6becfcc6f881532d19dd0aa6b865fbbb9f88fc63329effa7e8e7bca8503c8f6c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9583e8d925ec45ae6edece69a4154b30efd7a22ad69bb9d7aca0177442b86af"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "427da5c6383dd9a3307ec30c9a975ca5456f7b2c27b59d433991b25d613f0576"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "305a22c7217e51ad68f175bb9958d69474f8f4e1d2316d69ca49032302fa9eb5"
+    sha256 cellar: :any_skip_relocation, monterey:       "1afef375229983906d16d2dc28801d71b651cd29a118626f15448ad8d2439a87"
+    sha256 cellar: :any_skip_relocation, big_sur:        "97c26adfa53f4ec1e1d546040ae4f21416f6b8737cea762e6c4a2d1abbf11631"
+    sha256 cellar: :any_skip_relocation, catalina:       "2cba9786049522b242944fb71cb2a6cbbeb8ffa38616c7f6624b6c651e6a4c95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d6133da67859d9980c7fab8e57aaf87238083c72e989378915495250100e799"
   end
 
   depends_on "cmake" => :build
