@@ -1,8 +1,8 @@
 class Fbthrift < Formula
   desc "Facebook's branch of Apache Thrift, including a new C++ server"
   homepage "https://github.com/facebook/fbthrift"
-  url "https://github.com/facebook/fbthrift/archive/v2022.09.05.00.tar.gz"
-  sha256 "9eaaf1702b57b3098e815ca05782c9fe35c8e6aacaeb38a8d33152f1dacc9baf"
+  url "https://github.com/facebook/fbthrift/archive/v2022.09.12.00.tar.gz"
+  sha256 "1e7f7fc20f502c5e0235c5d361f7b1544efdff604c4101fe2d9b8e83b5f921a6"
   license "Apache-2.0"
   head "https://github.com/facebook/fbthrift.git", branch: "main"
 
@@ -32,10 +32,6 @@ class Fbthrift < Formula
 
   on_macos do
     depends_on "llvm" if DevelopmentTools.clang_build_version <= 1100
-  end
-
-  on_linux do
-    depends_on "gcc"
   end
 
   fails_with :clang do
