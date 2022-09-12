@@ -3,8 +3,8 @@ class Libgusb < Formula
 
   desc "GObject wrappers for libusb1"
   homepage "https://github.com/hughsie/libgusb"
-  url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.10.tar.xz"
-  sha256 "0eb0b9ab0f8bba0c59631c809c37b616ef34eb3c8e000b0b9b71cf11e4931bdc"
+  url "https://people.freedesktop.org/~hughsient/releases/libgusb-0.4.0.tar.xz"
+  sha256 "7f73dbbb0d0a3ef9228acde0d0ace9da7f591847f98478bcbedbd09c91cba9ea"
   license "LGPL-2.1-only"
   head "https://github.com/hughsie/libgusb.git", branch: "main"
 
@@ -29,17 +29,19 @@ class Libgusb < Formula
   depends_on "python@3.10" => :build
   depends_on "vala" => :build
   depends_on "glib"
+  depends_on "json-glib"
   depends_on "libusb"
   depends_on "usb.ids"
 
   def install
     rewrite_shebang detected_python_shebang, "contrib/generate-version-script.py"
 
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Ddocs=false", "-Dusb_ids=#{Formula["usb.ids"].opt_share}/misc/usb.ids", ".."
-      system "ninja"
-      system "ninja", "install"
-    end
+    system "meson", "setup", "build",
+                    "-Ddocs=false",
+                    "-Dusb_ids=#{Formula["usb.ids"].opt_share}/misc/usb.ids",
+                    *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
@@ -55,20 +57,24 @@ class Libgusb < Formula
     EOS
     gettext = Formula["gettext"]
     glib = Formula["glib"]
+    json_glib = Formula["json-glib"]
     libusb = Formula["libusb"]
     flags = %W[
       -I#{gettext.opt_include}
       -I#{glib.opt_include}/glib-2.0
       -I#{glib.opt_lib}/glib-2.0/include
+      -I#{json_glib.opt_include}/json-glib-1.0
       -I#{libusb.opt_include}/libusb-1.0
       -I#{include}/gusb-1
       -D_REENTRANT
       -L#{gettext.opt_lib}
       -L#{glib.opt_lib}
+      -L#{json_glib.opt_lib}
       -L#{libusb.opt_lib}
       -L#{lib}
       -lgio-2.0
       -lglib-2.0
+      -ljson-glib-1.0
       -lgobject-2.0
       -lusb-1.0
       -lgusb
