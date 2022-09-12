@@ -6,12 +6,13 @@ class Libmwaw < Formula
   license any_of: ["LGPL-2.1-or-later", "MPL-2.0"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8e8b9c289bfacec49f6698fb9b3024c92b86e89d6712069112faf4e777616b45"
-    sha256 cellar: :any,                 arm64_big_sur:  "6079d619891c7379f984bb8e9c50f090183ee97fc291bbbcf354b7e73cf334ab"
-    sha256 cellar: :any,                 monterey:       "ec17c3a3d8014901bb3dedca4c2d532c8f343c28f39130d49ac29c88b5dd47e6"
-    sha256 cellar: :any,                 big_sur:        "81fab7be2a6f5352ab9757cfa5a93827debc0a0469897a4b28922ca31a53fba5"
-    sha256 cellar: :any,                 catalina:       "98c7ef307cac9580e285a6c871b392cc7e67036906ff8565d55bbb5c6498850a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8853b2f34f3f561be4cef972c911697afd90e1404207f73f782cb113cb0e4ec9"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "6ffaa69023d1fb57fea42045e747e6df08336b1f00277fd1697c4480523533df"
+    sha256 cellar: :any,                 arm64_big_sur:  "a4c331f83eb77f6bd74a828f984c376be9a916e7671946e299f7aeb347562d02"
+    sha256 cellar: :any,                 monterey:       "d20dccf2c767fceea530bc66a1c0c1631a8961245d627ef806b060781bc7f4b4"
+    sha256 cellar: :any,                 big_sur:        "75d8edfd8ec17fdb6ca028ef30d183200539d8a47165fe0debfe27827eb4d081"
+    sha256 cellar: :any,                 catalina:       "4966ab87822fed4a14a231116d3c4f84e17b40b1e632e353d0161976e4b151cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "646ae7bc535dc1b1ee19ce42ee1a438ea4adde05af0fb873048f41af857e108b"
   end
 
   depends_on "pkg-config" => :build
