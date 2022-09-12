@@ -12,7 +12,7 @@ class Xorgproto < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xorgproto"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ce93c941174197d14f35952de63dd96eaaf90cbe80ef0e25e76717cd24768a30"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f1abca1d7ffd1fab11bf775c686f468e231b65b29c680b0b39ad88888f17d212"
   end
 
 
