@@ -1,35 +1,32 @@
 class Gcc < Formula
   desc "GNU compiler collection"
   homepage "https://gcc.gnu.org/"
-  if Hardware::CPU.arm?
-    # Branch from the Darwin maintainer of GCC with Apple Silicon support,
-    # located at https://github.com/iains/gcc-darwin-arm64 and
-    # backported with his help to gcc-11 branch. Too big for a patch.
-    url "https://github.com/fxcoudert/gcc/archive/refs/tags/gcc-11.2.0-arm-20211124.tar.gz"
-    sha256 "d7f8af7a0d9159db2ee3c59ffb335025a3d42547784bee321d58f2b4712ca5fd"
-    version "11.3.0"
-  else
-    url "https://ftp.gnu.org/gnu/gcc/gcc-11.3.0/gcc-11.3.0.tar.xz"
-    mirror "https://ftpmirror.gnu.org/gcc/gcc-11.3.0/gcc-11.3.0.tar.xz"
-    sha256 "b47cf2818691f5b1e21df2bb38c795fac2cfbd640ede2d0a5e1c89e338a3ac39"
-  end
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
   head "https://gcc.gnu.org/git/gcc.git", branch: "master"
 
-  # We can't use `url :stable` here due to the ARM-specific branch above.
+  stable do
+    url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
+    mirror "https://ftpmirror.gnu.org/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
+    sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
+
+    # Branch from the Darwin maintainer of GCC, with a few generic fixes and
+    # Apple Silicon support, located at https://github.com/iains/gcc-12-branch
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/1d184289/gcc/gcc-12.2.0-arm.diff"
+      sha256 "a7843b5c6bf1401e40c20c72af69c8f6fc9754ae980bb4a5f0540220b3dcb62d"
+    end
+  end
+
   livecheck do
-    url "https://ftp.gnu.org/gnu/gcc/"
+    url :stable
     regex(%r{href=["']?gcc[._-]v?(\d+(?:\.\d+)+)(?:/?["' >]|\.t)}i)
   end
 
   bottle do
-    sha256 arm64_monterey: "25fdeb23fc65a7386be6b550c71caf0ac49eb385424e0f1f7048e55fd5f0a897"
-    sha256 arm64_big_sur:  "5bad8a6999544b51e60e74a093410dde8b54cb14cf3d9e9cd2e804016de8f561"
-    sha256 monterey:       "f6c3877abd04bb3c2bfb66181ef770f28e6c13d034e3676594faba7cbce18e3f"
-    sha256 big_sur:        "fcbb2d595a2b3a74b6c2877979242f77d87c21f4fbc52916fa7d7fbf531ae661"
-    sha256 catalina:       "8a9bfb79c700a2cc5ea673c336fe0023aaa8205c4e896bfb2e5abdb015f49ae6"
-    sha256 x86_64_linux:   "7c25fa92c656dd2b6bd5d7dedc2e09474b64aa287563fec708f6df8bc4154a09"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f2827c54d1e3e9f845f84138a5a791953c9fcd2ddaf1f0c52220ab4c808cae17"
   end
+
 
   # The bottles are built on systems with the CLT installed, and do not work
   # out of the box on Xcode-only systems due to an incorrect sysroot.
@@ -50,15 +47,6 @@ class Gcc < Formula
   # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
   cxxstdlib_check :skip
 
-  # Fix for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=102992
-  # Working around a macOS Monterey bug
-  if MacOS.version >= :monterey && Hardware::CPU.arm?
-    patch do
-      url "https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=fabe8cc41e9b01913e2016861237d1d99d7567bf"
-      sha256 "9d3c2c91917cdc37d11385bdeba005cd7fa89efdbdf7ca38f7de3f6fa8a8e51b"
-    end
-  end
-
   def version_suffix
     if build.head?
       "HEAD"
@@ -72,18 +60,17 @@ class Gcc < Formula
     ENV.delete "LD"
 
     # We avoiding building:
-    #  - Ada, which requires a pre-existing GCC Ada compiler to bootstrap
+    #  - Ada and D, which require a pre-existing GCC to bootstrap
     #  - Go, currently not supported on macOS
     #  - BRIG
     languages = %w[c c++ objc obj-c++ fortran]
-    languages << "d" if Hardware::CPU.intel?
 
     pkgversion = "Homebrew GCC #{pkg_version} #{build.used_options*" "}".strip
-    cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
 
+    # Use `lib/gcc/current` to provide a path that doesn't change with GCC's version.
     args = %W[
       --prefix=#{opt_prefix}
-      --libdir=#{opt_lib}/gcc/#{version_suffix}
+      --libdir=#{opt_lib}/gcc/current
       --disable-nls
       --enable-checking=release
       --with-gcc-major-version-only
@@ -96,26 +83,19 @@ class Gcc < Formula
       --with-zstd=#{Formula["zstd"].opt_prefix}
       --with-pkgversion=#{pkgversion}
       --with-bugurl=#{tap.issues_url}
+      --with-system-zlib
     ]
-    # libphobos is part of gdc
-    args << "--enable-libphobos" if Hardware::CPU.intel?
 
     if OS.mac?
+      cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
       args << "--build=#{cpu}-apple-darwin#{OS.kernel_version.major}"
-      args << "--with-system-zlib"
-
-      # Xcode 10 dropped 32-bit Intel support
-      args << "--disable-multilib" if Hardware::CPU.intel? && DevelopmentTools.clang_build_version >= 1000
 
       # System headers may not be in /usr/include
       sdk = MacOS.sdk_path_if_needed
-      if sdk
-        args << "--with-native-system-header-dir=/usr/include"
-        args << "--with-sysroot=#{sdk}"
-      end
+      args << "--with-sysroot=#{sdk}" if sdk
     else
       # Fix cc1: error while loading shared libraries: libisl.so.15
-      args << "--with-boot-ldflags=-static-libstdc++ -static-libgcc #{ENV["LDFLAGS"]}"
+      args << "--with-boot-ldflags=-static-libstdc++ -static-libgcc #{ENV.ldflags}"
 
       # Fix Linux error: gnu/stubs-32.h: No such file or directory.
       args << "--disable-multilib"
@@ -129,7 +109,8 @@ class Gcc < Formula
       system "../configure", *args
       system "make"
 
-      # On Linux, strip the binaries
+      # Do not strip the binaries on macOS, it makes them unsuitable
+      # for loading plugins
       install_target = OS.mac? ? "install" : "install-strip"
 
       # To make sure GCC does not record cellar paths, we configure it with
@@ -137,22 +118,27 @@ class Gcc < Formula
       # temporary location, then move into the cellar path.
       system "make", install_target, "DESTDIR=#{Pathname.pwd}/../instdir"
       mv Dir[Pathname.pwd/"../instdir/#{opt_prefix}/*"], prefix
-
-      bin.install_symlink bin/"gfortran-#{version_suffix}" => "gfortran"
-      bin.install_symlink bin/"gdc-#{version_suffix}" => "gdc" if Hardware::CPU.intel?
-
-      if OS.linux?
-        # Only the newest brewed gcc should install gfortan libs as we can only have one.
-        lib.install_symlink Dir[lib/"gcc/#{version_suffix}/libgfortran.*"]
-      end
     end
+
+    bin.install_symlink bin/"gfortran-#{version_suffix}" => "gfortran"
+
+    # Provide a `lib/gcc/xy` directory to align with the versioned GCC formulae.
+    # We need to create `lib/gcc/xy` as a directory and not a symlink to avoid `brew link` conflicts.
+    (lib/"gcc"/version_suffix).install_symlink (lib/"gcc/current").children
+
+    # Only the newest brewed gcc should install gfortan libs as we can only have one.
+    lib.install_symlink lib.glob("gcc/current/libgfortran.*") if OS.linux?
 
     # Handle conflicts between GCC formulae and avoid interfering
     # with system compilers.
     # Rename man7.
-    Dir.glob(man7/"*.7") { |file| add_suffix file, version_suffix }
+    man7.glob("*.7") { |file| add_suffix file, version_suffix }
     # Even when we disable building info pages some are still installed.
     info.rmtree
+
+    # Work around GCC install bug
+    # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105664
+    rm_rf bin.glob("*-gcc-tmp")
   end
 
   def add_suffix(file, suffix)
@@ -223,7 +209,7 @@ class Gcc < Formula
       #   * `-L#{HOMEBREW_PREFIX}/lib` instructs gcc to find the rest
       #     brew libraries.
       # Note: *link will silently add #{libdir} first to the RPATH
-      libdir = HOMEBREW_PREFIX/"lib/gcc/#{version_suffix}"
+      libdir = HOMEBREW_PREFIX/"lib/gcc/current"
       specs.write specs_string + <<~EOS
         *cpp_unique_options:
         + -isysroot #{HOMEBREW_PREFIX}/nonexistent #{system_header_dirs.map { |p| "-idirafter #{p}" }.join(" ")}
@@ -252,7 +238,7 @@ class Gcc < Formula
       }
     EOS
     system "#{bin}/gcc-#{version_suffix}", "-o", "hello-c", "hello-c.c"
-    assert_equal "Hello, world!\n", `./hello-c`
+    assert_equal "Hello, world!\n", shell_output("./hello-c")
 
     (testpath/"hello-cc.cc").write <<~EOS
       #include <iostream>
@@ -267,7 +253,7 @@ class Gcc < Formula
       }
     EOS
     system "#{bin}/g++-#{version_suffix}", "-o", "hello-cc", "hello-cc.cc"
-    assert_equal "Hello, world!\n", `./hello-cc`
+    assert_equal "Hello, world!\n", shell_output("./hello-cc")
 
     (testpath/"test.f90").write <<~EOS
       integer,parameter::m=10000
@@ -281,19 +267,6 @@ class Gcc < Formula
       end
     EOS
     system "#{bin}/gfortran", "-o", "test", "test.f90"
-    assert_equal "Done\n", `./test`
-
-    if Hardware::CPU.intel?
-      (testpath/"hello_d.d").write <<~EOS
-        import std.stdio;
-        int main()
-        {
-          writeln("Hello, world!");
-          return 0;
-        }
-      EOS
-      system "#{bin}/gdc-#{version_suffix}", "-o", "hello-d", "hello_d.d"
-      assert_equal "Hello, world!\n", `./hello-d`
-    end
+    assert_equal "Done\n", shell_output("./test")
   end
 end
