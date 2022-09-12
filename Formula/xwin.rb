@@ -6,12 +6,12 @@ class Xwin < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "98b977655a106bd01dbd82d84705f7e97b9096485f809c3c3be86a69dd9be6e9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54e18174391607e1bc40ce7d57ee9ebbea0b315f79dcfe8181f091d9fb26731f"
-    sha256 cellar: :any_skip_relocation, monterey:       "85e6ff1eaa773b4ebc38654a333f8c862b56b74ae30c42524dfce14ed969b385"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ef8e89709618689f3e8e541ab5b48fccae0b25c1aaa0b3641e230592c8599924"
-    sha256 cellar: :any_skip_relocation, catalina:       "4f73f26b7e9e0a8d96fe3e14a2bb70820fddc949cb06504487efe90fd50cb29e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7033651cde673afd2881b327e28c4b18f11f350eca6acc35315cea8216a7a283"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cc724e3c680a794289365a75bf0a7a0ed3f4f739edbed076f332cbee0a3b846b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "61bbd9b75d4a85a88c0912f9b5e9d517e5c2f8e45cd16b0229eff958bd61f24b"
+    sha256 cellar: :any_skip_relocation, monterey:       "746c343cdf21d2bb37f756d180e03a1a87da63cbfaa7586fc0041bd23d9e06ea"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b1e80406dabe4746528e1743cf61d8f72572de9d355d09cb41ff1aa7fa6adbee"
+    sha256 cellar: :any_skip_relocation, catalina:       "238764df75009a2eabe9a3b1c9ed897a4de0704caf7322073cc4c6404dbf17b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5dd44689786c3bcc223af6a4bcdce9a093cbb752dce28c11b494f32c47af529"
   end
 
   depends_on "rust" => :build
