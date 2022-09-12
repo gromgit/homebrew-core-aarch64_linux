@@ -24,7 +24,7 @@ class Gcc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f2827c54d1e3e9f845f84138a5a791953c9fcd2ddaf1f0c52220ab4c808cae17"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4980beda02e3629ce9bcdaf1c7e4b1a43ad308279b1463d357f3295990bf9351"
   end
 
 
