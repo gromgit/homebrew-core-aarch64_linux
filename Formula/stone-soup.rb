@@ -13,13 +13,12 @@ class StoneSoup < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "f938d2a002197e0987e3b33fa1760de689a2d5451b64c105896f46de483d4d2a"
-    sha256 arm64_big_sur:  "e11b33c64f4d6b2521579df74f1ff6f1e66784d64fa3986b003d2905581640c4"
-    sha256 monterey:       "9e5d6568c2bb2e462dd87ce544d755d8ea56a36862e9b2c642e7a6ce82570298"
-    sha256 big_sur:        "d04f0c248b61b944239b8fd71e3443009096dda4e119a65ceeb4c7d74fdb5c73"
-    sha256 catalina:       "8c22ced2e5a55051b77fdbf1cb9ead71a3e2a8ce26c3d903a958c72b0c759628"
-    sha256 x86_64_linux:   "5b3baa0ae9ca696c896ce8cea85f34289078791a86c753404d5545604b8314d1"
+    sha256 arm64_monterey: "cf6ca59c6899897889fb1dd675513941085da9832c565009a33f35d0eaa8d983"
+    sha256 arm64_big_sur:  "e68f79cdfbee9e2c50c26785becab8a8e5060105657f7ea2ed1ceaf5efef83e5"
+    sha256 monterey:       "7772ce20e270a7bfbc0cf3838aa780a5679eb7733987835606d7596ab64d8846"
+    sha256 big_sur:        "fdc9152a3b611d3c905f86e07073bb871d2fe93f69c1940b0ab6a907c8403fd7"
+    sha256 catalina:       "edbc05d07621b8424656f6d997cfce5cdae087fd4fc2f624fcd85e6f61fd8c27"
+    sha256 x86_64_linux:   "eef057937a3400fbf577121fd0a8567d0295b6d1c0dd5985ee202f11a59bee57"
   end
 
   depends_on "pkg-config" => :build
