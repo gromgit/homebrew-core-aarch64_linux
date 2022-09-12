@@ -7,11 +7,11 @@ class Vapor < Formula
   head "https://github.com/vapor/toolbox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e3949ab0f18bbd183515aeb4ba39650a649be13d701bbe7e2177b1027157ea8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2dbf2b15ae5c76d41b6b452b1d95c60d677231513381b911dc60bccdeb50cfe8"
-    sha256 cellar: :any_skip_relocation, monterey:       "237bae1a1bf9316fd53e14aba8f9d71a80e957312507581ea59ffa7f933a84e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f25e0cc1a86cdca52dde602529d55cec9e037316c87a5d9afad0df2d8f15d47a"
-    sha256                               x86_64_linux:   "4bb7162fa3623f05588517413e2af189bc29dd1c9ffa05134bc4300b4c2a6e38"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "04c7eeb2a71e7e4fc2da6e41aa9d04943373aa62cb9a96d4501a9e95a2690f07"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3bd0dd23b86527ee620a13e401925d0b18de813ac8eb76dbe050e3b3ae354ff3"
+    sha256 cellar: :any_skip_relocation, monterey:       "4287b44b44519eeb45ca9e0bfaa6c12e184ffc9b3cd2296a373d8ac6cf38337f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bcd5983c3d88508b0de84083f3d6865cc92e8413f5c9b63ba5a9ae5561a9444d"
+    sha256                               x86_64_linux:   "5bf987050ac211251bf1f4e965b8a29e29ff3084523010006ad0d9f308ea55b7"
   end
 
   depends_on xcode: "11.4"
