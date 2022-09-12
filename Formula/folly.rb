@@ -1,8 +1,8 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
-  url "https://github.com/facebook/folly/archive/v2022.09.05.00.tar.gz"
-  sha256 "17a3804dd9aacd8a2440b3e0235cdfc2659f880c439b9a7533555d7061702f64"
+  url "https://github.com/facebook/folly/archive/v2022.09.12.00.tar.gz"
+  sha256 "c0bc96730dc30852f2656b8c0d98c7e35a4c7f513256307e4e54045a9cba1073"
   license "Apache-2.0"
   head "https://github.com/facebook/folly.git", branch: "main"
 
@@ -31,10 +31,6 @@ class Folly < Formula
 
   on_macos do
     depends_on "llvm" if DevelopmentTools.clang_build_version <= 1100
-  end
-
-  on_linux do
-    depends_on "gcc"
   end
 
   fails_with :clang do
