@@ -13,12 +13,13 @@ class Mgba < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "34235cb6f1aaeca67d11e4b060bfd2d7adf462b61b115beb029fd81ec0adc563"
-    sha256 cellar: :any, arm64_big_sur:  "0dc3200fa947b5872c48500c3c7b4841668edfc2143d2977226e850fa53db2dd"
-    sha256 cellar: :any, monterey:       "8486c6db482c218845f22d3dfbc5402066d002c6712b1fc0faefa3ce88d186f0"
-    sha256 cellar: :any, big_sur:        "575163b96818d53848c6b4a536fbccea185cce14487394974519b1655c3cb03f"
-    sha256 cellar: :any, catalina:       "fe54e4803c93036beb054b6e649f722e21f1ae08fa4efb4c2808d9b5b875fd8f"
-    sha256               x86_64_linux:   "2e521f7ea91d0e5b77583d818c0eed31ece44389d4ac3235dd6ed52bfd6141ae"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "e94c97f422890410db024c0024d844235f303716c8af1d54dad843ea84bcf3df"
+    sha256 cellar: :any, arm64_big_sur:  "2931042f94c4881ab643856586c17ee22b2b63675f0d3aa0509c53752fb80857"
+    sha256 cellar: :any, monterey:       "b29984650c71f50b533fb156265b10d6cfec4f3ad469a44675f6f0b7ee8fdd38"
+    sha256 cellar: :any, big_sur:        "a072688c9fd543a73816acd77c8aa318bed1ec29f284ca4e8d3adb55304bacdb"
+    sha256 cellar: :any, catalina:       "4c557e7daec07c756a8089460d2a0336e4e34db80c4709d61d5bd00f7da759fb"
+    sha256               x86_64_linux:   "32c9cdff39692aaa329ae08d19b1dec41a9b21d8e4c73b35f599ed0a010f5a7d"
   end
 
   depends_on "cmake" => :build
