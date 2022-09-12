@@ -11,12 +11,12 @@ class Stunnel < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "661fb14a483558d6572ed459c085fb3456d60dc58dcced2caf2bf082ba074ba9"
-    sha256 cellar: :any,                 arm64_big_sur:  "324a76ed9a0567ccb8b5553be53d8273e24767a5258a5769b4d4ba59bc19a9ca"
-    sha256 cellar: :any,                 monterey:       "30b9d6e8dafd81b4cb5da4978f9abfb309f682884596a85e84c75ce1f248649a"
-    sha256 cellar: :any,                 big_sur:        "ea4d844c27669ad32c6166dc1b7f073be0e67aa9dbb832bacbc6a29a48ffec17"
-    sha256 cellar: :any,                 catalina:       "2d287f3838ee54b9296feb29aa4d79f5091bad04ebc079e1af5bb0ef94226783"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4189f6dfab60662d3a9747cc1323f34242fcff1f938f0c7ca50fb2eaf3597f0b"
+    sha256 cellar: :any,                 arm64_monterey: "468aa86e69cb4a710a21634dfbd56ef5e82ce0bc0b03689217919c3a1b721fa1"
+    sha256 cellar: :any,                 arm64_big_sur:  "55e7e532bfa181a33ad8b0cd299492a5aacd71e7ffb3e4574028fd8fd06cf503"
+    sha256 cellar: :any,                 monterey:       "6632bf1c83320716620e6ff98859e8a9c74e531000504490a56b500a88f900c8"
+    sha256 cellar: :any,                 big_sur:        "38042e481912e9e7a5a00d29277c3ffecb6a2aa6c143e188337b65b0d3e73cfa"
+    sha256 cellar: :any,                 catalina:       "1b5725913ff7d90afbb3cbb088989a9664b908734174a3933905a65d70d3a4e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bac8acc1b13e79b8067cb9267ab3c21630392fef798610186599dc526655da0e"
   end
 
   depends_on "openssl@3"
