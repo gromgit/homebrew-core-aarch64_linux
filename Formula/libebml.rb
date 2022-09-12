@@ -21,13 +21,13 @@ class Libebml < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c7ba4bf364135ac436fc50211c4d72557d0c7921d1f0e9af47a530c503354c9f"
-    sha256 cellar: :any,                 arm64_big_sur:  "fce6d01b12243501223e4e9294528b8eab1818815b18e4ffe777fd14cec0e525"
-    sha256 cellar: :any,                 monterey:       "fc87630f3f45acb204763c92b50c8188b72de87e95b89696079f8d4f56f815c3"
-    sha256 cellar: :any,                 big_sur:        "de4edaae6d3f42a388be996f448b582262e39e923acc9ccef881a20ffa817d38"
-    sha256 cellar: :any,                 catalina:       "20a71bb0c2babdc04f179dc77c7a03c2f2f2031e7d8d87fbf9d3c41ee831addc"
-    sha256 cellar: :any,                 mojave:         "c3c91dc9f86978012a06f299115bc088e5ea0af6aec2e915d0f8338c4c0edd03"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9b4e0ff9efebb14dff775d6e567924ed54fe4ba67abfff48844acff583d9a15"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "d3af7501c3d4eef59d70cbe6d0db0dabcf643f060b7167e90f5f84e598611831"
+    sha256 cellar: :any,                 arm64_big_sur:  "f2b112005f974dbbc725949ba9c66cbca0dbb101934eaccfb15999d0694e2a0c"
+    sha256 cellar: :any,                 monterey:       "5d981e2ec0b97d3d1fdeb73a905239ffa8d031c27f0b55b0a57436705afa9999"
+    sha256 cellar: :any,                 big_sur:        "1cb134879583bcf749d5dbe0cb0fc0743b4323e224be904dc5865dd42e96e774"
+    sha256 cellar: :any,                 catalina:       "6eed9db58a9132676dc1c2ff0877f48a6424afb465c9654887956cd845cee2c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e0784e6765ab397b2f121fb032e9f3a8dedf7e2745570126d377e88a384304b"
   end
 
   depends_on "cmake" => :build
