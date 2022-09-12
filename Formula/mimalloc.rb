@@ -11,12 +11,12 @@ class Mimalloc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a600ddfb26f682c065638cf21d0a42247d31ac33a27ca525501b0c11645f73f3"
-    sha256 cellar: :any,                 arm64_big_sur:  "34179acc2bfaf5e8b45cb3d0ba5ce34d8f10707cace446ccf24c3f456964f775"
-    sha256 cellar: :any,                 monterey:       "16f7d8b1f61a463cce7ebebb368587173ee72e82a1e82b468144dff2a6d20c82"
-    sha256 cellar: :any,                 big_sur:        "35cb0ef636188ee92d2a5aa63d8e1ca422f3b7962daba961bb25845c27aab028"
-    sha256 cellar: :any,                 catalina:       "caa9ca85b45b5055eb0b2dcfd191c3cafd3cd9ff02c6714d46987ac49e3bda55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48f4d9a37d46c4289fdcbea078567975e59b40c6a3f4fa1d275b31185d43401b"
+    sha256 cellar: :any,                 arm64_monterey: "69c4b39ebd16770f33aaa3ce9023484e52c80d3c27d4f69e243e5be414c9237c"
+    sha256 cellar: :any,                 arm64_big_sur:  "3537ce70aff1b7d9bb8b0dfac8da2b404ebb92f483c40e9dc56ac7d098459f5d"
+    sha256 cellar: :any,                 monterey:       "60f36a99ebca794366457e80b6847d0cf1c17d7bfae13ce49efe502bd5af4514"
+    sha256 cellar: :any,                 big_sur:        "98c9fa19f7c7a34603129ae7c92da4e127f52eab822dc74351ee8c30cb628489"
+    sha256 cellar: :any,                 catalina:       "37f9631af5e05af08eb339d800eee4b940f86f01b49e92a4281d4a508fbb91b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8740d8eb3ccab83e3832e28659165d5e93a083206ce0370125bf4dc43dada0e"
   end
 
   depends_on "cmake" => :build
