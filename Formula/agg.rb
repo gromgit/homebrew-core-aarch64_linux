@@ -7,12 +7,12 @@ class Agg < Formula
   head "https://github.com/asciinema/agg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86d0f583217bc42f5dd763a5524d4efd97efcd62f3c3f97d490e02b5b3bc8559"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0bbb4aef066cba5f8604fd43eec2d2f919af821ff4a307f26a9f1f318e22bad1"
-    sha256 cellar: :any_skip_relocation, monterey:       "ce77e82ba4972a7d374cf76c5e4828639219a68b8d9934b0c1312d6cae08f324"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9027e18f85fbbc7108f0180c6a2d94d4b25b76c446f62b803468f65b52d05f00"
-    sha256 cellar: :any_skip_relocation, catalina:       "27535b67d985f55670dacef2d91c1bcfed474cd4610d4265201de5c1b39a67c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "801e65d0bd501a6fa8815debeedd36730127de5006f04e5d333e3d49d6182a9b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b851b428d4dfa04a0d74765bc0968889cd944da2022c56ccae9b9d8dcb7c3849"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "89b40ebb79fc932d8603b77dfe70deef6c6263199192a29e7567f6d6d1f50e62"
+    sha256 cellar: :any_skip_relocation, monterey:       "1232bc241ed1dc1c93a0c3864ef77380effc03cc4d4f4630ea2a73601a8996ac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5f3b4ab924861361e27e146c20730598150fa4fa6850091ce545111a571e9079"
+    sha256 cellar: :any_skip_relocation, catalina:       "cbd6e442a0513e79a5a556c31faa3a9a7495b22f0f7b48474413d696831bbb2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25cc79f6c4a724ded244abd5a54f45948bebdf20d9a7f135996045789cb6b609"
   end
 
   depends_on "rust" => :build
