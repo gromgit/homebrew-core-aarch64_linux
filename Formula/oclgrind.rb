@@ -12,13 +12,13 @@ class Oclgrind < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "04c4d2f631fc6d60116b5d7399deb671d5bdde333f6e2fe10aeb50b4db847feb"
-    sha256 cellar: :any,                 arm64_big_sur:  "5b1aa1409282fd96fa062506c547820ca830792c6fd001ba6aaa857b3dc873af"
-    sha256 cellar: :any,                 monterey:       "2a63ba6a8c9521f8bed0bdf1cc61d4f61917b576c3f0895bbce2d8c18300bc8c"
-    sha256 cellar: :any,                 big_sur:        "c1ebca0bf6a54f62b1e6fb1bccdedd144fbf6af607a910a9c73a6cb641abd1c7"
-    sha256 cellar: :any,                 catalina:       "84cc33cd385f5e94480c0c8ea5aaaa9a51415d428a0067068c8bbc951abd72b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f10dc01f531e2961be864dcd3318c24d7bfd148cd788f3edede26987e73bf0d4"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "a6c616268daefcc65f29791fcfa44b85fa910bdcb053e33197631e235430c0c0"
+    sha256 cellar: :any,                 arm64_big_sur:  "a620a4e5d6c1093d9d9543bf3e12423fdf36b99ebbe010f9b1d958065436e3b3"
+    sha256 cellar: :any,                 monterey:       "e958ab38343e29bf05dd0cd4db2f922160adb38c75a7e1f74e35e11254a2cbdd"
+    sha256 cellar: :any,                 big_sur:        "1ff4125bee35bfb055647ed1af30ea148c8e19b9bd33ddcd35a77e5066ca1848"
+    sha256 cellar: :any,                 catalina:       "cf616ad847a477ff17358c100ffaa14440d45bff439b6e354a0cbf9224aca19b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f04f695dd694b476d79517f3c248499906051062edd9e862298d211919431021"
   end
 
   depends_on "cmake" => :build
