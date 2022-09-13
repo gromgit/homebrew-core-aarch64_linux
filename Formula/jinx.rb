@@ -7,12 +7,13 @@ class Jinx < Formula
   head "https://github.com/JamesBoer/Jinx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa958ceb295710e0aabf7ddd0d8aa420f86d9c9cd372a37fa0603cf3fd9c2fd3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f50d2c1d7fa7d03e33af0d5097d0635d3e7c04908a611ba201b5f3ffe7322b65"
-    sha256 cellar: :any_skip_relocation, monterey:       "5eb1cf1d04dce70ebb4d8210f8db913c7706fb211d4b238109d4400f00e78ddc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2d5b18b26a2f879770dfdaaca8da4f81e6a2d0cfbdcb900dd540d3f731f69382"
-    sha256 cellar: :any_skip_relocation, catalina:       "9137f44de3bb8fa31baf1e27a7f2eef193434dfb1dfe8cfaf0c6baccc497d257"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82d9efcb7f4b4d22ff447c507d26deb3474cf9fed049461712d76690bd9b05bc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d860754de69cd9d21e3c09e17e95de5f6e788280d821604a665f0caac7b44e9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a0bbf1aabba2dc324df0900386ad1e3c75f8ec10a61374e23a3ccf16d442a80"
+    sha256 cellar: :any_skip_relocation, monterey:       "07ab4faca2d623a0184edefa4025b099241cb59d257d4c9f1abff32e0aadb1f6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fb9b426b226f2fc1388a52d97acfc55780baf6c7e4f148ce8e114b3a50f453ec"
+    sha256 cellar: :any_skip_relocation, catalina:       "3de90aa148fad5638d83f7214e30aa8a51c7b8c216ed8ce6cce5998be1fd71ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b9985239e95b1b0bb0960948ec9f68263ebf0e53a1954c464674ddbfd4040ef"
   end
 
   depends_on "cmake" => :build
