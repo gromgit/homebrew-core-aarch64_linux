@@ -25,23 +25,18 @@ class Suricata < Formula
   depends_on "jansson"
   depends_on "libmagic"
   depends_on "libnet"
-  depends_on "libyaml"
   depends_on "lz4"
   depends_on "nspr"
   depends_on "nss"
   depends_on "pcre"
   depends_on "python@3.10"
+  depends_on "pyyaml"
 
   uses_from_macos "libpcap"
 
   resource "argparse" do
     url "https://files.pythonhosted.org/packages/18/dd/e617cfc3f6210ae183374cd9f6a26b20514bbb5a792af97949c5aacddf0f/argparse-1.4.0.tar.gz"
     sha256 "62b089a55be1d8949cd2bc7e0df0bddb9e028faefc8c32038cc84862aefdd6e4"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "simplejson" do
