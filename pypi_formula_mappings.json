@@ -429,6 +429,9 @@
     "package_name": "termius",
     "exclude_packages": ["six"]
   },
+  "thefuck": {
+    "exclude_packages": ["six"]
+  },
   "theharvester": {
     "exclude_packages": ["six"]
   },
