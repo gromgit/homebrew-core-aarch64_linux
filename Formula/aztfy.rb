@@ -8,12 +8,12 @@ class Aztfy < Formula
   head "https://github.com/Azure/aztfy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "79dae50a2d5034ed78479cc512cac7f027335a80657314c8c9d46fb50e6bbe15"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79dae50a2d5034ed78479cc512cac7f027335a80657314c8c9d46fb50e6bbe15"
-    sha256 cellar: :any_skip_relocation, monterey:       "0c1fbbb4c588cb9e035adada127e107b56f13381a9c34bdefcf212e6c858f3bc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0c1fbbb4c588cb9e035adada127e107b56f13381a9c34bdefcf212e6c858f3bc"
-    sha256 cellar: :any_skip_relocation, catalina:       "0c1fbbb4c588cb9e035adada127e107b56f13381a9c34bdefcf212e6c858f3bc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e422b3038399eff6c079156404710063f7a2b9b99e85b88e53abf543035fa77e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3223262cffd36fd34b96828eaf60c6b91ea3296f7ca8a70a8bb97dc59d16a8d7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3223262cffd36fd34b96828eaf60c6b91ea3296f7ca8a70a8bb97dc59d16a8d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "248092b3e8792f4278eb9f981e8333a5c06410c4da6ed0c5379e784a9ce9329e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "248092b3e8792f4278eb9f981e8333a5c06410c4da6ed0c5379e784a9ce9329e"
+    sha256 cellar: :any_skip_relocation, catalina:       "248092b3e8792f4278eb9f981e8333a5c06410c4da6ed0c5379e784a9ce9329e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5742042639aa27ef133d0c80061cf2ffb337e545367021d6931ad188c6e2a7c"
   end
   depends_on "go" => :build
 
