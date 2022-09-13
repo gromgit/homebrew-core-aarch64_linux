@@ -452,6 +452,9 @@
   "twtxt": {
     "exclude_packages": ["six"]
   },
+  "urlwatch": {
+    "exclude_packages": ["PyYAML"]
+  },
   "vdirsyncer": "vdirsyncer[google]",
   "virtualenv": {
     "exclude_packages": ["six"]

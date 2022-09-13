@@ -18,6 +18,7 @@ class Urlwatch < Formula
   end
 
   depends_on "python@3.10"
+  depends_on "pyyaml"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
@@ -60,11 +61,6 @@ class Urlwatch < Formula
   resource "minidb" do
     url "https://files.pythonhosted.org/packages/21/75/2356bd4dcc48a8af77b0d2ded8984ceba5e4c71f67e9734ec9e378467ebd/minidb-2.0.6.tar.gz"
     sha256 "8bf0aca9b89cb1e8b7bfd8ad8b5a7208bd2fb046e343b3d656ea00f8bcfd6f5e"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "requests" do
