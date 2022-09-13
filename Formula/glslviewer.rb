@@ -18,12 +18,13 @@ class Glslviewer < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2f456474a519741116e51b879b003885bb9096b37e9a98deafd2d3d966a541c7"
-    sha256 cellar: :any,                 arm64_big_sur:  "a0ddf3807ad7de1c736957ace22843f5aa8c4ab7acd2e543e480c5b7af895712"
-    sha256 cellar: :any,                 monterey:       "ea23ee67e1aeff5b957ce19c73ff07c9a774151ff5682bfe1ef3bb8578b4a2fc"
-    sha256 cellar: :any,                 big_sur:        "4f7697383e46e1cc11e71011092b74111118e87ccc9a1998524962a5541e47ad"
-    sha256 cellar: :any,                 catalina:       "1070b61989a89248aebc4d78b68651e42f71ab2ae68d62960e351b1a7ac7d254"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb0e575ecbaf09367ca0a22303c57645ade93322c164628972c12db9b1e72a63"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "9bf045ba8f252a3ef1726f552d6c24d22a2be1a597e2ec9fc88fe5c8eff82220"
+    sha256 cellar: :any,                 arm64_big_sur:  "a11e7256ec826ae2435507ec781428cbec9fe8d50d432a98574161818f484ebb"
+    sha256 cellar: :any,                 monterey:       "9fb99a18f9a4775b8c43dd5c9f5f82c5aad905c94433e1ea543ce7ee23f543f3"
+    sha256 cellar: :any,                 big_sur:        "56bbbe0b32e5dd91e345014e8b73c76026bf0b8bc555d079630f4363e790eabf"
+    sha256 cellar: :any,                 catalina:       "25cee349f8ff580d3ebff976df4625893523de07cc9b747df103064195d318b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d510cb49e1b3094d24d919a82cf1b614e40688c7401754d3fbd33d2d13d37352"
   end
 
   depends_on "cmake" => :build
