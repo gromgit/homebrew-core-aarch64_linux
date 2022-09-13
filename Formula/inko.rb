@@ -7,13 +7,12 @@ class Inko < Formula
   head "https://gitlab.com/inko-lang/inko.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f9dbb9ca91c3c850de16e96b770118a7e98c2275b5d45e2d04e322702266ca4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97fd0e158ca05967044ce52f22efd5226e4f1a03d72dcc74d54759ac63490ce7"
-    sha256 cellar: :any_skip_relocation, monterey:       "1abad4e1a95ee97fbaa3ff1cc5c95eeada47e24ed0d9bc1611fe191658368b28"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d759b01b4aafb4117a280f6734e74e5df7006104ea1e9bb88377e91f29d69536"
-    sha256 cellar: :any_skip_relocation, catalina:       "2637485ed2ad0644e69fcb33cf4c56e9db6f9ab42751b9502e71299843d66c85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30a0af9b41a880e969480fe9dba4673da888a994e7ddb097c3382a296decdf71"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b4d8f51a76b0c7260dfcf311141cb52921f6b899ec962b521fb75a5b56b94b00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4a2a7c699d3ebffe9f92dc7dff1f839e369028404ce0997f945622a0603115e"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa1567b9a80ecf61d33dcc09637b76ea2c32be5a1558bbaf5259d0cd085a8f1d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e0e4889fef0fcf3d9eabc466c7290f38d4fd7b23bb1b422c71b301fcabe19a03"
+    sha256 cellar: :any_skip_relocation, catalina:       "4dab624dbe2acb233d0e0f1b92238988de99507e47400df9974b8b4c8c0e5293"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "793f34b23c6045b3e56bd64f6be059b4cb0cbc1f24a85cc688e6c41c99cabee1"
   end
 
   depends_on "coreutils" => :build
