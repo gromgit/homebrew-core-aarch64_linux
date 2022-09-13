@@ -12,12 +12,12 @@ class Neon < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0c4618e2d78ae5d4c3884a5a59131eeb309d1884ba41e376c044328510976d0f"
-    sha256 cellar: :any,                 arm64_big_sur:  "dcdc765d8760cecc458d9e64ca8562f498d969b5ea52b9f45c1f1504a705c1fd"
-    sha256 cellar: :any,                 monterey:       "f3142a2ae903721694aae7fdeca055b6e4707ba0897858fd73d9c28ee75c9997"
-    sha256 cellar: :any,                 big_sur:        "1456e9957c3225719f6662bb2e9bd504ee7c38b3932f51abae6979875426c005"
-    sha256 cellar: :any,                 catalina:       "42e300e95e79b35251518d7594484202c65b3684a18ef4bbb48698767dad9e83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58a533220d0ac093155f0e0ff32e246fb4fb0d3c87aa33857be8048e1a4a8f72"
+    sha256 cellar: :any,                 arm64_monterey: "8a9d15eed842a8cde2a71a19b3fc2fae4e29213c1d356c568383350bfde14f25"
+    sha256 cellar: :any,                 arm64_big_sur:  "421c1b74a8a1d8a60d64d839d483914e65d93d1c2005d5642aac81d0dad715ff"
+    sha256 cellar: :any,                 monterey:       "b480974e79ffe9f828b0cc7068db7d336a2eef8ad311ef4e3e70f08aa95ec601"
+    sha256 cellar: :any,                 big_sur:        "a06568dabaf8ebac45d53833a5bfb558aac0f97e07014fd80fe3ecb28dbff780"
+    sha256 cellar: :any,                 catalina:       "8bdcc4e6be196c4cffccee3d185154094c7938ffc40a37f43394a58b5770e113"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eef06a3735703c5e37bdf6973045db324a21719af799c1e92809fcfb6bafe5c1"
   end
 
   depends_on "pkg-config" => :build
