@@ -468,6 +468,9 @@
   "virtualenv": {
     "exclude_packages": ["six"]
   },
+  "virtualenvwrapper": {
+    "exclude_packages": ["six", "virtualenv"]
+  },
   "volatility": {
     "extra_packages": ["capstone", "pycryptodome", "yara-python"]
   },
