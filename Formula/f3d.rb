@@ -6,12 +6,11 @@ class F3d < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ac70f7b75dd20fbb59976ad90a62a14db3190c90f2f97294c39771e74efaf48e"
-    sha256 cellar: :any,                 arm64_big_sur:  "2ac4a39f7a33dcc71cde0e907f5f0610facf5375680e822ef66a24bfd18abdda"
-    sha256 cellar: :any,                 monterey:       "0a2fa1c92c87e4a39b7391f3e8f1c1d636ba6c1b5003d3cb72051a2c8015c87b"
-    sha256 cellar: :any,                 big_sur:        "1a6cf080c920572b651e567e839df1142dfc95e7e93200890a6abb6f9f60878b"
-    sha256 cellar: :any,                 catalina:       "e1528f1a04999a5d1cc8597dea5d0ebeb3a6139e0bddb61ee5dcf72f076a58ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "628f05faa164491788ca3bc4765684f9cd473c94f4ca0369c5d677db0c81eb9d"
+    sha256 cellar: :any, arm64_monterey: "eb43ad624a8cda6e60911b4de70631e5cfa71c7bc0ce2260337f1442243060f7"
+    sha256 cellar: :any, arm64_big_sur:  "267fcff261a954ec13a7cd01f59f4db0dbf01215e7df0404121edd9e88cae7c9"
+    sha256 cellar: :any, monterey:       "7e8cb99a85f499057447134306a1fc80d2a7d7a74f1dd58faa3ed633afcb90aa"
+    sha256 cellar: :any, big_sur:        "90819e0682f31fb0df1b634b0554d6cf672a37d0d2b06c0218f1d0c786565fdf"
+    sha256 cellar: :any, catalina:       "9ef83d637737e119fefc46f957d43c8d22c1e3a9fed97985919e6a7bad2da58e"
   end
 
   depends_on "cmake" => :build
