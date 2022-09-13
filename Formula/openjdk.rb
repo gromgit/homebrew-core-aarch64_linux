@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk18u/archive/jdk-18.0.1-ga.tar.gz"
-  sha256 "4728da4676601af35c6ad998f2283e595ca9ce9b8528a75d74fddf7d03932d71"
+  url "https://github.com/openjdk/jdk18u/archive/jdk-18.0.2.1-ga.tar.gz"
+  sha256 "06fad73665af281e36e1cc5fb0c8ed5e88e1e821989f1421539cb012065d7722"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -11,12 +11,8 @@ class Openjdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "61e9244f1f8f8c0c2139e1df26b9895f5508e3e7538952459b590f8bff50627f"
-    sha256 cellar: :any, arm64_big_sur:  "99fda507db67f88e289d8275ff7c37e63481c6f837a2c2c084cac1faf6e8fb2b"
-    sha256 cellar: :any, monterey:       "acb7d100bd61aa51fd0014339897dc8b6405f5c62adf8551cbffe28c1ce6aac7"
-    sha256 cellar: :any, big_sur:        "a70f028a2ad1233792eb1fd800ab0ed25d06a4d9f29250dbb1a2527685cd4ce6"
-    sha256 cellar: :any, catalina:       "e91872c557d4697ef33743dd3d161eca51c18f7dfff2c88d042ebc3d4e03e09b"
-    sha256               x86_64_linux:   "1723a239e00f76755947ff254e9ecf7b6416d49eb7690c1c9dc05a68dae09fe9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk"
+    sha256 aarch64_linux: "e087014251cfe69c695e808cc879868adfe1c43b50621a57e2187850f739e7bd"
   end
 
   keg_only :shadowed_by_macos
@@ -48,17 +44,24 @@ class Openjdk < Formula
   # From https://jdk.java.net/archive/
   resource "boot-jdk" do
     on_macos do
-      if Hardware::CPU.arm?
+      on_arm do
         url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-aarch64_bin.tar.gz"
         sha256 "602d7de72526368bb3f80d95c4427696ea639d2e0cc40455f53ff0bbb18c27c8"
-      else
+      end
+      on_intel do
         url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-x64_bin.tar.gz"
         sha256 "b85c4aaf7b141825ad3a0ea34b965e45c15d5963677e9b27235aa05f65c6df06"
       end
     end
     on_linux do
-      url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
-      sha256 "0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44"
+      on_arm do
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz"
+        sha256 "13bfd976acf8803f862e82c7113fb0e9311ca5458b1decaef8a09ffd91119fa4"
+      end
+      on_intel do
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
+        sha256 "0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44"
+      end
     end
   end
 
@@ -113,7 +116,8 @@ class Openjdk < Formula
       include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/darwin/*.h"]
       man1.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/man/man1/*"]
     else
-      libexec.install Dir["build/linux-x86_64-server-release/images/jdk/*"]
+      jdk = Dir["build/*/images/jdk"].first
+      libexec.install Dir["#{jdk}/*"]
       bin.install_symlink Dir[libexec/"bin/*"]
       include.install_symlink Dir[libexec/"include/*.h"]
       include.install_symlink Dir[libexec/"include/linux/*.h"]
