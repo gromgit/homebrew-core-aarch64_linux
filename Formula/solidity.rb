@@ -11,12 +11,11 @@ class Solidity < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "027f8cfe52cc40674e66d912f9d0670adb5c1a1b64d3dc98cd47290c85d3a080"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "953f8ff3918fd3b5f1a48618fceb2ae1515f8b8483c854ea81317022105bedf7"
-    sha256 cellar: :any_skip_relocation, monterey:       "e2bec1d08f27770dbf2d259ce99a19a2d11d21ebeae4b2ed2db2799144773742"
-    sha256 cellar: :any_skip_relocation, big_sur:        "018432773ac3f3e5f82db4a822a4ed98878a3ea466a24d0a1258246f41aac7fa"
-    sha256 cellar: :any_skip_relocation, catalina:       "7e5be18b7455bad8654b09cfd4797d3619693b3397ebb090cad766659d51c7ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53e81864be79cb365da8baf59cbacf71ce47504bb80fb9849a9d499d62784aae"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a44f2d497a1db10c796fc7833c2d166e53a2d441d75f0f03c56955d4267e229e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "275809d3b40b6470ebc0778f88cdc8921de593881e296370194b14f13652e348"
+    sha256 cellar: :any_skip_relocation, monterey:       "5ce812a479c2164315250e4e6f970d646d0f268e646aff02c913e8e1da1e8fc1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "92625da745854d006d18644647f1e93bbef87e5659596836fca1566aceeb9a89"
+    sha256 cellar: :any_skip_relocation, catalina:       "be5c8e865737ee4cee363010e44362d6f7099d3cea5d9e395f081aac013aca48"
   end
 
   depends_on "cmake" => :build
