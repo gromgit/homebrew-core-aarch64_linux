@@ -13,12 +13,13 @@ class Itk < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ed0de1d339aff119c2640e3a1005f839df71d72512bfbc6c8e4674a8cba6594e"
-    sha256 arm64_big_sur:  "88225bc780b95cbd930e3720f7bcc642486696af3d09ef1c11496be48e861877"
-    sha256 monterey:       "3ad1e354b45ecc757531b9d6b1824008bdd673a2f2a79a97d61df9e03691b1a0"
-    sha256 big_sur:        "29954b98ab4258d589f1a67f159444f56565b3b9bf1668856ebf6dfc26b79d6b"
-    sha256 catalina:       "635a00672c346af5b3e89dec3ebe8d8427068f1f28f0b187210a9e4b16c55cf8"
-    sha256 x86_64_linux:   "00848dadfd40fb0004e7e6fdd5e244f2803e4f376ced6dfa552c24081899a90f"
+    rebuild 1
+    sha256 arm64_monterey: "b9404867b0d10372dc178c78707c52ecfaace5812f15001809516f3a4ddca522"
+    sha256 arm64_big_sur:  "cdd5c6a59fe4a4c3b1c261250e3d9955d778cd9120d9cf8ea8b328fe24c21a9a"
+    sha256 monterey:       "ae2739cbc09f2308e883dedda290c14aed1f98d5fc8de8e233becdec3d3ae7a6"
+    sha256 big_sur:        "c95d53f403d23de160002aab5745c673b610a42c6db7bc4c9e773c9adee59b01"
+    sha256 catalina:       "3a4a3993689cc106e70476a74ad09efa57c1ac4fa397d0c4720c370a05cb328c"
+    sha256 x86_64_linux:   "7a59bef7c56ce8e09b9484b7261afc2280f5584a4e4b20930cb244856eb9fe02"
   end
 
   depends_on "cmake" => :build
