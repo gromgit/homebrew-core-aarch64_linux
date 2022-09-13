@@ -7,12 +7,13 @@ class Hamlib < Formula
   head "https://github.com/hamlib/hamlib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "402e4d11f14737861fc0e1b848b3750dd244155148a1e7d209368c52c536f492"
-    sha256 cellar: :any,                 arm64_big_sur:  "d2bca238a57f8c159b5056efbc65d4ebe596369e335593462631792ec7152fe4"
-    sha256 cellar: :any,                 monterey:       "5de56256bb7d46ca8b2adb77bb47489a53a97d9dfa030f5789f8384d548f0f39"
-    sha256 cellar: :any,                 big_sur:        "b048dc58043838aa534d497f1c53fd4ce98a7a430aca691068e828d5b226fbc6"
-    sha256 cellar: :any,                 catalina:       "20a4202b385772556054237968690744b850fa3174fe59eaed862489042024bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e10e9c3dd40872ff78d3382aa8040339ddde307ba7cb4253dee08bfd342b8f95"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "ca4a1a40238e72a834336c9f19a52a7a4ecaae4224e9d39352597555f4c948d8"
+    sha256 cellar: :any,                 arm64_big_sur:  "ace0fd60e8dfae3cdd4f807bd49944cd0d28003cfc16d8cf0e751db77fbde4db"
+    sha256 cellar: :any,                 monterey:       "5b32a7108366f79102ca69dabafd9ed6f556fba03208235b62f04ccc98508a65"
+    sha256 cellar: :any,                 big_sur:        "a56d67cf6837bbe2c57dbb404275ad39ca6c8515a0325f5c4b62323c1ab3a609"
+    sha256 cellar: :any,                 catalina:       "b7fe12d40e52c85b463fe66099b11938619126273a23d6b2496f8abb532de244"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8665360f495d72e0bd280e0d42d3a91eaa225762e691753194cbcf3fefa314b"
   end
 
   depends_on "autoconf" => :build
