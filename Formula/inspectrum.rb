@@ -8,13 +8,13 @@ class Inspectrum < Formula
   head "https://github.com/miek/inspectrum.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cb49666fff4b01b95a058d0c4426c54fa7656fa9bf238bfaca5f6452a474523d"
-    sha256 cellar: :any,                 arm64_big_sur:  "a0fb5fe1d6d28598185e4b550c3eb023edd06caa538965143ad9368fb12fde29"
-    sha256 cellar: :any,                 monterey:       "8ea325ef7a0b15bf6dab7e9eb427cdcb0930864bb0a36158ca377a863baac981"
-    sha256 cellar: :any,                 big_sur:        "50970461c14baf9ad20ddaf10ce822fab5d1a3d3c50119864ec18ada903c4bc4"
-    sha256 cellar: :any,                 catalina:       "d1fab945b3121deb6e5e9fbfe761bbb550c2478f1c169266cc467fcf143c1ce1"
-    sha256 cellar: :any,                 mojave:         "1bb0c291cfea17440808f50296634ff87ef9c6b1ddd28e3f1ea816eb4018597d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a48eec06539f246874c2a3320071bda2f2fb74e77e561ecc102a0881b1b67237"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "987ec702b9c0a62d782d08827ceca63cf930e3b32fa65b3ac6d6c1a808fc4c80"
+    sha256 cellar: :any,                 arm64_big_sur:  "c87caeeaecdf7dee81c4c8d557a5acb25a511a6a80418d829f0e87293970cd61"
+    sha256 cellar: :any,                 monterey:       "bf95d982178b20894aa627dc49c4af81601d78dbd7cca7ad17d75d73676f3a9e"
+    sha256 cellar: :any,                 big_sur:        "a3b1a2e902c182dbe8821025facb01cfe6b35945cc88302e7e1a14904ef98778"
+    sha256 cellar: :any,                 catalina:       "17c0d00e0191db31868a384d773ee1ac74da82fd01ceee06b425e99b15809670"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7b5c146e089b5eceb3ccf9456ba2c15b2535c9eafdbe4e37ed92512ea79cdd5"
   end
 
   depends_on "cmake" => :build
