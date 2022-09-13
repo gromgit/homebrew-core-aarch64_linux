@@ -12,12 +12,13 @@ class GstLibav < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "fc2fb6970dcc2e153b11d6cd53bbb61216aeb19398de18727ca75ecae450313b"
-    sha256 cellar: :any, arm64_big_sur:  "99c1537bd90d255df9e4e92a90037b24a57beeb51ab44daf590dfe3a45a1b801"
-    sha256 cellar: :any, monterey:       "d09097cb0f504f0e6da37f125078bc171a1923de817261f16fd3ca086f3b557c"
-    sha256 cellar: :any, big_sur:        "a016cd9ef794ed2c9281c1e30f8052a59d47d21641bd083721b0cfa88bbf1db6"
-    sha256 cellar: :any, catalina:       "acf202daebcfd054d1f226797c562ec8dcb610b9e5794a1548df4cd4afa89357"
-    sha256               x86_64_linux:   "4b36f679caf58d93cd3434c7c517809ac57a3353571c2ee2e436d83bb76ef3d8"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "4065537d800b19238c38b4b1d42cb92f194468049db105d733f8f17a742e2d9a"
+    sha256 cellar: :any, arm64_big_sur:  "340789fce634714aaae27165addaa43bb40f53ab69238ced86d7ded7782ae1e1"
+    sha256 cellar: :any, monterey:       "94daf9f1df921d2a72c085ba5ca3c5df532320d692d3b8d422f687396ee08b44"
+    sha256 cellar: :any, big_sur:        "2da4802458d0198c41315b6144d51ed20f8bd44f39ad1577388d6f7cd9b80ae3"
+    sha256 cellar: :any, catalina:       "47bec12928594e7835d77c69614069190d5756ebcf77b728eb5041b27533b7fd"
+    sha256               x86_64_linux:   "be06fbd85729712f0f21006039a5a42b3ecac27422860f0baa0025ac11312923"
   end
 
   depends_on "meson" => :build
