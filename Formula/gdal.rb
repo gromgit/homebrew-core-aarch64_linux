@@ -11,12 +11,12 @@ class Gdal < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "89683813b01ed80109ebdad5a50018610dcdb9a87b90deb7c083fd5ecefc13b4"
-    sha256 arm64_big_sur:  "08774b7486c819fd38c71d8a0b368faab367d4d8488181bb45bf81bf8af384bc"
-    sha256 monterey:       "7d66965d525f4cdafd5afdbcdaefccaa038d9d6a056244ca1ac17591f38e7ba0"
-    sha256 big_sur:        "bedd90ea66a50d49be051378ae3399439b33c7d225d60b9a60189df1162247f9"
-    sha256 catalina:       "39712c5b6cfebb0d9a747a4be444adc824de49173d9917135a645a8b1486c8f0"
-    sha256 x86_64_linux:   "540738ed96547d4ac6fb1709cce9315f01072cced6fc00277682d507b06b7ad2"
+    sha256 arm64_monterey: "4b31af5bfb44a3a64d6bc04a4cd6650bd4e9e4993997c54f11a49d9094fc5d85"
+    sha256 arm64_big_sur:  "441f7390ab812fcfe17ead6020e08fd6b76e60d8484b5cbfa3fcfac5da7c3a4b"
+    sha256 monterey:       "fa73f2ce395854b62a662453ab783c38e296df47005f0fd2955a522177a3eb30"
+    sha256 big_sur:        "8ff12e2b1438b193410d46d08aaf0aa083162cbc1ade3d46da547d3d8c3f9e2e"
+    sha256 catalina:       "8cf46e405bd9f54823532e5abf58ccab529d430cc64d0e8bcba7b8fc7bed96a4"
+    sha256 x86_64_linux:   "b7df41973128eca2d3f11696ee6909f785f2214114a59134bcf6a69a0f9c6307"
   end
 
   head do
