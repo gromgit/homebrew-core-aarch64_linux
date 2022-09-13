@@ -7,13 +7,13 @@ class Khiva < Formula
   license "MPL-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "399f0456c0b20163d7c38851ab7838a6d9ab4335f01e01073bfedae98f949750"
-    sha256 cellar: :any,                 arm64_big_sur:  "c386d039a93dc9f3e96bc0325cda600cfbf2f698f1b45180e712b5baa4227f09"
-    sha256 cellar: :any,                 monterey:       "c049efc28517b418e5f613187aa29de8173066442386b409b175291c7becf493"
-    sha256 cellar: :any,                 big_sur:        "1a32ac76362d01553dfd4e21dad40e237f686a959e71f19bb0f8b72df1c2da35"
-    sha256 cellar: :any,                 catalina:       "25f5bad055a178283a0be93cbdc7c1581aea942ea779704e4099c966a86e6a63"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f93da3f62b10d0f9158f50f722cace17a29ca66958fda924853af51cbcbe8cc9"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "520d5879468b0454190fce7fa890fb98cc169c917c0f72975fd97e5d2a5f1a77"
+    sha256 cellar: :any,                 arm64_big_sur:  "9ff14629f60e6ed2f278774c30ed9348d3965e8bfbe90cc31ea605bf475c747a"
+    sha256 cellar: :any,                 monterey:       "3c3fc743e58f62b1355ac3e942e1141cbf09b56de5e3516f522432c2de841491"
+    sha256 cellar: :any,                 big_sur:        "9341225ecc460b464de3760bd654165199b598e6393bd2b92ffd24a6cdc0f7b6"
+    sha256 cellar: :any,                 catalina:       "798a2bd7f9071245ce4c0b7c6058ade9f815e071e549ef07145cffbe59d2dc40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a6a2fad78cda325494014e7c43de7175b2e4859a4fdf4410febd7415e30f7e2"
   end
 
   depends_on "boost" => :build
