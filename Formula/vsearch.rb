@@ -6,12 +6,12 @@ class Vsearch < Formula
   license any_of: ["BSD-2-Clause", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "60a20c7db97a19480746b217c1a643b9c90eaa51a5d5110dd52480eb06095795"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a99ee1fab49d2944c45ae3fb00c0cff2a1a36ba3a37c0f06be93da28751b821c"
-    sha256 cellar: :any_skip_relocation, monterey:       "0da32c55eab32b73ed9f83c39ecf3011a48d4595ac0d05738bece1ca886bd062"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f4c87b86a29ea3742201d9764adc5ebe483f0c0243ddba9de78595a6e1bda3d6"
-    sha256 cellar: :any_skip_relocation, catalina:       "1b158f098827a1a39f0707159d26d89597312a23f99af7b33fe5aa44660ad633"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef5e9bd90a710ba412c06f420680c855c27663d7f91fa9c205adae4db7a8ca72"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0fb2e3930a3fed5e89202d71ad3c479daf442b1c02b0df3b2039db0d8844c575"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "86d15945c4c95ed305452c71a970b6f26b097e71ac299921717aa0528fabb378"
+    sha256 cellar: :any_skip_relocation, monterey:       "0bfaf15f0c27d0d016f7dff4f06748d079f4bfb9e9d61beaaf600833737153b9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bf52412a64c3ce1add4ea8a1dfd78c397a15b7af7945147bdca02c7def93794b"
+    sha256 cellar: :any_skip_relocation, catalina:       "65bf796bed27a063f941201b2138a144f9a6dacdff71eb99d06c701e2f56510e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "476aa8cd70419bf47c47d55c584808cc9adce17e4ebdbbb0827ce8dd0d9e10e8"
   end
 
   depends_on "autoconf" => :build
