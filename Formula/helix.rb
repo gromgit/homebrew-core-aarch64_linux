@@ -7,12 +7,13 @@ class Helix < Formula
   head "https://github.com/helix-editor/helix.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "57090f185674bf3809d1f8404b6051492028029015ea0ac21574002b45619c7c"
-    sha256 cellar: :any, arm64_big_sur:  "cc27d03f9a2ae50301bb52161042418de48efebbb5b287aac7d1ccad5ad544c3"
-    sha256 cellar: :any, monterey:       "e02c39d4f04e682ff8428cbec64b1ce56182745c2b93f8e2104b7b76c6caba48"
-    sha256 cellar: :any, big_sur:        "cab72badae4e61751b591f5b905f4968fb6296be4fe440597e23d1021ba06424"
-    sha256 cellar: :any, catalina:       "0d1b0d5952923c20c40ef596a159a046b3c615fa7a27f527c27325dda7e21b36"
-    sha256               x86_64_linux:   "661f36d16415f7d17a21494fe7a536c12e25da93c64a240f6822da5e68397ec9"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "fbc0e33ba2b0639778b11efa751643c898d232d2021f363e1155c8fd30b48e2c"
+    sha256 cellar: :any,                 arm64_big_sur:  "10fc0acae5c742ba3d3f95216f246a84160a072c9a300b8604ef32232047a606"
+    sha256 cellar: :any,                 monterey:       "0ffad064e6fe4c171025c18bab8d859244afca4fc3d6f338460111c9787fea2d"
+    sha256 cellar: :any,                 big_sur:        "94834a7dc26269fbd95d35963b8fa7c871257fc508ec0dad3176373c3b7a40ff"
+    sha256 cellar: :any,                 catalina:       "1312797458bebdd68994eb59c59da025fc5c1cce83d7650fdf8bcacf51159f59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a07db2941a93080fbc55d24138b22210fcfce512627552ccc3ecd3ebcbad0195"
   end
 
   depends_on "rust" => :build
