@@ -400,6 +400,9 @@
   "scipy": {
     "exclude_packages": ["numpy"]
   },
+  "scour": {
+    "exclude_packages": ["six"]
+  },
   "semgrep": "semgrep",
   "shallow-backup": {
     "exclude_packages": ["six"]
