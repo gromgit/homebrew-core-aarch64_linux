@@ -480,6 +480,9 @@
   "watson": {
     "exclude_packages": ["six"]
   },
+  "weasyprint": {
+    "exclude_packages": ["Brotli", "fonttools", "Pillow", "six"]
+  },
   "west": {
     "exclude_packages": ["six"]
   },
