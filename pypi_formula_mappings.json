@@ -407,6 +407,9 @@
   "sphinx-doc": {
     "extra_packages": ["numpydoc"]
   },
+  "sqlfluff": {
+    "exclude_packages": ["PyYAML"]
+  },
   "sqlite-utils": {
     "exclude_packages": ["tabulate", "six"]
   },
