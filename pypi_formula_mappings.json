@@ -459,6 +459,9 @@
     "exclude_packages": ["PyYAML"]
   },
   "vdirsyncer": "vdirsyncer[google]",
+  "vint": {
+    "exclude_packages": ["PyYAML"]
+  },
   "virtualenv": {
     "exclude_packages": ["six"]
   },
