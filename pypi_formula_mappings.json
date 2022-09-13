@@ -470,6 +470,9 @@
     "extra_packages": ["graphviz"]
   },
   "xonsh": "xonsh[ptk,pygments,proctitle]",
+  "yamale": {
+    "exclude_packages": ["PyYAML"]
+  },
   "yamllint": {
     "exclude_packages": ["PyYAML"]
   }
