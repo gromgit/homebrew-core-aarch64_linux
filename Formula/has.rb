@@ -6,6 +6,10 @@ class Has < Formula
   license "MIT"
   head "https://github.com/kdabir/has.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "1b267d61b91d1ca227e2d207b891dad3025976b2615a5f49fb33a3971feb117b"
+  end
+
   def install
     bin.install "has"
   end
