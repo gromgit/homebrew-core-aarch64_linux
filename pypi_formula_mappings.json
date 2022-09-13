@@ -414,7 +414,7 @@
     "exclude_packages": ["six"]
   },
   "tarsnapper": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "termius": {
     "package_name": "termius",
