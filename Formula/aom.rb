@@ -7,13 +7,10 @@ class Aom < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "621aaeb000c4ad3df7cf62af3a22f53e38d9cf0714b52cc23ee3406949c5ad0d"
-    sha256 cellar: :any,                 arm64_big_sur:  "76b0b72beb6975e6f8ebbefc256f01c2b6466e210c93172c39ef35fde3945aac"
-    sha256 cellar: :any,                 monterey:       "0a522c17ca7a108aa44860a549740f277fc6a1118b36df0bfd846e2d17fb80c8"
-    sha256 cellar: :any,                 big_sur:        "e5f4fba0b45d08db7ffe9e06884cb163dd027b18e8ef5442cc5d4d55b6489f44"
-    sha256 cellar: :any,                 catalina:       "10be5b52fb09dc2126ac5ed93e4caa805f9224833b665aebe79c2c3d40b51e0d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c59073520f70de15996b3af4c0513ff1b4bde89fb33a810a9dd7a8348afa553e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aom"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "69c6160d1305857ef1665cb91b06b372cd130a1f87dbce3567c7e4079f3313a1"
   end
+
 
   depends_on "cmake" => :build
   depends_on "yasm" => :build
