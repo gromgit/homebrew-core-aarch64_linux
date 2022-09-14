@@ -7,12 +7,12 @@ class Wangle < Formula
   head "https://github.com/facebook/wangle.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1b0258fd8fa28923f9d53bda0a7a8f59e75501d05c09969670d10cab6847ca0a"
-    sha256 cellar: :any,                 arm64_big_sur:  "ea951a63c2eba1be6e229b4105c76af0322280f12c167c3a877c86d0f7da47fc"
-    sha256 cellar: :any,                 monterey:       "6fe93848963f7294a0147a7a446123f631590b55cc9caaa58fb392d6b310bfcb"
-    sha256 cellar: :any,                 big_sur:        "f902f2c37540e3ab3b51ead90cec6e6d218c73c3dc165d9bb0d092378448557a"
-    sha256 cellar: :any,                 catalina:       "c3777827a5e47fcc2fa52f48568c78111dfa2e3dc9652e30f58ce154f25b3b5f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe6c3f2e95b1a55986b38b027f7f3475812c7b3cdc3a684f65c43a58fd7427aa"
+    sha256 cellar: :any,                 arm64_monterey: "08961cb5f97efefe840962f8205b42f6a1e3d0131c36b86765378fdf73b6ad6d"
+    sha256 cellar: :any,                 arm64_big_sur:  "c10f1d2a09150253813effdb8a7ee597a65c7533c44bc2cb77d3a76eb94745b6"
+    sha256 cellar: :any,                 monterey:       "66353f39b477871bc0af61d02044c25a0289ba900c7cbac4d4d2a7b31418f163"
+    sha256 cellar: :any,                 big_sur:        "71a875dc60d29999796fefa92ff270bee72e902235fc06f5bba6587f0ac3e7f5"
+    sha256 cellar: :any,                 catalina:       "d7d5ba88df3e03b58db803a3698f6e49866d2385d9df182b44a325c57822d058"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90cb80b1c8e3e4a8444f9d11dd7a1bbade4951ecdc49fe1a65cbedd666fc02c6"
   end
 
   depends_on "cmake" => :build
