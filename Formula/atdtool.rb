@@ -9,14 +9,10 @@ class Atdtool < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "00860b394d9167bc00b8a31a3edf07aa02ecca3434ad379d2b48e1914f0be191"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00860b394d9167bc00b8a31a3edf07aa02ecca3434ad379d2b48e1914f0be191"
-    sha256 cellar: :any_skip_relocation, monterey:       "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
-    sha256 cellar: :any_skip_relocation, catalina:       "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
-    sha256 cellar: :any_skip_relocation, mojave:         "32171ec53c6f52a2e877ba0b1506be093e42f4d594418a2727675a327daef1c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e982a3e891104e18964da29892efef84c79da560c3c2525467fcaa48bb28819f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/atdtool"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "47de69605d5dbe37ac0493f2f2c7e93805ee4eed0ad278447f80a664bbbb730d"
   end
+
 
   deprecate! date: "2020-11-18", because: :repo_archived
 
