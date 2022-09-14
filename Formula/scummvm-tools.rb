@@ -13,12 +13,12 @@ class ScummvmTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "499de191275bbf936f8d9e246976e6188b1ce9d52f564af3f5c6c9777d632589"
-    sha256 cellar: :any,                 arm64_big_sur:  "fbd80c2985dfb8755de5ad94f4933f025f7efb1ba511e0415e26c3c8ee80c595"
-    sha256 cellar: :any,                 monterey:       "e55b51da1a0452c6d55952961e3751ce71ec09fda9f19183f3f166a3463c0822"
-    sha256 cellar: :any,                 big_sur:        "21028952a2a0b56a2a03b7b7d547a454d8659ee2caf0653b97da2f1d483ae15a"
-    sha256 cellar: :any,                 catalina:       "ff34a6f37530ec0d77ba18dbcd9cf0cc4f4fd96e467a3acdd3db0c360a94419a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e81d861d2d5381e0755b683d50412d905fd7bd4e124cd146cba0c4e6f74bfc1"
+    sha256 cellar: :any,                 arm64_monterey: "78512ebdf536034d934ad4889183cc98f6e4de5b4c418956118ee2aaacfd4a29"
+    sha256 cellar: :any,                 arm64_big_sur:  "559e4544f32ede9f680561b86edbea6d82998acf583b63c5b994601b88b4a88c"
+    sha256 cellar: :any,                 monterey:       "5f78d7b7829534c412a2afb7206e1c842df9669ec2e86ad06380ad14558cc69f"
+    sha256 cellar: :any,                 big_sur:        "0250bdeb6acd8fe1051bcca2648c855739e7ac939bef172cfa77e69832ff74ee"
+    sha256 cellar: :any,                 catalina:       "d06751982041199c36d78c4d64e495c25d019845c1c1fa3df182018d6850a81a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9bf72c689c543e70dc8102f73760b7af2673eb239b3821c89185e233e126b409"
   end
 
   depends_on "boost"
