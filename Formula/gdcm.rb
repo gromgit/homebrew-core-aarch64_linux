@@ -11,12 +11,13 @@ class Gdcm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1e7719814308b6f74ec7bf2c6c4c58fbe47a567da2696afe6510460f58e6e735"
-    sha256 arm64_big_sur:  "56b33bff8837528ff080fa1196cb39d7ef2b2df45c3a68b55547b5b8252d42b3"
-    sha256 monterey:       "fd63b5be7c8ab3d826a74dabbdff9e4936239aeeb1de18fe6a514e401923d88c"
-    sha256 big_sur:        "152a8ea9c2f8264a106b6c60cf5613dcb382c2bd0761950240cfcaa167d7282e"
-    sha256 catalina:       "a24a411acff9289f0c0b0256ddf002f15373a92f6bc935a4a8df833df43a22be"
-    sha256 x86_64_linux:   "1cdcb0f37c02cb52c16ba8eb8c4448712fb50dd69c59a4672c5006b9a34ceab7"
+    rebuild 1
+    sha256 arm64_monterey: "61379a0ac83c571dc165a2a9ef7cf6df93da689423f2c91fb41eaf23a8c45325"
+    sha256 arm64_big_sur:  "06218b29148911fa5857d64ce37568562a9735e1ec124c483179917b41ba7d63"
+    sha256 monterey:       "391a57738446900375df3d366fee3556433d68bd6460c00736f1b6cc43e5f81a"
+    sha256 big_sur:        "dc0ca1951ec0d913537a61700cdaf51983f5422cd2265c8a77b51840389b896d"
+    sha256 catalina:       "4891153fbdcfe3def1f9509a30b733429b057b96a1831f4730f74c06ee6fd777"
+    sha256 x86_64_linux:   "d49f388906e0554e5b7b5a5921eec3cb6a0b29fb8270d5b09eb207b964f66006"
   end
 
   depends_on "cmake" => :build
