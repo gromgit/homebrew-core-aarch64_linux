@@ -6,13 +6,10 @@ class Libcbor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ebb91ce404c53552b9ec1f2a4800bc2c1a9e83cd1692d8b1e1612b4734b92925"
-    sha256 cellar: :any,                 arm64_big_sur:  "53bf212a9f3fa8544360ad26e3eb574b80875ff3dac74193d9092d781b20286c"
-    sha256 cellar: :any,                 monterey:       "d07e3853a1d2d1cabe8ac3f4c005a3d90226f9f5faa8d174f61c76b121a351cc"
-    sha256 cellar: :any,                 big_sur:        "445ccae0ed1133be713e635c11e6591946e2df0345627db9214c10fdc0f9256b"
-    sha256 cellar: :any,                 catalina:       "78b58702fde7659d633f12b176e8e2c1747b39616c218160f7f10697473adff0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2f103b611cf187099332e4cfe1638e261a35bd6181d3fadbfcb9daeadff734f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libcbor"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "55ae6745cdce6e08d925b5920b5797d654999090aef10a725d539e90a54f9a91"
   end
+
 
   depends_on "cmake" => :build
 
