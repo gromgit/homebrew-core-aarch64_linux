@@ -1,14 +1,15 @@
 class Anyenv < Formula
   desc "All in one for **env"
   homepage "https://anyenv.github.io/"
-  url "https://github.com/anyenv/anyenv/archive/v1.1.4.tar.gz"
-  sha256 "efb5663ea44ba53c692bb1db439f4b9cf69099614030d0950fdd083f07a2e3c7"
+  url "https://github.com/anyenv/anyenv/archive/v1.1.5.tar.gz"
+  sha256 "ed086fb8f5ee6bd8136364c94a9a76a24c65e0a950bb015e1b83389879a56ba8"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/anyenv"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "22b2acb74e6bce587f4ece88142d14c013f911cfb513ed0f3d50023ce1c6f48e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c234cba8a8456c97c8491b7aac3556ffde2719e86e3e467db7d4d458b5944e1c"
   end
+
 
   def install
     prefix.install %w[bin completions libexec]
