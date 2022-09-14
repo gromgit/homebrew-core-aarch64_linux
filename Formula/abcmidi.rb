@@ -1,8 +1,8 @@
 class Abcmidi < Formula
   desc "Converts abc music notation files to MIDI files"
   homepage "https://ifdo.ca/~seymour/runabc/top.html"
-  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2022.05.05.zip"
-  sha256 "ec22123b90c5ec29a54b91e4d6651c056f1ff5c168fff3256cafd3205e32ef4f"
+  url "https://ifdo.ca/~seymour/runabc/abcMIDI-2022.09.01.zip"
+  sha256 "583933c4277760c52fffd6ec87af1b62967759378cb9f2a8b41e0da4468cac4b"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -12,8 +12,9 @@ class Abcmidi < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/abcmidi"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "fa99204979f9534c137ce69ebf8226216defdc618821fed69385b6840d14c2db"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ac27dfbd03cbe6c4939ca65fa900920f0d4f271b3cebd86dbd570dc78b66259a"
   end
+
 
   def install
     system "./configure", "--disable-debug",
