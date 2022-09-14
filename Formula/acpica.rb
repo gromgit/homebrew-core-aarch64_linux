@@ -12,12 +12,10 @@ class Acpica < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9158b00f7deeb744b5fa08d79fb02a5eefbb606c10c0c2125681c3ff45673bff"
-    sha256 cellar: :any_skip_relocation, monterey:      "1e39557249a8259dc8fe300ab7325f385c6a7b332228408dec7b919b1864aef7"
-    sha256 cellar: :any_skip_relocation, big_sur:       "99b525eaf7d774bb286ea3b35327403bda569f09e85aa2c6f481c62a59a3c50b"
-    sha256 cellar: :any_skip_relocation, catalina:      "29d1add20083addb56b94cff09bed25549a9d46c27726678c13bb73a88649065"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3c5a176eda07b9a1b640d95542e1a3bc828a98f77dce5b7dfb4ca2b0bcdf817b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/acpica"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7913cdb7e9f54b37e19fedb9be14a0de6e04ea57836b3fc885679f30ef4c108d"
   end
+
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
