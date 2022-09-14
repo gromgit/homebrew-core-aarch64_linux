@@ -8,14 +8,10 @@ class Autojump < Formula
   head "https://github.com/wting/autojump.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd70efcdedc3195f8f1a1bdc92d24fd8077e26c848c453de5e3eef2b92f5c8c4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd70efcdedc3195f8f1a1bdc92d24fd8077e26c848c453de5e3eef2b92f5c8c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
-    sha256 cellar: :any_skip_relocation, catalina:       "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
-    sha256 cellar: :any_skip_relocation, mojave:         "25469a543ea749b071f258a046449bbbc5ee24630ecc9c3eee91cc26af0cee8a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd70efcdedc3195f8f1a1bdc92d24fd8077e26c848c453de5e3eef2b92f5c8c4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autojump"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "559e7aff017ad7452c17fe29da768ca15865c58254ff70652af968161a47aacb"
   end
+
 
   depends_on "python@3.10"
 
