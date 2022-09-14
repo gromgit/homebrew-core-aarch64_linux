@@ -13,12 +13,12 @@ class Mpd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0887974e31f59b03c5601c6d052ca1c32d412c77b8aa1facedf0f0bfe5087aca"
-    sha256 cellar: :any, arm64_big_sur:  "cf013b984382dfb1abe29a28ae3894f84539314f09af24b9f77a9efba0543b00"
-    sha256 cellar: :any, monterey:       "77c538094f8b8fa4557c107743fba8d68e0b05521b96b141dbdb235503db7843"
-    sha256 cellar: :any, big_sur:        "bf7abe4ea63d2c36f7e4e5cb64f788af100073f08b95911990f2ba345f275f81"
-    sha256 cellar: :any, catalina:       "64bb99376fb006b907d0c215514abec46c23776f1d5788cb6154bed517c23e78"
-    sha256               x86_64_linux:   "34f42f8ca0b82b708814bef095b8f8b176f4d371f1a087dbe3c107d47815deaf"
+    sha256 cellar: :any, arm64_monterey: "124436d2f73c34e3583e1adc613f51529ab5abed906291dd838621ec7b9b21c4"
+    sha256 cellar: :any, arm64_big_sur:  "6a09ae779448e9b7a7d92bf342dcb078ca5ba575290bc462057b5fa374b548a2"
+    sha256 cellar: :any, monterey:       "cdfab2b417635beab09807daa140589e22435bc9e25326621d8414532bb41495"
+    sha256 cellar: :any, big_sur:        "e061cf900241b73fb3050fa1640e7b40f5c99ae7e48f9c487bccf5ef9edc7f80"
+    sha256 cellar: :any, catalina:       "ace352bac9c1b56cd0645956addf840cba48589f34d26704189b4bcedbed2c0b"
+    sha256               x86_64_linux:   "e743df83acf32841900d9bd557ce621030df8fbf667cfaabdb8d25e3edf73929"
   end
 
   depends_on "boost" => :build
