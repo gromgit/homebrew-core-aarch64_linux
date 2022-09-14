@@ -11,12 +11,13 @@ class Dnsdist < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "217340674a363376daf3661f32c2228e6a47fdc18c56a255d80879011ba792ed"
-    sha256                               arm64_big_sur:  "d5754f3a410aca4e97f47838aea285328371d64e5ead938f46ca5775956e9192"
-    sha256                               monterey:       "ae1c1eab2e439280c15d986724170e308fbe675412cb43a7f8350028376d0ee9"
-    sha256                               big_sur:        "59dec63be07da8392bd6f469e8e45e2385862cbe3b00c652731ac3dcdbcd99c1"
-    sha256                               catalina:       "e5fb9b7356c8e2453ad5fd6a3ac9da6315f99b400214b6d93b664abe2520d455"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "954c1e0ae0b8def8a45c7fca6187f40ec0e55b6489a612426a9945e79d083aca"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "c827e90dfcfbbf5d4d52590e773358ee4c7196b97ab7d916ebb2c380da626762"
+    sha256 cellar: :any,                 arm64_big_sur:  "7012f771ef3b4acf67d36f04a5f1ba7b24946d9d5fd4eccee4723b25769c5279"
+    sha256 cellar: :any,                 monterey:       "89158bd4a8ca2167f47dea428d85499c53be7c7516418809858b42614b0e31dd"
+    sha256 cellar: :any,                 big_sur:        "478e7a9499fdb58d8c2f747d345d8583799c839016fa8e95c1dc1e75805db9d1"
+    sha256 cellar: :any,                 catalina:       "a4fcac8dd50d500555ed537fc940292ddefdb41c83ac9817e821c14dda604401"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "68a429366f85707cb1c93679539c0272809c7904151427526fe1ae7abb4b7738"
   end
 
   depends_on "boost" => :build
