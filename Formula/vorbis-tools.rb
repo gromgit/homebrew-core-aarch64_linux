@@ -12,14 +12,12 @@ class VorbisTools < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "84a6be2cfa26af111e5e557792030f954ee027cb8375fdc8bcf4ab219b21668e"
-    sha256 cellar: :any,                 arm64_big_sur:  "04a17ea863d62a4ea5839e6a2c2a86314d06ed6d13883a62b19745994d745317"
-    sha256 cellar: :any,                 monterey:       "ea85c845fa0f2ef26128624c219fc748448ca45aaf4c1998dc62943b7d089624"
-    sha256 cellar: :any,                 big_sur:        "96ba6cde73391d6a892e9bf2dc858264450481fd82abf7b5b18d51e50f925337"
-    sha256 cellar: :any,                 catalina:       "b01d184e0950457c156be75a93e58f33d3e68fc1c563d11c3d4201bd91835f1e"
-    sha256 cellar: :any,                 mojave:         "a9564d93b704d270a94dc5831f20a1033a18f4ad8f7c90270eeeb1c65abcd578"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6e13cfa641da45da07d912c1b6dcacf9e3603ea2152266605ad212188183259"
+    sha256 cellar: :any,                 arm64_monterey: "0bbda8f387e434f645cfab25de99e28e8331d38eaba4a88ca124994ec2c5f6fd"
+    sha256 cellar: :any,                 arm64_big_sur:  "5396b9e517cbb7fb7384e272affcce8b5a9ef263346611dfb068ed34be4988d8"
+    sha256 cellar: :any,                 monterey:       "32880efc56baaebc010f2e2b465852c9bad030cf8c4ddfceddb5961c4703872b"
+    sha256 cellar: :any,                 big_sur:        "ad1acc242f7976a700261ef8c914cf912a4bcd9970eca8009d949598648a16f6"
+    sha256 cellar: :any,                 catalina:       "04f820f7dfc6d2fe964b1e18e564728cbc4feb127b562bd788b80f7d40a23eab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b137af1a327bf93e3922244bf03ab2eef1151838483b2e71e1e35c5254d32cc4"
   end
 
   depends_on "pkg-config" => :build
