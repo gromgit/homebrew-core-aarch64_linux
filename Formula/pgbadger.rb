@@ -7,12 +7,12 @@ class Pgbadger < Formula
   head "https://github.com/darold/pgbadger.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14c6be30fcb494f156c9e06700f1930a5ec306b9be715e647afaa2319138132c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cc2767affa21e941a91b14ddb5622027af8383b33c739969cae9e2896725215d"
-    sha256 cellar: :any_skip_relocation, monterey:       "94fe00a37abe83df467c20fb60cfadc7140dfdb7ad5de9d06f6d0de70449fe85"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ec7c5490b66889b7dfa965f6b845b7c3ca19a94100d3bb15a6bf6602a20ea3d2"
-    sha256 cellar: :any_skip_relocation, catalina:       "9a0cd6664145e98e6d291f37ac262ae8c6e4820c5b5627e42f09630ec09d1b40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5192e1ac9ad093144950218397106a35b7dec3aa3e18d887234d391cb4026537"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6bcd3b8f62218ce246438b4db5cc1de58e1a867ee686ed9c3eed58dd5adbf385"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2be5e5aef3f6d2e8e857bc51dfa13bd6fe17298230f331f8f12c0dabae5e0072"
+    sha256 cellar: :any_skip_relocation, monterey:       "b327496a367e2b1052aea29d39331a2eebbdc5da9fc50dbefc5816ce108fdd7d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d3c2cf996a8c2d629aa0007a9e28fe1eea673718dab9da7f2a14d88f751064c3"
+    sha256 cellar: :any_skip_relocation, catalina:       "bc4167d80d7d0f517ebda656f587b73eeb8e7bbe7ea134c06f4e3e9f521cd1e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed28021e95bfa1b63956a894e5ed31fe18b17c96f7dcf9ade29a954505ec9f66"
   end
 
   def install
