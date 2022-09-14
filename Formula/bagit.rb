@@ -16,14 +16,10 @@ class Bagit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "754fa656037ce4f1d5f6f53b2d8498565c5dcbd9423a9d8d5cce047f5bd4781b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "754fa656037ce4f1d5f6f53b2d8498565c5dcbd9423a9d8d5cce047f5bd4781b"
-    sha256 cellar: :any_skip_relocation, monterey:       "dbbe53ea75bd1c6fcda5b26938ab79aa2676da5bcb434dbfc09fca3d4677f4a5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dbbe53ea75bd1c6fcda5b26938ab79aa2676da5bcb434dbfc09fca3d4677f4a5"
-    sha256 cellar: :any_skip_relocation, catalina:       "dbbe53ea75bd1c6fcda5b26938ab79aa2676da5bcb434dbfc09fca3d4677f4a5"
-    sha256 cellar: :any_skip_relocation, mojave:         "dbbe53ea75bd1c6fcda5b26938ab79aa2676da5bcb434dbfc09fca3d4677f4a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c460394f8bd13f972a848ac29a3dde16c9cdc2be167b3e34e9724c6b1fd6216d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bagit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4fc42d3a3005d39d12d5a92b66c73809fcee8ff5ed0c8e0d45a6e34efad49a8c"
   end
+
 
   depends_on "python@3.10"
 
