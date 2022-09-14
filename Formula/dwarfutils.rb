@@ -12,12 +12,12 @@ class Dwarfutils < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "001bcb6d3d3e84fc305a3f80bde7d82538578aaffd07c14100f1bc3e5771865e"
-    sha256 arm64_big_sur:  "a70b0a46e9e130553760e78a71a125c1cd535bfcc17e32841bfac1f80288bff6"
-    sha256 monterey:       "955d6aa57869cff77956222b2556a00a6368dd160ca1c01655f0a4ccee2eb584"
-    sha256 big_sur:        "8cf0011b85ec960429bc3bb60fcd7eac9829f23f429d202a19a8f613b0844f4b"
-    sha256 catalina:       "eb7da561bb0026ea1e74d2851ed76d6cc772166309273b087087db7a60e2a152"
-    sha256 x86_64_linux:   "69ac85e10a2069b7f50cf14d280fc7d2c1437372107b21e6df64599a8cd2597a"
+    sha256 arm64_monterey: "c809b3968af17d21341d29e067bf9d5bb75d148828f17fcd47c6ea90eaebe0da"
+    sha256 arm64_big_sur:  "61774aa3d47a48235a39742d166d1a30c5ee55ebe2cbe9691c9a4d6b69af55bb"
+    sha256 monterey:       "bb48f47b33093d9f1ce94cc3ef7db30e42aaf14707cc29b32e0d41dd124e1157"
+    sha256 big_sur:        "9b7f9ae528f37c4782b28baeae1219fe2a054e568fb65483cbb0db8232ba70e1"
+    sha256 catalina:       "3292001f4c1720e9c54d0cd4f73df39bbf9136a55843225b2b96bd46b46dfea7"
+    sha256 x86_64_linux:   "0b9487a05bc61649e8b7c752cd7b78f69547790366ef08dadccc999356951377"
   end
 
   head do
