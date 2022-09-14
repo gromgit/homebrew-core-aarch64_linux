@@ -6,15 +6,12 @@ class Sox < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f006a58fcfffdff435bcdf79c10249b1ad979cd82a64a99d081b651ca4ea70a7"
-    sha256 cellar: :any,                 arm64_big_sur:  "8070949420a9a02f3d5e1a99bd460d064e34c361798bae5c4554ac8e1aeb2d49"
-    sha256 cellar: :any,                 monterey:       "9384cdaee989d5ec7ffcf1585b81a2197d7d8ce68cc0c4134c56b204099f6b32"
-    sha256 cellar: :any,                 big_sur:        "e3f62a35b06c9e79516f575a923b3aafc5357f370f4ae5c2812c67c8862ae11c"
-    sha256 cellar: :any,                 catalina:       "fc412be07e577c2161763dfb509f4fb43f4fe3bca206a1b0b370687df0a264fa"
-    sha256 cellar: :any,                 mojave:         "4906207f83bd0f4ea1a67d040891711e9a9e8830216e451072f2957ca566b83d"
-    sha256 cellar: :any,                 high_sierra:    "c0bb4ba7ec922d9a8c71c2ba84e28c66c67e4fdeae970011ea45e937f43c18bd"
-    sha256 cellar: :any,                 sierra:         "dc8c294bb96c0b7ebc3ade73476c6031664bb8e81a32ece87ce84f815deeced5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "812ddfd499335d3ff3e096b6153ef60e86326b5fb2cffb3e2ae02e8be6bc98c2"
+    sha256 cellar: :any,                 arm64_monterey: "9edfc17be097b8ae7741ddee5d34b5d7c581a98c58e9c565cce34556639161ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "f7d948bc4bc997329cd35f2ef6da417577a928a56241ef69d1e12f77a68f30a5"
+    sha256 cellar: :any,                 monterey:       "453f0d46ba72d4a83978a34ab8ec0c91e4a4704d07f2bc99e0983d7743d952dc"
+    sha256 cellar: :any,                 big_sur:        "924b191728e113ba1894fe0eb14980f41cdac32ba13f47670a1629d8ab7a234d"
+    sha256 cellar: :any,                 catalina:       "3075e15314703e3b5c9057a876677b42792ba64278b0b450a28735e795701d6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae857033a9b5eef278e3dea57f5e786806c1195df92240432d328852587be2f1"
   end
 
   depends_on "pkg-config" => :build
