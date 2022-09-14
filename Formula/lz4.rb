@@ -1,8 +1,10 @@
 class Lz4 < Formula
   desc "Extremely Fast Compression algorithm"
   homepage "https://lz4.github.io/lz4/"
-  url "https://github.com/lz4/lz4/archive/v1.9.3.tar.gz"
-  sha256 "030644df4611007ff7dc962d981f390361e6c97a34e5cbc393ddfbe019ffe2c1"
+  url "https://github.com/lz4/lz4/archive/v1.9.4.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/lz4-1.9.4.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/lz4-1.9.4.tar.gz"
+  sha256 "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b"
   license "BSD-2-Clause"
   head "https://github.com/lz4/lz4.git", branch: "dev"
 
@@ -13,8 +15,9 @@ class Lz4 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lz4"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a507223fd2bea68cde46bc493231e0699f138547d8c19696039806cd51e7ed91"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c730d3ed7bdac1b27c22a1ff61b5958f5a8331b6766587176d1538ace277ceb4"
   end
+
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
