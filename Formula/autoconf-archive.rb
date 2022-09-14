@@ -1,19 +1,16 @@
 class AutoconfArchive < Formula
   desc "Collection of over 500 reusable autoconf macros"
   homepage "https://savannah.gnu.org/projects/autoconf-archive/"
-  url "https://ftp.gnu.org/gnu/autoconf-archive/autoconf-archive-2022.02.11.tar.xz"
-  mirror "https://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2022.02.11.tar.xz"
-  sha256 "78a61b611e2eeb55a89e0398e0ce387bcaf57fe2dd53c6fe427130f777ad1e8c"
+  url "https://ftp.gnu.org/gnu/autoconf-archive/autoconf-archive-2022.09.03.tar.xz"
+  mirror "https://ftpmirror.gnu.org/autoconf-archive/autoconf-archive-2022.09.03.tar.xz"
+  sha256 "e07454f00d8cae7907bed42d0747798927809947684d94c37207a4d63a32f423"
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "51d456417fb685f2b9f8a84a4ad1e2f1e37ff6f8208da706aaf5842a1ea51469"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51d456417fb685f2b9f8a84a4ad1e2f1e37ff6f8208da706aaf5842a1ea51469"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3953a023045de5ffaf8d9a9b0821e3935b1e98e0bc34b38ae0f48f14e70a57f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f3953a023045de5ffaf8d9a9b0821e3935b1e98e0bc34b38ae0f48f14e70a57f"
-    sha256 cellar: :any_skip_relocation, catalina:       "f3953a023045de5ffaf8d9a9b0821e3935b1e98e0bc34b38ae0f48f14e70a57f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51d456417fb685f2b9f8a84a4ad1e2f1e37ff6f8208da706aaf5842a1ea51469"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autoconf-archive"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8ea208fca421ae5900b2bed1bd093e11f2a154a07e7356365b27b2fffa3d6e54"
   end
+
 
   # autoconf-archive is useless without autoconf
   depends_on "autoconf"
