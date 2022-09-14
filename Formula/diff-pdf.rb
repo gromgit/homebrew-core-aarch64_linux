@@ -7,12 +7,13 @@ class DiffPdf < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "78ab605c8c34bcef91f31e9fdef602a0d1367737abb98a8daddf6d6b7aa30671"
-    sha256 cellar: :any,                 arm64_big_sur:  "96eb85ddbde92e463f88b79be4eb25cca96e07ef0723760b40b37d99eb00523f"
-    sha256 cellar: :any,                 monterey:       "87f787670ab2c9363068bed98bfa62308eeb83740186500cf79426ee0a14bbb8"
-    sha256 cellar: :any,                 big_sur:        "0624106a508ec4d7b568f0c6bc7e35f9d53a2fc8b85d2716b81f3ce4ae0508a2"
-    sha256 cellar: :any,                 catalina:       "19fb6b885deeeb0af2a85de372178cb076fa32299408cfecde57f8489093e38d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ab5dc28211c67d3ade744008798834b0dda2099f34d8a0cfca89cd3fed034e83"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "0616440421b45bca4494c5eaf90640d61b4f70ef77fb4a811fcebda766f07957"
+    sha256 cellar: :any,                 arm64_big_sur:  "0e01c107b0949a6d3baeefaf15899461a8b7ac886efdba9d2960a52a3e62d59a"
+    sha256 cellar: :any,                 monterey:       "439c5722731ba71ccff2e07de2c7b38262c47f8532c9949f606e9e12419682ea"
+    sha256 cellar: :any,                 big_sur:        "2e11ac7650d5cfe77922aa0deb7c036b708d370e5c748688b1538bfe3606ca54"
+    sha256 cellar: :any,                 catalina:       "aa5bfc82668e41fb44c6a5ed7e83b9c1a59ecd7ce4c76a67530713767e95902f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3b271e5a61d685e2fd6357b90e62f4849daae2de3759f58aa9a85563b3d4e94"
   end
 
   depends_on "autoconf" => :build
