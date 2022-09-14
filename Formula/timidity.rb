@@ -11,14 +11,12 @@ class Timidity < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "207353939838f83aec0c2fd6f68363f7f961f7f08d69f317aecfece613732583"
-    sha256 arm64_big_sur:  "b6a5b9258ca86e58a8f535a3d7d2c8c51faf608df5bc119b37d99dccfb549142"
-    sha256 monterey:       "61d1189c1afa7ca17680f8e8bcfc4f5277f9e30e7b2e47f89a246714606059e3"
-    sha256 big_sur:        "513868c11a5ecbc1b8044eea517c19490858173d6b61f0245c54f9b061956237"
-    sha256 catalina:       "31a2aaefcf9e293bbfce210de4a0521bdf6df205f4fb5bb009f98ad1c01bd6f1"
-    sha256 mojave:         "9dec67aa3004c6ad228dd143eea25c2db9fc568269cae1f80320c00addc3c782"
-    sha256 x86_64_linux:   "b6a6bd68c511b87eb952bdf7d0be891eba703720d1b5e339eb3375fe3a809d4f"
+    sha256 arm64_monterey: "215a1a95a53e1f8f136d96107135133375060c7c5f97e37ea61224c152cfd17e"
+    sha256 arm64_big_sur:  "8e0f3d548b9566140d1c2f1f12ebb221260e062060eb2c374fabc998efab5d1d"
+    sha256 monterey:       "7aeddb0863d411f946560c9a25606de141db96a596f63bbd80d19ccebbb4b4ec"
+    sha256 big_sur:        "2feeeebd41909eb7296bbe8fd7b09b99e49bb4f52341eed107d0cb423a673793"
+    sha256 catalina:       "761a0dd6e3c1499005cc2722a5cef8e8529216c8c668c18b9b1fc8711ea409f4"
+    sha256 x86_64_linux:   "bfb585896b4dcdc915adefea538fcb691a213a7f672e10d24b5ff34f95139a9a"
   end
 
   depends_on "autoconf" => :build
