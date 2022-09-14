@@ -7,11 +7,11 @@ class Snapcast < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "1d823dd68d442d23045e039425160c775a8c6657de72d80b2d1bbe6bce5ff785"
-    sha256 cellar: :any, arm64_big_sur:  "e452f9e3d9699b193f2b408a7785c906ce1f5d4be4eda0515591bb83522210ee"
-    sha256 cellar: :any, monterey:       "41cda7276d96a8d9dd684f3d768d2a30d0b8012f7d1308d1285946c98023eab4"
-    sha256 cellar: :any, big_sur:        "25eef0d2541b08199edab11561bbe89539bb496dc9bb8ebd51eb67423fdf8374"
-    sha256 cellar: :any, catalina:       "23fc1c6e73ce837277caabb003da8d3a2bc11a42e3d91ad181ddc9e4a2de434d"
+    sha256 cellar: :any, arm64_monterey: "43940265aea2debabe717648ef509c98aef3018290f57c4cb05c0e8567be1661"
+    sha256 cellar: :any, arm64_big_sur:  "1a6d23f065fcfc38e6aa7fbfac653dd128b36a50dcc0f8c567e50ee0747bf6b8"
+    sha256 cellar: :any, monterey:       "63b3f56b0521da50793dbd77c69075f5de6f7980d2249ddfe8fdf58a89e8a083"
+    sha256 cellar: :any, big_sur:        "35633819e9b126ed8d5bc5508383706c373326be74b7ff1cb3168f27f8b59fcf"
+    sha256 cellar: :any, catalina:       "385ab39a8af598fa27180b3c3d97161f1aad3cdb51aca3ce562366ce0be74928"
   end
 
   depends_on "boost" => :build
