@@ -13,13 +13,12 @@ class Allegro < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "13e874b0d1272b8ad700a4c809809c9d521bf54f95076177bf9cbbcb83f07596"
-    sha256 cellar: :any,                 arm64_big_sur:  "73585cdf21df62394d4a3c72858aae76663666c39a00100af974f47dac3fd450"
-    sha256 cellar: :any,                 monterey:       "2d5ef773c833b823d825cc71f9160104cb079d3a30d786733b3acffa7f4e5c09"
-    sha256 cellar: :any,                 big_sur:        "2469c661563807f8221c0fd38d5cc0485afd6d607bbe2c01bc83e9687c96406c"
-    sha256 cellar: :any,                 catalina:       "da24f757dd6d378c0fa067c988544a6bd18027c25c9eab8d19ba67f40fe893a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51ecc506faac7fb954ce6654a3d31f976039f6a57157f8e9a93e7c91518d85ca"
+    sha256 cellar: :any,                 arm64_monterey: "682fd6cdea13cffd8c110b6b1c9b7e29069bb2d9512fe844312e31c5ec75ef7d"
+    sha256 cellar: :any,                 arm64_big_sur:  "14b1fc80e206b3de73587af7d80a263bbbf590aecfde59bb969e0a960b8c493e"
+    sha256 cellar: :any,                 monterey:       "f81cb442d6555108894de9c4b57c0bbb688b9952789bbdfb2125d740219bb766"
+    sha256 cellar: :any,                 big_sur:        "faaffa7b7fc9c685cb21a7b03ea26a334b615875db6d2dc8a184b24218e787e9"
+    sha256 cellar: :any,                 catalina:       "d4a9c21e7b0ea0ef1d10ef78b100ac2f7cf4e8098dc1a0a4a7c52f90beb11bed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cff9c4efe355b2e4d679a36ebdaef40c663524908e5fbad864610c13376ce2b0"
   end
 
   depends_on "cmake" => :build
