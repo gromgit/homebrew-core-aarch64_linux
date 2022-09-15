@@ -1,8 +1,8 @@
 class BoostBuild < Formula
   desc "C++ build system"
   homepage "https://www.boost.org/build/"
-  url "https://github.com/boostorg/build/archive/boost-1.78.0.tar.gz"
-  sha256 "78ba74587c8ba137d2f5f5ee1472e49d6291842ac944e2c24012c9e8a3d2f664"
+  url "https://github.com/boostorg/build/archive/boost-1.79.0.tar.gz"
+  sha256 "3e46a4b8d54603acdb478c15e791de772678d2c002711e41187b2d9b7fb55418"
   license "BSL-1.0"
   version_scheme 1
   head "https://github.com/boostorg/build.git", branch: "develop"
@@ -14,8 +14,9 @@ class BoostBuild < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost-build"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "baf21d81947d8f19beb6b9be6937b74803af7792c7a7919e2429b3ef53e54fa0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6a1df9683ba65ba508f248b0961d16368e62f7dbceb9412c07c9dde7dfa4943c"
   end
+
 
   conflicts_with "b2-tools", because: "both install `b2` binaries"
 
