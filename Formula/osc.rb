@@ -9,12 +9,12 @@ class Osc < Formula
   head "https://github.com/openSUSE/osc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a41a38cf1fa74e77db04bba70b4eeda68d0888b078d8102506ada4bd0b4ae1fd"
-    sha256 cellar: :any,                 arm64_big_sur:  "a31848158b6ec70896eeca007df542685efa6e37e2a6791ed1698f54f9e8d5b2"
-    sha256 cellar: :any,                 monterey:       "a31f099840fc5ebeb7bf8313e4e9c3a717fc09d37b8a9edb7a71146077dcf47c"
-    sha256 cellar: :any,                 big_sur:        "cd6d6e56625416f48bf489d3cab3f97f47932aea3b628a7243db514d2b00d460"
-    sha256 cellar: :any,                 catalina:       "fa6d467c6b05dad32bca33c84c37ee5d313ad9e6ef79c01d5844ad1aff6dd74a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd8079f5718f1e59a182988dbe3007290fe444549d37b90d3766927b464232fd"
+    sha256 cellar: :any,                 arm64_monterey: "ec93e87b246a7f52b6e7ef1bfde40b61a21561dd4306dc4c5a0dc889d59274f0"
+    sha256 cellar: :any,                 arm64_big_sur:  "5dfad75e9c488f78623a5e270151fd2c81a4b8cc7a89054cedd8af56d0c5b76c"
+    sha256 cellar: :any,                 monterey:       "7f5fc874c20ec8ddb0d3e60f736c008a9f0d1fb261e1d970a53b1c110fc60f24"
+    sha256 cellar: :any,                 big_sur:        "6f1f549590562654ae2b059d76205f2307a404fe0a08e264068500bcd956ac9c"
+    sha256 cellar: :any,                 catalina:       "a15a12340022d76f165ce1f6430af7f76df3323462144e5a54822876dee0d11a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90a0851c25eba545e3d0b8693eed261e44c8e2a4e35a1a8e3223e9bd5b9ed90d"
   end
 
   depends_on "swig" => :build
