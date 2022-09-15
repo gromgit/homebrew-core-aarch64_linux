@@ -1,18 +1,15 @@
 class Bbtools < Formula
   desc "Brian Bushnell's tools for manipulating reads"
   homepage "https://jgi.doe.gov/data-and-tools/bbtools/"
-  url "https://downloads.sourceforge.net/bbmap/BBMap_38.96.tar.gz"
-  sha256 "18d9c89b02c0ab044b2795a65f6236b2262a494ed83d27e31750437b350ef080"
+  url "https://downloads.sourceforge.net/bbmap/BBMap_38.98.tar.gz"
+  sha256 "cdc3b8e0530c4a83a728d28da31f0e7ead2bc233d4bf21cd1916572c9b2d0e0e"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e5a3978e72e21c64260be9abc1e774fe7483068f20f535cbe69e8d0fdf74bbf4"
-    sha256 cellar: :any,                 arm64_big_sur:  "80d0cf1cabeb3e5b7444cc502f648f7f8bb3ba6b76eadc81285cce1c5ba72ee5"
-    sha256 cellar: :any,                 monterey:       "91b55caad3e49851078265f659be617177392ef7077a525cae1e4643a9db7049"
-    sha256 cellar: :any,                 big_sur:        "44e8a7318c8d619ff0a7cd2295869f158761d28ca197bdb2a6accf5a0937821c"
-    sha256 cellar: :any,                 catalina:       "3e306d31f8562469dbdb987ee78fbd1de6394fddfa17ded572dab05672cccdc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d02ef815958ec2fc729be2da6b814df18138de9a19b2ab237cf415bdad2de98a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bbtools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ef62554c203653c46d2be5d9ea66717aa9be3811702a34bfe1d3228b2860864d"
   end
+
 
   depends_on "openjdk"
 
