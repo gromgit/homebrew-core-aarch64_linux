@@ -1,8 +1,8 @@
 class Duck < Formula
   desc "Command-line interface for Cyberduck (a multi-protocol file transfer tool)"
   homepage "https://duck.sh/"
-  url "https://dist.duck.sh/duck-src-8.4.3.38269.tar.gz"
-  sha256 "21d84f81080ff7a7b610b3705bd856de39f5de89c93a52b9df57c0a331f0f2ea"
+  url "https://dist.duck.sh/duck-src-8.4.4.38366.tar.gz"
+  sha256 "5c404f4fbfac67a36630b4bf8e900065979e776623a585461d2edc2044376c2e"
   license "GPL-3.0-only"
   head "https://github.com/iterate-ch/cyberduck.git", branch: "master"
 
@@ -23,7 +23,7 @@ class Duck < Formula
   depends_on "ant" => :build
   depends_on "maven" => :build
   depends_on "pkg-config" => :build
-  depends_on xcode: :build
+  depends_on xcode: ["13.1", :build]
 
   depends_on "libffi"
   depends_on "openjdk"
@@ -43,8 +43,8 @@ class Duck < Formula
   end
 
   resource "jna" do
-    url "https://github.com/java-native-access/jna/archive/refs/tags/5.11.0.tar.gz"
-    sha256 "219086c61f804300871c2ec2ee220b6aac0fb8b6cbcc72dc53d4f35dc7f61fb6"
+    url "https://github.com/java-native-access/jna/archive/refs/tags/5.12.1.tar.gz"
+    sha256 "2046655137ecd7f03e57a14bbe05e14d8299440604f993cef171c449daa3789c"
   end
 
   resource "rococoa" do
