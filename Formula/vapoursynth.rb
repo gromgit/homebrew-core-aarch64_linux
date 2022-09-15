@@ -12,13 +12,12 @@ class Vapoursynth < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "ff4ad9d154967259f74778f6839ceb19b6f24762e64121c94bd97d604de8572e"
-    sha256 cellar: :any,                 arm64_big_sur:  "465ce5e57344b718de9ccb99b0617df0e00fb1616f0e63279ddab6203692d1d1"
-    sha256 cellar: :any,                 monterey:       "d4566d03e29d3767163e2fb47e18561ce50d62be719b93e10a9b300d8058e093"
-    sha256 cellar: :any,                 big_sur:        "e7f5270ca06a338376e07a002832de390f454f650af375def36b148dc2d61d19"
-    sha256 cellar: :any,                 catalina:       "f4aacbf3bb948ddb75d3e768cd1f4680a1ced6c66511c2aa989ac5c3b2809eae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9884eb0ed18d814b9a378bf3ad53b1cd6a3a369b471085fc37b8401174fc5e5"
+    sha256 cellar: :any,                 arm64_monterey: "c4eaf67aa81f58cc03bba831e78bc58ec34bafc3b893916466700af6d8196fb5"
+    sha256 cellar: :any,                 arm64_big_sur:  "5920e6e2e47d365a54fcf7b8ba530d63ab8d582117a5348a345c521c464c5233"
+    sha256 cellar: :any,                 monterey:       "4b7bd0b44eb0086e766efeff9129d7fef118b6ddf0a88701c4c94f643083e70a"
+    sha256 cellar: :any,                 big_sur:        "404d71359e917d42ce78fe3b37c4588ca14a64a91a4da417c9baab025d3b23f5"
+    sha256 cellar: :any,                 catalina:       "6284a9174f2cabde880f828e093a690700457bb31f40b65b40b0dec221d17e5f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7eca219f5145507ceebe8144c401cbe48d0dd1cc75e1257cc5071577e92a9aef"
   end
 
   depends_on "autoconf" => :build
