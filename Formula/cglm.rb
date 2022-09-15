@@ -6,13 +6,10 @@ class Cglm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c48a7cc3c284fd5a61fa1aef055d1aa4c51e38a87e245e402590e8dc48903e6d"
-    sha256 cellar: :any,                 arm64_big_sur:  "27d31698e3070d1f62e4be045cdb2da514d219cc0a28cb570404915aeeefcf3a"
-    sha256 cellar: :any,                 monterey:       "e67358d4569ba43fade443088f73b68ff28716da31794fd7547aff0d393563b4"
-    sha256 cellar: :any,                 big_sur:        "de5419cd5cd47d064f629d6aab9f9277e8e5bbd6a78bd3426dce5370f1a5e0a2"
-    sha256 cellar: :any,                 catalina:       "61de7afb22328af33cf17b7df29562ea8e9865337f81c315c28efff72aaa674c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3689de044b897eb9047854f008eb8b7b7e5ce7c915cbe9f6ec6c9241d98c6f49"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cglm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5b2d2dbaadca7e90a26a96fa415e11ac5495b3dc856ae532400efe3525c34fc0"
   end
+
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
