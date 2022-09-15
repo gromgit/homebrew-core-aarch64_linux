@@ -7,12 +7,13 @@ class Cpi < Formula
   head "https://github.com/treefrogframework/cpi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "18715516745f887dcb1d69011aa8fb5f17b93fcde903d64dd26eeb668517904a"
-    sha256 cellar: :any,                 arm64_big_sur:  "7fe73ba73e1c1218519a80cf06734e6952e499f62dba585ae99926934ada40b1"
-    sha256 cellar: :any,                 monterey:       "e5dcb9488c5a2f0c44481d6841cad4915b7fc111e7541f34cdaac34784a0506f"
-    sha256 cellar: :any,                 big_sur:        "ced5a9ce120b015e98bb2f7d8926b60614ffec9aa658dc3d2523cdd6cda2c98f"
-    sha256 cellar: :any,                 catalina:       "15bd4967f912b104af24e246ede702a49245e85baefff0e8ba404fc67a22f5c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4711e3edfd0c9c249453df3f12ceb9c239524a1f2edfc478f15a900f7127c1ab"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "7976724f2069f2d9e22731c252016085021ca616755be85bec0e174092549854"
+    sha256 cellar: :any,                 arm64_big_sur:  "c823b00a18be009c825f41c7da28e9bfbb545784b800ef95a64529164aff909c"
+    sha256 cellar: :any,                 monterey:       "6083cacfcaa25e3df4f5f124a4441818b6c9519ca5a5c7af34b8b2d12c4a1a8c"
+    sha256 cellar: :any,                 big_sur:        "26b0d34177634a9682c2e5d5bca99ee4aa67198a60dd235369e2674e42cb17f6"
+    sha256 cellar: :any,                 catalina:       "65f66e825d3c255cd2f888d34ce2552a7027a30655383c5a54b619bd610c84bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c06a6bc36bfdcfd3f3c2278d0ced9bcafc139681dafb0f322908eafcbe75da7"
   end
 
   depends_on "qt"
