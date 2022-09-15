@@ -11,14 +11,10 @@ class Bumpversion < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a879b38d1607fa3fdb6351a4e423fe58407a30cc4e1dbc06de2b9bfd8bf62056"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a879b38d1607fa3fdb6351a4e423fe58407a30cc4e1dbc06de2b9bfd8bf62056"
-    sha256 cellar: :any_skip_relocation, monterey:       "67879764a6f7b05d9948a91cad56a18c2a85298037c2dab7c7d92d6b2aa8d534"
-    sha256 cellar: :any_skip_relocation, big_sur:        "67879764a6f7b05d9948a91cad56a18c2a85298037c2dab7c7d92d6b2aa8d534"
-    sha256 cellar: :any_skip_relocation, catalina:       "67879764a6f7b05d9948a91cad56a18c2a85298037c2dab7c7d92d6b2aa8d534"
-    sha256 cellar: :any_skip_relocation, mojave:         "67879764a6f7b05d9948a91cad56a18c2a85298037c2dab7c7d92d6b2aa8d534"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86aa4d813e08f5e3d1fb1381f80b87ce61bd62acc17f3b55cbd085cb2fafee91"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bumpversion"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9bcd463dceb8d27ef7de3d146f1a67846c0bc48391813c8ac48fd4173fd6703f"
   end
+
 
   depends_on "python@3.10"
 
