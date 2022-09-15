@@ -6,13 +6,10 @@ class Celero < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c9536a9809658935372c9d818c341e54c3c0f7f1da7f2485bb7bf9a5f2fddfd0"
-    sha256 cellar: :any,                 arm64_big_sur:  "6952842a85eed42b08c60a05c2c18b965da6278c00f052b3c791be9d1823beb8"
-    sha256 cellar: :any,                 monterey:       "d17d2c1673e4fde2a2ecc5c44d636df7768b5f0f2e01d9feb0f3f118934c7631"
-    sha256 cellar: :any,                 big_sur:        "b3dedb5a019ab39ee9bbc122e56cdff8db779cc381a14234c8fb3655c9c4af02"
-    sha256 cellar: :any,                 catalina:       "2c0a33b10ba38244329606dbad5f2a959897cd6bed759fbbf554d9152271fabf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0caa8d4ef722ca17eb9d23e951ed2600472f1ec6793077570effd667194174b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/celero"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "80c98141ce48b12aa06284c4b61fce178f92c9e44febe10a2c1a221e3c918f8a"
   end
+
 
   depends_on "cmake" => :build
 
