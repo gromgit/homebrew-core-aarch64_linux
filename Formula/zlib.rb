@@ -16,12 +16,12 @@ class Zlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b3c956cfb722564f26a8c50a89293971089a7017f363c823d432e1c90c16b87c"
-    sha256 cellar: :any,                 arm64_big_sur:  "0cb865dc3adb641c0f4f7301d7ad66ab5b23ac76afe61e21d865c12f0ab5d03a"
-    sha256 cellar: :any,                 monterey:       "5072d7b94690a52220f7a9f6cc566f87998a380e3f2fcd8a386caf7dbd5f19c4"
-    sha256 cellar: :any,                 big_sur:        "3db997820d0f7cbd3de13fda10f731949f44cb19f3923be18686ae5d65ec2e7f"
-    sha256 cellar: :any,                 catalina:       "71657247458cf1aa4f1b548aff059e65b182ef5fdf86740071f7f60c5520b370"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23b1d8f0500bbccdf5cc466e7acbd7eddc40cd1465687239af423389abe4f46e"
+    sha256 cellar: :any,                 arm64_monterey: "4dcbd4731daf497739f5536769e774c75f7154c81b61275cc604bf3a96f86de4"
+    sha256 cellar: :any,                 arm64_big_sur:  "1e5c3a20d301c1025d5372c537674ceb2c5d9c571850de9a45302fa177e56a62"
+    sha256 cellar: :any,                 monterey:       "bdfd57b2672b1e75df424d19acbba962ec6c377e759aad5ae9d59ba85a4f603d"
+    sha256 cellar: :any,                 big_sur:        "fe7b0bb374b53124357a455583c07cffd730e44487c7547a62fd972c9da58d1c"
+    sha256 cellar: :any,                 catalina:       "52031d7d56f77a64b9a8674988b4f1080239eab37c4f2635f31ea01180ad12c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8e13538da9684a2cd591d241ea9a2ca6d6761b15a685dbf38c8a8fe9e0a42ea"
   end
 
   keg_only :provided_by_macos
