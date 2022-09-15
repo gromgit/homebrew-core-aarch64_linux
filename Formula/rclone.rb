@@ -7,12 +7,12 @@ class Rclone < Formula
   head "https://github.com/rclone/rclone.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8cf584e3209e1cb9f0b8255d5f4beb757bf33c36309922ecb6dbe12f7349a1b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4fd3b909dd1e43ea20fcd793377682b1fac3e7e534fac8239344d89b677b9ec"
-    sha256 cellar: :any_skip_relocation, monterey:       "f42d1176d97e2efa857cec91012a6f907f0a43bc70c008659cc9ff46ffcc0f29"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e368187e45a3d1917bef2c6e813af7f49bc8bd6bdb09ce8f929e15bfbe0e9549"
-    sha256 cellar: :any_skip_relocation, catalina:       "738c7c235d83340ba6688804252ae15ad894364ca496f448cec37e379e4ac9c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d1addddac369c444119d390c13be27f93e7476e5a8ca9bf9ebea5855f81adf7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9142ff1ec8c6fb61a9d57e59a59732b9ceaf0ee79c0557cd5889fde615d5826e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f7512219470980475dad384753b90b8878aa56c2709376ea4355ca8ad654d2a1"
+    sha256 cellar: :any_skip_relocation, monterey:       "5eeac976085cc98c8c0ec2455ba2cfd00c44e630dd39f8feab9bef6a7c16185f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9ac1a2bfbce19ed64dc1aee7e6487ad6fcd03ffc35dc89140f0c0fff027a7684"
+    sha256 cellar: :any_skip_relocation, catalina:       "3670207f4997bfdd0b0a11a791bc7e5708e56d3ef16e11d4697fdac4e058a8d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11f3c92190ae4c1cfa9602fc58a3442b4dae12819b5a9de787aeb51dfcec6fa2"
   end
 
   depends_on "go" => :build
