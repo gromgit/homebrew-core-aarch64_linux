@@ -1,6 +1,6 @@
 class Clip < Formula
   desc "Create high-quality charts from the command-line"
-  homepage "https://clip-lang.org/"
+  homepage "https://github.com/asmuth/clip"
   url "https://github.com/asmuth/clip/archive/v0.7.tar.gz"
   sha256 "f38f455cf3e9201614ac71d8a871e4ff94a6e4cf461fd5bf81bdf457ba2e6b3e"
   license "Apache-2.0"
@@ -23,11 +23,7 @@ class Clip < Formula
   depends_on "fribidi"
   depends_on "harfbuzz"
 
-  on_linux do
-    depends_on "gcc" # for C++17
-  end
-
-  fails_with gcc: "5"
+  fails_with gcc: "5" # for C++17
 
   def install
     system "cmake", ".", *std_cmake_args
