@@ -14,12 +14,12 @@ class FileFormula < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "320c0c43bb0354944ffd8f877130e0677673caa6d27b644df302b5181a7586d0"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7511025862041ba5661df24e8dc996558911e77689eabeafb2f5c0028c69c69"
-    sha256 cellar: :any,                 monterey:       "6c0720b2baa60480d2ae9764b372f57fdda6bb6bc0cacca755a79b34a8ef2a0e"
-    sha256 cellar: :any,                 big_sur:        "27f93809e79cd8b4bc860498d7a92e6631c4db8944c922016874a7491ec6dfbc"
-    sha256 cellar: :any,                 catalina:       "3a9e43b348aef84582721d185db2c1d259bb270dd0fdbf1b31376f97fa052c67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "947e053ef04495b1c718067ff1cb08b0e339c05697d1f8964bcc89339f6c5cda"
+    sha256 cellar: :any,                 arm64_monterey: "4670bf33cb4a2a2ec2167ba316f91d61ef524e67c0ec232ca2f513e4c6cc4a62"
+    sha256 cellar: :any,                 arm64_big_sur:  "983ef3239b886fa044a56adc2797f63b4d2930d7e68f589e8cd386d4663f2fe7"
+    sha256 cellar: :any,                 monterey:       "70ff46e2a33856064bfd7ab5752a26e2479fbef2c031cbca2a3c7c0eee867c33"
+    sha256 cellar: :any,                 big_sur:        "91a17666871d695c9c0df10afdb2b41835da1a8114dcba529e65f0feeffe2c8f"
+    sha256 cellar: :any,                 catalina:       "95ce9f08f5efa8f6c43390ab8ddc1f1807bba036419985f529ad1678c60cd595"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "156e61105587eaf3a1b7ee41b5a427cae1aa3eb873b07cf320989458957365e1"
   end
 
   keg_only :provided_by_macos
