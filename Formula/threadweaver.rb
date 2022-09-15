@@ -14,13 +14,12 @@ class Threadweaver < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "a184df853475e9e195420f9545b5bbb0bddab95b9b38a5d04dbab0f3e0d3f5ba"
-    sha256 cellar: :any,                 arm64_big_sur:  "ded9f15dd1ec1cfab7a2f2d754992f166947248149c02565580d6d05b77f9736"
-    sha256 cellar: :any,                 monterey:       "32ff54ae8409bf75d46c1866c58324e912519a308f8a418cfb2d8a15b5297981"
-    sha256 cellar: :any,                 big_sur:        "f9f0d99750d9bcc80c5f781095b95b0367e20fa4abdb880e2a9ffcfb6de28d41"
-    sha256 cellar: :any,                 catalina:       "8534650fab57baefcbc515405b31b0d8337a1855ee019b10d44a8d7a26ec91d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90bf0132b34b1056d83d3d384581a747192842a09cba1bdc323d155ba2608043"
+    sha256 cellar: :any,                 arm64_monterey: "bde4d7bb458e69e5d0fd38bfeade00c230be58d412480516b68d31011f93ce12"
+    sha256 cellar: :any,                 arm64_big_sur:  "fffe9ec54d3204120f76b1727a39f795ac83ddd5af01c0bf1b0e7e1c37ac282f"
+    sha256 cellar: :any,                 monterey:       "a56fdae4ddec022222939e212387d51956d5634a79a6bd7adf1664d9fe543ca7"
+    sha256 cellar: :any,                 big_sur:        "dc19891af582cb189c3f8c0558301a15584ed50d2b3560e35aacb98c2b70a428"
+    sha256 cellar: :any,                 catalina:       "0156ad22f345cc8a40e64190ce719785cffdd687364c65b6d60d8732414606b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92397102fecc48c933f6236abd5be6ed256dce7437570481a9444ce7bbeb4a84"
   end
 
   depends_on "cmake" => [:build, :test]
