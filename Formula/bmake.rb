@@ -1,8 +1,8 @@
 class Bmake < Formula
   desc "Portable version of NetBSD make(1)"
   homepage "https://www.crufty.net/help/sjg/bmake.html"
-  url "https://www.crufty.net/ftp/pub/sjg/bmake-20220418.tar.gz"
-  sha256 "6ea7de515cba74f173dc14ee17b1488ae032582028d2e86ea12f70369cc896f5"
+  url "https://www.crufty.net/ftp/pub/sjg/bmake-20220901.tar.gz"
+  sha256 "3f67c575ee9ae443a5f589a40acac0163743da98cb50afd1144b4246cd5063ad"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,8 +12,9 @@ class Bmake < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bmake"
-    sha256 aarch64_linux: "d8d32542416e2c3e80af9951601b0a566e9eeed0ddc9412aa248bb0575028037"
+    sha256 aarch64_linux: "a838dd653016f30cbbef9558f102d18e0423fe6895180f702b69c27da699e43a"
   end
+
 
   def install
     # Don't pre-roff cat pages.
