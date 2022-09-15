@@ -6,14 +6,10 @@ class Libxaw < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "7f72cb216e6754e6f72bfd0e0f03f19d4599e69b4562980f274a3797068194c2"
-    sha256 arm64_big_sur:  "6f9bd6bef10340da3fc23f24d0c4a4e3358dcbada118a8b74c4e05d901ac0dd6"
-    sha256 monterey:       "016221c5b49049daa3743b4957bb0f128b0f0f1e71037f27daa054364d8209af"
-    sha256 big_sur:        "bceab125f7dc2fde90b23c68daf8d3a6b5fff65a0f3f3895abe750a74a328dc6"
-    sha256 catalina:       "345ff906f7375ae71a550298fd482c849994ed25d0263822fe7ce8f3740db9f2"
-    sha256 mojave:         "16cd8aec41f9df9798704213ac41b7e9013d1a8af9f4bda90bfb13d50e55f057"
-    sha256 x86_64_linux:   "fa7c50e5fd51af0f69ee8d2369e390b7961194f227d5d09c2fcb91691f54f54c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxaw"
+    sha256 aarch64_linux: "f8a17dc2b481119c78150c8ab527743046c24389ea2887f605441cd30b90dbac"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "libx11"
