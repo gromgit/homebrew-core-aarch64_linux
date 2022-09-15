@@ -11,13 +11,13 @@ class Cairomm < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "d285d418a00fa705e40e1216d4949b0c80a7f12580c0f7021edf4c8083b833f9"
-    sha256 cellar: :any, arm64_big_sur:  "70e65e43376e9f2159955ee6ec8db9f4c440c24df8dfebdc06fa10953604eba9"
-    sha256 cellar: :any, monterey:       "52f956ccf9aeaad9be54850ff27867020b832f685b4f16dc22d024e666240f8e"
-    sha256 cellar: :any, big_sur:        "6b0e30e7ed71aed6bf7dfb862eba5d2c62dd0abc7a6d13684448ac6f5430f045"
-    sha256 cellar: :any, catalina:       "e02d87fa8a812686d9a2bf9ccfbe56e2937156e75488ee0795fb061d087cc171"
-    sha256 cellar: :any, mojave:         "53433da3d97a46f2878505f42882162eda2b145e7fbc3380034c79c9626120af"
-    sha256               x86_64_linux:   "ccbec4be03fed226dc702b2b03cd55e64a35aa4b2e3fdbf9b11c2c27c3e61fdc"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "7a67caede999c7ba7519176448e9339693f0db227f09a6828d1ae3429dd35b18"
+    sha256 cellar: :any, arm64_big_sur:  "56c5d0ece32f63cb06fb262077630694b3296e06daad0842b0734f2f288646d3"
+    sha256 cellar: :any, monterey:       "6f710276849eb221328f91d02d8360afefb22ee7f5443e354a48ca9570e2a605"
+    sha256 cellar: :any, big_sur:        "80c9e4d2948354442cba31e225f4343b8bd3985e8f9fd8fa3bb06c9ba50db9ff"
+    sha256 cellar: :any, catalina:       "bd8824b5da978158d1e7fdb6d156f9a41783d09a8dc82b4d56aabffc37335434"
+    sha256               x86_64_linux:   "3ffb4fbfb4ffc223341488313deb3bcbcd71dd9572d5ce10a1f489897f993e97"
   end
 
   depends_on "meson" => :build
