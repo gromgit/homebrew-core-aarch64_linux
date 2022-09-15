@@ -11,12 +11,12 @@ class Jdupes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3937038afc1820f1f774fbd22f35c8fe466e70f0588fe75cc3828f15dcf6653"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9c844afb4e9fba5b763ae1378a8629e9956f251c8ad9c1e0c74d8d0d18668274"
-    sha256 cellar: :any_skip_relocation, monterey:       "263316d819220f93765f67a80757c9b5769f3132bab17874bfd1d9de40aa60cb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6e39c1b51399b4c6cd2b39624bd8c7957643fd9abbd537cb75f3663619e355b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "9fadc414239619b0ed49beb9e31ade91fc917fe8d2ec37ea3be9ced6701a491d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b03a8221e4d828bed9072894e8a78151478a70283ec9ca98f95dbdc83eeeeb8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "60496d37fa731894985ede7a3ce8fc2ae58f41daa4ff4b2f8155b72263cad8aa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "92aa74b194b735d10012ec3ab5768eea50e4432ea13d64cfcffdf49b5e7953a6"
+    sha256 cellar: :any_skip_relocation, monterey:       "dac797d9b5d739d9dfc17676678d623099277e94912b6f92a3aeb479a6c2e121"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5784038ce9ccd2fdd6663529fe60b0724c83e7f9e8e9f8d7f58f9f3bdec9d2bb"
+    sha256 cellar: :any_skip_relocation, catalina:       "333bb2646c70e0960f8e857087c0bceb3bcf4a29a869e6e79b6622416e194bcd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "441cd0c6aa8cc17c0b040af1af3e198de4c2f35d6aa933f28f01ad56d914bc16"
   end
 
   # Fix build failure. Remove in next release.
