@@ -14,12 +14,13 @@ class ClickhouseOdbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a3d566363b077db6801bbe9757b8199f1a946f78f526a0f66059b85bbbbfa0db"
-    sha256 cellar: :any,                 arm64_big_sur:  "71de00f4651ba65f28b709262e626782a6ecbb07d795c3990fb8e518ac1b5189"
-    sha256 cellar: :any,                 monterey:       "e64cccb6b7e5cf12b41e9a83def001180209af6f50f6a9d3b0eede6d63d214d0"
-    sha256 cellar: :any,                 big_sur:        "35064cfb78300d168f3c5cef7852d43856922344d43a523d782c9f03cb4fa9b2"
-    sha256 cellar: :any,                 catalina:       "2c2d677fc26ec5bbddfd04971926fe41a726606c560781c7f719093788231c71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0da6e1c329428e002b83db225e381cb6dd0fcc6ed8fa515162f50b48a287c0f1"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "672e479aa4cccebdf6361e42bd578faae5c9a374ded20d7f73c2b313d512fed4"
+    sha256 cellar: :any,                 arm64_big_sur:  "b0db10491fb981f97a39d3996f96a93d581810345ff8f911374adfc22bd099cc"
+    sha256 cellar: :any,                 monterey:       "2ec9b05c9f11cf5de3e3f6e35b4bf3864f7b04d3dc5044a31d0df55affac2ea6"
+    sha256 cellar: :any,                 big_sur:        "922a347803f8a65bbd0ed3a159a1d2ac5522a281b3b7d174cbb03a0f9589e388"
+    sha256 cellar: :any,                 catalina:       "d3ea7bcd2951037214fd4b91a8af8c9bbc05758f42bdcacfd8721fb6407171f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f07a7588bb547c0016fb80ffb7a1a30a52273f9942b8c0183beed47a0096eb45"
   end
 
   depends_on "cmake" => :build
