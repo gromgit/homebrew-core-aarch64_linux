@@ -7,12 +7,12 @@ class ThorsSerializer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "72b292e2bd2fc4edd7257fd4d33e7aa1754bc253e0851ae35ea7e08eb156a41b"
-    sha256 cellar: :any,                 arm64_big_sur:  "7eb4a16cff723e979c9dd01fe7bc476353fca489d0f917b9b543a4f30646aaf9"
-    sha256 cellar: :any,                 monterey:       "9581c49a0c8ca7760e5b803cf26eeacba6761763e727da75115735db01163854"
-    sha256 cellar: :any,                 big_sur:        "cb5f3cad13ff513a0e66ea480977627ba52e01aa487a8f428763fa04c945f788"
-    sha256 cellar: :any,                 catalina:       "cb9c646b0d010c261a96faf8376c4329615547ba60335d8407e0935c2551d3ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a878988168438c306e22282659c5cbaff5480d6833b9fdc88a5b2ddeee3cb121"
+    sha256 cellar: :any,                 arm64_monterey: "fed38939de49fd5392bb5eb5b73a232a908f3d7fcc6c8c6f46cbd62cb9692f66"
+    sha256 cellar: :any,                 arm64_big_sur:  "c0bc34ed11e301a8c6c1d431b199a5d551ce001a645d3afcb4027be80175ebca"
+    sha256 cellar: :any,                 monterey:       "5b0f10dddcf34051c3dae5a89d645d9a8038fdfa205dfd1352a08fbb5ab512e2"
+    sha256 cellar: :any,                 big_sur:        "345aa3d840c70e080ffdda7323a25aed65d264fd15e092a254bd0f798054f978"
+    sha256 cellar: :any,                 catalina:       "6042a23651e48c42fc1f24736ce9c76f7c1b067321f882d1bd9e88836560ac28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74c185a7fe800e562b471806d56f92469a9caabb53fced25b24c0e368fa65ffd"
   end
 
   depends_on "boost" => :build
