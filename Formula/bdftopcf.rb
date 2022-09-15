@@ -5,6 +5,15 @@ class Bdftopcf < Formula
   sha256 "4b4df05fc53f1e98993638d6f7e178d95b31745c4568cee407e167491fd311a2"
   license "MIT-open-group"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "96b1cad7bbf70e54ecf15c419f721b4844af29f8dfa346167dd4fd765402d411"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "402d436d944450817e8e8f86491c544739cea6377e994fd69a8d25eb05fea076"
+    sha256 cellar: :any_skip_relocation, monterey:       "58dec51b6b84908ca02b8f62939079bacc1a2fdba84e1d15c41afcbe51a12b0f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3a3f6991ea766faf9a04c289b4be77eb41ed3821819328375184738f5629afa0"
+    sha256 cellar: :any_skip_relocation, catalina:       "d48cfa639a005786a4bed6f517729c932d80fa53d8a12b3e5c4301f7fa3506a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5808e28509b2ec50be770771e154baa70566113d961428403cbbe0392b4adc9f"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "xorgproto"  => :build
 
