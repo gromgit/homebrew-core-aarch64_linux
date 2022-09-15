@@ -1,8 +1,8 @@
 class Brev < Formula
   desc "CLI tool for managing workspaces provided by brev.dev"
   homepage "https://docs.brev.dev"
-  url "https://github.com/brevdev/brev-cli/archive/refs/tags/v0.6.56.tar.gz"
-  sha256 "a3d2de2475c64d6504cd8013de968f9ad52206f634d7e616d008b079247bcf4d"
+  url "https://github.com/brevdev/brev-cli/archive/refs/tags/v0.6.98.tar.gz"
+  sha256 "3917aa3c2ad622294e901a09bcea5b2005ba69100b2729e046d5ea3b0b56df78"
   license "MIT"
 
   livecheck do
@@ -12,10 +12,13 @@ class Brev < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/brev"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "d902ce6d743c2c6e4c1fa10513bf68f99db9dadfd03acfff5521fb85d942bfc2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ddb254a4d6cc2c169fe760ba24d3eb171aed476ef7496dabf00f306480f547d7"
   end
 
-  depends_on "go" => :build
+
+  # Required latest gvisor.dev/gvisor/pkg/gohacks instead of inet.af/netstack/gohacks
+  # Try to switch to the latest go on the next release
+  depends_on "go@1.18" => :build
 
   def install
     ldflags = "-X github.com/brevdev/brev-cli/pkg/cmd/version.Version=v#{version}"
