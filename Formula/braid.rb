@@ -7,13 +7,10 @@ class Braid < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a277b20c60e81d0269ab7c84a80a5e0404551cc3906d0696f6731c669ce2954f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c02b66768affbf197d45aebaf3229525464b41c69df91204315a82963153dc84"
-    sha256 cellar: :any_skip_relocation, monterey:       "a277b20c60e81d0269ab7c84a80a5e0404551cc3906d0696f6731c669ce2954f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c02b66768affbf197d45aebaf3229525464b41c69df91204315a82963153dc84"
-    sha256 cellar: :any_skip_relocation, catalina:       "c02b66768affbf197d45aebaf3229525464b41c69df91204315a82963153dc84"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ccbf57441d2db228e3ef8dd6da2df5bb46885f878d3308191f562898b9236cc5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/braid"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "657995fa12cbe556a328adb8ff4642ef17f9a9b930c1fe9c372400249b584997"
   end
+
 
   uses_from_macos "ruby", since: :high_sierra
 
