@@ -6,12 +6,13 @@ class Codequery < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "24a4898739d208f8dfda2bf7f02eed21dfe82bc4c8a938cef94c314c5658b97f"
-    sha256 cellar: :any,                 arm64_big_sur:  "3f80c4407314da08b4a576c3434c7e4ad29479752d6b45bf9572d3bd4010657d"
-    sha256 cellar: :any,                 monterey:       "0c9479b9d18664bedef6d9d9ac4582b536616b3fa87c64a6e0c75826a94fe50c"
-    sha256 cellar: :any,                 big_sur:        "1b660bfc8bc5dbe29ee1572d4f23ff97e8d0ce0f7010bdb9ee709ac87a323bde"
-    sha256 cellar: :any,                 catalina:       "78858d75d1980b20a592a04321fe552a3358155ed9f21b4b1a6ca15f10a9a50a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9838cc9f35121d8391d6ce91b60119d61c412bfe55f48e520014ca5888fe769"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "e81a2e4210a2ce35fc870bab1c41342735f0c6e9317d56ee9eab7a17ea32f7f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "618adda8c69f88e2fb9cce010dd9c9e862eeae9a1117f9492f9ae6043e12086f"
+    sha256 cellar: :any,                 monterey:       "61459d0b4467e459b04450e207fb7a969fe9fb0005e56f669815573c6c892f61"
+    sha256 cellar: :any,                 big_sur:        "914b33a4baaebcc8aad026abe9c85d71830b10c17edab8b1b4fbe00ef8a88ff6"
+    sha256 cellar: :any,                 catalina:       "4910a7cb4de7100322ae686f0bdc4146424f46cbd978257d28102d2a362dd90d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7dd62492b5cf3d9e4fb7626acdfd868ba583636964d8399ba39a5ecd6cb0950"
   end
 
   depends_on "cmake" => :build
