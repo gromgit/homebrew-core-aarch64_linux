@@ -1,7 +1,7 @@
 class Pcre2 < Formula
   desc "Perl compatible regular expressions library with a new API"
   homepage "https://www.pcre.org/"
-  url "https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.bz2"
+  url "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.bz2"
   sha256 "14e4b83c4783933dc17e964318e6324f7cae1bc75d8f3c79bc6969f00c159d68"
   license "BSD-3-Clause"
 
@@ -12,11 +12,12 @@ class Pcre2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pcre2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "acc2109c60509b65790ecdb50136b06a81e07bcba2d2a02e730b3dbf791e3707"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4bb6d88589bdd74cf438a8407793e2060e9edf0fb6b55857d28127b90b6176e1"
   end
 
+
   head do
-    url "https://github.com/PhilipHazel/pcre2.git", branch: "master"
+    url "https://github.com/PCRE2Project/pcre2.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
