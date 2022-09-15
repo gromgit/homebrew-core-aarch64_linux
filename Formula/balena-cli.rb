@@ -3,7 +3,6 @@ require "language/node"
 class BalenaCli < Formula
   desc "Command-line tool for interacting with the balenaCloud and balena API"
   homepage "https://www.balena.io/docs/reference/cli/"
-  # balena-cli should only be updated every 10 releases on multiples of 10
   url "https://registry.npmjs.org/balena-cli/-/balena-cli-14.3.0.tgz"
   sha256 "6b9ce0c55fa56d68c3aa41ceff1a0de41779ff5fa7794a34bb010c5166f69e82"
   license "Apache-2.0"
