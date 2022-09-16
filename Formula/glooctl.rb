@@ -4,8 +4,8 @@ class Glooctl < Formula
   # NOTE: Please wait until the newest stable release is finished building and
   # no longer marked as "Pre-release" before creating a PR for a new version.
   url "https://github.com/solo-io/gloo.git",
-      tag:      "v1.12.17",
-      revision: "e9b062c0dd1472041de862cb93c7b480925e3757"
+      tag:      "v1.12.19",
+      revision: "2ae44e598d479753ff31ec488b52552586622b0b"
   license "Apache-2.0"
   head "https://github.com/solo-io/gloo.git", branch: "master"
 
@@ -28,6 +28,8 @@ class Glooctl < Formula
   def install
     system "make", "glooctl", "VERSION=v#{version}"
     bin.install "_output/glooctl"
+
+    generate_completions_from_executable(bin/"glooctl", "completion", shells: [:bash, :zsh])
   end
 
   test do
@@ -36,8 +38,6 @@ class Glooctl < Formula
 
     version_output = shell_output("#{bin}/glooctl version 2>&1")
     assert_match "Client: {\"version\":\"v#{version}\"}", version_output
-
-    version_output = shell_output("#{bin}/glooctl version 2>&1")
     assert_match "Server: version undefined", version_output
 
     # Should error out as it needs access to a Kubernetes cluster to operate correctly
