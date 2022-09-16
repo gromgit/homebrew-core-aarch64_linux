@@ -12,11 +12,12 @@ class Blast < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "2bf18560fdbeeba904b1c064de2d7485f5f478ed8608124ba034889b8372518a"
-    sha256 monterey:      "8b52442d8fccc8f099cf06b3f5c047eedbb3823326d0ea1a4e61cae535231295"
-    sha256 big_sur:       "ee3a1af3ae297a89e2c9faadbf0e9f677d06540777fefa72503fe7d9cde69d56"
-    sha256 catalina:      "2a649294c81ba2449ed122c981359b05273bfd51d200c0cd56a0819458808b1f"
-    sha256 x86_64_linux:  "5ed46b12d1329eac692b299b62d19b1785154ea56df348da9592840f73da8880"
+    rebuild 1
+    sha256 arm64_big_sur: "78881b3e87d3fb5d3fa1aef2a25d8390097432de3a5d10521ca5fb4e7ca56496"
+    sha256 monterey:      "e144139a12c6f56996071cb3efcb57b552f937d0dfef61d577f12f9436cf8775"
+    sha256 big_sur:       "9d406671f65bb9271f1564d6dcd3dcb7adfda11304c856632c30338b282e5891"
+    sha256 catalina:      "9e06f6116d53ee375d166487ffa8dff40a7083dc2fdc70e4f4f2b9a49e96ca11"
+    sha256 x86_64_linux:  "3313233f45a9a7cdde4867c98404ea0bf5b10f7827a188b935599a24885a01e1"
   end
 
   depends_on "lmdb"
