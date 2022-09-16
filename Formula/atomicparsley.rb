@@ -9,13 +9,13 @@ class Atomicparsley < Formula
   head "https://github.com/wez/atomicparsley.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "05f8a9426c513b0bcd3e6bd3bdb2884bb85c212b9eb3cbb098d6d5e5ec0f7920"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f1997965e9c425cd6b4d524f79ccae01c052554f1cf3926dd24ea86c50c8f494"
-    sha256 cellar: :any_skip_relocation, monterey:       "5144666ed89e97f8a79eb646d3d6151a790f4edbfcf924204073e3b495e5f05f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "59476f055d9aba2d3d803830a7b6045313d39fb40a852932dd54191efc337672"
-    sha256 cellar: :any_skip_relocation, catalina:       "99e290df24ad259c91959669143108187f4654694bca9d857673e23dbd85997a"
-    sha256 cellar: :any_skip_relocation, mojave:         "e2d278c0505712c61e651450dc43c12fc2b62d0f37b018ff30031f91d4f33b1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "872001ac408f9eaca26e329c3895162fc65f623e56c7b9b1b5802055748b34aa"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd6740f15d9d909a464b2759676bc5c8f9e7e0d47206637b136b398e2f71e4ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79353541a9980e951bdf0a3137105f14c3bb42bcb399e0a98ee5b814374cdbd5"
+    sha256 cellar: :any_skip_relocation, monterey:       "1813634f5288568fa89a502960bf9560f79f8d4c344f36d3c45b6cb322bf01bb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "85983e4b886164a9e7d865ad629cbef1583bd171e7d2190634dc9968e23117e1"
+    sha256 cellar: :any_skip_relocation, catalina:       "82b715beaadc88b8c342de0f71f1a81d24307cf2ec3a633c82db32f4ec11d2bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ffd502f75ccdee2e85002c006956f47dfb385ea5cb4709d79c1042baa4ee27b"
   end
 
   depends_on "cmake" => :build
