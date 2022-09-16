@@ -9,12 +9,13 @@ class West < Formula
   head "https://github.com/zephyrproject-rtos/west.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5bd1cc5e231a100144e4ce3c1a2fd45aaff1cbcab72a54ff2c671bc97162e2e9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a0e3b55727c4b0503018477b779f7cfdb9059e654e70db658d23cbc94e40b43"
-    sha256 cellar: :any_skip_relocation, monterey:       "a29fd9cbdd9a7a6222a1504c19886a1c3839f121db92b52312c905af37477af9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1be8d3f6d19fe8f8f08eebabfcf6e003f88e02b1e62dab78aad1814721f73b17"
-    sha256 cellar: :any_skip_relocation, catalina:       "8d666ca3ed4f62634814adfbe07100a3d42aefebadcf919346cc05b1360a0d33"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a2eec0bf5dc1afd4d581756849f2bce28dc709f9c294ed7a807880202a443fc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2550d2c1a180ccab27ec18dfe9e1345ca0380ad28885723622b3a8108b1d99f4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c5ea120a45253efb8fbb911443d2fecac4569bf181d959962c1c2ecbc2fa182"
+    sha256 cellar: :any_skip_relocation, monterey:       "010a5dfaf53a0a2eb6a31894dd7f3e3ed01bf239a342103f0804ce0819a9277d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "485bf8ffc4134af7fe7d67d81e390ba4db2d4a9f2209260431cda4e0dec741a0"
+    sha256 cellar: :any_skip_relocation, catalina:       "f60e0bfb507f154fad15b6c626a5e04e0bd801d006faffb052c651645bb15ef4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e719f9b52c3eb8cb77bf76a82a5d0d0ab877f00f59f85d9ac72a14cbf00252e"
   end
 
   depends_on "python@3.10"
