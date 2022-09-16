@@ -1,6 +1,4 @@
 class StoneSoup < Formula
-  include Language::Python::Virtualenv
-
   desc "Dungeon Crawl Stone Soup: a roguelike game"
   homepage "https://crawl.develz.org/"
   url "https://github.com/crawl/crawl/archive/0.29.1.tar.gz"
@@ -23,25 +21,15 @@ class StoneSoup < Formula
 
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
+  depends_on "pyyaml" => :build
   depends_on "lua@5.1"
   depends_on "pcre"
   depends_on "sqlite"
 
   fails_with gcc: "5"
 
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
-  end
-
   def install
     ENV.cxx11
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
-    python3 = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor"/Language::Python.site_packages(python3)
-
-    venv = virtualenv_create(buildpath/"vendor", python3)
-    venv.pip_install resource("PyYAML")
 
     cd "crawl-ref/source" do
       File.write("util/release_ver", version.to_s)
