@@ -18,13 +18,8 @@ class Shyaml < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb3df94c12dc3917a52251264f28a4ab8e24bf1e243412b231693f36df62368d"
   end
 
-  depends_on "libyaml"
   depends_on "python@3.10"
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
-  end
+  depends_on "pyyaml"
 
   def install
     virtualenv_install_with_resources
