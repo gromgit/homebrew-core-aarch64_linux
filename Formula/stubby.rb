@@ -1,19 +1,10 @@
 class Stubby < Formula
   desc "DNS privacy enabled stub resolver service based on getdns"
   homepage "https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby"
+  url "https://github.com/getdnsapi/stubby/archive/v0.4.2.tar.gz"
+  sha256 "1525934e8e6b476edc4e5668c566705e99927336db58aee20c1643517fc064ed"
   license "BSD-3-Clause"
   head "https://github.com/getdnsapi/stubby.git", branch: "develop"
-
-  stable do
-    url "https://github.com/getdnsapi/stubby/archive/v0.4.1.tar.gz"
-    sha256 "e195f278d16c861a2fb998f075f48b4b5b905b17fc0f33859da03f884b4a4cad"
-
-    # Fix test yml reference issue, remove in next version
-    patch do
-      url "https://github.com/getdnsapi/stubby/commit/cf9e0f5d97e518f2edb1c21801f2ccf133467f2b.patch?full_index=1"
-      sha256 "9d888aab5448b47e844731e640ef9fa9ec6085128247824b3bb2c949d92a1a8d"
-    end
-  end
 
   bottle do
     sha256 arm64_monterey: "b4ea31171be5dba8e1bc76c7dc2afadabff6ed7a5f2daed0b999c351b3dd54d1"
@@ -57,12 +48,12 @@ class Stubby < Formula
         - 127.0.0.1@5553
       idle_timeout: 0
       upstream_recursive_servers:
-        - address_data: 145.100.185.15
-        - address_data: 145.100.185.16
-        - address_data: 185.49.141.37
+        - address_data: 8.8.8.8
+        - address_data: 8.8.4.4
+        - address_data: 1.1.1.1
     EOS
     output = shell_output("#{bin}/stubby -i -C stubby_test.yml")
-    assert_match "bindata for 145.100.185.15", output
+    assert_match "bindata for 8.8.8.8", output
 
     fork do
       exec "#{bin}/stubby", "-C", testpath/"stubby_test.yml"
