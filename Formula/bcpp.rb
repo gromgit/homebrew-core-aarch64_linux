@@ -11,13 +11,13 @@ class Bcpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ef362f6583a9a5779f8fb0a5237cc554615161d4f7f9fd5b054e0a59b51d917"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c7332e45d68c7c34e04b36935495e8e189944442650379f2c920757f2b210b7"
-    sha256 cellar: :any_skip_relocation, monterey:       "43a5d452995b4befa7498697435d30594bf4aa619750ef9f60d8192a35332ee0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "447070d7c227cdb2e5c8df360c8ea31c8f9fa89b39e2092a3a888a40caedb523"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f2a9da46190bde2855e3bdc5d430302c831e3ff0eb3e3c34f8754bbe73744da"
-    sha256 cellar: :any_skip_relocation, mojave:         "1872e08cd8d7addb8459865d451622d05ed4f4fc2f91e3a6f144ba1fe483b27a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec23404179ff7f080c3af852e5df992e01126b5a7d22b34ff509c20c863f7e18"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b8883d3bd16c07533655b35ee6e12fbcee46b59a65a623125c211bce60e088a5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a700a9f6f80235507a7547989a0d16129821326d53d66a3850c750559e08ed74"
+    sha256 cellar: :any_skip_relocation, monterey:       "dae15a3a40dd6e8d6dacca8df007f28a98e03237d1d9e2232811827e0c158284"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4cadc19aa73c9615978e1fe09e3f367a23e97f43fd40119cde2a018b704f8932"
+    sha256 cellar: :any_skip_relocation, catalina:       "06ee7591092542529d070ae475ae7cbae2f12bae5690f7fe2dce7b056024880d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40d63146f07c0c1186901b0df0954734d6942f7ae1cb9a0912c6e90f87867532"
   end
 
   fails_with gcc: "5"
