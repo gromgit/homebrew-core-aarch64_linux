@@ -98,6 +98,9 @@
     "exclude_packages": ["six"],
     "extra_packages": ["distro"]
   },
+  "commitizen": {
+    "exclude_packages": ["PyYAML"]
+  },
   "cookiecutter": {
     "exclude_packages": ["six"]
   },
