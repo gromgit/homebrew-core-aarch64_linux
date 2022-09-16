@@ -1,8 +1,8 @@
 class Libksba < Formula
   desc "X.509 and CMS library"
   homepage "https://www.gnupg.org/related_software/libksba/"
-  url "https://gnupg.org/ftp/gcrypt/libksba/libksba-1.6.0.tar.bz2"
-  sha256 "dad683e6f2d915d880aa4bed5cea9a115690b8935b78a1bbe01669189307a48b"
+  url "https://gnupg.org/ftp/gcrypt/libksba/libksba-1.6.1.tar.bz2"
+  sha256 "40750864c3ca11fa0833227938db6603661f6c1a3cc267485e81fa140cc6ea04"
   license any_of: ["LGPL-3.0-or-later", "GPL-2.0-or-later"]
 
   livecheck do
@@ -21,12 +21,6 @@ class Libksba < Formula
   end
 
   depends_on "libgpg-error"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
-    sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
-  end
 
   def install
     system "./configure", "--disable-dependency-tracking",
