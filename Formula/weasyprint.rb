@@ -7,6 +7,15 @@ class Weasyprint < Formula
   sha256 "27f796abce8edebc9e5b3cff2d095a9fa2b0af5766801431659db51203c70b38"
   license "BSD-3-Clause"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e71bb04424c92db0744342e46719a4a02cf42a81a9562dfc3f355c4be2571898"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8ae8315219567bd98640814546b553eb426a21a848665017393fbec9fc1c61ac"
+    sha256 cellar: :any_skip_relocation, monterey:       "d4dc46fb112b850d7773b5f1826203b555facd9fbc7b01c26e65a0c190ad9d29"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f712f5f72ca794212f20db2f5dfd40ac5d49e8d0c5963d0eb75538fb32592946"
+    sha256 cellar: :any_skip_relocation, catalina:       "17c6aec4b191b9bc8913df69947566042ff9ac4f2b74adfba07dd69518c49410"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22d79dafeec7d0e2ecbf60d4b0ee0c5ff29567a871b2a5aa0cdd979f6a7321c1"
+  end
+
   depends_on "fonttools"
   depends_on "pango"
   depends_on "pillow"
