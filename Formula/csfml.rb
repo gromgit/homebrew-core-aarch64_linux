@@ -8,13 +8,13 @@ class Csfml < Formula
   head "https://github.com/SFML/CSFML.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a8c50f1c117a704b3630dbf4047980de47bf2de5a5a865ff9d2b011028703b67"
-    sha256 cellar: :any,                 arm64_big_sur:  "d2021fddf559448c443461ccfab70aaeb69c6067599404bb181dc1b979c0c0ea"
-    sha256 cellar: :any,                 monterey:       "d172f3a39ed849b71f48c785ee74df265115579aa4204aef2b489af3c772a36b"
-    sha256 cellar: :any,                 big_sur:        "b8c7efa950d02d216b9c734c50b884b79e14812e738bd8a48d2113416677bd7a"
-    sha256 cellar: :any,                 catalina:       "4f7c022c4b4beeffd13e02b31b3feeea3cdef0e4a66a81c7630024d055b398ef"
-    sha256 cellar: :any,                 mojave:         "9ca41ce96eff95ff1cf5bfceebde99b720f8b8a2aaef098eb99a099393991915"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6bd7bfc04dc77180177d453bf0fc06ade3dd61b5554a77f17c5920618c54784e"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "c4fea6bf57896674c9c9abe693aa48edc8fb265607acbb6eb296d7c9bb75937f"
+    sha256 cellar: :any,                 arm64_big_sur:  "5da07203f213b3cd0f89cf61d454ee5fdcc0579fa033185b5b7bb4d28265c867"
+    sha256 cellar: :any,                 monterey:       "0e28a1870c7025c51e561274a2623e259813fb0754fd81406d379e3bbd31b360"
+    sha256 cellar: :any,                 big_sur:        "0b05f5e20a8a84a0343da2ef5a0ac7ea33cc45359b57fb15d5265ec019baf048"
+    sha256 cellar: :any,                 catalina:       "b77291facbded3e67f15271030cd251fd3f59e6a79f6ac4012ae55f77e8e2032"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb64c718f75186bd5df094255eaedf3ace73edc718b1505a1a031551e8c5a37a"
   end
 
   depends_on "cmake" => :build
