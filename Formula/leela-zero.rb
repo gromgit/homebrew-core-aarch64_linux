@@ -6,7 +6,7 @@ class LeelaZero < Formula
       tag:      "v0.17",
       revision: "3f297889563bcbec671982c655996ccff63fa253"
   license "GPL-3.0"
-  revision 1
+  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "13e77cee07ba6d6094bfc552c3f0f34217e12a53dae301f8a1697734a69f8b7f"
