@@ -12,6 +12,7 @@ class RpkiClient < Formula
     sha256 monterey:       "182a345138adf92b28e0ae5fd116a39a2d89b7716c7e3d7c99ee17c5a1c24f2f"
     sha256 big_sur:        "087fb52498765b261d100fd124e170c752fdc3e8f024ca3acd7687ef8b123c95"
     sha256 catalina:       "e1e6ab2bc911f12a579eeb5a9776d61e817e3ad13717d82e083b65c34130945e"
+    sha256 x86_64_linux:   "09688cdc813f3d65995b5279dd8cfa656dc30ce8b3c7b0f25770a20d84f9e071"
   end
 
   depends_on "pkg-config" => :build
