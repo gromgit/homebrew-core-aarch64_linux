@@ -6,12 +6,12 @@ class CargoEdit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "069324cf3e9b3026479f047709b35dce58e400a182e50420b75f6662b2aa1e91"
-    sha256 cellar: :any,                 arm64_big_sur:  "4edeb2801a99eb07b424ac485646a1f7721ea5e35468badb11dc56e3d815d385"
-    sha256 cellar: :any,                 monterey:       "378b0e2d0cf7128a58e5e2a848a2845496ecef8ffcc013c7c6370c1f663053f8"
-    sha256 cellar: :any,                 big_sur:        "a2f5a47df57bfb03009bf2e13038ff77c893210bc9d3c582063e09b14dcb42f5"
-    sha256 cellar: :any,                 catalina:       "ad60a8920b548df7fac95e8f8999a376add7a50c886447ad1946e450cc61a358"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8f05db455cd2ff051eeeb34a38b3ead7d3fc10340cc8eecf3350397aac2b756"
+    sha256 cellar: :any,                 arm64_monterey: "488dffff6c2f57d0e8e2249250f37eea40997f6b151678a90ac68983f1f3e53b"
+    sha256 cellar: :any,                 arm64_big_sur:  "04d923cefae2bcaf347638f76daec8fee0ea1ff1f6a184a9a99ee70834652227"
+    sha256 cellar: :any,                 monterey:       "edc0c4842a6022fdce12928ee6fda9bad956d7344d3e22c0f00abee5496560e5"
+    sha256 cellar: :any,                 big_sur:        "d4e9728fd705799345148c447ced7b6d572c4edb63a3dfa2bfe979b8c01a370d"
+    sha256 cellar: :any,                 catalina:       "30e7a42e02e3176ce7e415c870f7faac7010a514faea9e06af2b18f913af4c2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "854d7cf55f57a098e129a675d1fc7662bbd66d7684638deae663a7b4793a81a8"
   end
 
   depends_on "libgit2"
