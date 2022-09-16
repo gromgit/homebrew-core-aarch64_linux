@@ -335,6 +335,9 @@
   "platformio": {
     "exclude_packages": ["tabulate"]
   },
+  "podman-compose": {
+    "exclude_packages": ["PyYAML"]
+  },
   "pocsuite3": {
     "exclude_packages": ["six"]
   },
