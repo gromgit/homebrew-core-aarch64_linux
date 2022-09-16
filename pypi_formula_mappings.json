@@ -123,7 +123,7 @@
     "exclude_packages": ["six"]
   },
   "datasette": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "diffoscope": "diffoscope[cmdline]",
   "dnstwist": "dnstwist[full]",
