@@ -8,12 +8,13 @@ class Planck < Formula
   head "https://github.com/planck-repl/planck.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "60251db7bcf9f8aefdeedfe73e9d881a9c6f0810e7f0f92cf8d06f36357dac77"
-    sha256 cellar: :any,                 arm64_big_sur:  "22402b255e0865167b1fab89938287dcaea4897c39c6576bb9f7a1b9badc2dba"
-    sha256 cellar: :any,                 monterey:       "90688a347f810a1cc3f6a54f4b342c0a1e8bbcfe1f88f7c2c0190cae70c04d91"
-    sha256 cellar: :any,                 big_sur:        "767b85cc2af1a1f83c0ca5030fba4feff75caeb86b294b854e6768591e33c94f"
-    sha256 cellar: :any,                 catalina:       "b1ede3e99381062067def61a1b8c4da247abd71c5349c3afd619d0d93fd57db0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d711302abf6a781f2832991709912746c96d0a8cb2c25bf700c1da5f22568f3"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "3945ccf1866fb52c25df921bf42ac28b1d0f0b688d4c2b8b107cdd67da41c14e"
+    sha256 cellar: :any,                 arm64_big_sur:  "084239c44a8993fe2d2d327053e8324d8f6b13080a1b0d22ee6a6ff36fc5561c"
+    sha256 cellar: :any,                 monterey:       "8b54a20fc9bce4febcf5d377e8b62a3664bc447f4ed92036e9b85f39e5734ea4"
+    sha256 cellar: :any,                 big_sur:        "ed306156976c3cc03702836ddeea68c3ce39161e8ce2c196d9eff78d421b455c"
+    sha256 cellar: :any,                 catalina:       "b0e5c7f1ae5447c3226623075b3b05cb6bf9c3dd342589f8ba4d8cf6b3de1d92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea6dfa41bfb046ea891f5df7e006052297fbbe8b2290dfc06d89693d14ae2d4f"
   end
 
   depends_on "clojure" => :build
