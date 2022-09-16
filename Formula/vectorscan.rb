@@ -1,8 +1,8 @@
 class Vectorscan < Formula
   desc "High-performance regular expression matching library"
   homepage "https://github.com/VectorCamp/vectorscan"
-  url "https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.7.tar.gz"
-  sha256 "cd70c2a7bf632b5374083a450019703605520c10c5614a4c12011c99ab8435dd"
+  url "https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.8.tar.gz"
+  sha256 "71fae7ee8d63e1513a6df762cdb5d5f02a9120a2422cf1f31d57747c2b8d36ab"
   license "BSD-3-Clause"
 
   bottle do
