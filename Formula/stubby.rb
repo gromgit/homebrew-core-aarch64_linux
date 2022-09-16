@@ -7,12 +7,12 @@ class Stubby < Formula
   head "https://github.com/getdnsapi/stubby.git", branch: "develop"
 
   bottle do
-    sha256 arm64_monterey: "b4ea31171be5dba8e1bc76c7dc2afadabff6ed7a5f2daed0b999c351b3dd54d1"
-    sha256 arm64_big_sur:  "da69e1f67fdacfa3157b7ce65d54a882bafea078034675a740b5ce84a73474b8"
-    sha256 monterey:       "01fdc08df8fd30578f6dbf3548c1e41db0f3e7ac23043df4f993b68f129058dd"
-    sha256 big_sur:        "30321706c1c048e6b5b37f5c478539e5cda15f1b406a33cb851d51a2d52d0cd0"
-    sha256 catalina:       "76fcc1a8bf4fd749cdcdfdd3a21a548f0d085f574f8bc170e6cb8a7ec6840a60"
-    sha256 x86_64_linux:   "7366b9c82ea0f57196ef84e98d8715caf2a795a06bcc9f55d50f0078b854f763"
+    sha256 arm64_monterey: "8dae5616a15ae8b79386da0bd2faff4a2b55c790f13c427cce9c74b85b9d50a6"
+    sha256 arm64_big_sur:  "7501e035287e7410f00b09c6a36951d0b0510085f3401687a84a62eb61da69d2"
+    sha256 monterey:       "54e6f97cdc8e0d26bcf5567509f3a53661c01e773489073fb3b9cba4bd7ebe17"
+    sha256 big_sur:        "59c635a262c65f3e19ee9fd8791e7686e93a14a17b3e7329971f50637c538bfb"
+    sha256 catalina:       "52208414687d233e96e3938eda73feb5d8aa4e7601789db9276ff0cbc1ed791f"
+    sha256 x86_64_linux:   "aedb813029fcafa50af6bdd12eb6a8299bee1d71f59a0c5d41b1b02921fbc0d6"
   end
 
   depends_on "cmake" => :build
