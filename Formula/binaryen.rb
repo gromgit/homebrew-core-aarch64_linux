@@ -7,12 +7,13 @@ class Binaryen < Formula
   head "https://github.com/WebAssembly/binaryen.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4c4d9c48b73fdc36e655be7ec999c85b8fea6e82e178ad0039ec1b092ae96d73"
-    sha256 cellar: :any,                 arm64_big_sur:  "f78a4bd5a8ca59532c29837c9cba5748348bd5a757cac10420a8a29712db4ba1"
-    sha256 cellar: :any,                 monterey:       "a99c28767c8d450e0ff4bd505f59276c1054aa83550229f381cb6d66f511a1b8"
-    sha256 cellar: :any,                 big_sur:        "7e78efad3c1c4e6f55d8f0231abd8680d01e732ae0226a88deb14c1a44ee4760"
-    sha256 cellar: :any,                 catalina:       "5c5a150f985a7c08bccac10ccd19ff79d561560012b85ab1c14fccbda4b9b4fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cadc0af9d6df56f587b144243e847a76fcf7afbf068c2f7cc9b11b27537e1a9"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "40a5a0d8afbdbcb26fd52ea0a66804ff52860f8a4054ea285dd337272438ecf3"
+    sha256 cellar: :any,                 arm64_big_sur:  "7f1193147c44db434a09fa887a9f231307d1bd3e2fe8eb8dad5b9012f268a2e5"
+    sha256 cellar: :any,                 monterey:       "41150cf0ab34367f6e20a075cb4308a8e9223294c047f4177df95b03bca5e249"
+    sha256 cellar: :any,                 big_sur:        "b53db2c1d71c0b70d10bcd10805a70c55786fe9765fe331ca96d24e4a1cbbfc1"
+    sha256 cellar: :any,                 catalina:       "d879dcf03cbb1e077987af97baa0be57f7965e0e308a4bd07e7117855d2d2eb0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "332e17b0b3ada2bf14b79c1a8fba7e3c42f9622db6393f94252b7ccdccaf0ddd"
   end
 
   depends_on "cmake" => :build
