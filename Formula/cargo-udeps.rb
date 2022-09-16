@@ -6,12 +6,12 @@ class CargoUdeps < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c723b865d0831a242ef0e3699bcd53799d04e590ac87a79057ae357ae03beb33"
-    sha256 cellar: :any,                 arm64_big_sur:  "f815ad8fa9c513af2bddcaaa3e9055308a45de2b08c0cd02f5a0b8bfbb167cb2"
-    sha256 cellar: :any,                 monterey:       "4f2e92806f94e558cf227e60523eeea71cd4431ae3856266a9370da526423307"
-    sha256 cellar: :any,                 big_sur:        "9f3919ba2ca2021edf95d47279d8f1416ded22a7c54a669a3e61c5b92f3d0f4b"
-    sha256 cellar: :any,                 catalina:       "9bcb6238aaa6638eb38521676c256cd6071a5484499cf1f8600ecbdc789f5c01"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e420861db5d9576f32d9c6ee5930e7d4ff5eb045bc7f08fb2a3212c21d9823a7"
+    sha256 cellar: :any,                 arm64_monterey: "6622fdf828e57a6e4d749fad4d44a1cc85c3726fabf3ce61ae7902e89b7b6044"
+    sha256 cellar: :any,                 arm64_big_sur:  "ddc8518c0bf3e0363a2a389fe470017e6bdc5c5f4781a45b1a7cd9a077497bb2"
+    sha256 cellar: :any,                 monterey:       "334d045c02dac51558977d168e54beb54580c7fcbaa1e9510647eb0112200746"
+    sha256 cellar: :any,                 big_sur:        "468850dca51c19cbc95cffa5cebe480fabbb0a32861fd2a416b2583f23a92ee5"
+    sha256 cellar: :any,                 catalina:       "6a7ae7defe85b4b9093732898f78fc63fb4f2af4fba90bcfa2ce5b86ea0e6156"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5975f26e35609000803541b719600c7043dfee1fc9fd0a0130ad2c46ba00b60d"
   end
 
   depends_on "rust" => [:build, :test]
