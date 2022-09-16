@@ -4,7 +4,7 @@ class Bastet < Formula
   url "https://github.com/fph/bastet/archive/0.43.2.tar.gz"
   sha256 "f219510afc1d83e4651fbffd5921b1e0b926d5311da4f8fa7df103dc7f2c403f"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 3
 
   bottle do
     sha256 arm64_monterey: "f7f6d9a5b94a4a65519cf8b8da797250f4884b0a62d8dfd7b63c85ad2992ca8c"
