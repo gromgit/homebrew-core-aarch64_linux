@@ -6,14 +6,12 @@ class Llnode < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3b83445627d4e1e35aab418fbfba37303e72210b0a4c28ec8126616ef435cedd"
-    sha256 cellar: :any,                 arm64_big_sur:  "59c65b8dc37b82052e1ffe3ce845b975c04f0fd5a0a96ce75cc4d9f906239243"
-    sha256 cellar: :any,                 monterey:       "822b3b017c7ff2c3c2b1ef1b31c86695dfeb69a48afc9c342b0721bcb7c80abe"
-    sha256 cellar: :any,                 big_sur:        "a82631c8b56f17bea8cf3f8e5f5077607d59ac52c743058bd1d150ff5e61ad2e"
-    sha256 cellar: :any,                 catalina:       "560fa7f91b9efca4de97feffe3bec3ee218eca2786df2a2e473009ab520f855b"
-    sha256 cellar: :any,                 mojave:         "23c5930b1c3a4d3d9be6c410dc745014544331af8394917ecd9a928064d7ff49"
-    sha256 cellar: :any,                 high_sierra:    "33842b20f13a721a880810a50422bfbf25b8c20a12f5e4882453939e7203ff1d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7ec466d2950af84ec1bd3afb5f1170592cca5458b15eaec2d05f70d6b23d110"
+    sha256 cellar: :any,                 arm64_monterey: "4559e08d6dcf6a9f0ddfa92fc7fc6ca488d3b0a36e1d4adce527bb759400d779"
+    sha256 cellar: :any,                 arm64_big_sur:  "c326383b35e7992e2d866ac897e9421f9b79011ee6ea5fc26779aa5059ac4239"
+    sha256 cellar: :any,                 monterey:       "cbf7de9fcf5833ea6172b3fd263f7793f79041b5b2ac380350bd1cd5baab3971"
+    sha256 cellar: :any,                 big_sur:        "e2e10b47bf1d3f4bb2c5ecaf868cea6eb870aea40fc2705b0c099cf6b9697a0a"
+    sha256 cellar: :any,                 catalina:       "4018c6fe425d6b9ce00ae4a121de9ce17b7962ac1e8d2b32064c154038d3cb64"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "085354ed7593c0a7c2bacf20c44a745cf91be1c8d153f827074a49adfaa7a14a"
   end
 
   depends_on "llvm" => :build
