@@ -6,6 +6,10 @@ class Liburing < Formula
   license any_of: ["MIT", "LGPL-2.1-only"]
   head "https://github.com/axboe/liburing.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "56f202765112865ba402c9fe20f4b2571b586cff51e80632319ca451f3499f65"
+  end
+
   depends_on :linux
 
   def install
