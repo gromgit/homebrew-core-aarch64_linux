@@ -11,12 +11,13 @@ class Gwenhywfar < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c7b83b62888d39c6f1e18f603152db650b6d72e6f81a7cb061cc8bcbd998a80d"
-    sha256 arm64_big_sur:  "273495183704bead4fa1077be3e057d1be7a86be76bae3f70b0d30cf6d0eae26"
-    sha256 monterey:       "c8adb5792cd60ef01af64c0a2c3542246a0e7e5588a8c780fa4542ca157b790d"
-    sha256 big_sur:        "c3a687c6a0b498a6ce19a9fef1ec9dd18cad56b733b53153ca4ccff6e73415c2"
-    sha256 catalina:       "4c8a467bf4405f6591b49614c3b12b28c4f44b6b667fb92054e0126b52c62e0a"
-    sha256 x86_64_linux:   "46b55d7ef906d5f814c5995943b5d555094f36b1c0bae588c5c8fe6ccfadbb22"
+    rebuild 1
+    sha256 arm64_monterey: "a4a56e458f247380a5766377a718b25e8488101cf528d791d3e54f0b70d0d289"
+    sha256 arm64_big_sur:  "ed089ad54b5d4f967a27517759dbc2e89a76324c90e9520e28239cea774c2337"
+    sha256 monterey:       "1656453fb187a695e920960e8e95c4504b428c867d5124ab5ee6d180eec7a5e9"
+    sha256 big_sur:        "583bb7775e565b01b56787c51fcbf48a98ef9a38e247781c60a54839303aef90"
+    sha256 catalina:       "39e119ae0c67f3282b9323d79253f47b471e347fcb737f523b1d74fc1d128eef"
+    sha256 x86_64_linux:   "f48d3868cd3b66a3a76897984c2d567f7c35e21dc5376d030c62b550233d59b5"
   end
 
   depends_on "autoconf" => :build
