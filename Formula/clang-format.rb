@@ -7,12 +7,12 @@ class ClangFormat < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.3/llvm-14.0.3.src.tar.xz"
-    sha256 "1e09e8c26e1b67bc94a128b62e9b9c24b70c697a2436a479c9e5eedc4ae29654"
+    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/llvm-14.0.6.src.tar.xz"
+    sha256 "050922ecaaca5781fdf6631ea92bc715183f202f9d2f15147226f023414f619a"
 
     resource "clang" do
-      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.3/clang-14.0.3.src.tar.xz"
-      sha256 "f85c55f192cb35b9d6af1f998b7d5abe90e369f8b16445503ffab1b02e75a6f0"
+      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/clang-14.0.6.src.tar.xz"
+      sha256 "2b5847b6a63118b9efe5c85548363c81ffe096b66c3b3675e953e26342ae4031"
     end
   end
 
@@ -23,13 +23,10 @@ class ClangFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d518dd0e091e3b69749526051078ab376ab5001d1b538feeee1f4120676c3959"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4e65516e38bbce07b2300041a780d6ac9642a6a9e199e899873a36bb0831471"
-    sha256 cellar: :any_skip_relocation, monterey:       "66d3afce9d3fa6417f5dcf8d2082cf46903ea6409a9951f1c8efe3428d7d477f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "58b0ed6c859d751ac4b5fe64da0e3674b37ee96010afe742e66bb7fbdf528af4"
-    sha256 cellar: :any_skip_relocation, catalina:       "3f83410a029227830f4b4847f2d1323ae0b123e6ff1447e3ca897d938c32c0d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3f34b9b0e06f8cb0f5cf877c82ae9138def15fcd92566876e92f9f03d1154b1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clang-format"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a8e0dee93ff39c435b43fef26444dc98550dc9a9f05f9fc0c7a019aa4e22123"
   end
+
 
   depends_on "cmake" => :build
 
