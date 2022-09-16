@@ -20,8 +20,8 @@ class Theharvester < Formula
 
   depends_on "maturin" => :build
   depends_on "rust" => :build
-  depends_on "libyaml"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   uses_from_macos "libxml2"
@@ -245,11 +245,6 @@ class Theharvester < Formula
   resource "pyppeteer" do
     url "https://files.pythonhosted.org/packages/d9/bd/aee9896b82f5c74612586743a006fbdc02515277ffb62409b57e68934f6a/pyppeteer-0.2.6.tar.gz"
     sha256 "4621bb890e54f43dce84f5139ea4d484a62886be1903c2fcb393af607943538f"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "redis" do
