@@ -18,6 +18,7 @@ class Sail < Formula
 
   depends_on "rust" => :build
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   resource "bcrypt" do
@@ -118,11 +119,6 @@ class Sail < Formula
   resource "python-digitalocean" do
     url "https://files.pythonhosted.org/packages/f8/f7/43cb73fb393c4c0da36294b6040c7424bc904042d55c1b37c73ecc9e7714/python-digitalocean-1.17.0.tar.gz"
     sha256 "107854fde1aafa21774e8053cf253b04173613c94531f75d5a039ad770562b24"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "requests" do

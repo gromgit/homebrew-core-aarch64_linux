@@ -391,7 +391,7 @@
   },
   "sail": {
     "package_name": "sailed-io",
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "salt": {
     "extra_packages": ["pycryptodome", "pygit2"],
