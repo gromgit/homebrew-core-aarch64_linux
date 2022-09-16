@@ -4,6 +4,7 @@ class Dartsim < Formula
   url "https://github.com/dartsim/dart/archive/v6.12.2.tar.gz"
   sha256 "db1b3ef888d37f0dbc567bc291ab2cdb5699172523a58dd5a5fe513ee38f83b0"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     sha256                               arm64_monterey: "27be345f1467295f61a1be1489853445e50bb16823b730d45b784f550b7fe450"
@@ -29,10 +30,6 @@ class Dartsim < Formula
   depends_on "open-scene-graph"
   depends_on "tinyxml2"
   depends_on "urdfdom"
-
-  on_linux do
-    depends_on "gcc"
-  end
 
   fails_with gcc: "5"
 
