@@ -316,6 +316,9 @@
   "percol": {
     "exclude_packages": ["six"]
   },
+  "peru": {
+    "exclude_packages": ["PyYAML"]
+  },
   "pgcli": {
     "exclude_packages": ["six", "tabulate"]
   },

@@ -16,17 +16,12 @@ class Peru < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f2f9f55d91a612232221a8419e76538faa8ac290e461a60dd2c60c4f6283ad0"
   end
 
-  depends_on "libyaml"
   depends_on "python@3.10"
+  depends_on "pyyaml"
 
   resource "docopt" do
     url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
     sha256 "49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   def install
