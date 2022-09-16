@@ -2,8 +2,8 @@ class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com/"
   url "https://github.com/goreleaser/goreleaser.git",
-      tag:      "v1.11.2",
-      revision: "e31f7806dc0073159cc12dce7605073259105a67"
+      tag:      "v1.11.3",
+      revision: "0ea3e0f57289822085e5c0b554e2b430a40b832c"
   license "MIT"
   head "https://github.com/goreleaser/goreleaser.git", branch: "main"
 
