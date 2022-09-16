@@ -7,10 +7,11 @@ class Fastnetmon < Formula
   revision 5
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "8d4de0b01f7951f5315e4651971d80aefa1413401d9b469c329f182c33a38d97"
-    sha256 cellar: :any, arm64_big_sur:  "6950231b1781ae917835fce4445ea86e14467ce6ca682d44ec507d207a404b13"
-    sha256 cellar: :any, monterey:       "b5eebdbca11f5a17c358d827577e131c5c73e66ada37880511f8abeadb019b38"
-    sha256 cellar: :any, big_sur:        "dc87e379004d17826d28c176bdeb00722a87a21196c9220df815a3e333506bcf"
+    sha256 cellar: :any,                 arm64_monterey: "8d4de0b01f7951f5315e4651971d80aefa1413401d9b469c329f182c33a38d97"
+    sha256 cellar: :any,                 arm64_big_sur:  "6950231b1781ae917835fce4445ea86e14467ce6ca682d44ec507d207a404b13"
+    sha256 cellar: :any,                 monterey:       "b5eebdbca11f5a17c358d827577e131c5c73e66ada37880511f8abeadb019b38"
+    sha256 cellar: :any,                 big_sur:        "dc87e379004d17826d28c176bdeb00722a87a21196c9220df815a3e333506bcf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3965fab5d050d3cc4a4db9ef79a77c3a27799ce2d143cd28e9ffdc4377e1c4f6"
   end
 
   depends_on "cmake" => :build
