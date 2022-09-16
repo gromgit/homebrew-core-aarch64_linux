@@ -422,6 +422,9 @@
   "shallow-backup": {
     "exclude_packages": ["six"]
   },
+  "snakemake": {
+    "exclude_packages": ["tabulate", "PyYAML", "jsonschema", "attrs", "pyrsistent"]
+  },
   "sphinx-doc": {
     "extra_packages": ["numpydoc"]
   },
