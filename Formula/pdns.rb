@@ -4,6 +4,7 @@ class Pdns < Formula
   url "https://downloads.powerdns.com/releases/pdns-4.6.3.tar.bz2"
   sha256 "acd06b89ca01d1adf61b906604614f0e1d77a1e94eeecade8ff5d53a16db7389"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://downloads.powerdns.com/releases/"
@@ -36,11 +37,7 @@ class Pdns < Formula
 
   uses_from_macos "curl"
 
-  on_linux do
-    depends_on "gcc" # for C++17
-  end
-
-  fails_with gcc: "5"
+  fails_with gcc: "5" # for C++17
 
   def install
     args = %W[
