@@ -9,12 +9,13 @@ class Parliament < Formula
   head "https://github.com/duo-labs/parliament.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cdff5a39d575b1cb0db1f88f743ae06b2f69f90cfc4c20632b68bc846df1eea6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a05bd973215959bc47e00c533b50648798a34d280578d55a2e57a2698f4b617"
-    sha256 cellar: :any_skip_relocation, monterey:       "859bec622f67d11c95b39cf9b39c7d15e30bd0291b52f6ef5ec3f5896523442a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7e23167434873bf54781347dcb1b716fc5b8e4a75b351a0b5fd412e9c44bbee"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d2927bd06b9d807a0bdcc81e4aedf7ed7f4d403cef8d2e34cd77c7c9023a377"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "293a46e847761494af3c9d52693e6b6d40de6d235bf19f205031c380abb254c1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "56457cc2936fc70c7193e75045e0267486ed83d4e24c324e2fbd51cdae88dcf1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3419dfc9b414f45f9e9e92a726585a7d3906fb40c5c2f8e75e0f49a41533dba0"
+    sha256 cellar: :any_skip_relocation, monterey:       "c7d49ac3cf0fba6554766c85079088e81251b02ce1bf385b8ba2a8c2a50a3b59"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bcb5a8cce71b0c29f5924bd9fa134f5b0bcdc61985abadec53cb5984ea4d2982"
+    sha256 cellar: :any_skip_relocation, catalina:       "abc1d503f1cdeebcb9d4f1009eaeba0990aa4e153fa2c30961f6819040439125"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd4e0420e8c325b0bdd2b4f4775e9c5e60917601eb603eb7b00ee35e9ee498af"
   end
 
   depends_on "python@3.10"
