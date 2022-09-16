@@ -9,11 +9,12 @@ class PodmanCompose < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c7eb9c367955f764da4821a9dc31a41f8acbc0a320c609601aa4c230f1ec7c2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62406275548f3412477c72a4c23990d8a8674fa9d2f3e371126b65f84cb9aa6f"
-    sha256 cellar: :any_skip_relocation, monterey:       "b4db95a7f259f53ef888dff92bb63ffece19937739d1a85d8a5c007f55ebb53b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d1c9080f186bc02c2e7536d950ac14f7394ed9d6ed97aaa8cf1b0b3e4d6d207a"
-    sha256 cellar: :any_skip_relocation, catalina:       "0a5041233f1c03bf77d48592636fb384f895aee303fd84b7e5b4bb5b30b0175d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "192a0ad06b0acf8e4caa1b70216d1fcf8d88bb74e3a362b9e1db74f39640d721"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7c606a041e01537a00167c4451773626827f8cf5ff91fb2f1796653e854d0f9e"
+    sha256 cellar: :any_skip_relocation, monterey:       "d221387fb6943447f7a9314568a60c59f9d2aa1a379d6666a77b5ac516f96b65"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7c22fcb3a347e4d1e8c153f49f54991bf25a65d17b751a9c7822af19188b5a73"
+    sha256 cellar: :any_skip_relocation, catalina:       "72422377ed110bc826a4b5a2c3af49b83867ad68518c014886fad15f0ba7acde"
   end
 
   # Depends on the `podman` command, which the podman.rb formula does not
