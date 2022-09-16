@@ -496,7 +496,7 @@
     "exclude_packages": ["Brotli", "fonttools", "Pillow", "six"]
   },
   "west": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "woob": {
     "exclude_packages": ["pillow", "six", "PyYAML"],
