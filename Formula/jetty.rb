@@ -12,10 +12,10 @@ class Jetty < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "e03072df8acd66171e1916dfd05883610faa74a50a323cd07ad79698a8c46fc5"
-    sha256 cellar: :any,                 big_sur:      "e03072df8acd66171e1916dfd05883610faa74a50a323cd07ad79698a8c46fc5"
-    sha256 cellar: :any,                 catalina:     "e03072df8acd66171e1916dfd05883610faa74a50a323cd07ad79698a8c46fc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e89783e620e008ec57e836acec85afbea839a98caf8b0c44bdb5e442567ef142"
+    sha256 cellar: :any,                 monterey:     "f5579d086de7aa2364b4b3bed97b0d1fb0b5e503249ac8af1aaa8317bacf6c88"
+    sha256 cellar: :any,                 big_sur:      "f5579d086de7aa2364b4b3bed97b0d1fb0b5e503249ac8af1aaa8317bacf6c88"
+    sha256 cellar: :any,                 catalina:     "f5579d086de7aa2364b4b3bed97b0d1fb0b5e503249ac8af1aaa8317bacf6c88"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8533506b9adbcbc7de65fa95c7e08abd12e3585ca403db885778bad9fb58b61e"
   end
 
   # Ships a pre-built x86_64-only `libsetuid-osx.so`.
