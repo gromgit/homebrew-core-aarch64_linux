@@ -219,7 +219,10 @@
   "jenkins-job-builder": {
     "exclude_packages": ["six"]
   },
-  "jinja2-cli": "jinja2-cli[yaml,toml,xml]",
+  "jinja2-cli": {
+    "package_name": "jinja2-cli[yaml,toml,xml]",
+    "exclude_packages": ["PyYAML"]
+  },
   "jrnl": {
     "exclude_packages": ["six"]
   },
