@@ -259,7 +259,7 @@
     "extra_packages": ["wheel"]
   },
   "mapproxy": {
-    "exclude_packages": ["pillow"],
+    "exclude_packages": ["pillow", "PyYAML"],
     "extra_packages": ["pyproj"]
   },
   "mkdocs": {
