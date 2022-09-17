@@ -445,7 +445,7 @@
   },
   "termius": {
     "package_name": "termius",
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "thefuck": {
     "exclude_packages": ["six"]
