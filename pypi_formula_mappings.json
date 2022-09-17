@@ -102,7 +102,7 @@
     "exclude_packages": ["PyYAML"]
   },
   "cookiecutter": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "cppman": {
     "exclude_packages": ["six"]
