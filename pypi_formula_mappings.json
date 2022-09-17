@@ -424,7 +424,9 @@
   "scour": {
     "exclude_packages": ["six"]
   },
-  "semgrep": "semgrep",
+  "semgrep": {
+    "exclude_packages": ["jsonschema", "attrs", "pyrsistent"]
+  },
   "shallow-backup": {
     "exclude_packages": ["six"]
   },
