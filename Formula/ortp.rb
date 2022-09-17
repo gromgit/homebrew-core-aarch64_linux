@@ -1,8 +1,8 @@
 class Ortp < Formula
   desc "Real-time transport protocol (RTP, RFC3550) library"
   homepage "https://www.linphone.org/technical-corner/ortp"
-  url "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.1.55/ortp-5.1.55.tar.bz2"
-  sha256 "a8dce7185401eb693389716269c4426036c41a25fb99b8075129c45f491d02b2"
+  url "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.1.61/ortp-5.1.61.tar.bz2"
+  sha256 "028d4c60a55814786d8a13f99b21ca86b9b5ff229a579fe5fea8d40b0d135319"
   license "GPL-3.0-or-later"
   head "https://gitlab.linphone.org/BC/public/ortp.git", branch: "master"
 
@@ -23,8 +23,8 @@ class Ortp < Formula
   # https://github.com/BelledonneCommunications/bctoolbox
   resource "bctoolbox" do
     # Don't forget to change both instances of the version in the URL.
-    url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.1.55/bctoolbox-5.1.55.tar.bz2"
-    sha256 "19613e4a8f5b107af0acb849f45974a1af438c4e888e096c6216047fce6397a2"
+    url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.1.61/bctoolbox-5.1.61.tar.bz2"
+    sha256 "bba827cbc32e314749fcdd986a5a36c9720f70c2478e7bfc4c1ab2966cdc523c"
   end
 
   def install
@@ -38,10 +38,12 @@ class Ortp < Formula
 
     ENV.prepend_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
     ENV.append "LDFLAGS", "-Wl,-rpath,#{libexec}/lib" if OS.linux?
+    cflags = ["-I#{libexec}/include"]
+    cflags << "-Wno-error=maybe-uninitialized" if OS.linux?
 
     args = %W[
       -DCMAKE_PREFIX_PATH=#{libexec}
-      -DCMAKE_C_FLAGS=-I#{libexec}/include
+      -DCMAKE_C_FLAGS=#{cflags.join(" ")}
       -DCMAKE_CXX_FLAGS=-I#{libexec}/include
       -DENABLE_DOC=NO
     ]
