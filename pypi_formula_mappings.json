@@ -170,7 +170,7 @@
     "exclude_packages": ["six"]
   },
   "fdroidserver": {
-    "exclude_packages": ["numpy", "pillow", "six"],
+    "exclude_packages": ["numpy", "pillow", "six", "PyYAML", "yamllint", "pathspec"],
     "extra_packages": ["wheel"]
   },
   "flintrock": {
