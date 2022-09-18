@@ -22,47 +22,60 @@ class Seexpr < Formula
   depends_on "doxygen" => :build
   depends_on "libpng"
 
+  uses_from_macos "flex" => :build
+
+  on_linux do
+    depends_on "mesa"
+    depends_on "mesa-glu"
+  end
+
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args, "-DUSE_PYTHON=FALSE"
-      system "make", "doc"
-      system "make", "install"
-    end
+    args = %W[
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DUSE_PYTHON=FALSE
+      -DENABLE_LLVM_BACKEND=FALSE
+      -DENABLE_QT5=FALSE
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--build", "build", "--target", "doc"
+    system "cmake", "--install", "build"
   end
 
   test do
-    actual_output = shell_output("#{bin}/asciigraph2").lines.map(&:rstrip).join("\n")
+    actual_output = shell_output("#{bin}/asciiGraph2 'x^3-8*x'").lines.map(&:rstrip).join("\n")
     expected_output = <<~EOS
-                                    |
-                                    |
-                                    |
-                                    |
-                                   ###
-                                  # |#
-                                 ## |##
-                                 #  | #
-                                ##  | ##
-                                #   |  #
-                               ##   |  ##
-                               #    |   #
-                               #    |   ##
-                   ####       #     |    #       ####
-      #######-----##--###-----#-----|----##-----##--###-----######
-            ######      ##   #      |     #    #      ######
-                         ## ##      |     ## ##
-                          ###       |      ###
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
+                                    |        #
+                              ##    |        #
+                              ###   |
+                             #  #   |        #
+                             #  ##  |        #
+                             #   #  |        #
+                            ##   #  |        #
+                            #    ## |        #
+                            #     # |        #
+                            #     # |        #
+                            #     # |        #
+                            #      #|       #
+                           #       #|       #
+                           #       #|       #
+      ---------------------#-------##-------#---------------------
+                           #        #       #
+                           #        #       #
+                           #        #       #
+                           #        ##      #
+                           #        |#     #
+                          #         |#     #
+                          #         |#     #
+                          #         |##    #
+                          #         | #    #
+                          #         | #   #
+                          #         | ##  #
+                          #         |  #  #
+                                    |  ###
+                          #         |   ##
+                          #         |
     EOS
 
     assert_equal actual_output, expected_output.rstrip
