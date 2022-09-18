@@ -5,6 +5,14 @@ class Got < Formula
   sha256 "b35324893c9aefbd6bf49602a6c9bb9d6e20670aff3c9734fefead0205bb9cb2"
   license "ISC"
 
+  bottle do
+    sha256 arm64_monterey: "13c8ae34e326ad2194eda583a1d26cd9c7c66f0f45de01ad09bc7201b91a57d5"
+    sha256 arm64_big_sur:  "e77177ff6df73719eb475ffad8fbf6aba39882ba22d6be2347c784059bdd89b5"
+    sha256 monterey:       "312377d736196669295eef3a62d1aa83fcf2cb1b60c1ad9f9f1010d3a63cd9a4"
+    sha256 big_sur:        "d3650bea6d173fae553426de4bd95cb31d29286679fcb378f5c07192d435af31"
+    sha256 catalina:       "ed35522a26e7241e4ed0298650293cb8a80aa0e938131fcd899760d331a497a0"
+  end
+
   depends_on "bison" => :build
   depends_on "pkg-config" => :build
   depends_on "libevent"
