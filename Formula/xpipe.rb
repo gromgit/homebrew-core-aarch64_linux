@@ -11,12 +11,12 @@ class Xpipe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1bb830508ba49bd08eda1641ec55c222ca621ad65dc03a4d303fa72568e2c914"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5a7857c05557eb2e23d8f44f5c2f071d561bd9d9940b50c14899ce94dad3571"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f57fd6ba84b400fe4d64af2795ea93cda64e4c8a33ca2ce4b13b8a9c06223d3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "694220876bc71c8df56ddb0c87465bffdcdb044a9134269b1185a8f51c50048c"
-    sha256 cellar: :any_skip_relocation, catalina:       "d21cc9001d61926df6d08d74e15fa13bf6374c8b0248c129122de343468dd910"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1fb6f5f72fbbd4ff9ded0038aaa143230461f90292521cbf63df97c8d050fd2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff3737240646e704e40965973bcc09cbca5c9f9679bd3d5c1643132c521c30e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e81ce041bcf004a2a6292584a4185b35b6b8537c6ce62c2d307d841eba75606f"
+    sha256 cellar: :any_skip_relocation, monterey:       "da429b8898c33ced95e37856c153d773317b75349b432ebaf8e06008b5a764b3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7313a4c84f5abc49cd42d467ba5e25216a7ed6be9945fca33b4c0e56fc9660e9"
+    sha256 cellar: :any_skip_relocation, catalina:       "79e052470a98a55adbef9426e77ca1a04f4d1af1ed88528e7cae7e3d814ba75b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94080f818df52f9bb196e888ad106e68700576e2611b0c2ce28a442138e69fb6"
   end
 
   on_linux do
