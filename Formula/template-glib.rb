@@ -1,8 +1,8 @@
 class TemplateGlib < Formula
   desc "GNOME templating library for GLib"
   homepage "https://gitlab.gnome.org/GNOME/template-glib"
-  url "https://download.gnome.org/sources/template-glib/3.34/template-glib-3.34.1.tar.xz"
-  sha256 "9ec9b71e04d4f5cb14f755ef790631cd0b45c0603e11c836fc7cfd9e268cd07a"
+  url "https://download.gnome.org/sources/template-glib/3.36/template-glib-3.36.0.tar.xz"
+  sha256 "1c129525ae64403a662f7666f6358386a815668872acf11cb568ab39bba1f421"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -24,11 +24,9 @@ class TemplateGlib < Formula
   uses_from_macos "flex"
 
   def install
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Dwith_vapi=false", ".."
-      system "ninja", "-v"
-      system "ninja", "install", "-v"
-    end
+    system "meson", "setup", "build", "-Dvapi=false", "-Dintrospection=enabled", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
