@@ -14,13 +14,12 @@ class FbClient < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3bc9c8e679824e4aa1881940c2f31388009a092e82a7dab9aeb194356a3512e1"
-    sha256 cellar: :any,                 arm64_big_sur:  "a870e1dd933cdd27887bba730779541f1b9a118de7b77faafcd946a11987216a"
-    sha256 cellar: :any,                 monterey:       "dce8cbedeb2a437cdc4fa837e6a793b884cf754a9f99e139bb419dca961ca710"
-    sha256 cellar: :any,                 big_sur:        "15022e572c324e76d5b28922b1239f8ff8aba221bf2ed7cae49903ea85f9a4ae"
-    sha256 cellar: :any,                 catalina:       "ca22959ea5179efb908e13f0463e2a7d4bc0127322166594524a8db3be1a6925"
-    sha256 cellar: :any,                 mojave:         "d0681ab4b033fde92bcc83801c86342b1f97e27e849ea1404a7e8b3cf803a65c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8512aac59977ac082cb01cb01511c606c84b4daad6b95494b268ba6fe54c0e88"
+    sha256 cellar: :any,                 arm64_monterey: "0261f8a3d1be06624c5bb52156ca5951a2a398a9e055c3158621e2628e54c102"
+    sha256 cellar: :any,                 arm64_big_sur:  "6419b836639dbd07f6737b0963420b0359f4ff022a93e030be2c010bbc149755"
+    sha256 cellar: :any,                 monterey:       "26b827c4921233f655ae8475c875ae09dd0ba2f3e36ec6e2af8899f6af2be3eb"
+    sha256 cellar: :any,                 big_sur:        "beeb41d009cf51d8935eb0019e0da07ae3ade47c655bd7a118ec0196336925d7"
+    sha256 cellar: :any,                 catalina:       "3dab791997a218d23ad0604dde721cfc350a248df9b12f401a8df99d0343624f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff037d297f4ccc3bcadc9c6b239981de7b5c2418b73258573c34133fa3724535"
   end
 
   depends_on "pkg-config" => :build
