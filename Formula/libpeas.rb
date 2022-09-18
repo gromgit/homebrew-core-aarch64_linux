@@ -6,12 +6,12 @@ class Libpeas < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "3f00cc64bd20322cdcb213ef36a01bbfeee946e6529e562b47cdb6907cc4f83c"
-    sha256 arm64_big_sur:  "fd5a0bc995f0f819d7e191cc57880664d3b7352d75ea92b2f76ffdc1b0069209"
-    sha256 monterey:       "7b8a356081a65abb5c23fda43f2e4353cacb0182229cdcacbfbe4d4de59d80d6"
-    sha256 big_sur:        "38ae27203ce4ed3ea930414be2f1a10bc3488d3be721e34ac96f2477f0096c64"
-    sha256 catalina:       "9027603f11c76d48af9285bd6e9f46c6d898569bdd29c99c52a66c2f3c34879d"
-    sha256 x86_64_linux:   "06dca0f0281702151b8809b797f6b1931ff69b05f73ed266f0e0af725b563e4f"
+    sha256 arm64_monterey: "f31169f0a56251d8250a7aa3607e4d1dd48c713573af071f94ab53e5023571cf"
+    sha256 arm64_big_sur:  "ef7e7384713bc1ff69fe899f7ccc93c9650127a093d1e624b5c23db171ed7e1b"
+    sha256 monterey:       "e392e3b05c1f5e86bed510ccf197282ad97a6d5ff4e2fb4cfa33b8656806ffb4"
+    sha256 big_sur:        "9ee9248b680889d1586a0593d5429d61c3d74bdf007135c0a0813133482ea2c3"
+    sha256 catalina:       "ec22a78bc5ec276e481be7c48418e6b47a9540cd3a3ee86e2b8bc33ad145df1a"
+    sha256 x86_64_linux:   "cbeeed81c14de0eca458731003ad9558f3b5bb1d159d40b217d3b7c5d1aa3f23"
   end
 
   depends_on "meson" => :build
