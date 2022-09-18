@@ -8,12 +8,12 @@ class Mailsy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5a68f81b021e6e03a4df36823d2d7d100a43488e445711b046e0e80671cd324"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5a68f81b021e6e03a4df36823d2d7d100a43488e445711b046e0e80671cd324"
-    sha256 cellar: :any_skip_relocation, monterey:       "b0cb9ef81f1f4287850c4b05768f952af3ca8fcf5bc1ad04c4a9758664389aec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b0cb9ef81f1f4287850c4b05768f952af3ca8fcf5bc1ad04c4a9758664389aec"
-    sha256 cellar: :any_skip_relocation, catalina:       "b0cb9ef81f1f4287850c4b05768f952af3ca8fcf5bc1ad04c4a9758664389aec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5a68f81b021e6e03a4df36823d2d7d100a43488e445711b046e0e80671cd324"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "10e9485d0cc9c2be2ae1434d55bc4465e30c2f550f3ae804b996e553b250cfbf"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "10e9485d0cc9c2be2ae1434d55bc4465e30c2f550f3ae804b996e553b250cfbf"
+    sha256 cellar: :any_skip_relocation, monterey:       "a64208278b48c0c6706464b01c7bb8ea29b444cd676926c5fcab518606831d81"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a64208278b48c0c6706464b01c7bb8ea29b444cd676926c5fcab518606831d81"
+    sha256 cellar: :any_skip_relocation, catalina:       "a64208278b48c0c6706464b01c7bb8ea29b444cd676926c5fcab518606831d81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10e9485d0cc9c2be2ae1434d55bc4465e30c2f550f3ae804b996e553b250cfbf"
   end
 
   depends_on "node"
