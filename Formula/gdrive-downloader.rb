@@ -6,6 +6,10 @@ class GdriveDownloader < Formula
   license "Unlicense"
   head "https://github.com/Akianonymus/gdrive-downloader.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b3e4edb04a858f97976948a66b7be88a71780163653a3b7ec190f40a27e1e839"
+  end
+
   def install
     bin.install "release/bash/gdl"
   end
