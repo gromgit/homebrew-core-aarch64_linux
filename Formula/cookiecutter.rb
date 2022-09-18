@@ -9,12 +9,13 @@ class Cookiecutter < Formula
   head "https://github.com/cookiecutter/cookiecutter.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4101c9acacc29d30afca5f5d61082ab044971defa94472c811d54d5b91958cea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3d81a69df0b8b4de452500dcfa8e46d1172a9bf0c5e3cfadaa085b48dad8fe9"
-    sha256 cellar: :any_skip_relocation, monterey:       "a937a1f8887fc2b7a691816a8b7282d55a29bae8dde2bf856160f60ee52710a6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e172ba36c2faf9b7b2b33110b3b95321657342ca3cfc320e325a0741439e3564"
-    sha256 cellar: :any_skip_relocation, catalina:       "dba8823ef56fcfc709de636f51ceecef18e2fe8d329c41a54fdb004d81e5bf4b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a98c25502094ee37748ea2dae64f36e3d7de16c6e4521e1e60a042b4154df5b"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f26e4e244f5fe8d6a95fd30a356e8f229d91c8bc1e08e8b2be4fdc734caa4ff4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "95493e1e1ed542b9fb4fad339f0d5c5e88d9d652e5c4eb7c10484d3c1ef6d0fa"
+    sha256 cellar: :any_skip_relocation, monterey:       "f5c844d1285c8df0e22b5254827b2cdd6507479b4acf2694e4593cae47d1ed60"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c89c6306c423b7aa0b09c5f574c8773119f7fec759822eb867671d4197f8f9ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "c6c037fddd94ff4f7481d1bbec7dd473df5d2a185acecc5db2b0a017451bfbc1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5bcc23ed474da97127ace494ffe48bff319772892d7f299737e9700e963fcc58"
   end
 
   depends_on "python@3.10"
