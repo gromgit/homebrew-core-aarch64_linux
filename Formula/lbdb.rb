@@ -11,12 +11,12 @@ class Lbdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5cef87f4c96b20dc2d66a45cce1fe84d0c34e522fb840dc9f0ab6ab2ba4a21e0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "abedbbd72117fbdbbd9a84a830eb71d6f66ea0d4b7bb3ade48014778f8e80353"
-    sha256 cellar: :any_skip_relocation, monterey:       "6bbe0e6abc941d6d9ad924986fe2d4b9eeec2d373239e0a745bb6c152869d51d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e11a8eca1228ce832dd4bfb71f381b7522cc8a93e3fad39b7529339ed45f9aa"
-    sha256 cellar: :any_skip_relocation, catalina:       "199b172793df4d2533a158bfc1f24b8d344aa9e184a6172f0ac67774c6ad102d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c269fc118bdaa1049d58e9424e58e67c43fe07f85d39e9c0a83ecb216cc89e24"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "27aaf73b84538a78fd40cfe19f8d5adff6a3277a639085a5b9510d5546caeff1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e308f798530d35ee7a77fde6a35da9ffa02a039dc2a8c18e3257c24b708b6a14"
+    sha256 cellar: :any_skip_relocation, monterey:       "7cd1dd2a1209d574ae112e116121414bd0bdda73094699f9bd5a87b87ca13485"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9e95deee2c312e77e6519aef3a9e78702b1e4aa693f86c390a76a078beef4de5"
+    sha256 cellar: :any_skip_relocation, catalina:       "61ebb0db54a8f0a14704c5d409917eece096fca4d936f45aa5908ce7aeec6ace"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72d1f94b284ddd49b2c172152ea4212b821788a57dd46a43832e301379015414"
   end
 
   depends_on "abook"
