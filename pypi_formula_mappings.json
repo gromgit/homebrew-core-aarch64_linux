@@ -70,7 +70,7 @@
     "exclude_packages": ["six"]
   },
   "bzt": {
-    "exclude_packages": ["numpy", "six"]
+    "exclude_packages": ["numpy", "six", "Cython", "PyYAML"]
   },
   "censys": {
     "exclude_packages": ["Pygments"]

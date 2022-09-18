@@ -20,8 +20,10 @@ class Bzt < Formula
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "rust" => :build
+  depends_on "cython"
   depends_on "numpy"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   uses_from_macos "libxml2"
@@ -75,11 +77,6 @@ class Bzt < Formula
   resource "cssselect" do
     url "https://files.pythonhosted.org/packages/70/54/37630f6eb2c214cdee2ae56b7287394c8aa2f3bafb8b4eb8c3791aae7a14/cssselect-1.1.0.tar.gz"
     sha256 "f95f8dedd925fd8f54edb3d2dfb44c190d9d18512377d3c1e2388d16126879bc"
-  end
-
-  resource "Cython" do
-    url "https://files.pythonhosted.org/packages/4c/76/1e41fbb365ad20b6efab2e61b0f4751518444c953b390f9b2d36cf97eea0/Cython-0.29.32.tar.gz"
-    sha256 "8733cf4758b79304f2a4e39ebfac5e92341bce47bcceb26c1254398b2f8c1af7"
   end
 
   resource "dill" do
@@ -145,11 +142,6 @@ class Bzt < Formula
   resource "PyVirtualDisplay" do
     url "https://files.pythonhosted.org/packages/86/9f/23e5a82987c26d225139948a224a93318d7a7c8b166d4dbe4de7426dc4e4/PyVirtualDisplay-3.0.tar.gz"
     sha256 "09755bc3ceb6eb725fb07eca5425f43f2358d3bf08e00d2a9b792a1aedd16159"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "rapidfuzz" do
