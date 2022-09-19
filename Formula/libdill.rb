@@ -19,16 +19,30 @@ class Libdill < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
 
+  on_arm do
+    # Using Apple clang to compile test results in executable that
+    # causes a segmentation fault, but LLVM clang or GCC seem to work.
+    # Issue ref: https://github.com/sustrik/libdill/issues/208
+    depends_on "llvm" => :test
+  end
+
+  # Apply upstream commit to fix build with newer GCC.
+  # Remove with next release.
+  patch do
+    url "https://github.com/sustrik/libdill/commit/775bc53e2cf92672cf03cc43019e12948e669c04.patch?full_index=1"
+    sha256 "4002852086909a5572c406f3c629df994d06647690e3db113f2701a42e976413"
+  end
+
   def install
     system "./autogen.sh"
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make", "install"
   end
 
   test do
+    # Issue ref: https://github.com/sustrik/libdill/issues/208
+    ENV["CC"] = Formula["llvm"].opt_bin/"clang" if Hardware::CPU.arm?
+
     (testpath/"test.c").write <<~EOS
       #include <libdill.h>
       #include <stdio.h>
