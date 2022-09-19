@@ -13,12 +13,12 @@ class Halide < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a0f08ad604bf0bce564b59dcc8834465ac394de21df82ba8bc2a5a8945ad1c14"
-    sha256 cellar: :any,                 arm64_big_sur:  "731f4579b98a53937dfa926d7ed743486a21623f63b999a9388bf03ca2b07dba"
-    sha256 cellar: :any,                 monterey:       "dccc07728f57b7ce390d3370a4f262c5e0dc0784a5ab61dca69f102c7a7f0a77"
-    sha256 cellar: :any,                 big_sur:        "70a1fad1c68157715403b5ace8a5a18812a69e4e9c50ab6152dfe3e06609cfde"
-    sha256 cellar: :any,                 catalina:       "b73bcf60ebb46fa3cc8b6caa7a60a4e666b20be11e93575cf1950da7f6b6e879"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ffb43bc29d58a381f39f4a9760a3cfdf544ce514add06ed6545e7fa0d8ca84d"
+    sha256 cellar: :any,                 arm64_monterey: "4595bcff1f53ba6f0128693cb797cdf5d57f5f20b7c29ba11ca594019ed9965d"
+    sha256 cellar: :any,                 arm64_big_sur:  "88b6ff2cfe7f1fbe59c3da39866b5b7413bcfb6e4262135488b9c5904cba5523"
+    sha256 cellar: :any,                 monterey:       "d98d22642681032e45f46b03d3d0a97923f9569a186a030450da2c545698e7f7"
+    sha256 cellar: :any,                 big_sur:        "afc7bc359689f5adecf590be08d755f89f684fa322475d2433ad47bf42fc0cfb"
+    sha256 cellar: :any,                 catalina:       "ae2cc890185d2fb68ffa3665ce362d653c683353835377ce23f478fd76ac91b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f311085eeae716f884dc957c31fb7640c1159afb32d17a3985093dca68c8be30"
   end
 
   depends_on "cmake" => :build
