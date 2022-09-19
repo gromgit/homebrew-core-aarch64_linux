@@ -7,12 +7,12 @@ class Symengine < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2f14a527a90815157ddd3a7050bce697084640bebadd38424d32f9303a94cffd"
-    sha256 cellar: :any,                 arm64_big_sur:  "f243f842693a16ec33a24535420135944419434df3ff30b6763f6ccf72e1c8db"
-    sha256 cellar: :any,                 monterey:       "9c1caba2abdaddcd60f3b12bae45abab47483fc9dd51c78775500045a58a39ce"
-    sha256 cellar: :any,                 big_sur:        "f223805951efd1e98f0af0b981893891b6d81718f57a85843c807ef1b8dae2c4"
-    sha256 cellar: :any,                 catalina:       "ef7f55776b013b964fc6da53ffe555251c782371d56ef4cb913d8368bbc43dd5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9298e0d3a5074493f366481d4b2ab4ec65b8d12acc34bf3b47d301e02c26ad0e"
+    sha256 cellar: :any,                 arm64_monterey: "a21f1ecb176e2381decdbc6571f59541f496d6a0e051830e30580efec1243a48"
+    sha256 cellar: :any,                 arm64_big_sur:  "5761bf631464fe6891de913a4f96804a5b40a90bbe419dc3887b25d9f155c58e"
+    sha256 cellar: :any,                 monterey:       "8af8b961cbd4dec429440094b7dc5dea18ff766682f013b915d2688497ccc626"
+    sha256 cellar: :any,                 big_sur:        "db330d18c95e408e3ad4ae1496cedc00313218fe08a11c8f5590e27d9016af81"
+    sha256 cellar: :any,                 catalina:       "6a0483496434c4d7205a05295db8862d068c92c2e6c7c92cb0dbafeb147d3fc7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f113390949772bbe3514e1a7e49c78a29c9e3f2fae7dbac59415b06bf5b2a58b"
   end
 
   depends_on "cmake" => :build
