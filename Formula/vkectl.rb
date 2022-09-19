@@ -6,12 +6,13 @@ class Vkectl < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b448a0543341c7f1e85e5348d4870e863abd6f1bcb336e67251e7b166fb7c5cb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "777027b5b9c97203ff135ad143f69578cd04395df4ffdff191cb370b64df246d"
-    sha256 cellar: :any_skip_relocation, monterey:       "b4d4672f1f6f879dac715753429379de492bbecbb60ea963c8e3343bd053c108"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ed46bcdf4004aef00d92ae0caae727a2c66caf39da08423276fbb0f2a5880f74"
-    sha256 cellar: :any_skip_relocation, catalina:       "d00a281f29eef8ec8f0a9772d94b9e6b63937984c2d5bd8be74a11c9a4a6e29b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7369d566f5a8d7701bee09d76174a2145bcd7b1601311f20484e2f96fb0fe5ea"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dde1dccb53289861944edd98bd291ff3e307d4f3ee9f8c3fa0a5b54e9f5b957d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "93da7d4e85a216bb6a4167023c27d5ed0c50acdf82912d3283142b4a410f4216"
+    sha256 cellar: :any_skip_relocation, monterey:       "b15fdb3760570404c00443899dbf5215a9d0a89cb8d23f6eb16d866e0e1b7f5a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a613ea0176b98d6ff76168412fd78fba623cc85b719c23d57301fe2b403eed00"
+    sha256 cellar: :any_skip_relocation, catalina:       "e13380eb084651d7a1b6d515cdb6e9cc781d25b0d1293e49642dd6b4d7e20ff5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8642891d03c1b70b07f60f69492f8b104097508ca84b41f53c157c47853d78b"
   end
 
   # Bump to 1.18 on the next release, if possible.
