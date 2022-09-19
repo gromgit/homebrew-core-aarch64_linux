@@ -1,8 +1,9 @@
 class Eiffelstudio < Formula
   desc "Development environment for the Eiffel language"
   homepage "https://www.eiffel.com"
-  url "https://ftp.eiffel.com/pub/download/19.05/eiffelstudio-19.05.10.3187.tar"
-  sha256 "b5f883353405eb9ce834c50a863b3721b21c35950a226103e6d01d0101a932b3"
+  url "https://ftp.eiffel.com/pub/download/22.05/pp/PorterPackage_std_106302.tar"
+  version "22.05.10.6302"
+  sha256 "c2ede38b19cedead58a9e075cf79d6a4b113e049c0723fe9556c4f36ee68b80d"
   license "GPL-2.0"
 
   bottle do
@@ -18,7 +19,7 @@ class Eiffelstudio < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "gtk+"
+  depends_on "gtk+3"
 
   uses_from_macos "pax" => :build
 
@@ -30,11 +31,20 @@ class Eiffelstudio < Formula
       system "tar", "cjf", "c.tar.bz2", "C"
     end
 
+    # Use ENV.cc to link shared objects instead of directly invoking ld.
+    # Reported upstream: https://support.eiffel.com/report_detail/19873.
+    if OS.linux?
+      system "tar", "xf", "c.tar.bz2"
+      inreplace "C/CONFIGS/linux-x86-64", "sharedlink='ld'", "sharedlink='#{ENV.cc}'"
+      inreplace "C/CONFIGS/linux-x86-64", "ldflags=\"-m elf_x86_64\"", "ldflags=''"
+      system "tar", "cjf", "c.tar.bz2", "C"
+    end
+
     os = OS.mac? ? "macosx" : OS.kernel_name.downcase
     os_tag = "#{os}-x86-64"
     system "./compile_exes", os_tag
     system "./make_images", os_tag
-    prefix.install Dir["Eiffel_19.05/*"]
+    prefix.install Dir["Eiffel_#{version.major}.#{version.minor.to_s.rjust(2, "0")}/*"]
     eiffel_env = { ISE_EIFFEL: prefix, ISE_PLATFORM: os_tag }
     {
       studio:       %w[ec ecb estudio finish_freezing],
