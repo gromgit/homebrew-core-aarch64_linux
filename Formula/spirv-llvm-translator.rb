@@ -7,12 +7,12 @@ class SpirvLlvmTranslator < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "624e78d249e32eadd7f878a1614f48d6221b7c003ca1320d1caf7a26e2ce17bd"
-    sha256 cellar: :any,                 arm64_big_sur:  "77a011303bed9649122aaa2e8e525524009bbb37aeac323f01eebd7024466027"
-    sha256 cellar: :any,                 monterey:       "a93b9293ec484e764a2b7d78a7e495408cdeb0f34e82f6f323e2dce2541b277c"
-    sha256 cellar: :any,                 big_sur:        "b8b5cbdda3d0e86c9fce82a49e7b7c8b7d1ed1a7004071d4c391550e0cd8545d"
-    sha256 cellar: :any,                 catalina:       "986f6173f32dff93e402476eb29107b4e191f2f2ee6af3e8190a02e184454e89"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e595c8944ed32fa7a100a2091b1de0d23aa3530c0c728f9d4d9e1aa25353ade"
+    sha256 cellar: :any,                 arm64_monterey: "2df5901e5c9eea1315a27cb8c3330a946b05b7d4d2538b6e0f590dc3ca0bcc97"
+    sha256 cellar: :any,                 arm64_big_sur:  "33b49c70646d20ecd522d190dec8c643d55540f67985dbd7df1a055273cb754c"
+    sha256 cellar: :any,                 monterey:       "cb8804299aa67d0ea789db37a3db18dae89afa8ee5ebe6dc6c8954c3999ee709"
+    sha256 cellar: :any,                 big_sur:        "6af8b0a485a97d1f720ff575c0a123008c22c9a4473a561b2347c791c584eae2"
+    sha256 cellar: :any,                 catalina:       "4edef5f53e5a309545ed47d72124c9c20418f39e20864d227bd9fcce35c585d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31dc55f53ff4e0e57d0019a1e837d0fdd641a09ffc2ec2d964b8f14f6fd672ff"
   end
 
   depends_on "cmake" => :build
