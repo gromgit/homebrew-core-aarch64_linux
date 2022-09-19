@@ -5,7 +5,7 @@ class ApacheArrow < Formula
   mirror "https://archive.apache.org/dist/arrow/arrow-9.0.0/apache-arrow-9.0.0.tar.gz"
   sha256 "a9a033f0a3490289998f458680d19579cf07911717ba65afde6cb80070f7a9b5"
   license "Apache-2.0"
-  revision 2
+  revision 3
   head "https://github.com/apache/arrow.git", branch: "master"
 
   bottle do
@@ -19,7 +19,7 @@ class ApacheArrow < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
-  depends_on "llvm" => :build
+  depends_on "llvm@14" => :build
   depends_on "aws-sdk-cpp"
   depends_on "brotli"
   depends_on "glog"
@@ -48,8 +48,6 @@ class ApacheArrow < Formula
     # https://issues.apache.org/jira/browse/ARROW-15664
     ENV["HOMEBREW_OPTIMIZATION_LEVEL"] = "O2"
 
-    # link against system libc++ instead of llvm provided libc++
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     args = %W[
       -DCMAKE_FIND_PACKAGE_PREFER_CONFIG=TRUE
       -DCMAKE_INSTALL_RPATH=#{rpath}
@@ -75,7 +73,7 @@ class ApacheArrow < Formula
 
     args << "-DARROW_MIMALLOC=ON" unless Hardware::CPU.arm?
 
-    system "cmake", "-S", "cpp", "-B", "build", *std_cmake_args, *args
+    system "cmake", "-S", "cpp", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
