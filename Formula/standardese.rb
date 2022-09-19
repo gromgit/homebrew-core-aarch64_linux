@@ -21,11 +21,11 @@ class Standardese < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f3bc22f47c8140d2c9cab95eb8e14768566e9d6c09761a81db56846183da6f99"
-    sha256 arm64_big_sur:  "979b2177ddb83c4ee56c18ce0bc2f6c0cdf64f05c5ffe9dea93965fff2e92120"
-    sha256 monterey:       "a0f8cea2560b06979854c5bcd98dd76c42b6abee0b88fa2fde4d5fc732e78e98"
-    sha256 big_sur:        "6f07a4cac2f02d51f3bb77fbcd1e1da67176e2b0f46793c56cf1cb6c6176b93b"
-    sha256 catalina:       "36635f600773ff99efc5e6f64397598b33fe1a2bef62feadf5e35f0639f39314"
+    sha256 arm64_monterey: "31da9ef23c101510d23ac953e0d1d4a3191e32f019f3d67446aea82f4fb23747"
+    sha256 arm64_big_sur:  "006bd6efb09d78d714f077ee9ea056dea139040fd50708bdd25864944eaf46d6"
+    sha256 monterey:       "afadc9c1adaa62f8d245b4c7c34a9c4de127896f047cf339d13f73d1fa0aab7d"
+    sha256 big_sur:        "0d6236377eae15d7b9f02f81d4809015a49871b6498e719464689c4e8fb2aa17"
+    sha256 catalina:       "1a4653db021ada6d2cad6591205f1321e32b7eb82961c508eb0e0dd5028895ff"
   end
 
   depends_on "cmake" => :build
