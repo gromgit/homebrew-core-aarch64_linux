@@ -5,6 +5,15 @@ class TomlTest < Formula
   sha256 "33bf4e9c017cd57f3602e72d17f75fb5a7bcc7942541c84f1d98b74c12499846"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8723308819ae761f36a57f08dd87650412f500dd51d7901043dcd42e3b4630bb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8723308819ae761f36a57f08dd87650412f500dd51d7901043dcd42e3b4630bb"
+    sha256 cellar: :any_skip_relocation, monterey:       "0ae0985c6f7468629a0054689638504600ef391dca08651033cbacf9ec940135"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0ae0985c6f7468629a0054689638504600ef391dca08651033cbacf9ec940135"
+    sha256 cellar: :any_skip_relocation, catalina:       "0ae0985c6f7468629a0054689638504600ef391dca08651033cbacf9ec940135"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a579f93ab28c4aef05c70203fdabe73742f337a5d230615fc9c908aaa0a98d7a"
+  end
+
   depends_on "go" => :build
 
   def install
