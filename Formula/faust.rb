@@ -7,12 +7,12 @@ class Faust < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "17aa5ee61ab5a17820f9d045befcab14088af6ca1d82bea63e35dbd0fa1bcfed"
-    sha256 cellar: :any,                 arm64_big_sur:  "293bd3661ab6545abe556f885aeeb1f7e53b7247c69c75199f2daddb85e13931"
-    sha256 cellar: :any,                 monterey:       "0bec0f9ffbae2ed013c886206b304319f13feeecee1ee635a9522dc8dade4392"
-    sha256 cellar: :any,                 big_sur:        "b2d4cef298a84daca5e4bdf177b82d3a11929ecb8593cd91142f6fe24621a1d6"
-    sha256 cellar: :any,                 catalina:       "51b723b1dbfb00049af0206a4e0a22314806cc9baa806ca66db2aecece3f9be5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30db81472a7bd423fccc4fbc637db25b0a7318b79f16a66d1b660d483742ef6a"
+    sha256 cellar: :any,                 arm64_monterey: "82960a34b3d086c771fb8fc5a81d76c8320fe8d8c3dcd2b71abb3febd885feba"
+    sha256 cellar: :any,                 arm64_big_sur:  "ada2aa5feeff5e6cce7a130c359a94f0475210f4362471c69ee8a69d4254e40b"
+    sha256 cellar: :any,                 monterey:       "4039148223dd9d051b73b0734f49b67cae1013080bd938f3891b1f2e4741b457"
+    sha256 cellar: :any,                 big_sur:        "73964cdae017ca1cdeba8850cb055f16535186c02b79d346d2a54356fdf5e9b5"
+    sha256 cellar: :any,                 catalina:       "b80ba177994f548499ddfb496a619bd4054d7c3f2af23cb3bafc26ed42f5a47f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "806029859938cc14f50b735e75d01afc836eeab167b83893580a6385c63a8408"
   end
 
   depends_on "cmake" => :build
