@@ -3,10 +3,9 @@ class Gnuradio < Formula
 
   desc "SDK for signal processing blocks to implement software radios"
   homepage "https://gnuradio.org/"
-  url "https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.10.3.0.tar.gz"
-  sha256 "957108a67ec75d99adaad8f3b10be8ae08760a9cef0b659a5c815a4e33898a75"
+  url "https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.10.4.0.tar.gz"
+  sha256 "c6b9f59447a842559b00b3a67b4ca1186e9adb8db742b25400507fedc747f2bd"
   license "GPL-3.0-or-later"
-  revision 4
   head "https://github.com/gnuradio/gnuradio.git", branch: "main"
 
   livecheck do
@@ -70,8 +69,8 @@ class Gnuradio < Formula
   end
 
   resource "Mako" do
-    url "https://files.pythonhosted.org/packages/50/ec/1d687348f0954bda388bfd1330c158ba8d7dea4044fc160e74e080babdb9/Mako-1.2.0.tar.gz"
-    sha256 "9a7c7e922b87db3686210cf49d5d767033a41d4010b284e747682c92bddd8b39"
+    url "https://files.pythonhosted.org/packages/6d/f2/8ad2ec3d531c97c4071572a4104e00095300e278a7449511bee197ca22c9/Mako-1.2.2.tar.gz"
+    sha256 "3724869b363ba630a272a5f89f68c070352137b8fd1757650017b7e06fda163f"
   end
 
   resource "packaging" do
@@ -80,8 +79,8 @@ class Gnuradio < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/59/0f/eb10576eb73b5857bc22610cdfc59e424ced4004fe7132c8f2af2cc168d3/Pygments-2.12.0.tar.gz"
-    sha256 "5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb"
+    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
+    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "markupsafe" do
@@ -95,16 +94,18 @@ class Gnuradio < Formula
     sha256 "9815a12e3bf6b83b2e9d8c88335fb3fa0e2b4067d7fbaaed09c3bf26c6206cc7"
   end
 
-  # Fix build with newer GCC
-  # https://github.com/gnuradio/gnuradio/pull/6002.
-  patch :DATA
-
   # Fix build with fmt 9+
   # https://github.com/gnuradio/gnuradio/pull/6053
   patch do
     url "https://github.com/gnuradio/gnuradio/commit/e63ee41fd455cdd39ae983c258d8632c3ea57fc6.patch?full_index=1"
     sha256 "be4373f13ffe8ae8ddc7216eb2b7ddb436b7be345cc0e108ae60b5010935a859"
   end
+
+  # Fix missing includes. Fixed upstream by:
+  # https://github.com/gnuradio/gnuradio/pull/6188
+  # https://github.com/gnuradio/gnuradio/commit/463c3477549b26b32d9b73eef30044e97c4eee64
+  # Remove with next release.
+  patch :DATA
 
   def install
     python = "python3.10"
@@ -248,42 +249,18 @@ class Gnuradio < Formula
     system Formula["python@3.10"].opt_bin/"python3.10", testpath/"test.py"
   end
 end
-
 __END__
-diff --git a/gr-qtgui/lib/FrequencyDisplayPlot.cc b/gr-qtgui/lib/FrequencyDisplayPlot.cc
-index f6f673e..2171f26 100644
---- a/gr-qtgui/lib/FrequencyDisplayPlot.cc
-+++ b/gr-qtgui/lib/FrequencyDisplayPlot.cc
-@@ -16,7 +16,7 @@
- #include <gnuradio/qtgui/qtgui_types.h>
- #include <qwt_scale_draw.h>
- #include <QColor>
+diff --git a/gr-blocks/include/gnuradio/blocks/blockinterleaving.h b/gr-blocks/include/gnuradio/blocks/blockinterleaving.h
+index 9d4e0f2..f6b8bc6 100644
+--- a/gr-blocks/include/gnuradio/blocks/blockinterleaving.h
++++ b/gr-blocks/include/gnuradio/blocks/blockinterleaving.h
+@@ -12,7 +12,8 @@
+ #define INCLUDED_GR_BLOCKS_BLOCKINTERLEAVING_H
+ 
+ #include <gnuradio/blocks/api.h>
 -
-+#include <cmath>
-
- /***********************************************************************
-  * Widget to provide mouse pointer coordinate text
-diff --git a/gr-qtgui/lib/VectorDisplayPlot.cc b/gr-qtgui/lib/VectorDisplayPlot.cc
-index d5c2ecc..e047437 100644
---- a/gr-qtgui/lib/VectorDisplayPlot.cc
-+++ b/gr-qtgui/lib/VectorDisplayPlot.cc
-@@ -17,6 +17,7 @@
- #include <qwt_legend.h>
- #include <qwt_scale_draw.h>
- #include <QColor>
-+#include <cmath>
-
- #if QWT_VERSION < 0x060100
- #include <qwt_legend_item.h>
-diff --git a/gr-qtgui/lib/WaterfallDisplayPlot.cc b/gr-qtgui/lib/WaterfallDisplayPlot.cc
-index 69d82fd..d1e42e9 100644
---- a/gr-qtgui/lib/WaterfallDisplayPlot.cc
-+++ b/gr-qtgui/lib/WaterfallDisplayPlot.cc
-@@ -19,6 +19,7 @@
- #include <qwt_plot_layout.h>
- #include <qwt_scale_draw.h>
- #include <QColor>
-+#include <cmath>
-
- #if QWT_VERSION < 0x060100
- #include <qwt_legend_item.h>
++#include <cstddef>
++#include <vector>
+ 
+ namespace gr {
+ namespace blocks {
