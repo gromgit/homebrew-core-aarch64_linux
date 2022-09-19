@@ -7,13 +7,12 @@ class C2rust < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "ed7fd65c5dab2ba23a06bb8eaf26900c6c88001adcf981609807875fcb2421da"
-    sha256 cellar: :any,                 arm64_big_sur:  "d47181b738106f95d02e50b5d38b77617b3f7434e2eb3c7d013fb6916917942a"
-    sha256 cellar: :any,                 monterey:       "e731c18631ef35b1fbc5a47210b486d6fc09689572e9ed16e99369ae87759086"
-    sha256 cellar: :any,                 big_sur:        "5ef83273bd576ccfbc9a8f94a882f6a473e6675030bc770db125bc3432d815e5"
-    sha256 cellar: :any,                 catalina:       "fda784d7984de0032064041302d4027aa87046fdba7f54a9e7d11ab4b8ad3570"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f79604e99383d4a8966b748483469189c06733b581487a86de2070a8b630e55"
+    sha256 cellar: :any,                 arm64_monterey: "3273e2b69c83050f500993c11f7f64fd2f93249c123bf4680b3f1321132452a2"
+    sha256 cellar: :any,                 arm64_big_sur:  "a77f2a4bf5276333f97711bb7dd39bebe1bb621a8d0ddad389ccb76d7b3fef51"
+    sha256 cellar: :any,                 monterey:       "5644197dcaf9d4c3ad60bb9c23f37d3ab9b9f6e9372501a0e7baaa4cc2633e43"
+    sha256 cellar: :any,                 big_sur:        "d62b726bf0c9c547366eb30b56f6e779aaffded61f09e5dbbabf276daf9ca794"
+    sha256 cellar: :any,                 catalina:       "5726ecc28aced3d728e39a42ca0bb63319a16680bf392d89570511177ed39fe4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc1eb6240a68f394375a5fbaf71694279628f8299e241a6afd32f3932a3450fb"
   end
 
   depends_on "cmake" => [:build, :test]
