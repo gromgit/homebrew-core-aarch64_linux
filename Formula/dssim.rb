@@ -6,12 +6,12 @@ class Dssim < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68ea1d7e64e07cbe5ffdcc22a38ac57d5552a32c79c52564f5e448dc9cc6b8aa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "967ad98b4e362da00167cad1d9091a1e3c74025f31fd373cd0be113066fdb6ef"
-    sha256 cellar: :any_skip_relocation, monterey:       "bd24773eadbe47ca46c88e1afc73d1159eb29b165d315306e713bc2861dbae32"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2954d9685913deaedaf0e377952c884744c70067ae59d4ded16b787c499a475d"
-    sha256 cellar: :any_skip_relocation, catalina:       "7bb8eab77f3ee40640a4a324ce8e3d20b56af1bab91710b14ceaad8182fe9837"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81d4e2afdf0ac2eca9a9fff75d309c658d66b705155e0b951920d1d56b9f7e58"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "67f00244823dc82399e3f8e81313c7a4c12cc4d22991feb0737fb59cd130bf07"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7bddee07ec4de319e79fc9bf3ed915e81f95125eb55d8e5cfaa207cbf0ede8ba"
+    sha256 cellar: :any_skip_relocation, monterey:       "3006b3e0f9d29ce1070ad35088af491854f2863ae2d6e6f9e679a99c00bd1418"
+    sha256 cellar: :any_skip_relocation, big_sur:        "40db1b24a5ad785386acfe77fc03a5fede21a7439f0380c669d8cc3d00bb524c"
+    sha256 cellar: :any_skip_relocation, catalina:       "18fc00864e4e96bf493f0586aea7147bf07f1e880277169d03a0e960f733776b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e813b388548deb952c714d75847ae9a9ecd2bfb3a219a3a0fdfcf6fdcb2c8675"
   end
 
   depends_on "nasm" => :build
