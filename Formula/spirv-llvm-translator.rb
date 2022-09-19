@@ -6,12 +6,12 @@ class SpirvLlvmTranslator < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2df5901e5c9eea1315a27cb8c3330a946b05b7d4d2538b6e0f590dc3ca0bcc97"
-    sha256 cellar: :any,                 arm64_big_sur:  "33b49c70646d20ecd522d190dec8c643d55540f67985dbd7df1a055273cb754c"
-    sha256 cellar: :any,                 monterey:       "cb8804299aa67d0ea789db37a3db18dae89afa8ee5ebe6dc6c8954c3999ee709"
-    sha256 cellar: :any,                 big_sur:        "6af8b0a485a97d1f720ff575c0a123008c22c9a4473a561b2347c791c584eae2"
-    sha256 cellar: :any,                 catalina:       "4edef5f53e5a309545ed47d72124c9c20418f39e20864d227bd9fcce35c585d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31dc55f53ff4e0e57d0019a1e837d0fdd641a09ffc2ec2d964b8f14f6fd672ff"
+    sha256 cellar: :any,                 arm64_monterey: "080883216778e904458b872f6bf66a11be2aafa4618e9a09ad67dc4932eca1f8"
+    sha256 cellar: :any,                 arm64_big_sur:  "222a404360350f7f3a498882e74adeac6118c39ab21aff5caeb913d453272581"
+    sha256 cellar: :any,                 monterey:       "65c90b93e2649a7fa4d28c45902a768f6883068a6f6ad1f7a5713abd9ac1f9bc"
+    sha256 cellar: :any,                 big_sur:        "e1a94df6543392c2679b0d0e9e65201e69d9b9542c72a5d9254c05cbd2805a11"
+    sha256 cellar: :any,                 catalina:       "eab80f7162c66b933b6041934bab45f9aee1aaa53e26e68c777bdec5f993c612"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec199d4e665b66f9ee4c6d23cc4ec9add293efdb7c3f1a75967d4d9aa50a2308"
   end
 
   depends_on "cmake" => :build
