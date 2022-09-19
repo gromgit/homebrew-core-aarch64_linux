@@ -8,12 +8,12 @@ class Dpp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c2eb7cfae10d78fb99ea1290ea1bbc58751603aef67e18f88279a4fec36dbdf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8eca82d866ab06ee607cf656e7ae85ce5071aa9b1a2667ab5dd6194714b2b58f"
-    sha256 cellar: :any,                 monterey:       "7f366f783ee50fe0a49f4bb2e06c6243346c100d310974dd87690f854c4cb315"
-    sha256 cellar: :any,                 big_sur:        "adf314b02d371dae57b5c39a5c2b64d29e055191aa4c2e57779d330327e007c6"
-    sha256 cellar: :any,                 catalina:       "3a4d4faf920f4e24d4169caadd7947dc99fe7a53ea4660da93de5f9908d158fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfa73022f3ae3ba09c62df22a02cbb9faf54e9abb662babc0c5654baa45d5dcb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0658eee6e138e9930ae0054affcea76cb33f2edccd0c226520eddef3f06bdb4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6ae3e6950689244e4f8a8af145253c5239579a311d75916d2f9ab0563cfb0a73"
+    sha256 cellar: :any_skip_relocation, monterey:       "1b712e76dbe96b358290d5b20723ba782dac9a0d7a96563d6ea9df08f5f7a31d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0f8679bce1298ac64c819afe9206dd4bf96db147c9a386e1df1433f25b95bd9a"
+    sha256 cellar: :any_skip_relocation, catalina:       "f5db719e6d8e3c89f84057ec6b20a055bbeabad778c44f156f7b1d6c5d114b63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff41dddefb361e9525f2aab7498711e21048420fb017cd537347fd8bdb8d59c6"
   end
 
   depends_on "dub" => :build
