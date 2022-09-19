@@ -8,12 +8,12 @@ class Chapel < Formula
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "ee7336633417e084163e3281cc857bb26e35419287bf0d8fda10de6401f70334"
-    sha256 arm64_big_sur:  "fd09c428382d29c0d6971fb6d419f153be564fb032b67099cda5a6759972d24b"
-    sha256 monterey:       "b0a42a389cb3cdefb3406c0f2b10272a2ad8997133e7eaf9c12019380171eede"
-    sha256 big_sur:        "c16b22bd51d93b6030d49d67244329f86461c08296286de6efe7fc0471227597"
-    sha256 catalina:       "414bd03e035995b787ba6bac49c7357997e9bf6e3350dfde2da4f156e6594146"
-    sha256 x86_64_linux:   "917f9c0b5d6f95315e9802bd6cde35e903120cff619077ccbd06c19c2a434e8b"
+    sha256 arm64_monterey: "16e3fd0177ab450a788271b0e38e417ec459fc91d70b8d388a9fe85e78d0291b"
+    sha256 arm64_big_sur:  "c36c6e7cf4b30fefb9fe65aec07a04afdb168765c1a417318f75f65df0b4bd94"
+    sha256 monterey:       "e2d386f7f931f4c684f5aa325b56c678fc1613935404d40de5d9e09933a3e41b"
+    sha256 big_sur:        "97697fee3e47ad73ad0e2cb80078ea2a7dd1110fa06e297e8b076fff4ec3bc84"
+    sha256 catalina:       "4a588c9b8fdb17f01109be986a3d8df929eb666ddc403499ffdaabd2d174e8e1"
+    sha256 x86_64_linux:   "44e78c563407371437e9cb150ffd1b1f02dfd6f2643ec82d88322ad5665346a1"
   end
 
   depends_on "gmp"
