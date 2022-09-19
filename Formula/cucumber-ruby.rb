@@ -11,10 +11,12 @@ class CucumberRuby < Formula
   end
 
   bottle do
-    sha256                               monterey:     "5b05d36faf72b95190f77acae632bd3a8ac4ba947df23262ea4bc1c6b2402004"
-    sha256                               big_sur:      "30ac06c2908e0ca4ce7ba75e92393259911e454206a81c52f360b9aeda9a7c62"
-    sha256 cellar: :any,                 catalina:     "ee1eabb3641184384650cb0990a2d54c0b9f346cd941274a40d7c427e0c70f5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0196d1843ab7614a204f29f4d10588d3397a4d89c9bdc2e297720ef3b6ac9899"
+    sha256                               arm64_monterey: "2ce8d7ed9c6f0a41cf86029da8e72584b36b4a2a1d18e79c22cb5855c191aaa1"
+    sha256                               arm64_big_sur:  "9e2e4a70dfcb245dad57752fd538a29ec0ea56caabf22c1704598b036a8cb55c"
+    sha256                               monterey:       "5b05d36faf72b95190f77acae632bd3a8ac4ba947df23262ea4bc1c6b2402004"
+    sha256                               big_sur:        "30ac06c2908e0ca4ce7ba75e92393259911e454206a81c52f360b9aeda9a7c62"
+    sha256 cellar: :any,                 catalina:       "ee1eabb3641184384650cb0990a2d54c0b9f346cd941274a40d7c427e0c70f5e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0196d1843ab7614a204f29f4d10588d3397a4d89c9bdc2e297720ef3b6ac9899"
   end
 
   depends_on "pkg-config" => :build
