@@ -2,8 +2,8 @@ class Argo < Formula
   desc "Get stuff done with container-native workflows for Kubernetes"
   homepage "https://argoproj.io"
   url "https://github.com/argoproj/argo-workflows.git",
-      tag:      "v3.3.9",
-      revision: "5db53aa0ca54e51ca69053e1d3272e37064559d7"
+      tag:      "v3.4.0",
+      revision: "047952afd539d06cae2fd6ba0b608b19c1194bba"
   license "Apache-2.0"
 
   bottle do
