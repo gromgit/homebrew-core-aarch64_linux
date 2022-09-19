@@ -13,12 +13,12 @@ class Ldc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "703a1b7cc6dea61112183cbc21cd77faf686a7527b105bb61db7e3d92c0bd6a6"
-    sha256 arm64_big_sur:  "660bc67a5e12896a19427be2f39d58fad9f2c78d3f5948792706d20e80f351db"
-    sha256 monterey:       "c2b1c19deb39e815c8f1ddf0f8f1fdab63e849e6777c7e3e092399f3891110b1"
-    sha256 big_sur:        "c3fbdc34a89752a66e633ace1416e4f31eec1e4067f37d2cd12855323a068e15"
-    sha256 catalina:       "574931fec5e3746c83d7fb67a25af715d8c51efde11f70a48d037abecf2824ea"
-    sha256 x86_64_linux:   "7e532a02f6949cfc57355eb5c35b0f438e955db551dd5a98833d621be58a51fd"
+    sha256 arm64_monterey: "51fa3cac2b7a1cf24ccd2513ac717558bad15ab0bf372d77f9e533a6e206a5e6"
+    sha256 arm64_big_sur:  "44edf489e8c3cc251e5aaaa54500b68048f403a8bcf921ab15e1a08a309d14e9"
+    sha256 monterey:       "06b057c83bfc5915fdf4ce3e5ce0c9769324a2540616174adde6b39b5840c43a"
+    sha256 big_sur:        "ec17a74f6430156728ecc45e79c51ff3537b95cb124b1ca33713a15bf634c250"
+    sha256 catalina:       "68722090b10934b81b4852cee6b24e634cbf0af948fb525423e03ca787f952f3"
+    sha256 x86_64_linux:   "8360bdaac2d2910dcfda59757142a9d429631db654e8d8df2478e89d1570a4c7"
   end
 
   depends_on "cmake" => :build
