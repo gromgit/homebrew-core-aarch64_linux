@@ -1,10 +1,9 @@
 class DosboxStaging < Formula
   desc "Modernized DOSBox soft-fork"
   homepage "https://dosbox-staging.github.io/"
-  url "https://github.com/dosbox-staging/dosbox-staging/archive/v0.78.1.tar.gz"
-  sha256 "dcd93ce27f5f3f31e7022288f7cbbc1f1f6eb7cc7150c2c085eeff8ba76c3690"
+  url "https://github.com/dosbox-staging/dosbox-staging/archive/v0.79.0.tar.gz"
+  sha256 "4c45dff631b6edbcec76f88be6e800b373d0303ef66189a6769a5a18fef106f2"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/dosbox-staging/dosbox-staging.git", branch: "main"
 
   # New releases of dosbox-staging are indicated by a GitHub release (and
@@ -28,12 +27,16 @@ class DosboxStaging < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "fluid-synth"
+  depends_on "glib"
+  depends_on "iir1"
   depends_on "libpng"
   depends_on "libslirp"
   depends_on "mt32emu"
   depends_on "opusfile"
   depends_on "sdl2"
   depends_on "sdl2_net"
+  depends_on "speexdsp"
+  uses_from_macos "zlib"
 
   on_linux do
     depends_on "mesa"
@@ -43,11 +46,14 @@ class DosboxStaging < Formula
   fails_with gcc: "5"
 
   def install
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Db_lto=true", ".."
-      system "ninja", "-v"
-      system "ninja", "install", "-v"
-    end
+    (buildpath/"subprojects").rmtree # Ensure we don't use vendored dependencies
+    system_libs = %w[fluidsynth glib iir mt32emu opusfile png sdl2 sdl2_net slirp speexdsp zlib]
+    args = %W[-Ddefault_library=shared -Db_lto=true -Dtracy=false -Dsystem_libraries=#{system_libs.join(",")}]
+
+    system "meson", "setup", "build", *args, *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
+
     mv bin/"dosbox", bin/"dosbox-staging"
     mv man1/"dosbox.1", man1/"dosbox-staging.1"
   end
