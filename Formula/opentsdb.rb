@@ -11,9 +11,9 @@ class Opentsdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, catalina:    "31e57ba38c568eb7a41a6129a55aac5a9b443301578475702cdab5fb891faaa2"
-    sha256 cellar: :any_skip_relocation, mojave:      "ec077c13211eac9912661ff0e3e1165162f251c3408fdf36b709e0e98af34aa2"
-    sha256 cellar: :any_skip_relocation, high_sierra: "5bcdc828069e124c16e1e6c8b2eb6732d0ef88533c27f60fcbb0bec369aca375"
+    sha256 cellar: :any_skip_relocation, monterey: "98c4251b26aaa0d592c976615aa53d4d4ff0a464b342421e91354a4138dcd208"
+    sha256 cellar: :any_skip_relocation, big_sur:  "e29c00cec680bfc711c31d40aa5f04e5c62ebf9219c3adddcc84dff74b1922cc"
+    sha256 cellar: :any_skip_relocation, catalina: "61cd7a6e22f917bd544d427d77e7236c82735406ea384134ba0551a70ce10b27"
   end
 
   depends_on "autoconf" => :build
