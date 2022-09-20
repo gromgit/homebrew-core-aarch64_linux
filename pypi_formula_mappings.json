@@ -318,7 +318,7 @@
     "exclude_packages": ["six"]
   },
   "organize-tool": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "osc-cli": {
     "exclude_packages": ["six"]

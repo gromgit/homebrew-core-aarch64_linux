@@ -19,6 +19,7 @@ class OrganizeTool < Formula
   depends_on "freetype"
   depends_on "openjpeg"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   resource "appdirs" do
@@ -64,11 +65,6 @@ class OrganizeTool < Formula
   resource "Pygments" do
     url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
     sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "rich" do
