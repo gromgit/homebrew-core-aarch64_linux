@@ -161,7 +161,7 @@
     "exclude_packages": ["PyMuPDF", "six"]
   },
   "esphome": {
-    "exclude_packages": ["protobuf", "six", "tabulate"]
+    "exclude_packages": ["protobuf", "six", "tabulate", "PyYAML"]
   },
   "esptool": {
     "exclude_packages": ["six"]

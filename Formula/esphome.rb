@@ -20,6 +20,7 @@ class Esphome < Formula
   depends_on "libpython-tabulate"
   depends_on "protobuf"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   resource "aioesphomeapi" do
@@ -175,11 +176,6 @@ class Esphome < Formula
   resource "pytz-deprecation-shim" do
     url "https://files.pythonhosted.org/packages/94/f0/909f94fea74759654390a3e1a9e4e185b6cd9aa810e533e3586f39da3097/pytz_deprecation_shim-0.1.0.post0.tar.gz"
     sha256 "af097bae1b616dde5c5744441e2ddc69e74dfdcb0c263129610d85b87445a59d"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "reedsolo" do
