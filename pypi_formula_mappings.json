@@ -76,8 +76,8 @@
     "exclude_packages": ["junit-xml", "six", "PyYAML"]
   },
   "charmcraft": {
-    "extra_packages": ["appdirs", "pydantic", "pyyaml"],
-    "exclude_packages": ["six", "tabulate"]
+    "extra_packages": ["appdirs", "pydantic"],
+    "exclude_packages": ["six", "tabulate", "PyYAML", "jsonschema", "attrs", "pyrsistent"]
   },
   "ciphey": {
     "exclude_packages": ["six"]
