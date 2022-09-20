@@ -21,18 +21,15 @@ class C7n < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "896030e7a42eee4d32364df27324351aeef582c9a1ea8e396015836413fb5a68"
   end
 
+  depends_on "jsonschema"
   depends_on "libpython-tabulate"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   resource "argcomplete" do
     url "https://files.pythonhosted.org/packages/05/f8/67851ae4fe5396ba6868c5d84219b81ea6a5d53991a6853616095c30adc0/argcomplete-2.0.0.tar.gz"
     sha256 "6372ad78c89d662035101418ae253668445b391755cfe94ea52f1b9d22425b20"
-  end
-
-  resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
   end
 
   resource "boto3" do
@@ -60,24 +57,9 @@ class C7n < Formula
     sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
   end
 
-  resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/02/96/901e5735f16cb438eccff95b534d0bdd058237dab1ae4731b5e1e1ddc9b4/jsonschema-4.9.0.tar.gz"
-    sha256 "df10e65c8f3687a48e93d0d348ce0ce5f897b5a28e9bbcbbe8f7c7eaf019e850"
-  end
-
-  resource "pyrsistent" do
-    url "https://files.pythonhosted.org/packages/42/ac/455fdc7294acc4d4154b904e80d964cc9aae75b087bbf486be04df9f2abd/pyrsistent-0.18.1.tar.gz"
-    sha256 "d4d61f8b993a7255ba714df3aca52700f8125289f84f704cf80916517c46eb96"
-  end
-
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "s3transfer" do
@@ -97,6 +79,11 @@ class C7n < Formula
 
   def install
     virtualenv_install_with_resources
+
+    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
+    site_packages = Language::Python.site_packages("python3.10")
+    jsonschema = Formula["jsonschema"].opt_libexec
+    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   test do
