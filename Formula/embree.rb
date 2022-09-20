@@ -7,12 +7,12 @@ class Embree < Formula
   head "https://github.com/embree/embree.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "06275ad32b3619e35c82b8dcb824b6a8c723783fc6c9ffd9a3d74a92fae2576c"
-    sha256 cellar: :any,                 arm64_big_sur:  "94e0ed11b9f2071699693bbc19f58a029c0946d8b5d6a8f13bc7c5b1d8f18b7d"
-    sha256 cellar: :any,                 monterey:       "2229b74e2cea330ac9ffcd12b7b29b6830e5c1aaff85d34a7dfa8831e90bda8d"
-    sha256 cellar: :any,                 big_sur:        "a73a36ed7406ceddfd2dadc1e3ae48a19ce495b5a8ae6c71bf1b5e0ec8d81469"
-    sha256 cellar: :any,                 catalina:       "8ded60ea5d7a80ddcdd42d9c47a2169a4a072a1b91d82dca05c71cb5d6b20620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "354e6fbd80d5ceeb84ebc0ad3fd134e267f752689604e34d51a250d66018acb3"
+    sha256 cellar: :any,                 arm64_monterey: "07d0bbc91a36c907bd3e90a51cc7b89624eca1e4f49c4a551eafb892829593dc"
+    sha256 cellar: :any,                 arm64_big_sur:  "cf1adbab65ab590cdff0566a55ea8bb5031a6ca1142def1aa11f9ba4daee5865"
+    sha256 cellar: :any,                 monterey:       "cd3a8dad89525a5b48c07e3bf9ed2e1bdbeb192ad3a99bbce332cd714338e7e3"
+    sha256 cellar: :any,                 big_sur:        "a845948e82834d987cef6c2b52ca9bcf75ac6a1e60396be8d9bf728fad37a4a3"
+    sha256 cellar: :any,                 catalina:       "715da9c241e420ecf61b6d7c68153623c847d9d8ceace2cb4dfc86e848c67365"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae18d81783de71e6cb7f1ca0d058b8ec26a6f9a076364726c18369ea35a6ddd5"
   end
 
   depends_on "cmake" => :build
