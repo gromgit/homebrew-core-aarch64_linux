@@ -6,12 +6,12 @@ class Libhandy < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "2e2205fcb369590d99bf1244dd7dda9030b45089a910abf47b6c1a04db09c7f0"
-    sha256 arm64_big_sur:  "89a7fa9f2395dff4d99c67eaf9bfb032724179d7971fbe4e31e813b1ba865f32"
-    sha256 monterey:       "2b166e8d56b1c339b9646d58a1155342fa9ecda16c6a364e7abc5d8c4e6df446"
-    sha256 big_sur:        "5e664307f41f5e7bcfe076770b93736cd6f6e1a78fb7c3a501c9889b1f0cb166"
-    sha256 catalina:       "32f2f6643c7ab5648997a2f2d43f017d72d53abf42afad5db5acb1a33c75249a"
-    sha256 x86_64_linux:   "73032904b4bb9d851aca2081de2bf18603089c8c34c6e033ca7f7ea623762b60"
+    sha256 arm64_monterey: "973506dea8f690558a01f8b4e786c66e785a9dc5fb69347bcf3f501a6bce2b00"
+    sha256 arm64_big_sur:  "a3907134a8b5a823a1a591f5aece22e2668503ee6d457100ec7e8985759f8933"
+    sha256 monterey:       "3299684c80ba3fb24bf03061c4086f0b5ba195f26833f251194477ebb9f6271b"
+    sha256 big_sur:        "b570dc588fde9e71fe4d65d196de009d968d0ed21931b3c01ff1b286c81cdac3"
+    sha256 catalina:       "77f8b6b63595aa9016a59753376a7795335c40b827070a65277a8858d624987e"
+    sha256 x86_64_linux:   "75047efa0473ce094e13388d08fefdea2dc44e5c58be89325f959efe9b87b6c5"
   end
 
   depends_on "gettext" => :build
