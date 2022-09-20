@@ -38,13 +38,12 @@ class Openclonk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "7934144ac831d263bb0c51284f06f2bcac0004cf395d0404c52b1f3bf1c0189b"
-    sha256 cellar: :any, arm64_big_sur:  "ebd7f7efa0efc4c70b14071e98a5f2d314c16e5b6f28fe11257738619f0c813b"
-    sha256 cellar: :any, monterey:       "4210b30b0f2c1b7090eee8aa91c325a125f8305f65a3305066ac554ff84619f8"
-    sha256 cellar: :any, big_sur:        "1f4cca43144a36b7d6eeb24d9d3cefc84b591fb20abc503ecca7e73fc26b07ca"
-    sha256 cellar: :any, catalina:       "95f44dd3686157a5185f1452f46515160347cef55237aac391edfabbbeb0c5de"
-    sha256 cellar: :any, mojave:         "688963d2df4cd964a51bed317cf656137d5e8d668b457a7cef89e8302ac02f49"
-    sha256 cellar: :any, high_sierra:    "87779de2d3cfa0dc1880fa45226e3f434ecca4409565db5e8bf278c225487da1"
+    sha256 cellar: :any, arm64_monterey: "8df6fbb4658c855b62269b2e2e8662e3ece958a642ff2f364190466660dd4f12"
+    sha256 cellar: :any, arm64_big_sur:  "1be50cd57fe2284eab644c8f7b96d2d73e41433bcee445c9ee4e32ecd624ed23"
+    sha256 cellar: :any, monterey:       "c4f8dfb61e0ebc30ff721e326710424c256cb33bced493c9bcee7badf44e53fc"
+    sha256 cellar: :any, big_sur:        "b863f8f7a26d65cc4524210a7d141b5a96948ce1a795268473c5ee4bfd640f35"
+    sha256 cellar: :any, catalina:       "805a680c7377bc81ca2b1e8207a68348ebcbec5fb0efc036e30139626874494d"
+    sha256               x86_64_linux:   "352052e8b19d4d3f9e7f311ae5f97353ad1c6ba8cb8ee5c43ead3f7bb8cf5fbb"
   end
 
   head do
