@@ -11,12 +11,12 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e1c950eecbb7fe0877e054706dd3ea302fd35197aeb1268d15adf7ff7a006a23"
-    sha256 cellar: :any,                 arm64_big_sur:  "ff5c62049416d85cb3981f2913b45901a5738b7bf4c23de678f0e4749d4354a7"
-    sha256 cellar: :any,                 monterey:       "8613b0be1eb6140ae00e70b1da63891302e828a9d7fbb335e02d8c417c0fcaca"
-    sha256 cellar: :any,                 big_sur:        "c039a203f00b495a0d0d0c304383fd26ee4dc0b23d0133c1f6dcc928285aec11"
-    sha256 cellar: :any,                 catalina:       "b6067a936ab86bc50e247b0fdd75704f73f373679b55463d6bc5e8b549a7e407"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5482cc0f5056c067a3b5b85fdf4346416d3f40c2449362b52d4ae848f292888c"
+    sha256 cellar: :any,                 arm64_monterey: "f5baec455e7bbd0b419f0a5abb6ca7267664b92b3723e57554ab2a6e213d1b7a"
+    sha256 cellar: :any,                 arm64_big_sur:  "d3e141fecd1dcb4906aaa38e89db8735017985cbe4d3058d53577478bfdeab34"
+    sha256 cellar: :any,                 monterey:       "1ded4350ef30875fe62b0e6530e74130b8a33f669fb1e620c2cb5053af49d8b6"
+    sha256 cellar: :any,                 big_sur:        "3da7ec5a01c82c0ce8659d7f9c1a0e193332251b86754852d8e869ba291fe9cf"
+    sha256 cellar: :any,                 catalina:       "c0401fba71a6596121722927c6325bb25c1ebeeb5a2a78313509101f904f846d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f785707533502dc8c9a10fd98441149bf5bcffb8953e18d7c11b95bf792946de"
   end
 
   depends_on "gmp"
