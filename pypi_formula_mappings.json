@@ -20,7 +20,7 @@
     "exclude_packages": ["pycrypto", "six"]
   },
   "arxiv_latex_cleaner": {
-    "exclude_packages": ["pillow", "six"]
+    "exclude_packages": ["pillow", "six", "PyYAML"]
   },
   "athenacli": {
     "exclude_packages": ["six", "tabulate"]
