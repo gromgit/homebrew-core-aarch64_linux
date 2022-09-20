@@ -21,11 +21,12 @@ class Standardese < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "31da9ef23c101510d23ac953e0d1d4a3191e32f019f3d67446aea82f4fb23747"
-    sha256 arm64_big_sur:  "006bd6efb09d78d714f077ee9ea056dea139040fd50708bdd25864944eaf46d6"
-    sha256 monterey:       "afadc9c1adaa62f8d245b4c7c34a9c4de127896f047cf339d13f73d1fa0aab7d"
-    sha256 big_sur:        "0d6236377eae15d7b9f02f81d4809015a49871b6498e719464689c4e8fb2aa17"
-    sha256 catalina:       "1a4653db021ada6d2cad6591205f1321e32b7eb82961c508eb0e0dd5028895ff"
+    sha256                               arm64_monterey: "31da9ef23c101510d23ac953e0d1d4a3191e32f019f3d67446aea82f4fb23747"
+    sha256                               arm64_big_sur:  "006bd6efb09d78d714f077ee9ea056dea139040fd50708bdd25864944eaf46d6"
+    sha256                               monterey:       "afadc9c1adaa62f8d245b4c7c34a9c4de127896f047cf339d13f73d1fa0aab7d"
+    sha256                               big_sur:        "0d6236377eae15d7b9f02f81d4809015a49871b6498e719464689c4e8fb2aa17"
+    sha256                               catalina:       "1a4653db021ada6d2cad6591205f1321e32b7eb82961c508eb0e0dd5028895ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb59d32703dd5ed4cbdbf92b90bff0228d54fda8b32a7a1b275cacd93bf53a3f"
   end
 
   depends_on "cmake" => :build
