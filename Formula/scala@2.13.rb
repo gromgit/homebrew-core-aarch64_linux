@@ -12,6 +12,10 @@ class ScalaAT213 < Formula
     regex(/href=.*?scala[._-]v?(2\.13(?:\.\d+)+)(?:[._-]final)?\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9e72814dbfe3220086b69adcac0b3c11a2a46dd8a8507d9d933433476e632ccc"
+  end
+
   keg_only :versioned_formula
 
   depends_on "openjdk"
