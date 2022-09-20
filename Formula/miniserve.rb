@@ -6,12 +6,12 @@ class Miniserve < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "17fd9c4966aa6e7e66818c2b84bb847fd96636d19b2b296620b87d53e95997aa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ceb388a0131227abf61a920bccd3f94d18ea0588ebe6c78f8d3a075ef4d5ffaf"
-    sha256 cellar: :any_skip_relocation, monterey:       "30b12a3b9378c14f79e060b5f4f40c0ddeb38e69514f4c477b7358d0d9c8e1bc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cf56816ae95a90e252949756abaa2c118638e0ac74c45f08f7b9d8ce6b2d5601"
-    sha256 cellar: :any_skip_relocation, catalina:       "ecdef3d7ecc8e0edb2de1be9c13cf3722ccb469c293069f3ec6a14ace1403125"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "468d8fd3567d92eba025ddf900bb16965691b060e31505eeb5d2d10dcaee47d3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8087c2fc1f3ea672221b31ff4ea5ccafa4189b4f38fbb924e7e48c6633ff611"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e175d06b9f5b09687bf3e4fb67c804ea82a97a90d8a45c5e6d11bb7113662f8f"
+    sha256 cellar: :any_skip_relocation, monterey:       "0ebc9b6c83339eec7ca4662e9128876efa1a5b45ae5303769549678c5903edf2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5e283f0b5903041052a26ddc891c5f1ce0a47516c78ba47ac18f847563e4144f"
+    sha256 cellar: :any_skip_relocation, catalina:       "997bafd79ff359bae8980be257c34a3c264f5d9bb125fbe2d22ef897a6295487"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46e86908e63b87be92bd74d8594dcffbfd5dc6837268852d319e790eca67e9b9"
   end
 
   depends_on "rust" => :build
