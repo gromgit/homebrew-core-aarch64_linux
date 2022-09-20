@@ -7,12 +7,12 @@ class Davix < Formula
   head "https://github.com/cern-fts/davix.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b3fd12cecd1b960af4fe7c80b9e0156ed3a4dd5108bac3dcc1ed9dab36ba86b3"
-    sha256 cellar: :any,                 arm64_big_sur:  "52c5577ca06e32e59d20bb237fff2e79c908114e7742126ba3f7e471b395c288"
-    sha256 cellar: :any,                 monterey:       "1ce55fe29cb8731fb72628d8814f4ddca26020b7e28e97839ff7b9d27a73dd8d"
-    sha256 cellar: :any,                 big_sur:        "85241ccaba4ad6a5e118dc385444a93e86b48410f1fe1522003e133d15c01af6"
-    sha256 cellar: :any,                 catalina:       "b50ca24dc6bf232d18a0f32463064107005f462bb5242555158ac5c385fa7a24"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63f6b0cb5a38765039975cc57a1726fa7561cc1c2f937ac58f095de781e08bcb"
+    sha256 cellar: :any,                 arm64_monterey: "aa25fb42dcca1ac2ad69f5ee1a7d0ab84c5df70a2c4036907c33bf3739b8eaf3"
+    sha256 cellar: :any,                 arm64_big_sur:  "95d327e7cfb9dfaa8dc0e5785f58010ba3dfcd8bba0904d9fdc3e19ea5dba38c"
+    sha256 cellar: :any,                 monterey:       "3ee908b44c9f4ecb035f409890a07ef4cc7f41365275c0bf62285cbb0784c0a7"
+    sha256 cellar: :any,                 big_sur:        "554bfac4c2a799861a26fcd84bfee238856d0a06864c072ca9fd49522b53855d"
+    sha256 cellar: :any,                 catalina:       "cc2d389eb2106de7c749c992097b5165cbcb07c96d97cd9946225c169b4c02d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "00ec4568fca3c977e10e1aedc631db16fc2ccb33d9a401a561aa250922e9fbf4"
   end
 
   depends_on "cmake" => :build
