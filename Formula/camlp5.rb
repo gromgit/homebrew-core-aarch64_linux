@@ -13,12 +13,12 @@ class Camlp5 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0bed63661d001957196f1eed059f5b33d2c94ec7ef6ae53fd14cf44729733d27"
-    sha256 arm64_big_sur:  "ed57354104f665d458cd4d19596129d7a1d811713b03ffdbae806fa71e7de0c5"
-    sha256 monterey:       "a11f84037af3fa99c6cc6428daa58412b1fd1d32177c684bcdc84909f9684347"
-    sha256 big_sur:        "c4b79325ed05ecbaf4b7bd0ad806c63766a9ecf2606293675f0cd8744e05dc2e"
-    sha256 catalina:       "ab486332051f9133a5ec9a8b1bf0e51653ad850bce9e8f01ecf61b491483cd3f"
-    sha256 x86_64_linux:   "31f9d0038fb7af7fa9bb9934a1261917b1ebc63a5a89298e89f3088faadde3c4"
+    sha256 arm64_monterey: "9daedd1054de7c0004d21f643d47ea90611f66d13524488950e5fbe36bf8c0b4"
+    sha256 arm64_big_sur:  "328cb38eb6fc4540c35bca367e55c26f5e088dd0d2f0858bed6508f21ff470f7"
+    sha256 monterey:       "dc109b253d4a8393e83abe312ed7d372795efabf4d2ed32c0e4ea132ac473822"
+    sha256 big_sur:        "89414654ad17bd67769884a1f1f5f0b04ba7f822b41ec87821adec5e81323c6d"
+    sha256 catalina:       "361e38d25555a16220746683a9ff4483683d75cf1cf711140cc94c6cfd9931b9"
+    sha256 x86_64_linux:   "915b81cd45db3bad023f43efed93f1b5dafbff1c1c539244f06ce02f124f2311"
   end
 
   depends_on "ocaml-findlib" => :build
