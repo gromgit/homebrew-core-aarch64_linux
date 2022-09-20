@@ -417,6 +417,9 @@
     "extra_packages": ["pycryptodome", "pygit2"],
     "exclude_packages": ["six"]
   },
+  "salt-lint": {
+    "exclude_packages": ["PyYAML"]
+  },
   "shyaml": {
     "exclude_packages": ["PyYAML"]
   },
