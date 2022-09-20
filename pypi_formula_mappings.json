@@ -279,7 +279,12 @@
   },
   "molecule": {
     "extra_packages": ["docker-py", "molecule-vagrant", "python-vagrant"],
-    "exclude_packages": ["six"]
+    "exclude_packages": [
+      "six", "PyYAML", "jsonschema", "attrs", "pyrsistent",
+      "cookiecutter", "arrow", "binaryornot", "certifi", "chardet", "charset-normalizer",
+      "click", "idna", "Jinja2", "jinja2-time", "MarkupSafe", "python-dateutil",
+      "python-slugify", "requests", "text-unidecode", "urllib3"
+    ]
   },
   "moto": {
     "package_name": "moto[all,server]",
