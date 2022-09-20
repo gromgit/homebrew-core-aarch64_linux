@@ -9,12 +9,13 @@ class JujuWait < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e04f8b657da7e878dda77d9c31306708e062f3f917c6f31426da41ecbc8dbad5"
-    sha256 cellar: :any,                 arm64_big_sur:  "755de97cf6751a7f122dab8c7333fc36010210f3e20a3869e6662a3686efac1c"
-    sha256 cellar: :any,                 monterey:       "110669824c007b0ad6a05f5b387711779377bf83e0e4e5229d7925b277c69310"
-    sha256 cellar: :any,                 big_sur:        "fadd2d52965a99d993bd11bf75de1b7e7373b4ce17c9af28118f8b211f1170d4"
-    sha256 cellar: :any,                 catalina:       "9d08ba7ec7decac831dc8d38137d028caa99f3545ffb2c75c7c1f7a51539618f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53e1fa7c3e4fcaf849f6cdb515f63aeb5c12c2539b682b5cf3293b568ea35211"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bb2b340dc557ca8966456d433cdcf924900610ec8c734a715b7376a3b39b8ce8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb2b340dc557ca8966456d433cdcf924900610ec8c734a715b7376a3b39b8ce8"
+    sha256 cellar: :any_skip_relocation, monterey:       "01445d2f650d64e37127cbadc075d4d313836872731f451a869df6f518efbe51"
+    sha256 cellar: :any_skip_relocation, big_sur:        "01445d2f650d64e37127cbadc075d4d313836872731f451a869df6f518efbe51"
+    sha256 cellar: :any_skip_relocation, catalina:       "01445d2f650d64e37127cbadc075d4d313836872731f451a869df6f518efbe51"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a21b460baa91aba883fc8ebbd8254443580143746d5859d81e8c425ef6d63b41"
   end
 
   depends_on "juju"
