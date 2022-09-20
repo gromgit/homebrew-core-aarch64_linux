@@ -275,7 +275,7 @@
     "exclude_packages": ["PyYAML"]
   },
   "mkdocs": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "molecule": {
     "extra_packages": ["docker-py", "molecule-vagrant", "python-vagrant"],
