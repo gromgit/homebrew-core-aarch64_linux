@@ -5,6 +5,15 @@ class CamlpStreams < Formula
   sha256 "ad71f62406e9bb4e7fb5d4593ede2af6c68f8b0d96f25574446e142c3eb0d9a4"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "1aa419c01a3ca2738adf10d613def4cb213efea7c7af7682246287ef5a96a09a"
+    sha256 cellar: :any,                 arm64_big_sur:  "551ca86de9bdb769f0f22de773eb4a93f9faf31193f6b8833e39d30efe15fa03"
+    sha256 cellar: :any,                 monterey:       "f4fd0d6a51abb24f93fea4e7326dce470808aa5d6f2a8aca2750cd4bc9987174"
+    sha256 cellar: :any,                 big_sur:        "ee7ac1eda08673f956c10805187f58271fc1867522d93c004ebdbc085ca822af"
+    sha256 cellar: :any,                 catalina:       "0ef92902025844dd1abbe5fdc3f3c8e114b090738e6022f68d72c21aa608b9d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81e1d03158ed662d6266ae792dcb9145c042c61c0d3bd2b0e1079f8e42d6c72b"
+  end
+
   depends_on "dune" => :build
   depends_on "ocaml-findlib" => :test
   depends_on "ocaml"
