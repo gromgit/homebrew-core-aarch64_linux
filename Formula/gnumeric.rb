@@ -6,12 +6,12 @@ class Gnumeric < Formula
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256 arm64_monterey: "7e13773c0fadf7eaf36b9eff72ba9b35aa2520bab5449909458bb70598417cb3"
-    sha256 arm64_big_sur:  "ef4aacb4acd15a1b77ec8dfe82c1188bc14130fdf0ecdc49716eb50f5409d19f"
-    sha256 monterey:       "848fdf4104174559db9ed82d9b12530c8391c3616a0f426b26b19d7039122947"
-    sha256 big_sur:        "3ae90dc29ce9147af59882f9c8193d9a81f653b8856c730dc5991c036da21c55"
-    sha256 catalina:       "606f0d4215f60e4ba6bfc7ae18ae3bf071b0ae60310a42d6d826444bed5ee49b"
-    sha256 x86_64_linux:   "826a9645148c3110dbae178000ece70305146f356763cc8a4b06748ced11cd70"
+    sha256 arm64_monterey: "e0e9e6d7cb46c08b5cf72c98cfe4a06aa72d20da2e4b058c3e019e904edf5c8d"
+    sha256 arm64_big_sur:  "49bf897a4d2df371fa2de568d8eb65cc86046c2b3662a334e38e847b3d970633"
+    sha256 monterey:       "48d242c1c456ba6538f5bf64e04bbfb6c94a9300765bb92afacbac084c0d954f"
+    sha256 big_sur:        "4611c4e0776363d32a92877ac36973c76fadca3343aebff1e902dc796a335f55"
+    sha256 catalina:       "d4192e498fc5776d5463b86380cce584c1276c9a9766047e241217f6303d5341"
+    sha256 x86_64_linux:   "dd029eb8fc1bc6ca5a011bd448b31b926b79e1930a1ca79f502617d2e63b0143"
   end
 
   depends_on "intltool" => :build
