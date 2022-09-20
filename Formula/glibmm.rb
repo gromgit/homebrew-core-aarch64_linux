@@ -6,13 +6,12 @@ class Glibmm < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "6a64c235fc6a9c86a5f63e2ed5f6bdff7ee7255879f0c67382884b4a41817066"
-    sha256 cellar: :any, arm64_big_sur:  "f3c0131d708f404c29ac9b1a1b24766294f4d2616eae6e505b15af3234085b7f"
-    sha256 cellar: :any, monterey:       "493b21bfbacd2922030467242906c47183e2849e98e3a7653f755d48f26faa67"
-    sha256 cellar: :any, big_sur:        "fe7183b28b58884d27217d851e28d4fb89227204e4f50cf9b238fc03a103ac68"
-    sha256 cellar: :any, catalina:       "e2bb1811d324f8bcb4fae160f834ae931770f6c7a14287c4ca9ca46bdab0f757"
-    sha256               x86_64_linux:   "75e7999ade666972bbebaa8bf7a73ba9a8c2aa26187b1e9227b28ca9097fd5db"
+    sha256 cellar: :any, arm64_monterey: "9bed07ed0bc12a9eeb415a900d2a01b5163de1f595cdbdf77523c605410f7b56"
+    sha256 cellar: :any, arm64_big_sur:  "94c4d0b2ef01fa6f52f59e3eac7527f5b28c1aa71ccd60de4479402eefc7b34c"
+    sha256 cellar: :any, monterey:       "271bf32165f1e0c4566f7006a3d29346ed9a62f16e1bf14e2ceb710edaec0f0c"
+    sha256 cellar: :any, big_sur:        "ec798cefd26699800dd2ea6a6f0898f3c1f422b75e66eab54099b25f8ba7b0cd"
+    sha256 cellar: :any, catalina:       "7ef9ed7c63ea3d68e26f153b9bf77c1468f6811abead311f9f5c824b5eaa3550"
+    sha256               x86_64_linux:   "af31cc06c35171195312c20dbea1bcf188b6c09e770e160b0c12f64850ee57ec"
   end
 
   depends_on "meson" => :build
