@@ -17,8 +17,8 @@ class DetectSecrets < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d670bb9dcfb49fa0b0989c1225295e28d01b40788859a988b1d4942cd198a91"
   end
 
-  depends_on "libyaml"
   depends_on "python@3.10"
+  depends_on "pyyaml"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
@@ -33,11 +33,6 @@ class DetectSecrets < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz"
     sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "requests" do
