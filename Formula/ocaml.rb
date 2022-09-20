@@ -32,13 +32,12 @@ class Ocaml < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "adef805a6bc9cee04a0fa19ad4b32df4c593deffc735b68868e19f1132330aed"
-    sha256 cellar: :any,                 arm64_big_sur:  "83124ec43f2fa8164999c65068618311151792f1ab426cb7991ff59c514a7918"
-    sha256 cellar: :any,                 monterey:       "29003a3851245246fe8a53087baa5bf1e5d58cef2d2ef6c7be9c22bb3d735c5e"
-    sha256 cellar: :any,                 big_sur:        "e61a0e13d18b0478e02c368644786f33ec79aa38ad8b737b520ddb991d37efdd"
-    sha256 cellar: :any,                 catalina:       "8c7667334e0d425c4f75366e29217402680afa4aa2f271574e64eb128db96d83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "83fb8a37f5de730873eba6ecf6190297648fa3d1001370b6f63bf9c3fc29d3a6"
+    sha256 cellar: :any,                 arm64_monterey: "4627e987e1517d78cfd6f40aa84a7f8c29b1d20ae845d345038fc7b548148413"
+    sha256 cellar: :any,                 arm64_big_sur:  "dd4cddcad1dd890d90d2db3cd4119ec0dc8b30e10053ca480812e16a90dff342"
+    sha256 cellar: :any,                 monterey:       "f744606227e8187baacabccec4baf57aca0f4309eb3bf93623a6789861369dab"
+    sha256 cellar: :any,                 big_sur:        "bfff444bfd1a9f4c441087537e602964e19f00adad4a8b15b5e0aad522b0c1b3"
+    sha256 cellar: :any,                 catalina:       "130c3b5d8c8de8cfbdafb57d48abf75a98e560c2ed4ae4bbc6f4a388145fe401"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "493cc9bbb57be2722ebf5203aa95fc93ec24af04cfadf474cbccba125dfbd215"
   end
 
   # The ocaml compilers embed prefix information in weird ways that the default
