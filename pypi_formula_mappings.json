@@ -454,6 +454,9 @@
   "streamlink": {
     "exclude_packages": ["six"]
   },
+  "svtplay-dl": {
+    "exclude_packages": ["PyYAML"]
+  },
   "tarsnapper": {
     "exclude_packages": ["six", "PyYAML"]
   },
