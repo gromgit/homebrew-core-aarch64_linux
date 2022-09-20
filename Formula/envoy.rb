@@ -8,21 +8,17 @@ class Envoy < Formula
 
   stable do
     url "https://github.com/envoyproxy/envoy.git",
-        tag:      "v1.22.2",
-        revision: "c919bdec19d79e97f4f56e4095706f8e6a383f1c"
+        tag:      "v1.23.1",
+        revision: "edd69583372955fdfa0b8ca3820dd7312c094e46"
 
-    # Fix build on Apple Silicon which fails on undefined symbol:
-    # v8::internal::trap_handler::TryHandleSignal(int, __siginfo*, void*)
+    # Fix build failure on macOS 10.15 due to error at
+    # source/extensions/filters/http/file_system_buffer/filter.cc:402:53:
+    # error: no viable constructor or deduction guide for deduction of template arguments of 'weak_ptr'.
+    # For the next v1.23.x release, this can be removed after https://github.com/envoyproxy/envoy/pull/23177
+    # is merged.
     patch do
-      url "https://github.com/envoyproxy/envoy/commit/823f81ea8a3c0f792a7dbb0d08422c6a3d251152.patch?full_index=1"
-      sha256 "c48ecebc8a63f41f8bf8c4598a6442402470f2f04d20511e1aa3a1f322beccc7"
-    end
-
-    # Fix build with GCC in "opt" mode which fails on strict-aliasing rules:
-    # type_url_, reinterpret_cast<std::vector<DecodedResourcePtr>&>(decoded_resources),
-    patch do
-      url "https://github.com/envoyproxy/envoy/commit/aa06f653ed736b428f3ea69900aa864ce4187305.patch?full_index=1"
-      sha256 "d05b1519e6d0d78619457deb3d0bed6bb69ee2f095d31b9913cc70c9ee851e80"
+      url "https://github.com/envoyproxy/envoy/commit/68aa00067bbeb7aaf13599f75e54e8837cfb13ef.patch?full_index=1"
+      sha256 "0efbefd5cab5ada6c46845535644339733c4198ac21582401ba038605bc4ed5b"
     end
   end
 
@@ -52,8 +48,8 @@ class Envoy < Formula
   depends_on macos: :catalina
 
   on_linux do
+    depends_on "gcc@9" => [:build, :test] # Use host/Homebrew GCC runtime libraries.
     depends_on "python@3.10" => :build
-    depends_on "gcc@9"
   end
 
   # https://github.com/envoyproxy/envoy/tree/main/bazel#supported-compiler-versions
