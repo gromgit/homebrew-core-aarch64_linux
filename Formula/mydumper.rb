@@ -12,12 +12,12 @@ class Mydumper < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d0d623b442dcc05cd7d591040299f842494c973edcb6a99f5468c8e6b3e436a1"
-    sha256 cellar: :any,                 arm64_big_sur:  "d2d609c6de453321523b12dac08c3cadf8af7511b254ee5dcc85f10004852713"
-    sha256 cellar: :any,                 monterey:       "553487bc55ed8ac2f9b26b5a4d45333dab979516db44d5ac965dfadf06c94c30"
-    sha256 cellar: :any,                 big_sur:        "09f043fe37a1407a0d94ccc9c3967f8380a762e104929ce8f1babfbbd5a14fe5"
-    sha256 cellar: :any,                 catalina:       "a7b27b1d5ef09c5f85831b72438929f3ca740ccc2f437718e8cd4f61633b35ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9cdb8e2481935a1663db42d387334dc3fd62a6a4fab55e902783167d6f1a9b9"
+    sha256 cellar: :any,                 arm64_monterey: "7c6f565a8de02caa5421c28c844fb61ffb42c7241082bd8532b961e42a00a228"
+    sha256 cellar: :any,                 arm64_big_sur:  "c0479febbf7b90145c28559885a772086ea1aae48d4d3334f1b2489b352325a7"
+    sha256 cellar: :any,                 monterey:       "dd097ff298de20b0f50221fa32463608be153e03b9656f1989c78ecd5fdf2d40"
+    sha256 cellar: :any,                 big_sur:        "991d6124ee86f835abdaa0ceb6d24b51a9216870f77064faccab334c1c4468c1"
+    sha256 cellar: :any,                 catalina:       "95cb5ddc27e5b7d7f4e6d22673b26589b572d88cd608ea1aa2f64201b4e8641f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84933d5939b40e597150d298ffa6abfa249e214916bb7fa5ced96532c3953b6d"
   end
 
   depends_on "cmake" => :build
