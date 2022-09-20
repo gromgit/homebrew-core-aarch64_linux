@@ -7,13 +7,12 @@ class OcamlNum < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8a5d1c3625dc2fb163fed6576507e859f4d117b9612a69c8569d6047de63f9dd"
-    sha256 cellar: :any,                 arm64_big_sur:  "f1f22afab148209110159c9fcbe9cdfd7f27ca6a25b55ddd11358c130da033fb"
-    sha256 cellar: :any,                 monterey:       "b8812394abf008510cf45d72e0d136203a1fe5c93ed7dd2be50e251ad34d249c"
-    sha256 cellar: :any,                 big_sur:        "4563053ebf720e623e0afeb935f803ab1aedc3c15d6d99d6bc2818301eeb4ecb"
-    sha256 cellar: :any,                 catalina:       "26b165d15abd314baafa8c8a055236684eb26ae86740d85edca087321c5c311c"
-    sha256 cellar: :any,                 mojave:         "c14f476a964f149d3dc3145cb219286fea6585962351ada79aa1ed4606d9f781"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a73e9edb89bf0770888357b1d3020a704bbb068cf3cede057db573ed0f4f7be2"
+    sha256 cellar: :any,                 arm64_monterey: "24a7c2eb700a74089c1fbdb5395473c4afa7f90e86372b556c7b48b4caab23fc"
+    sha256 cellar: :any,                 arm64_big_sur:  "e14151e4a14faa9a43774d4682930994110f9d654d533091b48a35ed95bfe8eb"
+    sha256 cellar: :any,                 monterey:       "36835ca0d89b6ccf37c1dbb3596b2e1ba688148cac83d6ddda1d2bdf5ddb2a00"
+    sha256 cellar: :any,                 big_sur:        "0d247f113c3d0135e09a2b0a12a9299217600477083b089c5731bcf2b2245c36"
+    sha256 cellar: :any,                 catalina:       "5dbcc04ba33b58d14b77ae7382345b9abd913ce342c20c330c4cf15c936b24f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a1b1383e37f8f367f8f5c6c44a86f9e76c17080d3aa0465bfcff9328da88d68"
   end
 
   depends_on "ocaml-findlib" => :build
