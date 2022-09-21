@@ -8,12 +8,7 @@ class Pig < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "05975bde330ef940fa753ee188f16b3a4136e22e05cb98d2aa0f566c0db08cda"
-    sha256 cellar: :any_skip_relocation, monterey:      "35631463560d7c8d23624c334f9d99d669b58d01a3b10d94d29528855c456c5e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
-    sha256 cellar: :any_skip_relocation, catalina:      "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
-    sha256 cellar: :any_skip_relocation, mojave:        "a5d6bc2bec7cfb14e8a398b3ff04ef5583a7c1a31d809ede5e2f7c5f2ae394fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "12c02619e8fbfee0603e8d11ffa0facfed80717df4eae3f4176a9fe5b33a4076"
+    sha256 cellar: :any_skip_relocation, all: "065e13ccf248a66a7e63eac6d4fcae23a112ac42ff6a37151e14a196d0d640c3"
   end
 
   depends_on "openjdk@17"
