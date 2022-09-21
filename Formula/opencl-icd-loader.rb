@@ -6,6 +6,15 @@ class OpenclIcdLoader < Formula
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/OpenCL-ICD-Loader.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "a166392b2495da5feff5c20247699a065ec9923bd8239ad82ce58f9cc6667663"
+    sha256 cellar: :any,                 arm64_big_sur:  "8e33044b098f04bd9e77371397f2aab65d90073e93449acd8d1f7dc53b767e6d"
+    sha256 cellar: :any,                 monterey:       "f808d1255a4ad0ec72ec986e3b7e937cf66c6b09aaeb16704dec45a57950d18c"
+    sha256 cellar: :any,                 big_sur:        "b922f399390e0129d1daf28722985fc985dc68aa47646732cd39238b1401611f"
+    sha256 cellar: :any,                 catalina:       "e531ef20569d6803d8cd025d3bfa23f1c0eb1460f8b52604791586cbc4232924"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b11018926460b23b2c4d5fc1055b6289d787f997ce86fe769d21d71ac18799e4"
+  end
+
   keg_only :shadowed_by_macos, "macOS provides OpenCL.framework"
 
   depends_on "cmake" => :build
