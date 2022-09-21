@@ -8,12 +8,13 @@ class DockerBuildx < Formula
   head "https://github.com/docker/buildx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b58d89d30266fd8fab49b7ec815f6b801f37bdac3ebb713c38826ecef60e1f2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce33790cb2c3e83f4245819458dac41179195eb72e0de9b54541cffb287af319"
-    sha256 cellar: :any_skip_relocation, monterey:       "fbf4f9b019e888e2a6a6d906b454fedc8646e35f11be927076d4aae9d45b254c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "26b21d1e1843b8da03baa342bb99430b3f7a1a3e0b14f6b760cab0c3ac482bf4"
-    sha256 cellar: :any_skip_relocation, catalina:       "52744a454ca31e9b34f44b724d4095b59e612498ba5e68f83f7483654505dcf5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc6c1716bd652aaaf069d4def30640a75e64aad3e3f8006e2ee6d028f0e0a08d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "30e60e92b6d3d72c137d9cd62676a9ad3847ffeefbada5fb204dcd6934af0255"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3631233cbfcca28a2ffe46b2eaa9aa818d493a6d1df016bf2a97a7a7806cfb0f"
+    sha256 cellar: :any_skip_relocation, monterey:       "04bb00b8fa1d06fffeef91d7684e723c280c6ee579af653aaf8ebf4df3d13b71"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1b2c1ee80eeb656f394d4e545fd7390b3ecad9eff1d22413e704d852b5864d89"
+    sha256 cellar: :any_skip_relocation, catalina:       "9eb3d096a740abd0ba45d38e46063a56e49cced1f52e549a78d4ffa6a71e7765"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b055b152f0b64228325b9a9300684bb07a8cc0a92ebad574a2754a9bf5b5557e"
   end
 
   depends_on "go" => :build
