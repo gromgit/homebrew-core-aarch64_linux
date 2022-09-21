@@ -7,14 +7,12 @@ class Jlog < Formula
   head "https://github.com/omniti-labs/jlog.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a47745b2bd24e09f7be0a6e55171d9e989c03914747e732153358ab76176fae6"
-    sha256 cellar: :any,                 arm64_big_sur:  "aae9bc7604223b7535c8787af8737c7fb8e8e357a4106aafffcdc6ebf2d5e228"
-    sha256 cellar: :any,                 monterey:       "bdb8f7eaef8cd4387ae246fb64d92999985c91dd9057eb08d18df4e3ccb74a04"
-    sha256 cellar: :any,                 big_sur:        "bf009b8acfcfe3b702b017ef8e5c232fc791722fe505b71a0c3fabdeebd13443"
-    sha256 cellar: :any,                 catalina:       "28a606466256bf030942104c0e7b5618b442ecee7bcd7498cfac9f2cbb098ebc"
-    sha256 cellar: :any,                 mojave:         "e45a56ff580b67b3a17407996d72768b57f06b6f7878ca8320dc8befe8f2793f"
-    sha256 cellar: :any,                 high_sierra:    "583bdc22413565285d5f3551be33c17d12e18a25b665e57076332147cfb283d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba179ee6b8b414864eea944003ac434c532e53f731e2593ac6e9978568a5b7fa"
+    sha256 cellar: :any,                 arm64_monterey: "ca940d44eec020e82f8416245f4634d543ff471150e4579817344d944c445085"
+    sha256 cellar: :any,                 arm64_big_sur:  "32b7e00c10405ce4aa979adfef936eb67e59abc62f016df1a3b82e4e98c2393d"
+    sha256 cellar: :any,                 monterey:       "f65c6a850701989de8355e2db39e479103090b2b22c073c0f461d4c3e74818c2"
+    sha256 cellar: :any,                 big_sur:        "3968856ea5fbca1aa88feae8c9978d08bf35b380dcf486841c3e71a3937e794e"
+    sha256 cellar: :any,                 catalina:       "ef9a6e2a85b5bdb48b50a6e8f86e53288c1e82ed7d1a1b404335b8e3c3db84fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6349b0d48318cc98416da8a2481b4524a3b03b8b510cf1a2b043d78b3b142459"
   end
 
   depends_on "autoconf" => :build
