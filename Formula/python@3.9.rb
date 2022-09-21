@@ -1,9 +1,10 @@
 class PythonAT39 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.9.14/Python-3.9.14.tar.xz"
-  sha256 "651304d216c8203fe0adf1a80af472d8e92c3b0e0a7892222ae4d9f3ae4debcf"
+  url "https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz"
+  sha256 "125b0c598f1e15d2aa65406e83f792df7d171cdf38c16803b149994316a3080f"
   license "Python-2.0"
+  revision 4
 
   livecheck do
     url "https://www.python.org/ftp/python/"
@@ -11,13 +12,10 @@ class PythonAT39 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "24d551890bac7307df1231a65d572af9d5c69cda63a98a7a47bc557dcadda89b"
-    sha256 arm64_big_sur:  "fde3a4306df315717e91c46e71d8888118155b3ae69a6b0e17cdd63ef3c79bab"
-    sha256 monterey:       "26cd7888bec99e064ed99e2967344a253856e6b70b60f5329516d7f9a812b643"
-    sha256 big_sur:        "e3e86d85b5585a9556ac90144fd2081c6120a96f9c6d8d657454a65123f9ec6b"
-    sha256 catalina:       "7c14d8928f26a1223aac7c9f99c1cd18c5d84140d3fed884d37e0d2ba1a199d4"
-    sha256 x86_64_linux:   "85baefa3f6502adb186d61cb64a6dbab58841f2619887831f69982745165652a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python@3.9"
+    sha256 aarch64_linux: "10417c9eee21b7ed051bfded17754ac5ad42a15b91ceb4b8ca75eaeb27eec9db"
   end
+
 
   # setuptools remembers the build flags python is built with and uses them to
   # build packages later. Xcode-only systems need different flags.
@@ -49,8 +47,8 @@ class PythonAT39 < Formula
 
   # Always update to latest release
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/cc/83/7ea9d9b3a6ff3225aca2fce5e4df373bee7e0a74c539711a4fbfda53374f/setuptools-65.3.0.tar.gz"
-    sha256 "7732871f4f7fa58fb6bdcaeadb0161b2bd046c85905dbaa066bdcbcc81953b57"
+    url "https://files.pythonhosted.org/packages/5b/ff/69fd395c5237da934753752b71c38e95e137bd0603d5640df70ddaea8038/setuptools-63.4.3.tar.gz"
+    sha256 "521c833d1e5e1ef0869940e7f486a83de7773b9f029010ad0c2fe35453a9dad9"
   end
 
   resource "pip" do
