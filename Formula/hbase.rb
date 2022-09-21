@@ -8,12 +8,12 @@ class Hbase < Formula
   license all_of: ["Apache-2.0", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 arm64_monterey: "a00dc24317443f07c197696211c841bb926f1c7bfbe4ef534d3bbb528edb2029"
-    sha256 arm64_big_sur:  "7b69ed4265a345519c38040184a324a7a80175b4e374f3f2c76f68810f792f9f"
-    sha256 monterey:       "2c285066c573c815a82bf33dc99f7c65a3e778700f5fb0ad55ad7b5f938a9668"
-    sha256 big_sur:        "0e3f7216c8925f673c81ff8443f2b6db6b630a4653f04922db65d18b02de7b02"
-    sha256 catalina:       "3833a309fc926e5edf64954539db2036ce75ae68fb14bd1aae16199f264d23a2"
-    sha256 x86_64_linux:   "cb6d1910fc5df2f2b831549110e8a48267ba9831c1f2e57a1b6f56c87a4613ed"
+    sha256 arm64_monterey: "72aa3f915d728ae6677a3249636f8f696957ae3b718c076ac4bc6550625d8ec8"
+    sha256 arm64_big_sur:  "b710a4d5645cfd367643c7ceeab98960e0bd96038a908ce5596f46bc2440a114"
+    sha256 monterey:       "1b09699c447665ba343e1ac1921a84e71a9f23a29fbc479b7e41b973ad3258df"
+    sha256 big_sur:        "afba4ae96118c5bb3e3d7da91e07debf68c87efcb1e28155534cd3c7d25c6822"
+    sha256 catalina:       "f5c4b585aac4ec97bf5373be4d1bc87e7d0b7ff34df04314ed268a84ea9bf6df"
+    sha256 x86_64_linux:   "738fa4a64616877275521977d400681b85664ca2aaa7df8785342a1a2d42ec4a"
   end
 
   depends_on "ant" => :build
