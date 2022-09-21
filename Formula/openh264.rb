@@ -7,12 +7,12 @@ class Openh264 < Formula
   head "https://github.com/cisco/openh264.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "850c61c729ea016b0994f7179174bd7ba25d360afb99b0f432af161c2aa0409f"
-    sha256 cellar: :any,                 arm64_big_sur:  "9d5a2df60da72b153ebcb7312930e710a7e7ad10d9e4612947d09a9f375bd6ed"
-    sha256 cellar: :any,                 monterey:       "8ce4c3f088316d948efe32844e848cf04744479accc782c61f52a0fb40bb9843"
-    sha256 cellar: :any,                 big_sur:        "74096fa190b838ecbb8cd5467b0e1787b89b76f5c71497e8451191b5a5a1a64b"
-    sha256 cellar: :any,                 catalina:       "0063b3813acce3b6e95d8bb68d12c05c097459c8baaa8ca2d951deb2078e04bc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "714856c2805e22cf067855c815060fa098e62bc96571e185459659a7b35d4c07"
+    sha256 cellar: :any,                 arm64_monterey: "ae73e6d36f91ac47d93c4725356b6887ddd991d304af65015b958f4301fe61d8"
+    sha256 cellar: :any,                 arm64_big_sur:  "c79e4b81dccaa0901dd4b0df153375479c430253b9a5e7081e5e48ae7c834e2e"
+    sha256 cellar: :any,                 monterey:       "8a7b21814fc08e259a6fe8a9da00cac96d953ce10011b741dbd4feca426824ec"
+    sha256 cellar: :any,                 big_sur:        "c0d6182c17eb670e2abe5ecc865b5c22119980f3940b00ffffabd78ff50e4d09"
+    sha256 cellar: :any,                 catalina:       "a62c228494b27a45cccd967b45b741b726ef790a778c9e94e397e0cfaf2c320e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9cf3262fd11179defe88b448756d0c98f5f3a6b2bb0e2285ea843bbb694c106"
   end
 
   depends_on "nasm" => :build
