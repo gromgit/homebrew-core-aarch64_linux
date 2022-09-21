@@ -8,12 +8,12 @@ class Kubebuilder < Formula
   head "https://github.com/kubernetes-sigs/kubebuilder.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ffc21c6af5a815c6f82fc388376ade4be911e815b1b59d442a06f389b1b1580"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d38e8f9b89f9a369a54908f8fa21c39854d5f0d149755af3bacf8e18c72868e5"
-    sha256 cellar: :any_skip_relocation, monterey:       "55adb801e3d6f96f34a04863168ea5c9ac52b9a9860ac496d12a0f49e8cd814a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "19fa8c514001e6d7eff86ed0faaf9852e4d52e00726627454213850688659a23"
-    sha256 cellar: :any_skip_relocation, catalina:       "3871a407e8b6297008ed2ba67bd5143ae2a67e755261119d5a74ff4ed7cfa4d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7dbaa889002492dc90cbad276985580f763f8910c4d3decdddf1b59211401f58"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed28191bacb910531974baced46d2a50a817db3aa2975d7758be7826c735f51d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9e863ba2dec79a6c87a9f93224eb7699fe949d4efe032795a6ba63235cc1c149"
+    sha256 cellar: :any_skip_relocation, monterey:       "ca43e24cbbcbe43df28bb4720e9e3019b72d50adf43d56a208eb2c1dc26fb736"
+    sha256 cellar: :any_skip_relocation, big_sur:        "abb89e465db3532431a36cbe3f8f4ce9a689a7b879adcf3adeb22f94c9b603b4"
+    sha256 cellar: :any_skip_relocation, catalina:       "e3c813ad5736ad5651d0e4e46f862d5121e4637a6732aeefed227d7daa0e8130"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "828c05bdf24153cabb7233ca2c065a24f935bb598dfce67e522ca7913e0b91fe"
   end
 
   depends_on "git-lfs" => :build
