@@ -1,18 +1,15 @@
 class Libxft < Formula
   desc "X.Org: X FreeType library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXft-2.3.5.tar.xz"
-  sha256 "684fd6ec83db80b391b8111f604d9225772b26bb78bba261d77a5eaddab6a1ee"
+  url "https://www.x.org/archive/individual/lib/libXft-2.3.4.tar.bz2"
+  sha256 "57dedaab20914002146bdae0cb0c769ba3f75214c4c91bd2613d6ef79fc9abdd"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "295a354aeac393fd30498499ff9541c4f237fbecf0259ddd611015c153fa505f"
-    sha256 cellar: :any,                 arm64_big_sur:  "84ab0e299c671c1873e6e0555a9961e1d49c2b07c59d46257e46ec316fd337c5"
-    sha256 cellar: :any,                 monterey:       "332f0d5ca3fd2009a2f8d2bfb39edc4a285acfc8607eee344b47181e6313dd9b"
-    sha256 cellar: :any,                 big_sur:        "955d7574fb678d9a9b8b205846a716f6eb04af6471d11cc1fda2b2c294ec6969"
-    sha256 cellar: :any,                 catalina:       "3d18dd85206abfdfd6c9300602c814590275412f7024da2267faad91836ce1fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "705ee186ddb01dd7bccbcbb88cc54649dcdf191e39bc669e9715e1799ee72dd6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxft"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4e43c6e8ec4c85cb54c37e2cf02dda6c72781a9edab2e33cd49a3da012b8b63e"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "fontconfig"
