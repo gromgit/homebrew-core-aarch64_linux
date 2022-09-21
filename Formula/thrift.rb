@@ -16,12 +16,12 @@ class Thrift < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "336a02980f29f8d9ba7366ea0d3122a50b6e95384593061ee533f42f8a217f06"
-    sha256 cellar: :any,                 arm64_big_sur:  "78b97e148edf641a56cde92eaa218f44da8847baea8570e1acb40ebf21f2051f"
-    sha256 cellar: :any,                 monterey:       "1647c15f977509a0aedfe566ab08b444c4e027c7a78b5c43c1656a57d14279ad"
-    sha256 cellar: :any,                 big_sur:        "79bd37d9c191dd5396db03069bb679cab6698a34436229ee718b3ec7320cba16"
-    sha256 cellar: :any,                 catalina:       "7689fdacaed0365203163376d884230cc5a19d9ebfb5c65959fb71d1c02bae9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9682093d80cd96998537979152707c57c56550a14617e3f3d0650b6d3ccde62"
+    sha256 cellar: :any,                 arm64_monterey: "cab37541e49c9895b900cfbec2ef67fddf240699975bdaa2eea25e5110dc31e1"
+    sha256 cellar: :any,                 arm64_big_sur:  "bb496e6fe3cfdfafc3b2558af33c6008802f157efef43b12c801315c9cd4da45"
+    sha256 cellar: :any,                 monterey:       "17406f83b600ee211014de055114ba8948ef7802dd3f0de80bb63ed0a33dfd10"
+    sha256 cellar: :any,                 big_sur:        "e446d029f2856a2f9afaccabec4c469abc60330df078e89c773f42e372f9b639"
+    sha256 cellar: :any,                 catalina:       "103df8d65c791c3d3430d8ccf2165e27c30dd9745164a163871333b191338c62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "771930b8511e07801658fc5b94f374a758a135ae4da0f2ec2b61b990137b954a"
   end
 
   head do
