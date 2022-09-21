@@ -6,12 +6,12 @@ class GitCliff < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "806d48dcb3356bfb88e6770f4505adde46a7ab2ba0f9e2b1ad0b08be9719e1fd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bdcb5dce5b04237d5c6d23070279a1071f2af3021e528e868b852e7fbae97691"
-    sha256 cellar: :any_skip_relocation, monterey:       "e15389706af8df6727f7f79b8f674a5d237c53c74875017dcd2588ee0f613241"
-    sha256 cellar: :any_skip_relocation, big_sur:        "19482d057ed553d5df9ea59fae013a1c6b3d55fa500daf1bd48a64e4b7fa2ccd"
-    sha256 cellar: :any_skip_relocation, catalina:       "4386cb28d141800f7a7811d0bf7c4872ea2cbab7bfceb3d3a8439c9ecaf539f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fa78430531d7d0f7f124fa90a1d694eb692e19f79bff969d32e4853d94e57ad"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1205bf04ef3555a6125a7b2a084b04726c4e25133cc5c172edd18c80c9da24f3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "160daac17909de7afdc5367d3515f6e298c73f819402ca6d360029227fa0fb5f"
+    sha256 cellar: :any_skip_relocation, monterey:       "341571044039e1938e71071abc17f8c67aa5c02c5b0b33158c6196dbc2d630a0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4f4011ffb249ff358fe50a9fad61bb985a7e2aa9f05a6230c5fee7549ac7de0d"
+    sha256 cellar: :any_skip_relocation, catalina:       "093b3ed43f745e24deff286752914de226e118334ec0b9edff75e9c0d761b2d6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cb2e2ed177a44e158436a648fcd546cc1c421bb71d2f33be16fe3d335695568"
   end
 
   depends_on "rust" => :build
