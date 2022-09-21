@@ -11,12 +11,12 @@ class Libbluray < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ad906ee5fd5ef4913989acf3eec9a28fdaed7d1a64939e699f6490765522927a"
-    sha256 cellar: :any,                 arm64_big_sur:  "8a83ed6cd9d2dac0beb72f756b27850843d9cac1120b431b4a5cf4328c83ec9e"
-    sha256 cellar: :any,                 monterey:       "356b4b7982107b4945562a7ec635c23f70df5c9d7d639d9770413ff2b10354d2"
-    sha256 cellar: :any,                 big_sur:        "c98f79dc9aabdb616de7a5ee1ea8a0bc893d23c0af71369b65b093d215bc1d3e"
-    sha256 cellar: :any,                 catalina:       "432eaf039acf5b061fa49b290e136e510b78123af081d2d0ed68f3b834e7da1f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdbbadffa598be6ad26e857531b15352a3fa1416926f4ff29cb0328eff5309af"
+    sha256 cellar: :any,                 arm64_monterey: "d5f2c92bd6e50a0e5f5deaaac18697c188f40f772744934035188d45e3742d16"
+    sha256 cellar: :any,                 arm64_big_sur:  "38f92ef02a7574639d7ba07bd749a7db01e46d1270b3b48fb2fb4d9b2b2ce459"
+    sha256 cellar: :any,                 monterey:       "0d5cfd70f4b146c855f0f0149e230dc573287cfcc7d84c26ebf507a9fc7a1b46"
+    sha256 cellar: :any,                 big_sur:        "dde2149e8b7da0d496e006de9c9335e085952e47a54df9c72b9921c6e800a21a"
+    sha256 cellar: :any,                 catalina:       "55a591d08739fd75efdc192113e0c2a7f40785c58fd1c491592084a0c43e063d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afd7579f808ebc5d055e03cf6743167f3c525173c025c50b4f21aa9e2066fd28"
   end
 
   head do
