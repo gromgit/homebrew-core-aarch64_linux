@@ -2,7 +2,6 @@ class Clisp < Formula
   desc "GNU CLISP, a Common Lisp implementation"
   homepage "https://clisp.sourceforge.io/"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://gitlab.com/gnu-clisp/clisp.git", branch: "master"
 
   stable do
@@ -23,17 +22,12 @@ class Clisp < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "bfad1c6c3b4787711bc126ed360647a6ad6458dd24ff4cd9e3be5252b897ed82"
-    sha256 cellar: :any, arm64_big_sur:  "8108810c5af0ce990d9052ca96f6aa75af1f59589a103e21a86f8b1f2e801956"
-    sha256 cellar: :any, monterey:       "b2fc7c67341df7f9766f66054445e342bd61acc22c7260bac3589266ba78f8a3"
-    sha256 cellar: :any, big_sur:        "4b81399840c98918cda6447d86852ffcb96294f228cb26f6c289f22d90df5a7a"
-    sha256 cellar: :any, catalina:       "de714225b132ed2cdf971fd31befd890f336a3a917a5fd56832d6989b6c28a58"
-    sha256               x86_64_linux:   "c62c710ca923611df8d28202e49b0ca27eba36a4d0736a01e482b453d53769e1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clisp"
+    sha256 aarch64_linux: "8d33671aca10a9a0f33707d86f36d2823a24c58a40de0455f547d1becc18acab"
   end
 
   depends_on "libsigsegv"
   depends_on "readline"
-  uses_from_macos "libxcrypt"
 
   def install
     system "./configure", *std_configure_args,
