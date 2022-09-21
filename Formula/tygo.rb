@@ -8,12 +8,12 @@ class Tygo < Formula
   head "https://github.com/gzuidhof/tygo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "31b017cc6949dc9736a0641be1080fc2f5f8bb7512448630e663b3a42f024b72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f0eb7e35881bd983e70b00675a01e53593b30bb80c548bf88ac8c8cc04e4668"
-    sha256 cellar: :any_skip_relocation, monterey:       "fc51c6ac8b9bf18f7613e699f1ff271f733b4ec319da24ffd3d5eeee9a410a54"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cc91da0b630908079c7d3dd0e571192e462e456ea39d856728e0c32a2db84874"
-    sha256 cellar: :any_skip_relocation, catalina:       "84c3da648dd1af56c149df4f187e7f285053a63306e67c0cbb0e4cf1e15794ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84f34c1a847c949db33ead1d53465cdf9f83e2b026dc626cda9f3bb2da95c3a5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "81d8d41d0e3ccabdf9415f2b96d371ae3fdbf8137a18b508747133b0bdd735f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31db2b9d86d64a8c3245eeb2302a12fc2763a624fca3142c14712596a4ed0cfc"
+    sha256 cellar: :any_skip_relocation, monterey:       "a85c0d826da43108c7ffe8ec5d896b852a2e6d7ca53f342a1fb6eac802d33115"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0e5348d1439b277e177714c93e998ecbb06c1e6db002b62165050ad477d0e8d9"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb290d8f8d3c84bb35efaeb845b3c463744dea71e57ffc28f39c2839860fa20b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e040393cd996a2bcb1213b0427fd3ec7abae5ec1f893394f431be0e97bfd34c"
   end
 
   depends_on "go" => [:build, :test]
