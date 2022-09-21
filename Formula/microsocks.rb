@@ -7,12 +7,8 @@ class Microsocks < Formula
   head "https://github.com/rofl0r/microsocks.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7b5b8fa1a3ab00cb45bb1de97e67d53ac12bc04a5c9366b287eec91ab290400"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c609eb83c72039c8c826ba7377758738a5889d82951da4c61c4598245e7e280"
-    sha256 cellar: :any_skip_relocation, monterey:       "ba6beacd676cf505ea4e865f0c6f664f4d2cdce2fd5ed338c34077b9c92522ba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4b9ad2d9aaca92f430fe651b86a7a83323624f812c083264a7479ddcd29241b7"
-    sha256 cellar: :any_skip_relocation, catalina:       "aa5872429094462b4147aa020e0c0d79ad93e7a58c347b4c20af967f937f2e32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8477f5acb8120732c5bda2642a694a40ac93bdc7aa0b744b600e2d1761fcd6c6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/microsocks"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "68d612aff9fa12096b2fc2ea4419e311a9649fb8c7408f28c6f30c310100154e"
   end
 
   def install

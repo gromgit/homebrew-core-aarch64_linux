@@ -7,12 +7,7 @@ class Blueutil < Formula
   head "https://github.com/toy/blueutil.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "adcb4a19c564cbd895f7e216df0a3293e17a009b243f5710edb9ba60965231db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e29ddccdf7253406a3685f4099f3424ffb6d399ff2643f2d79f281ad97b93a67"
-    sha256 cellar: :any_skip_relocation, monterey:       "bdcffcaabd1270881f5b28da53aa1a6a28b93cbeb134d2b08891861653364b92"
-    sha256 cellar: :any_skip_relocation, big_sur:        "429703e2bae1445d2a6ae2e1f52ed2c1f0bad3a94e80b44bfe36e698ba5ded30"
-    sha256 cellar: :any_skip_relocation, catalina:       "3717d1a6753d4d94c4b4cbc92afa8ce58ed02bc1435806646fba4c7c1d04787a"
-    sha256 cellar: :any_skip_relocation, mojave:         "389cd2270eededef8623fda47663f998cca159b82f17ef030962ac7dbae3522b"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: :build

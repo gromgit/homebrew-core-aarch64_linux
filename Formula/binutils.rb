@@ -8,12 +8,8 @@ class Binutils < Formula
   revision 1
 
   bottle do
-    sha256                               arm64_monterey: "758ad6292041c3c53918b9177f30a5a15acfb3868cbc51d79dc51fcc5a661a4c"
-    sha256                               arm64_big_sur:  "93b1cfd89c43d8822fd6f78d4a573425891193e46de5cb3b86658db4f8f868dd"
-    sha256                               monterey:       "2ec016569ad18525d8f0598f2f6d42e4fb8b0e02178484acc3e885b381789a9b"
-    sha256                               big_sur:        "8842e0decbce5fe9718f492648730163ac9aa0cca4ccd08ec700ef95d0e07761"
-    sha256                               catalina:       "17e7dbd79aeaa50547888612f741c427a682fb269f6796345abd01710b89abcf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "efa7497e2ea56d9b68ce41363cdc1a41cad032b3ae2fa2cbe819459011651809"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/binutils"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "25cee5c00c58aa50a4b3e0a91df5e13688bdd023cf36a406b703b96711124153"
   end
 
   keg_only :shadowed_by_macos, "Apple's CLT provides the same tools"
@@ -26,6 +22,7 @@ class Binutils < Formula
   link_overwrite "bin/dwp"
 
   def install
+    ENV.deparallelize if OS.linux? && Hardware::CPU.arm?
     # Workaround https://sourceware.org/bugzilla/show_bug.cgi?id=28909
     touch "gas/doc/.dirstamp", mtime: Time.utc(2022, 1, 1)
     make_args = OS.mac? ? [] : ["MAKEINFO=true"] # for gprofng

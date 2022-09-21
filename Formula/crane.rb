@@ -1,17 +1,13 @@
 class Crane < Formula
   desc "Tool for interacting with remote images and registries"
   homepage "https://github.com/google/go-containerregistry"
-  url "https://github.com/google/go-containerregistry/archive/v0.11.0.tar.gz"
-  sha256 "e2eac75200a38f9fecdd8a6b80a839a50898e3539e5625c2150f6d5d31317ade"
+  url "https://github.com/google/go-containerregistry/archive/v0.8.0.tar.gz"
+  sha256 "2ed9b9da9954205996eedd17f507dc56f39de66b2e9b35eecd40b4bebfdddcce"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "26f8c6f1c635dab0421af1b4c9f40ec2418242c3cf43c1d1ccd3d611e941fa45"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8016c49019324822bef82954b1a4d9cbb2f9ac947d6a0e8bbfe5549ad6e78941"
-    sha256 cellar: :any_skip_relocation, monterey:       "87ebc1f1c9a4d2a3c2162220808ce629bc56a7c5ad890183a2139fdef41b1344"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f106c73fd08b854ec58b2afc53953d2559d287d930673488ca95a986933b4b42"
-    sha256 cellar: :any_skip_relocation, catalina:       "01cd5575be8eee5cf44912a5a074171469fc5f82458316d2425d4774f2e3eb04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f196ac7230485c16733a7fc9d090430f3f13ae828843d3671cb0e3823c55bf31"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/crane"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c3d806b1e50e34a7a1b2edbe5127d4f8946c4fa0877bf1dc2443c0e0bc9b9adf"
   end
 
   depends_on "go" => :build

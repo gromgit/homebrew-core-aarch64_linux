@@ -1,15 +1,15 @@
 class ApacheFlink < Formula
   desc "Scalable batch and stream data processing"
   homepage "https://flink.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=flink/flink-1.15.2/flink-1.15.2-bin-scala_2.12.tgz"
-  mirror "https://archive.apache.org/dist/flink/flink-1.15.2/flink-1.15.2-bin-scala_2.12.tgz"
-  version "1.15.2"
-  sha256 "32bb0a119b64827e05f63f742a2e68e1cfd8477cf0e93b7aea1bb80f8b1a2e15"
+  url "https://www.apache.org/dyn/closer.lua?path=flink/flink-1.15.0/flink-1.15.0-bin-scala_2.12.tgz"
+  mirror "https://archive.apache.org/dist/flink/flink-1.15.0/flink-1.15.0-bin-scala_2.12.tgz"
+  version "1.15.0"
+  sha256 "8d88b555453b162a62b9e7d37ec95b30f65b0219cd97819699ad5cb8e7f32964"
   license "Apache-2.0"
   head "https://github.com/apache/flink.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "05d7ed169e730ead5c004616b2c7e1f8299db86bc5c25072a97c9bda395dbf5d"
+    sha256 cellar: :any_skip_relocation, all: "30475ff4216cf4d931d73e1308829051f5ec1a04a74f9ecbd17e41510439752f"
   end
 
   depends_on "openjdk@11"

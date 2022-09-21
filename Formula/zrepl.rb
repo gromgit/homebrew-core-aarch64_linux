@@ -7,12 +7,8 @@ class Zrepl < Formula
   head "https://github.com/zrepl/zrepl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c8d9fd289790fce71ff766f4ba508841b26b07c9646c86c0f58d934b434a98a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "91da92f9974cacb35d64a0d84c20c6a02eb5c5ebdfc879bff968c883177e3298"
-    sha256 cellar: :any_skip_relocation, monterey:       "36ad9cad7ba5fdabf65461dd637a4cb05028a93c332b440d7f95409067d89dce"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9a54101a9d020f333e5183d372ffbd743ffc0a702cd59f9abc284d2fd2890aa8"
-    sha256 cellar: :any_skip_relocation, catalina:       "a4369b90960452b045f6d3879a2177c540fa3e42a6d18b3a567240c92c2a4772"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a615f406414dd1eed10a32de0cdae83f74b13de612ac0103248f0639ea962f43"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zrepl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0d19c89eb14c08b9f536477f3c9ad9ddfffa857393d2b59c5712ee8b4db6a76b"
   end
 
   depends_on "go" => :build

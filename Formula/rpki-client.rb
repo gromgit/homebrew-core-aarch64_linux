@@ -1,16 +1,12 @@
 class RpkiClient < Formula
   desc "OpenBSD portable rpki-client"
   homepage "https://www.rpki-client.org/index.html"
-  url "https://ftp.openbsd.org/pub/OpenBSD/rpki-client/rpki-client-7.9.tar.gz"
-  sha256 "accf531c885a9d95a37a6627399a59b360fa29a11810aba15b27d7526ce43e75"
+  url "https://ftp.openbsd.org/pub/OpenBSD/rpki-client/rpki-client-7.8.tar.gz"
+  sha256 "7a87a6fe7b1bd36a1ce277cf50e125ece7b2ed0236e252a66e2b34ca8f88b7f5"
   license "ISC"
 
   bottle do
-    sha256 arm64_monterey: "69384664e6a739e4a961434920a17a0b70033383c7c688cbb350af5ae06b01a6"
-    sha256 arm64_big_sur:  "1396185417a4287311398c2ee298dc1673a13beda4fc93c84ad5e537448a4e56"
-    sha256 monterey:       "9dee973ef3c51bb9ade9d0e0b154f09ddca26c42fed785a9356d5c780c0335ea"
-    sha256 big_sur:        "cc11ae071a0d37348fc60d4980551db9c4aa56dcc513fe32cab4a75bffedb974"
-    sha256 catalina:       "5b1e79efec36ee324bb3acd1f7e14bf58fd31be3b2355a752ac207ffbbbf0b6f"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on "pkg-config" => :build
@@ -34,6 +30,6 @@ class RpkiClient < Formula
   end
 
   test do
-    assert_match "VRP Entries: 0 (0 unique)", shell_output("#{sbin}/rpki-client -n -d . -R . 2>&1").lines.last
+    assert_match "parse file ta/", shell_output("#{sbin}/rpki-client -n -d . -R . 2>&1").lines.last
   end
 end

@@ -1,12 +1,11 @@
 class FfmpegAT28 < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-2.8.20.tar.xz"
-  sha256 "8566e326c3f4e47c67a176c9d14c1efe0852d025be378183ad7f5ceb2a7676c7"
+  url "https://ffmpeg.org/releases/ffmpeg-2.8.19.tar.xz"
+  sha256 "6cedc0c20e3abb3176ac833c7774371dc9ed80a0ff566d46693dd7440e3070f0"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url "https://ffmpeg.org/download.html"
@@ -14,12 +13,12 @@ class FfmpegAT28 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "6502ce2cc2cc1177957eeace83265254b063bac9bfd4ba92e048324456514592"
-    sha256 arm64_big_sur:  "aec6ec031f02fdcc7551142225d35e8b01f6852b89b07e13c3965ec869ddac7c"
-    sha256 monterey:       "8a5fe7f96f3a68ad134d1b0f07a2336e3a134ef1f61dd86d34266707b1e4e976"
-    sha256 big_sur:        "eb22288ea2eb879dbded818fbf9850da0f8c9b0b5338e390b52f7975e61acc65"
-    sha256 catalina:       "70c26b5cc479f01d315b5a4c1c1856bedf407e61b66898e2baff3fbfe7c043a4"
-    sha256 x86_64_linux:   "fb79180e038db7152fcbe6f8015e12782dfa1cbb17bc1c776e35ff02b5451394"
+    sha256 arm64_monterey: "65bec82261d5421432c8ffb05b2e713deec6df17caa7120f556d278858683a0c"
+    sha256 arm64_big_sur:  "7220c95033f94c9371b2c81f85cc38d1e9912410656b6ebcb3720db56466cdbb"
+    sha256 monterey:       "b7d6d86175d76a83e7f9f40c5ec5e34920b013a7dde172110f3d7e99c4970c26"
+    sha256 big_sur:        "ae84581309ad6d07d954478f535124673754b4ce09bcb936f992a113d23f0d76"
+    sha256 catalina:       "fc9c6bda822b30630b878dd0027e9d9701e5990fc0714300e15e9832c5af371d"
+    sha256 x86_64_linux:   "61eee811848a988b5159bb92f4ad57177f772c6c319a8a541d8b3a79123ed5cd"
   end
 
   keg_only :versioned_formula
@@ -46,7 +45,6 @@ class FfmpegAT28 < Formula
   depends_on "x264"
   depends_on "x265"
   depends_on "xvid"
-  depends_on "xz" # try to change to uses_from_macos after python is not a dependency
 
   def install
     args = %W[

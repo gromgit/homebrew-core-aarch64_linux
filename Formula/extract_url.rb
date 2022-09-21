@@ -6,47 +6,17 @@ class ExtractUrl < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6695e1a5dc10ac46acf1420064c5822095bb658a90ca1b43a1b68e769998edeb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "950f85ce128891278f41aa0b2c7fcaf0cce890055be40741ed8cac6db35c0a73"
-    sha256 cellar: :any_skip_relocation, monterey:       "068e50356b3f5e555dc76209629169704f1dc03cbf20a7e8f94b2ee3c884ca05"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1418a8148c3fbeb60fbb976b52b5fa59d3702ba5e69fe02179588ab3ba343001"
-    sha256 cellar: :any_skip_relocation, catalina:       "f25df47b8114db594552372e4ee1f9bf7337ab14996429dda0981c93c74afcfe"
-    sha256 cellar: :any_skip_relocation, mojave:         "e8061e3ca6f23c1ae9a042960d05b8ff23887a684c6b37cc831f17fdab4936de"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "2880b669c381e7c7a2420d71c673d68d988223dc63bad9f14b1c62495973f362"
-    sha256 cellar: :any_skip_relocation, sierra:         "57b556a225f6ec03cee7166c1b4cbd2eb1c0eb2bd7819865bd9ed39620b81b68"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "96d599a0f724f6f09e261c8b0a1c8bbf69ce1b199d311527636f8a5d42f197c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed3da89e39498b9cf758805a920ebbb6bb4f0f14e6587b7a82f1e0ddf3beddc5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "950f85ce128891278f41aa0b2c7fcaf0cce890055be40741ed8cac6db35c0a73"
+    sha256 cellar: :any_skip_relocation, big_sur:       "1418a8148c3fbeb60fbb976b52b5fa59d3702ba5e69fe02179588ab3ba343001"
+    sha256 cellar: :any_skip_relocation, catalina:      "f25df47b8114db594552372e4ee1f9bf7337ab14996429dda0981c93c74afcfe"
+    sha256 cellar: :any_skip_relocation, mojave:        "e8061e3ca6f23c1ae9a042960d05b8ff23887a684c6b37cc831f17fdab4936de"
+    sha256 cellar: :any_skip_relocation, high_sierra:   "2880b669c381e7c7a2420d71c673d68d988223dc63bad9f14b1c62495973f362"
+    sha256 cellar: :any_skip_relocation, sierra:        "57b556a225f6ec03cee7166c1b4cbd2eb1c0eb2bd7819865bd9ed39620b81b68"
+    sha256 cellar: :any_skip_relocation, el_capitan:    "96d599a0f724f6f09e261c8b0a1c8bbf69ce1b199d311527636f8a5d42f197c6"
+    sha256 cellar: :any_skip_relocation, yosemite:      "d16fcc4c81a2ffb7f384f104396aae674bb8f6f08d336056ab858924d545f205"
   end
 
-  uses_from_macos "ncurses"
   uses_from_macos "perl"
-
-  on_linux do
-    resource "YAML::Tiny" do
-      url "https://cpan.metacpan.org/authors/id/E/ET/ETHER/YAML-Tiny-1.73.tar.gz"
-      sha256 "bc315fa12e8f1e3ee5e2f430d90b708a5dc7e47c867dba8dce3a6b8fbe257744"
-    end
-
-    resource "Module::Install" do
-      url "https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Install-1.19.tar.gz"
-      sha256 "1a53a78ddf3ab9e3c03fc5e354b436319a944cba4281baf0b904fa932a13011b"
-    end
-
-    resource "Module::Build" do
-      url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4231.tar.gz"
-      sha256 "7e0f4c692c1740c1ac84ea14d7ea3d8bc798b2fb26c09877229e04f430b2b717"
-    end
-
-    resource "Mail::Header" do
-      url "https://cpan.metacpan.org/authors/id/M/MA/MARKOV/MailTools-2.21.tar.gz"
-      sha256 "4ad9bd6826b6f03a2727332466b1b7d29890c8d99a32b4b3b0a8d926ee1a44cb"
-    end
-
-    resource "Date::Format" do
-      url "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/TimeDate-2.33.tar.gz"
-      sha256 "c0b69c4b039de6f501b0d9f13ec58c86b040c1f7e9b27ef249651c143d605eb2"
-    end
-  end
 
   resource "MIME::Parser" do
     url "https://cpan.metacpan.org/authors/id/D/DS/DSKOLL/MIME-tools-5.508.tar.gz"
@@ -91,26 +61,24 @@ class ExtractUrl < Formula
   def install
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
     ENV.prepend_path "PERL5LIB", libexec/"lib"
-    ENV["PERL_MM_USE_DEFAULT"] = "1"
 
     # Disable dynamic selection of perl, which may cause "Can't locate
     # Mail/Header.pm in @INC" if brew perl is picked up. If the missing modules
     # are added to the formula, mismatched perl will cause segfault instead.
-    perl = OS.mac? ? "/usr/bin/perl" : Formula["perl"].opt_bin/"perl"
-    inreplace "extract_url.pl", "#!/usr/bin/env perl", "#!#{perl}"
+    inreplace "extract_url.pl", "#!/usr/bin/env perl", "#!/usr/bin/perl"
 
-    resources.each do |r|
-      r.stage do
-        if File.exist? "Makefile.PL"
-          system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
-          system "make"
-          system "make", "install"
-        else
-          system "perl", "Build.PL", "--install_base", libexec
-          system "./Build"
-          system "./Build", "install"
-        end
+    %w[MIME::Parser HTML::Parser Pod::Usage Env Getopt::Long Curses Curses::UI].each do |r|
+      resource(r).stage do
+        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+        system "make"
+        system "make", "install"
       end
+    end
+
+    resource("URI::Find").stage do
+      system "perl", "Build.PL", "--install_base", libexec
+      system "./Build"
+      system "./Build", "install"
     end
 
     system "make", "prefix=#{prefix}"

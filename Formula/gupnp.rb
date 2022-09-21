@@ -6,15 +6,14 @@ class Gupnp < Formula
   url "https://download.gnome.org/sources/gupnp/1.4/gupnp-1.4.3.tar.xz"
   sha256 "14eda777934da2df743d072489933bd9811332b7b5bf41626b8032efb28b33ba"
   license "LGPL-2.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "20a8225bd3f69fb56b37b09260e43699ac2ca88529178593c09b3b0ac6a05516"
-    sha256 cellar: :any, arm64_big_sur:  "cc2a5d6a8a5755eeddf83c5e39be393b9a8597ca4d35b4e230755cf2e25d2d78"
-    sha256 cellar: :any, monterey:       "bde4dbd7e0104c45f2776b1327fbf06876f98c376549b88221563a5e25b2597a"
-    sha256 cellar: :any, big_sur:        "a9aacbb2274395fcf56e2d8d18a6f91d342d09fbb1b1cf73e1fe51065b31af3a"
-    sha256 cellar: :any, catalina:       "ba073cf84ba7e26fa06dd14b4d6a0502650c99e0225822168d784520b2c7b036"
-    sha256               x86_64_linux:   "710a810a02b204d1570b4b20ed7d4fb625e5d009975f386c8a4a0509daa90389"
+    sha256 cellar: :any, arm64_monterey: "1937e917519b9784475606a21cc66d5b2ed5914c2008105c992b91a04bee834f"
+    sha256 cellar: :any, arm64_big_sur:  "811b1ec251e75dcec1a4f0b885edb3ec50f3b26e27ef0220f2da02bdc19017ff"
+    sha256 cellar: :any, monterey:       "56d15f95db673670a3cb899a223bba0b683daa6ddc3c65aadb0a6a85b0a51cef"
+    sha256 cellar: :any, big_sur:        "82379629f5708acfbfb767f53e6a0bdfd69ae3a8aeb4b3b747b0c906d7fcda44"
+    sha256 cellar: :any, catalina:       "7e2f769606feeb7276facb34f936b547cbabe451dcd76e3428ccf11c03c32f86"
+    sha256               x86_64_linux:   "5c70c2506558b48c9457ab89025929328f31333a14afe65d8d96010c7d8ed7f4"
   end
 
   depends_on "docbook-xsl" => :build
@@ -28,18 +27,21 @@ class Gupnp < Formula
   depends_on "gssdp"
   depends_on "libsoup@2"
   depends_on "libxml2"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   def install
     ENV.prepend_path "PKG_CONFIG_PATH", Formula["libsoup@2"].opt_lib/"pkgconfig"
     ENV.prepend_path "XDG_DATA_DIRS", Formula["libsoup@2"].opt_share
     ENV.prepend_path "XDG_DATA_DIRS", HOMEBREW_PREFIX/"share"
-    ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
 
-    system "meson", *std_meson_args, "build"
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
-    rewrite_shebang detected_python_shebang, *bin.children
+    mkdir "build" do
+      ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+      rewrite_shebang detected_python_shebang, *bin.children
+    end
   end
 
   test do

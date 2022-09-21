@@ -4,15 +4,15 @@ class Pagmo < Formula
   url "https://github.com/esa/pagmo2/archive/v2.18.0.tar.gz"
   sha256 "5ad40bf3aa91857a808d6b632d9e1020341a33f1a4115d7a2b78b78fd063ae31"
   license any_of: ["LGPL-3.0-or-later", "GPL-3.0-or-later"]
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9fdeb12b0f2606287dd1e2032da47a63c84702b3b983ea502fa258ef8ccd2c46"
-    sha256 cellar: :any,                 arm64_big_sur:  "c47c61282421e3ca6dcc9b0c3506860d79283a3612eb2307f52292c48e423986"
-    sha256 cellar: :any,                 monterey:       "76a1ef6baf81a36641d9ded41378f20f4a528f378e289d9d4c03396143fd49bc"
-    sha256 cellar: :any,                 big_sur:        "3c13ea41cb30df2fdb763fce03b402ee38c0a44a48eb41374dda972ca19786f0"
-    sha256 cellar: :any,                 catalina:       "5ec05fbd452a6bd80feaab0e4030ad8e2ff5d29e5e895779171118ea7bada8ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "167678b868dc7796bbe34aa805d657b2012bcf6c413594e1dbff9e190dbe57fb"
+    sha256 cellar: :any,                 arm64_monterey: "26f757c02d4e087032f684151fcf5c1f202e82b77c12520ecd0fc9e3c1063831"
+    sha256 cellar: :any,                 arm64_big_sur:  "4078c9db26232af1918e92c1fe2f452eb346fe07564cf49ff6cf840164f3f0b0"
+    sha256 cellar: :any,                 monterey:       "38b19943404fcb304e69a51f0e96e3f229080ece753977a083e5d20071034a67"
+    sha256 cellar: :any,                 big_sur:        "e3fe9ef3f10e0f3a8a374afb3ce6dde2eb1a4e269fb810cc18e7be641a638c81"
+    sha256 cellar: :any,                 catalina:       "f5623fc821e2df72e40215540dd642841777bc925926315a373818d31fe58b33"
+    sha256 cellar: :any,                 mojave:         "7c5416e486a9683c6a919717a5c3bfc1ab2dd294f7c328fcb3a9cdc7b535aac5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aabb46831cf4526dfaa960063208248beb827d5c74f70bc5e0a12552d71f81d9"
   end
 
   depends_on "cmake" => :build

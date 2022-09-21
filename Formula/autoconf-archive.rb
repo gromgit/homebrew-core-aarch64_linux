@@ -7,13 +7,10 @@ class AutoconfArchive < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "07da3d145d395749125f2402925fd6995056bf303f9514ed9018cb9140b8d2fd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07da3d145d395749125f2402925fd6995056bf303f9514ed9018cb9140b8d2fd"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7e7b1edebfa9d71d86a1885139b5271986eaddb691f5a5b826337910595fe68"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7e7b1edebfa9d71d86a1885139b5271986eaddb691f5a5b826337910595fe68"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7e7b1edebfa9d71d86a1885139b5271986eaddb691f5a5b826337910595fe68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e8d9592853fb11e37c161cf4eba16e4ba34b1720ac61d016793ca5ab7d34e19"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autoconf-archive"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8ea208fca421ae5900b2bed1bd093e11f2a154a07e7356365b27b2fffa3d6e54"
   end
+
 
   # autoconf-archive is useless without autoconf
   depends_on "autoconf"

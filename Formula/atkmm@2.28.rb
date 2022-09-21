@@ -1,8 +1,8 @@
 class AtkmmAT228 < Formula
   desc "Official C++ interface for the ATK accessibility toolkit library"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.3.tar.xz"
-  sha256 "7c2088b486a909be8da2b18304e56c5f90884d1343c8da7367ea5cd3258b9969"
+  url "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.2.tar.xz"
+  sha256 "a0bb49765ceccc293ab2c6735ba100431807d384ffa14c2ebd30e07993fd2fa4"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,12 +11,13 @@ class AtkmmAT228 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "876683a0c5f4da334dadb0142c564fb2007d9a3a66c7696dbfdc03dfb9162f9f"
-    sha256 cellar: :any, arm64_big_sur:  "1b957048c912011d829c1b4842c8e7cb94526e80500046d732010881d33109ec"
-    sha256 cellar: :any, monterey:       "8ca4c71ef66437838731e95a460d66430554fd3468b3c8856e638b09d94f2bc5"
-    sha256 cellar: :any, big_sur:        "473ce70bed27eac91868d6b8214c027b08e88abea444076d20615462842b86a2"
-    sha256 cellar: :any, catalina:       "4d2aeadd4d5114932d7d90ac2d53ed409e84b1703112e6dc5a0e8a5992d214b2"
-    sha256               x86_64_linux:   "0b1ed87427fb65199370db6a27c2bb18c0ebf330782ff32297bf1519c74d764d"
+    sha256 cellar: :any,                 arm64_monterey: "c998a07090f1a5979f5fffc63ae20a16e05683904391c1e6af55201c91111803"
+    sha256 cellar: :any,                 arm64_big_sur:  "e983693a33a42234e168ab6691a030a7e90f6ed0730dc3011034ec14478472b6"
+    sha256 cellar: :any,                 monterey:       "2a89fdca2f46e5a75c864fe197d2f7e2584d07f68c0fa693480d6da4adf75581"
+    sha256 cellar: :any,                 big_sur:        "ee8b64bf67e30fb46e3e8b1ec34c902055cad8ec635a8de8331073406e6a81f2"
+    sha256 cellar: :any,                 catalina:       "e6f94253d0a96d89131fe72fcf212028e87f41875761e57dd5f0cc40b46bfaf2"
+    sha256 cellar: :any,                 mojave:         "2b7ac6cd13ae986cef9784908877b3e4b58d42846b23f733e6f8c17600a44cc3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f39ac64ae650ee9f8d40447d346fc2166bc24a016d2e29cb2d23836c290be5e3"
   end
 
   depends_on "meson" => :build

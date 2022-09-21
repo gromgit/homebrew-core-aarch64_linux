@@ -19,7 +19,7 @@ class KubeAws < Formula
   end
 
   # Fork can be found at: https://github.com/kube-aws/kube-aws
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2020-09-29", because: :repo_archived
 
   depends_on "go" => :build
   depends_on "packr" => :build

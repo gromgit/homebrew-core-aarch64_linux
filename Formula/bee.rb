@@ -6,8 +6,10 @@ class Bee < Formula
   license "MPL-1.1"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a6dc0a2c6a83e541ee2c9a4daf767b4a4dc88bde97c6454248f3311ca17970ca"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bee"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "896b635d45b0fd891b0394a1e218b13c2f9955af064c55c92f473ed711be4d9d"
   end
+
 
   depends_on "openjdk"
 

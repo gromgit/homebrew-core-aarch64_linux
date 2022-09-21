@@ -32,6 +32,7 @@ class Terminalimageviewer < Formula
   end
 
   test do
-    system bin/"tiv", test_fixtures("test.png")
+    assert_equal "\e[48;2;0;0;255m\e[38;2;0;0;255m  \e[0m",
+                 shell_output("#{bin}/tiv #{test_fixtures("test.png")}").strip
   end
 end

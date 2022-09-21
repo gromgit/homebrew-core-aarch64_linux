@@ -2,23 +2,22 @@ class StellarCore < Formula
   desc "Backbone of the Stellar (XLM) network"
   homepage "https://www.stellar.org/"
   url "https://github.com/stellar/stellar-core.git",
-      tag:      "v19.3.0",
-      revision: "9ce6dc4e9889ce86083c0e3ba2e773e0ff2ced3a"
+      tag:      "v19.0.0",
+      revision: "9d0704eb4ef3d2827ffe0501282e21818d683898"
   license "Apache-2.0"
   head "https://github.com/stellar/stellar-core.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1448e110ca53e698c17c8b03f9624b97cd27a5b850b873a68a2d431f768ee98e"
-    sha256 cellar: :any,                 arm64_big_sur:  "3e2d3cb23a83a67588967e7fc6f469a53a6ae368b05c3295dfe7559dabb90306"
-    sha256 cellar: :any,                 monterey:       "28bce77a35079c3da0c3553dec91bd0282f29f55a98f015a1e66b04dff37828c"
-    sha256 cellar: :any,                 big_sur:        "243a2fcfe423ba6a6023b70df32d044095bfcb5545d571f3ccf63b9d3bfd2f87"
-    sha256 cellar: :any,                 catalina:       "c2b043f20dbe8038906076e402cfab67b41f50a97236a60a4b5ab46f51f99721"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9abefc1c4abcd62475c622bc3f433a947d14f8aaf538153bb57cc5173d7ce0bd"
+    sha256 cellar: :any,                 arm64_monterey: "f95f40c979a78eaab3877eb6dd2104c5fd52c7c7048dc44347953b55778a879f"
+    sha256 cellar: :any,                 arm64_big_sur:  "0975e73257c78a479efd8df3867721c162ed0b6ce0105d05fb06dc589dda45b6"
+    sha256 cellar: :any,                 monterey:       "f9979120501b461420ac17411b7c55bd8a0196cc10d3756d83753d9a3162e872"
+    sha256 cellar: :any,                 big_sur:        "1319c9b0c574224b584475157c509a0c79e8d579103795056216c642ae066403"
+    sha256 cellar: :any,                 catalina:       "4dc70a214a207e61a9f00684debd1b0280d5650cc60661339c9f49ddeb49c964"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdc4b40e2ab3bb4a88eb035dbeda2955ee0aefcda14b6831b0cced8012da58d7"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "bison" => :build # Bison 3.0.4+
   depends_on "libtool" => :build
   depends_on "pandoc" => :build
   depends_on "pkg-config" => :build
@@ -27,6 +26,8 @@ class StellarCore < Formula
   depends_on "libpqxx"
   depends_on "libsodium"
   depends_on macos: :catalina # Requires C++17 filesystem
+
+  uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
 
   on_linux do

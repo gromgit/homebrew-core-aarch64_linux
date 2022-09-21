@@ -4,7 +4,7 @@ class S2geometry < Formula
   url "https://github.com/google/s2geometry/archive/v0.10.0.tar.gz"
   sha256 "1c17b04f1ea20ed09a67a83151ddd5d8529716f509dde49a8190618d70532a3d"
   license "Apache-2.0"
-  revision 2
+  revision 1
 
   livecheck do
     url :homepage
@@ -12,12 +12,12 @@ class S2geometry < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6222e85b0e6e61d8cdb6d3d51e26d10b8bbfe9642c977f208f503c152db92243"
-    sha256 cellar: :any,                 arm64_big_sur:  "9ff446cb91fa7a78525393564d051838840599f9d49240d22792815af975bee7"
-    sha256 cellar: :any,                 monterey:       "def7fbb5bf4737cb1d9e44e58212b2231f947f06aad0713c5a14f6e2e479a3df"
-    sha256 cellar: :any,                 big_sur:        "0432a5fdc0b4448ee3e1e7d65845924434f58a51770ce263952f8cd59cba90cb"
-    sha256 cellar: :any,                 catalina:       "05fb72af1432e37b03bbfe97fec57083417a294782d0accaf69b5a6fe7d298c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b24429eb177024a38cd01deefcb56e5b698d379902f80ea62ab0f6aefe71997"
+    sha256 cellar: :any,                 arm64_monterey: "f21e190626623399004e5dbcbaead1c27827fa539027e547d9c6e020bd46f258"
+    sha256 cellar: :any,                 arm64_big_sur:  "c5bdc261e7fb11b9088853b39d69f717b8905af81559ec205ae58a5c21a0fc38"
+    sha256 cellar: :any,                 monterey:       "890a374b9ef7c6e947a098c494211d4dc6ab09ee543de1f312ee476e450135ba"
+    sha256 cellar: :any,                 big_sur:        "7a4dc546b1f10a74685992f81c5b8dadbef906365d46256ee345f854d3149393"
+    sha256 cellar: :any,                 catalina:       "fd205be9dece653c22a44d6795965c33fadd4f4bcbf5d82b96b1e3d5efadf907"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "830f5647642ad1e044c53196967b84a33b0679b686f9aa3599e49ba8ab7ff58f"
   end
 
   depends_on "cmake" => :build

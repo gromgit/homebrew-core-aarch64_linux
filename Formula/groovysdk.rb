@@ -1,8 +1,8 @@
 class Groovysdk < Formula
   desc "SDK for Groovy: a Java-based scripting language"
   homepage "https://www.groovy-lang.org/"
-  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-sdk-4.0.4.zip"
-  sha256 "5f15ba97715c56cc45a5aee82762e21bd7f3d8e88feeb258651974a356aa6cf9"
+  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-sdk-4.0.2.zip"
+  sha256 "7bf19b75fbcc9c02c9823eacdfe21f54145ae467a6466be28a525570c78a2db8"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,12 @@ class Groovysdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b240d031d112faa41cb07d52d1d145ebdd3743bd6e9c9ea9addcfeed48d985d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b240d031d112faa41cb07d52d1d145ebdd3743bd6e9c9ea9addcfeed48d985d"
-    sha256 cellar: :any_skip_relocation, monterey:       "5631bdfe37fc0c073132e8f490871461b1eb1d81f8b91ca9f52622f5e3f879cc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5631bdfe37fc0c073132e8f490871461b1eb1d81f8b91ca9f52622f5e3f879cc"
-    sha256 cellar: :any_skip_relocation, catalina:       "5631bdfe37fc0c073132e8f490871461b1eb1d81f8b91ca9f52622f5e3f879cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b240d031d112faa41cb07d52d1d145ebdd3743bd6e9c9ea9addcfeed48d985d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e330c6a65212b7dcb331e8486067bf2eca131be269d54958364025cb507030f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e330c6a65212b7dcb331e8486067bf2eca131be269d54958364025cb507030f8"
+    sha256 cellar: :any_skip_relocation, monterey:       "f3e1901152f6d6e56f049131a28ddb2883974236ac371dae59884b55712d5094"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f3e1901152f6d6e56f049131a28ddb2883974236ac371dae59884b55712d5094"
+    sha256 cellar: :any_skip_relocation, catalina:       "f3e1901152f6d6e56f049131a28ddb2883974236ac371dae59884b55712d5094"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e330c6a65212b7dcb331e8486067bf2eca131be269d54958364025cb507030f8"
   end
 
   depends_on "openjdk"

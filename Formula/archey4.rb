@@ -8,13 +8,10 @@ class Archey4 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "41ddb1507784fabcc850020343fd218a3550a45b837a3ef67467cb52945c873c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45e747c8cdf4b78d7600910803f3651694472044a6228222507bf07c99ec3a12"
-    sha256 cellar: :any_skip_relocation, monterey:       "954a64e2166de9a4819c80b5af70de71c466ac4266116580ade432d31bcb564d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af7eaa81198e4469d4f929dfb0710f17cb9071201929791c6e5b107343c6e86a"
-    sha256 cellar: :any_skip_relocation, catalina:       "2d54f4f054f4c28b2622c158cf30ad023100994e245490eea9307fda36529ba2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac16d29ad8c1354679cebb649399298c6b01975f75fe6cc601076343d712b83a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/archey4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f75022ee3e46e93c7cacb33c2b3ceb2b8b4617180a40deb1665231ac31501bf8"
   end
+
 
   depends_on "python@3.10"
 

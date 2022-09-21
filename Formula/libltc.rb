@@ -1,17 +1,13 @@
 class Libltc < Formula
   desc "POSIX-C Library for handling Linear/Logitudinal Time Code (LTC)"
   homepage "https://x42.github.io/libltc/"
-  url "https://github.com/x42/libltc/releases/download/v1.3.2/libltc-1.3.2.tar.gz"
-  sha256 "0a6d42cd6c21e925a27fa560dc45ac80057d275f23342102825909c02d3b1249"
+  url "https://github.com/x42/libltc/releases/download/v1.3.1/libltc-1.3.1.tar.gz"
+  sha256 "50e63eb3b767151bc0159a3cc5d426d03a42fd69029bc9b3b7c346555f4b709c"
   license "LGPL-3.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8289e0f5389ee652949981fbde5d3955d78048707c2731619e2d9d046cf1f89a"
-    sha256 cellar: :any,                 arm64_big_sur:  "d003af07740326535cc95332c180cc467b29eaab2d227438e1486c8891bd5560"
-    sha256 cellar: :any,                 monterey:       "9a4cdb442f640d04e8886b888bbc5427b448cc9d7a160672a505fda5fa1371c8"
-    sha256 cellar: :any,                 big_sur:        "a8a22a13e7faa84038e3833a7ad379d5ca3afe26670476fad9f87afc5312338a"
-    sha256 cellar: :any,                 catalina:       "2489b05efb1e77a52635ff5cded3850b9c1abe861b01145bccba7a2f6edaafaa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c160950aa4d33232070cb6607deec9ed4fc9b070dd5dcf0c3221404199016c46"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libltc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "681317d8a106cdc3dba9a2036ce7bf086cb987bacf4f9155bdb8ca1dcd746a52"
   end
 
   def install

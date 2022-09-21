@@ -11,8 +11,10 @@ class AlsaLib < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "9e9409e572680975dd401de6d0466ebc5b8bf2832cd013f2c88fc2022d48addb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/alsa-lib"
+    sha256 aarch64_linux: "2c2a0924315246839f944d65f587a614d40eeb6bba5f13b69b688df4cf39db4f"
   end
+
 
   depends_on :linux
 

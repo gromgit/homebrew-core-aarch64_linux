@@ -6,13 +6,10 @@ class BasisUniversal < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "48a4db14f02cbd5adc8c944f79cd22c46b6d4b3f8600a3f3dc1cf091dd932afb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8985ba21dd83aafd2ab4f37687ab88f1276a6c2f1697365200d578586cf06707"
-    sha256 cellar: :any_skip_relocation, monterey:       "b1715f18cf7b1567a23ae47d399995ca2b090116ee1682cd74873a2628603172"
-    sha256 cellar: :any_skip_relocation, big_sur:        "591d88c0a3342d6350e6164d880040cf4e56a60e4ad78d97f4c570fffaa2b883"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f4c2f9c4d85a80d2e0541a2a52638b11809247bb3989e71801c26b5d70a019e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "668ee321961b9840c64fbce0be72641ec4f5c12b95f18bc93a279a2db621a745"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/basis_universal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a5ca17e5f0a0bd37697e5e613b773867d3d1f695d41d0dea19ee8029f7c81dce"
   end
+
 
   depends_on "cmake" => :build
 

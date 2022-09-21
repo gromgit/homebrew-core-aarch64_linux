@@ -4,16 +4,15 @@ class PerlBuild < Formula
   url "https://github.com/tokuhirom/Perl-Build/archive/1.33.tar.gz"
   sha256 "79cfe7cdad693ab7b5a9544b81cff43c5ee7d09c057c86af524395313d53759b"
   license any_of: ["Artistic-1.0", "GPL-1.0-or-later"]
-  revision 1
   head "https://github.com/tokuhirom/perl-build.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d9608da782685ddfb59db4495bec0eaaf9a2dd1626a83996c45c97bd12e2354"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "558af15f28cb87935cda530e36419a86a843b15507c502e83de36ddf6549d75c"
-    sha256 cellar: :any_skip_relocation, monterey:       "2bfab1553d4dd92516f1047494f7cf5dc18929bf2d55db241d01cf4957c90059"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c6cde594d2cc9c52a19a46e4dbd874ade410ef6972a52e39ca92cdbe32edd33c"
-    sha256 cellar: :any_skip_relocation, catalina:       "4edfe560c51cd7bbfc534d902f25073ea977e2fd145cb135872ef60020860b49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c7d90c53829a1270a2a5bcddc11a53aef64e130f6198cadbbe0046dc605ce87"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "39d7cb7bca0663f6af6255a81dba6d39f27203867131da1bdeaccc3b7c2064bb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4461dc879b88fb7a270f1d4e9366aac7031aad92f49901dff5cf29cd5dec0c98"
+    sha256 cellar: :any_skip_relocation, monterey:       "6df7a4a63c78960c82b65c8422ff92555e5083b64bd131c95974a9e35c64ed0e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "325dd044c782e54d5912e9d0dbe4d148805b2369a009b0af94e5ec9d2f14d4db"
+    sha256 cellar: :any_skip_relocation, catalina:       "ef1cfb13839f2dd122ad246b6a64203f828e7832c8bab5cd78e70b4349327c40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "294ea6fcd30feae2f4438b0aa717431cc84a3556fdda4724432886cf05338b2d"
   end
 
   uses_from_macos "perl"
@@ -126,13 +125,6 @@ class PerlBuild < Formula
 
     %w[perl-build plenv-install plenv-uninstall].each do |cmd|
       (bin/cmd).write_env_script(libexec/"bin/#{cmd}", PERL5LIB: ENV["PERL5LIB"])
-    end
-
-    # Replace cellar path to perl with opt path.
-    if OS.linux?
-      inreplace Dir[libexec/"bin/{perl-build,config_data}"] do |s|
-        s.sub! Formula["perl"].bin.realpath, Formula["perl"].opt_bin
-      end
     end
   end
 

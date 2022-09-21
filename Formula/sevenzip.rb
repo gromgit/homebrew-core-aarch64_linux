@@ -1,9 +1,9 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://7-zip.org/a/7z2201-src.tar.xz"
-  version "22.01"
-  sha256 "393098730c70042392af808917e765945dc2437dee7aae3cfcc4966eb920fbc5"
+  url "https://7-zip.org/a/7z2107-src.tar.xz"
+  version "21.07"
+  sha256 "213d594407cb8efcba36610b152ca4921eda14163310b43903d13e68313e1e39"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
 
   livecheck do
@@ -12,22 +12,11 @@ class Sevenzip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b9131e0986339f9986c7248c3101776279ddb390d287098ea5be1c84d6408d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15f4157398fdb03a9fc9ffa66eaf08abc72987d471b23ea22f5ab6700d7ba1a7"
-    sha256 cellar: :any_skip_relocation, monterey:       "64f2ea16a7c0f8591701914621b8ada21ecd6caa3ecf2568c8d4bc470edfae00"
-    sha256 cellar: :any_skip_relocation, big_sur:        "22a8c3aa0647a1f8829c7e180cb2d6ac78b071925e8c06be361716626487fd6a"
-    sha256 cellar: :any_skip_relocation, catalina:       "3ac4e9978c71f2452ded1a8ee0983b0710cc66d127ff2a95dc603b6211ed9df4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4dc467f705977b3a7d390a1248c691b9f4cee3c98d21647d55ef7c57afe28b3c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sevenzip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e33674a8788f3d80e1c18765615356014f527d7e35d5accda96817409d81db1e"
   end
 
   def install
-    # See https://sourceforge.net/p/sevenzip/discussion/45797/thread/9c2d9061ce/#01e7
-    if OS.mac?
-      inreplace ["Common/FileStreams.cpp", "UI/Common/UpdateCallback.cpp"].map { |d| buildpath/"CPP/7zip"/d },
-                "sysmacros.h",
-                "types.h"
-    end
-
     cd "CPP/7zip/Bundles/Alone2" do
       mac_suffix = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch
       mk_suffix, directory = if OS.mac?

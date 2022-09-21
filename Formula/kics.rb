@@ -1,23 +1,14 @@
 class Kics < Formula
   desc "Detect vulnerabilities, compliance issues, and misconfigurations"
   homepage "https://kics.io/"
-  url "https://github.com/Checkmarx/kics/archive/refs/tags/v1.5.15.tar.gz"
-  sha256 "596c1dc39e6ad29b0a8f93593ce8a20fed1ac3ca0506a1e0646995568d0f156d"
+  url "https://github.com/Checkmarx/kics/archive/refs/tags/v1.5.10.tar.gz"
+  sha256 "eed7ecb324d5ab84355abeb8a3aa73403d0ab8e49e41788f145fb0bd586b3cce"
   license "Apache-2.0"
   head "https://github.com/Checkmarx/kics.git", branch: "master"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1ca4b4223a2f25aad642f90fc46d9e82b36ce595c47114279383e8b967d64a47"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "557d0cf72b09bd8e7b54655f7a1abfa3007770e4df2fd6c6ec1e0378365f70cb"
-    sha256 cellar: :any_skip_relocation, monterey:       "f559e37c776fd2dae22d9ad1f89560850874cc52a7ef96b0da4dfe4cb348eb03"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6db3d4f50d4672d65881d45b6486a27b5b42d9be0e25df4bad08ea4304647a3e"
-    sha256 cellar: :any_skip_relocation, catalina:       "6ae2e9a059fb2871adb891292886243fcd16f9dfad32c9c0d675fed73917c8f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b254291e17614a85e8c36e616b07f84fea93dad3c1053d42afbcfd64f458afd0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kics"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dbd68fcf364316961364769ce4fbc87e9eca39e40e07b5083716b9022d59ff1a"
   end
 
   depends_on "go" => :build

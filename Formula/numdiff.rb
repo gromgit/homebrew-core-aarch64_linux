@@ -12,12 +12,8 @@ class Numdiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bdd0116d55164e3704b948d8ff69aa57e3553d7c635897d26e9d381ef67b6dea"
-    sha256 cellar: :any,                 arm64_big_sur:  "ee93b5fbe264b96623ef6523a1dec871a5839d56823512da6a7811c06c367d5d"
-    sha256 cellar: :any,                 monterey:       "58e6c6f067c9a0ff39143bea741d68c5b50f06ddf7d66f5fbc35f4d691fcfd33"
-    sha256 cellar: :any,                 big_sur:        "5acb0364a5f94b40b9f4d79c998910426855da30ea7f7b00241c135ffabdcb8e"
-    sha256 cellar: :any,                 catalina:       "bb6458bc44ff4086cf74590c540dfce76014aaafdffd140b0a032b4ddbf17df6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9334ab2846721f6a4b643e061dc1ef76f693a8a07f99f05dda3dfdc190165a9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/numdiff"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "70363226c4789fb058b0e2e1e92cc8f53c1607f9a1467ce752e4abdc0c8856ca"
   end
 
   depends_on "gmp"

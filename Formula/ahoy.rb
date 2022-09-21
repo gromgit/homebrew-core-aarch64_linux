@@ -1,23 +1,25 @@
 class Ahoy < Formula
   desc "Creates self documenting CLI programs from commands in YAML files"
   homepage "https://ahoy-cli.readthedocs.io/"
-  url "https://github.com/ahoy-cli/ahoy/archive/refs/tags/2.0.2.tar.gz"
-  sha256 "74125750452c751ec62966d0bea8646b2f8d883095892d3dad641ff65df6bf9b"
+  url "https://github.com/ahoy-cli/ahoy/archive/2.0.0.tar.gz"
+  sha256 "cc3e426083bf7b7309e484fa69ed53b33c9b00adf9be879cbe74c19bdaef027c"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a783f4261bfd14a620550e7676dfa45ef7ea840175591948d1fa6ade1fb0d2a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8a783f4261bfd14a620550e7676dfa45ef7ea840175591948d1fa6ade1fb0d2a"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1260aa580c7499faec17a305e2e1667843a3c71fa5e93601b579c2c13eb789f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1260aa580c7499faec17a305e2e1667843a3c71fa5e93601b579c2c13eb789f"
-    sha256 cellar: :any_skip_relocation, catalina:       "c1260aa580c7499faec17a305e2e1667843a3c71fa5e93601b579c2c13eb789f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb55ed63e1324d556cb9cfffebd3001460b23e455fa9c4c3f5d591ff3306b856"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ahoy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c185dcdedde03191c09404dfe662b6883e0bb89e5b1d371cb8ec84db4a5ec892"
   end
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}-homebrew")
+    ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
+    bin_path = buildpath/"src/github.com/ahoy-cli/ahoy"
+    bin_path.install Dir["*"]
+    cd bin_path do
+      system "go", "build", "-o", bin/"ahoy", "-ldflags", "-X main.version=#{version}", "."
+    end
   end
 
   def caveats
@@ -43,7 +45,5 @@ class Ahoy < Formula
           cmd: echo "Hello Homebrew!"
     EOS
     assert_equal "Hello Homebrew!\n", `#{bin}/ahoy hello`
-
-    assert_equal "#{version}-homebrew", shell_output("#{bin}/ahoy --version").strip
   end
 end

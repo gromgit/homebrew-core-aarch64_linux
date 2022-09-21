@@ -13,13 +13,10 @@ class Libidn2 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e2d5ad350bd11194d179b2bf199103ce3a0f4aa57cca95fc8ac1f0bc104912c3"
-    sha256 arm64_big_sur:  "8ff0838515b514f57fffa8964669815e5fe9e9fc21eeb559210e1f5634ac5483"
-    sha256 monterey:       "1ed7a729a0e671778e89599ccf3df8536e41b95b30052827ee2a53a252a06519"
-    sha256 big_sur:        "80fd3d0e971eb6b2620141249d863232a382b0db606d7e95923cf2f753a41e3a"
-    sha256 catalina:       "fc09aa5df61b841c40a23490df6b2d556772c927520d7e0aac099029a11dd768"
-    sha256 x86_64_linux:   "0ceff03509ea09a0784aa40b7b724f40857dfac8e9e34b36ee93570c57eb1780"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libidn2"
+    sha256 aarch64_linux: "f9411128d68af6caa97f4e1da2bd7ae188a8eca4ff33cc9770df71fc129f86d9"
   end
+
 
   head do
     url "https://gitlab.com/libidn/libidn2.git"

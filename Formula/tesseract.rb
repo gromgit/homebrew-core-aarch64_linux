@@ -1,8 +1,8 @@
 class Tesseract < Formula
   desc "OCR (Optical Character Recognition) engine"
   homepage "https://github.com/tesseract-ocr/"
-  url "https://github.com/tesseract-ocr/tesseract/archive/5.2.0.tar.gz"
-  sha256 "eba4deb2f92a3f89a6623812074af8c53b772079525b3c263aa70bbf7b748b3c"
+  url "https://github.com/tesseract-ocr/tesseract/archive/5.1.0.tar.gz"
+  sha256 "fdec8528d5a0ecc28ab5fff985e0b8ced60726f6ef33f54126f2868e323d4bd2"
   license "Apache-2.0"
   head "https://github.com/tesseract-ocr/tesseract.git", branch: "main"
 
@@ -12,12 +12,12 @@ class Tesseract < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ad4c2c27f59f9c094d1ca9e81e731614491b785c8995f7dc505404bd8e35f34d"
-    sha256 cellar: :any,                 arm64_big_sur:  "70fb8a3f055181efe94973fc4aa2a74460b99620b74b970713bc895666daa79b"
-    sha256 cellar: :any,                 monterey:       "c0ea33e79f58f2e7dec3dd9c0f24a2d6e604ab8308d906f2804f0d4455ed9f3a"
-    sha256 cellar: :any,                 big_sur:        "94e75d2c6e2ae832c88ed4806dd19e18ee2e8ab8acb2d41ab683f955b80a562e"
-    sha256 cellar: :any,                 catalina:       "6a3b145ef65efa99373995eee83fe288f727490d759e56c22eb066bcc348825c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ada571eade45d98869e2cb2de5e091dae975f8b48243217724944aa04f372dd"
+    sha256 cellar: :any,                 arm64_monterey: "9ccac58d048015f4a413b77e101efb3dd887705013c8171cff4f1de291dd56d3"
+    sha256 cellar: :any,                 arm64_big_sur:  "84bd6cc90719599508c9519f51dbf991f6ce55fbdfa4ad3c1dce6af1f62759e2"
+    sha256 cellar: :any,                 monterey:       "8e95648b19daa92b54b9da27c7fdff4b1073395abb0e723117b1ff7766b16f02"
+    sha256 cellar: :any,                 big_sur:        "68816323f1e265054a84cdb323026756e9402840cb2ccdcbe91ca19089cc77c5"
+    sha256 cellar: :any,                 catalina:       "4410c76a07b5dfb8b5af20ee8b2622d29a0ffeed1d41141ef7722d1b2365f6c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8bc3bcc900da9ac8f0dfa3f7223e809b6b68c9d481aa48c62b35c1de70407d95"
   end
 
   depends_on "autoconf" => :build

@@ -1,8 +1,8 @@
 class IsoCodes < Formula
   desc "Provides lists of various ISO standards"
   homepage "https://salsa.debian.org/iso-codes-team/iso-codes"
-  url "https://deb.debian.org/debian/pool/main/i/iso-codes/iso-codes_4.11.0.orig.tar.xz"
-  sha256 "de556503c7cfd33e08b5c1ced4902e82bb3c5137a076930a9c9da687d9146938"
+  url "https://deb.debian.org/debian/pool/main/i/iso-codes/iso-codes_4.9.0.orig.tar.xz"
+  sha256 "d090112a529dbe37a0a1b46b8246cc1cfca92e0281ba27239426a2b693e28967"
   license "LGPL-2.1-or-later"
   head "https://salsa.debian.org/iso-codes-team/iso-codes.git", branch: "main"
 
@@ -12,7 +12,7 @@ class IsoCodes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "695036b6f74cb6fb4aaa750be44edb5deb0232d7cf33d8402e0e83a154d0b7b4"
+    sha256 cellar: :any_skip_relocation, all: "eec87541cb08d1862596b5768b2ee076259475a2b3d3d966acffdaf91d0f3388"
   end
 
   depends_on "gettext" => :build

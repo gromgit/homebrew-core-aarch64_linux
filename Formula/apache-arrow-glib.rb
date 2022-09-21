@@ -1,9 +1,9 @@
 class ApacheArrowGlib < Formula
   desc "GLib bindings for Apache Arrow"
   homepage "https://arrow.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-9.0.0/apache-arrow-9.0.0.tar.gz"
-  mirror "https://archive.apache.org/dist/arrow/arrow-9.0.0/apache-arrow-9.0.0.tar.gz"
-  sha256 "a9a033f0a3490289998f458680d19579cf07911717ba65afde6cb80070f7a9b5"
+  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-8.0.0/apache-arrow-8.0.0.tar.gz"
+  mirror "https://archive.apache.org/dist/arrow/arrow-8.0.0/apache-arrow-8.0.0.tar.gz"
+  sha256 "ad9a05705117c989c116bae9ac70492fe015050e1b80fb0e38fde4b5d863aaa3"
   license "Apache-2.0"
   head "https://github.com/apache/arrow.git", branch: "master"
 
@@ -12,12 +12,12 @@ class ApacheArrowGlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "78ec02f03f475726bd1458a4e3d417f8b83013f6188257c984a3fb9233d2b3d4"
-    sha256 cellar: :any, arm64_big_sur:  "e4b50a47ce255e90b02edc94dd933ea7e9df3311266b9bc68d6c5b09ef28f6c1"
-    sha256 cellar: :any, monterey:       "d8e6b958b5e6a59b6a0197a5d68381227787693b4a12e858c5bdcb8ea7bc67af"
-    sha256 cellar: :any, big_sur:        "dcb4f474faedf9602169413f71b221cc7d09214401c3be0b733eb2bc6b5f007b"
-    sha256 cellar: :any, catalina:       "9527e1b179e602bc219cce2efe8efcccbd8c23b6947bd86da7d5a86ba610b3b8"
-    sha256               x86_64_linux:   "026467ba89eec611a67fee7d92292c69caf9d3cb8eadf85ca40c0c92e8b588fc"
+    sha256 cellar: :any, arm64_monterey: "d5ca4c03e21608573570d28055ff7dba54ff16237c4e2e85953f85ab2b297400"
+    sha256 cellar: :any, arm64_big_sur:  "6a21e83c704d9734adafc7cbb4087ae6f0389c3cc537d0598fae0ec186cfcd4e"
+    sha256 cellar: :any, monterey:       "014cc1483619a6a4686d0e8a73fbd618ee41fb3a16e5e969d598af7c4ff28744"
+    sha256 cellar: :any, big_sur:        "7e407ababc447ecdcba628a18f6d1d974172db8fadb9fb1784196f023e50eb72"
+    sha256 cellar: :any, catalina:       "1c04df7e3fb2431974ecc8dbf3231611be54ca76799abe2d505bc807a8291555"
+    sha256               x86_64_linux:   "d049b74d0292bb4c61e40f353c4ca6e5a465e47e3a06d60a979eeccd355ca652"
   end
 
   depends_on "gobject-introspection" => :build

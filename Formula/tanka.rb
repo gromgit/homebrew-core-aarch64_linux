@@ -2,8 +2,8 @@ class Tanka < Formula
   desc "Flexible, reusable and concise configuration for Kubernetes using Jsonnet"
   homepage "https://tanka.dev"
   url "https://github.com/grafana/tanka.git",
-      tag:      "v0.22.1",
-      revision: "ed87b3829074f6b26f62cea7ee190a43b910c4ec"
+      tag:      "v0.21.0",
+      revision: "68d625e128b2678996ff442c385f5361c7987491"
   license "Apache-2.0"
   head "https://github.com/grafana/tanka.git", branch: "main"
 
@@ -13,25 +13,20 @@ class Tanka < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d763332d1fe381e9ebd93051ae94d1a055e064647fb6456fdf64c3662f6bcae8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d763332d1fe381e9ebd93051ae94d1a055e064647fb6456fdf64c3662f6bcae8"
-    sha256 cellar: :any_skip_relocation, monterey:       "3a81a8efadf9bf91865374e4033a9a16eafbd379992984b427d10df31ff84322"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3a81a8efadf9bf91865374e4033a9a16eafbd379992984b427d10df31ff84322"
-    sha256 cellar: :any_skip_relocation, catalina:       "3a81a8efadf9bf91865374e4033a9a16eafbd379992984b427d10df31ff84322"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f5fea4572a64cdb750cd912425e5c6c23cb57231172721d2f5ce27bc21d00aa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "511588e4612c004220dc8f2546b006ef73fb9ded63e95e19384cf2e25d609fb0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8235fa81c47354a894bed3a6a42bea0e8b2d40850ed98c9f1ad23726ad20b0b0"
+    sha256 cellar: :any_skip_relocation, monterey:       "a90d4c6e816075567a8ace1ec0c150187853b92a2909a964f7f3383af56f5449"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fd722d5878ffd54481f007134afdf5cbee2fb438b581709618de8c225c94f386"
+    sha256 cellar: :any_skip_relocation, catalina:       "9e9c73cbf0cdf1b8c473ecd96d98fd26f4038ba03d5a22ee6dc92f4bfe7c10ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "716f7ff0ebd661b7d04401a8f3507f730d66b0fe97e0962300b9397252d58471"
   end
 
   depends_on "go" => :build
   depends_on "kubernetes-cli"
 
   def install
-    ENV["CGO_ENABLED"] = "0"
-    ldflags = %W[
-      -s -w
-      -X github.com/grafana/tanka/pkg/tanka.CURRENT_VERSION=#{version}
-    ]
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" "), output: bin/"tk"), "./cmd/tk"
+    system "make", "static"
+    bin.install "tk"
   end
 
   test do

@@ -1,17 +1,17 @@
 class Gedit < Formula
   desc "GNOME text editor"
   homepage "https://wiki.gnome.org/Apps/Gedit"
-  url "https://download.gnome.org/sources/gedit/42/gedit-42.2.tar.xz"
-  sha256 "3c6229111f0ac066ae44964920791d1265f5bbb56b0bd949a69b7b1261fc8fca"
+  url "https://download.gnome.org/sources/gedit/42/gedit-42.0.tar.xz"
+  sha256 "a87991f42961eb4f6abcdbaabb784760c23aeaeefae6363d3e21a61e9c458437"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "349a305bae4108e2579712280ceb0e884d0e377969b2c22e0cee37a188a745b6"
-    sha256 arm64_big_sur:  "98dbef10f7bbe8133b08a73b958b286e0f73cd1bd265d09eb7365fe66d84b1b7"
-    sha256 monterey:       "60e99ade2028f2f87bc7c1337e23467262c7368e1cb14e84312249c9b22b8399"
-    sha256 big_sur:        "8e0ad599fa98901f11027ba6e9316f92fe775772589d08f99c900b2caa1d1d7b"
-    sha256 catalina:       "710be60f7b9559237bc7e6a3ec47fe0e1b502440298881786ce18482daa734c3"
-    sha256 x86_64_linux:   "a88a052db3e1337e2f5264f192a284ab29b0332f9235beae9aefc02244ec18eb"
+    sha256 arm64_monterey: "e86676c92593d01d9b0d1c04ae138d8c9d0653f5f9e67e957328ec13bedd52cd"
+    sha256 arm64_big_sur:  "d663b941cc3dd78c2d9c48cc4cbb98e9326245bf68f10f44c36e7d36300e8f95"
+    sha256 monterey:       "ec72280a13bd5c78436afcd1c829774fd778f8956656ec3be93aa2bbc04108d7"
+    sha256 big_sur:        "5e53509d003a7597561e0457510cd8fc12aa48458c4d1ca11d60b8197c941815"
+    sha256 catalina:       "2f9741e8a1ccca51e097e52d81eed9b268a8081491739a267a89f968f11a870e"
+    sha256 x86_64_linux:   "cf0e8b86045a61b1a67af714598b9bee08573b2d78634cc9c72fb0d458945ace"
   end
 
   depends_on "itstool" => :build
@@ -39,9 +39,11 @@ class Gedit < Formula
     ENV["DESTDIR"] = "/"
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/gedit" if OS.linux?
 
-    system "meson", "setup", "build", *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   def post_install
@@ -50,9 +52,6 @@ class Gedit < Formula
   end
 
   test do
-    # Remove when `jpeg-turbo` is no longer keg-only.
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["jpeg-turbo"].opt_lib/"pkgconfig"
-
     # main executable test
     system bin/"gedit", "--version"
     # API test

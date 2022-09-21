@@ -4,16 +4,15 @@ class Uwsgi < Formula
   url "https://files.pythonhosted.org/packages/24/fd/93851e4a076719199868d4c918cc93a52742e68370188c1c570a6e42a54f/uwsgi-2.0.20.tar.gz"
   sha256 "88ab9867d8973d8ae84719cf233b7dafc54326fcaec89683c3f9f77c002cdff9"
   license "GPL-2.0-or-later"
-  revision 2
   head "https://github.com/unbit/uwsgi.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "97b816a997de0bac3f0700c63d4580449d448ac75cb42845de265e76eef53597"
-    sha256 arm64_big_sur:  "8dd8c0cae8366843f45d90f54e744d92972140980560d51bf460b7dacf5dee5c"
-    sha256 monterey:       "7088b0e2aa2d25169c4103320c0b84f60ef4a64f81c770c058f6e508593675cd"
-    sha256 big_sur:        "c03ad9573cd5ec714c4be065202918e346e64edf8188019640eabe22f57d7b77"
-    sha256 catalina:       "cbaf0bc7eeb58695feac872232efacc4770a0e766ff985d1a4cce3115bc41971"
-    sha256 x86_64_linux:   "09c64389194544939d8f47976722737d3241736738b0c3b92643bb97c0f4d9b1"
+    sha256 arm64_monterey: "6d8989e195b1f1d4bef335389dabe61f097b42e3b8ddb4e09ef75c2fc39c0b24"
+    sha256 arm64_big_sur:  "449b9879aa04e5fafe03f9f24b572f44c1d47711f87ebbb4b19c42a11a8a8fef"
+    sha256 monterey:       "2288b4276dabd8eb758602e0df5bb07ebe81713e380c9a509508f4c07efbc30f"
+    sha256 big_sur:        "56fd9ef3bf7605fde0d02caca18275f788b4c4dd091f7a2dccc4a0a92dd09996"
+    sha256 catalina:       "7076c5076b8bfd7e2c3101c5de02b21a0f2031cac25f219333b6707540d7e525"
+    sha256 x86_64_linux:   "9c462b427bfc09517dd538d83777d3ace18b10adf91d081d2dd22e7b34a7ee8c"
   end
 
   depends_on "pkg-config" => :build
@@ -23,7 +22,6 @@ class Uwsgi < Formula
   depends_on "yajl"
 
   uses_from_macos "curl"
-  uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "openldap"
   uses_from_macos "perl"
@@ -48,8 +46,7 @@ class Uwsgi < Formula
       embedded_plugins = null
     EOS
 
-    python3 = "python3.10"
-    system python3, "uwsgiconfig.py", "--verbose", "--build", "brew"
+    system "python3", "uwsgiconfig.py", "--verbose", "--build", "brew"
 
     plugins = %w[airbrake alarm_curl asyncio cache
                  carbon cgi cheaper_backlog2 cheaper_busyness
@@ -72,10 +69,10 @@ class Uwsgi < Formula
 
     (libexec/"uwsgi").mkpath
     plugins.each do |plugin|
-      system python3, "uwsgiconfig.py", "--verbose", "--plugin", "plugins/#{plugin}", "brew"
+      system "python3", "uwsgiconfig.py", "--verbose", "--plugin", "plugins/#{plugin}", "brew"
     end
 
-    system python3, "uwsgiconfig.py", "--verbose", "--plugin", "plugins/python", "brew", "python3"
+    system "python3", "uwsgiconfig.py", "--verbose", "--plugin", "plugins/python", "brew", "python3"
 
     bin.install "uwsgi"
   end

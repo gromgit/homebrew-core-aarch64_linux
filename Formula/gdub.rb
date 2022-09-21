@@ -11,7 +11,7 @@ class Gdub < Formula
 
   # "This project is obsolete. Please use 'gng' instead.":
   # https://github.com/gdubw/gng
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2021-01-05", because: :repo_archived
 
   def install
     bin.install "bin/gw"

@@ -1,26 +1,24 @@
 class Phpstan < Formula
   desc "PHP Static Analysis Tool"
   homepage "https://github.com/phpstan/phpstan"
-  url "https://github.com/phpstan/phpstan/releases/download/1.8.5/phpstan.phar"
-  sha256 "e0e49c17f85dcd6038913ed867f96d65d92650ee3661a4d3b537db97d891af52"
+  url "https://github.com/phpstan/phpstan/releases/download/1.6.7/phpstan.phar"
+  sha256 "f03739db5bdf8e64bcdee64c18ced7b14863832512f5cf5d1039567f1a6258a0"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "94eb05211b4f9b2f1c0077d4edec5316a6edb6f1ee516664909a4de5e08e3277"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "94eb05211b4f9b2f1c0077d4edec5316a6edb6f1ee516664909a4de5e08e3277"
-    sha256 cellar: :any_skip_relocation, monterey:       "c72af05ba46acae652382474f20868a91d232c80a519a72ce9c815250bdd70e7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c72af05ba46acae652382474f20868a91d232c80a519a72ce9c815250bdd70e7"
-    sha256 cellar: :any_skip_relocation, catalina:       "c72af05ba46acae652382474f20868a91d232c80a519a72ce9c815250bdd70e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94eb05211b4f9b2f1c0077d4edec5316a6edb6f1ee516664909a4de5e08e3277"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c95dd3e3c4315c716078fd9d674d2d84a592c04194768a9c56a90df21a29c1ee"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c95dd3e3c4315c716078fd9d674d2d84a592c04194768a9c56a90df21a29c1ee"
+    sha256 cellar: :any_skip_relocation, monterey:       "1272839e91df89bb1b1d640d57f7f27d7f91a950858f5ee224436fd519267346"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1272839e91df89bb1b1d640d57f7f27d7f91a950858f5ee224436fd519267346"
+    sha256 cellar: :any_skip_relocation, catalina:       "1272839e91df89bb1b1d640d57f7f27d7f91a950858f5ee224436fd519267346"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c95dd3e3c4315c716078fd9d674d2d84a592c04194768a9c56a90df21a29c1ee"
   end
 
   depends_on "php" => :test
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
   on_macos do
-    on_intel do
-      pour_bottle? only_if: :default_prefix
-    end
+    pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
   end
 
   def install

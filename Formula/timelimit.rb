@@ -11,13 +11,8 @@ class Timelimit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "942effb229cb7f279a5cd4471bf3b70111bd0c79f286ad4954f924dc9805d096"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "857697f444d4ddc8658970890885230fe12eb21474cb212112a3ccbbbbaf81b3"
-    sha256 cellar: :any_skip_relocation, monterey:       "04d40a5e190cb1ed96e44690538d8445b7e097663a5df16577ad90e3ff3f7d01"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3888001f62e0dfdf0573b405dc2c0c5a36ce1274d1091a0cb0f38ee18438cfc4"
-    sha256 cellar: :any_skip_relocation, catalina:       "e083932ebe7fa08f9afaa28254e5a73df07a29bf072cb932065678d708127a87"
-    sha256 cellar: :any_skip_relocation, mojave:         "c0259eec4d6e78c2faf7c3860e5c47dffdef165dff28ef7992f7e9bf0914d0bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7a67387373b1409dd8e80893ccef41f0cf75d02c7256c35c19691bed52b5d8d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/timelimit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b68d64a15b162f6c29b18408cf6fd92051b44a7a8800669a6678f822057bcb1c"
   end
 
   def install

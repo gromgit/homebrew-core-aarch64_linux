@@ -5,7 +5,7 @@ class Freeswitch < Formula
       tag:      "v1.10.7",
       revision: "883d2cb662bed0316e157bd3beb9853e96c60d02"
   license "MPL-1.1"
-  revision 5
+  revision 4
   head "https://github.com/signalwire/freeswitch.git", branch: "master"
 
   livecheck do
@@ -14,12 +14,12 @@ class Freeswitch < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "edac1bff31549b74960e9da1636804482e8bd1a76557c8faa3e28798637736a3"
-    sha256 arm64_big_sur:  "ca15182a13b99bd317cf36d17b225544fab0a232e3be97fb803e5ebc8d958de0"
-    sha256 monterey:       "1d8a0979b95a6ba08f8f8340a8d66a5a6092de9035cf6ee529482de85a6cadc2"
-    sha256 big_sur:        "45f4fc04c78bde00b32b082a50141b30977e8a045fec5211bb55bf1c09fdfa8c"
-    sha256 catalina:       "66e56979495bc6be8079d0947e00c55582fca32b2e3328ff7307aa0ed1dd1d08"
-    sha256 x86_64_linux:   "bec284aee7032e016470f3b8ee5e13742f37604eefd0a1c92877c8955da0d4c5"
+    sha256 arm64_monterey: "c6ea3203ace7bb14a093379a005634c2a1168c3ffc8e6180628b6d1d9ea144c7"
+    sha256 arm64_big_sur:  "d50a18774f5ebce104dd53843c20998c7af189d97a6f56c60a6db54876b36c64"
+    sha256 monterey:       "d2b30cb6927c79f42bcb500af86490ba9f16c6f3dbe67a237077b91e9f31cfc3"
+    sha256 big_sur:        "b63a67915cba8a3d1e6f1580a4c9c5595c3d61d1900580a6403e394eb525fec3"
+    sha256 catalina:       "33498f0826b57b350702e6de4966bae76975b4f31b6ef10fe70a3a29107e99a6"
+    sha256 x86_64_linux:   "413dbb409c33a4b2a5215934a26b5c308d0dbb11d3ae559f2eed61ce32561813"
   end
 
   depends_on "autoconf" => :build
@@ -29,7 +29,7 @@ class Freeswitch < Formula
   depends_on "pkg-config" => :build
   depends_on "yasm" => :build
   depends_on "ffmpeg@4"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "ldns"
   depends_on "libpq"
   depends_on "libsndfile"
@@ -140,15 +140,14 @@ class Freeswitch < Formula
       system "make"
       ENV.deparallelize { system "make", "install" }
 
-      ENV.append_path "PKG_CONFIG_PATH", libexec/"spandsp/lib/pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{libexec}/spandsp/lib/pkgconfig"
     end
 
     resource("libks").stage do
-      system "cmake", ".", *std_cmake_args(install_prefix: libexec/"libks")
-      system "cmake", "--build", "."
-      system "cmake", "--install", "."
+      system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_PREFIX=#{libexec}/libks"
+      system "make", "install"
 
-      ENV.append_path "PKG_CONFIG_PATH", libexec/"libks/lib/pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{libexec}/libks/lib/pkgconfig"
       ENV.append "CFLAGS", "-I#{libexec}/libks/include"
 
       # Add RPATH to libks.pc so libks.so can be found by freeswitch modules.
@@ -158,11 +157,10 @@ class Freeswitch < Formula
     end
 
     resource("signalwire-c").stage do
-      system "cmake", ".", *std_cmake_args(install_prefix: libexec/"signalwire-c")
-      system "cmake", "--build", "."
-      system "cmake", "--install", "."
+      system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_PREFIX=#{libexec}/signalwire-c"
+      system "make", "install"
 
-      ENV.append_path "PKG_CONFIG_PATH", libexec/"signalwire-c/lib/pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{libexec}/signalwire-c/lib/pkgconfig"
 
       # Add RPATH to signalwire_client.pc so libsignalwire_client.so
       # can be found by freeswitch modules.
@@ -173,7 +171,7 @@ class Freeswitch < Formula
 
     system "./bootstrap.sh", "-j"
 
-    args = %W[
+    args = std_configure_args + %W[
       --enable-shared
       --enable-static
       --exec_prefix=#{prefix}
@@ -181,7 +179,7 @@ class Freeswitch < Formula
     # Fails on ARM: https://github.com/signalwire/freeswitch/issues/1450
     args << "--disable-libvpx" if Hardware::CPU.arm?
 
-    system "./configure", *std_configure_args, *args
+    system "./configure", *args
     system "make", "all"
     system "make", "install"
 

@@ -1,17 +1,13 @@
 class Atmos < Formula
   desc "Universal Tool for DevOps and Cloud Automation"
   homepage "https://github.com/cloudposse/atmos"
-  url "https://github.com/cloudposse/atmos/archive/v1.5.0.tar.gz"
-  sha256 "973b2d1af465aa9acc64d8e700733f586d806645ce8e669e3293aef6a078c75d"
+  url "https://github.com/cloudposse/atmos/archive/v1.4.13.tar.gz"
+  sha256 "db9f95fdc81a0fca06e217e488c94214794c8337fe46db70eff0509217a99cfd"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f9be4de355a071fdc52fd7c551ba2290d9ee630b657147ee326dcb9fa0bf7754"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9d39db96a09275214c8ef8f356d0093b642a628c6ea4d4d72da481b039f6bdc"
-    sha256 cellar: :any_skip_relocation, monterey:       "ac2c54b137618bbeae9d1418e95ba2b20a11a729395fd458b888cb1a625c43e9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fc555c4e04052084a8715db3e5919b3b822ecbde024214ddbc1ee12fc1d32437"
-    sha256 cellar: :any_skip_relocation, catalina:       "21552dd63dcb1ad382e838a2150db20a0eeed5a24fc7a414283f1bad0df1a5a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da02dba7ab79c38435483f740ec570a7a0004a136447defae7e4ef8995fdbb6d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/atmos"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f519bf3a50c4fa6bdfbe3ff34599c8524962dfc0288012553c2b389d9a1dc865"
   end
 
   depends_on "go" => :build

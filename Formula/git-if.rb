@@ -1,19 +1,15 @@
 class GitIf < Formula
   desc "Glulx interpreter that is optimized for speed"
   homepage "https://ifarchive.org/indexes/if-archiveXprogrammingXglulxXinterpretersXgit.html"
-  url "https://ifarchive.org/if-archive/programming/glulx/interpreters/git/git-137.zip"
-  version "1.3.7"
-  sha256 "b4a9356482e83080e4e9008ea4d0d05412e64564256c6b21709d8e253f217bef"
+  url "https://ifarchive.org/if-archive/programming/glulx/interpreters/git/git-136.zip"
+  version "1.3.6"
+  sha256 "28d8d7b8d81dac65c19f0b994d54b3c34b182045e86ca399fea65934918d1cf3"
   license "MIT"
   head "https://github.com/DavidKinder/Git.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e276ffffb24bbdb9fe565c7c55f79aec5df8d3a4c7b64541bbe73c757e2e45b2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb7f09ba2cb7c865b0ee80dd312e28250635a79173c0c2d3781acca03d519ee3"
-    sha256 cellar: :any_skip_relocation, monterey:       "a69998ddf6e70dacfbc12c9c17912fb7ece0e0dad9437201209554a50154f802"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5d2791d14db4f96ff76532d537d12d9eda5298e1a7190bd538801cdc3813739f"
-    sha256 cellar: :any_skip_relocation, catalina:       "0188ac542b752d94d6b8b544ab5a95ac8608ec0261a40be55ca6fa87140d2e9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f858e0ad782b54d8e630159b9be4dfc3e05a3a5e6f23e1a7378653bf1b54f1ec"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-if"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9aca54682b5738a0684e816269f5979df28faac3eaa9f45dc3d65f11ca056683"
   end
 
   depends_on "glktermw" => :build

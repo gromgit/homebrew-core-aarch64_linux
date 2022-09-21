@@ -1,24 +1,20 @@
 class Step < Formula
   desc "Crypto and x509 Swiss-Army-Knife"
   homepage "https://smallstep.com"
-  url "https://github.com/smallstep/cli/releases/download/v0.22.0/step_0.22.0.tar.gz"
-  sha256 "2865b7268d5a3b27913f3fdf86cd9a030c9d44dc6359f6cee54085a5d9ad6dca"
+  url "https://github.com/smallstep/cli/releases/download/v0.19.0/step_0.19.0.tar.gz"
+  sha256 "2cef308e984f3369840e270e40cfc946a70555611aa46401df562c2e6321eb53"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8045866de4f5f2277e261c4d6599b3c02e8273c428c26b9f7b39aa737be72550"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e8fb5d3510cfcac5951b5e1fe46f45bcec602cd816e92d39815552ad7933bef0"
-    sha256 cellar: :any_skip_relocation, monterey:       "9bbd01bfb0a2599dd6ffad6cc2da29c357f661f67b7ae42c8cd3b33d10720b5d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a8a5f25d20c89e12dd3f73eda25ce69585390d589228173d4b509720b2bd4951"
-    sha256 cellar: :any_skip_relocation, catalina:       "dfedeabd4f9e1a4973c2dc13ad91d5236feaa21ab7d4b6eb93ec18b4bd90ec6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "083dda6d42597b10cd260709451320ad60b3cf23f3eed8bcf1919614f8a948b8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/step"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22c6ef214c8c48279c41953b99f5f160115e0fb3f313f5f3aa8b47a827e30161"
   end
 
   depends_on "go" => :build
 
   resource "certificates" do
-    url "https://github.com/smallstep/certificates/releases/download/v0.22.0/step-ca_0.22.0.tar.gz"
-    sha256 "fe11b8e8aa48d8c62ed54ae577c2a5abbd1dda4d3d93502f5c26260c12395e24"
+    url "https://github.com/smallstep/certificates/releases/download/v0.19.0/step-ca_0.19.0.tar.gz"
+    sha256 "af2073671a5774a4fa9ae3038996976764a3040f999c38e38f0fa6c58134159f"
   end
 
   def install
@@ -80,7 +76,7 @@ class Step < Formula
     # certificate using the API.
     (testpath/"password.txt").write("password")
     steppath = "#{testpath}/.step"
-    mkdir_p(steppath)
+    Dir.mkdir(steppath) unless File.exist?(steppath)
     ENV["STEPPATH"] = steppath
     system "#{bin}/step", "ca", "init", "--address", "127.0.0.1:8081",
         "--dns", "127.0.0.1", "--password-file", "#{testpath}/password.txt",

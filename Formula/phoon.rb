@@ -20,13 +20,8 @@ class Phoon < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "16e0d7747e8d27e1d2070e9c0a977e978df8e050fcfec31ad4da2363450ac297"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ffb866ee12dee9890eb0ad36b0bc1e721bba69b631951fbeba3f2fb20a87168"
-    sha256 cellar: :any_skip_relocation, monterey:       "b4beab04ea220698a14dc6a0f104205e21f5e3b1af4846b849a1398b51c667e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "40dc9f71c308e04063cf566ba3ba64459d781f2795d0fa4aadee860768a763ab"
-    sha256 cellar: :any_skip_relocation, catalina:       "27ac5801ac5c5b411b587df1ec799acca76c3acd3a0a02a193a187d07ee76747"
-    sha256 cellar: :any_skip_relocation, mojave:         "86ea843f6ba29b5e23023f92b05460d7e105ef08d98dfc2094f579f667a53504"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c14a5311b93a01cfe4857784708ae9e6397525c07b07ca34f26b58d5dddc6f93"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/phoon"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b9a3b08249e269eef5ba690f4491585f38d03d73aa4bb50be5bc22c909a28071"
   end
 
   def install

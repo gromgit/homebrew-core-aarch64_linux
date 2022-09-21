@@ -6,13 +6,8 @@ class Libbinio < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3b66d91c0bc97b7ade4576bb7d54403ebbf4e22a46c1ad7a1eb165a5cec24368"
-    sha256 cellar: :any,                 arm64_big_sur:  "6490acae30e6e1047e5770b4aab37e4c043488c5c2e8a8919962208c1da2cdd4"
-    sha256 cellar: :any,                 monterey:       "f2f87992d693266d8fc333fc9c583b8c372657da0018b24538d771598c76570c"
-    sha256 cellar: :any,                 big_sur:        "5ca7b1faccab23de4efee72cfe82244e419c40c78775f09a01e5669aeed4a8e1"
-    sha256 cellar: :any,                 catalina:       "157efedae7e8169175623b12f91d8a786fdde524075a2a98a956e910aed5e507"
-    sha256 cellar: :any,                 mojave:         "4c5b9085fdfe812e664f342e9da9504c24f2f2055c2ef939764dd4bd96025a23"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d8b2aeba35080348293ad101e8f4751c17e1d5b9e53adcc7e539f571bc19b01"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libbinio"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b830b72d71dfed3e8d27aea9934a82fc50ef7a8c8684eaaedcb453fbdab56e86"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.

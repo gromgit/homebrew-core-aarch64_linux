@@ -1,8 +1,8 @@
 class Nspr < Formula
   desc "Platform-neutral API for system-level and libc-like functions"
   homepage "https://hg.mozilla.org/projects/nspr"
-  url "https://archive.mozilla.org/pub/nspr/releases/v4.34.1/src/nspr-4.34.1.tar.gz"
-  sha256 "c5b8354c48b632b8f4c1970628146c0e0c0ca8f32c7315d7d5736c002e03774f"
+  url "https://archive.mozilla.org/pub/nspr/releases/v4.33/src/nspr-4.33.tar.gz"
+  sha256 "b23ee315be0e50c2fb1aa374d17f2d2d9146a835b1a79c1918ea15d075a693d7"
   license "MPL-2.0"
 
   livecheck do
@@ -11,12 +11,8 @@ class Nspr < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89cac57fbae8797d10169e7357708df8c8c9dd4aafe3c3984555f4a3389a61dc"
-    sha256 cellar: :any,                 arm64_big_sur:  "4a8dcae8d968c3162a0a07f30f7c0d790008d831e34cb76c1a23a62b5c17ff26"
-    sha256 cellar: :any,                 monterey:       "80ac7f5e86707a572042ea4ad5a92180fd4fb3569bd784dff647408958c704b3"
-    sha256 cellar: :any,                 big_sur:        "765c92a1aebb2732c1c544dec207408032821f3997a1b09de222bdc4f46ba1c0"
-    sha256 cellar: :any,                 catalina:       "d5ac9d5cfaa2685822266aba63c5916d3ba078e77e7e508e0929e195f78bd1cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94441b578bd30e4ed732141a1df18dba2738486ceb324b4ed302f006a11b2393"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nspr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c5bb610104c95003867d421009c1f4ba857e443de7e1e224b5ac11ee2a4950bb"
   end
 
   def install

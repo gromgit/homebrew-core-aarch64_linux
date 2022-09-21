@@ -1,18 +1,19 @@
 class Cmus < Formula
   desc "Music player with an ncurses based interface"
   homepage "https://cmus.github.io/"
-  url "https://github.com/cmus/cmus/archive/v2.10.0.tar.gz"
-  sha256 "ff40068574810a7de3990f4f69c9c47ef49e37bd31d298d372e8bcdafb973fff"
+  url "https://github.com/cmus/cmus/archive/v2.9.1.tar.gz"
+  sha256 "6fb799cae60db9324f03922bbb2e322107fd386ab429c0271996985294e2ef44"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/cmus/cmus.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "db4d3a8fc7365aebb2d04c00fab660995e17fd33e1e858d227320f0132c5f750"
-    sha256 arm64_big_sur:  "c5b09c75e7b2dba15327fd4d9e44558bc0e6349a38c812329930e5f699361f5b"
-    sha256 monterey:       "33b6f93095d734ad3b94662251373c97ffd089da3487cb63bd8aa25c68feb326"
-    sha256 big_sur:        "e45b48a6d19b61633897b73389c8c1648026543072735330018e85960f2b85cd"
-    sha256 catalina:       "3b5595c657158e338d4ee9665afbc7ba4691e0eb228637eb42fb147b7cc33aee"
-    sha256 x86_64_linux:   "7ee4112ba4f7a8c80b20a5edbee93bf01fae4c333bd24398023bc8d3c1e71f68"
+    sha256 arm64_monterey: "c8442ac4518d870f91a68e917251fb9050ba7f477fce412597eabd4ab68c8008"
+    sha256 arm64_big_sur:  "e9bf47dcc8350d948fc841f18c0b5b68d72299f488338a68d0df2e52245f62aa"
+    sha256 monterey:       "d993861d232ff31bf395af15846d39e6d5872c6b0d075ae227983b3296e4841c"
+    sha256 big_sur:        "6704b64f4bd2e163be11e1146e076252ec6af54f6eaff80cb54bcce7b2047214"
+    sha256 catalina:       "185a420e4b5b7ac9a88232f0fe74d1110483ea682a1b9198335e9cd8b733d3a8"
+    sha256 x86_64_linux:   "8b51575dd6d4de96abb655cccd3bccbcb77018b15b2383172aac3d465e0e2fa6"
   end
 
   depends_on "pkg-config" => :build
@@ -25,10 +26,6 @@ class Cmus < Formula
   depends_on "mad"
   depends_on "mp4v2"
   depends_on "opusfile"
-
-  on_linux do
-    depends_on "alsa-lib"
-  end
 
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 

@@ -3,17 +3,17 @@ require "language/node"
 class HasuraCli < Formula
   desc "Command-Line Interface for Hasura GraphQL Engine"
   homepage "https://hasura.io"
-  url "https://github.com/hasura/graphql-engine/archive/v2.11.1.tar.gz"
-  sha256 "4c0c7fa5e8d97217826a65761b1ce86111bbbd0e5732f0660a8327cd7d8f2c9f"
+  url "https://github.com/hasura/graphql-engine/archive/v2.6.1.tar.gz"
+  sha256 "63429ae4d974a90544649ae22c92072315fc079984deb86d5f1628c9e0fc68a9"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb61fbd15e404e30f8a18b23d5b8b1586832bea19f93bd97e09a50ef3c303f01"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1e85caa54a73f88af3f0c775453f542b894bb52ef5db2af5e1ed532f87d9055"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ce940faa9a9864177108b4e0276480343686697ec79f544c977d572dcce7bb2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "209468a336cf878e4132c93516eae5de5785b754738f28e5b605d4c67e09034b"
-    sha256 cellar: :any_skip_relocation, catalina:       "50ed60a688f133f0a504539fb12d14ea5b7e36b067095d1d9815ce9411eff8be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee3b8518d75ccf29b65177cf4acb2e95a5ad18b6259f1b9833f01446c38ef314"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd2a3a75aaab3e95373704ca602987967639f1d074cf145739a272b58eb1916d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8e9237c3e3718521fe02fefefb15531f8af5e6e9726724e1cdf993b8bfb1695a"
+    sha256 cellar: :any_skip_relocation, monterey:       "73a0b6e7badb4573fd23674120e72b11decb0821a4a5fd9241c05e592fbfdd8c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7afd69af36f3e59b4a72b6ee4720db0818ee758d730bd7b30afcffa9a19022b0"
+    sha256 cellar: :any_skip_relocation, catalina:       "1e91f9635c728fd6f95bc78b63ba6e502829dac2dea5a7a62c6ee2bc1dab4ce1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a00ffa4067810ea713f48de044b101b98a55f93914c8e282bcb3b46bf04ecf5"
   end
 
   depends_on "go" => :build
@@ -42,7 +42,10 @@ class HasuraCli < Formula
       cp "../cli-ext/bin/cli-ext-hasura", "./internal/cliext/static-bin/#{os}/#{arch}/cli-ext"
       system "go", "build", *std_go_args(output: bin/"hasura", ldflags: ldflags), "./cmd/hasura/"
 
-      generate_completions_from_executable(bin/"hasura", "completion", base_name: "hasura", shells: [:bash, :zsh])
+      output = Utils.safe_popen_read("#{bin}/hasura", "completion", "bash")
+      (bash_completion/"hasura").write output
+      output = Utils.safe_popen_read("#{bin}/hasura", "completion", "zsh")
+      (zsh_completion/"_hasura").write output
     end
   end
 

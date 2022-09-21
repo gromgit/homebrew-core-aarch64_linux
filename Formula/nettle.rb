@@ -7,13 +7,10 @@ class Nettle < Formula
   license any_of: ["GPL-2.0-or-later", "LGPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f2fa03ad5664fdcf8475c1490a22f66d26056779911fd92ae2cb0d36998319a4"
-    sha256 cellar: :any,                 arm64_big_sur:  "6b169f8f81ec4dae1a1137f7d8738a4acdb24806c1057039791bb58dc9fb67d8"
-    sha256 cellar: :any,                 monterey:       "19eca950c962860d44093db86226b8a07ca045973c15f7d3b0de2acd1cfad3da"
-    sha256 cellar: :any,                 big_sur:        "48493dc5881e45b030b1f39d379fe70d6d8707063766c0f223e20e190d8de4ba"
-    sha256 cellar: :any,                 catalina:       "185a433efd966756372f46bb0669eaaac9883c6f9a149d2d7e0ed33df661d1fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1901826420ae92f7998068673ec444d32550618f38ad1c074acf68be16b9b056"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nettle"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5a4a94937adead40600fd6168e9e1a1f3ef7f9c47298f10775bfdf7c5f3476a5"
   end
+
 
   depends_on "gmp"
 
@@ -30,7 +27,9 @@ class Nettle < Formula
     end
 
     args = []
-    args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm?
+    on_macos do
+      args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm?
+    end
 
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",

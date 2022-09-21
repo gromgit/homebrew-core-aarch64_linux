@@ -4,15 +4,15 @@ class Gearman < Formula
   url "https://github.com/gearman/gearmand/releases/download/1.1.19.1/gearmand-1.1.19.1.tar.gz"
   sha256 "8ea6e0d16a0c924e6a65caea8a7cd49d3840b9256d440d991de4266447166bfb"
   license "BSD-3-Clause"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4345a6e4694a633cf44f98f0c050248f8c8361c02020eab19c695b3ec41cf82d"
-    sha256 cellar: :any,                 arm64_big_sur:  "7ad3a612fb8b53340c453d57a576fe7d90d4c9e48cab54e743125f62158e200e"
-    sha256 cellar: :any,                 monterey:       "80d89d4c584effcf7ca5040020682b75bcacdb564529a2cda03481629935e0f7"
-    sha256 cellar: :any,                 big_sur:        "3aceb32f55d94d805262cd0052d79eba3c6475ea3fe109a1f78bac0194352e67"
-    sha256 cellar: :any,                 catalina:       "293651e8e5851227f896dcd2f23eadcf4dd20f96b96b4584311f2483e64f4c41"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "588f76c78956e298d289d89895ee0d8b871d396bc76eb80c6060c9e0af7532e4"
+    sha256 cellar: :any,                 arm64_monterey: "565060b087df2f171c6aa5fa2edbf3f776d40eea967386f79c5f320959743d4f"
+    sha256 cellar: :any,                 arm64_big_sur:  "e237eede51af3c8254e8cf0fc4d11b0d83f7c3a980c6899f0e3b8ef4a6edbc0a"
+    sha256 cellar: :any,                 monterey:       "7f556eb5200e4903c171040ff67febe1d122c926fe930293935e36e1c2c32246"
+    sha256 cellar: :any,                 big_sur:        "d50b984b6f3bc180bdd7b00e6507de5a931573a1336f9bd3a7264988008f6168"
+    sha256 cellar: :any,                 catalina:       "09a5a74e725b5af17258e1b0bfd2671c40368c8460b9f987055220f1ce376d37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ce85d90c58408d55539224264c6871ef3ca482574e670534a4f6280b00d8525"
   end
 
   depends_on "pkg-config" => :build

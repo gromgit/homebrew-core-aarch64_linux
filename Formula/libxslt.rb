@@ -5,8 +5,8 @@ class Libxslt < Formula
   revision 1
 
   stable do
-    url "https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.37.tar.xz"
-    sha256 "3a4b27dc8027ccd6146725950336f1ec520928f320f144eb5fa7990ae6123ab4"
+    url "https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.35.tar.xz"
+    sha256 "8247f33e9a872c6ac859aa45018bc4c4d00b97e2feac9eebc10c93ce1f34dd79"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
@@ -23,12 +23,12 @@ class Libxslt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3bdcf15cac29f738ea1d07b8e9c290a3a4eaf6c16ce3fefd13808be4556b9951"
-    sha256 cellar: :any,                 arm64_big_sur:  "3ee16dc014079c7a03d5bb3ad4b10fff9942847d518b742f843c0fe0129de631"
-    sha256 cellar: :any,                 monterey:       "c34db451bd574830c369e5dcab31e54e3474e5a31f83cb10b3650d85f149794a"
-    sha256 cellar: :any,                 big_sur:        "378e59a2c69b0e06da3acd27bffc44b3906eb60d7ce3f4dd88287257a0ca0ef7"
-    sha256 cellar: :any,                 catalina:       "3da3f7f87b9ff6bb7ce4eb67e810504dfbba998d3d537e11830047f248d8f69e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65cb6fdd515408f8b95f3cc751a629add6c2410aa89e394b356a4e3bea26fa0c"
+    sha256 cellar: :any,                 arm64_monterey: "5c9f468e24ae918ae3e4966ff16cc22d5339072fc7e7508db2f36e769b563b8e"
+    sha256 cellar: :any,                 arm64_big_sur:  "2d92c6564b307cac871c57826ccd1a3f317647bd30e4c1143560b6230deac6c3"
+    sha256 cellar: :any,                 monterey:       "3282aa925b1956e8b4e5c8c58cee340551b596778822d765cacf99c20aa7c461"
+    sha256 cellar: :any,                 big_sur:        "f322603343c92777e9953ce2238236803f06a2c1195bcb87a8ddd253fc14eed7"
+    sha256 cellar: :any,                 catalina:       "f2e114e69b72994ca71c55802def701a7bf7803efeb85054e6839c5d800384b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd014efb1c1c44a80fee7ae5baf6b9563deeaf3d21b3f5af3d9119b1e8f4c22c"
   end
 
   head do
@@ -41,7 +41,6 @@ class Libxslt < Formula
 
   keg_only :provided_by_macos
 
-  depends_on "icu4c"
   depends_on "libgcrypt"
   depends_on "libxml2"
 

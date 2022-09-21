@@ -1,17 +1,17 @@
 class Observerward < Formula
   desc "Cross platform community web fingerprint identification tool"
   homepage "https://0x727.github.io/ObserverWard/"
-  url "https://github.com/0x727/ObserverWard/archive/refs/tags/v2022.9.6.tar.gz"
-  sha256 "230434f4a19a19d0d1428ecf0e8224d56a3ce2a15796d06de28611d7234db060"
+  url "https://github.com/0x727/ObserverWard/archive/refs/tags/v2022.5.5.tar.gz"
+  sha256 "493da7c3cd0941f306cc5747ca177b238997945286dad7065a372a7baccbe23e"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "836c84e485eedba1d490e01a93bdc85f950726cd06f8f26e8a2ab1ea8b1fe119"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4553443818834c718c51cb87209e35ecfbd8b87e7330384d02167320a0e4cf9c"
-    sha256 cellar: :any_skip_relocation, monterey:       "d750842037ca841a11c76652dd4df54a6b3d979af7d16f296ef52eda9b896661"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3a9bf3fc2d4c840e5b2a98ea0089ac97ed96220f0c80d4c899fa550c6c3ea2e1"
-    sha256 cellar: :any_skip_relocation, catalina:       "48d825f7179beed39599370307de30c76ce2fe32eb5b8ab8fa7af9fb179ede19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7a5bd8abcae89d19a137bf08fb57338c16681f2e9641e1b1e7fae148664aa69"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f6ff839cb5eeeec080883f6fc923050e22f8afecb74b20fe77e31ba478ada28a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d2cbcdb5092a16f6c135dfbc91054e96e7be828b449b80bbd48ea13b61c9d315"
+    sha256 cellar: :any_skip_relocation, monterey:       "2a6b772a5930ea76e5ac5576f6f42c9f0bb2d0a1f234529822f573f8d87433e3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "45e2ed44f0592e9495c4692dcfaa9cbe071363fb0f8a77ec5f0f530998965eb6"
+    sha256 cellar: :any_skip_relocation, catalina:       "1d578232c01522b803185d3173ff63ffdfa38b05ca23bfcac18c7447386b8446"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "948355777be5adf0352fc36b71c926705cd352dfcfaa88e36f6a086347f5dca5"
   end
 
   depends_on "rust" => :build

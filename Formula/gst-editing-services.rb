@@ -1,8 +1,8 @@
 class GstEditingServices < Formula
   desc "GStreamer Editing Services"
   homepage "https://gstreamer.freedesktop.org/modules/gst-editing-services.html"
-  url "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.20.3.tar.xz"
-  sha256 "5fd896de69fbe24421eb6b0ff8d2f8b4c3cba3f3025ceacd302172f39a8abaa2"
+  url "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.20.1.tar.xz"
+  sha256 "6ace1b21b58e0110b7dadd469f79b77e2f47d6207604231492531ae9fd4148df"
   license "LGPL-2.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class GstEditingServices < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0e0782fb99977a997dc512e68c6753bd5b348462679d6beb0185975a9ad2d822"
-    sha256 cellar: :any, arm64_big_sur:  "6a0a76f1c9601665bda8ffbac2fc37eef71acfebf8884a58454ede33cf3020a0"
-    sha256 cellar: :any, monterey:       "f6d89657b9c533f08d9ab00273b54957c266e592d857e3eecbf408123b33bd88"
-    sha256 cellar: :any, big_sur:        "be1b326db4a4a5da6845c2c32917fd151c26a1dfe61ef2d929233b745aa86e5f"
-    sha256 cellar: :any, catalina:       "e9804be1d11e5b1c271a063ef339ce1fb4945bbed123202e4d972c1021437bf8"
-    sha256               x86_64_linux:   "d187865c5bcff799a19728bf926924604501e664f486f72705d2daf17398428f"
+    sha256 cellar: :any, arm64_monterey: "b448555dee94ed82d381add836f9189db00301c1e4c7a315f7e3a606fe4fc839"
+    sha256 cellar: :any, arm64_big_sur:  "398e7585a34c6741e333ad26b16c922bd887fda14dfb30138f1ab572ee36e746"
+    sha256 cellar: :any, monterey:       "83f505bf5dba5e182d41fddc567c8d8b77d19c261a848d648835b964ea80f787"
+    sha256 cellar: :any, big_sur:        "3091b92c556da6b5757ff7aea4cee2facc01ea42700b6fb53d3a81d525c86b0b"
+    sha256 cellar: :any, catalina:       "6216cae04e11a6d04b796db2a78447fa1613e66f9a04615b027177627b99575d"
+    sha256               x86_64_linux:   "58b0cb8eb13a043ecb7b1b90360129a54b9424c2910fc515d563298d0bb8145c"
   end
 
   depends_on "gobject-introspection" => :build

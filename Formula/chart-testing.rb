@@ -2,18 +2,18 @@ class ChartTesting < Formula
   desc "Testing and linting Helm charts"
   homepage "https://github.com/helm/chart-testing"
   url "https://github.com/helm/chart-testing.git",
-      tag:      "v3.7.0",
-      revision: "1d3feac8e5ca55ccf11521ff297ccee7f09aa749"
+      tag:      "v3.5.1",
+      revision: "c891fb09f2c5ba548574c4bcf31229755a94e711"
   license "Apache-2.0"
   head "https://github.com/helm/chart-testing.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ed01a55334f607ded9102fed673d1eb0707fd2af11986256303476fe75915a8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "521a1e22cff4db795be5ed5cb6e4e7186297ac0fe049b114ae99cb664a9d2e90"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf887df516ae0c29627071a240dcd0dc6c8f31bb75203e301447859e154f28a4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9425b75ee14ab0f71905aea4047d5a3537d06349ac9b1da22312b615e6127c44"
-    sha256 cellar: :any_skip_relocation, catalina:       "249097795cb28d76de44406e0cb8b8095958b0d0a2fb6e5a7931c42dc030a5aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb9f826832c910a120bf2232efbdb376207f351b5526a339333ab0c4a476fdab"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c225372eb15f1546f8e5d8f5a5c2a0035955b2edbf378efad954a02c4da5126"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e2fb6c62d017c6167d205750558782fa871b75c0aee709834e8f6e6a340ac4d"
+    sha256 cellar: :any_skip_relocation, monterey:       "ae47595638dca3841e79d924f13ea079f5c958052b3e43aa7afdb1efbdff34fe"
+    sha256 cellar: :any_skip_relocation, big_sur:        "39682e0b4f25506ad93e8a50bb6d178e8ae2c68f9328fa601903362b70682163"
+    sha256 cellar: :any_skip_relocation, catalina:       "8f117ec2933662d8c49df81381e6ced2dc0f16e78bf4f6f6a3bc2bd440bbfaaf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e2409b0aeab320b9841aa346b451832ed6619013fb920a2e516baa88534b4c7"
   end
 
   depends_on "go" => :build
@@ -39,8 +39,8 @@ class ChartTesting < Formula
 
     # Lint an empty Helm chart that we create with `helm create`
     system "helm", "create", "testchart"
-    output = shell_output("#{bin}/ct lint --charts ./testchart --validate-chart-schema=false " \
-                          "--validate-maintainers=false").lines.last.chomp
+    output = shell_output("#{bin}/ct lint --charts ./testchart --validate-chart-schema=false" \
+                          " --validate-maintainers=false").lines.last.chomp
     assert_match "All charts linted successfully", output
   end
 end

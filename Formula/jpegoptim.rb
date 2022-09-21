@@ -4,22 +4,19 @@ class Jpegoptim < Formula
   url "https://github.com/tjko/jpegoptim/archive/RELEASE.1.4.7.tar.gz"
   sha256 "9d2a13b7c531d122f360209422645206931c74ada76497c4aeb953610f0d70c1"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/tjko/jpegoptim.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e6d9c5e8553dc145485bf7ac4f51769fa784db83a3a9c32f1a3104efe44ce7b4"
-    sha256 cellar: :any,                 arm64_big_sur:  "3a86e5222a263e8839fa4cc5a1718867db725fbb586c9a835aab536f4c61ccbb"
-    sha256 cellar: :any,                 monterey:       "63e2cf66cd28f76ba91fe51e9b48aa41355c87376469305a39caa2597b5af576"
-    sha256 cellar: :any,                 big_sur:        "cd7e4b0eebb6a3ea8f46012f34e18631efe9e5d966d7c09d8ca3bddb74802285"
-    sha256 cellar: :any,                 catalina:       "f3cea036b0c5dd14edadeb0e809add5fb2dd9cca19dceafa5cfb990a336942b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58ce46f0434d04bb363eb84e89a9043c429163733a502716db6e1f7b52afdbf2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jpegoptim"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6e6a1dd7322c9ffbf294c0086c713d5e041092e19f34bba40124afbd6ea658af"
   end
 
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
 
   def install
-    system "./configure", *std_configure_args
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--prefix=#{prefix}"
     ENV.deparallelize # Install is not parallel-safe
     system "make", "install"
   end

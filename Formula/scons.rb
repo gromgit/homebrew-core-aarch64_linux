@@ -8,13 +8,10 @@ class Scons < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e53074519b96a32b1359d58664b934fc9cdaac37e1a414d2e7d43963e8f4c3a0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e53074519b96a32b1359d58664b934fc9cdaac37e1a414d2e7d43963e8f4c3a0"
-    sha256 cellar: :any_skip_relocation, monterey:       "f4b2dc4152373424f8df6f9d8fff6e23e231443bd8897128445318468f23753d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f4b2dc4152373424f8df6f9d8fff6e23e231443bd8897128445318468f23753d"
-    sha256 cellar: :any_skip_relocation, catalina:       "f4b2dc4152373424f8df6f9d8fff6e23e231443bd8897128445318468f23753d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5596a34b3b95363298beae17d4ff46a6c7056c912d9f4181b4f86ea302a3d4e3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scons"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "190d0846f22a0ad3841a7ce2b13c5f3cf985026dccda6ecc40b23d530cd9b895"
   end
+
 
   depends_on "python@3.10"
 

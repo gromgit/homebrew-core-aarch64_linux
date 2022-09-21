@@ -8,24 +8,25 @@ class Inko < Formula
   head "https://gitlab.com/inko-lang/inko.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4f9dbb9ca91c3c850de16e96b770118a7e98c2275b5d45e2d04e322702266ca4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97fd0e158ca05967044ce52f22efd5226e4f1a03d72dcc74d54759ac63490ce7"
-    sha256 cellar: :any_skip_relocation, monterey:       "1abad4e1a95ee97fbaa3ff1cc5c95eeada47e24ed0d9bc1611fe191658368b28"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d759b01b4aafb4117a280f6734e74e5df7006104ea1e9bb88377e91f29d69536"
-    sha256 cellar: :any_skip_relocation, catalina:       "2637485ed2ad0644e69fcb33cf4c56e9db6f9ab42751b9502e71299843d66c85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30a0af9b41a880e969480fe9dba4673da888a994e7ddb097c3382a296decdf71"
+    sha256 cellar: :any,                 arm64_monterey: "962edbc75373209c6aa77517acd6b150cb4ddb799a3cf513485b6566aca73a65"
+    sha256 cellar: :any,                 arm64_big_sur:  "a7f73e96ff5076466770d434090aa1c49316faa2092dda709554a642bab3e292"
+    sha256 cellar: :any,                 monterey:       "0c4ad9650cf140ed89a8065f9efc257f549edb9af17a744798da40f887c7ea08"
+    sha256 cellar: :any,                 big_sur:        "ebceafed0b8fb72511c5788fe525ad83e204b9fce30116a76acd560ce6c36ba8"
+    sha256 cellar: :any,                 catalina:       "fa964ccada840c98ea19efad5e62cda6f73df789b4b820148c0af2ff3793347e"
+    sha256 cellar: :any,                 mojave:         "536ac0253c59601ac2f717af644997e37a6a801879904f99275c4112fb18c83c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4092e51e09e093d158314a50094730c3bbc4f794fb157ddd4812d790b8d2d51e"
   end
 
   depends_on "coreutils" => :build
   depends_on "rust" => :build
+  depends_on "libffi"
 
-  uses_from_macos "libffi", since: :catalina
   uses_from_macos "ruby", since: :sierra
 
   def install
-    system "make", "build", "PREFIX=#{prefix}", "FEATURES=libinko/libffi-system"
-    system "make", "install", "PREFIX=#{prefix}"
+    system "make", "build", "PREFIX=#{libexec}", "FEATURES=libinko/libffi-system"
+    system "make", "install", "PREFIX=#{libexec}"
+    bin.install Dir[libexec/"bin/*"]
   end
 
   test do

@@ -1,17 +1,18 @@
 class Termshark < Formula
   desc "Terminal UI for tshark, inspired by Wireshark"
   homepage "https://termshark.io"
-  url "https://github.com/gcla/termshark/archive/v2.4.0.tar.gz"
-  sha256 "949c71866fcd2f9ed71a754ea9e3d1bdc23dee85969dcdc78180f1d18ca8b087"
+  url "https://github.com/gcla/termshark/archive/v2.3.0.tar.gz"
+  sha256 "8e2a22534773b1ab0ce4327e929bbbe413d3695bab2d55c985d1f61961698610"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "37948c9f61f945ad6044eb03753da35bf735a2ef0599c21ee957c24c6549e670"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d95e25d67a299e15d5e9c861c5f1b99b98a58802ba78ec847d1801f6f1ef1432"
-    sha256 cellar: :any_skip_relocation, monterey:       "b22556c8b7777479e5a36c5c8abb9fbcff1e2774feb96383533ece79da6a5a6d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8b19aa1bd9d176bb52410f2751fd3877e22a8d4ba21ee7cccd93d08ef32c8653"
-    sha256 cellar: :any_skip_relocation, catalina:       "ce2586a94ccbc846b9d825e48dfec76e3aec711315564b01db2d87d9643a03b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69ee110ad437376b219f4aaa960818850be8e28868c8a0dc3ceff715849c8b1f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf549bc000877e1862c26ed6d3a1f466c09bc48fcb4488f6fe464738c717c986"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9fc25d8ee00903f6f3ce91d3cde70c12dc636d51050f938f2230a1bb6eaabbba"
+    sha256 cellar: :any_skip_relocation, monterey:       "6da8cd2b25fecd0edbac43ee4cc688932f46212624735c4cb655e76b7276d690"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4e8111a7730d4d042b4654689d0baa4e1cec23c658fc75f62f552d5d7f553843"
+    sha256 cellar: :any_skip_relocation, catalina:       "8dc2114b14d2738361021fef34e5069de185371c5828c1528fe7fbd3a5543aec"
+    sha256 cellar: :any_skip_relocation, mojave:         "a665f8f658b7699ff18acf7a8ac29658a90b694d368438fb7082b068d0ae426c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3502b76bdc682ba2dea3ec1fc463c52e087ea5f9a390a0e26314d7e5402ca869"
   end
 
   depends_on "go" => :build

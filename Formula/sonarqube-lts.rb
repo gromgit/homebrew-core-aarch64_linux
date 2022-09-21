@@ -1,8 +1,8 @@
 class SonarqubeLts < Formula
   desc "Manage code quality"
   homepage "https://www.sonarqube.org/"
-  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.9.56886.zip"
-  sha256 "bc31dcdadf85edcbde51fff9c0977412a5e87996f4f51f68a053ec7a44cdb818"
+  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.8.54436.zip"
+  sha256 "a491240b2066222680d9770c6da4d5f0cf9873c86e0d0e3fbe4d1383bbf3ce85"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class SonarqubeLts < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9d634ca67a5c82334ea2f1c7f34b3deadff0c7a763e7a39ac058dc405af868d6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b4d9d3bbeee32aaff8e2abfcc462eadb18605896c87bdea68d0e8fda6f6b9a2c"
-    sha256 cellar: :any_skip_relocation, monterey:       "a4d71d334c14740567a43abb374660da5f76a45eef2b5de8d2513e7a237a0c94"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e843228f6f74a598898b6fcc0a820fb04f415d6b4aa8de7a60eeec6bcebdf0a9"
-    sha256 cellar: :any_skip_relocation, catalina:       "1a46743eda427e53612cbe0e82736b4025261dcc2b1d7e742068e9fbab61d225"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3980551b0a52198eb33e37eaf5593cd688bbceeb7e3c242c80856a9f4d89974"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6bf0b208857351951429718a39d82f2dd0b51278236c7b7cd55f66bd9209eb01"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b5fa361559222f53d3656fa0d0bc77ec9730da116352a8845a7768082882f093"
+    sha256 cellar: :any_skip_relocation, monterey:       "dce9a4bcf3774a6643a5f366cac487f1cb4857f4d8b8d2c1ecabfe3c760da9c7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d67233026ad942789ed3b4723794bb7833b20f04637ebf2eaab0e850fd3d0530"
+    sha256 cellar: :any_skip_relocation, catalina:       "8408beee73e1c2622f4917d340110f390e2795378040e758754ef4c7bda01094"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d30b7b0fe6cba81a74746c3ba186c4a785c2d934a5c012550a2b4e89f0dd4eda"
   end
 
   depends_on "java-service-wrapper"

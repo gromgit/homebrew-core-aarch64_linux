@@ -6,12 +6,8 @@ class Kompose < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fce20c79ca7c5ec23d04804d5f0625796a9ae5bf2ff8f3c2dd6ebf6c9091039b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d7608ab8e23169c6c25b6da42713a7ef7aa078d09b63bcd748949800a0a3c6bd"
-    sha256 cellar: :any_skip_relocation, monterey:       "d900c5a6242038bbaf31560418d16f6b66790b7f4f9206415da2853276a1a137"
-    sha256 cellar: :any_skip_relocation, big_sur:        "94764694cbc83e31edc3df3f8588327159cdba7ff2658ea9786e118b5a792e11"
-    sha256 cellar: :any_skip_relocation, catalina:       "975b28f3cd25872551219403be36825d38585a315f5c1f3ad5812d7be4e2913a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "efb804b13b812975bb6995e458bd1a1404d26b836a47cd244031a362ce6c894e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kompose"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2cbface18efd7e3091439f4066c10c5128baedfc18acb9825aa6812aa33e8179"
   end
 
   # Bump to 1.18 on the next release, if possible.
@@ -20,7 +16,14 @@ class Kompose < Formula
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
 
-    generate_completions_from_executable(bin/"kompose", "completion")
+    output = Utils.safe_popen_read(bin/"kompose", "completion", "bash")
+    (bash_completion/"kompose").write output
+
+    output = Utils.safe_popen_read(bin/"kompose", "completion", "zsh")
+    (zsh_completion/"_kompose").write output
+
+    output = Utils.safe_popen_read(bin/"kompose", "completion", "fish")
+    (fish_completion/"kompose.fish").write output
   end
 
   test do

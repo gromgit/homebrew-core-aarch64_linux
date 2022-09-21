@@ -6,8 +6,10 @@ class VtableDumper < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "25d515fa79afefdabc3aa8020499f4092815f3857e891e3e5c88328eaa221b27"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vtable-dumper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee9605a188935f50cdf3290ac44a1ffadc284ea5a92e7052c0a4af0f9a31c931"
   end
+
 
   depends_on "elfutils"
   depends_on :linux

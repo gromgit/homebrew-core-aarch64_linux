@@ -6,8 +6,8 @@ class OpenshiftCli < Formula
 
   stable do
     url "https://github.com/openshift/oc.git",
-        tag:      "openshift-clients-4.12.0-202208031327",
-        revision: "3c85519af6c4979c02ebb1886f45b366bbccbf55"
+        tag:      "openshift-clients-4.11.0-202204020828",
+        revision: "f1f09a392fd18029f681c06c3bd0c44420684efa"
   end
 
   livecheck do
@@ -16,16 +16,18 @@ class OpenshiftCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0014adf50d782523d19caf3277f86b72a3d75aa5e98a6cc143214c6f3e8919c8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a904e24d03b473663b6c47cd459e3e91f4bd78fcde7c08f8ffdd6dd7333a0fe9"
-    sha256 cellar: :any_skip_relocation, monterey:       "ebb452458353b75d29726d7650f59a0eb24edc60574e7a87269658ee958083dc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "54738cd33c03203ab673f43b70202252fce2b9cd63d9be1f2d720c85addc8947"
-    sha256 cellar: :any_skip_relocation, catalina:       "8cb6b4c75b9a4d73bbfabdc2d8c58c6e91fcf648aac76e3967708a82e5d3949b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7bd6d5061ac5ba80ae76957c4ce1283654c78e9fb248e067928b46d2f25870c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8867063efd49d665866b2c6f64ec115f4469c08f90e2949b9b0b5b89cf5ab6d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f977ed51222df9a313f867141a568c2c6ce914fc599d71f758802ab1c3f68dd5"
+    sha256 cellar: :any_skip_relocation, monterey:       "e5b18766f67d10b16b519ada978371026ee4685cbbd975f7ffe29affd3073b37"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e17bae8eb69b676aadc58a4b2fcc2d10491270f8a138c447bd8fdae2fee462fb"
+    sha256 cellar: :any_skip_relocation, catalina:       "c6111d9e409c22734dd9bd841a80be4dd5c448f30e6928d0edc9a3cb3685c0cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0663c5b9780e503ba3eec7c23e3d8dd27f2485bcbc86a84701371ae3ebf1b3f"
   end
 
   depends_on "coreutils" => :build
-  depends_on "go@1.18" => :build
+  # Bump to 1.18 on the next release.
+  depends_on "go@1.17" => :build
+  depends_on "heimdal" => :build
   depends_on "socat"
 
   uses_from_macos "krb5"

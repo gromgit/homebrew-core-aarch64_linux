@@ -12,13 +12,10 @@ class Libgit2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1a3d957e46a244f78689420ad9c5d3fa0072ff08672bae7d5f2ce3ec426a82d3"
-    sha256 cellar: :any,                 arm64_big_sur:  "914aa3e7cae6be1ee2eb580859114df902a495f1169219f57225180684d401ff"
-    sha256 cellar: :any,                 monterey:       "a377a03747dbd5e8cebc9ea437bad644a41f60c24bafaf3ae239f42edb69e992"
-    sha256 cellar: :any,                 big_sur:        "81760fb5880774ed47c470aca07bdcf1945a241c7a2bc9c9727ba4c1d8f18bca"
-    sha256 cellar: :any,                 catalina:       "ecfb9a5ac0a3d99b576ea500dbde84c6370bac68a1d896b7c7deb1b2d3c5f704"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5645a27c2804fb54b79a269690d7cdba4a59f5f65859dcca866eb5f80af707b9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libgit2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6ca7b5b214ceec6306f0107549bae90abe00c2a6b6714acfef67545c838f385a"
   end
+
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build

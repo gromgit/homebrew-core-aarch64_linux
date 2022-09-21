@@ -1,8 +1,8 @@
 class VespaCli < Formula
   desc "Command-line tool for Vespa.ai"
   homepage "https://vespa.ai"
-  url "https://github.com/vespa-engine/vespa/archive/v8.48.22.tar.gz"
-  sha256 "2038c013eda9a0898af98e68cd731ad0a92bab6c1e0ab40ace9a00fed4061c30"
+  url "https://github.com/vespa-engine/vespa/archive/v7.580.54.tar.gz"
+  sha256 "5820253d2582761f8e4dcf5df0e1a37f4a3152a33feeca9517676679f9daee3a"
   license "Apache-2.0"
 
   livecheck do
@@ -12,12 +12,8 @@ class VespaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d262a37d6f2c02467a36842daa8a555a4b01cae9907c1315870690821931a79"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a480309133ec75720d7b2f8e233dca9bce294c5ec2aeafcd9ccf35bc513016f0"
-    sha256 cellar: :any_skip_relocation, monterey:       "38e55d71c0d60533a61078120bcbbeb84b916825b7de55deaa996bbe19146a6e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1b70527e3c8c3f2886453066cad8889fdb603960feb63bcd0db785b21c4eb621"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1f4ef84290faba13add6c83af810039464d5c60dc60bc55655dafcd80eab50c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddd62bb2416a407876a282a2e74b51b97ec76a585bb7a9581201f63dae6fc984"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vespa-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7094c252c2d45afd4054af11367a1140969077268c165653f7ce2a2f4cb8fd29"
   end
 
   depends_on "go" => :build
@@ -29,7 +25,9 @@ class VespaCli < Formula
       end
       bin.install "bin/vespa"
       man1.install Dir["share/man/man1/vespa*.1"]
-      generate_completions_from_executable(bin/"vespa", "completion", base_name: "vespa")
+      (bash_completion/"vespa").write Utils.safe_popen_read(bin/"vespa", "completion", "bash")
+      (fish_completion/"vespa.fish").write Utils.safe_popen_read(bin/"vespa", "completion", "fish")
+      (zsh_completion/"_vespa").write Utils.safe_popen_read(bin/"vespa", "completion", "zsh")
     end
   end
 

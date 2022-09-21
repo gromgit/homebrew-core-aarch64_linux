@@ -3,17 +3,17 @@ require "language/node"
 class Jhipster < Formula
   desc "Generate, develop and deploy Spring Boot + Angular/React applications"
   homepage "https://www.jhipster.tech/"
-  url "https://registry.npmjs.org/generator-jhipster/-/generator-jhipster-7.9.2.tgz"
-  sha256 "5f089544d6c2f06bbd109d06460ff6f2387b10d4c8fe9a54d4be070a00779b56"
+  url "https://registry.npmjs.org/generator-jhipster/-/generator-jhipster-7.8.1.tgz"
+  sha256 "c39921657dc50a106e0533229492915304b30a85d647e9a65788e19546ed4ed0"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6470523be77560242b755bc18af0b91479daea4e60e68409c9a286a6fef4ae2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6470523be77560242b755bc18af0b91479daea4e60e68409c9a286a6fef4ae2"
-    sha256 cellar: :any_skip_relocation, monterey:       "960ac782a7603c74b684a76fa5288014246ef71817fe05c5d267cbb1d94bc146"
-    sha256 cellar: :any_skip_relocation, big_sur:        "960ac782a7603c74b684a76fa5288014246ef71817fe05c5d267cbb1d94bc146"
-    sha256 cellar: :any_skip_relocation, catalina:       "960ac782a7603c74b684a76fa5288014246ef71817fe05c5d267cbb1d94bc146"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6470523be77560242b755bc18af0b91479daea4e60e68409c9a286a6fef4ae2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "27c1b3541a20bdab8d9351401eabdf18548afebc85f94af1fa82dbe841d445ba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "27c1b3541a20bdab8d9351401eabdf18548afebc85f94af1fa82dbe841d445ba"
+    sha256 cellar: :any_skip_relocation, monterey:       "f250319b1919080ce509ff83066ea2483fa6a8359627b6f722a7a9bcd45c8c54"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f250319b1919080ce509ff83066ea2483fa6a8359627b6f722a7a9bcd45c8c54"
+    sha256 cellar: :any_skip_relocation, catalina:       "f250319b1919080ce509ff83066ea2483fa6a8359627b6f722a7a9bcd45c8c54"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27c1b3541a20bdab8d9351401eabdf18548afebc85f94af1fa82dbe841d445ba"
   end
 
   depends_on "node"

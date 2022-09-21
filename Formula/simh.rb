@@ -1,9 +1,9 @@
 class Simh < Formula
   desc "Portable, multi-system simulator"
   homepage "http://simh.trailing-edge.com/"
-  url "https://github.com/simh/simh/archive/v3.12-2.tar.gz"
-  version "3.12.2"
-  sha256 "bd8b01c24e62d9ba930f41a7ae7c87bf0c1e5794e27ff689c1b058ed75ebc3e8"
+  url "https://github.com/simh/simh/archive/v3.11-1.tar.gz"
+  version "3.11.1"
+  sha256 "c8a2fc62bfa9369f75935950512a4cac204fd813ce6a9a222b2c6a76503befdb"
   license "MIT"
   head "https://github.com/simh/simh.git", branch: "master"
 
@@ -15,24 +15,21 @@ class Simh < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4bbbfacf19e812a3f551b11c3dc6222b30cba2ff789d10b7a0d3431c1c7816f8"
-    sha256 cellar: :any,                 arm64_big_sur:  "226b979de0b16040ceac8d43169acad561cc02de69fedbc3ce7608e08a8dcf99"
-    sha256 cellar: :any,                 monterey:       "a58a7539db5ac84a45dac55d1718b539435b4364b154922b1a12ea689f4f8a0e"
-    sha256 cellar: :any,                 big_sur:        "009a1fd5617b4964e7548754c9047688b3ffbc86a6c5e3acf816ce8462a3489e"
-    sha256 cellar: :any,                 catalina:       "260d5b0236efa26ea9846b5a64807afeb6dda6c0c308f84a4cd0f891a1fa76e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ff6b20047316c5efd516276d7029475379b026f43b446e1707e488cff52be10"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ecfcf91507421702249ef381049c885f4cef675337aaa9bb10ca0c6f5dd6f90a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7b8d2337069cae3c5cf8d4f521a5c3c9cb8f9385a12986f6cf8378f41854abf"
+    sha256 cellar: :any_skip_relocation, monterey:       "2e8fa1df3477fe48f9a9fda5a5f8a6253e8e92d72d6550a508eda90bc95ed4a7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b7bb7258d1375fa027baeaa09a28b158bb0795f8044caf67fb251c9d35abd6e4"
+    sha256 cellar: :any_skip_relocation, catalina:       "790feb234cf193ae6de2c076ad10024e5d9bd6d301020392a79cffc7ff6ccb15"
+    sha256 cellar: :any_skip_relocation, mojave:         "76246ba12f6771a031a092ccbc67f0f6fbe8dacda0e5c1e41bbaa8d4a7918680"
+    sha256 cellar: :any_skip_relocation, high_sierra:    "77ac8e9ea8a1589d4caa38f2cc9f21de2f4e66a836d316117926378080d09124"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15786096ec6cd0995825d33e772e3af76b78d7277ab94b57e4ad30ca88df0b40"
   end
-
-  depends_on "libpng"
-  depends_on "sdl2"
-
-  uses_from_macos "zlib"
 
   def install
     ENV.deparallelize unless build.head?
     inreplace "makefile", "GCC = gcc", "GCC = #{ENV.cc}"
     inreplace "makefile", "CFLAGS_O = -O2", "CFLAGS_O = #{ENV.cflags}"
-    system "make", "all"
+    system "make", "USE_NETWORK=1", "all"
     bin.install Dir["BIN/*"]
     Dir["**/*.txt"].each do |f|
       (doc/File.dirname(f)).install f

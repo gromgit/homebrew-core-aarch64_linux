@@ -6,13 +6,8 @@ class Rsc2fa < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f832afe87766e2847eadb453848ebf881c0c60bb608a71640b6c237ec44b9069"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6db5849c61249766bb9ac2168f2570c87b0893e19c7600e9749f375c6934ffa5"
-    sha256 cellar: :any_skip_relocation, monterey:       "aaf3afec742c3a53fd5a78e6677750b90120bc7803ac93c004d4f337d285a605"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7c0d499b3ee3fa0a1d2934e05fd36cdcf75f10710ec3fdc9192d07f74074262b"
-    sha256 cellar: :any_skip_relocation, catalina:       "7c0d499b3ee3fa0a1d2934e05fd36cdcf75f10710ec3fdc9192d07f74074262b"
-    sha256 cellar: :any_skip_relocation, mojave:         "7c0d499b3ee3fa0a1d2934e05fd36cdcf75f10710ec3fdc9192d07f74074262b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71c943ce568138c782321aaa436adf79d194707bd140f82b50046aff80851e3c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rsc_2fa"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e2f609e756e2b0424e1efc810a54c70c5587728f4f93a3801f4d6dec10c724c2"
   end
 
   depends_on "go" => :build

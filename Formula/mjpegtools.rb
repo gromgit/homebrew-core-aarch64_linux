@@ -4,19 +4,14 @@ class Mjpegtools < Formula
   url "https://downloads.sourceforge.net/project/mjpeg/mjpegtools/2.2.1/mjpegtools-2.2.1.tar.gz"
   sha256 "b180536d7d9960b05e0023a197b00dcb100929a49aab71d19d55f4a1b210f49a"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c7d05e5fc6d485aa298f4aa7ce6cdfb0c28f2a7792650bba2e3fda8adc030f85"
-    sha256 cellar: :any,                 arm64_big_sur:  "35bd5112b5352ad73c9636e205134628682d93f2502d33951945f676464f1e72"
-    sha256 cellar: :any,                 monterey:       "9afd34745954ea736c8e894c42b4552aa414df0d44942a09d7c47a6113c3ed2b"
-    sha256 cellar: :any,                 big_sur:        "49857ba4da574bcbdf2795f9bed39ab9b9ca4c4b3d6ff39196b707f0981e8523"
-    sha256 cellar: :any,                 catalina:       "c2beea84698794fc12896fa9e7b2c1655a3f4be189b90b6963799419ee3b34bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7efdf0c986f0afd7094a355256ee6743f2ce7720d23f680005e53a8ae5213244"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mjpegtools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a0b521edcf01feab599c689f6e5f4185c3ac7af67d8a0994fd7a5de8b1fe742e"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
@@ -25,7 +20,9 @@ class Mjpegtools < Formula
   end
 
   def install
-    system "./configure", *std_configure_args, "--enable-simd-accel"
+    system "./configure", "--disable-dependency-tracking",
+                          "--enable-simd-accel",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 end

@@ -1,18 +1,18 @@
 class Bat < Formula
   desc "Clone of cat(1) with syntax highlighting and Git integration"
   homepage "https://github.com/sharkdp/bat"
-  url "https://github.com/sharkdp/bat/archive/v0.22.0.tar.gz"
-  sha256 "bec63bffc315bda7b65d472a19833e14bbaff4d251cedf8bfc77c82a00b77bfc"
+  url "https://github.com/sharkdp/bat/archive/v0.20.0.tar.gz"
+  sha256 "12eca3add56f21b8056a4c17cfb5bffc45e107f23f75a8e0f5de948d8e997c39"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/bat.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "26bd8a65f1c64d7b33762df68727667b487b1eb777a42f52466ee5416e57a0b6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2e4938525974dc9f791700ff0c908900195cf289c8d2062954be7ce81a3ab7e"
-    sha256 cellar: :any_skip_relocation, monterey:       "94b08c3b72f6e052e49288f36c02db0b72f2607f147c31b45311ec2b7c24fe0c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d57c1a429bc33e419ea0aa5cae8dbae1b32337badb22ea594306bd78e079ff16"
-    sha256 cellar: :any_skip_relocation, catalina:       "992f1d749415acf3df041c4f4a5295b21f0ad415f080e3a8ca45791c1136ee35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cd7549c1f693534600664fe3c33678c0bcbb0b6e35087c4d6bfe2bc2979c5e5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8cf2fa7f8e76d0bb98eb3424f092c4fc7ee28c8dc076ed4647381f7a9dd93425"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2fba3298484fe353699cce3032a7d1693b5de08d860f2879b4b8a9e56b4535e1"
+    sha256 cellar: :any_skip_relocation, monterey:       "9e9b1c64c0bb01e297e8f1f17dc697404b5da7f345876814c519339421f35968"
+    sha256 cellar: :any_skip_relocation, big_sur:        "13a029946de4c9617371a65039081d83d04002014ac8f87511b42b16fa643c78"
+    sha256 cellar: :any_skip_relocation, catalina:       "53e1a8a0aa3c32c7df50f75468b0373afdada38528579e2c15213e60bc63c2ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "824358bdeeba4b1ba7c2c0224f8882a23a668fa8a5d4dadb217e00291f40d308"
   end
 
   depends_on "rust" => :build

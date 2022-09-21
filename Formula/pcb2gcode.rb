@@ -4,16 +4,16 @@ class Pcb2gcode < Formula
   url "https://github.com/pcb2gcode/pcb2gcode/archive/v2.4.0.tar.gz"
   sha256 "5d4f06f7041fe14a108780bdb953aa520f7e556773a7b9fb8435e9b92fef614d"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/pcb2gcode/pcb2gcode.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "70b7a09bf490ec4ab251bba4f11e384eee7ab4fdf0155b42b1586f78526cefe6"
-    sha256 cellar: :any,                 arm64_big_sur:  "8982e5d343c3a2f70ad92953144d8ab89f934c40f838e607a7e4914480de6a10"
-    sha256 cellar: :any,                 monterey:       "3bc721515abad735514715ac571306c65889b538faae0ea862e161f60beb84c6"
-    sha256 cellar: :any,                 big_sur:        "fb2caa63d391b966d8fd3949ea76158b46f72a2ed43797bdca557e921e31d386"
-    sha256 cellar: :any,                 catalina:       "febb8b969830b3c659a78e0512e7a8925f8436110185da77bd3d4556b79fb078"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "096aa7ced11dea9c634d936462848bc2b75e0197370dc16adaedb7881ccfeb3f"
+    sha256 cellar: :any,                 arm64_monterey: "4facc148f0dd1ed67cb098258f40210f13431239f36dd859a3605d8aba62a663"
+    sha256 cellar: :any,                 arm64_big_sur:  "596ef4d44d9da58ce8ce77fc51605c9a1229a8b763e47f785baf202b0ba2a208"
+    sha256 cellar: :any,                 monterey:       "20d4b84b6d91188a05455d39e7bf5a75314b641e11f41a860dc65ce318d78381"
+    sha256 cellar: :any,                 big_sur:        "d08a9c3c499b9b9d510942cb8e7f6bae057eb29cadeab474ce0bbd13ae452d43"
+    sha256 cellar: :any,                 catalina:       "5872fbb4710e05c4ad1795ea8cbb75fe26bc031cd00041156efc30f9fe632101"
+    sha256 cellar: :any,                 mojave:         "73c321af8bd386af20ec60cf9e0c98600f12681b5bdd8bac70504457ebcc8bad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53b4615757ee9604da2668158f7e420add1e4dfe6bdf8fc7183bb906322ead46"
   end
 
   # Release 2.0.0 doesn't include an autoreconfed tarball

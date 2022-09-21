@@ -7,13 +7,10 @@ class Carton < Formula
   head "https://github.com/perl-carton/carton.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ed93b6f36dcfcbda3cf60bd27d204ed6e3fef9837a2c604baf5134e5133a75d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ed93b6f36dcfcbda3cf60bd27d204ed6e3fef9837a2c604baf5134e5133a75d"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae0fcb618fd8b91fb40d7e52ed07d1ccb8a76ef5fabe0f7a73772f7f63a9979f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ae0fcb618fd8b91fb40d7e52ed07d1ccb8a76ef5fabe0f7a73772f7f63a9979f"
-    sha256 cellar: :any_skip_relocation, catalina:       "ae0fcb618fd8b91fb40d7e52ed07d1ccb8a76ef5fabe0f7a73772f7f63a9979f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b241c14b6caf27b5e0a7eb694e31c186a60670a72a47834eda4883947ce5b89"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/carton"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "87d60b56f23e9a20d05c2c37c206a7cfcc676cab54d3d7ff90805075270e9b8d"
   end
+
 
   depends_on "perl"
 

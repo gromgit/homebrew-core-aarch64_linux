@@ -3,8 +3,8 @@ class StoneSoup < Formula
 
   desc "Dungeon Crawl Stone Soup: a roguelike game"
   homepage "https://crawl.develz.org/"
-  url "https://github.com/crawl/crawl/archive/0.29.0.tar.gz"
-  sha256 "4b32d3c3a07fe969cc1e9d12430b4c143c36e92746b3715ccdb8416720fdc59f"
+  url "https://github.com/crawl/crawl/archive/0.28.0.tar.gz"
+  sha256 "287f35476d20bbe8aaa3e663140704462b4e304a4e1ed5c2b5da1d273dd1f383"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -13,13 +13,12 @@ class StoneSoup < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "f938d2a002197e0987e3b33fa1760de689a2d5451b64c105896f46de483d4d2a"
-    sha256 arm64_big_sur:  "e11b33c64f4d6b2521579df74f1ff6f1e66784d64fa3986b003d2905581640c4"
-    sha256 monterey:       "9e5d6568c2bb2e462dd87ce544d755d8ea56a36862e9b2c642e7a6ce82570298"
-    sha256 big_sur:        "d04f0c248b61b944239b8fd71e3443009096dda4e119a65ceeb4c7d74fdb5c73"
-    sha256 catalina:       "8c22ced2e5a55051b77fdbf1cb9ead71a3e2a8ce26c3d903a958c72b0c759628"
-    sha256 x86_64_linux:   "5b3baa0ae9ca696c896ce8cea85f34289078791a86c753404d5545604b8314d1"
+    sha256 arm64_monterey: "739eb63071963e6998243a03592a1c85dbb87b1ae39edbbbd5d4412f887ddcfb"
+    sha256 arm64_big_sur:  "5c73e7b489f45806902d011973d91947c9d0af47aa2cea058e81fdfa9b2f15c0"
+    sha256 monterey:       "00ebb829ffc8ad6b608e50528ec8b4692f2181efce13c071688c0ebd03012a16"
+    sha256 big_sur:        "d68275933552ec851d6e1f06a8528d6d2f6eb3b683e21fa34beaf5f9c5e23c1d"
+    sha256 catalina:       "0a5fed8750fcfda5f27efc2a8337e844911454fad521cad6d21e4585211b64a5"
+    sha256 x86_64_linux:   "7a6b21ce059ffeaca3fad2ffde77fccc2d030e1f2212f6cf23693a8afbe1ddcf"
   end
 
   depends_on "pkg-config" => :build
@@ -27,6 +26,10 @@ class StoneSoup < Formula
   depends_on "lua@5.1"
   depends_on "pcre"
   depends_on "sqlite"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
@@ -38,10 +41,10 @@ class StoneSoup < Formula
   def install
     ENV.cxx11
     ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
-    python3 = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor"/Language::Python.site_packages(python3)
+    xy = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{xy}/site-packages"
 
-    venv = virtualenv_create(buildpath/"vendor", python3)
+    venv = virtualenv_create(buildpath/"vendor", "python3")
     venv.pip_install resource("PyYAML")
 
     cd "crawl-ref/source" do

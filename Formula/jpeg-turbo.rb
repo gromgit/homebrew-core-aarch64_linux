@@ -7,13 +7,10 @@ class JpegTurbo < Formula
   head "https://github.com/libjpeg-turbo/libjpeg-turbo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c9dbfe3df4b1c8cd4ac7ef18a3643c923c8081e6acdf9936ebff79b7514f14cd"
-    sha256 cellar: :any,                 arm64_big_sur:  "02e7859fbd2d7ac8336600bde67184ff78339146da99525b404ba683d184dff7"
-    sha256 cellar: :any,                 monterey:       "d2d17e1b59fd7aff903b1b6d15209aa304de4bf974881c11700600f0d7bd486a"
-    sha256 cellar: :any,                 big_sur:        "c2cbe03545e80c2b438a3d7f9b96fbcb7db4130b39ddae267a3b199f58f99c1c"
-    sha256 cellar: :any,                 catalina:       "8b3fc1875533efe903b131b285074e745c7cbd5888eaec72407a2e1b8a8d150b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dda8e2acfdedd64381f39301191955822d082c8c9c65a2dd4b9cece33267408c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jpeg-turbo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e4e4fcc1945f39efcf2f8ce35d6bc92c45fccc51d9768576cf849c698debbc91"
   end
+
 
   depends_on "cmake" => :build
 

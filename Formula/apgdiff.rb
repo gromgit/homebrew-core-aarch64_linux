@@ -11,8 +11,10 @@ class Apgdiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f52732f8db636f2d122c471ea2e36b02e10b73ba23048040aafa44f79ff0dd69"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apgdiff"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bbf03a4049337fc1e304c24d66ba326b4e401a3096f5415b0946ae9d3f8b06a0"
   end
+
 
   head do
     url "https://github.com/fordfrog/apgdiff.git", branch: "develop"

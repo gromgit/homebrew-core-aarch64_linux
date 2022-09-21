@@ -14,13 +14,10 @@ class Curl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3dc6972b2f75130b3a9dc053a5fd277f18576c577b6f0053b9daefb9ba950b4e"
-    sha256 cellar: :any,                 arm64_big_sur:  "64419ca6486705f31f43fbf8ab813e6b85c9d836eeadc1229e720f4bc8cd3efe"
-    sha256 cellar: :any,                 monterey:       "3aa7c14fefd1953775e8d8a04daa85aaefe23f1b203a1c06dada2ea5a5651de4"
-    sha256 cellar: :any,                 big_sur:        "a98877da21bb8b87140022d501eda212ee4e86179d9554e951c2a7ba5e0c78c3"
-    sha256 cellar: :any,                 catalina:       "cd3475ba674b19428755722d4d447fceb3ef963779c645b7ddaa6ebb1868819a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70821b581c24e08df332b0e244773044b344a980c255abf5f44b07883b5cb0f1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/curl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "840ccb6930b9165214223fc90bd5f49aa6741e24f8ba9854d7cce467ed2807ed"
   end
+
 
   head do
     url "https://github.com/curl/curl.git"

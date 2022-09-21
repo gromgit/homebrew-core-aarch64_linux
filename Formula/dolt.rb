@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://github.com/dolthub/dolt/archive/v0.41.0.tar.gz"
-  sha256 "ca43ecc64220278c6e384f46339ca4b0a9bbde99d569fc97a94eafb64970c0aa"
+  url "https://github.com/dolthub/dolt/archive/v0.40.0.tar.gz"
+  sha256 "7e9fa4ba35f312c7c8718c029ea8dc3a65c5a4c1df01995db2eb48f48768d7a1"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,8 @@ class Dolt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "659957026ad9dfd64c30310d0fb15a7ff5506b00a14340d49d428c2e5ad9ae68"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7a6ee6946760b9faf6b47eec55aaf74db57c13ca8bff1a6371a9272621631b87"
-    sha256 cellar: :any_skip_relocation, monterey:       "8518cbe23fc3dafef901a51a67602a0f274ac2a6da245c834d429b9f16ec3963"
-    sha256 cellar: :any_skip_relocation, big_sur:        "47b87569c882a137c62cd30bfd219e23a115d75a85dec8c314e8819fdecf6007"
-    sha256 cellar: :any_skip_relocation, catalina:       "692ba5bac537d92cc737be9a30ae747d81173e1fbe3df50aa255537a28550ce1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51d2abcfac99b19b032779f8f15fc5d4acbd0f52f951b65cbf25ea78de095c27"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dolt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "868ab16f75679ae6e6e2444ee69021a2f6e1849350142d4bac6532b216d9495a"
   end
 
   depends_on "go" => :build
@@ -24,6 +20,8 @@ class Dolt < Formula
   def install
     chdir "go" do
       system "go", "build", *std_go_args, "./cmd/dolt"
+      system "go", "build", *std_go_args(output: bin/"git-dolt"), "./cmd/git-dolt"
+      system "go", "build", *std_go_args(output: bin/"git-dolt-smudge"), "./cmd/git-dolt-smudge"
     end
   end
 

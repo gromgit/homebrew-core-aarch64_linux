@@ -8,13 +8,8 @@ class TrojanGo < Formula
   head "https://github.com/p4gefau1t/trojan-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec98c6b4c3d8848c7f4f509b2dc0597ced55ca1345e6cb7df3db3cc61e8806ca"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9762f85a824ff74c47da792549bee3b227c3abdc0cdb0e240cbedd353aefdfc1"
-    sha256 cellar: :any_skip_relocation, monterey:       "0e62938f7a9e79f03a657c4fdaa0399bd7b619043bc479bdb593d27d52bd37c2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dbd2c6728ed016b1edec17347f6afb7b2c963838785e9579c597a84c84760782"
-    sha256 cellar: :any_skip_relocation, catalina:       "032789eb1b094143bb9e0ff9ff2e322b4bed0e14e5a475459637dea749771a2a"
-    sha256 cellar: :any_skip_relocation, mojave:         "938d529de6c2e30510d85e21a15507d1dd25c2775e4f15a23f3ebfe341403d9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d97afc587b2f38bb0bd46c0ed9adaf6d76346ac92c42b7cee5b959f4a0f0b7b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/trojan-go"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "dc528317ccd2e473d9c0f4f9fda7c44596275232868cca322722213df8e34755"
   end
 
   depends_on "go" => :build

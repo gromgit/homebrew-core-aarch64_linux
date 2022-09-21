@@ -8,13 +8,8 @@ class Periscope < Formula
   head "https://github.com/anishathalye/periscope.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "175e53a44e0d7b52db436369d918b12e34dbd244ddf7ba40e19c4e85cec2628f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c882c0377cff2389da04d004674e157d8f71953a0142a4b334d95518e957e96"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3bac4b5d15200c10954a2113bd4ca3c3105a614aa3c605b158d11b048daa317"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c9e56226deeabf9615a15af87a7ba702a9292eb3f6be1efbdae16245f51eb3af"
-    sha256 cellar: :any_skip_relocation, catalina:       "e60a33d406582d371f3a0bbd2f4ad78f9da9c4bab998b695a6a1b9e6baa29312"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3404970d8676e0b7d6391c92631fcb720c72b704833467d883f48558746efc92"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/periscope"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "53b7d5a1bec6dccfd2b987af7ae669ce62d0eeb70fbe2cafcf90f2bcc04dc287"
   end
 
   depends_on "go" => :build
@@ -27,7 +22,17 @@ class Periscope < Formula
     ]
     system "go", "build", *std_go_args(output: bin/"psc", ldflags: ldflags), "./cmd/psc"
 
-    generate_completions_from_executable(bin/"psc", "completion", base_name: "psc")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"psc", "completion", "bash")
+    (bash_completion/"psc").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"psc", "completion", "zsh")
+    (zsh_completion/"_psc").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"psc", "completion", "fish")
+    (fish_completion/"psc.fish").write output
   end
 
   test do

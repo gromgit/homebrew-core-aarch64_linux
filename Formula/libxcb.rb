@@ -6,13 +6,10 @@ class Libxcb < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b9ed936a5ee43ec58cfa7db03a75ff2b336836c219c024c58f68fa3eecd91976"
-    sha256 cellar: :any,                 arm64_big_sur:  "dbb71439521a388431894b8ba9ea8b9ee628046ccc71cc94acdd3511eceb4df1"
-    sha256 cellar: :any,                 monterey:       "21ed8d16c03b188edebd5e0b20b1fca8e36763e159d75a63d5214873e78b1807"
-    sha256 cellar: :any,                 big_sur:        "adfd6a48ce689095e518b3e05a7d1d775808c84aad660d6763ba27c95d154052"
-    sha256 cellar: :any,                 catalina:       "78f6cd5fce9028f7909f2089c8307fd2dacc44d5edc8fe22ab9833e468dee48d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "993d37bb436fab0157ed5f3c031f9a18168053439e93edb4bdce9abe6e99373d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxcb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "18d3c5f79ee28801e4605a01246197638b8296d2197c87ec08789add6d426d11"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build

@@ -6,12 +6,7 @@ class Xhyve < Formula
   head "https://github.com/machyve/xhyve.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, catalina:    "b81d7e54464f0870eabe1fead9d31627ad5342fd2e9aaff47535a7bcc738751f"
-    sha256 cellar: :any, mojave:      "babcee304193c68f484434c551732e5657878095f00c4149fc88867317f9252e"
-    sha256 cellar: :any, high_sierra: "9643b72b869ec57653668f1ed2db0c3a2c7fad77d8000931933824622032d476"
-    sha256 cellar: :any, sierra:      "edc2e17147d4ae9333033e7317590a48b752b418df689a6dae45bd29a12eaca8"
-    sha256 cellar: :any, el_capitan:  "b0a94f72b09c71aa3bfbbf55669cd9e64ea309d6be8c838f6bc98aeaf8a6895c"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on :macos

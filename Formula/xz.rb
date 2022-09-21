@@ -17,13 +17,10 @@ class Xz < Formula
   ]
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "345b942fb105c850d6243d91502fa285408cfcc7d78d9aaf27322acea608e901"
-    sha256 cellar: :any, arm64_big_sur:  "08ae5dd072653e49b921bc68ed69cbd36581f32fa12d49658e9481f55990a88d"
-    sha256 cellar: :any, monterey:       "853c17e5062001c0bf5d59875b7fcda3610438747680187586f96db93395fc11"
-    sha256 cellar: :any, big_sur:        "e2d22d68de9a20e44053eb9dbcc64a6a0beb5ab33b6d6653b4fea0e42342a948"
-    sha256 cellar: :any, catalina:       "2cc7627ad8dedb17a04f341b2a43e1307f7bd4f1516d344ca52547ec732ae305"
-    sha256               x86_64_linux:   "607a3d993f45efe858d3e4f002603e323a1b1f0c87b4db6fb57d1280f479809d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xz"
+    sha256 aarch64_linux: "6b23443653a1240c033979b56dcb8315f1cfbaa15c31c88932ebedc48e410b5f"
   end
+
 
   def install
     system "./configure", "--disable-debug",

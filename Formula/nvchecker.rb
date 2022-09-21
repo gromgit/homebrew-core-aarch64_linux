@@ -3,17 +3,17 @@ class Nvchecker < Formula
 
   desc "New version checker for software releases"
   homepage "https://github.com/lilydjwg/nvchecker"
-  url "https://files.pythonhosted.org/packages/c2/71/13c7c02602489b6187aca3bf833f577afc1e10501a3b394f8de5cf4f6ccb/nvchecker-2.9.tar.gz"
-  sha256 "bd627a6a50745b1855062ba8b1a6fdd119c98d2b861de9a5461523f6b46b7315"
+  url "https://files.pythonhosted.org/packages/7a/c0/61b7c2dab2e9d3526d8542ccab27577cf82fa5c4534ce661740dd2670beb/nvchecker-2.8.post1.tar.gz"
+  sha256 "bba8cf0bfa7af6c412b87d9d9e9d8b1d0711a04e2fc0d69839fc78fbdde90f91"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "eaddc33f8b586c5a71ce5b5def95beec612fc957610881e9e6f8406817d8f5f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69400f6ffa23e2b53d6e701bf64f8355d547defae3dd5e5166594fb770a7a57f"
-    sha256 cellar: :any_skip_relocation, monterey:       "87efd4e01a3bf96b986496f6bedb2a59aeb0463e67746c3a7bba112f8b1f64a1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "baa4683847d97af85cab0afd9db80401b6f5ea4689d515b3c855741f79371c4d"
-    sha256 cellar: :any_skip_relocation, catalina:       "b31b07f1b48179695b5a968c45dfa206a6107d94a348cc3e6a621d916ff9c275"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c12b219b83dee3a013d0d9947860de27e6399f6fb12d2b6563fb3e294d9233d8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "91ea1dbd8ebd40b06990b3dc5fb12422aedc1ff503b22d9308672145b1f1bff2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a1366a7be20680f4bbd8cd9f51d3347d9785b393a92fc88879050c463e73ba0"
+    sha256 cellar: :any_skip_relocation, monterey:       "6f1b25e837dcd6c34562b8f503ebd035662cac74c5fe1a769e2e6ca89b576d3e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bdae888f2840f60947dd5d0a964019405fc3a19cfe9e8fc2f2d7b5089ceeb02e"
+    sha256 cellar: :any_skip_relocation, catalina:       "b0a4f98e1736e4185f35706418c266659ba7290c2b2636634e2bb0f1b8c20291"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbad5191e70162cc80eeb1856f08f538a9df174c473351a7311df8ece484b313"
   end
 
   depends_on "jq" => [:test]
@@ -37,8 +37,8 @@ class Nvchecker < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "structlog" do

@@ -8,13 +8,10 @@ class Borgmatic < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7e5c2fb89a82f019c695d077af46656e61a70d8b1966682abd5503e819653746"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "21d37d330313aa69bd89813db9bddce5202a5494f971af4744a2ea47ab1ebe34"
-    sha256 cellar: :any_skip_relocation, monterey:       "cdfdbfed93cdc660e399480d8fd5d2c9967df2baf086fe82320346f28f52001b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8772ac93711d2893c6e9f7b5c76277a449f999296b1b4b196698f72a2c2381d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "091f93b96240e8af4b5ad9d9b35be22c3b2a1dcad0bd8c6165e5c3f069a80d40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a352000e6aab3959e3ee4d72e469cf03c160b678a0f370457e8e8c550dbe2ddd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/borgmatic"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b5bec67991c7bdc02bd920e35747e1abcbc7fc3a0fe3642636e3b2608cae9350"
   end
+
 
   depends_on "python@3.10"
 

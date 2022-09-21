@@ -7,12 +7,8 @@ class Libtool < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5f92327e52a1196e8742cb5b3a64498c811d51aed658355c205858d2a835fdc9"
-    sha256 cellar: :any,                 arm64_big_sur:  "6f676b306c72b04dd0e24cc96f51117e91719a4743743dc5527c16bf03f21320"
-    sha256 cellar: :any,                 monterey:       "33bf8379256791a8e8752541bf4e182090dcef5f73aa8faa5f6521d16414a6ca"
-    sha256 cellar: :any,                 big_sur:        "bae30841faca7f4b91e5388c0db13cd6cc95df0182b6d21a62b4c1ea508ebb69"
-    sha256 cellar: :any,                 catalina:       "624bb469bae686405b26ac05706c5f750bed31cd23995a9fa91cc31646e0eadc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1cde2899a36adf5b04d25a9b8b4d6bec8a3099bc59ae68c63e479a4da8ca70b3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtool"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e1550b47b21fb4441e31848cce1bff537d2d61122c732e3a85ba6cd9222558ef"
   end
 
   depends_on "m4"

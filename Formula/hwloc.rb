@@ -11,14 +11,10 @@ class Hwloc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "5a490d201828781f1d09be139c066761c8a21da6fe94eaeeb7833afeae694855"
-    sha256 cellar: :any,                 arm64_big_sur:  "c7b3b0ae09b9dbee5ffeb91120082ed0de28d4add7201a7f2399d5bc887f2838"
-    sha256 cellar: :any,                 monterey:       "42fdb0904f29f3f6635783d2d73a70e3ca44e5c95bf9295bdb4d00d23493d10f"
-    sha256 cellar: :any,                 big_sur:        "d7ac216b513863293f7c4d029741cefab3eb0eefc003c1562cc7007d782f3b20"
-    sha256 cellar: :any,                 catalina:       "2086a4a3b64ca762657b8bac2a8ef798799269911ebb1a12936242d6577be85d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac3a8ad60253e5559ef20bb0f36a57bc35cb951f91139137fbf65733919410cb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hwloc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6fd7ed300927d8bf814bf8de106d3175f16017f0e16bcf44a0acdc0a6397c251"
   end
+
 
   head do
     url "https://github.com/open-mpi/hwloc.git", branch: "master"

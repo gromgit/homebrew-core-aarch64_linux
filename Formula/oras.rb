@@ -1,17 +1,13 @@
 class Oras < Formula
   desc "OCI Registry As Storage"
   homepage "https://github.com/oras-project/oras"
-  url "https://github.com/oras-project/oras/archive/v0.14.1.tar.gz"
-  sha256 "29e934ef24092209c488a411a89af80cfcd93a4c880a36192e91085a58f0c2f7"
-  license "Apache-2.0"
+  url "https://github.com/oras-project/oras/archive/v0.12.0.tar.gz"
+  sha256 "5e19d61683a57b414efd75bd1b0290c941b8faace5fcc9d488f5e4aa674bf03e"
+  license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "295dca4d63c8237aa2997cbf7f1d4c4127f11d1d02371402eef872f7bee2b147"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c888364c1776c6ac9ecfca313d0120588af1db23823797d333cf4913b9c5bf9"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ccd5cc4ec66cbc091ea0cd70b8dccf13e9cfe5153bf0f2fe10b3179d4ffee77"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7e94939922ab6f2eed00190ece18cd033a441a22810d90aaa46cead418d3244a"
-    sha256 cellar: :any_skip_relocation, catalina:       "67191f5046451d48e8daf57f7d0b5b87f749f8bb4f4b6030bc172988747319cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85d93c180e60d0da16b814f79d3458c0c7fc2a449546d8074ed4b04576b2a1c8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/oras"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6e18a3c8a826caa3970db3de2f5c03ff53bbd3eeda36615af73b485a18a4aa21"
   end
 
   depends_on "go" => :build
@@ -19,10 +15,10 @@ class Oras < Formula
   def install
     ldflags = %W[
       -s -w
-      -X oras.land/oras/internal/version.Version=#{version}
-      -X oras.land/oras/internal/version.BuildMetadata=Homebrew
+      -X github.com/oras-project/oras/internal/version.Version=#{version}
+      -X github.com/oras-project/oras/internal/version.BuildMetadata=Homebrew
     ]
-    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/oras"
+    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "./cmd/oras"
   end
 
   test do
@@ -36,12 +32,16 @@ class Oras < Formula
       }
     EOS
     (testpath/"test.json").write(contents)
+    hash = Digest::SHA256.hexdigest(contents)
 
     # Although it might not make much sense passing the JSON as both manifest and payload,
     # it helps make the test consistent as the error can randomly switch between either hash
     output = shell_output("oras push localhost:#{port}/test-artifact:v1 " \
-                          "--config test.json:application/vnd.homebrew.test.config.v1+json " \
+                          "--manifest-config test.json:application/vnd.homebrew.test.config.v1+json " \
                           "./test.json 2>&1", 1)
-    assert_match "#{port}: connect: connection refused", output
+    assert_match %r{
+       ^Error:\ failed\ to\ do\ request(.*)
+       http://localhost:#{port}/v2/test-artifact/blobs/sha256:#{hash}
+    }x, output
   end
 end

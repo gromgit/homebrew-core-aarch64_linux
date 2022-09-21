@@ -2,18 +2,14 @@ class Eksctl < Formula
   desc "Simple command-line tool for creating clusters on Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.110.0",
-      revision: "b6664f85290fedfd5926d091f3374f16633f5c36"
+      tag:      "0.96.0",
+      revision: "59b50db419362c7dc57f0f94a3fd4c15ae2210da"
   license "Apache-2.0"
   head "https://github.com/weaveworks/eksctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bec34e8bcf6a3755722971bedd6e12409596a22ff5841dd4906c14b16ba08c70"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6cab34458abbf5d00b65dae92378bd8e2ea5d9e02e1b06a072c95fd122f3344f"
-    sha256 cellar: :any_skip_relocation, monterey:       "eec7cf9b7a152517f5e3fb495bb8b32b716a579bc2aa6b3b483132c8110a2c65"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c85f567154a0b7aa2327db02f2f3762f591bac80a66308cfce7a6e38d77e0bb1"
-    sha256 cellar: :any_skip_relocation, catalina:       "03c1fb33cf89187b2339c2914f85b083f08d8afec9578926e18efb2c2241d42d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6602e5db6996207497ac4f36c46c4b0096f0eb739f68f2dee68690bd39c43c75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/eksctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e23d969d6e74147888e47c790bc80e43a98b2d603abaa5293d33b04ff03f2214"
   end
 
   depends_on "counterfeiter" => :build
@@ -42,7 +38,12 @@ class Eksctl < Formula
     system "make", "build"
     bin.install "eksctl"
 
-    generate_completions_from_executable(bin/"eksctl", "completion")
+    bash_output = Utils.safe_popen_read(bin/"eksctl", "completion", "bash")
+    (bash_completion/"eksctl").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"eksctl", "completion", "zsh")
+    (zsh_completion/"_eksctl").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"eksctl", "completion", "fish")
+    (fish_completion/"eksctl.fish").write fish_output
   end
 
   test do

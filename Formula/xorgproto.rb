@@ -11,13 +11,10 @@ class Xorgproto < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, catalina:       "d6deb2e4712bdd55eadfdcd7156814a6c42c9d94eb5cda72b89c9e4221a8a99d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7517927867f2f59362eb06cb2b5dda1241a8f2765603197aae24d85b086dc645"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xorgproto"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bfe6bc43cb57e9f5d33e386d6cfd9ee280da8702969bf9ac2827d07303fddfcb"
   end
+
 
   depends_on "pkg-config" => [:build, :test]
   depends_on "util-macros" => :build

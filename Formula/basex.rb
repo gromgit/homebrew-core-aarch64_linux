@@ -12,8 +12,10 @@ class Basex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b4fc19910b4eb043b518467e4030223ae1beb6787c93f3b9ecab71d71ab5dfc6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/basex"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e9a381be86e57e929c82341c429e3c1099f94ba88e1d6f2f98bcc96ade1230f6"
   end
+
 
   depends_on "openjdk"
 

@@ -1,18 +1,14 @@
 class Yaegi < Formula
   desc "Yet another elegant Go interpreter"
   homepage "https://github.com/traefik/yaegi"
-  url "https://github.com/traefik/yaegi/archive/v0.14.2.tar.gz"
-  sha256 "78f69e7a2de98b3ea23b05385d3da9cf98b967a398b2af9545b9bba48533ea46"
+  url "https://github.com/traefik/yaegi/archive/v0.11.3.tar.gz"
+  sha256 "46e73955145cd829e41a906677edfcd78846862ca0274770dd4668dda2a949c1"
   license "Apache-2.0"
   head "https://github.com/traefik/yaegi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3d72a9990e69ef2fbd63bbf92408fa414ba10291a424edefe5dbf7838bd4a19"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6eabfb433e8f718961bc83d99868f2a59f45f35b9ff2d6ceae6b152a230f509b"
-    sha256 cellar: :any_skip_relocation, monterey:       "174954acb5d92c71144de236f1df9214845a57189da81dee07552f5ea3263ed2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b6ee4b4fc144728559c72644d806fc5dde64e781d4d1934100a28a33d7971add"
-    sha256 cellar: :any_skip_relocation, catalina:       "0a01399d0e1bb3fa7bb979fcd17fcfee0453cdd019ce504a5950640c69c44b73"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4890f5fbcbbdc97acdccd4c29d89fba9712d5b7dea43fe0829a0b96956a29532"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/yaegi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b4a3b8669613decd2e6f72fa392fbae578816e423788e78508ce02a9bd47b9ff"
   end
 
   depends_on "go" => :build

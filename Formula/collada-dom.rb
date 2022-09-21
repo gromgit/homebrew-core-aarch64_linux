@@ -3,34 +3,26 @@ class ColladaDom < Formula
   homepage "https://www.khronos.org/collada/wiki/Portal:COLLADA_DOM"
   url "https://github.com/rdiankov/collada-dom/archive/v2.5.0.tar.gz"
   sha256 "3be672407a7aef60b64ce4b39704b32816b0b28f61ebffd4fbd02c8012901e0d"
-  revision 3
+  revision 1
   head "https://github.com/rdiankov/collada-dom.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2c5fc66501eb69de970b7669e4aabb118bc677bb3864ccb5bdc0088c4912ffeb"
-    sha256 cellar: :any,                 arm64_big_sur:  "393c48aed410113fd631b7f3fb986532f0a9312b06c91e17a52195e3a6bcf537"
-    sha256 cellar: :any,                 monterey:       "26c7075d19926064efdb4d1f20857c755791d0f5a6039a573f6fdfc66e0e41f9"
-    sha256 cellar: :any,                 big_sur:        "c0da851d193374fc5facfcc9c2bd7ddc5de7c92f224d4e7a1d921017ec9e4508"
-    sha256 cellar: :any,                 catalina:       "383e160c3c84dce95e7a819a7333b822ecc9395dcb41c008f966e266a2ebb34b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7beae8c38b33043b5fbc1661d80a0855eef1c2025b7ab2f505190eb121ac569b"
+    sha256 cellar: :any,                 arm64_monterey: "6baf8c9373cc9694ee34a651bcc5e7f334853969394d3d4b6b64d20688cf396a"
+    sha256 cellar: :any,                 arm64_big_sur:  "d4c611de9f56ddadaf4e34fdea1049c02289fc81bd0bd9c6e6665f7f15c0f4cb"
+    sha256 cellar: :any,                 monterey:       "764bd5de44b51b088e61df10fd3b8f66581b31ec37821810c6e24d9dd2bc4e32"
+    sha256 cellar: :any,                 big_sur:        "b0987e22d6e0eb6a4b5d5c2413fd629204d1b32c13dd4798bca499446ff89391"
+    sha256 cellar: :any,                 catalina:       "7f2ca06cafbed79ee7df9d03f7842a6bdee997f5d77ed8421b528f79fbe75dd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e38b4a56ab6e5192f8f8d287fb33f0810c3a09fc1bbd32a490bc1486484594c"
   end
 
   depends_on "cmake" => :build
-  depends_on "pkg-config" => :build
   depends_on "boost"
-  depends_on "minizip"
   depends_on "pcre"
-
   uses_from_macos "libxml2"
 
   def install
-    # Remove bundled libraries to avoid fallback
-    (buildpath/"dom/external-libs").rmtree
-
-    ENV.cxx11 if OS.linux? # due to `icu4c` dependency in `libxml2`
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", *std_cmake_args
+    system "make", "install"
   end
 
   test do

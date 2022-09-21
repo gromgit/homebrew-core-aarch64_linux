@@ -15,12 +15,8 @@ class Squirrel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a1b1eaad58270a2b924e75720f9c3a1ce63ca408868ce31637e26fd27d66062"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b4a46f4bce39d747dcf5e7ec4ee43afc76646ae6f4e8c0e7ae1601d147061f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "c8822588938ec4e83897e6f883ccfad6f39ae6fff7279ea35e988a39c2da4c10"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bb230ed7a9aa535e40bbe4f127cd6d4325fed6be46b4a4dae58c39d01b169666"
-    sha256 cellar: :any_skip_relocation, catalina:       "749bb90e798990994fa79d8846661f95fa7e150d3606b889c0351697c82add62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "747575d9f05e9496d0eecf8ea4d6db59711396eac5feca1ae2f61794a53a6a64"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/squirrel"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "598760bfb92c00f82b29901ff04fd401b238f2d8bbb1820e40ddddc113849517"
   end
 
   def install

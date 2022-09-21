@@ -13,13 +13,10 @@ class UniversalCtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "fd0091d92bc23a95b0d477224df0c4a177bc0f6ae26eada5e3967936d1601e88"
-    sha256 cellar: :any,                 arm64_big_sur:  "568d3c9dc00e1e6d0e988ba2e69125f679bbab1de6c971c712ea9e3179dc0383"
-    sha256 cellar: :any,                 monterey:       "f0fcd5a4860ebd38c3d757cae686cc6a081ba25fb961e2fd0835abed65fcecdd"
-    sha256 cellar: :any,                 big_sur:        "d48982ab9293c187de96c887a02a025399446fe5658dbd30b5a107edff5235d4"
-    sha256 cellar: :any,                 catalina:       "247508d9df343dde5545030b92c11a8831739b8b91eb3bb7abc8d1ac8c3f07cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e2f71fdd773582752ccb8942cf3b8981bae71e98e29283725fbe1a02fadf107"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/universal-ctags"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8bfbb7ff897801a50600f79126f9d2a32c40e4f6f305c5d22aa5f34ab66c8f3e"
   end
+
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

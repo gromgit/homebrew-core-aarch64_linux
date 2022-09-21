@@ -6,12 +6,7 @@ class Smimesign < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d103d54144838e83f98e76260c5f3f546729cfa59b52002889ba6716951ba529"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2adc095ef7135d81dde128352c105f36affe27882900960e5ea658b1acd2427f"
-    sha256 cellar: :any_skip_relocation, monterey:       "b94e7e56d2920ae7038bc1ad9a33adf1ad6cced39c896e9a15515abbc63a423f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9781b5ecad25be5a9ef95fb714caedae7512af4d6a31be300b30c57fd17d1fb9"
-    sha256 cellar: :any_skip_relocation, catalina:       "4a8f0b0a87417c22175a7cfa7c25583a3c71170b220d3cbc56b05786baa3227d"
-    sha256 cellar: :any_skip_relocation, mojave:         "146db9c5113009eb23612bdf240d47a8f539619be6e7d87025c43c5cde8eca82"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on "go" => :build

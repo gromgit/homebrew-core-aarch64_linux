@@ -4,15 +4,15 @@ class DiffPdf < Formula
   url "https://github.com/vslavik/diff-pdf/releases/download/v0.5/diff-pdf-0.5.tar.gz"
   sha256 "e7b8414ed68c838ddf6269d11abccdb1085d73aa08299c287a374d93041f172e"
   license "GPL-2.0-only"
-  revision 5
+  revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "78ab605c8c34bcef91f31e9fdef602a0d1367737abb98a8daddf6d6b7aa30671"
-    sha256 cellar: :any,                 arm64_big_sur:  "96eb85ddbde92e463f88b79be4eb25cca96e07ef0723760b40b37d99eb00523f"
-    sha256 cellar: :any,                 monterey:       "87f787670ab2c9363068bed98bfa62308eeb83740186500cf79426ee0a14bbb8"
-    sha256 cellar: :any,                 big_sur:        "0624106a508ec4d7b568f0c6bc7e35f9d53a2fc8b85d2716b81f3ce4ae0508a2"
-    sha256 cellar: :any,                 catalina:       "19fb6b885deeeb0af2a85de372178cb076fa32299408cfecde57f8489093e38d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ab5dc28211c67d3ade744008798834b0dda2099f34d8a0cfca89cd3fed034e83"
+    sha256 cellar: :any,                 arm64_monterey: "83766e8b62534bbec80b603d08c56be97548fa1c67200565300b148466a4f2e7"
+    sha256 cellar: :any,                 arm64_big_sur:  "6d52ffd8c73772030febeaccbce369e4ebd3aa8f5d48ecaebc871fd209bd8281"
+    sha256 cellar: :any,                 monterey:       "62c63cea4828d2cee726103208f3ce6059fc9032b895e6f10462895fd475e007"
+    sha256 cellar: :any,                 big_sur:        "930be3aca2edfcffd9d6e77bb8b11e02569efb34f36721038b23e498755aa315"
+    sha256 cellar: :any,                 catalina:       "98fc9b5ebbeacf9d27d1d06c6b4d1e401ba15eea9e2d155674a95f450c72b61e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ce2184b6f83a05827d1fe7623fb37f5241d370c37b01084a22e2e2dd6a95ee5"
   end
 
   depends_on "autoconf" => :build

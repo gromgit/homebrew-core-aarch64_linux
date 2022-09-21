@@ -3,16 +3,16 @@ class Fuego < Formula
   homepage "https://fuego.sourceforge.io/"
   url "https://svn.code.sf.net/p/fuego/code/trunk", revision: "1981"
   version "1.1.SVN"
-  revision 4
+  revision 3
   head "https://svn.code.sf.net/p/fuego/code/trunk"
 
   bottle do
-    sha256 arm64_monterey: "5a3e590497e0820c464ad1502ff85099abc788ebb8bbd5673a3f13a3938974be"
-    sha256 arm64_big_sur:  "17218e8a637744273cd02101fb46ba305508c5629ffc8362cf369eb8727d1e25"
-    sha256 monterey:       "48789049382de09888cbc9584dcb72c5ec54d597868539fc739dfad016b54d70"
-    sha256 big_sur:        "cc9854427b57339e75b30fe71d354412b641e703254e9d7589e0968af2921848"
-    sha256 catalina:       "a3a74c3c91cb24b3a4bc80c416a7c763c9dcb4ea2864c9b1b24eb94b0829439a"
-    sha256 x86_64_linux:   "01cd8bb74fd428687faf32dd6a0275071291fa7647133f927579d0db5d897f09"
+    sha256 arm64_monterey: "fd608b01aa958d503f590b029525209ddd4d0e6817e4f722cf978e853d7555c4"
+    sha256 arm64_big_sur:  "95ec2ac797371b95af51822a496d20698a12ae3634957caffdee0960cb791be2"
+    sha256 monterey:       "32b9463d445e6655142662879346d4e6e19d4acc3df20cf79ee7d04d08763fbf"
+    sha256 big_sur:        "ec7e854d2bfa8853265051a3979e5dd49e357f5ae3a92fba709ba87016cfc4ac"
+    sha256 catalina:       "46cb29e00532a085978e00fa78a763b0273a7722e670f97ea1bd779c554cda62"
+    sha256 x86_64_linux:   "2abd98ef2ba46b27da1b058174d93bc41ea3707c0dc444c1203117fff43071bb"
   end
 
   depends_on "autoconf" => :build

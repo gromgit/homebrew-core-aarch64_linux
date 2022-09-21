@@ -6,13 +6,10 @@ class Libxcursor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "74a824dd9c8862745f66a17707ae3e5b4dd0e4f144717af8c6b706b76bed01a9"
-    sha256 cellar: :any,                 arm64_big_sur:  "e808a3694e529e169a6765b123c76b9e50e99bd781ee3fb5dc99370f2c97bff5"
-    sha256 cellar: :any,                 monterey:       "1ee235ee41180ae71b83c66948d3414ffaa855f689615dd3a247a68871dece6b"
-    sha256 cellar: :any,                 big_sur:        "33c6a96d769a95b515172c9fabfeb7cf37b3f1ba40bac913dee1457ee0659cb2"
-    sha256 cellar: :any,                 catalina:       "2c2cb1a2d43f836c277bdb33e4ebea581b49f84ef968c4d2c08e87bd9ffedc45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5feaf269b3a872f4a9b934baac4bfa833dba9e87437243d6071808b3b66495ea"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxcursor"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b6e59fe05ec831e869e8b61949219d9905aef1a65ddbf03809a6f1f3e0cf093e"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build

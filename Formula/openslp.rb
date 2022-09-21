@@ -5,14 +5,8 @@ class Openslp < Formula
   sha256 "924337a2a8e5be043ebaea2a78365c7427ac6e9cee24610a0780808b2ba7579b"
 
   bottle do
-    sha256 monterey:     "4fe473351f951da2840deac362acc9d16d5159a30e2e5a84077d1de3ee4dcede"
-    sha256 big_sur:      "3cc88f489dfe6e4e9566608ace194fb8e09a8cb28f80947d7454f03494d76341"
-    sha256 catalina:     "fee6eb82ad60bf1446278498ff8860584dcd2192a7505f3c57eec2bab55f337f"
-    sha256 mojave:       "948182086a86baa001d9b8864715c91d5d9b9ec76ba7c072667dc0d58e983d12"
-    sha256 high_sierra:  "3a933a2c697a2b7a00d9b1f9cc3a58664c43c18f7b4ff3d99afa7bc11d721da5"
-    sha256 sierra:       "fdd847dba24e5a96c30ccef98f0d035f39abc88617d779df627c132be5b648ae"
-    sha256 el_capitan:   "1c19d8355ddda63b9259101a0b7b56ea0fd9fb8f343e2df19f7248542fbf38e5"
-    sha256 x86_64_linux: "31a9bf8bd539a71378e4f5f6a438cdef166659e3641a9899213dd166dcaeee6c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openslp"
+    sha256 aarch64_linux: "dc90e2007f497073d398da6cb6e2d95a4f0967dc9470bc5188c443325813bf94"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.

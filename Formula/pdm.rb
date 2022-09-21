@@ -3,81 +3,41 @@ class Pdm < Formula
 
   desc "Modern Python package manager with PEP 582 support"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/6e/8b/2195627e0cb3cd2e8a5ca173e241eacefa4e70e7b9b96de7049e75e40faa/pdm-2.1.3.tar.gz"
-  sha256 "6fa50be65778c34148125d8fe36f8d21516f10bb306690319022181080625875"
+  url "https://files.pythonhosted.org/packages/61/22/814213bc9a757f664a30c718ff2b238c3835499a04c229df764eb1aefd69/pdm-1.14.1.tar.gz"
+  sha256 "170b3c1a9541bb53f91fff7b25c54afae796464ccb58caa8a0b9ff37646120dd"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "022e46ff0da1ed351e41808ff790742039c142bb878900a8243346ae8bd9345b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "49aa04c102d981a49718bee23899d1a1699ef2e6db48617f2b26fb9dd3eb5f87"
-    sha256 cellar: :any_skip_relocation, monterey:       "647f138976d7f21301dc48e4d65d45894bf87991f6ce5d195ba0e8e991c284cc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ff4331e7668e0f8a606dc987cefaff921a665b2853f670f9dcec578182af39cb"
-    sha256 cellar: :any_skip_relocation, catalina:       "34b419eca3faa5bd0a21668f471c656cf9a5cf07392c2f6d7c616a7922e4a76d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "287af44c614d0c57242dcebd54d5492e697dad88c944bcb597485cf51c8760ad"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1147d97f1b211e3b30471d2d5196fbd04d904344909f3c674f94e3094a84c4d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57f965a4a1f2af3567926e4a74ae7feee8f3a472a7ae2c1e6842fad7e0699e7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "7455a9b541aac2dbdb349d772a5b5a8ad5a5623a53fa6e3ddb805bca7266400e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d3f5bea6ae046acd5f2f3a0ec49ebc606c947183e3608bbcf667627f30fb1b37"
+    sha256 cellar: :any_skip_relocation, catalina:       "bb37578bee9b75279f94e5c712e71df715b85a45eb153f8b445bf9379eeccb1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b988d90a168a817671bec3e2076d4fce2f13de55c468a0f7cda40363c0d7775"
   end
 
   depends_on "python@3.10"
   depends_on "six"
 
   resource "blinker" do
-    url "https://files.pythonhosted.org/packages/2b/12/82786486cefb68685bb1c151730f510b0f4e5d621d77f245bc0daf9a6c64/blinker-1.5.tar.gz"
-    sha256 "923e5e2f69c155f2cc42dafbbd70e16e3fde24d2d4aa2ab72fbe386238892462"
+    url "https://files.pythonhosted.org/packages/1b/51/e2a9f3b757eb802f61dc1f2b09c8c99f6eb01cf06416c0671253536517b6/blinker-1.4.tar.gz"
+    sha256 "471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6"
   end
 
-  resource "CacheControl" do
-    url "https://files.pythonhosted.org/packages/46/9b/34215200b0c2b2229d7be45c1436ca0e8cad3b10de42cfea96983bd70248/CacheControl-0.12.11.tar.gz"
-    sha256 "a5b9fcc986b184db101aa280b42ecdcdfc524892596f606858e0b7a8b4d9e144"
-  end
-
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
-    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
-  end
-
-  resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
-  end
-
-  resource "commonmark" do
-    url "https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/commonmark-0.9.1.tar.gz"
-    sha256 "452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"
-  end
-
-  resource "distlib" do
-    url "https://files.pythonhosted.org/packages/58/07/815476ae605bcc5f95c87a62b95e74a1bce0878bc7a3119bc2bf4178f175/distlib-0.3.6.tar.gz"
-    sha256 "14bad2d9b04d3a36127ac97f30b12a19268f211063d8f8ee4f47108896e11b46"
-  end
-
-  resource "filelock" do
-    url "https://files.pythonhosted.org/packages/95/55/b897882bffb8213456363e646bf9e9fa704ffda5a7d140edf935a9e02c7b/filelock-3.8.0.tar.gz"
-    sha256 "55447caa666f2198c5b6b13a26d2084d26fa5b115c00d065664b2124680c4edc"
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/42/e1/4cb2d3a2416bcd871ac93f12b5616f7755a6800bccae05e5a99d3673eb69/click-8.1.2.tar.gz"
+    sha256 "479707fe14d9ec9a0757618b7a100a0ae4c4e236fac5b7f80ca68028141a1a72"
   end
 
   resource "findpython" do
-    url "https://files.pythonhosted.org/packages/56/85/3a587047aaab86970157497e9a56fd48947ed6e284112d8c5c810a773526/findpython-0.2.1.tar.gz"
-    sha256 "4394a1cbcdbcf8d10ea3439e2d8086b2ec074507097b6e6dbee18028c6e52b08"
-  end
-
-  resource "idna" do
-    url "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz"
-    sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
+    url "https://files.pythonhosted.org/packages/a6/10/2235c5e4f64f70c05b60d5b7c3a2139e5effcdeb7831e980464e93f03397/findpython-0.1.6.tar.gz"
+    sha256 "9fd6185cdcb96baa7109308447efb493b2c7f1a8f569e128af14d726b2a69e18"
   end
 
   resource "installer" do
     url "https://files.pythonhosted.org/packages/74/b7/9187323cd732840f1cddd6a9f05961406636b50c799eef37c920b63110c0/installer-0.5.1.tar.gz"
     sha256 "f970995ec2bb815e2fdaf7977b26b2091e1e386f0f42eafd5ac811953dc5d445"
-  end
-
-  resource "lockfile" do
-    url "https://files.pythonhosted.org/packages/17/47/72cb04a58a35ec495f96984dddb48232b551aafb95bde614605b754fe6f7/lockfile-0.12.2.tar.gz"
-    sha256 "6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799"
-  end
-
-  resource "msgpack" do
-    url "https://files.pythonhosted.org/packages/22/44/0829b19ac243211d1d2bd759999aa92196c546518b0be91de9cacc98122a/msgpack-1.0.4.tar.gz"
-    sha256 "f5d869c18f030202eb412f08b28d2afeea553d6613aee89e200d7aca7ef01f5f"
   end
 
   resource "packaging" do
@@ -86,13 +46,13 @@ class Pdm < Formula
   end
 
   resource "pdm-pep517" do
-    url "https://files.pythonhosted.org/packages/8a/8f/799f7b88c1333115db197dfc0ea3c3a7d57f1b9fb7d9f9151a92ebd2d2d6/pdm-pep517-1.0.4.tar.gz"
-    sha256 "392f8c2b47c6ec20550cb8e19e24b9dbd27373413f067b56ecd75f9767f93015"
+    url "https://files.pythonhosted.org/packages/cd/29/5ccfe04da3d1c138e464a05244640d83f88881f99f7733391b7944aed994/pdm-pep517-0.12.3.tar.gz"
+    sha256 "117bfb1619b86beb34fe009b8d41acacf790d1fc5240ccc11f6cada151d46887"
   end
 
   resource "pep517" do
-    url "https://files.pythonhosted.org/packages/4d/19/e11fcc88288f68ae48e3aa9cf5a6fd092a88e629cb723465666c44d487a0/pep517-0.13.0.tar.gz"
-    sha256 "ae69927c5c172be1add9203726d4b84cf3ebad1edcd5f71fcdc746e66e829f59"
+    url "https://files.pythonhosted.org/packages/0a/65/6e656d49c679136edfba25f25791f45ffe1ea4ae2ec1c59fe9c35e061cd1/pep517-0.12.0.tar.gz"
+    sha256 "931378d93d11b298cf511dd634cf5ea4cb249a28ef84160b3247ee9afb4e8ab0"
   end
 
   resource "platformdirs" do
@@ -100,14 +60,9 @@ class Pdm < Formula
     sha256 "58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"
   end
 
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
-  end
-
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "python-dotenv" do
@@ -115,29 +70,14 @@ class Pdm < Formula
     sha256 "b7e3b04a59693c42c36f9ab1cc2acc46fa5df8c78e178fc33a8d4cd05c8d498f"
   end
 
-  resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
-  end
-
-  resource "requests-toolbelt" do
-    url "https://files.pythonhosted.org/packages/28/30/7bf7e5071081f761766d46820e52f4b16c8a08fef02d2eb4682ca7534310/requests-toolbelt-0.9.1.tar.gz"
-    sha256 "968089d4584ad4ad7c171454f0a5c6dac23971e9472521ea3b6d49d610aa6fc0"
-  end
-
   resource "resolvelib" do
     url "https://files.pythonhosted.org/packages/ac/20/9541749d77aebf66dd92e2b803f38a50e3a5c76e7876f45eb2b37e758d82/resolvelib-0.8.1.tar.gz"
     sha256 "c6ea56732e9fb6fca1b2acc2ccc68a0b6b8c566d8f3e78e0443310ede61dbd37"
   end
 
-  resource "rich" do
-    url "https://files.pythonhosted.org/packages/bb/2d/c902484141330ded63c6c40d66a9725f8da5e818770f67241cf429eef825/rich-12.5.1.tar.gz"
-    sha256 "63a5c5ce3673d3d5fbbf23cd87e11ab84b6b451436f1b7f19ec54b6bc36ed7ca"
-  end
-
   resource "shellingham" do
-    url "https://files.pythonhosted.org/packages/bd/e6/fdf53ebbf08016dba98f2b047d4db95790157f0e2eed3b14bb5754271475/shellingham-1.5.0.tar.gz"
-    sha256 "72fb7f5c63103ca2cb91b23dee0c71fe8ad6fbfd46418ef17dbe40db51592dad"
+    url "https://files.pythonhosted.org/packages/9c/c9/a3e3bc667c8372a74aa4b16649c3466364cd84f7aacb73453c51b0c2c8a7/shellingham-1.4.0.tar.gz"
+    sha256 "4855c2458d6904829bd34c299f11fdeed7cfefbf8a2c522e4caea6cd76b3171e"
   end
 
   resource "tomli" do
@@ -146,23 +86,8 @@ class Pdm < Formula
   end
 
   resource "tomlkit" do
-    url "https://files.pythonhosted.org/packages/84/51/092a8b945edc3b93f2de091ab9596006673caac063e3fac14f0fa6c69b1c/tomlkit-0.11.4.tar.gz"
-    sha256 "3235a9010fae54323e727c3ac06fb720752fe6635b3426e379daec60fbd44a83"
-  end
-
-  resource "unearth" do
-    url "https://files.pythonhosted.org/packages/44/95/e53610248a8a590f2b5e716e173ca1b6b6f97734fa361069d316addac7ad/unearth-0.6.1.tar.gz"
-    sha256 "4b7bfbd7d34a11673d80dfae7fabbf921c139aac78383fb0ca16a90d3b53a66e"
-  end
-
-  resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
-  end
-
-  resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/3c/ea/a39a173e7943a8f001e1f97326f88e1535b945a3aec31130c3029dce19df/virtualenv-20.16.3.tar.gz"
-    sha256 "d86ea0bb50e06252d79e6c241507cb904fcd66090c3271381372d6221a3970f9"
+    url "https://files.pythonhosted.org/packages/60/cd/21a4dd7545350968e544f785e6be4273e6b58cc40a1ab1010d3ce573bc5a/tomlkit-0.10.1.tar.gz"
+    sha256 "3c517894eadef53e9072d343d37e4427b8f0b6200a70b7c9a19b2ebd1f53b951"
   end
 
   resource "wheel" do
@@ -172,7 +97,9 @@ class Pdm < Formula
 
   def install
     virtualenv_install_with_resources
-    generate_completions_from_executable(bin/"pdm", "completion")
+    (bash_completion/"pdm").write Utils.safe_popen_read("#{bin}/pdm", "completion", "bash")
+    (zsh_completion/"_pdm").write Utils.safe_popen_read("#{bin}/pdm", "completion", "zsh")
+    (fish_completion/"pdm.fish").write Utils.safe_popen_read("#{bin}/pdm", "completion", "fish")
   end
 
   test do

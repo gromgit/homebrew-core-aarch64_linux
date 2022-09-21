@@ -1,18 +1,18 @@
 class Xplr < Formula
   desc "Hackable, minimal, fast TUI file explorer"
   homepage "https://github.com/sayanarijit/xplr"
-  url "https://github.com/sayanarijit/xplr/archive/v0.19.0.tar.gz"
-  sha256 "3ffd1c6caf6d77b50744ba0c4166c149c8bb4bf66ad3012292bc54b4064d3779"
+  url "https://github.com/sayanarijit/xplr/archive/v0.17.6.tar.gz"
+  sha256 "3bd2798d5c22207ede1156c63131dbae72fa81fc4ec636067d9f9e6517cb999c"
   license "MIT"
   head "https://github.com/sayanarijit/xplr.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fce72347ae7ce788a19528dbf273fca08f3640e6346d97f5075f803e5fb7c8eb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7cbeb5c6e0426879f3a9a8e0cb29c4bddbe07c5ce12480c99b504bffcb80f8b2"
-    sha256 cellar: :any_skip_relocation, monterey:       "eb83c45e01a9acf43f1d828b9c5759e57bb582dd44c3d29077e57ae7e571860e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1ec024983b2061891472ebf67427b315095b17bc02fc263b3fc722f0bba8d56e"
-    sha256 cellar: :any_skip_relocation, catalina:       "6f1d12c9d764fd9bfd90e0f641ea86b478390d44a5253989621c5b7da373b08c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43387b5167054d1d7ce6a76bbd267a274279172ab7c5ab97506d534c13bc06ea"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "83cedec3a0caf86e0ae05d14427be346240ea8cf3df6128158dbe13e05eb1f42"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8d24e61c70b74f62bfdafaf11d24fa38f4ae27c7ded9307208975754139419d8"
+    sha256 cellar: :any_skip_relocation, monterey:       "f5e6852fbfc43f1b1d6708fb5c90eda4cf20fbc3b718d89446b53d4ae47abb9a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "93eafd238e8201c2dd282ccef98b25109bc5c3797124a19b479904bf3817e8ec"
+    sha256 cellar: :any_skip_relocation, catalina:       "7bcf3ff165970f4ae0e7d50e31f0a909c4a9e27e506c4b378f6e79d9b0930c10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d68c463cf8d858a8b4d632b8bf677b500be2271ad78daa880139ebc7548e9bb"
   end
 
   depends_on "rust" => :build

@@ -5,18 +5,18 @@ class Po4a < Formula
 
   desc "Documentation translation maintenance tool"
   homepage "https://po4a.org"
-  url "https://github.com/mquinson/po4a/releases/download/v0.68/po4a-0.68.tar.gz"
-  sha256 "af6124e68c04a0f02a3316cd5610e5d9b923bc2ede77bb7f9b1537717f44b110"
+  url "https://github.com/mquinson/po4a/releases/download/v0.66/po4a-0.66.tar.gz"
+  sha256 "854a75b91b2b39f4c2a4ed244dba22c9b01be675e2bd1448dce68c8e90d2f2ff"
   license "GPL-2.0-or-later"
   head "https://github.com/mquinson/po4a.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "66022b2512a10306cdff37880d6a201412eda8b2c8f02193dad40d779a6dab5e"
-    sha256 cellar: :any,                 arm64_big_sur:  "edd97007e48390d779e8dfe074885e1c5d4a712213c11578d01b2fab8a3596e7"
-    sha256 cellar: :any,                 monterey:       "af381c9b3dbeea85dbc4e83e7a7e9295bd9cc1f81f45f10b06d311671bd5ee10"
-    sha256 cellar: :any,                 big_sur:        "4a739c23713eefcf2dae9e2a0150a7d118419d2ff0ba60abaa91f60a58eba431"
-    sha256 cellar: :any,                 catalina:       "6c1e3934110aecb5eb8ab86222a0c6c70ce090979debf53aa923bbc43a8aafb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "826c4c2e026dc8caf9244de600c4c222f2885e730fa3d052a923ee56223454a8"
+    sha256 cellar: :any,                 arm64_monterey: "b7dfd568f731a09e3da3ac0032e87fbbc591d67382156fc84a48ef5932504e78"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b9b2e358d4d5fe41c553a1f4643f412c9ba7dad56c49df234be1d7d6c6aa8d6"
+    sha256 cellar: :any,                 monterey:       "fe7df5df2385cb52c14b3976c061af33a030d6e28c5b6d5df0b94642d45f8c50"
+    sha256 cellar: :any,                 big_sur:        "5b07035f584ee757311fd08f82bef27efe4511627e36d14535ebe46846382fa4"
+    sha256 cellar: :any,                 catalina:       "3dfc1f4cde97217205752346004841e0f7c95af44ef3d56806c061c059ba6dad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9d248005fdc21a472cc730b4af982078a2e2d0164c579153b3841df1e7e860b"
   end
 
   depends_on "docbook-xsl" => :build
@@ -36,8 +36,8 @@ class Po4a < Formula
   end
 
   resource "Pod::Parser" do
-    url "https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.65.tar.gz"
-    sha256 "3ba7bdec659416a51fe2a7e59f0883e9c6a3b21bc9d001042c1d6a32d401b28a"
+    url "https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.63.tar.gz"
+    sha256 "dbe0b56129975b2f83a02841e8e0ed47be80f060686c66ea37e529d97aa70ccd"
   end
 
   resource "SGMLS" do
@@ -65,35 +65,14 @@ class Po4a < Formula
     sha256 "bc315fa12e8f1e3ee5e2f430d90b708a5dc7e47c867dba8dce3a6b8fbe257744"
   end
 
-  resource "ExtUtils::CChecker" do
-    url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/ExtUtils-CChecker-0.11.tar.gz"
-    sha256 "117736677e37fc611f5b76374d7f952e1970eb80e1f6ad5150d516e7ae531bf5"
-  end
-
-  resource "XS::Parse::Keyword::Builder" do
-    url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/XS-Parse-Keyword-0.25.tar.gz"
-    sha256 "f5edb30cf7c7f220d0c6c31dc1eb554032840a99c7c298314f5cc3fef66c72c7"
-  end
-
-  resource "Syntax::Keyword::Try" do
-    url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Syntax-Keyword-Try-0.27.tar.gz"
-    sha256 "246e1b033e3ff22fd5420550d4b6e0d56b438cdcbb9d35cbe8b1b5ba1574de23"
-  end
-
   def install
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
     ENV.prepend_path "PERL5LIB", libexec/"lib"
 
     resources.each do |r|
       r.stage do
-        if File.exist?("Makefile.PL")
-          system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", "NO_MYMETA=1"
-          system "make", "install"
-        else
-          system "perl", "Build.PL", "--install_base", libexec
-          system "./Build"
-          system "./Build", "install"
-        end
+        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", "NO_MYMETA=1"
+        system "make", "install"
       end
     end
 
@@ -118,8 +97,6 @@ class Po4a < Formula
   end
 
   test do
-    # LaTeX
-
     (testpath/"en.tex").write <<~EOS
       \\documentclass[a4paper]{article}
       \\begin{document}
@@ -127,13 +104,7 @@ class Po4a < Formula
       \\end{document}
     EOS
 
-    system bin/"po4a-updatepo", "-f", "latex", "-m", "en.tex", "-p", "latex.pot"
-    assert_match "Hello from Homebrew!", (testpath/"latex.pot").read
-
-    # Markdown
-
-    (testpath/"en.md").write("Hello from Homebrew!")
-    system bin/"po4a-updatepo", "-f", "text", "-m", "en.md", "-p", "text.pot"
-    assert_match "Hello from Homebrew!", (testpath/"text.pot").read
+    system bin/"po4a-gettextize", "-f", "asciidoc", "-m", "en.tex", "-p", "out.pot"
+    assert_match "Hello from Homebrew!", (testpath/"out.pot").read
   end
 end

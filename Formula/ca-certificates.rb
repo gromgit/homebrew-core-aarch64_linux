@@ -12,8 +12,10 @@ class CaCertificates < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9e0df163364a5ae07f3ee2cf39083cd74bcb38eeb5250b706e1c02f878d8d632"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ca-certificates"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "17355c04dbc65097af9ee50757c022cdb6f4c803a361e3302bb644cca55ddf99"
   end
+
 
   def install
     pkgshare.install "cacert-#{version}.pem" => "cacert.pem"

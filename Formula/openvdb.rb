@@ -1,19 +1,19 @@
 class Openvdb < Formula
   desc "Sparse volumetric data processing toolkit"
   homepage "https://www.openvdb.org/"
-  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/v9.1.0.tar.gz"
-  sha256 "914ee417b4607c75c95b53bc73a0599de4157c7d6a32e849e80f24e40fb64181"
+  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/v9.0.0.tar.gz"
+  sha256 "ad3816e8f1931d1d6fdbddcec5a1acd30695d049dd10aa965096b2fb9972b468"
   license "MPL-2.0"
   revision 1
   head "https://github.com/AcademySoftwareFoundation/openvdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "335cfb69a9e3b591eed64131c41822f00058a021b097359ab8f02100b5a79317"
-    sha256 cellar: :any,                 arm64_big_sur:  "2a8919f3442922f0249c66006d0008416499bb3beba78e75100a507db3809c0d"
-    sha256 cellar: :any,                 monterey:       "cec4679ecf428581b69615253c728de62678e3339b5d8e7fa8083ee508c40d57"
-    sha256 cellar: :any,                 big_sur:        "6cc379c5eee390df9758d01d1ef4f9ceeed21427d76a5b1424b0446f797df437"
-    sha256 cellar: :any,                 catalina:       "c1e459e1d5d7c510420030dbaee505d0db0444494cbd95a6eef9c207515a7a06"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4b843e1c02948cefdbcfee809cdd4a5a67b896a98e7f73f93e672dde920b00c"
+    sha256 cellar: :any,                 arm64_monterey: "29ca05b8a12fc73fc8077fd7036a40a5bd2833a08b691e34f06e0906f1327bd8"
+    sha256 cellar: :any,                 arm64_big_sur:  "1be18c439e2f597acb6ab7b6c5015e8c0bde503433edfc14b7a95cdea0fef0cb"
+    sha256 cellar: :any,                 monterey:       "e5e41fcadf23b328b30703d4d952dcc4ad2cfb6a29eeb5e4d0455e6964717c6b"
+    sha256 cellar: :any,                 big_sur:        "4e70a60cafb9635500c69863519d4b084a3dafbb3bcec6bcf17d89c9181e295c"
+    sha256 cellar: :any,                 catalina:       "e8c0ab754b18fd72603c9d48ce2b985a70096f419f35266c2e3b3f5fd11ac8e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffd1aa828c4e1d1e20eada6d5d6276347722378e643013cc8630362cf646a262"
   end
 
   depends_on "cmake" => :build

@@ -1,17 +1,18 @@
 class LibgrapeLite < Formula
   desc "C++ library for parallel graph processing"
   homepage "https://github.com/alibaba/libgrape-lite"
-  url "https://github.com/alibaba/libgrape-lite/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "3dd601484a6ef5635ea520c56bca3a029fba382e8aacf3d8d23d12a813defb1e"
+  url "https://github.com/alibaba/libgrape-lite/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "aafc8e5e9b122c4bde4370ee3f2ab8afb043f2a1547cacc062991ad420e3b9a4"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3659ebee323f96fb3eb64094d02692738d18e235845d7303317d6022636ec3af"
-    sha256 cellar: :any,                 arm64_big_sur:  "9600dc934d922dd409aaf2cca9ade069864a867fa7b44fc89ca23689c047fb8b"
-    sha256 cellar: :any,                 monterey:       "84bd889b150876d23ba0b3834e1dd0660662fb80958ec17f136490da91af3b24"
-    sha256 cellar: :any,                 big_sur:        "5a4e474df5364687ce70746539b89d9777be651367906cc8011bd8858356ffa4"
-    sha256 cellar: :any,                 catalina:       "9c60844dfd8d599b39768fdec71a803ebb3911dc7c2b108ccedfee5d3ecafc11"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ca45dbd81d2069065fb46ef4c10a709d8977bd97dceb3a365c896d5872981164"
+    sha256 cellar: :any,                 arm64_monterey: "ed50fa273a04b369892e2bcb127cb9104a7f24c699adffde0df014f0cbed7a6d"
+    sha256 cellar: :any,                 arm64_big_sur:  "81ba4ead0d61e360b73d125f6ec426f539c412608731659aaf0f34a9a808fd45"
+    sha256 cellar: :any,                 monterey:       "71c99960740542e6033ce9055d05107e8823b7632a78a0a8c0df7fdf7e08eab2"
+    sha256 cellar: :any,                 big_sur:        "c3fee8aa45339ea0ebd06096d2cda7cdcbf81fb5dc3798e63696b56af43fe606"
+    sha256 cellar: :any,                 catalina:       "531e59c654f3470fb9d01f576355e1da3cbf31ce33bc810244f606b88c733535"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96d9b222820202b5d107502a4ede041d20839a0c01befa93b1f5a306af54c2c6"
   end
 
   depends_on "cmake" => :build

@@ -12,31 +12,27 @@ class Lua < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a68739b34434711be8213dd5f0b005675534967195b04b9c6ed2f60e05a362fe"
-    sha256 cellar: :any,                 arm64_big_sur:  "87f8fc36f2f97b92016304ae6d25bd197ed4f5275966c6cf1b28a1181cc20b64"
-    sha256 cellar: :any,                 monterey:       "ef899efde91007b9c02f61a8fd4519893e271edb89c03f0c4a7f201f288dae1b"
-    sha256 cellar: :any,                 big_sur:        "55abe1007284d39071736eff023495e1a483675586414ed8504cd9507ae0d67f"
-    sha256 cellar: :any,                 catalina:       "c8cab606ce17da91d120b87f8efaddf80041e22ec601e10242fb543c805d4fbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a94fd6e24f1b0ba6bb6a0c849c2fbfa6acedde81ef3e2c12fb80dcda791f01e2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a205ea2822e0889f26217a56995fb85ba98bcdb818cf1225e3456d4c9b65f29"
   end
 
   uses_from_macos "unzip" => :build
 
-  on_linux do
-    depends_on "readline"
-  end
-
-  # Be sure to build a dylib, or else runtime modules will pull in another static copy of liblua = crashy
-  # See: https://github.com/Homebrew/legacy-homebrew/pull/5043
-  patch do
-    on_macos do
+  on_macos do
+    # Be sure to build a dylib, or else runtime modules will pull in another static copy of liblua = crashy
+    # See: https://github.com/Homebrew/legacy-homebrew/pull/5043
+    patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/11c8360432f471f74a9b2d76e012e3b36f30b871/lua/lua-dylib.patch"
       sha256 "a39e2ae1066f680e5c8bf1749fe09b0e33a0215c31972b133a73d43b00bf29dc"
     end
+  end
+
+  on_linux do
+    depends_on "readline"
 
     # Add shared library for linux. Equivalent to the mac patch above.
     # Inspired from https://www.linuxfromscratch.org/blfs/view/cvs/general/lua.html
-    on_linux do
+    patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/0dcd11880c7d63eb395105a5cdddc1ca05b40f4a/lua/lua-so.patch"
       sha256 "522dc63a0c1d87bf127c992dfdf73a9267890fd01a5a17e2bcf06f7eb2782942"
     end

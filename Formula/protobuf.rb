@@ -11,13 +11,10 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "65db16092c200e43b2022ac85e595e01d1f63231075fb45cf1575a9527dacb28"
-    sha256 cellar: :any,                 arm64_big_sur:  "27ab263b5f859f05f799d367fe2c27dbc27af9b8a0bb8fa0634d380ea055e09f"
-    sha256 cellar: :any,                 monterey:       "0cc9eb3374db9ddaeaa91c814705639731f3966b0399b041bb9022f47a20a079"
-    sha256 cellar: :any,                 big_sur:        "09e243ee08872ea442554ef705fbd55e0643da1124d9ea06757053ccaeca9792"
-    sha256 cellar: :any,                 catalina:       "cd30f382dddb31b7fd1d36555cbf65d8b1880bdec0394fb68769a2d57c334ef1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df6092eefc2554ea52282bed1500254cd1adfc7f98c2c9a50362e38c36c4327b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/protobuf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a46f71f968f429d44d360cee08684d493ce92b5dbcf3d26395b2e86e6b5d12ea"
   end
+
 
   head do
     url "https://github.com/protocolbuffers/protobuf.git", branch: "main"

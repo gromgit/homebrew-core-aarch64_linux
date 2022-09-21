@@ -8,12 +8,8 @@ class Mage < Formula
   head "https://github.com/magefile/mage.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1d1b6476ecda13b01bcadb780b6e2788aaa824a65ef14c41cfb0bb5ed6c93bc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c1d1b6476ecda13b01bcadb780b6e2788aaa824a65ef14c41cfb0bb5ed6c93bc"
-    sha256 cellar: :any_skip_relocation, monterey:       "cdce99922ea340bb7fb022bba39b6524ebce3da456f26334ab68bd77d8d10277"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cdce99922ea340bb7fb022bba39b6524ebce3da456f26334ab68bd77d8d10277"
-    sha256 cellar: :any_skip_relocation, catalina:       "cdce99922ea340bb7fb022bba39b6524ebce3da456f26334ab68bd77d8d10277"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9045efef23a031c07ab4fd7efe5b6b5b6d67002156b6fdd5b9f8e1a0ae80bca5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mage"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "94c1c60c6ac72036fa7d0444c501ba65a017aa029daac0ae83c13c4d5ee8e2ce"
   end
 
   depends_on "go"

@@ -1,18 +1,20 @@
 class Proj < Formula
   desc "Cartographic Projections Library"
   homepage "https://proj.org/"
-  url "https://github.com/OSGeo/PROJ/releases/download/9.1.0/proj-9.1.0.tar.gz"
-  sha256 "81b2239b94cad0886222cde4f53cb49d34905aad2a1317244a0c30a553db2315"
+  url "https://github.com/OSGeo/PROJ/releases/download/9.0.0/proj-9.0.0.tar.gz"
+  sha256 "0620aa01b812de00b54d6c23e7c5cc843ae2cd129b24fabe411800302172b989"
   license "MIT"
+  revision 1
   head "https://github.com/OSGeo/proj.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "c2fc067271d23d5251a8448f9980e58abdcc901469d869a84800ec9047c9ff3e"
-    sha256 arm64_big_sur:  "f599eb7a880fa923ab464eedb1a57b84ef7b72355893a67d4fd008eb8869176a"
-    sha256 monterey:       "bac994a37c6330d1c446b6ff817cd6a5abb041fb239a5d45a7cf940aa0c56058"
-    sha256 big_sur:        "b8b0f822096fae82ec8ee81d31a78c5f58834b63f0e20da99223f8f051ebff01"
-    sha256 catalina:       "fefdbbbd06bb34124d4c5475c4a1acb426aa575fa0b6dc9140f6c2a5da41efff"
-    sha256 x86_64_linux:   "d261b008621c4a7362ecb4d62ae64dca94f38ab924be673091ed8fd754690acc"
+    rebuild 1
+    sha256 arm64_monterey: "8c4301de72f3d6e0706711196b1870a9b95554edce4c2e4defb46c309f8dcbdb"
+    sha256 arm64_big_sur:  "b5c1ccf9cc88e87594b6fb2cd3a23dce86b2a6e41011032d6ffd2e6422c624da"
+    sha256 monterey:       "6b0fc38c196c5cd32acc94a2b7092d56547f9515fcede56553081b0fb5232ed5"
+    sha256 big_sur:        "8cf517b1a686968b7d29b39b154c856a3a1aa9c6164d4031469e7168f245053d"
+    sha256 catalina:       "53e3acc54f9c9a5a25a90fc248b568cac4d622bc0fabdbd4908efd800b2325fa"
+    sha256 x86_64_linux:   "a81bbc9e93aa641b0bf30094af3ba85ef066394b6c2d25192d9cc3b61e92134e"
   end
 
   depends_on "cmake" => :build
@@ -29,8 +31,8 @@ class Proj < Formula
 
   # The datum grid files are required to support datum shifting
   resource "proj-data" do
-    url "https://download.osgeo.org/proj/proj-data-1.11.tar.gz"
-    sha256 "a67b7ce4622c30be6bce3a43461e8d848da153c3b171beebbbea28f64d4ef363"
+    url "https://download.osgeo.org/proj/proj-data-1.9.zip"
+    sha256 "6880bfe2c4f6bc69fec398e9b356f50a05d559a59ab05bd65401bf45f4a4b6da"
   end
 
   def install

@@ -1,37 +1,25 @@
 class Nqp < Formula
-  desc "Lightweight Raku-like environment for virtual machines"
+  desc "Lightweight Perl 6-like environment for virtual machines"
   homepage "https://github.com/Raku/nqp"
-  url "https://github.com/Raku/nqp/releases/download/2022.07/nqp-2022.07.tar.gz"
-  sha256 "58081c106d672a5406018fd69912c8d485fd12bf225951325c50c929a8232268"
+  url "https://github.com/Raku/nqp/releases/download/2022.02/nqp-2022.02.tar.gz"
+  sha256 "25d3c99745cd84f4049a9bd9cf26bb5dc817925abaafe71c9bdb68841cdb18b1"
   license "Artistic-2.0"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
-    sha256 arm64_monterey: "f594a0a65bb4335864a011a9e184e7c35ece4a7441ffdb7d576bb9406699503e"
-    sha256 arm64_big_sur:  "cb61da491155f138a9847a34cc84c6abe717050cdc0143908c58e73b7028f98e"
-    sha256 monterey:       "6b9b73cc13a7d53b006af8445cffa6a379671b2ae4fddfc94fe7c8197c967958"
-    sha256 big_sur:        "b8705e7496a17ebca1f805f1cde66490195a13ca6c3fb25a3f3306b1e86da1d8"
-    sha256 catalina:       "c46961f64c53996d4701db8a72e29966e0353312371422f35227bef83efa7630"
-    sha256 x86_64_linux:   "9c33f17ee8f23aeddc0c76b4e111551f80a89aa311a1c3e36539cf561ae72069"
+    sha256 arm64_monterey: "2fcf5411f84049b5ed9c33ea59b0670dab4a15e7f1fa9306b495d0e75eaffd7b"
+    sha256 arm64_big_sur:  "85ca3d2703380e861c38b11cdb06491fcb9d6d6ff8f164df7bba50a57193509b"
+    sha256 monterey:       "b41ab0d9aa8af807119c68f5410e7948c3805922163439bf2f41da7217521a7c"
+    sha256 big_sur:        "bb3b483b2f847317a8eb56c841c50a3ab9d8378c037667d9937225029d5442d2"
+    sha256 catalina:       "02f937da745f1560f4f8de56ef930e17af51cf11c31f9a2a36c68c94f804c97c"
+    sha256 x86_64_linux:   "708d729ea4d0d0f85072ede576b26b70ae2575080466dfca001ba9173600e638"
   end
 
   depends_on "libtommath"
-  depends_on "libuv"
   depends_on "moarvm"
-
-  uses_from_macos "perl" => :build
-  uses_from_macos "libffi"
 
   conflicts_with "rakudo-star", because: "rakudo-star currently ships with nqp included"
 
   def install
-    # Work around Homebrew's directory structure and help find moarvm libraries
-    inreplace "tools/build/gen-version.pl", "$libdir, 'MAST'", "'#{Formula["moarvm"].opt_share}/nqp/lib/MAST'"
-
     system "perl", "Configure.pl",
                    "--backends=moar",
                    "--prefix=#{prefix}",

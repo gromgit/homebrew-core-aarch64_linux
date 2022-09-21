@@ -1,19 +1,27 @@
 class Ddcctl < Formula
   desc "DDC monitor controls (brightness) for Mac OSX command-line"
   homepage "https://github.com/kfix/ddcctl"
-  url "https://github.com/kfix/ddcctl/archive/refs/tags/v1.tar.gz"
-  sha256 "1b6eddd0bc20594d55d58832f2d2419ee899e74ffc79c389dcdac55617aebb90"
+  url "https://github.com/kfix/ddcctl/archive/refs/tags/v0.tar.gz"
+  sha256 "8440f494b3c354d356213698dd113003245acdf667ed3902b0d173070a1a9d1f"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1650674a1529617dccc1fb61904f9586b17f9f61a63dbd740598019b1c6f25f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "909d9e837d2acb1d41ecf63535e1b352b825a17f3ff82a217bb45e79aff4b364"
-    sha256 cellar: :any_skip_relocation, monterey:       "2d8fd10cd210b815094fe4cdb168e6f63fdfe3320f559ce115fcdc490ea27f72"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3576d7627c47fd48bbc6abb8c200547cae4b0f074c11116f612c771c6172942b"
-    sha256 cellar: :any_skip_relocation, catalina:       "eb787a2b87a3c356933abf84b5f4de0050534ae6112ad4a38ed057df3d9fc73a"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on :macos
+
+  # Apply 2 upstream commits to fix build failures with Xcode 13.
+  # Remove with next release.
+  patch do
+    url "https://github.com/kfix/ddcctl/commit/d3ab6ecfd649fa8c335cd45d632cfc8ee2069174.patch?full_index=1"
+    sha256 "59fbd6f9e0aefdc65de967c350b9ab353001972bbc1b8fbe1bffb458e81a2700"
+  end
+
+  patch do
+    url "https://github.com/kfix/ddcctl/commit/8395b07150508305ff92ead307f1563163212383.patch?full_index=1"
+    sha256 "11646455bcb08fd3d8daad4e311df39a26936c4bc5da9180474eed33ccc52256"
+  end
 
   def install
     bin.mkpath

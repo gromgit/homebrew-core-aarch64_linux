@@ -7,8 +7,10 @@ class Meson < Formula
   head "https://github.com/mesonbuild/meson.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d6aa86323d9f5949dc4c8e544137da3937f55cbdee47fea39a826ee48fa16437"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/meson"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "013802b655ed04ff632182f399d5aa87fd535972624ed6276ab6debeb2047944"
   end
+
 
   depends_on "ninja"
   depends_on "python@3.10"

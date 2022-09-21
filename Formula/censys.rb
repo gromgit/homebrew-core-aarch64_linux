@@ -8,13 +8,10 @@ class Censys < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c77c41eda19e5306131a47a79ee014d7eebd37f18441db54e56dc4d9106f339"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cbe9d2d487777271f195e179d91b1e106f60580fac75ab945c1356ccb275e0e6"
-    sha256 cellar: :any_skip_relocation, monterey:       "18b8f1b1c83a6f90f20ea0d289281afa4e9e4167a07e03d541240045fab59f0b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dba3f0fdd3bebf1ed9e89c06398f7baa5de63d73c3923ec0a03cc129c03a531a"
-    sha256 cellar: :any_skip_relocation, catalina:       "99b4d5b95f03ac873f9526cbc3c76daaed328a365cec4081c28462c5fce3c550"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bdcc975ccc160c5cc79fc2cb9213e1423a96b937f5c3461131c632d6c72ea0ef"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/censys"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2e3cbece25c5e88b53a9c7cb220e74e184916ef5f280f94505bfdaec4c7bd3b6"
   end
+
 
   depends_on "python@3.10"
 

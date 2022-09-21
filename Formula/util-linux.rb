@@ -14,13 +14,10 @@ class UtilLinux < Formula
   ]
 
   bottle do
-    sha256 arm64_monterey: "b0b3c6d674a5ddc13707ac4af2ba34745b7dea8048b6b12034f3685cb017cadc"
-    sha256 arm64_big_sur:  "1b806803757b40e4ffed44f68364cb45386ff96d467fa94d6d776b1f41c1d5bc"
-    sha256 monterey:       "0c66175a5324b3a5a31bfbe2b6c2154666cbbddd1203182a661f6f6cb1095799"
-    sha256 big_sur:        "237a36c3eb5250d0b71d5cac628c364d2a753174ad8b891cdb1f548b60c182b7"
-    sha256 catalina:       "3d52e89f1e08a9d93462d2008289379784842ff8caa538eeaf653ea689500993"
-    sha256 x86_64_linux:   "27177c2a258f719de1236fc0eafa5e45021f7997e332dd9d345c28d0c4354c36"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/util-linux"
+    sha256 aarch64_linux: "b570a0756cb26f8b3f1f5cd6d67158e98301a25c6f549732e9c23df1f5f1afb4"
   end
+
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
 

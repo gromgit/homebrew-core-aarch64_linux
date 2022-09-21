@@ -14,6 +14,11 @@ class CmuSphinxbase < Formula
     end
   end
 
+  livecheck do
+    url :stable
+    regex(%r{url=.*?/sphinxbase[._-]v?(\d+(?:\.\d+)+)\.t}i)
+  end
+
   bottle do
     rebuild 1
     sha256 cellar: :any,                 arm64_monterey: "10c702ad300d51ffac6ed0251cf3b64952d549ad0a67792b80fe055a182014f2"
@@ -28,16 +33,13 @@ class CmuSphinxbase < Formula
   end
 
   head do
-    url "https://github.com/cmusphinx/sphinxbase.git", branch: "master"
+    url "https://github.com/cmusphinx/sphinxbase.git"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
     depends_on "swig" => :build
   end
-
-  # Commented out while this formula still has dependents.
-  # deprecate! date: "2022-06-12", because: :repo_archived
 
   depends_on "pkg-config" => :build
   # If these are found, they will be linked against and there is no configure

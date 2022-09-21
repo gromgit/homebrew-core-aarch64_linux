@@ -17,13 +17,10 @@ class OpensslAT11 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4e7b6cb2252c554a8e25ecae960f2fcd9a7fa742aa3fc99e6b533bb4e5d32483"
-    sha256 arm64_big_sur:  "f0b206023866473514bd5540dc8d2ba18967625d3befee6191bab8f1878f9b6c"
-    sha256 monterey:       "b4dabe01061f98a870548cc1bb5a18b68bcbc9021dc87781ead6e3e29a9abadc"
-    sha256 big_sur:        "9a130889462e43fdc473302fb7fa0ac871af0ad6a3e9df3de27c1ea2b211f2e0"
-    sha256 catalina:       "497b7711e3dff815210fdb690b851ddc4c25cd46ab2b20642194b47aa018db66"
-    sha256 x86_64_linux:   "abec715f01eb20edda202463ca91403e3fa767afcba0fe732ef8e072bb99d2fd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openssl@1.1"
+    sha256 aarch64_linux: "eefdc8d31a3e6d4b954ce31b612f38160f081aeeff086a071ac1c47a4f5e2904"
   end
+
 
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
 

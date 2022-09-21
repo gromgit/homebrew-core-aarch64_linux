@@ -44,19 +44,16 @@ class FbClient < Formula
     # avoid pycurl error about compile-time and link-time curl version mismatch
     ENV.delete "SDKROOT"
 
-    python3 = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor"/Language::Python.site_packages(python3)
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor"/Language::Python.site_packages("python3")
 
     # avoid error about libcurl link-time and compile-time ssl backend mismatch
     resource("pycurl").stage do
-      system python3, *Language::Python.setup_install_args(libexec/"vendor", python3),
-                      "--curl-config=#{Formula["curl"].opt_bin}/curl-config",
-                      "--install-data=#{prefix}"
+      system "python3", *Language::Python.setup_install_args(libexec/"vendor"),
+                        "--curl-config=#{Formula["curl"].opt_bin}/curl-config"
     end
 
     resource("pyxdg").stage do
-      system python3, *Language::Python.setup_install_args(libexec/"vendor", python3),
-                      "--install-data=#{prefix}"
+      system "python3", *Language::Python.setup_install_args(libexec/"vendor")
     end
 
     rewrite_shebang detected_python_shebang, "fb"

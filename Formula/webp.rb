@@ -6,13 +6,10 @@ class Webp < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f2857acd2c645e441e7363903906492e96cda8c52a1fe0c9ddb668fd12f63e53"
-    sha256 cellar: :any,                 arm64_big_sur:  "90cc74768d434a5476cf49144d02ef5dd24cfeb2dead12f1210ffa468e024c85"
-    sha256 cellar: :any,                 monterey:       "51401f60176f19559cd04e37873da32c470fe3ac6ba0a9e096a4fafda5cd8065"
-    sha256 cellar: :any,                 big_sur:        "dc4045b5b9e114898adc9522c704aa668c15c64a5026a2f22c0edfb0cd5fdaeb"
-    sha256 cellar: :any,                 catalina:       "c3d401ed32f666e4b1bf40b7c9c037e4c618e12d9e31b61ae59dca03fb8982a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "853c0c8e2d2b74f0a6f1b7d2b160c3fb69fa7b8a7ae93da5df9da97275a77b8f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/webp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "52afc151179638fc326c1962b178c3b97fd55bd4457dd957c15f700fd7ba0e0f"
   end
+
 
   head do
     url "https://chromium.googlesource.com/webm/libwebp.git", branch: "main"

@@ -1,18 +1,19 @@
 class GitCinnabar < Formula
   desc "Git remote helper to interact with mercurial repositories"
   homepage "https://github.com/glandium/git-cinnabar"
-  url "https://github.com/glandium/git-cinnabar/archive/0.5.10.tar.gz"
-  sha256 "20792358201417fa64cb3b1b9ccd6753909f081b0bf11cb9908f55a3607627e1"
+  url "https://github.com/glandium/git-cinnabar/archive/0.5.8.tar.gz"
+  sha256 "7971c2ae17d2b919f915efab35e3aba583b951d53ca2bc6ebf69bbd0c22f1067"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/glandium/git-cinnabar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "45c4131d5e6f2334043600361bcbadc35a958f0af1622911bcfa7e6630feb1c8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fae6f93aeabe58a4f42ed4cdad391eef193b86b4cc52dd355d00a16a7a0583d1"
-    sha256 cellar: :any_skip_relocation, monterey:       "ad041f42520a697f1b3e540370dcb76add2436c77b893e349dbb51378c2fdaba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "292c8b28e12de0559e3dced8386aac27696de6bca127e11b9c0733b387f3fd13"
-    sha256 cellar: :any_skip_relocation, catalina:       "a66c188e82bda40b4457fb0da18fec6559350b4c6dab168f1f8f5b4029ebcc04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35415f00c4cd5caafc3f325893d2b7c2af7e1d3004cc9e758f031173979ea586"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e82376d75a8481c1d14fc79a8c6ec7093260e05c7cb5007184914203ae91365c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "963c3f71356e10162265b3c2cd1abed252c84fe9424d350e4b96eabc360474d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "8436e3cc13ffbba4dacb0ae8f78689b841c428e6a9ea1c77c502c69ad5eeed9f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "290369e1d739f2d99209a8eed259efcff164af3ddf3c825b307450d59c2cfefb"
+    sha256 cellar: :any_skip_relocation, catalina:       "1c0507389075c31707cf9024512d1c5cca9c996d07e4ce06a52859df9f039d9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "131494059a460bfe7f8364528af2ab6b9cb365638244f3ad2598f82f39e76fc4"
   end
 
   depends_on "mercurial"

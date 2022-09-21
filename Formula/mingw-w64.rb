@@ -4,7 +4,7 @@ class MingwW64 < Formula
   url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v10.0.0.tar.bz2"
   sha256 "ba6b430aed72c63a3768531f6a3ffc2b0fde2c57a3b251450dcf489a894f0894"
   license "ZPL-2.1"
-  revision 3
+  revision 1
 
   livecheck do
     url :stable
@@ -12,12 +12,13 @@ class MingwW64 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "a93b02724538ddab682de97fb5954af51a777277ff60ca0c05cb09e98114c6bf"
-    sha256 arm64_big_sur:  "f7c7a35d27f4543226adab2d8b984eb464dd854c8a49bd38840c66e6a33583fb"
-    sha256 monterey:       "410a717fc0c81aabc961058b79411de9ab538c8ca61dd13262787c776f542c1f"
-    sha256 big_sur:        "0ad8f84cfce32fee78aa28bcc78f17184affb786c733be96040ae8b1c81c5bab"
-    sha256 catalina:       "197f1eab5e40be9b76a473b9b34c479d4c7c48f0a4e1b642a6bc13375607c1b5"
-    sha256 x86_64_linux:   "2adcbf1dba5615b4778a73345ca5c37346f902fa3cf06681ba0e765e101cf3b8"
+    rebuild 1
+    sha256 arm64_monterey: "83ac80b88fcf2d47b786d457648bb3f1f1002deb9ff71b1f5f884de8e1c0b392"
+    sha256 arm64_big_sur:  "857aecb324bf425ca3ef2bcfd462a4909df2f6d5152feb69bf86c1371234fbb9"
+    sha256 monterey:       "40976416e23d81cd33649fb1dbb5582d359effee42005f66a7b99bc97019a86d"
+    sha256 big_sur:        "0a6af7c3ce1f1d37a09a0b7e9e526d32a15d4817ee9ca9feab9ad2ce5d8a83d4"
+    sha256 catalina:       "cede2bfb5f915da57afb35cccc4fdfb89fcdec572a16714ef6bdc7a8383d395e"
+    sha256 x86_64_linux:   "e5e8544cc80513ebd44ebbed9207d10bf0419d8ca91f264fea85edaf6b4534aa"
   end
 
   # Apple's makeinfo is old and has bugs
@@ -29,15 +30,22 @@ class MingwW64 < Formula
   depends_on "mpfr"
 
   resource "binutils" do
-    url "https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz"
-    mirror "https://ftpmirror.gnu.org/binutils/binutils-2.39.tar.xz"
-    sha256 "645c25f563b8adc0a81dbd6a41cffbf4d37083a382e02d5d3df4f65c09516d00"
+    url "https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.xz"
+    mirror "https://ftpmirror.gnu.org/binutils/binutils-2.38.tar.xz"
+    sha256 "e316477a914f567eccc34d5d29785b8b0f5a10208d36bbacedcc39048ecfe024"
+
+    # Fix dlltool failures during parallel builds until the release after 2.38, upstream patch
+    # https://sourceware.org/bugzilla/show_bug.cgi?id=28885
+    #
+    # patch is from https://sourceware.org/git/?p=binutils-gdb.git;a=patch;h=d65c0ddddd85645cab6f11fd711d21638a74489f
+    # with ChangeLog patch removed
+    patch :DATA
   end
 
   resource "gcc" do
-    url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
-    mirror "https://ftpmirror.gnu.org/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
-    sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
+    url "https://ftp.gnu.org/gnu/gcc/gcc-12.1.0/gcc-12.1.0.tar.xz"
+    mirror "https://ftpmirror.gnu.org/gcc/gcc-12.1.0/gcc-12.1.0.tar.xz"
+    sha256 "62fd634889f31c02b64af2c468f064b47ad1ca78411c45abe6ac4b5f8dd19c7b"
   end
 
   def target_archs
@@ -226,3 +234,24 @@ class MingwW64 < Formula
     end
   end
 end
+
+__END__
+diff --git a/binutils/dlltool.c b/binutils/dlltool.c
+index d95bf3f5470..89871510b45 100644
+--- a/binutils/dlltool.c
++++ b/binutils/dlltool.c
+@@ -3992,10 +3992,11 @@ main (int ac, char **av)
+   if (tmp_prefix == NULL)
+     {
+       /* If possible use a deterministic prefix.  */
+-      if (dll_name)
++      if (imp_name || delayimp_name)
+         {
+-          tmp_prefix = xmalloc (strlen (dll_name) + 2);
+-          sprintf (tmp_prefix, "%s_", dll_name);
++          const char *input = imp_name ? imp_name : delayimp_name;
++          tmp_prefix = xmalloc (strlen (input) + 2);
++          sprintf (tmp_prefix, "%s_", input);
+           for (i = 0; tmp_prefix[i]; i++)
+             if (!ISALNUM (tmp_prefix[i]))
+               tmp_prefix[i] = '_';

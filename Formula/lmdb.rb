@@ -13,13 +13,8 @@ class Lmdb < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "5a02c8325714c21cf296f22807ab3eeca897e88f7163f9202b29cfbc97b1cce1"
-    sha256 cellar: :any,                 arm64_big_sur:  "c41fb2e2798d68609b974ab0897a2aee8a09628f34e93b4d2dca9b39c96a8fd0"
-    sha256 cellar: :any,                 monterey:       "7425bcf375008775546c80f8e783fc01cea763d597e049abf5e0b64dfcbaf8ee"
-    sha256 cellar: :any,                 big_sur:        "4b09b12695d58a6f3e311df5d0b80719ca409a4e47424a77425b008582ec5ddf"
-    sha256 cellar: :any,                 catalina:       "2b0ba99f6858d120ff7ab84fe0af0268523d3643246d56e0156161f32c3beff3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5cb6f9534ff4823b76d71214fed3f29bef56b73fd6feb691d047abf92795c95"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lmdb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "95b3e449df8d31ccd9aad862b35e6e6a30b28db98270d24fe6d05e8710a17853"
   end
 
   def install

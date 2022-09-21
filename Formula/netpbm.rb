@@ -3,9 +3,10 @@ class Netpbm < Formula
   homepage "https://netpbm.sourceforge.io/"
   # Maintainers: Look at https://sourceforge.net/p/netpbm/code/HEAD/tree/
   # for stable versions and matching revisions.
-  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "4365"
-  version "10.86.34"
+  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "4311"
+  version "10.86.32"
   license "GPL-3.0-or-later"
+  revision 1
   version_scheme 1
   head "https://svn.code.sf.net/p/netpbm/code/trunk"
 
@@ -16,16 +17,16 @@ class Netpbm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "8bf3b9fc4d9ebf4bf94d6eb8d24101ea5b603bc2d637f2c0580e343bf9241ef8"
-    sha256 arm64_big_sur:  "438ea4c47818e4f842863ef08cdcd6b66aa5760bd4278001697f70e52ce3698a"
-    sha256 monterey:       "0db6b3939e1d1582f5d1f2d6c773ce59608a0d1f447eddede14c152ae284f0b4"
-    sha256 big_sur:        "357f2471d61280edaad05bc2dbf455791e6e956c191f0706796d3ecdd261a49d"
-    sha256 catalina:       "8a1ad15323e118eb77d4c561d8a848ca9dfdc5a60ab467f1dcc6360694defe1f"
-    sha256 x86_64_linux:   "e5519cec5331aa00d1fe5a3e3ed34d2dffcdcb3a79229eefb2042880ca577302"
+    sha256 arm64_monterey: "50fe4b8bd38c95a636876c50eaa56ba7c08bc40260d2e41af83cd5851ecfdd27"
+    sha256 arm64_big_sur:  "c1afd6d892fd167b850996d6ef6d8c91777827d51e1c336a06ebe724559f238d"
+    sha256 monterey:       "160dbd102087ec169f5019527839bfe9d01454a0267196ab09a8fa8b3d852dd6"
+    sha256 big_sur:        "a08508f82df946861034ba7b5f5d48e30a344e3aa3b4ab3d66c0c3b21706cada"
+    sha256 catalina:       "3c55ba437d3991e17750144f586b83cc36294d615a2c9739b780fce1b0e06c3a"
+    sha256 x86_64_linux:   "f7372e3d244bff638ab0a62dff8df5e17b7ede9602a0a2f7a0e4bc0dc3080154"
   end
 
   depends_on "jasper"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
 
@@ -45,8 +46,8 @@ class Netpbm < Formula
       s.change_make_var! "PNGLIB", "-lpng"
       s.change_make_var! "ZLIB", "-lz"
       s.change_make_var! "JASPERLIB", "-ljasper"
-      s.change_make_var! "JASPERHDR_DIR", Formula["jasper"].opt_include/"jasper"
-      s.gsub! "/usr/local/netpbm/rgb.txt", prefix/"misc/rgb.txt"
+      s.change_make_var! "JASPERHDR_DIR", "#{Formula["jasper"].opt_include}/jasper"
+      s.gsub! "/usr/local/netpbm/rgb.txt", "#{prefix}/misc/rgb.txt"
 
       if OS.mac?
         s.change_make_var! "CFLAGS_SHLIB", "-fno-common"
@@ -70,7 +71,7 @@ class Netpbm < Formula
       end
 
       prefix.install %w[bin include lib misc]
-      lib.install buildpath.glob("staticlink/*.a"), buildpath.glob("sharedlink/#{shared_library("*")}")
+      lib.install Dir["staticlink/*.a"], Dir["sharedlink/#{shared_library("*")}"]
       (lib/"pkgconfig").install "pkgconfig_template" => "netpbm.pc"
     end
   end
@@ -78,8 +79,8 @@ class Netpbm < Formula
   test do
     fwrite = shell_output("#{bin}/pngtopam #{test_fixtures("test.png")} -alphapam")
     (testpath/"test.pam").write fwrite
-    system bin/"pamdice", "test.pam", "-outstem", testpath/"testing"
-    assert_predicate testpath/"testing_0_0.pam", :exist?
+    system "#{bin}/pamdice", "test.pam", "-outstem", testpath/"testing"
+    assert_predicate testpath/"testing_0_0.", :exist?
     (testpath/"test.xpm").write <<~EOS
       /* XPM */
       static char * favicon_xpm[] = {

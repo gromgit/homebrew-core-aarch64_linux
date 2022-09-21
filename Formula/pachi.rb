@@ -7,13 +7,8 @@ class Pachi < Formula
   head "https://github.com/pasky/pachi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c38b47dfb6e9f48507f47be141963ea5fb4b6329a83f015f4bd0d52c09325408"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71f7bf11f6d68a8768468e4494cdc0785f484a5ccd7713cfc4327f049e79e80a"
-    sha256 cellar: :any_skip_relocation, monterey:       "7079a129c324c7411aabe2c5357f3b5c86658bcec6b897f06e8cccf02e775a23"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d14dec70d5fedd0d7ba63b05f175b06b12c40e1da71d24da64712ce63858dae1"
-    sha256 cellar: :any_skip_relocation, catalina:       "9a2adc64bf7dbfbaf9e3d9ff940d6c5bcb0e4040160ed62f57751ec87281132e"
-    sha256 cellar: :any_skip_relocation, mojave:         "c88f24dd1e7a267848eab540dc2b0961962825ab6e7088fc24b335159dacf31c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0fc26989c0cf90b6fa2256e129b0b87993464ec27ad88fefe569abdd9702292"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pachi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6a94c3cd5d103005b2be4a91dbf0466aea2befc59a7de74e8cf3044053d57d4e"
   end
 
   resource "patterns" do

@@ -8,13 +8,13 @@ class Caf < Formula
   head "https://github.com/actor-framework/actor-framework.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "1313480b89b8ab7151ec4c585b2c7470b756a9b281f8944dbf85eb5ee16b82d7"
-    sha256 cellar: :any,                 arm64_big_sur:  "e3552ca90aa71ce07d710f27180b54c2f3c5bab37a0811e8dacf0efc144fcb03"
-    sha256 cellar: :any,                 monterey:       "d34c094aa418f1fa3b17e0dabc9d31f78b1e33a7e83bbba6e6eb00998cdd3320"
-    sha256 cellar: :any,                 big_sur:        "fd895f94627410078a14281a8cf201d8ea0399f3393b55c4c6742da8922f2e90"
-    sha256 cellar: :any,                 catalina:       "4e4f922feb8b8da760941ca4dfc3c050536938edaef0b7f3ea3c328b4d23c038"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0604ff641db3478a78639cac72937792e4efe4593a22f2ad027c09cf793f9f5d"
+    sha256 cellar: :any,                 arm64_monterey: "b0a2a5fc24463e78e24ed33d070b03f612ec905b13df94fe998aa60b832a36b7"
+    sha256 cellar: :any,                 arm64_big_sur:  "ab16a7c7af1cb9ebcf94b0f51185d2318de6c658e2c58fea826011eecd3e09f9"
+    sha256 cellar: :any,                 monterey:       "d8eb6e9e8f452ef2b509cd0291eb6adabb160ac6109e4582c26a9328b08fd6d7"
+    sha256 cellar: :any,                 big_sur:        "804cec1ee5419983767ced84f1eaa357ea1d96676725be2f0db85245625c4a17"
+    sha256 cellar: :any,                 catalina:       "8f11ac81d1c3efdd0b4813478336c5e215df2d44d0bd04e770d04bddd598b02e"
+    sha256 cellar: :any,                 mojave:         "ef6ea69f637a890f191b6f584167f9cb9fbe990e040ccce147f64331d305bfda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9dd022da722c0bdecfbf643251d9529fde48b2b13576a95fc706df751941df2"
   end
 
   depends_on "cmake" => :build
@@ -27,13 +27,11 @@ class Caf < Formula
   fails_with gcc: "5"
 
   def install
-    tools = pkgshare/"tools"
-    rpaths = [rpath, rpath(source: tools)]
-    args = ["-DCAF_ENABLE_TESTING=OFF", "-DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}"]
-
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DCAF_ENABLE_TESTING=OFF"
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do

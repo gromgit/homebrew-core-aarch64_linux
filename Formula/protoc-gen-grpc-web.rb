@@ -6,35 +6,27 @@ class ProtocGenGrpcWeb < Formula
   url "https://github.com/grpc/grpc-web/archive/1.3.1.tar.gz"
   sha256 "d292df306b269ebf83fb53a349bbec61c07de4d628bd6a02d75ad3bd2f295574"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e5328893bcbe0358cf13cd9271930f43f84133876b3af516fd05ed56d2abe907"
-    sha256 cellar: :any,                 arm64_big_sur:  "c58d3cce1fae0841e43f388a4882c8c1f0a2ce6dadc8d602c3868de812919041"
-    sha256 cellar: :any,                 monterey:       "b2c76d8ecbe7fd209f8ce81ca5df924b4cb42cb30fb8bbbda1ad969cfbec5eaf"
-    sha256 cellar: :any,                 big_sur:        "8be0ebdbcc638da05576db96c7e250f37cb76652d49e5f914dc0acd9fab6c99e"
-    sha256 cellar: :any,                 catalina:       "6b9587aa8e753496fb131bddbfe34c034b59daffe48f58ba3108873cde26b034"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c22f91d1442b02b6d546eaa5a10675221d01cf457bb9a408c574dfdfc67825ed"
+    sha256 cellar: :any,                 arm64_monterey: "e679f48db0744502049cda46308f89de294134b522ba731fcfc88486589e992d"
+    sha256 cellar: :any,                 arm64_big_sur:  "fcf29b351eb68c7db6dbe314dd819bd5f89909e46135008745362e345934d898"
+    sha256 cellar: :any,                 monterey:       "0834212bc2e4be2c88985582ba06b15481cbd0fe2b8da2f1543c69089f64b5dd"
+    sha256 cellar: :any,                 big_sur:        "e93c341c55c974b7be14075b248a1cac4722b3371ddd46dd5a1656e1ea5d817e"
+    sha256 cellar: :any,                 catalina:       "4e46ddd1da2a1d3ddd2081ab8870b8cf813bf099b48a7a000e4bf8e524b3d748"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24c1d8d62acd218135d6cee0bfdfa0962604121cfcd3b42c6c56d0edb14b49c7"
   end
 
   depends_on "cmake" => :build
   depends_on "node" => :test
   depends_on "typescript" => :test
-  depends_on "protobuf@3"
+  depends_on "protobuf"
 
   def install
     bin.mkpath
     system "make", "install-plugin", "PREFIX=#{prefix}"
-
-    # Remove these two lines when this formula depends on unversioned `protobuf`.
-    libexec.install bin/"protoc-gen-grpc-web"
-    (bin/"protoc-gen-grpc-web").write_env_script libexec/"protoc-gen-grpc-web",
-                                                 PATH: "#{Formula["protobuf@3"].opt_bin}:${PATH}"
   end
 
   test do
-    ENV.prepend_path "PATH", Formula["protobuf@3"].opt_bin
-
     # First use the plugin to generate the files.
     testdata = <<~EOS
       syntax = "proto3";
@@ -54,8 +46,8 @@ class ProtocGenGrpcWeb < Formula
     EOS
     (testpath/"test.proto").write testdata
     system "protoc", "test.proto", "--plugin=#{bin}/protoc-gen-grpc-web",
-                     "--js_out=import_style=commonjs:.",
-                     "--grpc-web_out=import_style=typescript,mode=grpcwebtext:."
+      "--js_out=import_style=commonjs:.",
+      "--grpc-web_out=import_style=typescript,mode=grpcwebtext:."
 
     # Now see if we can import them.
     testts = <<~EOS

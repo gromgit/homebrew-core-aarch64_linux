@@ -3,8 +3,6 @@ class Zlib < Formula
   homepage "https://zlib.net/"
   url "https://zlib.net/zlib-1.2.12.tar.gz"
   mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.12/zlib-1.2.12.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/zlib-1.2.12.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/zlib-1.2.12.tar.gz"
   sha256 "91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9"
   license "Zlib"
   head "https://github.com/madler/zlib.git", branch: "develop"
@@ -15,12 +13,8 @@ class Zlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b3c956cfb722564f26a8c50a89293971089a7017f363c823d432e1c90c16b87c"
-    sha256 cellar: :any,                 arm64_big_sur:  "0cb865dc3adb641c0f4f7301d7ad66ab5b23ac76afe61e21d865c12f0ab5d03a"
-    sha256 cellar: :any,                 monterey:       "5072d7b94690a52220f7a9f6cc566f87998a380e3f2fcd8a386caf7dbd5f19c4"
-    sha256 cellar: :any,                 big_sur:        "3db997820d0f7cbd3de13fda10f731949f44cb19f3923be18686ae5d65ec2e7f"
-    sha256 cellar: :any,                 catalina:       "71657247458cf1aa4f1b548aff059e65b182ef5fdf86740071f7f60c5520b370"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23b1d8f0500bbccdf5cc466e7acbd7eddc40cd1465687239af423389abe4f46e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zlib"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "320dfabd758f050436c939cf7f4b3f23e1b8981c8fadebd03fc3642f3f158ab2"
   end
 
   keg_only :provided_by_macos

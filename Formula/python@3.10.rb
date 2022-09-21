@@ -12,13 +12,10 @@ class PythonAT310 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "6b294c48f986b1b011de46f22d11ad761ac60df2f07385558e3aa8b44f262e82"
-    sha256 arm64_big_sur:  "7bad8c37f59964e6bbae8dea8b8b310242246ac09230d8e639c9d582dd601d17"
-    sha256 monterey:       "b7a957238eae1d94961a44e9ede4492ef74170571fe2a7073d16cd3ce9c714a5"
-    sha256 big_sur:        "9fed92e77f9ddc047af26eadb5cece99f2a848e86b92bca12814f8952cc41cc7"
-    sha256 catalina:       "3a26f3d3c87234a8ff24d7a8921d913d78a96f48a0ca84a8a4cbb56d067ce46a"
-    sha256 x86_64_linux:   "bdeff112ecc106278becf0a5930faff225171928bc3e1e2cbc1fed26dbd28b8a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python@3.10"
+    sha256 aarch64_linux: "4f37ecf9df5c551ad98b07b13c3630238e65a73b2f0247d1b23109139209f0a9"
   end
+
 
   # setuptools remembers the build flags python is built with and uses them to
   # build packages later. Xcode-only systems need different flags.

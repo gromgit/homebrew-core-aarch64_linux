@@ -1,18 +1,14 @@
 class Nfpm < Formula
   desc "Simple deb and rpm packager"
   homepage "https://nfpm.goreleaser.com/"
-  url "https://github.com/goreleaser/nfpm/archive/v2.18.1.tar.gz"
-  sha256 "b11544236307cc90b105ffcffccd020b0825eab7046bd1b72d983ae035bbe420"
+  url "https://github.com/goreleaser/nfpm/archive/v2.15.1.tar.gz"
+  sha256 "ce43c832311f3e8ce0432d6e7a72e91789705de309cfb42883e496d57f56bcec"
   license "MIT"
   head "https://github.com/goreleaser/nfpm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "decea9b1522190b80a904838ddc5082aa27098e43ccef90dfe91837ca485bc2d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e24283fb0b2b6e5b50038ce859c553cfe6458a21dd9820e14c530c17c82344a9"
-    sha256 cellar: :any_skip_relocation, monterey:       "c87da0d2ad1f57a580f8d23db6e7a538640b1f627d7462ed2157ac4e6b0df228"
-    sha256 cellar: :any_skip_relocation, big_sur:        "372fd9a8d4afd15820bde3bd02b1ba75e871f04844999c4eb579ba7f771af5c8"
-    sha256 cellar: :any_skip_relocation, catalina:       "8d9e505951f321315d632e3b6d1b1a7b7c593ec3d0eb61694642ad779d3eee97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7d4a6a29ca2b2c3f3947de1b396cf0f8b32f25988372a62089f2d1202eecc20"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nfpm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "795be5edc615dba8ae19b843ceab7b85564b8478aba8c48d83026bcd45b29c99"
   end
 
   depends_on "go" => :build

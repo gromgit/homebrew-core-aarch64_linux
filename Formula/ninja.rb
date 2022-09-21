@@ -12,13 +12,10 @@ class Ninja < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "daa36dfde4c007ccbc92a7b011fb21f475619ee72ee7b9fe4e287bbf69febcc7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3f6aeafb7814bf2a89527aae69ae64f47fd699c8bf0b5a4213a81d3fc01ff9c7"
-    sha256 cellar: :any_skip_relocation, monterey:       "15b65736bfc5c619019cabb2c0f36f2b02a031de9a8bd6c148eba0f329e907bf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ebce34e727724d140fb8c22ae3ac845c1c9e61339dc0f5a5ee13d7a04780a5e"
-    sha256 cellar: :any_skip_relocation, catalina:       "3e89d7587da0c026f88aec5490582522f9fbfee0bd0e13d1bb773724aee84c23"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0124cfd2fc96edec66111ffd30f51fa02be75e01a4b930bab17c8e980b28d14"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ninja"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3881dab04cc9421e6865c551b32f9ea2d73c6573bd594e8dc51fc2a93173192e"
   end
+
 
   # Ninja only needs Python for some non-core functionality.
   depends_on "python@3.10" => [:build, :test]

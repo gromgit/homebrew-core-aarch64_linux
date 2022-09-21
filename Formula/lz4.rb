@@ -14,13 +14,10 @@ class Lz4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "284fa580570efdc8056e4fc95dc05f7b0546aa0c346795dd616d4cec8eb99426"
-    sha256 cellar: :any,                 arm64_big_sur:  "8cf59a354786ad0ed95a7b531d7149ae03612081818dcdf2d9ca8cb4fe28c07a"
-    sha256 cellar: :any,                 monterey:       "88b369cea90a0a119c24aa96a614fe7d77de58d18cb1803023dc925679eb905f"
-    sha256 cellar: :any,                 big_sur:        "aafb93487e108d302d060265898e4eaa82f5c806ff36dec50871db1c33fdc04d"
-    sha256 cellar: :any,                 catalina:       "ddb59c42498843638f1f9d80bd0c7b7126910c4fc8ee7c69fa8784dd4bc95c1f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1757fefc3840e11c4822e4c2a95aa62aca44a4eaccce6f5c414ea51d1e58bf8e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lz4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c730d3ed7bdac1b27c22a1ff61b5958f5a8331b6766587176d1538ace277ceb4"
   end
+
 
   def install
     system "make", "install", "PREFIX=#{prefix}"

@@ -1,8 +1,8 @@
 class Ldns < Formula
   desc "DNS library written in C"
   homepage "https://nlnetlabs.nl/projects/ldns/"
-  url "https://nlnetlabs.nl/downloads/ldns/ldns-1.8.3.tar.gz"
-  sha256 "c3f72dd1036b2907e3a56e6acf9dfb2e551256b3c1bbd9787942deeeb70e7860"
+  url "https://nlnetlabs.nl/downloads/ldns/ldns-1.8.1.tar.gz"
+  sha256 "958229abce4d3aaa19a75c0d127666564b17216902186e952ca4aef47c6d7fa3"
   license "BSD-3-Clause"
 
   # https://nlnetlabs.nl/downloads/ldns/ since the first-party site has a
@@ -13,17 +13,17 @@ class Ldns < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "84fa570a26a953f4a793d8498c95fd4d2e63646673e514566b43096e6d01944b"
-    sha256 cellar: :any,                 arm64_big_sur:  "c165e0faa3f490a9f7c7baebb538cf79b48c1334fa4ea6da3a19ca0401b36bef"
-    sha256 cellar: :any,                 monterey:       "424b3710704a509032718b9e82c3814c7eeb3391b7ac4cc8fd2ce7e7fda8946d"
-    sha256 cellar: :any,                 big_sur:        "2187a1082edbca32be2bf59a8222f05c6fb68c371324116d288547c5cca60ce3"
-    sha256 cellar: :any,                 catalina:       "5e9493ff659d9b2e8587494f94df59bb7f97897dca0292c1880d4ebe9cef28e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d82fc8ab9aa3917ad9e3d565271a6e32231eb3aa914445002f4b52053e640455"
+    sha256 cellar: :any,                 arm64_monterey: "554036b4baf7a7f9e35651d5c0c33d727bcc1652c5b2e0335ab4568c9f793910"
+    sha256 cellar: :any,                 arm64_big_sur:  "5cbb8e5386b8f9c72121964ba2d6e992dbca80021341319d061411037b6003fb"
+    sha256 cellar: :any,                 monterey:       "a8e6b863f885131869c9096cb9ad0344dc60c8864c478b36f894a1222dc1006b"
+    sha256 cellar: :any,                 big_sur:        "84765e40f28a2600004a834740f62ca35388872c1873276d8d2009712f46f972"
+    sha256 cellar: :any,                 catalina:       "bdb1f97710e5887ee79f48d817058471bcf86bc8a19ad80deb7f1ad82dd84bf9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fb168f9c4e7a52cf94ab2d116b5c6db3959ec2cc9b3f7d27f32b491c208a87c"
   end
 
   depends_on "swig" => :build
   depends_on "openssl@1.1"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   conflicts_with "drill", because: "both install a `drill` binary"
 
@@ -34,7 +34,7 @@ class Ldns < Formula
       --with-examples
       --with-ssl=#{Formula["openssl@1.1"].opt_prefix}
       --with-pyldns
-      PYTHON_SITE_PKG=#{prefix/Language::Python.site_packages("python3")}
+      PYTHON_SITE_PKG=#{lib}/python3.9/site-packages
       --disable-dane-verify
       --without-xcode-sdk
     ]
@@ -42,7 +42,7 @@ class Ldns < Formula
     # Fixes: ./contrib/python/ldns_wrapper.c:2746:10: fatal error: 'ldns.h' file not found
     inreplace "contrib/python/ldns.i", "#include \"ldns.h\"", "#include <ldns/ldns.h>"
 
-    ENV["PYTHON"] = which("python3")
+    ENV["PYTHON"] = Formula["python@3.9"].opt_bin/"python3"
     system "./configure", *args
 
     if OS.mac?

@@ -13,12 +13,8 @@ class Rcm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
-    sha256 cellar: :any_skip_relocation, catalina:       "6b4023f9e2b482466d619cd2597001e167da9abd8d8a4306f79d7de32494f08a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ee4e4a747f2ae336116500cecfe49d507ae96ae2aa80bedc1a8574b52556ead"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rcm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b42d3b8775517a45188e422020d6134cb1d35d86589644f3bc628eabfd80d34c"
   end
 
   def install

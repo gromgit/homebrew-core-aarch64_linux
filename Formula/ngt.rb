@@ -1,8 +1,8 @@
 class Ngt < Formula
   desc "Neighborhood graph and tree for indexing high-dimensional data"
   homepage "https://github.com/yahoojapan/NGT"
-  url "https://github.com/yahoojapan/NGT/archive/v1.14.6.tar.gz"
-  sha256 "5d7b092855ecea76f6dcf439beeba774a36893aaf7a61732de07068449f6f86f"
+  url "https://github.com/yahoojapan/NGT/archive/v1.14.3.tar.gz"
+  sha256 "e3a2c6085001bf9183d214f93aa1ed89ac10ce93c2327799ca8e5d8c10a8edf1"
   license "Apache-2.0"
 
   livecheck do
@@ -11,24 +11,23 @@ class Ngt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "396c9824989332a89bbfba2181f3f254b43c7c6200bb54e67650f67c2b0fbf78"
-    sha256 cellar: :any,                 arm64_big_sur:  "935d284d92326d4f94e2dbe711649e315c9806fca44f53ffdd0b8e3ac778ec15"
-    sha256 cellar: :any,                 monterey:       "95b5ee150031b09d5944456a521f6dd1645409ccf00f1204cd9ee078b8af5b7c"
-    sha256 cellar: :any,                 big_sur:        "67ab721ab751f4ee0cace5ee748b8d6c2eda40667b8102ccd623879cf0817b7f"
-    sha256 cellar: :any,                 catalina:       "9b1d239e62573e9eddfa500106acc7d90e9154362930b7d1be90c7769a71ed11"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7492d0e49321729aaf643453315b7cd733f12dae20386aa1d86158638213cb9a"
+    sha256 cellar: :any,                 arm64_monterey: "9c10cc279964217b5f37d2907b82395630ea9a4528ef7142e75f562ee6451604"
+    sha256 cellar: :any,                 arm64_big_sur:  "3ccafd7ff3b8b82d91c58ab0142e24c9f1f29c760e87b8ab8268fc91f32b37a8"
+    sha256 cellar: :any,                 monterey:       "871dd786b9a6cd9f3198d32b87f58a079fdc648a3c3ee524353a23ed80bfa593"
+    sha256 cellar: :any,                 big_sur:        "172e1ef3707b4857450db5bdc02d681ab74ca0ac638f3b491aaf74497af91c29"
+    sha256 cellar: :any,                 catalina:       "a9477f72a46e3c3688ecd49a05ebc2199c8978da10694bebadf5bce797281f14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a9bf76755b4785f764ca6ca601791a6990dadeb252cedfad80240fda7a4db95"
   end
 
   depends_on "cmake" => :build
-
-  on_macos do
-    depends_on "libomp"
-  end
+  depends_on "libomp"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
+      system "make"
+      system "make", "install"
+    end
     pkgshare.install "data"
   end
 

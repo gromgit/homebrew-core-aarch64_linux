@@ -7,12 +7,8 @@ class Libsigsegv < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e8cae8734eafabb8c3bcfeba2449b1d6e309cea6ca0647ca7bdf62aca7e331db"
-    sha256 cellar: :any,                 arm64_big_sur:  "f37ac4bf1b939f0703029b5143fca0dc8c77ff77f2b860800a5e0028e5fdfea8"
-    sha256 cellar: :any,                 monterey:       "3ceaebb4bf32ec972aa786360dd55fc115fb2890d16da6b2ddaa9ff199160e2c"
-    sha256 cellar: :any,                 big_sur:        "6cefa3529425fcbd306c53d975bc0a727b34d8a3c636c664a1785f67202b2377"
-    sha256 cellar: :any,                 catalina:       "585d16ba5f3b6b2136704ff16e58c620ee2aac3b1f7f9eb15b883efecb1ba6b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a221904699cd8cefa4d70e72f59bab5282065bc0739428286278898a147b571d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsigsegv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1b5728f2c0f19975f9a5f85540c9f8897874ce8c53313da1732ec072cea3c9b5"
   end
 
   head do

@@ -1,10 +1,9 @@
 class Cherrytree < Formula
   desc "Hierarchical note taking application featuring rich text and syntax highlighting"
   homepage "https://www.giuspen.com/cherrytree/"
-  url "https://www.giuspen.com/software/cherrytree_0.99.48.tar.xz"
-  sha256 "4bba4f19d23560e8aa59f2ab1e76f128f7f02adaebb5813e826e1753ee5d81fa"
+  url "https://www.giuspen.com/software/cherrytree_0.99.47.tar.xz"
+  sha256 "1b551ee00f788d21ebda3123495a88da293467b8a53bb78fb4fae957c452d024"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url :homepage
@@ -12,12 +11,12 @@ class Cherrytree < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "08349d32832cfc2e7ab6ad8acbc03246896510e096ad21941690b933038f0877"
-    sha256                               arm64_big_sur:  "6a21616e1b15d01a520333aee04798a8ed62088be22e403371713cf627ab22f2"
-    sha256                               monterey:       "13b9f930542b2b4d169169a20e456871b36650d0b9d9d6cc2c911e3b3359698c"
-    sha256                               big_sur:        "b5baa4dde747d908e200a9732301368a807324c59ff30bdd68d6bce1a6bf4209"
-    sha256                               catalina:       "72393e799894d5a4deb65f8c266bce3793277fed38469ed2defb5558ed284708"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8527fd655991a7d487ee94001563f9566cad5f32cc4a808bbe8ebbccf76a5315"
+    sha256 arm64_monterey: "719a2a9e6f7f2e5cf2d8551ebc950852d5285e112eb51c149b8b6d1ba695b938"
+    sha256 arm64_big_sur:  "7c6575fd74aad453d3a59d274cc05bce335209bc9cfc52896417af3d0ebd4b98"
+    sha256 monterey:       "0658c77389e7ceff243b5aed1bf706ddd6efcfc21096c325d4ca80c35b71a4d0"
+    sha256 big_sur:        "bf1bc700fb367ec574eab60d404f8bd67a095322f876a3fb6b29874f864c6a50"
+    sha256 catalina:       "3f005d7b897aa4f528ea4767f4733db8a24f199cfa0bf81d7d3d8f5e3c596578"
+    sha256 x86_64_linux:   "d0e44b554461cc96f1d948a8421dd926673504ee1481f20e662017289b74ddc4"
   end
 
   depends_on "cmake" => :build
@@ -30,7 +29,6 @@ class Cherrytree < Formula
   depends_on "gtksourceviewmm3"
   depends_on "libxml++"
   depends_on "spdlog"
-  depends_on "sqlite" # try to change to uses_from_macos after python is not a dependency
   depends_on "uchardet"
 
   uses_from_macos "curl"

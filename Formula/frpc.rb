@@ -2,17 +2,13 @@ class Frpc < Formula
   desc "Client app of fast reverse proxy to expose a local server to the internet"
   homepage "https://github.com/fatedier/frp"
   url "https://github.com/fatedier/frp.git",
-      tag:      "v0.44.0",
-      revision: "8888610d8339bb26bbfe788d4e8edfd6b3dc9ad6"
+      tag:      "v0.42.0",
+      revision: "eb1e19a8212061e56a43ce798a231cd64cce989d"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0a2235a157bd9d1adeee488e098be3b14724291ad3a759147d455ae669be9174"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a2235a157bd9d1adeee488e098be3b14724291ad3a759147d455ae669be9174"
-    sha256 cellar: :any_skip_relocation, monterey:       "158d68417ba4f5db350720b26a3b46b0e0957a4aab3c64a543ac0b983d028242"
-    sha256 cellar: :any_skip_relocation, big_sur:        "158d68417ba4f5db350720b26a3b46b0e0957a4aab3c64a543ac0b983d028242"
-    sha256 cellar: :any_skip_relocation, catalina:       "158d68417ba4f5db350720b26a3b46b0e0957a4aab3c64a543ac0b983d028242"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "228041e37e00d32bfa6d360a275380dddb5b820540c41d5d889873fd0f4da856"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/frpc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0a81ebd2f19db598707df6beb40db8fa012a14222add81ba04e19d12635e5eb5"
   end
 
   depends_on "go" => :build

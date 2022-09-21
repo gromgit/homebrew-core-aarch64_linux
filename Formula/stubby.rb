@@ -1,27 +1,20 @@
 class Stubby < Formula
   desc "DNS privacy enabled stub resolver service based on getdns"
   homepage "https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby"
+  url "https://github.com/getdnsapi/stubby/archive/v0.4.0.tar.gz"
+  sha256 "8e6a4ba76f04b23612d58813c4998141b0cc6194432d87f8653f3ba5cf64152a"
   license "BSD-3-Clause"
   head "https://github.com/getdnsapi/stubby.git", branch: "develop"
 
-  stable do
-    url "https://github.com/getdnsapi/stubby/archive/v0.4.1.tar.gz"
-    sha256 "e195f278d16c861a2fb998f075f48b4b5b905b17fc0f33859da03f884b4a4cad"
-
-    # Fix test yml reference issue, remove in next version
-    patch do
-      url "https://github.com/getdnsapi/stubby/commit/cf9e0f5d97e518f2edb1c21801f2ccf133467f2b.patch?full_index=1"
-      sha256 "9d888aab5448b47e844731e640ef9fa9ec6085128247824b3bb2c949d92a1a8d"
-    end
-  end
-
   bottle do
-    sha256 arm64_monterey: "b4ea31171be5dba8e1bc76c7dc2afadabff6ed7a5f2daed0b999c351b3dd54d1"
-    sha256 arm64_big_sur:  "da69e1f67fdacfa3157b7ce65d54a882bafea078034675a740b5ce84a73474b8"
-    sha256 monterey:       "01fdc08df8fd30578f6dbf3548c1e41db0f3e7ac23043df4f993b68f129058dd"
-    sha256 big_sur:        "30321706c1c048e6b5b37f5c478539e5cda15f1b406a33cb851d51a2d52d0cd0"
-    sha256 catalina:       "76fcc1a8bf4fd749cdcdfdd3a21a548f0d085f574f8bc170e6cb8a7ec6840a60"
-    sha256 x86_64_linux:   "7366b9c82ea0f57196ef84e98d8715caf2a795a06bcc9f55d50f0078b854f763"
+    rebuild 1
+    sha256 arm64_monterey: "98de227b643cc50357f442dda39ba673c9bdba8f6b5977c6ee0f519ce0560036"
+    sha256 arm64_big_sur:  "aacda92701ecc4c275bfe6eb5ede29a6f07f6d0d85701f293146880437f448f8"
+    sha256 monterey:       "e3f52352894e8ed61a7166b2e3fd6fbf184264326f07615f32b450df8f162a94"
+    sha256 big_sur:        "435174729967fbf5bb4dc87a8e2ef440f6cec7e56c46a5373dfe6f5a6a6ec96c"
+    sha256 catalina:       "df3b7e64116093724ab01d7a6f3abee725e9ffebfd030a1255d9f6c8467101f2"
+    sha256 mojave:         "21530780a842976f9dbd45777c85900b841e15a063ab522d5c8d30f4bba74eec"
+    sha256 x86_64_linux:   "9e714d6c7b77449a65f7185ea9a86489a8b9019950ec11160987d5e9fa848b7a"
   end
 
   depends_on "cmake" => :build

@@ -1,18 +1,18 @@
 class UutilsCoreutils < Formula
   desc "Cross-platform Rust rewrite of the GNU coreutils"
   homepage "https://github.com/uutils/coreutils"
-  url "https://github.com/uutils/coreutils/archive/0.0.15.tar.gz"
-  sha256 "67abc3ed547537afdbe95aaa7cabf551afebfeee5f015874013fa5d7403ec3e4"
+  url "https://github.com/uutils/coreutils/archive/0.0.13.tar.gz"
+  sha256 "4f5de6369a826837dfb6fe578580589d38f69e6d2aa9ccc103c9c075c466ff32"
   license "MIT"
   head "https://github.com/uutils/coreutils.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "44babb77ea6296065a7bf5171074beea9a79ed9a2a775c89af9eb45ca1e4643b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce3fc84595a5340150970c18189fd7b21e86f48f23542abcf30e5d0e39b7e8e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "30727d1ae8136e0185dda1bae30544f0cfdd0298bd5856461aa47f07a652d48d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e94b25d4fd556e42049946a2160d4a1f9ea90e7b163784b0cabb199ddc9a9f22"
-    sha256 cellar: :any_skip_relocation, catalina:       "1e5c73a5c33153270c4238f30ab97b28f07b9c1babe76019e85c5f2d1a8dc323"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5a566f060dbeba0e4f67fd8f68a46bdfe320c691d1fba8d340b611f838d216e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f53cc930f1533816f9b0f3eea7508a30549c445af5a7bcda7c5782434ab076b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a12fbbba70075e2e46fea2d475b3a02fe0d92e35ea41fbc37d63a5959b8b5a1"
+    sha256 cellar: :any_skip_relocation, monterey:       "1e1f8efcb5cad02500887b8f6202015dd7cfd15df4841c48f3b805725dde3234"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3c0ddbeff4cf8353ff21838c95580e76b37d3f0e6fca99a5b1a8ccd6ff427e81"
+    sha256 cellar: :any_skip_relocation, catalina:       "857c4c0e35e141424ecc7c2d9f773aa3e3f779c38c54ac5e85b85a1055435453"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43db0f4fad68185bd0c0f5ea47de0edfaa730cae520780b6f9381e60d02a85aa"
   end
 
   depends_on "make" => :build

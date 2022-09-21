@@ -1,18 +1,19 @@
 class Ttyd < Formula
   desc "Command-line tool for sharing terminal over the web"
   homepage "https://tsl0922.github.io/ttyd/"
-  url "https://github.com/tsl0922/ttyd/archive/1.7.1.tar.gz"
-  sha256 "e1e9993b1320c8623447304ae27031502569a1e37227ec48d4e21dae7db6eb66"
+  url "https://github.com/tsl0922/ttyd/archive/1.6.3.tar.gz"
+  sha256 "1116419527edfe73717b71407fb6e06f46098fc8a8e6b0bb778c4c75dc9f64b9"
   license "MIT"
+  revision 5
   head "https://github.com/tsl0922/ttyd.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "2dcb7ed95b83914ae3c477e8272955224b51d34b906e6057fe3f667be66154fa"
-    sha256 arm64_big_sur:  "01c674bc7a80ac4ffc7d91f3557bfd0056a36337285d90b3ccc4595b8e9c9a54"
-    sha256 monterey:       "59f8a5afd097792730fe54ee3d71f92ae58e1a0baa87fac4d2faf3d58591fee3"
-    sha256 big_sur:        "07d576a2efe91de00f31fc47c13c7396abc2cac37ea6501833b669ee6824457f"
-    sha256 catalina:       "436a5cd144aadb451d4f0ec657d2b878ba3c4d1e239b18eed8cd78519937bd83"
-    sha256 x86_64_linux:   "4ec0f91928dc35c61fbdcc509cc91a96584a54c00ef542f409884746b677efe0"
+    sha256 arm64_monterey: "08876367ba2814425bc40a4bccb387594eaaa7a55355e1d5277878e19b5bc26b"
+    sha256 arm64_big_sur:  "e71a28ca4d574a23fce354ceb56cf99eccf8e3ad98bc2a2aedea68bf8e03b69b"
+    sha256 monterey:       "f6033cbb074d60e0465d19e401f55a88b6cdd8b9e0b1b61246fab604ca8ccdd8"
+    sha256 big_sur:        "b974d4b90a3ebd86a37759e4e77ec0f75b8efc49fd6c03e47fdf0670f4ec9546"
+    sha256 catalina:       "da907b437b4d66a8fdd2d81defa06dd7222adfdfa879444e42649ba6c030d6fd"
+    sha256 x86_64_linux:   "5be7cb4675897d31db44f4c24d02d35384cbdd82d8c6e3de6538247a500d0cc6"
   end
 
   depends_on "cmake" => :build

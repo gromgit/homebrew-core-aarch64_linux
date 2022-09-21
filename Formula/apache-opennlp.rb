@@ -7,8 +7,10 @@ class ApacheOpennlp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "47d390d8a18b2ba2ff91a9ed06cba6a85d591bce1c12afad4f6e9e452840cb8d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apache-opennlp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "09c10aa48f2d9911efe249bf3a6e64fbb275fa9913d0a44f47d3a3da3f681989"
   end
+
 
   depends_on "openjdk"
 

@@ -8,18 +8,13 @@ class Mas < Formula
   head "https://github.com/mas-cli/mas.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "379d46e2657be295321f1603dc1df28130ea0b5b264ceb192a9ba488d77c7a98"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "918a1484de106940f7bebc936e1ded87d7b65652054b09204887ad0651937ec4"
-    sha256 cellar: :any_skip_relocation, monterey:       "6b313f2f66d028cb7782c108d6e502ce73ccb9c08fac3bece0b057fcce5c4689"
-    sha256 cellar: :any_skip_relocation, big_sur:        "50b50f51219143fcb69c730b52b74011a76104f66348ea727d0200f7b375ae25"
-    sha256 cellar: :any_skip_relocation, catalina:       "d241d3b9156b033f3d2c31684a44de726297e07fd9bd5e3ccc4c36e4f1c3baf3"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on :macos
-  on_arm do
+  if Hardware::CPU.arm?
     depends_on xcode: ["12.2", :build]
-  end
-  on_intel do
+  else
     depends_on xcode: ["12.0", :build]
   end
 

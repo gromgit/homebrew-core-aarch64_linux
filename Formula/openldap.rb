@@ -13,13 +13,10 @@ class Openldap < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d3f0bdb0fdab90601339ec57ad4291aa08907733d40162a7450f3bafd3768e8a"
-    sha256 arm64_big_sur:  "9f347097480480f7df1519279a588cd68bf98e7befa11971c803a858843ebc6a"
-    sha256 monterey:       "107f7937af3e60ecf4262b4f60b7da74c38ef55c07c735c3f906f2bdb0067934"
-    sha256 big_sur:        "5881d9b771d9296d464a8d2f8e00908e76b31076df50d2c86225a9151ec64a85"
-    sha256 catalina:       "542b132bd0ae22ad6ffe2bb2f25f17c1933943ead28791bcf7e53888b48f5de1"
-    sha256 x86_64_linux:   "236b263f5d84e1c580380289599cad1719cc8c8b2bb1c78b48578aa139dc1095"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openldap"
+    sha256 aarch64_linux: "0fc26aeea4071c4cca31f1614e1f4a70fbe0e65e654b9cf209f2c2902ceafb46"
   end
+
 
   keg_only :provided_by_macos
 

@@ -1,18 +1,14 @@
 class Kind < Formula
   desc "Run local Kubernetes cluster in Docker"
   homepage "https://kind.sigs.k8s.io/"
-  url "https://github.com/kubernetes-sigs/kind/archive/v0.15.0.tar.gz"
-  sha256 "a3a0abbce70c5da267fabcb0409e0e373e8bc657679cc4cc38844743dd8a97d0"
+  url "https://github.com/kubernetes-sigs/kind/archive/v0.12.0.tar.gz"
+  sha256 "cd1d09921b3c8a0f58c6423e5706be0c6e556f0c3d2b9e62f42be59263b209bb"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/kind.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "adba6b3bada0a03dcece1479e1c7ef9f6c00c46d4206c80df4145e301d13960f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "55275447102a467ac29e6f5eb1cf027b4d26acfbbb10bf55f4c1ec3fa00ca9d4"
-    sha256 cellar: :any_skip_relocation, monterey:       "4ddb53469f6d8b75a87bc359587b5a8b713eaf70b97e06d6578cd41f67dcd196"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ca5a8b5169c2d649d0f6b0bd5ccfb9fcd13ba308d4d171fccfd1711eb16b3ce3"
-    sha256 cellar: :any_skip_relocation, catalina:       "5fbc6678432a9d03d619c970c6e34de1fce5f8352acc285bb025d5d1c11f6136"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d883a4e284b2d262751be3de2d6cbc44d2293e65aee7db99dcfc06cefcf1bb2e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kind"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f365441d709ef1897246ae69126631f2534556b2d3de77cedf169015fb3c3d03"
   end
 
   depends_on "go" => :build
@@ -21,7 +17,17 @@ class Kind < Formula
   def install
     system "go", "build", *std_go_args
 
-    generate_completions_from_executable(bin/"kind", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read("#{bin}/kind", "completion", "bash")
+    (bash_completion/"kind").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read("#{bin}/kind", "completion", "zsh")
+    (zsh_completion/"_kind").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read("#{bin}/kind", "completion", "fish")
+    (fish_completion/"kind.fish").write output
   end
 
   test do

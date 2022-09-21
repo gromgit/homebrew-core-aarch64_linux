@@ -1,18 +1,14 @@
 class Oauth2l < Formula
   desc "Simple CLI for interacting with Google oauth tokens"
   homepage "https://github.com/google/oauth2l"
-  url "https://github.com/google/oauth2l/archive/v1.3.0.tar.gz"
-  sha256 "3f708e3fab87c6ae50e0608b02b01a66ce427a4097f3a73f1fa8c6ea43839110"
+  url "https://github.com/google/oauth2l/archive/v1.2.2.tar.gz"
+  sha256 "6bee262a59669be86e578190f4a7ce6f7b18d5082bd647de82c4a11257a91e83"
   license "Apache-2.0"
   head "https://github.com/google/oauth2l.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "536c361c46b2a7cebd434232a569a58bf8b3d3f044d87a0039e9bc15fed649a0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a27a3caddf537d71ba7a9141bb45a1014d87ac09860ce4d8a7028f2ea0889b0"
-    sha256 cellar: :any_skip_relocation, monterey:       "85bd37fe734114478406c309c2942b21b8f214fba580ae255e4a928c39b922a4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6340b839cb5e06f979114bafce5a67786bc1dbd6c41e4f1875c32a7de65704d9"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7ea7d1924d3c3f43ed24dd3f8827d8632bc7d7b4464c3b42a5d38772eda7068"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d23bccc4390cd2cde0becd13dc32a7174b66072c7ebbea4e438feddef466cd80"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/oauth2l"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "14cd9621c19f9bc6a74ddefe2250cba5e2337c5c26be474c12e401c1f41d7d58"
   end
 
   depends_on "go" => :build

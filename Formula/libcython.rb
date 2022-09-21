@@ -10,13 +10,10 @@ class Libcython < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "03da2421a3ee299de5c0faa2830aa98025e235a8992a3ee2a8705387b4c63de2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "78b4e2d714c1b787bd695dab44825f0115ed0f1982b946185c8c6ac9893c455e"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ec609eb60279d5200fbdc69034ab2511450395fd19d729e0bed5ed154df0516"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c01a590c2e9bf5d3d486c75a041d0c7d7f44b1cf7e3a4a8ae4f30eb7f5438be0"
-    sha256 cellar: :any_skip_relocation, catalina:       "0e6e09e0c66544ebd68a7144ffd894c9587bbbbc09a963317f50090da5fc37de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87756c4a74bf13790e32c17aea4626e808d2fe214602761d4f7d8e9e2073e18d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libcython"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "63c1bcbd3b312594e528683fda99bcea04551f0cf70491b4b6db4c1402ec58f3"
   end
+
 
   keg_only <<~EOS
     this formula is mainly used internally by other formulae.

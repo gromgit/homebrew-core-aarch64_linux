@@ -2,17 +2,13 @@ class Envconsul < Formula
   desc "Launch process with environment variables from Consul and Vault"
   homepage "https://github.com/hashicorp/envconsul"
   url "https://github.com/hashicorp/envconsul.git",
-      tag:      "v0.13.0",
-      revision: "c9c55c9bffa749227e3c3bcd44f93f1f5b0eafb9"
+      tag:      "v0.12.1",
+      revision: "265f933f17eb918e38b24fd1a7b1eab1fc723df5"
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aae3da5d88d84ca10de1d8aba2e729c3003a8471ac55663906cc5de0aa346738"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "765b7246012434cd3f226cfc83158b02c2e0d32cb05f544b074b37d0e11ed13a"
-    sha256 cellar: :any_skip_relocation, monterey:       "c552f2ed9f026eebfb281aeedb8c9ae593e8e7ff97d99a7451c45e5f46c66be9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "870fbc163cfcdeea7abdedd3a974d3a890694b4eb3d14194c7a34df15cd990cf"
-    sha256 cellar: :any_skip_relocation, catalina:       "e63efc1337364669933ff9bc274f096d503c1d750360db683672c988ee00edfb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c478975d58b8da6790ee34e3fb3e99a0b704e286fa7bf30dddc3b680bd436d7b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/envconsul"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c439cb9de5aaff9478cf6b193bea9f125449be9c56d4f33f8da7d9ff0b9c7876"
   end
 
   depends_on "go" => :build

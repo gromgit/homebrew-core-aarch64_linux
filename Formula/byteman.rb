@@ -12,8 +12,10 @@ class Byteman < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e36f30f535f57866a23b588448527d00a09c7f75367398f365ca5236382c0851"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/byteman"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8ebeb6d18035c8b6e27b1f8a4d133104e3dd92fd59bb83358014c9a3240d12d9"
   end
+
 
   depends_on "openjdk"
 

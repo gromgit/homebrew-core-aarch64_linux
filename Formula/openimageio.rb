@@ -1,8 +1,8 @@
 class Openimageio < Formula
   desc "Library for reading, processing and writing images"
   homepage "https://openimageio.org/"
-  url "https://github.com/OpenImageIO/oiio/archive/v2.3.19.0.tar.gz"
-  sha256 "602c146aebee775f123459a6c6be753054144b8d82777de26965f2cc3e88113a"
+  url "https://github.com/OpenImageIO/oiio/archive/v2.3.15.0.tar.gz"
+  sha256 "37bb0ba854d512b7b3a74e2008416a247d5cab882e750360b16c3dd4dd8d0f81"
   license "BSD-3-Clause"
   head "https://github.com/OpenImageIO/oiio.git", branch: "master"
 
@@ -13,51 +13,41 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "74def36d2f11cb0a1051b7db10877c6324b83ed80d224de342616a9548833344"
-    sha256 cellar: :any,                 arm64_big_sur:  "e8ebb9eadd2b507209bfa72656aacce8953426965d0a32259a7aa0fd73edaf8c"
-    sha256 cellar: :any,                 monterey:       "91bee54ac1673ad686d8c10378ecd314c683b351fc7246591a77dc2262f55b06"
-    sha256 cellar: :any,                 big_sur:        "84e5f617bfb35d3b3ea62234fa83a64be0042a2547c763694caa4dafed58ff31"
-    sha256 cellar: :any,                 catalina:       "3499494ff4e4826e07f514aaff8e5f61fa55764dc561dc340e5bdf0af843b37e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2cb1314425bad8bd3a2672d57109d405f1b62633db68d44819cbf787c77ddaf"
+    sha256 cellar: :any,                 arm64_monterey: "91eb83a9081f4fdc0a90b999250df437be11a0830d433d6cc8bdbc16ca57cc33"
+    sha256 cellar: :any,                 arm64_big_sur:  "af722546f68a154bfc23be764b15dc21824ab438b95a829d4eac13c16077b8cc"
+    sha256 cellar: :any,                 monterey:       "63673fcd06de79f9323f1d6af7c7874409e0758b3fb760a98c8236b6038fbaa2"
+    sha256 cellar: :any,                 big_sur:        "9ed3f3f09d3e3eb6a8494aaa90dcad0e7dd33ebacc22f8b72fa8eee3cc065249"
+    sha256 cellar: :any,                 catalina:       "b9ba47638cd5a46f4655854d9552fdf161ca079ec092b8af4317c8998e2f7cd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e798be73b3577e75c4f8956a495b23c3e752ee89af77110fc93d8faa5e71abea"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "boost-python3"
-  depends_on "ffmpeg"
-  depends_on "fmt"
+  depends_on "ffmpeg@4"
   depends_on "freetype"
   depends_on "giflib"
   depends_on "imath"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libheif"
   depends_on "libpng"
   depends_on "libraw"
   depends_on "libtiff"
   depends_on "opencolorio"
   depends_on "openexr"
-  depends_on "pugixml"
   depends_on "pybind11"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "webp"
 
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   def install
-    python3 = which("python3.10")
-    py3ver = Language::Python.major_minor_version python3
-    ENV["PYTHONPATH"] = prefix/Language::Python.site_packages(python3)
-
-    args = %W[
-      -DPython_EXECUTABLE=#{python3}
-      -DPYTHON_VERSION=#{py3ver}
-      -DBUILD_MISSING_FMT=OFF
+    args = std_cmake_args + %w[
       -DCCACHE_FOUND=
       -DEMBEDPLUGINS=ON
-      -DOIIO_BUILD_TESTS=OFF
-      -DUSE_EXTERNAL_PUGIXML=ON
-      -DUSE_JPEGTURBO=ON
+      -DUSE_FIELD3D=OFF
+      -DUSE_JPEGTURBO=OFF
       -DUSE_NUKE=OFF
       -DUSE_OPENCV=OFF
       -DUSE_OPENGL=OFF
@@ -66,9 +56,25 @@ class Openimageio < Formula
       -DUSE_QT=OFF
     ]
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    # CMake picks up the system's python shared library, even if we have a brewed one.
+    py3ver = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    py3prefix = if OS.mac?
+      Formula["python@3.9"].opt_frameworks/"Python.framework/Versions/#{py3ver}"
+    else
+      Formula["python@3.9"].opt_prefix
+    end
+
+    ENV["PYTHONPATH"] = lib/"python#{py3ver}/site-packages"
+
+    args << "-DPython_EXECUTABLE=#{py3prefix}/bin/python3"
+    args << "-DPYTHON_LIBRARY=#{py3prefix}/lib/#{shared_library("libpython#{py3ver}")}"
+    args << "-DPYTHON_INCLUDE_DIR=#{py3prefix}/include/python#{py3ver}"
+    args << "-DPYTHON_VERSION=#{py3ver}"
+
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make", "install"
+    end
   end
 
   test do
@@ -81,7 +87,6 @@ class Openimageio < Formula
       import OpenImageIO
       print(OpenImageIO.VERSION_STRING)
     EOS
-    python = Formula["python@3.10"].opt_bin/"python3.10"
-    assert_match version.major_minor_patch.to_s, pipe_output(python, output, 0)
+    assert_match version.major_minor_patch.to_s, pipe_output(Formula["python@3.9"].opt_bin/"python3", output, 0)
   end
 end

@@ -3,31 +3,31 @@ class Regipy < Formula
 
   desc "Offline registry hive parsing tool"
   homepage "https://github.com/mkorman90/regipy"
-  url "https://files.pythonhosted.org/packages/cd/bd/1c168ee5bd3cb11f157befe9e498ff8d70013d0c239f918a1e8cbd345d12/regipy-3.1.0.tar.gz"
-  sha256 "7d65ed76eb0232fd37537751e5ae54264afdeae5678807eee6b6006387ee0377"
+  url "https://files.pythonhosted.org/packages/b1/7c/7198c96f40a40a70a3c8d0ff269b957fdf7a573e26c6c499d3a3b7a89835/regipy-2.3.0.tar.gz"
+  sha256 "d7d446fcf09c510fe2e896ec0db491c7fd8c842de812fc7383f553e38def7c95"
   license "MIT"
   head "https://github.com/mkorman90/regipy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "645e14c6d4eff1c2d6927c88b47210b5da1e223ad38f7ee3c438b0b658747c08"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f754326d3a28fc0a4179257446b6970871ea7cc9fe10468693200395c92a57e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "522981b4b48695ffa2157e713376f94101e26b74c98f4c78714ee2a819043727"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b7f918a1febdade93baf623a82427d486b6c10c65d83b31c0602dfdc0261f239"
-    sha256 cellar: :any_skip_relocation, catalina:       "7140a79ca0aef42af27b2a4a8c76f6081b5866f794cd82deb9ab8d1924d02137"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88af23c18c04de1a31cb550a61ab262e0f8d754b14434729944897207e53d217"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c4ef28de6f3fe559b9b00d1be0be8efad07ea6220f43bc32bcf8eeea119bc8b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cc6e76207e907bb4e3873fc1aeac2c7002f367316c95262d9cd12fcb7d4d8c82"
+    sha256 cellar: :any_skip_relocation, monterey:       "50360526cf4d69f24a87ddbd98239ce5d3760bae9c95e153643cc75c5dca4452"
+    sha256 cellar: :any_skip_relocation, big_sur:        "52352859fc0566f3c856f079eabce518eaf3ced5eff7fc6cc42632796deba1c4"
+    sha256 cellar: :any_skip_relocation, catalina:       "ba756d7f1fbab51da6efec3f069f5677f10fb59107b7a50d660fc5432f87c957"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1919606c5b298cf50ab185db4149b980425e0b38d5af03ccf41052bcff8defb1"
   end
 
-  depends_on "libpython-tabulate"
-  depends_on "python@3.10"
+  depends_on "python-tabulate"
+  depends_on "python@3.9"
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+    url "https://files.pythonhosted.org/packages/d7/77/ebb15fc26d0f815839ecd897b919ed6d85c050feeb83e100e020df9153d2/attrs-21.4.0.tar.gz"
+    sha256 "626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/45/2b/7ebad1e59a99207d417c0784f7fb67893465eef84b5b47c788324f1b4095/click-8.1.0.tar.gz"
+    sha256 "977c213473c7665d3aa092b41ff12063227751c41d7b17165013e10069cc5cd2"
   end
 
   resource "construct" do
@@ -41,8 +41,8 @@ class Regipy < Formula
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/cf/80/8246892889a36f4a12f719da27c72faea1c2bdb6998afbfffc4284dcd457/pytz-2022.2.tar.gz"
-    sha256 "bc824559e43e8ab983426a49525079d186b25372ff63aa3430ccd527d95edc3a"
+    url "https://files.pythonhosted.org/packages/2f/5f/a0f653311adff905bbcaa6d3dfaf97edcf4d26138393c6ccd37a484851fb/pytz-2022.1.tar.gz"
+    sha256 "1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7"
   end
 
   resource "test_hive" do
@@ -51,8 +51,14 @@ class Regipy < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
-    venv.pip_install resources.reject { |r| r.name == "test_hive" }
+    venv = virtualenv_create(libexec, "python3.9")
+    res = resources.map(&:name).to_set
+    res -= %w[test_hive]
+
+    res.each do |r|
+      venv.pip_install resource(r)
+    end
+
     venv.pip_install_and_link buildpath
   end
 

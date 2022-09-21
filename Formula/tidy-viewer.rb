@@ -1,23 +1,17 @@
 class TidyViewer < Formula
   desc "CLI csv pretty printer"
   homepage "https://github.com/alexhallam/tv"
-  url "https://github.com/alexhallam/tv/archive/refs/tags/1.4.30.tar.gz"
-  sha256 "52beddc07283396c7fd30097dc2ea37b9f1872eee7f2d83546dc93dfe644747e"
+  url "https://github.com/alexhallam/tv/archive/refs/tags/1.4.3.tar.gz"
+  sha256 "e308eb088d059d18119dc757c98487d9cabc2f4b97035a8dc9f8253717aa9fe9"
   license "Unlicense"
 
-  livecheck do
-    url "https://github.com/alexhallam/tv/releases?q=prerelease%3Afalse"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)(?:[._-]release)?["' >]}i)
-    strategy :page_match
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f767ffdd3274e903487c26772d9728858846174a7558c4d8d6c5d82d6b02d93"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ced1cc0f584974de24949023ba0fac33091616ef3fac7f518938de89c86d1d03"
-    sha256 cellar: :any_skip_relocation, monterey:       "0adfda2b71895f3963997200aa5d8ad3f262508729a7135a2ea9fb00e47b50c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6a48cfc429300d2484a4f96dd7a997347e7593757b20e9d576cd62e073aea7bb"
-    sha256 cellar: :any_skip_relocation, catalina:       "9b51e1ba9b6b27314f0d392d136d34cbd5148f322dfc82e6e92300dd3bb8c2d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d9e873c0d5fddb922187101c10a9c9b747eb1cc66c2443a297deafc58334927"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7326e50cbfebb23342dc968d536a73509ef11d397a21edd419ae4cfa5e8047b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0358924f7971448a28ee5be4fb0b82f991b545fba2108527e170c318a14ccad1"
+    sha256 cellar: :any_skip_relocation, monterey:       "84ea450d6cfdff253b5182c0855393e27f92ca815cf1fec4cb5aa6883079418a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d81df09c4b19e0e4942673bca857dd1a79f75215b63b25ad7332458abd458d9a"
+    sha256 cellar: :any_skip_relocation, catalina:       "12bde2da95e4ec056b625f8b6e6944b7fe4a756380da8f63a8367708d80600bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ba6f04d0b3f58f04538dac36c2551b52ec0bda96f80a61335f76454aeef93f4"
   end
 
   depends_on "rust" => :build

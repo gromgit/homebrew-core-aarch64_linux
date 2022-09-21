@@ -11,8 +11,10 @@ class Allure < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "8b765d2efdbc8f5ca8b74999daa94fcaae02f54d95f40713b976c4be5e10ebce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/allure"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f78ea7c1b2acce0e5aabe6fc3f6270f67cf1687c32fc60a931ed4a3e37bf11a0"
   end
+
 
   depends_on "openjdk"
 

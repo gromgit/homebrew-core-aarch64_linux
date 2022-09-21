@@ -7,13 +7,10 @@ class Libfabric < Formula
   head "https://github.com/ofiwg/libfabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2c53e73dfcd784dac33295e84ef45d35794260812f522dbb861d6fbb48f9970e"
-    sha256 cellar: :any,                 arm64_big_sur:  "ed9144b5cb03292a358f4f89e2a7bf7c84d9974dc3dc39162648f70bd0c7c812"
-    sha256 cellar: :any,                 monterey:       "d682d12e279871e48aa7b220cb6907b75d102762e3ea78f876a7c8f5c278edf4"
-    sha256 cellar: :any,                 big_sur:        "e8ba210e6e61540e4a6e04550b62ba36642f9257bda038a804c1a72da1647fb3"
-    sha256 cellar: :any,                 catalina:       "7e855780f1b7e8df553edfa62e2d9b02f708b108a86d74bdc96e1cb69e2cbbe9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa089a18b7fde229d98e57c40e48f623e06870000137240d1c207f15374c8c88"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libfabric"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "20444485f28185799e4323d0045f55bff7300377eba79283a7c091ee6b61b246"
   end
+
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

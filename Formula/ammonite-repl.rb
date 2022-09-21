@@ -9,8 +9,10 @@ class AmmoniteRepl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ab1a9252e52a095340ca483c9987d6f7bb121c918eefaa974b1d47429e6f0072"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ammonite-repl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3d0767590a6c40e37367147151b27f7e0dbba6f8d965406a3ae12015cfe06a2a"
   end
+
 
   depends_on "openjdk"
 

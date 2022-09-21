@@ -1,18 +1,17 @@
 class Nghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
-  url "https://github.com/nghttp2/nghttp2/releases/download/v1.49.0/nghttp2-1.49.0.tar.gz"
-  mirror "http://fresh-center.net/linux/www/nghttp2-1.49.0.tar.gz"
-  sha256 "14dd5654e369227afebfba5198793a1788a0af9d30cddb19af3ec275d110a7a6"
+  url "https://github.com/nghttp2/nghttp2/releases/download/v1.47.0/nghttp2-1.47.0.tar.gz"
+  sha256 "62f50f0e9fc479e48b34e1526df8dd2e94136de4c426b7680048181606832b7c"
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "f6d8130a9f5625f68f6da8b1fd128b8560c410662177dd1eafd0e0887cb45377"
-    sha256 arm64_big_sur:  "4d409aa9554e5e0cade07c4d2dec42b77ae992dc2b33af6aaa60788ea3200b32"
-    sha256 monterey:       "f47eebd19f84268259673d7469835a4850e3168d1c9b3aaade7f4245c7c376d4"
-    sha256 big_sur:        "c74c2c8f5f93b2ebf0ccb60a16501bbc91f387d1f2debd1faf440fb9416efafc"
-    sha256 catalina:       "eedbc417e89dba315bc6e854b8d315967aaf7d509b5060d21f039c9c8d5a068f"
-    sha256 x86_64_linux:   "576e2e477778c8c60a30c0a66d0decf3d79446af450693244f22ea1400534c8e"
+    sha256 arm64_monterey: "abe5c740388c37a7157150056054a84658de7d822e8686463a8f47716232417c"
+    sha256 arm64_big_sur:  "99d7e332e396d9b3058c18d8a94c854864ef64201ff9748dad0a4051356f3c17"
+    sha256 monterey:       "b99ff44001abfa58b109928627cb4a2214a11a2415d2ca0c49a0601e4d346664"
+    sha256 big_sur:        "4a5aa98db8472b7aaf97d0646f7a3550bf12ae28aaf45c9c1c1470b9a49c0528"
+    sha256 catalina:       "132ba73b92472714c358b650ef668039b3219df92fd574e93753a23a6b93ccb9"
+    sha256 x86_64_linux:   "a74b684df8a7ad4d908e65d63013a606832c0d20a1793bc6b25d97b8cdaff00d"
   end
 
   head do
@@ -33,11 +32,11 @@ class Nghttp2 < Formula
   uses_from_macos "libxml2"
   uses_from_macos "zlib"
 
-  # Fix: shrpx_api_downstream_connection.cc:57:3: error:
-  # array must be initialized with a brace-enclosed initializer
-  # https://github.com/nghttp2/nghttp2/pull/1269
-  patch do
-    on_linux do
+  on_linux do
+    # Fix: shrpx_api_downstream_connection.cc:57:3: error:
+    # array must be initialized with a brace-enclosed initializer
+    # https://github.com/nghttp2/nghttp2/pull/1269
+    patch do
       url "https://github.com/nghttp2/nghttp2/commit/829258e7038fe7eff849677f1ccaeca3e704eb67.patch?full_index=1"
       sha256 "c4bcf5cf73d5305fc479206676027533bb06d4ff2840eb672f6265ba3239031e"
     end

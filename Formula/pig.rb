@@ -16,10 +16,9 @@ class Pig < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "12c02619e8fbfee0603e8d11ffa0facfed80717df4eae3f4176a9fe5b33a4076"
   end
 
-  on_arm do
+  if Hardware::CPU.arm?
     depends_on "openjdk@11"
-  end
-  on_intel do
+  else
     depends_on "openjdk"
   end
 

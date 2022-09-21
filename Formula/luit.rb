@@ -11,12 +11,8 @@ class Luit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab9acf15dbc4f57744f46cfa68d3bcad5147202fb087e62278cfabf16060e212"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd9bf86b24b93a3d09f38578724106acebb16042f7f3ff43a0d791acaf8d99c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "6e334b4887641701e58d69504abad516290fce2ea6fcf0e18dbd5f3e0a73023e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7dc71fd9927f1a0319136578053f3894172ed1f65301663aabafaa1d359931b0"
-    sha256 cellar: :any_skip_relocation, catalina:       "6076f38bc562ff5408f986b767a20301c5c61c805881f836df3608152ae2c31c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b62d1247695d9587f5ddf316b1dc4f7e6ebba14979fce13a7dc2038f45259ce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "090af471cc82f2ce5fc5d41c3112f15da6f2ecd84cb974ad9324c85947293d75"
   end
 
   uses_from_macos "zlib"

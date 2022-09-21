@@ -6,19 +6,19 @@ class S3cmd < Formula
   url "https://files.pythonhosted.org/packages/65/6c/f51ba2fbc74916f4fe3883228450306135e13be6dcca03a08d3e91239992/s3cmd-2.2.0.tar.gz"
   sha256 "2a7d2afe09ce5aa9f2ce925b68c6e0c1903dd8d4e4a591cd7047da8e983a99c3"
   license "GPL-2.0-or-later"
-  revision 3
+  revision 1
   head "https://github.com/s3tools/s3cmd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e13cdf4fa4a22bff28b1c6d45e9b6abf3dc32706b5480aecfb795cd78bbb6a1a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28e7375d0037bcfc45a8e78bd25cea0607b2b84889a36c33b01928d665594c9e"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f1bb8a93419af123b4ef632fedee428b53803e768f90e1baf1fc9001d87b688"
-    sha256 cellar: :any_skip_relocation, big_sur:        "902b90e870a713c0317c2c7b9473b864e0e71c55dca645ea05ec6e928f4ab1d3"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f4c613de5672026788b198f0599a1b8f411c052485c9bee0d0afdba8c31ec62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "033fd52dfc82b54e62c50d07244b35d53b1b60f1b4bb6d6e66e17ce121b8ec8d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "966fb2bb8c02052b00b154326d9ccdd2f3ee5b342e2f044acb892c766ff687b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a8f7ba9cc505a9f85b520567fa4171b83b7d6c1629d54a4e4f28abb2beda118"
+    sha256 cellar: :any_skip_relocation, monterey:       "28c1ceda3886f9e5ae34970e4688de15dddb88c79e1578664da5d7c98e22a034"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d2c9c367aabe397103301708f12a3e3720fdf44ef73e46580a36cce82d89e59b"
+    sha256 cellar: :any_skip_relocation, catalina:       "b4da753aa2c650ece82199208d9be19d87017adedcd686176fc412c539f1da6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddea25a32f3d8eb2ca957676a975b52b30990709c7ed880eccb797bb1e25bc58"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "six"
 
   resource "python-dateutil" do
@@ -27,8 +27,8 @@ class S3cmd < Formula
   end
 
   resource "python-magic" do
-    url "https://files.pythonhosted.org/packages/f7/46/fecfd32c126d26c8dd5287095cad01356ec0a761205f0b9255998bff96d1/python-magic-0.4.25.tar.gz"
-    sha256 "21f5f542aa0330f5c8a64442528542f6215c8e18d2466b399b0d9d39356d83fc"
+    url "https://files.pythonhosted.org/packages/3a/70/76b185393fecf78f81c12f9dc7b1df814df785f6acb545fc92b016e75a7e/python-magic-0.4.24.tar.gz"
+    sha256 "de800df9fb50f8ec5974761054a708af6e4246b03b4bdaee993f948947b0ebcf"
   end
 
   def install
@@ -37,7 +37,6 @@ class S3cmd < Formula
   end
 
   test do
-    assert_match ".s3cfg: None", shell_output("#{bin}/s3cmd ls s3://brewtest 2>&1", 78)
-    assert_match "s3cmd version #{version}", shell_output("#{bin}/s3cmd --version")
+    system bin/"s3cmd", "--help"
   end
 end

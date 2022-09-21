@@ -12,16 +12,8 @@ class Log4c < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "df3a6f744304902108b48717a9bde9c4f1f19b25f04dbf4b99afb5ca8b55b9f8"
-    sha256 arm64_big_sur:  "13c3c642cb9d105c742bb313fde02b1968dee00017ac5fa96e46a908ae43e996"
-    sha256 monterey:       "26f216931900e3f177c8f9158afc9d1beddab45327606f35e180577ec3b4ca27"
-    sha256 big_sur:        "fa93c7beb25097d19cd6408e88e1d5bf8019386cdee22beb0f30d1fa7956286e"
-    sha256 catalina:       "25859511ac3302318ca6eed1eaa89c5a9b1e91b611da4233604e443d9c016dec"
-    sha256 mojave:         "8e35c261de43e25fe934f9f77875ff9c5fa6bdc4297fd0dd2fc657a5acd680ae"
-    sha256 high_sierra:    "4019efd84d56e2390feff696e1fa3305b788fdcb3105c5b6117913e81a16a7f2"
-    sha256 sierra:         "171a6c3f12f957d5442998f0f02df959aa4376ef543338765930ed4e062ef0ea"
-    sha256 el_capitan:     "2334e58e3ae201b28362707d2b64701e2e1378695e915baad886956e4edea50a"
-    sha256 x86_64_linux:   "5182c7b11972d29559087012a708f71137b9795294afb833aff1cf9d40168a9a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/log4c"
+    sha256 aarch64_linux: "5d5a68b6de762ff77a1895ae8563ab8fe2d20edf183b158e46ff81cb6d9b52aa"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.

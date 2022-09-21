@@ -16,14 +16,10 @@ class Flex < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "fba3fc3fe93abae2c8c436f0cf2fba194f6cf68e6938496937163c416fe6f402"
-    sha256 arm64_big_sur:  "ba78304da35f69526d386e1d1decca8818b155b4dda4f470d9393d23cf713e11"
-    sha256 monterey:       "937f34d36419d74cb32ef93df71f5fad1638b2ec5290cb865840e1fcc95ac595"
-    sha256 big_sur:        "89ec2b04b1aab94297f490c60fe6ca2bcde7de9b7661482728b07931e635d21c"
-    sha256 catalina:       "e563a7a42aceff203cca4f420ebc6a8bbd5075a2b0007d46724f037ebc7b41a5"
-    sha256 mojave:         "687132db0837bdcb6e02b5715f6a07f658bdf109b5353908f260d46d354f7bdb"
-    sha256 x86_64_linux:   "b2bff056ad86d8a1cb1a08944867b5f60636ad4e7edca623810937330d87d8eb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flex"
+    sha256 aarch64_linux: "ae632ea3ffdfb5adba884ff0d8521bce25859683c14a435a7ad08417c08d5745"
   end
+
 
   head do
     url "https://github.com/westes/flex.git", branch: "master"

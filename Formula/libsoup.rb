@@ -1,24 +1,23 @@
 class Libsoup < Formula
   desc "HTTP client/server library for GNOME"
   homepage "https://wiki.gnome.org/Projects/libsoup"
-  url "https://download.gnome.org/sources/libsoup/3.0/libsoup-3.0.8.tar.xz"
-  sha256 "c8739dc1c23c2b1e3b816d7598b3fa1764a3e1a2a2f5257b1bc4466d867caced"
+  url "https://download.gnome.org/sources/libsoup/3.0/libsoup-3.0.6.tar.xz"
+  sha256 "b45d59f840b9acf9bb45fd45854e3ef672f57e3ab957401c3ad8d7502ac23da6"
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "a3921bec5cde8f68b4e18492337a5592379ee9be85ff0bfa8ecc45c725be92f2"
-    sha256 arm64_big_sur:  "fbbb6b0ba2c9f4c42d859d957c52bb6baadef1469132c544c537dbc3f829317a"
-    sha256 monterey:       "35f72679633da06f56ff80d31314be823478dc35a168eaaea54123cb7e04e9c9"
-    sha256 big_sur:        "74663f81f1ddabfeecd8bd0190a651c38cbe3b40864e93511c1889dc8e238fd6"
-    sha256 catalina:       "1fcb359924843a0937cd01064c6bbf5a47f817968a5f172f11ea97c026a832de"
-    sha256 x86_64_linux:   "19f1fe4e6fa9857b60f084801ff15a5caa3aba2c696130751783b8bd47bd6b84"
+    sha256 arm64_monterey: "6bfe28dcf8068b439aa91e0961fd296d4acf6e43dc5d9cb5a897d0ecaeda5919"
+    sha256 arm64_big_sur:  "d5fa067babffcaf4e70269a7551912fcd1c648adb586737305f83f11afad3afe"
+    sha256 monterey:       "58254b69cddd3eb5741aca956a6535248dc4c97d2b4de61560532e3ab18fdecd"
+    sha256 big_sur:        "7de9fe1a8f2f25034a015864c936253086df3976138771ea9cf4de8ece311a77"
+    sha256 catalina:       "18bf9c45e38b33f303eb474aafd7de7a698a9f27c53501149bc7b1e05664c8af"
+    sha256 x86_64_linux:   "fe25656e6d1687571ae712d93e4d9c8f4f78f2381b0a3b6a05349b0a18f013a9"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
   depends_on "vala" => :build
   depends_on "glib-networking"
   depends_on "gnutls"
@@ -26,7 +25,6 @@ class Libsoup < Formula
 
   uses_from_macos "krb5"
   uses_from_macos "libxml2"
-  uses_from_macos "sqlite"
 
   def install
     mkdir "build" do

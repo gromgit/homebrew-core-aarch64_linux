@@ -2,24 +2,22 @@ class Micropython < Formula
   desc "Python implementation for microcontrollers and constrained systems"
   homepage "https://www.micropython.org/"
   url "https://github.com/micropython/micropython.git",
-      tag:      "v1.19.1",
-      revision: "9b486340da22931cde82872f79e1c34db959548b"
+      tag:      "v1.18",
+      revision: "da4b38e7562dfa451917f9d7f344a7f26de8c7bd"
   license "MIT"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc5514807c9010a80d3224606dfc0cfe9c6b8c135a14093b85ce348b2a8bbb82"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ba97c0bdedad351506ca6247a24c3bb9e60c42b4b4a2a940b19a969c3cc9cd4"
-    sha256 cellar: :any_skip_relocation, monterey:       "f0e87718ca44c30f75514b61afd66e8e1c521402487c99dcc2460b3ae670f10e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ed948a56f6d4bc32ecbe528085bc052b4fdc150311efe7c8058edb7312b29940"
-    sha256 cellar: :any_skip_relocation, catalina:       "3519c3b72905df1d1e6e1a966c7065e80c1ead3cebb3da50dbfd37115488c8e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10e202b63ee0424cd5efd86694d048aa99ce7d264c2e96dc883d679fd32bac94"
+    sha256 cellar: :any,                 arm64_monterey: "e1b6410da16a3cf7ce27b90ecf0fc3c9fc4fdd0d2db6c96de2f3b192502f62f0"
+    sha256 cellar: :any,                 arm64_big_sur:  "e35e1113d9a508c3f5d3b6d17dc94c3d3c35f8fd263890cf70b1ca6b1ed330a9"
+    sha256 cellar: :any,                 monterey:       "4d304b8993aa666d8019578da160df127c35369a38152fc691e447182a68231a"
+    sha256 cellar: :any,                 big_sur:        "248748849f31c85197df675a1c94ca76acaae87c268732f7ee3450857b63ef1f"
+    sha256 cellar: :any,                 catalina:       "64c4f4ed7fccf9ed5f640b6d4c7207a242accb7d982689e1bd3325927587109c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5842f54c8aed4df79ada0ed45df223887aa666e20ff93264fe054d531276c207"
   end
 
   depends_on "pkg-config" => :build
+  depends_on "libffi" # Requires libffi v3 closure API; macOS version is too old
   depends_on "python@3.10" # Requires python3 executable
-
-  uses_from_macos "libffi", since: :catalina # Requires libffi v3 closure API
 
   def install
     # Build mpy-cross before building the rest of micropython. Build process expects executable at

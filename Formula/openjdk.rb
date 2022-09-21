@@ -11,12 +11,8 @@ class Openjdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "373ac8b65daa370d2743649a606c96e0bccba510ebc7f47173c4c023f79d5378"
-    sha256 cellar: :any, arm64_big_sur:  "00d426f801ac70668086d982147f4e87891810d530339de10950d0574b2f48e1"
-    sha256 cellar: :any, monterey:       "e36e5aeef74829d1d87dbe61bc3b93d32d39ab3f44671384fee94e61ba9c9cdc"
-    sha256 cellar: :any, big_sur:        "bd1152971889cb2eba14c686f00beaffa6c512748255448dc59b15ca28aac046"
-    sha256 cellar: :any, catalina:       "e04f43adadb60a92ce830608f77ee41359cafaa20333ae1796b9e060903a8f06"
-    sha256               x86_64_linux:   "56910e5ab2d20c44c58f7f4665b9e66e08751857ec4e6360bc1740034f2b1822"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk"
+    sha256 aarch64_linux: "e087014251cfe69c695e808cc879868adfe1c43b50621a57e2187850f739e7bd"
   end
 
   keg_only :shadowed_by_macos
@@ -58,8 +54,14 @@ class Openjdk < Formula
       end
     end
     on_linux do
-      url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
-      sha256 "0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44"
+      on_arm do
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz"
+        sha256 "13bfd976acf8803f862e82c7113fb0e9311ca5458b1decaef8a09ffd91119fa4"
+      end
+      on_intel do
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
+        sha256 "0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44"
+      end
     end
   end
 
@@ -114,7 +116,8 @@ class Openjdk < Formula
       include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/darwin/*.h"]
       man1.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/man/man1/*"]
     else
-      libexec.install Dir["build/linux-x86_64-server-release/images/jdk/*"]
+      jdk = Dir["build/*/images/jdk"].first
+      libexec.install Dir["#{jdk}/*"]
       bin.install_symlink Dir[libexec/"bin/*"]
       include.install_symlink Dir[libexec/"include/*.h"]
       include.install_symlink Dir[libexec/"include/linux/*.h"]

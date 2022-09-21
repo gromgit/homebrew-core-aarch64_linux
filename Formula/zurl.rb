@@ -41,13 +41,11 @@ class Zurl < Formula
   end
 
   test do
-    python3 = "python3.10"
-
     conffile = testpath/"zurl.conf"
     ipcfile = testpath/"zurl-req"
     runfile = testpath/"test.py"
 
-    venv = virtualenv_create(testpath/"vendor", Formula["python@3.10"].opt_bin/python3)
+    venv = virtualenv_create(testpath/"vendor", Formula["python@3.10"].opt_bin/"python3")
     venv.pip_install resource("pyzmq")
 
     conffile.write(<<~EOS,
@@ -105,7 +103,7 @@ class Zurl < Formula
     end
 
     begin
-      system testpath/"vendor/bin/#{python3}", runfile
+      system testpath/"vendor/bin/python3", runfile
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)

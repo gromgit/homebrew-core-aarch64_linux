@@ -13,13 +13,10 @@ class Bento4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f62e19d2852307115f0c1e94b213bc9077181de58cf7e903c4b795d4cfbd6888"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d2358cfdfb419baa21fa6e755c9b3934e95ec3b98abb9be232b57246a3afd870"
-    sha256 cellar: :any_skip_relocation, monterey:       "cc5bdd3454e526f4c0b365c4a2edc12ab5a16103b4681cddf79bb3d09c925dcf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3dd938966ebb32156e7c59c80adc0278cd025b145c606db5762b05f41307d2c0"
-    sha256 cellar: :any_skip_relocation, catalina:       "168426e4c986c10d06e576cdf25081d5bd5530645c57eeffac741a04b8f5ae80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a911a1119727f07322db89b2ec133aabd98419ee9fe450ac06b92638ee084c08"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bento4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3bd250d0960c29f1b6cc0c564402e9db94d5d94ca2bd2839e78827e570147c87"
   end
+
 
   depends_on "cmake" => :build
   depends_on "python@3.10"

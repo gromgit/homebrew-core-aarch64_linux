@@ -3,18 +3,18 @@ class Duplicity < Formula
 
   desc "Bandwidth-efficient encrypted backup"
   homepage "https://gitlab.com/duplicity/duplicity"
-  url "https://files.pythonhosted.org/packages/fc/cf/4c492053398633154062759b1b8f7a4da77e029145c432ecfe3f76ca730c/duplicity-0.8.23.tar.gz"
-  sha256 "35e0d218bc6569aa99e51795c5b521093af21283af8c4db4f20652e76c20fefd"
+  url "https://files.pythonhosted.org/packages/67/67/f0db4470267997adb1fcccbb57cac928fbca47a2d423dbcb2ad7f3a88e1a/duplicity-0.8.22.tar.gz"
+  sha256 "c3c89d96cd6d374c22abed939619f77b0252ffb2e400888efc6b86b88bcfe626"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c9a8917e7737c11d621e0b097856841e456941b1f5c9edb73680b2093b1f5269"
-    sha256 cellar: :any,                 arm64_big_sur:  "74fabd7e7ad4ec5e140d6c3a1651c5dd1f1062774e8aff59d514fa79356b755b"
-    sha256 cellar: :any,                 monterey:       "412ca4c2607c38d202f3bdea2ec76b706a0abf53ef68e9b2a017ad02a7e8da61"
-    sha256 cellar: :any,                 big_sur:        "ef9b8245ee8471a85fd9ab8761e22c4f364ec90fa64f27052ff07f46a23663a2"
-    sha256 cellar: :any,                 catalina:       "513ddb18fa33e5282db481a444f466eb63c3100e8d720c58f3b4bbd5fa8e7676"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b41d9d8a8ed8c853dbb7d47e8d0c1225da03d3f2dc9ba9e18ca99f219af47756"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "b301700b81efd82cbf0cea7226c1b6c5b70c1edadbdfa5aa2228025e35e98a6c"
+    sha256 cellar: :any,                 arm64_big_sur:  "702cfaee163fec74361c47bb41009115f65b6bd81b73e377c37a640ca012e8b1"
+    sha256 cellar: :any,                 monterey:       "a0858ac24936c41ac7498d9282e89ce52b3c52e05c2b11b10cd6fed85753854c"
+    sha256 cellar: :any,                 big_sur:        "ba9c2f34ca5ac3201baf4b6619e7046c2f3730d62647e7e4b92d4b11ffb19956"
+    sha256 cellar: :any,                 catalina:       "ddc95b5956b22e87fee12f127d9db1e6684f27f8274df410027704082242e087"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7733c60b68f799547cf6836156280216d3a07d6d3016fbcc248a1cca88952ab4"
   end
 
   depends_on "rust" => :build # for cryptography

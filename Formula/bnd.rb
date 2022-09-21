@@ -11,8 +11,10 @@ class Bnd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "aa9f51264dbc00785812df13ae1d158f110d862de2bdecc8414689bc2aedff40"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bnd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9db6f4e493ca231ccccd28cbe2a0dbcd1d7e32d69b5599ad304b550252468082"
   end
+
 
   depends_on "openjdk"
 

@@ -2,18 +2,15 @@ class Braid < Formula
   desc "Simple tool to help track vendor branches in a Git repository"
   homepage "https://cristibalan.github.io/braid/"
   url "https://github.com/cristibalan/braid.git",
-      tag:      "v1.1.8",
-      revision: "d7391f2585fc86a8057d88de248ddc082eb8fa1b"
+      tag:      "v1.1.6",
+      revision: "008c1f5d1ba0a5a3faf2866a998fb7188c3ece36"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b87226e335b4bbf5ab6db80f4ae502c64849bdb1a3e93c0d40b954a7b8729f7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ef6c996ced958c4fbf1782ab4dbfdb7ce1fd4109253dd86b338978876b29a312"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b87226e335b4bbf5ab6db80f4ae502c64849bdb1a3e93c0d40b954a7b8729f7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ef6c996ced958c4fbf1782ab4dbfdb7ce1fd4109253dd86b338978876b29a312"
-    sha256 cellar: :any_skip_relocation, catalina:       "ef6c996ced958c4fbf1782ab4dbfdb7ce1fd4109253dd86b338978876b29a312"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f41f9bcb623db022eb830f348a1fe7f408332d4ef8d41e90aca6701da7476ccd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/braid"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "657995fa12cbe556a328adb8ff4642ef17f9a9b930c1fe9c372400249b584997"
   end
+
 
   uses_from_macos "ruby", since: :high_sierra
 

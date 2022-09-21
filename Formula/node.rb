@@ -1,11 +1,10 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v18.8.0/node-v18.8.0.tar.xz"
-  sha256 "2b5d9825d05ede6614f1668a8d97d774fe92ebc81088ec5fdf58184dce3c86b9"
+  url "https://nodejs.org/dist/v18.0.0/node-v18.0.0.tar.xz"
+  sha256 "344d0e6540b524c69a979ff5c3e78cda7254fd72c03699926beb0b8558b8ce75"
   license "MIT"
-  revision 1
-  head "https://github.com/nodejs/node.git", branch: "main"
+  head "https://github.com/nodejs/node.git", branch: "master"
 
   livecheck do
     url "https://nodejs.org/dist/"
@@ -13,12 +12,12 @@ class Node < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "043318c98b805ab5629983b2249e901fbf086b91990c5dbf1ce41f4a8be65922"
-    sha256 cellar: :any,                 arm64_big_sur:  "cc8fd067c37aeeb05dbd880cea65966ea0740b0fd0c0139806f81ce5dd762c42"
-    sha256 cellar: :any,                 monterey:       "4c8e0ce38e06adf4e168da3cf4a8e29687f40d787318eea2c42bc6e1368dedf7"
-    sha256 cellar: :any,                 big_sur:        "58e9dc27e8984920ce6e20bafb73fe5ab9b0eff18079c93ed1f624cc54832bc8"
-    sha256 cellar: :any,                 catalina:       "ebbee625370f3675f616a09956e9c4ac0c5402b4a7c7d143f0a12ea0bceacc47"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2922c55090148d57a81bf9eea95437ad3926dcfca508f20f4fc74f1f895db52"
+    sha256 cellar: :any,                 arm64_monterey: "c712a5bbc21c5d22250079e77a1cde2eb57a6d67967b3562eb9eda4c5f0cf239"
+    sha256 cellar: :any,                 arm64_big_sur:  "091d088c725eac508edcd842e5b01ce559d09468470c7fda27935862d872e61d"
+    sha256 cellar: :any,                 monterey:       "087f60d39f316c8762569df84c600b77ac9374c181f9763c5e8262a7e23f6191"
+    sha256 cellar: :any,                 big_sur:        "4200d108254940459db827ef55c71480d105fa7b34cc23e88045d34ad76c5755"
+    sha256 cellar: :any,                 catalina:       "094c89eae014a4b4e98db477488bfd37a83f03bca6f707fab35b3db555292e71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1885b4c2a37cf2a49afcae53a800c3503fd83727227e23fbb53bba1161624053"
   end
 
   depends_on "pkg-config" => :build
@@ -53,8 +52,8 @@ class Node < Formula
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-8.18.0.tgz"
-    sha256 "552a46197d331cef2823d01ff19bc0b7ae2680e1d49afd6b91811215e6d29baa"
+    url "https://registry.npmjs.org/npm/-/npm-8.6.0.tgz"
+    sha256 "d1cc0bc97f58f65b4acd8d7bcae71a26bc2849982f1b6a7ede63efbb07f9cd58"
   end
 
   def install

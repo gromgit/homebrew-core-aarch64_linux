@@ -1,17 +1,17 @@
 class Geographiclib < Formula
   desc "C++ geography library"
   homepage "https://geographiclib.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/geographiclib/distrib-C++/GeographicLib-2.1.1.tar.gz"
-  sha256 "28080fc48e1c76560eb2f8c306404de80c13d35687f676ff47a51695506e4a0a"
+  url "https://downloads.sourceforge.net/project/geographiclib/distrib-C++/GeographicLib-2.0.tar.gz"
+  sha256 "906b862aa9e988534fd5b8d9f3bae07437e0079a4236e19942ab61fe8c83960b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bfe0a6587b1795fb82b5c1b59c9b34462f720450ae32cb5940f6f3d4daf8b1ff"
-    sha256 cellar: :any,                 arm64_big_sur:  "a16bfa8a86ba9e3d72cc97ad1f3fdcb18fe60b16d09bfdcda16b19a12d4b38e2"
-    sha256 cellar: :any,                 monterey:       "c6f56914e3a91a17d2fdaccfe69b555936229cf85ec8e49cb331145eaf071a02"
-    sha256 cellar: :any,                 big_sur:        "ffeeacbc0e4fc7508d59d8c194b4f898545ad783d1e8e8aa56e5654722c96027"
-    sha256 cellar: :any,                 catalina:       "c4f069e57eff006d3f062ffe998ca0a8cefc9c42a93ea7969ec0bc187bef6064"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3aa5a4b955500a20587ef6c0b6a7064cac7e62620a69406ba3af1a002646f0bb"
+    sha256 cellar: :any,                 arm64_monterey: "3fc3f421dddd658cc96b68c967532c25d055b9a859bda415c701955f72d12542"
+    sha256 cellar: :any,                 arm64_big_sur:  "e132e08e23c5085c1e19f93031b0cc026865e4982f7f7ddcbf0e119294424c4a"
+    sha256 cellar: :any,                 monterey:       "098f8b7de3b85fb22e4d2f576765c6a697d4f7521fb2c3ee08f4ef6c6611fff9"
+    sha256 cellar: :any,                 big_sur:        "0557d7dc687a21e488ab5d9312006ab575bc6fe889f4d73a2d7e5fdecb637060"
+    sha256 cellar: :any,                 catalina:       "34d13afd308b36029e264f082a65b88cf4deb16ba34b1060f9ed12bc7d3395b0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c16104286c395af78eb7ec2c9be9050676bc753815d0b6b83d144a559257920"
   end
 
   depends_on "cmake" => :build

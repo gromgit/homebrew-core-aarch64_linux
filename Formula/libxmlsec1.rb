@@ -4,7 +4,6 @@ class Libxmlsec1 < Formula
   url "https://www.aleksey.com/xmlsec/download/xmlsec1-1.2.34.tar.gz"
   sha256 "52ced4943f35bd7d0818a38298c1528ca4ac8a54440fd71134a07d2d1370a262"
   license "MIT"
-  revision 1
 
   livecheck do
     url "https://www.aleksey.com/xmlsec/download/"
@@ -12,12 +11,12 @@ class Libxmlsec1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "024bc7d0c29d6538082c6c028cbd05333a114020c43068c51587ac8c826bbbac"
-    sha256 cellar: :any,                 arm64_big_sur:  "1f7fe144276fccca532e1cf53d25f02186c994ae49fae45400b5a8e6654abe1c"
-    sha256 cellar: :any,                 monterey:       "bc772fda0f897167a0203c54dcc7a1c212a4b31562bd07dec9597383582b729b"
-    sha256 cellar: :any,                 big_sur:        "a808516e71f10edefe72faa80fce47215cffb2117d6370808c05576f84cdfd1b"
-    sha256 cellar: :any,                 catalina:       "7f2a722846ebdff6e443d769ba2793f05a001c47b0bbaf2d4f527270444cd21e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa29289e159f700e07f38d7af68b7bf5832393c65716a2c0303f63e6f86738f3"
+    sha256 cellar: :any,                 arm64_monterey: "1428382252effcdabf34b7ab4bbaf039c353b11219a59127b3fdb4befc974c19"
+    sha256 cellar: :any,                 arm64_big_sur:  "40219e9a964a7e5ec08664524ed040bd05b58161ffd1c7bb5207d23d9b54206f"
+    sha256 cellar: :any,                 monterey:       "4cd56a217a6e2c596d8a86c239e2d934076a1cc1721dedeb870a7cb73e234388"
+    sha256 cellar: :any,                 big_sur:        "f661be8d4f407df484b50ca2b4882bf6ed5a0d0fc526a18bd1dfff0381aaa4ec"
+    sha256 cellar: :any,                 catalina:       "d8ab97537391a33597061ddd17f829a3c24b681a875b5e4db16f1c9bd87ed0ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75c2f4c33b87c39a0fc77b20fece4eed1679a3cfdfcfba386b07855f92094156"
   end
 
   depends_on "pkg-config" => :build

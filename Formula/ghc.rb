@@ -26,24 +26,17 @@ class Ghc < Formula
 
   depends_on "python@3.9" => :build
   depends_on "sphinx-doc" => :build
-
-  uses_from_macos "m4" => :build
-  uses_from_macos "ncurses"
-
-  on_linux do
-    depends_on "gmp" => :build
-  end
-
   # GHC 8.10.7 user manual recommend use LLVM 9 through 12
   # https://downloads.haskell.org/~ghc/8.10.7/docs/html/users_guide/8.10.7-notes.html
   # and we met some unknown issue w/ LLVM 13 before https://gitlab.haskell.org/ghc/ghc/-/issues/20559
   # so conservatively use LLVM 12 here
-  on_arm do
-    depends_on "llvm@12"
-  end
+  depends_on "llvm@12" if Hardware::CPU.arm?
 
-  resource "gmp" do
-    on_macos do
+  uses_from_macos "m4" => :build
+  uses_from_macos "ncurses"
+
+  on_macos do
+    resource "gmp" do
       url "https://ftp.gnu.org/gnu/gmp/gmp-6.2.1.tar.xz"
       mirror "https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz"
       mirror "https://ftpmirror.gnu.org/gmp/gmp-6.2.1.tar.xz"
@@ -51,16 +44,19 @@ class Ghc < Formula
     end
   end
 
+  on_linux do
+    depends_on "gmp" => :build
+  end
+
   # https://www.haskell.org/ghc/download_ghc_8_10_7.html#macosx_x86_64
   # "This is a distribution for Mac OS X, 10.7 or later."
   # A binary of ghc is needed to bootstrap ghc
   resource "binary" do
     on_macos do
-      on_intel do
+      if Hardware::CPU.intel?
         url "https://downloads.haskell.org/~ghc/8.10.7/ghc-8.10.7-x86_64-apple-darwin.tar.xz"
         sha256 "287db0f9c338c9f53123bfa8731b0996803ee50f6ee847fe388092e5e5132047"
-      end
-      on_arm do
+      else
         url "https://downloads.haskell.org/ghc/8.10.7/ghc-8.10.7-aarch64-apple-darwin.tar.xz"
         sha256 "dc469fc3c35fd2a33a5a575ffce87f13de7b98c2d349a41002e200a56d9bba1c"
       end

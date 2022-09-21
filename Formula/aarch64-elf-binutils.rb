@@ -11,13 +11,10 @@ class Aarch64ElfBinutils < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "816819b80149e70c4b001ff0d68b02b2809c208bbf3f005729f0ce6522dfc6c7"
-    sha256 arm64_big_sur:  "b3f844bdbf112b87d74c2d368071d6838747252019692b6b200bf5ae4b2003d3"
-    sha256 monterey:       "039fa6a5d98e1e6c6bab7580d25afc6791cad9fbfe3b53ce388435e1c2fd2aa1"
-    sha256 big_sur:        "5cbf1bf9d0a450e79405b239b8541cedd40619259828d2dd5cc42d53f619bce4"
-    sha256 catalina:       "711d3b85605b84d64aa88cb22a0de52668e0a232345293fc3dc040fe431b9fb3"
-    sha256 x86_64_linux:   "6529ba0f0d70e67b78a3e41be1200e5330550240c84c929d843e5ffb4aa4527e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aarch64-elf-binutils"
+    sha256 aarch64_linux: "3bfaad2ae71628722a97dbd244c75be4c1e02007e00bd2a4c0409fbe9bee25c1"
   end
+
 
   uses_from_macos "texinfo"
 

@@ -43,7 +43,7 @@ class Bde < Formula
       -DCMAKE_MODULE_PATH=cmake
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DCMAKE_TOOLCHAIN_FILE=#{toolchain_file}
-      -DPYTHON_EXECUTABLE=#{which("python3.10")}
+      -DPYTHON_EXECUTABLE=#{Formula["python@3.10"].opt_bin/"python3"}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args

@@ -1,8 +1,8 @@
 class Nushell < Formula
   desc "Modern shell for the GitHub era"
   homepage "https://www.nushell.sh"
-  url "https://github.com/nushell/nushell/archive/0.68.0.tar.gz"
-  sha256 "c170ce2a0fa931194c8169585608747fea0cbf7c957f67c6e2fd54c0c5071c64"
+  url "https://github.com/nushell/nushell/archive/0.61.0.tar.gz"
+  sha256 "9d12eafd790fbd7bde4d4a71bf5121cc4897fbaf18c0ac50167fb6153167fe57"
   license "MIT"
   head "https://github.com/nushell/nushell.git", branch: "main"
 
@@ -13,12 +13,12 @@ class Nushell < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "82f2dd3790efb74342fddaa107180213aebad0298c3d845fb709925479dcda29"
-    sha256 cellar: :any,                 arm64_big_sur:  "fa0b734ff1b15e68a59362b3dc28490de026fb959687c2a8ba51d58c0906dcc6"
-    sha256 cellar: :any,                 monterey:       "c2aaf841c8f1259c24ea8431f8ccbf5876a08e31f65266fcc8a87310c4e774ef"
-    sha256 cellar: :any,                 big_sur:        "dc8af0acb89a1097042bbb1f210fafd9745e78c5eb51be0722045e91eab3f351"
-    sha256 cellar: :any,                 catalina:       "20431e3a21a51160b41a0136652ada235d7f81d6f78094a15126119d4916e88e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "285043a9c9a1493938e67b1e236477d75acdf947718a0d5bea07302a1cfaad6c"
+    sha256 cellar: :any,                 arm64_monterey: "2005fb20d0eb5131664f061121c8c6a11e2062ba611e1f9029810071a58f0a9b"
+    sha256 cellar: :any,                 arm64_big_sur:  "a4cd427e34215a61808d370269462cf6be11d70d76673d7cf00b99be5337b6ca"
+    sha256 cellar: :any,                 monterey:       "8057ed0fcfde4a90ef28c4c1ef1967ac39602d44b9ed318389a7990ab16fcef9"
+    sha256 cellar: :any,                 big_sur:        "a0b54eed1421af059d5f80240edf2686b552b7a4c6c7b9da325b2446315458df"
+    sha256 cellar: :any,                 catalina:       "2f7e98de2f43c8e4b48abe2df93774cff2da6e98499e66ce9d8efde652ee6740"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a6ff57fb88df052222b40a2487c1dcea6fc630e7f506b5ec433ad4cda28f196"
   end
 
   depends_on "rust" => :build

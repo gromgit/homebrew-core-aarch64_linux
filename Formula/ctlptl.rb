@@ -1,17 +1,13 @@
 class Ctlptl < Formula
   desc "Making local Kubernetes clusters fun and easy to set up"
   homepage "https://github.com/tilt-dev/ctlptl"
-  url "https://github.com/tilt-dev/ctlptl/archive/v0.8.7.tar.gz"
-  sha256 "6d40946158c16cf86b56a293f5d60bed3f1035623828ccc1a6b978f544bee9a8"
+  url "https://github.com/tilt-dev/ctlptl/archive/v0.8.0.tar.gz"
+  sha256 "7f85d064e8b99ff5191a6f28e7958119666b6b394d486bf67173e53c3de33a01"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f3baa95a78dbccb51f147359941e534feecf28c2c7df2f0c5bd52d3e88a9962"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8aa64e0f9aef72af18247d8c154d21a6e59e8afbfc709ff777f94a30879fb34"
-    sha256 cellar: :any_skip_relocation, monterey:       "17dceb2ad67241264914976d9ad48cb67b5c1da7aeee8310b242d577f3b387bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "141b74ba4cebd66e122fa8f5f6c5e3e4db5dbe971ad7c12dc741cabc7df0c08e"
-    sha256 cellar: :any_skip_relocation, catalina:       "1630f34285047d6ddecc72ac2753b7fea0aec8d8ae7b41acabf469e522624e61"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1248bbc1fe748063a73411e7b8e4b8bbf06c2aa322059fe332f24e50450be5a4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ctlptl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "853b2c28a86c8d39da2d791ec1f5278dadbdc31bbeb12b2a49dc46043535fe77"
   end
 
   depends_on "go" => :build
@@ -24,7 +20,17 @@ class Ctlptl < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/ctlptl"
 
-    generate_completions_from_executable(bin/"ctlptl", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"ctlptl", "completion", "bash")
+    (bash_completion/"ctlptl").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"ctlptl", "completion", "zsh")
+    (zsh_completion/"_ctlptl").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"ctlptl", "completion", "fish")
+    (fish_completion/"ctlptl.fish").write output
   end
 
   test do

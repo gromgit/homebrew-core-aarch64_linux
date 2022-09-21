@@ -1,18 +1,14 @@
 class Mysqltuner < Formula
   desc "Increase performance and stability of a MySQL installation"
   homepage "https://raw.github.com/major/MySQLTuner-perl/master/mysqltuner.pl"
-  url "https://github.com/major/MySQLTuner-perl/archive/refs/tags/v1.9.9.tar.gz"
-  sha256 "f5a8ef9486977dd7e73ef5d53a1a0bf7f3cc7bf9ba9f9f4368454352cd0f881a"
+  url "https://github.com/major/MySQLTuner-perl/archive/1.8.3.tar.gz"
+  sha256 "9b8b1dff03550f03c659d2b850cb287d784f0d79f193c1d8a969516cc44738cb"
   license "GPL-3.0-or-later"
   head "https://github.com/major/MySQLTuner-perl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f48fec89712f94d011cba520736fafad466bc9f33eddb580b1b2dbe8dfc4e83"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f48fec89712f94d011cba520736fafad466bc9f33eddb580b1b2dbe8dfc4e83"
-    sha256 cellar: :any_skip_relocation, monterey:       "dde5020c41fd2f0a91dc626bff3a72649f78498d5bdcd7098dc60ef7cb323381"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dde5020c41fd2f0a91dc626bff3a72649f78498d5bdcd7098dc60ef7cb323381"
-    sha256 cellar: :any_skip_relocation, catalina:       "dde5020c41fd2f0a91dc626bff3a72649f78498d5bdcd7098dc60ef7cb323381"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f48fec89712f94d011cba520736fafad466bc9f33eddb580b1b2dbe8dfc4e83"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mysqltuner"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "15f46f2baf31667d6161e6345075e0fb9a037fede337d1cf4abe6173c27c47bd"
   end
 
   def install

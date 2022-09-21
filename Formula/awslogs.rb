@@ -10,13 +10,10 @@ class Awslogs < Formula
   head "https://github.com/jorgebastida/awslogs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c457a22e04ef623d43b954bae9a56d0405deceb801279a13260d594d80b8975b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7f9afdefeb804cdd221be20780ffeadfcfdccbd234f549b38d163f9962c6cb0"
-    sha256 cellar: :any_skip_relocation, monterey:       "dd66106ec6dd50056c85ce84a7f507890f19338ad95c0d844d333b582923e620"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9823d363323b80a5c1c48929a7313b3bef67a0e4c7a891dfca9f80edc526abae"
-    sha256 cellar: :any_skip_relocation, catalina:       "96c56ae773c9f68c3b5a0080549b13eafb699ab110198bad5334a8941b294209"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a14896857ef941ec8b99d1eae133515be05a45c95eed41ffb809583f0d146cc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/awslogs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "890985d57fafc652aed2713993255cf3baaceab5c0eda1ca26e2ca9bed4546f4"
   end
+
 
   depends_on "python@3.10"
 

@@ -3,8 +3,8 @@ class Corepack < Formula
 
   desc "Package acting as bridge between Node projects and their package managers"
   homepage "https://github.com/nodejs/corepack"
-  url "https://registry.npmjs.org/corepack/-/corepack-0.14.0.tgz"
-  sha256 "fe9fde0ba9e492b8bf16ee84b99313c9af5344fa2141bab6addb46fa6ee5840c"
+  url "https://registry.npmjs.org/corepack/-/corepack-0.10.0.tgz"
+  sha256 "ad7267a74370bd824f752a579a0965c32d422257cbb6ea8ab25dc9090b2ddde2"
   license "MIT"
 
   livecheck do
@@ -13,7 +13,7 @@ class Corepack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "028e8f1c9e0bd5e7a68c22a4445230f6d45a635a8a88e4ea2132a03776c9e52a"
+    sha256 cellar: :any_skip_relocation, all: "ed62f6ee6221939e59013211dc29a79145a576f5072060d47e0736bc6700d6f2"
   end
 
   depends_on "node"
@@ -34,7 +34,7 @@ class Corepack < Formula
     system bin/"yarn", "add", "fsevents", "--build-from-source=true" if OS.mac?
 
     (testpath/"package.json").delete
-    system "#{bin}/pnpm", "init"
+    system "#{bin}/pnpm", "init", "-y"
     assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end

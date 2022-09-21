@@ -1,8 +1,8 @@
 class Ocp < Formula
   desc "UNIX port of the Open Cubic Player"
   homepage "https://stian.cubic.org/project-ocp.php"
-  url "https://stian.cubic.org/ocp/ocp-0.2.99.tar.xz"
-  sha256 "d00165e206403b876b18edfc264abc8b6ce3d772be7e784fe4d358e37e57affd"
+  url "https://stian.cubic.org/ocp/ocp-0.2.95.tar.xz"
+  sha256 "94bffa3c7e7c1633a95a914c2d5b6fcf8d133e944f8e3455b5742d70e37b0231"
   license "GPL-2.0-or-later"
   head "https://github.com/mywave82/opencubicplayer.git", branch: "master"
 
@@ -12,12 +12,12 @@ class Ocp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b921004b4dd2cd920438958b4680f1f6a7ec9df6588ef29e02f480633f5b4a6b"
-    sha256 arm64_big_sur:  "42c624611c35001ca2b30b68170d732992e339165ddcbd951cba9d96be3c3b58"
-    sha256 monterey:       "216dc81701f3216ae552223f3ed09d34ddea880143898c8c1a475ce8b33acd0e"
-    sha256 big_sur:        "6ab826f1169833df2eca0cf33f36f88a35d4c12fb9ce8b5d20112ab108740f77"
-    sha256 catalina:       "97ff91ef5b48d7ae05a7ada0ba678dd69b825a025dce6c61e04759645d20bbe4"
-    sha256 x86_64_linux:   "125015cdc649ee1c0c3f1b770ca8cbc4a93ba8123a824687070196aea61da5e6"
+    sha256 arm64_monterey: "4cc24afa1801076f49fe41a24de65ba812aaf1bba577088c92f7a6424ae44658"
+    sha256 arm64_big_sur:  "7d8d2c2ce8478701d8297cce25daf82fd4fd07d41f57dbe47907ddfb51b57d3b"
+    sha256 monterey:       "0dac7fa3bbd1108fd6b6d4c3f9203c38ac9a221c9b88cb0e0bde1f7281d6ff62"
+    sha256 big_sur:        "143894d4658f2c7fad5852d1c3c4d9b72c136c1172eebd3991d9cc8a8b0582d3"
+    sha256 catalina:       "4e1ed4098098c347f44d9f6b64fd4ae8686231a2903967e228a9f4910e3f6853"
+    sha256 x86_64_linux:   "c59e438b69ab327ea8b46d4b0c5493beaab5e07f52e46d7449eb63614bc3d20a"
   end
 
   depends_on "pkg-config" => :build
@@ -31,16 +31,14 @@ class Ocp < Formula
   depends_on "libvorbis"
   depends_on "mad"
 
-  uses_from_macos "ncurses"
-  uses_from_macos "zlib"
-
-  on_catalina :or_newer do
+  if MacOS.version < :catalina
+    depends_on "sdl"
+  else
     depends_on "sdl2"
   end
 
-  on_system :linux, macos: :mojave_or_older do
-    depends_on "sdl"
-  end
+  uses_from_macos "ncurses"
+  uses_from_macos "zlib"
 
   on_linux do
     depends_on "util-linux" => :build # for `hexdump`

@@ -1,10 +1,9 @@
 class Gauche < Formula
   desc "R7RS Scheme implementation, developed to be a handy script interpreter"
   homepage "https://practical-scheme.net/gauche/"
-  url "https://github.com/shirok/Gauche/releases/download/release0_9_12/Gauche-0.9.12.tgz"
-  sha256 "b4ae64921b07a96661695ebd5aac0dec813d1a68e546a61609113d7843f5b617"
+  url "https://github.com/shirok/Gauche/releases/download/release0_9_11_p1/Gauche-0.9.11-p1.tgz"
+  sha256 "9069c347e12e7fd14072680100e63dedec92de8fd7f48a200224b4d478733795"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -13,17 +12,16 @@ class Gauche < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e8ed3922c71a7893b922e4ae30523d721bb49c9c6b069918662a85b6f718d4c7"
-    sha256 arm64_big_sur:  "f6794c8076aca975d4fa65c588b03e4e58cc392fbdc52c1d5dc63539152c8f15"
-    sha256 monterey:       "d2b320ef5f8d160bf020b66231d066fcd7474e57b5c0945ce7e9404edd93051b"
-    sha256 big_sur:        "51e132054978df068aaa5aa01d25c0005a32ca6d536e454bdf5d9ebbafaab347"
-    sha256 catalina:       "8de979e5a97b3bfb9b692b060b5d07b7e9eff3b9f03780c273f7f270ae6742aa"
-    sha256 x86_64_linux:   "5a3f90926fd31d7fc2d29e85dd119fa1e65ce7e0033916661d21d533949561ea"
+    sha256 arm64_monterey: "4bdf5a2a9587084ab420015aa4587ec327ee3f05506a884d742ef71cf10ea7dd"
+    sha256 arm64_big_sur:  "dbeda7059ccccad0efd5d615ba0f36fe0b5160d180d131149970428ae409672b"
+    sha256 monterey:       "a0b4f07a8397f91ef11b66d215e5c18eca3b7b0da67b47117a20a7730cd5df5d"
+    sha256 big_sur:        "2a21e02ce609480efec6abc2e9f03e9bd4cf1f353c132783101ead0a5ce219d8"
+    sha256 catalina:       "7f9f718aac4ec5c52ef60b3338c43204fa3ab019446f834867a5d528611b4583"
+    sha256 x86_64_linux:   "31295606e5b3844e9c3c3d999853236eef698250a415f3209083421a0dc36964"
   end
 
   depends_on "mbedtls"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   def install
@@ -35,7 +33,6 @@ class Gauche < Formula
 
   test do
     output = shell_output("#{bin}/gosh -V")
-    assert_match "(version \"#{version}\")", output
-    assert_match "(gauche.net.tls mbedtls)", output
+    assert_match "Gauche scheme shell, version #{version}", output
   end
 end

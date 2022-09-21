@@ -6,12 +6,8 @@ class Hss < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b22fe721a066962a1673c52f8c1152b46c451cd4cfa3672158faefb24533fe5b"
-    sha256 cellar: :any,                 arm64_big_sur:  "510fa3605e4d856cde1df1fd6af76db46b00b382738004931a6a59cfe78d1a4c"
-    sha256 cellar: :any,                 monterey:       "148418af9ede974ce97929a4d2203427b67d8cefd49001e8f70eaae68742b8dd"
-    sha256 cellar: :any,                 big_sur:        "3b2888677612b095f03226c3a9cd1dbb788233dc909519021f38a4fcbed09a49"
-    sha256 cellar: :any,                 catalina:       "64bb0e7f8de22316b5cabf7c805e4ce2948a7e44d4490e51bc3012c40acd59e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afddb5bd47b5545caddb3f178c318eae3074c07a417c194163316981067924a4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hss"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3e3257be481fa360d14eac6dfb0c9b03c175e1457f3fc8cc86ef20cef570b60c"
   end
 
   depends_on "readline"

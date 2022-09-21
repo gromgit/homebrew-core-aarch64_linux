@@ -1,18 +1,14 @@
 class Lastz < Formula
   desc "Pairwise aligner for DNA sequences"
   homepage "https://lastz.github.io/lastz/"
-  url "https://github.com/lastz/lastz/archive/refs/tags/1.04.22.tar.gz"
-  sha256 "4c829603ba4aed7ddf64255b528cd88850e4557382fca29580d3576c25c5054a"
+  url "https://github.com/lastz/lastz/archive/refs/tags/1.04.15.tar.gz"
+  sha256 "46a5cfb1fd41911a36fce5d3a2721ebfec9146952943b302e78b0dfffddd77f8"
   license "MIT"
   head "https://github.com/lastz/lastz.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0079336e54ddda2906063ae8e1345c285b907945ee992908bf2911298995a9e4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "869cf05ab0957ebf07fda9c95fe6e853610383a07f85f93a0b8efbd0a412b642"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ce7a7414d2cda02aa35efe3b9dfe418c8b6cdda4b58322a5554488c79a2d85a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bbf2688ff167ad24a18a218b1ba24175d06a9ea1a13f63914565b240848250ab"
-    sha256 cellar: :any_skip_relocation, catalina:       "9870cfbbcdee4b2512ef695f80c5bbc4f15bbbb98738009c7d7ea1a936016020"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46d6ba10ae062a21f3538006e2415897b089d50f264a6e048a81f210765435e3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lastz"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc81956d688f1c7f2e3ef02d5572d79045debded4a2826c3431c5da04b88a696"
   end
 
   def install

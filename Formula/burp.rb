@@ -19,13 +19,10 @@ class Burp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5b49f738c6755ed1661d0f4d17b2cfd5543316f775d6a17eac32bed217c6b84a"
-    sha256 arm64_big_sur:  "b61e5e1920d691c06ef16e4fd2ec8a9ccca26c305bd9e8403c6d25a95327403b"
-    sha256 monterey:       "6917c1084a60abd9e9f3c4b598550364d0e48ec834794ae874628535fa9b49f1"
-    sha256 big_sur:        "d542ee4aede6d4fb0d651b9888cac192fde50285889fd716b224d62ccd3b0cf2"
-    sha256 catalina:       "7dda2191539b4da970fcab02ff231b13a897bb809972f7a505fa74f676ec026d"
-    sha256 x86_64_linux:   "f0e3b60c6274bca19bfa073972a4f5eafc4d961f2024d975be6ddc9808d9c552"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/burp"
+    sha256 aarch64_linux: "e418024d0c50eb67ed54e62bc81773e5260e8c70c2958f65c6022c5c5b43c00b"
   end
+
 
   head do
     url "https://github.com/grke/burp.git", branch: "master"

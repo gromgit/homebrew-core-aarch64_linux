@@ -11,13 +11,10 @@ class LibatomicOps < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c2c524cf7b2a2066d9629190b75039283ca008f5a74752cca3b3c7387bed94a6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b6eb5d6a03178df1b704517496c79ddc4ceda06ec3d80e5c1230bd938232e629"
-    sha256 cellar: :any_skip_relocation, monterey:       "a2e24f4fb5d734c6407a87e6d92aad0fa8a6fae7d18c22794661b1f93a6484d7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4b41940cd48c41a9cb04a2ad951430240508c6153c51e97e237091d5618c8f04"
-    sha256 cellar: :any_skip_relocation, catalina:       "cfb78b72dd3fcccea0bb983380505c5b21b55811a9aa81c34996154ce59108b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67609f40170efe9725285e1fa97ae6042acf52eeded974f6e085db707decebd8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libatomic_ops"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e27e8ccbec5b11d18cb2d924a9ebd4183e7fc90c7bdff41283afaa998c623938"
   end
+
 
   def install
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"

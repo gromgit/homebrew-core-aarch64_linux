@@ -16,14 +16,8 @@ class Libmpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "658a1d260b6f77c431451a554ef8fa36ea2b6db19b38adc05c52821598ce2647"
-    sha256 cellar: :any,                 arm64_big_sur:  "6a93bd78c1b55f8b29e11fd1e9c68c6c305ffe74aa5b978ba93189b6d84d1451"
-    sha256 cellar: :any,                 monterey:       "b9984a72544255edf0c2d36dcb75d6adb7e68aa97233b005cf4120b36bb1fe6b"
-    sha256 cellar: :any,                 big_sur:        "754667644cc287cd9691fd3215df260aa971562b5a7b6ca65e29b2e15ea1e656"
-    sha256 cellar: :any,                 catalina:       "8c037df4b551058d00351676dc2c5ec395bd69c88545fac9ccfd0749dadb8ee2"
-    sha256 cellar: :any,                 mojave:         "c229b6def61f4acc41b4b159d93dbc63a5c77f87f61623c9f7c5399da440cc4f"
-    sha256 cellar: :any,                 high_sierra:    "939f0ad01d809356e33bdc70a8a8483eb1b021fd5f3723d0e61a2698af00f01b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d74eb5f1377d8fa72fad88baca1bd5f00c29d45ba186fbec89ad690c1d1f721f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmpc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0844027e67fd779bed17f06c9afbe3d8628268457cd766455058c625dbea2fa6"
   end
 
   head do

@@ -1,18 +1,17 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.land/"
-  url "https://github.com/denoland/deno/releases/download/v1.25.1/deno_src.tar.gz"
-  sha256 "a00fc3723377ed13a7b3eb3cc8e6564fc6604e50f7493c50d8189a8c6d457a8c"
+  url "https://github.com/denoland/deno/releases/download/v1.21.2/deno_src.tar.gz"
+  sha256 "3ab8e3b397a52d7fae598857a0658a429397e3db4ad8793ecb23d84b0cd6ef2d"
   license "MIT"
-  head "https://github.com/denoland/deno.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6f8488d83850416ad7eb653e904582c5d1725727dc078b217a3090183c86d65"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a0fd1fde0352bc5c831731156ff4d4e47f81aa738eef076dadfa6d581ec51e08"
-    sha256 cellar: :any_skip_relocation, monterey:       "8e33ea92a836b75d19bb199e0941842a56a0c9f8845ceaf5a8a86728603dbd47"
-    sha256 cellar: :any_skip_relocation, big_sur:        "17655d35b6d2213d8d8a8b19dfc6bd1eef0edaa07a398652fae36d28f08044c3"
-    sha256 cellar: :any_skip_relocation, catalina:       "93f7235aa1d1e69f9d858d52ba71b660847d5f76f84b1c6555e2d59a139a6823"
-    sha256                               x86_64_linux:   "58810560d478d14e011fe583597c44046caa47840e187fe155af96845144a29a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "325d73bd9de3bcad12ac19a08b1001c88e95f09a07c5d7f56b15459981f4ed72"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "128bf280be512b097cec521dfe3d8304c599dbb9ad1e0eb5c1d55b3ec6cb7e4d"
+    sha256 cellar: :any_skip_relocation, monterey:       "2fe2042e4d0e37014990fa0bcde37cbd66a1ed6bd4777e6856072b5c787c2c37"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8a3eaf3ffc14be0bcfc6c8ade9a69cb2a746154fecbb40c55fc0094b1b90ecb0"
+    sha256 cellar: :any_skip_relocation, catalina:       "b207eeed21f0add9b2ee70e21cc15e1ec663901e25373ec6d6db47402eacf0ad"
+    sha256                               x86_64_linux:   "478edf8d29228427bd8549389e4a6b9c9f876ff81e35995040778412b13e3b9f"
   end
 
   depends_on "llvm" => :build
@@ -34,19 +33,6 @@ class Deno < Formula
 
   fails_with gcc: "5"
 
-  # Temporary resources to work around build failure due to files missing from crate
-  # We use the crate as GitHub tarball lacks submodules and this allows us to avoid git overhead.
-  # TODO: Remove this and `v8` resource when https://github.com/denoland/rusty_v8/pull/1063 is released
-  resource "rusty-v8" do
-    url "https://static.crates.io/crates/v8/v8-0.49.0.crate"
-    sha256 "5a1cbad73336d67babcbe5e3b03c907c8d2ff77fc6f997570af219bbd9fdb6ce"
-  end
-
-  resource "v8" do
-    url "https://github.com/denoland/v8/archive/1f7df8c39451f3d53e9acef4b7b0476cf4f5eb66.tar.gz"
-    sha256 "5098e515c62e42c0c0754b0daf832f16c081bc53d27b7121bc917fb52759c65a"
-  end
-
   # To find the version of gn used:
   # 1. Find v8 version: https://github.com/denoland/deno/blob/v#{version}/core/Cargo.toml
   # 2. Find ninja_gn_binaries tag: https://github.com/denoland/rusty_v8/tree/v#{v8_version}/tools/ninja_gn_binaries.py
@@ -54,39 +40,18 @@ class Deno < Formula
   # 4. Find full gn commit hash: https://gn.googlesource.com/gn.git/+/#{gn_commit}
   resource "gn" do
     url "https://gn.googlesource.com/gn.git",
-        revision: "bf4e17dc67b2a2007475415e3f9e1d1cf32f6e35"
-  end
-
-  # To find the version of tinycc used, check the commit hash referenced from
-  # https://github.com/denoland/deno/tree/v#{version}/ext/ffi
-  resource "tinycc" do
-    url "https://github.com/TinyCC/tinycc.git",
-        revision: "afc136262e93ae85fb3643005b36dbfc30d99c42"
+        revision: "53d92014bf94c3893886470a1c7c1289f8818db0"
   end
 
   def install
-    # Work around files missing from crate
-    # TODO: Remove this at the same time as `rusty-v8` + `v8` resources
-    (buildpath/"v8").mkpath
-    resource("rusty-v8").stage do |r|
-      system "tar", "--strip-components", "1", "-xzvf", "v8-#{r.version}.crate", "-C", buildpath/"v8"
-    end
-    resource("v8").stage do
-      cp_r "tools/builtins-pgo", buildpath/"v8/v8/tools/builtins-pgo"
-    end
-    inreplace %w[core/Cargo.toml serde_v8/Cargo.toml],
-              /^v8 = { version = ("[\d.]+"),.*}$/,
-              "v8 = { version = \\1, path = \"../v8\" }"
-
     if OS.mac? && (MacOS.version < :mojave)
       # Overwrite Chromium minimum SDK version of 10.15
       ENV["FORCE_MAC_SDK_MIN"] = MacOS.version
     end
 
-    python3 = "python3.10"
     # env args for building a release build with our python3, ninja and gn
     ENV.prepend_path "PATH", Formula["python@3.10"].libexec/"bin"
-    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/python3
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
     ENV["GN"] = buildpath/"gn/out/gn"
     ENV["NINJA"] = Formula["ninja"].opt_bin/"ninja"
     # build rusty_v8 from source
@@ -97,25 +62,22 @@ class Deno < Formula
 
     resource("gn").stage buildpath/"gn"
     cd "gn" do
-      system python3, "build/gen.py"
+      system "python3", "build/gen.py"
       system "ninja", "-C", "out"
     end
 
-    resource("tinycc").stage buildpath/"tinycc"
-    cd "tinycc" do
-      ENV.append_to_cflags "-fPIE" if OS.linux?
-      system "./configure", "--cc=#{ENV.cc}"
-      system "make"
+    cd "cli" do
+      # cargo seems to build rusty_v8 twice in parallel, which causes problems,
+      # hence the need for -j1
+      system "cargo", "install", "-vv", "-j1", *std_cargo_args
     end
 
-    ENV["TCC_PATH"] = buildpath/"tinycc"
-
-    # cargo seems to build rusty_v8 twice in parallel, which causes problems,
-    # hence the need for -j1
-    # Issue ref: https://github.com/denoland/deno/issues/9244
-    system "cargo", "install", "-vv", "-j1", *std_cargo_args(path: "cli")
-
-    generate_completions_from_executable(bin/"deno", "completions")
+    bash_output = Utils.safe_popen_read(bin/"deno", "completions", "bash")
+    (bash_completion/"deno").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"deno", "completions", "zsh")
+    (zsh_completion/"_deno").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"deno", "completions", "fish")
+    (fish_completion/"deno.fish").write fish_output
   end
 
   test do

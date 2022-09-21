@@ -1,10 +1,9 @@
 class GstPluginsBad < Formula
   desc "GStreamer plugins less supported, not fully tested"
   homepage "https://gstreamer.freedesktop.org/"
-  url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.3.tar.xz"
-  sha256 "7a11c13b55dd1d2386dd902219e41cbfcdda8e1e0aa3e738186c95074b35da4f"
+  url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.1.tar.xz"
+  sha256 "09d3c2cf5911f0bc7da6bf557a55251779243d3de216b6a26cc90c445b423848"
   license "LGPL-2.0-or-later"
-  revision 1
   head "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git", branch: "master"
 
   livecheck do
@@ -13,12 +12,12 @@ class GstPluginsBad < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "883e428e0916301e1ee4b21e041372a2b523f5e66ec649f6e1a7d073639878f9"
-    sha256 arm64_big_sur:  "bdd8b41d13f8c98b863f0ca559881c7e4532e9845ac4aaf8a4951d9259f5117b"
-    sha256 monterey:       "19fb8cc5efdccea94dd4574eac1e35da2a46b2ca6f48278b3a06d01385c0b8aa"
-    sha256 big_sur:        "92107bb45bd7256d49cd09f2bcd56906f2942c8ff29728ced7ff50963030e84b"
-    sha256 catalina:       "c2f67922be2cb4bea0c6606b9a4a144d2deba28277fdc47a1a1aabe2cc80dacd"
-    sha256 x86_64_linux:   "669d27f5ea32b0cb17da5ca723e537ef0c68110bc5300140e158d3d386eb158e"
+    sha256 arm64_monterey: "ef4d873d1b65c869a9a8e5f05e9aad67649ae723e7c92a603320b52de6d1a716"
+    sha256 arm64_big_sur:  "a2999c158fd3e700426a328fd25991238a356828cffd956cb750715468985fe5"
+    sha256 monterey:       "07e4e7b82bf4d1bde54ceb936c868c1e6d0e5e8bb1c8b5d03f5070a383b2bdf7"
+    sha256 big_sur:        "befb557a42506d1a1278c3d069f42bda21da6d97825a9077443d7820ee7118f2"
+    sha256 catalina:       "cf358fc19131d6b1ddca74d79fc2c777d034e6d7062547d9594ca8d5d5a78d61"
+    sha256 x86_64_linux:   "f8258055d1c17aeb617e6e8d9167a298022ad51f3702f2bc08e7c2aa8441d678"
   end
 
   depends_on "gobject-introspection" => :build
@@ -29,7 +28,7 @@ class GstPluginsBad < Formula
   depends_on "faad2"
   depends_on "gettext"
   depends_on "gst-plugins-base"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libnice"
   depends_on "libusrsctp"
   depends_on "openssl@1.1"
@@ -37,8 +36,6 @@ class GstPluginsBad < Formula
   depends_on "orc"
   depends_on "rtmpdump"
   depends_on "srtp"
-
-  uses_from_macos "python" => :build, since: :catalina
 
   on_macos do
     # musepack is not bottled on Linux
@@ -48,17 +45,20 @@ class GstPluginsBad < Formula
 
   def install
     # Plugins with GPL-licensed dependencies: faad
-    args = %w[
+    args = std_meson_args + %w[
       -Dgpl=enabled
       -Dintrospection=enabled
       -Dexamples=disabled
     ]
+
     # The apple media plug-in uses API that was added in Mojave
     args << "-Dapplemedia=disabled" if MacOS.version <= :high_sierra
 
-    system "meson", *std_meson_args, "build", *args
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do

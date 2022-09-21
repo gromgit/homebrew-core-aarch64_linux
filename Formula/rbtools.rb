@@ -3,18 +3,18 @@ class Rbtools < Formula
 
   desc "CLI and API for working with code and document reviews on Review Board"
   homepage "https://www.reviewboard.org/downloads/rbtools/"
-  url "https://files.pythonhosted.org/packages/f3/12/69737ab2c89eae4e7c7952792148e6d065150a8c5067e3dfa184583bfcf8/RBTools-3.1.1.tar.gz"
-  sha256 "1c57725cb2c9a23b8aa947a607b6e71a5075c511379652406ca010f917e70b3e"
+  url "https://files.pythonhosted.org/packages/50/e6/461ac31f26064acf3a1ba1c5f3b75bf32bfb82732b5982c08455c0bc7fe8/RBTools-3.0.tar.gz"
+  sha256 "344b81f23ff271d02d20fd8751c0de1dbad5271ef4b0e0ec1a1df6f540f66294"
   license "MIT"
   head "https://github.com/reviewboard/rbtools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "55446557bdf534d41de838b34e950be95255098ce2f88c23a2c972ec75d1aa33"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "027739fd21d5a63d7dd44c7e24145135170e61b24ddda9a084869714ba1a608e"
-    sha256 cellar: :any_skip_relocation, monterey:       "ffd5c86cfd67e1c631f31304bde25f5bed20f4bc9e3703aa5998b7cc3a8b29b3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c065fc32ef9fe77d0370e8efba10124596a3f3ea5141559a2b96736ec0c7e32"
-    sha256 cellar: :any_skip_relocation, catalina:       "57de9e02373b0ade740c14739fb42d17afa5108c2d14eda882d14c39234c3e83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81ec8a8ba96b20b9ef10103179359f26cd51ccfee4f624304ba69f8fb9e46a71"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "61fbb58c12263f9aacbcf55cfc82fe037f7c1c3e4ff4fcc66c118eb9a36226ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97b5537cbecb0546c35ec34f1a85ae1462237a646dacf198c7aea41f060093a3"
+    sha256 cellar: :any_skip_relocation, monterey:       "aeae28bf5939133b4f12a686d28910a55de9c0ae9e3052cd8ae7a4c9d85875ad"
+    sha256 cellar: :any_skip_relocation, big_sur:        "de0bfda19e6c31a29e7d5b12571fb404d0b1da5a7f96ab2a6e7f8bd8e943fd95"
+    sha256 cellar: :any_skip_relocation, catalina:       "8cdd3319dc129639bd2a17f3473935bb37591ad4a50a26578f6b7201a1199b74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2f4859711ee408d4a7285d9c7ffff5735fc52798c2c6f6af0518df96e632d35"
   end
 
   depends_on "python@3.10"
@@ -36,8 +36,8 @@ class Rbtools < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/98/2a/838de32e09bd511cf69fe4ae13ffc748ac143449bfc24bb3fd172d53a84f/tqdm-4.64.0.tar.gz"
-    sha256 "40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"
+    url "https://files.pythonhosted.org/packages/cb/a5/803a55cae355bc2402492c6a1c23dc08117844e4a1c3a293b0ea19bca6fa/tqdm-4.63.0.tar.gz"
+    sha256 "1d9835ede8e394bb8c9dcbffbca02d717217113adc679236873eeaac5bc0b3cd"
   end
 
   def install

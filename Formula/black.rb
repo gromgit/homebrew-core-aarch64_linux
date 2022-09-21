@@ -14,13 +14,10 @@ class Black < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e8888fc508ff1aec0e258bf82278962832aba7763a9ce73456e93f61f1b53741"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ef7260baccc55be13c4e5e7fdaea730d29efd613c3c6356346f731f80fcfc244"
-    sha256 cellar: :any_skip_relocation, monterey:       "3fa83802c640a361ed83cdebfdf5f9ac5f8e34ff1d6a1d0f054982e45866148d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b5a53a4bd1c065d32b23649d89f714b38866b5106a7d9acd9bfcfdbdb5781c1b"
-    sha256 cellar: :any_skip_relocation, catalina:       "008a7175f718b1e01bb47aac856ab82e383833494f45e346389bca000cbcfd87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "097081106c0e93ff926e57a01a37f3bffb2b57d22ac74be9741901c1d5c52989"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/black"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "92df973d1c327035da5714dbbcdad4b75645862b7813e370a569cb8b680d0222"
   end
+
 
   depends_on "python@3.10"
 

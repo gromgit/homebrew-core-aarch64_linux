@@ -4,20 +4,18 @@ class OsmiumTool < Formula
   url "https://github.com/osmcode/osmium-tool/archive/v1.14.0.tar.gz"
   sha256 "67765fe6b612e791aab276af601dd12410b70486946e983753f6b0442f915233"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a822b931250081419f53ad441a89076a64411e5971e091387a92476860204806"
-    sha256 cellar: :any,                 arm64_big_sur:  "9dd563705ceb2f2837d4f5df511e5b3d13cf1409968b1fdcae991ef0a381e6e2"
-    sha256 cellar: :any,                 monterey:       "c10c02bea8013843e94222ae833e64b2ea61a4287d60e386b8c1a560baf978b2"
-    sha256 cellar: :any,                 big_sur:        "bd7ed40d240f593ddeab17dbaceb9f06b8d14f870a3e3f07872228a56d7622fc"
-    sha256 cellar: :any,                 catalina:       "5b67d83929194c424ff1929a3e4a019607409ac650a04bd97d9a7e58f169d0d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "28c587bd9003d6b08adbf08ae8cb15548184f1b1995032542166fce7d213c2d5"
+    sha256 cellar: :any,                 arm64_monterey: "366d2a275801b465effedcd9b3c58c4d5032ffc675e65ba9a58feb47b0365195"
+    sha256 cellar: :any,                 arm64_big_sur:  "28f759e51d219ce55915e85f62dc929b08ff5a0001440dd0512558c29b308177"
+    sha256 cellar: :any,                 monterey:       "276f2228730ebcc5cfe975fcd7163998e7e557c6a1165804b10a5c17f4146b66"
+    sha256 cellar: :any,                 big_sur:        "cd50810cc1ce63183d87fc764350b3d45b18891ce220dc12ed4af5965e7d83bd"
+    sha256 cellar: :any,                 catalina:       "709ccb8d194a5403e783e45706d59fe341567f191d5220e2231bb80b2e8749fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "244fe31de46dd27780e63eb4cf7ba810e8a56e8f25c1f6d4ad5e9a79a117a546"
   end
 
   depends_on "cmake" => :build
   depends_on "libosmium" => :build
-  depends_on "pandoc" => :build
   depends_on "boost"
   depends_on "lz4"
 

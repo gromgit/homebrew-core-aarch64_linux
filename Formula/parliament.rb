@@ -3,36 +3,36 @@ class Parliament < Formula
 
   desc "AWS IAM linting library"
   homepage "https://github.com/duo-labs/parliament"
-  url "https://files.pythonhosted.org/packages/8b/91/fe6ef857eea3a6794883dc5c767dbaf9eeba452b0759ee88659fece0699e/parliament-1.6.1.tar.gz"
-  sha256 "39c854dcf5c35c02366cfea531078f585bd6a6183248f792874588c8c48feca3"
+  url "https://files.pythonhosted.org/packages/ca/61/006a39b26dfaa909a6b0dda45b7f9df41e9d3be90517da7b1163b5d28377/parliament-1.5.2.tar.gz"
+  sha256 "80945a97715d1cfd736978727896ef8d39328fa6edc88be248116660309cf799"
   license "BSD-3-Clause"
   head "https://github.com/duo-labs/parliament.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cdff5a39d575b1cb0db1f88f743ae06b2f69f90cfc4c20632b68bc846df1eea6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a05bd973215959bc47e00c533b50648798a34d280578d55a2e57a2698f4b617"
-    sha256 cellar: :any_skip_relocation, monterey:       "859bec622f67d11c95b39cf9b39c7d15e30bd0291b52f6ef5ec3f5896523442a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7e23167434873bf54781347dcb1b716fc5b8e4a75b351a0b5fd412e9c44bbee"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d2927bd06b9d807a0bdcc81e4aedf7ed7f4d403cef8d2e34cd77c7c9023a377"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "293a46e847761494af3c9d52693e6b6d40de6d235bf19f205031c380abb254c1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "333d2e3d3efdf8b87f9c0fe9fa2d03081256afad546880b459123e00aa4d1f6e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5323fb61cea69c3c06af5b6b65e7e3176b724b4c0feb603fd1797a681ef9a042"
+    sha256 cellar: :any_skip_relocation, monterey:       "3ec93ebd9de4c765ffdca0d96fd3d8bdf7df372ea4eb4e073d5f416153d5c8c0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0adaa6db71638d44fdc5879feb17e748a0bba14138b61804e32cdf52e74ac3ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "82a8834f0e2692caa13738729dbf6f476a494ddb065e416c65d224523bed661f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d68a0e002aeb5bd42edd23fb04247a6567926b1bc5356c65168d11929e323d2e"
   end
 
   depends_on "python@3.10"
   depends_on "six"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/af/88/0aa54a60d9627bef23b9fe7c3f76c4761064d5f331edd92a2071e4cba358/boto3-1.24.67.tar.gz"
-    sha256 "2b9309a98fd7264788ff1d1b19146406cc4191e53ed9a03aca03e8837303fae2"
+    url "https://files.pythonhosted.org/packages/6d/27/5a5e2c3048d83dcbbd89167810e59d67035bdcb5e2aa2453b8f171e12c27/boto3-1.20.0.tar.gz"
+    sha256 "17b942d9513f396b2e90f71131b48cdc49279c9714189bbf84a232d189a793dd"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/57/60/e307245349b8914d423064f53dca3f8a81dac6a7fe69972797067a909314/botocore-1.27.67.tar.gz"
-    sha256 "b00894d2eee8a795ecedf9f4cbc454fa449a7bb11af1390c7414755243f90610"
+    url "https://files.pythonhosted.org/packages/28/e4/202d80d8f891949537ca83398ff5586068c6ab515bdaac85936169578309/botocore-1.23.1.tar.gz"
+    sha256 "3daa7148017685ee8120c12b024ad2b6eadc1abc775627d4f4dd8182aaca5d0f"
   end
 
   resource "jmespath" do
-    url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
-    sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+    url "https://files.pythonhosted.org/packages/3c/56/3f325b1eef9791759784aa5046a8f6a1aff8f7c898a2e34506771d3b99d8/jmespath-0.10.0.tar.gz"
+    sha256 "b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"
   end
 
   resource "json-cfg" do
@@ -56,13 +56,13 @@ class Parliament < Formula
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/e1/eb/e57c93d5cd5edf8c1d124c831ef916601540db70acd96fa21fe60cef1365/s3transfer-0.6.0.tar.gz"
-    sha256 "2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"
+    url "https://files.pythonhosted.org/packages/88/ef/4d1b3f52ae20a7e72151fde5c9f254cd83f8a49047351f34006e517e1655/s3transfer-0.5.0.tar.gz"
+    sha256 "50ed823e1dc5868ad40c8dc92072f757aa0e653a192845c94a3b676f4a62da4c"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/80/be/3ee43b6c5757cabea19e75b8f46eaf05a2f5144107d7db48c7cf3a864f73/urllib3-1.26.7.tar.gz"
+    sha256 "4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"
   end
 
   def install
@@ -70,9 +70,9 @@ class Parliament < Formula
   end
 
   test do
-    assert_equal "MEDIUM - No resources match for the given action -  - [{'action': 's3:GetObject', " \
-                 "'required_format': 'arn:*:s3:::*/*'}] - {'line': 1, 'column': 40, 'filepath': None}", \
-    pipe_output("#{bin}/parliament --string \'{\"Version\": \"2012-10-17\", \"Statement\": {\"Effect\": \"Allow\", " \
-                "\"Action\": \"s3:GetObject\", \"Resource\": \"arn:aws:s3:::secretbucket\"}}\'").strip
+    assert_equal "MEDIUM - No resources match for the given action -  - [{'action': 's3:GetObject',"\
+                 " 'required_format': 'arn:*:s3:::*/*'}] - {'line': 1, 'column': 40, 'filepath': None}", \
+    pipe_output("#{bin}/parliament --string \'{\"Version\": \"2012-10-17\", \"Statement\": {\"Effect\": \"Allow\","\
+                " \"Action\": \"s3:GetObject\", \"Resource\": \"arn:aws:s3:::secretbucket\"}}\'").strip
   end
 end

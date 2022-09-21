@@ -6,13 +6,8 @@ class Jhead < Formula
   license :public_domain
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e473e54dcc077f4b803d1fa3acf390d8d74845f9c01e8316dbccf195844b5738"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8ba17f494afc0590a876112f9f7f6b00664fbd1ad62ec3a9a21a5941188b9bbe"
-    sha256 cellar: :any_skip_relocation, monterey:       "cd587b58853b3f1adbdb7bf1cf7bf019d7f86354ffa4ba3de04ec60220858d6f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ff1612a2a1d386e153b934b790f6e3e4897a0cb9509805de91f0cf432a422f57"
-    sha256 cellar: :any_skip_relocation, catalina:       "57866edae4ac5a6b63988d3f7c9c1d261fa33eaff6dc1e6833a086fda2a7671f"
-    sha256 cellar: :any_skip_relocation, mojave:         "1d772617f005a7b1381d78c133e2745e9ca7e31cb6a5fd5428bd2f973bcfae45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15b04dc8681a47de34f7d95028ad979706403157d88bef21cdfc97b5f89393cf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jhead"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5122381048e0751f46c6fce01224d4c9e5e0989427ca85233f90205bbbb9263a"
   end
 
   # Patch to provide a proper install target to the Makefile. A variation

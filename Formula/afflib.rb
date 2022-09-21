@@ -32,8 +32,7 @@ class Afflib < Formula
   end
 
   def install
-    python = Formula["python@3.10"].opt_bin/"python3.10"
-    ENV["PYTHON"] = python
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
 
     args = %w[
       --enable-s3
@@ -41,13 +40,10 @@ class Afflib < Formula
       --disable-fuse
     ]
 
-    system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", *std_configure_args, *args
-
-    # Prevent installation into HOMEBREW_PREFIX.
-    prefix_site_packages = prefix/Language::Python.site_packages(python)
-    inreplace "pyaff/Makefile", "--single-version-externally-managed",
-                                "--install-lib=#{prefix_site_packages} \\0"
+    system "autoreconf", "-fiv"
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
+                          *args
     system "make", "install"
   end
 

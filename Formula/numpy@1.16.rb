@@ -7,12 +7,7 @@ class NumpyAT116 < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "44632bb6f64ba1e0c69135cedb6492366d1bb694db485e98d5ad9154c2de7fe1"
-    sha256 cellar: :any, arm64_big_sur:  "7642b59316ab6f72a98404891e507f30ace7fa4155b51f0bee34bd0420616b7b"
-    sha256 cellar: :any, monterey:       "d6bb3264733e935d0d0de1d88169424cf4135bc93ff3f634a5878054531f035f"
-    sha256 cellar: :any, big_sur:        "06715ef4325d085e529164cc2818e5cf21acb4ef38014a36f93a13adcdbf66c8"
-    sha256 cellar: :any, catalina:       "e394780485048f7e2629b168da0a01d0ad55d17200f69749a33e7ac1059f7aac"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   # was used only by opencv@2 which was deprecated on the same date

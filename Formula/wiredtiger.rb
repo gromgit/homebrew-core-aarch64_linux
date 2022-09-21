@@ -1,8 +1,8 @@
 class Wiredtiger < Formula
   desc "High performance NoSQL extensible platform for data management"
   homepage "https://source.wiredtiger.com/"
-  url "https://github.com/wiredtiger/wiredtiger/archive/refs/tags/11.0.0.tar.gz"
-  sha256 "1dad4afb604fa0dbebfa8024739226d6faec1ffd9f36b1ea00de86a7ac832168"
+  url "https://github.com/wiredtiger/wiredtiger/releases/download/10.0.0/wiredtiger-10.0.0.tar.bz2"
+  sha256 "4830107ac744c0459ef99697652aa3e655c2122005a469a49d221e692fb834a5"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
 
   livecheck do
@@ -11,28 +11,33 @@ class Wiredtiger < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "54ae003509c8488b6dbf019a88fad8215198e3e10ad120b4fb79fa87b33d2051"
-    sha256 cellar: :any,                 arm64_big_sur:  "04f9b121ef62be4f365d36bc1e2c901bfafe37bf62580b701898c01a9b58d359"
-    sha256 cellar: :any,                 monterey:       "bcf4fa0509021ae516a154281108eef2575616dcd0c16f1bc1937f0dc09e6f5a"
-    sha256 cellar: :any,                 big_sur:        "ebaab842d86b6088ef042da0b73d23e7da494128916e5b16f17daa16e8cfc028"
-    sha256 cellar: :any,                 catalina:       "ab75e49599d73c0537853750e440137ee2c07c8b027f6cf21c19dd8a3fb7644b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9b01253492207235ce85d2e72773bfff7fb5a054978c11cdb00b428e921f5bd"
+    sha256 cellar: :any,                 arm64_monterey: "4b72a7ac0c4f99e3fa6cdd8395f03bf0c819ccbcd90e9e4ce373de6e016180f4"
+    sha256 cellar: :any,                 arm64_big_sur:  "2e2b170afa925805d7f94e127dc6c66f7ae5d042a37860e736e9c6cbf1696acb"
+    sha256 cellar: :any,                 monterey:       "2d693bed27b7602f8645f861bd063f98ef9e9653294e238550a57c4fbb762924"
+    sha256 cellar: :any,                 big_sur:        "73dec56cf3779376bb1e111c6d96900bfd73e5df072dfce752defaf06d98b167"
+    sha256 cellar: :any,                 catalina:       "16d0323167834b745163edf87b88693a7b49ace3f901042c0d78fbfbe5afa8a8"
+    sha256 cellar: :any,                 mojave:         "0c2bbb142e29427648f66455b69028d1650b3d420700d31e952a70e58cc361f8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e89496c6a6af975b83b16006c84ef7c69d7df3b0e127e2f58a3b2ff6cfc860f"
   end
 
-  depends_on "ccache" => :build
-  depends_on "cmake" => :build
   depends_on "snappy"
 
   uses_from_macos "zlib"
 
+  # Workaround to build on ARM with system type 'arm-apple-darwin*'
+  # Remove in next release as build system is changing to CMake
+  patch :DATA
+
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
+
   def install
-    system "cmake", "-S", ".", "-B", "build",
-      "-DHAVE_BUILTIN_EXTENSION_SNAPPY=1",
-      "-DHAVE_BUILTIN_EXTENSION_ZLIB=1",
-      "-DCMAKE_INSTALL_RPATH=#{rpath}",
-      *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "./configure", "--with-builtins=snappy,zlib",
+                          "--prefix=#{prefix}"
+    system "make", "install"
   end
 
   test do
@@ -40,3 +45,16 @@ class Wiredtiger < Formula
     system "#{bin}/wt", "drop", "table:test"
   end
 end
+
+__END__
+--- a/configure
++++ b/configure
+@@ -16317,7 +16317,7 @@ else
+ fi
+
+ case $host_cpu in #(
+-  aarch64*) :
++  aarch64*|arm*) :
+     wt_cv_arm64="yes" ;; #(
+   *) :
+     wt_cv_arm64="no" ;;

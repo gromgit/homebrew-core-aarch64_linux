@@ -4,28 +4,29 @@ class Openslide < Formula
   url "https://github.com/openslide/openslide/releases/download/v3.4.1/openslide-3.4.1.tar.xz"
   sha256 "9938034dba7f48fadc90a2cdf8cfe94c5613b04098d1348a5ff19da95b990564"
   license "LGPL-2.1-only"
-  revision 7
+  revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1af4fb9e89cbb182c0b5e000afdbc2f2554f0021f39577137fc63d95128ba5e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "4f64b4f61ae37827b11b457f83ee4bc5d9a0fc97be6bbb48abd065b95cb90caf"
-    sha256 cellar: :any,                 monterey:       "78e02a8c690a050325e431d228f160fc9a1f811e7053aa8a0dfa914393ecbe6c"
-    sha256 cellar: :any,                 big_sur:        "da721497db16566e8d473c538b229124a44410e2a6f2ca9844a818d12bf40832"
-    sha256 cellar: :any,                 catalina:       "79b0955210000433597e1687e0658d3dc11905a2a1b0d87a70b3d843d7d534e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa324892691800b8a6a35e4e657631b728af9c2f5a63a6fed167e7f796ea0068"
+    sha256 cellar: :any,                 arm64_monterey: "3766557c0ad2aef7585e85ecd59c1b2794982602161425b67eba70bed8b35a80"
+    sha256 cellar: :any,                 arm64_big_sur:  "bcff20f6ae95b56179cd6c9d2a6f2f94672d499ba69283f7f3cd83ce70a51873"
+    sha256 cellar: :any,                 monterey:       "c3f779c6ffb907a7a985ddde48d214e492ee9f83f533b589fbe57d793cc85ece"
+    sha256 cellar: :any,                 big_sur:        "5cc9273868f2816ac3b2cfd9d12bcbc44d68fb461000469896c4f10b8047511f"
+    sha256 cellar: :any,                 catalina:       "6b59207518417bb5a45a716d6c26a01ed8d9977af51992b00d0479a7d9a4ffae"
+    sha256 cellar: :any,                 mojave:         "d90e3ee5514064389cea2bdf1d4369cc2be4e1d965ac9d56f47e0c6e22f310af"
+    sha256 cellar: :any,                 high_sierra:    "1d70f22fad80e061bcfa5d4955d522d37bd077c51cad4697579a104759233ad2"
+    sha256 cellar: :any,                 sierra:         "de34071d033c87c731be7954d7c0ced87ddf086100c29fea07410d68621b9929"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ef41cd82e551bc1abdd1ccc7cd56714654253a15fe1575feb190d1f69dbe48d"
   end
 
   depends_on "pkg-config" => :build
   depends_on "cairo"
   depends_on "gdk-pixbuf"
   depends_on "glib"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libxml2"
   depends_on "openjpeg"
-
-  uses_from_macos "sqlite"
 
   resource "svs" do
     url "https://openslide.cs.cmu.edu/download/openslide-testdata/Aperio/CMU-1-Small-Region.svs"
@@ -33,7 +34,8 @@ class Openslide < Formula
   end
 
   def install
-    system "./configure", *std_configure_args
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 

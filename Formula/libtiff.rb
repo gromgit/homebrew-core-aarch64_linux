@@ -13,13 +13,10 @@ class Libtiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "15921731edaae9d13ca572f3e2b58e07ca6f90429cc5f1bdff56aaf061abe2e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "cda70e066b4b649d7b41654abfc46e8ed1c3740c54f3cf58f4e750a551dc94f7"
-    sha256 cellar: :any,                 monterey:       "87bb203517b2d8a982cd2bcd96d8247d367a8de36c91faa8209371ddc27479b3"
-    sha256 cellar: :any,                 big_sur:        "a56a4f0a3ad9a75a70a9458fd098ec7da793eb39fcd4877515b5163b6ece21b0"
-    sha256 cellar: :any,                 catalina:       "e760184399d1f7c529dd921df16e9262ebcf2a56eba4c1bcccf248c23592239a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0f7f37d60e465f801e13052f7e5177eac772f079ec3706ede00f8804c9d7ab3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtiff"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "34189120891e00ed370975d28598648085cc11f53b318791cc44d592d354bf9f"
   end
+
 
   depends_on "jpeg-turbo"
 

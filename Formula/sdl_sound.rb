@@ -16,6 +16,7 @@ class SdlSound < Formula
     sha256 cellar: :any,                 high_sierra:    "c571e007bcbb022e6fd0042e506ce6cd47a26d814de06f348b13231fc95a1581"
     sha256 cellar: :any,                 sierra:         "0e692b6c08600d6d7014fc582b5a351e8a4eea42ce95d231ef39a0c07c41c71b"
     sha256 cellar: :any,                 el_capitan:     "fd93d8be366bfe3f16839f50d11ab1149cc725c6bf6248befe90feae25c0e052"
+    sha256 cellar: :any,                 yosemite:       "8f06d7c6c18c8a5192aebf5672c20f9f3b27bbd3109459ef96110d935c00f87b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b903c9b2b33a7c0ebf036d178f86d06adbc23ef8be891d49ed97312bc928d88"
   end
 
@@ -28,8 +29,7 @@ class SdlSound < Formula
   end
 
   # SDL 1.2 is deprecated, unsupported, and not recommended for new projects.
-  # Commented out while this formula still has dependents.
-  # deprecate! date: "2013-08-17", because: :deprecated_upstream
+  deprecate! date: "2013-08-17", because: :deprecated_upstream
 
   depends_on "pkg-config" => :build
   depends_on "libogg"

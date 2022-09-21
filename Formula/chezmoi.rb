@@ -2,18 +2,14 @@ class Chezmoi < Formula
   desc "Manage your dotfiles across multiple diverse machines, securely"
   homepage "https://chezmoi.io/"
   url "https://github.com/twpayne/chezmoi.git",
-      tag:      "v2.22.1",
-      revision: "64b9c1fa7346526c17d5073827fe055dc46f6c09"
+      tag:      "v2.15.3",
+      revision: "b525c5040f115d2718cd24c4b2385a13ff013ca7"
   license "MIT"
   head "https://github.com/twpayne/chezmoi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "84cb52694b6d6dc44e8117a63f23a70904583e46c75d2b768af6c11997338896"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "621e8df995dcd7bf54ad68d11c326d6d46196ebb80a48a463f11e8974caacde7"
-    sha256 cellar: :any_skip_relocation, monterey:       "d9ec8e27cceb5017246f49b6e6c7008f2bcdfbf1c90c1395033abefe06defdd1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "575e72b3da58ca5057a0745920adee2ef7791a66b3e55177d6eeaca8234c7411"
-    sha256 cellar: :any_skip_relocation, catalina:       "a25841c6ab87b74caff302496be8915b6b3f586126e27da249a2a2d87a2099ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23516bc669a76960d209c36a8e8b02be4cf0c02ecfac5186228983985b3f7d5a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chezmoi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f785fccb000646d68ec1bf46deb0c0b3fde838f63b14cd323063f4d180ae5b9c"
   end
 
   depends_on "go" => :build

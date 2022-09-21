@@ -1,8 +1,8 @@
 class Pkgconf < Formula
   desc "Package compiler and linker metadata toolkit"
   homepage "https://git.sr.ht/~kaniini/pkgconf"
-  url "https://distfiles.dereferenced.org/pkgconf/pkgconf-1.9.3.tar.xz"
-  sha256 "5fb355b487d54fb6d341e4f18d4e2f7e813a6622cf03a9e87affa6a40565699d"
+  url "https://distfiles.dereferenced.org/pkgconf/pkgconf-1.8.0.tar.xz"
+  sha256 "ef9c7e61822b7cb8356e6e9e1dca58d9556f3200d78acab35e4347e9d4c2bbaf"
   license "ISC"
 
   livecheck do
@@ -11,12 +11,8 @@ class Pkgconf < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f6700e419d7a201272559fca5652f16b716a2dc5f9ea6ad96865931181b239c9"
-    sha256 arm64_big_sur:  "7533f7fcd23efb90f4e78024782ab71b7117a35929e8381219bcefcd5cc931ea"
-    sha256 monterey:       "84b996d472c59021d3e641db0bc6bccc1e7503c58142f29b6657f81669617923"
-    sha256 big_sur:        "a9a477d4b51427bb8c1d17cf87063d56e12fbd0ce7eb4776b4b28a03e223b85c"
-    sha256 catalina:       "4f6660031db90526c2bc21ac3ce2e58e51c1850a351b13a6941860ecf7b751f0"
-    sha256 x86_64_linux:   "4d11d9671a30efd67241ad91535205d62a4a7c292c679a3867e108e266dda085"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pkgconf"
+    sha256 aarch64_linux: "fae8898b605b1965ce178a9b0b3f7ae8bfe6517383f6b7408ef1a93e9d6b92ce"
   end
 
   def install

@@ -7,13 +7,8 @@ class Tfk8s < Formula
   head "https://github.com/jrhouston/tfk8s.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "60e7ac0c249bc2685997731a51b363062cb9878ba6fb1d2b7772285ce3abadd8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1b1a9bb816036abc0784dfe452695e60c1c68afd115e67939d3d433e86482b1"
-    sha256 cellar: :any_skip_relocation, monterey:       "39b84355ef177d210193b06cde1ed3869a5a2bbf08ec6b5f144dd8507fb69c4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b5f31892d190ba1efd7022a82807897a6425541eb9ac4145d6ee1dec65b9182c"
-    sha256 cellar: :any_skip_relocation, catalina:       "6c59969d1485a8da95fc91f36651f66e408ab914dbbab5de7506c7116984eb18"
-    sha256 cellar: :any_skip_relocation, mojave:         "5719e16f622f7b70c2ddbcab9e3eef4e4039f5c73be904608ac50bc7d515031b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7957afd5e810dca0c340a217f9ddafae13ed173dc10d8b0cc7642607a3ad72be"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tfk8s"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d8965da20a6ca7d6828f85c62099433b04555b5d1fc27a6e18850afb20d242a2"
   end
 
   depends_on "go" => :build

@@ -1,9 +1,8 @@
 class PerconaXtrabackup < Formula
   desc "Open source hot backup tool for InnoDB and XtraDB databases"
   homepage "https://www.percona.com/software/mysql-database/percona-xtrabackup"
-  url "https://downloads.percona.com/downloads/Percona-XtraBackup-LATEST/Percona-XtraBackup-8.0.29-22/source/tarball/percona-xtrabackup-8.0.29-22.tar.gz"
-  sha256 "7c3bdfaf0b02ec4c09b3cdb41b2a7f18f79dce9c5d396ada36fbc2557562ff55"
-  revision 1
+  url "https://downloads.percona.com/downloads/Percona-XtraBackup-LATEST/Percona-XtraBackup-8.0.28-20/source/tarball/percona-xtrabackup-8.0.28-20.tar.gz"
+  sha256 "bfcdd838d19daa98ae8d7ddf7f84ffc89597c67edc9cc50d342f03fcca361616"
 
   livecheck do
     url "https://www.percona.com/downloads/Percona-XtraBackup-LATEST/"
@@ -11,12 +10,12 @@ class PerconaXtrabackup < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "d9a7df183adbf0b110a8ee77f3c1b63fc2cecd9396abd6f3e501b3844d9e9237"
-    sha256 arm64_big_sur:  "8fd06340af32fa1cdb683a58e6349c42054b1d84ddfdc103958c751d3093e45b"
-    sha256 monterey:       "bcc90c168eb91de14eaccdd378863f86b4811abef2fb95b4f8a97c2c99530ae3"
-    sha256 big_sur:        "9899079ceeea9a760f164942bd908603ef70f24abf845da9dec297bc562fe61c"
-    sha256 catalina:       "cea653756f8e0efd3d5d968eb0bcf63c89176b4b0dc8a05ebb78ac41d4aff28b"
-    sha256 x86_64_linux:   "31955d893cd0a25c7d19e3815979117ec0dc900aa4d2a6b5b2d68cb060bcd7ac"
+    sha256 arm64_monterey: "adfd6d7b789db4e0de7974ce757159ea3c27c26f87201bee38db70c275615165"
+    sha256 arm64_big_sur:  "91b6f0227d3b516723df2b231638c799fc2e43edad53a43c62624d340ffb6658"
+    sha256 monterey:       "965a581de545270b0d2c7bfeee20b1fc0d1f03db8ab113339004cdfe890b2186"
+    sha256 big_sur:        "3a568f94a042e9bf3ce6505968b0c04bc85b6fdc5c802a324e2b9282082d0d77"
+    sha256 catalina:       "54735177095d07b3eec711b7ba23e410ffb8b2f374392c1de69751a32fc6b36f"
+    sha256 x86_64_linux:   "97d549def9bfeaaa0426ef619f657db902dc7d23f595ccad9c7824302851596e"
   end
 
   depends_on "cmake" => :build
@@ -46,8 +45,6 @@ class PerconaXtrabackup < Formula
     depends_on "libaio"
   end
 
-  conflicts_with "percona-server", because: "both install a `kmip.h`"
-
   fails_with :gcc do
     version "6"
     cause "The build requires GCC 7.1 or later."
@@ -72,8 +69,8 @@ class PerconaXtrabackup < Formula
 
   # https://github.com/percona/percona-xtrabackup/blob/percona-xtrabackup-#{version}/cmake/boost.cmake
   resource "boost" do
-    url "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2"
-    sha256 "fc9f85fc030e233142908241af7a846e60630aa7388de9a5fafb1f3a26840854"
+    url "https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.bz2"
+    sha256 "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
   end
 
   # Fix CMake install error with manpages.
@@ -83,12 +80,11 @@ class PerconaXtrabackup < Formula
     sha256 "9b38305b4e4bae23b085b3ef9cb406451fa3cc14963524e95fc1e6cbf761c7cf"
   end
 
-  # Patch out check for Homebrew `boost`.
-  # This should not be necessary when building inside `brew`.
-  # https://github.com/Homebrew/homebrew-test-bot/pull/820
+  # Fix libfibo2 finding; fix unneeded coping of openssl@1.1 libs
+  # Remove in the next version (8.0.29)
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/030f7433e89376ffcff836bb68b3903ab90f9cdc/percona-server/boost-check.patch"
-    sha256 "3223f7eebd04b471de1c21104c46b2cdec3fe7b26e13535bdcd0d7b8fd341bde"
+    url "https://github.com/mysql/mysql-server/commit/4498aef6d4a1fd266cdbddcce60965e3cb12fe1a.patch?full_index=1"
+    sha256 "09246d7f3a141adfc616bafb83f927648865eeb613f0726514fcb0aa6815d98b"
   end
 
   def install

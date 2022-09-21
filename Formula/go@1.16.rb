@@ -7,19 +7,13 @@ class GoAT116 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0500786661f7cddfc20403a9daa9af648404e0564363783fb7d9fc44e884fe3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5dcd84f44f1231cf1d32cbe6ca5d5f158de11efe7ea24b1ae24b4ede68cc6361"
-    sha256 cellar: :any_skip_relocation, monterey:       "b57fe6d2c36ea1529189bd3b7c9687a17c5b66660843f8f8db80b3a437693743"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ba14df4f397d33f51bc22b9da40f07836990e6eb2e876aba96f3da82e12babe"
-    sha256 cellar: :any_skip_relocation, catalina:       "80d62cf6ed5b2fedfd714b1f02e7bb660a23d6f061f7ecdfdbbdf0257072401f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aaee729abff3f20350c5af642bea0e39257fe077dde752873f8539fbfed874d9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go@1.16"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "26a068a9cc1d41c50ef1666bcf53aae3eadc6bc7109514bd66b46871f435f291"
   end
 
   keg_only :versioned_formula
 
-  # Original date: 2022-03-15
-  # The date below was adjusted to match `kubernetes-cli@1.22`.
-  deprecate! date: "2022-08-28", because: :unsupported
+  deprecate! date: "2022-03-15", because: :unsupported
 
   depends_on "go" => :build
 
@@ -40,6 +34,7 @@ class GoAT116 < Formula
     # Remove useless files.
     # Breaks patchelf because folder contains weird debug/test files
     (libexec/"src/debug/elf/testdata").rmtree
+    (libexec/"src/debug/dwarf/testdata").rmtree
     # Binaries built for an incompatible architecture
     (libexec/"src/runtime/pprof/testdata").rmtree
   end

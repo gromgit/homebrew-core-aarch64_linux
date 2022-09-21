@@ -16,7 +16,7 @@ class ProtobufAT36 < Formula
 
   keg_only :versioned_formula
 
-  disable! date: "2022-07-14", because: :versioned_formula
+  deprecate! date: "2021-02-19", because: :versioned_formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -61,16 +61,16 @@ class ProtobufAT36 < Formula
     ENV.append_to_cflags "-I#{include}"
     ENV.append_to_cflags "-L#{lib}"
 
-    python3 = "python3.10"
     resource("six").stage do
-      system Formula["python@3.10"].opt_bin/python3, *Language::Python.setup_install_args(libexec, python3)
+      system Formula["python@3.10"].opt_bin/"python3", *Language::Python.setup_install_args(libexec)
     end
     chdir "python" do
-      system Formula["python@3.10"].opt_bin/python3, *Language::Python.setup_install_args(libexec, python3),
-                                                     "--cpp_implementation"
+      system Formula["python@3.10"].opt_bin/"python3", *Language::Python.setup_install_args(libexec),
+                                                      "--cpp_implementation"
     end
 
-    site_packages = Language::Python.site_packages(python3)
+    version = Language::Python.major_minor_version Formula["python@3.10"].opt_bin/"python3"
+    site_packages = "lib/python#{version}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-protobuf.pth").write pth_contents
   end

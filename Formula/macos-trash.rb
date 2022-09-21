@@ -7,11 +7,7 @@ class MacosTrash < Formula
   head "https://github.com/sindresorhus/macos-trash.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0cff573086ce20b6b3c1ace838570390605cd758965e455c1b36b097b3130ccb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "557c7c851c37f3cc90607e0565ee96e01f346ea675dcd2d894d5949471c90375"
-    sha256 cellar: :any_skip_relocation, monterey:       "14e572ed0ed3b36e475357e7fe67b2a575da6f17b190350c9aec51fb08f45e7f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "42e5185162cd75cb1e660beacfff18fa404dc98dcb5c5249d117c8dfe5fa6a53"
-    sha256 cellar: :any,                 catalina:       "bee0b6a9d5e1f9b23a9513a58d89b924ab3343613e94a62846eed2f9df8108d4"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: ["12.0", :build]

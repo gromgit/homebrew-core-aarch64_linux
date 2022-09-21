@@ -6,13 +6,8 @@ class AwsEsProxy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b053918e93c51c2b3a562dc30cfbcf30f07f2c10b841b5c61ab146595920368d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ae9e19bb22445be989da3b8407bc42fba17a3f512d692bd8d727751b1703757"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6b34390ba856f75db3adf881e2659bf48c6d420abe8d4de1226e59c607e0a41"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5d172bf29028041152acbd6635aee845193fc19f0b8d4e086ed4a28ee9354a37"
-    sha256 cellar: :any_skip_relocation, catalina:       "1e1cb5b16185e9948621055c4960b608973110c5d68ab10cc07c61f52d456010"
-    sha256 cellar: :any_skip_relocation, mojave:         "a30caee0acb5d3c89764be328025d84c9cbeb2adce32a97b78048c399576bff0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "927e9fcca53a19b16b22d363737b24111ecfd333dc9f969086b0e312c3d30a74"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aws-es-proxy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b3b2eb47ebb440a49154df6802adb54d4a9a6d79a2a8dc17e737d9ac56fc59f8"
   end
 
   # Bump to 1.18 on the next release, if possible.

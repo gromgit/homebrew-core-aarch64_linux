@@ -12,14 +12,8 @@ class BbftpClient < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d429a71fe3b54e34d75efd1480062c322cee2a9b471628a671de3e9f1b91b201"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd7a47c27111d4dc064a7009f919a3283360738329dcfde7eb6522ee280e78fd"
-    sha256 cellar: :any_skip_relocation, monterey:       "e50848489c6ad43604cbc0730d027939830ddc50d46fdd8d18dc6f729a910503"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f30650734e1829a0c399153c78088ccd987f28ede25b8eb13ecde6b138d55076"
-    sha256 cellar: :any_skip_relocation, catalina:       "6d5bed31d69a0ff2f38f2642176cb3c3a4da34c4ea2740567d2698ca62519b7d"
-    sha256 cellar: :any_skip_relocation, mojave:         "bdb7c899dab18816b4cc1d573291ba4691f365c9ed1c9951e73f9225810a8557"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be2f6db3c1cc87a51bab6a760cb1143747faeb3819f731192f09fceb3a658fbd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bbftp-client"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "86fc23c6248cf35b4c52b17f1412850ce5c2020019f4bb9d5d3f3e710699edb1"
   end
 
   uses_from_macos "zlib"

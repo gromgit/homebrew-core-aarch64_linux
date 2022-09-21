@@ -21,7 +21,6 @@ class Fwknop < Formula
     sha256 high_sierra:    "a36cd65fe358a6b156b2b5276bcdf629b2d777ac8a803e7cd40ee9e3c75512e4"
     sha256 sierra:         "7472ea129bbb0d5a1187d08e4a9770d66d480a9bc284a62db11f6dec90b770cf"
     sha256 el_capitan:     "ec59a9d13d78f441a695776767038fb830acc4cdbfe28b30cc41ec2b7ea76f1f"
-    sha256 x86_64_linux:   "4da5b329804bbdacdcfa93ec6b9bb46d73a9aeb7c2a74fff7fb3b3865a9f05f7"
   end
 
   depends_on "autoconf" => :build
@@ -29,25 +28,11 @@ class Fwknop < Formula
   depends_on "libtool" => :build
   depends_on "gpgme"
 
-  uses_from_macos "texinfo" => :build
-
-  on_linux do
-    depends_on "iptables"
-  end
-
   def install
-    # Fix failure with texinfo while building documentation.
-    inreplace "doc/libfko.texi", "@setcontentsaftertitlepage", "" unless OS.mac?
-
     system "./autogen.sh"
-    args = *std_configure_args + %W[
-      --disable-silent-rules
-      --sysconfdir=#{etc}
-      --with-gpgme
-      --with-gpg=#{Formula["gnupg"].opt_bin}/gpg
-    ]
-    args << "--with-iptables=#{Formula["iptables"].opt_prefix}" unless OS.mac?
-    system "./configure", *args
+    system "./configure", "--disable-dependency-tracking", "--disable-silent-rules",
+                          "--prefix=#{prefix}", "--with-gpgme", "--sysconfdir=#{etc}",
+                          "--with-gpg=#{Formula["gnupg"].opt_bin}/gpg"
     system "make", "install"
   end
 

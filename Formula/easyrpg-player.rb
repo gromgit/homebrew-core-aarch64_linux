@@ -4,19 +4,19 @@ class EasyrpgPlayer < Formula
   url "https://easyrpg.org/downloads/player/0.7.0/easyrpg-player-0.7.0.tar.xz"
   sha256 "12149f89cc84f3a7f1b412023296cf42041f314d73f683bc6775e7274a1c9fbc"
   license "GPL-3.0-or-later"
-  revision 3
+  revision 1
 
   livecheck do
     url "https://github.com/EasyRPG/Player.git"
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "71895da3ee0ae93fff96e9dba48afa5609c4b2d2b42102a862da4673605e366c"
-    sha256 cellar: :any,                 arm64_big_sur:  "7fd2cb62de865ab95efc459f40961ac22226f1734ba59f1b9b0317bbd38be072"
-    sha256 cellar: :any,                 monterey:       "7d663c0d68fbaca66bfdaa49f8d20c96ad28806193e0c76c0a28225b6999212a"
-    sha256 cellar: :any,                 big_sur:        "8b3ce92dc8aa8cccbbfdc395c523d2e9309a64d0073fe7c12488d3abc9f7e308"
-    sha256 cellar: :any,                 catalina:       "a0ab488ffe50144343477885b1b76d0a17976c410087600848e664b46cd9458c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac4dcac0b158f6af96b65178da115aaa8dbed80b0912d47039eb89e5d1daf7e8"
+    sha256 cellar: :any,                 arm64_monterey: "a0c9f7c5abdaea35f7db694564b63690deee082a0210a183818a2142a559f166"
+    sha256 cellar: :any,                 arm64_big_sur:  "d5ab6215a21eafaa63f33970fdb38d6680e95d6dcf9e34ff9f8cf0bcc276d4d8"
+    sha256 cellar: :any,                 monterey:       "02089936499be2c1e5f9b0a537875c966488070e2a698eed1675203476fd6dfb"
+    sha256 cellar: :any,                 big_sur:        "2ae20b066a7b4b499f2e8142eb4d80c4bf9bd8dbd6ef5169c9922971712de472"
+    sha256 cellar: :any,                 catalina:       "bd5b78feb53c6d1b2e7224a1262a5a9fd4d350deec64bc05603a97d38c0314f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da2efd4954e7d3373dc403e69153c1f35adff2b675b65b851e77c173e045abf7"
   end
 
   depends_on "cmake" => :build

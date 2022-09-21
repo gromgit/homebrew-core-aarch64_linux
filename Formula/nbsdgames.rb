@@ -7,12 +7,8 @@ class Nbsdgames < Formula
   head "https://github.com/abakh/nbsdgames.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9916d331aa232bf41939171c3591f22dd296ee973d90c703506eaca528409db1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c391d3da850a18fa442189d014181b3c0a28e3aa5286b5259ad9ca16aa6a5563"
-    sha256 cellar: :any_skip_relocation, monterey:       "31c7b5a1fa5cb7650d7de984547049f8429476ba23b1965db44497ac2eb7ac72"
-    sha256 cellar: :any_skip_relocation, big_sur:        "040fd2883d5c1ddd45b3bd27ed4ec12de532a1330bcc3e2cfeffdbb705d990da"
-    sha256 cellar: :any_skip_relocation, catalina:       "0c0672afd7f3de647311b6ae155c73aca2e1803f8cb22c4e6240aa77b116d4f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b311d8c8354dc0688b51024c40b2d632ff7d22587c89deeed8d559af092cce4a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nbsdgames"
+    sha256 aarch64_linux: "0e0f968625ec08e112183a80f69ee250452ca65e5e268901bc1b9d7065ec1ab2"
   end
 
   uses_from_macos "ncurses"

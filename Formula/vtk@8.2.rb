@@ -4,27 +4,26 @@ class VtkAT82 < Formula
   url "https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz"
   sha256 "34c3dc775261be5e45a8049155f7228b6bd668106c72a3c435d95730d17d57bb"
   license "BSD-3-Clause"
-  revision 9
+  revision 8
 
   bottle do
-    sha256                               arm64_monterey: "7599052ffa9026d7c5040d3df537e53de5fc58a8cc2ebec4dd80af479a79c97b"
-    sha256                               arm64_big_sur:  "ca42c0efabcb7ca6f9334a0dd30565e904283f5fcf119345e7ed98c0fd42cdc4"
-    sha256                               monterey:       "fe78ada0ed2cea3f40764888c7c7646a44a64e698a62bcb379e3034f8b27e8ce"
-    sha256                               big_sur:        "2e2b4b5ebef9cb72c107ccfa0db90e8e950fb9276c2e92f1a35226e13cb62531"
-    sha256                               catalina:       "2df7f2d759193b423224e3eb2b6e1eba30871098a955acfcc865587b4c02e2df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54461f2367cedbad42433f5c76be14eacbf797af544ca4dadeebef8543a76285"
+    sha256                               arm64_monterey: "b249cb4defffee5aac3aa5058a5d4f4e909bd91991b3fa580a77cdcb798b1692"
+    sha256                               arm64_big_sur:  "830e29cf629cd97413d77f679cecdc21a3795edcf336a0aa6efdec032022d5fc"
+    sha256                               monterey:       "e3890c6dfba19c6cf7bdcb99a46eab9a7069dfd3520af226d6b1efe0e62080ca"
+    sha256                               big_sur:        "fc747c1da6b5a001f288319ba2936b88eb38e0cf178ae99622cf525dd56f2249"
+    sha256                               catalina:       "027471c93128e75e8183d70274e0aedefb7ef9b7c905a85432283f45481206b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4873f8d2cede30b4969fc5a7bb91d22718f4d1e3cd18b438ef65cf9a6c42e149"
   end
 
   keg_only :versioned_formula
 
-  # Commented out while this formula still has dependents.
   deprecate! date: "2020-05-14", because: :versioned_formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "boost"
   depends_on "fontconfig"
   depends_on "hdf5"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "netcdf"
@@ -94,8 +93,8 @@ class VtkAT82 < Formula
     # Adapted from https://bugs.gentoo.org/attachment.cgi?id=641488&action=diff
     inreplace "CMake/VTKGenerateExportHeader.cmake", "[3-9]", "[1-9][0-9]" if OS.linux?
 
-    python3 = "python3.9"
-    args = %W[
+    pyver = Language::Python.major_minor_version "python3"
+    args = std_cmake_args + %W[
       -DBUILD_SHARED_LIBS=ON
       -DBUILD_TESTING=OFF
       -DCMAKE_INSTALL_NAME_DIR:STRING=#{lib}
@@ -114,8 +113,8 @@ class VtkAT82 < Formula
       -DVTK_USE_SYSTEM_ZLIB=ON
       -DVTK_WRAP_PYTHON=ON
       -DVTK_PYTHON_VERSION=3
-      -DPYTHON_EXECUTABLE=#{which(python3)}
-      -DVTK_INSTALL_PYTHON_MODULE_DIR=#{prefix/Language::Python.site_packages(python3)}
+      -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
+      -DVTK_INSTALL_PYTHON_MODULE_DIR=#{lib}/python#{pyver}/site-packages
       -DVTK_QT_VERSION:STRING=5
       -DVTK_Group_Qt=ON
       -DVTK_WRAP_PYTHON_SIP=ON
@@ -124,9 +123,11 @@ class VtkAT82 < Formula
 
     args << "-DVTK_USE_COCOA=ON" if OS.mac?
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make"
+      system "make", "install"
+    end
 
     # Avoid hard-coding HDF5's Cellar path
     inreplace Dir["#{lib}/cmake/**/vtkhdf5.cmake"].first,
@@ -177,7 +178,8 @@ class VtkAT82 < Formula
     EOS
 
     vtk_dir = Dir[opt_lib/"cmake/vtk-*"].first
-    system "cmake", ".", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_VERBOSE_MAKEFILE=ON", "-DVTK_DIR=#{vtk_dir}"
+    system "cmake", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_VERBOSE_MAKEFILE=ON",
+      "-DVTK_DIR=#{vtk_dir}", "."
     system "make"
     system "./Distance2BetweenPoints"
 

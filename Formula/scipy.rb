@@ -1,18 +1,19 @@
 class Scipy < Formula
   desc "Software for mathematics, science, and engineering"
   homepage "https://www.scipy.org"
-  url "https://files.pythonhosted.org/packages/db/af/16906139f52bc6866c43401869ce247662739ad71afa11c6f18505eb0546/scipy-1.9.1.tar.gz"
-  sha256 "26d28c468900e6d5fdb37d2812ab46db0ccd22c63baa095057871faa3a498bc9"
+  url "https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz"
+  sha256 "31d4f2d6b724bc9a98e527b5849b8a7e589bf1ea630c33aa563eda912c9ff0bd"
   license "BSD-3-Clause"
   head "https://github.com/scipy/scipy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "eb6578a423f0d00416c3c5447174eb35a602cd603a6546a40cae70fe040682b0"
-    sha256 cellar: :any, arm64_big_sur:  "2e9f46e809492c5b0c701d20f712f4238a7b86b7e42778963fc3d2cb6d63696b"
-    sha256 cellar: :any, monterey:       "d421491023e80bad4be3da789a847993818ddfb0bf06c074db0b20120b855039"
-    sha256 cellar: :any, big_sur:        "b2168d5dbbef232c844a155039e2f6e86f19ddfca2065063616f2f06faed6934"
-    sha256 cellar: :any, catalina:       "eaa71d7f7bf55ddff604048ccec41e5d2640224fdde4ee9c62e0a8f9bc1248c8"
-    sha256               x86_64_linux:   "1d4efe1f0132710ecbb2e89be57c106ef7f13be2c7b69009df6f0e9046b675e1"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "3750231845bfdb26a1f4295c3f91e70b879be62e3e3b6106e537da2c2d71870f"
+    sha256 cellar: :any, arm64_big_sur:  "c2dd138f5a909512fb5756196e90f2220640b9629d3474250a1632a50d6ef96b"
+    sha256 cellar: :any, monterey:       "116114cd1d9a36e3646c457a758286b143f31a82be833de512421b7fe33afbed"
+    sha256 cellar: :any, big_sur:        "5bc525993c6524fe61f04abfd47d6e5447ab8d7ad5c5df1baca97fbe2a3e255e"
+    sha256 cellar: :any, catalina:       "637f5820cad2cff149bf8471ad431ab4593b9bf458e4f62bae134252802cc3cd"
+    sha256               x86_64_linux:   "97be2faad3606d207d1def7ed58074b3223be18a0867e9061fc863c6e1a162fe"
   end
 
   depends_on "libcython" => :build
@@ -22,20 +23,16 @@ class Scipy < Formula
   depends_on "numpy"
   depends_on "openblas"
   depends_on "pybind11"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
   cxxstdlib_check :skip
 
   fails_with gcc: "5"
 
-  def python3
-    "python3.10"
-  end
-
   def install
-    openblas = Formula["openblas"]
+    openblas = Formula["openblas"].opt_prefix
     ENV["ATLAS"] = "None" # avoid linking against Accelerate.framework
-    ENV["BLAS"] = ENV["LAPACK"] = openblas.opt_lib/shared_library("libopenblas")
+    ENV["BLAS"] = ENV["LAPACK"] = "#{openblas}/lib/#{shared_library("libopenblas")}"
 
     config = <<~EOS
       [DEFAULT]
@@ -43,20 +40,21 @@ class Scipy < Formula
       include_dirs = #{HOMEBREW_PREFIX}/include
       [openblas]
       libraries = openblas
-      library_dirs = #{openblas.opt_lib}
-      include_dirs = #{openblas.opt_include}
+      library_dirs = #{openblas}/lib
+      include_dirs = #{openblas}/include
     EOS
 
     Pathname("site.cfg").write config
 
-    site_packages = Language::Python.site_packages(python3)
-    ENV.prepend_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
-    ENV.prepend_path "PYTHONPATH", Formula["pythran"].opt_libexec/site_packages
-    ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_prefix/site_packages
+    site_packages = Language::Python.site_packages("python3")
+    ENV.prepend_create_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
+    ENV.prepend_create_path "PYTHONPATH", Formula["pythran"].opt_libexec/site_packages
+    ENV.prepend_create_path "PYTHONPATH", Formula["numpy"].opt_prefix/site_packages
     ENV.prepend_create_path "PYTHONPATH", site_packages
 
-    system python3, "setup.py", "build", "--fcompiler=gfortran", "--parallel=#{ENV.make_jobs}"
-    system python3, *Language::Python.setup_install_args(prefix, python3)
+    system Formula["python@3.9"].opt_bin/"python3", "setup.py", "build",
+      "--fcompiler=gfortran", "--parallel=#{ENV.make_jobs}"
+    system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
   end
 
   # cleanup leftover .pyc files from previous installs which can cause problems
@@ -66,6 +64,6 @@ class Scipy < Formula
   end
 
   test do
-    system python3, "-c", "import scipy"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import scipy"
   end
 end

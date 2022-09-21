@@ -1,10 +1,10 @@
 class Rsync < Formula
   desc "Utility that provides fast incremental file transfer"
   homepage "https://rsync.samba.org/"
-  url "https://rsync.samba.org/ftp/rsync/rsync-3.2.5.tar.gz"
-  mirror "https://mirrors.kernel.org/gentoo/distfiles/rsync-3.2.5.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-3.2.5.tar.gz"
-  sha256 "2ac4d21635cdf791867bc377c35ca6dda7f50d919a58be45057fd51600c69aba"
+  url "https://rsync.samba.org/ftp/rsync/rsync-3.2.4.tar.gz"
+  mirror "https://mirrors.kernel.org/gentoo/distfiles/rsync-3.2.4.tar.gz"
+  mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-3.2.4.tar.gz"
+  sha256 "6f761838d08052b0b6579cf7f6737d93e47f01f4da04c5d24d3447b7f2a5fad1"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -13,12 +13,12 @@ class Rsync < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e81cbf8b5c10a45c292323ac21d2dddc30e75b055254561e5c39ad1ecde5013d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ba293d27c4c615fe8afc1ad3bfa1e22b68856579fe75939d40a213368e769111"
-    sha256 cellar: :any,                 monterey:       "7a1103d28fe70a3e4a79d27da3b8cadef1b046f427731c5b2501e22aa17eed24"
-    sha256 cellar: :any,                 big_sur:        "801ad0f88a3db6c9339825cd3e100a2f22b756ff7c84c3f0e9874ed99cf1210e"
-    sha256 cellar: :any,                 catalina:       "ac69d4ef788e0eb998cf0c0ab128f1dba057ab87c603ac75420445cce03133c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f67e2ca6df78af1f225a415e124687992e5810c488b6846c1743bab36b79c60"
+    sha256 cellar: :any,                 arm64_monterey: "5203ca4a96801c82df6304be050d16676edeb1179d060055c0a0d024719c647f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7a97c83e5bdc7abfec4e3a605e5e7f2c142378dbb14719930b5da58ac11f8c58"
+    sha256 cellar: :any,                 monterey:       "57d1cf3bed28db1f850a5ce119dbd9a4ca6de38ec446a7a406e0f9510446af50"
+    sha256 cellar: :any,                 big_sur:        "1b9467be7a8c6199fd3b86ff1e316d8d6ada4ddd22b9ba3c4f0449207b9c36e0"
+    sha256 cellar: :any,                 catalina:       "76221855501830c9a97f08cdf24003d2540934f12d8758883cfbea2780bb827e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25827ec52d77b05cadd5930d0d0b81f327477639badaafb538b755c886a9f677"
   end
 
   depends_on "lz4"

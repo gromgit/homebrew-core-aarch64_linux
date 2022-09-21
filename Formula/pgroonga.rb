@@ -1,10 +1,9 @@
 class Pgroonga < Formula
   desc "PostgreSQL plugin to use Groonga as index"
   homepage "https://pgroonga.github.io/"
-  url "https://packages.groonga.org/source/pgroonga/pgroonga-2.3.8.tar.gz"
-  sha256 "ff1967c2750c5bb26e51c4a76545789ea08572b7c60ef5d3a33ec82729070862"
+  url "https://packages.groonga.org/source/pgroonga/pgroonga-2.3.6.tar.gz"
+  sha256 "fc68a66a216e304bb0e2ef627f767fff528f4fbf2bbda27e8cd8db1b7ba090b0"
   license "PostgreSQL"
-  revision 1
 
   livecheck do
     url "https://packages.groonga.org/source/pgroonga/"
@@ -12,25 +11,19 @@ class Pgroonga < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c67bea2146d059a75a39360d2b1b56dfe33cbbf71bf6e550be6ec38573122248"
-    sha256 cellar: :any,                 arm64_big_sur:  "0fae7e4f0ef86a9accf1e6f0adc29801a9f5666cf1ed11a45bdd38d3a76e4604"
-    sha256 cellar: :any,                 monterey:       "106848f5c58fdd97736843097a23b2d0a05e5216b7545fbb2714687aa7bfc838"
-    sha256 cellar: :any,                 big_sur:        "bbdff160b06309cc01f1415b39f67798215a6b9626183da4f198cac912403259"
-    sha256 cellar: :any,                 catalina:       "a95cbe94bcd1359bbcee5ed638bb28506f08c403f0b653a5c6bb7dcc62ee1b5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41472cca666e3d29c626cf073836993c4c44d4ae6b786d707e7d2dc86a49467f"
+    sha256 cellar: :any,                 arm64_monterey: "3d3f7bbbeacdfc9b2391242f8d2ba757bbbf541bf154f52d8e0c482ab78cf82c"
+    sha256 cellar: :any,                 arm64_big_sur:  "442d5d9a02f563243626299b1191c54196fbec963f67db229082785cef82211f"
+    sha256 cellar: :any,                 monterey:       "319244d89ebc320de1c2074bc71e3579ffcfd1fa94ab1863adb05a5809163ff3"
+    sha256 cellar: :any,                 big_sur:        "e242ad6aa6bbf01c16769afce5e97f96c9d9954fe0aa1b08d40a3e4c23f36289"
+    sha256 cellar: :any,                 catalina:       "8ff648ec80d26251a697c76f4a219de20d39c7a51cc17c7d64b7b572f3029a35"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c6e4b0ac90176f3fed6267dbb9c70303e8d42c4bc81ca95265244a4a49beca2"
   end
 
   depends_on "pkg-config" => :build
   depends_on "groonga"
-  depends_on "postgresql@14"
-
-  def postgresql
-    Formula["postgresql@14"]
-  end
+  depends_on "postgresql"
 
   def install
-    ENV["PG_CONFIG"] = postgresql.opt_bin/"pg_config"
-
     system "make"
     mkdir "stage"
     system "make", "install", "DESTDIR=#{buildpath}/stage"
@@ -42,21 +35,7 @@ class Pgroonga < Formula
   end
 
   test do
-    pg_ctl = postgresql.opt_bin/"pg_ctl"
-    psql = postgresql.opt_bin/"psql"
-    port = free_port
-
-    system pg_ctl, "initdb", "-D", testpath/"test"
-    (testpath/"test/postgresql.conf").write <<~EOS, mode: "a+"
-
-      shared_preload_libraries = 'pgroonga'
-      port = #{port}
-    EOS
-    system pg_ctl, "start", "-D", testpath/"test", "-l", testpath/"log"
-    begin
-      system psql, "-p", port.to_s, "-c", "CREATE EXTENSION \"pgroonga\";", "postgres"
-    ensure
-      system pg_ctl, "stop", "-D", testpath/"test"
-    end
+    expected = "PGroonga database management module"
+    assert_match expected, (share/"postgresql/extension/pgroonga_database.control").read
   end
 end

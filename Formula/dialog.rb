@@ -11,13 +11,10 @@ class Dialog < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f92895a98040a2ff1a7a4cd1923ddf93130f84dffdbeb03ca1ffaef9c5f03c5e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17723d341f3ec1609405e8b597bb87926da3d00ff208be14df87568f87c55caa"
-    sha256 cellar: :any_skip_relocation, monterey:       "a40c13d04bbf4039619301faad320cac8691d66bd928c0b5976ef1891e33e92d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4187d20252fcd775d57ff445e6d79ef7e1a92ee603c80ebee3c4522450f3c65f"
-    sha256 cellar: :any_skip_relocation, catalina:       "00495c5134b064176cb0937d1f70d875fd32e5bb909cf0ede3fdce51157368fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86b29f26a7abb8c407a12e2c4d98d021568089c6c83b0ff22282b434eff32dda"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dialog"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7f1b8aa7fb0afc42a7580be90940fd750b827a021b7c3652db3920ddcac553d3"
   end
+
 
   uses_from_macos "ncurses"
 

@@ -1,8 +1,8 @@
 class Monetdb < Formula
   desc "Column-store database"
   homepage "https://www.monetdb.org/"
-  url "https://www.monetdb.org/downloads/sources/Jan2022-SP4/MonetDB-11.43.21.tar.xz"
-  sha256 "ade155f6bb692f030e01f94bfaafd7732f2b980a415f86485c31f4bc35a5b0ae"
+  url "https://www.monetdb.org/downloads/sources/Jan2022-SP2/MonetDB-11.43.13.tar.xz"
+  sha256 "fc02d6c1b6326c47b843e21257386be20b97d3788c793e217fa640be6bec5025"
   license "MPL-2.0"
   head "https://dev.monetdb.org/hg/MonetDB", using: :hg
 
@@ -12,12 +12,12 @@ class Monetdb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "56c8aeb7a8ee4c7e1b99d67a0e96c53f56fe3d5c48831fa992d9421652eeb73a"
-    sha256 arm64_big_sur:  "177fc4fc6b39869dbaaa945cd103ca2a2fb7243b0c80e2d5028cc8317ef129dd"
-    sha256 monterey:       "85514474d20b9d8a4cc3dd1f368065dbce587eafe76f9fa6d9c2e97743a55400"
-    sha256 big_sur:        "fe49d4cfdb90ffd4cc623d8ee6e8f0cf5cee145d1d42d05432fc3232ad9298b9"
-    sha256 catalina:       "82a32f55f20c4c15156699d0cef3bf8856d3ee3405e5fd985188f53ca0660245"
-    sha256 x86_64_linux:   "2945dda661cfb58943d47467317d3b04cfeaf2438e2173bf3efe442fea5594a2"
+    sha256 arm64_monterey: "e8a5287a6d8f8a0da9edceea347b55f50da430c341d4b87a5e6119c924dd6d48"
+    sha256 arm64_big_sur:  "03374de9bacd840c4697c9e6b5071ca87e9cb7c6932499d20ce105b03f96313e"
+    sha256 monterey:       "e0830f916cfe313b33c4177ef3eacae8fbf0f0392be5ee4bbcadeb2e363d16c3"
+    sha256 big_sur:        "3ccb654a7f5436f568480698ce6a55957a094157e51b112f54f3c1c3ef828ba1"
+    sha256 catalina:       "5a12377c00421b316392826d7dca7699426035ae1ab3137da4a72b13892e6c70"
+    sha256 x86_64_linux:   "17e918e72842b0f7a11729024bdd5840f6a2433f5c9234c83fef033372c2ae97"
   end
 
   depends_on "bison" => :build # macOS bison is too old

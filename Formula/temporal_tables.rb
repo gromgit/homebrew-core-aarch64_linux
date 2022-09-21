@@ -4,18 +4,19 @@ class TemporalTables < Formula
   url "https://github.com/arkhipov/temporal_tables/archive/v1.2.0.tar.gz"
   sha256 "e6d1b31a124e8597f61b86f08b6a18168f9cd9da1db77f2a8dd1970b407b7610"
   license "BSD-2-Clause"
-  revision 4
+  revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac10885f89785fae6e75daacfc3853918967d4fbb871ef4930e5ac1be8a51ec7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e55f5d41a2f00473e7c17b6d17afe2e06c2f7a878df83983fa6039678058712a"
-    sha256 cellar: :any_skip_relocation, monterey:       "00646b0b31c19f0b7d3e3fc79838b22bf13594ce596f1730dda2bdd436b830eb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "392580073077794d58fa80f777822db79e3f611f7182dc6d6f647b904ede124d"
-    sha256 cellar: :any_skip_relocation, catalina:       "25a7565d7644729e8bd0fa1a2626f0a8bb6193d03328295b5fd57791f908a9d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65e9ba4630fb2c0db0d7296fec147daa643ec2ab8dad19a56107c1f41637a0fe"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c0f993c548b4712d06a62910c41a8a3353f4787c150993066bc9065234e1c040"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ace1bc50036de0db253faad559c125c6f47496308b78ae9c81796cb19576fb62"
+    sha256 cellar: :any_skip_relocation, monterey:       "9261b086bc9ac6276b83d3b7a742f6eb1835c2a3dbc66e0e1030d577359d361b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bbca0fa6293665bf8441fcaa6d560c7414b9cffb0e1e6ec0b05ae5abb75ead19"
+    sha256 cellar: :any_skip_relocation, catalina:       "232faff661afb06b3b5c9a496a7d6781cb4c5d469080fea2903429472c1049e6"
+    sha256 cellar: :any_skip_relocation, mojave:         "bbf936aa039c98a3226fa8c3635d192d807826a9753fcee99514f212fc6f85c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0156446fd9b2de02039e4904e7198bf4ca036be805692a0f49c22fa9abfcc564"
   end
 
-  depends_on "postgresql@14"
+  depends_on "postgresql"
 
   # Fix for postgresql 11 compatibility:
   # https://github.com/arkhipov/temporal_tables/issues/38
@@ -38,39 +39,20 @@ class TemporalTables < Formula
     sha256 "c1e63befec23efbeff26492a390264cbc7875eaa3992aa98f3e3a53a9612d0e0"
   end
 
-  def postgresql
-    Formula["postgresql@14"]
-  end
-
   def install
-    ENV["PG_CONFIG"] = postgresql.opt_bin/"pg_config"
+    ENV["PG_CONFIG"] = Formula["postgresql"].opt_bin/"pg_config"
 
     # Use stage directory to prevent installing to pg_config-defined dirs,
     # which would not be within this package's Cellar.
     mkdir "stage"
     system "make", "install", "DESTDIR=#{buildpath}/stage"
 
+    pgsql_prefix = Formula["postgresql"].prefix.realpath
+    pgsql_stage_path = File.join("stage", pgsql_prefix)
+    share.install (buildpath/pgsql_stage_path/"share").children
+
     stage_path = File.join("stage", HOMEBREW_PREFIX)
     lib.install (buildpath/stage_path/"lib").children
     share.install (buildpath/stage_path/"share").children
-  end
-
-  test do
-    pg_ctl = postgresql.opt_bin/"pg_ctl"
-    psql = postgresql.opt_bin/"psql"
-    port = free_port
-
-    system pg_ctl, "initdb", "-D", testpath/"test"
-    (testpath/"test/postgresql.conf").write <<~EOS, mode: "a+"
-
-      shared_preload_libraries = 'temporal_tables'
-      port = #{port}
-    EOS
-    system pg_ctl, "start", "-D", testpath/"test", "-l", testpath/"log"
-    begin
-      system psql, "-p", port.to_s, "-c", "CREATE EXTENSION \"temporal_tables\";", "postgres"
-    ensure
-      system pg_ctl, "stop", "-D", testpath/"test"
-    end
   end
 end

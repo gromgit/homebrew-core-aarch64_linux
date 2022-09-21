@@ -1,9 +1,10 @@
 class Lilv < Formula
   desc "C library to use LV2 plugins"
   homepage "https://drobilla.net/software/lilv.html"
-  url "https://download.drobilla.net/lilv-0.24.18.tar.xz"
-  sha256 "f65814ae60be54d65f1671dff7538aeddcda3610cb6e46ec96de47f84ab0f3b8"
+  url "https://download.drobilla.net/lilv-0.24.12.tar.bz2"
+  sha256 "26a37790890c9c1f838203b47f5b2320334fe92c02a4d26ebbe2669dbd769061"
   license "ISC"
+  revision 1
 
   livecheck do
     url "https://download.drobilla.net/"
@@ -11,40 +12,25 @@ class Lilv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "a287d8768b56d67a8baf71692bad390fa5dbf3ff1b46bb3eb6964bc7d11c6d74"
-    sha256 cellar: :any, arm64_big_sur:  "7ed8283500c9b8a7296bad00bf72e03b757d717a63c21025959044d5aa4a801e"
-    sha256 cellar: :any, monterey:       "b9f9b51da8cffcc343d98c4538c2a95690312143d522b685fd99b3a43143e2d5"
-    sha256 cellar: :any, big_sur:        "ef9d9e2c30a64f1fbb3a94ab6e5e6dc276d8069d714810fece4df37c34ebb195"
-    sha256 cellar: :any, catalina:       "a3dfb87bf01262c7a28bf552688a0085548a265495bcfa531cf02450dfca816d"
-    sha256               x86_64_linux:   "420d1c89561040a8b9acb3700f304d0bc3f9fd35334f7b95c0958374d274321d"
+    sha256 cellar: :any,                 arm64_monterey: "d7e2c05b21a8314da8f49bb4a66feb07c65883603885c6e9e8bda9a5d8748c75"
+    sha256 cellar: :any,                 arm64_big_sur:  "069d1a84c3cdeaa7aa1f9e92e1afeb6161ba1070454885f0932a84e4ff85e8fd"
+    sha256 cellar: :any,                 monterey:       "7bf3c51de78814ec48c4a856b9865f3848024a93bb2e7034be263c246a1db8d9"
+    sha256 cellar: :any,                 big_sur:        "9e416b6f64740ae1bf0a9ba32edb3908eec389245e239a40c463a3e0aa399aa3"
+    sha256 cellar: :any,                 catalina:       "044e3c4c9bf50262d84ca1036498f57e73f27dcdd445c0afae4685ea37a80b98"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e55820d75d9d5c70dcb4ed4632b904916258c9b59bb1312016b5aa2ae396df7"
   end
 
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => [:build, :test]
-  depends_on "libsndfile"
   depends_on "lv2"
   depends_on "serd"
   depends_on "sord"
   depends_on "sratom"
 
-  def python3
-    "python3.10"
-  end
-
   def install
-    # FIXME: Meson tries to install into `prefix/HOMEBREW_PREFIX/lib/pythonX.Y/site-packages`
-    #        without setting `python.*libdir`.
-    prefix_site_packages = prefix/Language::Python.site_packages(python3)
-    system "meson", "setup", "build", "-Dtests=disabled",
-                                      "-Dbindings_py=enabled",
-                                      "-Dtools=enabled",
-                                      "-Dpython.platlibdir=#{prefix_site_packages}",
-                                      "-Dpython.purelibdir=#{prefix_site_packages}",
-                                      *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    system "python3", "./waf", "configure", "--prefix=#{prefix}"
+    system "python3", "./waf"
+    system "python3", "./waf", "install"
   end
 
   test do
@@ -59,6 +45,6 @@ class Lilv < Formula
     system ENV.cc, "test.c", "-I#{include}/lilv-0", "-L#{lib}", "-llilv-0", "-o", "test"
     system "./test"
 
-    system python3, "-c", "import lilv"
+    system Formula["python@3.10"].opt_bin/"python3", "-c", "import lilv"
   end
 end

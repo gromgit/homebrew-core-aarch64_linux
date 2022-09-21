@@ -4,15 +4,14 @@ class Gspell < Formula
   url "https://download.gnome.org/sources/gspell/1.10/gspell-1.10.0.tar.xz"
   sha256 "803bb884c0215d3fd22a85d7f30423aff88d9792f05a5199d8a489a2ffaae1da"
   license "LGPL-2.1-or-later"
-  revision 1
 
   bottle do
-    sha256 arm64_monterey: "9102f866c84b027e06b66e499a68aa3e961b0d0d7028365ed08aa85da0ed32ff"
-    sha256 arm64_big_sur:  "acdc517ea5c19323f0f92f8a7ddd2ef2ace672373abe5ec43e86403bb162b224"
-    sha256 monterey:       "cb88a9aecaf314b56977c9b9f9970ead4548556b8d46db4f8de86817004c73c5"
-    sha256 big_sur:        "5cbbf56cda623114fe425da2f8cdc2ff70fee4b69426459232ccc46371c6bcaf"
-    sha256 catalina:       "0f4dd2be2efba396adc89b94b3e2ade6206c5d8b4263fca4bb6fefb104b15566"
-    sha256 x86_64_linux:   "50efdf695eb3f553fa52cabbf2b361e5fd1e70f177afbd904708050960fa2c70"
+    sha256 arm64_monterey: "40864f7810104d4c29c6811c4f5ed233406f5b95279fb704bd58e47d2853d839"
+    sha256 arm64_big_sur:  "b28648c96bc1fadb3d2843ecdd7b7f157825f7e3fd9b30dfcc7634f169861f37"
+    sha256 monterey:       "c8dea27d10b7f4a0e47adabd532e339c2a8b0f615d1f34318eca81342cd04c11"
+    sha256 big_sur:        "32085aecc907c9a918e54c437e164e420004d808ac253bd1aa1be3b73f1bd0d3"
+    sha256 catalina:       "31180cd5a088e824d4fd785e39a4897d243d0c71db528ecb196082c0ba5b0dc2"
+    sha256 x86_64_linux:   "e51a3cea7ead9513490b0a1def4acdfa6c59fe19a3983ac0e2f59c95df3df013"
   end
 
   depends_on "autoconf" => :build
@@ -34,8 +33,10 @@ class Gspell < Formula
   patch :DATA
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "autoreconf", "-if"
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 
@@ -128,7 +129,7 @@ index 076a9fd..6c67184 100644
 	$(BUILT_SOURCES)
 
  libgspell_core_la_LIBADD =	\
-+	$(GTK_MAC_LIBS) \
++	$(GTK_MAC_LIBS)		\
 	$(CODE_COVERAGE_LIBS)
 
  libgspell_core_la_CFLAGS =	\

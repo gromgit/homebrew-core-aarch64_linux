@@ -1,8 +1,8 @@
 class Dub < Formula
   desc "Build tool for D projects"
   homepage "https://code.dlang.org/getting_started"
-  url "https://github.com/dlang/dub/archive/v1.29.1.tar.gz"
-  sha256 "7cf67f1359ac042ed98420933408dbbbfff39d27021c086d271ee2cf6301b15c"
+  url "https://github.com/dlang/dub/archive/v1.28.0.tar.gz"
+  sha256 "bf072edeedc6761fe407aebc55cb9ab624bd61aac2611404990717c2be00ca66"
   license "MIT"
   version_scheme 1
   head "https://github.com/dlang/dub.git", branch: "master"
@@ -13,12 +13,12 @@ class Dub < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5d55dd4437b993a784b11d770000b3f9d7b432c440b4e633b41b498a18fad01f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d4eef5c830a990cc47964aa66468360954c2f24563a1787d178655b35912cbe"
-    sha256 cellar: :any_skip_relocation, monterey:       "cda296d526a9bc5122f2e7b09f15d70e91475abf5ccba33a4cf29cc4ac92b81d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2db41b9a8ef24687b432d2f3d2212b86212d51a383b7bf74c1800cfd827c2317"
-    sha256 cellar: :any_skip_relocation, catalina:       "ec93dc4c92f36de1277c81394a861cba9564f8fa9826c432441162e484b4d89f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ef188bee3c040f6e74487fe46330af14fc9903f4847a8bef05833a6fc0dafd3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cccc9ceee9ec8c4b9862e0442c92f426a2382d7a8312e46b56f71a94cdeb640c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f2d4071b7584a465ffe9f200352d461803d3d7cf27bfab801018cbe1c9ea1542"
+    sha256 cellar: :any_skip_relocation, monterey:       "9408c7786db9c860425b00340da19ea6863edaef9acffb63feeaf5a5804d1fa5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "440f2e41dd346d764059e952079cc2f940209697815ff2804f917dac395617bd"
+    sha256 cellar: :any_skip_relocation, catalina:       "d65451e626f8fb08f13aa92e483dedadcaa616868426ed3e9e38c7de59e19a44"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "493ad504e56b4ba4d1d3adf4887a40d8c062271a6f4127ef1eee85b9f900ccd8"
   end
 
   depends_on "ldc" => :build

@@ -7,11 +7,7 @@ class Afsctool < Formula
   head "https://github.com/RJVB/afsctool.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "eb8354b43a3be62e15b67539367e0fc34fa818f56b758f5d8875811d1eb683d2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0ad2029644ef5a0597750a5ef27f4da1f04441a49c2b9da63cf9d75e342ecff7"
-    sha256 cellar: :any_skip_relocation, monterey:       "0a31f139ac8d56aa796446d6458f02a7a700d425e33e66824b407deeece709a9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4d4d08188fb559874d969a3e17ec43f3758f2f884db81a917cb839fa2da0d3b2"
-    sha256 cellar: :any_skip_relocation, catalina:       "699723059b23cd7c9b91df35a38d0f0d308c61dc6ee3bcadd18b893ace2c9757"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on "cmake" => :build

@@ -1,8 +1,8 @@
 class Alluxio < Formula
   desc "Open Source Memory Speed Virtual Distributed Storage"
   homepage "https://www.alluxio.io/"
-  url "https://downloads.alluxio.io/downloads/files/2.8.1/alluxio-2.8.1-bin.tar.gz"
-  sha256 "5cf36642b3c810e697378461dacea82b9a5b88dd49e4fca3895e490fc4846d63"
+  url "https://downloads.alluxio.io/downloads/files/2.8.0/alluxio-2.8.0-bin.tar.gz"
+  sha256 "d2819ea49a14182b1406ed61796026605510abca8f53adeda1ae05305057d1ef"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,12 @@ class Alluxio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ab0727c7081dd1db69d14d83aa0074d00ba7c5166cf11a213ebac08d843323d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ab0727c7081dd1db69d14d83aa0074d00ba7c5166cf11a213ebac08d843323d"
-    sha256 cellar: :any_skip_relocation, monterey:       "841697122a0ff55545e065ba3ded610ae839bacdc80fb95f6cf77adb34b331a5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "841697122a0ff55545e065ba3ded610ae839bacdc80fb95f6cf77adb34b331a5"
-    sha256 cellar: :any_skip_relocation, catalina:       "841697122a0ff55545e065ba3ded610ae839bacdc80fb95f6cf77adb34b331a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ab0727c7081dd1db69d14d83aa0074d00ba7c5166cf11a213ebac08d843323d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d845e46e556e33ec02e69b51cad893eb6296fe49d5f699aefe346b161fdbfabe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d845e46e556e33ec02e69b51cad893eb6296fe49d5f699aefe346b161fdbfabe"
+    sha256 cellar: :any_skip_relocation, monterey:       "8f28c665a49d478eaab64e044bc9a6773cd0f66548277434b53a00b29ac6dec9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8f28c665a49d478eaab64e044bc9a6773cd0f66548277434b53a00b29ac6dec9"
+    sha256 cellar: :any_skip_relocation, catalina:       "8f28c665a49d478eaab64e044bc9a6773cd0f66548277434b53a00b29ac6dec9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10e26cdd6744eb4db06575f50f636aa0b16db47ca284a25e3bb827352c27b0e4"
   end
 
   # Alluxio requires Java 8 or Java 11

@@ -1,8 +1,8 @@
 class Mongocli < Formula
   desc "MongoDB CLI enables you to manage your MongoDB in the Cloud"
   homepage "https://github.com/mongodb/mongodb-atlas-cli"
-  url "https://github.com/mongodb/mongodb-atlas-cli/archive/refs/tags/mongocli/v1.26.1.tar.gz"
-  sha256 "d017394b05b8768795cd108f70f1117ed8898af266ae4dd3bf2a1d4f1013beac"
+  url "https://github.com/mongodb/mongodb-atlas-cli/archive/refs/tags/mongocli/v1.25.0.tar.gz"
+  sha256 "aab93f9702df598461f0de5a7d8949e4c1d45c73c1f01198cff0d60b12ac9fd9"
   license "Apache-2.0"
   head "https://github.com/mongodb/mongodb-atlas-cli.git", branch: "master"
 
@@ -12,12 +12,8 @@ class Mongocli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "076ff8fc409d0fcc0bb9987560eef94ea5a6385a053818076953d556736e5832"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b42e5e1ee998d36aa436fc94a2b36aeb21a1673da3c0986e118a168f982b0c1c"
-    sha256 cellar: :any_skip_relocation, monterey:       "ee6d4555d56bbad77386af9a340cf170b285ef19f75d0c48db83fafdea9e648b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5700d538527e9192171311a465debde181a666c47e910d066bbc692fff046b8b"
-    sha256 cellar: :any_skip_relocation, catalina:       "9bc50c4ec87e03dd14a59dbfa6201d8a86ca6da3d88a9c43ef6012769773e7fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22ba57e3962435f4720bcc1f3068ea3fa66596f8b32888e47af1ac0d274f3c24"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mongocli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "92c815718d10ec0f82ab9e19cb96e5f8ed5f22b842a1ab0d6bd06d03f48454cc"
   end
 
   depends_on "go" => :build
@@ -31,7 +27,9 @@ class Mongocli < Formula
     end
     bin.install "bin/mongocli"
 
-    generate_completions_from_executable(bin/"mongocli", "completion")
+    (bash_completion/"mongocli").write Utils.safe_popen_read(bin/"mongocli", "completion", "bash")
+    (fish_completion/"mongocli.fish").write Utils.safe_popen_read(bin/"mongocli", "completion", "fish")
+    (zsh_completion/"_mongocli").write Utils.safe_popen_read(bin/"mongocli", "completion", "zsh")
   end
 
   test do

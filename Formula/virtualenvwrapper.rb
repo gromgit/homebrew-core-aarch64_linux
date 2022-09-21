@@ -62,15 +62,14 @@ class Virtualenvwrapper < Formula
   end
 
   def install
-    python3 = "python3.10"
-    venv = virtualenv_create(libexec, python3)
+    venv = virtualenv_create(libexec, "python3")
     venv.pip_install resources
     venv.pip_install buildpath
 
     bin.install_symlink libexec/"bin/virtualenvwrapper_lazy.sh"
     (bin/"virtualenvwrapper.sh").write <<~SH
       #!/bin/sh
-      export VIRTUALENVWRAPPER_PYTHON="#{libexec}/bin/#{python3}"
+      export VIRTUALENVWRAPPER_PYTHON="#{libexec}/bin/python"
       source "#{libexec}/bin/virtualenvwrapper.sh"
     SH
   end

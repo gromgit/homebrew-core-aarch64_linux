@@ -12,13 +12,10 @@ class Gnutls < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "9f30799c00efb30c52d864bc865c3d4f7bb3ab5bb707101b67572c962cc6f224"
-    sha256 arm64_big_sur:  "96e743b74e73bf743db62000c3631b0b58c081e1399a7521239572f0f48da9ce"
-    sha256 monterey:       "c7ae049c2b46d81d7e8f861137d3a21e0268b1dd23932cba62ed25b72860668b"
-    sha256 big_sur:        "143c717cc4cf0d4c9c8ad05c93610023b9092b035de982aa3003530a2204a44c"
-    sha256 catalina:       "93d54df117440e3467d57198340e15a3ef7cf7807a7cb3386a84e34f0624dbfe"
-    sha256 x86_64_linux:   "7c8d8948ac53ee9c67931e011b312fd30c9414c70a7065ff1de7e5e30e105366"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnutls"
+    sha256 aarch64_linux: "4e3b25e7d8cb939e46cedc6e555ef0bc7a451accba62ccb68443574e9c0a53b4"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "ca-certificates"

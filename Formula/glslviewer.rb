@@ -1,34 +1,24 @@
 class Glslviewer < Formula
   desc "Live-coding console tool that renders GLSL Shaders"
   homepage "http://patriciogonzalezvivo.com/2015/glslViewer/"
+  url "https://github.com/patriciogonzalezvivo/glslViewer.git",
+      tag:      "2.0.5",
+      revision: "788bb17bfa10759dd88def6979f1d16b31591ff6"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/patriciogonzalezvivo/glslViewer.git", branch: "main"
 
-  stable do
-    url "https://github.com/patriciogonzalezvivo/glslViewer.git",
-        tag:      "2.1.2",
-        revision: "c6eaf01456db4baa61f876762fdb2d8bf49727e4"
-
-    # Fix error: 'strstr' is not a member of 'std'. Remove in the next release
-    patch do
-      url "https://github.com/patriciogonzalezvivo/glslViewer/commit/2e517b7cb10a82dc863a250d31040d5b5d021c2a.patch?full_index=1"
-      sha256 "fec27080bd7951a061183e8ad09c5f20fa1b74648aa24e400204cd1ac89a8ebc"
-    end
-  end
-
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2f456474a519741116e51b879b003885bb9096b37e9a98deafd2d3d966a541c7"
-    sha256 cellar: :any,                 arm64_big_sur:  "a0ddf3807ad7de1c736957ace22843f5aa8c4ab7acd2e543e480c5b7af895712"
-    sha256 cellar: :any,                 monterey:       "ea23ee67e1aeff5b957ce19c73ff07c9a774151ff5682bfe1ef3bb8578b4a2fc"
-    sha256 cellar: :any,                 big_sur:        "4f7697383e46e1cc11e71011092b74111118e87ccc9a1998524962a5541e47ad"
-    sha256 cellar: :any,                 catalina:       "1070b61989a89248aebc4d78b68651e42f71ab2ae68d62960e351b1a7ac7d254"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb0e575ecbaf09367ca0a22303c57645ade93322c164628972c12db9b1e72a63"
+    sha256 cellar: :any,                 arm64_monterey: "f1f56f94f020e9cbd7687a4050b593c994f88c7171cf9b8844269f274a63b154"
+    sha256 cellar: :any,                 arm64_big_sur:  "1cd53a4a542feeb3339d14b6864385431dafde36b4c0c40168932fe1b6ccaddd"
+    sha256 cellar: :any,                 monterey:       "60e3894913d8fe9ca335bdce56bcf3500c50980524751dbe091c48a7208cc7c9"
+    sha256 cellar: :any,                 big_sur:        "83847db14457a67a4018444b572da153f64faee492cad55bf25fcdd2b7258c30"
+    sha256 cellar: :any,                 catalina:       "4193fa09eca8907ea14c05d04a843396c0610cd85af7f483f21242884cc5c6d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9871545c27387e50f6f0ca0a36791b1e8c27e47857ad7c1bf457547c15a2b2c"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   depends_on "glfw"
 
   on_linux do

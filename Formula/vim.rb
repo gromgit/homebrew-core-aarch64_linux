@@ -2,28 +2,18 @@ class Vim < Formula
   desc "Vi 'workalike' with many additional features"
   homepage "https://www.vim.org/"
   # vim should only be updated every 50 releases on multiples of 50
-  url "https://github.com/vim/vim/archive/v9.0.0350.tar.gz"
-  sha256 "36c211d34beb734fa322975daa170868d7172b1a5f9605257d532cebf956f708"
+  url "https://github.com/vim/vim/archive/v8.2.4900.tar.gz"
+  sha256 "fd92d25b7ec34c8adbb3a9ce19132cc6699350ba46c313263d1d1c5abd28bc94"
   license "Vim"
-  revision 1
   head "https://github.com/vim/vim.git", branch: "master"
 
-  # The Vim repository contains thousands of tags and the `Git` strategy isn't
-  # ideal in this context. This is an exceptional situation, so this checks the
-  # first page of tags on GitHub (to minimize data transfer).
-  livecheck do
-    url "https://github.com/vim/vim/tags"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
-    strategy :page_match
-  end
-
   bottle do
-    sha256 arm64_monterey: "051e743da4ed767da0631c81f36f987f25f2f2ecbeaf1c98e7fdfe0028c5536c"
-    sha256 arm64_big_sur:  "cb4abd85c90e4541e6c3a58a0ae55449be8bb1062fe2ab72080fdc89c66ccac8"
-    sha256 monterey:       "e8336cd6562cf8fd8f07831b0db3b5682b923592371db26e4fa7514dc87e46e6"
-    sha256 big_sur:        "6a3b91b2895818762248bead5f4f5b1d7530189202129d746a5a4fbd9dcf3653"
-    sha256 catalina:       "e990d967cd1833807138d8c5bd6553a670fe7e20a437782892e224a5cf498ecc"
-    sha256 x86_64_linux:   "ef5644417e26e7cbff7da7474bd490c45b26a89afb5b6e0c9cfe8d9bbd3c5cd8"
+    sha256 arm64_monterey: "0b02453bee6a24599b14d6a60d77c19e41d58fbedfc7a49ade8076a4471ed99b"
+    sha256 arm64_big_sur:  "67e183b5721af7c531cc0e626787edb5be3c869759d6f558ba545cc8bc862773"
+    sha256 monterey:       "f45c84c77734400a51642f2a976ba45405ba29ad0a942a8796fa02f98a651a93"
+    sha256 big_sur:        "97339b60528380b9eb39248fad183ba460c5c18308daec0d222aa3007004d8e9"
+    sha256 catalina:       "d9d0e7330b83398744554326d51e009304dbc952689b4627f04a1d6f99ed9626"
+    sha256 x86_64_linux:   "c0bc46bebe49084b158404a7042fbb68104bfab3bc3bd80b36e8981c908b3352"
   end
 
   depends_on "gettext"

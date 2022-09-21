@@ -4,15 +4,11 @@ class BoostAT176 < Formula
   url "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2"
   sha256 "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41"
   license "BSL-1.0"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "06b0d013ef4760a75511d8d637377caac0f8643cfc95ac1dfd67a96b708ad8e4"
-    sha256 cellar: :any,                 arm64_big_sur:  "b3d192a5702c5ba060ee45e6db0af475cefc61cb32cc4845d4a28769fb750ac8"
-    sha256 cellar: :any,                 monterey:       "7e6f3919e4cb4f84c5e756d3040c6892f075c28a9054581188281c2babda255c"
-    sha256 cellar: :any,                 big_sur:        "1e8cbd437f466d6784e450c2a382946e2643c6430d290440914074190f75ab25"
-    sha256 cellar: :any,                 catalina:       "b9f891df6d3169ce4f36e0f14ab9f9c64ce23f7e488148f6b09f4a3a896a77bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d966b3324e961e814af5bfaaab086051ed51c5a01e2ad916e9e2c2de4b49d397"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost@1.76"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a8d134609f5c6223c2171b9059300502894a16502c71032d16024cbc500ea87"
   end
 
   keg_only :versioned_formula

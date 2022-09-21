@@ -1,8 +1,8 @@
 class Librealsense < Formula
   desc "Intel RealSense D400 series and SR300 capture"
   homepage "https://github.com/IntelRealSense/librealsense"
-  url "https://github.com/IntelRealSense/librealsense/archive/v2.51.1.tar.gz"
-  sha256 "f03b2bf6d52c665120dd0b961fe4553867c2a6eddb5d1898e123f9eb81a91536"
+  url "https://github.com/IntelRealSense/librealsense/archive/v2.50.0.tar.gz"
+  sha256 "cafeb2ed1efe5f42c4bd874296ce2860c7eebd15a9ce771f94580e0d0622098d"
   license "Apache-2.0"
   head "https://github.com/IntelRealSense/librealsense.git", branch: "master"
 
@@ -12,24 +12,22 @@ class Librealsense < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "558c77261f81f424939e36841e79c8eb236711468434bca6be72987312e7e550"
-    sha256 cellar: :any,                 arm64_big_sur:  "6b62d2e23da3c9ea8d43e574500d57ae1608d0c31ccbd982d5bd2080d2d94d6e"
-    sha256 cellar: :any,                 monterey:       "cc5fbbc7f972a475548615cd0a74fcf84a61d91093f2efb8c3f74ca5097c7ea7"
-    sha256 cellar: :any,                 big_sur:        "9ed5a2e0127f3cd378fbc624a32899dd0fbe9162c50f675699225e4fc5066d60"
-    sha256 cellar: :any,                 catalina:       "81d5784b88e8609b49432b3acfcdcd5cc7185447738c601fc0ec8be719681829"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21f823c8d286e304e8de0b3767ba270daa1e05e2c8ada7e65bc6d9c5278dba1d"
+    sha256 cellar: :any,                 arm64_monterey: "b23a09d176e9fac673c1ed48874c80394bb5c4cd4ae751757dbce5c20e32625f"
+    sha256 cellar: :any,                 arm64_big_sur:  "df9542f991b62d5905bb85b8409f8fcaf81a9e30e111e3b1bae907d14797d078"
+    sha256 cellar: :any,                 monterey:       "c4a501d50abf2287d7700ede8ab2cd8602d2a71ab138e8b98c1ac0c244e843a5"
+    sha256 cellar: :any,                 big_sur:        "a0c555c2884007c2441f6d25a3ec4661a80c6ccebeff8e6972ad1d1e4236ef16"
+    sha256 cellar: :any,                 catalina:       "8fcbda6676b9df6401b14b02d6862eecdf8e931afe1cfb8f3bae2d5399c6e79f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af90eea1b514759bda89c478b9aa77fde8502ae1095b5e64b26c8db17e137e5e"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
+  # Build on Apple Silicon fails when generating Unix Makefiles.
+  # Ref: https://github.com/IntelRealSense/librealsense/issues/8090
+  depends_on xcode: :build if Hardware::CPU.arm?
   depends_on "glfw"
   depends_on "libusb"
   depends_on "openssl@1.1"
-  # Build on Apple Silicon fails when generating Unix Makefiles.
-  # Ref: https://github.com/IntelRealSense/librealsense/issues/8090
-  on_arm do
-    depends_on xcode: :build
-  end
 
   def install
     ENV["OPENSSL_ROOT_DIR"] = Formula["openssl@1.1"].prefix

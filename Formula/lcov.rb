@@ -5,31 +5,39 @@ class Lcov < Formula
 
   desc "Graphical front-end for GCC's coverage testing tool (gcov)"
   homepage "https://github.com/linux-test-project/lcov"
-  url "https://github.com/linux-test-project/lcov/releases/download/v1.16/lcov-1.16.tar.gz"
-  sha256 "987031ad5528c8a746d4b52b380bc1bffe412de1f2b9c2ba5224995668e3240b"
+  url "https://github.com/linux-test-project/lcov/releases/download/v1.15/lcov-1.15.tar.gz"
+  sha256 "c1cda2fa33bec9aa2c2c73c87226cfe97de0831887176b45ee523c5e30f8053a"
   license "GPL-2.0-or-later"
   head "https://github.com/linux-test-project/lcov.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9fd558cedeedc95fa3bc481a3bde4781c941a63e8c7bb2259bb2e32483f123ea"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c5d93417fd0352f458241daaebc89c4a67042e4e74c30018e09ee56d15ae832"
-    sha256 cellar: :any_skip_relocation, monterey:       "8b4c4367f9392015d4448038ec82822d986244f9184f6200fcac7dbbaccd6267"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a8f0fb6ec023076edce63a9197bb96a3a3b9a98371c17dbe3e315eaa52de0169"
-    sha256 cellar: :any_skip_relocation, catalina:       "7018ff8e61a4229d1ce47e80124ac10f90aa9ed36504798295d0a1a6e4344729"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "660d399d6fc26591066767f4514c5c961427afde6bbcb7eb4a853a2b06022adc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bab0e9f810cffad96404c8cd78377925b162ac286a74223f0cd749fe6a008dbc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46b38875aa7bb7f7604e95126b03e1a68897aba7e5cb5c59fd97ff831b729d04"
+    sha256 cellar: :any_skip_relocation, monterey:       "65a02bd256b693b90435c7b0cc72bc032edbb27225c5e4c511a8bcaf53cd9e10"
+    sha256 cellar: :any_skip_relocation, big_sur:        "54ec973afb4d98a5efa8f016f0588fbfd5eb3f0986c8914ce05c71a6b85763bd"
+    sha256 cellar: :any_skip_relocation, catalina:       "aa3b34c95a9e00eb9b65735cfd93a57d50703d50e1f07931d48325f9e3fd1a26"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdf87e195d48b9cf3311cf86cf7576c08c89893d9dee1b99a55b5e70c2ba3deb"
   end
 
   uses_from_macos "perl"
   uses_from_macos "zlib"
 
   resource "JSON" do
-    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.06.tar.gz"
-    sha256 "1137e98a42208d802f3ad94a10855606c0455ddad167ba018557d751f6f7672e"
+    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.02.tar.gz"
+    sha256 "444a88755a89ffa2a5424ab4ed1d11dca61808ebef57e81243424619a9e8627c"
   end
 
   resource "PerlIO::gzip" do
     url "https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/PerlIO-gzip-0.20.tar.gz"
     sha256 "4848679a3f201e3f3b0c5f6f9526e602af52923ffa471a2a3657db786bd3bdc5"
+  end
+
+  # Temporary patch. Use correct c++filt flag. Upstreamed at
+  # https://github.com/linux-test-project/lcov/pull/125
+  patch do
+    url "https://github.com/linux-test-project/lcov/commit/462f71ddbad726b2c9968fefca31d60a9f0f745f.patch?full_index=1"
+    sha256 "73414e8f29d5c703c6c057d202fdd73efb07df05ae35c7daa5c48a4b2396e55b"
   end
 
   def install

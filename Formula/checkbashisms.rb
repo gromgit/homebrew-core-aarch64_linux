@@ -11,8 +11,10 @@ class Checkbashisms < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "bd4c1264761f3e9d8cc16032058a212ba83fc0ba5f8d5a98fc0ece0dd52287b5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/checkbashisms"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1338de3fad7ec78839814a89db0bc1597b7f83592c64e080b1d10c82530af4d5"
   end
+
 
   def install
     inreplace "scripts/checkbashisms.pl" do |s|

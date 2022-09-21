@@ -1,8 +1,8 @@
 class Datree < Formula
   desc "CLI tool to run policies against Kubernetes manifests YAML files or Helm charts"
   homepage "https://www.datree.io/"
-  url "https://github.com/datreeio/datree/archive/1.6.16.tar.gz"
-  sha256 "ec7c5da1747e159174fa9b6fc7db10f0ef06c6847e0036ff080fd478c93e2b3a"
+  url "https://github.com/datreeio/datree/archive/1.4.4.tar.gz"
+  sha256 "6da8b7d57e1db5953a502cd8fbf3dd2e34e8fee6800c33f4d41bf18876cd36e6"
   license "Apache-2.0"
   head "https://github.com/datreeio/datree.git", branch: "main"
 
@@ -12,12 +12,8 @@ class Datree < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68a6f1ff692b1fc55c2a162a9d285200c795cde98069fcaf8b96fb230437f0b5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "738ee99f8d13aa9d556a4fbdcf960abbbf9e28f7029c09348e24533170a19074"
-    sha256 cellar: :any_skip_relocation, monterey:       "7aa02741d2d1017f5646a03cf0ff351ff735c5f7e5e6086c25e8132316bc500f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4ea8a55e5b925e8473bf8f8b01d10691d65189eda150cb2d8ac387e12a602e2c"
-    sha256 cellar: :any_skip_relocation, catalina:       "bfe13adb57f54b63b55eedeb0138112dbb217932ce709e63b2b0709b01f0da0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "135aaa9784d34395694b1a98fce44062c4c946c3b0b5d7c514a9a7bf316a10ee"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/datree"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "85f7362261c039d0fd8d089ad9ab98a0d024dd2f7a60089e750bc1f3ebf5fd3b"
   end
 
   depends_on "go" => :build

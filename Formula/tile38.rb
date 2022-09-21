@@ -2,18 +2,14 @@ class Tile38 < Formula
   desc "In-memory geolocation data store, spatial index, and realtime geofence"
   homepage "https://tile38.com/"
   url "https://github.com/tidwall/tile38.git",
-      tag:      "1.29.0",
-      revision: "757db4d50904c979a928fcea51166fe9d287a595"
+      tag:      "1.28.0",
+      revision: "036017db4f8c5cbe6533d8e0770159d7d87be40a"
   license "MIT"
   head "https://github.com/tidwall/tile38.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "915a14d364975a895d9ac184e86646031f997c67fd6661e0ade4847d0648096a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c318515963db7dc756b2865d1b7815226ae157cb850a41f2889359bd33e002d1"
-    sha256 cellar: :any_skip_relocation, monterey:       "8da844ac221e10d8103fb8dfed5b9d6d5604e3e4f7118cc2e948653c82897bf4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e8b0186042360ef52f9362b6f157b6e667611e032afc75d6a67b9aef2a24e5bc"
-    sha256 cellar: :any_skip_relocation, catalina:       "05b7dbc17c39f33505500a4974b4a0ad0e64273172df11ded26f8fc25511fda2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb5c116f0e2fe5d6a7b545d287547fdff3c1ca402ef5c9e288891569d8c25a71"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tile38"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "12914e4ae628bed7b3fc271520b1778d6377d0e5ff66791153551eedcb9cf8a3"
   end
 
   depends_on "go" => :build

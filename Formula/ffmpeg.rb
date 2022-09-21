@@ -1,8 +1,8 @@
 class Ffmpeg < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-5.1.1.tar.xz"
-  sha256 "95bf3ff8c496511e71e958fb249e663c8c9c3de583c5bebc0f5a9745abbc0435"
+  url "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
+  sha256 "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   license "GPL-2.0-or-later"
@@ -14,12 +14,12 @@ class Ffmpeg < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ab401c96929674d90003b3b75eee7280806ba913648c4ddd648d3f07b323dc66"
-    sha256 arm64_big_sur:  "967a8ac417964bdad509749a039d12d06461f2b8e52102b7c118f52fc634645e"
-    sha256 monterey:       "c3ad7a1c3da583707efd72553952a07ab3ba5cfb9383ad44119868517fba8401"
-    sha256 big_sur:        "b97a869d8da126cfa974266f4e62f095b50805f805f9c697186a16c750de8ee2"
-    sha256 catalina:       "fe4afaf2707d8483cd873c2eb5fdf713d31721693cbc3087d753c0449137d49b"
-    sha256 x86_64_linux:   "cc2a9eaf4c7dd8399f2b0fef593858a8ac290c1139328dd35fb55a7e862c7b09"
+    sha256 arm64_monterey: "766f68ee9b87731b8b2b9a67140af5b7a4178542c83c2aa4790b3ec4d66951db"
+    sha256 arm64_big_sur:  "76abad2fdf37c88c02e6ff3c7c5dc5131f2cb1261e62f41903f10f9b93312932"
+    sha256 monterey:       "7f44e9040938f7b74484ceb8dca79bd8f31d30844255f074ae84ca905ce3d745"
+    sha256 big_sur:        "ab8be194324b7326c384f1db87f1687aaf6424ca9d69cdffcd227a385c66fca3"
+    sha256 catalina:       "f371c60da0c9aea8d818d9523dbf770088baa4bd98f4afd5bdace00689f5e2db"
+    sha256 x86_64_linux:   "4f032e8c0d38e0c1259ee3881682ececad8d3e74d99a75c3694f4afc1b54b1c5"
   end
 
   depends_on "nasm" => :build
@@ -63,9 +63,8 @@ class Ffmpeg < Formula
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "alsa-lib"
-    depends_on "gcc" # because rubberband is compiled with gcc
     depends_on "libxv"
+    depends_on "gcc" # because rubbernand is compiled with gcc
   end
 
   fails_with gcc: "5"
@@ -122,6 +121,15 @@ class Ffmpeg < Formula
     # Needs corefoundation, coremedia, corevideo
     args << "--enable-videotoolbox" if OS.mac?
     args << "--enable-neon" if Hardware::CPU.arm?
+
+    # Replace hardcoded default VMAF model path
+    unless build.head?
+      %w[doc/filters.texi libavfilter/vf_libvmaf.c].each do |f|
+        inreplace f, "/usr/local/share/model", HOMEBREW_PREFIX/"share/libvmaf/model"
+        # Since libvmaf v2.0.0, `.pkl` model files have been deprecated in favor of `.json` model files.
+        inreplace f, "vmaf_v0.6.1.pkl", "vmaf_v0.6.1.json"
+      end
+    end
 
     system "./configure", *args
     system "make", "install"

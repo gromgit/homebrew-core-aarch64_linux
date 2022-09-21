@@ -4,7 +4,7 @@ class Maxima < Formula
   url "https://downloads.sourceforge.net/project/maxima/Maxima-source/5.46.0-source/maxima-5.46.0.tar.gz"
   sha256 "7390f06b48da65c9033e8b2f629b978b90056454a54022db7de70e2225aa8b07"
   license "GPL-2.0-only"
-  revision 3
+  revision 1
 
   livecheck do
     url :stable
@@ -12,12 +12,12 @@ class Maxima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "82245da41cdcdb0c41187520638fda635d1f112b38dec9496d4321141ff5155f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8aa105d0535eb1bfbc62f4819dba80883b8bdab90f99e4c0bb05bcc9e64e99b7"
-    sha256 cellar: :any_skip_relocation, monterey:       "b34e533fa6acbfb6f82778583952c2b9f7524860e3647bbc0c1c5b809edadf55"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c404ae11377eae562de509e17199610ccc236fe223d97b02744ac9cb2c0653ea"
-    sha256 cellar: :any_skip_relocation, catalina:       "8b183f03af4e366124b1a91a8aa61a899f44ea473c16318c03d8962942bfaeaf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5add87906b254ef2d53bafd4de250f7ec891e3a5702a4eecedd742970a8b84f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f10ca28d61f041e718581050dde24aea407cfc90ec77bd5cdab376537f1f9bc9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c3ec53f9bbbae8922ec84cc5e44905f7f1fc952fe2570976172d8aedbd8aa3c1"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1bd4ce41a16ee92682b06bfdfd7470cc7320cedc308e167b2d7e2882eb16bd7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7d0bd876d8ad2b828f60b0718b77d80b7640d793e9015dc908f8cebb44aca9ca"
+    sha256 cellar: :any_skip_relocation, catalina:       "f74f9bb98d30654904fd5a72ba4105a61f443cb1ec2fcc9fa7765e68e85b4baf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f64ec75a642dc9b3bb9558ad8c66084a6a8559c14b08b99655ea4156c611e1b2"
   end
 
   depends_on "gawk" => :build

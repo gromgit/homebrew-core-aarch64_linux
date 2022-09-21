@@ -1,8 +1,8 @@
 class DitaOt < Formula
   desc "DITA Open Toolkit is an implementation of the OASIS DITA specification"
   homepage "https://www.dita-ot.org/"
-  url "https://github.com/dita-ot/dita-ot/releases/download/3.7.3/dita-ot-3.7.3.zip"
-  sha256 "daab1e8fff5ec77c0187c4c610fc0ed377f9dfdc0331bb3a24b002463c0dca0c"
+  url "https://github.com/dita-ot/dita-ot/releases/download/3.7.1/dita-ot-3.7.1.zip"
+  sha256 "9a9790de79da566c636b805e5f42e94a8d3c0c187919e5159d1b8a64998b5bbd"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,12 @@ class DitaOt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9bacf2aaa47f35139420e17745c75dfe86e25035b064364ac5abadb1e1b37221"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9bacf2aaa47f35139420e17745c75dfe86e25035b064364ac5abadb1e1b37221"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d64628950b465b61feaf38052ba6f8f3f81679f140ce84a9c159b77b9a4c485"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3d64628950b465b61feaf38052ba6f8f3f81679f140ce84a9c159b77b9a4c485"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d64628950b465b61feaf38052ba6f8f3f81679f140ce84a9c159b77b9a4c485"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4c2117012a63fcd8583f752278bfa2767dcfec87072edbd15a015fc2b18e590"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b09ccd7cb0ff165ea05a36e781043b166f4a30388a1fdcd34bd3f105489db7ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b09ccd7cb0ff165ea05a36e781043b166f4a30388a1fdcd34bd3f105489db7ad"
+    sha256 cellar: :any_skip_relocation, monterey:       "7dcffe2eadd0dbf60e6672a217e699bdee1f26b8a184ad960d8a6f32dbaa2e45"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7dcffe2eadd0dbf60e6672a217e699bdee1f26b8a184ad960d8a6f32dbaa2e45"
+    sha256 cellar: :any_skip_relocation, catalina:       "7dcffe2eadd0dbf60e6672a217e699bdee1f26b8a184ad960d8a6f32dbaa2e45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec590a6d1fca973322efbb02b615e7428a7bc10345cf9907f1188459253d42fd"
   end
 
   depends_on "openjdk"

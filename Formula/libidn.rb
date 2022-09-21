@@ -7,13 +7,10 @@ class Libidn < Formula
   license any_of: ["GPL-2.0-or-later", "LGPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "c4a1c32197a17b25f61adecc077503661b595efa986d9c418e9a736354eee3e1"
-    sha256 cellar: :any, arm64_big_sur:  "2c1ec1cc41cb3ca506930d50367fcdcabee872156c8c4ae44ac68ae022cd5d41"
-    sha256 cellar: :any, monterey:       "ad84e01ad371a8bd47a15a2b2da2acef55293cc6fc72ef0e5130986ddfd119c7"
-    sha256 cellar: :any, big_sur:        "464812fe81d7bafe7c25fe5d4e7348b603e5ded35410ff52b9933db76e6e5724"
-    sha256 cellar: :any, catalina:       "9e6ed6c2ea5ad341d3e0627ee67861001bb8104f441298b456b983e935d5aa55"
-    sha256               x86_64_linux:   "fe9a04089d251cc404385029ab855630c509961937930cb703ff85b236503751"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libidn"
+    sha256 aarch64_linux: "5d31c9adecba628b47ec689e84aada9de34f2ac7f502fbee549716636f99bb72"
   end
+
 
   depends_on "pkg-config" => :build
 

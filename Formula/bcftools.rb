@@ -1,8 +1,8 @@
 class Bcftools < Formula
   desc "Tools for BCF/VCF files and variant calling from samtools"
   homepage "https://www.htslib.org/"
-  url "https://github.com/samtools/bcftools/releases/download/1.16/bcftools-1.16.tar.bz2"
-  sha256 "90bf647c9ad79e10a243b8058c873de057fd7012e250d5ae6574839787a2ecd6"
+  url "https://github.com/samtools/bcftools/releases/download/1.15.1/bcftools-1.15.1.tar.bz2"
+  sha256 "f21f9564873eb27ccf22d13b91a64acb8fbbfe4f9e4c37933a54b9a95857f2d7"
   # The bcftools source code is MIT/Expat-licensed, but when it is configured
   # with --enable-libgsl the resulting executable is GPL-licensed.
   license "GPL-3.0-or-later"
@@ -13,12 +13,12 @@ class Bcftools < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "65a2a78dd8fb87800fc5f46f020a73625cd1ac3a785a60140c473a96bd647ca0"
-    sha256                               arm64_big_sur:  "b8bf1ee7fecde28d1facb2164ff6e398ed33c5ff1095129a2e323affbd0656d2"
-    sha256                               monterey:       "82fb878c7e66acbe2e88da18ba11e6555b49d3c7ee857de606a1c7ea554472fe"
-    sha256                               big_sur:        "50a2abedf76288f41c716d9e075712e20b6a1161e96ba0d77ed64f398f0d8df2"
-    sha256                               catalina:       "4f59af51a89cbb746179dd7ce62f04e3d2c58ca1561cf6eeb00ed669d0550c36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2a6fd547af1d4e99e747d19c92c1c89a71a63544940581ce9281c0b28f9a5cb"
+    sha256                               arm64_monterey: "547be287eadb9b767ab27232071c0fbd6895cea8de8470a657912d82ea90183c"
+    sha256                               arm64_big_sur:  "856cc821f42aa3a34efc45c71fe5be9139605e52373d123bd04be511d1476380"
+    sha256                               monterey:       "51b716a9f1b3b6889ee91f67135f0b3ef19bd4fbc298f1c3607497842684a5a2"
+    sha256                               big_sur:        "da96ced1e7dea42220ef0bea1deecc4f38bb1f30d68cd980dbdb37cdd61a719c"
+    sha256                               catalina:       "622b3e4e56e7b716824e3552e7cb9468753ba4dddacb7ef9b14e7e128cf68fc8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e7d57e0c0fbe7639362ba27ef336000e43e6be81c68d920cf7f86d6b4f50eeb5"
   end
 
   depends_on "gsl"

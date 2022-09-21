@@ -12,12 +12,8 @@ class Camlp5 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0bed63661d001957196f1eed059f5b33d2c94ec7ef6ae53fd14cf44729733d27"
-    sha256 arm64_big_sur:  "ed57354104f665d458cd4d19596129d7a1d811713b03ffdbae806fa71e7de0c5"
-    sha256 monterey:       "a11f84037af3fa99c6cc6428daa58412b1fd1d32177c684bcdc84909f9684347"
-    sha256 big_sur:        "c4b79325ed05ecbaf4b7bd0ad806c63766a9ecf2606293675f0cd8744e05dc2e"
-    sha256 catalina:       "ab486332051f9133a5ec9a8b1bf0e51653ad850bce9e8f01ecf61b491483cd3f"
-    sha256 x86_64_linux:   "31f9d0038fb7af7fa9bb9934a1261917b1ebc63a5a89298e89f3088faadde3c4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/camlp5"
+    sha256 aarch64_linux: "6651260615fb21b546ff8dbe1d660d71e96fac31bfbf9c39ce350de69ed4048c"
   end
 
   depends_on "ocaml-findlib" => :build

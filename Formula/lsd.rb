@@ -1,17 +1,18 @@
 class Lsd < Formula
   desc "Clone of ls with colorful output, file type icons, and more"
   homepage "https://github.com/Peltoche/lsd"
-  url "https://github.com/Peltoche/lsd/archive/0.23.0.tar.gz"
-  sha256 "0ce6582745b5364fdb4052954d24f6a211af616061d1454583e68f3366f6496e"
+  url "https://github.com/Peltoche/lsd/archive/0.21.0.tar.gz"
+  sha256 "f500c18221f9c3fd45f88f6f764001e99cf9d6d74af9172cbb9a9ff32f3e5c7d"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d9118a00072f09bfbe0389b32f10e744dcd4265f7a73c51a2d7baa163ed86dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "955c94b02d2e099be742ea7d1b84e95a6334b73d2ef57b7e4fd297d33062c64e"
-    sha256 cellar: :any_skip_relocation, monterey:       "316f690ace642dafe8d44930f852a222dc6c9bd412d76799ade1e5425c66feec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "512dac8d55eaaec38b23d065c22e2074feaa6a70a615d2b62c62aae261287d20"
-    sha256 cellar: :any_skip_relocation, catalina:       "ad682aeca688bebb04be12db707d1518fab8bdf594578b64fdea3056d1f0ed81"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "06cd54abd64cfb81ea5c48f91274535aa915cadce2dafedae7990a2e4f7dc767"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb1ae021488b265d2f05e71b9c1b79ffa6113c2cac1f77e7287b9525315add2b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "706fdc3ceb41d2ad2ebdbc11b3930d87c5546d109331c9b965cb7d29875bd100"
+    sha256 cellar: :any_skip_relocation, monterey:       "1b8a883d68c3ea85695a5e33602e99b3d6f8866f34444eeedbb4d9131112af90"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d14efa8c804908f25d88f0cea0ecea253d6a059d971de1f630ffb29af2f691d8"
+    sha256 cellar: :any_skip_relocation, catalina:       "b42295c9884214ecf4e6afc90aca429d739cd509f72f54e8ee590e6afc26aed4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90f92d5c4d38f5c3e84c13bc171c3bdae04f50da02a7fc2bd6680ea82368f3fe"
   end
 
   depends_on "rust" => :build

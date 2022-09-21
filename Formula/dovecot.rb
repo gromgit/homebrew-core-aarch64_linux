@@ -1,10 +1,9 @@
 class Dovecot < Formula
   desc "IMAP/POP3 server"
   homepage "https://dovecot.org/"
-  url "https://dovecot.org/releases/2.3/dovecot-2.3.19.1.tar.gz"
-  sha256 "db5abcd87d7309659ea6b45b2cb6ee9c5f97486b2b719a5dd05a759e1f6a5c51"
+  url "https://dovecot.org/releases/2.3/dovecot-2.3.18.tar.gz"
+  sha256 "06e73f668c6c093c45bdeeeb7c20398ab8dc49317234f4b5781ac5e2cc5d6c33"
   license all_of: ["BSD-3-Clause", "LGPL-2.1-or-later", "MIT", "Unicode-DFS-2016", :public_domain]
-  revision 1
 
   livecheck do
     url "https://www.dovecot.org/download/"
@@ -12,18 +11,17 @@ class Dovecot < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "84ae37c002fb903dde0682cef958f5ddd49c40f4d61b0afd4ad1f602837b85c4"
-    sha256 arm64_big_sur:  "eab081f7f434e7934e789d5e2992312086df91a80e90bcdac70d0ba5f6fd4a7e"
-    sha256 monterey:       "4c116a281b03d57bd4e40ba70020b30278089b77fac4d406786084335be77251"
-    sha256 big_sur:        "70f94514c6a5bb9e212cedf96b6cbf99344ce02264a7fcfaa3890448ee70d236"
-    sha256 catalina:       "afe4a6433bedbcbec98524c59aaa204a66dbb78ac00936358539f30c1328dcac"
-    sha256 x86_64_linux:   "1ee5b6d7968f2d764ad21f892e8d30470c818dc6cd8fb0a184b8510a43bb317e"
+    sha256 arm64_monterey: "d2cc62eb849982ca14279369b4d28448843d1845910086453b731c74c329d4f9"
+    sha256 arm64_big_sur:  "941b8612dbb9cdcdd5e0e126d426f1560901f0e79763f0a7a5ed604000a86459"
+    sha256 monterey:       "7c9ce42ea413b52942f83231a072615e4f5b7d4174a1ff2a62414b84f470c58c"
+    sha256 big_sur:        "9b071d88d2f41e49d96e7ae742dd978555fd498d671e02c0f05c868ff34e36b5"
+    sha256 catalina:       "d6a488b910f15a4fd854bfb8419c463c6bd63d4d37a26ee31b07d5bc9f71290b"
+    sha256 x86_64_linux:   "e1bbd60ce22a39ff395e1757c2ff62ea0286f30b4eb4a185af6cade2dceecb52"
   end
 
   depends_on "openssl@1.1"
 
   uses_from_macos "bzip2"
-  uses_from_macos "libxcrypt"
   uses_from_macos "sqlite"
 
   on_linux do
@@ -32,8 +30,8 @@ class Dovecot < Formula
   end
 
   resource "pigeonhole" do
-    url "https://pigeonhole.dovecot.org/releases/2.3/dovecot-2.3-pigeonhole-0.5.19.tar.gz"
-    sha256 "637709a83fb1338c918e5398049f96b7aeb5ae00696794ed1e5a4d4c0ca3f688"
+    url "https://pigeonhole.dovecot.org/releases/2.3/dovecot-2.3-pigeonhole-0.5.18.tar.gz"
+    sha256 "a6d828f8d6f2decba5105343ece5c7a65245bd94e46a8ae4432a6d97543108a5"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do

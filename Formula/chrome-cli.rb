@@ -7,11 +7,7 @@ class ChromeCli < Formula
   head "https://github.com/prasmussen/chrome-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2cf65772593e86be9a02761d2ec17ffdf685c4f3eb28a01cdcd7a7cc18e39d54"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df1f09538d913e62a7be6529e3936bee96b9ceac29e04b48b320ec2fc426be07"
-    sha256 cellar: :any_skip_relocation, monterey:       "8a54bfafacf5fa0bc13824a28c7994d17ab7271fd90c40defb8eb3440ac22af3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a63860da780f58237ccae8deb63425d54f827093004d0a8fbbb05191a8e5b5b0"
-    sha256 cellar: :any_skip_relocation, catalina:       "7e3ee262df867a7f9f928b4b2e5e8f9eab064bd0833008e9be672352a85eb37f"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: :build

@@ -1,19 +1,11 @@
 class Suil < Formula
   desc "Lightweight C library for loading and wrapping LV2 plugin UIs"
   homepage "https://drobilla.net/software/suil.html"
+  url "https://download.drobilla.net/suil-0.10.10.tar.bz2"
+  sha256 "750f08e6b7dc941a5e694c484aab02f69af5aa90edcc9fb2ffb4fb45f1574bfb"
   license "ISC"
+  revision 1
   head "https://gitlab.com/lv2/suil.git", branch: "master"
-
-  stable do
-    url "https://download.drobilla.net/suil-0.10.16.tar.xz"
-    sha256 "bc9f36c13863e70fd65bf7134afc2b7b141e9ca4b279590efae1d4b25f4211f9"
-
-    # remove in next version
-    patch do
-      url "https://github.com/lv2/suil/commit/ecebfdb35fd8af72dc918ff34ae3f3366521925d.patch?full_index=1"
-      sha256 "d12cc51870da6009555e8f40fddd64931b68e6e09362224eec0ee227d97fe62d"
-    end
-  end
 
   livecheck do
     url "https://download.drobilla.net/"
@@ -21,26 +13,46 @@ class Suil < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e5a25182fc6bc52b88a470248e4263e4744b9d2df31c36d8e903523c19832b7d"
-    sha256 arm64_big_sur:  "dfcc9301dca83593d4556d36b29411fa658ced02c59bd5a23b38cd0fbae5805f"
-    sha256 monterey:       "28cde799db29ed771bf7d525551c1cb65b514b66d5ff4a9e5358f31fd3009466"
-    sha256 big_sur:        "054500679837fed2d069828244191e3da85421aa5c4773b5f28ce44993f1f669"
-    sha256 catalina:       "3c2d95382b91fb20e3cf03d64c5695a92121f93f7bd3b8928f1928d092c211e8"
-    sha256 x86_64_linux:   "2b5f51754e05f0444115cdc6e5da108f59871d1abf013b2619d897c1f88c83fb"
+    sha256 arm64_monterey: "4b952357f77ca23c77da7b02bd5b95da858d74e33378272a7bf7c63e759fb0af"
+    sha256 arm64_big_sur:  "11af96a8cd470b08da0bd49cb3b620ae81d89e9589c5ed44a533e2cb93d5133f"
+    sha256 monterey:       "ce9decde67d416caaae2d8e0be74eb1a2f0497d856f6a4e40d13a84c71ebd3b2"
+    sha256 big_sur:        "02a8eed42b15c099954dce4741c71b0e5f9ae652fce48921e4920a3efc779e01"
+    sha256 catalina:       "4a74f4c1cbf9b1e67c7fbda45e5ca67b5163757b70ee62c33a7e66b136a2d4c1"
+    sha256 mojave:         "2bc87e39cf2cb0a66c983c01834d39c2f1cccdddbe4db28331e0dcb6cf64c3fb"
+    sha256 x86_64_linux:   "b652f25be19c7044ef7f11818488054459a23719afe5cca1118be8a9dfac1547"
   end
 
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
   depends_on "gtk+"
   depends_on "gtk+3"
   depends_on "lv2"
   depends_on "qt@5"
 
+  # Disable qt5_in_gtk3 because it depends upon X11
+  # Can be removed if https://gitlab.com/lv2/suil/-/merge_requests/1 is merged
+  patch do
+    url "https://gitlab.com/lv2/suil/-/commit/33ea47e18ddc1eb384e75622c0e75164d351f2c0.diff"
+    sha256 "2f335107e26c503460965953f94410e458c5e8dd86a89ce039f65c4e3ae16ba7"
+  end
+
   def install
-    system "meson", "build", *std_meson_args
-    system "meson", "compile", "-C", "build"
-    system "meson", "install", "-C", "build"
+    ENV.cxx11
+    ENV.prepend_path "PATH", Formula["python@3.10"].libexec/"bin"
+    args = [
+      "--prefix=#{prefix}",
+      "--gtk3-lib-name=#{shared_library("libgtk-3.0")}",
+    ]
+    if OS.mac?
+      args += [
+        "--no-x11",
+        "--gtk2-lib-name=#{shared_library("libgtk-quartz-2.0.0")}",
+      ]
+    else
+      args << ["--gtk2-lib-name=#{shared_library("libgtk-x11-2.0")}"]
+    end
+    system "./waf", "configure", *args
+    system "./waf", "install"
   end
 
   test do

@@ -1,18 +1,14 @@
 class Libspiro < Formula
   desc "Library to simplify the drawing of curves"
   homepage "https://github.com/fontforge/libspiro"
-  url "https://github.com/fontforge/libspiro/releases/download/20220722/libspiro-dist-20220722.tar.gz"
-  sha256 "3b8e54473f3d4d99c014f2630e62f966f5f4e25c28ca59b63d30bd8e9b7593f5"
+  url "https://github.com/fontforge/libspiro/releases/download/20200505/libspiro-dist-20200505.tar.gz"
+  sha256 "06c69a1e8dcbcabcf009fd96fd90b1a244d0257246e376c2c4d57c4ea4af0e49"
   license "GPL-3.0"
   version_scheme 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b3498c1a31dba2bbd728c4940c270458a946e2b0b4318a92d611d825b93c56f5"
-    sha256 cellar: :any,                 arm64_big_sur:  "586a41d1ce7658531787026822d18043dce42b0f31f89f2506f544b28a156e4c"
-    sha256 cellar: :any,                 monterey:       "37809c1fcd66a6e7f33a8113b04d6799f9740b6a4407a32229f0d8985a38c42b"
-    sha256 cellar: :any,                 big_sur:        "c1022c3d1173013815484d27276a03a251fcc6bf44eacdc74c9baf00e0e9ad5a"
-    sha256 cellar: :any,                 catalina:       "0856dba557c27a3f09a10791e7030aacfd4e8093dc169ecc68d6dd350b6ac146"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd949a77a584f8a6783e9432a48f0601c1fec3600f8c0e0dc26a93c32418a1f1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libspiro"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "998c2c3fc463445b9fc35ec98408640938fc9c0d6f7fc7d5176ba3daaff1dc0c"
   end
 
   head do

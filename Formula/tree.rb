@@ -1,8 +1,8 @@
 class Tree < Formula
   desc "Display directories as trees (with optional color/HTML output)"
   homepage "http://mama.indstate.edu/users/ice/tree/"
-  url "http://mama.indstate.edu/users/ice/tree/src/tree-2.0.4.tgz"
-  sha256 "b0ea92197849579a3f09a50dbefc3d4708caf555d304a830e16e20b73b4ffa74"
+  url "http://mama.indstate.edu/users/ice/tree/src/tree-2.0.2.tgz"
+  sha256 "7d693a1d88d3c4e70a73e03b8dbbdc12c2945d482647494f2f5bd83a479eeeaf"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,12 +11,8 @@ class Tree < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa8eb457cd23554cbee29e9527287eb482a995d4b82a96e70c20424ea992394b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff0bfbe9dcc7108e646741181900f1947d52dc60aee229fc9d834bee0ae3ac80"
-    sha256 cellar: :any_skip_relocation, monterey:       "189103af15d87e1f5fa07a47d4050d070629e99f299bad5dd9ed54c4289fdb73"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c96432f421c19d06bec2a01e0d789334a01db4c04a21ae058cb745203ea75f79"
-    sha256 cellar: :any_skip_relocation, catalina:       "f58be945558f3c5486581f71aeba7d9599227bfdd1c06651b3d3639cb655ecbf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8431d98c7898d6bab60b9d6a221f9cb694e35ce9f3ef0e094d6939eeb11ac2e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tree"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b4500e45e8461b7f09bbad25e3f784484ab8e08e3daf9a6b874e1428d635e7a0"
   end
 
   def install

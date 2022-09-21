@@ -1,17 +1,18 @@
 class Sdl2Ttf < Formula
   desc "Library for using TrueType fonts in SDL applications"
   homepage "https://github.com/libsdl-org/SDL_ttf"
-  url "https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.20.1/SDL2_ttf-2.20.1.tar.gz"
-  sha256 "78cdad51f3cc3ada6932b1bb6e914b33798ab970a1e817763f22ddbfd97d0c57"
+  url "https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.0.18/SDL2_ttf-2.0.18.tar.gz"
+  sha256 "7234eb8883514e019e7747c703e4a774575b18d435c22a4a29d068cb768a2251"
   license "Zlib"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0717a73e3b400b75d4c95a1f041405d1e2a51d853084f4f4a2df509a0f5f66b4"
-    sha256 cellar: :any,                 arm64_big_sur:  "3c330912742dc8adec3f1c84d72cd0c6d2042e07668b4e0949dd19a48db93399"
-    sha256 cellar: :any,                 monterey:       "03664994cfddf5b0dc3c2e17882ac02d01e2f46f0c74b711cdaf8b850e97c721"
-    sha256 cellar: :any,                 big_sur:        "1d882966dfe5f2710325b20c9aaa3dc37e4fdc2698c8fb9f3d4252a62a3799be"
-    sha256 cellar: :any,                 catalina:       "b969e2ec3520ce18c9ab44e05e9fb4e406887c8d879d156c8eedc559ba9bfe30"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69cd455ca76baafa15a74f4266c6dc5b3531c5146a7d420beeeae2e106ebdfc1"
+    sha256 cellar: :any,                 arm64_monterey: "28d5056700c673afc9015cc76ac7db652ed0a916399246e432ba5e2bcb8a09c3"
+    sha256 cellar: :any,                 arm64_big_sur:  "bd4b97e8b2aa48eb25a9d02c974ce4c22677424554609aa1206aa06da83d389c"
+    sha256 cellar: :any,                 monterey:       "5d772f784a63098751c71bb1a353ea329a7e491b7e4a5b99e8d9352248d95228"
+    sha256 cellar: :any,                 big_sur:        "9b718acaa1960181907a0830c383aea817ed12e894d8fe8827214e76c3f06d63"
+    sha256 cellar: :any,                 catalina:       "90eec1f51b053c9c8b58f808b0e185ae08c44ef7aca41449531c4c617b6d297e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4dc8925d5cae9a76e69fd9f928d22b7a2fc30801cfeb3964b166b01c0160e4a1"
   end
 
   head do

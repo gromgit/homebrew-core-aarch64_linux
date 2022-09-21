@@ -11,12 +11,8 @@ class YazeAg < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e16e79f90ea2bc48a220d2e4d3ce8e72acefe6a3f6382709d1d69b0cc4e0f221"
-    sha256 arm64_big_sur:  "51ce224af28b3929a4b8563aa0cc740cbb43e7e2b5a31c6c0cfa502b52e200b3"
-    sha256 monterey:       "0b4e934e85cea0db946cf6df95393be56e2e330665786fde9437e091197379d9"
-    sha256 big_sur:        "32ef5add9479aef13177444a6a148e1fb2ae9719f2b043b1c235804b461f3e84"
-    sha256 catalina:       "4954f1099ce8a6ed84a8f074221f4bd75a7abcc8e6303c733ff02221651f36bd"
-    sha256 x86_64_linux:   "7a3cfeda8e67249ed33bdc5c6d37c037895967530f1f416cb8dbe908cfb922fe"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/yaze-ag"
+    sha256 aarch64_linux: "350c15018e0cd6214287b0455f88685deb8c0019317bf6299d71755a298f5cf7"
   end
 
   def install

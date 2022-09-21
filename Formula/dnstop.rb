@@ -5,11 +5,6 @@ class Dnstop < Formula
   sha256 "b4b03d02005b16e98d923fa79957ea947e3aa6638bb267403102d12290d0c57a"
   license "BSD-3-Clause"
 
-  livecheck do
-    url "http://dns.measurement-factory.com/tools/dnstop/src/"
-    regex(/href=.*?dnstop[._-]v?(\d+(?:\.\d+)*)\.t/i)
-  end
-
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_monterey: "7e991cd5c68fcbefb7c45ac7b977b3f9e51a719cae0dbead9aa7172dbfebeb3f"
@@ -21,6 +16,7 @@ class Dnstop < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:    "4d6b9a2f15e3165ccf63b67752cd4f0d21b128f64b5f22beb2c2b0657e082709"
     sha256 cellar: :any_skip_relocation, sierra:         "dc995c2857fdd5093ae753844ce5c45ed00bae59184528a184e0313b25882802"
     sha256 cellar: :any_skip_relocation, el_capitan:     "1d5b1ad056475ce9a27f40b48cbbf58421e4eb66fd134ac318413de2d025db66"
+    sha256 cellar: :any_skip_relocation, yosemite:       "aa3b72d1432e7c13b9b7e0722cde3f7fafef17aff557489662029698929638dc"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d8b4de6f9441442ff6c59476101ebf5fbcf6073882c971556fa566afda211bd"
   end
 

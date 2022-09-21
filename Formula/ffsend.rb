@@ -1,17 +1,18 @@
 class Ffsend < Formula
   desc "Fully featured Firefox Send client"
   homepage "https://gitlab.com/timvisee/ffsend"
-  url "https://github.com/timvisee/ffsend/archive/v0.2.76.tar.gz"
-  sha256 "7d91fc411b7363fd8842890c5ed25d6cc4481f76cd48dcac154cd6e99f8c4d7b"
+  url "https://github.com/timvisee/ffsend/archive/v0.2.74.tar.gz"
+  sha256 "e6092fc4f40be6d79ddf46a0fb4a739310a2db5407fd3f5db2c43cafc8c41485"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4a33d7dd1465a0ee60e67f351d9d33a8f343fb0f478bbb951e1ad4f013704b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d330f6673e5c524439241a00ab78d2a9904ae98bc809bd7884d2410b01ec1bf5"
-    sha256 cellar: :any_skip_relocation, monterey:       "bc7917b4fcf38c237f70fae69642bacfa9bb5c0907160a8a20615838d5f24c62"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0ac4ab065ea9b47203cf9c320c890d1a3014621111ce532fa3a58bba4d58eb2d"
-    sha256 cellar: :any_skip_relocation, catalina:       "6a6216d395863c342f3a1babc7896238a41b57e3712a9aeb1483d343e4314ee8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8df5439e73182be4487788bf4c3c576c840f2a5bae1b360a5a21945fa54172fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b53cd1075514afca5d97f9132b1abdecd1c6e0da8085493572084c0f4924e00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb28f76fd8ce6bdd41178a7c019b74a181bc10c6af7bc4577c39f42cb8a5aad4"
+    sha256 cellar: :any_skip_relocation, monterey:       "03593e8ec608b4906bd3e02324fb8ebb01fec7f6f346f66c2adcb48d3b2b48cf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b0cf6c1a3c746a12a9fb654c772ec117378d63acaa9027811641a7ce81493f2d"
+    sha256 cellar: :any_skip_relocation, catalina:       "17e152eadf259130498d4b99008244646fa13d5ab35ca55998dbaa587b39283b"
+    sha256 cellar: :any_skip_relocation, mojave:         "8721d410afecbffa858783fadedc162294924ea4aba35ba0c929956df7bbe899"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1eaeb9b9f408a6a0766c84fe6cc7bfada070b859a9a66c36dff3d80b7d198b38"
   end
 
   depends_on "rust" => :build

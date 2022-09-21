@@ -1,8 +1,8 @@
 class Qmmp < Formula
   desc "Qt-based Multimedia Player"
   homepage "https://qmmp.ylsoftware.com/"
-  url "https://qmmp.ylsoftware.com/files/qmmp/2.1/qmmp-2.1.1.tar.bz2"
-  sha256 "d16fa33d066ec3e4993070b7dee8336df39869560a54a36d5d9659935ef0057f"
+  url "https://qmmp.ylsoftware.com/files/qmmp/2.0/qmmp-2.0.4.tar.bz2"
+  sha256 "3786a687b366abec91e279772176b6881e44daa9102136026be765f903b9822e"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Qmmp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "71a53acc1108adc9c918a979ef90d5af0800eb99d7c0293b7e967049f94125fb"
-    sha256 arm64_big_sur:  "e60001ec427e59a06271e08259035db1f8035faede6072ecfe72fec2d93885ed"
-    sha256 monterey:       "34bcff555cd200f2466183c88778a371b8e2336dfa34a99e946b0db97bd949d6"
-    sha256 big_sur:        "4250889ad41fcd66a89c29b02d580b3f5c43d795784c9c184b79cecf12c6f4d1"
-    sha256 catalina:       "b775a1c3af67e426845a72fca215bb66ea3fdfa07d5d492ec6528ce77f639a8e"
-    sha256 x86_64_linux:   "a7e875d93455467c6ab319f96281dd7af62407830596931bc5ebb96cd6aaffdf"
+    sha256 arm64_monterey: "5075402202c279f1d66c5587296fe9902de7a0505ee800d7cb58c0bd5e68e066"
+    sha256 arm64_big_sur:  "d7c5baf9463236ec73618eaaf17ebdcce48fd4fda5c7a675b27b5dc656ba1573"
+    sha256 monterey:       "3c60765d93ad5656792cb9f5e8608605288a48dd8378802365d078b3ced320c9"
+    sha256 big_sur:        "ac508090df0fbe069b80e5ec6ed7929aceba929fae8581f34a84c9dccc017627"
+    sha256 catalina:       "410fd1219143fa3f311d5f1881b544843df3f9d10d7c07a84b6aaf2cf18ce57e"
+    sha256 x86_64_linux:   "863a0d0e7bc288be2de7c297589eea467336d689c115f25404386524ab29ffbc"
   end
 
   depends_on "cmake"      => :build
@@ -68,8 +68,8 @@ class Qmmp < Formula
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   resource "qmmp-plugin-pack" do
-    url "https://qmmp.ylsoftware.com/files/qmmp-plugin-pack/2.1/qmmp-plugin-pack-2.1.0.tar.bz2"
-    sha256 "25692f5fc9f608d9b194697dae76d16408c98707758fb1d77ca633ba78eee917"
+    url "https://qmmp.ylsoftware.com/files/qmmp-plugin-pack/2.0/qmmp-plugin-pack-2.0.2.tar.bz2"
+    sha256 "c8d50f1cb76b38757697aa358b841b622cbbd026ef28055d972a30a8328a3fd4"
   end
 
   def install

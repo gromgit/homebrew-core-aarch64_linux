@@ -9,20 +9,11 @@ class LuaAT51 < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "de6f49207593ea1ff60752fbda844d4be34d92de796f758c9e0e5f3dd329fab7"
-    sha256 cellar: :any,                 arm64_big_sur:  "cde11765109e69c6484206f4b2a63081b535253f32233471343f03b52505a89b"
-    sha256 cellar: :any,                 monterey:       "38413995d200a915e9d40831983b3605be0b1afcdb62fb0e768ca38c69b62dab"
-    sha256 cellar: :any,                 big_sur:        "0d00a4c74d8e5fd3cd36621d318d2c1031a16c5701d2ae669223a2ca8a1a576d"
-    sha256 cellar: :any,                 catalina:       "bbc328f48c0cf137907ccabe206f75cc7ade66cf76cafe82ced3a5f885c73da8"
-    sha256 cellar: :any,                 mojave:         "4578b515c3e1a255f766d7fa542e632007ac2de8282e207b92192d0bb9bafd11"
-    sha256 cellar: :any,                 high_sierra:    "d374b94b3e4b9af93cb5c04086f4a9836c06953b4b1941c68a92986ba57356b1"
-    sha256 cellar: :any,                 sierra:         "67ce3661b56fe8dd0daf6f94b7da31a9516b00ae85d9bbe9eabd7ed2e1dbb324"
-    sha256 cellar: :any,                 el_capitan:     "e43d1c75fe4462c5dca2d95ebee9b0e4897c872f03c4331d5898a06a408cbcb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b5ebc378db8f01127fdec3922b58252ede872cd6b70cbbde2adde311f1f699a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua@5.1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3fe70a5e7125ef03550df1b9d8530bd01a6775b6beadda3f9e64e1abc487d5af"
   end
 
-  # Commented out while this formula still has dependents.
-  # deprecate! date: "2012-02-17", because: :unsupported
+  deprecate! date: "2012-02-17", because: :unsupported
 
   uses_from_macos "unzip"
 

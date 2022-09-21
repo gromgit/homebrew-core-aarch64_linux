@@ -4,25 +4,40 @@ class Luaradio < Formula
   url "https://github.com/vsergeev/luaradio/archive/v0.10.0.tar.gz"
   sha256 "d540aac3363255c4a1f47313888d9133b037cc5d1edca0d428499a272710b992"
   license "MIT"
-  revision 1
   head "https://github.com/vsergeev/luaradio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "80048889479b279f24f3f0967ea13752487ac2f9d36109999cbc86c682dac13b"
-    sha256 cellar: :any,                 arm64_big_sur:  "54f0347fbb22407d85dfb361c704dbdb22edb5675e190cbdfb3d3f2d64fa1b13"
-    sha256 cellar: :any,                 monterey:       "b799b23735581ff900549775dca8d0e2b37fd237f6d2062e84ac645fd3f49952"
-    sha256 cellar: :any,                 big_sur:        "294b88b1809673505baf3d4d5dffa48e858ba5ef77e27f79744905aed700df07"
-    sha256 cellar: :any,                 catalina:       "6e7e3d041d074853d801524198a970c6d3db8cc289ad2251b181b7c555ca53f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b11a86f2430f67c7d051d0ea2e8e6912bfa96849b4ca626cc1dbd51894a864c"
+    sha256 cellar: :any,                 arm64_big_sur: "b04641f0b463cd38e257f954a7b2fb49a5b4fe3ee671a5faa09f9603023f7ed2"
+    sha256 cellar: :any,                 monterey:      "2789e761aa3eb0ff47516350e8e38357086cded52f1e77644ce268171fb32cec"
+    sha256 cellar: :any,                 big_sur:       "765bcff473c15da215a2c162c3247c12b3a12a6a088ff324103de2e05510e973"
+    sha256 cellar: :any,                 catalina:      "e0de1690d1a42741722374cc61a8966a51c9ff8219b46d5e361e06fdcf11e4b4"
+    sha256 cellar: :any,                 mojave:        "535aa76ad7c009e4ffa918eb910462d861081a7516f17a2210275bb6e619ad9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3172d2fc3864696ad84bab32d36c8fb60f262a71986003b43b5a55f87fa25a7c"
   end
 
   depends_on "pkg-config" => :build
   depends_on "fftw"
   depends_on "liquid-dsp"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
 
   def install
-    system "make", "-C", "embed", "PREFIX=#{prefix}", "INSTALL_CMOD=#{lib}/lua/5.1", "install"
+    cd "embed" do
+      # Ensure file placement is compatible with HOMEBREW_SANDBOX.
+      inreplace "Makefile" do |s|
+        s.gsub! "install -d $(DESTDIR)$(INSTALL_CMOD)",
+                "install -d $(PREFIX)/lib/lua/5.1"
+        s.gsub! "$(DESTDIR)$(INSTALL_CMOD)/radio.so",
+                "$(PREFIX)/lib/lua/5.1/radio.so"
+      end
+      system "make", "install", "PREFIX=#{prefix}"
+    end
+
+    env = {
+      PATH:      "#{Formula["luajit-openresty"].opt_bin}:$PATH",
+      LUA_CPATH: "#{lib}/lua/5.1/?.so${LUA_CPATH:+;$LUA_CPATH};;",
+    }
+
+    bin.env_script_all_files libexec/"bin", env
   end
 
   test do

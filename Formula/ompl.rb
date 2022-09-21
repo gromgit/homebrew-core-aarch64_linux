@@ -4,7 +4,7 @@ class Ompl < Formula
   url "https://github.com/ompl/ompl/archive/1.5.2.tar.gz"
   sha256 "db1665dd2163697437ef155668fdde6101109e064a2d1a04148e45b3747d5f98"
   license "BSD-3-Clause"
-  revision 2
+  revision 1
   head "https://github.com/ompl/ompl.git", branch: "main"
 
   # We check the first-party download page because the "latest" GitHub release
@@ -15,12 +15,12 @@ class Ompl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8c0d6f9594ce11936ab9e26625d89bb33dce3ff8b6795c706e540215c0f3c152"
-    sha256 cellar: :any,                 arm64_big_sur:  "20365e1b7edded4f8cd3afd5d5930c05fdd9b1607cb49a66e659fc780b2cba23"
-    sha256 cellar: :any,                 monterey:       "c0e1c146155afa48941aab7ab5a0aea8fa2402b5849492274bca94594562490c"
-    sha256 cellar: :any,                 big_sur:        "eb74697504d54cdd7b3c215c8ce226c5490a873a81d265d3b45a56c5b388d982"
-    sha256 cellar: :any,                 catalina:       "6632b384fe0325d6bf078ac1bd57c10e2b07737a208d490f6a579398b971b9c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b6327fa3e8ae84fe376c1ac97a1aeacf3d2fe444d253a67b2d3193eafe04379"
+    sha256 cellar: :any,                 arm64_monterey: "ffe47e64de3abc87d21742b2f91d8e82d15f452dfced450cae396800dfe8d3a7"
+    sha256 cellar: :any,                 arm64_big_sur:  "8ec7941715b61540fbefccf77957e10de0283fd5faa247d8b49081597fa35fd2"
+    sha256 cellar: :any,                 monterey:       "07b00d741d2b807ba8bd4a73663d75728cce63bee2060ef5c1c99010a2eb1833"
+    sha256 cellar: :any,                 big_sur:        "cf1c091ca7a9df020d37cacd7984237c1a495ffe82408e5c48561f3325704e29"
+    sha256 cellar: :any,                 catalina:       "dffc06c254246bdbc7dd21e078c22fb84efcb9ebf838edd848ad0624a1fd8b4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ee3b59b7370f80c621b2cad70bbbf6a487836b75951dcf0a1f056048fe8716b"
   end
 
   depends_on "cmake" => :build

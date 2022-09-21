@@ -11,13 +11,10 @@ class Chrony < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0a963bb5d33481aa76625c12d7459dcda5aa8383c9c291accbda8107ecf43958"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "976fc7759e22bd69d623525a286a01551dc2d1651a305c053275f41edaa8d3e7"
-    sha256 cellar: :any_skip_relocation, monterey:       "a324dd4e43662d3c8b4a362695af02b519838a85273b4fd97b607b22e6e41c9e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "71fc7b46b1c4c313b70e72760b8091792fd1670a5a5122020588e6eea2b5244c"
-    sha256 cellar: :any_skip_relocation, catalina:       "db8262f30b2074e9e12cc7391de384f4a209dd2cfdbf18f5ac4f189cae61e4fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9bab0617f63d1eda4e8f48316fdf241f9dbac571ddae45608ea58990cfc1f47"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chrony"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b0c1d4153fe2c575d42e1392f08a90082d029684162b4a3305fbaa2180d03a83"
   end
+
 
   depends_on "nettle"
 

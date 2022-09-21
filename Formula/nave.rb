@@ -7,12 +7,8 @@ class Nave < Formula
   head "https://github.com/isaacs/nave.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba1b26cb794a07bace9800d71264fceb8b4b9efbddf6d9291399654d98bc88f9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba1b26cb794a07bace9800d71264fceb8b4b9efbddf6d9291399654d98bc88f9"
-    sha256 cellar: :any_skip_relocation, monterey:       "1f245fcfdd7109a0939d1cb82a854407ac78bedb2bf140966b0d736c69e9a9a4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1f245fcfdd7109a0939d1cb82a854407ac78bedb2bf140966b0d736c69e9a9a4"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f245fcfdd7109a0939d1cb82a854407ac78bedb2bf140966b0d736c69e9a9a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba1b26cb794a07bace9800d71264fceb8b4b9efbddf6d9291399654d98bc88f9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nave"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "55aac22e227f3b30c9e1478c7e0aec292f90b96087d82985969e4c43ed8164ca"
   end
 
   def install

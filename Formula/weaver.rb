@@ -1,21 +1,19 @@
 class Weaver < Formula
   desc "Command-line tool for Weaver"
   homepage "https://github.com/scribd/Weaver"
-  url "https://github.com/scribd/Weaver/archive/1.1.2.tar.gz"
-  sha256 "9052999a85249a5f46fbe7af97c73eb4c93b658dc69444e90ddfefc344665ee4"
+  url "https://github.com/scribd/Weaver/archive/1.0.8.tar.gz"
+  sha256 "eefdd5f986be6da6256e132c83ea4a7ed711ae492a158e685385ea65670cc88d"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff3baa7aaccd5664e391032d72c2e0aa714d5c14809ca499f0abca82fbe791e6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a51afad4f2c57873ac40f27250b6ac8c72796eb3e64780f97ab7e8f97be40e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "164c3300fb9dc8eb1056804b9d1703e14aa7af606a7e2ae3bd15adffddbd3998"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6d66f81f2b234e28776e0d7e01763b53bf52c5c59fa8a3a1d9948560d0c3728a"
-    sha256 cellar: :any_skip_relocation, catalina:       "13457fdd41255eaa5ee7a9b1a46d00a7eab9b3f62c705e20371f266b480bec59"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ef608bc19d4f7b73774a664163c8b134d5110203dee5008a513d60704cbb68f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d940db79ce543334b7d888033adc22a517ed37b607bc2e1d0a37d2831ef26608"
+    sha256 cellar: :any_skip_relocation, monterey:       "9d5648c31c7dba7867ad7a9915a54ad67342eb96b8347e8e6bf834606ec9d38c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a94e918e25975679aac042648547d882887b52e2f67c2271d1a6f63011043716"
+    sha256 cellar: :any_skip_relocation, catalina:       "ec79048231822f03c6dc5be241f215c650ef148036292e3be6e1fd6000d92325"
   end
 
   depends_on xcode: ["11.2", :build]
-
-  uses_from_macos "swift"
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
@@ -25,6 +23,6 @@ class Weaver < Formula
     # Weaver uses Sourcekitten and thus, has the same sandbox issues.
     # Rewrite test after sandbox issues investigated.
     # https://github.com/Homebrew/homebrew/pull/50211
-    system bin/"weaver", "version"
+    system "#{bin}/weaver", "version"
   end
 end

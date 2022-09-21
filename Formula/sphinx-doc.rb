@@ -8,13 +8,10 @@ class SphinxDoc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5ffd34fa6ff52a0f80dc17465747145268c397a40c20ff537fe575bc6ac05d7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "63aab3acd8bcf4ab0380d3cc58121781b305f144465b764b08caf16785be935f"
-    sha256 cellar: :any_skip_relocation, monterey:       "7e2fb09476272c3820dd96fc60257f6aaa1fe186136d8176b1821c586949b0c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e5ff94b002d67d6ff753596c335a1624649c0d7f80b278b42451af3942b3376"
-    sha256 cellar: :any_skip_relocation, catalina:       "d50d6bded84db6b5581b3182cbcd92c2442bfc6a5cb591ea86fbfab45357db15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eceaa7e00125247a200039d5bf06b5d47cb6503e9f7e1fb35bb80747e750ae0a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sphinx-doc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0fb3e639cd0e1ecf4939b5e41ab921b6cf4a836c4b1c7033f10e6c6e0eb61f67"
   end
+
 
   keg_only <<~EOS
     this formula is mainly used internally by other formulae.

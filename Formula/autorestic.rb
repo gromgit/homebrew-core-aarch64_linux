@@ -1,18 +1,14 @@
 class Autorestic < Formula
   desc "High level CLI utility for restic"
   homepage "https://autorestic.vercel.app/"
-  url "https://github.com/cupcakearmy/autorestic/archive/v1.7.2.tar.gz"
-  sha256 "a04317c81f3dfafc28cb72c96b1b6ae8d90f2a5e5fab8d571b1b1a846b574dba"
+  url "https://github.com/cupcakearmy/autorestic/archive/v1.7.1.tar.gz"
+  sha256 "89ffb11c14eb02bcc66427517a43a42a7e73ea359b579b8c2047c95ce5f9a8d8"
   license "Apache-2.0"
   head "https://github.com/cupcakearmy/autorestic.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d47f81f636baf69ba9931d713f8c6bb84ec44f2b881a3f28155ddcd8c6ade94c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0731a66c87db47cf155e08da423a46fa3c6b019aad96b84b2191cfd90aed49ff"
-    sha256 cellar: :any_skip_relocation, monterey:       "8d65f2f071c8f13691a7163ba59a279dea8fc6a5c5ccda4c72526772621f5d0d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "080755d384ecf39f7e76318eaca2928b65536d1f9b806d587e2d8baf483ba794"
-    sha256 cellar: :any_skip_relocation, catalina:       "f4e825513f90e980789b2e6f9b06881c3c850cebb51f847c0fa384be9928f3a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6dddcdd2fbbe6bef9f918380e4f4f64ec207a9b7a92c85b1d366aea2d46776a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autorestic"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0ff1a38c6a07f1fe80251355748f7e60cdf4b6cae306ab637bbdc67b19bdc242"
   end
 
   depends_on "go" => :build
@@ -20,7 +16,9 @@ class Autorestic < Formula
 
   def install
     system "go", "build", *std_go_args, "./main.go"
-    generate_completions_from_executable(bin/"autorestic", "completion")
+    (bash_completion/"autorestic").write Utils.safe_popen_read("#{bin}/autorestic", "completion", "bash")
+    (zsh_completion/"_autorestic").write Utils.safe_popen_read("#{bin}/autorestic", "completion", "zsh")
+    (fish_completion/"autorestic.fish").write Utils.safe_popen_read("#{bin}/autorestic", "completion", "fish")
   end
 
   test do

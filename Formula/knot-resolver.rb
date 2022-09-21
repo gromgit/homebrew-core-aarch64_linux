@@ -1,10 +1,9 @@
 class KnotResolver < Formula
   desc "Minimalistic, caching, DNSSEC-validating DNS resolver"
   homepage "https://www.knot-resolver.cz"
-  url "https://secure.nic.cz/files/knot-resolver/knot-resolver-5.5.2.tar.xz"
-  sha256 "3f78aa69c3f28edc42b5900b9788fba39498d8bffda7fb9c772bb470865780cb"
+  url "https://secure.nic.cz/files/knot-resolver/knot-resolver-5.5.0.tar.xz"
+  sha256 "4e6f48c74d955f143d603f6072670cb41ab9acdd95d4455d6e74b6908562c55a"
   license all_of: ["CC0-1.0", "GPL-3.0-or-later", "LGPL-2.1-or-later", "MIT"]
-  revision 1
   head "https://gitlab.labs.nic.cz/knot/knot-resolver.git", branch: "master"
 
   livecheck do
@@ -13,12 +12,12 @@ class KnotResolver < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "26c0cc619db0701c66d8264595ef1b4b4f341cc53e5b91a09bba810823e18aec"
-    sha256 arm64_big_sur:  "dc130750c64885bdfec3c33c66d75547fa05c350e0023851c26e1f8816345fbb"
-    sha256 monterey:       "3a0e4737a28bd51e236b800161282b4f315a4a7df34ed3571c69b811acc808d1"
-    sha256 big_sur:        "a5228303c870b7b95e3f075843d504b6373990fbfaa88306becbf8363bc815fa"
-    sha256 catalina:       "514c0c14b066f6e6698afbc917ce9a123a7e8473f8de688bafe46b93d8044b17"
-    sha256 x86_64_linux:   "9dc0d26e0408e5b913d39b659810e0a59895be8f5c3eae5725b28735e1984b0f"
+    sha256 arm64_monterey: "00a6b08095cf50df34c95a4045fed42b15a8f4aa25d7233dfe60744f76272f54"
+    sha256 arm64_big_sur:  "50b5f1de099fc2abfcc0884d62a1c62fb891a83d4f0394b1474c8f8c2903eddd"
+    sha256 monterey:       "25bd87b99ee1628ae8e1b5d141c0f7ed05475aca252c76b659ab2353c0ab49f8"
+    sha256 big_sur:        "bee12b1f2fbbfb70c441ee447baf892f90ae61807edb18abdfc40f474e2d224f"
+    sha256 catalina:       "77f451db9bc36f6710e928e1b905da2f2b86249fad3af4ec685a66748885b111"
+    sha256 x86_64_linux:   "06625a977631bd6db573b45631324db57107bc98885927ff714367180a7feefb"
   end
 
   depends_on "meson" => :build

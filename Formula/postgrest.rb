@@ -1,8 +1,8 @@
 class Postgrest < Formula
   desc "Serves a fully RESTful API from any existing PostgreSQL database"
   homepage "https://github.com/PostgREST/postgrest"
-  url "https://github.com/PostgREST/postgrest/archive/v10.0.0.tar.gz"
-  sha256 "34e09612e8ad2f26fc6897b41ce2c260497a89425c3860be17c369ddb3229c3a"
+  url "https://github.com/PostgREST/postgrest/archive/v9.0.0.tar.gz"
+  sha256 "14ce20a0e4eb12f7cacb73360c3d40c837a4007d94b7a82f5a586f34587bf233"
   license "MIT"
   head "https://github.com/PostgREST/postgrest.git", branch: "main"
 
@@ -12,17 +12,17 @@ class Postgrest < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8f16ffb2efc906c2415ac28698740a8a8381d0bd2fd2a1085962e3bf0ecf1133"
-    sha256 cellar: :any,                 arm64_big_sur:  "bc89572983d9bc6ca4f8602688aae4fd53623de1e6868856e6321fc3b0ec1491"
-    sha256 cellar: :any,                 monterey:       "98dd4a692dfb57ca9d30c75e7024f7ce2a10320b19e75f55c0e639f74ec3a125"
-    sha256 cellar: :any,                 big_sur:        "2b397c225111a0f50fb2f2a44f6f0b7e11c3e658622b0e149532b2ff76207728"
-    sha256 cellar: :any,                 catalina:       "f4bb0697c939dca690215922cf17658d152a45c7bc24c657e7ddb4f991dcb0ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2116b90dbbf22eaee5025af239dea39224bcd95a7c7156137180263fc0f6d3a3"
+    sha256 cellar: :any,                 arm64_monterey: "42944adf10de9717f24e87f2cf9ed58fb1cf2c4b3a5720d047cedb50b7fafd79"
+    sha256 cellar: :any,                 arm64_big_sur:  "23819a365f67d9be02599d9a6ce66f70d5d2d64d54d7828156a2008793450de4"
+    sha256 cellar: :any,                 monterey:       "e5e0124159c0099b01986015830fada6b5096488db7d33aa4d0702762052c1c4"
+    sha256 cellar: :any,                 big_sur:        "2e69962c69b9c2adc0f11ab2de8580546f6221ae3c3dce0a4527b899a772978e"
+    sha256 cellar: :any,                 catalina:       "65b917925217316d1d1efc7d4b3e00ef17f9bdbb14650c6d2aff8d2d406d1c74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c252ee6b1f53fd611cd4dee29fa9e581c34fcc254f668317da600580b2839fc9"
   end
 
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build
-  depends_on "libpq"
+  depends_on "postgresql"
 
   def install
     system "cabal", "v2-update"

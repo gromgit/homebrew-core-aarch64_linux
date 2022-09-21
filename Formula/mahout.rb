@@ -8,8 +8,7 @@ class Mahout < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "3b7e05dbbd5838236245dd37e3ed7a1cc10d4dd151adbc7979b345cb19daab0e"
+    sha256 cellar: :any_skip_relocation, all: "baaec00c1e35a0a264b4ef3d0e7e5043f4ea8dfb264d3df278bd5fc629d7faf0"
   end
 
   head do
@@ -18,10 +17,10 @@ class Mahout < Formula
   end
 
   depends_on "hadoop"
-  depends_on "openjdk@11"
+  depends_on "openjdk"
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home("11")
+    ENV["JAVA_HOME"] = Formula["openjdk"].opt_prefix
 
     if build.head?
       chmod 755, "./bin"

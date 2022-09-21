@@ -1,8 +1,8 @@
 class Geos < Formula
   desc "Geometry Engine"
   homepage "https://trac.osgeo.org/geos"
-  url "https://download.osgeo.org/geos/geos-3.11.0.tar.bz2"
-  sha256 "79ab8cabf4aa8604d161557b52e3e4d84575acdc0d08cb09ab3f7aaefa4d858a"
+  url "https://download.osgeo.org/geos/geos-3.10.2.tar.bz2"
+  sha256 "50bbc599ac386b4c2b3962dcc411f0040a61f204aaef4eba7225ecdd0cf45715"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,12 +11,12 @@ class Geos < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "25dce9a65e623bc866fc0fdf21be70d2939f33d8f23abc275932e5f3804470c7"
-    sha256 cellar: :any,                 arm64_big_sur:  "4adfc940062c8e534c9596ba2e932fe634e750d2ee53207db14a2949d8af3a4d"
-    sha256 cellar: :any,                 monterey:       "f8f1bd048260aa996c233a61f102f80c4eb045e9922a5c7896974f177fb24956"
-    sha256 cellar: :any,                 big_sur:        "6b4b5202a09fc1bb7d5a2ed971b15ea3af0f242da4c801d21e654a62b26bb469"
-    sha256 cellar: :any,                 catalina:       "cade2a003b9ca0de0c84874967653a4d8cc4fd7e20f19771a8d9badb36122102"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff1f6210032d16af3456e9f3734028013688d6134d8920e30a5b16e7363bc842"
+    sha256 cellar: :any,                 arm64_monterey: "428a34a85cedb1ae8e3f36db4d926fb1c5d4897549d11aec14541eeed417d048"
+    sha256 cellar: :any,                 arm64_big_sur:  "99d4cefa2243a67dba6ee118fc2255edcf524e039179df567e09de4181031032"
+    sha256 cellar: :any,                 monterey:       "1a31f70c0017373e0f8676cfd69ddc3d7bcc3879010e60b0912a6103a4eeebbf"
+    sha256 cellar: :any,                 big_sur:        "d5c404e8bed308173d7a6bbc86ea14610b8ac8dd417af97e420964e4649119ce"
+    sha256 cellar: :any,                 catalina:       "3e5f0c6bd82f9083f4c91745275b34bf440bef7c90f67cfd1de36cbfda53a487"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c24de077aa44a6387c42d9bfedf00082f7244c308ddb9be138e2af54c404bf6"
   end
 
   depends_on "cmake" => :build

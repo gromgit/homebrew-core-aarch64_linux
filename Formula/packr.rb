@@ -6,12 +6,8 @@ class Packr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78402bd55fe8a3c1c2e354e1d0a394bfc62b2c223016f93ce671876cee786b9e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d33f607b95795245e701beae7c7518065a20eff0123cf589a5492623f073f804"
-    sha256 cellar: :any_skip_relocation, monterey:       "95d3bb5b313625de9988d49459df4f7937fc4b6b95c1edde704b6df3e4e76c80"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f8dfe789d79d2db26072577c7d304d12b65a88a36af73e8d188388487bf4ea6"
-    sha256 cellar: :any_skip_relocation, catalina:       "1c9b6831e7d16b51c3489216c96a10200fc08fbfaff22f39e0d4a70ca12e7555"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76c1441bae5ded86a2f6f032b5d69030bdddd94d1a9f10ae4d7a28050612c683"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/packr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee417535b0b3976702f735166dd80717d99190466b66a096fabf4ed28c21ac6e"
   end
 
   depends_on "go" => [:build, :test]

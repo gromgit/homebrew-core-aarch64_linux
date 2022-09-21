@@ -6,13 +6,10 @@ class Libx11 < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "dc03a6058d4ac7ae5c58f30e3cc78a056d26417388190f75947e6b58dc306160"
-    sha256 arm64_big_sur:  "fe550c503a924fd78a9865793706a8e208752b890713a6699282630b28d7ad50"
-    sha256 monterey:       "cf5034cc7c677f80d4301bff99b6135df077fdd0a7933a1054e5f505152da21b"
-    sha256 big_sur:        "69397e1eac69a76cc58f58e7e5764fa2eccaff9fbd891f42a7da0dee72b75d8c"
-    sha256 catalina:       "898dd6a72382f37b6508762d3a377db445be7f254d64a5140a8958b189f27ce9"
-    sha256 x86_64_linux:   "1a0f30a63d5cd9f212f6999156baf0503dcc85c0c9b6ce4fe8a9116727a77a84"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libx11"
+    sha256 aarch64_linux: "b67d6009ce42a153d2bd39d5c476e67ddef490c1ee9983a268f0f3bfaee70931"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build

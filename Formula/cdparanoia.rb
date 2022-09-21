@@ -21,6 +21,7 @@ class Cdparanoia < Formula
     sha256 cellar: :any,                 high_sierra:    "8b8b1eeb36773ce01ef09232e2e7270fc759aedd1814218cbd8eb9f668a4bf73"
     sha256 cellar: :any,                 sierra:         "709190d769f7b8c61d19867ae2faf902a2f84dec6f0d5506bd71c56a99e4a67a"
     sha256 cellar: :any,                 el_capitan:     "135250473fe692dc976ecbf7324676fa8cef3cdb48a091287bb183c31548fed9"
+    sha256 cellar: :any,                 yosemite:       "3cd7bbd1a4a0a7992287b255cf0d6409bdb5f4a3fed245b0fd2296e535e9f2de"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "260243bbe3a8e726d4a9e8207c1905086fbe2375c29c10c91bd31ddd3a4f8f40"
   end
 
@@ -28,15 +29,15 @@ class Cdparanoia < Formula
   depends_on "automake" => :build
 
   # Patches via MacPorts
-  patch do
-    on_macos do
+  on_macos do
+    patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/2a22152/cdparanoia/osx_interface.patch"
       sha256 "3eca8ff34d2617c460056f97457b5ac62db1983517525e5c73886a2dea9f06d9"
     end
   end
 
-  patch do
-    on_linux do
+  on_linux do
+    patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/bfad134/cdparanoia/linux_fpic.patch"
       sha256 "496f53d21dde7e23f4c9cf1cc28219efcbb5464fe2abbd5a073635279281c9c4"
     end

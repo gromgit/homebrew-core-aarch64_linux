@@ -6,13 +6,10 @@ class Anyenv < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fcafa1cbde4f24bb3e88597312c279ad4ad34e5ab80b51a2e1e96afb8b97157"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6fcafa1cbde4f24bb3e88597312c279ad4ad34e5ab80b51a2e1e96afb8b97157"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7a9bd58702840c6aee47e42ff2691681721a494a47cceac00cf10e1b1748879"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e7a9bd58702840c6aee47e42ff2691681721a494a47cceac00cf10e1b1748879"
-    sha256 cellar: :any_skip_relocation, catalina:       "e7a9bd58702840c6aee47e42ff2691681721a494a47cceac00cf10e1b1748879"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fcafa1cbde4f24bb3e88597312c279ad4ad34e5ab80b51a2e1e96afb8b97157"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/anyenv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c234cba8a8456c97c8491b7aac3556ffde2719e86e3e467db7d4d458b5944e1c"
   end
+
 
   def install
     prefix.install %w[bin completions libexec]

@@ -16,15 +16,14 @@ class Lightgbm < Formula
   end
 
   depends_on "cmake" => :build
-
-  on_macos do
-    depends_on "libomp"
-  end
+  depends_on "libomp"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DAPPLE_OUTPUT_DYLIB=ON"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", *std_cmake_args, "-DAPPLE_OUTPUT_DYLIB=ON", ".."
+      system "make"
+      system "make", "install"
+    end
     pkgshare.install "examples"
   end
 

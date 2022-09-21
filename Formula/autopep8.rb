@@ -8,13 +8,10 @@ class Autopep8 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c52de22dd0b9d9a7773db27b587ee9d27c3cafedc121fe7a0abaa3d1c50605cc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c52de22dd0b9d9a7773db27b587ee9d27c3cafedc121fe7a0abaa3d1c50605cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "282206f1a762ce0bcead1bac457509057287548089b3d16c2ca032de98deca37"
-    sha256 cellar: :any_skip_relocation, big_sur:        "282206f1a762ce0bcead1bac457509057287548089b3d16c2ca032de98deca37"
-    sha256 cellar: :any_skip_relocation, catalina:       "282206f1a762ce0bcead1bac457509057287548089b3d16c2ca032de98deca37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "548a6fadf6bcc710185bbd29d444a45cab853b29817949f1208a58bd292c9bc3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autopep8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "39f297deec47c898795e034890b610d9d725ce9a0694cfbdbd387bbe41d8d69b"
   end
+
 
   depends_on "python@3.10"
 

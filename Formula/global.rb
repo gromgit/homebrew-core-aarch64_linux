@@ -44,11 +44,10 @@ class Global < Formula
   def install
     system "sh", "reconf.sh" if build.head?
 
-    python3 = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
+    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages("python3")
 
     resource("Pygments").stage do
-      system python3, *Language::Python.setup_install_args(libexec, python3)
+      system "python3", *Language::Python.setup_install_args(libexec)
     end
 
     args = %W[

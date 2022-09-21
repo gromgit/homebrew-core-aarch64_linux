@@ -16,13 +16,10 @@ class CAres < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a5818fef12f8028c1ee36d9df5213a74b8e3f33b08889043908bc59364cc29b5"
-    sha256 cellar: :any,                 arm64_big_sur:  "2a3a10365f123633607a3569a8cb31afeac814229e17d975c95be5139f33fed5"
-    sha256 cellar: :any,                 monterey:       "62b9590a3b9d30d2db8696da78948fb79a26c139536c3820c4275327fd808559"
-    sha256 cellar: :any,                 big_sur:        "e276dddce0e43aba6e8f39b26be811294ae36cb7c45e203ff656bb52fa30242c"
-    sha256 cellar: :any,                 catalina:       "3d1c10f0de6c0847e972f67e7e6021fde7ccc1f58dc5497182ae7af80bb127f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b66f4b75a81bd37ad1eebefc4a59e4ac41eb8d2d0f2b47f56a661366193dffc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/c-ares"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2cab0be79ba8fd9fed24a0fa52af2ea6679490c36a3421830c96a5082973b103"
   end
+
 
   depends_on "cmake" => :build
 

@@ -1,8 +1,8 @@
 class OpenjdkAT17 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk17u/archive/jdk-17.0.4.1-ga.tar.gz"
-  sha256 "9b3e2558590fbb06ae4c02355919b1f75af9c696b786b113088ab6630e425824"
+  url "https://github.com/openjdk/jdk17u/archive/jdk-17.0.3-ga.tar.gz"
+  sha256 "9a23da36c4e8f26a7197c6e6b763c7be83bc8788f495ae9dadfabadf8c7d57c2"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -11,18 +11,17 @@ class OpenjdkAT17 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "ef9bebef623a07da1d3c1d108155ee2eaa47b3e89d7c0d15ce9fea6e3b0d1f9c"
-    sha256 cellar: :any, arm64_big_sur:  "434ed46f533a434767635778ec7185bfe00a2849b64c19aa3552da805d48e12d"
-    sha256 cellar: :any, monterey:       "7850d052807931b14395f0ba01938be6718518c76c11fb51189a66b0d42d3781"
-    sha256 cellar: :any, big_sur:        "6b73d3f8aef69580a4b5e9f84b8fe63ee6114569646d707fd212a608dc3a9edb"
-    sha256 cellar: :any, catalina:       "c222720861d6ca909e1ce5ecc13d305ae3413422784b95cda3ab7da85e8020f2"
-    sha256               x86_64_linux:   "2215fb5d18e58958974b9c5e6dd97792e4fd9527ee6564ae0846f2598b84a881"
+    sha256 cellar: :any, arm64_monterey: "a0f5189a1719c2d6530ee79eb018470e9e86321c745ed73c5e15c8465df0c24d"
+    sha256 cellar: :any, arm64_big_sur:  "caf9fc1ab57cbe96155d11cc4c5076fa05204058c41dab9bee6e79d79aa27192"
+    sha256 cellar: :any, monterey:       "b7cf051662b5d6a7839e6d65010adff4a0c980fa03b56447090996d6052aa569"
+    sha256 cellar: :any, big_sur:        "c47a05de36d684b0b893fb096bc1adfee80b47b47eda4e08204fab0151abe746"
+    sha256 cellar: :any, catalina:       "49bd4a42120737354c356f2ce35c5b65937fdf8970815693b0268c367f5e5de8"
+    sha256               x86_64_linux:   "1c4ff0b196cbe8daa32e0e73d47b5424572a2f641708ae91a9f6fcc8dbb05568"
   end
 
   keg_only :versioned_formula
 
   depends_on "autoconf" => :build
-  depends_on xcode: :build
 
   on_linux do
     depends_on "pkg-config" => :build
@@ -47,11 +46,10 @@ class OpenjdkAT17 < Formula
   # From https://jdk.java.net/archive/
   resource "boot-jdk" do
     on_macos do
-      on_arm do
-        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-aarch64_bin.tar.gz"
-        sha256 "602d7de72526368bb3f80d95c4427696ea639d2e0cc40455f53ff0bbb18c27c8"
-      end
-      on_intel do
+      if Hardware::CPU.arm?
+        url "https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_macos-aarch64_bin.tar.gz"
+        sha256 "45acad5647960ecde83dc1fb6dda72e5e274798660fa9acff0fb9cc8a37b5794"
+      else
         url "https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_osx-x64_bin.tar.gz"
         sha256 "e65f2437585f16a01fa8e10139d0d855e8a74396a1dfb0163294ed17edd704b8"
       end

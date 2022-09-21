@@ -4,15 +4,19 @@ class NodeAT12 < Formula
   url "https://nodejs.org/dist/v12.22.12/node-v12.22.12.tar.xz"
   sha256 "bc42b7f8495b9bfc7f7850dd180bb02a5bdf139cc232b8c6f02a6967e20714f2"
   license "MIT"
-  revision 1
+
+  livecheck do
+    url "https://nodejs.org/dist/"
+    regex(%r{href=["']?v?(12(?:\.\d+)+)/?["' >]}i)
+  end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "080b711a20d34d0272b737fe0b764afe8e0339c6cf298faee8397a4870ac3b7d"
-    sha256 cellar: :any,                 arm64_big_sur:  "535bf5c436d07b3078237460cba937124540b3fa92c4123a290b24fed6e0a0d9"
-    sha256 cellar: :any,                 monterey:       "a9f6e355460a7eaa9309ae1ba8332040a51409ce3dd462ca957b80ff45c65c42"
-    sha256 cellar: :any,                 big_sur:        "1f790b5c3a7cb07599d61e61be28a076d3980b14f14939d2e3f29daf5f9f4d9e"
-    sha256 cellar: :any,                 catalina:       "a9544a2762f1c2fd862c44cebc867cd2e3ad97836229d5228ac4340bbd0301be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "744c889c42c289732d392589d369c3c462ee83579c863375c0ec745c1e7de10a"
+    sha256 cellar: :any,                 arm64_monterey: "55ac811bdbf7b23af17685ffc6ca8f856b24eb12cdacf0090ba4db180601fcd0"
+    sha256 cellar: :any,                 arm64_big_sur:  "f77863889d72ff635fc8636c2c981129f77b63ca3f8089b1d3352a0f82fba82b"
+    sha256 cellar: :any,                 monterey:       "e17dd5d3ed174f07c209c3d997c754d955391204212015145dfd5a00babd0a1e"
+    sha256 cellar: :any,                 big_sur:        "f11dbd58e394229abb675d9d0f8bd4194b74ed4e00fe4450179864fc90961ff4"
+    sha256 cellar: :any,                 catalina:       "6fbfa5dc3b8ca2f79139a3d590a8672941d2d1d97468994cb0517e67fe56e1f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85107636ad59250c7b50c4f47d44d28fb6044f254f9b5f0f585defbbbb76aaaf"
   end
 
   keg_only :versioned_formula
@@ -21,7 +25,7 @@ class NodeAT12 < Formula
   deprecate! date: "2022-04-30", because: :unsupported
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.9" => :build # fails with Python 3.10
+  depends_on "python@3.9" => :build
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "icu4c"
@@ -29,7 +33,6 @@ class NodeAT12 < Formula
   depends_on "libuv"
   depends_on "openssl@1.1"
 
-  uses_from_macos "python"
   uses_from_macos "zlib"
 
   on_macos do
@@ -38,7 +41,7 @@ class NodeAT12 < Formula
 
   def install
     # make sure subprocesses spawned by make are using our Python 3
-    ENV["PYTHON"] = python = Formula["python@3.9"].opt_bin/"python3.9"
+    ENV["PYTHON"] = which("python3")
 
     args = %W[
       --prefix=#{prefix}
@@ -61,7 +64,7 @@ class NodeAT12 < Formula
       --shared-cares-libpath=#{Formula["c-ares"].lib}
       --openssl-use-def-ca-store
     ]
-    system python, "configure.py", *args
+    system "python3", "configure.py", *args
     system "make", "install"
 
     term_size_vendor_dir = lib/"node_modules/npm/node_modules/term-size/vendor"
@@ -91,12 +94,8 @@ class NodeAT12 < Formula
     output = shell_output("#{bin}/node -e 'console.log(new Intl.NumberFormat(\"de-DE\").format(1234.56))'").strip
     assert_equal "1.234,56", output
 
-    # make sure npm can find node and python
+    # make sure npm can find node
     ENV.prepend_path "PATH", opt_bin
-    if MacOS.version >= :monterey
-      (testpath/"bin").install_symlink Utils.safe_popen_read("xcrun", "-find", "python3").chomp => "python"
-      ENV.prepend_path "PATH", testpath/"bin"
-    end
     ENV.delete "NVM_NODEJS_ORG_MIRROR"
     assert_equal which("node"), opt_bin/"node"
     assert_predicate bin/"npm", :exist?, "npm must exist"

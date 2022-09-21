@@ -6,7 +6,8 @@ class Libpciaccess < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "40ad780e2eca51034f9203259b5970978932f5d437124f333717863a0b900e43"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libpciaccess"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "46a3f98e797772d90f059e9306afca7327085daea8e5a94621202f2f04efda9d"
   end
 
   depends_on "pkg-config" => :build

@@ -1,8 +1,8 @@
 class Qbs < Formula
   desc "Build tool for developing projects across multiple platforms"
   homepage "https://wiki.qt.io/Qbs"
-  url "https://download.qt.io/official_releases/qbs/1.23.1/qbs-src-1.23.1.tar.gz"
-  sha256 "8667bb6b91eeabbc29c4111bdb6d3cd54137092b8e574a47171169d3e17d4bef"
+  url "https://download.qt.io/official_releases/qbs/1.22.1/qbs-src-1.22.1.tar.gz"
+  sha256 "b06003f49683971b552bb800bc134bf6c76cff79e1809cce741c40382b297b04"
   license :cannot_represent
   head "https://code.qt.io/qbs/qbs.git", branch: "master"
 
@@ -12,12 +12,12 @@ class Qbs < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "012a61110f01a833ebf58d0c340746a2e26025e8aec85291bd4e6a7ff61a4aeb"
-    sha256 cellar: :any,                 arm64_big_sur:  "ec0a73b355d8412a3270a48f9e94c4915d9a2f85fc71fe1650fc94e4018bd71f"
-    sha256 cellar: :any,                 monterey:       "9b0a90d79cffd64656bf25044d5bb2d2a487810122ea20c4186fa26a49ffe0a8"
-    sha256 cellar: :any,                 big_sur:        "9be3e9403f505135b5f8fcc0d40fbf06bec24239c320096679a723c6ca2d91c7"
-    sha256 cellar: :any,                 catalina:       "3243117bf46e7dae7855c8c407d62328f1a75b7bad5f1cb0f9a999d30abdce80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8712e15d31e4376d50662e954a5ef07cb016f0828320c87450b3c085b52b94ab"
+    sha256 cellar: :any,                 arm64_monterey: "739cff370d75fe1110290d9f3f1b7ca4c578aae27890d44a47af02801c654670"
+    sha256 cellar: :any,                 arm64_big_sur:  "e311c98d4d8d8dbb647448ccdb991b3e4d847d09ff00dfa66f7577acb9628da1"
+    sha256 cellar: :any,                 monterey:       "e9b21e081c886fd6dac1943e5273dc77b39555f3ad662b19e9bd8aeda7817cb4"
+    sha256 cellar: :any,                 big_sur:        "f682af236f0aa85b53667b7746f4af72e9e1f8cc6b9538c0a681ccc37eb168a8"
+    sha256 cellar: :any,                 catalina:       "11c47e011c05e23430cead51bf023a7bf8e75949f06304338e82c7f265d874b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "871d62e3ac8fd5e9409f819a9a9f555ba21be21e5636c54841bb387c2c082c7e"
   end
 
   depends_on "cmake" => :build

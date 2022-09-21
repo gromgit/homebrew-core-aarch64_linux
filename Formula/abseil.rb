@@ -1,18 +1,18 @@
 class Abseil < Formula
   desc "C++ Common Libraries"
   homepage "https://abseil.io"
-  url "https://github.com/abseil/abseil-cpp/archive/refs/tags/20220623.1.tar.gz"
-  sha256 "91ac87d30cc6d79f9ab974c51874a704de9c2647c40f6932597329a282217ba8"
+  url "https://github.com/abseil/abseil-cpp/archive/refs/tags/20211102.0.tar.gz"
+  sha256 "dcf71b9cba8dc0ca9940c4b316a0c796be8fab42b070bb6b7cab62b48f0e66c4"
   license "Apache-2.0"
   head "https://github.com/abseil/abseil-cpp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d27a0ad54eb544a7f5a272cc1d3d50e6290660480a574b424c98db481107b620"
-    sha256 cellar: :any,                 arm64_big_sur:  "641db05b2d660720d1b97d1ea9b93849fdf65941483871525707fb64c890bbfe"
-    sha256 cellar: :any,                 monterey:       "cbbdfaa39842b6b483ce62c35e4315cdd0c2b9918ae92cf1fd46c02bcf1e4c34"
-    sha256 cellar: :any,                 big_sur:        "e5b7f75a35bcbe0fa096396bd8d6c34a1b66564002dee8c599b6ac8559f73b29"
-    sha256 cellar: :any,                 catalina:       "5fba2bd66821b5033f901918a15947fe28e1b4950a6742184e60d01cd45158dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60f232cba63cc45c520f74a64d50371d124862569a5718077da85b4385928e86"
+    sha256 cellar: :any,                 arm64_monterey: "0c19e80720547d2ef348842242568e27bbc662f4be6b4dc4b40a7477645b9dbf"
+    sha256 cellar: :any,                 arm64_big_sur:  "23ad9b293aad20112786ec85f80a54781edb42081277e18bbda61752965b1301"
+    sha256 cellar: :any,                 monterey:       "a890728e03ba9359d371d55430ca1b86e4b7c28420179b6d05ae4fed2134b966"
+    sha256 cellar: :any,                 big_sur:        "c707d13cb25a75e52333bcbd57e17f522e09e5f073302ce904d61ec026ccd708"
+    sha256 cellar: :any,                 catalina:       "9a2c8277e6d4b348914220580486bf707b2e09d70f6457a60496cc4254426875"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "513087011325dd2d8a006ba7d12c07e6077dc9048fed2d5e36d20c0905681c81"
   end
 
   depends_on "cmake" => :build

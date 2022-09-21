@@ -1,8 +1,8 @@
 class Neo4j < Formula
   desc "Robust (fully ACID) transactional property graph database"
   homepage "https://neo4j.com/"
-  url "https://neo4j.com/artifact.php?name=neo4j-community-4.4.11-unix.tar.gz"
-  sha256 "28810daac5de4a5d5b77ce2da7d7c3da4c5ccf13288bad885b833c35b96100c8"
+  url "https://neo4j.com/artifact.php?name=neo4j-community-4.4.6-unix.tar.gz"
+  sha256 "2e2786674ed565cb77fbd692424d0eca15c82939ef02b6bea68e9bdade7b5e21"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -12,7 +12,7 @@ class Neo4j < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "73bc7b410291367f0e77f403bd3fb49c118a2ff828afbabf9030a9a98dbce383"
+    sha256 cellar: :any_skip_relocation, all: "54caa6306b87bf6541a3022cdfd0f211261e9385e5799a82035695f4d50143c6"
   end
 
   depends_on "openjdk@11"

@@ -4,20 +4,19 @@ class Timg < Formula
   url "https://github.com/hzeller/timg/archive/refs/tags/v1.4.4.tar.gz"
   sha256 "66d2e00b50068fd6638bb8be1859c50ca4f24caef751f9dc95b303f37fb07b1e"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/hzeller/timg.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "544ece49b78ce94cc86b051f79c7d482a422f703eb6a6ac9629cec6e407ab636"
-    sha256 cellar: :any,                 arm64_big_sur:  "0194db39ce6bdd677cbe6ab0fb0ae04f15079d59966714c8452e1a2e6fb0f552"
-    sha256 cellar: :any,                 monterey:       "32c07c228f70b47fa944f87c6c966a4eebac41cfc82df9670af9aeabae465e53"
-    sha256 cellar: :any,                 big_sur:        "072b04b7a2888e2d2b5e3b727cb915a757743d3b4eb7b7e28df4f78d7ee06c10"
-    sha256 cellar: :any,                 catalina:       "476d093d5d8b40f92b8aaa050a5dfa071b581e1cf87fa3c1820c71c8d7a8f620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80bd1ea0746bbe5a216c29ebb345631329ec9cf2a5c3b1c2e90bad48bb7752e5"
+    sha256 cellar: :any,                 arm64_monterey: "de4c65235281a2b9c5d62d28fa39053e21f30c4852ae3f6a0cb419a5ef4231d4"
+    sha256 cellar: :any,                 arm64_big_sur:  "da8576af220bdd5052fcd031c0e2b0e1fb206d449c40354f72d10dfb5d9c6d7a"
+    sha256 cellar: :any,                 monterey:       "f9f639aac4e106fb0c3ab2f4776acee6d6423f4f497491f334e43547e734ccea"
+    sha256 cellar: :any,                 big_sur:        "0efbad0c7a082200d97ec158e1934362d82f5db03aa1130f8ea54088b73c478b"
+    sha256 cellar: :any,                 catalina:       "5a2f9661a9e5ad1ada45486c2efb99a16f070f955d373cefdb63a6c9079e8b24"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c173cd55ef26536b606b64e5044777732fcf67b625d17f6c430947325e8f2ec1"
   end
 
   depends_on "cmake" => :build
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   depends_on "graphicsmagick"
   depends_on "jpeg-turbo"
   depends_on "libexif"
@@ -32,9 +31,8 @@ class Timg < Formula
   fails_with gcc: "5" # rubberband is built with GCC
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", *std_cmake_args
+    system "make", "install"
   end
 
   test do

@@ -11,16 +11,8 @@ class Mpegdemux < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ce2c6346e596ad75dbf869133e777b5ae0297172c93007ec0d68bf57d417faff"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b69d0d03885830c30bc529606bf3f7c95181512714bca1a12e4e8aaa4a83b1cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "e3c324812ab8418d89a93c67b13bcd088f434e762db103dcf9804b8afb687983"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7e9ee9336d84bb82b1ee8f5b415b534ea7a8b859638cedc074875c13be16e40e"
-    sha256 cellar: :any_skip_relocation, catalina:       "1fd3f22495cec5d802f73def919457122829cc617e0a7ca82a91d10e0ab8001f"
-    sha256 cellar: :any_skip_relocation, mojave:         "daa143e087fe5d35e5deda8dd37637b54ba908ba34d050beb0b42b3697b1f67c"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "af6cd127b024079f9584533b143094cbcdb97693007eaffcb6f967942d471712"
-    sha256 cellar: :any_skip_relocation, sierra:         "2a1bae657b91607e47b201f2d97749def3c771911208db70c278bf4a47f4fd7e"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "4f00eabfededc549d4f419b6e6bf7896dbff0c95e83fda5f47067bf73294289b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d77288a69ec6dbb402a4438a41502c23db6f47ac4fbd12d21f7a00fd57121bd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mpegdemux"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c7c1b596b2eda3ac70b6509beaa2bc155093fc1b71ca469ca61144960adb737e"
   end
 
   def install

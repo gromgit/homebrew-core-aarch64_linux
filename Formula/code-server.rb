@@ -1,18 +1,16 @@
-require "language/node"
-
 class CodeServer < Formula
   desc "Access VS Code through the browser"
   homepage "https://github.com/coder/code-server"
-  url "https://registry.npmjs.org/code-server/-/code-server-4.6.1-1.tgz"
-  sha256 "6c66bbb59e06dc38ded2492af5806e6d1987ec42551ab66fd887231ec874f4b6"
+  url "https://registry.npmjs.org/code-server/-/code-server-4.4.0.tgz"
+  sha256 "fc65ce860b2a7c6386788b4f36ba9954e1a606c14f2667e805a003dc81c98e28"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6ebda654ef3190bf888c650f6dfe0dafd7b5848bb5825585d186f925222b720"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e1606fb9ea802ec7eadbfdc03c2cc6bdffb32956b2fdce0c38cfe1b97c6a8b3b"
-    sha256 cellar: :any_skip_relocation, monterey:       "a01b0510b68334e6a18b359641884a0c5b659bf36cd70e294ac668094b6b3660"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9364ef16acb856aea58c6794e1f52fe6bc9415324cb495ea0ce23d9fbcddf6a1"
-    sha256 cellar: :any_skip_relocation, catalina:       "aa547654cb53b98b311f89dbe82907c2b75d83047c8eb5436aeda957e25416f4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1341e1f1f673ea30f536117cc77fd1fc42fe5e730a3859561c66d10b4a27c27d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7b0c0e00bf6d547fca3e7d9a3270dfcf74c252c06bf3c0adc52769a3b7f2e8b4"
+    sha256 cellar: :any_skip_relocation, monterey:       "6a3ee99ac0ad23bb08b5e5be9a073c09cf29ccc7b190345986fd784e777536f6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3d627823d15bc36888d1337e06cc831f0333873ecdb8f3d77e94a20cb42146c8"
+    sha256 cellar: :any_skip_relocation, catalina:       "44d094685f8294767950936aec51833bc5d3b18d0046eaa47e4c1ea80311681e"
   end
 
   depends_on "bash" => :build
@@ -29,7 +27,7 @@ class CodeServer < Formula
 
   def install
     node = Formula["node@16"]
-    system "npm", "install", *Language::Node.local_npm_install_args, "--unsafe-perm", "--omit", "dev"
+    system "yarn", "--production", "--frozen-lockfile"
     # @parcel/watcher bundles all binaries for other platforms & architectures
     # This deletes the non-matching architecture otherwise brew audit will complain.
     prebuilds = buildpath/"lib/vscode/node_modules/@parcel/watcher/prebuilds"
@@ -51,7 +49,7 @@ class CodeServer < Formula
     keep_alive true
     error_log_path var/"log/code-server.log"
     log_path var/"log/code-server.log"
-    working_dir Dir.home
+    working_dir ENV["HOME"]
   end
 
   test do

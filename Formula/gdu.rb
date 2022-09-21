@@ -1,17 +1,13 @@
 class Gdu < Formula
   desc "Disk usage analyzer with console interface written in Go"
   homepage "https://github.com/dundee/gdu"
-  url "https://github.com/dundee/gdu/archive/v5.16.0.tar.gz"
-  sha256 "266bd635d3b5a676f23dd0a9a599d7eb54ac56d5b6aa4ace044b9a3763cf9783"
+  url "https://github.com/dundee/gdu/archive/v5.13.2.tar.gz"
+  sha256 "f4f237f6da470599f6393591282cfd67922a963325859a939ca40ba7e18024a8"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dcc5fdbb25bf9fa83140b7bdfeb31d14512b5b1af5f85c9ffa3112f48db123be"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c701611eba64c18980ced0c2f0619938367d2e46f5828dc6f816ec6736799422"
-    sha256 cellar: :any_skip_relocation, monterey:       "207ece508411210b67ebdf0004295b32cf32a93cd97d6cd0f9cb612dfc9a100f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9e6adaf465568981134f06775ce50c3691f4a57ce6166c9e350c1b4ece798171"
-    sha256 cellar: :any_skip_relocation, catalina:       "8a720bb658da6c9865fa1dc4d72af40eea884a23cb4fae5774092966c020b9a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e85e66cbc0016911f4f730d4b62482e0608e5a18434b2acae93ad39f82fb5b3f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gdu"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9d8507035a0ca9eb15fb22045338d56c05748f4731ca75fad1236af06e5f78cc"
   end
 
   depends_on "go" => :build

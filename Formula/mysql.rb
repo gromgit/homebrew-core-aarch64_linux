@@ -1,10 +1,9 @@
 class Mysql < Formula
   desc "Open source relational database management system"
   homepage "https://dev.mysql.com/doc/refman/8.0/en/"
-  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.30.tar.gz"
-  sha256 "c331ac7a68099a2116097acbb14fd331423d486fe47ce0e346925111b44df69c"
+  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.29.tar.gz"
+  sha256 "fd34a84c65fc7b15609d55b1f5d128c4d5543a6b95fa638569c3277c5c7bb048"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
-  revision 1
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/?tpl=files&os=src"
@@ -12,12 +11,12 @@ class Mysql < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "087a0ccf2725c577cfe4de6c44d6517145e5a8bfa2bf926ab32b378e0acf4dd6"
-    sha256 arm64_big_sur:  "6078d657be355c5080a14f2a9a600816c9fdc130530ee0d044d3ffafd0d279a9"
-    sha256 monterey:       "084a01b67a7bb5d5fd171a4c318de5f9a621487b19bff7737252e549cbf9c5fe"
-    sha256 big_sur:        "aae3214fe212112289a5e7557d69533409976a60cfb331080f0ca460d3bb0d0f"
-    sha256 catalina:       "f9309cdf8443ac1b763925d275180cc369d59b37fdf268044f2ed5b1ed749833"
-    sha256 x86_64_linux:   "51d635cbaaee4370c605fbb58186983ad5e4e5790a990a682f6e28758d97ca19"
+    sha256 arm64_monterey: "462d849e91bcaed0ea7faf967e50cb13166c9d1f1e7ee72849cd14fde1b41392"
+    sha256 arm64_big_sur:  "041bae356a31fb942e57827c7bcacd327dafaf9ae30f2654c65758d8053c282b"
+    sha256 monterey:       "b152c47fb301c2200ea6ccc525307910b903879ed8ba2f0912e09934da9a864d"
+    sha256 big_sur:        "39704edeac2cb2fac5494b0f5f313fb40f0336fc425f1a78af29a5ded340525d"
+    sha256 catalina:       "c5ff449dce2bcb26adbf2ec725821df32f4b7e23be1d1d315a5abc94e39bbc01"
+    sha256 x86_64_linux:   "0bef9bedc6ffcec182258d8d2e471821fcecd82058e6a74d96ed5282d00a4001"
   end
 
   depends_on "cmake" => :build
@@ -28,12 +27,12 @@ class Mysql < Formula
   depends_on "lz4"
   depends_on "openssl@1.1"
   depends_on "protobuf"
-  depends_on "zlib" # Zlib 1.2.12+
   depends_on "zstd"
 
   uses_from_macos "curl"
   uses_from_macos "cyrus-sasl"
   uses_from_macos "libedit"
+  uses_from_macos "zlib"
 
   on_linux do
     depends_on "patchelf" => :build
@@ -44,14 +43,6 @@ class Mysql < Formula
     because: "mysql, mariadb, and percona install the same binaries"
 
   fails_with gcc: "5"
-
-  # Patch out check for Homebrew `boost`.
-  # This should not be necessary when building inside `brew`.
-  # https://github.com/Homebrew/homebrew-test-bot/pull/820
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/030f7433e89376ffcff836bb68b3903ab90f9cdc/mysql/boost-check.patch"
-    sha256 "af27e4b82c84f958f91404a9661e999ccd1742f57853978d8baec2f993b51153"
-  end
 
   def datadir
     var/"mysql"

@@ -4,7 +4,6 @@ class Ruby < Formula
   url "https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.2.tar.gz"
   sha256 "61843112389f02b735428b53bb64cf988ad9fb81858b8248e22e57336f24a83e"
   license "Ruby"
-  revision 1
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
@@ -12,13 +11,10 @@ class Ruby < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "31217c5ddf91622cb444b41e3fa27e91e09606a45732b84e8f680b4020c2fe6e"
-    sha256 arm64_big_sur:  "1bf22db112a85a2c3d39d8f36c2794a1023a072eb6743bd72cc7db5edc5cc46e"
-    sha256 monterey:       "519a9dca4f576cb54858ca6b8371891d4bbfa7268e3baf2839996eac0a253b10"
-    sha256 big_sur:        "49cbb1dddd7c8c7449b7df170c7ee704d36ae4aafdf985eb12d8eccaf91bea76"
-    sha256 catalina:       "e0ab84261c665f24bcd88a8ff6b9cecd7fedb92636da43518d128f4f048a7627"
-    sha256 x86_64_linux:   "4382b9a0940dbfbf8e3b8b63b1e2602e1fa0cabdd6acc7be83ef66077c7d6adc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby"
+    sha256 aarch64_linux: "833dc68b493dba9d195494e1e719f12999b4726a37b543e4d330c906ff0f6dd7"
   end
+
 
   head do
     url "https://github.com/ruby/ruby.git", branch: "trunk"
@@ -33,7 +29,6 @@ class Ruby < Formula
   depends_on "readline"
 
   uses_from_macos "libffi"
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   # Should be updated only when Ruby is updated (if an update is available).

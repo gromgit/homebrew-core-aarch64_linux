@@ -1,18 +1,18 @@
 class QuickLintJs < Formula
   desc "Find bugs in your JavaScript code"
   homepage "https://quick-lint-js.com/"
-  url "https://c.quick-lint-js.com/releases/2.9.0/source/quick-lint-js-2.9.0.tar.gz"
-  sha256 "b0010e2025c3250106df9c2cd2aa67f4643c037159c2f05ba97cbc9b02b04837"
+  url "https://c.quick-lint-js.com/releases/2.4.2/source/quick-lint-js-2.4.2.tar.gz"
+  sha256 "c52f961669439ae13e9676d471118f995baf46279da70ac0a7c98c4aede925fd"
   license "GPL-3.0-or-later"
   head "https://github.com/quick-lint/quick-lint-js.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e829b743179adba4839d6dcb23221a01bc1c473afe2033c4b0b324998cbefedb"
-    sha256 cellar: :any,                 arm64_big_sur:  "3911941557711252f7b12a524807edc354d2abaf4f2306a1f035ed2cd07e4cc9"
-    sha256 cellar: :any,                 monterey:       "349970456ff1f94dc70d21f466c7db4efb65366741d0b15f2a5f095da397b144"
-    sha256 cellar: :any,                 big_sur:        "e5b16442309306498aded07542bff7eef8abaa7c75b0939699e94960cf78b266"
-    sha256 cellar: :any,                 catalina:       "022aac5626b20882aac39adfc4c5b9daba54fb679dd76b9db112bff1374033f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf8465c87fb1027b49eb0df5cf113c2bce08512a0e39a37dd95b79cbe913850b"
+    sha256 cellar: :any,                 arm64_monterey: "89a1773ca9906bdde6449170f7c1f1dd49361f2335a9f310cd42058662e0f860"
+    sha256 cellar: :any,                 arm64_big_sur:  "b06bd33d74a281673276b1713de5e3fdfb89f5574a42b1837d0639f5344cce80"
+    sha256 cellar: :any,                 monterey:       "acefec368522b6d17d21a3fa780e197eeb5d305d6d8db64095ee5418a5a0cbed"
+    sha256 cellar: :any,                 big_sur:        "cba4ae88794eb5dc71568135e85593ab1f1c043f4851a9ed5379f6029da12e37"
+    sha256 cellar: :any,                 catalina:       "22a563cbbc25c78dda6896ad3689de97f7f45986483d699f1c557c785fd65e07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50b6994fbc6b784a77899e6b2549af29ba391c5a12c26befd65b50af115efd63"
   end
 
   depends_on "cmake" => :build
@@ -45,7 +45,9 @@ class QuickLintJs < Formula
                     "-DQUICK_LINT_JS_USE_BUNDLED_SIMDJSON=OFF",
                     *std_cmake_args
     system "cmake", "--build", "build"
-    system "ctest", "--verbose", "--parallel", ENV.make_jobs, "--test-dir", "build"
+    chdir "build" do
+      system "ctest", "-V"
+    end
     system "cmake", "--install", "build"
   end
 

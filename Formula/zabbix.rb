@@ -1,8 +1,8 @@
 class Zabbix < Formula
   desc "Availability and monitoring solution"
   homepage "https://www.zabbix.com/"
-  url "https://cdn.zabbix.com/zabbix/sources/stable/6.2/zabbix-6.2.2.tar.gz"
-  sha256 "f0e7a9abb0f65d700f531253b91c31165077a9c94769cc8d238a423ada852773"
+  url "https://cdn.zabbix.com/zabbix/sources/stable/6.0/zabbix-6.0.4.tar.gz"
+  sha256 "5743b6cc2e29d9bd242aa88b2835f3ded0be177509000d84db74e1159c5afa75"
   license "GPL-2.0-or-later"
   head "https://github.com/zabbix/zabbix.git", branch: "master"
 
@@ -12,16 +12,15 @@ class Zabbix < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "54e290f946b05442f6aea69e14df76ffc39448960e7f35f834f5d7aaee79aa87"
-    sha256 arm64_big_sur:  "95daba9c12acab84e686f13e3c7612438ebe0958a524f79ceb0d3818f086b2f9"
-    sha256 monterey:       "5e37f05abc4f086ca020a694dfc59a01829b86aab1b2bbdef57cc89442cd17ff"
-    sha256 big_sur:        "c21f9a3ded5f9a4b907b09d40672ac2374f4be5033c5ff90ea029ac1f463fab7"
-    sha256 catalina:       "85be8059ec39f94532c9a8458db4d0c533cd4cfbbad8bf19e3612353670588dc"
-    sha256 x86_64_linux:   "9ee9cd71552f20b44206ea7bbaffd8edd5e9587377272bafb69a0a0cccac4cd3"
+    sha256 arm64_monterey: "d9e57fac7e26b546f7475bf52dc7384744fe12d5483c576038240c5f06d376e4"
+    sha256 arm64_big_sur:  "fd9d418501cef8fda973942ea792e7475aaceb3f9aa564a9f643537938dd96aa"
+    sha256 monterey:       "95e8b14c4fea6f8da5fb57df457d7a1dd6b0e0d63b95a568e19684ac96bb50cf"
+    sha256 big_sur:        "ae88bb4ff58258fc050647c1655a6d577dabfa265101e0ffae5f7856b5fe65e0"
+    sha256 catalina:       "35ea17458ffe3f993e488902029092a67b32f7a9e70759151ed4d44d00a1c8d4"
+    sha256 x86_64_linux:   "dc5f1232cf3403a78ee6ad3995d17ced5d17f65749d28fcf72aa10578843a7b8"
   end
 
-  depends_on "pkg-config" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
   depends_on "pcre2"
 
   def install
@@ -31,7 +30,7 @@ class Zabbix < Formula
       --sysconfdir=#{etc}/zabbix
       --enable-agent
       --with-libpcre2
-      --with-openssl=#{Formula["openssl@3"].opt_prefix}
+      --with-openssl=#{Formula["openssl@1.1"].opt_prefix}
     ]
 
     if OS.mac?

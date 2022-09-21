@@ -4,15 +4,16 @@ class Clip < Formula
   url "https://github.com/asmuth/clip/archive/v0.7.tar.gz"
   sha256 "f38f455cf3e9201614ac71d8a871e4ff94a6e4cf461fd5bf81bdf457ba2e6b3e"
   license "Apache-2.0"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "acf22810f4d0f153a53b2c35bc995c74757e3241d8d43f312a7cd5898dd1cf35"
-    sha256 cellar: :any,                 arm64_big_sur:  "220094b17e96838d519b0cd2f9cf76f7ad9e281eda6e905d5089305e2f0397e0"
-    sha256 cellar: :any,                 monterey:       "3df0179ee07c6eefd3b47f41729efaa8d75000c818896f28f7a86195470439b8"
-    sha256 cellar: :any,                 big_sur:        "2d983a2abf0507d882b39affed117a6d57db4e5b1867aa9ab47f3f8f20b4a1b6"
-    sha256 cellar: :any,                 catalina:       "7df786779866b3f1800f2adca1646085bddaa8ef98129ec27ec868968fa867cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9078f87299b67452fe186206012954ef0b54b77c14b0fb8972c7238ccd1be73c"
+    sha256 cellar: :any,                 arm64_monterey: "02d8da157f889f384abb2900d10ead88cc6bfaba984165e78a92f6fbce100f6e"
+    sha256 cellar: :any,                 arm64_big_sur:  "20bb528940048dacd9f0eb67b3a1fe849e9e54d1c7e9a7c58da1fc9814beb1c8"
+    sha256 cellar: :any,                 monterey:       "14853fce6b1e8ccd447df646d60b9277a23e72279dd74c40677b823451801995"
+    sha256 cellar: :any,                 big_sur:        "cb33d312ff97b10b5761ceb105e3a5d63ab11c48db072c199108167cecf47854"
+    sha256 cellar: :any,                 catalina:       "c6e0fc40838d76e9632e21e1a781603a1a75d584a3206300fe0a9f7272d9b702"
+    sha256 cellar: :any,                 mojave:         "72f17c87e0c824cea89ba5fa383cf22d013751997a916a408eaa8408544292fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adbd6fc3d72a07a847e887fa050e91598e3045fa9d9dc251cec0953a6f6626d5"
   end
 
   depends_on "cmake" => :build

@@ -6,8 +6,10 @@ class Checkstyle < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6404adda5cf164cc302c40878422315cd4e792db0d2e0d134dcbb8593c19acfd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/checkstyle"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c59677e38ce766ecfe40d801c4b4d042d2e8ba0f6403d1fb9a76142840f75c0a"
   end
+
 
   depends_on "openjdk"
 

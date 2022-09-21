@@ -4,16 +4,16 @@ class Dspdfviewer < Formula
   url "https://github.com/dannyedel/dspdfviewer/archive/v1.15.1.tar.gz"
   sha256 "c5b6f8c93d732e65a27810286d49a4b1c6f777d725e26a207b14f6b792307b03"
   license "GPL-2.0-or-later"
-  revision 14
+  revision 12
   head "https://github.com/dannyedel/dspdfviewer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "00e271e02d46e1d1378e88ee1b332a6bb4bf9a36990ea0c7cb27a9650bc39f95"
-    sha256 cellar: :any,                 arm64_big_sur:  "7421f2e247a714e2545c230c1d9b47e7908f44dc50d20de953e2ee545f86edfd"
-    sha256 cellar: :any,                 monterey:       "f17cfd6dfdb3c63bef04a2fade88b46b9f0321937138e080d1255f30f17da6ef"
-    sha256 cellar: :any,                 big_sur:        "a395d0fc80209d2f00e5b54d197442cb789c6aafb7b38ee96ed0ee685be5c5b6"
-    sha256 cellar: :any,                 catalina:       "b44d2f06611d9f4e33b0af5ab2ea4f375445f2b92f67e484bb57029cfc053a49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "949d272617dea22608b31f67977f640aef4c804cf0039c8443b07934f7daa228"
+    sha256 cellar: :any,                 arm64_monterey: "da24ba97fbae24b36492e878571a4a1cf07cf7979ded00ccc07c23f86e26ce1c"
+    sha256 cellar: :any,                 arm64_big_sur:  "8b5db6a6870b1e825274f0a28a1f41da06e7325d45b21e700f2de94c59cf7e72"
+    sha256 cellar: :any,                 monterey:       "26f5ad626166f23fe820ea41ded7cb9c3ab328178ee3f9d0eb5319fe02819f16"
+    sha256 cellar: :any,                 big_sur:        "9a7b4b3ada6b75e933a8d577f9dc67e86eed733f5eab383ebe59dbf8c6fb2cd8"
+    sha256 cellar: :any,                 catalina:       "de51c0869902887ee1f385d68358a04414bd85adea00aa481e1310a417e0749d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "faeff34b7271731f882d46087c907b565b5218c77a6b57eba2227fb477cf42ab"
   end
 
   depends_on "cmake" => :build
@@ -25,7 +25,7 @@ class Dspdfviewer < Formula
   depends_on "freetype"
   depends_on "gettext"
   depends_on "glib"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "openjpeg"
@@ -39,12 +39,13 @@ class Dspdfviewer < Formula
   fails_with gcc: "5"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
-                    "-DRunDualScreenTests=OFF",
-                    "-DUsePrerenderedPDF=ON",
-                    "-DUseQtFive=ON"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args,
+                            "-DRunDualScreenTests=OFF",
+                            "-DUsePrerenderedPDF=ON",
+                            "-DUseQtFive=ON"
+      system "make", "install"
+    end
   end
 
   test do

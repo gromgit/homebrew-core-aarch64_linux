@@ -1,17 +1,17 @@
 class PandocPlot < Formula
   desc "Render and include figures in Pandoc documents using many plotting toolkits"
   homepage "https://github.com/LaurentRDC/pandoc-plot"
-  url "https://hackage.haskell.org/package/pandoc-plot-1.5.4/pandoc-plot-1.5.4.tar.gz"
-  sha256 "481969a763903c19787054b85da10f814e96671f0880f90ecd0e62ac0afdb6ae"
+  url "https://hackage.haskell.org/package/pandoc-plot-1.5.1/pandoc-plot-1.5.1.tar.gz"
+  sha256 "216d7d0c5db2716ac2be076cf8b405f5da451900645c97721a98c841d8571358"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab6de4c6432a454f63e7d9eab0cbee1d1bbf21f02285f440c0c0065676e94607"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47215bd3b0adc7a5e563d39166129ddf854d1c10fd1c34d91577d7b9d73d3fc9"
-    sha256 cellar: :any_skip_relocation, monterey:       "31bbbb42a89b7f4965bcfa0bd83f9b51b8ea86a023c2a2c80cb680587ead0ebb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b07d5070b5425f0f08c45d3aaab5e805c859e82bc84fa70215fea13ffffe121"
-    sha256 cellar: :any_skip_relocation, catalina:       "d93868b01fb949ab8074e988a300d7d1a5ac2853e78477ed90a9e4407b6d8205"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "34d8bfdae956f8ba9c5a042f60449eaff0c263bcafd43e44af3fdcfaf7b7453c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c154bfae27f884c857c509966a89745d9dc370ad25bc233c4f09486661f40ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00f0eeed755f85289826ad0830b38baa0972776d4b260a7cc8c5e37ab2a6783a"
+    sha256 cellar: :any_skip_relocation, monterey:       "8fd2509415802e0fcb3f6307a7986e57117b1fb88a41d03b52eb4f20ca793b02"
+    sha256 cellar: :any_skip_relocation, big_sur:        "95c496284aaa92f6d0121fb2f767a11386b146b7dc85ad6a94a78cfc0106cd11"
+    sha256 cellar: :any_skip_relocation, catalina:       "38c2d85123870ccc43ffebb913bfe23d998307e1e4a034db5273af167522ef1f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1fb7c505a9ab2968ed9638e97be3a4aeba28d016281a79a3b27808ac7b05b1d"
   end
 
   depends_on "cabal-install" => :build

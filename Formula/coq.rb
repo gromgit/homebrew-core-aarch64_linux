@@ -1,8 +1,8 @@
 class Coq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://coq.inria.fr/"
-  url "https://github.com/coq/coq/archive/V8.15.2.tar.gz"
-  sha256 "13a67c0a4559ae22e9765c8fdb88957b16c2b335a2d5f47e4d6d9b4b8b299926"
+  url "https://github.com/coq/coq/archive/V8.15.0.tar.gz"
+  sha256 "73466e61f229b23b4daffdd964be72bd7a110963b9d84bd4a86bb05c5dc19ef3"
   license "LGPL-2.1-only"
   head "https://github.com/coq/coq.git", branch: "master"
 
@@ -12,17 +12,16 @@ class Coq < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "49ab12e191b51e815c80b695c207813eb17a33698d3814387cfaa92776726367"
-    sha256 arm64_big_sur:  "1ff641d832c407834e85a5e518c3afe29adc8d82f9f1c4ebc69caaf91e99c033"
-    sha256 monterey:       "ffdd7527e08e32012f2c49295aa45955d937ba7e97dd3bd085635f15b51463c9"
-    sha256 big_sur:        "77ab0ab206936dae52fee15b2d38e457c30ac7bbf29ce0521f7b1db4e8d5b974"
-    sha256 catalina:       "355dabbfa119eff9e1ff8fa10864cda98a4182ab4ade1d07d05d450ccaba4344"
-    sha256 x86_64_linux:   "6a6a6986f7c285b95c13235b146fd3bc7bf85838864e253a7659a1b96d98d2c1"
+    sha256 arm64_monterey: "94d901ca4675f97322ae04f3474bb0345673d8925c30128c170c09ef97c9904d"
+    sha256 arm64_big_sur:  "f58c9dd0cf172093fbc08189ed89885c0eb492685cf8d852798366414733eb05"
+    sha256 monterey:       "b8b12628eb6693abc60a80e02b312429d01d354569338f7641e54238b7abf754"
+    sha256 big_sur:        "40514554b814a1d95d128baf4d2fffb54b01ec51821dc3cb228a4332a79ea6f5"
+    sha256 catalina:       "8b9006e565578633129b4eba9ec6bc752456a70748ad9358beefb7c4d389c7fb"
+    sha256 x86_64_linux:   "01ac370c205cc12a7b1370b476013e085d418a2ba4b420d1f8f7d21ae52d4953"
   end
 
   depends_on "dune" => :build
   depends_on "ocaml-findlib" => :build
-  depends_on "gmp"
   depends_on "ocaml"
   depends_on "ocaml-zarith"
 
@@ -30,10 +29,9 @@ class Coq < Formula
   uses_from_macos "unzip" => :build
 
   def install
-    ENV.prepend_path "OCAMLPATH", Formula["ocaml-zarith"].opt_lib/"ocaml"
     system "./configure", "-prefix", prefix,
                           "-mandir", man,
-                          "-docdir", pkgshare/"latex",
+                          "-docdir", "#{pkgshare}/latex",
                           "-coqide", "no",
                           "-with-doc", "no"
     system "make", "world"
@@ -66,6 +64,6 @@ class Coq < Formula
       intros; lia.
       Qed.
     EOS
-    system bin/"coqc", testpath/"testing.v"
+    system("#{bin}/coqc", "#{testpath}/testing.v")
   end
 end

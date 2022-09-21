@@ -12,13 +12,10 @@ class AmqpCpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ec00a2b6a9636a99b3e164284a9d65ebdcf2293fda167647ade88fe0fcb3c61"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b5227ad442f8abe8932c375d21a71047f10c585fd28e57305771cfff4cb0d22"
-    sha256 cellar: :any_skip_relocation, monterey:       "2f8f8868acd5abcaa1174a6114d4d8616e18efa54efaefb11fa356ebc94d2f6c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c86f56420a57c32a03e7541ac3db1fde7c1eb60bec33100375107fd41b5b0aeb"
-    sha256 cellar: :any_skip_relocation, catalina:       "8b17778d04251e140bd89b61002e11d48f18570cad294aadd19bbd24c406c49c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71d9aa8520cddc67a852be9cc96315daa0ebb064300acff45ea63f271fe07a27"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/amqp-cpp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f3e6fa2b069bf18801ae21d7453f6cc9accbde6a39b99f35769be80e4849ff75"
   end
+
 
   depends_on "cmake" => :build
   depends_on "openssl@1.1"

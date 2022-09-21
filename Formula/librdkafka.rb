@@ -1,8 +1,8 @@
 class Librdkafka < Formula
   desc "Apache Kafka C/C++ library"
   homepage "https://github.com/edenhill/librdkafka"
-  url "https://github.com/edenhill/librdkafka/archive/refs/tags/v1.9.2.tar.gz"
-  sha256 "3fba157a9f80a0889c982acdd44608be8a46142270a389008b22d921be1198ad"
+  url "https://github.com/edenhill/librdkafka/archive/refs/tags/v1.8.2.tar.gz"
+  sha256 "6a747d293a7a4613bd2897e28e8791476fbe1ae7361f2530a876e0fd483482a6"
   license "BSD-2-Clause"
   head "https://github.com/edenhill/librdkafka.git", branch: "master"
 
@@ -12,12 +12,13 @@ class Librdkafka < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "51cf809caf8626828668859f212e29dd644a8cbe6bbd1740c10edf0b565f0c2f"
-    sha256 cellar: :any,                 arm64_big_sur:  "71fd99b66724e9cde7fc862eadd2043b3c0a072c5ef564d6400da24b47e4d26c"
-    sha256                               monterey:       "9b56f5818e278cec646eb2c93f3d32b19eddfeacb1ec96bff9ba95b7232031fd"
-    sha256                               big_sur:        "939f96a1a1f5fc8caeeb5e0256fe2ea3a319d27f7519739b2699aef96f1bbebb"
-    sha256                               catalina:       "09dee2fe5791509406023eb4510bd19ac9f32e675adbfebcdba3288864927083"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "939c1bf09ef24b036644cb8cd1f15c517e74f4ea6f015082308ac828ad135ee0"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "62d464f0c91804cbc7e243d2947a3684fbe7f984fed62a61911c4e758274b213"
+    sha256 cellar: :any,                 arm64_big_sur:  "f173038bf4ca75233c4d323dd07743d04accce68aa8513284b4ec1465a689589"
+    sha256                               monterey:       "a3852aef4d08f02186ac10d3ac20dbbf5270b1ded8c8a2ceac004bfde3936488"
+    sha256                               big_sur:        "40c00838eb97e3781930de8c4c743319fb126cbfd63195cd3ccc561380835c02"
+    sha256                               catalina:       "00b5f82f5bdc5e71d80355125634e30ec04059fce88dac2b4560259bdabbe990"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e11b1becd5dc7eabf9f453e92cd4a9f71fa0e16ff92a07baa265021f4efebd99"
   end
 
   depends_on "pkg-config" => :build
@@ -26,10 +27,6 @@ class Librdkafka < Formula
   depends_on "lzlib"
   depends_on "openssl@1.1"
   depends_on "zstd"
-
-  uses_from_macos "curl"
-  uses_from_macos "cyrus-sasl"
-  uses_from_macos "zlib"
 
   def install
     system "./configure", "--prefix=#{prefix}"

@@ -11,13 +11,10 @@ class Pcre2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "18b810bc5ddba9960505488662ad3b122c898ded44461e2dfb871ee32abbe0fb"
-    sha256 cellar: :any,                 arm64_big_sur:  "e9ad944caf659a16e81a3232da8b9d21547b9979cc784f9d242860667ed757a5"
-    sha256 cellar: :any,                 monterey:       "3d2707e8d5a80e1a28875e3b9c7b47cebaf5fd420049d6f1a72fa933b0e68339"
-    sha256 cellar: :any,                 big_sur:        "0108a261b51c0c8628eb94fb92a00e33867dccac8b6756a71a24e47f596125c7"
-    sha256 cellar: :any,                 catalina:       "b25728793286a5fcd8a92d4a75033e20df74c60ffe1d5d886ea5ad719fe25927"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3b73a0c4061aefa98f11f9dfa6c10aadcbdb105a9328d3d66b64e76b9b0538b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pcre2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4bb6d88589bdd74cf438a8407793e2060e9edf0fb6b55857d28127b90b6176e1"
   end
+
 
   head do
     url "https://github.com/PCRE2Project/pcre2.git", branch: "master"

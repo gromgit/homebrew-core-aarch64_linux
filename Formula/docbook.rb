@@ -12,15 +12,10 @@ class Docbook < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dcab543bb0e0ae56e0aa106b61f77a111d52aa002c0418aae93f9fe6ac3cb332"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "53a9dc79db8b2d06dc75009d5d09fc797ddcd5eb4ca040d606efd35ae4fa3829"
-    sha256 cellar: :any_skip_relocation, monterey:       "dcab543bb0e0ae56e0aa106b61f77a111d52aa002c0418aae93f9fe6ac3cb332"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c4e8398b5548cef2830169aadaf6221ac9ee7e6733547642ccee1ea81e07e99"
-    sha256 cellar: :any_skip_relocation, catalina:       "8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
-    sha256 cellar: :any_skip_relocation, mojave:         "8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dcab543bb0e0ae56e0aa106b61f77a111d52aa002c0418aae93f9fe6ac3cb332"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docbook"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1fb8156c775546296a654fbbf91abcc77718a0a70f22203175f3928e64f0c760"
   end
+
 
   uses_from_macos "libxml2"
 

@@ -5,14 +5,13 @@ class Gdb < Formula
   mirror "https://ftpmirror.gnu.org/gdb/gdb-12.1.tar.xz"
   sha256 "0e1793bf8f2b54d53f46dea84ccfd446f48f81b297b28c4f7fc017b818d69fed"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   bottle do
-    sha256 monterey:     "b01f3958cc295ef0b3a270ddcddfdbca79dd09c7df08175a84d687af11c3d458"
-    sha256 big_sur:      "00b147895f10aa3a21f394f347fb6b360027f1088581cda4bd82e551cf0ae0e0"
-    sha256 catalina:     "39b4bc0defa847236aaed8ada0e4bcbe6a2e4f0c7de18a844cf6a018568433f9"
-    sha256 x86_64_linux: "5e0713b32a6becb1a12ee508269563fc6ae1fa8d0698d9f03b6c7fa4470f4bc4"
+    sha256 monterey:     "2a067be29153e334e732082adfaf3f7579d6bc355c75250d2a04e19b6ef6c0e8"
+    sha256 big_sur:      "333e8565b1af77ab81aa531a4f088bbe29fff27b259c909eadc90cc62d75cb36"
+    sha256 catalina:     "4e90533da0983000eca1e41e1d77675df3f4af6d68cd573d1e8f7f53e38763c7"
+    sha256 x86_64_linux: "1219b819cc5d73edb71169c8e5052a69bc79e7a2b54c65d1fccae9d44feb4099"
   end
 
   depends_on arch: :x86_64 # gdb is not supported on macOS ARM
@@ -22,7 +21,6 @@ class Gdb < Formula
 
   uses_from_macos "texinfo" => :build
   uses_from_macos "expat"
-  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
 
   on_linux do
@@ -48,7 +46,7 @@ class Gdb < Formula
       --disable-debug
       --disable-dependency-tracking
       --with-lzma
-      --with-python=#{Formula["python@3.10"].opt_bin}/python3.10
+      --with-python=#{Formula["python@3.10"].opt_bin}/python3
       --disable-binutils
     ]
 

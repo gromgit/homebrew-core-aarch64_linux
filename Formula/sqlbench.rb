@@ -7,13 +7,8 @@ class Sqlbench < Formula
   head "https://github.com/felixge/sqlbench.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14d3a0b3a26e3291ae1039e67c72970b4a1b0388387b919f2c71e01e24e6a429"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8373986acd8ee9e32df964c5bff6b365f29afa06fa256789017112d9b07ffcf2"
-    sha256 cellar: :any_skip_relocation, monterey:       "a59e25067b830b0062a0d3c7fa98da5c31ef16c0763303f5acf16238aead26a6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9a74a774e1c5c5512b9230713af78f3694d38f237241817740c8f244febe8e09"
-    sha256 cellar: :any_skip_relocation, catalina:       "a138dbb8bf3fa6293e51b49e91e35078c8c2d7dc399c70a61705f047b519a8f1"
-    sha256 cellar: :any_skip_relocation, mojave:         "382ff90c210126e6803b47d1b267761d592b1d9898f6804730beb26df80af917"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0e961ada32e3e6588b0a328d3030f39e7bcc1457b63573608347e28cd5960cf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sqlbench"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f3668f339e5079c51c9c5ee151ade8b8f303abce36a3798b8c8857414e40ced4"
   end
 
   depends_on "go" => :build

@@ -6,11 +6,7 @@ class Libapplewm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "054032d8ea48004ed41b659815c0d934cb386280d7651ea304118395bafdc360"
-    sha256 cellar: :any, arm64_big_sur:  "0356059f0accd7c74e4082d944d1404c5b36457d8b3ecc7bee80faeb7523b16b"
-    sha256 cellar: :any, monterey:       "05a90d77f0c0803ee859872051157b3070f97b8ab7999d7f4c7ed02e1df57a24"
-    sha256 cellar: :any, big_sur:        "33eb76e5d25de65e9970f5cb9795c8933090ce9eb4e2c9574d589c0b222dde39"
-    sha256 cellar: :any, catalina:       "c3e392ce25599cfe0929f1cd14a24a4d512697c952f15dea0533c2dbb8755b23"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on "pkg-config" => :build

@@ -9,8 +9,10 @@ class ApacheSpark < Formula
   head "https://github.com/apache/spark.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "70d5e3f211b3c2ffceacd171066bff9089a67ce11624288c53a9b654fd4decee"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apache-spark"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "db8c95913d1bcbe16812fbead0e6a4afb75dc17b1c593a71522665f757d4e6a3"
   end
+
 
   depends_on "openjdk"
 

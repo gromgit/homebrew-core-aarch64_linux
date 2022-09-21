@@ -1,8 +1,8 @@
 class X3270 < Formula
   desc "IBM 3270 terminal emulator for the X Window System and Windows"
   homepage "http://x3270.bgp.nu/"
-  url "http://x3270.bgp.nu/download/04.02/suite3270-4.2ga5-src.tgz"
-  sha256 "bed21cc51572f0248c9a11436d0f8b79ab971a65dae6b5a857625b173798bf9e"
+  url "http://x3270.bgp.nu/download/04.01/suite3270-4.1ga13-src.tgz"
+  sha256 "31b256f018099a613c4abc1836f72d00cd18def9df2486ce0ab01130bf9ca88e"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,12 +11,12 @@ class X3270 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e3977b6ea2a5db8988c1d78cba44a02a1e705db27cadaa58404e323a02803985"
-    sha256 arm64_big_sur:  "b15fbaa76fea0ff3f5be128fb9c5cfe4223744e10012f461ceb184d9e6ad2104"
-    sha256 monterey:       "4f66fdf0642cb1b4427bacc890c55851e24e09bf7c73478011586f5dc5b32407"
-    sha256 big_sur:        "0bd89ade1161e3e3680f64bd256e61f37d261cbfc0abd8327d13c4fee94b33fd"
-    sha256 catalina:       "01cc5f9b06fab6ec4e24854684bec3313586a0ff8c6417717fc1e12b7b196a5e"
-    sha256 x86_64_linux:   "50ae82d5efd4877fb79359580443538d07f8b1b5a7c76cabda82ef2d5a000804"
+    sha256 arm64_monterey: "17eae1f7bb53abd100e3c0b12aa35fe8286a27026e5cc38a617756f4c6bf6c04"
+    sha256 arm64_big_sur:  "dfffc828fb2abea2e254cdc3f00c5ce9dbc6c539fbceb7bf86ef89cf231b3e28"
+    sha256 monterey:       "79c3fb4ae749288b70a7f8528d26321a8fef53cb40b98c82cf7c4969ab66ca25"
+    sha256 big_sur:        "2cbfb4bf23c1cf7c4f80158e2fcb73c25b75db02de757559987a767b0aeec4d9"
+    sha256 catalina:       "f3ee0a641f9a2c7962abaf2cf0c48212db3fb34b25c92297dbd495d3fb4bd316"
+    sha256 x86_64_linux:   "3e3162289affd48aef816b823497d33d1695814f6f2c151f0f89264d764dff77"
   end
 
   depends_on "readline"

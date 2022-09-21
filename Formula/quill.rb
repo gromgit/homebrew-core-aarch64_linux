@@ -1,30 +1,25 @@
 class Quill < Formula
-  desc "C++17 Asynchronous Low Latency Logging Library"
+  desc "C++14 Asynchronous Low Latency Logging Library"
   homepage "https://github.com/odygrd/quill"
-  url "https://github.com/odygrd/quill/archive/v2.1.0.tar.gz"
-  sha256 "66c59501ad827207e7d4682ccba0f1c33ca215269aa13a388df4d59ca195ee76"
+  url "https://github.com/odygrd/quill/archive/v1.7.2.tar.gz"
+  sha256 "e2153c6e25f3a6cee47c2a9edbabdace418f6d64f62cd701dfdae38d5892bb1b"
   license "MIT"
   head "https://github.com/odygrd/quill.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1cc82aa7d85b91e69de1abfa049db94d3e0ee5a89d826fe4b5184b9ea9677dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40ea9265eea1e8daefe213171b1343870adfe15701eed2c63455ebde2fc51dea"
-    sha256 cellar: :any_skip_relocation, monterey:       "eb647974436749da7d6c4d7b28dda1ee563ccba93c3ada81c0ab4d7f0e91f9f9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e6451e2a31e352b52f68d465953dd162c52daae87957cb47d16af6c043a22bc9"
-    sha256 cellar: :any_skip_relocation, catalina:       "fb8b121919848c7b0e56e8c6fdcabac2d455c518c5860260c6e24106acb97957"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b62d4908f033f0c91343ef7399f1e7b7406c57c155d28b26f1291805a89554b5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4d1156c5e15f71b4431e3bfce7813de6ecac7f65fe564ff444a8f34fff89192"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd3a53ddde24590eb81882f8f297e74fd8555de87f08d6a9c7e2ace4df41739f"
+    sha256 cellar: :any_skip_relocation, monterey:       "0545c76cfaf31b9183fbe1a307a022bba058be60fd719af2e302be5d412875e9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f3a50bf8db2b560acd26ab61519ab0fd9664520cc4f88955ebe72f3e4b215f35"
+    sha256 cellar: :any_skip_relocation, catalina:       "2526b1dd073fbc7c872787128585765bdc61c420e687ae675aec2cdfd6f989a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "014d8a5d06e471b29604c26c0b167d7328f5cd95fbb6cdc77d9c172f1a16c6da"
   end
 
   depends_on "cmake" => :build
-  depends_on macos: :catalina
-
-  on_linux do
-    depends_on "gcc"
-  end
-
-  fails_with gcc: "5"
 
   def install
+    ENV.cxx11
+
     mkdir "quill-build" do
       args = std_cmake_args
       args << ".."
@@ -45,7 +40,7 @@ class Quill < Formula
       }
     EOS
 
-    system ENV.cxx, "-std=c++17", "test.cpp", "-I#{include}", "-L#{lib}", "-lquill", "-o", "test", "-pthread"
+    system ENV.cxx, "-std=c++14", "test.cpp", "-I#{include}", "-L#{lib}", "-lquill", "-o", "test", "-pthread"
     system "./test"
     assert_predicate testpath/"basic-log.txt", :exist?
     assert_match "Test", (testpath/"basic-log.txt").read

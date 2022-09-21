@@ -1,8 +1,8 @@
 class Deark < Formula
   desc "File conversion utility for older formats"
   homepage "https://entropymine.com/deark/"
-  url "https://entropymine.com/deark/releases/deark-1.6.2.tar.gz"
-  sha256 "199f5cd6c65cd23af9323bc464f0d33f53d22686135695b4aa4ddf2ec43534ae"
+  url "https://entropymine.com/deark/releases/deark-1.6.1.tar.gz"
+  sha256 "6d3e6853fb1342eb3ead53cd9c10496e262c885397cfc073529cc880cd3dcb46"
   license "MIT"
 
   livecheck do
@@ -11,12 +11,8 @@ class Deark < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e560bcecac579e61c6e55dd4fedf07831d7f14ca84731feb672bc92b17ffaf5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41b5fe260d01e8520ebfa31a9df1545be5aabeafc7def39e565691a2be5736d5"
-    sha256 cellar: :any_skip_relocation, monterey:       "df89df680d31ba928a3f41a6c8beafd19310db780551ba4e9c64eecdc3488aac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c8b135424c8da134b51def027de5207150ab81329fb999cb347d4fe0b7d4f7b1"
-    sha256 cellar: :any_skip_relocation, catalina:       "823e4f833b2c843c5ffda4cf393f3baebd6e6bd19432187b47346166e6217555"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b84a83ac5ac0b5b06aadeb3bb744a08cff912630610b9f13dc4c7ab6a79e4a8b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/deark"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "889bc9df3f199ddac5b14f75a8d72f96cd24504f858df4e3d9ef37b66b4e35db"
   end
 
   def install

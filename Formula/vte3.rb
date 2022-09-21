@@ -1,18 +1,18 @@
 class Vte3 < Formula
   desc "Terminal emulator widget used by GNOME terminal"
-  homepage "https://wiki.gnome.org/Apps/Terminal/VTE"
-  url "https://download.gnome.org/sources/vte/0.68/vte-0.68.0.tar.xz"
-  sha256 "13e7d4789ca216a33780030d246c9b13ddbfd04094c6316eea7ff92284dd1749"
+  homepage "https://developer.gnome.org/vte/"
+  url "https://download.gnome.org/sources/vte/0.64/vte-0.64.2.tar.xz"
+  sha256 "2b3c820b65a667c1d8859ba20478be626d1519cc3159dac25f703330c6d07e18"
   license "LGPL-2.0-or-later"
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "5956f0ff63ffc5af08896373d884a6e12f831f714d7c01fc78774ff1cb618515"
-    sha256 arm64_big_sur:  "7aee3f3e6e07847f7b65110b53873a3e74b5fc14268518fe0b345b9793b4ec5c"
-    sha256 monterey:       "dd1a7f9a98338987adff46db075170cd029ed8a13be293855d3d70c654349582"
-    sha256 big_sur:        "71c257c8137523518d2a1276cbf3961ee60a11ea585d1353bbda4709fda22095"
-    sha256 catalina:       "06344a53569cb93939f93e0a49e142f4af269090a200ee4a5e8eb395a9c41f80"
-    sha256 x86_64_linux:   "bf4c3ae25efa4c8d1b3d8bd22eb7a2bb25d4eaecef95f1634715c7c62b0ee584"
+    sha256 arm64_monterey: "be757081c2174226aa18516a2eed57c1c2ab3e7d408c4ab7102a4e0f6e49b26b"
+    sha256 arm64_big_sur:  "0f8661eb1bb60e68bbdf2a1122ec0e6bcfa9cae381aa0bddc1f61a7dde99297b"
+    sha256 monterey:       "ac5105d4bc7b44d5abdd4b94f9b84329a3ba0df5cefe61c1a1b9b7dc9f2f79ce"
+    sha256 big_sur:        "6438e66d85eb28ce8c416d12d84e1b8565dcd705391e68ef9afb19d69da34f7b"
+    sha256 catalina:       "a6880f4a6a268fc1addb351181db918813af21a5327422013e07b3df068f45c6"
+    sha256 x86_64_linux:   "58eb40e41c86211778da9b44dcf9c9f40a9eb255bc56bbbc516d6d50ed0e001a"
   end
 
   depends_on "gobject-introspection" => :build
@@ -27,33 +27,18 @@ class Vte3 < Formula
   depends_on macos: :mojave
   depends_on "pcre2"
 
-  on_macos do
-    depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1200
-  end
-
   on_linux do
     depends_on "linux-headers@4.15" => :build
-    depends_on "gcc" # for C++20
+    depends_on "gcc" # for C++17
     depends_on "systemd"
   end
 
-  fails_with :clang do
-    build 1200
-    cause "Requires C++20"
-  end
-
-  fails_with :gcc do
-    version "9"
-    cause "Requires C++20"
-  end
+  fails_with gcc: "5"
 
   # submitted upstream as https://gitlab.gnome.org/tschoonj/vte/merge_requests/1
   patch :DATA
 
   def install
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
-    ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
-
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 
     args = std_meson_args + %w[
@@ -72,8 +57,6 @@ class Vte3 < Formula
   end
 
   test do
-    ENV.clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
-
     (testpath/"test.c").write <<~EOS
       #include <vte/vte.h>
 

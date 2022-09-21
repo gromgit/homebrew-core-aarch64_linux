@@ -23,13 +23,10 @@ class ClangFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f25fa006c4f3684d7cc403d81f3dbbd00aef5dcee54d8909fc0b929dc46fd21"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f1cebeec140ce27dbbf0f9b7ffde342ad1a7d7ae90476e2d8ecf659e44cc8c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "7185911bd8c322d7b88340b6a2479454271609d6356c86538c2e2fb7c037950d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5ce43d5e2e82cdbc41d8dffed41d389c7876509109911132a1a206dd5324eeef"
-    sha256 cellar: :any_skip_relocation, catalina:       "5c8b3a8d0fecfed6220b2e97ea818452160fa0e6af03260f350a613e42fd242a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "201ae67f25cbb2a92d024a40bccf978f8f8b165cad149eabf8dc8f701ff33347"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clang-format"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a8e0dee93ff39c435b43fef26444dc98550dc9a9f05f9fc0c7a019aa4e22123"
   end
+
 
   depends_on "cmake" => :build
 

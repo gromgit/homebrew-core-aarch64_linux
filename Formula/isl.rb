@@ -26,13 +26,10 @@ class Isl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "764bde8aa0d015c13cbf53891489f3ef56a5951f617ad9906aea34382dc1f4d1"
-    sha256 cellar: :any,                 arm64_big_sur:  "24f86a50eea8a2d4dbc24ecb5f8b8ded61f6f7cd7054886b5dafcb82854b28ed"
-    sha256 cellar: :any,                 monterey:       "568dd08209728ad3a036cf45287ff8384b9ed821460a216a9a79fa80fdcfbf52"
-    sha256 cellar: :any,                 big_sur:        "be6456799bb670c16115d89feacf72cee9b444fe87aca6b1bd350bfb89ff6247"
-    sha256 cellar: :any,                 catalina:       "c2ccd96c92ab0bbfdb775ccd7c8f20c2057cbe976769cf078e728b6f5f5938bc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0244c95ed9cc89b826868de83bec3150fcc120add1265017176770150757083"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/isl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8fed68c1bfa87e3036a0f8193a6edab96830e4f47e07da08280b932e1dac242e"
   end
+
 
   head do
     url "https://repo.or.cz/isl.git"

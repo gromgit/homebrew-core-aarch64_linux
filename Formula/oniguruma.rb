@@ -12,12 +12,8 @@ class Oniguruma < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6c66f5d4198bfd9d9be019f4f40d19f4c68676df9eb0702f450ec818ef43d3e9"
-    sha256 cellar: :any,                 arm64_big_sur:  "0c9cd371a4baa9cf7322d3083aaf3d6c77f0d676a3ad2db6c80ee5e19c89367a"
-    sha256 cellar: :any,                 monterey:       "680427d257a0ec9851f736e09c07ca3a808710ce57635024d8ddf31543c8c6db"
-    sha256 cellar: :any,                 big_sur:        "2abcc410df54889260ec1dc5cdb93cbe22ee01d4df5bff97d2ab43b4aaad3afb"
-    sha256 cellar: :any,                 catalina:       "000bae49a7219387f2a94e2c675113d241217702cde7f424e3590d7350270dc3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3e431432a920a795798426fe7a32b5536909947d8a23970c4274029b8d03607"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/oniguruma"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "79cffb1b20a34a2ff02a91d9b823d24bde9c8ac8b835f7c3e8c513c6860cd82a"
   end
 
   depends_on "autoconf" => :build

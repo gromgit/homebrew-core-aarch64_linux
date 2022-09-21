@@ -4,15 +4,15 @@ class Mlpack < Formula
   url "https://mlpack.org/files/mlpack-3.4.2.tar.gz"
   sha256 "9e5c4af5c276c86a0dcc553289f6fe7b1b340d61c1e59844b53da0debedbb171"
   license all_of: ["BSD-3-Clause", "MPL-2.0", "BSL-1.0", "MIT"]
-  revision 7
+  revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "277afc1ab6337583a9bb281adbeddd3be707f30e7c4398d868b858bb46ac10b8"
-    sha256 cellar: :any,                 arm64_big_sur:  "8bf7bf1352f47de1d1a10a09aae695ece8959e2a3c0e6558aaac236c92ccebba"
-    sha256 cellar: :any,                 monterey:       "7c67d680d0ebb915526c99baa908d292b60bc9e57d616ebc5ebca80f96798d4e"
-    sha256 cellar: :any,                 big_sur:        "cdeb478bbaaaa1414ea8d5641423316f08b5aa5ce81e82708076769c60b0cb0b"
-    sha256 cellar: :any,                 catalina:       "45aaf8a7a5e7943b1e1b981918e406810da90f96a8ca1e3fa9df88160ec2092d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08873aab2d2241ca041ab707c2b48a900b42af7db2af9f802573be675b412e79"
+    sha256 cellar: :any,                 arm64_monterey: "7f5ea76e533cf82a23314eaa3b795bd3ccf1f35dcbc61b873507e7eb0fce153f"
+    sha256 cellar: :any,                 arm64_big_sur:  "60e0c2e971f6fbb94c8384a07dba0fb418ae8a1683ebe79701ae6cf68b155037"
+    sha256 cellar: :any,                 monterey:       "98a0a185ce11203c15307d18249b01ddf6a2ace4dadf0972de44e416d70ce655"
+    sha256 cellar: :any,                 big_sur:        "3b31fed267940257aab567c907c4635b6aab1ca7f8ef5e52e1d3c16ff1b30dc2"
+    sha256 cellar: :any,                 catalina:       "c3c45aaa730efdaf777cce8bdc4f12831e488383c4e8ad174f53810c3075a9f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76ec703752026e506bbe5f7759ad53242c7c7c758962009a86cc5e0d3a87afe9"
   end
 
   head do

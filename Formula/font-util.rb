@@ -1,33 +1,30 @@
 class FontUtil < Formula
   desc "X.Org: Font package creation/installation utilities"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/font/font-util-1.3.3.tar.xz"
-  sha256 "e791c890779c40056ab63aaed5e031bb6e2890a98418ca09c534e6261a2eebd2"
+  url "https://www.x.org/archive/individual/font/font-util-1.3.2.tar.bz2"
+  sha256 "3ad880444123ac06a7238546fa38a2a6ad7f7e0cc3614de7e103863616522282"
   license "MIT"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "57edda9390b2123b1f9b31651b5ad03e8888ccd7a1f5409d7795c18f9fa6a31d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c668bc56ced30ffb6ac8838ed40fd219538b2155cd810d5978ac5ce4b34d6992"
-    sha256 cellar: :any_skip_relocation, monterey:       "cd192a5dfbc1dc6667caacc87445fb028905141d059c33c61124f544a17f6838"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6b7d236e3d49b24292959ccfd78bf2479887eef9d7c0a7ac670008c9f410af5b"
-    sha256 cellar: :any_skip_relocation, catalina:       "198d4383e2e254f2c81f0227e416635a8435ea4cf2fd6a8ce814315ecadd2a80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1225cda3cc0e81f7a85285b12ebba475b219041749de9b0e8a31af87ef651f46"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/font-util"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "95775ed66ccb90bef3895f678925654a605e543fa25fbb2a186f769cc3ff76ca"
   end
 
   depends_on "pkg-config" => [:build, :test]
   depends_on "util-macros" => :build
 
   def install
-    args = std_configure_args + %W[
+    args = %W[
+      --prefix=#{prefix}
       --sysconfdir=#{etc}
       --localstatedir=#{var}
-      --with-fontrootdir=#{HOMEBREW_PREFIX}/share/fonts/X11
+      --disable-dependency-tracking
+      --disable-silent-rules
     ]
 
     system "./configure", *args
     system "make"
-    system "make", "fontrootdir=#{share}/fonts/X11", "install"
+    system "make", "install"
   end
 
   def post_install

@@ -2,8 +2,8 @@ class ZeroInstall < Formula
   desc "Decentralised cross-platform software installation system"
   homepage "https://0install.net/"
   url "https://github.com/0install/0install.git",
-      tag:      "v2.18",
-      revision: "b58af5db6afd496cfd4a5f85fb23f30ba8dfbc87"
+      tag:      "v2.17",
+      revision: "4a837bd638d93905b96d073c28c644894f8d4a0b"
   license "LGPL-2.1-or-later"
   head "https://github.com/0install/0install.git", branch: "master"
 
@@ -13,12 +13,14 @@ class ZeroInstall < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e681ef011946eee260f580f0faaf250803ffe7df97875db1560f24d26de68e44"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba5899e357c4e98c2116230eee9cad756f51564250471b950503f936f5951306"
-    sha256 cellar: :any_skip_relocation, monterey:       "f293e6e5c07b33cebf63f868e2582e3dc390c0e2305fcefb7e7b17c5eb6d57fb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f4761b5bf5adce56f3a0084b110aa51026cdbd85a152112481484a30878a13b"
-    sha256 cellar: :any_skip_relocation, catalina:       "66a2d596f829de3bab7abf5558b0c4e9e922983ee146930b3755c38f4a593e02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dcc1fe5759e42d2757f7ab28cdd33eecc9339ef83bf8aebb60cba6d8b5dd94d6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6254ca486e396289cefdcd992373295aff86bfa3353aa7c5b6252aea899e92c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8a6dccd6f31bdb194e16e0c24a203055cea85d48ee5fc7b955db52d788056392"
+    sha256 cellar: :any_skip_relocation, monterey:       "f0d03c94152415456e3125f3fb281020b1e213253ddf79db6b4f68722d30132b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "77fe4b65401743e8cd82de23568ad9e630e50467018faba2b7167231fe14f48a"
+    sha256 cellar: :any_skip_relocation, catalina:       "4306ae5d0ca339a7f5ecd9c7ba6a3a192a1d176883d49dda9d31aad78bc390fd"
+    sha256 cellar: :any_skip_relocation, mojave:         "73b04cd9560f78c799599fc4f9fba0de2b072c56e2195ef0522bb23e6eeb376b"
+    sha256 cellar: :any_skip_relocation, high_sierra:    "4fb5867d432bd3e22525b95682521a12a3279dd4fb7f8b0df3cb6664a6959835"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6865140889715cceb51faee115bece7448c6cc3e6f880534e7b7da92f75a1b7"
   end
 
   depends_on "ocaml" => :build
@@ -28,7 +30,6 @@ class ZeroInstall < Formula
   depends_on "python@3.10" => :build
   depends_on "gnupg"
 
-  uses_from_macos "unzip" => :build
   uses_from_macos "curl"
 
   on_linux do

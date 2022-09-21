@@ -1,8 +1,8 @@
 class Terraform < Formula
   desc "Tool to build, change, and version infrastructure"
   homepage "https://www.terraform.io/"
-  url "https://github.com/hashicorp/terraform/archive/v1.2.9.tar.gz"
-  sha256 "40aba75e2fcc3088a88b086a6038c8fb3b1dbe93ac769124c72ce1983558bec7"
+  url "https://github.com/hashicorp/terraform/archive/v1.1.9.tar.gz"
+  sha256 "a22d539fc18998ff62bccd5aa74fabccb4f402073d3c4a1a2840db2f428f9b96"
   license "MPL-2.0"
   head "https://github.com/hashicorp/terraform.git", branch: "main"
 
@@ -12,15 +12,19 @@ class Terraform < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "483a95ad0107cffbbd56d75ee9039f8f81b6f805f6c7b78ff687878a0987185b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07ea3c933beffa10cd07d88b687a909da2cc2f53284ab94bab0f15515168414e"
-    sha256 cellar: :any_skip_relocation, monterey:       "f10e7dfd1e76479fe7d568308349bed8f61dd97ea4b54f1c775e2625d95a29cc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3aa44b2d6b73f6aefe38bd7b18f3c954218d8c227eb30706a8b530817f96cc17"
-    sha256 cellar: :any_skip_relocation, catalina:       "86bafa862d741f18caea29a4e44a205c2212bd912a082239e92348316bc28280"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "346db9dd674f6d4ebe783b5bb32364834ae2ebd991e523d745ed3eaf56fde1ac"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "94cbe9a25c0a856b8ba554db1a7a79acfc08a545e13a1c86b7faa582d0ace7df"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bdd424be40f690cf0b0f84626be96343aa1134962b876d48670c1726fafe13b8"
+    sha256 cellar: :any_skip_relocation, monterey:       "5a6eb79befa8a59072ce96df31d017282faa3ec9bd780bc08ce06d234c9638a9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bf1f7b8cdd8c9fe1628cfc53617023d7d1088d23e8935f246499e874172f8444"
+    sha256 cellar: :any_skip_relocation, catalina:       "113cd074ce9401323e46a456937cbd47145b581caf3a9d2afce1f4ce534a4ef6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fa28c68646a884958510640071f2fd53ee60ea4d388777134eb5c1bdeb72f9d"
   end
 
   depends_on "go" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
 

@@ -1,8 +1,8 @@
 class Petsc < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (real)"
-  homepage "https://petsc.org/"
-  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.4.tar.gz"
-  sha256 "99c127486722a3ffd95a268b4ceb0976cbf217926c681a9631bd7246eab8cb2a"
+  homepage "https://www.mcs.anl.gov/petsc/"
+  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.0.tar.gz"
+  sha256 "96d5aca684e1ce1425891a620d278773c25611cb144165a93b17531238eaaf8a"
   license "BSD-2-Clause"
 
   livecheck do
@@ -11,12 +11,12 @@ class Petsc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "224d5b60100062e050ebe0e03ccb0f93ad9da98c268022140a301682ce5bd68b"
-    sha256 arm64_big_sur:  "dec8af0a32b80b0a1000a7ae249e92495e1e6a474a60b4fd59f30aeb8b6c17f0"
-    sha256 monterey:       "e0db879529c06d2b43494de292d74e49be806de9a8af1b87fc9db2147fbcba26"
-    sha256 big_sur:        "f0b45cd04d4be388d0b33af2f4b8dcd32d76781d501b03f9354c1af8c0c6eb53"
-    sha256 catalina:       "42d9e6ecc371ec67d3feb4076e86660d55d024e0d9a9d6f25452bd15cb144829"
-    sha256 x86_64_linux:   "15dd7d33ed03b98634c31bc569c883cf65451b15b7aedd5bd461d8b8c85de02c"
+    sha256 arm64_monterey: "b69278b067d677c75e1a9f35d6b263b5f5421bcc8104482ad51989e0aa51de98"
+    sha256 arm64_big_sur:  "124ad5b9d62cd4cf6f2c9e20a0e765f40cb4beccee9075036c5ea9ccabd3d0bb"
+    sha256 monterey:       "7dd782278decb04b07b3f8b3bdc9a5b86c093852845a9e4108eb67a90b165dba"
+    sha256 big_sur:        "29699391d5a79d5b64f3d02396da645b241455885a272efef68066ee61c1f2ec"
+    sha256 catalina:       "33a7b67b60b2e956276fb03d5e9f9a5fe178e186e07ae32db23e6ed27b1a534f"
+    sha256 x86_64_linux:   "de0b44bcde1ac345a2978db4193ecf031572848f2998cdfaeae7c6e3002d8d5a"
   end
 
   depends_on "hdf5"
@@ -27,8 +27,6 @@ class Petsc < Formula
   depends_on "openblas"
   depends_on "scalapack"
   depends_on "suite-sparse"
-
-  uses_from_macos "python" => :build
 
   conflicts_with "petsc-complex", because: "petsc must be installed with either real or complex support, not both"
 

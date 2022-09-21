@@ -12,13 +12,10 @@ class Libnghttp2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89846583fac0ade75d0e64c195b007a508f99b48d12a8f77e7aea5b654e90ea7"
-    sha256 cellar: :any,                 arm64_big_sur:  "2a6945610d3654497a100588475c85c37c6a5615bd8bb307b51a908902ebb54c"
-    sha256 cellar: :any,                 monterey:       "6c2b493f5304665e417231c2eef5099b6c385c7cc369c8f0d8980af562104d8f"
-    sha256 cellar: :any,                 big_sur:        "f1a539e485733ded916783a5cd574bafca865121bf6d58260c98ca59e5daebb0"
-    sha256 cellar: :any,                 catalina:       "42fe29e3be6c5af61ce0a59c4af58809f6734c38cdaa322796d371f8b84b23a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b39e519b439023b05ce2563549d3238f61e0765ad370a92590282f63865ffb22"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libnghttp2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e076779e29fefe23ce62e518458e43a47f2f0c1bf19e24c5f8faadb0c8c9ad11"
   end
+
 
   head do
     url "https://github.com/nghttp2/nghttp2.git", branch: "master"

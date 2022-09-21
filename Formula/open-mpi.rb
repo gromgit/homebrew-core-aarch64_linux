@@ -1,10 +1,9 @@
 class OpenMpi < Formula
   desc "High performance message passing library"
   homepage "https://www.open-mpi.org/"
-  url "https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.bz2"
-  sha256 "92912e175fd1234368c8730c03f4996fe5942e7479bb1d10059405e7f2b3930d"
+  url "https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.3.tar.bz2"
+  sha256 "3d81d04c54efb55d3871a465ffb098d8d72c1f48ff1cbaf2580eb058567c0a3b"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :homepage
@@ -12,17 +11,16 @@ class OpenMpi < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "a2d31ec8594e73c2c4a1bba865d8e81c610b0ff01f039f96efefe0317535d339"
-    sha256 arm64_big_sur:  "7ff7d8a4ea8395d2601bf72ad17ea422fa326325c38a47dd572add58ca36cbf8"
-    sha256 monterey:       "0af78dd3d07df75329c6ba30a9fccf16d6cf7e4a9eb5d8f2af3b892496df47d2"
-    sha256 big_sur:        "e6c45885f7dbbe4a8e112c493293976d7dc67739dd6c5fa7511413fc1210ac23"
-    sha256 catalina:       "ca1c09fd3cf0b9fee16b1d31759e1c0a3ad9b964b4165354f22c51606059306a"
-    sha256 x86_64_linux:   "6858cb1171181e721a6b8f2d9fb9d43eaae2c8fef7ebc5b6076f133484332485"
+    sha256 arm64_monterey: "0e3b9d9a3a4c6cb77914b416b2e5cb2eff469275d68dc13dc2eb2b98e2a3931d"
+    sha256 arm64_big_sur:  "087464557aad4d1f6622e396baa5e23f47cca73f03185398e4592122824cdfef"
+    sha256 monterey:       "2825f51a7bb6b5957fd211863ef635017eba0e6d4d6ca91a749b05226066d24d"
+    sha256 big_sur:        "15718d988a5b33b93939101fb996d5484b67267939f009f85fe1f8b6b14c7a90"
+    sha256 catalina:       "e3b902a4f205c3bd7c30961c66f7979d20d93bc2ceb39c705f4f2ef47dd81a62"
+    sha256 x86_64_linux:   "7cdb577b27a350b5390051388b3fa09be927efdce8ca13d2c89f3dde3235f5c2"
   end
 
   head do
-    url "https://github.com/open-mpi/ompi.git", branch: "main"
+    url "https://github.com/open-mpi/ompi.git"
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
@@ -39,40 +37,45 @@ class OpenMpi < Formula
     ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version
 
     # Avoid references to the Homebrew shims directory
-    inreplace_files = %w[
+    %w[
+      ompi/tools/ompi_info/param.c
+      orte/tools/orte-info/param.c
+      oshmem/tools/oshmem_info/param.c
+      opal/mca/pmix/pmix3x/pmix/src/tools/pmix_info/support.c
+    ].each do |fname|
+      inreplace fname, /(OPAL|PMIX)_CC_ABSOLUTE/, "\"#{ENV.cc}\""
+    end
+
+    %w[
       ompi/tools/ompi_info/param.c
       oshmem/tools/oshmem_info/param.c
-    ]
-
-    inreplace inreplace_files, "OMPI_CXX_ABSOLUTE", "\"#{ENV.cxx}\""
-
-    inreplace_files << "orte/tools/orte-info/param.c" unless build.head?
-    inreplace_files << "opal/mca/pmix/pmix3x/pmix/src/tools/pmix_info/support.c" unless build.head?
-
-    inreplace inreplace_files, /(OPAL|PMIX)_CC_ABSOLUTE/, "\"#{ENV.cc}\""
+    ].each do |fname|
+      inreplace fname, "OMPI_CXX_ABSOLUTE", "\"#{ENV.cxx}\""
+    end
 
     ENV.cxx11
     ENV.runtime_cpu_detection
 
     args = %W[
+      --prefix=#{prefix}
+      --disable-dependency-tracking
       --disable-silent-rules
       --enable-ipv6
       --enable-mca-no-build=reachable-netlink
-      --sysconfdir=#{etc}
       --with-libevent=#{Formula["libevent"].opt_prefix}
       --with-sge
     ]
     args << "--with-platform-optimized" if build.head?
 
     system "./autogen.pl", "--force" if build.head?
-    system "./configure", *std_configure_args, *args
+    system "./configure", *args
     system "make", "all"
     system "make", "check"
     system "make", "install"
 
     # Fortran bindings install stray `.mod` files (Fortran modules) in `lib`
     # that need to be moved to `include`.
-    include.install lib.glob("*.mod")
+    include.install Dir["#{lib}/*.mod"]
   end
 
   test do

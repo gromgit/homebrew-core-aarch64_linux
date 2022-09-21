@@ -11,16 +11,8 @@ class Libmetalink < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4181f8a100f736a945001f57c2ad8f768ad99cdad6789a19d9f21e0cfdd4d3fb"
-    sha256 cellar: :any,                 arm64_big_sur:  "a5eec14410ca7f2ea831d91c273d6372bc851f930944d207f07f35245b077a91"
-    sha256 cellar: :any,                 monterey:       "c1a510079e53edc2ebd437321751752e897c253332dc6644ebc6b03cecbf48f2"
-    sha256 cellar: :any,                 big_sur:        "ec4a4a8f898432cccfa2198c0e877daf2d80c2ab5bc92a7a9134a3dd75529a87"
-    sha256 cellar: :any,                 catalina:       "a18e6199b4d775a32693aa38b80551d547eb1de58c5d7c788f706276ce296d5e"
-    sha256 cellar: :any,                 mojave:         "461d42fab1dd15b7df8144ef814a3b589c5be9177728b522ea73e6c52bec660f"
-    sha256 cellar: :any,                 high_sierra:    "037c9d82da0a2c77031515cc8618b28552c526e559b3d9cebb0f054cd66204e3"
-    sha256 cellar: :any,                 sierra:         "87711da9c52d75d2d6fed5829a70b0f6561f55fdcf1129266001b6e96bc69b1b"
-    sha256 cellar: :any,                 el_capitan:     "4ca3f82ac2e2520c677def661168c6ba14ee2b8f0139fbe33cf5be66745244d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "583e662593473f7310e1c3e3bed77a89a4dc43aed5fd1ce6a12a7260ec69c5f5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmetalink"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "18d03c7535ce92efc73f6dc75cca8a846421ed4d54511a0bde15e85c7d2e3088"
   end
 
   depends_on "pkg-config" => :build

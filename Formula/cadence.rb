@@ -1,20 +1,10 @@
 class Cadence < Formula
   desc "Resource-oriented smart contract programming language"
   homepage "https://github.com/onflow/cadence"
+  url "https://github.com/onflow/cadence/archive/v0.23.4.tar.gz"
+  sha256 "316c29721fe613fff9de19c3f9b8010bb6cc1891c6356c5e133f5a00cc4a369d"
   license "Apache-2.0"
   head "https://github.com/onflow/cadence.git", branch: "master"
-
-  stable do
-    url "https://github.com/onflow/cadence/archive/v0.26.0.tar.gz"
-    sha256 "6ec4bd26e2563b3ea8df180f55f9aa370ae090ef635043d210e3f5b4d8aedee7"
-
-    # add build patch, remove in next release
-    # upstream PR reference
-    patch do
-      url "https://github.com/onflow/cadence/commit/a4657de4d03d5e3cfb144df24dbc75636c7c4d8c.patch?full_index=1"
-      sha256 "fcf60195d3bdca45cd3e421119846b2a70ff04858ba173ce3a505bfd2e87b0d3"
-    end
-  end
 
   livecheck do
     url :stable
@@ -22,12 +12,8 @@ class Cadence < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "56e6da1ae4a5ebf5e4da49c7978b11b074406631641f5f2b393c1b3301909f04"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b41be5b6632f1199ae80f3acc386eab8391c85b10af26470e0c7e9497227b1f9"
-    sha256 cellar: :any_skip_relocation, monterey:       "791e6c1c4b00ea2e8085589e7729b17c72a807ca186a5eee65899c8a12fec8f8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "893fa24e825aee8d1609b2f2d3060d856cc6a9349460864625b30d68ec25dd87"
-    sha256 cellar: :any_skip_relocation, catalina:       "248134de3df2dbdbf521d704306168c771614a4dd2de9e51931614a747a4312a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2fd0bf5d51cbee5f1c0a9ac640ae6702b46f1dacfdffa883c90d946ecf2976d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cadence"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "787c4df6bae4577dfdc601d119a15837c41e774594ba961cc5c312e83326a8ad"
   end
 
   depends_on "go" => :build
@@ -35,7 +21,7 @@ class Cadence < Formula
   conflicts_with "cadence-workflow", because: "both install a `cadence` executable"
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./runtime/cmd/main"
+    system "go", "build", *std_go_args, "./runtime/cmd/main"
   end
 
   test do

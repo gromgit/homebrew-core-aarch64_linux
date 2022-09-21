@@ -26,13 +26,12 @@ class Blockhash < Formula
   end
 
   def install
-    python3 = "python3.10"
-    system python3, "./waf", "configure", "--prefix=#{prefix}"
+    system "python3", "./waf", "configure", "--prefix=#{prefix}"
     # pkg-config adds -fopenmp flag during configuring
     # This fails the build on system clang, and OpenMP is not used in blockhash
     inreplace "build/c4che/_cache.py", "-fopenmp", ""
-    system python3, "./waf"
-    system python3, "./waf", "install"
+    system "python3", "./waf"
+    system "python3", "./waf", "install"
   end
 
   test do

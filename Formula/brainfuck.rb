@@ -7,13 +7,10 @@ class Brainfuck < Formula
   head "https://github.com/fabianishere/brainfuck.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b753b7dd2274926dbd763571f8b922fe270e25ee527ddd3a71cc4a1f7acb94de"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "802734b20ee8e8fc6eed4a1894c10b5e11810d006ff9346897179b085a4d244b"
-    sha256 cellar: :any_skip_relocation, monterey:       "482ca8d67a9fd57c88e24d5763194e8e70f7e9d7c9dd8a7f3b5827097e2dfb6a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3120d4eda67a0cf102317a5e0a4ecb36ca8ab99b75c2f0c8b76eabdffb31e252"
-    sha256 cellar: :any_skip_relocation, catalina:       "3bc5affaa9e6ba7d7dc6c2f94ad1e63f36a6e19553a8f0183077322f4c9e9026"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3554b9a52daf8e246b2459186a891b82c2aa4ce70d900735288903cbc5150152"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/brainfuck"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "55be42dafc5fdb53a5b24e7231cb166ae08593278f53bb81f719f5780d9fc1ab"
   end
+
 
   depends_on "cmake" => :build
 

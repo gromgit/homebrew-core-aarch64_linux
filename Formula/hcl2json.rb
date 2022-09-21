@@ -7,12 +7,8 @@ class Hcl2json < Formula
   head "https://github.com/tmccombs/hcl2json.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cc74090b0abcd15cdcc1f2a23450ad6dcd7255ad4826932d613f53409a9b96ae"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cc74090b0abcd15cdcc1f2a23450ad6dcd7255ad4826932d613f53409a9b96ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "9d4ba59c2ac8d5f10dc848f68704647f8fb6e67fd447efd1a2c81762c40f7d64"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9d4ba59c2ac8d5f10dc848f68704647f8fb6e67fd447efd1a2c81762c40f7d64"
-    sha256 cellar: :any_skip_relocation, catalina:       "9d4ba59c2ac8d5f10dc848f68704647f8fb6e67fd447efd1a2c81762c40f7d64"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13d812e1296de5f1ccc26bbafe8a79fd42f7fc19f0b8e34da06c626a692440e4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hcl2json"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d7ec1fe84f4c19aee299dd461b6826062b997d551f6cb7d090414f2a8fd2b4c0"
   end
 
   depends_on "go" => :build

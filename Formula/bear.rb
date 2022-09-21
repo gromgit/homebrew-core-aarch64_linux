@@ -1,19 +1,19 @@
 class Bear < Formula
   desc "Generate compilation database for clang tooling"
   homepage "https://github.com/rizsotto/Bear"
-  url "https://github.com/rizsotto/Bear/archive/3.0.20.tar.gz"
-  sha256 "45cfcdab07f824f6c06c9776701156f7a04b23eadd25ecbc88c188789a447cc7"
+  url "https://github.com/rizsotto/Bear/archive/3.0.19.tar.gz"
+  sha256 "2fcfe2c6e029182cfc54ed26b3505c0ef12b0f43df03fb587f335afdc2ca9431"
   license "GPL-3.0-or-later"
   revision 2
   head "https://github.com/rizsotto/Bear.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "fd7cebdc653cf89784ccb7ac0d63a66eaad730f8b8a65dc1d021b5d3707273e6"
-    sha256 arm64_big_sur:  "8a97aeee7a913e1a588fe09f2b25379dd910ab75884beef74fcdeb1540837428"
-    sha256 monterey:       "2383e160d2d48400d5b6b8ae219280bafd33aee576333abc5a4d3114b5d5f134"
-    sha256 big_sur:        "f2ddf39c0032e194ab275abcfa6b7b8da3ee4dd9476a05775284f8839f840051"
-    sha256 catalina:       "e6970ad002595c6c55ac8efc49a50f24ced66471888dfc7c18059648f89e5442"
-    sha256 x86_64_linux:   "48046a4591aa44a377c4ee78f100a9baaa78efd402e99f59b60c2b807fe35253"
+    sha256 arm64_monterey: "266042902f03ce27b36921ff9b558b3b894b32cee3e6cabe3d7c3f2d5c867add"
+    sha256 arm64_big_sur:  "fb43e08998008413b01a5326ef4cd918a3e3afcf23a28c50c41dda74f07a0c1f"
+    sha256 monterey:       "557d16d8427721118fb594fce2abda828ad97bcb4223108b4f4202a8eb397a39"
+    sha256 big_sur:        "14d47bff99c2319cac532f38e141e82c998deea0746965f18cdf0ada09bae6e5"
+    sha256 catalina:       "adc831813186d909afb02bc28f273692c3aec99354689f500c26df795970b787"
+    sha256 x86_64_linux:   "795b15c351033fab20a279c1903fe5e1b7a31fbc215a1d52fc3c63732a7c3d6b"
   end
 
   depends_on "cmake" => :build
@@ -51,9 +51,11 @@ class Bear < Formula
       -DENABLE_FUNC_TESTS=OFF
     ]
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *args, *std_cmake_args
+      system "make", "all"
+      system "make", "install"
+    end
   end
 
   test do

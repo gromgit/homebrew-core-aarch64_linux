@@ -6,13 +6,10 @@ class ClangFormatAT11 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "04eb4f41a69b4e4f1c3d4b020cfcafe07556fec0ce45bc2ffb1ad858e8ce389c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "08840589ede996c8040c994dbf2fd257892fbab226721bd4212f759bb88ecf08"
-    sha256 cellar: :any_skip_relocation, monterey:       "e59f3acdd1ccb01100c1e22093b61c5d442b3eb290857e9226ace3e070376b20"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d05a3e8c962d0170d27dd1cba184cd9fc7fabad7792e60402dc530c1849b33f6"
-    sha256 cellar: :any_skip_relocation, catalina:       "34600b6ed222dfaa3ad410e6abbbc2ec86da0cc8f6906156d443665f57472db0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd67883368c8948f35545a2bce2356f8af91f1c518b17e5e41fc95d286dc9a00"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clang-format@11"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8555cc3e062f9a2581e883b431112a795ec665b5378f55d14c2c729a98999c0b"
   end
+
 
   depends_on "cmake" => :build
 

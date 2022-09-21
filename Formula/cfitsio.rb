@@ -10,12 +10,8 @@ class Cfitsio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0269cf18a5dd1ce217c799461fb5831db284edb3d05c2b144ce30a7a1566f246"
-    sha256 cellar: :any,                 arm64_big_sur:  "f95d18fe4f060505e6695bef0cf5ea228493b872e71052c68aa4d03c8378804e"
-    sha256 cellar: :any,                 monterey:       "62cf2942b05394dc7b906aba1fc6b2b27c24caf81fc85263d1697ed488fc230a"
-    sha256 cellar: :any,                 big_sur:        "708ad462a892a776bcc62a1e5c8627f6de9fa7bb83f9a107daffa0d099968837"
-    sha256 cellar: :any,                 catalina:       "7206c141ca07704be2485f297eaa44f6d6ed62edaeab41efe6356c78da10ddc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea728776b33a24f236b21ecedfc7430fee6bb4c551e94e772785b38994b93b99"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cfitsio"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "43773175b33d6d06d4da132a7a87ab55934119f3795780f16d7a9dc093de56ee"
   end
 
   uses_from_macos "zlib"

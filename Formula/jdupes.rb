@@ -11,12 +11,8 @@ class Jdupes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3937038afc1820f1f774fbd22f35c8fe466e70f0588fe75cc3828f15dcf6653"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9c844afb4e9fba5b763ae1378a8629e9956f251c8ad9c1e0c74d8d0d18668274"
-    sha256 cellar: :any_skip_relocation, monterey:       "263316d819220f93765f67a80757c9b5769f3132bab17874bfd1d9de40aa60cb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6e39c1b51399b4c6cd2b39624bd8c7957643fd9abbd537cb75f3663619e355b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "9fadc414239619b0ed49beb9e31ade91fc917fe8d2ec37ea3be9ced6701a491d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b03a8221e4d828bed9072894e8a78151478a70283ec9ca98f95dbdc83eeeeb8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jdupes"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "592538e1910f7e06acb067a0cac045a1cfcde20245ca653d9ecb008425e48e52"
   end
 
   def install

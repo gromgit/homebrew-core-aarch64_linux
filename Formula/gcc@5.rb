@@ -4,7 +4,7 @@ class GccAT5 < Formula
   url "https://ftp.gnu.org/gnu/gcc/gcc-5.5.0/gcc-5.5.0.tar.xz"
   mirror "https://ftpmirror.gnu.org/gcc/gcc-5.5.0/gcc-5.5.0.tar.xz"
   sha256 "530cea139d82fe542b358961130c69cfde8b3d14556370b65823d2f91f0ced87"
-  revision 8
+  revision 7
 
   livecheck do
     url :stable
@@ -12,7 +12,7 @@ class GccAT5 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a3e52eeea5f2dc3fa99e021ee2e06034efd5ad27ccc331e751cf7f92110c7434"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "14a5443ed549cc911a8b589f5fa2cda7cfe97c1ffe8c87674d67836406d25878"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -30,6 +30,7 @@ class GccAT5 < Formula
 
   on_linux do
     depends_on "binutils"
+    depends_on "glibc" if OS::Linux::Glibc.system_version < Formula["glibc"].version
   end
 
   # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
@@ -47,8 +48,8 @@ class GccAT5 < Formula
   # Fix Apple headers, otherwise they trigger a build failure in libsanitizer
   # GCC bug report: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=83531
   # Apple radar 36176941
-  patch do
-    on_high_sierra do
+  if MacOS.version == :high_sierra
+    patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/413cfac6/gcc%405/10.13_headers.patch"
       sha256 "94aaec20c8c7bfd3c41ef8fb7725bd524b1c0392d11a411742303a3465d18d09"
     end
@@ -127,6 +128,12 @@ class GccAT5 < Formula
       # Change the default directory name for 64-bit libraries to `lib`
       # https://www.linuxfromscratch.org/lfs/view/development/chapter06/gcc-pass2.html
       inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
+
+      # Fix for system gccs that do not support -static-libstdc++
+      # gengenrtl: error while loading shared libraries: libstdc++.so.6
+      mkdir_p lib
+      ln_s Utils.safe_popen_read(ENV.cc, "-print-file-name=libstdc++.so.6").strip, lib
+      ln_s Utils.safe_popen_read(ENV.cc, "-print-file-name=libgcc_s.so.1").strip, lib
     end
 
     mkdir "build" do
@@ -138,6 +145,23 @@ class GccAT5 < Formula
       else
 
         system "make", "install-strip"
+      end
+
+      # Add symlinks for libgcc, libgomp, libquadmath and libstdc++ so that bottles
+      # built in CI can find these libraries when using brewed gcc@5
+      if OS.linux?
+        lib.install_symlink lib/"gcc/#{version_suffix}/libgcc_s.so"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libgcc_s.a"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libgcc_s.so.1"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libgomp.so"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libgomp.a"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libgomp.so.1"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libquadmath.so"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libquadmath.a"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libquadmath.so.0"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libstdc++.so"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libstdc++.a"
+        lib.install_symlink lib/"gcc/#{version_suffix}/libstdc++.so.6"
       end
     end
 

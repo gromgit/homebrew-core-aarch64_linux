@@ -11,12 +11,8 @@ class Lziprecover < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f304f75f053a6045e0286da2f1761c1a5c73c0333c80446017b8f7a3519b66e7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e750fd2418477ae083f1be0113572af5703d0997971871e046db90450530d4e1"
-    sha256 cellar: :any_skip_relocation, monterey:       "f85eac960d6a8a1a8fcf3711980fb9122e1cd4789161c7d974840c2d1762e650"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0180531f07c7493e58ef145c7de2ee0891db6ec8c2d2a24ca62cad813c5ea95d"
-    sha256 cellar: :any_skip_relocation, catalina:       "5e2168438e6bd3669db3dae1969173737873f46372003ae36a56d832296e5e45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61b9cb353269182c3ba0564849ac427d35735389270c565eadc55e8c4b2dfd70"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lziprecover"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "97fa79df6eed506beb7e7c281508e954c579b8dbf98b040b9318b6e737bdbd91"
   end
 
   depends_on "lzip" => :test

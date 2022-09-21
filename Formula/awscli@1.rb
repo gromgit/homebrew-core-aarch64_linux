@@ -4,8 +4,8 @@ class AwscliAT1 < Formula
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
   # awscli should only be updated every 10 releases on multiples of 10
-  url "https://files.pythonhosted.org/packages/78/c2/5addcc8e66ac3491aa97006530f8a63cf44f70be5bcf30cf6dd9ceb31f50/awscli-1.25.60.tar.gz"
-  sha256 "fa90a804cd295dfac60ff1f324dcc50744f7debdf1e25abbce75123da1023c0a"
+  url "https://files.pythonhosted.org/packages/06/98/03c15230f97ac096c872d9596c37630a2cfa66e608bc45316d75f7b796cc/awscli-1.23.0.tar.gz"
+  sha256 "bfd3d7e46a870231aec6dd8d0f2cb0ffbc63d80e5ed7e8a1a247264230867a30"
   license "Apache-2.0"
 
   livecheck do
@@ -14,25 +14,26 @@ class AwscliAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "03e8e546c4b9cd78ea889a6f09d2ed1626d29fdfd926dad892543c331f0a8762"
-    sha256 cellar: :any,                 arm64_big_sur:  "e462cb820911abb71e6dbfc538b0674811ccf7bc081833a2c718287304049d96"
-    sha256 cellar: :any,                 monterey:       "5672590bed7f7b1f1fa33844c92ac65fa8e07c5c86fe4e7bf7ec2249bedd0bfe"
-    sha256 cellar: :any,                 big_sur:        "60e45cc5ccb2483316c3d14688ea41521a7440ba28c552fa8452b0567290b95a"
-    sha256 cellar: :any,                 catalina:       "efbd9ec1fc69b39a8ca5b47e227c1f2c86b6762009bcdc96efe48c280541cc27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a12db8cae568357e57554eba6cb3300a5b8fe0c28e9c30046204b710a37b66f9"
+    sha256 cellar: :any,                 arm64_monterey: "13af186b6424d28702d733b177fe8077ca7d67b3c2ad7ab32ae32ec6af1223c7"
+    sha256 cellar: :any,                 arm64_big_sur:  "9dff54f07bd02cd5808b74d2f02ee1bb004894d63f611264d36cd2b9fdeb54f6"
+    sha256 cellar: :any,                 monterey:       "e56e651eec85085b40d172a36335470b94da080b32c04412e9eb7538b033de00"
+    sha256 cellar: :any,                 big_sur:        "4560d4030c685ff9b08a2d237ae8a44f18a347a3ebd3415a02a7c7b0cadfbbf2"
+    sha256 cellar: :any,                 catalina:       "5ce39e703f93f372cf11e41e7380808481354d961f7b1585fc82ee2735c41d76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78e2ec322012dfb44724d7e4caee883d6ce6796d1fe0bb84df73a2ce6bf703ac"
   end
 
   keg_only :versioned_formula
 
   depends_on "libyaml" # for faster PyYAML
-  depends_on "python@3.10"
+  # Some AWS APIs require TLS1.2, which system Python doesn't have before High Sierra
+  depends_on "python@3.9"
   depends_on "six"
 
   uses_from_macos "groff"
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/94/29/b8ef249300edf4584384f725d20db126b6caf6147aac4d02efebca239dce/botocore-1.27.59.tar.gz"
-    sha256 "eda4aed6ee719a745d1288eaf1beb12f6f6448ad1fa12f159405db14ba9c92cf"
+    url "https://files.pythonhosted.org/packages/08/e7/85d2eff1b0221c4c874e771f8294c6389a2e8ce82e9785c84dd094bb274e/botocore-1.25.0.tar.gz"
+    sha256 "646f0631c4ee46928be2dbb4b44e10f5f184e70ed6efddb24bc7328d81d7a175"
   end
 
   resource "colorama" do
@@ -41,13 +42,13 @@ class AwscliAT1 < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/2f/e0/3d435b34abd2d62e8206171892f174b180cd37b09d57b924ca5c2ef2219d/docutils-0.16.tar.gz"
-    sha256 "c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
+    url "https://files.pythonhosted.org/packages/93/22/953e071b589b0b1fee420ab06a0d15e5aa0c7470eb9966d60393ce58ad61/docutils-0.15.2.tar.gz"
+    sha256 "a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"
   end
 
   resource "jmespath" do
-    url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
-    sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+    url "https://files.pythonhosted.org/packages/06/7e/44686b986ef9ca6069db224651baaa8300b93af2a085a5b135997bf659b3/jmespath-1.0.0.tar.gz"
+    sha256 "a490e280edd1f57d6de88636992d05b71e97d69a26a19f058ecf7d304474bf5e"
   end
 
   resource "pyasn1" do
@@ -71,17 +72,22 @@ class AwscliAT1 < Formula
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/e1/eb/e57c93d5cd5edf8c1d124c831ef916601540db70acd96fa21fe60cef1365/s3transfer-0.6.0.tar.gz"
-    sha256 "2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"
+    url "https://files.pythonhosted.org/packages/7e/19/f82e4af435a19b28bdbfba63f338ea20a264f4df4beaf8f2ab9bfa34072b/s3transfer-0.5.2.tar.gz"
+    sha256 "95c58c194ce657a5f4fb0b9e60a84968c808888aed628cd98ab8771fe1db98ed"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
+    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
   end
 
   def install
-    virtualenv_install_with_resources
+    # setuptools>=60 prefers its own bundled distutils, which is incompatabile with docutils~=0.15
+    # Force the previous behavior of using distutils from the stdlib
+    # Remove when fixed upstream: https://github.com/aws/aws-cli/pull/6011
+    with_env(SETUPTOOLS_USE_DISTUTILS: "stdlib") do
+      virtualenv_install_with_resources
+    end
     pkgshare.install "awscli/examples"
 
     rm Dir["#{bin}/{aws.cmd,aws_bash_completer,aws_zsh_completer.sh}"]

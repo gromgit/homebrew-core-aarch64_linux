@@ -1,8 +1,8 @@
 class Empty < Formula
   desc "Lightweight Expect-like PTY tool for shell scripts"
   homepage "https://empty.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/empty/empty/empty-0.6.22b/empty-0.6.22b.tgz"
-  sha256 "f581d560e1fa857f5304586e3c2107b5838bcf11dedcccec4a7191fa9e261b69"
+  url "https://downloads.sourceforge.net/project/empty/empty/empty-0.6.21b/empty-0.6.21b.tgz"
+  sha256 "2fccd0faa1b3deaec1add679cbde3f34250e45872ad5df463badd4bb4edeb797"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,12 +11,8 @@ class Empty < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "84afb04ac997310da37e100d6d50f618d1ee1d293ff11694dc2449b6f65a659d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7264818e54338763ddae29e5c468f717072bc7c6a4752c4318da7a8bc5f144a8"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7e0b4eecd78ddb0c349b97ab70ad1a8159e3a55b10a5079ba24797fa2933ebd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d05665ea66efb506651fca79d7f7cdd2cc448b598499ed42b08f19c8928bca26"
-    sha256 cellar: :any_skip_relocation, catalina:       "5ab09ed653c3f767d333aab559471675d68ee366bbc8a9980ccce0f6a5b2efda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce8354cfcdb62d269eefbe94c06693758f986d1446fea89b569c0021546a734e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/empty"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "def802912d37d73a568c6fd80a2aee59253d94292332a54ee669240f341b91d8"
   end
 
   def install

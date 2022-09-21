@@ -11,8 +11,10 @@ class Ack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e7e30bf5bbecf500fe23c4c3bcaf4fbf0e7976e902df2b4e16bcbd10898d13b0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ack"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "71d0802dea13ac3601896b1ed5632a0b3ed5fa280f2bba02611b7b3b1f5f21c1"
   end
+
 
   head do
     url "https://github.com/beyondgrep/ack3.git", branch: "dev"

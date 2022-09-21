@@ -1,8 +1,8 @@
 class PetscComplex < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (complex)"
-  homepage "https://petsc.org/"
-  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.4.tar.gz"
-  sha256 "99c127486722a3ffd95a268b4ceb0976cbf217926c681a9631bd7246eab8cb2a"
+  homepage "https://www.mcs.anl.gov/petsc/"
+  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.0.tar.gz"
+  sha256 "96d5aca684e1ce1425891a620d278773c25611cb144165a93b17531238eaaf8a"
   license "BSD-2-Clause"
 
   livecheck do
@@ -10,12 +10,12 @@ class PetscComplex < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c37605edacdff6c34abc0d25568e4150c805eb8cde38cc14f19bb83766e62695"
-    sha256 arm64_big_sur:  "461e5917ffa2f8cc66a2436a0749d90ba396e8c51483a8509c64ccef02519e34"
-    sha256 monterey:       "97525809053c56281cffaf2087e8746760327b59640079768560c92b1d7849df"
-    sha256 big_sur:        "729dad0081625b186e00e230598796fbbbdd0699dfac0485223a5b3a2cdbd0ca"
-    sha256 catalina:       "075f167f50b088e9a20aaec1b2d0e7d1cea62e16f1510eb39a24ebfd249da6d4"
-    sha256 x86_64_linux:   "d29d36898ce7a21d1eb564061eed9ffaccdedc0973869fe519aa60876d75eacc"
+    sha256 arm64_monterey: "66f2d3c4fcb4b0c288a9e1a0a4994617e6a860e7e9d839b594c9354d776f0686"
+    sha256 arm64_big_sur:  "68232f6457bad61079e3e39660d904a1985c2f594397a2157074e202f47cb236"
+    sha256 monterey:       "a4f4e29bb5cfed249eafb734178723b46bdb844badb46a4e46745c6a33b3ace6"
+    sha256 big_sur:        "3726de3542182e8aade2497a67194afcc605a19d945ada3aaf37cce08b18a9ea"
+    sha256 catalina:       "6d60454d85def8764899a23d0a30399afce5c650d2bc082c0b5c8aabd2f74f39"
+    sha256 x86_64_linux:   "c7ac9e6f30556c348d67cebda53a69e3365eab9d457e7379484c6de8e55cc96c"
   end
 
   depends_on "hdf5"
@@ -27,8 +27,6 @@ class PetscComplex < Formula
   depends_on "python@3.10"
   depends_on "scalapack"
   depends_on "suite-sparse"
-
-  uses_from_macos "python" => :build
 
   conflicts_with "petsc", because: "petsc must be installed with either real or complex support, not both"
 

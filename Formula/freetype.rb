@@ -12,13 +12,10 @@ class Freetype < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3e190f2fa02702aa86e46cf33e7dde1d93e879f1de38f3d1b61e301f8367136d"
-    sha256 cellar: :any,                 arm64_big_sur:  "deb09510fb83adf76d9bb0d4ac4a3d3a2ddfff0d0154e09d3719edb73b058278"
-    sha256 cellar: :any,                 monterey:       "3d4afd3f040571ea464c7afc010be38faf77665f919a79f557369d2eceee13d1"
-    sha256 cellar: :any,                 big_sur:        "69a5d61245af56e6b088986b16c6e5b842c3d4f5896c34e013341ca94f4a45d1"
-    sha256 cellar: :any,                 catalina:       "cafa6fee3a0ca54b1659f433667a145acef2c2d2061292d2f8bc088db7f0ea4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43be70d09e51402bb453d491d69021af20f0d0c5154092bd5571b365673d4e2f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/freetype"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4370070b8bf114a2c6f179b51ec8b6a23d9e8d09117a94576d8d21412a8730a5"
   end
+
 
   depends_on "libpng"
 

@@ -1,8 +1,8 @@
 class Teleport < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://gravitational.com/teleport"
-  url "https://github.com/gravitational/teleport/archive/v10.2.0.tar.gz"
-  sha256 "2b5b049d8630b443559103f999f5263a249f4ef3a8acb6b42c5e7163a551d3cb"
+  url "https://github.com/gravitational/teleport/archive/v9.2.1.tar.gz"
+  sha256 "1fde014338e137cfced6ebb2661b55966264abc1a7624379859b31e3107a1f2f"
   license "Apache-2.0"
   head "https://github.com/gravitational/teleport.git", branch: "master"
 
@@ -16,17 +16,15 @@ class Teleport < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "09791bc677511c2b8c1a41598d123a009fc836fa7bf00c2e2c05649095878c6e"
-    sha256 cellar: :any,                 arm64_big_sur:  "f8e0ceafa7e6fe54bfd55bc91c268728dfc42811a77256b20ba4cb6a3e974523"
-    sha256 cellar: :any,                 monterey:       "4fe384f47fb2b6eafa28cbb9ace4a4dbf6d27c9a14cd6469b7e6c1b949dc408a"
-    sha256 cellar: :any,                 big_sur:        "3bfe1c70663371bbe2fb7bbe5ba5c322b643725d13f2e2ffeb62275e0ce34aec"
-    sha256 cellar: :any,                 catalina:       "a0b936c3648f8b5aebb01d7c6f617bc980b3ceba91c87a4b451e6cbd0715cc07"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b632dae0814c30aae1773489e7818f62f6a142a763e9df6f137f422dc9f0932c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "21bbe32cb3bf50fe1134b1d7bb11669c19630ad79f3af4e5bb574a111abb7fc7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ee99fa8ed60d134fd38c33c0cd97a0b13ac3a20e88202c7cc34a8c2273d6713"
+    sha256 cellar: :any_skip_relocation, monterey:       "00a3bbde09eb86b688f3b47e2fdbc3918bc10c0d0d359806a084aa698aab2f88"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c6db2dfbe8be5a208b59bab37abc135fa0d14f548028d45ec76920dc16c7318c"
+    sha256 cellar: :any_skip_relocation, catalina:       "fce410377c9b9456fa14d6077cc0e37814d830d9aa1a1aa0eb27acf23a867483"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b47dc4feb3746d7c027db6a84c9dbb2e00f61c97d40589c1c954ea847bf05c4"
   end
 
   depends_on "go" => :build
-  depends_on "pkg-config" => :build
-  depends_on "libfido2"
 
   uses_from_macos "curl" => :test
   uses_from_macos "netcat" => :test
@@ -36,13 +34,13 @@ class Teleport < Formula
 
   # Keep this in sync with https://github.com/gravitational/teleport/tree/v#{version}
   resource "webassets" do
-    url "https://github.com/gravitational/webassets/archive/789ca5098b3e1f66c0bea2d2014ae247b3c1f74f.tar.gz"
-    sha256 "1ccbf2d4fbb70a44069c26e763b3dc000caadbb973c44460ea91a7a39a00aef5"
+    url "https://github.com/gravitational/webassets/archive/4c555ddd7f4e8c6d74dd1ac467db5d17ad5c4ecc.tar.gz"
+    sha256 "00ba592b9a5f790e115d41a2a42127b178b75a362292b68b40577881a0984b19"
   end
 
   def install
     (buildpath/"webassets").install resource("webassets")
-    ENV.deparallelize { system "make", "full", "FIDO2=dynamic" }
+    ENV.deparallelize { system "make", "full" }
     bin.install Dir["build/*"]
   end
 

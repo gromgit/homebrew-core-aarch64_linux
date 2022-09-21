@@ -6,12 +6,8 @@ class Cloog < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e6e5952ded447b71b8742c7110512d9afc91b7399a900ec8f7b3317c47731f49"
-    sha256 cellar: :any,                 arm64_big_sur:  "7e9717c9f378f51c40282abd7defb978d0a0edd960eb84410f493bd96a27e222"
-    sha256 cellar: :any,                 monterey:       "7238821fcae5761ac240e91f19287ac119eab3db509b7f1b040ba7f9e5b562ff"
-    sha256 cellar: :any,                 big_sur:        "d5e21a7bc40be89004c107f89e49c8dbda04cc1b9fb54e15d4225823562b8b19"
-    sha256 cellar: :any,                 catalina:       "52c35562f93176d8f3e5216f5f2867aa857e3f0b8b238eb036dea9dbc077595e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b700274e30904d1827d5ec5eacd0809b13183ca532305437a15592dc61167bc0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cloog"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8578397781dcdfd82fab2c425e479ad7a854b8aa48053219b2499bf1271e816b"
   end
 
   depends_on "pkg-config" => :build

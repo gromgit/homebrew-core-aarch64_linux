@@ -2,7 +2,7 @@ class Collectd < Formula
   desc "Statistics collection and monitoring daemon"
   homepage "https://collectd.org/"
   license "MIT"
-  revision 4
+  revision 2
 
   stable do
     url "https://collectd.org/files/collectd-5.12.0.tar.bz2"
@@ -21,16 +21,16 @@ class Collectd < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "0e458ec53ea191bcd9674df6319fc12ddd6237a29572e8094ede1d1eefd90cf0"
-    sha256 arm64_big_sur:  "86de826e614056a49f494ea1bd764a5eaa566fe79ac7dd471c98f27a8ac28364"
-    sha256 monterey:       "36707976a260835ac0c871086f6d8869f75b9d5f7d61c5c291e39e846dc80097"
-    sha256 big_sur:        "5d6c61543e3db6c65f8adff020392bf2185a1b186a9fffca4f512183c5439c1f"
-    sha256 catalina:       "82111df6006519d6c6f0eae1e0dd5dec1756997e8a772ce3fc1458e87b017a80"
-    sha256 x86_64_linux:   "fa7db8c94c7508f40740bebc17d3ebc7d9fdf8bcc5cb7cc438bc6e0bab376d09"
+    sha256 arm64_monterey: "a56843d8635cca54f7b67c584147d82a3a1d1f9a2ac3306e4ff9f6c1b112f160"
+    sha256 arm64_big_sur:  "ad251013d5579a17ec0682b23dd902d7fadd6f0f35736dd98d89c4f625f55d1e"
+    sha256 monterey:       "d34d4f4ed54c19669a9cfbd11e8d27ace8c41c0628c2852636c5bead857e8089"
+    sha256 big_sur:        "a81231d246349376c3e6bab9e1c7b1199645c9a8941e7339aed9fd239e4847ed"
+    sha256 catalina:       "1f16bc2e65d7475fd67c6e286027a543e506272901f7fdac98522d3d4a664b7b"
+    sha256 x86_64_linux:   "a2b240c5b10bb4f9b1593d9ff8b1803cbe314cc4b72c108aa845c2e686a8c0d9"
   end
 
   head do
-    url "https://github.com/collectd/collectd.git", branch: "main"
+    url "https://github.com/collectd/collectd.git"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -42,17 +42,19 @@ class Collectd < Formula
   depends_on "net-snmp"
   depends_on "riemann-client"
 
-  uses_from_macos "bison" => :build
-  uses_from_macos "flex" => :build
+  uses_from_macos "bison"
+  uses_from_macos "flex"
   uses_from_macos "perl"
 
   def install
-    args = std_configure_args + %W[
+    args = %W[
+      --disable-debug
+      --disable-dependency-tracking
+      --prefix=#{prefix}
       --localstatedir=#{var}
       --disable-java
       --enable-write_riemann
     ]
-    args << "--with-perl-bindings=PREFIX=#{prefix} INSTALLSITEMAN3DIR=#{man3}" if OS.linux?
 
     system "./build.sh" if build.head?
     system "./configure", *args

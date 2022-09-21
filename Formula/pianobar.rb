@@ -1,28 +1,23 @@
 class Pianobar < Formula
   desc "Command-line player for https://pandora.com"
-  homepage "https://6xq.net/pianobar/"
-  url "https://6xq.net/pianobar/pianobar-2022.04.01.tar.bz2"
-  sha256 "1670b28865a8b82a57bb6dfea7f16e2fa4145d2f354910bb17380b32c9b94763"
+  homepage "https://github.com/PromyLOPh/pianobar/"
+  url "https://6xq.net/pianobar/pianobar-2020.11.28.tar.bz2"
+  sha256 "653bfb96b548259e3ac360752f66fdb77e8e220312e52a43c652f7eb96e7d4fe"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/PromyLOPh/pianobar.git", branch: "master"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?pianobar[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7c33a6f2e9b9ae1d701f14a520292c89caa7ea330e8211c9987ee391f20618d4"
-    sha256 cellar: :any,                 arm64_big_sur:  "530a99e4e0542d8464ae5230de3c45603476d1c6bf8c1a08ffba215959753b99"
-    sha256 cellar: :any,                 monterey:       "6233ef41fd8d56e42636aa74ccb7ef2612f13d55f7117a2fe0241da90f003bd0"
-    sha256 cellar: :any,                 big_sur:        "cc1f2870b2bcfd05cd880aec0587fba5208ec42897c1338ae8ea89f8abf713b8"
-    sha256 cellar: :any,                 catalina:       "5eba43deaa835d05bbc03636fc3277d7a40120e381ba8ba2430d07ab6d272fa8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99e93aa0bf38508bc6f7174b91dc72dcf32ee79dbe92d4c6057864b3d8009206"
+    sha256 cellar: :any,                 arm64_monterey: "ba9ac1b0f24fb28d3e6e3a03f715504054759559cae549df46c5a804bdaece8a"
+    sha256 cellar: :any,                 arm64_big_sur:  "00b8027107c1afba4dd0c91edc602bb885ea4ae970c007eb92fd811403976ab5"
+    sha256 cellar: :any,                 monterey:       "b8f5b1ad1c8457131c871ae68dd363ea8e8b0791fbfa3d070de77cab8d09d495"
+    sha256 cellar: :any,                 big_sur:        "5dbc24f0e6718770b02c87bdf1ed8ad4010960a659e85a63714df0ed317d3d73"
+    sha256 cellar: :any,                 catalina:       "f7627970b36ad2570186a6cde16f349de3e80c57fd4f6a30d59be2479da63df9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0fb3f1818c95bfe5ab201277b97f441a3673a65127bd335bec780542dc09e04"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   depends_on "json-c"
   depends_on "libao"
   depends_on "libgcrypt"

@@ -1,18 +1,18 @@
 class Pueue < Formula
   desc "Command-line tool for managing long-running shell commands"
   homepage "https://github.com/Nukesor/pueue"
-  url "https://github.com/Nukesor/pueue/archive/v2.1.0.tar.gz"
-  sha256 "cd5c6500e65960f6a102db5d0f0544f49eec8f74b2cc0df16ded8e2525a545f6"
+  url "https://github.com/Nukesor/pueue/archive/v2.0.2.tar.gz"
+  sha256 "92e54105f840d973d048c280a9320c8740d205770d82f8ca882a4eb5716c4136"
   license "MIT"
   head "https://github.com/Nukesor/pueue.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c29548258ce75deb56323a25171c19fc8b65c59b3528c01cf54795e0eb599e4e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ae3c5df9f8e5806b6491ffcd961e5b82e0ce0e1388d716a310b60e0a0830b2be"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1a3476363b71812a96b2979534efcd5d2805499dac71f9282377812a18d1ad4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69320b094180e687430f5c804ad24e5bf1fe7d43e5e53459f47849e959d26da6"
-    sha256 cellar: :any_skip_relocation, catalina:       "5c6d4bef8102f8c314a7daa0098d6493631881d21edcfb48c1fabc16afd5beeb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b86dcb78f19ae14358dae333087e1d54d1468280cacd2202baccda1da43174bf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "60da7272b878cea08e0fce5837f352e6f67402dba30fa1d72fae628d8db0d7cc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71441f15db84eb6d278b19d49d30358ad653ab46c2b2b87856e1014438b62b30"
+    sha256 cellar: :any_skip_relocation, monterey:       "ab0b8cc6b6b1c6f4286f2e6a89be64ea01aae2dca4d37815751cad24c74cf944"
+    sha256 cellar: :any_skip_relocation, big_sur:        "593066d61dc94fcf72eb720d4444f6bf1917ed877de04b98f476588548671952"
+    sha256 cellar: :any_skip_relocation, catalina:       "1e2c08fe197b1fc446f4aa3d69a6885b9b3b428174abdb0ec8d588b9b9974ac1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d40ed92a9b201f707e12a3f225698df8d0ff6b41025d65b0af261493b1bd97e1"
   end
 
   depends_on "rust" => :build

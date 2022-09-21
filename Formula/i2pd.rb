@@ -1,22 +1,27 @@
 class I2pd < Formula
   desc "Full-featured C++ implementation of I2P client"
   homepage "https://i2pd.website/"
-  url "https://github.com/PurpleI2P/i2pd/archive/2.43.0.tar.gz"
-  sha256 "db1679653491a411dd16fa329488d840296c8f680e0691f9fe0d0e796e5d7bca"
+  url "https://github.com/PurpleI2P/i2pd/archive/2.41.0.tar.gz"
+  sha256 "7b333cd26670903ef0672cf87aa9f895814ce2bbef2e587e69d66ad9427664e6"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "db52cf4513b14df53dee830dccc3f7c616414f18ab700245240a8f3589964d8e"
-    sha256 cellar: :any,                 arm64_big_sur:  "f394f532f667ac1c0517948d21296570ac1c02584e024649167f47e3a61117f8"
-    sha256 cellar: :any,                 monterey:       "e67a017206afb3adc32fbbae996cbbe34947921a256bd95c4cafc2a754cd08db"
-    sha256 cellar: :any,                 big_sur:        "5c864dc961eb45d906dd71a2489a66319f7d368556b790dd905bf8cf1a46700c"
-    sha256 cellar: :any,                 catalina:       "a94343a4472e833464044756d6b618f017455ffaa9c92ace525508018ce46bb4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a8e4c4b782b1b6dd3928ce1c7566310771421a6a08e95df4c581cd03919ac08"
+    sha256 cellar: :any, arm64_monterey: "ecafe792b40cef127a5f34d06b6d4a2d887bbb52468d546cbba494abdb1d3ba9"
+    sha256 cellar: :any, arm64_big_sur:  "e9e10b7b38236e95ee3bc7893bfdf086802c4e2733698e7e767c7514b8beccf2"
+    sha256 cellar: :any, monterey:       "0b9b3ff3efc51f4c88d4b5f565da3778e906d2b948987740b8b1040afbb32867"
+    sha256 cellar: :any, big_sur:        "7396ef0b74e60a44dfbdc46e55c566392c06e5f15116f5ccaa116f504f9252bd"
+    sha256 cellar: :any, catalina:       "f6947aca1840031c034cd43fa36b57e6eaece869ae74054e5fb1c04c6e14eaee"
   end
 
   depends_on "boost"
   depends_on "miniupnpc"
   depends_on "openssl@1.1"
+
+  # apply commit 5c15a12116c1e4447b94fd0f36caecfd2e5a40de to fix mutex lock on stop
+  patch do
+    url "https://github.com/PurpleI2P/i2pd/commit/5c15a12116c1e4447b94fd0f36caecfd2e5a40de.patch?full_index=1"
+    sha256 "bc3b1234966bd7d7dd13dcc71fd72f8db316b865aa7fb4e7bffa4fdd2efa4eb9"
+  end
 
   def install
     args = %W[

@@ -13,13 +13,10 @@ concurrency:
 env:
   HOMEBREW_FORCE_HOMEBREW_ON_LINUX: 1
 
-permissions:
-  contents: read
-
 jobs:
   autopublish:
     if: github.repository == 'Homebrew/homebrew-core'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew

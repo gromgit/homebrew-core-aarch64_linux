@@ -1,8 +1,8 @@
 class Lxc < Formula
   desc "CLI client for interacting with LXD"
   homepage "https://linuxcontainers.org"
-  url "https://linuxcontainers.org/downloads/lxd/lxd-5.5.tar.gz"
-  sha256 "462e66c03b5eb08eaf3a3b5be4be73043e3af63218c79af100989bd018daf29b"
+  url "https://linuxcontainers.org/downloads/lxd/lxd-5.1.tar.gz"
+  sha256 "319f4e93506e2144edaa280b0185fb37c4374cf7d7468a5e5c8c1b678189250a"
   license "Apache-2.0"
 
   livecheck do
@@ -11,22 +11,19 @@ class Lxc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "714228afe2a3b99b4f54f9c98a825e33d69ed40a51f02c77418b012a7a6ec8af"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3c2213f827ec4718fe73395ba31f52ae6857c6fa42ba25bfec78569f1c02f66"
-    sha256 cellar: :any_skip_relocation, monterey:       "828d4b67d6293d3b1ae58d93846a21b5fc65370b4c1f2a1cfa9c0636a03bb3b2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "75efe0fabe1441e2b4dd6f59dcf75d30eda2454a50a31c9eacbced068a0b8324"
-    sha256 cellar: :any_skip_relocation, catalina:       "cbfd6d5b06298bfe8019f5418b221a2fc7bd20fc110f86c0abbf975716278175"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a5807e801b2b9422e67da3fefe68b52e5a1949281771d427572ec38049bb484"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lxc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b79686197e10d31bfa0913e763a77d873f2d4f4120dd00db0150e65f9817f0a4"
   end
 
   depends_on "go" => :build
 
   def install
+    ENV["GOBIN"] = bin
+
     system "go", "build", *std_go_args, "./lxc"
   end
 
   test do
-    output = JSON.parse(shell_output("#{bin}/lxc remote list --format json"))
-    assert_equal "https://images.linuxcontainers.org", output["images"]["Addr"]
+    system "#{bin}/lxc", "--version"
   end
 end

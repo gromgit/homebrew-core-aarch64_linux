@@ -29,7 +29,7 @@ module Homebrew
     linux_runner = if timeout > 360
       "linux-self-hosted-1"
     else
-      "ubuntu-22.04"
+      "ubuntu-latest"
     end
     linux_runner_spec = {
       runner:    linux_runner,
@@ -43,14 +43,12 @@ module Homebrew
     tags = formula.bottle_specification.collector.tags
     runners = if tags.count == 1 && tags.first.system == :all
       # Build on all supported macOS versions and Linux.
-      MacOSVersions::SYMBOLS.values.flat_map do |version|
+      MacOS::Version::SYMBOLS.values.flat_map do |version|
         macos_version = MacOS::Version.new(version)
         if macos_version.outdated_release? || macos_version.prerelease?
           nil
         else
-          macos_runners = [{
-            runner: "#{macos_version}-#{ENV.fetch("GITHUB_RUN_ID")}-#{ENV.fetch("GITHUB_RUN_ATTEMPT")}",
-          }]
+          macos_runners = [{ runner: macos_version.to_s }]
           macos_runners << { runner: "#{macos_version}-arm64" } if macos_version >= :big_sur
           macos_runners
         end
@@ -63,11 +61,7 @@ module Homebrew
           nil # Don't rebottle for older macOS versions (no CI to build them).
         else
           runner = macos_version.to_s
-          runner += if tag.arch == :x86_64
-            "-#{ENV.fetch("GITHUB_RUN_ID")}-#{ENV.fetch("GITHUB_RUN_ATTEMPT")}"
-          else
-            "-#{tag.arch}"
-          end
+          runner += "-#{tag.arch}" unless tag.arch == :x86_64
           { runner: runner }
         end
       rescue MacOSVersionError

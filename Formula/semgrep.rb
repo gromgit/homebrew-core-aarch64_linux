@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v0.111.1",
-      revision: "d3a6dc7132ba3ff4c7057c90fc31512c22897e63"
+      tag:      "v0.91.0",
+      revision: "78a2e51eff86699713a5a8f02b832106229be776"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,12 +15,12 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "f8ce9e275108104734afd9ad33cda8301727871b30b564bffeacb9355146e1b2"
-    sha256 cellar: :any, arm64_big_sur:  "f9a19b63886c99b16614b98e32f78a77acb4a6ee6d2e397c5c6e93f29e400c8f"
-    sha256 cellar: :any, monterey:       "300094a56c3eea8088847978d60692674b0e933c6bc68ae9c534e190ce671d53"
-    sha256 cellar: :any, big_sur:        "160f5d0c9f1dfe92ce580840e63ac58cb4560d9fe774a4c89581e5b2edae1c71"
-    sha256 cellar: :any, catalina:       "d2628cc913d10167d67bf279ef98e4de62dc5a92b1cceb46d3c7e35f29e5b60d"
-    sha256               x86_64_linux:   "17f7a64778120b3a71f7c7c19e1636ddb343c7dee38bfe2603b5d90d3af473fd"
+    sha256 cellar: :any, arm64_monterey: "fdce75ce12823b887b73d8521878c643b30ee713b69bb55e28117d57f4ffba7e"
+    sha256 cellar: :any, arm64_big_sur:  "779c0e2bddf09b65ff20478eaad106594515b2eae0b0460b03ef80d231905881"
+    sha256 cellar: :any, monterey:       "617a80311808d39c194bcb851360967fe209d6d2f1baff98e38e098ec4015ad1"
+    sha256 cellar: :any, big_sur:        "19bc542796df6f7181dcd9e9d3c5a4b71b8592739f9f6cce958f8bc575c91552"
+    sha256 cellar: :any, catalina:       "1d5603b6d72e8d29ebdbe4b2dd959ef4b2794fd667d395b3e144ecc6f58b0714"
+    sha256               x86_64_linux:   "dd8b7bb0c85f1fce2da1b9cf7e107e71e5218723ddfa6ebcd9af5986522f0e38"
   end
 
   depends_on "cmake" => :build
@@ -53,18 +53,18 @@ class Semgrep < Formula
   end
 
   resource "bracex" do
-    url "https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz"
-    sha256 "e7b23fc8b2cd06d3dec0692baabecb249dda94e06a617901ff03a6c56fd71693"
+    url "https://files.pythonhosted.org/packages/bd/ef/6273bba9e5bc615aab4997159eeaddfe03c825eeabe2942c39e91be5afec/bracex-2.2.1.tar.gz"
+    sha256 "1c8d1296e00ad9a91030ccb4c291f9e4dc7c054f12c707ba3c5ff3e9a81bcd21"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
-    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
+    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
   end
 
   resource "click" do
@@ -78,8 +78,8 @@ class Semgrep < Formula
   end
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/2b/65/24d033a9325ce42ccbfa3ca2d0866c7e89cc68e5b9d92ecaba9feef631df/colorama-0.4.5.tar.gz"
-    sha256 "e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"
+    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
+    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
   end
 
   resource "defusedxml" do
@@ -103,8 +103,8 @@ class Semgrep < Formula
   end
 
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/35/ee/889aee424a43066a06ac68e499335877775eac9b4409f7860f6af94c6688/jsonschema-4.14.0.tar.gz"
-    sha256 "15062f4cc6f591400cd528d2c355f2cfa6a57e44c820dc783aee5e23d36a831f"
+    url "https://files.pythonhosted.org/packages/69/11/a69e2a3c01b324a77d3a7c0570faa372e8448b666300c4117a516f8b1212/jsonschema-3.2.0.tar.gz"
+    sha256 "c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a"
   end
 
   resource "packaging" do
@@ -113,13 +113,13 @@ class Semgrep < Formula
   end
 
   resource "peewee" do
-    url "https://files.pythonhosted.org/packages/45/c4/be139f7b7e0bbbc7b2fba4dc492cfb0202c64a0086fa2d23c0b6091ef4f2/peewee-3.15.1.tar.gz"
-    sha256 "6d5db3babc33819ac326f1550e5a39677f4584094c567a7b88cc6bf7bcdcb687"
+    url "https://files.pythonhosted.org/packages/ca/2a/a3a01c86080c77369a5288554e619a0dc4efdacd9fabae2d2fdbbe393f82/peewee-3.14.10.tar.gz"
+    sha256 "23271422b332c82d30c92597dee905ee831b56c6d99c33e05901e6891c75fe15"
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "pyrsistent" do
@@ -127,14 +127,9 @@ class Semgrep < Formula
     sha256 "d4d61f8b993a7255ba714df3aca52700f8125289f84f704cf80916517c46eb96"
   end
 
-  resource "python-lsp-jsonrpc" do
-    url "https://files.pythonhosted.org/packages/99/45/1c2a272950679af529f7360af6ee567ef266f282e451be926329e8d50d84/python-lsp-jsonrpc-1.0.0.tar.gz"
-    sha256 "7bec170733db628d3506ea3a5288ff76aa33c70215ed223abdb0d95e957660bd"
-  end
-
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
+    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
   end
 
   resource "ruamel.yaml" do
@@ -147,29 +142,24 @@ class Semgrep < Formula
     sha256 "4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"
   end
 
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
   resource "tqdm" do
     url "https://files.pythonhosted.org/packages/98/2a/838de32e09bd511cf69fe4ae13ffc748ac143449bfc24bb3fd172d53a84f/tqdm-4.64.0.tar.gz"
     sha256 "40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"
   end
 
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
-  end
-
-  resource "ujson" do
-    url "https://files.pythonhosted.org/packages/fb/94/44fbbb059fe5d295f1f73e731a0b9c2e1b5073c2c6b58bb9c068715e9b72/ujson-5.4.0.tar.gz"
-    sha256 "6b953e09441e307504130755e5bd6b15850178d591f66292bba4608c4f7f9b00"
-  end
-
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
+    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
   end
 
   resource "wcmatch" do
-    url "https://files.pythonhosted.org/packages/95/b3/597b79292584de5b790146871e50cf3cb3bf37cf845232a20123fc784ef2/wcmatch-8.4.tar.gz"
-    sha256 "ba4fc5558f8946bf1ffc7034b05b814d825d694112499c86035e0e4d398b6a67"
+    url "https://files.pythonhosted.org/packages/a7/73/7c739ae235b7e3ee36f2c0084a595b89c62aefeafa52df8d54d26846b32b/wcmatch-8.3.tar.gz"
+    sha256 "371072912398af61d1e4e78609e18801c6faecd3cb36c54c82556a60abc965db"
   end
 
   def install
@@ -184,7 +174,7 @@ class Semgrep < Formula
       ENV["SETUPTOOLS_USE_DISTUTILS"] = "stdlib"
 
       system "opam", "init", "--no-setup", "--disable-sandboxing"
-      ENV.deparallelize { system "opam", "switch", "create", "ocaml-base-compiler.4.14.0" }
+      ENV.deparallelize { system "opam", "switch", "create", "ocaml-base-compiler.4.12.0" }
 
       # Manually run steps from `opam exec -- make setup` to link Homebrew's tree-sitter
       system "opam", "update", "-y"
@@ -195,11 +185,6 @@ class Semgrep < Formula
       system "opam", "install", "-y", "--deps-only", "--no-depexts", "./semgrep-core/src/pfff"
       system "opam", "install", "-y", "--deps-only", "--no-depexts", "./semgrep-core/src/ocaml-tree-sitter-core"
       system "opam", "install", "-y", "--deps-only", "--no-depexts", "./semgrep-core"
-
-      # Run configure script in ocaml-tree-sitter-core
-      cd "semgrep-core/src/ocaml-tree-sitter-core" do
-        system "./configure"
-      end
 
       # Install semgrep-core and spacegrep
       cd "semgrep-core" do
@@ -212,7 +197,7 @@ class Semgrep < Formula
     end
 
     ENV["SEMGREP_SKIP_BIN"] = "1"
-    python_path = "cli"
+    python_path = "semgrep"
     cd python_path do
       venv = virtualenv_create(libexec, Formula["python@3.10"].bin/"python3.10")
       venv.pip_install resources.reject { |r| r.name == "ocaml-tree-sitter" }

@@ -5,22 +5,21 @@ class Apr < Formula
   mirror "https://archive.apache.org/dist/apr/apr-1.7.0.tar.bz2"
   sha256 "e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea"
   license "Apache-2.0"
-  revision 3
+  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "02e6b44b3284fa471cce15592a8666356f8d43b256bb08b391efbd521eddedd0"
-    sha256 cellar: :any,                 arm64_big_sur:  "26736a76f4ad71f17a1a5068bbe0a1bfa2c48e26622d3ed959f3ce42165ddd0c"
-    sha256 cellar: :any,                 monterey:       "365d71d8598761991d7c37831d11a4d355a5dc007863e5a677afd39d664d8351"
-    sha256 cellar: :any,                 big_sur:        "e397174ca8509867732b3b39bd3620288d84504584320355c9b1d85df0350e9a"
-    sha256 cellar: :any,                 catalina:       "ee9d9b6e5bb722c31ffac5ea0d2497f65feae2e69d73cafa44d63c99312d373d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9166ca46f30bc3f48b1087f107370800bb97ed74493cca5fc887b66ebc4c481b"
+    sha256 cellar: :any,                 arm64_monterey: "ecc2c4b61e538c3a39fe228221356c2aae9c3d967f72e20a7978206321ef15b4"
+    sha256 cellar: :any,                 arm64_big_sur:  "d8adb33071a6a845ff928b6166377dea6de5b642b412042002386416354932b9"
+    sha256 cellar: :any,                 monterey:       "706df15280f05bc3ab057bd5dd856746f02c4fcc7356cccd5babd92a6362f132"
+    sha256 cellar: :any,                 big_sur:        "d9a9554a726ec60e124055a55747e6e7f4cff6310955d6340be340ac053ac097"
+    sha256 cellar: :any,                 catalina:       "3f5c1fa8f17715291ce9f66cf4eb4f518ac1aa856c485f0157036459ad63792c"
+    sha256 cellar: :any,                 mojave:         "4627416a5d9c651d2d4fbb7faa639d6f7a89c7c0558576eeac1f17a81a17f3bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc3b583e8e0773016a5749e947939f895043a1155968fdbab795d3fba9fe801c"
   end
 
   keg_only :provided_by_macos, "Apple's CLT provides apr"
 
   depends_on "autoconf@2.69" => :build
-
-  uses_from_macos "libxcrypt"
 
   on_linux do
     depends_on "util-linux"

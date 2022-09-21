@@ -1,18 +1,18 @@
 class Ortp < Formula
   desc "Real-time transport protocol (RTP, RFC3550) library"
   homepage "https://www.linphone.org/technical-corner/ortp"
-  url "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.1.55/ortp-5.1.55.tar.bz2"
-  sha256 "a8dce7185401eb693389716269c4426036c41a25fb99b8075129c45f491d02b2"
+  url "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.1.12/ortp-5.1.12.tar.bz2"
+  sha256 "7ed33dc6085c0323ab8547cf20e6e501433ae685558eada33942d0dafe8f027e"
   license "GPL-3.0-or-later"
   head "https://gitlab.linphone.org/BC/public/ortp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a7957cf8af01767ea9ea3c3ece09bcb3365cbe73c02941e2ac59cfae544e9a7a"
-    sha256 cellar: :any,                 arm64_big_sur:  "45fc44eaa628a46d30063804099b01f55bf16181c0352f54b04a4d4a6769a753"
-    sha256 cellar: :any,                 monterey:       "7d58d6515059359e6bc0cff8222aebb9509178cae528d25a23851b75fd9f8ce0"
-    sha256 cellar: :any,                 big_sur:        "2a1e737533f32b5c2573c9a5065493f7ca34700aa3994545a178459012ad3e11"
-    sha256 cellar: :any,                 catalina:       "8223016e6e30bc6312b0d6cc7656dcb18d0b0c1ee07fdad3f380e81afb96dd99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0ba1503878d27abde9861a092c791a3458c18984e6d42c7f3670272ab26d67c"
+    sha256 cellar: :any,                 arm64_monterey: "8b32343c7016fe24f09c67194cd7fd5b1a34d44f371f044d7a427738b9ac98fa"
+    sha256 cellar: :any,                 arm64_big_sur:  "af954418bf3f68899b6db7563cfd131d775e3f1bb82eb07c3fb07f56ed16dedb"
+    sha256 cellar: :any,                 monterey:       "eeb7692b2499bc7d2d70c0e71fbd08458218207fc749e0b852664b6ccf7f0ee9"
+    sha256 cellar: :any,                 big_sur:        "326d6799b7492c9d2bf1739a57f0387941353594133176d83676bfa2ed7e5bd5"
+    sha256 cellar: :any,                 catalina:       "4892ad9ecf62b96a9535ad024bd4e081d775c0b23feddd3248d725cd89a9830c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c41a492928bc08195c98cc62331295793bd38a8d09ee31a80f54fb41fc9bc3b"
   end
 
   depends_on "cmake" => :build
@@ -22,33 +22,29 @@ class Ortp < Formula
   # bctoolbox appears to follow ortp's version. This can be verified at the GitHub mirror:
   # https://github.com/BelledonneCommunications/bctoolbox
   resource "bctoolbox" do
-    # Don't forget to change both instances of the version in the URL.
-    url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.1.55/bctoolbox-5.1.55.tar.bz2"
-    sha256 "19613e4a8f5b107af0acb849f45974a1af438c4e888e096c6216047fce6397a2"
+    url "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.1.12/bctoolbox-5.1.12.tar.bz2"
+    sha256 "a1f777627f0f0304ec56155f65d3318424a55b909d8b13d3012709a659b7c604"
   end
 
   def install
     resource("bctoolbox").stage do
-      system "cmake", "-S", ".", "-B", "build",
-                      "-DENABLE_TESTS_COMPONENT=OFF",
-                      *std_cmake_args(install_prefix: libexec)
-      system "cmake", "--build", "build"
-      system "cmake", "--install", "build"
+      system "cmake", ".", *std_cmake_args(install_prefix: libexec), "-DENABLE_TESTS_COMPONENT=OFF"
+      system "make", "install"
     end
 
     ENV.prepend_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
     ENV.append "LDFLAGS", "-Wl,-rpath,#{libexec}/lib" if OS.linux?
 
-    args = %W[
+    args = std_cmake_args + %W[
       -DCMAKE_PREFIX_PATH=#{libexec}
       -DCMAKE_C_FLAGS=-I#{libexec}/include
       -DCMAKE_CXX_FLAGS=-I#{libexec}/include
       -DENABLE_DOC=NO
     ]
-
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make", "install"
+    end
   end
 
   test do

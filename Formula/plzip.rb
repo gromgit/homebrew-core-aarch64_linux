@@ -12,12 +12,8 @@ class Plzip < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9ec189bc207195600ac67dc7bd8e1f45b34685f187829f20c94dc576530ed8bb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be14dc090e8d607c81f0602104ca92d76c2a2dd041d822d2e9ca2e10b9af5c40"
-    sha256 cellar: :any_skip_relocation, monterey:       "84d7405ddf1f389d88272bc1059de5734a5fa3ad7c4e47bca93db44668f408b3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "68bf6627aeaa0e6656deaf8022fd41e19529d0b6ba80d4f15063a6ad10d7d688"
-    sha256 cellar: :any_skip_relocation, catalina:       "cbf0b83bef990c417d8dc4cb57a67418ad1891842d18d568d27f902fe299560e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e23f7ed84c69053f4cb82d0666b15c566fae4989448f4f259a1cba4a81d7a9b0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/plzip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fd63e3458a15bfcedb89c3423c2400d29836ff77479c64b3c95b0292a6ee2daf"
   end
 
   depends_on "lzlib"

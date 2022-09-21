@@ -2,21 +2,21 @@ class Zig < Formula
   desc "Programming language designed for robustness, optimality, and clarity"
   homepage "https://ziglang.org/"
   license "MIT"
-  revision 1
 
   stable do
     url "https://ziglang.org/download/0.9.1/zig-0.9.1.tar.xz"
     sha256 "38cf4e84481f5facc766ba72783e7462e08d6d29a5d47e3b75c8ee3142485210"
-    depends_on "llvm@13"
+
+    depends_on "llvm"
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "68753cc80a085df9c1a37c33b9ce0dc1a52a54ee4d30b08ceb34adcd38c4187e"
-    sha256 cellar: :any,                 arm64_big_sur:  "cb634dd3f4056a6af9fb473bb4df0ef9d43f72d87770013c90d1cfed917a3d65"
-    sha256 cellar: :any,                 monterey:       "fb571c678a0b09b8121bf22beb0b5b7590c570126d996bd2453d0dc63556a79a"
-    sha256 cellar: :any,                 big_sur:        "a68db737a48c93265857facdf97584eaa2db5557ddfddfa193f753ad8cf33bfd"
-    sha256 cellar: :any,                 catalina:       "57ac5fe27bf9390bee7631c0b72e7f219bb07ef30a77ecbc45e38b7d1cbb5134"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16147ff8975e5e77003c1c933d1bbcd5cc57b4250eb838503a6dfea96d68206f"
+    sha256 cellar: :any,                 arm64_monterey: "61d958015313e75d98c407902e6aba1b4f359e392eda0c090199eec76d20534a"
+    sha256 cellar: :any,                 arm64_big_sur:  "accea97f675c8fb0c6049225ccaba3b9ce4a0d7f778ed47b4b2d2f34c8bccdf5"
+    sha256 cellar: :any,                 monterey:       "da8c2def2c9d0d09a84dd745a52b9d4acd136014b4fc1c383f06df05d99e6cb3"
+    sha256 cellar: :any,                 big_sur:        "ce7fefb8d1e9de6374a0daf605ae5ec7756377a6f60fa6b34bb11dfadf57e7c4"
+    sha256 cellar: :any,                 catalina:       "f53b3254181523c12e382404fec21583b408390ce2668b1c97d94b8af343acd8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d8cb3768434244333ab7164ba5806a924db341a1f86c9471009fc1f6177fcfe"
   end
 
   head do

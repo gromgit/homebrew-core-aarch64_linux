@@ -3,10 +3,10 @@ class GraphTool < Formula
 
   desc "Efficient network analysis for Python 3"
   homepage "https://graph-tool.skewed.de/"
-  url "https://downloads.skewed.de/graph-tool/graph-tool-2.45.tar.bz2"
-  sha256 "f92da7accfda02b29791efe4f0b3ed93329f27232af4d3afc07c92421ec68668"
+  url "https://downloads.skewed.de/graph-tool/graph-tool-2.44.tar.bz2"
+  sha256 "2dd8c31b65eb9404b78af1413d2c8896e247fa5bf81dfcbe56fcaa27af82df26"
   license "LGPL-3.0-or-later"
-  revision 2
+  revision 1
 
   livecheck do
     url "https://downloads.skewed.de/graph-tool/"
@@ -14,12 +14,11 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "bfd35784c3e8c4915567f5ad6606e819155eb3d7fd7e1fdf5c7658ff5325de00"
-    sha256                               arm64_big_sur:  "36dd6bbcd331b5e7bb582cf77ea97ac042e0a2aede7f55fdfa3f98f99d405243"
-    sha256                               monterey:       "a02c6f456582678f5b6dd5bfc74f273a1f7d31c0d8adda6eabf2192826729da9"
-    sha256                               big_sur:        "67efce17b0b24b7d86b99d9790f16b2ddbe1dadb57636f927738103c2d97d528"
-    sha256                               catalina:       "707cd23d7855407b312eb3eb8b80fbb60a10e93983a1206db475d9b88f7c38f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f41391aed1eff7170c45e4985f20f054726ec6629d99b693a9e95580a2b67fcd"
+    sha256 arm64_monterey: "9a4db825a44c6ae1614d5815103a57ad589c2230b963445d0947548439f43b7d"
+    sha256 arm64_big_sur:  "0b8df36a4822cbc9b336ce1614a69f52ca992be513d27b0d135d5730728af9a7"
+    sha256 monterey:       "a59af6591bd1d93f88163cc4edb3539687b84aee9b4818acfd1e896912a78c95"
+    sha256 big_sur:        "06f780584252159fcec05eb35a7ba6c975e55188f63703ace8fda545c9b5a8d1"
+    sha256 catalina:       "4075f605762c097fcb11d30e8228150079c1cded528eff0dc0b240020dba8300"
   end
 
   depends_on "autoconf" => :build
@@ -37,17 +36,9 @@ class GraphTool < Formula
   depends_on "numpy"
   depends_on "py3cairo"
   depends_on "pygobject3"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "scipy"
   depends_on "six"
-
-  uses_from_macos "expat" => :build
-
-  on_linux do
-    depends_on "gcc"
-  end
-
-  fails_with gcc: "5"
 
   resource "Cycler" do
     url "https://files.pythonhosted.org/packages/c2/4b/137dea450d6e1e3d474e1d873cd1d4f7d3beed7e0dc973b06e8e10d32488/cycler-0.10.0.tar.gz"
@@ -84,20 +75,10 @@ class GraphTool < Formula
     sha256 "52de08355fd5cfb3ef4533891092bb96229d43c2069703d4aff04fdbedf9c92f"
   end
 
-  def python3
-    deps.map(&:to_formula)
-        .find { |f| f.name.match?(/^python@\d\.\d+$/) }
-        .opt_bin/"python3"
-  end
-
   def install
-    # Linux build is not thread-safe.
-    ENV.deparallelize unless OS.mac?
-
-    system "autoreconf", "--force", "--install", "--verbose"
-    site_packages = Language::Python.site_packages(python3)
-    xy = Language::Python.major_minor_version(python3)
-    venv = virtualenv_create(libexec, python3)
+    system "autoreconf", "-fiv"
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    venv = virtualenv_create(libexec, Formula["python@3.9"].opt_bin/"python3")
 
     resources.each do |r|
       venv.pip_install_and_link r
@@ -108,17 +89,18 @@ class GraphTool < Formula
       "--disable-dependency-tracking",
       "--prefix=#{prefix}",
       "PYTHON=python3",
-      "--with-python-module-path=#{prefix/site_packages}",
+      "PYTHON_LIBS=-undefined dynamic_lookup",
+      "--with-python-module-path=#{lib}/python#{xy}/site-packages",
       "--with-boost-python=boost_python#{xy.to_s.delete(".")}-mt",
-      "--with-boost-libdir=#{Formula["boost"].opt_lib}",
+      "--with-boost-libdir=#{HOMEBREW_PREFIX}/opt/boost/lib",
       "--with-boost-coroutine=boost_coroutine-mt",
     ]
     args << "--with-expat=#{MacOS.sdk_path}/usr" if MacOS.sdk_path_if_needed
-    args << "PYTHON_LIBS=-undefined dynamic_lookup" if OS.mac?
 
     system "./configure", *args
     system "make", "install"
 
+    site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-graph-tool.pth").write pth_contents
   end
@@ -133,6 +115,6 @@ class GraphTool < Formula
       assert g.num_edges() == 1
       assert g.num_vertices() == 2
     EOS
-    system python3, "test.py"
+    system Formula["python@3.9"].opt_bin/"python3", "test.py"
   end
 end

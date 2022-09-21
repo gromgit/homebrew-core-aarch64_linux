@@ -4,7 +4,7 @@ class Ledger < Formula
   url "https://github.com/ledger/ledger/archive/v3.2.1.tar.gz"
   sha256 "92bf09bc385b171987f456fe3ee9fa998ed5e40b97b3acdd562b663aa364384a"
   license "BSD-3-Clause"
-  revision 9
+  revision 8
   head "https://github.com/ledger/ledger.git", branch: "master"
 
   livecheck do
@@ -13,12 +13,12 @@ class Ledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "101d38b9ad9bbee38049c084211f1d44b1fe2880e33c80350c0e16b8ab8dec34"
-    sha256 cellar: :any,                 arm64_big_sur:  "af728a87cae6e3cc0b0b9d1809665b7914af34dd7276bf53ae56b5e3bed685ee"
-    sha256 cellar: :any,                 monterey:       "a1388b6e16fc8ec03d26a29eb68863f828887a87df31ce8f6bb094527d81868a"
-    sha256 cellar: :any,                 big_sur:        "78ae068b488f4797d71f626837489a593d74224b89e085558a5e7c95b14441a4"
-    sha256 cellar: :any,                 catalina:       "9fe8c7132791596222ce22133bb3a194b4e59b00761616a2abab6f1e5909ca77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed433809b3e7e9db34611bfab79ad6186b78dbce97da6a4e7f9ab55be343963"
+    sha256 cellar: :any,                 arm64_monterey: "37ed1f1252a0d6fc2d03e992366b42f796ee1d20824ef33f2edec255cca37ead"
+    sha256 cellar: :any,                 arm64_big_sur:  "527153ddc9398531a048d9f44515c4957056a2c2516a4549276a49725f619aa3"
+    sha256 cellar: :any,                 monterey:       "e7c98a74ce6f898a81ebb3ed16a4ed632d642d01bc9fc3dc9a92db89a46298d9"
+    sha256 cellar: :any,                 big_sur:        "4268a869cff79e90071ec4dd922dfcdb794d60915bc9d537a7678cff3474a57f"
+    sha256 cellar: :any,                 catalina:       "4d57f51ac997fc69b854c52419cbe41d81c009ecc64963a8c11114b5b75170d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51ba0f4b37b449e710d9377f2d38fd92599ed3af9bd6d1bc0be042ba8cbacd5f"
   end
 
   depends_on "cmake" => :build
@@ -28,7 +28,6 @@ class Ledger < Formula
   depends_on "python@3.10"
 
   uses_from_macos "groff"
-  uses_from_macos "libedit"
 
   # Compatibility with Boost 1.76
   # https://github.com/ledger/ledger/issues/2030

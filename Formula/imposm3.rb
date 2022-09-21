@@ -4,15 +4,14 @@ class Imposm3 < Formula
   url "https://github.com/omniscale/imposm3/archive/refs/tags/v0.11.1.tar.gz"
   sha256 "14045272aa0157dc5fde1cfe885fecc2703f3bf33506603f2922cdf28310ebf0"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "963d5a8cb653d299053cee34147a8621cdf52b4ab6a35466280c33d8b8bbb459"
-    sha256 cellar: :any,                 arm64_big_sur:  "06e48ad84bf09388bbd6f9b7ba1d74f37d25e6cd88f5a654ecb3ca94382aa284"
-    sha256 cellar: :any,                 monterey:       "de268561471e84f0da4246e0ae1b164eefccc7d3605378f6abff9cf68a6ce6d1"
-    sha256 cellar: :any,                 big_sur:        "414b866d127e3b9a14cb7493c9eacf1caf125db4b12f06d762e9b46a4eaa7656"
-    sha256 cellar: :any,                 catalina:       "de962f20d642f3896ec67d03e77ab44994568a164029c1f9dc22b45491994c4c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dcd5668ebd62fd0883cceec35a34ff47aeb04302ab5c20f8885f4076e8b14646"
+    sha256 cellar: :any,                 arm64_monterey: "fdafcbc08f1e074d72e2cb9c4b1fac78bfce27bc7a13a8bcec66ef9772500ebb"
+    sha256 cellar: :any,                 arm64_big_sur:  "3de66aef5a6ac996404b8649533154c33556f89bff203e25ddd6629c5aaa5996"
+    sha256 cellar: :any,                 monterey:       "a21df3f6a6b84b27a6dc765c484b77369999a8bb3491a05a58a4443f2716e0ff"
+    sha256 cellar: :any,                 big_sur:        "0adc7ed5a958cc0383b156184ceb0a07c567d8826480a7e0d2de56355d74e787"
+    sha256 cellar: :any,                 catalina:       "d82aea779d17f54eef2f96d032a0d4332757afbb0f490e1f8dccb98cb519b5c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a792e769a9d5319b62ae64048ec8f88bf33f9d35eef724a66b5fca1a10b4496d"
   end
 
   depends_on "go" => :build

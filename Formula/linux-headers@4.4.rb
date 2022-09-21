@@ -6,11 +6,9 @@ class LinuxHeadersAT44 < Formula
   license "GPL-2.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e924cdf506f91e9010ea3dd8a32396262a28bc54ac0290982fd85a3215e7db2a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/linux-headers@4.4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8f75ecfa1adb846f0fe370b5d77a53a70649fa1b4ad512d9f21244162fd244a8"
   end
-
-  keg_only :versioned_formula
 
   depends_on :linux
 

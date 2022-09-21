@@ -2,8 +2,8 @@ class OryHydra < Formula
   desc "OpenID Certified OAuth 2.0 Server and OpenID Connect Provider"
   homepage "https://www.ory.sh/hydra/"
   url "https://github.com/ory/hydra.git",
-      tag:      "v1.11.10",
-      revision: "1a6c22070fc9550796c14b271e816be1dd1b8d78"
+      tag:      "v1.11.8",
+      revision: "337ab3ec2e363292ff93d5e5641a9b0bb87dba0c"
   license "Apache-2.0"
 
   livecheck do
@@ -12,12 +12,8 @@ class OryHydra < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "32800f07a1bbc749624f7c139b9da9b0e196a2838475b58e3832090801a256d1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6bf2d60166effbbc1279b573a8064be21c775b3fa1b2e71d1c5891fef164776a"
-    sha256 cellar: :any_skip_relocation, monterey:       "f10ffc6b0011b51bca4d63ef1fac6e1dd5ebeae147c01e3ba38d21cb4ef8f73a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2391affbce3715d42bbe69bc84d1a6c82bec6cd567efc96e60fab323db5da563"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1b7c62a800ffe8f53267ebad12608d2ee3c25c23b7ea5e3f9c1f6a29e6a0818"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7021751fe783eb552822118abf32ca9660d92bc87d1c1328ad8ef1765811e173"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ory-hydra"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4a975d9453686ef24b87eafdd4362dfb0adad2dd2558de792c35d8f00d1de70d"
   end
 
   depends_on "go" => :build

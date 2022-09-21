@@ -10,14 +10,8 @@ class Newlisp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1fb90e4713da55257988e767547c82613586e3a441e007a629e878644955cc89"
-    sha256 arm64_big_sur:  "24b3c02002fa7c832d9a817c552b19bd520ae06f82ab526b8e993ae0a3d77d99"
-    sha256 monterey:       "e7e6ab4d066923848b35a24c5a85cb357be0ab15d76fc9dbe5c87e2625c18b1a"
-    sha256 big_sur:        "509f6892a0eabf53cebe424f2f2163ded090b7942e8fe8e43047f43781b0535e"
-    sha256 catalina:       "62fd116459d24ab0db976221fb16fd83a7a7db5447298bcc7f8b0dbf9a55f91f"
-    sha256 mojave:         "179146b49c20011f3da4dbdb9b66a6ed66d5dd9f15d07aeca9b8717219a62eeb"
-    sha256 high_sierra:    "5a0d4085a0e7fc364b3165be7e92a9dfeb2f4882e1971663ac74c70348a5c4a4"
-    sha256 x86_64_linux:   "27f5be3e4e9319afe264a0394127ddbfdaf6d4f8da25b790af9b25d559c23c13"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/newlisp"
+    sha256 aarch64_linux: "9bb21e79553a47c9f013424c33e75a29384e4bc0d472c063955bd4bb147860fc"
   end
 
   depends_on "readline"

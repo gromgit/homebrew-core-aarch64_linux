@@ -1,12 +1,12 @@
 class Lammps < Formula
   desc "Molecular Dynamics Simulator"
   homepage "https://lammps.sandia.gov/"
-  url "https://github.com/lammps/lammps/archive/refs/tags/stable_23Jun2022.tar.gz"
+  url "https://github.com/lammps/lammps/archive/refs/tags/stable_29Sep2021_update3.tar.gz"
   # lammps releases are named after their release date. We transform it to
   # YYYY-MM-DD (year-month-day) so that we get a sane version numbering.
   # We only track stable releases as announced on the LAMMPS homepage.
-  version "20220623"
-  sha256 "d27ede095c9f00cd13a26f967a723d07cf8f4df65c700ed73573577bc173d5ce"
+  version "20210929-update3"
+  sha256 "e4c274f0dc5fdedc43f2b365156653d1105197a116ff2bafe893523cdb22532e"
   license "GPL-2.0-only"
 
   # The `strategy` block below is used to massage upstream tags into the
@@ -27,49 +27,49 @@ class Lammps < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "92210ab28f759a0190f750278c6d46e26da078db0aadb6bf49a0a50f04dcb07e"
-    sha256 cellar: :any,                 arm64_big_sur:  "a8aa255ed46e262bd98a79b4ef0b1d9d55cab432f839c7716d7562dfce1d80ed"
-    sha256 cellar: :any,                 monterey:       "da50b59f56062691df4b64b295e14478d95cef546f19d7b33a9dd53680b48437"
-    sha256 cellar: :any,                 big_sur:        "3074f43e948a6fd92ee8daa060eba4430ed863339c51586a7ba11b6c3f0cdaf5"
-    sha256 cellar: :any,                 catalina:       "6e678d1316c2c8f4b078d87ac5496c29547acedc5c93b8d66a536c15a8e8c686"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f03c890bfb34d0398c07ae16e3ab9f99793e206d4a77744094a3f8fb72a7f08a"
+    sha256 cellar: :any,                 arm64_monterey: "eb9d8e1685f7fee2e8d3631852fbadba6e129d9e70091313638e04fc7bce5795"
+    sha256 cellar: :any,                 arm64_big_sur:  "48ffa53bfa1b7c929ccdc113ba490e4d2ce01529ea09d2bda1e5c4429ea9f5aa"
+    sha256 cellar: :any,                 monterey:       "a4ed6e4d39617f089f6e1544d898d7851935dfaa339e5d7ff46dc7dec8520390"
+    sha256 cellar: :any,                 big_sur:        "1d60e46657ba86c6fd6795d0edb1e9450eb2d67214844514b515d8d8f7365097"
+    sha256 cellar: :any,                 catalina:       "e0bed5a3cef60b763e54011895188f02848e2293ff122fa262593feeb7f91e37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3877f35fa8ec630ff60c6cab01ebcc9ff8c9a7da3184618801b9316cd49c99a"
   end
 
-  depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "fftw"
   depends_on "gcc" # for gfortran
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "kim-api"
+  depends_on "libomp"
   depends_on "libpng"
   depends_on "open-mpi"
 
-  on_macos do
-    depends_on "libomp"
-  end
-
   def install
+    ENV.cxx11
+
     %w[serial mpi].each do |variant|
-      system "cmake", "-S", "cmake", "-B", "build_#{variant}",
-                      "-C", "cmake/presets/all_on.cmake",
-                      "-C", "cmake/presets/nolib.cmake",
-                      "-DPKG_INTEL=no",
-                      "-DPKG_KIM=yes",
-                      "-DLAMMPS_MACHINE=#{variant}",
-                      "-DBUILD_MPI=#{(variant == "mpi") ? "yes" : "no"}",
-                      "-DBUILD_OMP=#{(variant == "serial") ? "no" : "yes"}",
-                      "-DBUILD_SHARED_LIBS=yes",
-                      "-DFFT=FFTW3",
-                      "-DWITH_GZIP=yes",
-                      "-DWITH_JPEG=yes",
-                      "-DWITH_PNG=yes",
-                      "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                      *std_cmake_args
-      system "cmake", "--build", "build_#{variant}"
-      system "cmake", "--install", "build_#{variant}"
+      cd "src" do
+        system "make", "yes-all"
+        system "make", "no-lib"
+        system "make", "no-intel"
+        system "make", "yes-kim"
+
+        system "make", variant,
+                       "LMP_INC=-DLAMMPS_GZIP",
+                       "FFT_INC=-DFFT_FFTW3 -I#{Formula["fftw"].opt_include}",
+                       "FFT_PATH=-L#{Formula["fftw"].opt_lib}",
+                       "FFT_LIB=-lfftw3",
+                       "JPG_INC=-DLAMMPS_JPEG -I#{Formula["jpeg"].opt_include} " \
+                       "-DLAMMPS_PNG -I#{Formula["libpng"].opt_include}",
+                       "JPG_PATH=-L#{Formula["jpeg"].opt_lib} -L#{Formula["libpng"].opt_lib}",
+                       "JPG_LIB=-ljpeg -lpng"
+
+        bin.install "lmp_#{variant}"
+        system "make", "clean-all"
+      end
     end
 
-    pkgshare.install %w[doc tools bench examples]
+    pkgshare.install(%w[doc potentials tools bench examples])
   end
 
   test do

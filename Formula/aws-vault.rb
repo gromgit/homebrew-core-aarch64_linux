@@ -1,8 +1,8 @@
 class AwsVault < Formula
   desc "Securely store and access AWS credentials in development environments"
   homepage "https://github.com/99designs/aws-vault"
-  url "https://github.com/99designs/aws-vault/archive/v6.6.0.tar.gz"
-  sha256 "c9973d25047dc2487f413b86f91ccc4272b385fea3132e397c3a921baa01c885"
+  url "https://github.com/99designs/aws-vault/archive/v6.5.0.tar.gz"
+  sha256 "b2127b20a58fd75d92a2af28e77368dd9ab3c576dc73c3d56c3817e496a45515"
   license "MIT"
 
   livecheck do
@@ -11,12 +11,8 @@ class AwsVault < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c252bb7b2ff9b0929f80544c713c0239b51054f5699d5fd3f5c0c5b4e1ffd5a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5642d06419e9e31ce66e1377f0eea7d27aec05cfb4a36f78a4724a6fdc21401"
-    sha256 cellar: :any_skip_relocation, monterey:       "862ac6a7df7366e189cc3faff977affc8821c63b97f29cbeb120d22442ead6d6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "176964e06cda0a4b9d862cd5993afb60aa1bed374007bcb36d14796476762b99"
-    sha256 cellar: :any_skip_relocation, catalina:       "c987a850f1b6f4fc5585eaa300e7c9df28796243b9d58fc316594df250497211"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b91f307635e4221dca4e53e507c2d67ef77e052f589e0da30d2eee434a20c551"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aws-vault"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9caf506044d68e892b1eec850311e7a1aea2cad6e0a94bbd7c83495bfb71e792"
   end
 
   depends_on "go" => :build
@@ -36,9 +32,7 @@ class AwsVault < Formula
   end
 
   test do
-    assert_match("aws-vault: error: login: argument 'profile' not provided, nor any AWS env vars found. Try --help",
-      shell_output("#{bin}/aws-vault --backend=file login 2>&1", 1))
-
-    assert_match version.to_s, shell_output("#{bin}/aws-vault --version 2>&1")
+    assert_match("aws-vault: error: required argument 'profile' not provided, try --help",
+      shell_output("#{bin}/aws-vault login 2>&1", 1))
   end
 end

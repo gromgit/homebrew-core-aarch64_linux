@@ -1,8 +1,8 @@
 class Scamper < Formula
   desc "Advanced traceroute and network measurement utility"
   homepage "https://www.caida.org/catalog/software/scamper/"
-  url "https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20211212a.tar.gz"
-  sha256 "d986b429655dce36629d1821ea6f32d65cc418f7d22b1ea4330621bffb35c18c"
+  url "https://www.caida.org/catalog/software/scamper/code/scamper-cvs-20211212.tar.gz"
+  sha256 "ae4f84aef28373701568a9e57ec44a31ec20871c33c044a5272de726acbd2d13"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,22 +11,12 @@ class Scamper < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "32c28e7e8bb6c2e4c9b9b9c8f8d7093fa247c13f07059a33a5ff450fcd694c6c"
-    sha256 cellar: :any,                 arm64_big_sur:  "e378f92c02320c68abb66805d10ecf7b88759027d9e24d8d6c2a9e992ff9ae40"
-    sha256 cellar: :any,                 monterey:       "2bf7ff29e584306c98894e00d15aacdc1336fa6e733c78361b6578a37f1a6660"
-    sha256 cellar: :any,                 big_sur:        "be6722020b6c359406e1620d82f13e11f41498e732730dadae5f350f4fdda5ab"
-    sha256 cellar: :any,                 catalina:       "3b3e6cdfc534058ef687ba289cd7361c295de65e027de92dff6613df0a24556a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d5fbafb8d6a6603f7245842a4cdba8969536f764588ac6a8a092087ebf2b533"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scamper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d31336bb9e1f70e3074792eb653fc9d4260b7b7e44b6ef2ffd385356855a972d"
   end
 
   depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
 
   def install
     system "./configure", *std_configure_args

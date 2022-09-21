@@ -6,13 +6,10 @@ class Bbtools < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "51541c4b8a3ac58e8c3d89544ac99c802bdf3a22d3b98920f70b8e7e43e3bf42"
-    sha256 cellar: :any,                 arm64_big_sur:  "cd24a52f10ab3f630b93aadf4f058093ff03528b79f39a5c0ca08370b1fcc61e"
-    sha256 cellar: :any,                 monterey:       "414f934c32f1de25719235562403fad0ca7f54f6801c1e62d3a7bc6d48a6391c"
-    sha256 cellar: :any,                 big_sur:        "2193c8149f4e917e0fab546ec8ec618bcad884f43fa5b18439c245c44fe5c8c0"
-    sha256 cellar: :any,                 catalina:       "178b274b20fa934e38e7c615233233062c569e4c1db309fce779d90637d8159e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b6969dd969943e0d45dfbc7f80c139812b007266ae2cd5c7e0d59f1bdd717d3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bbtools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ef62554c203653c46d2be5d9ea66717aa9be3811702a34bfe1d3228b2860864d"
   end
+
 
   depends_on "openjdk"
 

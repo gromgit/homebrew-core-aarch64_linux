@@ -4,7 +4,7 @@ class Dcraw < Formula
   url "https://www.dechifro.org/dcraw/archive/dcraw-9.28.0.tar.gz"
   mirror "https://mirrorservice.org/sites/distfiles.macports.org/dcraw/dcraw-9.28.0.tar.gz"
   sha256 "2890c3da2642cd44c5f3bfed2c9b2c1db83da5cec09cc17e0fa72e17541fb4b9"
-  revision 2
+  revision 1
 
   livecheck do
     url "https://distfiles.macports.org/dcraw/"
@@ -12,21 +12,21 @@ class Dcraw < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3d77794768e6ae2d0ff3ffbacc3ed745017f7ffc2503da954100b2d1ac146db7"
-    sha256 cellar: :any,                 arm64_big_sur:  "899ea09ca46695dcbae2414fd72f3af86fc8676e0e51aea2b54baa28a4a5845d"
-    sha256 cellar: :any,                 monterey:       "72c6183da24a08d3cc0d887ac294a51c14d5b39c8b2a42820cc4a4351768b9b1"
-    sha256 cellar: :any,                 big_sur:        "2f5f80cfc1599bbc5615312a1652f6904e3ef79d24d30c68e3d6e7c185d517ce"
-    sha256 cellar: :any,                 catalina:       "6ad0be7cd49f7ccb34d7159e2a78e231be474cf32d094c722aaae6e4e354c65b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97498f11a22904605edaa7fce8b823bb7f93cf6cd336e3ab9fb0e9811a892426"
+    sha256 cellar: :any,                 arm64_monterey: "81ca4e8b50071303c1bed20a3901dc5041ac72468d470344ed8618307746a662"
+    sha256 cellar: :any,                 arm64_big_sur:  "b80d00af67db54c3b346050ee774286b89487e278a91973e2ee1d0ed30a1bb68"
+    sha256 cellar: :any,                 monterey:       "d808e057798d60c3daf76cdb9adffce5e762f75b7eeb9f95156b702f46d622ba"
+    sha256 cellar: :any,                 big_sur:        "46bb8e39ef71d4fddab93eeafacfacfc942226257452b9491728104c37673380"
+    sha256 cellar: :any,                 catalina:       "dd48d13f966ac2d9230a14ca53048438bf9a1976ac63a1b23554b7ed042fd6da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8daabf2c986c54cfb169810a2796f2281703366280605cfb3406d9708b290007"
   end
 
   depends_on "jasper"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "little-cms2"
 
   def install
-    ENV.append "LDLIBS", "-lm -ljpeg -llcms2 -ljasper"
-    system "make", "dcraw"
+    ENV.append_to_cflags "-I#{HOMEBREW_PREFIX}/include -L#{HOMEBREW_PREFIX}/lib"
+    system ENV.cc, "-o", "dcraw", ENV.cflags, "dcraw.c", "-lm", "-ljpeg", "-llcms2", "-ljasper"
     bin.install "dcraw"
     man1.install "dcraw.1"
   end

@@ -9,13 +9,10 @@ class Bandit < Formula
   head "https://github.com/PyCQA/bandit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e0091642260daeca5125bf05626f6f12e1a08c34dcb34b438292fc3dec6f43e3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "437e9a8b75bdb52fc8055d4cb4572d38b6b181098b830dbef842fe645d804f3a"
-    sha256 cellar: :any_skip_relocation, monterey:       "efa468bed53d8dda0bf3ec53197255efc489d5c9642e1ad1a0907e73320ba1f9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4f7744b613f90fb4214a7afaa429ab13f352f0470b18bb8515e38c337b662160"
-    sha256 cellar: :any_skip_relocation, catalina:       "6478334ce46c9b0ee01ec83598ea89fe2e043bc418def4068ba7df76015d30ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "809c32197ec9e1632c990f0f29b4b70d0c5f656f1a5395524a205a58cfee9dca"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bandit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a11d590f1c8d8d20b1b0ce452738aca17a7ffcf5693a744877ea6ba3132c29b3"
   end
+
 
   depends_on "python@3.10"
 

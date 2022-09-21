@@ -12,13 +12,10 @@ class Nim < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3e214ca5ddbf7d42963f13f2cbab8c574cf21a8baf321d3ed3747f09f27bce76"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2ef248de065620fdeb54db3faaf5082ec32d67734590074546c84facdb5be05"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf085cf759a3ecdd1e680e809f2cb73ac503d5951d34ed49c8b6927cc8a56024"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0b149204287e7bbde1e80e2cc5829dffe94c158ac095324fe3bbbbc67abbacb9"
-    sha256 cellar: :any_skip_relocation, catalina:       "de0fe0f7e2e0738cc72993964ac02364f73b9bdd8a832c8be353686336eabdbb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76c949ae021e7d3fea06f4738d58adea8cb0bc2b79031a5640cec1e80908f496"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nim"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2d3e3668b1de5a370084fe4b003b5eed4b0787056b4e1b826eab7b020113a4b0"
   end
+
 
   depends_on "help2man" => :build
 

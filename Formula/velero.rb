@@ -1,17 +1,13 @@
 class Velero < Formula
   desc "Disaster recovery for Kubernetes resources and persistent volumes"
   homepage "https://github.com/vmware-tanzu/velero"
-  url "https://github.com/vmware-tanzu/velero/archive/v1.9.1.tar.gz"
-  sha256 "6e3137c04a279647308fa89cefd4d14ab4f8333c40859594e8ee7014b3e7fc75"
+  url "https://github.com/vmware-tanzu/velero/archive/v1.8.1.tar.gz"
+  sha256 "675034d30d3539f9292ca5896e28df6159cdf1c6436d806795a79c61bfe37cd7"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fc6a8a6356d3c1d3461c623fc6b6e18b68f738440b039a327c700218a9a8810"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01fbfe905cbf47d056de89346dc486b9229ec929cdb1a8a2f1e100fddadcb8e3"
-    sha256 cellar: :any_skip_relocation, monterey:       "3be6d81159876050b7f83718968d24946a492caecc0900dd541c98edfbd854e7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "949012a43992cfde3a2273cbfdefdb18ec13c68dcbf62d24195c7c0d56fcb63c"
-    sha256 cellar: :any_skip_relocation, catalina:       "74890025164a0e62dc87f99e18de8d43c5a1c93dad8294f9930d7e754b4f2cc1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce55c308a2a22611139e0d49c857a953d2a818584521f0ec964b76fb6c88f77a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/velero"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "372ea3b95b8a3831c868dfe7b94f397f3a37bb0a0544323eb6d91c0068c35daf"
   end
 
   depends_on "go" => :build
@@ -23,7 +19,17 @@ class Velero < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "-installsuffix", "static", "./cmd/velero"
 
-    generate_completions_from_executable(bin/"velero", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"velero", "completion", "bash")
+    (bash_completion/"velero").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"velero", "completion", "zsh")
+    (zsh_completion/"_velero").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"velero", "completion", "fish")
+    (fish_completion/"velero.fish").write output
   end
 
   test do

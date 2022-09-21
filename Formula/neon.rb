@@ -1,9 +1,9 @@
 class Neon < Formula
   desc "HTTP and WebDAV client library with a C interface"
   homepage "https://notroj.github.io/neon/"
-  url "https://notroj.github.io/neon/neon-0.32.3.tar.gz"
-  mirror "https://fossies.org/linux/www/neon-0.32.3.tar.gz"
-  sha256 "94cb875dc6dbfcdee58f039b763c674b0232886cdfd7a5de91be5cdfa2b7596a"
+  url "https://notroj.github.io/neon/neon-0.32.2.tar.gz"
+  mirror "https://fossies.org/linux/www/neon-0.32.2.tar.gz"
+  sha256 "986566468c6295fc5d0fb141a5981e31c9f82ee38e938374abed8471ef2fb286"
   license "LGPL-2.0-or-later"
 
   livecheck do
@@ -12,12 +12,12 @@ class Neon < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0c4618e2d78ae5d4c3884a5a59131eeb309d1884ba41e376c044328510976d0f"
-    sha256 cellar: :any,                 arm64_big_sur:  "dcdc765d8760cecc458d9e64ca8562f498d969b5ea52b9f45c1f1504a705c1fd"
-    sha256 cellar: :any,                 monterey:       "f3142a2ae903721694aae7fdeca055b6e4707ba0897858fd73d9c28ee75c9997"
-    sha256 cellar: :any,                 big_sur:        "1456e9957c3225719f6662bb2e9bd504ee7c38b3932f51abae6979875426c005"
-    sha256 cellar: :any,                 catalina:       "42e300e95e79b35251518d7594484202c65b3684a18ef4bbb48698767dad9e83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58a533220d0ac093155f0e0ff32e246fb4fb0d3c87aa33857be8048e1a4a8f72"
+    sha256 cellar: :any,                 arm64_monterey: "5b10f6c1be6a6897763339f92831344a2ca97a27e26bc8c27399358f6214961f"
+    sha256 cellar: :any,                 arm64_big_sur:  "c3e6c0140a0761348ec6ebb26ff464bc3baf250b3674df7a9692a0af7a6d4068"
+    sha256 cellar: :any,                 monterey:       "2a3ce9b7329c7abcbbe9167e8d5fef45a242d1ae2d876a989b41cabbec19171a"
+    sha256 cellar: :any,                 big_sur:        "ddf63fc6da79aa76871cf66c88237c2a0cb83a35fd01263c608c9c8dbf122ff7"
+    sha256 cellar: :any,                 catalina:       "25216dfe96706b6e1cab7cc6b15300571fe38a00973e0c31209886a1005cf290"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9929c188b7c2bac00ea1bbb3b169481e02feb41d04157b80ba19b47e78b9add7"
   end
 
   depends_on "pkg-config" => :build

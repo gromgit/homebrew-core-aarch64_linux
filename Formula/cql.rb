@@ -7,14 +7,8 @@ class Cql < Formula
   head "https://github.com/CovenantSQL/CovenantSQL.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f3d16b39545a07b7811657ed8de92063b3f4fc13f96e8b092be420ff80d0ed6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a5f446cb406f5aafce83406573b0a808f718e4e8b3df3d112692b824d4912e45"
-    sha256 cellar: :any_skip_relocation, monterey:       "29676dd87b84617809ee42f862ddbeabb56a52df5ddffa4acc9e8fe807e7244a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ba7c4a2af433caab8ca7d413629cb7a7f16c603bbe982029b0b9cf651e58b3d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "aca52c8e6eb35cda498056f2047efbed677cda2632d9993f19b6b26f558dd82b"
-    sha256 cellar: :any_skip_relocation, mojave:         "aabedbf76babd3b74753cd478fc431a8b4da832de192c9cab733ba92564a4b1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35126cd0a047a47d7f08b3dc2a2967eee1d2263ef55c8eccafe4b4bfa9047385"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cql"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "456579a4cde26efbb468bb64788b1adaf0fadc17fea79a8c29c478947734e04d"
   end
 
   depends_on "go" => :build

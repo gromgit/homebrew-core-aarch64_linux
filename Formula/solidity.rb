@@ -1,8 +1,8 @@
 class Solidity < Formula
   desc "Contract-oriented programming language"
   homepage "https://soliditylang.org"
-  url "https://github.com/ethereum/solidity/releases/download/v0.8.16/solidity_0.8.16.tar.gz"
-  sha256 "ba1a690a3583f17c039e6d480970f687f959d9c0fcb2e77ac72a0a0c7efa2056"
+  url "https://github.com/ethereum/solidity/releases/download/v0.8.13/solidity_0.8.13.tar.gz"
+  sha256 "474c76b30f6de12e1d84171d094a110f4a9dbee8e110313de430e7ebabccb3da"
   license all_of: ["GPL-3.0-or-later", "MIT", "BSD-3-Clause", "Apache-2.0", "CC0-1.0"]
 
   livecheck do
@@ -11,12 +11,12 @@ class Solidity < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "027f8cfe52cc40674e66d912f9d0670adb5c1a1b64d3dc98cd47290c85d3a080"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "953f8ff3918fd3b5f1a48618fceb2ae1515f8b8483c854ea81317022105bedf7"
-    sha256 cellar: :any_skip_relocation, monterey:       "e2bec1d08f27770dbf2d259ce99a19a2d11d21ebeae4b2ed2db2799144773742"
-    sha256 cellar: :any_skip_relocation, big_sur:        "018432773ac3f3e5f82db4a822a4ed98878a3ea466a24d0a1258246f41aac7fa"
-    sha256 cellar: :any_skip_relocation, catalina:       "7e5be18b7455bad8654b09cfd4797d3619693b3397ebb090cad766659d51c7ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53e81864be79cb365da8baf59cbacf71ce47504bb80fb9849a9d499d62784aae"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ff19ef72faf15d7e66a2b5a8e5eba7cbc45d5932bfa930908d27a7d1134a9ad0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2dae31579d457d92271e73e93ae025e6da5df7f95cc320718ff105b11fc2dc58"
+    sha256 cellar: :any_skip_relocation, monterey:       "8d79a24c017e5ecd62dc4915f425b998b66bcb93687c0a94447798dadd3c4a3d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7a20165432bc6427d7ed5fc7be7eaf04726426a18d5f6917433a5a6968fbed28"
+    sha256 cellar: :any_skip_relocation, catalina:       "fa769d055d709fb4bc7ebecd20766688fd057a02fc685062b4d8f1c73bde9c16"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a256d7054e7eaddc8630fbb87fc5e813667ef41a6e84386cec0457789a494028"
   end
 
   depends_on "cmake" => :build

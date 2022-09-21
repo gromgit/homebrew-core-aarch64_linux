@@ -1,33 +1,30 @@
 class Sftpgo < Formula
   desc "Fully featured SFTP server with optional HTTP/S, FTP/S and WebDAV support"
   homepage "https://github.com/drakkan/sftpgo"
-  url "https://github.com/drakkan/sftpgo/releases/download/v2.3.4/sftpgo_v2.3.4_src_with_deps.tar.xz"
-  sha256 "18184cede2c4b29d801ad6276b9b257ead8ec4070d8683dee72fecb77122e625"
+  url "https://github.com/drakkan/sftpgo/releases/download/v2.2.3/sftpgo_v2.2.3_src_with_deps.tar.xz"
+  sha256 "6c8676725e86ee3f6ad46a340a84f0da37cab8b6ea7b6aee86b2b96ba5e6671a"
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 arm64_monterey: "39c85b9f0f992afa526afd6f0f09eac68a4d21d44648a8cf50a05951848139b6"
-    sha256 arm64_big_sur:  "95f93afcb82eeba62263dedd7e258aa2bd86375f7c715984d9a39377587a19d1"
-    sha256 monterey:       "77e15f5dd6fbc52db3456e1aa070e0bfa6bc30eb6b128cbf7a26f19989a85c19"
-    sha256 big_sur:        "e1a16191ded1ffa35b1de6d14730bee4339be5a19bd7b359df1e8f312829d519"
-    sha256 catalina:       "1f159f1919b4c19194b00c1337a3b320210513b0ed5a8ea37a4dc4ed7f709ef8"
-    sha256 x86_64_linux:   "9ff1191524ff77b0a4e1148a7fbcf37f7b8e20daf37b5c3c65f48b530a4da38f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sftpgo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fed9f1537360c28bfdf344a19a60e7fc401188b0c96e1eff6a83fd115608aa1b"
   end
 
   depends_on "go" => :build
 
   def install
-    ldflags = %W[
-      -s -w
-      -X github.com/drakkan/sftpgo/v2/util.additionalSharedDataSearchPath=#{opt_pkgshare}
-    ].join(" ")
-    system "go", "build", *std_go_args(ldflags: ldflags)
+    system "go", "build", *std_go_args(ldflags: "-s -w")
     system bin/"sftpgo", "gen", "man", "-d", man1
 
-    generate_completions_from_executable(bin/"sftpgo", "gen", "completion")
+    (zsh_completion/"_sftpgo").write Utils.safe_popen_read(bin/"sftpgo", "gen", "completion", "zsh")
+    (bash_completion/"sftpgo").write Utils.safe_popen_read(bin/"sftpgo", "gen", "completion", "bash")
+    (fish_completion/"sftpgo.fish").write Utils.safe_popen_read(bin/"sftpgo", "gen", "completion", "fish")
 
     inreplace "sftpgo.json" do |s|
       s.gsub! "\"users_base_dir\": \"\"", "\"users_base_dir\": \"#{var}/sftpgo/data\""
+      s.gsub! "\"templates_path\": \"templates\"", "\"templates_path\": \"#{opt_pkgshare}/templates\""
+      s.gsub! "\"static_files_path\": \"static\"", "\"static_files_path\": \"#{opt_pkgshare}/static\""
+      s.gsub! "\"openapi_path\": \"openapi\"", "\"openapi_path\": \"#{opt_pkgshare}/openapi\""
     end
 
     pkgetc.install "sftpgo.json"
@@ -64,7 +61,7 @@ class Sftpgo < Formula
     ENV["SFTPGO_SFTPD__BINDINGS__0__PORT"] = sftp_port.to_s
     ENV["SFTPGO_SFTPD__BINDINGS__0__ADDRESS"] = "127.0.0.1"
     ENV["SFTPGO_SFTPD__HOST_KEYS"] = "#{testpath}/id_ecdsa,#{testpath}/id_ed25519"
-    ENV["SFTPGO_LOG_FILE_PATH"] = ""
+    ENV["SFTPGO_LOG_FILE_PATH"] = "#{testpath}/sftpgo.log"
     pid = fork do
       exec bin/"sftpgo", "serve", "--config-file", "#{pkgetc}/sftpgo.json"
     end

@@ -1,9 +1,10 @@
 class Opencv < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
-  url "https://github.com/opencv/opencv/archive/refs/tags/4.6.0.tar.gz"
-  sha256 "1ec1cba65f9f20fe5a41fda1586e01c70ea0c9a6d7b67c9e13edf0cfe2239277"
+  url "https://github.com/opencv/opencv/archive/4.5.5.tar.gz"
+  sha256 "a1cfdcf6619387ca9e232687504da996aaa9f7b5689986b8331ec02cb61d28ad"
   license "Apache-2.0"
+  revision 2
 
   livecheck do
     url :stable
@@ -11,30 +12,29 @@ class Opencv < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "61aed0889d4b0d4553a49369c71b0654114c88bc6319d594e4a790d32fbb077e"
-    sha256 arm64_big_sur:  "f41fc0f27eca6ca2acb41108b91b355d837335672684778c5ae865a7fcc3e792"
-    sha256 monterey:       "dcbcd6e71788caa64f20a043d24d3611e43e02805335248b32d55bcd630979bb"
-    sha256 big_sur:        "0928305dd181559dd50b49e9130e1e36c773919dc04361fe1e42be1c4cb42e74"
-    sha256 catalina:       "b59eebeae4d03e585ddf78577cd0253906f5998ca90a99da4fdc6f3d6249afd1"
-    sha256 x86_64_linux:   "9aa99d86d15f7acc43d7f8fff57e49104c103459e0f72f465bbac0b1121293f6"
+    sha256                               arm64_monterey: "09ff0cf6c1615ae90f868104312a6f5600837a0a8f81932d95b2b441967b2c53"
+    sha256                               arm64_big_sur:  "7c2caf5b086c12861fbe94bf1bbf7f1789eceefa38d299de9cf7d7c71d4b1583"
+    sha256                               monterey:       "e8a0ae9ac95af2a50ea029a175addb786eca8ef74927f439ebf486ea6f27419b"
+    sha256                               big_sur:        "191f877884653ccc2daf7f1f54810cd59be0aed183af75de7f745bbfd238da9f"
+    sha256                               catalina:       "9f5ed07be7da595070b04642fe4f3776e5e7df6db6a314d012a8b0ce7be6df37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62aec5ee6afa617bd30ecc2b35131c2a7eafb3aa6547b6b9f65839dfd2f08f8e"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "ceres-solver"
   depends_on "eigen"
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   depends_on "glog"
   depends_on "harfbuzz"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "numpy"
   depends_on "openblas"
   depends_on "openexr"
-  depends_on "openjpeg"
   depends_on "protobuf"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "tbb"
   depends_on "vtk"
   depends_on "webp"
@@ -44,30 +44,13 @@ class Opencv < Formula
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   resource "contrib" do
-    url "https://github.com/opencv/opencv_contrib/archive/refs/tags/4.6.0.tar.gz"
-    sha256 "1777d5fd2b59029cf537e5fd6f8aa68d707075822f90bde683fcde086f85f7a7"
-
-    # Fix build error: cannot initialize a parameter of type 'ceres::LocalParameterization *'
-    # Remove in the next release.
-    patch do
-      url "https://github.com/opencv/opencv_contrib/commit/4c93cc9925ece6c4a38cf8b869c8217d15104fe5.patch?full_index=1"
-      sha256 "9761c48d1c6f19fa0a2bf5a55cf7a0501a1e85fe595006ec5bd1929d9602f702"
-    end
-  end
-
-  # Fix build error: use of undeclared identifier 'CODEC_ID_H264'; did you mean 'AV_CODEC_ID_H264'
-  # Using commit from related PR for 3.4 branch: https://github.com/opencv/opencv/pull/22357
-  # Remove when fix is in 4.x branch and available in a release.
-  patch do
-    url "https://github.com/opencv/opencv/commit/496eed950f6d0e7fd92619d47e3cec8f06e96ace.patch?full_index=1"
-    sha256 "f9a5dac14d54b699383328a2d28b2d86f7274db8a603974ca5e9076d77490d49"
-  end
-
-  def python3
-    "python3.10"
+    url "https://github.com/opencv/opencv_contrib/archive/4.5.5.tar.gz"
+    sha256 "a97c2eaecf7a23c6dbd119a609c6d7fae903e5f9ff5f1fe678933e01c67a6c11"
   end
 
   def install
+    ENV.cxx11
+
     resource("contrib").stage buildpath/"opencv_contrib"
 
     # Avoid Accelerate.framework
@@ -76,21 +59,14 @@ class Opencv < Formula
     # Reset PYTHONPATH, workaround for https://github.com/Homebrew/homebrew-science/pull/4885
     ENV.delete("PYTHONPATH")
 
-    # Remove bundled libraries to make sure formula dependencies are used
-    libdirs = %w[ffmpeg libjasper libjpeg libjpeg-turbo libpng libtiff libwebp openexr openjpeg protobuf tbb zlib]
-    libdirs.each { |l| (buildpath/"3rdparty"/l).rmtree }
-
     args = std_cmake_args + %W[
-      -DCMAKE_CXX_STANDARD=11
       -DCMAKE_OSX_DEPLOYMENT_TARGET=
       -DBUILD_JASPER=OFF
       -DBUILD_JPEG=OFF
       -DBUILD_OPENEXR=OFF
-      -DBUILD_OPENJPEG=OFF
       -DBUILD_PERF_TESTS=OFF
       -DBUILD_PNG=OFF
       -DBUILD_PROTOBUF=OFF
-      -DBUILD_TBB=OFF
       -DBUILD_TESTS=OFF
       -DBUILD_TIFF=OFF
       -DBUILD_WEBP=OFF
@@ -116,41 +92,43 @@ class Opencv < Formula
       -DWITH_VTK=ON
       -DBUILD_opencv_python2=OFF
       -DBUILD_opencv_python3=ON
-      -DPYTHON3_EXECUTABLE=#{which(python3)}
+      -DPYTHON3_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
     ]
 
     # Disable precompiled headers and force opencv to use brewed libraries on Linux
     if OS.linux?
-      args += %W[
-        -DENABLE_PRECOMPILED_HEADERS=OFF
-        -DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib}/libjpeg.so
-        -DOpenBLAS_LIB=#{Formula["openblas"].opt_lib}/libopenblas.so
-        -DOPENEXR_ILMIMF_LIBRARY=#{Formula["openexr"].opt_lib}/libIlmImf.so
-        -DOPENEXR_ILMTHREAD_LIBRARY=#{Formula["openexr"].opt_lib}/libIlmThread.so
-        -DPNG_LIBRARY=#{Formula["libpng"].opt_lib}/libpng.so
-        -DPROTOBUF_LIBRARY=#{Formula["protobuf"].opt_lib}/libprotobuf.so
-        -DTIFF_LIBRARY=#{Formula["libtiff"].opt_lib}/libtiff.so
-        -DWITH_V4L=OFF
-        -DZLIB_LIBRARY=#{Formula["zlib"].opt_lib}/libz.so
-      ]
+      args << "-DENABLE_PRECOMPILED_HEADERS=OFF"
+      args << "-DJPEG_LIBRARY=#{Formula["libjpeg"].opt_lib}/libjpeg.so"
+      args << "-DOpenBLAS_LIB=#{Formula["openblas"].opt_lib}/libopenblas.so"
+      args << "-DOPENEXR_ILMIMF_LIBRARY=#{Formula["openexr"].opt_lib}/libIlmImf.so"
+      args << "-DOPENEXR_ILMTHREAD_LIBRARY=#{Formula["openexr"].opt_lib}/libIlmThread.so"
+      args << "-DPNG_LIBRARY=#{Formula["libpng"].opt_lib}/libpng.so"
+      args << "-DPROTOBUF_LIBRARY=#{Formula["protobuf"].opt_lib}/libprotobuf.so"
+      args << "-DTIFF_LIBRARY=#{Formula["libtiff"].opt_lib}/libtiff.so"
+      args << "-DWITH_V4L=OFF"
+      args << "-DZLIB_LIBRARY=#{Formula["zlib"].opt_lib}/libz.so"
     end
 
-    # Ref: https://github.com/opencv/opencv/wiki/CPU-optimizations-build-options
-    ENV.runtime_cpu_detection
-    if Hardware::CPU.intel? && build.bottle?
-      cpu_baseline = MacOS.version.requires_sse42? ? "SSE4_2" : "SSSE3"
-      args += %W[-DCPU_BASELINE=#{cpu_baseline} -DCPU_BASELINE_REQUIRE=#{cpu_baseline}]
+    if Hardware::CPU.intel?
+      args << "-DENABLE_AVX=OFF" << "-DENABLE_AVX2=OFF"
+      args << "-DENABLE_SSE41=OFF" << "-DENABLE_SSE42=OFF" unless MacOS.version.requires_sse42?
     end
 
-    system "cmake", "-S", ".", "-B", "build_shared", *args
-    inreplace "build_shared/modules/core/version_string.inc", "#{Superenv.shims_path}/", ""
-    system "cmake", "--build", "build_shared"
-    system "cmake", "--install", "build_shared"
+    mkdir "build" do
+      system "cmake", "..", *args
+      inreplace "modules/core/version_string.inc", Superenv.shims_path, ""
 
-    system "cmake", "-S", ".", "-B", "build_static", *args, "-DBUILD_SHARED_LIBS=OFF"
-    inreplace "build_static/modules/core/version_string.inc", "#{Superenv.shims_path}/", ""
-    system "cmake", "--build", "build_static"
-    lib.install buildpath.glob("build_static/{lib,3rdparty/**}/*.a")
+      system "make"
+      system "make", "install"
+
+      system "make", "clean"
+      system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *args
+      inreplace "modules/core/version_string.inc", Superenv.shims_path, ""
+
+      system "make"
+      lib.install Dir["lib/*.a"]
+      lib.install Dir["3rdparty/**/*.a"]
+    end
 
     # Prevent dependents from using fragile Cellar paths
     inreplace lib/"pkgconfig/opencv#{version.major}.pc", prefix, opt_prefix
@@ -165,10 +143,11 @@ class Opencv < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}/opencv4", "-o", "test"
-    assert_equal shell_output("./test").strip, version.to_s
+    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}/opencv4",
+                    "-o", "test"
+    assert_equal `./test`.strip, version.to_s
 
-    output = shell_output("#{python3} -c 'import cv2; print(cv2.__version__)'")
+    output = shell_output(Formula["python@3.9"].opt_bin/"python3 -c 'import cv2; print(cv2.__version__)'")
     assert_equal version.to_s, output.chomp
   end
 end

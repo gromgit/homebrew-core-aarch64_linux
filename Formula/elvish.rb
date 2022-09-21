@@ -7,12 +7,8 @@ class Elvish < Formula
   head "https://github.com/elves/elvish.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b6187cc49a089a96a15fda4f1899b302dec13bf256febf4015fd5484a94a7bbe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "820a6cb5f7f706ab12717e23586d2eb788ca8d5a5140362092945d2a8d188620"
-    sha256 cellar: :any_skip_relocation, monterey:       "cf517bf55f67746b5a2a5094abc5e5d0dff66069aec220cb89e792af08ea0a6a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6158072faf7d59114696e5a7c23ec1ed0bfd7175ff970fc0f0b6a6e0933f0fdf"
-    sha256 cellar: :any_skip_relocation, catalina:       "64d1ccfdf5e9d3026277221274b5943225de6d65520a06bcf0eda6f13674fa9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc21b2de77e60c7193eae1dbb1e9d317b766e043dd4bb504c05c259970192467"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/elvish"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "415051b3e901ba6e169983ed3d5b5275fb3232e24c8bde6bf69bbedb3c918edd"
   end
 
   depends_on "go" => :build

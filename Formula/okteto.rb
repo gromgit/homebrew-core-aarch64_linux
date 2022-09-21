@@ -1,18 +1,14 @@
 class Okteto < Formula
   desc "Build better apps by developing and testing code directly in Kubernetes"
   homepage "https://okteto.com"
-  url "https://github.com/okteto/okteto/archive/2.6.0.tar.gz"
-  sha256 "5cbd2e620741212c5588605a305f7180e79534238d8b934d073c32b2ae96a1bb"
+  url "https://github.com/okteto/okteto/archive/2.2.2.tar.gz"
+  sha256 "d11fe64407335c67d402ee9ff323465e5c5727e8b7261255540b464f7c70c241"
   license "Apache-2.0"
   head "https://github.com/okteto/okteto.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "06e6239374996e0249f1b4a92e5075436bdb9af44e5145d21dc45393b232d466"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e42f54b2e724e86750213f6da4f15174c795cdba8f55c5431a1d3aa8e52fac2f"
-    sha256 cellar: :any_skip_relocation, monterey:       "9e1b93b9047ab0a0b4fe297f58babbb0388e7dd752f59eb7ca615255f4778592"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0321ba51e6a4b6db23d524ae7ae4d9850307c9351ca9b832ce972d5ca995d62d"
-    sha256 cellar: :any_skip_relocation, catalina:       "413f48ad52f093515d28d8e3acf605d4fd7ce24e4b59dbb576da9e870a992b66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "128c701e90ba2ab0859d552894cdaaba508d8e4c97d67345d3d7abda35d87304"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/okteto"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2c218b32735f37da173b36bd16fcc5ace84c7e665bb40f1a2ce80e9904465556"
   end
 
   depends_on "go" => :build
@@ -22,7 +18,12 @@ class Okteto < Formula
     tags = "osusergo netgo static_build"
     system "go", "build", *std_go_args(ldflags: ldflags), "-tags", tags
 
-    generate_completions_from_executable(bin/"okteto", "completion")
+    bash_output = Utils.safe_popen_read(bin/"okteto", "completion", "bash")
+    (bash_completion/"okteto").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"okteto", "completion", "zsh")
+    (zsh_completion/"_okteto").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"okteto", "completion", "fish")
+    (fish_completion/"okteto.fish").write fish_output
   end
 
   test do

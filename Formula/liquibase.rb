@@ -1,8 +1,8 @@
 class Liquibase < Formula
   desc "Library for database change tracking"
   homepage "https://www.liquibase.org/"
-  url "https://github.com/liquibase/liquibase/releases/download/v4.15.0/liquibase-4.15.0.tar.gz"
-  sha256 "e805f8b878f84e7d42b39e4fcee1c1a1b467c6481650738f1059cdc98a207c56"
+  url "https://github.com/liquibase/liquibase/releases/download/v4.10.0/liquibase-4.10.0.tar.gz"
+  sha256 "ef54411974918a43b67b0a3d14c8eec4700e9c16df9dd8498dd709af31089e15"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,7 @@ class Liquibase < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b9c6d88603baaf66a72d5214ca0856ae7882e4299e93323932b5642715cd774"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8b9c6d88603baaf66a72d5214ca0856ae7882e4299e93323932b5642715cd774"
-    sha256 cellar: :any_skip_relocation, monterey:       "15b1554385b83106eac3efb88f3c02bc10ba8b4ae33fb18e2cf5e42c8eea7549"
-    sha256 cellar: :any_skip_relocation, big_sur:        "15b1554385b83106eac3efb88f3c02bc10ba8b4ae33fb18e2cf5e42c8eea7549"
-    sha256 cellar: :any_skip_relocation, catalina:       "15b1554385b83106eac3efb88f3c02bc10ba8b4ae33fb18e2cf5e42c8eea7549"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b9c6d88603baaf66a72d5214ca0856ae7882e4299e93323932b5642715cd774"
+    sha256 cellar: :any_skip_relocation, all: "3db0f7af4ada1edcab528b492544df08c126c952288055ac7eaba2d74fb8b64e"
   end
 
   depends_on "openjdk"

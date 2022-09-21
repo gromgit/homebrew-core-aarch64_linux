@@ -9,16 +9,12 @@ class BerkeleyDb < Formula
 
   livecheck do
     url "https://www.oracle.com/database/technologies/related/berkeleydb-downloads.html"
-    regex(/Berkeley\s*DB[^(]*?\(\s*v?(\d+(?:\.\d+)+)\s*\)/i)
+    regex(%r{href=.*?/berkeley-db/db[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8da7ddbf86ba57c94235796b4acddefba7a67b20cef9c4955e5601f80f8a0e23"
-    sha256 cellar: :any,                 arm64_big_sur:  "5a9de497a3fb74b8b7fd3b1be77fcd0b808361a3adf228c04132106a16f03aa5"
-    sha256 cellar: :any,                 monterey:       "923b8995be6b3da9742b8c283d18dbf3142f73b478b60f85f76db97c37e9b280"
-    sha256 cellar: :any,                 big_sur:        "eca9cf2bbc656225f096789d5e5f5f73fc62e82aae70233835a7bb29e0e8220c"
-    sha256 cellar: :any,                 catalina:       "8b868ae69e708c22e04ba3d7ab6164d31d9de5611458f6aae0a0c636b1bf6dc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed8bbe73f3996dce31e082f325cb5230e6026d2067824e6ceaaceeafc146ff0c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/berkeley-db"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1ca9bfedcb28f6550f1cda98f52c5e42589e376f62085c54a6c4b463c33b8fce"
   end
 
   keg_only :provided_by_macos
