@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v1.2.171.tar.gz"
-  sha256 "d5e26f151ada7f49fe72153676e39f13ba1911fa4bc99e2ef67d37ebd6d5a4d4"
+  url "https://github.com/werf/werf/archive/refs/tags/v1.2.169.tar.gz"
+  sha256 "7e3252ffb477b76c6b4651ff8e90d9b8af2a9b67d98f11fd76743974a32650d1"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
@@ -14,13 +14,6 @@ class Werf < Formula
     strategy :github_latest
   end
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96dc3b3c8598fe406f4835568d81e9b2ec373e6604497f18bb0e9b156e98a6f6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2404281c595cd8670bd49bd45e20d4bcd6e00726548cf82736641c67f63a0d41"
-    sha256 cellar: :any_skip_relocation, monterey:       "5a71a3d5c8ff0c46092011af2b4c2f36c211a51b9c1f67240c93900c3c137c4a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2f04ee927ab7d9792d17415103fa7400d1be5ef5d2cfc591b9d4d098571bc9f0"
-    sha256 cellar: :any_skip_relocation, catalina:       "456ec78ced4236f86dc612b6211f6de178bf0a724fbe5f7b4b37bb1140e72b2e"
-  end
 
   depends_on "go" => :build
   # due to missing libbtrfs headers, only supports macos at the moment
