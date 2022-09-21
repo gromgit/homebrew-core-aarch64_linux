@@ -303,6 +303,9 @@
   "nicotine-plus": {
     "exclude_packages": ["pycairo", "PyGObject"]
   },
+  "notifiers": {
+    "exclude_packages": ["jsonschema", "attrs", "pyrsistent"]
+  },
   "nox": {
     "exclude_packages": ["six"]
   },
