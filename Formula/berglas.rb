@@ -6,12 +6,13 @@ class Berglas < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3df7b381a95693b58a2b1171f568611b6915de8395f6baf17d504c7e0e0db16d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd8252b271500337fed969910f0d9eb9c97c2624d56f32c6854efabc2ec63f8a"
-    sha256 cellar: :any_skip_relocation, monterey:       "2438631e820983b4cd80de5cec8472266ac4d3e38a8187f5c6985ab3b1535fd4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2a93da9a29aa65f744971973bbe0f5df75d94c4a3acf0a7f942ecf68349c279f"
-    sha256 cellar: :any_skip_relocation, catalina:       "facb1496c4be3723fba590b9ebb1de0206db27b32ed4a314a84c766a81e7864a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "262aeb25d4524fe0e7823b849ef7aebb3a1af8d055a2ade33f27f387c6817887"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d392721ea8471cfa11db1f2d7e6781b1fbad2114529489fe60c432161d95c02b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "20b103e06f0d92f809dfc42e2c0f949dad8f214279449599d230f287e9a7f8b7"
+    sha256 cellar: :any_skip_relocation, monterey:       "216c3bcbe16588242e0921ee73fbd11cedae215427e05909ef0274f0b890990f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2c89e0016996ddb7847a2bfdb4b7c7e7d04801932a9d08dc537c55f2927e2053"
+    sha256 cellar: :any_skip_relocation, catalina:       "38b91df56e0944b6169d27c50ff6fb92fa433febc63e2d907781056754d3310d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d2e2be5ea59902755712114403d39c131830f05098405b1bfc056e0b1868161"
   end
 
   depends_on "go" => :build
