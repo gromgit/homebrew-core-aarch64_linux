@@ -11,12 +11,13 @@ class Astro < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f95ac5d8429e735c82a4616ac4d5a7f867a4772a2cad9537e2cd49ac99d2ef7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f95ac5d8429e735c82a4616ac4d5a7f867a4772a2cad9537e2cd49ac99d2ef7"
-    sha256 cellar: :any_skip_relocation, monterey:       "726fdb013ff4982061984028926b3a5bb4ce60f801a815c220e27019243db13a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "726fdb013ff4982061984028926b3a5bb4ce60f801a815c220e27019243db13a"
-    sha256 cellar: :any_skip_relocation, catalina:       "726fdb013ff4982061984028926b3a5bb4ce60f801a815c220e27019243db13a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adb57f7282ddb04a129db39530875d51f37467321b802845bfc3805b36312438"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b5c2dc0d931436a7b65b437c4a2168af617c52414d179b9b1754501b56108b3e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b5c2dc0d931436a7b65b437c4a2168af617c52414d179b9b1754501b56108b3e"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9aacce854a9456cd71b12ea59ae21bf4497b282fe0d562a0b1beb45e8cf0549"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b9aacce854a9456cd71b12ea59ae21bf4497b282fe0d562a0b1beb45e8cf0549"
+    sha256 cellar: :any_skip_relocation, catalina:       "b9aacce854a9456cd71b12ea59ae21bf4497b282fe0d562a0b1beb45e8cf0549"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15b1e016fb19e14ad147faf473ddbf12426289f5a4f846d18f567e6c80e54214"
   end
 
   depends_on "go" => :build
