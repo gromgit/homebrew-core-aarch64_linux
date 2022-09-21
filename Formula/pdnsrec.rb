@@ -1,9 +1,8 @@
 class Pdnsrec < Formula
   desc "Non-authoritative/recursing DNS server"
   homepage "https://www.powerdns.com/recursor.html"
-  # TODO: Remove `ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib` at rebuild.
-  url "https://downloads.powerdns.com/releases/pdns-recursor-4.7.2.tar.bz2"
-  sha256 "bdb4190790fe759778d6f0515afbbcc0a28b3e7e1b83c570caaf38419d57820d"
+  url "https://downloads.powerdns.com/releases/pdns-recursor-4.7.3.tar.bz2"
+  sha256 "206d766cc8f0189f79d69af64d8d937ecc61a4d13e8ea6594d78fe30e61405f2"
   license "GPL-2.0-only"
 
   livecheck do
@@ -44,7 +43,6 @@ class Pdnsrec < Formula
 
   def install
     ENV.cxx11
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
     args = %W[
