@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v1.2.169.tar.gz"
-  sha256 "7e3252ffb477b76c6b4651ff8e90d9b8af2a9b67d98f11fd76743974a32650d1"
+  url "https://github.com/werf/werf/archive/refs/tags/v1.2.98.tar.gz"
+  sha256 "651b8b6b148fa03be4d8c6ff2508185f2557e24f3f56e3456aca82520b9cb8ec"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
@@ -14,6 +14,9 @@ class Werf < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
+  end
 
   depends_on "go" => :build
   # due to missing libbtrfs headers, only supports macos at the moment
@@ -25,7 +28,12 @@ class Werf < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags), "-tags", tags, "./cmd/werf"
 
-    generate_completions_from_executable(bin/"werf", "completion")
+    bash_output = Utils.safe_popen_read(bin/"werf", "completion", "bash")
+    (bash_completion/"werf").write bash_output
+    zsh_output = Utils.safe_popen_read(bin/"werf", "completion", "zsh")
+    (zsh_completion/"_werf").write zsh_output
+    fish_output = Utils.safe_popen_read(bin/"werf", "completion", "fish")
+    (fish_completion/"werf.fish").write fish_output
   end
 
   test do

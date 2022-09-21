@@ -8,6 +8,9 @@ class Folderify < Formula
   license "MIT"
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
+  bottle do
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
+  end
 
   depends_on xcode: :build
   depends_on "imagemagick"
