@@ -6,12 +6,12 @@ class SimpleScan < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "b35b5c6ac0f562ffd0726e92c1be604ef9277b7b51edd1a5027fdd6690f7b3f1"
-    sha256 arm64_big_sur:  "43b0ffd9979ab5469f8beeacc2d04d15679fd27ec26322916f56d488a6fc4717"
-    sha256 monterey:       "e7b802dc36363a1f5c5772515582e938e7ebb74ff24a77871911d7b1263c0475"
-    sha256 big_sur:        "290eeb48d96252789d33dae8e2b4295f41d477fd6bf081a78e7e47e8a502d677"
-    sha256 catalina:       "18dcb33f6a5cb5110c5f49a6243f0c60362388fe6702e4fd09d42e16b4b02af1"
-    sha256 x86_64_linux:   "d77f133de90e9ce36e089adbabc8bee2deceefed635969d723fb079d13ffe814"
+    sha256 arm64_monterey: "80acb3bb82bdfc4ae6311c9a8188fcdd93a4357434248f21e47d7d9490682c22"
+    sha256 arm64_big_sur:  "ac9800eb3bab125883229ed260f55c3a0b440fc03287f8d823d1fb38edfe5218"
+    sha256 monterey:       "e9805d0b210633beca14b395cf8fa4d9fe182e8dde09a065403901c44796e91e"
+    sha256 big_sur:        "a1cc322c0ce81cf2bc2e2e9aab706542bd52c93941c295c756c4ecfc6481ba4b"
+    sha256 catalina:       "9d484fd5d6baf6180b3e6d9946dd752f4f485f029fd1e2edc8d6945e11f5ebc3"
+    sha256 x86_64_linux:   "8a15d4a1a86f60b6ce011c1ef46a59d2768b05316fd76fde118375d516ef1538"
   end
 
   depends_on "itstool" => :build
