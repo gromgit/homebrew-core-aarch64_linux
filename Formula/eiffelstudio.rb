@@ -7,15 +7,12 @@ class Eiffelstudio < Formula
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0e98c32215210bcb4d600b6ad37ecfc07679464fa1bab017ba97fdf92dd1c3f8"
-    sha256 cellar: :any,                 arm64_big_sur:  "247ae6f6d6c9a15fb568d7a67150ed74f75b7718fff8391f746f5fae89adce54"
-    sha256 cellar: :any,                 monterey:       "7c86824f5449c8306aef55e527b43ec3de6b7a7bb39b3d6a8e9c12999aa4db83"
-    sha256 cellar: :any,                 big_sur:        "aeb6b50791dc52a1911e04309f88a37ffbc597ae077124cbcdd983366c2d02f7"
-    sha256 cellar: :any,                 catalina:       "a75094bbba27a570e33d7efb5136526da56a8328c0177ad7ca4dff6e217ba49e"
-    sha256 cellar: :any,                 mojave:         "8a7764d27dccc50a8bd8d34175591c90bd52ef8c3e3bf256a941cfccbd0e7f84"
-    sha256 cellar: :any,                 high_sierra:    "1204b20cd8146aeb89dc15b904ee792cfe6dd7141bc30536beba436efa667cea"
-    sha256 cellar: :any,                 sierra:         "4f8f7374ec1a2032334dd13ddf00d93b3feda22c75d884f7c0f8fe799f27643b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b55211f955c38a4db7852f19c03e81ee60c1178edb4d035a7730a1283f57252e"
+    sha256 cellar: :any,                 arm64_monterey: "7702a2a1ad36efe8571c676468582eacc949c64fbd785684e64adbb9613c394b"
+    sha256 cellar: :any,                 arm64_big_sur:  "05891069a779e163414a4fb38126f81974375bb762a16391446efb7d8925213a"
+    sha256 cellar: :any,                 monterey:       "7b93bd2cba3b0fd57de705bdce5d9f5d9602f12789468a067d40cafd2ab1a225"
+    sha256 cellar: :any,                 big_sur:        "6f6cdc2480c8fd52baa606189ef7a7f381779655640bb84ce89c7651d52858c5"
+    sha256 cellar: :any,                 catalina:       "b7ced66010ed23f1dbd4d25c959828188708924402a5e350e8858c235cfc7374"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48c2d59af7e2b897b4f5560f67a0818679a44542dcfb59f5a2c81cb74b45f980"
   end
 
   depends_on "pkg-config" => :build
