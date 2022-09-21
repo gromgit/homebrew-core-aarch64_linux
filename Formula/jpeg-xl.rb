@@ -1,10 +1,9 @@
 class JpegXl < Formula
   desc "New file format for still image compression"
   homepage "https://jpeg.org/jpegxl/index.html"
-  url "https://github.com/libjxl/libjxl/archive/v0.6.1.tar.gz"
-  sha256 "ccbd5a729d730152303be399f033b905e608309d5802d77a61a95faa092592c5"
+  url "https://github.com/libjxl/libjxl/archive/v0.7.0.tar.gz"
+  sha256 "3114bba1fabb36f6f4adc2632717209aa6f84077bc4e93b420e0d63fa0455c5e"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -41,7 +40,7 @@ class JpegXl < Formula
   # https://github.com/libjxl/libjxl/tree/v#{version}/third_party
   resource "highway" do
     url "https://github.com/google/highway.git",
-        revision: "e2397743fe092df68b760d358253773699a16c93"
+        revision: "22e3d7276f4157d4a47586ba9fd91dd6303f441a"
   end
 
   resource "lodepng" do
@@ -59,25 +58,18 @@ class JpegXl < Formula
         revision: "64374756e03700d649f897dbd98c95e78c30c7da"
   end
 
-  # remove when https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034 is in a tag
-  patch do
-    url "https://github.com/libjxl/libjxl/commit/88fe3fff3dc70c72405f57c69feffd9823930034.patch?full_index=1"
-    sha256 "a1dba15e75093dea2d16d4fb1341e1ba8ba8400be723cb887a190d4d525ce9a6"
-  end
-
   def install
     resources.each { |r| r.stage buildpath/"third_party"/r.name }
-    mkdir "build" do
-      # disable manpages due to problems with asciidoc 10
-      system "cmake", "..", "-DBUILD_TESTING=OFF",
-        "-DJPEGXL_FORCE_SYSTEM_BROTLI=ON",
-        "-DJPEGXL_ENABLE_JNI=OFF",
-        "-DJPEGXL_VERSION=#{version}",
-        "-DJPEGXL_ENABLE_MANPAGES=OFF",
-        *std_cmake_args
-      system "cmake", "--build", "."
-      system "cmake", "--build", ".", "--target", "install"
-    end
+    # disable manpages due to problems with asciidoc 10
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DJPEGXL_FORCE_SYSTEM_BROTLI=ON",
+                    "-DJPEGXL_ENABLE_JNI=OFF",
+                    "-DJPEGXL_VERSION=#{version}",
+                    "-DJPEGXL_ENABLE_MANPAGES=OFF",
+                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--build", "build", "--target", "install"
   end
 
   test do
