@@ -7,13 +7,12 @@ class Vifm < Formula
   head "https://github.com/vifm/vifm.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "ced1940f97f1fb72f85f73820b387ab7945aaae43119f426900473fb3db807d8"
-    sha256 arm64_big_sur:  "f7534889df9f84b519989685295ea92b25d3405d52c4fd02c234278a6e18b067"
-    sha256 monterey:       "8a0095983b35fda58e93461623b9b696fec8084417c8d5b34a27343c11beba4b"
-    sha256 big_sur:        "4517c5ebdcb849db63e098333fff9826a4fb04738c1e834ba2b3a01f69689d3c"
-    sha256 catalina:       "6a88bdb18fabe25b5e1540e3c1eab8185743f551a1223b2940567a1025ff71ee"
-    sha256 mojave:         "8e1586f13e371c4c88d18efb84ad1f91333b3fbdca97c757c8d6fcdde2ace9d6"
-    sha256 x86_64_linux:   "4a8a8336e7e28fd307f600f87f5490afc56217c38035fec53dc4096f623d4cc4"
+    sha256 arm64_monterey: "9ff2c110a2487990dc8a5473c4198e6c14d06076d2676945873ca6c79b7e1f5a"
+    sha256 arm64_big_sur:  "a054a93a662f4280f6b374ca8587d4a7b37dbbc3ff34ea0926c391f68faf7f8c"
+    sha256 monterey:       "202faa12cccb273b6cb60b746d8dbbc96d80fe18da651d09adc9b954a151c8cb"
+    sha256 big_sur:        "1e026dfdc6081bd33fb833c0694a25d30b588737bcac0a7e4588f10d2850ab3f"
+    sha256 catalina:       "c1cd64539b149331b9c75cdaa309b73324d813a99aba93fe6943c070107e78a3"
+    sha256 x86_64_linux:   "ce89d3ba9ff14eea964836c59269627de30a1c6707a44a5c55adabed035cd88d"
   end
 
   uses_from_macos "groff" => :build
