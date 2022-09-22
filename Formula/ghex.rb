@@ -5,14 +5,12 @@ class Ghex < Formula
   sha256 "add40f8ab24921db30d27be58f00273201977d87fdc8d79eceadfa8b0e354def"
 
   bottle do
-    sha256 arm64_monterey: "292f84d1b19188dcb9b6ad7e8c812e1b4bb0189fbf377009118905daa4db7017"
-    sha256 arm64_big_sur:  "0b3953f55c7d99378104344d01d3f3207cf4e0f8364906c90561ca43484e9d34"
-    sha256 monterey:       "617fc014643a58da71c63bc935d01589c3f0df7b257c840a32250a9303556917"
-    sha256 big_sur:        "3c7a8c7f133ff63b1398074340ed06140645d258b94e971d897f912b8631f609"
-    sha256 catalina:       "b152b5f03f5bc0d7a50a834fef582ea7fb477dd7560afb4a0b1f4df88e229970"
-    sha256 mojave:         "c2e68caac31470d6dbc66050b2dc42333b3dfc6956ee7453fba9032b5cf894a4"
-    sha256 high_sierra:    "4de4a0a7ee3f81c7f7b36d7368380b2ff2a063c5d444302cd5979ee33727fb1c"
-    sha256 x86_64_linux:   "162e20b386fe920b63142876b0e0100a471d69b9737c516a9c30ed04b27d5801"
+    sha256 arm64_monterey: "4d7254cc2ef96df2c6187e904e2a63613cfa2963b1c4aa4965f10f49dac318ef"
+    sha256 arm64_big_sur:  "c493a5c7d8421dbd84ab8bf8e61ba469fa57afe70f99728a17a95046ccfb85a5"
+    sha256 monterey:       "54fe13e40831f5e0032ce82bbded59c5521043e41fcbfed8d532ea2b878e90df"
+    sha256 big_sur:        "54c7098a34cbc2cc9c5d32881bf19160fd9506dd81f06c9037036fbd5e08bf4c"
+    sha256 catalina:       "b95753839545d3a7e8d664b7afb87cbf4a585635d49fef7ee5cb93ec9e890bd1"
+    sha256 x86_64_linux:   "1726f4384ae6dc10dba8cae6bfdb7621abb987fb0390ee7ca8b43bbc597f19a9"
   end
 
   depends_on "desktop-file-utils" => :build
