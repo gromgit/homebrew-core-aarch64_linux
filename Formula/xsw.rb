@@ -7,16 +7,12 @@ class Xsw < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "4d2182fe5decfd5b2675e6715b8731676412d33ee8cde600f8c521f34ab44d15"
-    sha256 arm64_big_sur:  "88ea32bb62da06d34a0f53679f4b2eae886527dcbd2a20d316b9950c516e88cf"
-    sha256 monterey:       "4132cfb1ef41717119f29039a11b516f85ec362083803ca3b20847c984acff22"
-    sha256 big_sur:        "ca902b972fa913fc6c0f8e906c86986702d91e4383ceb5b017aae143d681121b"
-    sha256 catalina:       "76084ad086c4635e308c84ed975d5249e8338207614b1b48f27c014611d913e6"
-    sha256 mojave:         "ea85521cec4aed7642dd1c5c4e1d44532292064c4ea1ca4d3bfd4a779484b428"
-    sha256 high_sierra:    "09e57751cad18711cdc71cf47442366fda1bdb0adf6d156605c0ad2cc49be4fd"
-    sha256 sierra:         "02e0d7c1f309b1743d11555af5601ddbf462c835e81f6188dd3f46835978a86a"
-    sha256 el_capitan:     "b7a6391cf0df4a4d514a33188dc67a8fac551a3f66e82da626c4d4877cfe5274"
-    sha256 x86_64_linux:   "94274156a1fbb7c7c13a36ed0ededbad7cca62427ff73c7b8450ff2f7d8ecc99"
+    sha256 arm64_monterey: "1a4a635c11df035cdb3aaf70265cf88ab821c3778ae20679728921bba4b49bf5"
+    sha256 arm64_big_sur:  "adcd51d55c60f71ad81dc0c88cc67dac046d4083d7c27b50e0d4cfd9fdc8ff2b"
+    sha256 monterey:       "7f101f339ccf764f1fca2b4e81a227cd4e1861a06d4c1630a8f9ac3aa9ca9c0c"
+    sha256 big_sur:        "89b5bea34cf3c25385f810ce2c4bf667cd43caf541316d8efc47958d1f404847"
+    sha256 catalina:       "151199c2df40c292c4c0751cdf385d6d59704a98100be61eb3111e3429d31b04"
+    sha256 x86_64_linux:   "85ae0378112fd3d6d2307c9bbc1506896f1d534ddc26d8dc04fcc122a7617668"
   end
 
   depends_on "sdl12-compat"
