@@ -6,12 +6,8 @@ class Aide < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b0c84efe8e1900637012961de81510d4b161add9251fc83614141cc149e0c575"
-    sha256 cellar: :any,                 arm64_big_sur:  "7d5c7b012260f55372992d7e692f53c72d14e8b265db4869af5641f0b44f8435"
-    sha256 cellar: :any,                 monterey:       "f19c632ec5e607e4fa4687cc3b49f644d678a957e93ab5e74df37c51df97203a"
-    sha256 cellar: :any,                 big_sur:        "c619712d6930437e597f599e5e62f0047fd9ce985aae1ed964d1cc5a03fdf5ef"
-    sha256 cellar: :any,                 catalina:       "aa1ae5486d07a19d0729947adcc180518ad1b6a46fc29c0b450e95868b80a05a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef25683c89e216c309bd49f0422a83111ca6535e695822b3962cce5ed77bacee"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aide"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f5d9c1ec183cba4b849d9db15224aeb302852f5ed3878e5f05b493a22edf06c2"
   end
 
   head do
