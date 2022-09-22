@@ -1,30 +1,26 @@
 class Aptly < Formula
   desc "Swiss army knife for Debian repository management"
   homepage "https://www.aptly.info/"
-  url "https://github.com/aptly-dev/aptly/archive/v1.4.0.tar.gz"
-  sha256 "4172d54613139f6c34d5a17396adc9675d7ed002e517db8381731d105351fbe5"
+  url "https://github.com/aptly-dev/aptly/archive/v1.5.0.tar.gz"
+  sha256 "07e18ce606feb8c86a1f79f7f5dd724079ac27196faa61a2cefa5b599bbb5bb1"
   license "MIT"
-  revision 1
   head "https://github.com/aptly-dev/aptly.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aptly"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "94578dae1405970432cc4eecce9305bfdfe2dc491db21ec7d2bb41d894aa66a5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "615b207f6eaf8431fb876bb0b7284f8686f9cd67efd08e0ebbcc9f9e35ce8b95"
   end
 
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    ENV["GOBIN"] = bin
-    (buildpath/"src/github.com/aptly-dev/aptly").install buildpath.children
-    cd "src/github.com/aptly-dev/aptly" do
-      system "make", "VERSION=#{version}", "install"
-      prefix.install_metafiles
-      bash_completion.install "completion.d/aptly"
-      zsh_completion.install "completion.d/_aptly"
-    end
+    system "go", "generate" if build.head?
+    system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=#{version}")
+
+    bash_completion.install "completion.d/aptly"
+    zsh_completion.install "completion.d/_aptly"
+
+    man1.install "man/aptly.1"
   end
 
   test do
