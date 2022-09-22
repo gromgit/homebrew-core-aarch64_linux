@@ -6,12 +6,13 @@ class Cointop < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6ee93ff4d71ee6d9418e972e03b2793267e809ddfefad226c4768ad64fcba1b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62a9c420f36752b3b4acdab93f96f98566822661e9e4c75e404be233c15c6823"
-    sha256 cellar: :any_skip_relocation, monterey:       "09cf270f0ac715952792f39d40dc95929c6fe9d423baf6214f17e48c6ef231d8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "effcf6142cf4adc9b7c21e86c9c74e8b8d0105fef747729d61dafc66e644d1dd"
-    sha256 cellar: :any_skip_relocation, catalina:       "4b2b50933313c695c883709e5d0bdb03508a5fb0e20ca1c600679cb0038ffd53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3ba671173b8fc6902baf83ab7d6f921758bf09d07f905d780d19d6753259f38"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b6439f989983c4513b8d0744b6e05d56e7c79a7ca2e25ef6fa4ed0547c7aae90"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d21f1ec4932e705f02abb72f4df4e2131701ec33468669f5c237b27b550c56a"
+    sha256 cellar: :any_skip_relocation, monterey:       "e2120a9df18b3d4cb3bca96477d1a4849ed9bdf3b0310958b43d555f49bcaa5a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b320c63a712d387811bc0732362b0e0e25799fd3d28ff775272a459755d7efa7"
+    sha256 cellar: :any_skip_relocation, catalina:       "6d5851a8c19e542358d91a02a0a6c9dbac8571e50865403026620b24890f3ea1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ac984c14974abe0006d84d1e802a2eddb376e2603f88fd42b60decab2a8c2ad"
   end
 
   depends_on "go" => :build
