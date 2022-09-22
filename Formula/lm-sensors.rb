@@ -7,7 +7,8 @@ class LmSensors < Formula
   license any_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
-    sha256 x86_64_linux: "9cab2dd7da319a2eda20dffe27d52292f3e66926fabba8ac1f2204fa0885af3d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lm-sensors"
+    sha256 aarch64_linux: "d1b0702359d90f82f8d921ae6fcf97edf6374684de8ebd01cf13a5e2a9324eb4"
   end
 
   depends_on "bison" => :build
