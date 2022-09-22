@@ -17,17 +17,12 @@ class Libagg < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "ff191e608c0a5ce5284fc8fa338ab6a73915a890c7c625544434ce87f137913f"
-    sha256 cellar: :any,                 arm64_big_sur:  "b44f75e0bbf8725910b93bf65d18cd86966d825a993d92c4995a59bba5955fd3"
-    sha256 cellar: :any,                 monterey:       "7e88f2570202d6650f1cdf80f68bcbacf9777f377b55e4dca65f42de494ab10d"
-    sha256 cellar: :any,                 big_sur:        "9b05190639d2c1419046cbedd1f6c16e65f5ee1c03f807a8157b774a4177ca01"
-    sha256 cellar: :any,                 catalina:       "1ef56d71cf0fc0f5780395069105c7151f02a2264f2469ca3ae824c6366f45a6"
-    sha256 cellar: :any,                 mojave:         "97e0bd763cda63b61cefba2e46048275dda4d03cdaed251be5ebd0b7369b8e38"
-    sha256 cellar: :any,                 high_sierra:    "de1daeb1b324b1797f46ff6e6799498019de9256b4e09a128cf686e2572f6f60"
-    sha256 cellar: :any,                 sierra:         "872f49f0fd96ee65dca4bedba3e82c4fcf0e0b0c45de15afc82a9e70e0f0623c"
-    sha256 cellar: :any,                 el_capitan:     "5b9ab7a9ef2f4075bd55561f0fda99c7203a70020288747ebf90cfc1b2ee626b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b62898903589309b33bb8b6431fceda94c90e713a742327734fc27ba5068970"
+    sha256 cellar: :any,                 arm64_monterey: "397cc6cc076ad6e8105a1888112e7e0c5cc310d4f192ad2f3b479eb13a41c4b3"
+    sha256 cellar: :any,                 arm64_big_sur:  "fe56ee8021062f9fc853290fa07ffbcc9adab30eeffd566cbdbb041fca7d5044"
+    sha256 cellar: :any,                 monterey:       "af427a27e940353797d88a3b3224a43ad15ad51681494902dad975d5c5270d27"
+    sha256 cellar: :any,                 big_sur:        "12d797bfc9b2a1414787aa3028c1704a5b6f1f000b80ed5e4cd200029f10f160"
+    sha256 cellar: :any,                 catalina:       "d6770fea6a2589b7641fbeda183ff58835ae463cbbab3178096654b36a99b232"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cee5823d550698b94dc7e494af8b5f8a83acebec701264a4c20dec2d828c2240"
   end
 
   depends_on "autoconf" => :build
