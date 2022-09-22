@@ -3,8 +3,8 @@ class ArxivLatexCleaner < Formula
 
   desc "Clean LaTeX code to submit to arXiv"
   homepage "https://github.com/google-research/arxiv-latex-cleaner"
-  url "https://files.pythonhosted.org/packages/b8/4d/58a34098d023513ad129891799685c0f28387c4be22e72abbebed5a649ca/arxiv_latex_cleaner-0.1.28.tar.gz"
-  sha256 "9bb9ab3a965ad3cbb394fdd288f1d675ae1c9e2e4c1839337903fcd567ef74e8"
+  url "https://files.pythonhosted.org/packages/ab/4c/a06ba3d1bc19c0c4f3215db8534582c9d5d096ff18948e0576d10ec8fe65/arxiv_latex_cleaner-0.1.29.tar.gz"
+  sha256 "9f74f4d7baa59d1a0cbc7d80bc2bb9005e975e04374273e81a2370de23879885"
   license "Apache-2.0"
   head "https://github.com/google-research/arxiv-latex-cleaner.git", branch: "main"
 
@@ -26,6 +26,11 @@ class ArxivLatexCleaner < Formula
   resource "absl-py" do
     url "https://files.pythonhosted.org/packages/20/5b/02495cbb35e658e8353e309a288efcb93b3ca3cbb87a47db49d6c6516961/absl-py-1.2.0.tar.gz"
     sha256 "f568809938c49abbda89826223c992b630afd23c638160ad7840cfe347710d97"
+  end
+
+  resource "regex" do
+    url "https://files.pythonhosted.org/packages/f8/43/b85d103acc0bfb54939f801908bf83354085579e8422eeaa22c017950c02/regex-2022.9.13.tar.gz"
+    sha256 "f07373b6e56a6f3a0df3d75b651a278ca7bd357a796078a26a958ea1ce0588fd"
   end
 
   def install
