@@ -7,11 +7,12 @@ class Instead < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "54d5cf80499e6b088700d8119db84f1d8048c834e89f82e47c61b1193f025fdc"
-    sha256 arm64_big_sur:  "0480c3df8d3323dcb726cc0d2f41777fcb4bffc4b4421ece7fede026fb4081f2"
-    sha256 monterey:       "f9e9e0b7cbf22ce2330482803f8e626b6b573aad906ba53fd8fa2daca2196b0e"
-    sha256 big_sur:        "6d22aa39da7ad83aea389238a8460dd4de12e8511b40b0fdc317342a589a5bf6"
-    sha256 catalina:       "7ebd1d27964ee2215db0924f53f997667bb3102956603f97f086e50a01e1a5c5"
+    sha256 arm64_monterey: "ab640922ca125be86535d8f18e72cf627ff9f5de3f390c96fb292c0a0722c2c1"
+    sha256 arm64_big_sur:  "a8567211438e9a45b56c0a382b962a1ac6effa993a98041107b5493fc2bb2b9c"
+    sha256 monterey:       "84137b216b1c8cb4ef4f886fceee77234d98f58af5dd355f8da95bcaf9a8e281"
+    sha256 big_sur:        "a007eb402aa5a2d9b4dcd27e404531154ea2a5aafb917694eb977016e5aeeafd"
+    sha256 catalina:       "36074d03fe68d4f958e0370f9fa06cbf933334d049aa35bf496bcaca7e13a17d"
+    sha256 x86_64_linux:   "ca65cb49260b64f9338df21fad6ffa48e63a6605b59b1e9135a43b9b6d856d73"
   end
 
   depends_on "cmake" => :build
