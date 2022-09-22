@@ -24,15 +24,12 @@ class Libdc1394 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7d749b90fc87178b9f168bd129f204e4668758e09beda52b6a9cd2e7c680557c"
-    sha256 cellar: :any,                 arm64_big_sur:  "8af168268139e714a725ab1d4384a34ef092a3e50e081baba66fdf583fef3711"
-    sha256 cellar: :any,                 monterey:       "f838aec8a1a70d8e69dde3fee3e93b8869e821aafad8a5e7fcd2c3739cb0a53b"
-    sha256 cellar: :any,                 big_sur:        "7eef59a97b33666b144d68181b081eba93c4c23c58f159a67684d2ed2d043080"
-    sha256 cellar: :any,                 catalina:       "57080908a5da9abb2c0d83d4ad25450a507de8140a812112d9e5751f4004e4d0"
-    sha256 cellar: :any,                 mojave:         "6cf02c5500f83fa2ccd1ff9b880f44f9652d68b0e90a2345d6c62fb92a988f0a"
-    sha256 cellar: :any,                 high_sierra:    "536cbd34a43886d63a3dba41e7877ed63ad0fbe1a5e21cde499bd2c9e1e37e52"
-    sha256 cellar: :any,                 sierra:         "ff1d7c6b07f21d8cd485574b10091eb21c2316390a7d4cfa84d29cccce8097e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c95c1747f8a7b05bb423f16a0a2fa2106e6b1413e7424f2fee4a2ed07a92f54a"
+    sha256 cellar: :any,                 arm64_monterey: "df7e187b4be0fd2c0b1d44ae4affaf06c880d10405b49676c46654f7578c578e"
+    sha256 cellar: :any,                 arm64_big_sur:  "1130efff7b225327ca8743b863d808f509c1391afb19692be2b14b01f65fc3bf"
+    sha256 cellar: :any,                 monterey:       "9a293bb439cf246d321f3a2f3b913a0cabcec397dec51134d6bb5c315949d2d4"
+    sha256 cellar: :any,                 big_sur:        "d2783838520007d2620ce7a640dc68e7aaf3c47e9ff857d03404594b0343ddc1"
+    sha256 cellar: :any,                 catalina:       "392b2fc67276fabb361f3e9d88878c79baff7b50f8666c63e6b3c58f04af81cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5d8ff3fd2c11d8c8387ec2c1d30d6b93bee3f1d5516c2a9df4d2454ad1842cb"
   end
 
   head do
