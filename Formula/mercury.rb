@@ -12,12 +12,12 @@ class Mercury < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d4d7da746a3903308c29bdaf2a958a5fe2a8a39479b7915336189510daba2415"
-    sha256 cellar: :any,                 arm64_big_sur:  "ff56525679c46110bb62e291836a5f41603346a3c907d7b6c95ca9d7d9200903"
-    sha256 cellar: :any,                 monterey:       "3d8523d289526f717bcb3547492f5ab73b687b7fd93b8f93e123d993c5020f02"
-    sha256 cellar: :any,                 big_sur:        "b655f38b5eab501a46de0681b8861a98eacd26b86561c46cc3b1c9ee09a682f4"
-    sha256 cellar: :any,                 catalina:       "b28cfbfa350b95d12542948cb547bd9e93f23d9d9eb41c319e70e9eb7aa2f124"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5adad7ca5952d6548e893639c131f6fa000fc6564d077f37df1b69398ea35093"
+    sha256 cellar: :any,                 arm64_monterey: "825e3876f6c1960fb50fbe504af434e25578b3ff641353cb6f3254a098e2e5a1"
+    sha256 cellar: :any,                 arm64_big_sur:  "2deff06f22ac96b29db1070ee830dafd610fe393e11e9cc53b48a88a7ee2ed24"
+    sha256 cellar: :any,                 monterey:       "b6882729b695e6adfbc39625c0e6f08672c2e2a89611c46466b948a95323a91d"
+    sha256 cellar: :any,                 big_sur:        "988660fd4e794c650aa9619db96b14f2aef5f41af103bb256f7bf060a41f9162"
+    sha256 cellar: :any,                 catalina:       "4175cafa86fed2eab2ad5a910b8f8d6123ec1d82763a5a136ccfceeec7ee3805"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fe2e46ecc74258921fe2cd6e8e18b6561578517e6bfd261b603780306de17b9"
   end
 
   depends_on "openjdk"
