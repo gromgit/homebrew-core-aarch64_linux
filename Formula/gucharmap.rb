@@ -6,14 +6,12 @@ class Gucharmap < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "04be31ca892b6d00aabe5025063abb525630883ff1dd1a99f4f6fc1e8de48802"
-    sha256 arm64_big_sur:  "f96625e52ea9855f9d4f350e0e61cbc90c352dfd76931dff3fc3503810be0118"
-    sha256 monterey:       "739f55d1ebe5cb2bbd1cb3e414c9e0e01f6f7d2172aa2cb858e016340da875ea"
-    sha256 big_sur:        "318ada0ffb5e2b9a2c4ed5968f8d38762a4cc2bb7119e50d6bb13354ca1de47f"
-    sha256 catalina:       "007a3670270b9b8cbc2e0e9f36cb3854ba987d8b8105ec73e236fc56d28c2cbe"
-    sha256 mojave:         "b8f34cbea2db76364e0a4e3a6d2e5ba3110e80ef6b76fa3c165b1ac6b30ee9f1"
-    sha256 high_sierra:    "f8ad1728dd1e0124201e568ad0f69f004245368eb21527dea98ecf045ccad708"
-    sha256 x86_64_linux:   "6604c5046dbae96f07f30c6e4ee45c9b2e6e5a1030ae44c5dcd03870361c8fc4"
+    sha256 arm64_monterey: "94b8a8d68d2e41fc967141191571c92033341eb253e26924ad2254a5fbebeea6"
+    sha256 arm64_big_sur:  "f8c13179e94a42e165fbc997b764d5490715dc578052471abd34b745564522bf"
+    sha256 monterey:       "965e8db0910c3fbb535c598c759f0bcf6ece18465ec72aea1507e7c15f66d249"
+    sha256 big_sur:        "86d98d0143f5ce0369bc8a5dfc9d28ba698e58ec594bd2889cafd9872c221b00"
+    sha256 catalina:       "3764303688c44734939493f7d9f8f4260a5cac8b6a56586730516a0b8b2b3aca"
+    sha256 x86_64_linux:   "8eb21b303b018769b8cb24e4bc8d292e0f1b5ed81dbbff4f06ee66afb13d2a9c"
   end
 
   depends_on "desktop-file-utils" => :build
