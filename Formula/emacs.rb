@@ -7,13 +7,8 @@ class Emacs < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "63e819e025b63ae5ddd5f0f34d6ca965e8678c981f32dc83824eff59b35c2814"
-    sha256 arm64_big_sur:  "11efe35336b565b8f9c1584b02d12a3de1a17b0a12764af6273425dd34898c08"
-    sha256 monterey:       "c258d8cb6b85d377381e8adda32f00bcd3d7b3db37ee4fd05cce09815d0c36f7"
-    sha256 big_sur:        "f246447a7575f2ff5a41332f23b50d72a1d26e43cdccad30f22bb5af1a4cc0f8"
-    sha256 catalina:       "e29f1627f58d9a02cfdcc56c426dcdaa257bc6e74482e4d250abe034553bf0ca"
-    sha256 x86_64_linux:   "cfb6ef8f158d521f115e66707091a36e84b63f165930979eb8948b796116aa7b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/emacs"
+    sha256 aarch64_linux: "a56bd4bbbbea067e1d0b593c79b88ce6ccb2427e954f6f498f9e8fddff8dd0d2"
   end
 
   head do
