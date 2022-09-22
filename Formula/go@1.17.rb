@@ -1,9 +1,9 @@
 class GoAT117 < Formula
   desc "Go programming environment (1.17)"
   homepage "https://golang.org"
-  url "https://go.dev/dl/go1.17.9.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.17.9.src.tar.gz"
-  sha256 "763ad4bafb80a9204458c5fa2b8e7327fa971aee454252c0e362c11236156813"
+  url "https://go.dev/dl/go1.17.13.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.17.13.src.tar.gz"
+  sha256 "a1a48b23afb206f95e7bbaa9b898d965f90826f6f1d1fc0c1d784ada0cd300fd"
   license "BSD-3-Clause"
 
   livecheck do
@@ -13,7 +13,7 @@ class GoAT117 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go@1.17"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "8bf8f64390b6259da9e7b0f0edf387ee5b2e2c63a4c16f923936f3a2884f5dd0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "461577044e8f8b1625b6847e0db3a5d402c5d8a6d44be20be7fc579b35293b53"
   end
 
   keg_only :versioned_formula
@@ -37,7 +37,6 @@ class GoAT117 < Formula
     # Remove useless files.
     # Breaks patchelf because folder contains weird debug/test files
     (libexec/"src/debug/elf/testdata").rmtree
-    (libexec/"src/debug/dwarf/testdata").rmtree
     # Binaries built for an incompatible architecture
     (libexec/"src/runtime/pprof/testdata").rmtree
   end
