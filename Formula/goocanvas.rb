@@ -5,15 +5,12 @@ class Goocanvas < Formula
   sha256 "670a7557fe185c2703a14a07506156eceb7cea3b4bf75076a573f34ac52b401a"
 
   bottle do
-    sha256                               arm64_monterey: "82c8618cacc3ede0528d7b5642df008d85004ffcb2dca6161854191fc5f7305f"
-    sha256                               arm64_big_sur:  "afc6329ef248fba21b033b7f9e409112260e28f0c9964e5748df4bed40a0cdae"
-    sha256                               monterey:       "54771e536701697bd1e1225d41c2ac1cb74ab05fc5b7e0500699acb469e7b65d"
-    sha256                               big_sur:        "31471c7264bf173c9f82ba40daec0555403f9007cc8046d7bee5b2406bfeedae"
-    sha256                               catalina:       "ff71ce064b86b1e8973ee5c6aaebdbba6a1159614f5c425d83cc3fb6b00e8b97"
-    sha256                               mojave:         "b9d36364339793b428077bbc7735981f8cd33e681971653806dc574236382778"
-    sha256                               high_sierra:    "6822fe0a452809ce94bc1fd70fb32b024ad52702a56878db381b7dad2e05aa28"
-    sha256                               sierra:         "44b1bd9f058cd4fe112cd1022a0ad2daa93c7f849257ae57bc6d10f9c33e57de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df27306b70d7a3b4ff8ab489bf4d3fe4cf9c2e9d6e49589095b1c6b2c5926ca0"
+    sha256                               arm64_monterey: "ffbe53df96aebdefad5bca437f0be3a0ca39b725736e943d300747a6bd7770dd"
+    sha256                               arm64_big_sur:  "d2881f093f710abde959761a53e797e7b7adab47b359136c52974cd0d39d9b3f"
+    sha256                               monterey:       "201056ff9afb6af37984ba0586e8fa0fd6d55a4f09d344754bf7394defd54570"
+    sha256                               big_sur:        "2696cb6c47f70283a599e7b31d6ae359d1defb54d8c5cc2a466a0610ef8f470d"
+    sha256                               catalina:       "28e1912c12842419642d61a4aa400dc7028a4dde604dcf06f8088bf7cf3cc3a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f2a67e29fabc01031801decaff6a51fb6cd8196d33e78dca351b1aebe5f6a8f"
   end
 
   depends_on "gobject-introspection" => :build
