@@ -13,16 +13,12 @@ class Abuse < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "a65b0ae9c8bbfc5c58e3650983d2be5a9e308ca45e325b4884504a1b389dcd84"
-    sha256 cellar: :any, arm64_big_sur:  "02c9bc66fbd8460ea0ecc0479806ab7e6a2ff982d38bd16068eba21348d54e41"
-    sha256 cellar: :any, monterey:       "454a93ef2407bec483792814dbde42b6e419ee6f46ea3db04f782b20f10c9748"
-    sha256 cellar: :any, big_sur:        "48a11a0a5f7f34c85c30b0cc4f259ea0352043b4c3e9dc81f2e4d8a743270edb"
-    sha256 cellar: :any, catalina:       "669679d60bb64b08d940f9f7c4b29faf340ff081d62b66f1764087db466fffe2"
-    sha256 cellar: :any, mojave:         "e2dd02d540aabb2943823051e4bf80ea1fbb80da1725462fb314f53a0c6800b2"
-    sha256 cellar: :any, high_sierra:    "3fdc2ccd00bf320b994747d982b5cbde4b73c45c094c9a0f89acf13aea3eb847"
-    sha256 cellar: :any, sierra:         "6971b6eebf4c00eaaed72a1104a49be63861eabc95d679a0c84040398e320059"
-    sha256 cellar: :any, el_capitan:     "456dfbfb6e7486d0c5a50ac01423efabf5243b08d3235c83477681090a42c652"
-    sha256               x86_64_linux:   "24da6cb770bbe2405b4e546ce768fbf15869029b8d9eb3af0fc1610375664f3c"
+    sha256 cellar: :any, arm64_monterey: "f9c0ad01bf244402da95d81a483a46d8bcc45fdaa50dde524711db05f5051438"
+    sha256 cellar: :any, arm64_big_sur:  "487a8f37d5f3b9313d0d83a7e7349ce3c5111b1dc21b4d75c36b8a1e14a7aec3"
+    sha256 cellar: :any, monterey:       "1902270b9c53512d7d4770c5c8f1b40f7670539befd7e6e4f95b67b3248c1782"
+    sha256 cellar: :any, big_sur:        "3a30d73be5603120665da70ffc53bf27c92196b582aa53bc62e40296a3a625d0"
+    sha256 cellar: :any, catalina:       "39183111fb8c61401824df809e46d09857f1d37e49703e993cc221406d0cc7ae"
+    sha256               x86_64_linux:   "99bb1d87aef39b46eb39d0b6d9483afa3052bb0e616a16bbea90798545f1db37"
   end
 
   depends_on "autoconf" => :build
