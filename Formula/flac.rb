@@ -11,12 +11,8 @@ class Flac < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ca0f491b3a3c353e7562d0e8f25a1b54d07c760d4164251ab328239d276ba600"
-    sha256 cellar: :any,                 arm64_big_sur:  "7e13abd55a15c99201005e8f311c0015225f59c82f7408e314d3cbfb5f98f06e"
-    sha256 cellar: :any,                 monterey:       "cf8ac3c3150544be3b809a549c7cf7bb71344904e1b4d4c9c9970c38aa7b2072"
-    sha256 cellar: :any,                 big_sur:        "2edc8dddafb0731d45237cdcb5036ff60988575fa9171691b7dc9aa8215430e4"
-    sha256 cellar: :any,                 catalina:       "48463384c101270b29fb1b436443ee8b67dec9af0830c58adce44225142de8a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7dab52777c3c995c3d7b93b5a86d2ca6ad1e9f5be97f993132ace30c50cc3af5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flac"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d461e4eeec4cf1c23e11cca6b45dda203d3cdc3baee324407e93ac8247ab6835"
   end
 
   head do
