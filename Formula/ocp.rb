@@ -13,12 +13,12 @@ class Ocp < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e195a02f6dab9fc8e4b30e31547034b13039fba747661a4766687140e7eb7b68"
-    sha256 arm64_big_sur:  "75911d550ddb535f734d993be08f7dabed15c104ee5baddac6f8372ef2e20c9a"
-    sha256 monterey:       "2893b8000462f2f34f6a7a55f8e1108c6acfc4dcf722a72851501095cb87e024"
-    sha256 big_sur:        "1779607df1ff5012c075b874e1ff5326d1555a696f136c1d24e81f01921e2dc9"
-    sha256 catalina:       "bb3ee3bacf36067cf20a370b9d971390111a3ffce3097a914c2f208a8d147a69"
-    sha256 x86_64_linux:   "85106bb45b1a796245a230d29bec2bc482de065720753196548381f10c7a6c19"
+    sha256 arm64_monterey: "9edc28eaa5cf8ed6e167f210507a6a0c3ef4c7d575daf0b4bc92aa07d0164486"
+    sha256 arm64_big_sur:  "82e19216f43ce9d8987fa9d12060dc73a6466b47002406809f3f7576ca618e8e"
+    sha256 monterey:       "ecab66f3af0eafc0d7b07d11c08ef876ef6e4865fe78ca599cda2dc20cfa8288"
+    sha256 big_sur:        "9310045304a8d3c2147c4ed62771fe8b6991f93de5f83d99ea7af7c1d3081cde"
+    sha256 catalina:       "3b6c634729414ba56a28bee50525a1571218066a8ce3814db3d67006527891d4"
+    sha256 x86_64_linux:   "c1e03126316630cba2f978965a17d41f726b9f8105ab74fea5425a185f33efb3"
   end
 
   depends_on "pkg-config" => :build
