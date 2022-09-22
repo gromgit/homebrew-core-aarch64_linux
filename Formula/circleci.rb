@@ -3,8 +3,8 @@ class Circleci < Formula
   homepage "https://circleci.com/docs/2.0/local-cli/"
   # Updates should be pushed no more frequently than once per week.
   url "https://github.com/CircleCI-Public/circleci-cli.git",
-      tag:      "v0.1.21194",
-      revision: "0f1ff57542b90c399b7e5675c16f1bd1a09d970c"
+      tag:      "v0.1.21289",
+      revision: "3b49940db83d496241211861c4d3e209d48f1afb"
   license "MIT"
   head "https://github.com/CircleCI-Public/circleci-cli.git", branch: "master"
 
@@ -43,7 +43,7 @@ class Circleci < Formula
     output = shell_output("#{bin}/circleci config pack #{testpath}/.circleci.yml")
     assert_match "version: 2.1", output
     # assert update is not included in output of help meaning it was not included in the build
-    assert_match "update      This command is unavailable on your platform", shell_output("#{bin}/circleci help")
+    assert_match(/update.+This command is unavailable on your platform/, shell_output("#{bin}/circleci help 2>&1"))
     assert_match "`update` is not available because this tool was installed using `homebrew`.",
       shell_output("#{bin}/circleci update")
   end
