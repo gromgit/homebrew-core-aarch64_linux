@@ -7,15 +7,11 @@ class Pce < Formula
   head "git://git.hampa.ch/pce.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ac061de748e0b6bba56957a0b712c65b380d02b4bbc8314a610dee3f6c780e8e"
-    sha256 cellar: :any,                 arm64_big_sur:  "c65bf1ca8a8b83b77fd383807fd783696ce9167b1c54b7a03452b6954cfc7733"
-    sha256 cellar: :any,                 monterey:       "347b4b3c1fce486b29e8123c4511025e4f9e1907171de26f42d65f4fc32216be"
-    sha256 cellar: :any,                 big_sur:        "554c878d6f17167377d677797c295ec5cb65d8e8e5af0ebe320972a42d037c89"
-    sha256 cellar: :any,                 catalina:       "de9b733199b55e9cf2cdd0d73643c3ea199d132320600adf81428d08ebfba8af"
-    sha256 cellar: :any,                 mojave:         "8c0364c490a9b01875ab9c05c7bc5a6cba190e27d941c72bbbb3e17af71ab88a"
-    sha256 cellar: :any,                 high_sierra:    "6c67f811c813423d7380894d6de77aeeeba20d9f18fd36a71653c23b97c433f6"
-    sha256 cellar: :any,                 sierra:         "ae09a42321608dfa10291d2a2a1afed87a137c9612a54e513360022de8e908b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b219c1e06cdb370c7865c4e2a39eb50df89889585a7b77320acfb758bbe13696"
+    sha256 cellar: :any, arm64_monterey: "e91060cfda85a63fee4413b7eb726714f8775e0cd452edd0957eba43c578fdd4"
+    sha256 cellar: :any, arm64_big_sur:  "a549787c54e01ed779ac141bf523bca16b00151802f77fa869c2f2d660dc2732"
+    sha256 cellar: :any, monterey:       "a393cdc7dadc636acfe2f16510d4422ffd2a9fa565c094e8b82c26a7c4574456"
+    sha256 cellar: :any, big_sur:        "84d3de8d69880534cd5a1daa04370df793e7cd81ea4c97d7146c567e904a9c28"
+    sha256 cellar: :any, catalina:       "2d003611fb1b523196faccd42360b38a5ef955ba9a5accf213270381499c00d7"
   end
 
   depends_on "readline"
