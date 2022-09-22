@@ -8,16 +8,11 @@ class Vecx < Formula
   head "https://github.com/jhawthorn/vecx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f9360058ee1058e3e52953eece22bdf33b5a2a05519d30e790b3bc7b555c95c5"
-    sha256 cellar: :any,                 arm64_big_sur:  "e1d6a1b7d28c46a7c0f2ec2eb26e5f15ba9816d0fb6e921a0f53af16f7088b84"
-    sha256 cellar: :any,                 monterey:       "fa0c6a8226e5c0f985609ceaede8f159e42cacb35c048c668190ef134ef8d74f"
-    sha256 cellar: :any,                 big_sur:        "6bfe8b690323619720d3448f5efef663787b0f4c8ad8296fb94f6ee3ecf5ff43"
-    sha256 cellar: :any,                 catalina:       "8213a8cfb2f96374046f9952241ab34b2be01c4f2dd2988f39aa0b07e948ff60"
-    sha256 cellar: :any,                 mojave:         "8e55a474a2d775bf3cbd0d7801b6d23aa3cf759d1aa48268542fee67cc6ab322"
-    sha256 cellar: :any,                 high_sierra:    "2a2b5d63a8be0bcf51a9b4eee05b0751fd3757b5576e515931a55ad6f729a465"
-    sha256 cellar: :any,                 sierra:         "9417cc9e5938dc117b4ab7ab41518a2b28e366cae15cdf1192af15e6237a35e6"
-    sha256 cellar: :any,                 el_capitan:     "48d404ad79ecd0ac870ca0b3390a6465e7ed2755d58eaf130ec93a4e874e5f34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1214cbb429b4a346a039b95f8e383b5c887d109e70fabaf7f741db447414d744"
+    sha256 cellar: :any, arm64_monterey: "75779f24618178fb98ad78e8cdbfcbd9769a4878eadd6580f2fb4381ae9ba60e"
+    sha256 cellar: :any, arm64_big_sur:  "085f8f3d413a6259c8dd804d4ad4cccaacadb2446eee33b1140d46e7bca7af29"
+    sha256 cellar: :any, monterey:       "f3452a9fcd0b85f1c3debe208630b26d42e86be1af61a23336fa7c0f90753ad9"
+    sha256 cellar: :any, big_sur:        "f00822462c70b4b6eb84c831b2c5d771b50671ecb1d51b7a03319e785f911984"
+    sha256 cellar: :any, catalina:       "442ddb9d1e87e21f642e6785e170b3ef754ab9329c5ffd2d04b49b998f90f512"
   end
 
   depends_on "sdl12-compat"
