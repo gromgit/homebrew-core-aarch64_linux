@@ -1,11 +1,10 @@
 class Doxygen < Formula
   desc "Generate documentation for several programming languages"
-  homepage "https://www.doxygen.org/"
-  url "https://doxygen.nl/files/doxygen-1.9.3.src.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.3/doxygen-1.9.3.src.tar.gz"
-  sha256 "f352dbc3221af7012b7b00935f2dfdc9fb67a97d43287d2f6c81c50449d254e0"
+  homepage "https://www.doxygen.nl/"
+  url "https://doxygen.nl/files/doxygen-1.9.5.src.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.5/doxygen-1.9.5.src.tar.gz"
+  sha256 "55b454b35d998229a96f3d5485d57a0a517ce2b78d025efb79d57b5a2e4b2eec"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/doxygen/doxygen.git", branch: "master"
 
   livecheck do
@@ -14,19 +13,14 @@ class Doxygen < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "368ece92d696d30bb2001c98381df8db30a648a1419373749fd4ae4a917abfff"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "630d13f7ce33d9778d14c286ef8cdf6db8a3e4425687ce883dcd03432067559d"
-    sha256 cellar: :any_skip_relocation, monterey:       "d9890c4d75eab2b74894783bb8fe683c4f6f189a2deb5ed3a67d2ac6e1ee1eef"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b56fa527820cfbc37d6d73a1a5608d4bf030be4280d01247e2f90aa76e467f7c"
-    sha256 cellar: :any_skip_relocation, catalina:       "22b7ceee204ea77784f0f6a9ffeb0a4e46d816949cb7da247ad07c5690cebcf2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c61f9db9a0389820b164418e0b4a8982ba22556a3a94dbba3f16b3d8b0c4010d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/doxygen"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e25c7e8641c2d018e9c92197771471ddca26a87b3fe9dbf510ba277a2c88fc66"
   end
 
   depends_on "bison" => :build
   depends_on "cmake" => :build
-
-  uses_from_macos "flex" => :build
+  depends_on "python@3.10" => :build # Fails to build with macOS Python3
+  uses_from_macos "flex" => :build, since: :big_sur
 
   on_linux do
     depends_on "gcc"
@@ -37,15 +31,16 @@ class Doxygen < Formula
   fails_with gcc: "6"
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make"
-      system "make", "install"
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+
+    system "cmake", "-S", ".", "-B", "build", "-Dbuild_doc=1", *std_cmake_args
+    man1.install buildpath.glob("build/man/*.1")
   end
 
   test do
-    system "#{bin}/doxygen", "-g"
-    system "#{bin}/doxygen", "Doxyfile"
+    system bin/"doxygen", "-g"
+    system bin/"doxygen", "Doxyfile"
   end
 end
