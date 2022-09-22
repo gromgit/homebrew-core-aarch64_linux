@@ -1,9 +1,9 @@
 class Algernon < Formula
   desc "Pure Go web server with Lua, Markdown, HTTP/2 and template support"
   homepage "https://github.com/xyproto/algernon"
-  url "https://github.com/xyproto/algernon/archive/1.12.14.tar.gz"
-  sha256 "cab5b01923142e0326ea2a01797814bb2e8ea9f7c6c41a3ea0ae7df3b667e86e"
-  license "MIT"
+  url "https://github.com/xyproto/algernon/archive/refs/tags/v1.14.0.tar.gz"
+  sha256 "2d30fe7a3f7c9b985f5fde7d6035888ad0c31ae4342fb38a96404de320ccd883"
+  license "BSD-3-Clause"
   version_scheme 1
   head "https://github.com/xyproto/algernon.git", branch: "main"
 
@@ -14,14 +14,13 @@ class Algernon < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/algernon"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c7f77e9d279b0d4859f08c97506baee7b75a0b2a447231b001837ef59c790072"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e5afb7039ebfb5a76e6099df07ade5534ff78116408e3a600faacdcfa023a63e"
   end
 
-  # Go 1.18 can be used after the next release (1.12.15 or later).
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-mod=vendor"
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "-mod=vendor"
 
     bin.install "desktop/mdview"
   end
