@@ -2,8 +2,8 @@ class Eksctl < Formula
   desc "Simple command-line tool for creating clusters on Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/weaveworks/eksctl.git",
-      tag:      "0.111.0",
-      revision: "9a99e9218dca43507e940996072ab3872da9361a"
+      tag:      "0.113.0",
+      revision: "e493c31d408ab66bd434efef9aa4da9e1ce90847"
   license "Apache-2.0"
   head "https://github.com/weaveworks/eksctl.git", branch: "main"
 
@@ -39,6 +39,7 @@ class Eksctl < Formula
                                                           buildpath/"ifacemaker"
 
     ENV["GOBIN"] = HOMEBREW_PREFIX/"bin"
+    ENV.deparallelize # Makefile prerequisites need to be run in order
     system "make", "build"
     bin.install "eksctl"
 
