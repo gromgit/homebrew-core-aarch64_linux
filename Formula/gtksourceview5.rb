@@ -11,12 +11,12 @@ class Gtksourceview5 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c6bb61a5374dcdc279127477e1b1344d919759240fce65a4178edd61031315eb"
-    sha256 arm64_big_sur:  "9d6e55f548b131bd4307dd9d6d81ce6560f63cc68ce3eb51ec3aa6c5d2f19aa3"
-    sha256 monterey:       "6ee6023e5ea99220a203db4a789914f781572559eaecb1a127551881ba69eab9"
-    sha256 big_sur:        "ff57804f66b1d5b131888e1fdef1db65f5b2b2ddef400113a0e90b29c19e34aa"
-    sha256 catalina:       "db45d64faaaff7784bb1856f4af9959fb6f507f05f5e3a633eb78f0a5c399db0"
-    sha256 x86_64_linux:   "5ac4cf66c7c4cf5d6c58101c3d069b82cb8a93a51118babc534846df3752c4b5"
+    sha256 arm64_monterey: "95ecf13f25c7b6dba6ce922afea5933b2932d0bc099a69a7c11fff678afa3a53"
+    sha256 arm64_big_sur:  "e89bff5608ef32a1e086e088a952f4cad107ea93889b8d50300c4585743bd021"
+    sha256 monterey:       "9ce97c46b9e259a2650e6afad120346ce35b979d781a57352134a877fc8d386e"
+    sha256 big_sur:        "326a12dd4ed21e70aa71a5e56c85fd10d0bb88f18f5a550037a958b0ad6af293"
+    sha256 catalina:       "b9e031a18b4e9ee7cf66a18f241cb0f589da07639ccc0ee4874b3fb12c32440f"
+    sha256 x86_64_linux:   "c8ea21321b5ea9dc065b15eae4d2fd955194146383b14a4640795d6743ce541c"
   end
 
   depends_on "gobject-introspection" => :build
