@@ -10,17 +10,12 @@ class Smpeg < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "119f4031fd0ada3466a78b55310b6f05facee84d9c9a01b71f3f17d8f2b613f3"
-    sha256 cellar: :any,                 arm64_big_sur:  "1078558dafa6125c781a6b50242fc8def024f36dc3d8f4c1ae719c05779f12c2"
-    sha256 cellar: :any,                 monterey:       "4b07d003520cc8ac1a9422efc9630cb7f316b75ed9b1f4195cb88c3f1c5a095f"
-    sha256 cellar: :any,                 big_sur:        "1b667d8cc8548a25b1a5c16e706f9fba9a0a4a3380c1674ba64444abb3d18837"
-    sha256 cellar: :any,                 catalina:       "929cb2fe89f7525acbf38a269bde8aaf07f7b2d406007ee9df2d21051a0ccba6"
-    sha256 cellar: :any,                 mojave:         "6e826bd49ceb171cc36877c0498d8ccfc3c614f39b684728e0c307b69942d58c"
-    sha256 cellar: :any,                 high_sierra:    "2779c8aba2aed376076e53fc9e2e694e8b5fabca0096ae91eed786b73ef3704f"
-    sha256 cellar: :any,                 sierra:         "9ac1a1c83a9861b8762ab711d709e67bf020204fb1c1b5907b244d83ced4ab2c"
-    sha256 cellar: :any,                 el_capitan:     "a4bf36f39959150e1f0cd83c8f58761ce59acdee50f591a1f695665b7517728a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b5a86bc35fd6f8e17cf6445fd8d9aa7246ac77e75e3d4d6e7c1c3d66154fa35"
+    sha256 cellar: :any,                 arm64_monterey: "c5eab6893599eb3853a814df8bd10232024992b610e464713faef09c9b89af15"
+    sha256 cellar: :any,                 arm64_big_sur:  "a681c545d54533151554e7ae875ceb10ab50557265b6903e82a7db1f649195a0"
+    sha256 cellar: :any,                 monterey:       "0dee6e8e4fc6dc7b4d97813c61c3bd31613c158dc17f4cf9ae3c24f91d93b591"
+    sha256 cellar: :any,                 big_sur:        "a095b94ab3d0072785c4e5c59ee5518b83e5d8d677f77561dbc5e53026313c32"
+    sha256 cellar: :any,                 catalina:       "884228b0396550379ea0f63b23cba2a078d495470424096232b6eff869972a08"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e66be23025650d303fb1d05e4203d5d696369052d5cdd5f5289c69b00f7405e"
   end
 
   depends_on "autoconf" => :build
