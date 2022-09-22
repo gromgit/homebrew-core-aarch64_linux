@@ -8,12 +8,12 @@ class Sdl12Compat < Formula
   head "https://github.com/libsdl-org/sdl12-compat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "28a52174028532660d3526dc2057674b58379230c7bf1f7e325d7450c4be5f4a"
-    sha256 cellar: :any,                 arm64_big_sur:  "cc9f77abf218e5b16d3f4fa970c2be4fc46da61e8a37b79a78907a570ec4517a"
-    sha256 cellar: :any,                 monterey:       "e145a7fa135f4c2832d7f7416545f5942dcba7e3bad494a658d159503e5305c6"
-    sha256 cellar: :any,                 big_sur:        "5308f18cbce6d40617e6f1499f7c0a12e95806ddfc22d898063d5144e6676c55"
-    sha256 cellar: :any,                 catalina:       "c4d8e089c779b7a2dce577dd314df3bd3955b55d03c73db88e9b47801d98d6ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac62b744285315381ba584bf90e78a11e98786e02a308c63a258aef76dbec16f"
+    sha256 cellar: :any,                 arm64_monterey: "9fa81c93ccaac2f1d2593b66b6964abbc4d3d503cc9985051b2ffc22b23737ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "f6debd32dfc5afe87c10af3558c8403eba7b11b5336e9743a845ee6d0e5c5bf5"
+    sha256 cellar: :any,                 monterey:       "421b2ed2509c5137903a72d509c4d0370d31882e9dcf5ab4a4b821bc0a498ac1"
+    sha256 cellar: :any,                 big_sur:        "f130548e7786274d35d87604adbd7c77237381e5cfcb3a105932d9d73be716b8"
+    sha256 cellar: :any,                 catalina:       "23ede3121cb5e0bfd0d28df00f3b70bebef61032e803bf763da46298bfbcadae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3d180113b4ff6d3098de92688c0c74321be325b6fda59b97af9359f2c32aa10"
   end
 
   depends_on "cmake" => :build
