@@ -12,13 +12,12 @@ class FuseEmulator < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "3fb546ad800926e68739a2d75ad7f2ab7c7e6fae4a9ab10d1131f994053d79a5"
-    sha256 arm64_big_sur:  "e90d4659088b2fd702f5b9fdd65971f40e91468b539d1f6bba5405f09177cd31"
-    sha256 monterey:       "cb341e9c415cfbf803f8195b034f21db4f0cefa9a82a91b1ad8ea192e0ffccd0"
-    sha256 big_sur:        "36e52532b87822d39bcfc3df322e16cc1bce3d15e3c4898df3fb19e603627979"
-    sha256 catalina:       "569522bf7f64bec6a0c0ebbd50658798830fa4509d1720a01f2a9404d5d44cc9"
-    sha256 mojave:         "4431c55c622edab217e5e896e9718895747ccb8546dd4251c4457c327a0c6ae0"
-    sha256 x86_64_linux:   "4018537ef9c031ab708b26608f6d4505a7543138b34d0c5dbbb185d7a3ecbc07"
+    sha256 arm64_monterey: "a27a5c880e711be90be247febe40f5a872c2a7cd5d3a569785cde244dfabf156"
+    sha256 arm64_big_sur:  "2e69fcb7757f40f65d29b4e7a62217d51c9735024906b91b5a4ccfd329836f66"
+    sha256 monterey:       "a1486ffb825291ba014642a71c54d6983d5a03a144721038f7db990698e115f7"
+    sha256 big_sur:        "b9bfc52e3eb1d8af025f6cc89c947ea15af0e77975ae53bf2dcef04f82d17f92"
+    sha256 catalina:       "f6ec30f9ee02d5a51a6c87d7a19f6b96d771585f8b881678f143fb82fa882e38"
+    sha256 x86_64_linux:   "6f86b83a89073ec0b21ab434b61cd82e87d1f32ca4232cc083a91bc021e1e7b6"
   end
 
   head do
