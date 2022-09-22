@@ -1,8 +1,8 @@
 class Libdrm < Formula
   desc "Library for accessing the direct rendering manager"
   homepage "https://dri.freedesktop.org"
-  url "https://dri.freedesktop.org/libdrm/libdrm-2.4.110.tar.xz"
-  sha256 "eecee4c4b47ed6d6ce1a9be3d6d92102548ea35e442282216d47d05293cf9737"
+  url "https://dri.freedesktop.org/libdrm/libdrm-2.4.112.tar.xz"
+  sha256 "00b07710bd09b35cd8d80eaf4f4497fe27f4becf467a9830f1f5e8324f8420ff"
   license "MIT"
 
   livecheck do
@@ -11,7 +11,8 @@ class Libdrm < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "1ca8eb09c3a8c1b9a64dc05d030f0e544456e18fae2f30eca0a6a2729fe3943b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libdrm"
+    sha256 aarch64_linux: "abb89b59f35ae3ac1ef4f4eaf380d84385b686ab8257761d3387f0b93b132c02"
   end
 
   depends_on "docutils" => :build
@@ -23,7 +24,7 @@ class Libdrm < Formula
 
   def install
     mkdir "build" do
-      system "meson", *std_meson_args, ".."
+      system "meson", *std_meson_args, "-Dcairo-tests=false", ".."
       system "ninja"
       system "ninja", "install"
     end
