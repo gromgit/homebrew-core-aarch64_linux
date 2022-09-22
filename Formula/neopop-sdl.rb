@@ -7,16 +7,12 @@ class NeopopSdl < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e266df28b76e1da41cb04954d23f5f7fc02f82b852434dd02e0defc9531fbe57"
-    sha256 cellar: :any,                 arm64_big_sur:  "12111d2d3ec73026031531e7d5b930285ff234732e099ee041122694e8371913"
-    sha256 cellar: :any,                 monterey:       "735c39be0cdfe7a56e4d395859d097b9a48dbea26b219bf922cdddb3ffa5e40f"
-    sha256 cellar: :any,                 big_sur:        "53e2a47e1f4e3bc4b35a31ea06f757ef62fc11de24347fcca5f4d1799f1adf94"
-    sha256 cellar: :any,                 catalina:       "c4bd22db58945139a07d7c007c546e2edb3be1c3763f2d3f3008b575f30cef84"
-    sha256 cellar: :any,                 mojave:         "d84d1d9e2304a21ce915b8a65001a310da3c797e1f89e4d8a86a102e53f92f10"
-    sha256 cellar: :any,                 high_sierra:    "9bdf06235151ae52d85e630021ce810d49ce12ba74e18b27f7584d9584377eb4"
-    sha256 cellar: :any,                 sierra:         "3510d31984f2f46a59390617e2af3941638a4eb20a42131fc804e5d307cb5059"
-    sha256 cellar: :any,                 el_capitan:     "e115fe849a0b8e1921a6c36c3d34fcc00b911f0504a0e32543656e76513384ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53a84ba836a1c4f2ce579d149554a865e69a736ec69e6c49de369dd5f0364673"
+    sha256 cellar: :any,                 arm64_monterey: "75d72c03b2f65fedee641b74515ebbbc021009d7ac281f284b48d6eca1ff145b"
+    sha256 cellar: :any,                 arm64_big_sur:  "8ec87c1aa5a6544628143aff2edc8b0db59185b2998c1e7f14a9f3490db3c991"
+    sha256 cellar: :any,                 monterey:       "7a07a0dc510ed83c174dd54ad3a0a8005dce9e9c2be44b61b622a455f9a9bced"
+    sha256 cellar: :any,                 big_sur:        "ed8e6cb23919f63c24ff387d81b531e1e64af40387d2f60b7fc751bfd8141e04"
+    sha256 cellar: :any,                 catalina:       "6b988af217b9dc042b17495a45d2f9ec7481025d941e31a749d798e4039d2f23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "742ad78adc9f2c1ec32c9221406e52d4656321c7ba16836c7e630469e3b6a26c"
   end
 
   head do
