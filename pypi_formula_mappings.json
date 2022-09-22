@@ -155,7 +155,7 @@
   },
   "dvc": {
     "package_name": "dvc[all]",
-    "exclude_packages": ["protobuf", "pyarrow", "six", "tabulate"]
+    "exclude_packages": ["protobuf", "pyarrow", "six", "tabulate", "PyYAML"]
   },
   "dxpy": {
     "exclude_packages": ["six"]

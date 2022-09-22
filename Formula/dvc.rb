@@ -26,6 +26,7 @@ class Dvc < Formula
   depends_on "openssl@1.1"
   depends_on "protobuf"
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   # When updating, check that the extra packages in pypi_formula_mappings.json
@@ -645,11 +646,6 @@ class Dvc < Formula
   resource "pytz" do
     url "https://files.pythonhosted.org/packages/24/0c/401283bb1499768e33ddd2e1a35817c775405c1f047a9dc088a29ce2ea5d/pytz-2022.2.1.tar.gz"
     sha256 "cea221417204f2d1a2aa03ddae3e867921971d0d76f14d87abb4414415bbdcf5"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "requests" do
