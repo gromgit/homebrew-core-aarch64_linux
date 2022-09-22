@@ -9,13 +9,12 @@ class ArxivLatexCleaner < Formula
   head "https://github.com/google-research/arxiv-latex-cleaner.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bfacf14fff528d8c54bcc9a0d3598523f1a9bb23270824455ff79a84d2615ed4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bfacf14fff528d8c54bcc9a0d3598523f1a9bb23270824455ff79a84d2615ed4"
-    sha256 cellar: :any_skip_relocation, monterey:       "89fae052f2b4e327b8c2a52965687a44101be22aab803ede33cc90e94b6cbfe0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "89fae052f2b4e327b8c2a52965687a44101be22aab803ede33cc90e94b6cbfe0"
-    sha256 cellar: :any_skip_relocation, catalina:       "89fae052f2b4e327b8c2a52965687a44101be22aab803ede33cc90e94b6cbfe0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04e753a0d424d3855fac07e4ee0850119df040f6e179ee629f8639a8224f2449"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c9530832aeea215d5082a095a0a2077a50a13f955cb560353c1fab09a79bbe8e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "873854fbc4a33d59092127a26be8cf4ac658e163a253cc26f19c9b923b0a010a"
+    sha256 cellar: :any_skip_relocation, monterey:       "f2ea841aab9bffb0a6d64a37f3fd3895b7c7eb685f47fd6fc9f56fba05520507"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f663a896f464780a69b819a17be22d4fbdfa8cbdaa56442d321b3cca5d1263e"
+    sha256 cellar: :any_skip_relocation, catalina:       "445532434fae0d57bf752ac92522b0daf56961520a3af594d4145095f6b2af8f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9548ece0d0bcaee7c35211e297cfd49ff0c0098a63bd37ca8367d9e58739620a"
   end
 
   depends_on "pillow"
