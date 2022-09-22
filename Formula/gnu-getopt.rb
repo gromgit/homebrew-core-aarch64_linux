@@ -1,17 +1,13 @@
 class GnuGetopt < Formula
   desc "Command-line option parsing utility"
   homepage "https://github.com/util-linux/util-linux"
-  url "https://www.kernel.org/pub/linux/utils/util-linux/v2.38/util-linux-2.38.tar.xz"
-  sha256 "6d111cbe4d55b336db2f1fbeffbc65b89908704c01136371d32aa9bec373eb64"
+  url "https://www.kernel.org/pub/linux/utils/util-linux/v2.38/util-linux-2.38.1.tar.xz"
+  sha256 "60492a19b44e6cf9a3ddff68325b333b8b52b6c59ce3ebd6a0ecaa4c5117e84f"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96d951b721c22830f976066f8704424bb065f1814fbd6d86fcd5f3996679db81"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7185fed500da9746d2249185f6fdbb93a7d08dd85661c5699c768004927e010e"
-    sha256 cellar: :any_skip_relocation, monterey:       "eee08bd48c1ad6adb71687db5599fe6d593769351d2cd5f9f1f2d485fc69c9b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4951cfe10db08f60f663b717a03a01be7a774ac717be30d19a2c36fdbb38c7ca"
-    sha256 cellar: :any_skip_relocation, catalina:       "858025570517573d8254ee63717256cdfaea66def67cc0a5675a800deb0c674f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44292ce4da02a035699014bc56f714825399406ab8e3b9b5480a9e293a90af2f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-getopt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9674852286b9327adcfd6c58470839c10596f0b01c6a7282758fa5f535a5f0de"
   end
 
   keg_only :provided_by_macos
