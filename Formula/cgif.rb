@@ -6,12 +6,8 @@ class Cgif < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0da861374a98aa9131d04e84178c244f5ac60d76cd7773c15a47c2418e54a79b"
-    sha256 cellar: :any,                 arm64_big_sur:  "54a86cf41b5388fec523e5995af70ce8bd764781a544b135f82c925bbe82cf17"
-    sha256 cellar: :any,                 monterey:       "716cf5539f2d766ee948f1517d3df0289fd19067adf471b278734d0c73ceda3b"
-    sha256 cellar: :any,                 big_sur:        "6220f016ff8d01dd3f5f2113633c4959f9fcbeb8ecfe789cc1cb548ab04992bd"
-    sha256 cellar: :any,                 catalina:       "5f666ec88e04fd67350425eb60360f2bb850ab9b231283a57c6910cc54cf054a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ab1f1081301700d61a5b07417e0b908b92c79cd2ddffc43312779f60168385da"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cgif"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4cbb125b5ca445420286b3356e3f6eac6d5e1d37f2b1000977d33272f7a76947"
   end
 
   depends_on "meson" => :build
