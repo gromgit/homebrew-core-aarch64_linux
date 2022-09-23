@@ -13,12 +13,8 @@ class CfrDecompiler < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f0860e5883c6453777bcb7dfa447f99639c3bebfc281baa83ba31fca83f0d80a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87ac8a8345d70e1a9c7e6d8f5d0c6d2c53f41d54c4099895d3133dace7fd19fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "e8cbec43262bb913ebc307a19fddaf983ac149fdc32fd3cf09da6c1585afbf50"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bb5d9c8ecdeef4e8e950d8b752f85dceb8cd4cf4b97b538f62d63be5c8ed7dff"
-    sha256 cellar: :any_skip_relocation, catalina:       "31565bced5fabda93b658abf71ef43c2a5658c02ae226e385373001dba6503f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9dc91498cbc8dbaacfed2b9c33aa0e8a290322ea108e4649c977cf8d7b17956e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cfr-decompiler"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9080e3d08b94a4a8be6de9957cecfd97a531f4db39f2892359f1f0aa7009d219"
   end
 
   depends_on "maven" => :build
