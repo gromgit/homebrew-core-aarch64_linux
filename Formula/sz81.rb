@@ -13,6 +13,7 @@ class Sz81 < Formula
     sha256 monterey:       "2e4b260f47d8079aeda161b05533219e1074ed4e9ec8f8dbff8a495170d4e70a"
     sha256 big_sur:        "3fab5d79a3994f71580732051ab9cb927927388850d1323245720c638642e2e0"
     sha256 catalina:       "d5cf814d1ad80e3487bec11a5a1d79adef5dae89dc099c7ee2abef7ffe11e4db"
+    sha256 x86_64_linux:   "99dd0e53ec8daf391aa95acda0fa68578248088e6ab944f5615607a18cddfd82"
   end
 
   depends_on "sdl12-compat"
