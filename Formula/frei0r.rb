@@ -11,12 +11,8 @@ class Frei0r < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc29537f1ea00bd0f303886fa5819ef44890f0435b12276919c952104843247b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c45ba867a2cc39664a405db9cb2ee9f97289f101fff6be8ca9ba88dcfcb19f8e"
-    sha256 cellar: :any_skip_relocation, monterey:       "27768088554351600fcc15987a3671cf7cd133533c41fad06776383c4f96cb2c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e97f700c8a5a2df70aeb941217314d313df4f343992c9dfa8a4f1b80300add27"
-    sha256 cellar: :any_skip_relocation, catalina:       "0287b2caef7477439e9e07420e68ba794524b9348807c36903d5c22caf84134e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d33e8b0bd9932b996d6d2f612b4d1484ca9c41466b2c5df1e3db6fcbebf5bf6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/frei0r"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bf6938860270273b8e1f18c68cb5748712f9d4611901e76e5df6b65de4ba1bb3"
   end
 
   depends_on "cmake" => :build
