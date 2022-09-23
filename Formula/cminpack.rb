@@ -7,13 +7,8 @@ class Cminpack < Formula
   head "https://github.com/devernay/cminpack.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "77fb555fafcface498156afafaee3303660b548bcb813dd381443457701e4c3a"
-    sha256 cellar: :any,                 arm64_big_sur:  "d508c68c13b468c31d533289722929544c43a01e3c24082d6a58b02fb8dd875d"
-    sha256 cellar: :any,                 monterey:       "13c06f84c13a6c57c659d19ae277da7ebc8306536050b8952dadf88da7d4d35c"
-    sha256 cellar: :any,                 big_sur:        "42feed7d547bfc20b5665c9e28b68a4a059f8791f56830ddd5e004a12d363784"
-    sha256 cellar: :any,                 catalina:       "adfd9f1a494a35c87c9d6e04a7f10371fa3a1107fa3f2dfeb67c40b87d07dadb"
-    sha256 cellar: :any,                 mojave:         "04a82ea734b10f9600b3bd3c4390d213f34eade2ec375784c1083e755548274c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e78fde611720ec7d338383afd4deb5095517ab2a1a012763d8024db7b58fa84"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cminpack"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2c2d78f8212b7454e44a3f2a877da3c7e2e25d1cc22f612078635ea814888169"
   end
 
   depends_on "cmake" => :build
