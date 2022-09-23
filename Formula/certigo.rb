@@ -1,8 +1,8 @@
 class Certigo < Formula
   desc "Utility to examine and validate certificates in a variety of formats"
   homepage "https://github.com/square/certigo"
-  url "https://github.com/square/certigo/archive/v1.15.1.tar.gz"
-  sha256 "1c6b336a33fd944dfa1b05d3b592261d7538333a605078bdbb9889bbab088f0a"
+  url "https://github.com/square/certigo/archive/v1.16.0.tar.gz"
+  sha256 "a6ce89964ca2fbe7d45d2e2019b06a21984f133c4f1f110eee12a67dd60c4145"
   license "Apache-2.0"
   head "https://github.com/square/certigo.git", branch: "master"
 
@@ -13,7 +13,7 @@ class Certigo < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/certigo"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a98572b6a885dc41aa2c71d33c0ed9555eaa8944a7844fc0cece5a1fb6d7ecfd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "90863c5c4497d8da5d548942ab9075fb0d0770156aaccc0b81a8ffd276175aa8"
   end
 
   depends_on "go" => :build
@@ -22,13 +22,8 @@ class Certigo < Formula
     system "./build"
     bin.install "bin/certigo"
 
-    # Install bash completion
-    output = Utils.safe_popen_read("#{bin}/certigo", "--completion-script-bash")
-    (bash_completion/"certigo").write output
-
-    # Install zsh completion
-    output = Utils.safe_popen_read("#{bin}/certigo", "--completion-script-zsh")
-    (zsh_completion/"_certigo").write output
+    generate_completions_from_executable(bin/"certigo", shell_parameter_format: "--completion-script-",
+                                                        shells:                 [:bash, :zsh])
   end
 
   test do
