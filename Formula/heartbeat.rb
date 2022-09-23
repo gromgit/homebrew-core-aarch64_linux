@@ -8,12 +8,13 @@ class Heartbeat < Formula
   head "https://github.com/elastic/beats.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0facd286eefb622251063a3793709d20c615067119d6ed8b7ba0b32f7c595d9e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "466be7a78a1958be2554522322937bd4d9024fe48ce687b7a2a233c1b71a0817"
-    sha256 cellar: :any_skip_relocation, monterey:       "8db961b6c91be2f94b84da10d0bc87188a674d9ad4da3d036625a439d8ed1e0b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dc4c8193e9fe17890615d6f67b4d0b390ab3e0398cd191f1a92c195a5a0307d0"
-    sha256 cellar: :any_skip_relocation, catalina:       "165d15af180edbf0563170df32cb120b45c72c929b5795bdd7999ada323e9626"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f43aa64837059b0893ae3bd8c14ebcc4edd96eca0dfc124d7037601908ced3e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e1144eac1ef36170cd58443ff9a7797dc7c329f2219e03cea08e62262a03d41f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5884efdd31f98bb55ae93d95d4765597d6937c696d5f509770ac6476376c3a73"
+    sha256 cellar: :any_skip_relocation, monterey:       "56e9224a3500fa1c5a5d06d07d34d27c76368748f5d644f3ab5d377aec511a73"
+    sha256 cellar: :any_skip_relocation, big_sur:        "51979edcdf33bd3e694cbbe3fcf2ff39d633badfd0e91859803597da0ab935a6"
+    sha256 cellar: :any_skip_relocation, catalina:       "f5d49e1d1bd6c7952dd4f2cc179c9134cb39e11a235e763f36602f5eda856c3c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5d9a67dc74995a0a30ab7ea64903bf193066e146305a4cc6d9f56262467c4eb"
   end
 
   depends_on "go" => :build
