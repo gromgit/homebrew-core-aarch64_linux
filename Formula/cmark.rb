@@ -6,13 +6,8 @@ class Cmark < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "088cdde54f9999dc34fdcc788b85052c9b58db6b4379ab601cffa7a41d936c94"
-    sha256 cellar: :any,                 arm64_big_sur:  "69c90d2fad0777d9f38bcab5c57384907dad0695e4feeb8416fba20f22f900e2"
-    sha256 cellar: :any,                 monterey:       "d48785695ca7b81ad1d36a7c97b032d8499a6025f8f230884e9ddaa816f46181"
-    sha256 cellar: :any,                 big_sur:        "458ddb5baf0452ffbeba28aa890836273ef1b880b5f729c0cc0466cd7e12ccd7"
-    sha256 cellar: :any,                 catalina:       "d5da6294f5f07fe987edab4b8c51a7b7a76a4e9c4c268635d1d08644f21a05fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1072f9aa1474190ea218ae7243ad432d71a3868edd55d19c6102d2e691a4ca1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cmark"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f822905e46dc1de50c0198fe5f4935615eb9a4df46bdb20a577282104adea0b0"
   end
 
   depends_on "cmake" => :build
