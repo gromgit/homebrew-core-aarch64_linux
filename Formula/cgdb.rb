@@ -11,12 +11,8 @@ class Cgdb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "cf029cddf3d08875c2f363d6ed9df10bfb944830d448557784e669138a3aefa5"
-    sha256 arm64_big_sur:  "1dfbebad73683e283033ce308c131a9509a1db30df30830f8177c08f631b69c4"
-    sha256 monterey:       "8fd498ac0f53354ec1b2298e5b6d0bf5d11f2047ca0df29b44b3b31a6bf89682"
-    sha256 big_sur:        "82301d4bbc42f2feea9b20676554ed96360d7ce7626b5ef02afb6e76983818f6"
-    sha256 catalina:       "0cf4c2cd5ed2f6b831581d06d3f9614007aaecc16bc4ba0a1fce85afa81a11ee"
-    sha256 x86_64_linux:   "cb3a12c3700e55375cffe843a4bdf8e4fe2541219dc1da35304f7dbece2f5809"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cgdb"
+    sha256 aarch64_linux: "51f1bb4b29c89f8c96c83c0965361fed35fe85f73cf4c6a701b7709320c057c1"
   end
 
   head do
