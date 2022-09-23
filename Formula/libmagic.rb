@@ -1,8 +1,8 @@
 class Libmagic < Formula
   desc "Implementation of the file(1) command"
   homepage "https://www.darwinsys.com/file/"
-  url "https://astron.com/pub/file/file-5.41.tar.gz"
-  sha256 "13e532c7b364f7d57e23dfeea3147103150cb90593a57af86c10e4f6e411603f"
+  url "https://astron.com/pub/file/file-5.42.tar.gz"
+  sha256 "c076fb4d029c74073f15c43361ef572cfb868407d347190ba834af3b1639b0e4"
   # libmagic has a BSD-2-Clause-like license
   license :cannot_represent
 
@@ -12,7 +12,7 @@ class Libmagic < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmagic"
-    sha256 aarch64_linux: "59c69dd0e8abc98ae865da12e76d02e82be430190e413a1791c0cab69163165d"
+    sha256 aarch64_linux: "35f2f7344d278cba0bee8040d73d3403a184594c5aec116a46eec5c632334ea7"
   end
 
   uses_from_macos "zlib"
