@@ -1,8 +1,8 @@
 class Cadence < Formula
   desc "Resource-oriented smart contract programming language"
   homepage "https://github.com/onflow/cadence"
-  url "https://github.com/onflow/cadence/archive/v0.23.4.tar.gz"
-  sha256 "316c29721fe613fff9de19c3f9b8010bb6cc1891c6356c5e133f5a00cc4a369d"
+  url "https://github.com/onflow/cadence/archive/v0.25.0.tar.gz"
+  sha256 "21166a0edd516b7f8c223388a6e1639f054af8318c3e87b133bc8c6bb8d239fd"
   license "Apache-2.0"
   head "https://github.com/onflow/cadence.git", branch: "master"
 
@@ -13,7 +13,7 @@ class Cadence < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cadence"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "787c4df6bae4577dfdc601d119a15837c41e774594ba961cc5c312e83326a8ad"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1c1f9ee7ae81b008572c14d3ca9db13145911021dcebe9631cdbe9fdd991ee88"
   end
 
   depends_on "go" => :build
