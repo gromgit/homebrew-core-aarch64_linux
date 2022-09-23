@@ -11,12 +11,8 @@ class Libarchive < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0cf4a68e9bd6d24a4579bdf08eb33348151464d525e279f569f0b51e60ccc2cd"
-    sha256 cellar: :any,                 arm64_big_sur:  "305f6be2e4fe73076a065ac7ebf82158d13e702ef8cfa8be1494a9f29ed1dd19"
-    sha256 cellar: :any,                 monterey:       "652e949db4255c0dca6feee1a8cc96361a66458f4439c58a7dfd0c8215840b80"
-    sha256 cellar: :any,                 big_sur:        "a241d5e65955c8fcbbebac59b8eb85fb2949131d89352adced58929b5cd9b755"
-    sha256 cellar: :any,                 catalina:       "9d6b54ed2a65936461827076e3e1e8addb96d06ca2ff318e8fe0d89f144146da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e1bfdebe427e1ccb2816a1e393aef985d2d2e6530d96dc166e1914c5c10b59d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libarchive"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e2db76b97e7cc990207c57056f50c81faf27e0937a3d5653f371f264c2ad91f1"
   end
 
   keg_only :provided_by_macos
