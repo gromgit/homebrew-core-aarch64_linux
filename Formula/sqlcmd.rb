@@ -5,6 +5,15 @@ class Sqlcmd < Formula
   sha256 "35a2d165ae6e1f39033ef7ab9ef3b0b205dc1b6b5583912a082297e93ad1c8ab"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "07e962f035bd8ae6ad6e1acea1ea1d715575adbc5e0dc2d5e9c9243ff7088c77"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07e962f035bd8ae6ad6e1acea1ea1d715575adbc5e0dc2d5e9c9243ff7088c77"
+    sha256 cellar: :any_skip_relocation, monterey:       "721717dbed76e3641c24fafc1e78d05163f2f6d05bf24511a8e6235a78750b94"
+    sha256 cellar: :any_skip_relocation, big_sur:        "721717dbed76e3641c24fafc1e78d05163f2f6d05bf24511a8e6235a78750b94"
+    sha256 cellar: :any_skip_relocation, catalina:       "721717dbed76e3641c24fafc1e78d05163f2f6d05bf24511a8e6235a78750b94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c20233f6f68b56ab90c7c9c664cdcd7899ef4af654779f100797533f5568b1f4"
+  end
+
   depends_on "go" => :build
 
   def install
