@@ -7,12 +7,8 @@ class Blis < Formula
   head "https://github.com/flame/blis.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "52c3918675fa0604bf2c9426f0908f5f3e1a25b60f886f86b2ae83ee8b72d7e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "a9a11b09c4570cdcc7e84f992a33cab3f41daa27ef1ccc8483d9c2b5c34d6ac6"
-    sha256 cellar: :any,                 monterey:       "5b33bda9771e26c111a0b584995e3894c7f9fda16f3eb376e63698a0c6583874"
-    sha256 cellar: :any,                 big_sur:        "814f573e8a13d58d4bce3327c97af8dbfa4729dff01d541f2845734640d58a1f"
-    sha256 cellar: :any,                 catalina:       "9863e7c187fb4d14bce8499d86a63935c8e04bd76e001f8888f83101cb02feff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6319286075b6b686052882db10b2146275d746bd34235acb881e3c41acf82ebd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/blis"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5fa8f23f998f5a18af371a3a7f79b8f45f764d5beb796876a0ee23d9e14e5a27"
   end
 
   uses_from_macos "python" => :build
