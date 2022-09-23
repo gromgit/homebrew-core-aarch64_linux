@@ -1,9 +1,8 @@
 class BoostBcp < Formula
   desc "Utility for extracting subsets of the Boost library"
   homepage "https://www.boost.org/doc/tools/bcp/"
-  # Please add to synced_versions_formulae.json once version synced with boost
-  url "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2"
-  sha256 "8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc"
+  url "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.bz2"
+  sha256 "475d589d51a7f8b3ba2ba4eda022b170e562ca3b760ee922c146b6c65856ef39"
   license "BSL-1.0"
   head "https://github.com/boostorg/boost.git", branch: "master"
 
@@ -13,7 +12,7 @@ class BoostBcp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost-bcp"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "bc5fb969c35ecaf90d115d2dda9536b4497bd9f9d087c1f2255998cfffa5c719"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1895aebefcdb6a92d5074e816e46abb699c589d7eea54aec96064fa4586c672b"
   end
 
   depends_on "boost-build" => :build
