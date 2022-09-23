@@ -11,13 +11,12 @@ class Efl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "e6da0a672ba04750d9b8567dd4b431e7b8e40a25fe100c4fcf468e52856fc576"
-    sha256 arm64_big_sur:  "3397324e77cda1f9f630278a6c7969f885c79d8846b9e24b1e908a4e69d504a3"
-    sha256 monterey:       "54218e4e73e3d92e0acc6a8ee5b87a78a22a02dad3af8a60f522c390ecb1c15c"
-    sha256 big_sur:        "3860756a115e6125d2493e7eeb57289595f5a85df5c0e38eec87b83ed0e8aa9c"
-    sha256 catalina:       "6893a7a957f096894872d4413a83558dce33ef73610e8d5a8af09c8e2da903b0"
-    sha256 x86_64_linux:   "489b3d01eb0cb29b4877f34a67654ea01d17c6cb818a59cfb16e5a7a7be0ee40"
+    sha256 arm64_monterey: "da52c5d9b7efa7e3254e2fa4d0648362453794af527548062d8cdb5c459a6f82"
+    sha256 arm64_big_sur:  "6c467014094ffefb7488a6033326db7fb42a31f26b20e4e0ad2d8b7071f4c06a"
+    sha256 monterey:       "644f71c3c546f95f81a0a0de87fe0a55bf4b1ac0b40f55e3a74ebe5c3248eae9"
+    sha256 big_sur:        "f8ebfb27a77a471f78b098ecf404190323f1c590851a9c27cc0da44298a4c0a8"
+    sha256 catalina:       "62383e2614ad992aaf6216908e4af05918afb6c87c73fca8af5cc2709d9d8a1c"
+    sha256 x86_64_linux:   "7d5e6e19ddadfe16b4403653a7087628979c73df345ace0ff5e83245a18f3b47"
   end
 
   depends_on "meson" => :build
