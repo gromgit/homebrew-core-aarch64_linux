@@ -8,6 +8,15 @@ class Fortls < Formula
   license "MIT"
   head "https://github.com/gnikit/fortls.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2d6013ad6fdae9855ecf1cc095712a02277d4f13a708346b68d6db455b4bd78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6701692537a0730c2ac2a2723edc9133474dacf3af4bc7f45a06325b01c5831e"
+    sha256 cellar: :any_skip_relocation, monterey:       "14df9f15ec27ddd1c7f1dfec19661d9f34d4e46d75895fac5298914779184f55"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9fa0491997b42f3ab7e8e8a8c2d7417efe708652a46b8599ccb4e291e080adb0"
+    sha256 cellar: :any_skip_relocation, catalina:       "53dd5cbaa4945e26e86b1dcb09ffda3f2f199638ab9fe1dceea3f417a5af3fe7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d83b540e20a624338af94720bd2322daa2bc5443923f9fe8f7ca6b0441a41ccb"
+  end
+
   depends_on "python@3.10"
 
   resource "json5" do
