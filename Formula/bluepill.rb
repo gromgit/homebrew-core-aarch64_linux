@@ -2,8 +2,8 @@ class Bluepill < Formula
   desc "Testing tool for iOS that runs UI tests using multiple simulators"
   homepage "https://github.com/MobileNativeFoundation/bluepill"
   url "https://github.com/MobileNativeFoundation/bluepill.git",
-      tag:      "v5.8.1",
-      revision: "2dfc0a965ab564d015a2a0f00be89edf53c0f256"
+      tag:      "v5.12.1",
+      revision: "dd6d563d8b822113190896dea400d1a837671a6a"
   license "BSD-2-Clause"
   head "https://github.com/MobileNativeFoundation/bluepill.git", branch: "master"
 
@@ -23,14 +23,18 @@ class Bluepill < Formula
     sha256 cellar: :any_skip_relocation, mojave:        "9926fb42710ce7c6067603a51520b66941b3b86e4827e7e7b63ae73db460ee05"
   end
 
-  depends_on xcode: ["11.2", :build]
+  depends_on xcode: ["14.0", :build]
   depends_on :macos
 
   def install
+    pbxprojs = ["bluepill", "bp"].map { |name| "#{name}/#{name}.xcodeproj/project.pbxproj" }
+    inreplace pbxprojs, "x86_64", Hardware::CPU.arch.to_s
+
     xcodebuild "-workspace", "Bluepill.xcworkspace",
                "-scheme", "bluepill",
                "-configuration", "Release",
-               "SYMROOT=../"
+               "SYMROOT=../",
+               "ARCHS=#{Hardware::CPU.arch}"
     bin.install "Release/bluepill", "Release/bp"
   end
 
