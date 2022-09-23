@@ -5,6 +5,15 @@ class Mqttui < Formula
   sha256 "542cb069def17c9799d62fafd2b3051fd70ff31fad54f83c334f2840bdb6b1cd"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4951b959c9d3eb86f0f9f76fcff8c2056c0e966c13695e630c0117a9afe5af72"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee8ca7b76ef954400c49f98cc64f8a5fccd15003cfd91a5dc1f8222a7869e50e"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7e6ab3d45799a95a656425cc524b1bf29cdde4435e692d14e353b8fccc40e43"
+    sha256 cellar: :any_skip_relocation, big_sur:        "672533cf64855255f73afb5c1d1993b39eda5140dd142206524312959602e185"
+    sha256 cellar: :any_skip_relocation, catalina:       "4d18fc32e180bb702892e8d6646c4aad2fd6cd3ee27f4b2843ea54b6f69c66ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2ea0d06ffe4ffc9ef583a7d13953ee0e4813a794abdfdc51d6707cb3e891625"
+  end
+
   depends_on "rust" => :build
 
   def install
