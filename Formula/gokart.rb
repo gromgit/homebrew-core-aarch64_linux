@@ -7,12 +7,12 @@ class Gokart < Formula
   head "https://github.com/praetorian-inc/gokart.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ca65ab68b72d0bbd7c054bdf86fe30338c1cd479f8eb4c11c2c118d3dac2483f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "146157bf16be2215dc0596459fd413a8d52a6179f4c5424f30af8362042cf999"
-    sha256 cellar: :any_skip_relocation, monterey:       "af854ceaf46f62cf2097f4b4f1959e434b8975848bb6d034242f4fa21ec7727d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8b3ae2bf1fb83d1bc71952fc6da682c05b8da59134907f6e7386327f076d74e9"
-    sha256 cellar: :any_skip_relocation, catalina:       "c17b7de4bd2a3c6741d99cb395ee7ab9536977d14ba6881c7128a796255d87a9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b48d4fc955daaa16a88e57f71a561f7f35458739aac7c54186558e355bb8ab4d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "50f225b023198e9ecb44e854f37cd84c0638cb17bef5b1d43bcb31a2bb8d58d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01ab4e67e745df4737e271c3d1639bd02c5ab1b028c3ad10e6a227c41ffd99bf"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b738132eca3d46d45bac4940af5edf356150bf8b0b693e195d77b0a8de0f5f4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0b8950ba85b71dd420699eff09b64251473c2b0b130c5c2bcc530afd6a8b0a30"
+    sha256 cellar: :any_skip_relocation, catalina:       "4bdf138ac774192e8984fbe34033c0673a4e0a8f173441ede2af1c1cf3ab2f20"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "272ab63250f847c8749b0ea407a5947e8472288f8bb21da400df45a01e9ecb4a"
   end
 
   depends_on "go" => [:build, :test]
