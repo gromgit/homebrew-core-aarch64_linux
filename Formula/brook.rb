@@ -1,13 +1,13 @@
 class Brook < Formula
   desc "Cross-platform strong encryption and not detectable proxy. Zero-Configuration"
   homepage "https://txthinking.github.io/brook/"
-  url "https://github.com/txthinking/brook/archive/refs/tags/v20220501.tar.gz"
-  sha256 "31474d3a9667a153986710b989d99a4f971255f407d47eebaf15b6fc9c2f4128"
+  url "https://github.com/txthinking/brook/archive/refs/tags/v20220707.tar.gz"
+  sha256 "377d6be82a8e122cc2e1c87ea10d2f404be6e4cf85304f329b01654e8f551753"
   license "GPL-3.0-only"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/brook"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e9559935a042eb5f6fc685d193fae665703ad9ae4a3796ca8e84239ef0a06709"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3a7b15a873959a9714b14344ea91db3764dbbc263654ff745b00b409696d283a"
   end
 
   depends_on "go" => :build
