@@ -7,12 +7,8 @@ class Bibtexconv < Formula
   head "https://github.com/dreibh/bibtexconv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "eae3c4722d3b824dcaeb36ee02f1ab5fbd7e837ca540a98ac37a68a95ca66084"
-    sha256 cellar: :any,                 arm64_big_sur:  "32369759a62181680a6146a975b36f7712ca2dc96a2d645772903d20d1394eb2"
-    sha256 cellar: :any,                 monterey:       "0e738cb15ae6d4c43221401bba7501138159ca03b53f78271e73a0394729697a"
-    sha256 cellar: :any,                 big_sur:        "0e216e19ab0dc2b63c660892b8503f493f101437386da8239ea2c18b5b511ebf"
-    sha256 cellar: :any,                 catalina:       "d1a4b531a508711d1524b89ef21d2a1a1818453548c14d99c4ed09b1d05bbd09"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d4960851c348c9a2bd2b981fd110ef2de2d1aa0ea6d2ea2a588ad1328a74c10"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bibtexconv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6236db3b8bc1543c460e49374337267bc1cd531dab463316897bf8c52b4e37de"
   end
 
   depends_on "bison" => :build
