@@ -6,12 +6,8 @@ class Faad2 < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7d3ed82ad0bc48a71b7341db0d578545bc9fcdd4ea084b4e651d99319c1e7b63"
-    sha256 cellar: :any,                 arm64_big_sur:  "8032f53b871aa9c01950efd796f73f66f3cbd514e5078a0a81cf7f36e42723a8"
-    sha256 cellar: :any,                 monterey:       "fbb0d45e57a091f43f049152b505525a060f4a15c65f455769f88adfafc4e46e"
-    sha256 cellar: :any,                 big_sur:        "3b213d8ff392515c908a505c0ec902f195fcbd7a8ae470896a0a4ed0080a5445"
-    sha256 cellar: :any,                 catalina:       "efc7c8b92b7411b12fb4f63ef641f92d2278b212f49614b7322449dcd24971fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "720a60fc65bf50a3645009ab1e4046f897ebadfc06be17e84e00eec0dfd49a56"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/faad2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2046a2a9cfda31019c2b4b0bd802127760c1a698c8eeea001b3fc11b82657be7"
   end
 
   depends_on "autoconf" => :build
