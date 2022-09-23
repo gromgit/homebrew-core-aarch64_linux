@@ -7,13 +7,12 @@ class Boxes < Formula
   head "https://github.com/ascii-boxes/boxes.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "e8b8eca263957a235a37c69e99c30753c5f784d3b2ca782a51da94a4c339cdf6"
-    sha256 arm64_big_sur:  "8a84a206ca3a46d2364dd51f3e025762545645ff161e593a60149fc55e7a1f97"
-    sha256 monterey:       "aeb6f5c6587634067ea8ba32f7a92cd1d3e8b7503ddd8c8afbaefd9f279e5e87"
-    sha256 big_sur:        "eba500de77351541b21e68725366e61c7f6452cf097d72d7098ebb752d9d6f8f"
-    sha256 catalina:       "26564383c477c7e9e77ae94ab8d4fdb26cbaf2d530b768d01f93b72c1567b0c8"
-    sha256 mojave:         "e42c888a34141a1cff3b52404f0e35d1de820f64b2d7d7bf973684a8e234b1bd"
-    sha256 x86_64_linux:   "4a7881b680878471dfb3ea8d9392439b5f857b7a61c6385f1c4bd405f2333891"
+    sha256 arm64_monterey: "23f81e330d74582785d6b6aca4900c10487d8cae733f5caf4944c484f93eb3e4"
+    sha256 arm64_big_sur:  "79e09ade59fd7db22de7f3160edbb03375290d25b1d16c1225cbd310cf30dc73"
+    sha256 monterey:       "dcd22b8872dde84938d31c7b373ebc6f139d6af2a1823d9954e097651a28daf5"
+    sha256 big_sur:        "43acc18d20ea9bc0cb30e4ed6498071763da130a2b91f0afff9c2f181eb6b814"
+    sha256 catalina:       "deb00c1a1a555dbae43cea3a45959902cba8a50cc261a88e8c5808c7042bbb19"
+    sha256 x86_64_linux:   "581f765f9c4d78d0ae2d507c45b4d931e6cbee06f637504eba9fb8e0f450804d"
   end
 
   depends_on "bison" => :build
