@@ -11,11 +11,12 @@ class Pce < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "e91060cfda85a63fee4413b7eb726714f8775e0cd452edd0957eba43c578fdd4"
-    sha256 cellar: :any, arm64_big_sur:  "a549787c54e01ed779ac141bf523bca16b00151802f77fa869c2f2d660dc2732"
-    sha256 cellar: :any, monterey:       "a393cdc7dadc636acfe2f16510d4422ffd2a9fa565c094e8b82c26a7c4574456"
-    sha256 cellar: :any, big_sur:        "84d3de8d69880534cd5a1daa04370df793e7cd81ea4c97d7146c567e904a9c28"
-    sha256 cellar: :any, catalina:       "2d003611fb1b523196faccd42360b38a5ef955ba9a5accf213270381499c00d7"
+    sha256 cellar: :any,                 arm64_monterey: "e91060cfda85a63fee4413b7eb726714f8775e0cd452edd0957eba43c578fdd4"
+    sha256 cellar: :any,                 arm64_big_sur:  "a549787c54e01ed779ac141bf523bca16b00151802f77fa869c2f2d660dc2732"
+    sha256 cellar: :any,                 monterey:       "a393cdc7dadc636acfe2f16510d4422ffd2a9fa565c094e8b82c26a7c4574456"
+    sha256 cellar: :any,                 big_sur:        "84d3de8d69880534cd5a1daa04370df793e7cd81ea4c97d7146c567e904a9c28"
+    sha256 cellar: :any,                 catalina:       "2d003611fb1b523196faccd42360b38a5ef955ba9a5accf213270381499c00d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8085c1b4a0418582fd72b74f50d33b8cc04d3b791ed023e1ef31b96e6a631c8f"
   end
 
   head do
