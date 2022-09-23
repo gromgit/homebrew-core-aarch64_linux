@@ -13,6 +13,7 @@ class Xrick < Formula
     sha256 monterey:       "8bac12edddcd4707b5404c98f1e0d7af073154ffee46f3e4ddca9251a0e8ec26"
     sha256 big_sur:        "3f344cdf41f15e2b82d5ce3557db8e05cdafd6d9cc50b3f78a4ab67af4906e15"
     sha256 catalina:       "0834c07da50760edddf5263d5169bd27edeff0b5765795a535b637b14c823a59"
+    sha256 x86_64_linux:   "1fe086e447b190cf83ff1440bf8bbc665537fab642551444a02d77d03e1505ac"
   end
 
   depends_on "sdl12-compat"
