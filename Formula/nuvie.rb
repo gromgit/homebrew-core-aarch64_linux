@@ -7,11 +7,12 @@ class Nuvie < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "987e483a02d53595c23a2174ba7603e2cbd03f0351ef8d1ba2cf210c73aa5540"
-    sha256 cellar: :any, arm64_big_sur:  "ae3f93506890f1ab1f1ddcb1395eeb42988ec5afb7896bc08a6b9786f48f6b6f"
-    sha256 cellar: :any, monterey:       "d88f929686eb725ccb1702103cf814e40047ce6bfaa0cee764a601c2d84724ad"
-    sha256 cellar: :any, big_sur:        "8c0568e88b4192a2d6ff1511d560214efb1e1c914116c78ce1350fa9b872c09d"
-    sha256 cellar: :any, catalina:       "252ecb752212720f38209762e1ae067cc25e77e9c5c4939ce01040c4e86fae5c"
+    sha256 cellar: :any,                 arm64_monterey: "987e483a02d53595c23a2174ba7603e2cbd03f0351ef8d1ba2cf210c73aa5540"
+    sha256 cellar: :any,                 arm64_big_sur:  "ae3f93506890f1ab1f1ddcb1395eeb42988ec5afb7896bc08a6b9786f48f6b6f"
+    sha256 cellar: :any,                 monterey:       "d88f929686eb725ccb1702103cf814e40047ce6bfaa0cee764a601c2d84724ad"
+    sha256 cellar: :any,                 big_sur:        "8c0568e88b4192a2d6ff1511d560214efb1e1c914116c78ce1350fa9b872c09d"
+    sha256 cellar: :any,                 catalina:       "252ecb752212720f38209762e1ae067cc25e77e9c5c4939ce01040c4e86fae5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f177e380622df80bbc34340afde5d533df0d29f6a9a671fe416f57d1222643a"
   end
 
   head do
