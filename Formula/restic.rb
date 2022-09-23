@@ -1,14 +1,14 @@
 class Restic < Formula
   desc "Fast, efficient and secure backup program"
   homepage "https://restic.net/"
-  url "https://github.com/restic/restic/archive/v0.13.1.tar.gz"
-  sha256 "8430f80dc17b98fd78aca6f7d635bf12a486687677e15989a891ff4f6d8490a9"
+  url "https://github.com/restic/restic/archive/v0.14.0.tar.gz"
+  sha256 "78cdd8994908ebe7923188395734bb3cdc9101477e4163c67e7cc3b8fd3b4bd6"
   license "BSD-2-Clause"
   head "https://github.com/restic/restic.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/restic"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "935eb5b8314aaf8fdfdfaa8fe7954ea934119da7061c06305fbc2245700ecb26"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0cc59add25e0de924cb3a48b82da2d2033f9ee97f9cd925e1a28b2eb1a44e7cf"
   end
 
   depends_on "go" => :build
@@ -19,6 +19,7 @@ class Restic < Formula
     mkdir "completions"
     system "./restic", "generate", "--bash-completion", "completions/restic"
     system "./restic", "generate", "--zsh-completion", "completions/_restic"
+    system "./restic", "generate", "--fish-completion", "completions/restic.fish"
 
     mkdir "man"
     system "./restic", "generate", "--man", "man"
@@ -26,6 +27,7 @@ class Restic < Formula
     bin.install "restic"
     bash_completion.install "completions/restic"
     zsh_completion.install "completions/_restic"
+    fish_completion.install "completions/restic.fish"
     man1.install Dir["man/*.1"]
   end
 
