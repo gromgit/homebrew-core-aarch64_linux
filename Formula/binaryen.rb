@@ -1,18 +1,14 @@
 class Binaryen < Formula
   desc "Compiler infrastructure and toolchain library for WebAssembly"
   homepage "https://webassembly.org/"
-  url "https://github.com/WebAssembly/binaryen/archive/version_107.tar.gz"
-  sha256 "c09a7e0eb0fbfdfc807d13e8af9305e9805b8fdc499d9f886f5cf2e3fce5b5cf"
+  url "https://github.com/WebAssembly/binaryen/archive/version_110.tar.gz"
+  sha256 "0f80250a02b94dd81bdedeae029eb805abf607fcdadcfee5ca8b5e6b77035601"
   license "Apache-2.0"
   head "https://github.com/WebAssembly/binaryen.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "218f55acd750cc293d96800c6a3a8b303371f48717ed5cd11254351dc7666471"
-    sha256 cellar: :any,                 arm64_big_sur:  "6e3adab5e2ffdfdc1fb0ec6e6fde941722c515cb90a63a0ba159ddf2b96ad952"
-    sha256 cellar: :any,                 monterey:       "13cd326b05ff2cf88ab77d3b95ef04c7f23a888a0fd9e6850c4f52e0f942332d"
-    sha256 cellar: :any,                 big_sur:        "389367ae356b3d2232e11aa6128f3fe8bf31f0315def0a267073497645ecdee4"
-    sha256 cellar: :any,                 catalina:       "1d2ed8768edeb8b3c89968b08017184e13535ad5da532ef26e5cd4bea9fae1ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ae85e5bd82ca544d1f1d6c3aced346336e93fe618d10921f42cff6139206d74"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/binaryen"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "734630e1af25c43350ba87d1f342e80fd2899d48e234d7d024a6ca65abac8382"
   end
 
   depends_on "cmake" => :build
