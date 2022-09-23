@@ -17,6 +17,7 @@ class Qdae < Formula
     sha256 monterey:       "6dc2007e7f4cd389c81fcfccdbaec02b12956133e6250614edf374c8ca5c6ebf"
     sha256 big_sur:        "b2a572238e037b46c2765c32bf92180e1370bd1ba4fae123966d715f2b07f796"
     sha256 catalina:       "9b52e69dfcbeed51cacae5189cd2833da3bafda73ebb155b7d6a3c57eb8152fd"
+    sha256 x86_64_linux:   "db3a6068e466987b92397d842c2b3ecde2bded442094c3f913333f128758d0c6"
   end
 
   deprecate! date: "2022-09-23", because: :unmaintained
