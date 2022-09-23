@@ -6,12 +6,12 @@ class FileRoller < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "4beb47f33e5f0829a1bb2afc229327c18e9ea1e555283066df56bae6e8dc35f8"
-    sha256 arm64_big_sur:  "49adb5120e4a854e49a3a437a20cecb4968438cf70f9b633733ff4e3dd8cf8dc"
-    sha256 monterey:       "a3482cea0278ad464148e4bdb47892b1548a35f25c86aa370c19f64e0d8f95aa"
-    sha256 big_sur:        "7c535b2b24a9bd6902dc40ee6423a838c2d5a8e1f65846fa90bb2132c3e67b7f"
-    sha256 catalina:       "4aec12ffc7731540e37f874eea27e18ae25b4358f99a0c4bd4c4b48ac19596e9"
-    sha256 x86_64_linux:   "b083f2d968ccc6ea981e53fc5105b39ded995f37c49a5115e34e830f91a02981"
+    sha256 arm64_monterey: "24c57252d20bf9c50965dbcd6758119b857455f98be186352e39f62220850708"
+    sha256 arm64_big_sur:  "20562e6dd43c1837bbd477a0772e54969e7b1941443232a638136046c3303a5d"
+    sha256 monterey:       "34b892ba595a685455bfcffd699676e4773fb4fac5a32ee8ed72b78bf9562e7e"
+    sha256 big_sur:        "ca90cd09d4b7c310c39851d6880391a04c8838a82d4e00d9c3c275ce834d962d"
+    sha256 catalina:       "8e6a700c11ca46f433b159faa2aecc425791aa1b7acf9f6b8dd8a69b3caf1820"
+    sha256 x86_64_linux:   "26fafa0ed18cc3e19567609ed448f6cd6bae516a5490d71d16580d1bf4b45e0c"
   end
 
   depends_on "itstool" => :build
