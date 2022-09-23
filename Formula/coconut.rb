@@ -8,12 +8,8 @@ class Coconut < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "175ba537a78b60af0fbdb5d34cf094d3e1c8fbc7325015cad49457246f03d117"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b1bac0a20ff53c65c807a39407518bae4e93aa18d5751639e3d0ac8af2eb43d0"
-    sha256 cellar: :any_skip_relocation, monterey:       "0f42ba0b0c18e27d2a1aa03f78f52cda15180af48937e5c87039e24a7de98e62"
-    sha256 cellar: :any_skip_relocation, big_sur:        "91b29d721725e33a4caa5a918691bfdf88cbd5f7179f63060d70ef50449e7fc9"
-    sha256 cellar: :any_skip_relocation, catalina:       "fdf64c77471c9e1021f76f5429213a65880f2065ec2ced64131478015eaf9d39"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4322eaad03c1737c8f0988c3f9778b5d23a2603defd711caca2ae40660a64c3c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/coconut"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bf40f0cc8a285fdc5de5a7e30b309302d9fe5e642c813df11f5c7708c832dfeb"
   end
 
   depends_on "python@3.10"
