@@ -1,18 +1,14 @@
 class Cloc < Formula
   desc "Statistics utility to count lines of code"
   homepage "https://github.com/AlDanial/cloc/"
-  url "https://github.com/AlDanial/cloc/archive/v1.92.tar.gz"
-  sha256 "b5f18f4dbc05eff08ada215b6c2a8cbdab397e9b4b4e25c7427d4ed86fb6e248"
+  url "https://github.com/AlDanial/cloc/archive/v1.94.tar.gz"
+  sha256 "c835fe343e1c25194a61eb74d7a36e98413682ed0c3b4d6b8e35a327077bf926"
   license "GPL-2.0-or-later"
   head "https://github.com/AlDanial/cloc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0efc12ede2a34d0f3861223327a7e1ea559e401e567969e50d84d825cc3c90b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05ea934d7a6ce536bbb928c9cd9a5d9ba27bc09109da8edf5ce39c39fdc71d82"
-    sha256 cellar: :any_skip_relocation, monterey:       "3e7b13dcfa8cfa88ac066471984c7966768f104085fd3384ee4948f481a1108d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "79233c01f28f7f76b4e763c2f4301297502b47b77e8f39fea10f18576d12cc62"
-    sha256 cellar: :any_skip_relocation, catalina:       "c66fde2a289083b2e121817f17f5b75769f638a4b90c0b49a3e0fc89cec9e655"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "879b082292c2ca231e4146d94867f121006494ae5331a6aee8b0f531d63918a3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cloc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5016f231605d2bd1025dc7c4dfdfcb326e56c9deaa06eb92d7312e0e96c0ee37"
   end
 
   uses_from_macos "perl"
