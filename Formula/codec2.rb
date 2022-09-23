@@ -2,9 +2,8 @@ class Codec2 < Formula
   desc "Open source speech codec"
   homepage "https://www.rowetel.com/?page_id=452"
   # Linked from https://freedv.org/
-  url "https://github.com/drowe67/codec2/archive/v1.03.tar.gz"
-  version "1.0.3"
-  sha256 "d1b156035b806fd89a29371a5ab0eefca3ccecfeff303dac0672c59d5c0c1235"
+  url "https://github.com/drowe67/codec2/archive/refs/tags/v1.0.5.tar.gz"
+  sha256 "cd9a065dd1c3477f6172a0156294f767688847e4d170103d1f08b3a075f82826"
   license "LGPL-2.1-only"
 
   livecheck do
@@ -21,12 +20,8 @@ class Codec2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "090856f39e5957c5d3badc83d370aa70bb89d1d5cc6120446d6c3b877581d94d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ae72433df0f211abb44fa154af2f7d404a56202a4caec2b5716816e8d69471e3"
-    sha256 cellar: :any,                 monterey:       "c4260dad2bfca1133bc167c632602c685abcd3372cd3a2f2c02d913a2ee0c6a6"
-    sha256 cellar: :any,                 big_sur:        "68afdf2fe3058e49234d468fe4e17508815d799cdff6883b29debb233690c5d2"
-    sha256 cellar: :any,                 catalina:       "9bb3ae4a8ae3c08d24e6a2b0d6823f8e3cc88edb4ac556c91ef1474b6f00c894"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b34f238df3fca8b0446be087f81f1e5e10528a0efcda57e6fee97a78b2210259"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/codec2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3274867237fe4696679c692901381432a121f9c4b38e3d836f2436ec1bba7392"
   end
 
   depends_on "cmake" => :build
