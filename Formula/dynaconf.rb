@@ -8,12 +8,12 @@ class Dynaconf < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3db109fc4f9c1731d43647a2c421e7d1cc879b5703abcb257a42b74b3568d30e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3db109fc4f9c1731d43647a2c421e7d1cc879b5703abcb257a42b74b3568d30e"
-    sha256 cellar: :any_skip_relocation, monterey:       "46a93b62b260d0805e30abe427ba5893af6ee2e40e5a035502f39d880a546d3b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "46a93b62b260d0805e30abe427ba5893af6ee2e40e5a035502f39d880a546d3b"
-    sha256 cellar: :any_skip_relocation, catalina:       "46a93b62b260d0805e30abe427ba5893af6ee2e40e5a035502f39d880a546d3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a11204edb0ae3ca2eb0aae97e266f6e0884732380e01fe5a4cafa3b10a94dc72"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7cedcd2167d53c1edc2bcbc40f2810b117737802c72022c6e927fda9dfbd910"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7cedcd2167d53c1edc2bcbc40f2810b117737802c72022c6e927fda9dfbd910"
+    sha256 cellar: :any_skip_relocation, monterey:       "2ef3e5cc32bcd14bf1a39785cfca58826cef1e110d6ef22040da71aa8ee1fe4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2ef3e5cc32bcd14bf1a39785cfca58826cef1e110d6ef22040da71aa8ee1fe4b"
+    sha256 cellar: :any_skip_relocation, catalina:       "2ef3e5cc32bcd14bf1a39785cfca58826cef1e110d6ef22040da71aa8ee1fe4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e011ddd063e327fd8e7ce41c7571e0a344ebbc7642db30428659fc657ee0a4bd"
   end
 
   depends_on "python@3.10"
