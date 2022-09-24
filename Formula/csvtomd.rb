@@ -9,13 +9,8 @@ class Csvtomd < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8685baa5ab7f599731b2ce2e300efddd740fed6c786a371b725abebd5f2e72ee"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8685baa5ab7f599731b2ce2e300efddd740fed6c786a371b725abebd5f2e72ee"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ed6b67a278e0266bda516a475867129cff5e93fad695f4e029e4119b199f123"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ed6b67a278e0266bda516a475867129cff5e93fad695f4e029e4119b199f123"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ed6b67a278e0266bda516a475867129cff5e93fad695f4e029e4119b199f123"
-    sha256 cellar: :any_skip_relocation, mojave:         "2ed6b67a278e0266bda516a475867129cff5e93fad695f4e029e4119b199f123"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d047da6a41a03db412406412f4741715b7446630a5ba5558fac8bda7b66668e9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/csvtomd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3b0d7893c989a8acca5d34cb3c6deee0df9caa09e4f6434edc34169d4a00cc66"
   end
 
   depends_on "python@3.10"
