@@ -6,12 +6,8 @@ class Faac < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "413a14d54cc48a4fd7ae0363438f8ef75c0f0e076a889d3484cb93afa4b464aa"
-    sha256 cellar: :any,                 arm64_big_sur:  "0e3e4e7ac9a55ca918a495b7ae577fb89e7d575e8ae52d8a8f2fd989b56f38f1"
-    sha256 cellar: :any,                 monterey:       "5a59cfb676ba67e6386cc9d0a5726ef1546de461364f88a96d6eaa4ca664bf18"
-    sha256 cellar: :any,                 big_sur:        "6b5f296f4cbf136daaf34236ad07b76f79aa4452eb2914efbd641a97aee2b5c9"
-    sha256 cellar: :any,                 catalina:       "36620606b1b45f273e61ebaf4527b226a8fc586808c9570d69940da680af14a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb2acbc5251d69a81adf1481f2e2cf631fbc13b588b53c206f6c6e07819c6e00"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/faac"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a63196fbc1e8ed7a340414c8b1ecfea56aeaf91f19d849782e944f22ff2e7a49"
   end
 
   depends_on "autoconf" => :build
