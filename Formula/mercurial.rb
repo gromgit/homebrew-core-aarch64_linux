@@ -3,8 +3,8 @@
 class Mercurial < Formula
   desc "Scalable distributed version control system"
   homepage "https://mercurial-scm.org/"
-  url "https://www.mercurial-scm.org/release/mercurial-6.1.2.tar.gz"
-  sha256 "a52810fc01409828c4974d0bc2cbb5c80e948d5b584cfb1a7699623e924a2f2a"
+  url "https://www.mercurial-scm.org/release/mercurial-6.1.4.tar.gz"
+  sha256 "f361f9802b36e357ac019ceb712ca11de8332b07deadeed8dfa904f05bf7ca78"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -13,12 +13,8 @@ class Mercurial < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "597e01ddd337bd9171a3276420ffd017825476667cf1ef85f2fb73a3afb2bbec"
-    sha256 arm64_big_sur:  "c7c6f5d60074cc3b71bb27565aabd6a5ef946917dbd045fb97bcde28b32bd9dc"
-    sha256 monterey:       "4f7f092a779a663332fdb2fefa695f83be6923b41036bb043a6af3963d4c35a8"
-    sha256 big_sur:        "de0265d9d408a4f198ac4efc3ad2f0c7ab360b351c2f88235e1e5283340a9eeb"
-    sha256 catalina:       "66f7adf15ad4de7b21b405696735d7cd7ff4f1cdaae0ad69294ea9061bd40253"
-    sha256 x86_64_linux:   "0a522f21b1dd9cc483da171709fa70c98c9457920ec78a163eee01b688424773"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mercurial"
+    sha256 aarch64_linux: "fd186ae52e0ee74dc226c171d8af8e28d5d54371979784db5e4f4a5b4bf19a73"
   end
 
   depends_on "python@3.10"
