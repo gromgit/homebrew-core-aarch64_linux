@@ -1,14 +1,14 @@
 class Dasel < Formula
   desc "JSON, YAML, TOML, XML, and CSV query and modification tool"
   homepage "https://github.com/TomWright/dasel"
-  url "https://github.com/TomWright/dasel/archive/v1.24.3.tar.gz"
-  sha256 "86d497e7dcfe63901ef0aeddb31e3989959d60d785a04f98fc6a88b6f497980a"
+  url "https://github.com/TomWright/dasel/archive/v1.26.1.tar.gz"
+  sha256 "44c90753cf4c1b6e7fb82074c6701fd4b47dc6dc26fe4e5504dcccb4d273b946"
   license "MIT"
   head "https://github.com/TomWright/dasel.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dasel"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebea8d00d8911dcb2d967eba1d9268909d9bebbfba94e0c48a61dc883ae169af"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c25b988dafa8d5f853d510e695f19192852b918e53d2dd370cd9d242cb5e1ab7"
   end
 
   depends_on "go" => :build
