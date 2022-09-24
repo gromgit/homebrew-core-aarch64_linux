@@ -1,18 +1,14 @@
 class Cppcheck < Formula
   desc "Static analysis of C and C++ code"
   homepage "https://sourceforge.net/projects/cppcheck/"
-  url "https://github.com/danmar/cppcheck/archive/2.7.5.tar.gz"
-  sha256 "6c7ac29e57fa8b3ac7be224510200e579d5a90217e2152591ef46ffc947d8f78"
+  url "https://github.com/danmar/cppcheck/archive/2.9.tar.gz"
+  sha256 "56aee8b5bdf936ab7adc9ab43903ba2052f088695c80f047682024a1ed0ef3f3"
   license "GPL-3.0-or-later"
   head "https://github.com/danmar/cppcheck.git", branch: "main"
 
   bottle do
-    sha256 arm64_monterey: "900e08329dda2382b00846dcbc78f4e690e1939a7e7c22bf7d3c7c609c763cbb"
-    sha256 arm64_big_sur:  "1756159b82e6743f9f94b307d9887bb955ff3cce98ed70df2a3acb132d9ef955"
-    sha256 monterey:       "e19bd6218630cfe85067e9bcb9d47fde1e5bcd088090f2407ac6f5b30dd05548"
-    sha256 big_sur:        "af962c41f017ddddf9d8d0d1080c8fb104067263af076f9e91427af918d02a87"
-    sha256 catalina:       "036ab97bc7a535f7345993056c1f3095586b508cb0e7528982e3285ad2f861ce"
-    sha256 x86_64_linux:   "7a94ab586adc08dd0db6af1588d5632287960ec26cb895d7bfb6e640e5a2be6a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cppcheck"
+    sha256 aarch64_linux: "263261d34ef039a3c786dc988a92fd3d6cb0fc39459fca46a85703c937784742"
   end
 
   depends_on "cmake" => :build
