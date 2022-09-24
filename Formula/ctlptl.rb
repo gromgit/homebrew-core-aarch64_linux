@@ -1,13 +1,13 @@
 class Ctlptl < Formula
   desc "Making local Kubernetes clusters fun and easy to set up"
   homepage "https://github.com/tilt-dev/ctlptl"
-  url "https://github.com/tilt-dev/ctlptl/archive/v0.8.0.tar.gz"
-  sha256 "7f85d064e8b99ff5191a6f28e7958119666b6b394d486bf67173e53c3de33a01"
+  url "https://github.com/tilt-dev/ctlptl/archive/v0.8.7.tar.gz"
+  sha256 "6d40946158c16cf86b56a293f5d60bed3f1035623828ccc1a6b978f544bee9a8"
   license "Apache-2.0"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ctlptl"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "853b2c28a86c8d39da2d791ec1f5278dadbdc31bbeb12b2a49dc46043535fe77"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4a80e3f5a5110eccf28e06ef839b9dc3d84a2af4e1e5a653149217c045063e16"
   end
 
   depends_on "go" => :build
@@ -20,17 +20,7 @@ class Ctlptl < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/ctlptl"
 
-    # Install bash completion
-    output = Utils.safe_popen_read(bin/"ctlptl", "completion", "bash")
-    (bash_completion/"ctlptl").write output
-
-    # Install zsh completion
-    output = Utils.safe_popen_read(bin/"ctlptl", "completion", "zsh")
-    (zsh_completion/"_ctlptl").write output
-
-    # Install fish completion
-    output = Utils.safe_popen_read(bin/"ctlptl", "completion", "fish")
-    (fish_completion/"ctlptl.fish").write output
+    generate_completions_from_executable(bin/"ctlptl", "completion")
   end
 
   test do
