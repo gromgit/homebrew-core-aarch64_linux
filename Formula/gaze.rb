@@ -6,12 +6,12 @@ class Gaze < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8eb8e9be30445e9cf2b89da843c1658e76dcb368537295655800b5eb3d44612"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ebecb5e90711f5156824bfa59a4bf123364349225b27716a9297c8c369ac7a9d"
-    sha256 cellar: :any_skip_relocation, monterey:       "bc9608ed9269d536ab7c6ac57b71976b154cf5e2f68936417cf76192ef352011"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b83cc8d8c7e765e4cc1844a044ebe6d46ccedcf0d52eb8ecc54bc496b9500565"
-    sha256 cellar: :any_skip_relocation, catalina:       "27a5bfb76379fa3b22e340939ef1878871513ebffdca4d1595eb5a65b892336d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be6e273ee53f4dc47ed78c9d54f0b3671f6193cc2f24f4759cf21ca47f684f82"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7d7858554a31fb35c18208505406ef87bbd5ae9d0c611dbb7bd2b922434a2e6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5b44413b9439372a8df04dfc191969dbf6ffedce7a25f7b4ad2058884f8f4cc8"
+    sha256 cellar: :any_skip_relocation, monterey:       "28f18859a123f1b06349300bc40b6d6249475ea3e0089ef8b57af0b25e14ab75"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5dc7683e7f6eb8e6618c44fd7c10f3cb9cbf032e12019f46002f905d03adef3e"
+    sha256 cellar: :any_skip_relocation, catalina:       "b383861277696943cc637867be5ef4b3fa0191ddd0306f090b52c1184dfbaeaf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a157686c0439af0073554c8cbc5a7b6c93cb8a8476175e74d0dab39d5f5a7600"
   end
 
   depends_on "go" => :build
