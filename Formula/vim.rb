@@ -2,18 +2,24 @@ class Vim < Formula
   desc "Vi 'workalike' with many additional features"
   homepage "https://www.vim.org/"
   # vim should only be updated every 50 releases on multiples of 50
-  url "https://github.com/vim/vim/archive/v8.2.4900.tar.gz"
-  sha256 "fd92d25b7ec34c8adbb3a9ce19132cc6699350ba46c313263d1d1c5abd28bc94"
+  url "https://github.com/vim/vim/archive/v9.0.0350.tar.gz"
+  sha256 "36c211d34beb734fa322975daa170868d7172b1a5f9605257d532cebf956f708"
   license "Vim"
+  revision 1
   head "https://github.com/vim/vim.git", branch: "master"
 
+  # The Vim repository contains thousands of tags and the `Git` strategy isn't
+  # ideal in this context. This is an exceptional situation, so this checks the
+  # first page of tags on GitHub (to minimize data transfer).
+  livecheck do
+    url "https://github.com/vim/vim/tags"
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
+  end
+
   bottle do
-    sha256 arm64_monterey: "0b02453bee6a24599b14d6a60d77c19e41d58fbedfc7a49ade8076a4471ed99b"
-    sha256 arm64_big_sur:  "67e183b5721af7c531cc0e626787edb5be3c869759d6f558ba545cc8bc862773"
-    sha256 monterey:       "f45c84c77734400a51642f2a976ba45405ba29ad0a942a8796fa02f98a651a93"
-    sha256 big_sur:        "97339b60528380b9eb39248fad183ba460c5c18308daec0d222aa3007004d8e9"
-    sha256 catalina:       "d9d0e7330b83398744554326d51e009304dbc952689b4627f04a1d6f99ed9626"
-    sha256 x86_64_linux:   "c0bc46bebe49084b158404a7042fbb68104bfab3bc3bd80b36e8981c908b3352"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vim"
+    sha256 aarch64_linux: "57ffdb4144b8e4e5bcf4c31f36d13722fb4e5bc3297ef296566d0ba8d7349ff7"
   end
 
   depends_on "gettext"
