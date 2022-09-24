@@ -1,18 +1,14 @@
 class Croaring < Formula
   desc "Roaring bitmaps in C (and C++)"
   homepage "https://roaringbitmap.org"
-  url "https://github.com/RoaringBitmap/CRoaring/archive/v0.5.0.tar.gz"
-  sha256 "edab1b1a464e5a361ff622dc833170b2f33729c161aee4c2e53a324ac62ef78f"
+  url "https://github.com/RoaringBitmap/CRoaring/archive/v0.7.0.tar.gz"
+  sha256 "a2a9033eb44fb958dd19887e69a5934e59ebc56370f5853d3a22f8c64a9da268"
   license "Apache-2.0"
   head "https://github.com/RoaringBitmap/CRoaring.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "613062d7b85f53b9acf9c99a459217cd807c3e6fc9294ce4c871a56c17ba983b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9c68f8e1077e62ce292416ecc278c07a9b833c654c6ce6601cc6efaf2f94acec"
-    sha256 cellar: :any_skip_relocation, monterey:       "f59810c10d85550d85889f74735eaff72e3bb8e262c5389abd8477ce1cd779f2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "50802f55188c5bcfa6c4addbe339405c406aab1c65644189207464cfe51f9fa6"
-    sha256 cellar: :any_skip_relocation, catalina:       "b22a7a363ac1365a37d1aa949c80c76dae22c187ea2fa415b206c360f5d95492"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7235f4b4dcbfde67214a61a32c3795eee3cb76a110722045c40c8ce66631ed9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/croaring"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6142024b2662a4ee78af1ba0d2ead9a65dc82d38e0925ca9379f53cb909c8699"
   end
 
   depends_on "cmake" => :build
