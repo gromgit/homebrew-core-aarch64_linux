@@ -1,18 +1,14 @@
 class Cpm < Formula
   desc "Fast CPAN module installer"
   homepage "https://metacpan.org/pod/cpm"
-  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-0.997010.tar.gz"
-  sha256 "62af744521a8d450fa2a38a4f5ea6cd7d2f3b68807e0ef66076335d529536f32"
+  url "https://cpan.metacpan.org/authors/id/S/SK/SKAJI/App-cpm-0.997011.tar.gz"
+  sha256 "632102c6e67de7c9cff51d6faa0d9d03bfefbed35b5cc5d96919f7b9202501c9"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/skaji/cpm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "734666d7d4b19cf787331a5b8b9e2be49de2026aa5db3933ef64b83b167531c7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "734666d7d4b19cf787331a5b8b9e2be49de2026aa5db3933ef64b83b167531c7"
-    sha256 cellar: :any_skip_relocation, monterey:       "b9f3b0b726ede0d42ec0c1c7ebece5ee3f91f96fddb289ec1168b0252c5789ee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b9f3b0b726ede0d42ec0c1c7ebece5ee3f91f96fddb289ec1168b0252c5789ee"
-    sha256 cellar: :any_skip_relocation, catalina:       "b9f3b0b726ede0d42ec0c1c7ebece5ee3f91f96fddb289ec1168b0252c5789ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c441b10dc4fd2f461afeaaf975404e4788551e7e6afffebebc9bfc5c9604891d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cpm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "195a6948a8d3cfa806ce9f60cd05fe0940d81942b7f912c8a440f4c81b8a07a3"
   end
 
   depends_on "perl"
