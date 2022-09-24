@@ -11,12 +11,8 @@ class Cubelib < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "089fedf98faa3718a4785ebbb7293788c243da97ec90d19f59e3e9d9ef9d1794"
-    sha256 arm64_big_sur:  "dea38e7b971f6224476d825f238cdf99f67939a1192cfbaf9002094790966c61"
-    sha256 monterey:       "851901171cd00b0b7264cea204192fa401e1ae9dce6ad7426488311a30894dc9"
-    sha256 big_sur:        "00e9988c22abb19f792c0bdb0e69741d1fd549e43152b147893b3089b619d86e"
-    sha256 catalina:       "7f8d1c44c47f570ae9ccd97b674452320861393a7c745f4770cf5a0bfd43a366"
-    sha256 x86_64_linux:   "85204c024889a2bba352c8df5864ef8d38c568219b4b22d10c89face9131d855"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cubelib"
+    sha256 aarch64_linux: "c9ac84e77ebe25a725f49cf41936e97957b1e101f7bafa46ea58b979648605d9"
   end
 
   uses_from_macos "zlib"
