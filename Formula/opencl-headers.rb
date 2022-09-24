@@ -7,12 +7,12 @@ class OpenclHeaders < Formula
   head "https://github.com/KhronosGroup/OpenCL-Headers.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "60b2ccfedf9128ca15a2e63e5526981c3a9d3d1ab339987c9f585d5bf3e12afd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "60b2ccfedf9128ca15a2e63e5526981c3a9d3d1ab339987c9f585d5bf3e12afd"
-    sha256 cellar: :any_skip_relocation, monterey:       "60b2ccfedf9128ca15a2e63e5526981c3a9d3d1ab339987c9f585d5bf3e12afd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "60b2ccfedf9128ca15a2e63e5526981c3a9d3d1ab339987c9f585d5bf3e12afd"
-    sha256 cellar: :any_skip_relocation, catalina:       "60b2ccfedf9128ca15a2e63e5526981c3a9d3d1ab339987c9f585d5bf3e12afd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b887fed5a6c8cb4a5d7d9f87c49ac68c394295c84696783512247d653c8b10f8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a0b3d080e04feb48c7b1157ac12a382d4b4fc25988980f7c89faff841da7be04"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a0b3d080e04feb48c7b1157ac12a382d4b4fc25988980f7c89faff841da7be04"
+    sha256 cellar: :any_skip_relocation, monterey:       "a0b3d080e04feb48c7b1157ac12a382d4b4fc25988980f7c89faff841da7be04"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a0b3d080e04feb48c7b1157ac12a382d4b4fc25988980f7c89faff841da7be04"
+    sha256 cellar: :any_skip_relocation, catalina:       "a0b3d080e04feb48c7b1157ac12a382d4b4fc25988980f7c89faff841da7be04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66093f798ab10287d25ce8a8fc62b60d6b1a19f2cf599fc9cebbcb459e3d1d0e"
   end
 
   keg_only :shadowed_by_macos, "macOS provides OpenCL.framework"
