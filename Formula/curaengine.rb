@@ -18,12 +18,8 @@ class Curaengine < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e50192db5753c99795d012a80cc7514f905bee8df9f6e499952b8b89533b1a6f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76a809ff1507945ecd8a4268ddcf7ae56159a03ea2008c5c7a7dd071e8cb80da"
-    sha256 cellar: :any_skip_relocation, monterey:       "296bb03ca611297ae83eb5e385b6eb94072b9554907729a1aad6fe4e121858c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "198cb804ea034871e4f07b8919265aaf692713e2c59c8fa65af49291f7c657fa"
-    sha256 cellar: :any_skip_relocation, catalina:       "83fe93c09ea47ea993f0ec4415c1143d2661035da24c0ff9bfa5eb09c113dc9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adbd8fdb2072c77ffec996467346ab2e98af89c9105967e890e98825c471642d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/curaengine"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fddb1e49c0f3edfaf9252dd493f6c9f8839d616cd1f264af9062bffe726c3430"
   end
 
   depends_on "cmake" => :build
