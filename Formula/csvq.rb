@@ -1,8 +1,8 @@
 class Csvq < Formula
   desc "SQL-like query language for csv"
   homepage "https://mithrandie.github.io/csvq"
-  url "https://github.com/mithrandie/csvq/archive/v1.17.0.tar.gz"
-  sha256 "f723b7f8d6263bee4048e73fd2010b4275550b9a2ca2eeca16602c1d6fb3ac49"
+  url "https://github.com/mithrandie/csvq/archive/v1.17.10.tar.gz"
+  sha256 "0285f2d1e11eb3d571809d5bb4c2cf568b22c5dec68193c828b2f1c89f59da4e"
   license "MIT"
 
   livecheck do
@@ -12,7 +12,7 @@ class Csvq < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/csvq"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7869d2381de80d9fb5bde031c98307cea4a5004e76f7949be7483ca3760e784b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f31f7e148d5820b80f4506f5161f625109aaa813c81594b1c29b18e6a8077c61"
   end
 
   depends_on "go" => :build
