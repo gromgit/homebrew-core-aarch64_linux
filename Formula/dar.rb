@@ -1,8 +1,8 @@
 class Dar < Formula
   desc "Backup directory tree and files"
   homepage "http://dar.linux.free.fr/doc/index.html"
-  url "https://downloads.sourceforge.net/project/dar/dar/2.7.5/dar-2.7.5.tar.gz"
-  sha256 "95fa493a899a755fe84c9b0e9681f5ad81795b2de456bf84054bea67ec5a0966"
+  url "https://downloads.sourceforge.net/project/dar/dar/2.7.7/dar-2.7.7.tar.gz"
+  sha256 "c03e2f52efd65a2f047b60bbeda2460cb525165e1be32f110b60e0cece3f2cc9"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -12,14 +12,17 @@ class Dar < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dar"
-    sha256 aarch64_linux: "8400bd7f47298a9e4180607b3c6eb70373e51cae836ddabadfb2e5d4c5a25b9d"
+    sha256 aarch64_linux: "c69f4138f789d37c20b8ab5c6f71cc4778518f12bbd70b70d3da7ae56dc52d72"
   end
 
-  depends_on "upx" => :build unless Hardware::CPU.arm?
   depends_on "libgcrypt"
   depends_on "lzo"
 
   uses_from_macos "zlib"
+
+  on_intel do
+    depends_on "upx" => :build
+  end
 
   def install
     system "./configure", "--prefix=#{prefix}",
