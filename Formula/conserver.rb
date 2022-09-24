@@ -1,10 +1,9 @@
 class Conserver < Formula
   desc "Allows multiple users to watch a serial console at the same time"
   homepage "https://www.conserver.com/"
-  url "https://github.com/bstansell/conserver/releases/download/v8.2.6/conserver-8.2.6.tar.gz"
-  sha256 "33b976a909c6bce8a1290810e26e92bfa16c39bca19e1f8e06d5d768ae940734"
+  url "https://github.com/bstansell/conserver/releases/download/v8.2.7/conserver-8.2.7.tar.gz"
+  sha256 "0607f2147a4d384f1e677fbe4e6c68b66a3f015136b21bcf83ef9575985273d8"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -13,10 +12,12 @@ class Conserver < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/conserver"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "5978950c85adec89019672e21484a3f9aff6afde07e0760ca9ea25b278937ddb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7eeb08a0aa968e0363b24f4c735bb4c999dc5244cfb06dfa768f2a538edcf9db"
   end
 
   depends_on "openssl@1.1"
+
+  uses_from_macos "libxcrypt"
 
   def install
     system "./configure", "--prefix=#{prefix}", "--with-openssl", "--with-ipv6"
