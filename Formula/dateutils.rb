@@ -1,13 +1,13 @@
 class Dateutils < Formula
   desc "Tools to manipulate dates with a focus on financial data"
   homepage "https://www.fresse.org/dateutils/"
-  url "https://github.com/hroptatyr/dateutils/releases/download/v0.4.9/dateutils-0.4.9.tar.xz"
-  sha256 "790256d9949b96001fdcc3f7c42226dde4fcc87eb580717c7aabf51a1334c9c3"
+  url "https://github.com/hroptatyr/dateutils/releases/download/v0.4.10/dateutils-0.4.10.tar.xz"
+  sha256 "3c508e2889b9d5aecab7d59d7325a70089593111a1230a496dab0f5ad677cdec"
   license "BSD-3-Clause"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dateutils"
-    sha256 aarch64_linux: "4fbbeff2325088222073ed64d41edc9176680fef51c645b85cc84819648c9469"
+    sha256 aarch64_linux: "7bc3adc4d16b3dec03793213c007385fb86339475e216fde87277b1048f3b025"
   end
 
   head do
