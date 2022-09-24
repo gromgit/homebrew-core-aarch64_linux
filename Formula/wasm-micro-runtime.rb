@@ -6,6 +6,15 @@ class WasmMicroRuntime < Formula
   license "Apache-2.0"
   head "https://github.com/bytecodealliance/wasm-micro-runtime.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "76b7d0f9fe1be60e1b33091acece2afec12545561663cba4abc75f76a89d10da"
+    sha256 cellar: :any,                 arm64_big_sur:  "607bae21939f03e76ad9b6bdaeea3c2a7aec478a6a859d92e596f72c21837e34"
+    sha256 cellar: :any,                 monterey:       "9bffd5d15505686eabcaf7302f48023d0dea2a3851d00b2c780f12d90a98ad00"
+    sha256 cellar: :any,                 big_sur:        "862cbde690d53aa4acff7a1bceace24448a6d397cfc7b9119883741ded468c60"
+    sha256 cellar: :any,                 catalina:       "378727ff0ef6a0ce2ed32edd864ed2fbe0d66fd25061254e42026d60e3bba170"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9510e8a281f424e9463b96ea97ead563b4a188bd75ffc22a2e1c6c3677d10b01"
+  end
+
   depends_on "cmake" => :build
 
   resource "fib_wasm" do
