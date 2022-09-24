@@ -12,13 +12,8 @@ class Cppcms < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "9a02f447ab6d82e0cf98c2a4aba48011974e6c6ae103cbe2e7c74890dac4d038"
-    sha256 cellar: :any,                 arm64_big_sur:  "67a1c9feafceea6cbbe96ab29fa05ee6032dfc839b691cb3e64f28ebd8e70d81"
-    sha256 cellar: :any,                 monterey:       "d4b7c10f3349b0d96a29f936e1e26c819b99229bb0e49b3b6856c786be168418"
-    sha256 cellar: :any,                 big_sur:        "4a343093b0050726543c1ca4e125460c5537efb7bb4c7ca24b475f8f33be12fe"
-    sha256 cellar: :any,                 catalina:       "a0d3cb27c298bf95e97b7cbd97329aacd6eb33239f21dfe9e3d91272d5ce5263"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1757391e77052508958f08bfe468e7168a6b8261f5022e9dd644de056e9079d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cppcms"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "918f50103d778effc1acb8c66bee1c1d34d510f0526c9b028494c26763e8ea1e"
   end
 
   depends_on "cmake" => :build
