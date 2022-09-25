@@ -17,6 +17,7 @@ class Commitizen < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8eb896d989552f657fe9fa34ce501c9a1457fc804abad68c5870fa4c998b96ec"
   end
 
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "pyyaml"
 
@@ -78,11 +79,6 @@ class Commitizen < Formula
   resource "tomlkit" do
     url "https://files.pythonhosted.org/packages/84/51/092a8b945edc3b93f2de091ab9596006673caac063e3fac14f0fa6c69b1c/tomlkit-0.11.4.tar.gz"
     sha256 "3235a9010fae54323e727c3ac06fb720752fe6635b3426e379daec60fbd44a83"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   resource "wcwidth" do
