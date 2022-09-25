@@ -7,12 +7,12 @@ class Nghttp2 < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_monterey: "f6d8130a9f5625f68f6da8b1fd128b8560c410662177dd1eafd0e0887cb45377"
-    sha256 arm64_big_sur:  "4d409aa9554e5e0cade07c4d2dec42b77ae992dc2b33af6aaa60788ea3200b32"
-    sha256 monterey:       "f47eebd19f84268259673d7469835a4850e3168d1c9b3aaade7f4245c7c376d4"
-    sha256 big_sur:        "c74c2c8f5f93b2ebf0ccb60a16501bbc91f387d1f2debd1faf440fb9416efafc"
-    sha256 catalina:       "eedbc417e89dba315bc6e854b8d315967aaf7d509b5060d21f039c9c8d5a068f"
-    sha256 x86_64_linux:   "576e2e477778c8c60a30c0a66d0decf3d79446af450693244f22ea1400534c8e"
+    sha256 arm64_monterey: "6d3f13a35cad857895ea2a127e79a6ef5cf3331fd4dc630f16bce0b6afe689bb"
+    sha256 arm64_big_sur:  "e0d2bcc458d51d2efe0a6e152d870dd8de98f1818bdaf5e698200d3e23cb9123"
+    sha256 monterey:       "39abb63476c806f1475e0579f883b4e5b727ed8d19a21a87becd3a2e0514cbd1"
+    sha256 big_sur:        "9c6e6ab0f887af49397c77240c4be2d9f8c2be2af119fe6fb9800958c7ec9ebf"
+    sha256 catalina:       "03cec80f7a6e40907a55bd5fcda637353f91e12b8372384afc39aff63b635cf6"
+    sha256 x86_64_linux:   "6f959539df4d94b7e5c9a0aa6debc65d30bf058797231a686a81f31867905106"
   end
 
   head do
