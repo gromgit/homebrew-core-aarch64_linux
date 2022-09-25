@@ -22,6 +22,7 @@ class Duplicity < Formula
   depends_on "gnupg"
   depends_on "librsync"
   depends_on "openssl@1.1"
+  depends_on "python-typing-extensions"
   # msgpack-python does not support Python 3.10. Dependency comes from pyrax:
   # pyrax -> python-novaclient==2.27.0 -> oslo-serialization<2.17.0 -> msgpack-python
   # Related issue on pyrax being deprecated: https://gitlab.com/duplicity/duplicity/-/issues/105
@@ -515,11 +516,6 @@ class Duplicity < Formula
   resource "tqdm" do
     url "https://files.pythonhosted.org/packages/98/2a/838de32e09bd511cf69fe4ae13ffc748ac143449bfc24bb3fd172d53a84f/tqdm-4.64.0.tar.gz"
     sha256 "40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/fe/71/1df93bd59163c8084d812d166c907639646e8aac72886d563851b966bf18/typing_extensions-4.2.0.tar.gz"
-    sha256 "f1c24655a0da0d1b67f07e17a5e6b2a105894e6824b92096378bb3668ef02376"
   end
 
   resource "uritemplate" do
