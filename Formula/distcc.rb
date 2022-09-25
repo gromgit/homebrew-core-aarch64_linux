@@ -13,13 +13,8 @@ class Distcc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "8eb63057e2dfe3c30167c9e4bdae8c3b95adb0e49d0107587df14084053a3b95"
-    sha256 arm64_big_sur:  "ffab1cecd8e01d68b0219b5a6bfe5ff17951b56721e22e43c98e5195d25a0478"
-    sha256 monterey:       "d8c6cdd1435d7bb44b6ada902e509765ea6a270b4e7a6b8d77d723531d3878eb"
-    sha256 big_sur:        "18a8fd773714b43e5effec750afca17ff2c55c29cfcfbf43a70da804d0387be8"
-    sha256 catalina:       "eeb7573a412908530b6deec90e1a8dea6d6e8ca543914ccdc8aa93cf390cacad"
-    sha256 mojave:         "a2ed5a4d9b741a95a0ff3bb710f7382b6d3b4e01c30f6e0e9698da8796291504"
-    sha256 x86_64_linux:   "1c5befd01ca2e4c87b074ef98b7d23f33a5b08e9b63e77b71869d4da1b2a7e51"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/distcc"
+    sha256 aarch64_linux: "d8883028e6e860e265ff24ac82bcdaf03b1f269cf999edb9bd8980d560a03565"
   end
 
   depends_on "autoconf" => :build
