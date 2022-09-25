@@ -4,8 +4,8 @@ class Libdvdread < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://download.videolan.org/pub/videolan/libdvdread/6.1.2/libdvdread-6.1.2.tar.bz2"
-    sha256 "cc190f553758ced7571859e301f802cb4821f164d02bfacfd320c14a4e0da763"
+    url "https://download.videolan.org/pub/videolan/libdvdread/6.1.3/libdvdread-6.1.3.tar.bz2"
+    sha256 "ce35454997a208cbe50e91232f0e73fb1ac3471965813a13b8730a8f18a15369"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
@@ -21,7 +21,7 @@ class Libdvdread < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libdvdread"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e2e72dba5bd64219a49087f09dd9632f778b852d5d624bc354a54bbd285c528d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "96b706f0eb145df620f8e27530cff8f10f55ebae87d4ce50b5d1fc22f75dadc4"
   end
 
   head do
