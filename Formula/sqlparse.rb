@@ -8,13 +8,12 @@ class Sqlparse < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5917e87d404c93aa04ce10b94b1d036e1b7302b32e118931d86799022f22f671"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5917e87d404c93aa04ce10b94b1d036e1b7302b32e118931d86799022f22f671"
-    sha256 cellar: :any_skip_relocation, monterey:       "2b655782b25db3c6de626342cc640acdf2226540935546a1e947c4bc064c969c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b655782b25db3c6de626342cc640acdf2226540935546a1e947c4bc064c969c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2b655782b25db3c6de626342cc640acdf2226540935546a1e947c4bc064c969c"
-    sha256 cellar: :any_skip_relocation, mojave:         "2b655782b25db3c6de626342cc640acdf2226540935546a1e947c4bc064c969c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76b4d21dec27b2311986f15e9b279a8ac0cefe6bc5d91a94733ded3746cf3c90"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "59182d025638eb3e95eda5b0f2e15878d35b9d758d5bb38c4c8bcb908a2b6e32"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "59182d025638eb3e95eda5b0f2e15878d35b9d758d5bb38c4c8bcb908a2b6e32"
+    sha256 cellar: :any_skip_relocation, monterey:       "5fa722a3eb224017a604ead376c986ead3b128a2edb8417d355d2970fce6a78c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5fa722a3eb224017a604ead376c986ead3b128a2edb8417d355d2970fce6a78c"
+    sha256 cellar: :any_skip_relocation, catalina:       "5fa722a3eb224017a604ead376c986ead3b128a2edb8417d355d2970fce6a78c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62aa5e4b12c27d5996b667aeecdbe1643c91ab6ed36777f6f898dc1bad0ed0a5"
   end
 
   depends_on "python@3.10"
