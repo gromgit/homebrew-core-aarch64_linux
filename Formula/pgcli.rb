@@ -20,6 +20,7 @@ class Pgcli < Formula
   depends_on "libpq"
   depends_on "libpython-tabulate"
   depends_on "openssl@1.1"
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -81,11 +82,6 @@ class Pgcli < Formula
   resource "sqlparse" do
     url "https://files.pythonhosted.org/packages/32/fe/8a8575debfd924c8160295686a7ea661107fc34d831429cce212b6442edb/sqlparse-0.4.2.tar.gz"
     sha256 "0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   resource "wcwidth" do
