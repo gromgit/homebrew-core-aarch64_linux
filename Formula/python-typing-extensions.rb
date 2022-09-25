@@ -5,6 +5,15 @@ class PythonTypingExtensions < Formula
   sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   license "Python-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "33fbcfd2bf9e68be8075762e837dd058f7f4769270d3ca3f36f39f39518be0f3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "55ac1155c1def6faa78f500e9455a73551f176e935f8230f35b903f0561e4c0a"
+    sha256 cellar: :any_skip_relocation, monterey:       "f89e002953a4e7d07f0309b406ae0cc78c25d579ac2151299f936464c36fd8d4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7332f5f6f6ab0c4fa2b36e38ccdb2c9df3fff9ee51cd1f710cc1d27145e068b5"
+    sha256 cellar: :any_skip_relocation, catalina:       "336e0ad958054ac747e641d567d05f316d0744eb9ffccd8f51eddfe33e613a6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c115d09ebd88d718c5b899800148325a60e8a8d42c4ab985e790a3a97b7d8f7"
+  end
+
   depends_on "flit" => :build
   depends_on "python@3.10" => [:build, :test]
   depends_on "python@3.8" => [:build, :test]
