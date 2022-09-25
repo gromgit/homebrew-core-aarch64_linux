@@ -6,6 +6,15 @@ class Dynein < Formula
   license "Apache-2.0"
   head "https://github.com/awslabs/dynein.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "db55aa07dfe414452a0d7137077b8baefe3881ed327623f881f38941cdcfe284"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "739c8a91f706fe1738bd9ba41dac317f0db5728ab17dfe5d7526a3894f6d412c"
+    sha256 cellar: :any_skip_relocation, monterey:       "da3f54319ce86e2bdd1dc9896612a1e6180752f967793a1536e53d3525851f4f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c9a51b02ae52fae35a02d8d433a7edaa926215751ddcc0d66986c44ae001aef7"
+    sha256 cellar: :any_skip_relocation, catalina:       "f4279bdb47125daff9c6409243f14aba664e18b3a691476fb2372b63c5ed6ea2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "075dad3a402d915e8645bd192254f0bbcd68f419e1cd94b936223f2bf319cd78"
+  end
+
   depends_on "rust" => :build
 
   on_linux do
