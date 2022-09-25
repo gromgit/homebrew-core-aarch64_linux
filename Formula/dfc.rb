@@ -8,14 +8,8 @@ class Dfc < Formula
   head "https://github.com/Rolinh/dfc.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "6aa0c0d2ad81bf179b61fced051ea22e5cb85376eafbb8e1d7376d8f3fc9cec7"
-    sha256 arm64_big_sur:  "6f2d7350e0c7e1c905718b6dcf282367bc846bbd51538a9a525f681dda03be61"
-    sha256 monterey:       "127dd250819075427ca4a6f35f292d29c4af8b070c6ee368645817d54ac5a50b"
-    sha256 big_sur:        "a89714cadb5ca91708c9f0c0f37266726517418e0ee592003c1cff38cc7599b1"
-    sha256 catalina:       "cefa6f0f5e96a815ebbee4d4618dc927f88052f4137d52c31d21688fac211aa8"
-    sha256 mojave:         "93406a46f6e08d861ddbc5ea7f4ce910629f33090c39eeb827f05444d61fe466"
-    sha256 x86_64_linux:   "0d467920d7e3393975fc11b8fa07f84e177ddafdfa7139bc219183380f891d42"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dfc"
+    sha256 aarch64_linux: "be4a5af27a74ba02e890dabd3f092158874780f42049968bc224a0a359880f3e"
   end
 
   depends_on "cmake" => :build
