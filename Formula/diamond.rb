@@ -6,12 +6,8 @@ class Diamond < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1e1daedcd1ea44e29b70859d57bcd6f0983b9d38ac27f32e63b1072002f452c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aa0e405531a810c30e7e86414dd6bc5a1a3d362af243329008623c703134dafb"
-    sha256 cellar: :any_skip_relocation, monterey:       "63dd3620cc1447aeb81b99e636301489ca6d2d3ba6a42f7c3c3432eacf82539b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "619e8ff1bbfe88b3336831c3f324ba076461cdbc5a9cf8638d510ca0bf1a9dd3"
-    sha256 cellar: :any_skip_relocation, catalina:       "392f3045b0972f2ec771f1afd3349da404e0f083b57115dc093125247d22e5db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c3558c6daf8a9f202cc9c1ae5081aef8a5671f4b0879229e6b6d1e886fb91ce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/diamond"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "59fe33ef5f36754101b94023ea79cf537f2516d957e2acc0c9fa668c413c9e80"
   end
 
   depends_on "cmake" => :build
