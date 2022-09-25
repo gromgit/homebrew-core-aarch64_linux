@@ -13,12 +13,12 @@ class Colima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f28fc747423e8c5679fdba280c6cc7a3816b59dc9a8b77369b23abe1c09afe37"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1eaa675ae8556fcde77ac19e6ff531e05d45dc4f1ad26b9b4d025ad71ee60ae7"
-    sha256 cellar: :any_skip_relocation, monterey:       "a1bbfe934659a9f6f24d08009d06e42f0f97bd07453e035b8a11e6a5f00ac8d9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d673a769d5008e95513cdbe27e9191cd6d511762f4d8a33ee171b9b5bb7489e4"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4891f258ec55835e4474cc7a988891057d20cd36ad6d20c697a2a35eaa42c79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16a92215d353ae0e2550ec2272edbb68bde22dc1d2e35d15b3c0bb12efabc328"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b35150d30c06a4c5e20a4d657eb77732d170acd188af33ff3e18071ff5b1e1ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eda2f83a37b2cccc8cbeedf569f34be1bff2b824312d7ef246038b1c1ba81f88"
+    sha256 cellar: :any_skip_relocation, monterey:       "87f1691b194d350cb990cc9b736095c51bfc6af835829990cea7aaae3ac580f3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "50aed168a4535070271615b7515bfd57732c008aaf86a3413aaea3ef882403bd"
+    sha256 cellar: :any_skip_relocation, catalina:       "da6fbced11a4a9b0601bb900718bd9c340943abad2875cdb35b175803a8701c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d9b638131065532666f6f443164de6972dcbefb8b01c5687ee854a2c5b33a3e"
   end
 
   # Required latest gvisor.dev/gvisor/pkg/gohacks
