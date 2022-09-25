@@ -8,12 +8,8 @@ class Diceware < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba158bc1e6f66da51dbf0817e67ccb99ab828b283a93c239b805edd1731a76de"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba158bc1e6f66da51dbf0817e67ccb99ab828b283a93c239b805edd1731a76de"
-    sha256 cellar: :any_skip_relocation, monterey:       "33faf48fdcd74c69c466794bd6559bfc5b6b4d6f18a6e56e81a2ee3d1fb302b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "33faf48fdcd74c69c466794bd6559bfc5b6b4d6f18a6e56e81a2ee3d1fb302b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "33faf48fdcd74c69c466794bd6559bfc5b6b4d6f18a6e56e81a2ee3d1fb302b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ffea931d997e34db9d26035858da3842502eca81ab5f895646f378829dc7318"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/diceware"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d2fc88a58c01f255a5e5d0a6af2e3607ad1f1073b2baf1c0efec8f4c8018cc80"
   end
 
   depends_on "python@3.10"
