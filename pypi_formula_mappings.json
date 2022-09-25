@@ -445,7 +445,7 @@
     "exclude_packages": ["six"]
   },
   "semgrep": {
-    "exclude_packages": ["jsonschema", "attrs", "pyrsistent"]
+    "exclude_packages": ["jsonschema", "attrs", "pyrsistent", "typing-extensions"]
   },
   "sgr": {
     "exclude_packages": ["typing-extensions", "jsonschema", "attrs", "pyrsistent"]

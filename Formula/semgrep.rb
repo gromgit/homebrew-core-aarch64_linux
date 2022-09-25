@@ -32,6 +32,7 @@ class Semgrep < Formula
   depends_on "pkg-config" => :build
   depends_on "jsonschema"
   depends_on "pcre"
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "tree-sitter"
 
@@ -137,11 +138,6 @@ class Semgrep < Formula
   resource "tqdm" do
     url "https://files.pythonhosted.org/packages/c1/c2/d8a40e5363fb01806870e444fc1d066282743292ff32a9da54af51ce36a2/tqdm-4.64.1.tar.gz"
     sha256 "5f4f682a004951c1b450bc753c710e9280c5746ce6ffedee253ddbcbf54cf1e4"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   resource "ujson" do
