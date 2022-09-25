@@ -1,8 +1,8 @@
 class Dwarfutils < Formula
   desc "Dump and produce DWARF debug information in ELF objects"
   homepage "https://www.prevanders.net/dwarf.html"
-  url "https://www.prevanders.net/libdwarf-0.4.0.tar.xz"
-  sha256 "2cb065faa323b02f836a858ce62d2b9efa11ecd0f6e8b1133fdab5ae9318e198"
+  url "https://www.prevanders.net/libdwarf-0.4.1.tar.xz"
+  sha256 "34277b969d30be3cc4c6fbce6926dd3e6f9ea9a27b01951c6753b479aadfd5ef"
   license all_of: ["BSD-2-Clause", "LGPL-2.1-or-later", "GPL-2.0-or-later"]
   version_scheme 1
 
@@ -13,7 +13,7 @@ class Dwarfutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dwarfutils"
-    sha256 aarch64_linux: "d5a079331e7f5dc4ad1174a50f28ab5f1f800b944ccbd0d9210d3b9f57389e54"
+    sha256 aarch64_linux: "2c63ca201f3d84a3f49c56bd8953e1966de74b860352078aa6e511024eaccd9d"
   end
 
   head do
