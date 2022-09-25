@@ -13,12 +13,12 @@ class Ghostscript < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c84daf7a848fac53bf2968239151361290ccb277accae6f11b0b39a7acb5f914"
-    sha256 arm64_big_sur:  "a4f21885ac9b57f6e5511a1208b9d36ad0aa473180a2e080a9b4c23de2a5b6e9"
-    sha256 monterey:       "38729b0c92a70014d82ddd57d33190019822f999efdb69d3f95e2e4cbe38fb71"
-    sha256 big_sur:        "d1c4c864b2c954cf10c9023b5468652f60fb943d5ba91c190a85ef9d8224571f"
-    sha256 catalina:       "335d57520e942b8547d79f62b505cc87a8afee12ecc50baccebe9dad32a0f0d0"
-    sha256 x86_64_linux:   "478b2bb55a41d3afbfbdf55956180e6f653a981219dd137ba5728fbce8bed6ea"
+    sha256 arm64_monterey: "07becfb977ec79a7cdd2b6c5298fbb3d24ba61599106d903a7e1ea51d23b3df3"
+    sha256 arm64_big_sur:  "6d71b98737f6113d18b963ca01d454e46218458b7b6eb8e2a5ae4c59359c5d30"
+    sha256 monterey:       "c61d7421c9835d33d293fd0d496ce8fb983d8ee9351a6c59e3efbd621a4bec30"
+    sha256 big_sur:        "eaf18fcce3a87ea2513439b58733a675c96a650ec91c4302293927e0054b43c6"
+    sha256 catalina:       "0a200d59567de71739729720e96e9012961e1149c3a8cfe4ff79ca44b6a24a43"
+    sha256 x86_64_linux:   "95c5e86cc3e8d68e61b7c7c7659aa75b6673d399f67e99ab815418d9f165ce22"
   end
 
   head do
