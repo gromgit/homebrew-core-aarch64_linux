@@ -7,12 +7,12 @@ class Texlab < Formula
   head "https://github.com/latex-lsp/texlab.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "19fa1b48d9f9dc3d0761855e4d9a2bae3695b0511df590e6ba7cdf4ff67fb7b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9165915484bf6af9521934c35035f23b4f97dbace2b138d150cf4e4cbae85442"
-    sha256 cellar: :any_skip_relocation, monterey:       "910f75047a4717aebf62a84d98fecd431ac5d69a957c5c1ac094bb7aed6810a4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d5d2b01abb524c254383f02c91dd4705908355b659f171feb5daf7162b44c724"
-    sha256 cellar: :any_skip_relocation, catalina:       "c1243e82c6d22aa8bcd79e3e4b742c69c96728f1a93fd7e2ee1bec6f1ad89eff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2eaeab02a16ccf747ff2b8c7950a0068431fcb908e6ccef2dee7c121c04c1a89"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e0438680f9171ddd5fd153cec60db8594c4fe2a44dcaacdad0f5392259909660"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3721887e71c7b0f720f11880a721092d752dd52ae4c106627507dc35f0c5ac85"
+    sha256 cellar: :any_skip_relocation, monterey:       "a1f133639667e8fb9c95d4d2b80a3adc3e2a6e9e013b4efd1b4fd295df06487f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2f1d75dee910316730cd3f2a21d46100df416949e3e258e7c918aaf42abac327"
+    sha256 cellar: :any_skip_relocation, catalina:       "600af14882f983fb54dbcffa85c3ec76cf409a37b7fbb62a97ac5135156cf7a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c60a20b1a5a92d548a0467656b4e048ff3668b4a0f29adc5be141407be9d5b9"
   end
 
   depends_on "rust" => :build
