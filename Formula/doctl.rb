@@ -1,14 +1,14 @@
 class Doctl < Formula
   desc "Command-line tool for DigitalOcean"
   homepage "https://github.com/digitalocean/doctl"
-  url "https://github.com/digitalocean/doctl/archive/v1.74.0.tar.gz"
-  sha256 "3b0fcd2daff4cdce575f7a833a36c3a63a66c0dbb9af50baafe3ec9fe02c3872"
+  url "https://github.com/digitalocean/doctl/archive/v1.79.0.tar.gz"
+  sha256 "c4c581c1b2e1df73f434adac77c60fd64ddb5e62455651965dacbf624cf70d98"
   license "Apache-2.0"
   head "https://github.com/digitalocean/doctl.git", branch: "main"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/doctl"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "b6af73bb461d17614618ea9183942728e8ce4299545235f04f91748a8077af8f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1faad09b0ec3ac47dccdebbefe3478bf6aad79c8fba80a4f5c7179210bdf22f8"
   end
 
   depends_on "go" => :build
@@ -24,9 +24,7 @@ class Doctl < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/doctl"
 
-    (bash_completion/"doctl").write `#{bin}/doctl completion bash`
-    (zsh_completion/"_doctl").write `#{bin}/doctl completion zsh`
-    (fish_completion/"doctl.fish").write `#{bin}/doctl completion fish`
+    generate_completions_from_executable(bin/"doctl", "completion")
   end
 
   test do
