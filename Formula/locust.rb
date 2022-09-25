@@ -16,6 +16,7 @@ class Locust < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0452e81ee702d4704e9abc873bf7a727118670e0cc4a75a7918480540a8187a"
   end
 
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -117,11 +118,6 @@ class Locust < Formula
   resource "roundrobin" do
     url "https://files.pythonhosted.org/packages/38/97/6508c09e3af7eaee96e7b66a7dc7bbdbe8e6b85b8d2bbbb89612cf621bad/roundrobin-0.0.4.tar.gz"
     sha256 "7e9d19a5bd6123d99993fb935fa86d25c88bb2096e493885f61737ed0f5e9abd"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   resource "urllib3" do
