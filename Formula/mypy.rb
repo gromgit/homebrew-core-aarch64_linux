@@ -17,6 +17,7 @@ class Mypy < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "82b25ddf6ec246b7fdc070d9383148d7b04dc37fec0c541c012863f2a23631b4"
   end
 
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
 
   resource "mypy-extensions" do
@@ -27,11 +28,6 @@ class Mypy < Formula
   resource "tomli" do
     url "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz"
     sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   def install
