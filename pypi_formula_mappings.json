@@ -107,6 +107,9 @@
   "cookiecutter": {
     "exclude_packages": ["six", "PyYAML"]
   },
+  "copier": {
+    "exclude_packages": ["PyYAML", "typing-extensions"]
+  },
   "cppman": {
     "exclude_packages": ["six"]
   },
