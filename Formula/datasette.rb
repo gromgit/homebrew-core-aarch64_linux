@@ -17,6 +17,7 @@ class Datasette < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f58112f6ee6386d0802c5211c7811a041d9486edc239c09dc088c17db43b2c98"
   end
 
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "pyyaml"
   depends_on "six"
@@ -129,11 +130,6 @@ class Datasette < Formula
   resource "sniffio" do
     url "https://files.pythonhosted.org/packages/a6/ae/44ed7978bcb1f6337a3e2bef19c941de750d73243fc9389140d62853b686/sniffio-1.2.0.tar.gz"
     sha256 "c4666eecec1d3f50960c6bdf61ab7bc350648da6c126e3cf6898d8cd4ddcd3de"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   resource "uvicorn" do
