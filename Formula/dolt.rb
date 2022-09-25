@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://github.com/dolthub/dolt/archive/v0.40.0.tar.gz"
-  sha256 "7e9fa4ba35f312c7c8718c029ea8dc3a65c5a4c1df01995db2eb48f48768d7a1"
+  url "https://github.com/dolthub/dolt/archive/v0.40.32.tar.gz"
+  sha256 "9ac7f6f0381b3002da213ef4148a9b98fe3b7e47bab8362f6a12f985123352bb"
   license "Apache-2.0"
 
   livecheck do
@@ -12,7 +12,7 @@ class Dolt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dolt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "868ab16f75679ae6e6e2444ee69021a2f6e1849350142d4bac6532b216d9495a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3bbb92d5fd8c38ff6bf943eddb786d4d8b962727b034fe2fdd391f4edc3bcb4a"
   end
 
   depends_on "go" => :build
@@ -20,8 +20,6 @@ class Dolt < Formula
   def install
     chdir "go" do
       system "go", "build", *std_go_args, "./cmd/dolt"
-      system "go", "build", *std_go_args(output: bin/"git-dolt"), "./cmd/git-dolt"
-      system "go", "build", *std_go_args(output: bin/"git-dolt-smudge"), "./cmd/git-dolt-smudge"
     end
   end
 
