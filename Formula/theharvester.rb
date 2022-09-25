@@ -21,6 +21,7 @@ class Theharvester < Formula
 
   depends_on "maturin" => :build
   depends_on "rust" => :build
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "pyyaml"
   depends_on "six"
@@ -311,11 +312,6 @@ class Theharvester < Formula
   resource "tqdm" do
     url "https://files.pythonhosted.org/packages/e3/c1/b3e42d5b659ca598508e2a9ef315d5eef0a970f874ef9d3b38d4578765bd/tqdm-4.62.3.tar.gz"
     sha256 "d359de7217506c9851b7869f3708d8ee53ed70a1b8edbba4dbcb47442592920d"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/0d/4a/60ba3706797b878016f16edc5fbaf1e222109e38d0fa4d7d9312cb53f8dd/typing_extensions-4.0.1.tar.gz"
-    sha256 "4ca091dea149f945ec56afb48dae714f21e8692ef22a395223bcd328961b6a0e"
   end
 
   resource "typing-inspect" do
