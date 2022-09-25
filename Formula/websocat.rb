@@ -11,12 +11,12 @@ class Websocat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "80d297bb2d57c6c978cca4b6128ab1e997ed215fe541e6dfc6996fa91e5001d2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f9ca787b3e30a93ed36ad0a3bf7e323c90cce322e53321f9f8e699bddb3c4077"
-    sha256 cellar: :any_skip_relocation, monterey:       "cf216c574ffb9ba612501ecb300ad62efd51c2361f43fe2f7d6fcd24e02679cd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "35c88fe762c8e8ed6c1b67540ac1eca844961f368828d83f994da73ddd62dc2c"
-    sha256 cellar: :any_skip_relocation, catalina:       "569cc39bbd032bb6d755b201b3ad3dea40c1162071592fa1e70605b7034f53b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7ee5ad57ba8a70d91bbf552441a78c2f558699dbccad738f4ed9c4cd92e3e90"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e0a0e93024e9b076e830b378139f17f4ded0abe8e9d78ddcebe5cb1bff08f20d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "19bcee4c76f93016a059ffd43c3a892537a430297d9aa212b78d5454f5427057"
+    sha256 cellar: :any_skip_relocation, monterey:       "8570807ea670cf971c338fa22e669323711a29ca0eb2523706519bc014aa5ace"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d096ce9912b60128cf32539e8d5cb01bdb670998c9a822aad70799cb0c01a575"
+    sha256 cellar: :any_skip_relocation, catalina:       "0efad7161a7198a08f9f83c3a79ac4e9ef8bff37ee4ec13a1bdfa0e1c41d1bc8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f51fbae6e8d881ea4701adcffba0640dfadfe5558389738e87c9077a79c81c1c"
   end
 
   depends_on "pkg-config" => :build
