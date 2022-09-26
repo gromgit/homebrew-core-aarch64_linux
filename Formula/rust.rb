@@ -16,12 +16,12 @@ class Rust < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f40c3ae3595fa41433e87cf0b02d5c26234c5fa30ddf7a4dc3702bdebc74fcee"
-    sha256 cellar: :any,                 arm64_big_sur:  "e310d540fe9cf37660c15ed640036f5aa15a0fa3b89c1248acade9e41fc464c2"
-    sha256 cellar: :any,                 monterey:       "d2df7421122ec8f8e2fc88827003ad31482081a0d37efdaa1b651d75f9882854"
-    sha256 cellar: :any,                 big_sur:        "ee3b1363a38c27e0d3437f1a927a2fb3b8efca2980082400ed7e2c7c5a0fb5cb"
-    sha256 cellar: :any,                 catalina:       "5d7eb392e93d7fafa5d00786ba9341f04ac84bfb447cb3b0618a5cc68ba7809a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa4ae1e261c987717b0e09bf98c163b7b74b4ea258c4d8a9247131500cf71946"
+    sha256 cellar: :any,                 arm64_monterey: "6fb6dbcd5c3ec716e4317e6ca8ee118f855e07f4e9e85f654272ce2d8eba6da8"
+    sha256 cellar: :any,                 arm64_big_sur:  "66197a981993cb0e1f55c9df752d0e684ad394ad026ac9e963521d5e97da9dbc"
+    sha256 cellar: :any,                 monterey:       "6e93ea5237a1dbb39844b1c6d89bc1fd75582d73a47de137fc564a748e84cbb0"
+    sha256 cellar: :any,                 big_sur:        "95e9dafade80bb18989e8210e88db50414a71167d9e19c6d951cea902086e334"
+    sha256 cellar: :any,                 catalina:       "bc493cbd2cf8f0f6156363fbfaeccf940b118755e22b905434548559371dd915"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c835a606710424a49483d196ab45fafbdc7724a6a18d9ea1650e13e812e6cee"
   end
 
   head do
