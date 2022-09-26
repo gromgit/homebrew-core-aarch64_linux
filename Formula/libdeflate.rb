@@ -1,13 +1,13 @@
 class Libdeflate < Formula
   desc "Heavily optimized DEFLATE/zlib/gzip compression and decompression"
   homepage "https://github.com/ebiggers/libdeflate"
-  url "https://github.com/ebiggers/libdeflate/archive/v1.10.tar.gz"
-  sha256 "5c1f75c285cd87202226f4de49985dcb75732f527eefba2b3ddd70a8865f2533"
+  url "https://github.com/ebiggers/libdeflate/archive/v1.13.tar.gz"
+  sha256 "0d81f197dc31dc4ef7b6198fde570f4e8653c77f4698fcb2163d820a9607c838"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libdeflate"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "fb14caf3d2f0cb2f69ee0727550f278009d185e7f1cc51753adc68b4903c87e8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "94c7b6acddc4f6e4bafe63f8762a594b240a0d9cabd70d86cb7c890cb367ae09"
   end
 
   def install
