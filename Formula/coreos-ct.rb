@@ -6,12 +6,12 @@ class CoreosCt < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:     "a1b57820f00633b3e3af5d7cbee4accb970e8fee0e092fce3901801f3c84ce1e"
-    sha256 cellar: :any_skip_relocation, catalina:    "db582062a1743b1f01a0a90012e8a66d73b2518d88b4fb897afe9709565f6a95"
-    sha256 cellar: :any_skip_relocation, mojave:      "883c46865e141d74fa7f0815fc51d3f9ea3145019f28dcec402fc457d3f67e27"
-    sha256 cellar: :any_skip_relocation, high_sierra: "5acd28f4e5dd0c74938cc7e7e10c5501badbab1d05316537a9afa173ff64f44e"
-    sha256 cellar: :any_skip_relocation, sierra:      "8f09ba9875fe34e55de7fd25514493f41276d5c5e9f3cd37e00288fb6d44323e"
-    sha256 cellar: :any_skip_relocation, el_capitan:  "9a48da5217b7e4b57e56702ee884fbc3067ccd895c2144cf7b02571cbcb80b42"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "daecb2d366f73487e19a3357e64fe02be095ba9a92ac8d6ed4350d3281d5f9dc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01ee0a8cdf60e4f9ceefbb28529c508ff16cc8dcc8e6b9d3ea3ab2c5bf05e8a6"
+    sha256 cellar: :any_skip_relocation, monterey:       "d5b7543e14bd73c528cbfca81b32f56c18d17018ef4e7edf7d16870223eaaee2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9517910a97a3643010e7d0ccc65dab68a6e85a7321780a0d3e095686530b6502"
+    sha256 cellar: :any_skip_relocation, catalina:       "acb5592eabf664da5576e643378d903d9c30b3ed57c2ecaba8b0d48c8f561041"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82"
   end
 
   depends_on "go" => :build
