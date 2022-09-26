@@ -12,12 +12,12 @@ class Coq < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "49ab12e191b51e815c80b695c207813eb17a33698d3814387cfaa92776726367"
-    sha256 arm64_big_sur:  "1ff641d832c407834e85a5e518c3afe29adc8d82f9f1c4ebc69caaf91e99c033"
-    sha256 monterey:       "ffdd7527e08e32012f2c49295aa45955d937ba7e97dd3bd085635f15b51463c9"
-    sha256 big_sur:        "77ab0ab206936dae52fee15b2d38e457c30ac7bbf29ce0521f7b1db4e8d5b974"
-    sha256 catalina:       "355dabbfa119eff9e1ff8fa10864cda98a4182ab4ade1d07d05d450ccaba4344"
-    sha256 x86_64_linux:   "6a6a6986f7c285b95c13235b146fd3bc7bf85838864e253a7659a1b96d98d2c1"
+    sha256 arm64_monterey: "6b693d14144d92d46932724843c89083762a83b1e352b51bcbf1311b4d2de84d"
+    sha256 arm64_big_sur:  "730ea0c2e9a1d3bcedd772c7ec355446996bca621e8a168c46616c17e4306c72"
+    sha256 monterey:       "9775ac5bb1131df82502645adc20cbb4874e15f7db15ad1e16334cd7419e6ca0"
+    sha256 big_sur:        "f3a2849971a9c26e46ba79f360cb65df0fe636667d99fac55581c8acca421cf2"
+    sha256 catalina:       "3a35b8dedec20d3bf2f1332d9615d0496bc2ffae8b843579c0ebeb28e778100a"
+    sha256 x86_64_linux:   "4016e4a6373e65172531419bc7a406dfc44a5186840f234f5fc94f5f5b4d62fe"
   end
 
   depends_on "dune" => :build
