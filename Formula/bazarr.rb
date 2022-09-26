@@ -13,6 +13,15 @@ class Bazarr < Formula
     sha256 "0a55474e185c7f84246218097af4caae805ed33d18657f37a8a141d2d847e9e3"
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7e7502fd86287ae876a205a97f46324d76b5866decce960cdd46638d567b1797"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "056148533d39abdebd1cd5112778a2cfa97a9a4f55fcc3c5f49df41c1a28f049"
+    sha256 cellar: :any_skip_relocation, monterey:       "998fedfaacdcff31fdf5d9c91aef1bf01a006b1c1f5fad219f37e9ea56346f20"
+    sha256 cellar: :any_skip_relocation, big_sur:        "17050d67fdcbff24d19571e305bcf3bdd86edf1d05e9989e97ba48ae4db0c68c"
+    sha256 cellar: :any_skip_relocation, catalina:       "6283d6605df7f70ab72ba22c0f6694959beb38eedf0add8be20f281effaf0704"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bf2d80f9e08a9f27a0b3a9da0c39057b5a6d9d4fffd21211276446cea195dd2"
+  end
+
   depends_on "node" => :build
   depends_on "ffmpeg"
   depends_on "gcc"
