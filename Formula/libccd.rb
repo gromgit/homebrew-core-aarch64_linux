@@ -7,13 +7,8 @@ class Libccd < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "95bbd2e402b8388a6b348fd755b6997ae765568357115013996efe9e596f982f"
-    sha256 cellar: :any,                 arm64_big_sur:  "69d8c269bc6c5f60d141eaebe6bdff9cf333f789c4d3b72cd69b1e61edff3ea3"
-    sha256 cellar: :any,                 monterey:       "b07fdb5107c0a1e3b912f441d338729ff2d58a50b65f3d6f5d013e26fa1c9dc2"
-    sha256 cellar: :any,                 big_sur:        "8257a7f8ab8f5eca8fced2e881b96a68202c08ce94a4aa169d1d80149b61eb0f"
-    sha256 cellar: :any,                 catalina:       "caa0aba8d2ba740998b54c73d3ab038747ac984e4d27797b9f768195a487dc4e"
-    sha256 cellar: :any,                 mojave:         "47c19c5f277ecc9016ef1e62a3ce1a0c4aafd1c91e6893fb4f251183ebd505ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6bee053612267522f0eb8c55c24a68dddb787126f46771fc8459d4d3460aa077"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libccd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee33ed2a1219cfd0c40739dbb7aba73b5f3387cb82ba6d4fa6e5ace56225b6cc"
   end
 
   depends_on "cmake" => :build
