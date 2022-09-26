@@ -1,12 +1,11 @@
 class Cryptominisat < Formula
   desc "Advanced SAT solver"
   homepage "https://www.msoos.org/cryptominisat5/"
-  url "https://github.com/msoos/cryptominisat/archive/5.8.0.tar.gz"
-  sha256 "50153025c8503ef32f32fff847ee24871bb0fc1f0b13e17fe01aa762923f6d94"
+  url "https://github.com/msoos/cryptominisat/archive/5.11.2.tar.gz"
+  sha256 "c9116668e472444408950d09d393f6178d059e4b4273bb085ba9b93c297c02a1"
   # Everything that's needed to run/build/install/link the system is MIT licensed. This allows
   # easy distribution and running of the system everywhere.
   license "MIT"
-  revision 4
 
   livecheck do
     url :stable
@@ -23,14 +22,8 @@ class Cryptominisat < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "python@3.10" => [:build, :test]
   depends_on "boost"
-  depends_on "python@3.10"
-
-  # Fix build error with setuptools 61+
-  patch do
-    url "https://github.com/msoos/cryptominisat/commit/a01179ffd6b0dd47bfdef2d9350d80b575571f24.patch?full_index=1"
-    sha256 "a75998d5060d1de13f2173514b85b2c3ce13ad13085ef624b0d711e062fc6289"
-  end
 
   def python3
     "python3.10"
@@ -40,22 +33,12 @@ class Cryptominisat < Formula
     # fix audit failure with `lib/libcryptominisat5.5.7.dylib`
     inreplace "src/GitSHA1.cpp.in", "@CMAKE_CXX_COMPILER@", ENV.cxx
 
-    # fix building C++ with the value of PY_C_CONFIG
-    inreplace "python/setup.py.in", "cconf +", "cconf + ['-std=gnu++11'] +"
-
-    # fix error: could not create '/usr/local/lib/python3.10/site-packages/pycryptosat.cpython-310-darwin.so':
-    # Operation not permitted
-    site_packages = prefix/Language::Python.site_packages(python3)
-    inreplace "python/CMakeLists.txt",
-              "COMMAND ${PYTHON_EXECUTABLE} ${SETUP_PY} install",
-              "COMMAND ${PYTHON_EXECUTABLE} ${SETUP_PY} install --install-lib=#{site_packages}"
-
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DNOM4RI=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *std_cmake_args
+    args = %W[-DNOM4RI=ON -DMIT=ON -DCMAKE_INSTALL_RPATH=#{rpath}]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    system python3, *Language::Python.setup_install_args(prefix, python3)
   end
 
   test do
