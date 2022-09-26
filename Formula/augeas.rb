@@ -21,13 +21,12 @@ class Augeas < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "136e012d7695d0ddf73a689d84b521aebc74944dc5b763b0f40abb2b49dff768"
-    sha256 arm64_big_sur:  "9625e271fbbf7bb914bb7475eae95f97f99f5cbf9e71874f599ee620dd907432"
-    sha256 monterey:       "62beef17116c12a01d5cf68595636570e658f3c9714b0601dc8884de458af419"
-    sha256 big_sur:        "83b60962039b8d9c8a2ff343c8eaf21454976394f60ee5f340901d8de6161bd8"
-    sha256 catalina:       "dc69497d1ac32d9f8203fb346965ad8e88f4498c120b7915a3f4dd0d7509d9e2"
-    sha256 mojave:         "446030ec8931aa24eabee1e051daf7365dbd6fb9e43b4f71998dc6d7d0f9fdda"
-    sha256 x86_64_linux:   "1d769bb0e887b5a321e5c89d15959e71fc7d616fb79c3e2e926ff2d1cefc106f"
+    sha256 arm64_monterey: "c2b38e9d3f4611a7d7c569ce62d19e35b6d9da3feb4706abddc27828fd4e2a09"
+    sha256 arm64_big_sur:  "64fd8945d6a7408664bad5acc707e587f9c54a78fe3e320c57f13bf456c61553"
+    sha256 monterey:       "8978eb7d972b143ab12e895b3fc72a4e9a12bd980e02e37eb0dadba9977d8fcd"
+    sha256 big_sur:        "cb898760713b1cc45c6cfb24e8692e762037ca7d947b57d8d39fb89082681b7c"
+    sha256 catalina:       "e3b262dfad73f3b6efb01ff258a465f566fd451377f0bf3bbe37a99f57926427"
+    sha256 x86_64_linux:   "37c08a6a125569eb281a1a2812c44db90f529159418e9a0c5559697c634d2c65"
   end
 
   depends_on "autoconf" => :build
