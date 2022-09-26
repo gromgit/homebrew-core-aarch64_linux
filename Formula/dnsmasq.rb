@@ -11,13 +11,12 @@ class Dnsmasq < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "9f25c2cfab3902767464a11a49151503c8532a554ee9f8452f536bbbec4c7b04"
-    sha256 arm64_big_sur:  "958b73b470c3fad28aa5144afd18cbc423448d70bb74ecd45ee296384f97b37e"
-    sha256 monterey:       "d4e2c92c41d0a580868a2bc68c3b1caa5257bd241b89c1b88c5e74c73d59f78b"
-    sha256 big_sur:        "ebcab796c2876217e0bcaa2db862ce407a784c81f8d5d2c2b625122945e13944"
-    sha256 catalina:       "fb1bbf13dd64a0fd3e4d75773795cd7edc4345bbdf3290399ebaca6f08d645ad"
-    sha256 mojave:         "4ea6a7c2ab644ee388a5489307c3c4bb2b358f7eafeb32676fd1cdcc89aeb33d"
-    sha256 x86_64_linux:   "b5ae5a7152ef11bbcdc2a8444d3c4f830da1228b484eb98b1e2db8e0ce6e19f5"
+    sha256 arm64_monterey: "357a30adc744526d520802f38099e0759116b822994e29848a6f3d24926ff467"
+    sha256 arm64_big_sur:  "7e5ed2bd70f5894c99baaf8de7b4ca3130beae2fd8293bb70455f0c2d3168150"
+    sha256 monterey:       "fc001641289ee8238714157e67feea1494f56578378e37823699dfa2cdcaf346"
+    sha256 big_sur:        "8cd8b71e6d7d63d2510ac8a37a98ca6e9ae8989a58d50f9e40a53660a975e600"
+    sha256 catalina:       "2ea93b8e8ad857aca2846a4d4f66c3dae1e119712b5608d0ba6919cf9df63eca"
+    sha256 x86_64_linux:   "a3e8cb542671c0536c50680039742292c26d80a0aaa399c4860073bb6b7f5f05"
   end
 
   depends_on "pkg-config" => :build
