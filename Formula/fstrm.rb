@@ -15,13 +15,8 @@ class Fstrm < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9a6bc2f1e46b05c45ea8f0925f08781d22604e8bc5a77357ccd29f2d90070ca3"
-    sha256 cellar: :any,                 arm64_big_sur:  "409e20e264b28337487a22ff762e8f7d1b4dc81bea1cd131c6d673a978d94e2f"
-    sha256 cellar: :any,                 monterey:       "1e8daf8e57af116ffdcf7ada7a945181d3ef35d955f1631a8ed4e2c27ac8ebcb"
-    sha256 cellar: :any,                 big_sur:        "32c20ee504e029088d36ee45177137411beed0aaaac76ce287810cec71d3eea9"
-    sha256 cellar: :any,                 catalina:       "3b775d63b3594f2264b413184aad3fbb33990c07473e0db9db12c86bd0f19950"
-    sha256 cellar: :any,                 mojave:         "7f18a4569511492fdad064427c67fc88f988046c1fc6804a7973e1ae2911714e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a1db14f84679ffb80882a5a00b733e671f82242d2a338ce485e180b4f40f1a0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fstrm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8ba2f15b0739cd00fb4654fa684feb016edff75d4786a394812e66df3002c19d"
   end
 
   head do
