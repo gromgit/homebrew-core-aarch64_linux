@@ -9,12 +9,8 @@ class Flit < Formula
   head "https://github.com/pypa/flit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e81e7df88cf7e1327777442cd65f9b2405b842ab47eaaa288f4ec26daa2e220e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1b732032f051ad55558b9ede3c59d5e7bb6ea57432f1a70a372c92561047a1d"
-    sha256 cellar: :any_skip_relocation, monterey:       "498a7c3edd623e6fe7249e164fea4eb0a80dd3a8b2714038f876c24eb70c8707"
-    sha256 cellar: :any_skip_relocation, big_sur:        "800f88a9a5ada4e8489d48c69296ece526eb614c2b33c70349e79385e4df5c8e"
-    sha256 cellar: :any_skip_relocation, catalina:       "645a3e5786fd5f5624284388e556d2fa4ebea139ca317e74151fc2477943e7dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed85737762f7774afa6f631cfc942420b64e91f2c040c8c14c4b706da2bf8061"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3f90a52b3790f90fba5a5e8f39badebe31ecdb103f666e194a1b292a8aaf6075"
   end
 
   depends_on "python@3.10"
