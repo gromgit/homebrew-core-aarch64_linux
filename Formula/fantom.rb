@@ -6,12 +6,8 @@ class Fantom < Formula
   license "AFL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7fcc2fc9b9274107bebe956c165da541fbbd1171b954d21c426e3d7cb4542ca8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7fcc2fc9b9274107bebe956c165da541fbbd1171b954d21c426e3d7cb4542ca8"
-    sha256 cellar: :any_skip_relocation, monterey:       "0ba7cd9d14d193ac7a20703e8ed5e1fba69ec4d0856daa7860892be4d1410f6d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0ba7cd9d14d193ac7a20703e8ed5e1fba69ec4d0856daa7860892be4d1410f6d"
-    sha256 cellar: :any_skip_relocation, catalina:       "0ba7cd9d14d193ac7a20703e8ed5e1fba69ec4d0856daa7860892be4d1410f6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7fcc2fc9b9274107bebe956c165da541fbbd1171b954d21c426e3d7cb4542ca8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fantom"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "69768b0d678c7131355d5edc26126a02061407c725c3d8831f8b6651631f5ad9"
   end
 
   depends_on "openjdk"
