@@ -11,12 +11,8 @@ class FetchCrl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "31195e7618b568140819ca5220581f5fee24d18049a925116e144aff0e07410c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31195e7618b568140819ca5220581f5fee24d18049a925116e144aff0e07410c"
-    sha256 cellar: :any_skip_relocation, monterey:       "31195e7618b568140819ca5220581f5fee24d18049a925116e144aff0e07410c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "31195e7618b568140819ca5220581f5fee24d18049a925116e144aff0e07410c"
-    sha256 cellar: :any_skip_relocation, catalina:       "31195e7618b568140819ca5220581f5fee24d18049a925116e144aff0e07410c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c479b15b49f159bd6371fe3e609024bf716caf93561861e4e6c0aaca296755fd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fetch-crl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cec11aa0f32a4d67d2d4078abd31a6da7955e4838d548e6760dbf3ff043fb38b"
   end
 
   uses_from_macos "perl"
