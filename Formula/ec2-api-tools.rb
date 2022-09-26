@@ -6,13 +6,8 @@ class Ec2ApiTools < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2d0cd307194a156731087035900c915777ac2e6068c879088fe41b754a260766"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d0cd307194a156731087035900c915777ac2e6068c879088fe41b754a260766"
-    sha256 cellar: :any_skip_relocation, monterey:       "b7cf3620699017c6f0b7ba925511319037313fa447361cb04d3add6d15de3c27"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b7cf3620699017c6f0b7ba925511319037313fa447361cb04d3add6d15de3c27"
-    sha256 cellar: :any_skip_relocation, catalina:       "b7cf3620699017c6f0b7ba925511319037313fa447361cb04d3add6d15de3c27"
-    sha256 cellar: :any_skip_relocation, mojave:         "b7cf3620699017c6f0b7ba925511319037313fa447361cb04d3add6d15de3c27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d0cd307194a156731087035900c915777ac2e6068c879088fe41b754a260766"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ec2-api-tools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a7146fc03dd733ad6a10275ff8a3d5007090586e7c8fea8fde98bda01cc6f8e"
   end
 
   # Deprecated upstream somewhere between 2017-12-24 and 2018-09-09 here:
