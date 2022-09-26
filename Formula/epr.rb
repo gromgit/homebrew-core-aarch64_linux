@@ -9,12 +9,8 @@ class Epr < Formula
   head "https://github.com/wustho/epr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1d98c74561ea423741be4268845a86035d5ece2730e8f070330d79eeff5c66b7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6d908ffbaf2d86e5138e8eb54cef8ec3d002f53d3fa39df700031dba83f34df"
-    sha256 cellar: :any_skip_relocation, monterey:       "230ae4c3ae853bb2a5e389ffc3a086a19da828b94b0f08cc35d7716419865e7e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e2c5e041abeae7147bffac8a6c361583e7c990ba64695fd1d976799b47c09153"
-    sha256 cellar: :any_skip_relocation, catalina:       "8c2ae4638d6814fdfdd9444bce8991a85d515a265f4bc1c988e770a4cf4d4b8c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f303eb1374e664808e445a7aca7b81589240beb4205a7fd1a05cfaa6fb4f565"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/epr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0dbab129a6360669d890948f81ceaa816f31d6f43250b27eae195f373506b95a"
   end
 
   depends_on "python@3.10"
