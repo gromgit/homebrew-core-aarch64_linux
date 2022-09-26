@@ -1,8 +1,8 @@
 class Empty < Formula
   desc "Lightweight Expect-like PTY tool for shell scripts"
   homepage "https://empty.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/empty/empty/empty-0.6.21b/empty-0.6.21b.tgz"
-  sha256 "2fccd0faa1b3deaec1add679cbde3f34250e45872ad5df463badd4bb4edeb797"
+  url "https://downloads.sourceforge.net/project/empty/empty/empty-0.6.22b/empty-0.6.22b.tgz"
+  sha256 "f581d560e1fa857f5304586e3c2107b5838bcf11dedcccec4a7191fa9e261b69"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,7 +12,7 @@ class Empty < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/empty"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "def802912d37d73a568c6fd80a2aee59253d94292332a54ee669240f341b91d8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c37e254d82fd4bf916528e56ad953fed3093d2c893543731285a2012185c82d0"
   end
 
   def install
