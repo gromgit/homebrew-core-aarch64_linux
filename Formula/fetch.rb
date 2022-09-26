@@ -1,14 +1,14 @@
 class Fetch < Formula
   desc "Download assets from a commit, branch, or tag of GitHub repositories"
   homepage "https://www.gruntwork.io/"
-  url "https://github.com/gruntwork-io/fetch/archive/v0.4.4.tar.gz"
-  sha256 "5e5af89111a2e986d7d59c156c55ca301c9f2199369c9dc89b80dc94cb62b31a"
+  url "https://github.com/gruntwork-io/fetch/archive/v0.4.5.tar.gz"
+  sha256 "baa14d521cf0c59668dd5e84451579f48b623e16bb4d3b2254fa3c54b504fc9b"
   license "MIT"
   head "https://github.com/gruntwork-io/fetch.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fetch"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "dda47e8e3eca8118a1fce54b8dbc05dcadeccc418484253e2e93b80ca91dede6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "53482fa335d9ee50f7a702cfefde09da24f9337ea6e0a2f2fe56f692d3a6d8a8"
   end
 
   depends_on "go" => :build
