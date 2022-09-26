@@ -6,12 +6,8 @@ class Libexif < Formula
   license "LGPL-2.1"
 
   bottle do
-    sha256 arm64_monterey: "b71456dcf43a1697530075ed530dd4561e921de1ef9ac872ae173fb3c4b70596"
-    sha256 arm64_big_sur:  "89e01320edd8d164b9a885c8f72b08215e175cece967f6c86a9bcf472e4d85bc"
-    sha256 monterey:       "b49a9f852c06e2a0df9310f0e550d952cd0ae0a675a3a2eab44a51583a8089bb"
-    sha256 big_sur:        "e8f4e1e32cba740b59dd9dfeea98c45d6fecfb3e5f52553da7963c92a83bc632"
-    sha256 catalina:       "ebbc780bac1eac5bf0afb384a36eea408e8dc35369558b256eea4283ff2c0c39"
-    sha256 x86_64_linux:   "9a72e30a88de8a164a4b249e181747639b9b2e2fc2b089f0e1cbaf850d6a0acb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libexif"
+    sha256 aarch64_linux: "f34ee2d761730d9bf68705482345baab06f9fc20923bf8ecc2732354f6956ee8"
   end
 
   depends_on "autoconf" => :build
