@@ -6,12 +6,8 @@ class ElasticsearchAT6 < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4db242272e294706f8cf26a6d4d33b8c68a9e47db10d7d8ca84d2a3139a39311"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4db242272e294706f8cf26a6d4d33b8c68a9e47db10d7d8ca84d2a3139a39311"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d77a4b086fa69e59b3f33b344131868588bcb558035b862961e514a0c3273e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3d77a4b086fa69e59b3f33b344131868588bcb558035b862961e514a0c3273e4"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d77a4b086fa69e59b3f33b344131868588bcb558035b862961e514a0c3273e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae05feeb52801460e639d2440e3a523c4d5d0ca0626cc609cfb2dd1414fa5101"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/elasticsearch@6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "834fcab8ad88788e9b58e5578a92666cba5dba71c44ac2d47403545a3b924b6a"
   end
 
   keg_only :versioned_formula
