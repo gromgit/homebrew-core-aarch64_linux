@@ -13,12 +13,8 @@ class Exiv2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "df5a064e5e5828cab5d4dace6d467c0880168f2cfe4eff96d95805f4ec0a1090"
-    sha256 cellar: :any,                 arm64_big_sur:  "3de53aea67fdf1b2e0db0d360d4d594c84cfa6e602207764cf69587bbb08ab98"
-    sha256 cellar: :any,                 monterey:       "bc67f1f00301efd37e9c4b69fc174260c95016d751757f099426a33515a85a73"
-    sha256 cellar: :any,                 big_sur:        "3577a686dde0a3441b0aa655dc176cefd3d6897dfb790458c86ba00f5ed12cb9"
-    sha256 cellar: :any,                 catalina:       "78976c980580a1286b077679225902a444dff19a17e392a7d5e2f609f8619f2b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0e727a5c7cac7fcd2238ab707976c8e049394d166dd2e382898a7bd94d66523"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/exiv2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2ac9321db560313b697b263f2e38520340679a030be0e122d81d218534c8d52c"
   end
 
   depends_on "cmake" => :build
