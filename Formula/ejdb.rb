@@ -8,12 +8,8 @@ class Ejdb < Formula
   head "https://github.com/Softmotions/ejdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c1a23396c872b4a5e05a98ae982103cfc67da805706a091dc1c57d7770026998"
-    sha256 cellar: :any,                 arm64_big_sur:  "85c60ffc351cf601c932406f75606edbf041abade468ea7ca47b2cb9a7f4cee7"
-    sha256 cellar: :any,                 monterey:       "c0a2639abef7cd76b167ae19af901b9d4cca045a2b88044e9dddcf65bc1494db"
-    sha256 cellar: :any,                 big_sur:        "e77d0cd2d377db7230ab9d6663f859ce9b4d59333204858851aae34bf689c54e"
-    sha256 cellar: :any,                 catalina:       "13387810b1f21f9d068dfe4dd82844e19a3f4e12fa95c7fd78d8fb001a1ff6c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eedee3fd1e621438e436a004062a96fc79e195f4b3b1e1358220c6cd46ace47f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ejdb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "386b141a5de4d509c5d3275747210a734223836f6f75703d6fc2a278c91c43dc"
   end
 
   depends_on "cmake" => :build
