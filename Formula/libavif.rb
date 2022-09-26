@@ -7,12 +7,12 @@ class Libavif < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8a87d1f6d545e4f3b30ad302bc40d2b113fd0a5e7aef3b881f30ce67733af3a3"
-    sha256 cellar: :any,                 arm64_big_sur:  "028e2fedcb137f6bc66abee05d97d9d8dde3ea05ea64c5eaacf4fb39369212ea"
-    sha256 cellar: :any,                 monterey:       "e025a5a329f4cddc1f496f430b59160f50fe35a481b1926ee2b89d08960b622f"
-    sha256 cellar: :any,                 big_sur:        "468a7d894bdc34acb1f51629a3629c7ad230be2dcbc4d690f2ff1d645faea2ae"
-    sha256 cellar: :any,                 catalina:       "2a4b502605b778bc9ea1e4abc2637106a67f7ccce902334c9abf30650b28536f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b86d16243abde8499e2afd8fe06142c588dac845d8287aa96d10e8761f7b0bcb"
+    sha256 cellar: :any,                 arm64_monterey: "baf0787c1def41b919475ee2e959bfe3b9f67f3af03ea9063a5c536d78d5779c"
+    sha256 cellar: :any,                 arm64_big_sur:  "b92b5be19960f10c45db51c724bf00fc0fef5b7e709ebc3f029a10bc4970dbdb"
+    sha256 cellar: :any,                 monterey:       "3e8d5783354c79ca59d258d506366021fec36b549e0ca92cc3979b3f70a1c59e"
+    sha256 cellar: :any,                 big_sur:        "84b6be93c3981a5944266690754ec5d0302e93c055d74daa08970f09c2ef0095"
+    sha256 cellar: :any,                 catalina:       "776cb10e368527e351d1f115a13fe5e2e63afabaaddc12a252ac7b5fb5f03839"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59d1a4f574b51fc8d27920ec48b289fe78ce1a4b7edf3a2e2726f13ef98d1f6f"
   end
 
   depends_on "cmake" => :build
