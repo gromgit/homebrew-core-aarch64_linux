@@ -8,13 +8,13 @@ class Datasette < Formula
   head "https://github.com/simonw/datasette.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2a77e146c147b464aad513462563ed179361d5367de51b1106de93e9ced15d4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0765bccf39658aac70625f230f4f813e77abb25cc6b0b39810a8e5a8a5f0327"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b44634bec52a2290ce54d799dc66e9309eda06c751a55cb48c8ada9999e51d6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a16d844f36f8cd923f344fd5ebd8cdd86efdaabffe47b0ac744a7243b0d01bdc"
-    sha256 cellar: :any_skip_relocation, catalina:       "2412ac4b79b535c999afedfff7ad6fb7c2e4964fe59f7283c2aab4b216a6c961"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f58112f6ee6386d0802c5211c7811a041d9486edc239c09dc088c17db43b2c98"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "142a28580eb60268abf9d61a6505696bb6be49d41edbaa9aa5c7f4626d6a3171"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a84a27be62a78a56e9fa2de9c0b747ee75ebbe541ac04457a2a81ba08bfd3875"
+    sha256 cellar: :any_skip_relocation, monterey:       "0ae3670f4c188edbc1244a167b5f991429bb4c95da70ef77a3ae2b0d821981fb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a0c57ebac98d5200cd1949b789e300a655fa3caaf9861ee8e68efcd48ecccca1"
+    sha256 cellar: :any_skip_relocation, catalina:       "448734839fcb2e4be42252ce69bd00d423ad3e30dd6201daad0992baf7b40357"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0461d7c854cbbfb6431e8005659221cfe75ec8a061e22027c0b92834b0430c97"
   end
 
   depends_on "python-typing-extensions"
