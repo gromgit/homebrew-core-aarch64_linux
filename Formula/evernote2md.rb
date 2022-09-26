@@ -1,13 +1,13 @@
 class Evernote2md < Formula
   desc "Convert Evernote .enex file to Markdown"
   homepage "https://github.com/wormi4ok/evernote2md"
-  url "https://github.com/wormi4ok/evernote2md/archive/v0.17.1.tar.gz"
-  sha256 "7b8c06946087ebb836d35ad7d3b4ddde1b04ad2f4665d650c9a08f7253ddf28c"
+  url "https://github.com/wormi4ok/evernote2md/archive/v0.18.0.tar.gz"
+  sha256 "504643760dae72c6cb92d2d47c57bcd5abd9c387cb6a8905bd37d0701a667337"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/evernote2md"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2da2399de966ed5c905ac5911733b1e267bdba5ff7923666820b08828d4b9b86"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e85b54e7670f9b0d43f24cbf403da45728ad52ad87d202a603291b2f16f60268"
   end
 
   depends_on "go" => :build
