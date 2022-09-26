@@ -8,12 +8,13 @@ class Sgr < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9ed51698283079824a7d599d00710ae5d742128721d6f782ce2311813ebc828b"
-    sha256 cellar: :any,                 arm64_big_sur:  "ca7de3c262b37b0eacdd714b52a53176e9e19047290076df1dd46448c83527d3"
-    sha256 cellar: :any,                 monterey:       "1e7346eaf87e3a016a2320f44c3c06748eb9bcd6a69cc4c26ba4cbe55de5072b"
-    sha256 cellar: :any,                 big_sur:        "c8a928fc8caec9e1d8d2a7085785648659174ce2b1aa63c8f5d4b8ccded0b42c"
-    sha256 cellar: :any,                 catalina:       "411f1924e918a81a8230cbafbcec86a9e78c5982bd79e3fda9cdf6777e7fb8c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c459933ee16f232f9bd09512dca9d30c6962f1bc15d7b821b38ad54faa40652"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "522d2fd67ee0502bd014b1fe7d8df28dac91cb236c14cd4eab9e552f81195039"
+    sha256 cellar: :any,                 arm64_big_sur:  "743c9462b5032817be4d633a0932029e4a3d04a771367ae27f840ccf7988f967"
+    sha256 cellar: :any,                 monterey:       "a88b516d4970000b007d69a8850699d6a414a84d16ebb99ecb77acb87e35796b"
+    sha256 cellar: :any,                 big_sur:        "c18cff46b464337df1dbece26d82d08525a85e28472cc63188ff44b3c6a95732"
+    sha256 cellar: :any,                 catalina:       "c8db28d0661cfd4aa9b27f360de9d47cfb5a6b51d541f4b6849fc6c771588a8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df6df3e3cb72fb8d7f91aea11964d65c012bacc3d10f219461445b8e3e7a26d2"
   end
 
   depends_on "libpython-tabulate" => :build
