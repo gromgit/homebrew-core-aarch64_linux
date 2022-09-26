@@ -12,12 +12,8 @@ class Fail2ban < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "febbc601485ec3f52a408c28dfdde5455197c9857789cda8ecadbf19961cfe2e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "febbc601485ec3f52a408c28dfdde5455197c9857789cda8ecadbf19961cfe2e"
-    sha256 cellar: :any_skip_relocation, monterey:       "a81c3b3ea79be5241226d49afc2c67c785d388eb01a0e4c7e7fd25397444bc30"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a81c3b3ea79be5241226d49afc2c67c785d388eb01a0e4c7e7fd25397444bc30"
-    sha256 cellar: :any_skip_relocation, catalina:       "a81c3b3ea79be5241226d49afc2c67c785d388eb01a0e4c7e7fd25397444bc30"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "824dbe231518bf8ab1d51552c318616f237eead4618807c05e289190f5b1490b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fail2ban"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "64ce1d1757d4987b4eb1291ddf281a79130dde8d1dd9ae7633881341ba869ce4"
   end
 
   depends_on "help2man" => :build
