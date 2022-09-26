@@ -9,13 +9,8 @@ class EgExamples < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d089071964aeefc2ca28062eff414a0c0dea3d940495212c71a2609e4749b36"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6d089071964aeefc2ca28062eff414a0c0dea3d940495212c71a2609e4749b36"
-    sha256 cellar: :any_skip_relocation, monterey:       "9e766b57ef1ede0a5cd68da245d372573860545702af673ba18693159cc95657"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9e766b57ef1ede0a5cd68da245d372573860545702af673ba18693159cc95657"
-    sha256 cellar: :any_skip_relocation, catalina:       "9e766b57ef1ede0a5cd68da245d372573860545702af673ba18693159cc95657"
-    sha256 cellar: :any_skip_relocation, mojave:         "9e766b57ef1ede0a5cd68da245d372573860545702af673ba18693159cc95657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d057caedc12f52baeaec1c47fa9b6f3346d9d7c4e8e519ca5781f1915e6f9bc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/eg-examples"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f87688ce2ed660ee7ec67849390cbc0f925fc10d22cd5107063b43cc25502f16"
   end
 
   depends_on "python@3.10"
