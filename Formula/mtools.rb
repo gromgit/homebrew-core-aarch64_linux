@@ -12,6 +12,7 @@ class Mtools < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "08a81f09374540bbbd2a64716da7b16b8bf277fee21b9774a4c9f4f848d733a9"
     sha256 cellar: :any_skip_relocation, big_sur:        "c0ceb747c1cd82bf997203d1f3381c9f6947faab6ba00c3df62eabb13d6a2584"
     sha256 cellar: :any_skip_relocation, catalina:       "39bf7b0d33eae404fd7f5abd21b6a5c59d562e21226a6902ea8ad880828d48d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "610b09d844dfdb37fd625df541a0368ea763269f1705dd70dcaf8659a8734545"
   end
 
   conflicts_with "multimarkdown", because: "both install `mmd` binaries"
