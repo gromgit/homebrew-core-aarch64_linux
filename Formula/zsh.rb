@@ -1,9 +1,9 @@
 class Zsh < Formula
   desc "UNIX shell (command interpreter)"
   homepage "https://www.zsh.org/"
-  url "https://downloads.sourceforge.net/project/zsh/zsh/5.8.1/zsh-5.8.1.tar.xz"
-  mirror "https://www.zsh.org/pub/zsh-5.8.1.tar.xz"
-  sha256 "b6973520bace600b4779200269b1e5d79e5f505ac4952058c11ad5bbf0dd9919"
+  url "https://downloads.sourceforge.net/project/zsh/zsh/5.9/zsh-5.9.tar.xz"
+  mirror "https://www.zsh.org/pub/zsh-5.9.tar.xz"
+  sha256 "9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5"
   license "MIT-Modern-Variant"
 
   livecheck do
@@ -11,12 +11,8 @@ class Zsh < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "750505b1f918835561d0faed812ba007b26ca6f85f658407874a7e764d05aec7"
-    sha256 arm64_big_sur:  "f6150fb2971ff3e1f127d5a41e2178593723bfe83dbff1162024581aa657f790"
-    sha256 monterey:       "bc2f7567c37e90c76f6d0e59fa026f00379ba764d8eb6d77d3e96775af74f99d"
-    sha256 big_sur:        "56e6e6569dfa2871dbe7337b70f800698b7fecb2a40bb0130f4c41a3e8d39387"
-    sha256 catalina:       "622fb66e31fbea6b09c733fc786d17f884cbadc465849885d725310edd89d3e1"
-    sha256 x86_64_linux:   "abe61492a141121b3d46c06358b7760b49a866f524b96345dc070f955304cc2d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zsh"
+    sha256 aarch64_linux: "dd8ae312846750f19af5880cc003c54c7ae6d4b2fe842b1d017e2ab4ca6dea34"
   end
 
   head do
@@ -30,9 +26,9 @@ class Zsh < Formula
   uses_from_macos "texinfo"
 
   resource "htmldoc" do
-    url "https://downloads.sourceforge.net/project/zsh/zsh-doc/5.8.1/zsh-5.8.1-doc.tar.xz"
-    mirror "https://www.zsh.org/pub/zsh-5.8.1-doc.tar.xz"
-    sha256 "8b9cb53d6432f13e9767a8680b642e8e8a52c7f1b8decd211756ca20c667f917"
+    url "https://downloads.sourceforge.net/project/zsh/zsh-doc/5.9/zsh-5.9-doc.tar.xz"
+    mirror "https://www.zsh.org/pub/zsh-5.9-doc.tar.xz"
+    sha256 "6f7c091249575e68c177c5e8d5c3e9705660d0d3ca1647aea365fd00a0bd3e8a"
   end
 
   def install
