@@ -7,13 +7,12 @@ class Augustus < Formula
   head "https://github.com/Gaius-Augustus/Augustus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "48d4e709de88d93f6c00b751cd2b70238eeed73c748267973aea6ef0a50a76c6"
-    sha256                               arm64_big_sur:  "cf98b0583590e5c5c83bcae8357d9a510c18240b33b12c9f95ca4ec0318d61f4"
-    sha256 cellar: :any,                 monterey:       "d5346659a287d591d36110f987ae3becb64ab8d63cb940aaea46d68439208be4"
-    sha256 cellar: :any,                 big_sur:        "0ceda121d6ead1c2b3812f7e1a9155366751da603fd1ab6c0ccbcada6eebb668"
-    sha256 cellar: :any,                 catalina:       "526462eb67bf51a1b95fdecf402d67df75c876333adfabe5aedffe89d76946fc"
-    sha256 cellar: :any,                 mojave:         "1eab0e15ac3027334f0ccda5e4edce2d99cafeffcea50f486842aada76bf6212"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8271784fc43729dd82e83e031ef63bb278771c6ba271ff7c7bc17908abc56646"
+    sha256 cellar: :any,                 arm64_monterey: "cce33c0cbdb742182f6dade28c652671699e70742b145f725adcc76bab29f0b3"
+    sha256 cellar: :any,                 arm64_big_sur:  "323e151f495fd25eac2b4f54a28cc533250f60d253061487c659e0c3131ec5c9"
+    sha256 cellar: :any,                 monterey:       "73003ea7a3d9cca428f1de8e2ea031b6983a8b5296859381f2a452628b804ecf"
+    sha256 cellar: :any,                 big_sur:        "aeb4db4999b98dd3496c80f62f9ace11ff7d4e6caecc92e4181eb6be332c7d50"
+    sha256 cellar: :any,                 catalina:       "7b6138699ba427e2cf7333b7fd519dc93f47c91c56af786e4139eee263f14374"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8ee7a7e85f4988f1b8d2e3fa6773a74b036dea30adb7148fb778e9128006c4e"
   end
 
   depends_on "bamtools"
