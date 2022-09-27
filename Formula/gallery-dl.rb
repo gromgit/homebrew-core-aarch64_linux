@@ -3,30 +3,26 @@ class GalleryDl < Formula
 
   desc "Command-line downloader for image-hosting site galleries and collections"
   homepage "https://github.com/mikf/gallery-dl"
-  url "https://files.pythonhosted.org/packages/f1/0e/7c5d060b0fc6a33739e7a36603c7d8dd0186cf5699e61e05706b4ecca104/gallery_dl-1.21.2.tar.gz"
-  sha256 "c67f98f163881face41313b764dc9add907087dd284a34a4d34c5f3b4736dd3a"
+  url "https://files.pythonhosted.org/packages/89/36/f286ec47795fed7285cede2f914e81f222bbcb522556e8b7ccb6f9f09c0a/gallery_dl-1.23.0.tar.gz"
+  sha256 "7062edcf950f4c8a7459f0a1296767ac3e02fa61aff9df3778746bce90fb308b"
   license "GPL-2.0-only"
   head "https://github.com/mikf/gallery-dl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c8f17955ee2ffa3e69582fe979b8f494bf082e8f07521507a26a4eed229c79d9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8f17955ee2ffa3e69582fe979b8f494bf082e8f07521507a26a4eed229c79d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "7a858074c718cf0caa2f1e993f75daeb0d23f5f8ce663ad5f7f1d5face0a0b05"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7a858074c718cf0caa2f1e993f75daeb0d23f5f8ce663ad5f7f1d5face0a0b05"
-    sha256 cellar: :any_skip_relocation, catalina:       "7a858074c718cf0caa2f1e993f75daeb0d23f5f8ce663ad5f7f1d5face0a0b05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69fd89a5ab84f50f587dd7bba4703f0d7d613acd42aaa7839fe733196bc3a1ba"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gallery-dl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b16dded5a344e4d05ac1d59f426ec1ac5a7bff9380481c49669731bc6490296"
   end
 
   depends_on "python@3.10"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
-    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
+    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
+    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
-    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
+    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
+    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
   end
 
   resource "idna" do
@@ -35,13 +31,13 @@ class GalleryDl < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
-    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
+    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
+    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
-    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
+    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
+    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
   end
 
   def install
