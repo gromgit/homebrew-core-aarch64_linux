@@ -6,6 +6,15 @@ class Highway < Formula
   license "Apache-2.0"
   head "https://github.com/google/highway.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "3cdf11ce370958e7ab8a632f72f2314f158ad11589530039761dacd0cfb38c73"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b75f29e2d9696b39705face1c606f373f71695492b5027454e32196206198d0"
+    sha256 cellar: :any,                 monterey:       "5e8cf8ae1bd0a2d1f87a58c70522fd6f5ce0a411acbe4be141a74fca21fdce25"
+    sha256 cellar: :any,                 big_sur:        "bf41f04b4711c00fe930bf6ed4ce3f269d70ae9b732609aa3dc7bf246abe32cf"
+    sha256 cellar: :any,                 catalina:       "5400bcc779804a0e2a4e8a5d4653bcd68a478f5d1f0129ed72c0bc5e7d31e991"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17c99eda57fca375f1e94eda95d3892d2a8a47cf2c0c47cb8526cc805f650e9d"
+  end
+
   depends_on "cmake" => :build
 
   # These used to be bundled with `jpeg-xl`.
