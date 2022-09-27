@@ -8,7 +8,7 @@ class F2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/f2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc3c3e74d55704fbc197c6ed7489a66e2a314242fadf4c6715c7ea5229929dd6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aee952e9a2709e3e35e4860bbccf8e5973b6fdb8c416bd77156ab249449374b7"
   end
 
   depends_on "go" => :build
