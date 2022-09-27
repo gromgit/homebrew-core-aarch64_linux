@@ -1,11 +1,9 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
-  # TODO: Remove `ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib` at rebuild.
-  url "https://github.com/rui314/mold/archive/v1.4.2.tar.gz"
-  sha256 "47e6c48d20f49e5b47dfb8197dd9ffcb11a8833d614f7a03bd29741c658a69cd"
+  url "https://github.com/rui314/mold/archive/v1.5.0.tar.gz"
+  sha256 "55f67a0531cd357fa8c8aa16f9664954188f49537126e9bd35240846de3c3434"
   license "AGPL-3.0-only"
-  revision 1
   head "https://github.com/rui314/mold.git", branch: "main"
 
   bottle do
@@ -19,10 +17,11 @@ class Mold < Formula
 
   depends_on "cmake" => :build
   depends_on "tbb"
+  depends_on "zstd"
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1200
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1200
   end
 
   on_linux do
@@ -35,17 +34,16 @@ class Mold < Formula
     cause "Requires C++20"
   end
 
-  # Requires C++20
-  fails_with gcc: "5"
-  fails_with gcc: "6"
-  fails_with gcc: "7"
+  fails_with :gcc do
+    version "7"
+    cause "Requires C++20"
+  end
 
   def install
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
 
     # Ensure we're using Homebrew-provided versions of these dependencies.
-    %w[mimalloc tbb zlib].map { |dir| (buildpath/"third-party"/dir).rmtree }
+    %w[mimalloc tbb zlib zstd].map { |dir| (buildpath/"third-party"/dir).rmtree }
     args = %w[
       -DMOLD_LTO=ON
       -DMOLD_USE_MIMALLOC=ON
@@ -68,12 +66,6 @@ class Mold < Formula
   end
 
   test do
-    # Avoid use of the `llvm_clang` shim.
-    if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
-      ENV.clang
-      ENV.prepend_path "PATH", Formula["llvm"].opt_bin
-    end
-
     (testpath/"test.c").write <<~EOS
       int main(void) { return 0; }
     EOS
@@ -91,6 +83,12 @@ class Mold < Formula
 
     if OS.mac?
       cp_r pkgshare/"test", testpath
+      # Delete failing test. Reported upstream at
+      # https://github.com/rui314/mold/issues/735
+      if (MacOS.version == :monterey) && Hardware::CPU.arm?
+        untested = %w[libunwind objc-selector]
+        testpath.glob("test/macho/{#{untested.join(",")}}.sh").map(&:unlink)
+      end
       testpath.glob("test/macho/*.sh").each { |t| system t }
     else
       system bin/"mold", "-run", ENV.cc, "test.c", "-o", "test"
