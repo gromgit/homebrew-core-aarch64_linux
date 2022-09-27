@@ -1,10 +1,9 @@
 class Suricata < Formula
   desc "Network IDS, IPS, and security monitoring engine"
   homepage "https://suricata.io"
-  url "https://www.openinfosecfoundation.org/download/suricata-6.0.6.tar.gz"
-  sha256 "00173634fa76aee636e38a90b1c02616c903e42173107d47b4114960b5fbe839"
+  url "https://www.openinfosecfoundation.org/download/suricata-6.0.7.tar.gz"
+  sha256 "d172289358e22d57e85b3f28f4a49f9f7844d99e1b4b4680510fe81fb9b16446"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url "https://suricata.io/download/"
@@ -54,12 +53,6 @@ class Suricata < Formula
 
   def install
     python = "python3.10"
-
-    # Work around Homebrew's "prefix scheme" patch which causes non-pip installs
-    # to incorrectly try to write into HOMEBREW_PREFIX/lib since Python 3.10.
-    inreplace %w[python/Makefile.in suricata-update/Makefile.in],
-              /@HAVE_PYTHON_TRUE@.*\sinstall --prefix \$\(DESTDIR\)\$\(prefix\)$/,
-              "\\0 --install-scripts=#{bin} --install-lib=#{prefix/Language::Python.site_packages(python)}"
 
     ENV.prepend_create_path "PYTHONPATH", libexec/"vendor"/Language::Python.site_packages(python)
     resources.each do |r|
