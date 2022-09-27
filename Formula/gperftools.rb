@@ -2,18 +2,10 @@ class Gperftools < Formula
   desc "Multi-threaded malloc() and performance analysis tools"
   homepage "https://github.com/gperftools/gperftools"
   license "BSD-3-Clause"
-  revision 1
 
   stable do
-    url "https://github.com/gperftools/gperftools/releases/download/gperftools-2.9.1/gperftools-2.9.1.tar.gz"
-    sha256 "ea566e528605befb830671e359118c2da718f721c27225cbbc93858c7520fee3"
-
-    # Fix segfaults on Monterey.
-    # https://github.com/gperftools/gperftools/pull/1315
-    patch do
-      url "https://github.com/gperftools/gperftools/commit/1000c64559ad5f624bec4d08657209d755c0a02a.patch?full_index=1"
-      sha256 "93f58cb6fe6d0e22a7aadc1ad2ee60a45743e862e398387213024acad83de319"
-    end
+    url "https://github.com/gperftools/gperftools/releases/download/gperftools-2.10/gperftools-2.10.tar.gz"
+    sha256 "83e3bfdd28b8bcf53222c3798d4d395d52dadbbae59e8730c4a6d31a9c3732d8"
   end
 
   livecheck do
@@ -24,7 +16,7 @@ class Gperftools < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gperftools"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "706523180abe273ae28c638136dee67db2f43d1c82a7d7d197cfea3b53037dee"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fd963e3b9757d12e37894e0e25b86ce1937840c1e54ed9a693fab2e332cd7fdb"
   end
 
   head do
