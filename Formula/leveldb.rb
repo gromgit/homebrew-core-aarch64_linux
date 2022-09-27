@@ -6,13 +6,8 @@ class Leveldb < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "41f1ceea1e85dafe0552acf94a4903ef45fd54fc63e38c277b7d101c836e5801"
-    sha256 cellar: :any,                 arm64_big_sur:  "377ac4b779d9ac24295b99c5f859dc8f78f473e62a90849f09eeec7a72d872d2"
-    sha256 cellar: :any,                 monterey:       "3b4ce296ae8732cdec0b9fdc3623a5c12f8739b61c39cdb96be423e8004834be"
-    sha256 cellar: :any,                 big_sur:        "bb5f8bc871e315e4ae36f011052f2b92e35040cc03ef8d448093e7be1bdfe6ac"
-    sha256 cellar: :any,                 catalina:       "299f9004aa344b2ac164fdeee5a077c3e45335f3527cb8f2e67b46acf88b185a"
-    sha256 cellar: :any,                 mojave:         "b4d54e51eef8d5d538830f555561fa4cc5f1b275b45588eae364d79de6b1d716"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c056f3b6a5e2b25d90b57255138ce65796615d0e66d7156821b13ebbe8f836cd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/leveldb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "95bd6bcaedb6dd16941af973e2904809a9706b0907759a6cd05f26b6af8c98fa"
   end
 
   depends_on "cmake" => :build
