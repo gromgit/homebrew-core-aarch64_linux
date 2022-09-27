@@ -6,11 +6,13 @@ class Libtensorflow < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "4ad5bdc8ac3fbf0702d0d8d065efa96b03fe5851f964600b5aa0f791ad9204fb"
-    sha256 cellar: :any, arm64_big_sur:  "5d50ef50dfe302cabf280a85ed89c86d40bdba97f561b228706e769d9cef1e0d"
-    sha256 cellar: :any, monterey:       "78740a9f2c6e557943fbd56cb781bb3c88bdbbe0f63e842cb1398f886e849d53"
-    sha256 cellar: :any, big_sur:        "de2d7d3c205862ceb91a94fc35cad67541a5a24b0933a1783203045bc14be549"
-    sha256 cellar: :any, catalina:       "94076eb515a7240b26d36add1e214643a4d7cc6b0bea3f4d66685af72cbe1469"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "09bf63a4fcdf438a0c5d0ee89b66db15fe959ebc260b37a48f9bdb36c6cb8fa3"
+    sha256 cellar: :any,                 arm64_big_sur:  "0b71f38331612569264154e8d27bf087c12d0c29aedc770b44addca2974ba00e"
+    sha256 cellar: :any,                 monterey:       "b4a70f6962773b161f4e7ce0fe6898f25cf64a1654909974a4136a71ae091342"
+    sha256 cellar: :any,                 big_sur:        "89cca8ee1e8f5838dbcf75482345b9d3e19f2f406a22a29836f4e0669aa580cf"
+    sha256 cellar: :any,                 catalina:       "d1f7461958f9210b974d736837f3de2b8cc35a640590557e49a8a6d154f1d4ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61a0964d730c01ba2608c40f95a04c9159d76e08821ebc4c24ec60d80c8feba0"
   end
 
   depends_on "bazelisk" => :build
