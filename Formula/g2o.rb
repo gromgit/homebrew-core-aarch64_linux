@@ -12,13 +12,8 @@ class G2o < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "c492d099917d4f2a22b8b11095580fbd14de561942d048727e4069316832dfbb"
-    sha256 cellar: :any,                 arm64_big_sur:  "161de612759ffe32652d1eac931b72f8f3c7d1a9807acd9e7215459430df3eec"
-    sha256 cellar: :any,                 monterey:       "e8d94c808de15df0286bf9337a17cf5c21935b6a9da55ad993560225c3d36623"
-    sha256 cellar: :any,                 big_sur:        "b99527b4e0670ced76af5ad443df1b83d3c3a16a84b9a834be849336e76d99fc"
-    sha256 cellar: :any,                 catalina:       "8d8d1b729449d5f6e5afd9ef70aa2531e75e60f2a3208dcfdf00ca3097e146c4"
-    sha256 cellar: :any,                 mojave:         "92c77224cffd95acface4d59aeb65a8e4330059c7c183ca4cd8df7fb90be9ffd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "645f512ca275ccc7749cb6be5ae149c21c37547ec962961d3fbb835fccb784d0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/g2o"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e2ae3f96d310453d6f832ae8338d6301fc62a089afc430b9241683ba01a30567"
   end
 
   depends_on "cmake" => :build
