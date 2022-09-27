@@ -11,12 +11,8 @@ class GerbilScheme < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "95f3dddf6cf1fc48589aa31fea8b1932337a6d16f3b920fff372f8741c2be89e"
-    sha256 arm64_big_sur:  "d5156015ff7c5806db8b89dc05886fcffb19f6ab2b61d9173895ac185bde13a3"
-    sha256 monterey:       "83792d7b1a1339a73e36493f4201ab2b1657d2d1f061fb1f0cf50587722448da"
-    sha256 big_sur:        "e49f094f25ebc88a787be33c109308decee3aebaf58298f43d429a31cbaa53d5"
-    sha256 catalina:       "c136d9ffbf63bb1ac05c9b5c4936d61d97e855fc90964163ea645e32e9adeffb"
-    sha256 x86_64_linux:   "6b0d5524324abcd1838483696a9e04e21cce47d7a0910e2ab20a48940454b09e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gerbil-scheme"
+    sha256 aarch64_linux: "ab0b3e714247bdf8605395581dc967ba50e6f85719ee065454798292e15b566d"
   end
 
   depends_on "gambit-scheme"
