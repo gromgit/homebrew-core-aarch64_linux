@@ -8,12 +8,12 @@ class SphinxDoc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3ed10a4e0068e8fc71084a492b6ba1e7dce7a868bf06ec2816d4920949a225de"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "756e3327d781f6c1b7bff1b9cb510e798049f12034e4e6f24813b0388ef9946d"
-    sha256 cellar: :any_skip_relocation, monterey:       "7555307759f1ae15a754da114cfda729517bfae8427e7f3902c87cd2cb80539d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b53ddfc5b260f923f00421aa59967a71a6c04dcbb8ad13b04c6259ba7b47674"
-    sha256 cellar: :any_skip_relocation, catalina:       "723c030c9b9ac005ccb28fc8475a61eac896fcbb5ab5816047e20f7d7daec85f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8afec14918f1184cf71c4a557e592b8009b90a2dd08995f27f8593f67d7677a6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d7fb64a1f9bcd32abde2a94eada5b01824b6d5add2d2e8c7162f1fc1f9db522"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a0ca2538f03a4a108d7e07c068f9d3a7354c5072f34b2cabf9e9cc2e974d35c2"
+    sha256 cellar: :any_skip_relocation, monterey:       "a9ff645ae1517e8bbe538ae5c45aaed7b550b42eabda79b157f28b119d944394"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d31a8f5eb5de6d1ffc7559d4b607b2d2e5474f9da0e79916f08f7e525bfbc3e1"
+    sha256 cellar: :any_skip_relocation, catalina:       "f1066e332abb5917858f89f71ecd8596a32ea70361e5c917c4a0999c4eaa7f14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d40217a9d926c7f079447b48c37810ffc467165351e48aafea501de967fd005d"
   end
 
   keg_only <<~EOS
