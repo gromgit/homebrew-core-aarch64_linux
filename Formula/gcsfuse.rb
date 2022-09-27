@@ -7,7 +7,7 @@ class Gcsfuse < Formula
   head "https://github.com/GoogleCloudPlatform/gcsfuse.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a27112808fc54795d62d27a921977a88428587c1c1415050d7934634ac0cf638"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c40d4ec48be72166f8091b734b3475bedb2a022826242ac2732776e347ad5247"
   end
 
   depends_on "go" => :build
