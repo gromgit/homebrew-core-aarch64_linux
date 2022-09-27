@@ -8,13 +8,12 @@ class Bamtools < Formula
   head "https://github.com/pezmaster31/bamtools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "da59f26d70c68c71a6c6a600c21be2804dc703e23d31eea20ab73980037b0e09"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cad31e2a176762fdaa4aa0b311509b30a339395b6da469f005c667b75ce99296"
-    sha256 cellar: :any_skip_relocation, monterey:       "019cb251644784e10943797901abf914a8940f12dee84df5811759a8cb46150f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5c213c66de8e7ed7a13b07b41b6ed3b71509a28121cf942c3b76cd735efa6c3d"
-    sha256 cellar: :any_skip_relocation, catalina:       "e978a4b284e0905486557a2a3ccc224303900d38970e4c0a9b6ee6886c9fd743"
-    sha256 cellar: :any_skip_relocation, mojave:         "4459a3ddde44539d67dec67bd40f3f7f38f98fbaa883db7b786aad410bd9cff4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "373dc0881a1cab120df3c9ed35662373ab46066f413483242dcbc782f77e45fc"
+    sha256 cellar: :any,                 arm64_monterey: "fd3594b78acee23bf5d260ecb30dbcc32a6c51f2c57b02fcd46f6bf6e0215741"
+    sha256 cellar: :any,                 arm64_big_sur:  "a09703edb44ac45c00f1ca338736af291def439419edf571500dfec776d7c71f"
+    sha256 cellar: :any,                 monterey:       "d81c6addc556c9d421e8a6974c3ae564c0de8291d64d0d9476dafe2cd9c8e5f0"
+    sha256 cellar: :any,                 big_sur:        "ae4c20d973c8ed46a430c668bcbc2b6ac4c32a9241bd989bf8c3afe3cc0f57da"
+    sha256 cellar: :any,                 catalina:       "4bd0d24b3301ba788bc79cdf12f07dbf499347dce3beb9250e7ec6e12b6670a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5909b02859753489fe8e24652053afdca942f6d88b13f110a0d04650478c81a9"
   end
 
   depends_on "cmake" => :build
