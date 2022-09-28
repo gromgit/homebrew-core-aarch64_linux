@@ -9,12 +9,8 @@ class GitRevise < Formula
   head "https://github.com/mystor/git-revise.git", revision: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6eee8e1415f615aeef5726cb7c82834357f3d2868f21e30ed128d6c51a889e8b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6eee8e1415f615aeef5726cb7c82834357f3d2868f21e30ed128d6c51a889e8b"
-    sha256 cellar: :any_skip_relocation, monterey:       "aac1ccf21a7f370ad64d30bc92cefab901913bc81b7561ce3b4232036d28da0c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aac1ccf21a7f370ad64d30bc92cefab901913bc81b7561ce3b4232036d28da0c"
-    sha256 cellar: :any_skip_relocation, catalina:       "aac1ccf21a7f370ad64d30bc92cefab901913bc81b7561ce3b4232036d28da0c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e55a7ac0fd6a079cb4f5f79c01bc5448f1b415906d6df7f5d3a9851dfa208e58"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-revise"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "61ccc3aa347e9a3d4772e18e526c6667e1945af640d7ba69b623aca77c88fe3e"
   end
 
   depends_on "python@3.10"
