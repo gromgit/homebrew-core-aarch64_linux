@@ -1,18 +1,17 @@
 class Gotify < Formula
   desc "Command-line interface for pushing messages to gotify/server"
   homepage "https://github.com/gotify/cli"
-  url "https://github.com/gotify/cli/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "9013f4afdcc717932e71ab217e09daf4c48e153b23454f5e732ad0f74a8c8979"
+  url "https://github.com/gotify/cli/archive/refs/tags/v2.2.2.tar.gz"
+  sha256 "d44d0058a87684db8c61a9952a84327f7bab102d6a4a16547f7be18b9a9c052c"
   license "MIT"
   head "https://github.com/gotify/cli.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gotify"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e40af180356cab41dcb4de2c9ab693daefa1d6a3d00f8d6dcac72b098d1223a4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "032907f1a9f5768a675603f7626d1758171bb88e3b9dbccb86ed6d2183b92427"
   end
 
-  # Bump to 1.18 on the next release, if possible.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build", *std_go_args(ldflags: "-X main.Version=#{version}
