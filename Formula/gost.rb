@@ -1,18 +1,17 @@
 class Gost < Formula
   desc "GO Simple Tunnel - a simple tunnel written in golang"
   homepage "https://github.com/ginuerzh/gost"
-  url "https://github.com/ginuerzh/gost/archive/v2.11.2.tar.gz"
-  sha256 "143174a9ba5b0b6251d1d9a52267220f97bec1319676618746c1a5d7a7a86d96"
+  url "https://github.com/ginuerzh/gost/archive/v2.11.4.tar.gz"
+  sha256 "aa3211282fce695584795fac20da77a2ac68d3e08602118afb0747bd64c1eac4"
   license "MIT"
   head "https://github.com/ginuerzh/gost.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gost"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0fc2b960c81ea76b993d4ef84ab24bde190c0709286990768f8140fd2015a8e0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3dfa0e9a1524fb40524fbcd3a0c25b97ee1293bd1df680c23fa9c848dfad7a59"
   end
 
-  # Bump to 1.18 on the next release, if possible.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build", *std_go_args, "./cmd/gost"
