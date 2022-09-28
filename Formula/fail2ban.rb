@@ -1,10 +1,9 @@
 class Fail2ban < Formula
   desc "Scan log files and ban IPs showing malicious signs"
   homepage "https://www.fail2ban.org/"
-  url "https://github.com/fail2ban/fail2ban/archive/0.11.2.tar.gz"
-  sha256 "383108e5f8644cefb288537950923b7520f642e7e114efb843f6e7ea9268b1e0"
+  url "https://github.com/fail2ban/fail2ban/archive/1.0.1.tar.gz"
+  sha256 "62b54679ebae81ac57f32c5e27aba9f2494ec5bafd45a0fd68e7a27fd448e5ac"
   license "GPL-2.0-or-later"
-  revision 2
 
   livecheck do
     url :stable
@@ -24,92 +23,52 @@ class Fail2ban < Formula
   depends_on "sphinx-doc" => :build
   depends_on "python@3.10"
 
-  # fixes https://github.com/fail2ban/fail2ban/issues/3098 remove in the next release
-  patch do
-    url "https://github.com/fail2ban/fail2ban/commit/5ac303df8a171f748330d4c645ccbf1c2c7f3497.patch?full_index=1"
-    sha256 "4f22a39ae708b0c0fb59d29054e86b7c3f478a79925508833fd21f000b86aadb"
-  end
-
-  # fixes https://github.com/fail2ban/fail2ban/issues/2931 remove in the next release
-  patch do
-    url "https://github.com/fail2ban/fail2ban/commit/2b6bb2c1bed8f7009631e8f8c306fa3160324a49.patch?full_index=1"
-    sha256 "ff0aa188dbcfedaff6f882dba00963f4faf3fa774da9cfeb7f96030050e9d8e3"
-  end
-  patch do
-    url "https://github.com/fail2ban/fail2ban/commit/42dee38ad2ac5c3f23bdf297d824022923270dd9.patch?full_index=1"
-    sha256 "b8755368fe3de255aca948d850afa9dbdc66676029c98ebf1869def14b4638f0"
-  end
-  patch do
-    url "https://github.com/fail2ban/fail2ban/commit/9f1d1f4fbd0804695a976beb191f2c49a2739834.patch?full_index=1"
-    sha256 "81a71e608a2ce8bfe484651fa3ab744709dfab7d769699f0d937d15519082350"
-  end
-
   def install
     python3 = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
     ENV["PYTHON"] = which(python3)
 
     rm "setup.cfg"
-    Dir["config/paths-*.conf"].each do |r|
-      next if /paths-common\.conf|paths-osx\.conf/.match?(File.basename(r))
-
-      rm r
-    end
+    Pathname.glob("config/paths-*.conf").reject do |pn|
+      pn.fnmatch?("config/paths-common.conf") || pn.fnmatch?("config/paths-osx.conf")
+    end.map(&:unlink)
 
     # Replace paths in config
     inreplace "config/jail.conf", "before = paths-debian.conf", "before = paths-osx.conf"
 
     # Replace hardcoded paths
-    inreplace "setup.py" do |s|
-      s.gsub! %r{/etc}, etc
-      s.gsub! %r{/var}, var
-    end
-
-    inreplace Dir["config/{action,filter}.d/**/*"].select { |ff| File.file?(ff) }.each do |s|
-      s.gsub! %r{/etc}, etc, false
-      s.gsub! %r{/var}, var, false
-    end
-
-    inreplace ["config/fail2ban.conf", "config/paths-common.conf", "doc/run-rootless.txt"].each do |s|
-      s.gsub! %r{/etc}, etc
-      s.gsub! %r{/var}, var
-    end
-
-    inreplace Dir["fail2ban/client/*"].each do |s|
-      s.gsub! %r{/etc}, etc, false
-      s.gsub! %r{/var}, var, false
-    end
+    inreplace_etc_var("setup.py")
+    inreplace_etc_var(Pathname.glob("config/{action,filter}.d/**/*").select(&:file?), audit_result: false)
+    inreplace_etc_var(["config/fail2ban.conf", "config/paths-common.conf", "doc/run-rootless.txt"])
+    inreplace_etc_var(Pathname.glob("fail2ban/client/*"), audit_result: false)
 
     inreplace "fail2ban/server/asyncserver.py", "/var/run/fail2ban/fail2ban.sock",
               var/"run/fail2ban/fail2ban.sock"
 
-    inreplace Dir["fail2ban/tests/**/*"].select { |ff| File.file?(ff) }.each do |s|
-      s.gsub! %r{/etc}, etc, false
-      s.gsub! %r{/var}, var, false
-    end
-
-    inreplace Dir["man/*"].each do |s|
-      s.gsub! %r{/etc}, etc, false
-      s.gsub! %r{/var}, var, false
-    end
+    inreplace_etc_var(Pathname.glob("fail2ban/tests/**/*").select(&:file?), audit_result: false)
+    inreplace_etc_var(Pathname.glob("man/*"), audit_result: false)
 
     # Fix doc compilation
-    inreplace "setup.py", "/usr/share/doc/fail2ban", (share/"doc")
+    inreplace "setup.py", "/usr/share/doc/fail2ban", doc
     inreplace "setup.py", "if os.path.exists('#{var}/run')", "if True"
     inreplace "setup.py", "platform_system in ('linux',", "platform_system in ('linux', 'darwin',"
 
     system "./fail2ban-2to3"
-    system python3, *Language::Python.setup_install_args(libexec, python3), "--without-tests"
+    system python3, *Language::Python.setup_install_args(prefix, python3), "--without-tests"
 
     cd "doc" do
       system "make", "dirhtml", "SPHINXBUILD=sphinx-build"
-      (share/"doc").install "build/dirhtml"
+      doc.install "build/dirhtml"
     end
 
-    bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
-    man1.install Dir["man/*.1"]
+    man1.install Pathname.glob("man/*.1")
     man5.install "man/jail.conf.5"
+  end
+
+  def inreplace_etc_var(targets, audit_result: true)
+    inreplace targets do |s|
+      s.gsub! %r{/etc}, etc, audit_result
+      s.gsub! %r{/var}, var, audit_result
+    end
   end
 
   def post_install
