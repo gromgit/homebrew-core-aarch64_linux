@@ -7,13 +7,12 @@ class Ne < Formula
   head "https://github.com/vigna/ne.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "7dd2a938696a36f8c02e371d786b223d67f04e83c998ef932476e48971781206"
-    sha256 arm64_big_sur:  "b55c5eec667c1297570a6ef49e989061983a068c4daad9c8e27a85898556b58d"
-    sha256 monterey:       "23b806ddde22eb2592ddb308f4ea3b5351b9f05a91f7acdb4ac597a6dc11cf92"
-    sha256 big_sur:        "993bb3e19da613eec505a0ad68fe83bee71ff2623d7110b9e09005af7c819795"
-    sha256 catalina:       "ecfd40e9e55ae2fe75fe6c8118742de8268ed794784fdff5807c26073832d2c5"
-    sha256 mojave:         "4e3b9c4ad9cf331cd239cfe8b192e9f3c6cd9f6609d3726a0fad32ad1c4c9715"
-    sha256 x86_64_linux:   "8667e95df91bb5c2f696f404c5d6ded28c279ef41596ffba4ddd3705338ba939"
+    sha256 arm64_monterey: "3f7e0ae2691ee9f8c1560c44ad34b3180e137dcb318e4ef4d05137d6c531ab33"
+    sha256 arm64_big_sur:  "fae2a8975de41ecbfb9ec22845831377360ed407edfff9f15e09c6c57cda2cf1"
+    sha256 monterey:       "b0651ff75f326f1710e2235564dc5d1089248b7e0d7cf2b5377ddf6d1b343e70"
+    sha256 big_sur:        "48cc19c9a971d63ec35530e71930277f033e4f931bf613153ff1f9a095654158"
+    sha256 catalina:       "249c14869150874534d6a865be9d147fa87b0987d69192ae73e0b4a9644db163"
+    sha256 x86_64_linux:   "60b786b997a8f01b66c83eeb13c76c5f6c0d2005122539f7f271b58c205a569f"
   end
 
   depends_on "texinfo" => :build
