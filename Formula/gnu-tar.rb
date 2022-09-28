@@ -8,12 +8,8 @@ class GnuTar < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68b05e32ab65f9d196f7c27921ee9b517078023a095484180cc8712878d53342"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3abefa0307a46f6ff26f3801e329e1c9c44cf51879db396533278e1953741b6f"
-    sha256 cellar: :any_skip_relocation, monterey:       "dc04edcba6fb8c7df23e7a97eedb84a2ea9026b12e9c2a8efe78a9c7b41de1ec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a40e1e3d3f573e0c124286f0548e89929d51282369488028f962baa28c8131ab"
-    sha256 cellar: :any_skip_relocation, catalina:       "6d7e3c0ad1386d482b70ff70de07ff6e10c3eb57db7f74ad8b9aedcc6167df51"
-    sha256                               x86_64_linux:   "d0488c8e6bc4d603f0820c8d84fb2cacaee44d59917b9be8cc896d0b48ee7a1e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-tar"
+    sha256 aarch64_linux: "08acfabc0efc8c17aa6447ff05d102c32565452527609860503142510bddf46b"
   end
 
   head do
