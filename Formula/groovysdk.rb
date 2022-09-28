@@ -1,8 +1,8 @@
 class Groovysdk < Formula
   desc "SDK for Groovy: a Java-based scripting language"
   homepage "https://www.groovy-lang.org/"
-  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-sdk-4.0.2.zip"
-  sha256 "7bf19b75fbcc9c02c9823eacdfe21f54145ae467a6466be28a525570c78a2db8"
+  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-sdk-4.0.4.zip"
+  sha256 "5f15ba97715c56cc45a5aee82762e21bd7f3d8e88feeb258651974a356aa6cf9"
   license "Apache-2.0"
 
   livecheck do
@@ -11,12 +11,8 @@ class Groovysdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e330c6a65212b7dcb331e8486067bf2eca131be269d54958364025cb507030f8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e330c6a65212b7dcb331e8486067bf2eca131be269d54958364025cb507030f8"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3e1901152f6d6e56f049131a28ddb2883974236ac371dae59884b55712d5094"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f3e1901152f6d6e56f049131a28ddb2883974236ac371dae59884b55712d5094"
-    sha256 cellar: :any_skip_relocation, catalina:       "f3e1901152f6d6e56f049131a28ddb2883974236ac371dae59884b55712d5094"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e330c6a65212b7dcb331e8486067bf2eca131be269d54958364025cb507030f8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/groovysdk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "828b33341952bc3961e8aa4f7cecf7d752a4534d03f9c66c364c10a8605007c5"
   end
 
   depends_on "openjdk"
