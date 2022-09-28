@@ -13,12 +13,8 @@ class Pkcs11Helper < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "02155c6d56975a3cb96cdd5b2e57e993b5841300af1636fd0d8ae5b8e9fae33d"
-    sha256 cellar: :any,                 arm64_big_sur:  "2fe182fd00dd0baca77ff94f26a3648a2afbfb3c2ffe7f57b73ece952cacecf0"
-    sha256 cellar: :any,                 monterey:       "1ae6236ec0c857d5dc1cc2f80c0a50b4d69e8672cf895ce4d53f5c511ea0a511"
-    sha256 cellar: :any,                 big_sur:        "caa4474b77fbb8d95e11c77a7d2f4da6ab3b8dec4fe62128e5a72f8572e0a8a8"
-    sha256 cellar: :any,                 catalina:       "06f17f7492feabec8b42fa5d2da9f16f4b83526b6f5fa36c251c20a4132db6b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b5bcb11b8e1317ef37b1b3e6ba37675ef05fbb7c6f6c314694a9fef3d9c0299"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pkcs11-helper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a45f5464888fd0ad6bb7b8ea39e3e0c5c1954e1b5debfe6901da414624f8d7f7"
   end
 
   depends_on "autoconf" => :build
