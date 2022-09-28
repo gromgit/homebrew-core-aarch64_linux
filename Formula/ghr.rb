@@ -1,13 +1,13 @@
 class Ghr < Formula
   desc "Upload multiple artifacts to GitHub Release in parallel"
   homepage "https://tcnksm.github.io/ghr"
-  url "https://github.com/tcnksm/ghr/archive/v0.14.0.tar.gz"
-  sha256 "e48f6080f81960ec12dad0d104cb0afe876134bab862a229c9aed91f9f618c1e"
+  url "https://github.com/tcnksm/ghr/archive/v0.15.0.tar.gz"
+  sha256 "89180208e62bc56e1bc401ca5171291c75c2589d47732c34d8647b3e5e0522e5"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ghr"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "db6adccff973b485d0d184108c599222ca3837abf03c4ccce7a12692190dc040"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "de90b0158581b663bf8ddad17ff8ccfd8e16dfba4a36feaef06e2c444448f9e9"
   end
 
   depends_on "go" => :build
