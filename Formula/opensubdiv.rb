@@ -11,13 +11,12 @@ class Opensubdiv < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4ac8f662d7df872990f3991cf6207355daf6e2862e2a1e9865e8b983371277af"
-    sha256                               arm64_big_sur:  "76d36c038038fd7008964ec8d06f36b2970e56deda06e35096ab59cf02e056d9"
-    sha256 cellar: :any,                 monterey:       "184d1b6e702029e2009175da965fd1403e01a8182517fac423ca303c02025396"
-    sha256                               big_sur:        "2e1d8e64192097735c133a6b8282c8d204e3955b9359a85b51b129c7c8d1efe6"
-    sha256                               catalina:       "3c25d8912c5751dda7134cd15b6841acead81b1d86b017acdc4e89fab9527a9b"
-    sha256                               mojave:         "f335e92fcfd6f03e1c7348dc28b221fd38dfcb0d1bd27c8c5270c711b3019561"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1526f27e8ccf65a26bb4e69369abeb929ee7457f3db02237aabf1e80c1593254"
+    sha256 cellar: :any,                 arm64_monterey: "55e4971fc63f46550a0e6ce5e2c28a7ea690500b3794a91b27b40a9c2b1d722c"
+    sha256 cellar: :any,                 arm64_big_sur:  "5611125d1094c5fd95ddffadb9969ef9429827c06707d6538a25e664cea033a7"
+    sha256 cellar: :any,                 monterey:       "eb6089b7f26f5f1ebf0f5563d000ac557ed6d971229840ec97cd91ca258cfa3d"
+    sha256 cellar: :any,                 big_sur:        "e6bae70b4bd8560798e75db3145625a1fc6d04d1d330ce69eb32a43fa3360ee7"
+    sha256 cellar: :any,                 catalina:       "299153bc3c8d9836d5da04116de0fc37ec9ed8d18b7eb34b4a411d42d4f38056"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "034c5adee4fdccbc45db5c84b74b72c2447dd84a85e713958eba8384c27ded62"
   end
 
   depends_on "cmake" => :build
