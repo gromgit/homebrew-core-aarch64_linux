@@ -16,7 +16,7 @@ class Prestodb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3ed8f8d73b6c384be5312ce9f6cede2ba947b3ef49275ecd44beec3526f8c6be"
+    sha256 cellar: :any_skip_relocation, all: "aa1cecfa8fbd0f4b53a7f6b91011b4db4cf7f6f0456db75d99c9791b8d061dff"
   end
 
   # https://github.com/prestodb/presto/issues/17146
