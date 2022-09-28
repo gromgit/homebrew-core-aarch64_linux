@@ -7,15 +7,8 @@ class GnuTypist < Formula
   revision 2
 
   bottle do
-    sha256 arm64_monterey: "11053d3574c7c569cd3bdddd8e48e0609af0abdc0638346f810168570411f16d"
-    sha256 arm64_big_sur:  "b241409e921daccc7d82bfd1641ba1b6fd43966d19458fc580d4245641306fe2"
-    sha256 monterey:       "100c51f8f078f96c5e4307ed3f7d2aced6ae5975ae91df6aa208932211113d5e"
-    sha256 big_sur:        "74506e983cf7d74abcd8cfa4007d8429cdae7283a1b3cd3a3f0272d4380df024"
-    sha256 catalina:       "2a824f3fad3871cbf43f15009c23563aa03872597f22e823f9e2551d35fe1e26"
-    sha256 mojave:         "9f0fcdd42b9a041408b132882778db2eb479749a7169b82f2caf1f4fd486b599"
-    sha256 high_sierra:    "72503afd4efafe7a8485ea22332819937008263976a6f5f5b42818565d59edbf"
-    sha256 sierra:         "d32708d6e8a640101ac618ceac23be6b9d1a6a4caa127c5fd12a44b4e57c09e9"
-    sha256 x86_64_linux:   "46bb2345984a78a4ff0bb6b91d3417311c54105ff5bc96e851f74919d78f86db"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-typist"
+    sha256 aarch64_linux: "35ee3cce21f72be06d147882d8841af672759d3e092a497b119b5ca19fc1af40"
   end
 
   depends_on "gettext"
