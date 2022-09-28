@@ -1,14 +1,14 @@
 class GnuUnits < Formula
   desc "GNU unit conversion tool"
   homepage "https://www.gnu.org/software/units/"
-  url "https://ftp.gnu.org/gnu/units/units-2.21.tar.gz"
-  mirror "https://ftpmirror.gnu.org/units/units-2.21.tar.gz"
-  sha256 "6c3e80a9f980589fd962a5852a2674642257db1c5fd5b27c4d9e664f3486cbaf"
+  url "https://ftp.gnu.org/gnu/units/units-2.22.tar.gz"
+  mirror "https://ftpmirror.gnu.org/units/units-2.22.tar.gz"
+  sha256 "5d13e1207721fe7726d906ba1d92dc0eddaa9fc26759ed22e3b8d1a793125848"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-units"
-    sha256 aarch64_linux: "21ad670754345da9b108e5a897f909a7021339f9fd7de88de2ad52d08f4a93af"
+    sha256 aarch64_linux: "c2b5314d40fc97b9b38dba0a9651b93ea171debbf0d22efb051c43304efd10fa"
   end
 
   depends_on "readline"
