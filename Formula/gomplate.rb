@@ -1,18 +1,17 @@
 class Gomplate < Formula
   desc "Command-line Golang template processor"
   homepage "https://gomplate.hairyhenderson.ca/"
-  url "https://github.com/hairyhenderson/gomplate/archive/v3.10.0.tar.gz"
-  sha256 "f9a30d8e94b81eefbbe3455c21dc547ec0ebf0e010a809c72db617a4b37223a6"
+  url "https://github.com/hairyhenderson/gomplate/archive/v3.11.2.tar.gz"
+  sha256 "310f2ae19f409ad45f0f19a53045a3e8345e4723fa5ca9c5eeb8cbaf7cc0e195"
   license "MIT"
   head "https://github.com/hairyhenderson/gomplate.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gomplate"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "5e46c2cae5076bdf52f2d5d352594dd766b0e062b291979f40c7c38cc271bf55"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "938285b2c4b326509685f3c478e77a413b605a860419b4bf510b42a17aa1d44a"
   end
 
-  # Bump to 1.18 on the next release, if possible.
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
     system "make", "build", "VERSION=#{version}"
