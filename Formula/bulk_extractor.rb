@@ -11,14 +11,12 @@ class BulkExtractor < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "827ffd8be9d94c8d73eafee14be12527f55502fcc17177cc2388b57da50bcdef"
-    sha256 cellar: :any,                 arm64_big_sur:  "0d798b0a0ab7796d05d91a2fbbda7b959d76026a1360c69e9d360ead265a3ac1"
-    sha256                               monterey:       "e16b6e0276beff6059f39035e15d42a38343dba8cd157138c3a1495372e4f86f"
-    sha256                               big_sur:        "4207941ab88e766e1a0fd55031585c52cea1c27ac528b7db1496a714fbeda5c4"
-    sha256                               catalina:       "6acada1995761f484993f407f33014260f8c16596381172b405fe84eef206e06"
-    sha256                               mojave:         "da01b2d5208c362fa10baa1a3b1d7fd018f4886eddb068107b9786c36bbff480"
-    sha256                               high_sierra:    "621af8efc0671cd2905f4f077c9cfef8ac2493cf65421fb2973228c2b651c24e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70e164f1f80f037e9d3026da89caad2913c2c2390a7ba69a9a161b314e75d6c9"
+    sha256 cellar: :any,                 arm64_monterey: "3853437885b3ddebe96ff0fdf82cc51bb463475896773a0bc187c3eee797df64"
+    sha256 cellar: :any,                 arm64_big_sur:  "86ea36c73ad1de83fdfd03e3ac0d009eef3717a06ba371405719e7bdaab4a23e"
+    sha256                               monterey:       "41288b59b588eb7d4d3e0aaaaef02d90bef22525b4baaa652df2fc4974b9cef8"
+    sha256                               big_sur:        "35b5eaae1670fc6dea617ddb76d703aafe336097ae1646e2ec6f925f85d7803b"
+    sha256                               catalina:       "13f47b8410b0f8af8bf7a65ea5dde4790051c295854552fdcebaceb3ed49a510"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d89721d67c9460edc181f54c0c92f3dd56dd0f70cba83356b9cc3dffecb5c995"
   end
 
   depends_on "openssl@1.1"
