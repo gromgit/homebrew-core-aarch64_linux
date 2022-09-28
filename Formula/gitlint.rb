@@ -8,12 +8,8 @@ class Gitlint < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7391686d3bf8a32107e86bfa9ce33ce37d14497fd94e5f4642042060d61787e8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba55c41aca93467e4a82ea5232f918fafee8dc21c7b65e59baec81d3aaaf784d"
-    sha256 cellar: :any_skip_relocation, monterey:       "6068fc62b06b5709151e600c4f2f2f6a68e33ed0f4b2638f53498e6886fd22a2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "748a6a66b668147364c4afc2a8b512d298c5c0609108d1b541be89d8687371d3"
-    sha256 cellar: :any_skip_relocation, catalina:       "139e2a00477ba3e2168c90580c85b9be1d5c3a5f806912701fc7b45c8e9effae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05bf33a5d44c9da39cd35a277b25b4260215b818b72c27e0b623125737fce8bc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gitlint"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "31f17eb57e661a58298f24046f96191364a3e2c99e0dcd708bd6bacfc4ae30c2"
   end
 
   depends_on "python@3.10"
