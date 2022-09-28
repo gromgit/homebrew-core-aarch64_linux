@@ -1,8 +1,8 @@
 class Goreman < Formula
   desc "Foreman clone written in Go"
   homepage "https://github.com/mattn/goreman"
-  url "https://github.com/mattn/goreman/archive/v0.3.12.tar.gz"
-  sha256 "2068badbfffbe213df2d901be00fed273766ef1329895589e99d4ee8cfcfa7d2"
+  url "https://github.com/mattn/goreman/archive/v0.3.13.tar.gz"
+  sha256 "dfc20682714626c69db2fde9ce48432e7116f267488a123b79d72f6dabcca7a3"
   license "MIT"
   head "https://github.com/mattn/goreman.git", branch: "master"
 
@@ -13,7 +13,7 @@ class Goreman < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/goreman"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1a8af42bade9869c0efbe3c21d60248f3f705b63bad3c62a771eb561dd2ad158"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "49d4dc5fccc05ac3681cd6e7e37687481384c22c960f6a2b48565ef85da82fdb"
   end
 
   depends_on "go" => :build
