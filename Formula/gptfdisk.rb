@@ -6,12 +6,8 @@ class Gptfdisk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a324c027ce6d6f41d464ba001961e0481180ce5d43eddfebcec2c108358479cd"
-    sha256 cellar: :any,                 arm64_big_sur:  "6ba98737562bd6ca00091e4259fa8195592e0d6f25b9650f8451f3cae553d6f9"
-    sha256 cellar: :any,                 monterey:       "1d114b23a2a5cd0bbeb5b52bf9eb049a38f1ddd41b53abdfaf245b2ff333ae51"
-    sha256 cellar: :any,                 big_sur:        "0e9d348490a0610c6342d624dafc745a838e33d3cf64287985470c79ac95e5a4"
-    sha256 cellar: :any,                 catalina:       "ac261cf0e7e1b9848f4c2d9ce7cb85854eb10392d332018333330df0ebd6ba49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d42a4448e83c5f84f9f947f9aef03bd1a67dffd95cea7edeb28bc1eae07c7be0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gptfdisk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5588c8d281e600e1e7b45528d702c8e7f1ba12fbe9187859b8433db057cadced"
   end
 
   depends_on "popt"
