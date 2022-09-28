@@ -1,26 +1,26 @@
 class GitAppraise < Formula
   desc "Distributed code review system for Git repos"
   homepage "https://github.com/google/git-appraise"
-  url "https://github.com/google/git-appraise/archive/v0.6.tar.gz"
-  sha256 "5c674ee7f022cbc36c5889053382dde80b8e80f76f6fac0ba0445ed5313a36f1"
   license "Apache-2.0"
   head "https://github.com/google/git-appraise.git", branch: "master"
 
+  stable do
+    url "https://github.com/google/git-appraise/archive/v0.7.tar.gz"
+    sha256 "b57dd4ac4746486e253658b2c93422515fd8dc6fdca873b5450a6fb0f9487fb3"
+
+    # Backport go.mod from https://github.com/google/git-appraise/pull/111
+    patch :DATA
+  end
+
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-appraise"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "6f61caa2a6c9513be6c0d4d38b10dd921319c7c57e6c6cba57cf69d0aff07086"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c147a7fa6183ab0995decd0eb7ddcabd3c0d4d61de58f12044768ea0bc0f1936"
   end
 
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-
-    (buildpath/"src/github.com/google").mkpath
-    ln_s buildpath, buildpath/"src/github.com/google/git-appraise"
-
-    system "go", "build", "-o", bin/"git-appraise", "github.com/google/git-appraise/git-appraise"
+    system "go", "build", *std_go_args, "./git-appraise"
   end
 
   test do
@@ -38,3 +38,24 @@ class GitAppraise < Formula
     assert_predicate testpath/".git/refs/notes/devtools/reviews", :exist?
   end
 end
+
+__END__
+diff --git a/go.mod b/go.mod
+new file mode 100644
+index 00000000..28bed68b
+--- /dev/null
++++ b/go.mod
+@@ -0,0 +1,5 @@
++module github.com/google/git-appraise
++
++go 1.18
++
++require golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12
+diff --git a/go.sum b/go.sum
+new file mode 100644
+index 00000000..b22c466b
+--- /dev/null
++++ b/go.sum
+@@ -0,0 +1,2 @@
++golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12 h1:QyVthZKMsyaQwBTJE04jdNN0Pp5Fn9Qga0mrgxyERQM=
++golang.org/x/sys v0.0.0-20220406163625-3f8b81556e12/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
