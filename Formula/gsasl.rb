@@ -1,14 +1,14 @@
 class Gsasl < Formula
   desc "SASL library command-line interface"
   homepage "https://www.gnu.org/software/gsasl/"
-  url "https://ftp.gnu.org/gnu/gsasl/gsasl-1.10.0.tar.gz"
-  mirror "https://ftpmirror.gnu.org/gsasl/gsasl-1.10.0.tar.gz"
-  sha256 "85bcbd8ee6095ade7870263a28ebcb8832f541ea7393975494926015c07568d3"
+  url "https://ftp.gnu.org/gnu/gsasl/gsasl-2.2.0.tar.gz"
+  mirror "https://ftpmirror.gnu.org/gsasl/gsasl-2.2.0.tar.gz"
+  sha256 "79b868e3b9976dc484d59b29ca0ae8897be96ce4d36d32aed5d935a7a3307759"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gsasl"
-    sha256 aarch64_linux: "808f9aa626d8fbde34ffc35031534f14a588267a61ab969a9e301e3c4b6dbc1c"
+    sha256 aarch64_linux: "56b21ce9a9398b183ae4971c99c0bd457fd0f5d821093e30d4f3d38ac124c85f"
   end
 
   depends_on "libgcrypt"
@@ -21,6 +21,6 @@ class Gsasl < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/gsasl")
+    assert_match version.to_s, shell_output("#{bin}/gsasl --version")
   end
 end
