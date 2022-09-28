@@ -9,13 +9,12 @@ class KeepkeyAgent < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9ec1b531c8705fe435f31f16fce8ad100aca11644c5d33e05df1e70056dd3121"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d666d772a79bdf2b128adcc65760f9eb9803d3e7dd17a4aba4bad155f65a1f31"
-    sha256 cellar: :any_skip_relocation, monterey:       "c8dbfb2ce54eacac0cf75615bdf23dd2b5493defc5931ba53825c71a4d53fa71"
-    sha256 cellar: :any_skip_relocation, big_sur:        "648c7a6bee2065718586b392941e3881e4d10d7971e785df15b63c3c51806b56"
-    sha256 cellar: :any_skip_relocation, catalina:       "f5c1be64474b731cf09cd8066c0ef6b33c28a00803bef23b856a24fee92fd1f8"
-    sha256 cellar: :any_skip_relocation, mojave:         "900d7ba894e9aa98c285106037db89bf3ddb1a3c08f761781d37f227f2ab960b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d341f2556e410200106b4588a6de17e5395412c837b0fc46e0e7a235ab1a41f"
+    sha256 cellar: :any,                 arm64_monterey: "4ccac1dfd70436fe50ca906f7e89113dd7316c0ca43d6dc6a2cfff2ab064c9f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "9f419d252f670d22e1efb669f5558250b0fb8337b5690cef0ce55bec015ed9be"
+    sha256 cellar: :any,                 monterey:       "24f8cb4149999576d0283315d1eaedc9599190b36ef804e0996cdb37b501ad11"
+    sha256 cellar: :any,                 big_sur:        "e555d7d5740e2a005e237b47bced9ad4dfbf2191fb0143de5800c7f9987616df"
+    sha256 cellar: :any,                 catalina:       "4ed076003c8afd2a2e0ff19cd546fd590e9f632e74170220b1a35aca847e78fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d5bcba3c0d0616875803b534aca83f4f3897730651c247421e93b9e4e015a4f"
   end
 
   depends_on "rust" => :build
