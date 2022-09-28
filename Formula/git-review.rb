@@ -9,12 +9,8 @@ class GitReview < Formula
   head "https://opendev.org/opendev/git-review.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2ad7f7c0dbc722126772127f43eeb819d0f9604ae15bdf39d41b5f4b11dcf73"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2ad7f7c0dbc722126772127f43eeb819d0f9604ae15bdf39d41b5f4b11dcf73"
-    sha256 cellar: :any_skip_relocation, monterey:       "cb2812428a69ba6186f1714161c93ed15b1ebb0d28fdbec33c120c0c7c7e4083"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cb2812428a69ba6186f1714161c93ed15b1ebb0d28fdbec33c120c0c7c7e4083"
-    sha256 cellar: :any_skip_relocation, catalina:       "cb2812428a69ba6186f1714161c93ed15b1ebb0d28fdbec33c120c0c7c7e4083"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fcdfa15e3aa564f57e96f5922de5436b3fc8c399d1a3033c384ddaa00fd6d2f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-review"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7339be06b7c646b074989cd01d423bf36263756277abfada4d11e89aa0e6f4ab"
   end
 
   depends_on "python@3.10"
