@@ -8,12 +8,13 @@ class Notifiers < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "960b18b529618ca66159c80f8a0f81aa3de37e8535a3d2843a6f76d6a7845e37"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9cbbc0c730bbc6f727fc6bb70ab02c3d13ff7dc5f51da423d6725d74214a55df"
-    sha256 cellar: :any_skip_relocation, monterey:       "5dc812c0538ddd386a2ebb4f672506392c6118cd33f24141ff6584ee8ce945d2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cd1ed9363710d49d6985fa0f25aa13997529623e4b54f0e0fb7a15132a539809"
-    sha256 cellar: :any_skip_relocation, catalina:       "5025fa16775b182eab226629f9089cdbd15705894edf4b8a9f2684b769884555"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99764544a3a20321070f6abdad5f9f1e56758b4d076aad19672790d0489c4173"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae0751eda811803cff41beeae5e1a4e1975c468b43c84292d8a2a4704472da66"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c65011533dd5eb881d2e62e84e34e68942c96e304d7159e150556b779d3cb501"
+    sha256 cellar: :any_skip_relocation, monterey:       "14479fdc7c153d7f59c15d8a5f39882f74b0e907efedb0475828b3fde62b2f6e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cd51cb92313fd6508bd81724ea6041a92e9dd9e593efc69db39ea60875f2dfa9"
+    sha256 cellar: :any_skip_relocation, catalina:       "8c1aaa09c061f4783a65bedd43af0f4ce5a57e4ff67a7bcbc03b938fbc469a71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e36373228406d86243c04c559b1ccc442c53c1a883c0ce67ff49c3a8c3e8ca0f"
   end
 
   depends_on "jsonschema"
