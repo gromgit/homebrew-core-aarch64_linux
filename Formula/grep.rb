@@ -1,18 +1,19 @@
 class Grep < Formula
   desc "GNU grep, egrep and fgrep"
   homepage "https://www.gnu.org/software/grep/"
-  url "https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz"
-  mirror "https://ftpmirror.gnu.org/grep/grep-3.7.tar.xz"
-  sha256 "5c10da312460aec721984d5d83246d24520ec438dd48d7ab5a05dbc0d6d6823c"
+  url "https://ftp.gnu.org/gnu/grep/grep-3.8.tar.xz"
+  mirror "https://ftpmirror.gnu.org/grep/grep-3.8.tar.xz"
+  sha256 "498d7cc1b4fb081904d87343febb73475cf771e424fb7e6141aff66013abc382"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grep"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "66b0f85f6968764c762a25a1b564bccab7e73b4821203ff83da4c60abb3819f9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1baa3b933e791bad6f657abaa26ce4b6836e929f0ac4b4893e4223e0b18cbc3c"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "pcre"
+  depends_on "pcre2"
 
   def install
     args = %W[
@@ -55,12 +56,12 @@ class Grep < Formula
     text_file.write "This line should be matched"
 
     if OS.mac?
-      grepped = shell_output("#{bin}/ggrep match #{text_file}")
+      grepped = shell_output("#{bin}/ggrep -P match #{text_file}")
       assert_match "should be matched", grepped
 
-      grepped = shell_output("#{opt_libexec}/gnubin/grep match #{text_file}")
+      grepped = shell_output("#{opt_libexec}/gnubin/grep -P match #{text_file}")
     else
-      grepped = shell_output("#{bin}/grep match #{text_file}")
+      grepped = shell_output("#{bin}/grep -P match #{text_file}")
     end
     assert_match "should be matched", grepped
   end
