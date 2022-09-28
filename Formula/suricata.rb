@@ -11,12 +11,12 @@ class Suricata < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c4fbbd922be1b9fc4ce414fb432800e427b00d8c90ebbf9619ca8c53acc24303"
-    sha256 arm64_big_sur:  "db83b2c112fb58d50594c68e6eaed453380a53924cb30121c0bbaefdd182bcd2"
-    sha256 monterey:       "334a5c3e7b46186103cc5e8b04b9ea02f6e7b1f55ca48ef6a64f9c8901e1859a"
-    sha256 big_sur:        "89cc9a15dfb810c9211c3a71d96cd3286345f397f0183a2159b80c40d58c897a"
-    sha256 catalina:       "d745d19be7122c738eb19e288ec0386884e79b17fdc24ce9ffa15cc0dd1a594f"
-    sha256 x86_64_linux:   "565afd295fff52cd213359577cf1189a444ab9a3d9ace38938d279260d78aabd"
+    sha256 arm64_monterey: "d2a768df140d12f487a71bddfddc8f84848df9d0fea09ce1b33a099c4416bf5d"
+    sha256 arm64_big_sur:  "2a66f64bc224b24c9ce98e49b783c0f1c1cf101f419dc027d2371853fb4d1b7c"
+    sha256 monterey:       "b63164b0e79fa038451212f01b182dad95edd1334ca26181c528999c4cf8942e"
+    sha256 big_sur:        "df74bb0d6c6350e8a866107cd52540e68104c5fc571c906fc61c437964965208"
+    sha256 catalina:       "4679e19e9160e587462ab8c40f2d292fc65da79ed7ef788e879f7d60151fd153"
+    sha256 x86_64_linux:   "a3daab3dce1e955289e1bb9fae9cdf61a71029d691a5fa6a27d3357ba02fc482"
   end
 
   depends_on "pkg-config" => :build
