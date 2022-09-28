@@ -6,12 +6,8 @@ class LibsigcxxAT2 < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f08cb049ca155fb8ac09d1586ea415084ba95e3e2aa760c5b4ddabe51ea44b08"
-    sha256 cellar: :any,                 arm64_big_sur:  "5d024a8626df8d8bb872a2e1f1452ebe793f3b95a9c08814abe36a48e9f19297"
-    sha256 cellar: :any,                 monterey:       "155cb09e024335504393bc4ea4921348449bbcbf08384f7e6e1210c2cee3f403"
-    sha256 cellar: :any,                 big_sur:        "5ea91db7ec5618625126b12e5bf7de2b2d8cc21b77170536f0d9d33de3bc8ffa"
-    sha256 cellar: :any,                 catalina:       "f4aa31cd03380890a69669687fee5a978586ea8cd8613e871864f2a5dcc7bd97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a2909597897d782656e62646e426c9e0f29a11d845b986de0f13a0e07adcd77"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsigc++@2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "83daf0e28906dba06ec6a2dcb543ed17e3f4c6a188512fea81f8e028f96f94d1"
   end
 
   depends_on "meson" => :build
