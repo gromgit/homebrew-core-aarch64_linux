@@ -1,13 +1,13 @@
 class Gitbackup < Formula
   desc "Tool to backup your Bitbucket, GitHub and GitLab repositories"
   homepage "https://github.com/amitsaha/gitbackup"
-  url "https://github.com/amitsaha/gitbackup/archive/v0.8.0.tar.gz"
-  sha256 "b94bc7c55b5c086ba1504adceef74d0f0eb8c159f94cb84b23863e97f74fe217"
+  url "https://github.com/amitsaha/gitbackup/archive/v0.8.2.tar.gz"
+  sha256 "a216fc96cc80c65ed72a1b50f77697c2d6cb18f4cb849d8dde67f65d24951adc"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gitbackup"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "97c0e17826f3f409b8439a7bf8e8eb2d2ad4ed80a32dc74bd08cdf13a04db45b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4044ef8bd1fcaf99907cc90582937cec51d12783aa34fd6f25b05478658ed548"
   end
 
   depends_on "go" => :build
