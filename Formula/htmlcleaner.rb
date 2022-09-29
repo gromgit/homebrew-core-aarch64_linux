@@ -6,12 +6,8 @@ class Htmlcleaner < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b6a287a43392e2a9ea253172a5000ff7da6f898dffda7c3052eda4ecdb91a961"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9db87bc977615b9bb0250f0dc9f735dcd3d20a0799700640afe80c9bb011dd29"
-    sha256 cellar: :any_skip_relocation, monterey:       "6dd5433406edc84f3e175426793cc788d1edc8cae11bfacfbaf4431f39c631a9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "573b152655d4c622581d6dc5f73229271cfd4307b3dd4d63967d41b2c3da5ae9"
-    sha256 cellar: :any_skip_relocation, catalina:       "03d164b2210190deecac6180af860948b1d4e09a318dce0bbe631b7e98f0d0a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc3f63cf7c8a4d264c34fe39dfc265422a15564e04ce5495ab9bc08c91838dbf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/htmlcleaner"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7df49e57c82bd6d474414096a1d037a6a72397f857ecf8d893c638adc1cecbff"
   end
 
   depends_on "maven" => :build
