@@ -16,6 +16,7 @@ class Zig < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "fb2a4b511bbde8f7e2ad4a00aa63442daced1e02e168b9c081eef1a8406319fb"
     sha256 cellar: :any_skip_relocation, big_sur:        "1c79f7eebaf0b0c7e97830aa43a630de27d1f1593dbed36f36f189dda269d451"
     sha256 cellar: :any_skip_relocation, catalina:       "647e8c20a77ba8c2711d3af2c8e7aac0bedeab99b2bc5ac73f8c4ea303c621a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95dbaeaabf3cc63df04c8fa46a19f74ef17e7f67cfeb7bfe0dd1e6be99cb399b"
   end
 
   head do
