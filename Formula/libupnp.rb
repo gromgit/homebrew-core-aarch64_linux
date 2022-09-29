@@ -1,8 +1,8 @@
 class Libupnp < Formula
   desc "Portable UPnP development kit"
   homepage "https://pupnp.sourceforge.io/"
-  url "https://github.com/pupnp/pupnp/releases/download/release-1.14.12/libupnp-1.14.12.tar.bz2"
-  sha256 "091c80aada1e939c2294245c122be2f5e337cc932af7f7d40504751680b5b5ac"
+  url "https://github.com/pupnp/pupnp/releases/download/release-1.14.13/libupnp-1.14.13.tar.bz2"
+  sha256 "025d7aee1ac5ca8f0bd99cb58b83fcfca0efab0c5c9c1d48f72667fe40788a4e"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,13 +12,7 @@ class Libupnp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libupnp"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2ae6c8f6f7adfbaf6aaf8f08541321df6b2521814961e8a275ab78fdd10fa100"
-  end
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "af98b04fa2e156ea53960dd60fa6082487f06e19b3f33ba54e683b1c676d2198"
   end
 
   def install
