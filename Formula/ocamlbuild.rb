@@ -12,12 +12,12 @@ class Ocamlbuild < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "035b9432d6fe955bb53f2d637fb4de478dfdfd03f22e2884032172e37b226dba"
-    sha256 arm64_big_sur:  "d1b989fc6305cb608d4b46a0e71827907074b5a2f5b2b8efb08f93383465c184"
-    sha256 monterey:       "97ef3918da137ee1845f434695830599924115318246a9e0dd9bee51ab40a042"
-    sha256 big_sur:        "fbc736c65d15027c12f07837a920fe7d3ca20f946fc1c3934970020cc315ea9b"
-    sha256 catalina:       "87cb5e4accc61bca40db364eb3818143941f2f6aa8215dabcea33e200e138e87"
-    sha256 x86_64_linux:   "d9b0cf584bd021f8872bb80b00d1663484b82f2e634d422c8b1854ca75ff4c8d"
+    sha256 arm64_monterey: "3d47c72ddcd5a6bead87487dd503bd8cf98b015e04c17a5b2b0696bb75ce83de"
+    sha256 arm64_big_sur:  "85b92b0677aa8eb69c0d5835eb2c13d4cf188caec95352060bf7e174950f82ea"
+    sha256 monterey:       "4b209b5cac1d988448bd636f92af9d136d789ba0fdf94c92ac691b42294aa987"
+    sha256 big_sur:        "7b3e3b42d3183983c581948a3cd125179da47bc000edf3c0fe143cad820589ec"
+    sha256 catalina:       "ad29ad617242569e40fa04743c82fffd31e7f095d78e940d022d7077de1bc0fe"
+    sha256 x86_64_linux:   "c6dd0b3abbbeab25bfd412f2aaf4a3683b04eb6050c49ccec5d36b99959e20a1"
   end
 
   depends_on "ocaml"
