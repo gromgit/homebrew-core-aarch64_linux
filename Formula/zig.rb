@@ -24,6 +24,8 @@ class Zig < Formula
   end
 
   depends_on "cmake" => :build
+  uses_from_macos "ncurses"
+  uses_from_macos "zlib"
 
   fails_with gcc: "5" # LLVM is built with GCC
 
