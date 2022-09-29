@@ -18,26 +18,24 @@ class HasteClient < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bdc96fa486c1eda47dce4e807857784edb28f9b37b39ca4644cb4363a686d335"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b37f0ea5d4c45a13c49e4e88572a6998e9704d34ad145f763ba32e51af85e89a"
-    sha256 cellar: :any_skip_relocation, monterey:       "bdc96fa486c1eda47dce4e807857784edb28f9b37b39ca4644cb4363a686d335"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b37f0ea5d4c45a13c49e4e88572a6998e9704d34ad145f763ba32e51af85e89a"
-    sha256 cellar: :any_skip_relocation, catalina:       "b37f0ea5d4c45a13c49e4e88572a6998e9704d34ad145f763ba32e51af85e89a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f58ba7733cf6b73c7ad7be755d4d31c88af9577a43f9cd4658d8732bdd8bad3b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/haste-client"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "44a03258eb0a1c889f650602ddff2809a3cd34c6af047857b14322167011258a"
   end
 
-  depends_on "ruby" if MacOS.version <= :sierra
-
-  resource "faraday" do
-    url "https://rubygems.org/gems/faraday-0.17.4.gem"
-    sha256 "11677b5b261fbbfd4d959f702078d81c0bb66006c00ab2f329f32784778e4d9c"
+  on_system :linux, macos: :sierra_or_older do
+    depends_on "ruby"
   end
 
-  if MacOS.version <= :sierra
+  on_system :linux, macos: :sierra_or_older do
     resource "json" do
       url "https://rubygems.org/gems/json-2.5.1.gem"
       sha256 "918d8c41dacb7cfdbe0c7bbd6014a5372f0cf1c454ca150e9f4010fe80cc3153"
     end
+  end
+
+  resource "faraday" do
+    url "https://rubygems.org/gems/faraday-0.17.4.gem"
+    sha256 "11677b5b261fbbfd4d959f702078d81c0bb66006c00ab2f329f32784778e4d9c"
   end
 
   resource "multipart-post" do
