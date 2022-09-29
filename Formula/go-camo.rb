@@ -6,12 +6,12 @@ class GoCamo < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c109736fe43f92e4283f9da9fa3a472f75324f6a78b421ffcf0aa288bb24247"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0c109736fe43f92e4283f9da9fa3a472f75324f6a78b421ffcf0aa288bb24247"
-    sha256 cellar: :any_skip_relocation, monterey:       "9aeb1790075eb725a34e3d5f07901a65c27ca98a6821316918a817949f378432"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9aeb1790075eb725a34e3d5f07901a65c27ca98a6821316918a817949f378432"
-    sha256 cellar: :any_skip_relocation, catalina:       "9aeb1790075eb725a34e3d5f07901a65c27ca98a6821316918a817949f378432"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48c7f81d8f6e30bc86dab0a26bdb20b545d8b4f9e98e73e1f29efb894330c32a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5d2635701563ffcbcca22121832e4a111c5ba80a91bf36aad4eddf50622ee5b6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5d2635701563ffcbcca22121832e4a111c5ba80a91bf36aad4eddf50622ee5b6"
+    sha256 cellar: :any_skip_relocation, monterey:       "979979b03d083d27e50dcbe846b92adf47496f61c3059c76210b5c14999deff3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "979979b03d083d27e50dcbe846b92adf47496f61c3059c76210b5c14999deff3"
+    sha256 cellar: :any_skip_relocation, catalina:       "979979b03d083d27e50dcbe846b92adf47496f61c3059c76210b5c14999deff3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0bfdb3b0f091a3147ea525eeebb896e8c14f5081c6967e57e925a483a0125dfc"
   end
 
   depends_on "go" => :build
