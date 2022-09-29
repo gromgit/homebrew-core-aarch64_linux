@@ -7,12 +7,12 @@ class StylishHaskell < Formula
   head "https://github.com/haskell/stylish-haskell.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8492583c2c98984f12b0aaa8a49bc40778236e939a19359e1e9b17d2c949cd04"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f938218d664df786dbabfff415d3d3849ff7dfb31fe0224ef07240f96c9213f"
-    sha256 cellar: :any_skip_relocation, monterey:       "4d0bc56f858f8f60acc7b78abac39c075985ab5caecf5d8cefdc8826c360dbc2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "29d61a1b5bd338b7e9ae143afc2512140ed1f67db8ff8b6aa0a59680cb08d336"
-    sha256 cellar: :any_skip_relocation, catalina:       "e9bbb68478ac1ec25e17b2b27f552120a744aa59fd4c30fdcc9bcbcfb3aab595"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "662314c0c7f3388ff069c5a31fed485c5a93ff54b2f4c84ba680686509c2772c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "51d558bc19d94bf7ce019e4be28fe016e8ca51f80b7f8853b3287f5705f14760"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6171291422a4cf5d2281f6cf0d4f9cfc3aa6c3b68beb38b81bfdee37fc4a60da"
+    sha256 cellar: :any_skip_relocation, monterey:       "4b89870742215a1bf3e88b9c5bef2e999b5ec611c8134efbab034c240a6f2846"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6b6506f2723daf41c9ca4f072211b7021b238f16451a41b8345cfa7984dcf674"
+    sha256 cellar: :any_skip_relocation, catalina:       "05bdaee2bff49b3e3853f66a0e9da5c68785e17ba97012e02f0e27a98744982d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7f9a242e4cde7e144b70997f992e3e40c6f11c83644cd43282c227e06a61b7b"
   end
 
   depends_on "cabal-install" => :build
