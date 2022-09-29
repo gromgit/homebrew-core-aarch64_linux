@@ -7,7 +7,7 @@ class Testssl < Formula
   head "https://github.com/drwetter/testssl.sh.git", branch: "3.1dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6f5a1162e55cf0b03f4261d2e653c01302ede13d56c413b4172774f2e0f2d7a0"
+    sha256 cellar: :any_skip_relocation, all: "346e7096964be2c0de0356202fa335c81533da6f4cca421216a583b5f9b0db46"
   end
 
   depends_on "openssl@1.1"
