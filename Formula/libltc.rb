@@ -1,13 +1,13 @@
 class Libltc < Formula
   desc "POSIX-C Library for handling Linear/Logitudinal Time Code (LTC)"
   homepage "https://x42.github.io/libltc/"
-  url "https://github.com/x42/libltc/releases/download/v1.3.1/libltc-1.3.1.tar.gz"
-  sha256 "50e63eb3b767151bc0159a3cc5d426d03a42fd69029bc9b3b7c346555f4b709c"
+  url "https://github.com/x42/libltc/releases/download/v1.3.2/libltc-1.3.2.tar.gz"
+  sha256 "0a6d42cd6c21e925a27fa560dc45ac80057d275f23342102825909c02d3b1249"
   license "LGPL-3.0"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libltc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "681317d8a106cdc3dba9a2036ce7bf086cb987bacf4f9155bdb8ca1dcd746a52"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "ce0b1476b1b6d7e1db1992c045d6f4f4a425e9ee2537d3c16b05715ef80de6cf"
   end
 
   def install
