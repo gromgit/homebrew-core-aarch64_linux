@@ -7,12 +7,12 @@ class Mold < Formula
   head "https://github.com/rui314/mold.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "8bd38ef1e972d670f893038746548d50944b094c736fd6751cf2344883e314b3"
-    sha256 cellar: :any, arm64_big_sur:  "aacbedd7a33e5fec099f97b951cba872e2347ad06dcff9f34b706018fd232641"
-    sha256 cellar: :any, monterey:       "c862ce2d2ee97cc5d753f125ac7630fc3783343327e3a21da75105081d5b89c2"
-    sha256 cellar: :any, big_sur:        "55652e6c7ed9dc3c2f56612bc9b65dcb938509f242ef881acb971ac8270a483d"
-    sha256 cellar: :any, catalina:       "085677f15b07a982473f1a417601382a40be58aff82063f3d525eccad9cd386d"
-    sha256               x86_64_linux:   "e55462d611bbbddac8776c4d0804f5b45abf7a4962a4ed34490f4091e7c15e00"
+    sha256 cellar: :any, arm64_monterey: "ba3f4bf4429811c8f348f548b624d099479d2806ee0bf9ad8e2d5c79be584aa3"
+    sha256 cellar: :any, arm64_big_sur:  "e149035a9472ee5f4f4549cf8a5c4e42155d49809f61d417a8c924e225532d4f"
+    sha256 cellar: :any, monterey:       "03ce1df456b6528301b2aa269ca92fc20c66323329c9f9656386b9cb90cc5a89"
+    sha256 cellar: :any, big_sur:        "aed925c6585f646b00c4d71e26c87ca090a76a13ecebfaa67b63f8ea0d2338ba"
+    sha256 cellar: :any, catalina:       "33791aeeb8ba68b3eb9cd71eeb2d7941b9e7cff9a0d304e9543661bda84c70f5"
+    sha256               x86_64_linux:   "1d8a402ea0bb036bfadd194c9e8c2aed7088940d300c3b05c856d0ece64f56c8"
   end
 
   depends_on "cmake" => :build
