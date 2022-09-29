@@ -1,8 +1,8 @@
 class Log4cplus < Formula
   desc "Logging Framework for C++"
   homepage "https://sourceforge.net/p/log4cplus/wiki/Home/"
-  url "https://downloads.sourceforge.net/project/log4cplus/log4cplus-stable/2.0.7/log4cplus-2.0.7.tar.xz"
-  sha256 "8f74a0a5920ba044b24e2ebeb0f1e5e36d85d5c23ed48d9fe328882b16130db8"
+  url "https://downloads.sourceforge.net/project/log4cplus/log4cplus-stable/2.0.8/log4cplus-2.0.8.tar.xz"
+  sha256 "f5949e713cf8635fc554384ab99b04716e3430f28eed6dd7d71ad03d959b91a0"
   license all_of: ["Apache-2.0", "BSD-2-Clause"]
 
   livecheck do
@@ -12,7 +12,7 @@ class Log4cplus < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/log4cplus"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "8e64e9f472a2d4df398376c7697c6443c7a7c5035cbcdc6f047ce33c1012d2e6"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "7c53dd91fa7d4ad0fe94766fb32e2ccf19eef0a7d17b868f7e5a29e5ed867b54"
   end
 
   def install
