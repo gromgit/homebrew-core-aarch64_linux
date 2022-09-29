@@ -11,12 +11,8 @@ class Minizip < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ff18fe7d07a68f17366a40f39a05604049a88ac4ce58a63820ac57fa6f8af476"
-    sha256 cellar: :any,                 arm64_big_sur:  "68d0ae9dc6ec0efa701f68af2663fc85da36e33a957743c5b01bae3118a04078"
-    sha256 cellar: :any,                 monterey:       "1d2ce07558bfa685effb10a2ab00683427f60f3d286f99488c5b42017b5f04ff"
-    sha256 cellar: :any,                 big_sur:        "98c64a1187ce693d07d4cfcb0abee35b88157b5491132fb495097641f7803ed8"
-    sha256 cellar: :any,                 catalina:       "ecb193a80dd68f0b38401183294bf282c5046814fd4692afdfb37989df702755"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ac31c56f146beebcebcbee8d51bd680f202e5b7a29588abeca3c0cdee6dc748"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minizip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ef7fb01c424a815def8852e850bd3b46bcac31e750fd9fc4833c67a6146c0dad"
   end
 
   depends_on "autoconf" => :build
