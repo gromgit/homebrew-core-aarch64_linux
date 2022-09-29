@@ -7,12 +7,8 @@ class Hcxtools < Formula
   head "https://github.com/ZerBea/hcxtools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "24d06b03f444b8d96ababeded338616a4f2dcf9e319156f42eb320dd71ce0f81"
-    sha256 cellar: :any,                 arm64_big_sur:  "6401a756aebf675ade6eb471c579b1841d8658b660d38b7f4bc84b279dcd5275"
-    sha256 cellar: :any,                 monterey:       "f147def903c38e1f5e58e00b997a60c41e9856a0bbd347c6ba3e3630049e96dc"
-    sha256 cellar: :any,                 big_sur:        "d2926410fd310dfdba03ff7f21fb56582ed65cc199a7952c3981f1db6120192d"
-    sha256 cellar: :any,                 catalina:       "724c4e3cdc4026c84c7c9de3d8972917fad385c585bd4da5259ab09bfc7e7646"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b22950fbb1c486d3886f90c45dabefcb9239d9322681fba91f4fe7fe5009a6b3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hcxtools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "48854bb0aabf4346255b90817cb80c7fa23dc2b8920849b1e0a1ec428ae50a48"
   end
 
   depends_on "pkg-config" => :build
