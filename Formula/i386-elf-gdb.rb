@@ -12,12 +12,8 @@ class I386ElfGdb < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "28446027067f4c4beba9db4fdb282da2b92b61b52a167b9258b44d3ff822d6a9"
-    sha256 arm64_big_sur:  "6ed21bdc62c33e8774d438928a37dbf6f6543707b39a396bb5dcba64b1f07669"
-    sha256 monterey:       "53afd744fcb91a0ba17d52a4cf3628bc84756663db3d7b9fd81192bf90a5ba3e"
-    sha256 big_sur:        "0848d18425249ff040691b2f247f8ffdece645c13a4402c51ebbf88cadd1f61f"
-    sha256 catalina:       "ed282f08f2c53276c4d105cf3c20e74a688b226aced2d1c01e52e73c80d18e58"
-    sha256 x86_64_linux:   "59f4d6fdc7ec138da1755acd059b3930ac670c29a8ff27ac32d29adc5c66f1be"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/i386-elf-gdb"
+    sha256 aarch64_linux: "815d5a5834c47ad3d148a53f21ee2047075601f0b7488c6cc495bc715d583ae0"
   end
 
   depends_on "i686-elf-gcc" => :test
