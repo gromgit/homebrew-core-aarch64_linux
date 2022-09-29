@@ -8,12 +8,12 @@ class LlvmAT13 < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b480466716f06633140ddadb009d774b0998e99eaa0fdba68d1f2b7863d5da3b"
-    sha256 cellar: :any,                 arm64_big_sur:  "51aa0ba0cd01aed95eff270131ee2d43fe903a9dba74ca26be72a6ae2a39e72c"
-    sha256 cellar: :any,                 monterey:       "d4495985af28aaed17424584ec2b4c1e83fd49c9be1b96554803963211bf6489"
-    sha256 cellar: :any,                 big_sur:        "3ca38a010801868bc967d9ae7756fca259dcc5a01af227823e659f3ecbefe5eb"
-    sha256 cellar: :any,                 catalina:       "feb0677067a551fbdc96181ef6f6414baac7d259a7a4d43f46149589002160a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e90cdf9451430b7939de6416c200590cba946f55ba6d97dd17d67ee08a403b68"
+    sha256 cellar: :any,                 arm64_monterey: "f261f288461d9babc19d79c2fe5d984e5b589fb675f172cc2492f7bfd64e56d0"
+    sha256 cellar: :any,                 arm64_big_sur:  "9e6f60b8d6b8b464345e7d9b9bf728f49fd2ad8c5cf45a7918ce3b60cc9efd91"
+    sha256 cellar: :any,                 monterey:       "703cc19867f51a059f71b9fe7c9ac20c0c10d1e39e04a57bbd272c2965f542bc"
+    sha256 cellar: :any,                 big_sur:        "8933be1d408ab802e7049201774922ff045e470d7e80fd570700e79bcf7055b9"
+    sha256 cellar: :any,                 catalina:       "b91e1b1154707fce05d16ef54abd886d9bf0fc38a625f0bf254420ad6e4474c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b6ad468ae8d3316c54fb5770f9a2f66f8be6970729b32f7daadd3c41ddbd6f75"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
