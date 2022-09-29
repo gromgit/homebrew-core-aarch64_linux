@@ -1,9 +1,9 @@
 class I686ElfGcc < Formula
   desc "GNU compiler collection for i686-elf"
   homepage "https://gcc.gnu.org"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-12.1.0/gcc-12.1.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.1.0/gcc-12.1.0.tar.xz"
-  sha256 "62fd634889f31c02b64af2c468f064b47ad1ca78411c45abe6ac4b5f8dd19c7b"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
+  sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
 
   livecheck do
@@ -11,12 +11,8 @@ class I686ElfGcc < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "1cab4ffbf89904279fc85aa6f42a6c06f43907116fc6a3d7a9d4461e7dc7b358"
-    sha256 arm64_big_sur:  "6cc4e8f9c771466cb4c65ff41ebea41f8951579c9a1d51b07d18b8bd6136f2e9"
-    sha256 monterey:       "48d6944ef5842de0ac224bdce9fb521bb9763b335f0a1bbcce2ad3ca4fefc50e"
-    sha256 big_sur:        "51c5d795d33fdc4ec01e509387d9d79d7966d1cec0e66236d6f2776ebc94374c"
-    sha256 catalina:       "51504a2f517815c84192f35f8a9ad68650897ab5c906f431f13318f1338f520e"
-    sha256 x86_64_linux:   "89f6af92c0aeda416f5a237940940312f09326081e9486ec51a680d5721ff94e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/i686-elf-gcc"
+    sha256 aarch64_linux: "9579fcda34eff28ee9509e2f336a065c237ac6efa4c8db621e4bc7a22057ec6a"
   end
 
   depends_on "gmp"
