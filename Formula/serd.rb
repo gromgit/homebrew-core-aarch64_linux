@@ -1,8 +1,8 @@
 class Serd < Formula
   desc "C library for RDF syntax"
   homepage "https://drobilla.net/software/serd.html"
-  url "https://download.drobilla.net/serd-0.30.10.tar.bz2"
-  sha256 "affa80deec78921f86335e6fc3f18b80aefecf424f6a5755e9f2fa0eb0710edf"
+  url "https://download.drobilla.net/serd-0.30.14.tar.xz"
+  sha256 "a14137d47b11d6ad431e78da341ca9737998d9eaccf6a49263d4c8d79fd856e3"
   license "ISC"
 
   livecheck do
@@ -11,22 +11,19 @@ class Serd < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "d1bcd61616acf402f9c9d5ba7e45430d7c680907b1ae40e1619abeb6d032ecf5"
-    sha256 cellar: :any,                 arm64_big_sur:  "820e665f024fc4cadc9bdc1dbbed043ff8532b78820bd562111ad58fe7b7c773"
-    sha256 cellar: :any,                 monterey:       "a4c365f5e3f5684668223f58ff83f51b59931fca800eea1883debbad006454e4"
-    sha256 cellar: :any,                 big_sur:        "88b931157faf0b6aee0574b3643a0050cb4bfe457ca8afbd7349d7d44bf69927"
-    sha256 cellar: :any,                 catalina:       "bf3e88a5e10d6f553c16961289a1ab8eae961f9f025ad62b09c2469b9a87529b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44b4777b706dce7681061463bfc96c3040ef6b874fcac9511173c50c03818a59"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/serd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "163715b402e7590c2a9d765d663d5d78d6712ac11a3ed9ea1711f094e4493b86"
   end
 
-  depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
 
   def install
-    system "python3", "./waf", "configure", "--prefix=#{prefix}"
-    system "python3", "./waf"
-    system "python3", "./waf", "install"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
