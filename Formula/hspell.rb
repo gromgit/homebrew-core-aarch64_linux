@@ -11,24 +11,18 @@ class Hspell < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "743ad6762f4452a62702961c030950a6d70d36877140dd8728ce45f8d06411c3"
-    sha256 arm64_big_sur:  "421fdc3ab5d0ebde258ce7bdb235d2b50144966a27a74cbbe5c607dff0984c7f"
-    sha256 monterey:       "21abb651324e2e46eae76ae915efe203f198a7a74f7c9144b3d21060fc5a2dfd"
-    sha256 big_sur:        "426c87d91350f33392c862296b5d1b0081bc953adae5c04a9769ebb2a626213f"
-    sha256 catalina:       "a0406d5a4d5adefa40b5e820510a9b7f461fcea6a61112103c112775fff49ae8"
-    sha256 mojave:         "32e8037e9d494241b975c7558635456991285d53c9bbc89005cd6c86744f30e3"
-    sha256 x86_64_linux:   "fd7cae8024a97aadce0f713008dba1f27e7254969f689a21c9501d42be84fcdb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hspell"
+    sha256 aarch64_linux: "fa00b434957e494f7c0af7238e1dbc080c830999c17fb23b5b1292bf2829d61c"
   end
 
   depends_on "autoconf" => :build
 
   uses_from_macos "zlib"
 
-  on_macos do
-    # hspell was built for linux and compiles a .so shared library, to comply with macOS
-    # standards this patch creates a .dylib instead
-    patch :p0 do
+  # hspell was built for linux and compiles a .so shared library, to comply with macOS
+  # standards this patch creates a .dylib instead
+  patch :p0 do
+    on_macos do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/hspell/1.3.patch"
       sha256 "63cc1bc753b1062d1144dcdd959a0a8f712b8872dce89e54ddff2d24f2ca2065"
     end
