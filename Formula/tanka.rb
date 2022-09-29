@@ -13,12 +13,12 @@ class Tanka < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "472a24893c2a4a66d250572026f9cbd4276bcaf3d0be319a7772fc915a4a43a0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "472a24893c2a4a66d250572026f9cbd4276bcaf3d0be319a7772fc915a4a43a0"
-    sha256 cellar: :any_skip_relocation, monterey:       "361f05bd1975f9f2e012f467feba018759c5fdf92959b2d659adfd8695b27454"
-    sha256 cellar: :any_skip_relocation, big_sur:        "361f05bd1975f9f2e012f467feba018759c5fdf92959b2d659adfd8695b27454"
-    sha256 cellar: :any_skip_relocation, catalina:       "361f05bd1975f9f2e012f467feba018759c5fdf92959b2d659adfd8695b27454"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d376369b9c1c6fdf9bd4b6fcefb5ce20dbde34c6b0fe38a8f13021174a47581"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "924468a521b5334d2b9e9c7016dda2a91e58adbf8b09ae1d48373edc926d5174"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "924468a521b5334d2b9e9c7016dda2a91e58adbf8b09ae1d48373edc926d5174"
+    sha256 cellar: :any_skip_relocation, monterey:       "dd7b67cab0598b62c26ce1101fcb4208d0ded91760780cecef88e38e472d0dc6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dd7b67cab0598b62c26ce1101fcb4208d0ded91760780cecef88e38e472d0dc6"
+    sha256 cellar: :any_skip_relocation, catalina:       "dd7b67cab0598b62c26ce1101fcb4208d0ded91760780cecef88e38e472d0dc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38df5c3af8e10af2e9cb5d723d86527ddc04240de2265e5e780258b8927d2e6d"
   end
 
   depends_on "go" => :build
