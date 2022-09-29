@@ -1,20 +1,11 @@
 class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
+  # Use the `-full` tarball to avoid having to download during the build.
+  url "https://github.com/JuliaLang/julia/releases/download/v1.8.2/julia-1.8.2-full.tar.gz"
+  sha256 "e57cfc2e6d891750a47f7cf03559a4e8f7212bf54900f26a9f12fd6d009d4ca9"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
   head "https://github.com/JuliaLang/julia.git", branch: "master"
-
-  stable do
-    # Use the `-full` tarball to avoid having to download during the build.
-    url "https://github.com/JuliaLang/julia/releases/download/v1.8.1/julia-1.8.1-full.tar.gz"
-    sha256 "31e4655f4b377e73d6f583c539d0221ed7b480a3ea091833d0005316185c5b61"
-
-    # Fix compatibility with LibGit2 1.4.0+
-    patch do
-      url "https://raw.githubusercontent.com/archlinux/svntogit-community/cd813138d8a6fd496d0972a033d55028613be06d/trunk/julia-libgit-1.4.patch"
-      sha256 "cfe498a090d0026b92f9db4ed65ac3818c2efa5ec83bcefed728d27abff73081"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "6a61899a2f2e94ebcc4c4f6f70a3d85f21c4a7fa0bb6ece7cd2b6809e25b817e"
