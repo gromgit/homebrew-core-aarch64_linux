@@ -2,7 +2,7 @@ class Upscaledb < Formula
   desc "Database for embedded devices"
   homepage "https://upscaledb.com/"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/cruppstahl/upscaledb.git", branch: "master"
 
   stable do
@@ -13,6 +13,18 @@ class Upscaledb < Formula
     patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/31fa2b66ae637e8f1dc2864af869baa34604f8fe/upscaledb/2.2.1.diff"
       sha256 "fc99845f15e87c8ba30598cfdd15f0f010efa45421462548ee56c8ae26a12ee5"
+    end
+
+    # Fix compilation on non-SIMD platforms. Remove in the next release.
+    patch do
+      url "https://github.com/cruppstahl/upscaledb/commit/80d01b843719d5ca4c6fdfcf474fa0d66cf877e6.patch?full_index=1"
+      sha256 "3ec96bfcc877368befdffab8ecf2ad2bd7157c135a1f67551b95788d25bee849"
+    end
+
+    # Fix compilation on GCC 11. Remove in the next release.
+    patch do
+      url "https://github.com/cruppstahl/upscaledb/commit/b613bfcb86eaddaa04ec969716560949b63ebd98.patch?full_index=1"
+      sha256 "cc909bf92248f1eeff5ed414bcac8788ed1e479fdcfeec4effdd36b1092dd0bd"
     end
   end
 
@@ -44,35 +56,17 @@ class Upscaledb < Formula
 
     system "./bootstrap.sh"
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
+    simd_arg = Hardware::CPU.intel? ? [] : ["--disable-simd"]
+    system "./configure", *std_configure_args,
+                          *simd_arg,
                           "--disable-remote", # upscaledb is not compatible with latest protobuf
-                          "--prefix=#{prefix}",
                           "JDK=#{Formula["openjdk"].opt_prefix}"
     system "make", "install"
 
     pkgshare.install "samples"
 
-    unless OS.mac?
-      shim_reference_files = %w[
-        db1
-        db2
-        db3
-        db4
-        db5
-        db6
-        env1
-        env2
-        env3
-        uqi1
-        uqi2
-        Makefile
-      ]
-
-      shim_reference_files.each do |file|
-        inreplace pkgshare/"samples"/file, Superenv.shims_path, ""
-      end
-    end
+    # Fix shim reference on Linux
+    inreplace pkgshare/"samples/Makefile", Superenv.shims_path, "" unless OS.mac?
   end
 
   test do
