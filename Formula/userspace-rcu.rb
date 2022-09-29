@@ -1,8 +1,8 @@
 class UserspaceRcu < Formula
   desc "Library for userspace RCU (read-copy-update)"
   homepage "https://liburcu.org"
-  url "https://lttng.org/files/urcu/userspace-rcu-0.13.1.tar.bz2"
-  sha256 "3213f33d2b8f710eb920eb1abb279ec04bf8ae6361f44f2513c28c20d3363083"
+  url "https://lttng.org/files/urcu/userspace-rcu-0.13.2.tar.bz2"
+  sha256 "1213fd9f1b0b74da7de2bb74335b76098db9738fec5d3cdc07c0c524f34fc032"
   license all_of: ["LGPL-2.1-or-later", "MIT"]
 
   livecheck do
@@ -12,7 +12,7 @@ class UserspaceRcu < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/userspace-rcu"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "5c28e9fc267ea4b79c6dd92e8f2dd5c251153207b07ebf4e3b3356ef5a738902"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "31662e544937b89405a55821d107f9dafa7ccf5efd109129c9e2a33e4afee97a"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
