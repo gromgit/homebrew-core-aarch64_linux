@@ -7,6 +7,15 @@ class GitMachete < Formula
   sha256 "b999ff0ead4b856436ee74aae394ae3c68941fab8286256488304382d0fc8452"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd55a44e0c7cc77cbc52208b1cdd29bba2724982f41847838a8281840dee78b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd55a44e0c7cc77cbc52208b1cdd29bba2724982f41847838a8281840dee78b2"
+    sha256 cellar: :any_skip_relocation, monterey:       "8630c377f2c0dc0e4175cd809e2a7d227934fd51e9c6cd60efa854a2f5d44d1c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8630c377f2c0dc0e4175cd809e2a7d227934fd51e9c6cd60efa854a2f5d44d1c"
+    sha256 cellar: :any_skip_relocation, catalina:       "8630c377f2c0dc0e4175cd809e2a7d227934fd51e9c6cd60efa854a2f5d44d1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c9679680e8107f71b53a460cd884d8668c64f83b5b65f4bf72b72df8ccacc36"
+  end
+
   depends_on "python@3.10"
 
   def install
