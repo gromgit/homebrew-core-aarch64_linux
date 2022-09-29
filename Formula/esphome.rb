@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/f1/20/d0b8361a204e3b88bea7786024486545097fd854d8e72d2e1222dfdab4e9/esphome-2022.9.1.tar.gz"
-  sha256 "294778b4305a2b06dc40c050606bcd0fe6ee7ddc0d8234df19e7324b6b12aac0"
+  url "https://files.pythonhosted.org/packages/b1/60/6b48b879b8a7ef3c9b51b17afa5c3d5aa9d30f4a724c7905321cf870a3c1/esphome-2022.9.2.tar.gz"
+  sha256 "0860c6789dac8e8f33a64acace98de45d41bb88e1f88d2239d15d17188f9198b"
   license "MIT"
 
   bottle do
@@ -64,8 +64,8 @@ class Esphome < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/ca/48/88ec470f8b68319b6782ca3a0570789886ad5ca24c1af2f3771699135baa/certifi-2022.9.14.tar.gz"
-    sha256 "36973885b9542e6bd01dea287b2b4b3b21236307c56324fcc3f1160f2d655ed5"
+    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
+    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
   end
 
   resource "cffi" do
@@ -99,8 +99,8 @@ class Esphome < Formula
   end
 
   resource "esphome-dashboard" do
-    url "https://files.pythonhosted.org/packages/d0/43/0d44e84be20f6cd81cc74cf77353f2387b121876702feb2bd40f7c562022/esphome-dashboard-20220920.1.tar.gz"
-    sha256 "aa6bad727b33deeb5552655964461889e98e19d4382266b6b9e0f82f261a39d5"
+    url "https://files.pythonhosted.org/packages/b5/2b/65fe53f28643e92713e0a4b5091cda277bd3cd0e2cec236d49a6feee1a09/esphome-dashboard-20220925.0.tar.gz"
+    sha256 "8e51d2f8776ed45595fe726289f7ab39dc93856c88736d6e005165878043f8ce"
   end
 
   resource "esptool" do
@@ -109,8 +109,8 @@ class Esphome < Formula
   end
 
   resource "h11" do
-    url "https://files.pythonhosted.org/packages/fa/a6/450568b2d62dd633be53f69890332bb0ce78183ffbe1e514c2b3102efff5/h11-0.13.0.tar.gz"
-    sha256 "70813c1135087a248a4d38cc0e1a0181ffab2188141a93eaf567940c3957ff06"
+    url "https://files.pythonhosted.org/packages/f5/38/3af3d3633a34a3316095b39c8e8fb4853a28a536e55d347bd8d8e9a14b03/h11-0.14.0.tar.gz"
+    sha256 "8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d"
   end
 
   resource "idna" do
@@ -209,8 +209,8 @@ class Esphome < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/3e/eb/a00286433c739bb1a0d83a069b2dc379a5d14b0b9c927e3cb00cb434d740/tzdata-2022.2.tar.gz"
-    sha256 "21f4f0d7241572efa7f7a4fdabb052e61b55dc48274e6842697ccdf5253e5451"
+    url "https://files.pythonhosted.org/packages/1f/7a/ca39b0a6f86686816e675fb8bcd99f5f9ab413b1faff8578ab3f5a4bb9f9/tzdata-2022.4.tar.gz"
+    sha256 "ada9133fbd561e6ec3d1674d3fba50251636e918aa97bd59d63735bef5a513bb"
   end
 
   resource "tzlocal" do
