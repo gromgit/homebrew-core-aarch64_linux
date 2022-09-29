@@ -7,12 +7,12 @@ class GitBranchless < Formula
   head "https://github.com/arxanas/git-branchless.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f4f649e311a98cd075ad03b44b5e73cbd5b5dcc8fcbad0b1078fbda82314833a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f49d2dcd8a4dc826d4e540b1808c79b2b9c55a75b8fb429f24fa4292931f5736"
-    sha256 cellar: :any_skip_relocation, monterey:       "d1cd42d896e207718eb25b506215f79599bee9d6821cc00f6ad36f39af036d69"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0d07fd7dc467642015b81bb5de1b014eee59720714f5a7f186c3e16b59396a2a"
-    sha256 cellar: :any_skip_relocation, catalina:       "b336c0c7a94a5b19060134978cb20f724c3b2f408e1365b3584bc74fa4a9aa80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c90a497b062a5e47126c63407182697241136b617bbd3a3f073720bf8d40dd73"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7abef4d45e8d02edc34efcfb3b3f283b589fa109d37eed6f71f76fe9bc85fd3c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c65f5936a1f25cb26f8adffd381f756bcc3e8ecfc754fce9edf8e15b7df822e7"
+    sha256 cellar: :any_skip_relocation, monterey:       "6d51dfb0daeaf23b223c28edeb310a76efc211528028dc55df4324bb9db05009"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4f19f476e3d2f8222a7ad733b845bce3ebe672aa7a4a01c8054e76f90f9e3e64"
+    sha256 cellar: :any_skip_relocation, catalina:       "5bcdf8eefad3412aeda382737364e40b6e7c5768eec8c6b9d5c2e51cf7f86a61"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "335ff8cf5ab5f374e5193cffd3691f161ce9e51f28195a542b5bbad0b40a5ba1"
   end
 
   depends_on "rust" => :build
