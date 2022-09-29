@@ -9,12 +9,8 @@ class Httpie < Formula
   head "https://github.com/httpie/httpie.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "10ce896b2bb6686104fedea658fdaf903c0dd77bfb1f4a889f4bae714f4d9504"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "289f01c3a0d275ac15d6a54a742d865b88e1c7597530548db959389e5ae3a2fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "70f95f6fb4c9d8438cf3957d1a206a615f870c69aefb8085976d455971404c26"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4a2af142a0361da7cd3bced7212f3cecc62ffe8ca0defbe7be2ea7aeed4ec2d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "6f9196061f4ebb7a2742329e46085f960acf87dcfb45ecb4b7a82ab29db47456"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d80c38beeaadd384752dedc669a04fbc6bc59f40e54d5757d36c60e14bd9d8f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/httpie"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8debb952b236e180c4f942d50b71074fca251c1efaa2a51e4de1be528333981e"
   end
 
   depends_on "python@3.10"
