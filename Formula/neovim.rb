@@ -2,25 +2,32 @@ class Neovim < Formula
   desc "Ambitious Vim-fork focused on extensibility and agility"
   homepage "https://neovim.io/"
   license "Apache-2.0"
-  revision 1
+  head "https://github.com/neovim/neovim.git", branch: "master"
 
-  # Remove `stable` block when `gperf` is no longer needed.
   stable do
-    url "https://github.com/neovim/neovim/archive/v0.7.2.tar.gz"
-    sha256 "ccab8ca02a0c292de9ea14b39f84f90b635a69282de38a6b4ccc8565bc65d096"
+    url "https://github.com/neovim/neovim/archive/v0.8.0.tar.gz"
+    sha256 "505e3dfb71e2f73495c737c034a416911c260c0ba9fd2092c6be296655be4d18"
 
-    # Libtool is needed to build `libvterm`.
-    # Remove this dependency when we use the formula.
-    depends_on "libtool" => :build
-    # GPerf was removed in https://github.com/neovim/neovim/pull/18544.
-    # Remove dependency when relevant commits are in a stable release.
-    uses_from_macos "gperf" => :build
+    # TODO: Consider shipping these as separate formulae instead. See discussion at
+    #       https://github.com/orgs/Homebrew/discussions/3611
+    resource "tree-sitter-c" do
+      url "https://github.com/tree-sitter/tree-sitter-c/archive/v0.20.2.tar.gz"
+      sha256 "af66fde03feb0df4faf03750102a0d265b007e5d957057b6b293c13116a70af2"
+    end
 
-    # TODO: Use `libvterm` formula when the following is released:
-    # https://github.com/neovim/neovim/pull/17329
-    resource "libvterm" do
-      url "https://www.leonerd.org.uk/code/libvterm/libvterm-0.1.4.tar.gz"
-      sha256 "bc70349e95559c667672fc8c55b9527d9db9ada0fb80a3beda533418d782d3dd"
+    resource "tree-sitter-lua" do
+      url "https://github.com/MunifTanjim/tree-sitter-lua/archive/v0.0.13.tar.gz"
+      sha256 "564594fe0ffd2f2fb3578a15019b723e1bc94ac82cb6a0103a6b3b9ddcc6f315"
+    end
+
+    resource "tree-sitter-vim" do
+      url "https://github.com/vigoux/tree-sitter-viml/archive/v0.2.0.tar.gz"
+      sha256 "608dcc31a7948cb66ae7f45494620e2e9face1af75598205541f80d782ec4501"
+    end
+
+    resource "tree-sitter-help" do
+      url "https://github.com/neovim/tree-sitter-vimdoc/archive/v1.1.0.tar.gz"
+      sha256 "4c0ef80c6dc09acab362478950ec6be58a4ab1cbf2d95754b8fbb566e4c647a1"
     end
   end
 
@@ -39,18 +46,13 @@ class Neovim < Formula
     sha256 x86_64_linux:   "be762f679f83c41fb982d32f067229ca3480f991fdcbc7b15147fdef932312a1"
   end
 
-  # Remove `head` block when `stable` depends on `libvterm`.
-  head do
-    url "https://github.com/neovim/neovim.git", branch: "master"
-    depends_on "libvterm"
-  end
-
   depends_on "cmake" => :build
   depends_on "luarocks" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "libtermkey"
   depends_on "libuv"
+  depends_on "libvterm"
   depends_on "luajit"
   depends_on "luv"
   depends_on "msgpack"
@@ -105,10 +107,16 @@ class Neovim < Formula
       end
 
       if build.stable?
-        # Build libvterm. Remove when we use the formula.
-        cd "libvterm" do
-          system "make", "install", "PREFIX=#{buildpath}/deps-build", "LDFLAGS=-static #{ENV.ldflags}"
-          ENV.prepend_path "PKG_CONFIG_PATH", buildpath/"deps-build/lib/pkgconfig"
+        Dir["tree-sitter-*"].each do |ts_dir|
+          cd ts_dir do
+            cp buildpath/"cmake.deps/cmake/TreesitterParserCMakeLists.txt", "CMakeLists.txt"
+
+            parser_name = ts_dir[/^tree-sitter-(\w+)$/, 1]
+            system "cmake", "-S", ".", "-B", "build", "-DPARSERLANG=#{parser_name}", *std_cmake_args
+            system "cmake", "--build", "build"
+
+            (lib/"nvim/parser").install "build/#{parser_name}.so"
+          end
         end
       end
     end
@@ -126,12 +134,6 @@ class Neovim < Formula
                     "-DLIBLUV_LIBRARY=#{Formula["luv"].opt_lib/shared_library("libluv")}",
                     "-DLIBUV_LIBRARY=#{Formula["libuv"].opt_lib/shared_library("libuv")}",
                     *std_cmake_args
-
-    # Patch out references to Homebrew shims
-    # TODO: Remove conditional when the following PR is included in a release.
-    # https://github.com/neovim/neovim/pull/19120
-    config_dir_prefix = build.head? ? "cmake." : ""
-    inreplace "build/#{config_dir_prefix}config/auto/versiondef.h", Superenv.shims_path/ENV.cc, ENV.cc
 
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
