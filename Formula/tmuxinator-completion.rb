@@ -1,8 +1,8 @@
 class TmuxinatorCompletion < Formula
   desc "Shell completion for Tmuxinator"
   homepage "https://github.com/tmuxinator/tmuxinator"
-  url "https://github.com/tmuxinator/tmuxinator/archive/v3.0.2.tar.gz"
-  sha256 "3992e4a13113ebc6d1d7571c2fae05a056655ee7bfd2eba1455242e30a6dcdd8"
+  url "https://github.com/tmuxinator/tmuxinator/archive/v3.0.5.tar.gz"
+  sha256 "f67296a0b600fb5d8e51bf8fc9f8376a887754fd74cd59b6a8d9c962ad8f80a4"
   license "MIT"
   head "https://github.com/tmuxinator/tmuxinator.git", branch: "master"
 
@@ -11,7 +11,8 @@ class TmuxinatorCompletion < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "89c2778c88287f00e00f005f4d0d6fa84b5913ad7c0cf53442e7378a8a647b47"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tmuxinator-completion"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "60dfd09d5870aeaf9de91df88c564046259d6fe6fd6c5db8c8e764a1eb1f37bd"
   end
 
   conflicts_with "tmuxinator", because: "the tmuxinator formula includes completion"
