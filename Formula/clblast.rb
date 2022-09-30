@@ -6,13 +6,12 @@ class Clblast < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "449a6738088d6e491de9fab0df1c23d7ab2bdb317a1e13840d0f825f8a83797a"
-    sha256 cellar: :any,                 arm64_big_sur:  "e6c6c8e7221e6311ffa712d1bd2331fe3fa727f0b7e51759b2723ae53eeada4d"
-    sha256 cellar: :any,                 monterey:       "092f965ca4c91baf8a32586b6152e0d53fa22f6d47ff1bf627d54b24832677dc"
-    sha256 cellar: :any,                 big_sur:        "7dc30133bf7d780a3377672a6bb4d224f57c138b1aa063bda8a6a0cf88276210"
-    sha256 cellar: :any,                 catalina:       "e7470605bb8000f9fe5ed84eea0f839127fded8ce3a0949b0a93bd5ce18e6f49"
-    sha256 cellar: :any,                 mojave:         "2aef3e5730b1109de45d3748d0e17d78b2181c8eff7b417200c8b2e187681385"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13bb516233aa5ceddaef0dd4b7449984bd2fb02f3f186d514d51224d4b42bbc6"
+    sha256 cellar: :any,                 arm64_monterey: "774f70ba7ac65ec99e8a543ab2dda95acd566e60c423ac23b3e176117ef52664"
+    sha256 cellar: :any,                 arm64_big_sur:  "46c2acd40dfdb2cb21f14c80273ef4a2d0f7ecc2d2b107ded0485602d397b42c"
+    sha256 cellar: :any,                 monterey:       "a4f1ee6cca9530e84aa3bc0e409cbca95d633a66187b4e82328dbcf575f71ee5"
+    sha256 cellar: :any,                 big_sur:        "f467f40350f3237b105e4cce34403b6f7ab51c7999b60131c9d396bcf7210619"
+    sha256 cellar: :any,                 catalina:       "bac255054fb5e7cb3638aca4a7e9c5f961f95b13004ed95500218de50c30c34f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e9b336180d53a2756e2bc7f3e64a2e2d8b2c0c50ae1444e7afc78dedb6b9c28"
   end
 
   depends_on "cmake" => :build
