@@ -6,12 +6,12 @@ class Gotop < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e31c03674afecf694b8a81a7aa7e4b58380233cc1be6485c7217458eb54d0035"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a90066ac1768b3501a9cc3def21145171cfb9f902a380393b6bd5af512588c18"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b37342aa125d059b04d0cbef2bf1a43b06254a20c9d482798fefd6f4405b9e7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6992fc66b85405c15f7f3cb2b189e6f101eedb8ab217e045826c7da387799bf3"
-    sha256 cellar: :any_skip_relocation, catalina:       "0afef67d52edc325041d1ee6e6b9b1533b61894537e1a4f71b4b43825d1b252f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c481add3eaa9d62b18b6e5d64959e3cdcd80178917ab8ba6f1768b821481032e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "26f36d53f4f63536d74c2565a66595f2b5658ff0322e123486fdc2df73fcc9ff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9a4ec909ce13bf1627374bc35a3e5f55a6e897cb14fb779d677a0c715d580c22"
+    sha256 cellar: :any_skip_relocation, monterey:       "967cf5ea968270791932cef90aaeb8c131a695e142429d72a1694508c6a01dda"
+    sha256 cellar: :any_skip_relocation, big_sur:        "61f87b013e7a20046a34ef65bfeb2cbc68a6e78df6f04baee64fa1bdc5be2d66"
+    sha256 cellar: :any_skip_relocation, catalina:       "3948c3cf1d4a198462af0bbed422215a12bcd87266af2c9dd629eed8bcc27a6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b4323239fa19e80fcec5d8ef9ba94b5be4015ae9ca0be3c3a74e06a86f15f29"
   end
 
   depends_on "go" => :build
