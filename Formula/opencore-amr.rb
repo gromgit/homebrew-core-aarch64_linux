@@ -1,8 +1,8 @@
 class OpencoreAmr < Formula
   desc "Audio codecs extracted from Android open source project"
   homepage "https://opencore-amr.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/opencore-amr/opencore-amr/opencore-amr-0.1.5.tar.gz"
-  sha256 "2c006cb9d5f651bfb5e60156dbff6af3c9d35c7bbcc9015308c0aff1e14cd341"
+  url "https://downloads.sourceforge.net/project/opencore-amr/opencore-amr/opencore-amr-0.1.6.tar.gz"
+  sha256 "483eb4061088e2b34b358e47540b5d495a96cd468e361050fae615b1809dc4a1"
   license "Apache-2.0"
 
   livecheck do
@@ -12,11 +12,25 @@ class OpencoreAmr < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/opencore-amr"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "91734a4774907464eb44df3c07a8f5fd6c5a2629322bbd34df679fb14364a2b1"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "713fcf6740c35b5befba0d624046d7a343bdfefba0599d1ac54be55149e69e04"
   end
 
   def install
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make", "install"
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <opencore-amrwb/dec_if.h>
+      int main(void) {
+        void *s = D_IF_init();
+        D_IF_exit(s);
+        return 0;
+      }
+    EOS
+
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lopencore-amrwb", "-o", "test"
+    system "./test"
   end
 end
