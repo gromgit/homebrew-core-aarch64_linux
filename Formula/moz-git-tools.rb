@@ -1,15 +1,14 @@
 class MozGitTools < Formula
   desc "Tools for working with Git at Mozilla"
   homepage "https://github.com/mozilla/moz-git-tools"
-  url "https://github.com/mozilla/moz-git-tools.git",
-      tag:      "v0.1",
-      revision: "cfe890e6f81745c8b093b20a3dc22d28f9fc0032"
-  license "GPL-2.0"
+  url "https://github.com/mozilla/moz-git-tools/archive/refs/tags/v0.1.tar.gz"
+  sha256 "defb5c369ff94f72d272692282404044fa21aa616487bcb4d26e51635c3bc188"
+  license all_of: ["GPL-2.0-only", "CC0-1.0"]
   head "https://github.com/mozilla/moz-git-tools.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/moz-git-tools"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "eaed1078588971b4369b52d732ff28c7aed48684288b8452c14a6741db25f9dc"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "524d096e91eb39e173dd2965b6ecdbcbd771394056ad9b3204aa42ab7aba92dd"
   end
 
   def install
