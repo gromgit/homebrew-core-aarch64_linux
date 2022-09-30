@@ -1,12 +1,13 @@
 class MultiGitStatus < Formula
   desc "Show uncommitted, untracked and unpushed changes for multiple Git repos"
   homepage "https://github.com/fboender/multi-git-status"
-  url "https://github.com/fboender/multi-git-status/archive/refs/tags/2.1.tar.gz"
-  sha256 "cef8c14992d6a6a473248fef5290858518abba5947cdad57f2e5022c7e86752a"
+  url "https://github.com/fboender/multi-git-status/archive/refs/tags/2.2.tar.gz"
+  sha256 "d26a71cd2efd80416c28d59632665341bc393d2d5fdde20dd588f959b0faea6a"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3f2087edcb148064d057689126fedcfdd3314f086c392f6d8223b335a3a3358f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/multi-git-status"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "cf787cf659535caf0d1a6e09f123e506d043b4085ea29d28346dcd94a8feb300"
   end
 
   def install
