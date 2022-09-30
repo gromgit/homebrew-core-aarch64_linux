@@ -1,13 +1,13 @@
 class Pgformatter < Formula
   desc "PostgreSQL syntax beautifier"
   homepage "https://sqlformat.darold.net/"
-  url "https://github.com/darold/pgFormatter/archive/v5.2.tar.gz"
-  sha256 "78bfc77f54f33d948f9b2e2cd061ceee0b970e263a403603635cfec61e955ae0"
+  url "https://github.com/darold/pgFormatter/archive/v5.3.tar.gz"
+  sha256 "ad709a2c92c763d54088ae3f3002276a962ea25b5aa29ae16dd57e10f51b66f9"
   license "PostgreSQL"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pgformatter"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a9655bf26cd4225c20e12846c7f639920210198601b52cb766cf65674fcf03d2"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "e4f545f0abc62df2f753b149862f3e4681ef7e1d2a7eb0dd20b42c5cc225afd9"
   end
 
   def install
