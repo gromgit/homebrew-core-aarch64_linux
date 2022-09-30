@@ -1,14 +1,14 @@
 class When < Formula
   desc "Tiny personal calendar"
   homepage "https://www.lightandmatter.com/when/when.html"
-  url "https://github.com/bcrowell/when/archive/1.1.42.tar.gz"
-  sha256 "85a8ab4df5482de7be0eb5fe1e90f738dfb8c721f2d86725dc19369b89dd839d"
+  url "https://github.com/bcrowell/when/archive/1.1.43.tar.gz"
+  sha256 "ddc3332aeadb4b786182128d3b04db38176b59969ae6980a7187d40b14528576"
   license "GPL-2.0-only"
   head "https://github.com/bcrowell/when.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/when"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a067c0ab5cf248ca681ff2e5cf459cbf621220b02883c2eed10bd75e5fb6090"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "e9d24dfd3cb16694ce16d0106acb8b585acb3f5bd0c34fb67f2ab6950ae74b20"
   end
 
   def install
