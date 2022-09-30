@@ -1,13 +1,13 @@
 class Zlog < Formula
   desc "High-performance C logging library"
   homepage "https://github.com/HardySimpson/zlog"
-  url "https://github.com/HardySimpson/zlog/archive/1.2.15.tar.gz"
-  sha256 "00037ab8d52772a95d645f1dcfd2c292b7cea326b54e63e219a5b7fdcb7e6508"
+  url "https://github.com/HardySimpson/zlog/archive/1.2.16.tar.gz"
+  sha256 "742401902f2134eb272c49631fe5c38d7aeb9a2ad56fa3ec3d15219b371ba655"
   license "LGPL-2.1-only"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zlog"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "759fa86a50d83c894dc9a672ee0a9d47696fe7056c867a0e93d453bbd5222757"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "484da30dacef8f0661cb8c6f4d50b154c5b7596c1c6fdeae76b6ecd4576eafb0"
   end
 
   def install
