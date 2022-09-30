@@ -1,11 +1,12 @@
 class Vassh < Formula
   desc "Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder"
-  homepage "https://github.com/x-team/vassh"
-  url "https://github.com/x-team/vassh/archive/0.2.tar.gz"
+  homepage "https://github.com/xwp/vassh"
+  url "https://github.com/xwp/vassh/archive/0.2.tar.gz"
   sha256 "dd9b3a231c2b0c43975ba3cc22e0c45ba55fbbe11a3e4be1bceae86561b35340"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "024883e4d57b626c8fd7d80f37b44c1cdee15bfb2b7f4f546cb40fdd09e79a08"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vassh"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "b2fe722f497a089ce894ac780c6b86d88a01c10baf77b2399a883735475066a8"
   end
 
   def install
