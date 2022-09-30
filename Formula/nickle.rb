@@ -12,11 +12,10 @@ class Nickle < Formula
   end
 
   bottle do
-    sha256 monterey:     "b1258d434acb09bb06f6a466a0e895fabbe2469c38d45da48ca8fe8a98d64e4a"
-    sha256 big_sur:      "6e377f6674d6609f634b28941d8c53fef94c9cb429f31d1c765e4a5d8607e88d"
-    sha256 catalina:     "3e1d028467ee41d963e9eaa9809f288fbc3effd826e09ae69bd4e4bfd26679c5"
-    sha256 mojave:       "6fa77667c30e0dfa186868159076bd2e003c34d32624915481f8c52e68b97f23"
-    sha256 x86_64_linux: "a80572816adbeb145a3dd76b327bff79653d6ff504eba14b9fb767e73c64a992"
+    sha256 monterey:     "372a728eaa440022fb6cf28a8a2e4f63171e202efd1d6cc2ab91c934d4f84423"
+    sha256 big_sur:      "135347f40925ae8ff735756acbce9a34d214b4edd489355e8fd1579c716b4657"
+    sha256 catalina:     "10005a33c40d894911d86bc45ad8671eda24d63d2b4117b61540e6bcc6ac1a85"
+    sha256 x86_64_linux: "3350bde797ffbe319c870163dadcb69d413fcf6c50c75ab88e3e5d5977ae0034"
   end
 
   depends_on "autoconf" => :build
