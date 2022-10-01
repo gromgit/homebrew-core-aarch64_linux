@@ -12,12 +12,8 @@ class Dwdiff < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "c6ac8bd5755d425b521cd053dffb6b8ed743576e23f3f32691af25eff05dcaa5"
-    sha256 arm64_big_sur:  "5e1721a6b5e82ffd1e96912c68b130b56c757cc1dc838101f6ca35c033e71a8c"
-    sha256 monterey:       "532f53fb5ce20b15ae8ab16fb7a73cae4c2e606529dfa16e57c72f35242c3154"
-    sha256 big_sur:        "068d3426506689419160ae59cdb21cd8546622b05965fefff4e310b32862bf5b"
-    sha256 catalina:       "1bfc80e8d237eaafb2144c225a1c34e86934c35021df7ae98a5743de35ad21fb"
-    sha256 x86_64_linux:   "3efef1cf3d0b820d21bfc5e2c6d9258224527f98233b0f45be5ea90d3304f72b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dwdiff"
+    sha256 x86_64_aarch64_linux: "a44b7dab9d0e0ac03fce6972001c622599007c4f36a2f72d5b29a47c94ec5039"
   end
 
   depends_on "pkg-config" => :build
