@@ -6,12 +6,8 @@ class CyrusSasl < Formula
   license "BSD-3-Clause-Attribution"
 
   bottle do
-    sha256 arm64_monterey: "ab2db74328cfcf6e6e6d9871dbd9997abf9663f8406f7413eae3297f31df1af5"
-    sha256 arm64_big_sur:  "0a68a1a03c26d5c6d3efbab276bb41aef9cfbe2878e0b206a1a4046f326bb9fd"
-    sha256 monterey:       "5ae417c006bce921655450e65b34daa21c3c418ee39ae22a9686ffb68b15ae91"
-    sha256 big_sur:        "923ba97216a1c61c759b9b3ed961c44ebe8226429898e99785c5efa719b6517e"
-    sha256 catalina:       "9af6c7964abcbbad80aa2e9f1203e40f87488c42e5e13e32c74100dc286311ef"
-    sha256 x86_64_linux:   "d54ca2a32013569d63be2ce1f2dd92216d47a5e0a096d74561490a429e3b3dbf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cyrus-sasl"
+    sha256 x86_64_aarch64_linux: "397edcfec5a1d5a00238962fdf7c1ce6edb4c8db469513bb08056a66633f4a4a"
   end
 
   keg_only :provided_by_macos
