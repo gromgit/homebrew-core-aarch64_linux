@@ -13,12 +13,12 @@ class Innoextract < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "57dec1589632c3bcfb86c7402b2f323a0e30123f69424a71522260ea98268555"
-    sha256 cellar: :any,                 arm64_big_sur:  "26f0785a2b94720a7c4f50ebb44a410644bae4a34d60c2183a2f53d5eb006ba6"
-    sha256 cellar: :any,                 monterey:       "13752b1f734b83fe450c8580ea2c267c14d29cff4e55a7ab37aeccf168f44059"
-    sha256 cellar: :any,                 big_sur:        "e9027a847d367e94e2a3bcd28dbda59516eb85b44a82d0cdff72863f2f72fb19"
-    sha256 cellar: :any,                 catalina:       "43741a15dff324bdf57d0b97c6ebd30a8a05e27cb5e931788e9e2a3010e4e7e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5d734c33916760cbe52c7ebdb338566a0d85e3ade9b8085c1abd3264b9ea93e"
+    sha256 cellar: :any,                 arm64_monterey: "9ee72f555539ca423420c6ec83bdb7fb549f8727e4fc5fec25f47593760809ab"
+    sha256 cellar: :any,                 arm64_big_sur:  "1dda1fcae2b4243cfbb565b36b0554b003920e43e18dc479837191efc1f368e4"
+    sha256 cellar: :any,                 monterey:       "cf7c24ad28cc0aaf358d4d6b676a1ac73e2ffe583cd26149575974c0eb0aa7e0"
+    sha256 cellar: :any,                 big_sur:        "36269c001615fe060fcf4a91cfae2e273785e951b5e12402254a1158963bd580"
+    sha256 cellar: :any,                 catalina:       "749d13cbe03a8e4d189b47b942f86b42f488508abbfc179a02950eddf1f6034a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37aa76c6b8ff612462fadf8ffd38b53cbff299d974b8065c27c08ca06c13028c"
   end
 
   depends_on "cmake" => :build
