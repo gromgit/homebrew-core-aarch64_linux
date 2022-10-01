@@ -8,10 +8,12 @@ class Nu < Formula
   head "https://github.com/programming-nu/nu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "a2a1bdb6473b6afd30cde5def27158415fb38f92851b8a252498631f7e2f350d"
-    sha256 cellar: :any,                 big_sur:      "bde3090df08b5cf2a6038aab4b80daf3981fcf2d7cb19653a8bb507eb5a2349a"
-    sha256 cellar: :any,                 catalina:     "4cace319187e0c057a0437dd17f83022e9e5ac20f478cc317fd2be8b2ca8c2ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1413e8674c855798fc973e5f9a00af4575e6fece5427e1f16b8814e40c338cf2"
+    sha256 cellar: :any,                 arm64_monterey: "73458d60272c9b5b96ec050db803e86e6f5886bc900f43fce9a99166f5829bc1"
+    sha256 cellar: :any,                 arm64_big_sur:  "d5d3537f601e6de7a089a83156751a904875f311c8df33a296d76ab82869864d"
+    sha256 cellar: :any,                 monterey:       "a2a1bdb6473b6afd30cde5def27158415fb38f92851b8a252498631f7e2f350d"
+    sha256 cellar: :any,                 big_sur:        "bde3090df08b5cf2a6038aab4b80daf3981fcf2d7cb19653a8bb507eb5a2349a"
+    sha256 cellar: :any,                 catalina:       "4cace319187e0c057a0437dd17f83022e9e5ac20f478cc317fd2be8b2ca8c2ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1413e8674c855798fc973e5f9a00af4575e6fece5427e1f16b8814e40c338cf2"
   end
 
   depends_on "pcre"
