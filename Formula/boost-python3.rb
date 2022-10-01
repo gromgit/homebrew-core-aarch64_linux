@@ -11,12 +11,12 @@ class BoostPython3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3b00e0557668bb9a167b7aa1864db33a4b8505066288459ab05ad10745398df2"
-    sha256 cellar: :any,                 arm64_big_sur:  "646249b68231b84630fd631790ab80e9d13b7a7cb62bafa8e08fb35c926380ba"
-    sha256 cellar: :any,                 monterey:       "abd27c9a20d98a3f3acadc55225c582dcbe3457080e9f66bb480b14f549771c1"
-    sha256 cellar: :any,                 big_sur:        "0960734129fa8ddc8f3f2b7d3d35efc63d67677f99c3f1bbcb780197018ddbe8"
-    sha256 cellar: :any,                 catalina:       "20af97eca0a0c3fb287c76c2972d15a2e01f43f4bf4484c90e11045b21667b4f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b93830c083dd4e555e5f70e5ef7ab5afaaa2feb387c2837fbd8f82d62405efa"
+    sha256 cellar: :any,                 arm64_monterey: "81151a4fe10906c62e9bc6fdbdae760173c651e24fb4db481bdc434fee06e474"
+    sha256 cellar: :any,                 arm64_big_sur:  "86daf3cde3883aa28b5f8bcde21da9e49514bdb92d815a698e82524c20940aad"
+    sha256 cellar: :any,                 monterey:       "2b1e159f4dab39b3bcb1f9610f3fa2cab5dad81d207cec4f4a378c39e5110fa9"
+    sha256 cellar: :any,                 big_sur:        "069bcb621f209ef4a81fa1b7e4579f2de5d57281b8e24ec8a070a165c0b14c68"
+    sha256 cellar: :any,                 catalina:       "c497158ff9d4e5deda35a17d345593800f69d0a7d91e7eb6e2af4b8254f982be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30f47378e8e531be27b74fcb215d3b8ab348e992741cae3eed69b26c8106b770"
   end
 
   depends_on "numpy" => :build
