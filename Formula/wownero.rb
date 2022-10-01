@@ -24,12 +24,12 @@ class Wownero < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0646ba9aeaef3204b5e26d0879f7e98026e61e43bd17cafa41103b41a4ce15e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "c1ad435035722aecd7a6fe0638f0c9b0422dc3012e264e0e2f08384cdb5a689c"
-    sha256 cellar: :any,                 monterey:       "482dffad2aa48520403a157ea6ec528efb5b6717f3575873f21377fd470fac60"
-    sha256 cellar: :any,                 big_sur:        "58e407effcf1443a4c57e4f2c940aaf9435680cbcc8514601d2899002aa31f8f"
-    sha256 cellar: :any,                 catalina:       "615bd23d5418a2e1619fa33eb17f40736771b83a22e60f378d28a09047a09267"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb8eb6d58f4bb2824323831665bcf16a247a5b7b7c3bf855a80267e572966fdb"
+    sha256 cellar: :any,                 arm64_monterey: "b627c6af02ba17fb383732cfd73d3e8c6008e411f023de9d41e87040cb4b0103"
+    sha256 cellar: :any,                 arm64_big_sur:  "0fd483fb375cb8f15b8ef0ea0834b67598d654f7c2a009b0524d789fe280f4f9"
+    sha256 cellar: :any,                 monterey:       "1a6df256f7c5770c20d187314b5b17d573d6a66b96f4271849f27cc4cefa745b"
+    sha256 cellar: :any,                 big_sur:        "38346fc0d87e8d5b92d258e4c9e95913d294ef78b62c44053814a3464acbb79b"
+    sha256 cellar: :any,                 catalina:       "8821221bc24cecae72e59c4a51f7f1e3583c8f2c1759baf26e046b79e94a9c47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c47de0a28e479265da68243b21c14a842b78c1661574ac86224736d8e55aab5"
   end
 
   depends_on "cmake" => :build
