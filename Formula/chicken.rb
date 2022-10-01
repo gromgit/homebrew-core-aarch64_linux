@@ -12,12 +12,8 @@ class Chicken < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "e09430040963225492897d7609406819e86fb849d13845ad8087d5d61e31eaca"
-    sha256 arm64_big_sur:  "61ae526015573afb8c25f406a65cdd4b7de3f8eb937e4f7fa6e7348323d89898"
-    sha256 monterey:       "049d9b3aa4cd14369f60989ab423da0b73a1aeab96b15e3c238f904de0293fb0"
-    sha256 big_sur:        "86b3c43930711b19e3270bda4701c3472da23eed410ca33203426e155f7098ff"
-    sha256 catalina:       "6cc05c82270f15d1013cd4d3d63ed7b82ae891c29ff6fc3156be89c3d64973f1"
-    sha256 x86_64_linux:   "cb961e4d3aadeca9ffff40761b866ba766234d9b4ffe87cf4daae445435f5e4d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chicken"
+    sha256 x86_64_aarch64_linux: "827734d75654341505074a8be8d2645ed47e08d0c06c9b0364aa0da899779e1c"
   end
 
   def install
