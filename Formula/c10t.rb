@@ -7,12 +7,12 @@ class C10t < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5bcb225283ff1ef1517416ea63fd4531991694f295145be2c370d1d54d9b84da"
-    sha256 cellar: :any,                 arm64_big_sur:  "38cf0106eca82d542b1e3af46093b7ae8794e255352f40ce2bc380ff525088d7"
-    sha256 cellar: :any,                 monterey:       "cefe5abaf716636386a488aa4567bed7de4e83427f3e3cc65dc180a933245f7e"
-    sha256 cellar: :any,                 big_sur:        "f6549cf911df71c42423a42b0ea9ca7aaeabd45607c71b46cfa45f558041af6f"
-    sha256 cellar: :any,                 catalina:       "bb70f4cc507e90b5f72a44c0d0fa1a4beb500a44fd25b16681633e6521735871"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fbec62e6c3534ee4fd7cdb676589ca41788015dad4facbf966d5a62c637c1548"
+    sha256 cellar: :any,                 arm64_monterey: "bb52335803ba6ede73c4108d60521408261467674625dcf300a847aed813fab3"
+    sha256 cellar: :any,                 arm64_big_sur:  "2ee23e4a9df8e49fea71796878b496e17fd85f708366cf7776706dcbcd7c5ffe"
+    sha256 cellar: :any,                 monterey:       "69fb50b752d67060a557c23274bb83bfe73ec3a76a09988cf78646371d6abbf2"
+    sha256 cellar: :any,                 big_sur:        "59e476e2c75735742d2147673a668bbf24e148383192b4ed8002f2e1222e90b6"
+    sha256 cellar: :any,                 catalina:       "412f8b7ad24cd8ed63c2812c1ca4332ac4b3c159784e5dea36462d0a5dc3c41e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5051fa40ffa44dce21c9707b05a027164b5b3747a514ae424f671ecc5461589c"
   end
 
   depends_on "cmake" => :build
