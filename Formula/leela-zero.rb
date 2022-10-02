@@ -9,12 +9,12 @@ class LeelaZero < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "13e77cee07ba6d6094bfc552c3f0f34217e12a53dae301f8a1697734a69f8b7f"
-    sha256 cellar: :any,                 arm64_big_sur:  "93db2d839cea6cd971be9192383ef281a2b561f145165f141f21714c9f52fafa"
-    sha256 cellar: :any,                 monterey:       "f854d4a6da72d191a2db1511cd004ba8fb434a785f87a3540bf70bc45187e5ea"
-    sha256 cellar: :any,                 big_sur:        "77af83d8aec2ae9d8e127189245fa49a66b849c4671a37aab8eb59b8ce6b278c"
-    sha256 cellar: :any,                 catalina:       "79bb3fe211cf9cb867d70264d17cc6bdab93b9afbee02614f6d93992d151a345"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27538c14a70f31c8b9ce6c4b71fe80657421d051ac2ceb01d2d34e4c1dfa3578"
+    sha256 cellar: :any,                 arm64_monterey: "0ac3d4c9f8ae3d5b900e4dcec2d41194503239c1867737c4d174bda8758df8f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "df9c877847417407625c6a3f061e715c0cccf26e3655b3726d7c70138f98b52c"
+    sha256 cellar: :any,                 monterey:       "8b3c96caf950feb781a366c2f7b1b770bdd1dfe814e90d2abaa2cafddefbb236"
+    sha256 cellar: :any,                 big_sur:        "1ce90ee3717265c98cafc1cad1854e1787ba3cd9a02b33617706c355d3d2aeb4"
+    sha256 cellar: :any,                 catalina:       "28877197dc8ab066e8f7bce53ba31326211413eb7a23c34f5bfcaecc4d9602b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53a2563f07af0a6219691c0ee2a474a0436bb392db33434242a0d21a60cd5dc2"
   end
 
   depends_on "cmake" => :build
