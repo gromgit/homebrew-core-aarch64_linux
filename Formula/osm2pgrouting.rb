@@ -8,12 +8,12 @@ class Osm2pgrouting < Formula
   head "https://github.com/pgRouting/osm2pgrouting.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "655fce8ebc42541f74c19891cb7f95cb3ea349a5a9f56a55eaf9d48b86142f81"
-    sha256 cellar: :any,                 arm64_big_sur:  "5221c89b5f7ad69f683919032ed1f08c69a2854d249ec3cbd1ea32ed4a2a5c78"
-    sha256 cellar: :any,                 monterey:       "1b2baeec219eb69778e7e393ec47705bb3971d716c360d3ad96a8edba35c21e2"
-    sha256 cellar: :any,                 big_sur:        "82155e14a81382a35fc23b64169b76fc934e4fd0121c30f21733adc49a05c5c5"
-    sha256 cellar: :any,                 catalina:       "c1623261ff58d3e98dd528da974fc6828c7d39915551004f0b20c17042efe856"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "702b3512f5944637b24477d057329a7c379202a479eff7fd25f7029b1285e434"
+    sha256 cellar: :any,                 arm64_monterey: "50a6b839a749405b1a8ed973112ec404588f9689cb6f9d1838fc93e069113aaa"
+    sha256 cellar: :any,                 arm64_big_sur:  "f014ee852c616ed7e4bc83c06137c57a9005a21a6cc3a3d94867c368fcd3d4de"
+    sha256 cellar: :any,                 monterey:       "98c0e8d3b2fa3eceda49deaf76a4577bfe2101b298f579a725fa9c06cc426e06"
+    sha256 cellar: :any,                 big_sur:        "e8c9c756dedb666562e01bb2a617b11f81d176d1ce4c3caebf6390cd0e510790"
+    sha256 cellar: :any,                 catalina:       "3e7d0bcb78fd7b62ebee99080133aae026a77a4b2b8d6f58e84f67b98d777039"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "092b3158861c3d646c8fb955c41fa8f4a3999cc6040cc08111c9d7278ce3a52d"
   end
 
   depends_on "cmake" => :build
