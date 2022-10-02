@@ -8,15 +8,12 @@ class Sphinx < Formula
   head "https://github.com/sphinxsearch/sphinx.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 arm64_monterey: "1b9d46aed9d62eff25aba72b20380e2b03fc04851b9309fbce3ffc071f2760c7"
-    sha256 arm64_big_sur:  "57a2dc9f3c5c40d46785753531e4801a7db0560c11434a10d224efeba3c2c1b2"
-    sha256 monterey:       "17c8dbbdd7f5abf50a195e72dc3eee1bea414490ecffa97473e8ed99dff90aea"
-    sha256 big_sur:        "bbaebbfc31099a28b528c679a2c7825e218e42d83d04a4b0dc53561e70fcbdca"
-    sha256 catalina:       "f3d89ffcd2926373af5a35bb7ae6f16e59074699eeacfb4d358a0dc5742729cc"
-    sha256 mojave:         "61f1ae14e253c8c84f0e8a9f3a26833ca4a1da887d97c0df8ecebb6096222546"
-    sha256 high_sierra:    "3daf6e565c7c12803c13b6439a872e61335b3b27c06719ca6f8cec93dcd2176e"
-    sha256 x86_64_linux:   "3736780f2809b0449953cfb4ed85cc7d65b86e6c5c55aa98186062f8aff81d99"
+    sha256 arm64_monterey: "0a7686315aa341f8d12d0a46f7d7f13bf921e85b59a285292bd67be0ec6cb9c5"
+    sha256 arm64_big_sur:  "0702c419e4680937a9e9c1970074e7e785b5b7307c90bb852f849bebeda8bd17"
+    sha256 monterey:       "56a74fda35d958988e0fa6c5420074a5933b47f990aee4c42c05bf57cce2d8a5"
+    sha256 big_sur:        "2969e6045b58a3bb2b68c45cf687606a02c15d397760d50a4d7a345779f2f69c"
+    sha256 catalina:       "ce510deb9be121b4fbae238dcd626cfde7666cc73979412f54b8726ca689e659"
+    sha256 x86_64_linux:   "ee340d578c2a8e8e91e2624cbd505d06cc054e6f37dff83124a8ac115275f4f2"
   end
 
   # Ref: https://github.com/sphinxsearch/sphinx#sphinx
