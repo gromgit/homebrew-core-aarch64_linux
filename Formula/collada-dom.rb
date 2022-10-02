@@ -7,12 +7,12 @@ class ColladaDom < Formula
   head "https://github.com/rdiankov/collada-dom.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2c5fc66501eb69de970b7669e4aabb118bc677bb3864ccb5bdc0088c4912ffeb"
-    sha256 cellar: :any,                 arm64_big_sur:  "393c48aed410113fd631b7f3fb986532f0a9312b06c91e17a52195e3a6bcf537"
-    sha256 cellar: :any,                 monterey:       "26c7075d19926064efdb4d1f20857c755791d0f5a6039a573f6fdfc66e0e41f9"
-    sha256 cellar: :any,                 big_sur:        "c0da851d193374fc5facfcc9c2bd7ddc5de7c92f224d4e7a1d921017ec9e4508"
-    sha256 cellar: :any,                 catalina:       "383e160c3c84dce95e7a819a7333b822ecc9395dcb41c008f966e266a2ebb34b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7beae8c38b33043b5fbc1661d80a0855eef1c2025b7ab2f505190eb121ac569b"
+    sha256 cellar: :any,                 arm64_monterey: "3f4c94c87fcf91e70742ee59d9beaac2795f0338732d5416a68e498d58c4067d"
+    sha256 cellar: :any,                 arm64_big_sur:  "0fd24a0542b44e9718527d769a8f3b2229ee2f3f9e0c114472d0d28f9499edc7"
+    sha256 cellar: :any,                 monterey:       "70bca431ec07f8e203c0fb60621527a6df11a122871c02af2e3b34cb615542bb"
+    sha256 cellar: :any,                 big_sur:        "45fe76243a5bfb058c5e5e618d7fa974177097c52ffedcaa53e2b19180634221"
+    sha256 cellar: :any,                 catalina:       "8cfbaf5caa2d489b860348d49596907fb137048241f64645a60d5156f4378ffc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01048c13f1eb1ac249b40ff691c712724d0cbcaabfbc0d11eead0db21f15f5fa"
   end
 
   depends_on "cmake" => :build
