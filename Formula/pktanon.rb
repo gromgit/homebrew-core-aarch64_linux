@@ -14,12 +14,12 @@ class Pktanon < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9a0a99c0307d31a24651f38f7783520a46dab6a73f719f2a339b5fed88909165"
-    sha256 cellar: :any,                 arm64_big_sur:  "af5eecdb727ede2277c315672e49eaa7917348847738cb1f3eb916de0a1b846b"
-    sha256 cellar: :any,                 monterey:       "652bc79b5cf95d708340ea863e1e7d07667c7872120f54b583e0f4bee21a1c9e"
-    sha256 cellar: :any,                 big_sur:        "60234e81604a908d379bc57e162e7f1a4540f088ade8eef94255ece3f85af6a3"
-    sha256 cellar: :any,                 catalina:       "4356e0c9f88666d9ac4d9f61afb413f816615cf8f4ec387b9aa34b33347de866"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4ecb07eba671e414b6e6c1d874b3dca78dde3454ad738359cf099e844d21988"
+    sha256 cellar: :any,                 arm64_monterey: "7bce2aef63a3a786500090ec47feeee781f3ea815c1e290138df41a8d44663f6"
+    sha256 cellar: :any,                 arm64_big_sur:  "36905bed56897e7151f048047b5696c36d7cdc2ef8ee310568daf29022e9b2ec"
+    sha256 cellar: :any,                 monterey:       "077c0faf136fd7ec5a0d5596fb84e720d376dfce83d85563ceb74bfcae48f61e"
+    sha256 cellar: :any,                 big_sur:        "1cb761204f479937cb389f2754dbb1bd4227a6759fa4b9c9ca3d8011e3fbcd22"
+    sha256 cellar: :any,                 catalina:       "52761b594fd6ade559756d25174e5ce53fa6db21db5d1795e750a58c6ef85b10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54a53776fa3c529c82d9f1ae3725b9a5a82fe6ff9c35cae2133859f7245f161e"
   end
 
   depends_on "boost"
