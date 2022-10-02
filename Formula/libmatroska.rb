@@ -12,13 +12,12 @@ class Libmatroska < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8547a058752a4a107227a379565968ca1240846464ebcc85478ea986f3a14caf"
-    sha256 cellar: :any,                 arm64_big_sur:  "80b085f93f8bd5a189b65ef9f9792d1070a3e2743d5b0d80fea37320a05f7821"
-    sha256 cellar: :any,                 monterey:       "d002852d72c7721ff49ad67cb21052d4b584e459372802082b1a725353409fed"
-    sha256 cellar: :any,                 big_sur:        "f1ec19e1e09fcb4b56f08701419e43e0f70f2551ef5584510b26c29cac3b4f34"
-    sha256 cellar: :any,                 catalina:       "8c1331e57e66489ba3488e44e70860c645f0c2739d5b34ec82be45fc42985d7a"
-    sha256 cellar: :any,                 mojave:         "c3f5c74b93b7b71755e104c8c62d0ac8f10b36ca579210729e654706e83f1e03"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ae37f837221f686dd5ebb8cdcb59a0e0fede7db02f7cbc5b374c3e44019e8f9"
+    sha256 cellar: :any,                 arm64_monterey: "b8a93025aa493a3337c60587f4b0d44ed1405444928a654bf5bd4da5e97b7630"
+    sha256 cellar: :any,                 arm64_big_sur:  "bb1ddb052d3a72306f3e0b144375a51e773d662f33c7f32c5fd6b5d3ab367ee2"
+    sha256 cellar: :any,                 monterey:       "e810f9fd1cde2dc589d5c8f8a90e5b83731f5d11b1dffdb7bde18766f1aecf33"
+    sha256 cellar: :any,                 big_sur:        "d5f12efa4d18b6d752a454fc1693d14fd8c8f73d07fee1af29906d0f012ec98a"
+    sha256 cellar: :any,                 catalina:       "b540d3cba51677fa0bcf8814044cc3c1e3e5deac86d9d92652967e3832a48949"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88cf397ff4c9039c616418a7ddde0b298b30fd586496de95c9ccd265b1c6cd0a"
   end
 
   depends_on "cmake" => :build
