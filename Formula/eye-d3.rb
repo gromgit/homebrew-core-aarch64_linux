@@ -14,13 +14,8 @@ class EyeD3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "258101dfb0923a34f79feea463f224496917a3cf5bb2af0f5942df371044ac76"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4613276d6a11d859910c4fc261acd46ed8c79f6fb39e1174fc9a0e3aa9a425f"
-    sha256 cellar: :any_skip_relocation, monterey:       "878a0964d4e7f5fcbb71268afd12fc0fcca3bb0afb59f58b19e11efc95f76cf8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fabd715d3a65c1227ba6f6f0f5f5ef6e4f30311fdb6a81c6ee64f29ab06b6315"
-    sha256 cellar: :any_skip_relocation, catalina:       "fac417d9f81abb4a7f9a7c422e166eecafc1d7eedfeb0db93e47d59d9e1894b7"
-    sha256 cellar: :any_skip_relocation, mojave:         "9a2595374e19a747a5c5e04bd25cd95d80cf99e3a78c9259fe9b4cd9414f9afc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a85e5aba1fe2b28c9b7587e06cbea8b65585b0d5eb958a22fb760948092b0826"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/eye-d3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3594516d3a8cbf9c6869790af974a1eafcd69656a6ae6892843580c203d663a1"
   end
 
   depends_on "python@3.9"
