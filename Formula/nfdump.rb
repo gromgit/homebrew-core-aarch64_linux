@@ -7,12 +7,12 @@ class Nfdump < Formula
   head "https://github.com/phaag/nfdump.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "70a059b159cffdc2779052d3208875f7d5ec3cd1011934ad5fefce8e784dcd59"
-    sha256 arm64_big_sur:  "d5261036eec525b54b3e085523fdc12b7fbf22d2db547de517587db776c3e050"
-    sha256 monterey:       "a53609defd554e191bd83c62959a0ad30214bad155df4dbec93cd63fe6a11b5f"
-    sha256 big_sur:        "7131ea67f9eea20c42a56305b4c2464ef35a6ab7282db4d9f3ac991c4f8e41ad"
-    sha256 catalina:       "51601b61506d7535d5253ad3690fd21cc931390dcc7a751d0f83a8b7a4fb5cd0"
-    sha256 x86_64_linux:   "fe4f57703ca2c02d1035b2cbed8c08ba7a08b490e7a9122994abf0c38fceaa86"
+    sha256 arm64_monterey: "681beef5015bf019828a043715db83e4dd60520f16a81dc407cd87b02b8cceb6"
+    sha256 arm64_big_sur:  "d19ad9cb90362d9ed47428bcb9a49e0397f67bcc4bc71f5a996edba314dd987d"
+    sha256 monterey:       "a6de554ea6baa063a23f8324900411222eb5aa09c8988f2f12ffccdccc6a183a"
+    sha256 big_sur:        "3583fedeaa83d5c0a82cf51aa225ee3798db0f1779a094c466011fabcfbcc39f"
+    sha256 catalina:       "fa4cc1227af8aabfacefbe89d9e1079c6510aa29a2ca5626c5557f6d1f73e0a7"
+    sha256 x86_64_linux:   "d71d0d8766ea2346659017b6ab6d232d0473a9ffc280c2464fa7102fdda2acce"
   end
 
   depends_on "autoconf" => :build
