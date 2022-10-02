@@ -7,12 +7,11 @@ class Fuego < Formula
   head "https://svn.code.sf.net/p/fuego/code/trunk"
 
   bottle do
-    sha256 arm64_monterey: "5a3e590497e0820c464ad1502ff85099abc788ebb8bbd5673a3f13a3938974be"
-    sha256 arm64_big_sur:  "17218e8a637744273cd02101fb46ba305508c5629ffc8362cf369eb8727d1e25"
-    sha256 monterey:       "48789049382de09888cbc9584dcb72c5ec54d597868539fc739dfad016b54d70"
-    sha256 big_sur:        "cc9854427b57339e75b30fe71d354412b641e703254e9d7589e0968af2921848"
-    sha256 catalina:       "a3a74c3c91cb24b3a4bc80c416a7c763c9dcb4ea2864c9b1b24eb94b0829439a"
-    sha256 x86_64_linux:   "01cd8bb74fd428687faf32dd6a0275071291fa7647133f927579d0db5d897f09"
+    sha256 arm64_monterey: "f6301e86813d55ba476153d0ada58d1cb40791527f59b5cb8c3602426f666a89"
+    sha256 arm64_big_sur:  "65dfab9714a6866134dbcd17de0db06148eec4164b00e5dd259ff0fd1732c29d"
+    sha256 monterey:       "73d6548393b805dfc42ece561040c1549682cc862a671aa090b32b5f2b2d210e"
+    sha256 big_sur:        "73abec7b9dad7cb5bddb944b7ded1f184850543db10c7ed8e4d09ef5f3efbbf1"
+    sha256 catalina:       "3df75cc7d8fc3f2975108e15e9a751bbc9b072ab9e4e8355e750a1402bb3526d"
   end
 
   depends_on "autoconf" => :build
