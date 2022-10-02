@@ -8,7 +8,7 @@ class MozGitTools < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/moz-git-tools"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "524d096e91eb39e173dd2965b6ecdbcbd771394056ad9b3204aa42ab7aba92dd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "524d096e91eb39e173dd2965b6ecdbcbd771394056ad9b3204aa42ab7aba92dd"
   end
 
   def install

@@ -8,7 +8,7 @@ class Liquidprompt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/liquidprompt"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "85b6c43ad094ce516ea27402ef069af47630a9a3b8eb540e46554a40a8481952"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "85b6c43ad094ce516ea27402ef069af47630a9a3b8eb540e46554a40a8481952"
   end
 
   def install

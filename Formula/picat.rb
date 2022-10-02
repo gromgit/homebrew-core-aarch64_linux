@@ -1,9 +1,9 @@
 class Picat < Formula
   desc "Simple, and yet powerful, logic-based multi-paradigm programming language"
   homepage "http://picat-lang.org/"
-  url "http://picat-lang.org/download/picat316_src.tar.gz"
-  version "3.1#6"
-  sha256 "857f45e1a99e9d597843d0ddede82bbcbb077f7aff568ffa4ab30785dc170821"
+  url "http://picat-lang.org/download/picat328_src.tar.gz"
+  version "3.2#8"
+  sha256 "1b679edec1586c6fd4f92e0b4241598c38969ae82fb7b6e0ed1b5a33e0ef61a7"
   license "MPL-2.0"
 
   livecheck do
@@ -12,7 +12,8 @@ class Picat < Formula
   end
 
   bottle do
-    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/picat"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2e7e05435e9ba304177584cc8260eb195c0ec1437c9a5c8663acf343e18be811"
   end
 
   def install

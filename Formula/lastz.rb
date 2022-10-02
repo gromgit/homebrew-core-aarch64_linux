@@ -1,14 +1,14 @@
 class Lastz < Formula
   desc "Pairwise aligner for DNA sequences"
   homepage "https://lastz.github.io/lastz/"
-  url "https://github.com/lastz/lastz/archive/refs/tags/1.04.15.tar.gz"
-  sha256 "46a5cfb1fd41911a36fce5d3a2721ebfec9146952943b302e78b0dfffddd77f8"
+  url "https://github.com/lastz/lastz/archive/refs/tags/1.04.22.tar.gz"
+  sha256 "4c829603ba4aed7ddf64255b528cd88850e4557382fca29580d3576c25c5054a"
   license "MIT"
   head "https://github.com/lastz/lastz.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lastz"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc81956d688f1c7f2e3ef02d5572d79045debded4a2826c3431c5da04b88a696"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3392990fc5f5523c22e427047a4c5c739863a449d2cf69d24ba902928336c61e"
   end
 
   def install

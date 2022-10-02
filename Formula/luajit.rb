@@ -41,7 +41,7 @@ class Luajit < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luajit"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "264f403535a36e3194d3e399ff6ce9da1ababa5024f8e0de52330172f520e1b2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "264f403535a36e3194d3e399ff6ce9da1ababa5024f8e0de52330172f520e1b2"
   end
 
   def install

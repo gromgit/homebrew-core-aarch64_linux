@@ -7,7 +7,7 @@ class Libltc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libltc"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "ce0b1476b1b6d7e1db1992c045d6f4f4a425e9ee2537d3c16b05715ef80de6cf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ce0b1476b1b6d7e1db1992c045d6f4f4a425e9ee2537d3c16b05715ef80de6cf"
   end
 
   def install

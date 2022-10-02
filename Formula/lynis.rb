@@ -7,7 +7,7 @@ class Lynis < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lynis"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "30a03bf55865831fe53713a1f0682510d422f6c7b3bae78560fb454a3130004e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "30a03bf55865831fe53713a1f0682510d422f6c7b3bae78560fb454a3130004e"
   end
 
   def install

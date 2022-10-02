@@ -8,7 +8,7 @@ class Kerl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kerl"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "072ef3ae93cad9f29248dbc2fe7bd6d89066b2a956a0e22825a02403e980100d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "072ef3ae93cad9f29248dbc2fe7bd6d89066b2a956a0e22825a02403e980100d"
   end
 
   def install

@@ -8,7 +8,7 @@ class N < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/n"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "fa979454a3c6965732a20b0ab4166a9789edce29093d686907a0b52898f174bf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fa979454a3c6965732a20b0ab4166a9789edce29093d686907a0b52898f174bf"
   end
 
   def install

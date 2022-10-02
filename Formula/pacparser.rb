@@ -1,19 +1,19 @@
 class Pacparser < Formula
   desc "Library to parse proxy auto-config (PAC) files"
-  homepage "https://github.com/pacparser/pacparser"
-  url "https://github.com/pacparser/pacparser/archive/v1.4.0.tar.gz"
+  homepage "https://github.com/manugarg/pacparser"
+  url "https://github.com/manugarg/pacparser/archive/v1.4.0.tar.gz"
   sha256 "d62d30aa6e2b4ccdf6773fc30a8b90d1d64eb6ad8edcbf56d2b803e913dcddbb"
   license "LGPL-3.0-or-later"
-  head "https://github.com/pacparser/pacparser.git", branch: "master"
+  head "https://github.com/manugarg/pacparser.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pacparser"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a3120df042462ccc149cd30106f31c7dd1c6d105cf9402f75ba89e9ae63b924"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "262c40f6893f6dbc12ade817be3737860d498083b1ee1892de690b74bf27f56d"
   end
 
   def install
     # Disable parallel build due to upstream concurrency issue.
-    # https://github.com/pacparser/pacparser/issues/27
+    # https://github.com/manugarg/pacparser/issues/27
     ENV.deparallelize
     ENV["VERSION"] = version
     Dir.chdir "src"

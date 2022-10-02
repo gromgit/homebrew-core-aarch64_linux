@@ -6,7 +6,7 @@ class Vassh < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vassh"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "b2fe722f497a089ce894ac780c6b86d88a01c10baf77b2399a883735475066a8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b2fe722f497a089ce894ac780c6b86d88a01c10baf77b2399a883735475066a8"
   end
 
   def install

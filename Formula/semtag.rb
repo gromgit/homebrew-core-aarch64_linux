@@ -7,7 +7,7 @@ class Semtag < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/semtag"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "6a6b37e1523c6ebf66395fc503680c0a069b09d2d97607aee0025591c8e4c8a8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6a6b37e1523c6ebf66395fc503680c0a069b09d2d97607aee0025591c8e4c8a8"
   end
 
   def install

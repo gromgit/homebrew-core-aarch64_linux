@@ -7,7 +7,7 @@ class Zlog < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zlog"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "484da30dacef8f0661cb8c6f4d50b154c5b7596c1c6fdeae76b6ecd4576eafb0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "484da30dacef8f0661cb8c6f4d50b154c5b7596c1c6fdeae76b6ecd4576eafb0"
   end
 
   def install

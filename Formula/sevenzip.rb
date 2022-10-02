@@ -1,9 +1,9 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://7-zip.org/a/7z2107-src.tar.xz"
-  version "21.07"
-  sha256 "213d594407cb8efcba36610b152ca4921eda14163310b43903d13e68313e1e39"
+  url "https://7-zip.org/a/7z2201-src.tar.xz"
+  version "22.01"
+  sha256 "393098730c70042392af808917e765945dc2437dee7aae3cfcc4966eb920fbc5"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
 
   livecheck do
@@ -13,10 +13,17 @@ class Sevenzip < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sevenzip"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e33674a8788f3d80e1c18765615356014f527d7e35d5accda96817409d81db1e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "07f19d40eec4bc73330bbf7d74374b6bb68b64a7ae176b961050fb90f7663bc1"
   end
 
   def install
+    # See https://sourceforge.net/p/sevenzip/discussion/45797/thread/9c2d9061ce/#01e7
+    if OS.mac?
+      inreplace ["Common/FileStreams.cpp", "UI/Common/UpdateCallback.cpp"].map { |d| buildpath/"CPP/7zip"/d },
+                "sysmacros.h",
+                "types.h"
+    end
+
     cd "CPP/7zip/Bundles/Alone2" do
       mac_suffix = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch
       mk_suffix, directory = if OS.mac?

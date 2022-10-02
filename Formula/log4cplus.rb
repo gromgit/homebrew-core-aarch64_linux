@@ -12,7 +12,7 @@ class Log4cplus < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/log4cplus"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "7c53dd91fa7d4ad0fe94766fb32e2ccf19eef0a7d17b868f7e5a29e5ed867b54"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7c53dd91fa7d4ad0fe94766fb32e2ccf19eef0a7d17b868f7e5a29e5ed867b54"
   end
 
   def install

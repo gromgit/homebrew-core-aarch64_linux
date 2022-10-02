@@ -12,7 +12,7 @@ class UserspaceRcu < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/userspace-rcu"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "31662e544937b89405a55821d107f9dafa7ccf5efd109129c9e2a33e4afee97a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "31662e544937b89405a55821d107f9dafa7ccf5efd109129c9e2a33e4afee97a"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.

@@ -12,7 +12,7 @@ class Libupnp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libupnp"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "af98b04fa2e156ea53960dd60fa6082487f06e19b3f33ba54e683b1c676d2198"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "af98b04fa2e156ea53960dd60fa6082487f06e19b3f33ba54e683b1c676d2198"
   end
 
   def install

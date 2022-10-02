@@ -7,7 +7,7 @@ class MultiGitStatus < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/multi-git-status"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "cf787cf659535caf0d1a6e09f123e506d043b4085ea29d28346dcd94a8feb300"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cf787cf659535caf0d1a6e09f123e506d043b4085ea29d28346dcd94a8feb300"
   end
 
   def install

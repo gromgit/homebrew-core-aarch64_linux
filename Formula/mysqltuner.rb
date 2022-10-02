@@ -8,7 +8,7 @@ class Mysqltuner < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mysqltuner"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "9122d318a0600aa09053c7f53bee4d77aa67183f8f1d27ca44fdb58b01559073"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9122d318a0600aa09053c7f53bee4d77aa67183f8f1d27ca44fdb58b01559073"
   end
 
   def install

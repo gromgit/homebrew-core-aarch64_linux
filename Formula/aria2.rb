@@ -7,7 +7,7 @@ class Aria2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aria2"
-    sha256 x86_64_aarch64_linux: "46c586c17422b76d07220725bbbee755063df9824647ff74da660b146aaa2706"
+    sha256 aarch64_linux: "46c586c17422b76d07220725bbbee755063df9824647ff74da660b146aaa2706"
   end
 
   depends_on "pkg-config" => :build

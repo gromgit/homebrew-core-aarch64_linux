@@ -19,7 +19,7 @@ class Libngspice < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libngspice"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "0d58c488aa086aade836bcbd946f40cd58932490a995d371afa9f5e8411e32f9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0d58c488aa086aade836bcbd946f40cd58932490a995d371afa9f5e8411e32f9"
   end
 
   head do

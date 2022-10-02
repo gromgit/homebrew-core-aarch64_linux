@@ -12,7 +12,7 @@ class Nspr < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nspr"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "40882ec539d8c553f0e890414ce9c9c4f414257cef3db56ce5262b55ac389b8e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "40882ec539d8c553f0e890414ce9c9c4f414257cef3db56ce5262b55ac389b8e"
   end
 
   def install

@@ -7,7 +7,7 @@ class Odpi < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/odpi"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "e5b2cf74c97d5802049bccf6ba3e596c9a7f4da1d2a5e824933683de54082887"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e5b2cf74c97d5802049bccf6ba3e596c9a7f4da1d2a5e824933683de54082887"
   end
 
   def install

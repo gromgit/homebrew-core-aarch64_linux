@@ -8,7 +8,7 @@ class Titlecase < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/titlecase"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "fb24026539e4fd3db91084f2bf78b21d17e08e0cbd6aaf2acbdccf4cb9079ed6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fb24026539e4fd3db91084f2bf78b21d17e08e0cbd6aaf2acbdccf4cb9079ed6"
   end
 
   def install

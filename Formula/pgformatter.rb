@@ -7,7 +7,7 @@ class Pgformatter < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pgformatter"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "e4f545f0abc62df2f753b149862f3e4681ef7e1d2a7eb0dd20b42c5cc225afd9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e4f545f0abc62df2f753b149862f3e4681ef7e1d2a7eb0dd20b42c5cc225afd9"
   end
 
   def install

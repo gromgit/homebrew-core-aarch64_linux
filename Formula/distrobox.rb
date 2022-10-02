@@ -8,7 +8,7 @@ class Distrobox < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/distrobox"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "d716b6b03bcdd9e0e698d2870bc20b719e67aee6b2d1e98e3cf4c16aa905b080"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d716b6b03bcdd9e0e698d2870bc20b719e67aee6b2d1e98e3cf4c16aa905b080"
   end
 
   depends_on :linux

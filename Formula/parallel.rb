@@ -15,7 +15,7 @@ class Parallel < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/parallel"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "80151ca9c399f789cf6c5031de083d408feb98498dd450753187c4c10fa724d3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "80151ca9c399f789cf6c5031de083d408feb98498dd450753187c4c10fa724d3"
   end
 
   conflicts_with "moreutils", because: "both install a `parallel` executable"

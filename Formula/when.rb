@@ -8,7 +8,7 @@ class When < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/when"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "e9d24dfd3cb16694ce16d0106acb8b585acb3f5bd0c34fb67f2ab6950ae74b20"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e9d24dfd3cb16694ce16d0106acb8b585acb3f5bd0c34fb67f2ab6950ae74b20"
   end
 
   def install

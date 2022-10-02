@@ -1,9 +1,9 @@
 class Icon < Formula
   desc "General-purpose programming language"
   homepage "https://www.cs.arizona.edu/icon/"
-  url "https://github.com/gtownsend/icon/archive/v9.5.21b.tar.gz"
-  version "9.5.21b"
-  sha256 "5dd46cd4e868c75ff1b50de275f1ec06a09641afcb8c18b072333f97f86d3bcc"
+  url "https://github.com/gtownsend/icon/archive/v9.5.22e.tar.gz"
+  version "9.5.22e"
+  sha256 "e09ab5a7d4f10196be0e7ca12624c011cd749fc93e50ad4ed87bd132d927c983"
   license :public_domain
 
   livecheck do
@@ -13,13 +13,13 @@ class Icon < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icon"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "af399a929306503ff962407089b6131ad31eb544927470d46e7e80b0d7ab8a46"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5f6273b1882b4ee79efe10d54e6a0609596831f2ecf33b56604ec6d631a883ec"
   end
 
   def install
     ENV.deparallelize
     target = if OS.mac?
-      "posix"
+      "macintosh"
     else
       "linux"
     end

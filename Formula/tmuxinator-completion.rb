@@ -12,7 +12,7 @@ class TmuxinatorCompletion < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tmuxinator-completion"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "60dfd09d5870aeaf9de91df88c564046259d6fe6fd6c5db8c8e764a1eb1f37bd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "60dfd09d5870aeaf9de91df88c564046259d6fe6fd6c5db8c8e764a1eb1f37bd"
   end
 
   conflicts_with "tmuxinator", because: "the tmuxinator formula includes completion"

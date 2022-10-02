@@ -9,7 +9,7 @@ class Jenv < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jenv"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "2ca2778d3a433ba15e23e7044e85728c57566d9e18e9533304198783efd4d50e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2ca2778d3a433ba15e23e7044e85728c57566d9e18e9533304198783efd4d50e"
   end
 
   def install

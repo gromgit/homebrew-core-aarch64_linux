@@ -8,7 +8,7 @@ class RubyInstall < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby-install"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "fbf7c2aafd7ef1bfef3dcc68441c43926a6c16666f3876c6c8aa32d29e296700"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fbf7c2aafd7ef1bfef3dcc68441c43926a6c16666f3876c6c8aa32d29e296700"
   end
 
   def install

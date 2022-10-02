@@ -1,9 +1,10 @@
 class Nauty < Formula
   desc "Automorphism groups of graphs and digraphs"
   homepage "https://pallini.di.uniroma1.it/"
-  url "https://pallini.di.uniroma1.it/nauty27r3.tar.gz"
-  version "2.7r3"
-  sha256 "4f0665b716a53f7a14ea2ae30059f23d064ce3fe4c12c013404ef6e1ee0b88c2"
+  url "https://pallini.di.uniroma1.it/nauty27r4.tar.gz"
+  version "2.7r4"
+  sha256 "b810c85a6fe299f3b4c9f24aaf929cac7f9546c2f35c20e1dd0adbc7408848a6"
+  license "Apache-2.0"
   version_scheme 1
 
   livecheck do
@@ -16,7 +17,7 @@ class Nauty < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nauty"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f96713646bfa3c180eef0d8783d88d4373c288b003838f35e1f875bbaf1f9802"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "869916ef3aeefb493b4f2ccb4001a01186a7da4312475446a4f1542d27c29ccd"
   end
 
   def install

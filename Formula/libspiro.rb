@@ -8,7 +8,7 @@ class Libspiro < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libspiro"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "4907e1c160855f951890082922041fc98f73c5e92848fbfac2ba55b11c629d36"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4907e1c160855f951890082922041fc98f73c5e92848fbfac2ba55b11c629d36"
   end
 
   head do

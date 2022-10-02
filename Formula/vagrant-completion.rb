@@ -8,7 +8,7 @@ class VagrantCompletion < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vagrant-completion"
-    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "607fac573fc21dddbe7fc7d69e243ac031b43c41c974ad8831106adc22164541"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "607fac573fc21dddbe7fc7d69e243ac031b43c41c974ad8831106adc22164541"
   end
 
   def install
