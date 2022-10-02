@@ -14,13 +14,12 @@ class GraphTool < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256                               arm64_monterey: "7666e269c3827264844b42dd7a27b807e7d91000576fa2b20b19cdb36e9a7ff4"
-    sha256                               arm64_big_sur:  "42488ecf30763dfd9f7161b18b28ecea228b6e144f593e7390d63fb93a16f342"
-    sha256                               monterey:       "1f7412f6f547232351b539f7da2b22de7a6ea767c0893abbac6187da0d563333"
-    sha256                               big_sur:        "6770f6eed5f5f02ffc557e8bf4da18b14b683755f925933c32fd7be0d628b25d"
-    sha256                               catalina:       "02272277f85ed501816ba50d5de712ed643ad6989694b93d997172687fb477df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1961970eba1b4d4e1e777233a406ec180a77faf79a3e488b212777966aee1489"
+    sha256                               arm64_monterey: "cefa9e4aa514f88449e0eac1443aec41789a1837143d8bac6e4c285dce2893f7"
+    sha256                               arm64_big_sur:  "f69ab24a3b744e48b3c293591794cea45c9b7c22f19db34736b19c5985639f4b"
+    sha256                               monterey:       "eb3b025abd1640bf31dd775d843a91928d2f44c83c52c4508519b1ab14d12bc8"
+    sha256                               big_sur:        "ba031e95b34ab31013941727a83fe6ce07007798e91fb9c8e7e5647d831e2c78"
+    sha256                               catalina:       "4484f4162621e6a4069edb80c05973c9f6dbc6423d5ef9ed5f421b4dabc01af3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05aa60765b805c9b0f8f7b1e35dfe0829e1f5c94b4a82ba53e5870393cd21b46"
   end
 
   depends_on "autoconf" => :build
