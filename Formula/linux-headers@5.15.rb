@@ -7,7 +7,7 @@ class LinuxHeadersAT515 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/linux-headers@5.15"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "98b4b2a8d827bf1dd3c91ce223a8d4bfe6eacca4ce118b85aa888cf96a6bfb0c"
+    sha256 cellar: :any_skip_relocation, x86_64_aarch64_linux: "a7aafb4a6c7f2b886ef7e1c730fdbf3b0a3435e5b95213f61aef7fd7980cbe9c"
   end
 
   depends_on :linux
