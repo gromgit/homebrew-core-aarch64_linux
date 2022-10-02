@@ -6,6 +6,15 @@ class Tbls < Formula
   license "MIT"
   head "https://github.com/k1LoW/tbls.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "32b742267f1aaee9c4e3dd64a86b58788f5bab8742cf1f01cec752f0c9bf202a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd269f39f34877371f3372723b3cd89f9aceb2a229eba4ba7eb2758ec1da66e3"
+    sha256 cellar: :any_skip_relocation, monterey:       "20f8011fb2ddbb1d571e72b8fb1e52ea14f4e026f5980091d8e702dad226f7a5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1625446230563db9856b4e0db8889adf331aec3be617bd7a850b9a398f1588b8"
+    sha256 cellar: :any_skip_relocation, catalina:       "d9596755908e57fd6751ac100210bc43787de0b6d9be57c3d52bb9f5616538bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b33074594781bc528fff8d65f14b8fb3a7da09530da468ee75c1c02aaea9ffb2"
+  end
+
   depends_on "go" => :build
 
   def install
