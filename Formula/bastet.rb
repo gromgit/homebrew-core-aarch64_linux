@@ -7,12 +7,12 @@ class Bastet < Formula
   revision 3
 
   bottle do
-    sha256 arm64_monterey: "f7f6d9a5b94a4a65519cf8b8da797250f4884b0a62d8dfd7b63c85ad2992ca8c"
-    sha256 arm64_big_sur:  "fa7dc7e193cde7d21642cfe2d89748a4638ee1eb5ada154d46b6aabcaf8ab729"
-    sha256 monterey:       "b77a98824f1a20240a523635994ff656b74557fb0466e971f93610ba76b827d2"
-    sha256 big_sur:        "4636c8dbdb1f175e52f4a170f15a11a3f5b5cb7d5e23cf4fa42f11b6da0640b2"
-    sha256 catalina:       "fc5f5522045309048d206d1dc6495fa04b5d1486e5574ba97a026d941930ff5e"
-    sha256 x86_64_linux:   "e11bcd4f8ff62ed570fafa8fa225176f0382aec3fb94197e51bd76f29ba6e162"
+    sha256 arm64_monterey: "847549943397d6599052de7fddb1028fa521e86c778bb32ecc876b597d352c2e"
+    sha256 arm64_big_sur:  "f4e46f9ceeb65880d581bf0db249e4b781c37abadbd3d3199ff66aafde2f28d4"
+    sha256 monterey:       "c003bbb534a90d60b8a48abb3fc4fc418d5efe51f334063e5082b090dfc589cf"
+    sha256 big_sur:        "1309388b45599252aff6a86e11c634ce1eaf432ba95048af329c9c31103362ef"
+    sha256 catalina:       "afea0c4b2b48a465bad4dcbca28f5019f457968d45d6de5234e3c0a7b6965db0"
+    sha256 x86_64_linux:   "90a34c5ad79a5990922ad05c811c45caabd70e67dabe9f4b581c5de40d5c6699"
   end
 
   depends_on "boost"
