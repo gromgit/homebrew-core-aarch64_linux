@@ -8,12 +8,12 @@ class SimpleAmqpClient < Formula
   head "https://github.com/alanxz/SimpleAmqpClient.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1efc3a134820a81981068c8f99f519c96e13604e6fd1d9acb7501a0f888a660d"
-    sha256 cellar: :any,                 arm64_big_sur:  "0fdfea8c88d7ec12183a6377c0b8bd78d2f9f6c6e7f62fd6e274289b5b20a9ac"
-    sha256 cellar: :any,                 monterey:       "a49348936a6c08fbcfaec0816ad52ac36fccd7d37c1f9df2c43a6c4d5f74801a"
-    sha256 cellar: :any,                 big_sur:        "94ff05f451b5556620319fe52f59ce091cac762ea42bf7c701048870985afbe8"
-    sha256 cellar: :any,                 catalina:       "43a06e0d576f4754e730dc215d38a092924e08bb9325f6085c854963f65c3e2e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0c478ea6722862268c26f3601b2de3e759743c3975c58051a84e6ac1a9e0b36"
+    sha256 cellar: :any,                 arm64_monterey: "98e88b317c98418541f136c5a4258ac0a55811ab3930ce764f81b59cbeb2377f"
+    sha256 cellar: :any,                 arm64_big_sur:  "0c8874f465e52174070b0458134ba72778c244297b482d34549823d353efd4fb"
+    sha256 cellar: :any,                 monterey:       "a2da20f175d9b66adc2b792574bc97f7ee52786c2c874a105fdc4a6ffdb3c09e"
+    sha256 cellar: :any,                 big_sur:        "843b97c2ec5bc775a71375bee1890b6e64e11839965ea87d92fe90e575791392"
+    sha256 cellar: :any,                 catalina:       "aca58f6eefbc489a0e1e5d630d888efc9116355485f7891ad5759e5b4db5deb2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30d2f03df8695f2416b6b0882030f23a36754fa3da8a3815003fed880b44fea9"
   end
 
   depends_on "cmake" => :build
