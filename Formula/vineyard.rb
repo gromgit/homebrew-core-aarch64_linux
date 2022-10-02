@@ -9,12 +9,12 @@ class Vineyard < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "f45f713c67eaa655d991a5d2af73af39c29d2fd0deb51ac64384c8a8c24f18e1"
-    sha256 arm64_big_sur:  "ee5417404df1dfa58f3a1f3eb98e5ddb05f29d3f8d4a2f6c040d243f7b478b1a"
-    sha256 monterey:       "1b1be0a0bbbad02d091d63f881b28a93f78d7e8e884eba04941ce98edadedd13"
-    sha256 big_sur:        "92862b30610be2b7b8b658583b3917c914a821ab19c620bbc26ce7157df53e50"
-    sha256 catalina:       "0d4ddec53606a8761a7606439548223be706fc4e4cf3040661e31f3a81f3fd33"
-    sha256 x86_64_linux:   "1b991335522875b8404f3891056230d53cb11336d748cb91035354850ff694c8"
+    sha256 arm64_monterey: "2d54fdd6363c8e3b9dd9c23183d2476924ecaf0f04f5df0d0379d42ffe738180"
+    sha256 arm64_big_sur:  "69a4a890e2cf658c52384d1e42fcd34932365d8bb5e23d37d3676ed45289e872"
+    sha256 monterey:       "e99c518baf85ac291fd0c70e6bb0ae03eef04d6012b563747c107b776c689145"
+    sha256 big_sur:        "4986ff03f669da82c8d08be9ee84c4231014c6b3eb24adb03cb09c6a7dbb4e59"
+    sha256 catalina:       "a1cd3f3c80c27e74debf016cf5b60b627517193ed81096accb0fe58ac653ff70"
+    sha256 x86_64_linux:   "3731345ef9e6282a34b9d967b3c22c6658bdace4e4138ca378b0d3a3d1c5edac"
   end
 
   depends_on "cmake" => :build
