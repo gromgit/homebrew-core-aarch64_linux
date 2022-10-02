@@ -8,12 +8,12 @@ class Pcb2gcode < Formula
   head "https://github.com/pcb2gcode/pcb2gcode.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b05c1320d169fe31748c0a9fd173058f935ccf6872cd3425721aaf1e5f952e36"
-    sha256 cellar: :any,                 arm64_big_sur:  "94d5932e1a4be6f56ea6f3b84decb4399ccdec66d5f0e2dd01f5583bd3cbe33d"
-    sha256 cellar: :any,                 monterey:       "f2f0795787b32de91825ec1e7669cbfc9d530b7676f6d0bf9e9de0766c34ba6d"
-    sha256 cellar: :any,                 big_sur:        "4a5397460b704b3ee51b2829cb9b340a2b67da3894e0df48a86d81aeb197a028"
-    sha256 cellar: :any,                 catalina:       "25279d3a7f039f2b12412e897588d12891a1d03ef7cdbbd5fa61dfdd1af18748"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d01aac891f817b1b0f13b1f0a278a2bca50f70422058f480a9f3ec2dc5b888c4"
+    sha256 cellar: :any,                 arm64_monterey: "e83354a49d5ca3beff774b097e789b79330bbce4d9d5388da8006334c66b2c25"
+    sha256 cellar: :any,                 arm64_big_sur:  "f73a00e3c21ffa00009b450f2d728144417055009f2a82ba6a3ae969ba3003db"
+    sha256 cellar: :any,                 monterey:       "a1ce70052b5b1746a6b4f1997787aefed336bc01aa5767eac444be929e026882"
+    sha256 cellar: :any,                 big_sur:        "def348fc4f16ba1c61f8ea4397b14e4d8af171f2654a6403456072bb3da22509"
+    sha256 cellar: :any,                 catalina:       "6c6dc43876c7f7103f6d8864040f3c32f6cc733ccb0258e5dcbf121ce9e3477d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aea298c9b282ad8e1750dee166976200463891bfd78e397d3570e29526550507"
   end
 
   # Release 2.0.0 doesn't include an autoreconfed tarball
