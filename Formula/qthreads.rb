@@ -7,10 +7,12 @@ class Qthreads < Formula
   head "https://github.com/Qthreads/qthreads.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, monterey: "c3e5ccea2cd274bcfd0a885b0a6144162e7a91c4219a73a8f88dc279d848ca55"
-    sha256 cellar: :any, big_sur:  "e0f9e60cb18bafc88477533ca65f3c78a821188a3cd2bb077e3a90ad886c2c3d"
-    sha256 cellar: :any, catalina: "0ee47db33538dfea98f384927d9b5e9c9d43b2c7391f6308fb47c740c62bec8c"
-    sha256 cellar: :any, mojave:   "0eb14aec995c438dab677dc3084bf772a5ff083812a5d3a0eac988ed08496a42"
+    sha256 cellar: :any,                 arm64_monterey: "20e1c3bfd839efc644db0d69c98d0d58a9fce71b4a2830d054d4792d5180fc92"
+    sha256 cellar: :any,                 arm64_big_sur:  "a584249b31c678d1a723e3c2dc78ce455a76275baef8e9d3c59e5d624f0f5369"
+    sha256 cellar: :any,                 monterey:       "b60ec614ce7bd7cfc835a084e1aa371efa7bbf3790f84f8942e5933f4b77fd27"
+    sha256 cellar: :any,                 big_sur:        "0523493be01de6b4e4159ac430693ce59919d3970349643b8b9278bbe1fe6054"
+    sha256 cellar: :any,                 catalina:       "c4f9b57d8bd7fb1536aa668317d3fc5cff24ca3db5d78a8d52f26f80431277fd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "083a3510caf257af5108d87e1d23cc036c5e65e3263487d68ee1afb41d6fa6bf"
   end
 
   depends_on "autoconf" => :build
