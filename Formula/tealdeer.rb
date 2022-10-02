@@ -6,12 +6,12 @@ class Tealdeer < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d1d7ba657937c479ae47d27942e66d1ff15cc3f957596d223e28b26361d9021"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d64f393398aea8171ec136a96baeef735adf458c2b53a41410487f94089da0d"
-    sha256 cellar: :any_skip_relocation, monterey:       "0a7f00acd485f3cfd6a99664b39fcf82aee38d8f2ffda8fc48b77f060695e743"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c97e8782cafb0151755c361cf99854a493bda6873fab6fffe46c6ed0c9931593"
-    sha256 cellar: :any_skip_relocation, catalina:       "9abfdc915c51c97cde029a6029adb6c8bcf5d848da738be785316f998449d5a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "130dc8bc4bc2af2d56e9c06766ba71689990b941123448d4de2b84bba8d96fbd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e8dba260e24870180e524d428ce5313e517bd78c1ef4cffe764ec32221c150c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e21ecaa6dd21a3b826d268b4f8d9f333060c2d3fbcf369a9f88069880825a7e0"
+    sha256 cellar: :any_skip_relocation, monterey:       "403b266d509fe646846dd25b3d8561287952b7565963f944cc548a1cadf8f901"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c9edf21ada213f6d2182faf3bf1101adc97cc9b5e4973cb6441d06062028c788"
+    sha256 cellar: :any_skip_relocation, catalina:       "3935f536c903cf0093a933af57655e772c1717e96de111ee41d589966652f4ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fc5f32014abd2beed6319ebc8d8e81bda2c8e244dc77aa0e20f9a43aa88b0d0"
   end
 
   depends_on "rust" => :build
