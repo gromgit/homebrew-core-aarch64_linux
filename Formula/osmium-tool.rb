@@ -7,12 +7,12 @@ class OsmiumTool < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a822b931250081419f53ad441a89076a64411e5971e091387a92476860204806"
-    sha256 cellar: :any,                 arm64_big_sur:  "9dd563705ceb2f2837d4f5df511e5b3d13cf1409968b1fdcae991ef0a381e6e2"
-    sha256 cellar: :any,                 monterey:       "c10c02bea8013843e94222ae833e64b2ea61a4287d60e386b8c1a560baf978b2"
-    sha256 cellar: :any,                 big_sur:        "bd7ed40d240f593ddeab17dbaceb9f06b8d14f870a3e3f07872228a56d7622fc"
-    sha256 cellar: :any,                 catalina:       "5b67d83929194c424ff1929a3e4a019607409ac650a04bd97d9a7e58f169d0d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "28c587bd9003d6b08adbf08ae8cb15548184f1b1995032542166fce7d213c2d5"
+    sha256 cellar: :any,                 arm64_monterey: "ecfb1b350bb2d92d32ff311a1659084db2000b244eb7351c30bf94283c35265a"
+    sha256 cellar: :any,                 arm64_big_sur:  "cfb56102bd3cb066cdfade5936679d4cf1c5ff7cb36464f901b7cb2071873aab"
+    sha256 cellar: :any,                 monterey:       "2e11f60463925a700b88a2b171905a8a8f64ee2cd7cfb44965a7d61ac4f7a8ef"
+    sha256 cellar: :any,                 big_sur:        "457422771493c4c8d432f7081c77d806113886da9dcaacf60f3c2c1465948acb"
+    sha256 cellar: :any,                 catalina:       "8f25a3775f55b6c72cca6714632ed5463b94a724ea619a8955c4fc94dc03ff38"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a0c1361abc5a4d59d50e84438072f7903428a55372029578bdcd01cf068fee9"
   end
 
   depends_on "cmake" => :build
