@@ -7,13 +7,12 @@ class Sfcgal < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "27c79e4e9db21d023e67cc8b3c36962a5192fcf0a41e36f0716c5c2d4389db42"
-    sha256 cellar: :any,                 arm64_big_sur:  "c8c850d7b183f314c345e09eb950f551a92520fe6474ffa98bce470880ccbdaf"
-    sha256 cellar: :any,                 monterey:       "9c99287f0795eac493cf6ef6b692a4b7a756a7b8a883b3c59b94c70208ac2868"
-    sha256 cellar: :any,                 big_sur:        "3f1bef94cb398dc0ce41104ee1bcaa7da50abf781aa6e5484993322280dd0896"
-    sha256 cellar: :any,                 catalina:       "0236c932bfaf71363674a06ff7b22afa8e970c2d11fdc50d4d9e412f08bbe8bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df8e58a9120cb041f88f928e733d5eb0577dbdaa5aab13acaeca455ca3f60ada"
+    sha256 cellar: :any,                 arm64_monterey: "ce56024a7fe7128cc0c46d38c9d0ebc7b884ca45b515e53c855e50082c8bf78c"
+    sha256 cellar: :any,                 arm64_big_sur:  "a277214793c453cfe4238c0c764f64e1cec3a3ebd9b67185a452289717ea5f7a"
+    sha256 cellar: :any,                 monterey:       "2b3e3d6bc3c0b3f0a1e4d60c006150ffaabb8ce94320334c2c098de90e838a9e"
+    sha256 cellar: :any,                 big_sur:        "afb6e18acaa58068cee76d2a0034c8a21e12dc6f1bda5ff35a2338e2a02befa0"
+    sha256 cellar: :any,                 catalina:       "e2a48b73d1fc26ec367a863199ff145c6258edadb1c9e2d63c90d64a27721f33"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8839f174f0bcb73c6e608bb0f2473c6b9c1bdeac6db8769fd9bb02a02159c49c"
   end
 
   depends_on "cmake" => :build
