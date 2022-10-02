@@ -7,12 +7,12 @@ class AzureStorageCpp < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5a8a1e373496131a0128cfbccb1ae6f5e57fc91eaea968aabfe57767d3370fe0"
-    sha256 cellar: :any,                 arm64_big_sur:  "15d27a167c197bca0e649cb241bfdb7f49b2f6f8dbdc9b3ae36aa6562c15f96d"
-    sha256 cellar: :any,                 monterey:       "308598850ccde71d7f3f0b95b1f26e257eef415a9cdc140b5da34867555729cb"
-    sha256 cellar: :any,                 big_sur:        "778476a3c4cd8f88c475aff98086e9c704f19213eb46d250af145d51a3af8506"
-    sha256 cellar: :any,                 catalina:       "fe3ebcd4d1b7454738a7d76113040d6c9fbbbd16ba5265e42101f8575782af89"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "072a0ec3117267bc849068e88b6e48579e72904386ac44558e091dfa5e117ea2"
+    sha256 cellar: :any,                 arm64_monterey: "eceac6e6f0593179a3534c2eab359edf6649e7aa17dcebd8ae4440183e73ae5d"
+    sha256 cellar: :any,                 arm64_big_sur:  "0d9d71cc5cf69d7fcb77cfc333c7e2d6c636f5bc3699a0f58c2efd0afb22e03b"
+    sha256 cellar: :any,                 monterey:       "6b915ca380a9aef0e0d5e517570204f9f68ec019d7085ab8d3701c420365cbc6"
+    sha256 cellar: :any,                 big_sur:        "d57014fd7bebf8938b6c9961e47454053778fd8055ef330df727d8e109d19474"
+    sha256 cellar: :any,                 catalina:       "527e53429a66ab82caaf15b83c3cbc98e6a5fccc875d9a7111eff14daaeb6ccb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "897b6fd224578e6555f902d13428e11f8a2edee4b12c6cdee6f57928cd4c2350"
   end
 
   depends_on "cmake" => :build
