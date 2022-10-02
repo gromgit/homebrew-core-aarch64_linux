@@ -12,10 +12,10 @@ class Arangodb < Formula
   end
 
   bottle do
-    sha256 monterey:     "6ce88863c3d64b6e0f80157b81ccada705ba6a364ee8ff827e46f63df16b3b10"
-    sha256 big_sur:      "e38065e33bd2ee3eee533bcde177f1ce0c3dfd7c8857f678fe73d4e2e8fcec75"
-    sha256 catalina:     "5420623e77cc3c4dd8c272a791ce8d102d46fdceeea983104f2443a6b2cb95c8"
-    sha256 x86_64_linux: "8c311faac036bab8fc2acee10adf136275ccbf5c976795fadae2b08adaefffaf"
+    sha256 monterey:     "fa9cfb815626809db09fae96b14902750d52b32045c204be4d3dd47b2153591a"
+    sha256 big_sur:      "2d89e2bb77096fec1cc03ddc38faffb3c783b151b8e901951bf3bb9598120282"
+    sha256 catalina:     "2b6ef1ed9d1b984ffb10d813151eae4f9f7bfdf8a735496a3454026b51030e5b"
+    sha256 x86_64_linux: "2b4b33bdaa222b35622a15cffc573769b7206851531eb5576de11af2cca29cdd"
   end
 
   depends_on "cmake" => :build
