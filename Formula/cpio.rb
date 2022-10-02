@@ -8,15 +8,19 @@ class Cpio < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f22c470e6b85be477298907f64e9d6c0c8261d81f244ee9f7977b37f64bc2d53"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f0f5625adf815f5dcbce9016b20df0ea0f41475343954e057422f9bd006ab87"
-    sha256 cellar: :any_skip_relocation, monterey:       "1b04d03bdfdb091451d3c6602e7dfbefe18c3a719c5382c6636245b9d5403c91"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dc6d56c513f95660d835533ad45717ac448767692216f22f39971e28da045bb0"
-    sha256 cellar: :any_skip_relocation, catalina:       "63775ad863bde22691bf678e67982fbb21488c2e86843133bd34461aa5a61586"
-    sha256                               x86_64_linux:   "42071ea523978d2b2ea5a5129cb29084fef728f270577709fc1595d5a8cfbef2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cpio"
+    sha256 aarch64_linux: "481cba8a9581773d0e50b35679e457af6ee971bb8c987d6722b4220f805c573c"
   end
 
   keg_only :shadowed_by_macos, "macOS provides cpio"
+
+  # Upstream patch for multiply-defined global variable
+  # https://git.savannah.gnu.org/cgit/cpio.git/commit/?id=641d3f489cf6238bb916368d4ba0d9325a235afb
+  # Review for removal in next release
+  patch do
+    url "https://git.savannah.gnu.org/cgit/cpio.git/patch/?id=641d3f489cf6238bb916368d4ba0d9325a235afb"
+    sha256 "cdc04006fee03b60ab42bccae9a9bf146e3a4655d0e76a7a0a24689176a79ed0"
+  end
 
   def install
     system "./configure", *std_configure_args, "--disable-silent-rules"
