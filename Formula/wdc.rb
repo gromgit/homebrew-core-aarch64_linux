@@ -6,14 +6,12 @@ class Wdc < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "62495852d3c1071bf9d1f3121e330edae3fdbc9e9c63fb65e766be3f38c2a885"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be11e8b817c20749111b09db86ff335c6c97bad37575f715e9a7e7ec7ca0335a"
-    sha256 cellar: :any_skip_relocation, monterey:       "c039308564cb3c12b33cd01344b939187d0172426fc8d3beb277bf4a55ce8843"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c0d2e5d13ef2dca786d050eb726cdd240a8c7da8f56868f2a85aae67ee99ee8c"
-    sha256 cellar: :any_skip_relocation, catalina:       "18365f76dafd05a312e9a7862f2fa747caa8c63e881469719a8ef45d07dce3c6"
-    sha256 cellar: :any_skip_relocation, mojave:         "fbcaccbaa2440ac38f9efa41a342eef4d883e522fa5df7d642aaa1563d38f28b"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "92dcb68d02f64ff51446052bf5c41fa178cc48ade406a9533199461476f7c849"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "540ee4f07372f9080c4cf88d17a067379fbef4af4f69240cfced99f4944c07df"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "89c0f41a2fb78d5f63e5242652f8a7b5e14991b0ae04949b46ad73d09690f179"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0d034056bfb1e51c26134f639d7d2b0fa3edf5b16ef0956f72b7211efd2103d"
+    sha256 cellar: :any_skip_relocation, monterey:       "b1c38fc88f4367f244fc4516799ae9fc5c97c71fdcd82a7d1fa8c5c2b2f4bf97"
+    sha256 cellar: :any_skip_relocation, big_sur:        "79ee8ab9fd6385a5db733582c6ecb3a28369dd2510f29abc4d02a4ec83d0083c"
+    sha256 cellar: :any_skip_relocation, catalina:       "40528e275df5a1df4985b461180eaa795283f0f19f816d0eb249aa14d73ff5d6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "979e255fa0e9ef8558dfb3b09e2ae5463d4b00eb0418e8bda1376cc00ab32f11"
   end
 
   depends_on "cmake" => :build
