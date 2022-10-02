@@ -6,13 +6,12 @@ class Darkhttpd < Formula
   license "ISC"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0cf5e582aaab036d6a467b399416ec554c595f6b85187e76d43f57f2eb7dbbe3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "36ae262543c3c5a76c282267e400ed1566cf31d1955f9a2d2298e2cb14a42cc8"
-    sha256 cellar: :any_skip_relocation, monterey:       "34522ba6119c42022afeb73ef5b95a360d3293322c43af7d5e3edfc8034a5c8e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1643b2894325e4ed51b6007c1f1c6a935cc0780f48f3d953620d7b0ab50d6dbc"
-    sha256 cellar: :any_skip_relocation, catalina:       "161992a2da584f5704fc6923d26fe6675a2ac23b3a66d9c1bba154b2a5888833"
-    sha256 cellar: :any_skip_relocation, mojave:         "fdc947505f7ee3885b23431afe3603cb6e75f7edeea9784dab45975b30956086"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dddd097bfb71ec14118ed242beb0e7feb31012cb3888a9c6f5ed0c6ecdeda830"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "20cc4363df790f1ab094acca40a37b501b2ade963f59b4776963d8fbf499ae07"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e60532b603188fe20c282e1ba50432536c2bd9f1c8726dc6854ee621cdc424c8"
+    sha256 cellar: :any_skip_relocation, monterey:       "23b5e2cb7ab606293771b35c88a9c4e7a8563df7f095a80662ff1f57c48f65c3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ad64ddeea1173ec2ef0f7ba20f54192227f818afc3e94ccac3ab535497d29263"
+    sha256 cellar: :any_skip_relocation, catalina:       "8e32c73f5f737c112ea7b631a16238bb46b7bd8fc13f75ea8473a96d479f93d8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fae114eb7efde0eef9075a08bd5f14d6fca5a5eb891e6b4b84a8bbdd00c36cd"
   end
 
   def install
