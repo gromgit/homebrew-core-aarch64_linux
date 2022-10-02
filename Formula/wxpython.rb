@@ -13,6 +13,7 @@ class Wxpython < Formula
     sha256 cellar: :any, monterey:       "6aef2edb2894f75c23c859edd6db7bd308d6420f4680ce32839b7904b425d382"
     sha256 cellar: :any, big_sur:        "3914f0cc1a1a67431e76c7ca793e5b3bf48ccbf98cb24f9476c8518ea87f3b43"
     sha256 cellar: :any, catalina:       "561959e711b0801d74c68ee2333bd5905e160923ca49a3e2f0dceaf3c80cf534"
+    sha256               x86_64_linux:   "a6475f2a2407b5e4bfba19394cb89360cd783b63a9e37eab653989aa18671b6d"
   end
 
   depends_on "doxygen" => :build
