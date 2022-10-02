@@ -7,13 +7,12 @@ class Field3d < Formula
   revision 8
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "dd7a5bc0753b005117617530c6be75c17df59a7c4a031ae1063ba6a87412f88e"
-    sha256 cellar: :any,                 arm64_big_sur:  "a9a29067970e29b57a31c05dae9bae5b6bd38325f46d9b82df207834c4f60179"
-    sha256 cellar: :any,                 monterey:       "3819ae35d571632bcfff8cb126caccdca67617eb51eb5094b48297badd77388f"
-    sha256 cellar: :any,                 big_sur:        "7a111aeb16124fb8197a0226ec5868bb85ba28e9d52307c23d0e8363a15a52a0"
-    sha256 cellar: :any,                 catalina:       "0a8b6db945e6d4316b0b5d908d4b9a48ab0e15814d027228c6d3e0eae3b53d3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c726a57df42221704e420460d752a95318e3a48d6b157024bb2d97d4306d508c"
+    sha256 cellar: :any,                 arm64_monterey: "5ccab64a1d8a3f1a709b4efd84e47be950a28b468cf4315eaed9c332fc0dd0c0"
+    sha256 cellar: :any,                 arm64_big_sur:  "bdd3df3a156e09d0612b4266a4a7036baf3a8ebd99573c70fef4cb3fa3af595b"
+    sha256 cellar: :any,                 monterey:       "4c854331b625741ed631440767b90ceb8dae7c565b19c1b909a35068e9635c8e"
+    sha256 cellar: :any,                 big_sur:        "f7113a6ebab33c4591099ffa838d98cee8d72d8f0d2627a9e8a9c4783755fdc7"
+    sha256 cellar: :any,                 catalina:       "c74402ddc431e94001cf07efe110c4085aa486fd024a470dd2bd0d00454aba46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37156c96c67dcf0b5fe46027c758e6172781503495dab9364b43cad3331dc28c"
   end
 
   depends_on "cmake" => :build
