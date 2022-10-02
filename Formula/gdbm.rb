@@ -8,7 +8,7 @@ class Gdbm < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gdbm"
-    sha256 aarch64_linux: "6b941f9f87e7b14a2a26e5d4cd04ddda1f341672fe4a683dd705450555f63d7f"
+    sha256 x86_64_aarch64_linux: "19f70ed645f14895377b70d12f1dbf7dbfcf517551f544b5b6b344f49bd232ea"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
