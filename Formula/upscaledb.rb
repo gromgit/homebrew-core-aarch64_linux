@@ -34,10 +34,12 @@ class Upscaledb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "693a8a0ad4e8298847d25bb2ef348a39249f3c05cc9ccf578e7b7db57db0c8c3"
-    sha256 cellar: :any,                 big_sur:      "b6b0005cf98da8d3ecc3f762782d9129634023e53fd3303febf4e1bc145486d3"
-    sha256 cellar: :any,                 catalina:     "5731bf62beee7d010c92d841d69b93620865a5c048e0a6b52cd60a1e906d46c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "17ba39ba89047d56cdab9a056cd541e2916447f8f3527bc22fae77354467d075"
+    sha256 cellar: :any,                 arm64_monterey: "681c6480b867cfabe84dc86f642ff8190a09db19cbba45e2ab825c08bb22e8c5"
+    sha256 cellar: :any,                 arm64_big_sur:  "52c35ae632361c43f0134e4601f447d8f0ce5849e054a697c56a821380515ef1"
+    sha256 cellar: :any,                 monterey:       "eb56657cf69888dfe9a60d62f021470f59b402a846b1c08f623d672c55032663"
+    sha256 cellar: :any,                 big_sur:        "92a278053f801938558c40b6ab2284125e1da0c4815caa1dc75b6bdf8cd83ebf"
+    sha256 cellar: :any,                 catalina:       "b902d877822ecdd047b3286a45ccd28a732655d1f672ec7ba104181307c2d7af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c693331be7046fb3f52e6a046aa1279943c086731a164192740b2cee07ec2864"
   end
 
   depends_on "autoconf" => :build
