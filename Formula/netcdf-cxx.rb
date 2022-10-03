@@ -5,6 +5,15 @@ class NetcdfCxx < Formula
   sha256 "e3fe3d2ec06c1c2772555bf1208d220aab5fee186d04bd265219b0bc7a978edc"
   license "NetCDF"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "14fb172c409bda5dc90e97e7696346cde6907b74a8e282579b0d7a96486d7c6f"
+    sha256 cellar: :any,                 arm64_big_sur:  "36523f3a017dfc37063d39b7b266258ed6fcc72cd1062a03ef6fa18ddbdb143d"
+    sha256 cellar: :any,                 monterey:       "f37b15aab9c88cf7328e0670e7665c8cba49e0594910a21150ffb0291d270a16"
+    sha256 cellar: :any,                 big_sur:        "87b7034615ee31987178ac7021b2227fa28f5ef355ba32f16721840c0874de28"
+    sha256 cellar: :any,                 catalina:       "eb5fe6b9c98889404e70090f76f02521a54f35ab4602ba2fc2b25b49f421f24a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd5c4196c35299f7a25dd4c3016f6bb6a1735c2f3984afd8f6eb837c8a88f9c3"
+  end
+
   depends_on "cmake" => :build
   depends_on "hdf5"
   depends_on "netcdf"
