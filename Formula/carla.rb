@@ -12,13 +12,12 @@ class Carla < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "84ff0ddeb198c505271993cce92e05d6fd1c1a4bfdfbf1701121464715dc2601"
-    sha256 cellar: :any,                 arm64_big_sur:  "d809ab0142ec1c144b64ed44f730241dc9909fb00b71dcab2f8b8c1a0775f38c"
-    sha256 cellar: :any,                 monterey:       "16458248b4067b67d0ea33acf71e6f58af58c79f53cde2d40efbf2cb0aa56d63"
-    sha256 cellar: :any,                 big_sur:        "bb03c8a8b000baabd032e8f888a50b4d0a049449cbc281e809334e0693c23391"
-    sha256 cellar: :any,                 catalina:       "82026c919f5be0c50f0d6e95507e0f6bae64100d86c8ef526ed2a9c458f72a1a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac3e0ecaaaebdcbd00de563e9a84eec272f12b9f9b5101ece647ca5ee5b80f5e"
+    sha256 cellar: :any,                 arm64_monterey: "f6dad358a626999025a82f77b7195d6835e9102277013a1bce5b4b225a8b4e42"
+    sha256 cellar: :any,                 arm64_big_sur:  "e3da612be57402a03736aa74aa3efa7eba0e84e4091e6ca7830e78618adf8389"
+    sha256 cellar: :any,                 monterey:       "ec0ccdb10e58e6a0f5e71ac3bfbf87f7c65fc618aa749d1e1e25cd3d7d117cb7"
+    sha256 cellar: :any,                 big_sur:        "d7e6a211d8e6da6f228b46ea769c905ec921822d968be921ddf8780ba3a39243"
+    sha256 cellar: :any,                 catalina:       "2be72064c9de33b0971999b39e0e98c20cdb29752454538e8a8fd49078fbb61f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20e410ab2214739cef22ff9f4d787a81b4b4a7cbad595f908f814065334a51f2"
   end
 
   depends_on "pkg-config" => :build
