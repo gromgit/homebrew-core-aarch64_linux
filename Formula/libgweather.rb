@@ -16,12 +16,12 @@ class Libgweather < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "b13c7715d841a75ea106450bf14df81648725829b8142a4723ee155901ab8998"
-    sha256 monterey:      "281f8f7f0e9e5ef0c44239f0f404888a61934c8051000293b9ad5a61d92dc4e7"
-    sha256 big_sur:       "c8b80b40fde5432a83885430d0791147ec594e1849420416b47eaa521e679044"
-    sha256 catalina:      "7eb0152cd6f73075a4516f4bf4125417d61a0197cb46d764789d365d9fb4f284"
-    sha256 x86_64_linux:  "22842026d482f9e95bcd2131104c2dce4937eab9d3f48b3319a0f208b6e4e329"
+    sha256 arm64_monterey: "2cfc7ff943b1d00488fb70125e837ad77e9f71bea804e3e7a03dbc5db0e24883"
+    sha256 arm64_big_sur:  "748389d72bb3f3c118fa84647fbd00f5180d716a08a3f4588c215a54c9a9992d"
+    sha256 monterey:       "5963be2b91c72fd4fd9240c1e644e237d48333df89db5985144ceae8a9849944"
+    sha256 big_sur:        "1e027c5251e2d55c3a2f054907efe1f7e8f660c358d2e98a530011e6be6a6e65"
+    sha256 catalina:       "6e2e7b5acd9e182a19a3696ce631ee67b477d30c359e2163284bc4c1f135ec4e"
+    sha256 x86_64_linux:   "b22f6f49cedb71e8789bee404274b7407f16d8e6717dd8fc7981ced3bd80b0b4"
   end
 
   depends_on "gobject-introspection" => :build
