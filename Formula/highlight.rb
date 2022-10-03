@@ -12,13 +12,12 @@ class Highlight < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "683155a52c1f45950708ee40c559a1f955a9b6e13882e344bac63631271643ce"
-    sha256 arm64_big_sur:  "caec099d296e0bab619a8c988ac0332690cf4990aa58daba654601ec0466862d"
-    sha256 monterey:       "9bf677672f83fd0bfbc559db494b18c3f5268df87b210e6c20d8c03f128b8f28"
-    sha256 big_sur:        "d6262d6a8f698e9a0faf9e9a7a912bb4a458d4cdc8c5b0639e644fc712abfb84"
-    sha256 catalina:       "0a9f49b9a5616c83da6b24c4a13a19dbe76d2868e131411f97d68066ceee46bb"
-    sha256 x86_64_linux:   "d7282ae3f73455fcb13930471050b6f0b3b817b23f47375d782229eced943ad8"
+    sha256 arm64_monterey: "dfcc5e7eae844ac8fb1dc11cdf8f570aa502ecf10514387aa862eafa45e63217"
+    sha256 arm64_big_sur:  "eba19ab6306489abe3c47822205cc045eaa4432f5fe6f3328ae84b6c7835bd40"
+    sha256 monterey:       "fdbb6827299f2d392b728cb8b1ca8c0b46f740a90e265fb7a7ff209969a845fa"
+    sha256 big_sur:        "8ef032a3bc83f64158018d6247bd98c81ac2588cb48c8474a8db390017c79cb2"
+    sha256 catalina:       "cb890add706023159e1fd2aa757d72ca0e72887ea30a4a9d3ae915aacfaa756f"
+    sha256 x86_64_linux:   "17cdbd67dbcf99083e4a231eebad747f4d86f48cbd6066161a98e5e930e48a47"
   end
 
   depends_on "boost" => :build
