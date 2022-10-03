@@ -9,12 +9,12 @@ class Sip < Formula
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d370544a78c735d7d2dbfcaa99caae8d25c6501c527a7a2643e76ffd790ebcc1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0900203a4f34ba4dcdcd50f323d3862ffac301c4fa470ab15da0d9722b23fb4d"
-    sha256 cellar: :any_skip_relocation, monterey:       "955d999f732223fcca3ab150a838bf6b87ab0f3659b9d83c0a0d16da1e179bba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c9e3baa09fbe50dafff4514ea2619dde3e04bb68855b03448990014ff5567225"
-    sha256 cellar: :any_skip_relocation, catalina:       "ea05cc7b23bf7b8f0d21fbfb5c23f47d74b3d0a8d48707cbf1e5e284f27c0d10"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f7957b2bf9e0ad5980aba4971a0d590552adce492a70871fe4fc61892480529"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9459221b69cbe3b8bc008a9d8be04ab55db0a5fd219c89c2e9c819ceafede438"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a46c210b1bd3ac9c3f6114bbac758b5915df6bdf0b066a4e097defc06b59943f"
+    sha256 cellar: :any_skip_relocation, monterey:       "a074c65f1a0066a5a8855eb71717c092a498396d558f6cf579fa98f11ab4019d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d20181ebf36bc5c2b8a00e8771f84306f69e79cfb1cfc2665c9c6ee8dc2f3e30"
+    sha256 cellar: :any_skip_relocation, catalina:       "cd4790a3e480323e36b54cb20f6af79dc61645f96f00416a55a4736ed625f716"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc1309968cca5634bdcbfbd149830c9f877f6e5942596303895d8b1215470a13"
   end
 
   depends_on "python@3.10"
