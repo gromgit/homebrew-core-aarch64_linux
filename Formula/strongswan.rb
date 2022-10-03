@@ -20,11 +20,11 @@ class Strongswan < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "66ba64bc3177bfe1232ff6b52bfb71d793767328738b8d6fa26f130872362b9d"
-    sha256 arm64_big_sur:  "d89f331d900825708f8674ef96113354dac7a305386345ea86ca9041d6fc87c4"
-    sha256 monterey:       "de5ebca0e3da62662d2200136e3838ad16893ea38f7f358ae22a5230a439b10b"
-    sha256 big_sur:        "9a57d057d0ff5ca69f1ebb19402e26bf58e7f38abfb8a9bd15e710cdef2adb7e"
-    sha256 catalina:       "e04a3a26609500cc6df881796ca0e21c2beb84602d8a26515da86f97f06da3e7"
+    sha256 arm64_monterey: "e3bb47ea4d170a2d5fea7b474d95ec236651e631f470034c8d9ed58b8159416f"
+    sha256 arm64_big_sur:  "8e88ec4ce51468217d447de72c72aa1ec4ab7ed3daeaf7d1231e192652933c90"
+    sha256 monterey:       "b64777a6a4dd13eca9fc201c8da36e81c9a356be2ecae6ea37876da1b8f2a659"
+    sha256 big_sur:        "126a9e7b798f5330db940fd6d361f4a563521d849af63924329b2a4cb237a823"
+    sha256 catalina:       "5b8d29d581a539c5bc1bd40667c3584cf58c01eb2ddbbb6402e33512fafb4fde"
   end
 
   head do
