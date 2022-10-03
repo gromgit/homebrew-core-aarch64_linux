@@ -12,13 +12,12 @@ class Netcdf < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "770b243589ea4420c06c9a4d7d0b77bd27bc8fa17fe8ef6d3e3dd827ca58feb1"
-    sha256 cellar: :any,                 arm64_big_sur:  "3304476f90eb9cb7a7662441680962bd4c5dbf749263f538bc94514d5d8b34a8"
-    sha256 cellar: :any,                 monterey:       "90d41c38781d1878baac468c4cbad93d8a646d319f2f43836118c57b61432ff2"
-    sha256 cellar: :any,                 big_sur:        "23ec38026fa6a3c89ec284566db84242458efa3eccd7f2f8bcd608779dd6e2db"
-    sha256 cellar: :any,                 catalina:       "e1bbb416f05bd5a0e36a2e19e75fb7114ad61222b9a35d631d7eb107c5374327"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23cc014a5abcdde70ba321e8eb2eb664116713a9b4cd2f8592c83237e0b4c2b1"
+    sha256 cellar: :any,                 arm64_monterey: "f4a3da85ae0c0534fbdc08b93a2aafd9f68db08d8678081474cd7a8285fa8818"
+    sha256 cellar: :any,                 arm64_big_sur:  "6877b01444394bd8e0f3956cf57934bc88de9678c10a4ad446f1650c4485d341"
+    sha256 cellar: :any,                 monterey:       "9742b36dc484608a41ebfda6ca28f20a218039ab8de7f25b4c4a19e2f3cb1568"
+    sha256 cellar: :any,                 big_sur:        "8702e95b84806410b6375099286d4a1e6172eeb1e835a29a7ae460f05208ca61"
+    sha256 cellar: :any,                 catalina:       "c23ce8a3b89ce90d50b8858a7af8e48096280b6b0b90961f95ae25963325807e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "747caad2209fb946ba62db15f64ee73e55bf1db6f2620a688f8e0be850d58792"
   end
 
   depends_on "cmake" => :build
