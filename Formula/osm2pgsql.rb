@@ -12,6 +12,7 @@ class Osm2pgsql < Formula
     sha256 monterey:       "093c11ed82bf2bdc76f66149ef47721687a600ea3330bb4828118c16f8d07d7f"
     sha256 big_sur:        "abfc6b1a9f834feef34bef6dfa3c5332e445be238916992e90adeac3e0e5f28a"
     sha256 catalina:       "563cc7be1efeeba1f8426138c11fa20a3ce1ec381952d4a975181767395d77f6"
+    sha256 x86_64_linux:   "5168a536bbd24c235d7e40265119d8ac7c2e2d3b751ccd24fbb13e0657c11c96"
   end
 
   depends_on "cmake" => :build
