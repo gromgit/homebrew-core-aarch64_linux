@@ -53,7 +53,7 @@ class Glibc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glibc"
-    sha256 aarch64_linux: "c6190ae8ba177aa435c38c96b25e93997cb9332476919b4fe28f0ee290d4ee05"
+    sha256 aarch64_linux: "d1cf8e38f3cdcb8ad75fd175e5422f8842abb1c5fa2a1f726e85c20cb65740dc"
   end
 
   depends_on "linux-headers@5.15" => :build
@@ -193,7 +193,8 @@ class Glibc < Formula
 
   def post_install
     # Install ld.so symlink.
-    ld_so = Hardware.CPU::intel ? "ld-linux-x86-64.so.2" : "ld-linux-aarch64.so.1"
+    ld_so = Hardware::CPU.intel? ? "ld-linux-x86-64.so.2" : "ld-linux-aarch64.so.1"
+    ohai "Linking #{ld_so}"
     ln_sf lib/ld_so, HOMEBREW_PREFIX/"lib/ld.so"
 
     # Compile locale definition files
@@ -229,7 +230,7 @@ class Glibc < Formula
   end
 
   test do
-    ld_so = Hardware.CPU::intel ? "ld-linux-x86-64.so.2" : "ld-linux-aarch64.so.1"
+    ld_so = Hardware::CPU.intel? ? "ld-linux-x86-64.so.2" : "ld-linux-aarch64.so.1"
     assert_match "Usage", shell_output("#{lib}/#{ld_so} --help")
     safe_system "#{lib}/libc.so.6", "--version"
     safe_system "#{bin}/locale", "--version"
