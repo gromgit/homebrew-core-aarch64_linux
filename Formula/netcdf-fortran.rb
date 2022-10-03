@@ -5,6 +5,15 @@ class NetcdfFortran < Formula
   sha256 "8194aa70e400c0adfc456127c1d97af2c6489207171d13b10cd754a16da8b0ca"
   license "NetCDF"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "2218dea75ee32c7e5aa093c50c6557359865d1e7363497133b5f1666aff86025"
+    sha256 cellar: :any,                 arm64_big_sur:  "e0cfebb70ac4e43ca906dc3211404d561d9a6097da04bb69616e0717c83cdf15"
+    sha256 cellar: :any,                 monterey:       "84bd99b4eac569d656f1fd84be92533b5c659863e68093151761d69623a544eb"
+    sha256 cellar: :any,                 big_sur:        "241ab9b78a55f618a4e65689d9b9f8d7aaea19411af7790ee2669da5fdb6c701"
+    sha256 cellar: :any,                 catalina:       "416e9eecedeef6e400eab28158406647a3c860cac29601aeb17bcf87e770f419"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd412f6ad7303fceb3b21402da7ec4198ae5db913991ac712e4e0efb74ae557a"
+  end
+
   depends_on "cmake" => :build
   depends_on "gcc" # for gfortran
   depends_on "hdf5"
