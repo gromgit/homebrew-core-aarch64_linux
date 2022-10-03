@@ -14,12 +14,12 @@ class Ace < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "1d7cdca57f5f17952a4fec4c8256bd12c3253334f8f33ff0e44085e822c37ba3"
-    sha256 cellar: :any,                 arm64_big_sur:  "80bf0478c8a50658d45af23dfc60407435386952670cd1d0fd4dc7db44a2f390"
-    sha256 cellar: :any,                 monterey:       "91e1921808d72dd92c2105909a32ec012777a3b4cc01c50e422169a4c2965e3e"
-    sha256 cellar: :any,                 big_sur:        "59e10285e1f0cea510ce248000dcc1dce05d6962778f549f74efcdaa6550024a"
-    sha256 cellar: :any,                 catalina:       "075c33922ec132c7cd0941e80f7e593a4fb48b3b9e163745fdba7734e0d88e29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fec7514588fe20d0c3150f9b935ce84925be69cd7de9e21857e658d862df0026"
+    sha256 cellar: :any,                 arm64_monterey: "fe7c6e61e7c947cb7d1626a581a0a11f100e7e4e935d863b10afb1c85ec18a3a"
+    sha256 cellar: :any,                 arm64_big_sur:  "205b9d903c71044a65b1071c942f8e3ceef024e1c8ce3a016aec987e5ea04e0f"
+    sha256 cellar: :any,                 monterey:       "415484c2ad190e3f2afc6a018816103d2d1d61db9d5841da29608b86982f3964"
+    sha256 cellar: :any,                 big_sur:        "e68787163e9490839158073a727d3b7ec7961b3db372b419498e0b1fc850efe2"
+    sha256 cellar: :any,                 catalina:       "aa24069cba01f0a4eb58a99187fd728d3fcc434aac691150e50b1dfb20c3496b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0559274f11d5337a11faa54384ab48b6bd287b1071d60a51daf0bf105c0da394"
   end
 
   def install
