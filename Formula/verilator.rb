@@ -6,13 +6,12 @@ class Verilator < Formula
   license any_of: ["LGPL-3.0-only", "Artistic-2.0"]
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "8e5f635658b007f27fecaece0588bd715f1e12ae4aead2170a45a0bedc3bd766"
-    sha256 arm64_big_sur:  "4905b78faa6c65c317680e8904704bc0c11d0cb5e4a5d6d51390adafbc8056aa"
-    sha256 monterey:       "669276002757d11080befc9a6cb22bcd491e4df70390a63db9674fe56a02f54c"
-    sha256 big_sur:        "696a5c432c02769cf383d279e0aad7de1fbca58262f3c03cd1a2608b8a512c10"
-    sha256 catalina:       "66810bc435954d3f8dfb3016ac31d7e557bd5c7ff2932c91f614ba505f9592df"
-    sha256 x86_64_linux:   "41b0a1e5d3f0ba30284ef69f887a49e2af4e9bb76c546c3a7f6c204cc347b2ae"
+    sha256 arm64_monterey: "892ffbcd0e96b47dd1117f4496feed9ac0135036efe1d054a21e23c6c91920b1"
+    sha256 arm64_big_sur:  "a23268268b1d5dba051c3323bc710576411ed275ecc047e14f9a5ea971000f2f"
+    sha256 monterey:       "e3aae130b82eec63682a3cba1fb4bd013541ee556bdf9ef8c573423bb3785cac"
+    sha256 big_sur:        "354ee81bb51c5903a17ac093480630c7e06e2502972c12746816a83bbb396822"
+    sha256 catalina:       "b55676954ad3fe5d75b1ad70f164793aa4ce09ed750acaa85d8f965944dcf877"
+    sha256 x86_64_linux:   "71517024181695b5103200682a331fc57964924b965c74a76b920b3e828bc98d"
   end
 
   head do
