@@ -1,23 +1,22 @@
 class Sbcl < Formula
   desc "Steel Bank Common Lisp system"
   homepage "http://www.sbcl.org/"
-  url "https://downloads.sourceforge.net/project/sbcl/sbcl/2.2.4/sbcl-2.2.4-source.tar.bz2"
-  sha256 "fcdd251cbc65f7f808ed0ad77246848d1be166aa69a17f7499600184b7a57202"
+  url "https://downloads.sourceforge.net/project/sbcl/sbcl/2.2.6/sbcl-2.2.6-source.tar.bz2"
+  sha256 "3e23048c8fa826fb913220beb2ac3697dbc5c0cdf2e89fed8db39ed1712304a0"
   license all_of: [:public_domain, "MIT", "Xerox", "BSD-3-Clause"]
   head "https://git.code.sf.net/p/sbcl/sbcl.git", branch: "master"
 
+  livecheck do
+    url "https://sourceforge.net/projects/sbcl/rss?path=/sbcl"
+  end
+
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c6d8c6243cd6fd92cf9fd681a3784d876c1be1a86083dc542dd9abc01f8e49ed"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4af4f35fafa713bb0cec53e4139667556586f65e444e5c06644a44683c36b76"
-    sha256 cellar: :any_skip_relocation, monterey:       "69ce647fd052ffa06a88b075a2f6d89aca716a7e41c40592fd1e2f3dae50bccf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "80752428b30f1f51088d771a9e3ea473f027bf268f2087a279c30be1d5ae0c10"
-    sha256 cellar: :any_skip_relocation, catalina:       "91db4a34003a7c7d4a9730f96eb93ab8ef61dd29feedd2c0ac75494ca2f2689f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c294f8ccd79f9a5e55f3d284250238ee2e50b27c4958691283e0b0671f0cd95c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sbcl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d9a5343e7a6d6f7dba4a1ac8546c7dcaa7cf5adb35fb6e39b864fe8e9f1587b9"
   end
 
   depends_on "ecl" => :build
-
-  uses_from_macos "zlib"
+  depends_on "zstd"
 
   def install
     # Remove non-ASCII values from environment as they cause build failures
