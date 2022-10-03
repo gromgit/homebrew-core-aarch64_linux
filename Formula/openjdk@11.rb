@@ -1,8 +1,8 @@
 class OpenjdkAT11 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.15-ga.tar.gz"
-  sha256 "6ed94f08aa8aed0f466cb107c5366c20124d64248f788ec75bcc24823ad93a40"
+  url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.16.1-ga.tar.gz"
+  sha256 "3008e50e258a5e9a488a814df2998b9823b6c2959d6a5a85221d333534d2f24c"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,13 +11,8 @@ class OpenjdkAT11 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "96cabd068395a8e99f16ec56cef0d00815ae5fb9736e5f24514516e9c44cf286"
-    sha256 cellar: :any,                 arm64_big_sur:  "bd525f7e1e8b91ee42e606763cfac25c8888a87f3bbdb56b0f3cb324c1363b83"
-    sha256 cellar: :any,                 monterey:       "773983fd85afacf11590381ae697d37dbf96ca9ecaf4b208354a01c62be409b7"
-    sha256 cellar: :any,                 big_sur:        "2c93b4ca7f9305c4a73f8f886456e8810c537c3aca6c5785cf33e92f50e36048"
-    sha256 cellar: :any,                 catalina:       "634cfd7122512e326bddb49d17812eeb97e850e06ce81cb839c2e50676922f73"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "754a3687351ca56fd4def0e348b1a622c06e518b94dfd5a8c4c22db7667d4278"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk@11"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fadc29186d44e83f2dc2d4bc66a8362e5ff53f605a4fc1ef66b4196991c9bdef"
   end
 
   keg_only :versioned_formula
@@ -43,19 +38,27 @@ class OpenjdkAT11 < Formula
 
   resource "boot-jdk" do
     on_macos do
-      if Hardware::CPU.arm?
-        url "https://cdn.azul.com/zulu/bin/zulu11.54.25-ca-jdk11.0.14.1-macosx_aarch64.tar.gz"
-        sha256 "2076f8ce51c0e9ad7354e94b79513513b1697aa222f9503121d800c368b620a3"
-      else
+      on_arm do
+        url "https://cdn.azul.com/zulu/bin/zulu11.58.15-ca-jdk11.0.16-macosx_aarch64.tar.gz"
+        sha256 "cb71a8ad38755f881a692098ca02378183a7a9c5093d7e6ad98ca5e7bc74b937"
+      end
+      on_intel do
         url "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_osx-x64_bin.tar.gz"
         sha256 "77ea7675ee29b85aa7df138014790f91047bfdafbc997cb41a1030a0417356d7"
       end
     end
     on_linux do
-      url "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz"
-      sha256 "f3b26abc9990a0b8929781310e14a339a7542adfd6596afb842fa0dd7e3848b2"
+      on_arm do
+        url "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz"
+        sha256 "2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8"
+      end
+      on_intel do
+        url "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz"
+        sha256 "f3b26abc9990a0b8929781310e14a339a7542adfd6596afb842fa0dd7e3848b2"
+      end
     end
   end
+
 
   def install
     boot_jdk = Pathname.pwd/"boot-jdk"
