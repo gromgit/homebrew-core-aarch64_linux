@@ -1,11 +1,10 @@
 class Vcpkg < Formula
   desc "C++ Library Manager"
   homepage "https://github.com/microsoft/vcpkg"
-  url "https://github.com/microsoft/vcpkg-tool/archive/2022-07-21.tar.gz"
-  version "2022.07.21"
-  sha256 "44085e694a913d529d8f16d03cb9d3c7ba614e82452fc0156bb075f7f6df5920"
+  url "https://github.com/microsoft/vcpkg-tool/archive/2022-09-20.tar.gz"
+  version "2022.09.20"
+  sha256 "a501380ac03a926fdd62fb5c4fba1ab66e01b96ed3a0834d6904b580c927a01c"
   license "MIT"
-  revision 1
   head "https://github.com/microsoft/vcpkg-tool.git", branch: "main"
 
   # The source repository has pre-release tags with the same
@@ -31,13 +30,6 @@ class Vcpkg < Formula
   depends_on "ninja" # This will install its own copy at runtime if one isn't found.
 
   fails_with gcc: "5"
-
-  # Fix build with fmt 9+
-  # https://github.com/microsoft/vcpkg-tool/pull/634
-  patch do
-    url "https://github.com/microsoft/vcpkg-tool/commit/5fba654cc47c175202491a5d80f280c0e39b364d.patch?full_index=1"
-    sha256 "e9a61b8fc8e2ce21ae5eae36bf36b5e5214b0a624ef7c938ddea0e739a61340a"
-  end
 
   def install
     # Improve error message when user fails to set `VCPKG_ROOT`.
