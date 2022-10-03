@@ -16,12 +16,12 @@ class OsrmBackend < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "30e473b97a8b623eec3d602e45e7e21c4e44b761ca4e2c4ef724c87614498b75"
-    sha256 cellar: :any,                 arm64_big_sur:  "4d13b51a5e03c17cb60de48d738ab1ec08946114baa298a24482f76f784ec226"
-    sha256 cellar: :any,                 monterey:       "b98e83beb4c841c9289b6efb8d1b058ea97c5b6411c6132903001d0fe84ba834"
-    sha256 cellar: :any,                 big_sur:        "f0943390ad90826d2def7a9c7fc27f214a20cc9dc6886d47ec309b852916c4d8"
-    sha256 cellar: :any,                 catalina:       "74825bed2c07fd6e5a5862c4dd66e9eff13818ae83ab3d8f62034db38bd9fb20"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e78299d0601d9aefce6ba8d0597e256ae57dfc7890b88a9f03701e10155d08a"
+    sha256 cellar: :any,                 arm64_monterey: "4dbb3c3109f85e0410c693f6c2765a13f80c057bc5152d4d1a46010816a253a9"
+    sha256 cellar: :any,                 arm64_big_sur:  "f0f2ce21927fc5045ee789b91e7c7b7e51153e56f9f3fe47cf0c126cb7767985"
+    sha256 cellar: :any,                 monterey:       "c45bd2ec986f0d89121343d2d9ae5b63ae4c08e1b55c816a862237dae1240cb1"
+    sha256 cellar: :any,                 big_sur:        "c9b99f5b5f20ca3f12966c45803e49aa7adc13721589b742921837b06fd93a14"
+    sha256 cellar: :any,                 catalina:       "7e299f69b73d70f0e59bfdefb5eb99199ed1cf42d2a6592d6b077000b620743d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e4ae0bf5395b1ce3ee5ae26c4397d36ffb414815c20cb34564ef62f8d024199"
   end
 
   head do
