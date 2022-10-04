@@ -21,10 +21,10 @@ class Harbour < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "2c9986d437787a68730f663836f5d38ecc1003aa46db0bb8d5d4acb5348e5a20"
-    sha256 cellar: :any,                 big_sur:      "5828169bfbec03a59c9f5ea87c8783d3408d5ebe62516900f859095ea295ae52"
-    sha256 cellar: :any,                 catalina:     "b54c72219d366319ce929e8dea8c22b9a36feb331a3e196007f73c88bbd33638"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2330a003c48032b3504fc358a704cccc0e3d8b02e2c10abc79d4481413bf1204"
+    sha256 cellar: :any,                 monterey:     "1bf87ebc6134674eb11edfe42cdfc03b06c21ea915b038a6a2a8add2126ad4f4"
+    sha256 cellar: :any,                 big_sur:      "47f824bb06b67e53dddff036c7d193680a9ab3ce54fb3c887edf37baee3000ba"
+    sha256 cellar: :any,                 catalina:     "a36cdb7043bb20f9aafac0ee9a5a88843b93e585fde0a8556ac5ba44821b89da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "99139cf0fc916c5af14279c6ae2def30a96b27b373450f3d9a99571ada9533f3"
   end
 
   depends_on "jpeg-turbo"
