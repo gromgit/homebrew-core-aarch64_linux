@@ -18,12 +18,8 @@ class LittleCms2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0fc9bdf0e245b210e0260f2a641dc88b1b1b5c1004eeadaafb9536eb21a347ab"
-    sha256 cellar: :any,                 arm64_big_sur:  "e78f36abce8a417db16755c5dbbdf8817e14861ea92bd029bb36e424a8563f52"
-    sha256 cellar: :any,                 monterey:       "0c50589e60d1fdc8e8ae52550c1ed0e9bbc68f77d105fa0180192d517cc5a85a"
-    sha256 cellar: :any,                 big_sur:        "7fbbf54484b962a2b72104db3f425587acf88666c0dd0753b00eb104bce1a2cc"
-    sha256 cellar: :any,                 catalina:       "152469fd79f4dde476f916be31fe0657656f298512201e6eb8be9f8dd9016c7a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "021649a443c169b8b18dd404f99d367ef79e5a6f650d8912b552a1b887e85ffe"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/little-cms2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "381af755c4733e93b1748cfe10cfe80dede1d41bd1cfe01d69fc07ccf72a069f"
   end
 
   depends_on "jpeg"
