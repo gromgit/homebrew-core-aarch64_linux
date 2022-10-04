@@ -21,12 +21,12 @@ class Sbcl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89e604fdf546b9070682a72f99d6e8d27217442c21398aac6949e99e0d479eb7"
-    sha256 cellar: :any,                 arm64_big_sur:  "47d0d235fa09665ebf2bead963472e1618fe1760d8b17330f97c02d07ee39411"
-    sha256 cellar: :any,                 monterey:       "24b35feacd60ea1ab6884df95728601e9c65410fec6004a988aa481ccf9a3108"
-    sha256 cellar: :any,                 big_sur:        "e0397aa657cd7a48c58821d36592945f3067690b11fc00cff6aba9c4e69603e8"
-    sha256 cellar: :any,                 catalina:       "071a547ad2d1d4421943228898071268f4f1d1caf6c87967ed9d2c586a5f14bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15ccf8f748989caab179478b704d14451c06dd3e2c0ef4df6ac5e2b52fa24ec3"
+    sha256 cellar: :any,                 arm64_monterey: "08dc55aeb4d3c2f6caf90c32141277b00892e2d5ec7bdb6eb7a7b47b200341e4"
+    sha256 cellar: :any,                 arm64_big_sur:  "0e4513fe179b6c87b350e3bf92b2130d78d555b2922e60a214b259fb368092f8"
+    sha256 cellar: :any,                 monterey:       "a1b964e902d3874a9a753163703c06651a31862fe8bfacb38504f00f1ee5145b"
+    sha256 cellar: :any,                 big_sur:        "cca24c9dd7a99df2ad5f340b1f12d48ef90eff5c3695806837cda266030ac6e8"
+    sha256 cellar: :any,                 catalina:       "00fccb19530a9fe4f8fb6c2a2da26d82f5ba7aa586134387f934979064c53005"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22409d2c64da17c8407654487ed30435077861831b772cccdb83ba13e24c221f"
   end
 
   depends_on "ecl" => :build
