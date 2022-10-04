@@ -11,14 +11,12 @@ class SqlTranslator < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "87a368a2a4ac14068f5af0552cb54c8cd7eaa773946ebee0f35ed7a4b2afb516"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd430de2cdd05f6766fad897788bcba2405eb93f0c35b56952df1b0c062d739f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f987d8c6e63c50e590066fe49e53b6f24472bd2ae05fb8a6fec93e87874b883e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7389609bcf5844ae648f0c4f8cf7e9cc6776ac085f3826378e3dd54421d5627e"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d141958909ac51a8ba45a075db30100a447230d2a6e1bf08e44a8a677425afd"
-    sha256 cellar: :any_skip_relocation, mojave:         "9293157476e7ed616067b1c378c811c9e05c5ec17d9c0ad14d1d785428945d80"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "d9247d5d149363071ceecea045453779ebb5c0df249e0ef3b679b6c684acb453"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "950bde11b0c016ec277dab61ce3aea1f61aba2e7a069da3abce3ba3ba733bf08"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5b569d3339ab37e0c8e963f4c314f05cfa4a7607cabc0c3b8076171a1b98415"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f655162409fb6814c1825c7ea6d6fc728fe48f92f2b8f0fd189e6e552112d97"
+    sha256 cellar: :any_skip_relocation, monterey:       "37aa9abf5b79546cd961291b7ce884cbeb774b8c00f8830fba7837001e47111e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6f0b5a13935877fdf7e614525082c532ef76af02644dfda6acfdc427b6904668"
+    sha256 cellar: :any_skip_relocation, catalina:       "e099ac2d4b73aca1beaa61f8a267c8334256c9ae5b0073f86a53a25e6f9ce9c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90f5316e2c4de49810fdeb2825f12739c2420438648fdb374715fdde3154b8df"
   end
 
   uses_from_macos "perl"
