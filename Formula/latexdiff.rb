@@ -6,12 +6,12 @@ class Latexdiff < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6cb7541c9dcddb8fa58cff401cea3313d9602f1829f77d16a8bab42e9909253c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6cb7541c9dcddb8fa58cff401cea3313d9602f1829f77d16a8bab42e9909253c"
-    sha256 cellar: :any_skip_relocation, monterey:       "c79073ff78df1073956006d14de25a9f7c88d11ce434508f75ca0a6816d2ec74"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c79073ff78df1073956006d14de25a9f7c88d11ce434508f75ca0a6816d2ec74"
-    sha256 cellar: :any_skip_relocation, catalina:       "c79073ff78df1073956006d14de25a9f7c88d11ce434508f75ca0a6816d2ec74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6cb7541c9dcddb8fa58cff401cea3313d9602f1829f77d16a8bab42e9909253c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8d86124c7257174e320c6fb0c26eb54254079ce7af27cdc303cdf8d88a8bac9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8d86124c7257174e320c6fb0c26eb54254079ce7af27cdc303cdf8d88a8bac9"
+    sha256 cellar: :any_skip_relocation, monterey:       "1d9555dcabb14322349dd93128d81078dfc4326878532173f184c8f9dbb61757"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1d9555dcabb14322349dd93128d81078dfc4326878532173f184c8f9dbb61757"
+    sha256 cellar: :any_skip_relocation, catalina:       "1d9555dcabb14322349dd93128d81078dfc4326878532173f184c8f9dbb61757"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8d86124c7257174e320c6fb0c26eb54254079ce7af27cdc303cdf8d88a8bac9"
   end
 
   # osx default perl cause compilation error
