@@ -6,12 +6,8 @@ class Libavif < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "febd8e9323eaedb8079bcad420b689cb0f2ce7d443f7aef867d6656297488e70"
-    sha256 cellar: :any,                 arm64_big_sur:  "d5bc9850e31bff49542703f6a35a9f6fff240045eabe9ea2daf914b45a72d4b3"
-    sha256 cellar: :any,                 monterey:       "9d9a141b3f49071c4520b499d7ca30818ad2a18ebcba63df326fa980fd46d253"
-    sha256 cellar: :any,                 big_sur:        "7cd60491a115a112cfca358076359edba4c137c6a9a6c7be4cde710ac3817d71"
-    sha256 cellar: :any,                 catalina:       "3b9611a1b827880d54ef0a8fdae35f911cb2df2e9372f8d15c32224c56df8d99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "162daea36979f79d7aaabac8b02ac722d8799e303aae4a1d21306afda84d4279"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libavif"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "37e7a34565e3eb32eb7b99cb2510a077a5eee8cf687fa6342a5ac69205914ef2"
   end
 
   depends_on "cmake" => :build
