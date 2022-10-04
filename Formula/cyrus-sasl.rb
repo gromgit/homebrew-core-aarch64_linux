@@ -7,7 +7,7 @@ class CyrusSasl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cyrus-sasl"
-    sha256 aarch64_linux: "397edcfec5a1d5a00238962fdf7c1ce6edb4c8db469513bb08056a66633f4a4a"
+    sha256 aarch64_linux: "bbef5f4dd7d355b93e4f9de622355b5e8f62c30b9479194aff256cbd63652a6f"
   end
 
   keg_only :provided_by_macos
