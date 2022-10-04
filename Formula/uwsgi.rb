@@ -8,12 +8,12 @@ class Uwsgi < Formula
   head "https://github.com/unbit/uwsgi.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "97b816a997de0bac3f0700c63d4580449d448ac75cb42845de265e76eef53597"
-    sha256 arm64_big_sur:  "8dd8c0cae8366843f45d90f54e744d92972140980560d51bf460b7dacf5dee5c"
-    sha256 monterey:       "7088b0e2aa2d25169c4103320c0b84f60ef4a64f81c770c058f6e508593675cd"
-    sha256 big_sur:        "c03ad9573cd5ec714c4be065202918e346e64edf8188019640eabe22f57d7b77"
-    sha256 catalina:       "cbaf0bc7eeb58695feac872232efacc4770a0e766ff985d1a4cce3115bc41971"
-    sha256 x86_64_linux:   "09c64389194544939d8f47976722737d3241736738b0c3b92643bb97c0f4d9b1"
+    sha256 arm64_monterey: "98911a326660ac4933704e55f18870fded66510589b4877ed9b1a94ab5eaa844"
+    sha256 arm64_big_sur:  "afbb87515a90172ba750d50aa6cc7a70e5474097e48dd1869b118f44af68dcb0"
+    sha256 monterey:       "592e723dbcc07ddf01595c6091d09402bcc602f16215f10171d2b896c5c3b93d"
+    sha256 big_sur:        "ad77d774701e00d4093050ef9cba6c102d25dac74f92a2da9c0567c468f404e8"
+    sha256 catalina:       "fdbd90d384701b126aa746e83ecb7d6060d5f5a5e129cf06de17e2356f513d6e"
+    sha256 x86_64_linux:   "183c028e7b123a7b50e5e747eefd741179c0c24dd2d5098600b75282517595fd"
   end
 
   depends_on "pkg-config" => :build
