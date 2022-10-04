@@ -19,6 +19,7 @@ class Samba < Formula
     sha256 monterey:       "0029b15ccfaa0cef074d18ef91272d4aa9e97554fef8ad31f4e3f92aa21a602a"
     sha256 big_sur:        "a78c766b3cebf2825464ff66123b0eb39ca59b2f5e4b50a3c70d80aad4595113"
     sha256 catalina:       "a3929b67e6df6d6799ee137ca8931d4fff30f87d27d8d502c06c13957881fcf8"
+    sha256 x86_64_linux:   "bb172cea429931a9ca747f9bcb91314ce04ef8f6e663c3c118112fd629fd275a"
   end
 
   # configure requires python3 binary to be present, even when --disable-python is set.
