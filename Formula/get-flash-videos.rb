@@ -7,12 +7,12 @@ class GetFlashVideos < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7556fc02fefbb77d6af0abba77201d802f3cad9532e68e998231e0fc7fe63cf5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "434be0911618efb04d7cda83b59ed1cf9bcfbfa1dfca5727daff95b4229bee4f"
-    sha256 cellar: :any_skip_relocation, monterey:       "e5aee7ebcab3995b5a8bd2d66e7e765c6d18a7fccef8a27c666e8296ff391bd0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "93b5446b296151adb3cb12f94e8966e66ea69a8470d6c95c8b4beec93fbfaa53"
-    sha256 cellar: :any_skip_relocation, catalina:       "de8f969c144220aa7a17cb12ad5a19615bbfe2d709f4f7255584e96c47e17dc8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2661e2a50e6f76a1b12ed2c8d440e36a5f180f203f57ae5ddaaad2aa4f016a6b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "596c60e7d7307363cd9ee6a3a9095f6f82809bb0f58337a768ffaf24d905f91c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cfbe9243f86f096ffce18e6ef7c290f8eff49d705df34bcaeda0dda997f47c09"
+    sha256 cellar: :any_skip_relocation, monterey:       "937da2dac18101279a26f90ba47bceb2164f7c895601b0088b749524fd6e52f1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "95414e77f9bab04d1e117e85d7c50e44a9fa0f326b59ea5be3abc1e56bcc9b6d"
+    sha256 cellar: :any_skip_relocation, catalina:       "f6d89dd6055381e293e10eeb653688a433d823867335ce9d862283941be9d374"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e52f233bd9df451f7dcbb7297a2c34e63d730aae229fff1ed2c06fd077e2c89f"
   end
 
   depends_on "rtmpdump"
