@@ -1,8 +1,8 @@
 class Llvm < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.1/llvm-project-15.0.1.src.tar.xz"
-  sha256 "f25ce2d4243bebf527284eb7be7f6f56ef454fca8b3de9523f7eb4efb8d26218"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.2/llvm-project-15.0.2.src.tar.xz"
+  sha256 "7877cd67714728556a79e5ec0cc72d66b6926448cf73b12b2cb901b268f7a872"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
@@ -142,12 +142,6 @@ class Llvm < Formula
     runtimes_cmake_args = []
     builtins_cmake_args = []
 
-    # Skip the PGO build on HEAD installs or non-bottle source builds
-    # Catalina and earlier requires too many hacks to build with PGO.
-    # FIXME: The Linux build appears to have a parallelisation issue,
-    #        so avoid a painfully slow serial build until that's resolved.
-    pgo_build = build.stable? && build.bottle? && (MacOS.version > :catalina)
-
     if OS.mac?
       args << "-DLLVM_BUILD_LLVM_C_DYLIB=ON"
       args << "-DLLVM_ENABLE_LIBCXX=ON"
@@ -204,6 +198,13 @@ class Llvm < Formula
       builtins_cmake_args << "-DCOMPILER_RT_DEFAULT_TARGET_ONLY=ON"
     end
 
+    # Skip the PGO build on HEAD installs or non-bottle source builds
+    # Catalina and earlier requires too many hacks to build with PGO.
+    # FIXME: The Linux build appears to have a parallelisation issue,
+    #        so avoid a painfully slow serial build until that's resolved.
+    pgo_build = build.stable? && build.bottle? && (MacOS.version > :catalina)
+    lto_build = pgo_build && OS.mac?
+
     if ENV.cflags.present?
       args << "-DCMAKE_C_FLAGS=#{ENV.cflags}" unless pgo_build
       runtimes_cmake_args << "-DCMAKE_C_FLAGS=#{ENV.cflags}"
@@ -250,9 +251,7 @@ class Llvm < Formula
         extra_args << "-DCMAKE_LINKER=ld"
         extra_args += clt_sdk_support_flags
 
-        # NOTE: do not enable LTO on Linux, because this creates static archives that are not portable.
-        #       This is not an issue on macOS, where bottles are built and installed on the same version.
-        args << "-DLLVM_ENABLE_LTO=Thin"
+        args << "-DLLVM_ENABLE_LTO=Thin" if lto_build
         # LTO creates object files not recognised by Apple libtool.
         args << "-DCMAKE_LIBTOOL=#{llvmpath}/stage1/bin/llvm-libtool-darwin"
 
@@ -336,7 +335,7 @@ class Llvm < Formula
                         "-DCMAKE_C_FLAGS=#{instrumented_cflags.join(" ")}",
                         "-DCMAKE_CXX_FLAGS=#{instrumented_cxxflags.join(" ")}",
                         *instrumented_extra_args, *std_cmake_args
-        system "cmake", "--build", ".", "--target", "clang", "lld"
+        system "cmake", "--build", ".", "--target", "clang", "lld", "runtimes"
 
         # We run some `check-*` targets to increase profiling
         # coverage. These do not need to succeed.
@@ -352,6 +351,7 @@ class Llvm < Formula
         system "cmake", "-G", "Unix Makefiles", "..",
                         "-DCMAKE_C_COMPILER=#{llvmpath}/stage2/bin/clang",
                         "-DCMAKE_CXX_COMPILER=#{llvmpath}/stage2/bin/clang++",
+                        "-DLLVM_BUILD_RUNTIMES=OFF",
                         *extra_args.reject { |s| s["TABLEGEN"] },
                         *std_cmake_args
 
@@ -434,7 +434,7 @@ class Llvm < Formula
     # Install Emacs modes
     elisp.install llvmpath.glob("utils/emacs/*.el") + share.glob("clang/*.el")
 
-    return if OS.linux? || !pgo_build
+    return unless lto_build
 
     # Convert LTO-generated bitcode in our static archives to MachO. Adapted from Fedora:
     # https://src.fedoraproject.org/rpms/redhat-rpm-config/blob/rawhide/f/brp-llvm-compile-lto-elf
