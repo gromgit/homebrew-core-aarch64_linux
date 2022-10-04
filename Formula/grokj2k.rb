@@ -14,13 +14,11 @@ class Grokj2k < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "f278c89c6747a0701b038b6c6c4cf924f2e320a6e398d8d638261e56a6a7ed5e"
-    sha256 cellar: :any,                 arm64_big_sur:  "5275d16ed57d86e7693149ea36d833ba0669e799e2759fa66d3c706ca4deb0b3"
-    sha256 cellar: :any,                 monterey:       "848f7f689ce0da957c6679b704c4a92d367955b82b71a4599ecfffb730c7dc8a"
-    sha256 cellar: :any,                 big_sur:        "778b6446451ce7d8b423564975ad3ef5e1d6804259ddd36dd8a109c9400bca72"
-    sha256 cellar: :any,                 catalina:       "bc1ebffbbc30c624050661ff22a14317b91e2afb728e820131c2986232f06690"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "115d7a94a7288ba4933a95683814f1f2684f1b9405a356bad3267c8504bdf25c"
+    sha256 cellar: :any, arm64_monterey: "1b971aafec72a883d82c009372d982f310acb63a8a4322499d4c03ed01cd007d"
+    sha256 cellar: :any, arm64_big_sur:  "40acc921b0e923df0093cc27b0fcf2858df7c4c8f5b6aecb7a37f49c9310713f"
+    sha256 cellar: :any, monterey:       "d5772a236cd681515d56191fc18926fbf2af6d92f466b394273dbafe7ace5399"
+    sha256 cellar: :any, big_sur:        "be2d8cf9bb4b6897f73a9a4d3f590db601a52ccfceee793e418f13f451e0d34f"
+    sha256 cellar: :any, catalina:       "e88005934bb5a09840f4cfab3ce57def5fa159398a97b3dd070034290f78d157"
   end
 
   depends_on "cmake" => :build
