@@ -13,12 +13,12 @@ class Mercurial < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "737ceba26e04326ea6b70c06d5ff14400c3cb7af5dd123d2445e7a816d47f0db"
-    sha256 arm64_big_sur:  "36452fa78b494b30f71cb1799ec4c3c612f7f6d2e2e89721f12f037128ca4b6f"
-    sha256 monterey:       "7f7d98d3e6f77fd87d64b496bcbc8ee942ad0264cea915ad5ddc307149953a84"
-    sha256 big_sur:        "e0b72286e4578b8a0775026e38a630597acdae17ca3da34fc725e97554d65877"
-    sha256 catalina:       "8a14ec66a7c520775e1e93d9097bf45a1707daf5cb10d39dd41693f3be71616e"
-    sha256 x86_64_linux:   "28ae090d3c606c984cc35a5ef1ed23889a6f3f1a0638a38bdc283a80afb3bf88"
+    sha256 arm64_monterey: "13554d637c035c3e131d382625267c99a851e2de085877edefb9ea6bdfb8a0f6"
+    sha256 arm64_big_sur:  "3858b593fe71f88039e12cadbad1e45dbd9e5a19019bc4c3445bbca3a5b3c3f0"
+    sha256 monterey:       "724b8e27b78610887aeffc87a798537f2bcd9fac9770fddc6a821adc29c0dfe2"
+    sha256 big_sur:        "d4ad55af45adab9a3fcdc55bf1acdd30ab1006928e20335060eedc527a61a1d1"
+    sha256 catalina:       "d9ddf3a6557a3b5ba59ca2c497306f282d4b95c9ccac1fff12086fc14e9452e1"
+    sha256 x86_64_linux:   "90a5366187dab6d5f61fa60a9a7c5d0e56a4c33f52b534b860ed9025f7ef87c8"
   end
 
   depends_on "python@3.10"
