@@ -8,12 +8,12 @@ class Innotop < Formula
   head "https://github.com/innotop/innotop.git"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "45a9b49284646d65f952a15670eb9e3bb0a471365daae7f57d101377a4c7f252"
-    sha256 cellar: :any,                 arm64_big_sur:  "c974c0178ce90162a6a417b00bb1576b49941bf07caf382d2bde7ff0ad556eb7"
-    sha256 cellar: :any,                 monterey:       "3f0158957c8a7188425a28da90e9f2839b8ab501a4f886d3e0c755eff247ceb8"
-    sha256 cellar: :any,                 big_sur:        "22a308935fcd0931a72e0812b2a5b8ed75953106c57130b5d519cc6f56602ca9"
-    sha256 cellar: :any,                 catalina:       "550b3ac3cf0736304172e83c35419585e7caffd3803201a0ba03694e570099c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4653b6f4bc93efa58c34f86fa479a40cc48127ea9d083360cac334add7bfb09"
+    sha256 cellar: :any,                 arm64_monterey: "750258fa6cdba7d0c1f5b1c63c6f7147b71fd0c011143ac4aaf0e79de9a3db81"
+    sha256 cellar: :any,                 arm64_big_sur:  "3afc923395e6a125d9935d135b94b733512645155cd25f366a70b1f7e542b430"
+    sha256 cellar: :any,                 monterey:       "cca41045f9fd17f918ddd019e901ccdf7378af84432569678de80a2f20a78a6c"
+    sha256 cellar: :any,                 big_sur:        "80dd83b847117c4134cfe92cbea270feab5d982cacf02589bdbe968c358d6998"
+    sha256 cellar: :any,                 catalina:       "37d9c2e484c05d25308a5868af10f09d8dc7641ca88b8fa68ca2d3372f1c1545"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cee83a61c30303263741258a618a9e7ae45c7737c9a54ab2bed264a031cfaae"
   end
 
   depends_on "mysql-client"
