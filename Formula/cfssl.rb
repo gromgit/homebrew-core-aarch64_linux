@@ -7,12 +7,12 @@ class Cfssl < Formula
   head "https://github.com/cloudflare/cfssl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "068525630ea7232521c389d8a10c7e0bd5f1737d46fadb653e332ff776548925"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f9dc8c05d1ea1e5dd8a119fb2b2a1c004ad58256328c24784aff3da4a5d6272"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ffea6c0346691064654ae4c71440d049a39107af9783a900ab60dfcb27b6cd0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "048d5d0ceab4a3ce85547dd9aba2bc3311255e1c8ce02971801cdd9d2e8d3f4a"
-    sha256 cellar: :any_skip_relocation, catalina:       "a1be4cee42490e2fe8b6437db5dd60b9db09df9886cecb2a9bfa8b7bcafefd91"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "165d15c9de1a2431f96a10b2518df17837dfe578a44a49f8289aa995aa2fb58e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "28d0e6236486aa126f772d7032ecabdf328fc47868732986d583bbe306fee46f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3017502bbc93892c0745141349353acb3bc9e332fba7877a96a72174c75248b4"
+    sha256 cellar: :any_skip_relocation, monterey:       "9f1fcc16f9eb7529cd885cd00f98ce85b85538c965580e2fd339efb7565c1543"
+    sha256 cellar: :any_skip_relocation, big_sur:        "23cdd69e2098cd6fcf2d7bcad7c82d631616d93d2e96cec9f8bede446adc7d6d"
+    sha256 cellar: :any_skip_relocation, catalina:       "2c4b8d46567c449c0e728fdb459ac5e0b327e8d5093655d3b5b7eef18f099abd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b5a93664ec06633cd8566a1acdb576c500dc57cf7e47e70e1bc6ab018a964d80"
   end
 
   depends_on "go" => :build
