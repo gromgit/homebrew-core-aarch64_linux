@@ -13,12 +13,12 @@ class Openssh < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "dc8a68702befc83e394381378cc20c9c5c9440b9f31a8e491ba4605f14c31f44"
-    sha256 arm64_big_sur:  "6c77da617ec1fdc44037faef2e0242cbef97a9acc26025f2386c884d467865a2"
-    sha256 monterey:       "e0ba7d39ae68ecd653bc5bbe73ceb252f148a51bd5e7257ed6316973023bb73c"
-    sha256 big_sur:        "2aeab07efa1366184ce592a5c172440a74f4c8ed2b68d6b8c0a70740f274e519"
-    sha256 catalina:       "fccb117717bad0d24f7cd48eb3b075299ead1d1153e8dde2a95e0de31a7990d0"
-    sha256 x86_64_linux:   "8e7f4971bbad2e288324a409b473215e582915ef297c34f645b346413c018664"
+    sha256 arm64_monterey: "0a542c0f11d8d94245d96a26700dc2169a61d5e6712ae1f692a7eaa36aa0c91e"
+    sha256 arm64_big_sur:  "50e41ea5da92f0a11fa766f769c1f95a71c5902d7f2b4efb1d7c47cd5652faa9"
+    sha256 monterey:       "b1ed4e0f37f5b600403036fc2d14de298a81c57ff1ee96fba6b87103f2970982"
+    sha256 big_sur:        "2ae6602db02ad26f680b37bbb2a9aa9b20a508237a5be509395b22fa02ee3be2"
+    sha256 catalina:       "e8e6e6727003343dc912216f3b255974db09f8453a87551a61f4c507cf5a7920"
+    sha256 x86_64_linux:   "bf000bf4474311a85a2c8b2884963382012802f7aa82f58398bd998a0c0b1d86"
   end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
