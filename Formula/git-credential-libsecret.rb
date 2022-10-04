@@ -11,12 +11,12 @@ class GitCredentialLibsecret < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6992aff0aa77859e90e437df6847911234de6df6ebd6681273490bcdffcefc36"
-    sha256 cellar: :any,                 arm64_big_sur:  "cca356a297eb0c622df34b8328ce10bce5e298d56a8595452213773552b2c9eb"
-    sha256 cellar: :any,                 monterey:       "5fae0716b65b11de4bdf251fc91fe2a44f4097f5bd7003b06b701873c2ad4504"
-    sha256 cellar: :any,                 big_sur:        "be738e8cb519560d5d43c29065f0de7dd7af3ba5835dc9ec0d57349140a2e8f9"
-    sha256 cellar: :any,                 catalina:       "1cda59c93db7ccd00ecdfcb03b80f84e97d71f5cb93b3b6787bd8f40df1d4fe0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9f3d924cf8e11f3d3103ef369b9c26dc16381ff3d9e41c0dc6ee8d31bce582d"
+    sha256 cellar: :any,                 arm64_monterey: "43e700f96ad11a809f2ee34fa9712a677916c01eca1f06c05bbfd66df331c189"
+    sha256 cellar: :any,                 arm64_big_sur:  "5e0e1f6536b9d43c8482494e94d14b9a32938ae3e19561e5ef46838c905539e1"
+    sha256 cellar: :any,                 monterey:       "88c52388c877a8e7caa88481e7bbde6045efd5fb230c540e26114982a74ce327"
+    sha256 cellar: :any,                 big_sur:        "81585d54d2b286532ef1b55a8530e3b36855ddb2f5c48e38e245b6aca99ddbea"
+    sha256 cellar: :any,                 catalina:       "2ba2240e6a3eabbce5ea2801a4ad440535f1a0a15f2436e0315fae777fc7ff36"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c7ab34023037442a2aa3b562c453bede2157e3ed159296c5bfac6f18e193c1d"
   end
 
   depends_on "pkg-config" => :build
