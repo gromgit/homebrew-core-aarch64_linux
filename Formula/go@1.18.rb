@@ -12,12 +12,12 @@ class GoAT118 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b1a03891b767759e4ddb7ca7a4ccc374d52823dc49b7b16ae0e33ae22f499f9b"
-    sha256 arm64_big_sur:  "191203597646177ce179318499eceb7bc5ca0046d63a5865ae80837ed1704556"
-    sha256 monterey:       "2d1b3c2012bdbdef51feb1e1002e681c49637e5b4675f22f59c3b412b9ec091d"
-    sha256 big_sur:        "2b1afdf7a53e1006f24e4a8f7d87f19f2624be879dfe4fe7876b7e824f122c92"
-    sha256 catalina:       "7c6df0f28dbd368cd02a6addf0994f9b8ebc1c00b1ccf9492f76e1e40b6e1dd0"
-    sha256 x86_64_linux:   "89725ef8cfee0c7a63c615a5987dffd273c6e3ae30e15494151f2d804cb5861e"
+    sha256 arm64_monterey: "139c8fea435a5e54054c48efa2613a275a5847adb264ba516a5828a9e41285bc"
+    sha256 arm64_big_sur:  "14c8e9eafc8749f09fa4a283a49d2695af80cd6525c6b0eaaf54732a3200941a"
+    sha256 monterey:       "7cc509841d6635b7f4f966b7b27d3e606af515455f3959b71c7421916e3cd02b"
+    sha256 big_sur:        "496dceec8ececc5197246c8909f18347cb1fd456a81d6d5ed7a6915103d2a5b8"
+    sha256 catalina:       "7f84899232b246f6953768aec3d7ed0172d8512295ac48b1b26a1b33c05f5e36"
+    sha256 x86_64_linux:   "7e12d7e118a0e72a620a48f419188f4c0b0aa27f7f489ad4e49f332af16c8d01"
   end
 
   keg_only :versioned_formula
