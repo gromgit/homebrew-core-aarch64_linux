@@ -11,12 +11,12 @@ class Sratom < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "05e228669eec5974a627b10a8629f805629ebfc5d587f060902831f3f4be7316"
-    sha256 cellar: :any, arm64_big_sur:  "8b4d423579e613d1ae97f2e3451fece7391941c7ad24e1c586be8d5e9cf9e5f9"
-    sha256 cellar: :any, monterey:       "83f4f118688d3fa0f844efd4619b28c43a6d43c6bb068fe7d09494f3146bfed7"
-    sha256 cellar: :any, big_sur:        "043c402fa73d4ea35d504443499881714d35cf135fb5395037708b7950d6b8da"
-    sha256 cellar: :any, catalina:       "3d8f94ffc2361105af3f044c9d01874e2395f46ac8bbb36e30622b5bcab0c7e7"
-    sha256               x86_64_linux:   "7b5c0f85be3dc1fcd4a4f2c7ce1d32a1bae97eea8e11b735364e1d30b05de92a"
+    sha256 cellar: :any, arm64_monterey: "4279011c330c294669c4a0269d588a2a13c94dd8572cbe5bd142a7e896f76b33"
+    sha256 cellar: :any, arm64_big_sur:  "44288a39e0ff6b9744818a3cb288149f846ad5f53db803c8b0d833b0f912b3f9"
+    sha256 cellar: :any, monterey:       "be71b80a11c1bb0e0abd54ec1e6823b962cedeb9be33da38ed880251ce4ad3ee"
+    sha256 cellar: :any, big_sur:        "a9080fe9fb2599855f5b512caab3cfdce9c40f3c285597de3899c67dfe8cb2d0"
+    sha256 cellar: :any, catalina:       "d6514a036efc5cd3820bcd686aaea2ab4fc9d85071dc32f09d702cf48d6c9004"
+    sha256               x86_64_linux:   "1a5c19504309b0a88bf93ca6c4e4176438af55b2bb638df0d54e31614cc811cb"
   end
 
   depends_on "meson" => :build
