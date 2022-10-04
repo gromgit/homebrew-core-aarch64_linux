@@ -7,12 +7,12 @@ class Feedgnuplot < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d921d4a402bdf9ad1633bea40e99f12c746dc671c256c7cfbe54995e2923cb55"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87e2ecb32147849148ff6f5519212b48f209abe96a08dc5b5b018d27256b5717"
-    sha256 cellar: :any_skip_relocation, monterey:       "d921d4a402bdf9ad1633bea40e99f12c746dc671c256c7cfbe54995e2923cb55"
-    sha256 cellar: :any_skip_relocation, big_sur:        "87e2ecb32147849148ff6f5519212b48f209abe96a08dc5b5b018d27256b5717"
-    sha256 cellar: :any_skip_relocation, catalina:       "7cfa22c0bd4edf4856f846115e836ac4ac0708ddc4e67c0a1d4234b148f957e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80dc888d48976009f83e56d5395d2db726fbd2e75e9836b68fd33c00af304413"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c84ee60a6faa933c43c270489c546de007e29530353ba4969b82d7f7692f3b5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "26299cc2f7edb31454e3a484328033d1da600aedb585860698ae5e079710e528"
+    sha256 cellar: :any_skip_relocation, monterey:       "1c84ee60a6faa933c43c270489c546de007e29530353ba4969b82d7f7692f3b5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "26299cc2f7edb31454e3a484328033d1da600aedb585860698ae5e079710e528"
+    sha256 cellar: :any_skip_relocation, catalina:       "dd94ae98b5eea50d2d2a6c5437089d27522bb2111092581a8bfca2cd4d7b9373"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e60aa54281c6660afa1d69e2c9ba3070d042e29fc46eff704f15f218c3d6925"
   end
 
   depends_on "gnuplot"
