@@ -17,12 +17,12 @@ class Sslmate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "46c13c2b430a8d3621478a3bd84732bb885f61a11519ac643fce209c72fe17b1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46c13c2b430a8d3621478a3bd84732bb885f61a11519ac643fce209c72fe17b1"
-    sha256 cellar: :any_skip_relocation, monterey:       "0b9be005d0b52d40b4a8459bf899c891b8a221b177d070fbed649ef42b10a018"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0b9be005d0b52d40b4a8459bf899c891b8a221b177d070fbed649ef42b10a018"
-    sha256 cellar: :any_skip_relocation, catalina:       "0b9be005d0b52d40b4a8459bf899c891b8a221b177d070fbed649ef42b10a018"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8e10a44ff520b1ca52330a788ab15a99fa2ad40805946369dd18addf299df54"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e56927a6a5cf72e966495ce2c3d236f467a503e347e965b330e5eb99cf4bd828"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e56927a6a5cf72e966495ce2c3d236f467a503e347e965b330e5eb99cf4bd828"
+    sha256 cellar: :any_skip_relocation, monterey:       "a6f4063710c6ba948074b87598d2e135898114343be1b9327a9109d3e4945ff8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a6f4063710c6ba948074b87598d2e135898114343be1b9327a9109d3e4945ff8"
+    sha256 cellar: :any_skip_relocation, catalina:       "a6f4063710c6ba948074b87598d2e135898114343be1b9327a9109d3e4945ff8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cedcb97d4092a3b0412ea42bba72ff24d88866232bfeeaba8579056094c9794d"
   end
 
   depends_on "python@3.10"
