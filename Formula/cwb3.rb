@@ -1,10 +1,9 @@
 class Cwb3 < Formula
   desc "Tools for managing and querying large text corpora with linguistic annotations"
   homepage "https://cwb.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/cwb/cwb/cwb-3.5-RC/cwb-3.4.33-src.tar.gz"
-  sha256 "856b72785522d42f13f4a0528d2b80c2bf422c10411234a8e4b61df111af77dd"
+  url "https://downloads.sourceforge.net/project/cwb/cwb/cwb-3.5/source/cwb-3.5.0-src.tar.gz"
+  sha256 "20bbd00b7c830389ce384fe70124bc0f55ea7f3d70afc3a159e6530d51b24059"
   license "GPL-2.0-or-later"
-  revision 2
   head "svn://svn.code.sf.net/p/cwb/code/cwb/trunk"
 
   livecheck do
@@ -13,12 +12,8 @@ class Cwb3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "fce8071b9fe5b2c2bdd9b237ddac22d2df6b4fe2c08d29eb8bea456b7ab814d8"
-    sha256 cellar: :any,                 arm64_big_sur:  "8f4fdd05b181e8f3c819c88d9cb7456b370a148ade914b5336ed7943c2725774"
-    sha256 cellar: :any,                 monterey:       "157899904d915f2bc5dfe1cc7fd6e89899c91bd61c801c6854e831b811fde037"
-    sha256 cellar: :any,                 big_sur:        "b8fec5b9f028d8f3ee3d98938bab86ac083ede05efe740504cd7abdb7ebc509e"
-    sha256 cellar: :any,                 catalina:       "194365652e3e8e6478dfa0cc4c6e8fadf5d2191b253abc02d9e05ff0cbf7b792"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "574689b505bbb71eb7f626203b2d1e611208958ab5a9f320b805def38fe26a63"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cwb3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f3bfca94e79196ccc205d07709504672afd69c25c0daa42cd7becfd22a789d4d"
   end
 
   depends_on "pkg-config" => :build
