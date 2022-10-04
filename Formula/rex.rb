@@ -6,12 +6,12 @@ class Rex < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f298c2f718406756536bd571aa58ad510e8b29b17e2a1cf3a1921affde39f954"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "191daba59b48d777de85ccbff1500c46ce422274911fbc70818b9017102d2907"
-    sha256 cellar: :any_skip_relocation, monterey:       "88a8982c502280a6a7d137f922d300d6bc318eae91a872873067aef2459b63e5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fd29c062470ff6efcf12e43bba2c5ac8d2f71e4069bad912858b858f9643a712"
-    sha256 cellar: :any_skip_relocation, catalina:       "442d8d513cd938ff72eb2a4340618f4eaa26d9ecf755ccbaa94557981f3593b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aef159c2c11cc5d544c7b450eb0b783ad6658342b9631e6c8b5890cbd634190a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "25e720f0a28f7762f424632605c417c2ee3ce1496cd1520c5a2c08e8877d4e4a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7fb823e7d2b461e687f36b22be742da1c5b903b84cab11acde9a7fc44223737a"
+    sha256 cellar: :any_skip_relocation, monterey:       "a4640015236f2c3122de44650aca33bf0b249ee81fc1513a56390484bc217aec"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9ddcc81e4c5325a81de3822367fb083b1e51b3b60342c497653fb7b7e4e791ab"
+    sha256 cellar: :any_skip_relocation, catalina:       "1e4b314b9f79b0ad955002062950d086c13436330dfc3575ee33ca53dfa5dfdf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7791149dbc99f2c148a2efd34246f5d2b96b68f8388905d1cc6069b2d7180951"
   end
 
   uses_from_macos "perl", since: :big_sur
