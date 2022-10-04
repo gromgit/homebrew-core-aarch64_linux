@@ -3,6 +3,7 @@ class Supermodel < Formula
   homepage "https://www.supermodel3.com/"
   url "https://www.supermodel3.com/Files/Supermodel_0.2a_Src.zip"
   sha256 "ecaf3e7fc466593e02cbf824b722587d295a7189654acb8206ce433dcff5497b"
+  license "GPL-3.0-or-later"
   revision 1
   head "https://svn.code.sf.net/p/model3emu/code/trunk"
 
@@ -43,6 +44,8 @@ class Supermodel < Formula
     inreplace makefile_dir do |s|
       # Fix missing label issue for auto-generated code
       s.gsub! %r{(\$\(OBJ_DIR\)/m68k\w+)\.o: \1.c (.*)\n(\s*\$\(CC\)) \$<}, "\\1.o: \\2\n\\3 \\1.c"
+      # Add -std=c++14
+      s.gsub! "$(CPPFLAGS)", "$(CPPFLAGS) -std=c++14" if OS.linux?
     end
 
     # Use /usr/local/var/supermodel for saving runtime files
