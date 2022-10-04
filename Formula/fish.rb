@@ -1,8 +1,8 @@
 class Fish < Formula
   desc "User-friendly command-line shell for UNIX-like operating systems"
   homepage "https://fishshell.com"
-  url "https://github.com/fish-shell/fish-shell/releases/download/3.4.1/fish-3.4.1.tar.xz"
-  sha256 "b6f23b3843b04db6b0a90fea1f6f0d0e40cc027b4a732098200863f2864a94ea"
+  url "https://github.com/fish-shell/fish-shell/releases/download/3.5.1/fish-3.5.1.tar.xz"
+  sha256 "a6d45b3dc5a45dd31772e7f8dfdfecabc063986e8f67d60bd7ca60cc81db6928"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,16 +11,14 @@ class Fish < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "34bcdd4310da2fe6e5e4d31ef465bdc38bb403ac050dd8efacfc9dcf35b451d7"
-    sha256 cellar: :any,                 arm64_big_sur:  "e4e1c8f1235b462cd1f5f21e59be0f8dce7e075f95d6fe2138d363f3957c0601"
-    sha256 cellar: :any,                 monterey:       "2af22ec016e21463326a33c653dc8c66d56deff1f975c8753a6ec2df894e0c17"
-    sha256 cellar: :any,                 big_sur:        "5e775df994cdd2479aec83c91fa103f883317e515429e18e57cea0a5de992cde"
-    sha256 cellar: :any,                 catalina:       "295d2223a3f98c4cbaeeb465480651db830e9be270834356d50fd4da3b9bc874"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "126ef47d281af27b490e74c8f89e210bc418f8e3cf6e0eea58228fbd0a8076fd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fish"
+    sha256 aarch64_linux: "690c72b71fae923a113408cee92115a57fc4128d5305658dd5935abe2e0bce75"
   end
 
+  pour_bottle? only_if: :default_prefix
+
   head do
-    url "https://github.com/fish-shell/fish-shell.git"
+    url "https://github.com/fish-shell/fish-shell.git", branch: "master"
 
     depends_on "sphinx-doc" => :build
   end
@@ -32,12 +30,11 @@ class Fish < Formula
   depends_on "pcre2"
 
   def install
-    args = %W[
-      -Dextra_functionsdir=#{HOMEBREW_PREFIX}/share/fish/vendor_functions.d
-      -Dextra_completionsdir=#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d
-      -Dextra_confdir=#{HOMEBREW_PREFIX}/share/fish/vendor_conf.d
-    ]
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
+                    "-DCMAKE_INSTALL_SYSCONFDIR=#{etc}",
+                    "-Dextra_functionsdir=#{HOMEBREW_PREFIX}/share/fish/vendor_functions.d",
+                    "-Dextra_completionsdir=#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d",
+                    "-Dextra_confdir=#{HOMEBREW_PREFIX}/share/fish/vendor_conf.d"
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
