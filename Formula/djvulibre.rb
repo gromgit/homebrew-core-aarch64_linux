@@ -10,13 +10,8 @@ class Djvulibre < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "54e8737a09b1c0aebc0b5ef27c43b3a85fcb88172214c47c095bd142a0b70ec9"
-    sha256 arm64_big_sur:  "bb1d4090bc63c01757258e885b2bf71f1a72ff73cb7d3773c01f407e05ac677f"
-    sha256 monterey:       "da591c89172dd92664e340cf1ac0896c9782b6a360e949b38fc7380fb4a86557"
-    sha256 big_sur:        "6d308b8e5bb791a708926ca46adba3b40c3e3cc68edcc80928eeaca21f08b460"
-    sha256 catalina:       "c6d381a0927b5a9cf24b32a0bca2b5aa7481fbc2824fb85460aa846026013e07"
-    sha256 mojave:         "2a264a38035e422d9af42adbc64486aa30eb0ed206a03a369f15e07905ca37be"
-    sha256 x86_64_linux:   "aafad0808f56b3b0fd9bc6b05297cbc8b9fe06df2068fb2f0bd87c93aa45e79c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/djvulibre"
+    sha256 aarch64_linux: "4c2445360ab36e401d39904712acb0ea36e4b47c2c5388d701001a6f39e0a156"
   end
 
   depends_on "autoconf" => :build
