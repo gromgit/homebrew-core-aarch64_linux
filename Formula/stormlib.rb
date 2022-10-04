@@ -7,13 +7,12 @@ class Stormlib < Formula
   head "https://github.com/ladislav-zezula/StormLib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e53d414b82a05e0b533e487c2f6af493dc19d76e06c43e43c1fe8da18b18f765"
-    sha256 cellar: :any,                 arm64_big_sur:  "16d13a201008b0f6c145e80d28ced76f29af97dfcfce05d1bc2dac84ac0dba33"
-    sha256 cellar: :any,                 monterey:       "86406682d4f63e431c8239e885b72410a9b5d25e01e8fe6022f33ed62446aa95"
-    sha256 cellar: :any,                 big_sur:        "12177d76e3bac8c67baba52c812a855642e780624d7a75f1e826b10811de35b4"
-    sha256 cellar: :any,                 catalina:       "686a27d3793a4a80858f442d1feda9d5880e21e687c152067136b4bb27c6fa50"
-    sha256 cellar: :any,                 mojave:         "0270b8a31bf89afd8a81a0b8e36f3a967e196f024a3900fdf24ef5ab1b26a422"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "14d33ffa96557afdff6f9b3476005b83c6dbcd51994d0b7fed03d2af0484d263"
+    sha256 cellar: :any,                 arm64_monterey: "eb49ee0d868f90645193babd489badae79d5d00ca7ede13013f1e59060bbc770"
+    sha256 cellar: :any,                 arm64_big_sur:  "339ba3a797c4e4e778605cf162ac730bec7800efb83559a9d8c2869334ffe6ef"
+    sha256 cellar: :any,                 monterey:       "f259e5472e2b4dc860b0d56070b9ef65a9c5da60af9f456470e47632a9e1e156"
+    sha256 cellar: :any,                 big_sur:        "bc0569b5bf83746075a6c732e88ea256297b99f2b1e87763eafc2f988c5b953a"
+    sha256 cellar: :any,                 catalina:       "d40db23bd0e88f802e8971544de7ac57599a150df3debf2fb2032104a0599d30"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fbc2be72468c6fdef29cc7130f26bd3d7c606e58b02ee41a3d952a2a754c51c"
   end
 
   depends_on "cmake" => :build
