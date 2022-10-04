@@ -13,12 +13,12 @@ class Cryptominisat < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "55c45ccdfd3047c85937dbe13666b013c8495bd7b2abcb67c2fdb0c5106200f9"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd93c87900b8f490d735d691e20f17f0f6dfadaf0dc1fdfb4a04d459de047e4d"
-    sha256 cellar: :any,                 monterey:       "e014ba19bfa3e86220fd6ce2c08a90a7a182685986eca762c1f6e317f19fe13d"
-    sha256 cellar: :any,                 big_sur:        "5847aace0165707d81335cf262648c806eeb27f168e3ab27a2dae6e4c2aebf95"
-    sha256 cellar: :any,                 catalina:       "d27a51f89337e37222c3bb5bd6239c1411a5aec1531904832a11ab378742a266"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c26d59f2db3e9b46d1a78594c4c704443dadff284308ae22aadcaa7d2b776341"
+    sha256 cellar: :any,                 arm64_monterey: "a37911641a25c49ef4a4152531c93679f4c42694688d7695e84b31fd0f56df4a"
+    sha256 cellar: :any,                 arm64_big_sur:  "c30ac0d1f97c3138a1d75c8519718c38d9481237ef891a4aa9991de796db2927"
+    sha256 cellar: :any,                 monterey:       "8432fed87a785122585fcbee69a3256fcb9c537cbd6d6a404d63226a5b15262e"
+    sha256 cellar: :any,                 big_sur:        "c4ff5942f8bfccf27d37065f8b010b72fca214641f20530ae4b95831e48d1826"
+    sha256 cellar: :any,                 catalina:       "ef55bbbfe712fe39128d4abbd1cf023a2b496b1e92029de0ea32ce5fb13914a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b469605be2c28104303217c39f752079c51e887b245c306ff831ccb9051a62f"
   end
 
   depends_on "cmake" => :build
