@@ -14,12 +14,12 @@ class Irssi < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "a9cf2441cb3eccfbe05a2fdcb75b92cb6d49360ce4f70f3e4e8f3b315b5c5e7f"
-    sha256 arm64_big_sur:  "f9b916bdbeb562a0581ea29038c425b236495e62f64fbbf813f142755e3ca56d"
-    sha256 monterey:       "6257cfbc34b5501397c41d07ad2d5bfb2c151c6f31e0d7c8ca33917da50b0ee7"
-    sha256 big_sur:        "ab7e834920115f440fa9785cfa3da93eed3a05167530823e81115db886b0f68e"
-    sha256 catalina:       "1761863c0d487a2f0c12dcb3e334d1b885efb9c5d75f8e9dbdd53448a238b397"
-    sha256 x86_64_linux:   "9794cd9b7e88d94b3f4701947d8deb0004267a241cf72d1886645246ad7f6ff5"
+    sha256 arm64_monterey: "69731184fcfe2677b6d24cf3b3c3901e2aace975ed99242b7b706182aef01cd3"
+    sha256 arm64_big_sur:  "743b316af037b0756de7b405a6f29cd70c99f213ad03cd02aed56ede6a8c8654"
+    sha256 monterey:       "b7df6b4e9dd65d526127e8c0b243a32c80d33ac3c04456c63f3a24953f149c75"
+    sha256 big_sur:        "ebc2daf02eae062170378d2995a42a643bb3d64f5f10ebeccdecf0446c7e0401"
+    sha256 catalina:       "5c9239da0b6620df1e8bba3f315d35a6e41884bd107aab393c46434bd17fa920"
+    sha256 x86_64_linux:   "3b1dc215132892ba386ff95486231a50e367b1866bcb6dc330811d4f5cf765f3"
   end
 
   head do
