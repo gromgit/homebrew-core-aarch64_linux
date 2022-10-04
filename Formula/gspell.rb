@@ -6,12 +6,12 @@ class Gspell < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "9102f866c84b027e06b66e499a68aa3e961b0d0d7028365ed08aa85da0ed32ff"
-    sha256 arm64_big_sur:  "acdc517ea5c19323f0f92f8a7ddd2ef2ace672373abe5ec43e86403bb162b224"
-    sha256 monterey:       "cb88a9aecaf314b56977c9b9f9970ead4548556b8d46db4f8de86817004c73c5"
-    sha256 big_sur:        "5cbbf56cda623114fe425da2f8cdc2ff70fee4b69426459232ccc46371c6bcaf"
-    sha256 catalina:       "0f4dd2be2efba396adc89b94b3e2ade6206c5d8b4263fca4bb6fefb104b15566"
-    sha256 x86_64_linux:   "50efdf695eb3f553fa52cabbf2b361e5fd1e70f177afbd904708050960fa2c70"
+    sha256 arm64_monterey: "dd6a969d290fed85428da8e3af6853cd3fe11b1636ae38fa71ba739f0d7d838e"
+    sha256 arm64_big_sur:  "95f6ce667b2be26d856aa798046e6cbc68eb915d3b5f65e85fbdf23bfd76810b"
+    sha256 monterey:       "b83ab0866c4e4519601adc543637b718db6be8cd6c3b057f33281db0322e497b"
+    sha256 big_sur:        "b40a91cbc88b603b3569007637fe827d1cb89c6d30984deab7d50450efb7d3e1"
+    sha256 catalina:       "7a00c7b0520c18923312b148b9489747825d7fedd83886a01bbbd33143cf295a"
+    sha256 x86_64_linux:   "457396633583a31635573e0a022e800906e6cc7b5ab4fbdf2a0a5869cb09f889"
   end
 
   depends_on "autoconf" => :build
