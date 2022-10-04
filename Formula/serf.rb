@@ -8,12 +8,12 @@ class Serf < Formula
   head "https://github.com/hashicorp/serf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "072bf0a61633a6ee92d9c80fa26caa80bc7347f8a05bc1375f69c2988f7b75e2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44572bc73830df57ff5888e4e87312ee4cd193a2c593d4daaf8f9d628560f676"
-    sha256 cellar: :any_skip_relocation, monterey:       "e440b4ee34d49a1218451f3386d82de12b200b0f91926624bf34ad7e58ccac54"
-    sha256 cellar: :any_skip_relocation, big_sur:        "76d6f3326f99e239d3fec8d3becbe08ad21ca51dfb52bdd6cca04ade960edfa6"
-    sha256 cellar: :any_skip_relocation, catalina:       "384e75b881441902f6d7e0b96f72f547a7de6cb9dda0ef6f606ae241110418ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6cc701296a0e70345a64c7e3d5b15edb99572e60ab461395dafd5f9fb1aad2e2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "59a8907fb429075617af0dd136dec133ef2d3db717aefdd5d34af24bdb61b8f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62db308d9635a9ea626c57583164787a63384269eb58dac7e73d30a7814032dc"
+    sha256 cellar: :any_skip_relocation, monterey:       "93a502382f60b63b45fd43636ac8799831a5a68b26acbde13e34f1b69bc0b813"
+    sha256 cellar: :any_skip_relocation, big_sur:        "35e00fc92e749a4d529e2b7828232b35addf73a83548a01d5ada7616274db7ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "f8711cd1c0eed5c1c2417450a5f75458f81ea4a665a8f064e3a064c2d9c70c4d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a23cfd0f748a6d4f52803b3ade623bb79691a217e12f185103cb93359cb1c6fb"
   end
 
   depends_on "go" => :build
