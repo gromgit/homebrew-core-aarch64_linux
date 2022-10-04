@@ -1,8 +1,8 @@
 class ArgyllCms < Formula
   desc "ICC compatible color management system"
   homepage "https://www.argyllcms.com/"
-  url "https://www.argyllcms.com/Argyll_V2.3.0_src.zip"
-  sha256 "daa21b6de8e20b5319a10ea8f72829d32eadae14c6581b50972f2f8dd5cde924"
+  url "https://www.argyllcms.com/Argyll_V2.3.1_src.zip"
+  sha256 "bd0bcf58cec284824b79ff55baa242903ed361e12b1b37e12228679f9754961c"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -11,12 +11,8 @@ class ArgyllCms < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f7ef8b6684a81686d1eba6350d6a1dce78e0995264ab2dec383547c32042ab80"
-    sha256 cellar: :any,                 arm64_big_sur:  "f19205f7c0d87399c06af8f2c905811f4cf101cf3f86e5d426e2afaeeef9f49b"
-    sha256 cellar: :any,                 monterey:       "03feaa99b2fd77fdf1858b6596e0274595adcc126bb1070119b1e7830195dd33"
-    sha256 cellar: :any,                 big_sur:        "69be49eb52ff6525015295bdcfb93e79c63dc89e79da072db2126f9e9ed7cec3"
-    sha256 cellar: :any,                 catalina:       "236467588e60d2266690f20b319d892b19addaad6037a2dbc017fd1473baa0aa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32290105011f95d383046c0a656c9dd4328b3527dd4683f271eb1a341745fe75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/argyll-cms"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "27fefceae3492757212c45724085af61cb469b596b34c4ba58acf67364da8c67"
   end
 
   depends_on "jam" => :build
@@ -42,12 +38,6 @@ class ArgyllCms < Formula
   end
 
   def install
-    # dyld: lazy symbol binding failed: Symbol not found: _clock_gettime
-    # Reported 20 Aug 2017 to graeme AT argyllcms DOT com
-    if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
-      inreplace "numlib/numsup.c", "CLOCK_MONOTONIC", "UNDEFINED_GIBBERISH"
-    end
-
     # These two inreplaces make sure /opt/homebrew can be found by the
     # Jamfile, which otherwise fails to locate system libraries
     inreplace "Jamtop", "/usr/include/x86_64-linux-gnu$(subd)", "#{HOMEBREW_PREFIX}/include$(subd)"
