@@ -8,12 +8,12 @@ class Help2man < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "383b411c2f38bcc248ef62253135047fcdf62d9dc53f8204d8789648705750e2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "383b411c2f38bcc248ef62253135047fcdf62d9dc53f8204d8789648705750e2"
-    sha256 cellar: :any,                 monterey:       "2fa2384e5b009445b1c22c3524c290f99097e28f513d05fc72bd34b5a2359c4c"
-    sha256 cellar: :any,                 big_sur:        "6d00cbba2327558de78a1e01fc1906ddce81a03067b3d8636f15df835290018a"
-    sha256 cellar: :any,                 catalina:       "96ff3329951b52db5e2e70f64e93a5fa291b79d70bc39a4d10d6c2cc3340a1b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "457df4779894e46898cb3ae03f9b7d2650a0bd42e75ab7cdf4aacbe0e6bb90d6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5b0bf73ebf258cb4870683c6baf8a4a029d3c46c2996413a6602ef049baf6cd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5b0bf73ebf258cb4870683c6baf8a4a029d3c46c2996413a6602ef049baf6cd"
+    sha256 cellar: :any,                 monterey:       "0481c92c77f5a3fd47271eb8a4ce4e69ac65cdd9725648fa395a2e0c5a72a30c"
+    sha256 cellar: :any,                 big_sur:        "9ad7fec41ef9f551d6fa6b0f15cc0bce69253daf0e2d1e2c0f25b14d5ca2c045"
+    sha256 cellar: :any,                 catalina:       "758ca628b5bd9e705848c5ec78b2c00d61cd1a5b4363751ccc06bf146b019c72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e934fa20f035226d407cb5c429ee6ae91b95710a4fd2c4445b26438d56c3450"
   end
 
   uses_from_macos "perl", since: :mojave
