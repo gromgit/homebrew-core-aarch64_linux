@@ -8,13 +8,8 @@ class Jinja2Cli < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3c29f7f1c00ff8568e0277a3df9cb7b952df34c37c4e5d5607ad755e1d0d7d67"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c312379e7bcc59c8f1b25c51571f274fcc248784e8a852fe594b020f6faf289"
-    sha256 cellar: :any_skip_relocation, monterey:       "f14e696604a0160216c837409b4d29683b6b55541bc956c940028b754a02d42d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "463b04b93dc0e2b5b6132ee38a59e563cff76c4b5aa2b72aa746465c8afea65d"
-    sha256 cellar: :any_skip_relocation, catalina:       "3372164230b316ea0cd7e853953b775a16f962469e9827201b1adc12041be4e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae469ff00703bd8b8cd045e0b1ecea9216c6d80f24b3b757de7f935bc3d80089"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jinja2-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bd7024ef4ae378903cc7cbaba47da0ca07c8c04565ec7822b53c9b02ae2a0e68"
   end
 
   depends_on "python@3.10"
