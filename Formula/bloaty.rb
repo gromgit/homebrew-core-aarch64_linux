@@ -7,12 +7,8 @@ class Bloaty < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ba9f5939fc1a0b26f069c79e03e82c46172f3e7414cdd9a8575180535dd7ac74"
-    sha256 cellar: :any,                 arm64_big_sur:  "0f3047ba12a5f2094fda29e2deb3247dfbdd4812367e27708dee4c6237688e79"
-    sha256 cellar: :any,                 monterey:       "28c336018b3967d6588ff4973e579ab4fb33035a01489ea21ed2db45ef1dad68"
-    sha256 cellar: :any,                 big_sur:        "f1f5844b6791049e0fed204d4e585292fdbb31b30f14399303c1649f0d5589d0"
-    sha256 cellar: :any,                 catalina:       "9ba7cb7e18921902ae6539bb92087d609266913a47a380ccd8ba7e40d8a630d1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "183c718270cf78df476bfd92945beebc6141ad794916c024dec0421c617304e4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bloaty"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b94a756c68a219802ca751fde33df52645a586ca34db028145e7ae4fd8ed2514"
   end
 
   depends_on "cmake" => :build
