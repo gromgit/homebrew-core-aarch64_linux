@@ -6,11 +6,12 @@ class Pmdmini < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "1bdf417d67bfd4312694a9c5e8cdc70d1ed9c749d39a7082ac92fff2210c8fec"
-    sha256 cellar: :any, arm64_big_sur:  "7d9638e8edf8d9124f682b6a9d6ebd379d5afe4431ffb09bbf987a86fe3a5529"
-    sha256 cellar: :any, monterey:       "ad0c82a61af3d50f6dad3745021d1bd4f82525ffc1eb52139eed94e0b5bbc3c0"
-    sha256 cellar: :any, big_sur:        "c23d6cfa04ca47e7d11580620694bedf2cc943b697c49198b80b0aaf489352b1"
-    sha256 cellar: :any, catalina:       "422add6136c6829f5ba656e0a052dd2c03f118c665a3fc3bb74a3e4091d8f2e5"
+    sha256 cellar: :any,                 arm64_monterey: "27137c3e0caeb62401f16ff188ab94c629935342615a97be38e2a12e77877f33"
+    sha256 cellar: :any,                 arm64_big_sur:  "a2c9ff100327daa46dae7c0fb7d49ee5dd71f7dbd28d585d6a8f6f74b3c2db92"
+    sha256 cellar: :any,                 monterey:       "b84f6ad8b040a1b193b753e8d9934045d605b7ba37a547acab95302aea802a77"
+    sha256 cellar: :any,                 big_sur:        "149cbae3b8b5b93ad8b5e55590e87b96120aa5c4fa729f142d2ab62ea3758d4a"
+    sha256 cellar: :any,                 catalina:       "32eaf2e42986d019c891e922a4c6744abdc243c7d927210f65a26c4b363aa569"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40d7b0addf0328bbb2bd4ab80af954ce4feaa11d57fb76aecc21da90b522cf9e"
   end
 
   depends_on "sdl2"
