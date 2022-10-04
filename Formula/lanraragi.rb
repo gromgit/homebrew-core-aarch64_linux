@@ -10,12 +10,12 @@ class Lanraragi < Formula
   head "https://github.com/Difegue/LANraragi.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3efb2fda8a8547f615b03bb2f7f5a78b7b7eb3f931769e35845539b6aed4e0ad"
-    sha256 cellar: :any,                 arm64_big_sur:  "3ca636952c14c3161577028cd085dc17edce784f10f87fe99c4e9a8e08710b4c"
-    sha256 cellar: :any,                 monterey:       "02d32b961a0e07971d33795b8a5a3503ec81e34d2e783131351b82ea21452f7b"
-    sha256 cellar: :any,                 big_sur:        "2a39692c6a468c74f327171d12e70d842164a650cc2d99c710081923dbe0c94d"
-    sha256 cellar: :any,                 catalina:       "becc9bfc4a90b3098f2f1a9a5cf8c70d32fcaf67a454eb3f6616b809cd117b5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16bcdf6d1e5b378e3fa3ef8319f3af0c5081b5318adacba5dc3a0514779235f0"
+    sha256 cellar: :any,                 arm64_monterey: "e31e4723ca6218a34b484b7b1e5812fc07929f2ad13583b252d0bf9d87f4ab23"
+    sha256 cellar: :any,                 arm64_big_sur:  "878392048b56fb89d9307373cd652d2f66a1821e03191232f5b2c2db481d58a7"
+    sha256 cellar: :any,                 monterey:       "4bc11aa5c4a64ea70b3a666099bd0a0bbacd3d123f2fb47c9848eb1564341b7f"
+    sha256 cellar: :any,                 big_sur:        "709e02781fdabd8cfcab53d03e57916848909cfb20911e433e4bd488ddb50972"
+    sha256 cellar: :any,                 catalina:       "f11572489c90db426fe07ac95cc6aa5f18347ebc0c57c4a2128188d5d5097f93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4edf41c6316c692b2ec737fa259bb7c6dee9720182e9e39acd706c0be1068cbb"
   end
 
   depends_on "nettle" => :build
