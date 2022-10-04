@@ -7,16 +7,12 @@ class Intltool < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "273d2b13868310fda429c3fbf1ddc347de0cab3189bf47639fd6c64adb8ec0cb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a95b3272a26918e1a92ad548ca72e1b74f5ade8073193c560c418369f9dacb51"
-    sha256 cellar: :any_skip_relocation, monterey:       "bdeafd2b872e89587ccc884208d5ba41ef1ab5131ec6c508039d5f299b753c49"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aacf573a663f8c555bfa8163593386046462856392001b9dcad317fcf889fdfe"
-    sha256 cellar: :any_skip_relocation, catalina:       "853b0f355c1bb6bdfc41d2ad17026d75c93aecb7581e711d7db3edab4ca6b5d4"
-    sha256 cellar: :any_skip_relocation, mojave:         "52ccb5bfce1cda123f30c84335172335cee0706973e6769ec9a5358cb160f364"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "7924c9c7dc7b3eee0056171df8c6b66c2e0e8888e4638232e967a5ea31ca5b86"
-    sha256 cellar: :any_skip_relocation, sierra:         "e587e46b6ebdebb7864eb4f9cb17c221024d9167ae0148899adedb6127b2bdfb"
-    sha256 cellar: :any_skip_relocation, el_capitan:     "14bb0680842b8b392cb1a5f5baf142e99a54a538d1a587f6d1158785b276ffc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9506dfd59eb01b9cd5735dde05523feded67cc2fc039053704dbbd46e02a49f8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "45adf17254203ae3085e595907a01e02188643a3080c595a0a9f50301ecd8e56"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45adf17254203ae3085e595907a01e02188643a3080c595a0a9f50301ecd8e56"
+    sha256 cellar: :any_skip_relocation, monterey:       "743ff02675bf6a8b52311d8fb93ceff3ef512487d29940b547992e3e8f6e494e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "743ff02675bf6a8b52311d8fb93ceff3ef512487d29940b547992e3e8f6e494e"
+    sha256 cellar: :any_skip_relocation, catalina:       "743ff02675bf6a8b52311d8fb93ceff3ef512487d29940b547992e3e8f6e494e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3250b9524cf8540d10b5354145fd3541c4c308efaaa091d17f6bd691a552b15b"
   end
 
   on_linux do
