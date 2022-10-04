@@ -12,7 +12,7 @@ class Mhonarc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "fe9730eed078aea4b9fcfda2c0f7321ca9b899a3b720802355f84731db643df3"
+    sha256 cellar: :any_skip_relocation, all: "bf14803e198aabe4b95f50db39691499f43fa2aff77d7c90760782eeb4c9cbdb"
   end
 
   depends_on "perl"
