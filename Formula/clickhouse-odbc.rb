@@ -14,12 +14,8 @@ class ClickhouseOdbc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "420b61266c61a96400fbee24dcfcd3b76b7291bfdce3133d50f118e0d63b9fab"
-    sha256 cellar: :any,                 arm64_big_sur:  "864770fdac3047d862830b7afacb45d17fbb420ab63cd00d27503862ef1a4f1c"
-    sha256 cellar: :any,                 monterey:       "71073b86f8b363aad6c733d75c3d389accb32e559a32decbab10c0a444f02ad0"
-    sha256 cellar: :any,                 big_sur:        "ed0402d5455e56d88a896e786754d013f3165d585cdb42e7e9dd5da8c5d4fd33"
-    sha256 cellar: :any,                 catalina:       "4bb619896ce647d4cc6171bf0f0dc76bcdfc5e2a264146d8ab9236b49714ec50"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e1a2917e04ffa2ba091586adc930345d437f29ca390424e6b5305cdb8298169"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clickhouse-odbc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "336b57bacb003ceda39b398a07cf367cd51dd78ddc0bfb73fd2492819808501e"
   end
 
   depends_on "cmake" => :build
@@ -32,8 +28,8 @@ class ClickhouseOdbc < Formula
   end
 
   on_linux do
-    depends_on "unixodbc"
     depends_on "gcc"
+    depends_on "unixodbc"
   end
 
   fails_with gcc: "5"
