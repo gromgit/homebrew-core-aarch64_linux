@@ -7,14 +7,8 @@ class Devd < Formula
   head "https://github.com/cortesi/devd.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "066a8cb9c2a379b7b4c77476dcad100ef1b50ca211717460de1b23727f540e51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1adc7ff42fb9063f2724578755a548a4b52244269c03ffef599bad06da2641d0"
-    sha256 cellar: :any_skip_relocation, monterey:       "c5a739aeae1644c64f5dde53190c6050ecf28ff7ae06867e604679391684c5df"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3a80a457e6b056c0b00d9b1dbbce26c18c36285e4296100d1196875988ee6b7c"
-    sha256 cellar: :any_skip_relocation, catalina:       "5a1dceea4de81075bab6e0617b38c39f715423c4e8e0d17f75f65d7e15cf7dee"
-    sha256 cellar: :any_skip_relocation, mojave:         "33c299776d5aa228d68b36d9d51af12b04d5e65a194b907900bd117882a45f27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19d3cb4f63a05ccd30e3e819940ce9f7f50732d4478a04a65cb6d54d31852a7c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/devd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "01f2099621274321673b9019ba8d6a1edeb4f432c21ca6c2ae94c03d787ed2f1"
   end
 
   depends_on "dep" => :build
