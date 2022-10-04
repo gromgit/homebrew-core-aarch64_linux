@@ -18,6 +18,7 @@ class Supermodel < Formula
     sha256 monterey:       "339da803650d68029618c577e5c57a374af2da9521badd82d0de76897c51eeef"
     sha256 big_sur:        "37277a5568532cf6deb7ec130c67f5f66c7f9538d96cfdf59c3117eb91a4a18d"
     sha256 catalina:       "8978ed55cf9121291601384e24462932fed8fd12a59ad815384edd200b860e75"
+    sha256 x86_64_linux:   "da80611e54278fe44c3869c876fbe0d7955901e5bd0df86e99c67b358d60172d"
   end
 
   depends_on "sdl12-compat"
