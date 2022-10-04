@@ -23,12 +23,12 @@ class Perl < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "74b3f24c7c08a99b569e7d6159c68aa9912b222d7e4d40c9895436130fc1aba1"
-    sha256 arm64_big_sur:  "c1edffa4e60b7c3801e1437e9bbf1d6a7eab0b77e9dd551a556dc9fd91b7dfcd"
-    sha256 monterey:       "5baa007a4878f165e1e8f5fde45d8b670fc77043ff30458650513c37ddb4b495"
-    sha256 big_sur:        "dc450ab3b43888382fcc46e975617a9c97f77ff5a6a690022f6745fd53ca8c72"
-    sha256 catalina:       "34a5ce2d637952eb163fb9bac91767322971158106dcd88a44b7128d88bf050d"
-    sha256 x86_64_linux:   "99dbd9c282ec8c2bdef461ff2c54b78d92ee19a315c69537b0f3aa420a4973ab"
+    sha256 arm64_monterey: "aef200b8035eb1fbf5b6aa219c053df7f73d9c07da10f503f08889ae70e2e92a"
+    sha256 arm64_big_sur:  "f0f893e0ceb2e9855bfcec2ceafaaaa8202df3477d11f39b88722eb776ee4f34"
+    sha256 monterey:       "5b63dfe448c0b7a69cb8a3d0b4220074848ae0680a2f245080a8f4cfd1be3baf"
+    sha256 big_sur:        "b8371ca58bdc89bd17ba3bd0a0f6d151fb0bbd1544e47357ad474507f4ca5f28"
+    sha256 catalina:       "3f0a9bae1a11de46f3cb19e9f1d64e63b6af957a771bcab0663ab18f2a6822b3"
+    sha256 x86_64_linux:   "64131980cdcecfdee05b10ab5878f3152f6f661fd779358b4d658d7d23f36d36"
   end
 
   depends_on "berkeley-db"
