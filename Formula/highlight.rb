@@ -12,12 +12,8 @@ class Highlight < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "caf613faeea04598af9f40e33f0035584250cb690bd2747374b932a562f16f04"
-    sha256 arm64_big_sur:  "4334f3d71cd6c4e5b452154f7b9d1386d921afc9805bcbafd18c4a945a88dbac"
-    sha256 monterey:       "f9fd20137f1c3bba43234e0d1ef181ff37001e226f4887d1c168be726c989514"
-    sha256 big_sur:        "2cf01ec552ef0d2367aa9aecd1606cbee37c17e009bd72e371f8375e416d2a3f"
-    sha256 catalina:       "5bb748bd4cdc0211a157d2a846bb2921cda8c35a3c2508acb17290a376b66010"
-    sha256 x86_64_linux:   "e60a62a021aee25dd40cd2fed076a7700f8a943da70927a0d4fd934945b69245"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/highlight"
+    sha256 aarch64_linux: "be9c0ff91874f6714e41775885e0620583b6ef8508c89fbfcb1592e61d7bce93"
   end
 
   depends_on "boost" => :build
