@@ -5,6 +5,15 @@ class Curlcpp < Formula
   sha256 "d1c236be862965d5882a842be3112b16e7f49d6fdff9906f7aec71ee8669d60e"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "87922690e232f15e852f33a4636e9b9a4f8458b1c244c4b8465d80c09bd9522c"
+    sha256 cellar: :any,                 arm64_big_sur:  "f6980da3dd9bf14016f7e7832e4981ea87d077958e2dc225eb4eacc3ddef87bf"
+    sha256 cellar: :any,                 monterey:       "deeef2d85d2923bc14f62f48e91b2581e028de97c6c087e41868b2e7c27eb055"
+    sha256 cellar: :any,                 big_sur:        "205dbd2d04e1b71c31d53d7e331bb27745d05329dd87426ac5906a489cb88755"
+    sha256 cellar: :any,                 catalina:       "73d4a493d900c4d5b03e4fe0eb1b657f84075404c8ceb45ce116e36af169de85"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "36a715a64edbd313a814be1d7b31aa792290a1828fef45a0ff4e1c06f3eaa37a"
+  end
+
   depends_on "cmake" => :build
 
   uses_from_macos "curl"
