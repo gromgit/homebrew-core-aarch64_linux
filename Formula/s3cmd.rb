@@ -9,12 +9,12 @@ class S3cmd < Formula
   head "https://github.com/s3tools/s3cmd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e13cdf4fa4a22bff28b1c6d45e9b6abf3dc32706b5480aecfb795cd78bbb6a1a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28e7375d0037bcfc45a8e78bd25cea0607b2b84889a36c33b01928d665594c9e"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f1bb8a93419af123b4ef632fedee428b53803e768f90e1baf1fc9001d87b688"
-    sha256 cellar: :any_skip_relocation, big_sur:        "902b90e870a713c0317c2c7b9473b864e0e71c55dca645ea05ec6e928f4ab1d3"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f4c613de5672026788b198f0599a1b8f411c052485c9bee0d0afdba8c31ec62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "033fd52dfc82b54e62c50d07244b35d53b1b60f1b4bb6d6e66e17ce121b8ec8d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bb414acde1db4bb6928bcd7d324ece8d76789d2317dcc1e7bba62d68b3c5ca1c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8d0c5b731e391732e95079cb1f9d77a06f573c0d8399ea75c130796decfb6d35"
+    sha256 cellar: :any_skip_relocation, monterey:       "b5bce6966cadc7ded6bc9665dd46cb0139fbbe0a77c015ee0815700ea057eb18"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a4b3ff0cd6989280a0aa7bfb6e530d9e4eb1ce4f2b0dea621ba168a6a10c0b55"
+    sha256 cellar: :any_skip_relocation, catalina:       "c15344cf5ced2e4c47e552d06c48e43320e7c52289d7d8dd4b10cd63a3c222e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a9a466725bc9a3478b70e2b9708fedf6d83fb32b5f9562ad74f90fe5c6a2c64"
   end
 
   depends_on "python@3.10"
