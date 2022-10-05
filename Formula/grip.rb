@@ -8,12 +8,8 @@ class Grip < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c629925f497600000aa7992737491677427a76695fd1b3dc1e0523a8a2eb88b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62eadc72cac0159a63e6ea00305dcc9b9ca26751f93f1157ab44fd5d07cf7b2b"
-    sha256 cellar: :any_skip_relocation, monterey:       "1db10133349cd2ba46e1713b43288fba105b4c29545a55d5d3f31d9c6cc6f4e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "91118814e4002905119f946fa9f1b922da551afc2e67f3ebe10533c978ab01df"
-    sha256 cellar: :any_skip_relocation, catalina:       "f96eaf2868ab26000b6876ba0e51bf899a932f30c23042dfb2ddb9be3f764b70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5aad4cebfec9fd66dc7aab88d94e04fda89c42c2708fcae428e6fe851ebca850"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7fe78844683aef7831057feeaad6fa77229f2044ca60f5865aeaaf9f0282b8b2"
   end
 
   depends_on "python@3.10"
