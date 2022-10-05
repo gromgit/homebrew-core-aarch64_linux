@@ -8,13 +8,12 @@ class Zbctl < Formula
   head "https://github.com/camunda/zeebe.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68180e5dd7e8098a3dbf1d7c6d401e40e3702f7584d38737393fea1838e26cd7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68180e5dd7e8098a3dbf1d7c6d401e40e3702f7584d38737393fea1838e26cd7"
-    sha256 cellar: :any_skip_relocation, monterey:       "f884af4e4358cb08c75bdf17796bccef0cf7307678a00875c439ce69d32e9593"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f884af4e4358cb08c75bdf17796bccef0cf7307678a00875c439ce69d32e9593"
-    sha256 cellar: :any_skip_relocation, catalina:       "f884af4e4358cb08c75bdf17796bccef0cf7307678a00875c439ce69d32e9593"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5572a625db90dfc1689bf22bb9b53b2c165136f1d405ad13ff78f2510f2a46bd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf2aa67b8f06dfff8690c31a5b3f94a6120fe113b3d267368cff335538892713"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bf2aa67b8f06dfff8690c31a5b3f94a6120fe113b3d267368cff335538892713"
+    sha256 cellar: :any_skip_relocation, monterey:       "4d3b965693acfeec3125dfb1c22e6f55adddabe6919a4fd05efe7cb2dbd45fae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4d3b965693acfeec3125dfb1c22e6f55adddabe6919a4fd05efe7cb2dbd45fae"
+    sha256 cellar: :any_skip_relocation, catalina:       "4d3b965693acfeec3125dfb1c22e6f55adddabe6919a4fd05efe7cb2dbd45fae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0de78ec110950f44c1571dcb654e427c29abd1a800ad70d4cf7fecb08aa668a2"
   end
 
   depends_on "go" => :build
