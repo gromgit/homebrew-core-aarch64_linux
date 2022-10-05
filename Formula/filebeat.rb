@@ -10,13 +10,12 @@ class Filebeat < Formula
   head "https://github.com/elastic/beats.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "23464c39728cb412adaff0837edfeb87022d716d92aaa57b1f5a83a04ef241db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e64ad66cf6ab8f7512599115df83350a4c3430e93387639363c9d0ade9c6a518"
-    sha256 cellar: :any_skip_relocation, monterey:       "42967b0cee2125458585c5f535c10538f2f423e0624ca274f79c7210100ec121"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e9e6cb10852b09290de800ec53290c39f801be07ecca075f25c17b323dd1965d"
-    sha256 cellar: :any_skip_relocation, catalina:       "1f30ab16b2b2e1307ec2f08d8f01bc8c1c20604759380c7c5212b02e7439e3d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ef575bfed9dfb10e73d0ecb0b555e5e491b42e5a2c80384f91fac142576df3f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ff77bf4367171152397a554e4c182caf293e3babc7f5d8aeb3fafda5935f739"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "770b5d6e4867234c7c802e7bb51bd9f8c929ace0da026290196d88a1b32c9b9b"
+    sha256 cellar: :any_skip_relocation, monterey:       "cc9a2240ef1a914e91b0dfa23da026b51a5c205fc44c2395b40be0e6fca3fdff"
+    sha256 cellar: :any_skip_relocation, big_sur:        "413d3ec39d02f5b197bbf575e5a0e19f858915818dd4014542aa2027ea0810c8"
+    sha256 cellar: :any_skip_relocation, catalina:       "fd001fbc4111e2fc54c6ac56d368ac16cbeb9b08401e1c9ddcf75920a524e6e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "636d4ed98978b91843955b055ef5190fbb0a09f1e6dd85ce6bcf8a7c546efbbb"
   end
 
   depends_on "go" => :build
