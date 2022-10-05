@@ -13,7 +13,7 @@ class Dwdiff < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dwdiff"
-    sha256 aarch64_linux: "a44b7dab9d0e0ac03fce6972001c622599007c4f36a2f72d5b29a47c94ec5039"
+    sha256 aarch64_linux: "cf6a35f36a7223ae674984b11f4cc43192c5647a2cf2644116ab4ce40cfa0aea"
   end
 
   depends_on "pkg-config" => :build
