@@ -1,17 +1,13 @@
 class Opendht < Formula
   desc "C++17 Distributed Hash Table implementation"
   homepage "https://github.com/savoirfairelinux/opendht"
-  url "https://github.com/savoirfairelinux/opendht/archive/refs/tags/2.4.3.tar.gz"
-  sha256 "ed7f1a6714c4cf0afc79a736b6f2c91545aaebda1f2f91357fa0e79d2fb97d60"
+  url "https://github.com/savoirfairelinux/opendht/archive/refs/tags/v2.4.10.tar.gz"
+  sha256 "8077958fb7006612b9b9758095461d8a35316b4224184f10cef785f0ec7031fe"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7dabc73c643cb66bb5c10264216acd346fd2dc73400b54a5e7e5334483981a05"
-    sha256 cellar: :any,                 arm64_big_sur:  "56610b9952fef8031f9c13e868c8e630fdacea01e300aa9113ffec92a8d1fcf1"
-    sha256 cellar: :any,                 monterey:       "edb40db3e6c3a54b3f3e224880b409b0e17da7b1c9a4a23706912d06ae0a1c22"
-    sha256 cellar: :any,                 big_sur:        "1547259e336a0c55ac4000ccd462afc66f9c6255dfc100f1461f6aeb1ad55c6a"
-    sha256 cellar: :any,                 catalina:       "0ca0cdce79dda6ed1b98f184efc7f3bdde63d3507a7574c075a07a393f4579e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63553c7fc05cb84f229073a54f124138c5deec54c38f870c9e9eca6eab048e75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/opendht"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "544eb2b6d061889ded3ee3646193982cd7959ca0b7cca5197e0ddcac06ba1234"
   end
 
   depends_on "cmake" => :build
