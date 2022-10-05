@@ -6,12 +6,8 @@ class Glibmm < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "c29aa04bc62b03add040f49af1002fdde20d9b4e5eb2cc4f96422cc937fce3c1"
-    sha256 cellar: :any, arm64_big_sur:  "58bfdbea84d605f3fa8ba7825b71e2f9ae6c7bf091fff97c8444a8b31adf54dd"
-    sha256 cellar: :any, monterey:       "c5772c2c3e829d36be16c89a05bb65e429f1558c2b3abe21172749574861220a"
-    sha256 cellar: :any, big_sur:        "aec0ad08f5deb73b234ef8d9ea60889db68429a2e6b037c812aa3b417c9cfcea"
-    sha256 cellar: :any, catalina:       "bfe5a02b9bd0517cb6f58feccd502538a2f4eae548b27509d9bd323ac5502d1e"
-    sha256               x86_64_linux:   "f14a1f30131ecb144ec9d8e615e360573074eb482e03987e0aa2435544ee617a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glibmm"
+    sha256 aarch64_linux: "992bd822dd78eae28052880cf02b859bdb53d46a61225f58b971ef856ac49c57"
   end
 
   depends_on "meson" => :build
