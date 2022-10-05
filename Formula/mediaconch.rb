@@ -11,12 +11,12 @@ class Mediaconch < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "519bb9c709793e1e9343f69087b4832be1392220066ef5a37b60ea4f51e1f726"
-    sha256 cellar: :any,                 arm64_big_sur:  "acf1493abb7e5a14c276a831addd076a584d30d60b9b8e9373993808dedfbad2"
-    sha256 cellar: :any,                 monterey:       "88974c4a26e78c494cd4f641323ecc4c561946ccbdb7f5968c824acbc856d5e0"
-    sha256 cellar: :any,                 big_sur:        "5f7e218f55ae40cd50c45c6188f1a6f5314f87d24081eac338a2613bfcde104e"
-    sha256 cellar: :any,                 catalina:       "a82bd4c853e0473e4285fbced7c1011a7d0b3950d6ba9ecf6530e8e4482b10de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d79bbbe98490ee3ba70a07ae4fe2fb14cba2cd42b3cbfc49638dc46b9c7a13c2"
+    sha256 cellar: :any,                 arm64_monterey: "b50b3309915cf885c17bd8bae2b28914b4ad75dc39c39885d63dcbd00d0addb2"
+    sha256 cellar: :any,                 arm64_big_sur:  "a07b8e83f9eae756d297567c28fcfb02432a2c527b2da31149c73914ba5251a1"
+    sha256 cellar: :any,                 monterey:       "df6e1f485e1ee0e0fc3207ed609a1aea8c49cb7a09fb06374bd3742c666627c9"
+    sha256 cellar: :any,                 big_sur:        "cb73095a4412e37d1ebc36f6b3e55726e892d858fae99055e8a525b1b1310ea6"
+    sha256 cellar: :any,                 catalina:       "bfc13581c53976d8a732f160e853869c462117a8731075f7c7a35b5de85d0c31"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d786d22f5a5473ce40a2d4425877092b3823e8ade39ad2117e6b6310998ae82"
   end
 
   depends_on "pkg-config" => :build
