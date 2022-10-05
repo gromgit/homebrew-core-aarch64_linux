@@ -12,12 +12,8 @@ class Ehco < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "24d028b47e3f21743bb8e9ae6f02c60247806d7657e140ce4ba25c254e31f832"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "285974a17e80b0dc06803316d71f694ef0e0cef7449641e76738b18768b7f9a8"
-    sha256 cellar: :any_skip_relocation, monterey:       "955b7bcfb6681ca0c733d02afcb50bf848d340c9f74b3ff01733160e585581e9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c3081decea0e987e9115f3a0e67412372eb2fb7d6301992a62f3c3040bdd0bea"
-    sha256 cellar: :any_skip_relocation, catalina:       "ca1802dc805cfe09c4ab7a06ab27592cf46c83eb708af4c399c35627af2a099b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b78ea30d2249f5c29e3642016edc43fde0e2ae4895cb6b7ae7ff80ef6e108a92"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ehco"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4aa969799fa603776eab243d022c15c326e7c013b21ac56c567601b7c0c66b6f"
   end
 
   depends_on "go" => :build
