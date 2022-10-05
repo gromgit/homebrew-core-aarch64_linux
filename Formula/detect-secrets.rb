@@ -9,13 +9,12 @@ class DetectSecrets < Formula
   head "https://github.com/Yelp/detect-secrets.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "34b52b38cea619e3217d114d1f42c024736717e8fd0de7e1bb736dac1cc3b1f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aad9fcd1e24721635cf482c47f365a5eb1052da4efc2100271c7cf8f4fdbfb44"
-    sha256 cellar: :any_skip_relocation, monterey:       "326f0c16b88ebb1bfa16141c8bdb276ac7b39a2ba9c1e4f50731621d51604666"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d7e865348fc06766d25cd35e8ba395d93e06a3060edd6d7f5cb76e0a7c27ac82"
-    sha256 cellar: :any_skip_relocation, catalina:       "48baee45d75e9381fcf844aba9998c021c41b044b29724c9e82149e38cafa16c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "357460349ab238c4e5df75de6959db3eea7cfdc968764b4172afa94de5f41923"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d889403039af2f8c20e759feadcd506b12290b7b9a87f9f982ec2e3ba6fe4aea"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ae0ab05f4a4a29a2e52f11df5aa4ba759f01ff5b1a26f6c692b8bb2c34d1298b"
+    sha256 cellar: :any_skip_relocation, monterey:       "dfe21a1989c39aba8ab183c35f8e442f51ff82a937b55d2585744247807f7131"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1674428310442d10418838bc841c3d8fe247eb13548dd3949bd41de8622f57d2"
+    sha256 cellar: :any_skip_relocation, catalina:       "bcf167972c165abdba528bd18dfd3080033c9cca5bee8b1082a8b9d347870eaa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9271154fba5f25e964c57ce1edc87eb851311cc874d95af519aa792dd51008d"
   end
 
   depends_on "python@3.10"
