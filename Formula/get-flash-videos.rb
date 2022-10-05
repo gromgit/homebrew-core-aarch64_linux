@@ -6,13 +6,8 @@ class GetFlashVideos < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "168600d7a501abf32e1243c34491a501913c16034de8021d73128f2366fc717c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79a6359023b8e477bc3a033747b817c57a476cf19938a1ae484ce2a52f2ce4ef"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7e7d4e346def5ba7fa8f641f7c3803125e604370302f6f5667e667da2b364c7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2778b4877b9a5f717f247e73ce571db7f3215ca6a31e77dfaaebc4d7b0664bd7"
-    sha256 cellar: :any_skip_relocation, catalina:       "aac5558ccf7b7198eb48b71d7cdb9d07b93f4174926182a6e540678b0c4f9648"
-    sha256 cellar: :any_skip_relocation, mojave:         "f67cf7971842dbfaa8f8ecb24ba6692bd506688c4ff6b0e51cc05dd3d13f6d11"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/get-flash-videos"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "60a71f0e406208a5d51a016d5f0440b5e6242d228c3bdec5ae51a86219eecffd"
   end
 
   depends_on "rtmpdump"
