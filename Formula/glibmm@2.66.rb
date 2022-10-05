@@ -12,13 +12,8 @@ class GlibmmAT266 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "5131ab5c66e574bb30d696dc0a078eef37c3fbbdbbd4962a1f8fec468e1774a3"
-    sha256 cellar: :any, arm64_big_sur:  "239fdbfe8fb891068c1d62e67c9cd047af78997d722b4d315c336e4355d95e25"
-    sha256 cellar: :any, monterey:       "f253fabbcde2fe8419b4892b2d89b065af94c86ee9214801392734e7aef6d26d"
-    sha256 cellar: :any, big_sur:        "b9f2b7cb1cc2332b1ee4790dc8477a7df86ecafcd8d40ba459f3131007148a28"
-    sha256 cellar: :any, catalina:       "782035c5298608b93ed10bcb526e5e68425ca030b4d34c79a55ddda0e33c2ae9"
-    sha256 cellar: :any, mojave:         "0295dd5e75ea0ed118702663a113a5651094d7aabafa6773ecc877dded162258"
-    sha256               x86_64_linux:   "e4f4d2271a4f469f779e3e3a39b877adf5d294bc176fee19c55efafc007174e4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glibmm@2.66"
+    sha256 aarch64_linux: "140f2a8595f422814a449618c48d161d35e0685ead503fba3959c30bec763b97"
   end
 
   depends_on "meson" => :build
