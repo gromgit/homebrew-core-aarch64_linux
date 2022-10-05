@@ -6,12 +6,8 @@ class Pict < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "850390dcfee5160977df23f8bb6cee15fd92f720efea4431c06e829962ac5f4e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd5908f0467620ae185bc24e395b7132695b814242ec3a5195197baf8e9180e4"
-    sha256 cellar: :any_skip_relocation, monterey:       "3beebff6cb6214a7b3a413e52557377dcd45f2880ac1528facd10a74b3c32da5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6185ed2966b814e76cff386f76cd14c67e45b8005a197be1f0ea976792c27297"
-    sha256 cellar: :any_skip_relocation, catalina:       "295161d07acd9e141235eecd7c7e715bf3615ee3e71289cc57f00fa6440c2dd5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89c9e0a586a093c3fcbbce59dcb05d54a16c111e18ac02cbe4c9cfc7ca74ef6a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pict"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "93acc651bdab7ffb7dd8420ea3670c9a61b7433962f3686c807ce2de88dcec86"
   end
 
   on_linux do
