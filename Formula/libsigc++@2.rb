@@ -7,7 +7,7 @@ class LibsigcxxAT2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsigc++@2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "83daf0e28906dba06ec6a2dcb543ed17e3f4c6a188512fea81f8e028f96f94d1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b8a1d0ae9a03198cd882f89f54a93e75bb8b4f0b8e42690b0c10a41bb9cf247"
   end
 
   depends_on "meson" => :build
