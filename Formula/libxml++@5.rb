@@ -11,13 +11,8 @@ class LibxmlxxAT5 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "cdae1a5b5a898578afa753d6fb3fbafa413d07fbf2d8367ae3559dbd0eb9b066"
-    sha256 cellar: :any, arm64_big_sur:  "04df228902b1127ce69db14966e48302294c8c903ac0cad3ba7d43d8af123855"
-    sha256 cellar: :any, monterey:       "782cb6730ec7ea3dc20055d0addc043b014188926a5a7f6d6eaef521cb10fb06"
-    sha256 cellar: :any, big_sur:        "a97fc98cc632deba48754e35a3ef6a065b720ebd24c93aa5b4e9f490e54f956f"
-    sha256 cellar: :any, catalina:       "29587d375cdc89d559f90a4dcbe1dab535869dd5e3a04847f3fce23b831c2bac"
-    sha256               x86_64_linux:   "c5e82519eaedf123b7d33e71a7ea7d36b5d44b730ee88189cd1f1055faa4ab33"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxml++@5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "05acd3d28c275fa143b146c83b3e3b7ce17fe4a91e14b4817fc88737aba64ddc"
   end
 
   depends_on "meson" => :build
