@@ -6,12 +6,12 @@ class Krakend < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b140ae01b6b65668216ccf4b5182cd8815d300b20adc3c1188b98a14446bfd9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6a424b225d493bee87f1da8413ced27b841472b421b14c4074c7ad1a5a438829"
-    sha256 cellar: :any_skip_relocation, monterey:       "945cdb76964b18402e8c2d74e910bfafeee15d64339a81c33ce28ee5e559447e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "afc860086982c8427d425ff10494a759b900900e0f0b947e425e85e279662d0a"
-    sha256 cellar: :any_skip_relocation, catalina:       "9fd87244eb454eabcdeba3beb3bc42a404024a0c3a92a287fba8ddbf2e57d804"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a5652447b3076134516e632b0285d47ccde12af34b8ba3a004e8757b126b740"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "775bcdca42306f51879fc063a2296235c4fc0f14a2bea0e28a66618c57ce18ce"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad61f927d3be8cef26b94bf6074b357777768f78b8bb97afaa232bbcb5940e38"
+    sha256 cellar: :any_skip_relocation, monterey:       "93f5fffef1425983f0bedec0fcfb54d7e374426c3665404350a1ca63948ccbc5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4d32f42025b7edc72d9e0e38a05e29e593fdce376b75dc1e2d64d85d90c4a92d"
+    sha256 cellar: :any_skip_relocation, catalina:       "0a44da8939a3cb0c67b2172e50c4490889afefa5155ebdfb47f7f989bbb5bc47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b45704c049480bf4aa96376e24ca696cd5ca63cd950caae2311c2c4487ce697d"
   end
 
   depends_on "go" => :build
