@@ -6,12 +6,8 @@ class Enchant < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_monterey: "a108e65f994b1f4d783e337d3d91b1cf97232286ff12e171e40b89e81f8812f0"
-    sha256 arm64_big_sur:  "76226e20f61ffdc8ba8e5adde919251bbf720d2011c66e74ab2858211fb3d8dc"
-    sha256 monterey:       "3c3d3295fda5cbe97b11ded4c8c7f21754fba625626c6de87e659744afb268a6"
-    sha256 big_sur:        "a62e218d184f399cd6404043099363b32ace55760cb4ea8d249e017e281dab33"
-    sha256 catalina:       "35342a7cd9748ec02b714b042f6624320a8c8159cc25880684416cf3927b532d"
-    sha256 x86_64_linux:   "2d43c2614be362e7a7f34cdb4ddf655c28a13fd0387756110a9d2c8dbc1eea96"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/enchant"
+    sha256 aarch64_linux: "7224bf7c1893e8b72d48ee1b8d506c3916696208232353639726e24ebdbaa55c"
   end
 
   depends_on "pkg-config" => :build
