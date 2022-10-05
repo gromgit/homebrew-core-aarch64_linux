@@ -1,8 +1,8 @@
 class Pdns < Formula
   desc "Authoritative nameserver"
   homepage "https://www.powerdns.com"
-  url "https://downloads.powerdns.com/releases/pdns-4.6.2.tar.bz2"
-  sha256 "f443848944bb11bbb4850221613b3a01ffb57febf2671da6caa57362ee0b19b8"
+  url "https://downloads.powerdns.com/releases/pdns-4.6.3.tar.bz2"
+  sha256 "acd06b89ca01d1adf61b906604614f0e1d77a1e94eeecade8ff5d53a16db7389"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,12 +11,8 @@ class Pdns < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "5f11785a7f2ee10469a79ce44fc7c58debd796445de4710ade9169e7f0a6396d"
-    sha256 arm64_big_sur:  "7488177bc07804ef18d17979aa9693c938d70b91c4b2f9c6fcdf453bb67c578b"
-    sha256 monterey:       "5b8647690138a9cbd97f5dd525a407d115d77ad4fd0e4fb70e10a947df0d187e"
-    sha256 big_sur:        "67ec5b6f05c1d9f73a43ecde2f6fe66de077bf5ca80163f5f0c616fe878a6b39"
-    sha256 catalina:       "01424ecf828fb8645eec581e9bdcfdab89662d8bde2f9d8c7c9825890b3dbaf2"
-    sha256 x86_64_linux:   "f139bc7ba7de91a697ef355d3b1eb201fbb02219e809754d3b4266978a6372ae"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pdns"
+    sha256 aarch64_linux: "6f781d8fdaefa289ea3c1431a1e46cacd35f66c8365677c81643708e3a2d1e8b"
   end
 
   head do
