@@ -3,8 +3,8 @@ class SlitherAnalyzer < Formula
 
   desc "Solidity static analysis framework written in Python 3"
   homepage "https://github.com/crytic/slither"
-  url "https://github.com/crytic/slither/archive/refs/tags/0.8.3.tar.gz"
-  sha256 "7549ab983541094a34525d7e74af1fa9b1538122c92a6ed969d2e4c7fcc7b42b"
+  url "https://files.pythonhosted.org/packages/63/fe/1e7b29ed341a8ad032cb75705d0ff77bc1dc9700cb447b97c6a63693c373/slither-analyzer-0.9.0.tar.gz"
+  sha256 "bb37ebde30b24ed6c933d575fe34d2d92581ab748eb8c9030ce60543cbc2e132"
   license "AGPL-3.0-only"
   head "https://github.com/crytic/slither.git", branch: "master"
 
@@ -22,8 +22,8 @@ class SlitherAnalyzer < Formula
   depends_on "solc-select"
 
   resource "prettytable" do
-    url "https://files.pythonhosted.org/packages/10/88/ef38a6e4bc375600d3031e405a8d3b3dc4a154fccffd21d5d06e66c96230/prettytable-3.3.0.tar.gz"
-    sha256 "118eb54fd2794049b810893653b20952349df6d3bc1764e7facd8a18064fa9b0"
+    url "https://files.pythonhosted.org/packages/a5/aa/0852b0ee91587a766fbc872f398ed26366c7bf26373d5feb974bebbde8d2/prettytable-3.4.1.tar.gz"
+    sha256 "7d7dd84d0b206f2daac4471a72f299d6907f34516064feb2838e333a4e2567bd"
   end
 
   resource "wcwidth" do
@@ -42,8 +42,10 @@ class SlitherAnalyzer < Formula
     (testpath/"test.sol").write <<~EOS
       pragma solidity ^0.8.0;
       contract Test {
-        function f() public pure returns (bool) {
-          return false;
+        function incorrect_shift() internal returns (uint a) {
+          assembly {
+            a := shr(a, 8)
+          }
         }
       }
     EOS
@@ -51,9 +53,9 @@ class SlitherAnalyzer < Formula
     system "solc-select", "install", "0.8.0"
 
     with_env(SOLC_VERSION: "0.8.0") do
-      # slither exit code is the number of findings
-      assert_match("test.sol analyzed",
-                   shell_output("#{bin}/slither --detect external-function #{testpath}/test.sol 2>&1", 1))
+      # slither exits with code 255 if high severity findings are found
+      assert_match("1 result(s) found",
+                   shell_output("#{bin}/slither --detect incorrect-shift --fail-high #{testpath}/test.sol 2>&1", 255))
     end
   end
 end
