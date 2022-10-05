@@ -7,7 +7,7 @@ class Ffuf < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ffuf"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "250e7608c7a2bd3563f4fdac80d8968d8671db875785dded1d9ab42432ed20a5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b4ce4eabe5f43869b4b1043482702823fd021a37864effc838c6567c6f58ae3a"
   end
 
   depends_on "go" => :build
