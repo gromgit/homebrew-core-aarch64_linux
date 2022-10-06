@@ -11,12 +11,8 @@ class RubyAT30 < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "f32813fbb36f5adabc64e959c0412f60304ba0d0fc782c61a3f208f27a0319f1"
-    sha256 arm64_big_sur:  "6dbff16fd5e19f039b75e56a6fa0af782086003f39683e94fc04986a6b468d21"
-    sha256 monterey:       "1946de51954930a396899e99cafcb77e535830c2a6470f6a1ca3aae709816ae3"
-    sha256 big_sur:        "88c9c43e9e9d9bb107afd1483bf7c5477afe0de67d74ae1fefb980956b5b7a96"
-    sha256 catalina:       "53cb996916041946a6374532a4acb385d9ec7efaacf45f753c690e4780422a7a"
-    sha256 x86_64_linux:   "a1d1df8923bc840f3305ef79cacc016a27d955e7aee34709e1471e537ccc60ab"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby@3.0"
+    sha256 aarch64_linux: "03f6efc38978182c1ff95182ea9fa31c9b2078832176ef7b2e39d90bb48d36c7"
   end
 
   keg_only :versioned_formula
