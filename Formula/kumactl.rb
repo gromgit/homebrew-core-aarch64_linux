@@ -11,12 +11,12 @@ class Kumactl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4adf2b7115a278a7e650959347e6459d6f9843316bc2275062d40da6daf5baff"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fc9cb3ea61086b0a260619de9b4a626bf1a309b25f8b89b86f9e70565466fdbe"
-    sha256 cellar: :any_skip_relocation, monterey:       "5a65966a1ce501feae6903af1f10f2a10b7efff7480e4183bdea9bd1f62a0fd6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9dc3265d87c5c68d72f6d7f311bc57c2aac4ebd50500cf24be51d74831b30e22"
-    sha256 cellar: :any_skip_relocation, catalina:       "ed27e008739b293b2bc1ce0ee59fdb2fcd8d6cfc6a36b5717207de8e33101ae0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "377939feec85b7ba5b4f493016c366e6338f5a00dc4c509c219911edccce80f7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a0c89ba0e9bac60333f46e009f41bb809fed718e3b39de5b8101a6a225c83ed5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe4657d043ec6823b748ed465c470a9964fd0729a4d84e5e592276798c140520"
+    sha256 cellar: :any_skip_relocation, monterey:       "5a662fda1c59cce5bfc9605a6248f245a9cfaecef27ecd053d5ebd5e13ebabf7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2a50ebe11045edf7d90ad96c682f3a8048092640130af29c260809e5dee0ef2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "ccfe95c2fc4123603539660370f89676c8d0d33f31ffec984c27b891493d04e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a6fc75e1e41fb418b5f223820c8fe666b0e28f1bca5936deabfbd5c479112b2"
   end
 
   depends_on "go" => :build
