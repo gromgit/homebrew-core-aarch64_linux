@@ -23,7 +23,9 @@ class Libtorch < Formula
   depends_on "cmake" => :build
   depends_on "python@3.10" => :build
   depends_on "eigen"
-  depends_on "libyaml"
+  depends_on "libuv"
+  depends_on "openblas"
+  depends_on "openssl@1.1"
   depends_on "protobuf"
   depends_on "pybind11"
   depends_on "python-typing-extensions"
@@ -45,10 +47,16 @@ class Libtorch < Formula
 
     resource("fbgemm").stage(buildpath/"third_party/fbgemm")
 
-    args = %w[
+    openssl_root = Formula["openssl@1.1"].opt_prefix
+    args = %W[
+      -DBLAS=OpenBLAS
       -DBUILD_CUSTOM_PROTOBUF=OFF
       -DBUILD_PYTHON=OFF
+      -DCMAKE_CXX_COMPILER=#{ENV.cxx}
+      -DCMAKE_C_COMPILER=#{ENV.cc}
+      -DOPENSSL_ROOT_DIR=#{openssl_root}
       -DUSE_CUDA=OFF
+      -DUSE_DISTRIBUTED=ON
       -DUSE_METAL=OFF
       -DUSE_MKLDNN=OFF
       -DUSE_NNPACK=OFF
