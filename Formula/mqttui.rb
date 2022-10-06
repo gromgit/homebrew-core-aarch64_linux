@@ -6,12 +6,12 @@ class Mqttui < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4951b959c9d3eb86f0f9f76fcff8c2056c0e966c13695e630c0117a9afe5af72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee8ca7b76ef954400c49f98cc64f8a5fccd15003cfd91a5dc1f8222a7869e50e"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7e6ab3d45799a95a656425cc524b1bf29cdde4435e692d14e353b8fccc40e43"
-    sha256 cellar: :any_skip_relocation, big_sur:        "672533cf64855255f73afb5c1d1993b39eda5140dd142206524312959602e185"
-    sha256 cellar: :any_skip_relocation, catalina:       "4d18fc32e180bb702892e8d6646c4aad2fd6cd3ee27f4b2843ea54b6f69c66ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2ea0d06ffe4ffc9ef583a7d13953ee0e4813a794abdfdc51d6707cb3e891625"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "97a273fd7474c402a5615f211ad092ff55ed22a7b817a2af1c80b250e9467fb5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f4933a37e857607d1bfe617b442780e72b518fab7119e023cc3067a6ae5abe8e"
+    sha256 cellar: :any_skip_relocation, monterey:       "49c41cec799c0aa71594fb7ccf0adc6d3a9383f86982bfdc70838c6dd29ff24e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a3a5ddb75337a9f3fb4e14262bd78425dc1bf320a53e1204ca0bb537cc75b7c5"
+    sha256 cellar: :any_skip_relocation, catalina:       "08d009cd278615ef390f2cb2d7bfb1aa254ed322b2c8c68e4256720715469b87"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98186b9ed5ccf1d0d6b2bc03e945e0d40dd40df38e90afe309f59e288aef4d02"
   end
 
   depends_on "rust" => :build
