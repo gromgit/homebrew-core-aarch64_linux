@@ -3,8 +3,8 @@ require "language/node"
 class FirebaseCli < Formula
   desc "Firebase command-line tools"
   homepage "https://firebase.google.com/docs/cli/"
-  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-11.13.0.tgz"
-  sha256 "6ea6fbb2c82ef80dc27109de4121fe43105f41925b003db0a5691603dd17cb91"
+  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-11.14.0.tgz"
+  sha256 "f5d19f543b654eccf704d1e3d3917930b2f9143bf2a16bc2f9bf6bf94d8d4947"
   license "MIT"
   head "https://github.com/firebase/firebase-tools.git", branch: "master"
 
@@ -21,23 +21,9 @@ class FirebaseCli < Formula
 
   uses_from_macos "expect" => :test
 
-  on_macos do
-    depends_on "macos-term-size"
-  end
-
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
-
-    term_size_vendor_dir = libexec/"lib/node_modules/firebase-tools/node_modules/term-size/vendor"
-    term_size_vendor_dir.rmtree # remove pre-built binaries
-
-    if OS.mac?
-      macos_dir = term_size_vendor_dir/"macos"
-      macos_dir.mkpath
-      # Replace the vendored pre-built term-size with one we build ourselves
-      ln_sf (Formula["macos-term-size"].opt_bin/"term-size").relative_path_from(macos_dir), macos_dir
-    end
   end
 
   test do
