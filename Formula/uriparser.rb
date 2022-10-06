@@ -7,13 +7,12 @@ class Uriparser < Formula
   head "https://github.com/uriparser/uriparser.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "8ed697813938a18193dfd1a3a048cf3b237429ae6dadabc943cd419c2e948dde"
-    sha256 cellar: :any,                 arm64_big_sur:  "c6e0c16982bf15a531e8e2d60abb7d104407b0b7e01aac9b59e817cf1890bfba"
-    sha256 cellar: :any,                 monterey:       "687b043d447e68967f63077a08053b18fd9791f33645781ffb17eae9c7bde984"
-    sha256 cellar: :any,                 big_sur:        "f34888412c2e45eeb6e3cccb5a6d73064c2e8f52a000790828d907d63a48a90a"
-    sha256 cellar: :any,                 catalina:       "646001e197cd645dbf99ed8036d21289056bca546dcfab074e7031af5c7cc4db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fa1c9ef128411497b8e7ac7689cfb730571281c6ac071173ef961383ed6dd4f"
+    sha256 cellar: :any,                 arm64_monterey: "c246c0448bc8325163156ffc6f2978da545bb42724ba9cb9b17038292d1797e1"
+    sha256 cellar: :any,                 arm64_big_sur:  "5a8a8595cee32186f8e6d180a183ffc63a0d105563b7ec3a32b5ba2fb95e8562"
+    sha256 cellar: :any,                 monterey:       "24922aed78fc01f1b93cec54a5d7590689439128d18498131a327895bed353b0"
+    sha256 cellar: :any,                 big_sur:        "71253e72c359702d184f83b86c9d1e8c0acd123e37e9c86fdc783e79d81149b3"
+    sha256 cellar: :any,                 catalina:       "ca0d40acafadaf72bcbef19b7e44e3351a3fd0c552e9b066316779bd5b8abc4e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ef786e370707bf3b8d646737116b723fc11fef8ecf8f2720bf107897c40ba33"
   end
 
   depends_on "cmake" => :build
