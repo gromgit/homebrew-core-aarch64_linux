@@ -1,18 +1,14 @@
 class Rocksdb < Formula
   desc "Embeddable, persistent key-value store for fast storage"
   homepage "https://rocksdb.org/"
-  url "https://github.com/facebook/rocksdb/archive/v7.0.3.tar.gz"
-  sha256 "85bcdcd4adcd77eed6748804d5672d5725b5d2a469694e2a3dbd21b175cf4fd2"
+  url "https://github.com/facebook/rocksdb/archive/v7.5.3.tar.gz"
+  sha256 "c9f8cb3f14622a9bb2ead81093720d0660784352f7f53f44a990dc850a0caca1"
   license any_of: ["GPL-2.0-only", "Apache-2.0"]
   head "https://github.com/facebook/rocksdb.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "72d280af1e3cc131ef2de59781a7eb89d4ce61df0defc23a2e3ddb0c8d21bb4e"
-    sha256 cellar: :any,                 arm64_big_sur:  "7749fba348ffefb6fe0830146c031d038e2e5cf3d5e863abf6a8b61ae200dcee"
-    sha256 cellar: :any,                 monterey:       "7ec3031bd34da67798b9b5aa6090b5ba438e1aea18ff7a098b3834c0051e15c2"
-    sha256 cellar: :any,                 big_sur:        "bc59c25326447c43172e92f784533d722dca9ae1edf5cd4b0200056fc046dda3"
-    sha256 cellar: :any,                 catalina:       "94b0de194cd78db1eaeb43220754fdec2349734b7098a6fc44bb681e8e712e88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "262d1ae78f4a4c82220f64d915aec54bdc4e6e923268b7848524bae2e314b754"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rocksdb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1b6fabe0c18472284673d908711706ef771d6468cb8a8f770e2735613c79a2fd"
   end
 
   depends_on "cmake" => :build
