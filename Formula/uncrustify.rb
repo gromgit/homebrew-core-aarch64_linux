@@ -1,18 +1,14 @@
 class Uncrustify < Formula
   desc "Source code beautifier"
   homepage "https://uncrustify.sourceforge.io/"
-  url "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.75.0.tar.gz"
-  sha256 "f4d1bdac7805fc165e99b1001e474d8ce233d91319894f9b4fc8e0964e10d8f6"
+  url "https://github.com/uncrustify/uncrustify/archive/uncrustify-0.75.1.tar.gz"
+  sha256 "fd14acc0a31ed88b33137bdc26d32964327488c835f885696473ef07caf2e182"
   license "GPL-2.0-or-later"
   head "https://github.com/uncrustify/uncrustify.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae836c3cc1e1e0e027d6f0082e1eaf6052259b4895f8e4d86a332fa897a63e0b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b63b8b33cbbfbc0c5df109fd607733de9175ff1e92021592640515caa22d9e83"
-    sha256 cellar: :any_skip_relocation, monterey:       "ef2310bbab7696e2ab990d083b37429a76288d2d6bb0dbe6e834a0277c76bf3e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9bb5ac5befb9da7b6f5d58505aa577ac38d3eeddd1861214ce550cf579b3ad1d"
-    sha256 cellar: :any_skip_relocation, catalina:       "2a77c5e3a4d198c8b3fb80f6d2d6d597fb89d299aa36ca01aee65f260e8ca08a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fae0bf279c7cb27ed982072f1749e49910886ee5cf44121d9667dfb36fce807e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/uncrustify"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b8ab1d884ebc8ab5b2447f61f0ad80265e0b1ee0bc2088ff2c623cc889fbddd"
   end
 
   depends_on "cmake" => :build
