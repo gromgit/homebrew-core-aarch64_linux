@@ -1,6 +1,4 @@
 class Libtorch < Formula
-  include Language::Python::Virtualenv
-
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://github.com/pytorch/pytorch.git",
@@ -28,29 +26,28 @@ class Libtorch < Formula
   depends_on "libyaml"
   depends_on "protobuf"
   depends_on "pybind11"
+  depends_on "python-typing-extensions"
+  depends_on "pyyaml"
 
   on_macos do
     depends_on "libomp"
   end
 
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
+  # Update fbgemm to a version that works with macOS on Intel.
+  # Remove with next release.
+  resource "fbgemm" do
+    url "https://github.com/pytorch/FBGEMM.git",
+    revision: "0d98c261561524cce92e37fe307ea6596664309a"
   end
 
   def install
-    venv = virtualenv_create(buildpath/"venv", Formula["python@3.10"].opt_bin/"python3")
-    venv.pip_install resources
+    rm_r "third_party/fbgemm"
 
-    args = %W[
+    resource("fbgemm").stage(buildpath/"third_party/fbgemm")
+
+    args = %w[
       -DBUILD_CUSTOM_PROTOBUF=OFF
       -DBUILD_PYTHON=OFF
-      -DPYTHON_EXECUTABLE=#{buildpath}/venv/bin/python
       -DUSE_CUDA=OFF
       -DUSE_METAL=OFF
       -DUSE_MKLDNN=OFF
@@ -62,14 +59,13 @@ class Libtorch < Formula
     # Remove when https://github.com/pytorch/pytorch/issues/67974 is addressed
     args << "-DUSE_SYSTEM_BIND11=ON"
 
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args, *args
+    system "cmake", "-B", "build", "-S", ".", *std_cmake_args, *args
 
-      # Avoid references to Homebrew shims
-      inreplace "caffe2/core/macros.h", Superenv.shims_path/ENV.cxx, ENV.cxx
+    # Avoid references to Homebrew shims
+    inreplace "build/caffe2/core/macros.h", Superenv.shims_path/ENV.cxx, ENV.cxx
 
-      system "cmake", "--build", ".", "--target", "install"
-    end
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
