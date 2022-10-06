@@ -1,19 +1,13 @@
 class ThriftAT09 < Formula
   desc "Framework for scalable cross-language services development"
   homepage "https://thrift.apache.org"
-  url "https://github.com/apache/thrift/archive/0.9.3.1.tar.gz"
+  url "https://github.com/apache/thrift/archive/refs/tags/0.9.3.1.tar.gz"
   sha256 "1f7ca02d88a603f2845b2c7abcab74f8107dd7285056284d65241eb7965e143c"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "051ccc03d1ec77a43ba687fcfe8a20f8f41d8892a6260bf0b8d9cb1a36560c11"
-    sha256 cellar: :any,                 arm64_big_sur:  "0b96eded35c6da92ea4fb6a2cbbc2c572838a9a7a0221161088adb77f8ccaa9f"
-    sha256 cellar: :any,                 monterey:       "01572a1b6a61c90cbb2e21f324fe3705c98943888915c32a78a072672ba2740c"
-    sha256 cellar: :any,                 big_sur:        "0e5f46ca808e61fb8982787c04bbccedd6e17637b121dedf4a6581f5a30ea9fc"
-    sha256 cellar: :any,                 catalina:       "bebef37eaa3671d2810eaaf9f06b7c6cf73ef56f83b8359de514643cd201b946"
-    sha256 cellar: :any,                 mojave:         "9c4f0de40a613a30dce7b032425a66d0f5392680d6af39f9944e8982bd7d16d4"
-    sha256 cellar: :any,                 high_sierra:    "a85aabc6f3c1d496f618c41e1ca367d2e8c730d9fd543f5b2a74af2760a1869a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20900326c3b385d60e26a62482fecc0c1b30b7d6c9b0b9ec81726938f73ebe7d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/thrift@0.9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5ee840bc28a56c61c86ce8390bfb84c1817c12adf375669ccccaaabb12898be0"
   end
 
   keg_only :versioned_formula
