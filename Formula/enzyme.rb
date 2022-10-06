@@ -1,8 +1,8 @@
 class Enzyme < Formula
   desc "High-performance automatic differentiation of LLVM"
   homepage "https://enzyme.mit.edu"
-  url "https://github.com/EnzymeAD/Enzyme/archive/v0.0.40.tar.gz", using: :homebrew_curl
-  sha256 "1651faaaf9005412f1c4475fa17fffbebb8dd82d9f1a56d682923ea6787e7395"
+  url "https://github.com/EnzymeAD/Enzyme/archive/v0.0.41.tar.gz", using: :homebrew_curl
+  sha256 "c53dc84f35bee829275f78b49b0d0ed7f9fda755a502e25053971cf09f171750"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/EnzymeAD/Enzyme.git", branch: "main"
 
@@ -25,11 +25,7 @@ class Enzyme < Formula
   end
 
   def install
-    args = ["-DLLVM_DIR=#{llvm.opt_lib}/cmake/llvm"]
-    # Needed for `ld` to be able to parse our LTOed object files.
-    args << "-DCMAKE_EXE_LINKER_FLAGS=-Wl,-lto_library,#{llvm.opt_lib/shared_library("libLTO")}" if OS.mac?
-
-    system "cmake", "-S", "enzyme", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", "enzyme", "-B", "build", "-DLLVM_DIR=#{llvm.opt_lib}/cmake/llvm", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
