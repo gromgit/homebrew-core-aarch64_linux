@@ -1,8 +1,8 @@
 class Uriparser < Formula
   desc "URI parsing library (strictly RFC 3986 compliant)"
   homepage "https://uriparser.github.io/"
-  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.6/uriparser-0.9.6.tar.bz2"
-  sha256 "9ce4c3f151e78579f23937b44abecb428126863ad02e594e115e882353de905b"
+  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.7/uriparser-0.9.7.tar.bz2"
+  sha256 "d27dea0c8b6f6fb9798f07caedef1cd96a6e3fc5c6189596774e19afa7ddded7"
   license "BSD-3-Clause"
   head "https://github.com/uriparser/uriparser.git", branch: "master"
 
@@ -19,12 +19,15 @@ class Uriparser < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", "-DURIPARSER_BUILD_TESTS=OFF",
-                         "-DURIPARSER_BUILD_DOCS=OFF",
-                         "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                         *std_cmake_args
-    system "make"
-    system "make", "install"
+    args = %W[
+      -DURIPARSER_BUILD_TESTS=OFF
+      -DURIPARSER_BUILD_DOCS=OFF
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
