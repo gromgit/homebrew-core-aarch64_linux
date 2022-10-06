@@ -12,12 +12,8 @@ class Wabt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ed9228130cae7caaf99878bbb659c2ffd6004b2ce8fb1d93105aa0e0f993c4b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "35c8a5d9cbe6e488251dcb3dd8c0d129230585b4e3911ec0b0621d31257109d1"
-    sha256 cellar: :any_skip_relocation, monterey:       "9c56b047954e585faa6f5870104f4ced672c4d5f87b3fc38463cdca98ccc714b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "373276a1f3bb3cf8569facf06baece468478d3eaab13f92d0d780c5215044b2b"
-    sha256 cellar: :any_skip_relocation, catalina:       "6d1178fb069d4e7a109ae7a5105d8290a1e753670bcb2b205815abf113043e88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cfeafe8d40277ebc638324223ea361dd4e1711dcba42006b9483dcb74b7456d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/wabt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "23e918631b287b1fd017ab006af9e1bf6d85438b305543a3a87f945d15390822"
   end
 
   depends_on "cmake" => :build
