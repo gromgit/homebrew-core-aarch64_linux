@@ -13,12 +13,13 @@ class Simutrans < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "89c68007e13410b6d7fc4d675f0eabc4487393ad4d4768d2e0830a206ae5dae7"
-    sha256 cellar: :any,                 arm64_big_sur:  "aa8073c151259b074563854c6ea63ffaab8a41b268b150e24d3dab93ab75231e"
-    sha256 cellar: :any,                 monterey:       "339ac25e7eb60cbe2158c59feece111a66bdb587e23f4104c5045b820c861031"
-    sha256 cellar: :any,                 big_sur:        "076b15195eb642b6e97eef391580c62d9333a52c68f8551aeb1812736e9967d1"
-    sha256 cellar: :any,                 catalina:       "e618f3935018b641b10d70286fe3d60e366cfcd914125a634d6c51c8e33fad79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c2eb82d4b879f59e2201b78d11cea24a8f8f3fc7ba2859d5c6c3aa41a830355"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "07b96b69671a91db8a708c1052fbeaa6d1731ce3803026fdb6a15cefb398df82"
+    sha256 cellar: :any,                 arm64_big_sur:  "576142b4340df99b5539eb8d1169be30809f34e993d9dd4e959e3bcd4d9ca730"
+    sha256 cellar: :any,                 monterey:       "cf6297e4f98a2a7a65dcf8ebeb8dcfff8d7d5e8ff2520cde81e7e7bd4c2e9f85"
+    sha256 cellar: :any,                 big_sur:        "57473a566814dfabb642bf5b0d27bfbe0763213438946034c8c09ab960d12f7a"
+    sha256 cellar: :any,                 catalina:       "9b301316ba5bfcfbfdab0b5572dad74aca6b2e0620a7249a260a750222b997ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57be3936b3b49cd16550d50be872e1dd602af3a965dfc959419d27832299dd3b"
   end
 
   depends_on "cmake" => :build
