@@ -14,11 +14,13 @@ class Mlton < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 monterey:     "b9c206b21139fd8e3048b0f363caabe323baeea4bd85490708dfa6aafb082968"
-    sha256 cellar: :any,                 big_sur:      "a6544e924c162c854afb4311ae4c9b3d0cf7b27fdf116f31aaf8ec9cb9317ce5"
-    sha256 cellar: :any,                 catalina:     "44e72a7d678541a53c14bb269a10a7c5031427fb8b5b1073b76a063790b076b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "07083ac89dede435371b7dc5df734676047ab9b318710a6220b25ab8e03732d1"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "b63990802ceb1eab45673ca135e32aa1329a051fdd2ac3ca28c703d691e2f854"
+    sha256 cellar: :any,                 arm64_big_sur:  "13f277d7115052ab34efd1cbea436bb9dec5227a09cc1f1e7c07a9f0670f7405"
+    sha256 cellar: :any,                 monterey:       "67242137af80b4ecae138c139ee1e169d8ee04a1928ae0e40cbd339c2846d349"
+    sha256 cellar: :any,                 big_sur:        "1a78dc22f29209bd9d2b3acc9b4d67655443a07adda31e421ccd748ae82cf50d"
+    sha256 cellar: :any,                 catalina:       "049702ba52a30d7d5e4f005f68e35460ed9a9f18cc2af5d1ae66ca6c2d8fd5e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8dd855cfe0427e16f22c83f52f19999fa184cbac12853431fac1444c34565ff4"
   end
 
   depends_on "autoconf" => :build
