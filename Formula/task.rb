@@ -12,12 +12,8 @@ class Task < Formula
   end
 
   bottle do
-    sha256                               arm64_monterey: "a1a3c706322405709ad4d89005abf423ae6252255b1f25857c68112d98f0cfc8"
-    sha256                               arm64_big_sur:  "4bfece330fa1a6951f49ce2539eee0a44cee4ac71e5f2d52f52cc98300cf4f6c"
-    sha256                               monterey:       "08ad2ecfcdb93b578bbc296c874c139225bd7a09b0130432232830a5cb6a916d"
-    sha256                               big_sur:        "5d7f4c9ab31bd5f2daa9b90e46c01fc75fa75c5dd59f53d71c470ca3453b4d18"
-    sha256                               catalina:       "d387254a93560ad965cf29753847fc830057f655361ba9f0b9e31c53843b3768"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e01eea1f420752a719c38be2e618506fa22b9c7b83d23ef7606d9e2c87f48257"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/task"
+    sha256 aarch64_linux: "1f8ac4932a736c8bba98dc463abc1fe6f6b3c1643bf98b54b53fec29daacf8f1"
   end
 
   depends_on "cmake" => :build
