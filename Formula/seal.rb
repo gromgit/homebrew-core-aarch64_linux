@@ -6,12 +6,8 @@ class Seal < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ea53dd611311c919f58c7808143addd1998d7f2a3d28f58eed756ecb19ee98d4"
-    sha256 cellar: :any,                 arm64_big_sur:  "a0bf775b0bc6b873a92eb9dc52856c7119d4ea78b99acf4a08a1973dc5ebbd8f"
-    sha256 cellar: :any,                 monterey:       "992afd0a163c2aada6f229a5c8afb556d5a427f25b4561c793f3955a8460956f"
-    sha256 cellar: :any,                 big_sur:        "322c2cf9c05b472e0fb6622f0476d5f53ff17a3cfd09ae5c4b9988386cba2bfb"
-    sha256 cellar: :any,                 catalina:       "f3a21a40b17452fedb54680b5214faaafd1ef26f2e7c06d859a53985e83c771b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "409aab1c8e31f433ba23c9f08d4ae28ec858467043eedff6201b143beb9e8b63"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/seal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "005ed804f723d5e3d572e3efcf11c9caeefcc49871adfef16acbd6423f20ab4f"
   end
 
   depends_on "cmake" => [:build, :test]
