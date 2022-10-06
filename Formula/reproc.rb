@@ -7,12 +7,8 @@ class Reproc < Formula
   head "https://github.com/DaanDeMeyer/reproc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7ca8c71697fde21aee214aa89b946c8888fc705158a7ca0ab69517bd197a6da9"
-    sha256 cellar: :any,                 arm64_big_sur:  "d470a5392162d5fb1f55278e6929848e83ae94cabab1df336e37a129c8ad283c"
-    sha256 cellar: :any,                 monterey:       "83ea02414a36a147e2aa5b10af9dd1ffb54ab9264a41494f1445f74719705627"
-    sha256 cellar: :any,                 big_sur:        "c78f3749af6dd54bc49284a537bd4fd12e63c205912e5c9ac94315c02806e6a1"
-    sha256 cellar: :any,                 catalina:       "73c318ae34404846109bd408e4d47ed22581f3b6666458a9c6d8595281fb0046"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d89df90f4fac92f1c189ced3417a439ae2b774b9653bc16ac6abcc352f1b26d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/reproc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "68994eff2e3509e927bd16afe2aa7ed67a29fadca8f8ab156545201d251b4d8e"
   end
 
   depends_on "cmake" => :build
