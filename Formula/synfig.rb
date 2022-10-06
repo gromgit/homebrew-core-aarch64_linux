@@ -20,12 +20,12 @@ class Synfig < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "920d6f73d8236b3559cf93465893931aaa929782f60e73107c53bb4e30a308e6"
-    sha256 arm64_big_sur:  "c6f2045f16807852b5973ad47c2f569bec472cd3057b16b81936c8f5cfd968b5"
-    sha256 monterey:       "be1fa009cdf23d70a48a1da1476f5ae76e42326a0411b349328fb8a7be370f22"
-    sha256 big_sur:        "92612f7abc22c970ba345e09c01a426fa2ffe7080c6a5ec251fca8ed8ecfd2e4"
-    sha256 catalina:       "0840206906aa67a5a26635465e96f5bc9578b7c8d5310d9052a10707726fa6ad"
-    sha256 x86_64_linux:   "719aaac98ecf68e066a771f39b70322eca878d5fcbab89b86e901d331eb5e03d"
+    sha256 arm64_monterey: "d6c3ff6f8ebaf3c51541374f0b002a7aa76276f654c2a1bfbb5832d1c58b23b7"
+    sha256 arm64_big_sur:  "129b75a9a6beea76d92b7b916f4a4353591abc1be63369e199fa80b8f626aff1"
+    sha256 monterey:       "78df0036495eccaa6005cd853fa58ab48fd3027d866d7116295bb1b6d3be0391"
+    sha256 big_sur:        "117c2aaefa5db9dc9f8bb68e810aed6a83e19b6671c815d81d1cb8c9283aa2e8"
+    sha256 catalina:       "b78c0b2ff9a309a18e6220d15dc7b78642df81d1cd8f6e6a5331bee4af5448ef"
+    sha256 x86_64_linux:   "4563e1b18b9d2487a4286cf6dd2d1c41b2d837b76a01c1be7a950a93142b6aab"
   end
 
   head do
