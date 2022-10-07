@@ -325,7 +325,7 @@
   },
   "openstackclient": {
     "extra_packages": ["python-heatclient", "python-octaviaclient"],
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "PyYAML"]
   },
   "organize-tool": {
     "exclude_packages": ["six", "PyYAML"]
