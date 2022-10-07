@@ -448,6 +448,9 @@
   "scour": {
     "exclude_packages": ["six"]
   },
+  "search-that-hash": {
+    "exclude_packages": ["typing-extensions"]
+  },
   "semgrep": {
     "package_name": "semgrep",
     "exclude_packages": ["jsonschema", "attrs", "pyrsistent", "typing-extensions"]
