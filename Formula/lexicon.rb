@@ -19,6 +19,7 @@ class Lexicon < Formula
 
   depends_on "rust" => :build # for cryptography
   depends_on "python@3.10"
+  depends_on "pyyaml"
   depends_on "six"
 
   uses_from_macos "libxml2"
@@ -167,11 +168,6 @@ class Lexicon < Formula
   resource "pytz" do
     url "https://files.pythonhosted.org/packages/cf/80/8246892889a36f4a12f719da27c72faea1c2bdb6998afbfffc4284dcd457/pytz-2022.2.tar.gz"
     sha256 "bc824559e43e8ab983426a49525079d186b25372ff63aa3430ccd527d95edc3a"
-  end
-
-  resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   resource "requests" do
