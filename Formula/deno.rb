@@ -7,12 +7,12 @@ class Deno < Formula
   head "https://github.com/denoland/deno.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f1f0145689b0c3e6da05fe0464d4ad2bb27f3d29bc5a0985b580367568ffe49f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54137824074d27f357556135357f3f21c6f7e9e9bead777a8e122bb21d6066c5"
-    sha256 cellar: :any_skip_relocation, monterey:       "77ad30f3bebe27c23d05d511f95f3c0c667571758c266262e9cdeb14a9520c1b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "86c2e0693bee37a6a95e704341295cf4be7e2608a48ffdbc5ecc6ec731105073"
-    sha256 cellar: :any_skip_relocation, catalina:       "d6e1d2fb22c724f257362e58d143a8c7e12f3b2b76b5b426fa66e05d7ca30b19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4d91d2b9d0764925c15cb0addf783a331d7df8788934eb468681a9b7217984e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53b01313e01f7fd8549e73508c41130a918ada0c48d0d3b316e26c07e0de9db2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "50665f15c4a71589d1779702b62eab920dc400e8326011c1cac408320cb6c4d9"
+    sha256 cellar: :any_skip_relocation, monterey:       "db7d25aa312d28fd5a86f3e8bc44592b2cff7b0e7d536140c4e587a48608c6f1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eb725852979bcd20a62e0eb3595fce2c025baca23ed235d22ca122ebf5821b07"
+    sha256 cellar: :any_skip_relocation, catalina:       "a23bdd125c505859eda1d685b94cf03b33e779f7ce8caed18007f4828051fb00"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4e64198573695063d3490a2e7603359e5cebafa5ef1354f46837377469759c3"
   end
 
   depends_on "llvm" => :build
