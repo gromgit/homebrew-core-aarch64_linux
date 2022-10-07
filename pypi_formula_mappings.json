@@ -262,7 +262,7 @@
     "exclude_packages": ["six", "tabulate"]
   },
   "localstack": {
-    "exclude_packages": ["six", "tabulate"]
+    "exclude_packages": ["six", "tabulate", "PyYAML"]
   },
   "locust": {
     "exclude_packages": ["six", "typing-extensions"]
