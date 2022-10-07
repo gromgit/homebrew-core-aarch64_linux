@@ -390,6 +390,9 @@
   "pyqt-builder": {
     "exclude_packages": ["packaging", "pyparsing", "sip", "toml"]
   },
+  "python-yq": {
+    "exclude_packages": ["PyYAML"]
+  },
   "pythran": {
     "exclude_packages": ["numpy", "six"]
   },
