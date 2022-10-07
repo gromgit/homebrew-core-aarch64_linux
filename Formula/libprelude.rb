@@ -12,12 +12,8 @@ class Libprelude < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "7af71434befcd84ab6e66bc6d355942a81ff492bf732d53b23babd98afd4e045"
-    sha256 arm64_big_sur:  "0b66c24df4c249e9038f6673ddbd3c813659798e957da9d6c1bfd9fdb67a8316"
-    sha256 monterey:       "9284d8e1a805d7ef1332b2c9d040b8ccc30cdc0b8eb83085d7a4d24811c2a922"
-    sha256 big_sur:        "c52daf8e1e41fb0ad7123761ecc4fb3f9e059a96a6440baba997e0cd2812be59"
-    sha256 catalina:       "42af699d24654a53f69b6eedf42c71fa7ce87f6ee9c2f72d60e5e8bb7c1e4fde"
-    sha256 x86_64_linux:   "7f78270bd579bc35cebe47ffbfe3cb26723f1360edca8482affe7b7ea21904bc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libprelude"
+    sha256 aarch64_linux: "4dab55a845302a252fbf6a264849c4fb0a54a8391fe7b38f4d15371d0e0f6188"
   end
 
   depends_on "libtool" => :build
