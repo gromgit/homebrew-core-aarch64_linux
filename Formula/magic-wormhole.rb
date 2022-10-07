@@ -20,6 +20,7 @@ class MagicWormhole < Formula
   depends_on "rust" => :build
   depends_on "libsodium"
   depends_on "openssl@1.1"
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -142,11 +143,6 @@ class MagicWormhole < Formula
   resource "txtorcon" do
     url "https://files.pythonhosted.org/packages/47/ca/7941660345c769637a97bdbaf25202460fbab35eead55c538fb1fe61b71e/txtorcon-22.0.0.tar.gz"
     sha256 "89a1b65e32a4b369d67e6c166387fbc468cc5d05227448d239a5e7e9718aa053"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/fe/71/1df93bd59163c8084d812d166c907639646e8aac72886d563851b966bf18/typing_extensions-4.2.0.tar.gz"
-    sha256 "f1c24655a0da0d1b67f07e17a5e6b2a105894e6824b92096378bb3668ef02376"
   end
 
   resource "wheel" do
