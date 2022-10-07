@@ -12,9 +12,8 @@ class Ruby < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby"
-    sha256 aarch64_linux: "833dc68b493dba9d195494e1e719f12999b4726a37b543e4d330c906ff0f6dd7"
+    sha256 aarch64_linux: "8aa861ac7573975f35e788b78e9a2fb8f6e4d0e3bda31bfe95dc2a32f49bf8b0"
   end
-
 
   head do
     url "https://github.com/ruby/ruby.git", branch: "trunk"
