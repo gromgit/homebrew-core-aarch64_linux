@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/df/6d/f2d223f3d33ad0483f74d6930e220b1dfa6e9608e35006edc7d57ca109d2/esphome-2022.9.3.tar.gz"
-  sha256 "8958470b7e26112c7f09189f34f821fd508688ca2def67269a3c08639fe48215"
+  url "https://files.pythonhosted.org/packages/e8/e1/29573ea067a866dc1102401799019c3d1bf7957a34fce3bb0059dcba6e12/esphome-2022.9.4.tar.gz"
+  sha256 "b572503f9d42dfca925b5742a6d051bf91c785d07a647fc4c22564f863569745"
   license "MIT"
 
   bottle do
@@ -99,8 +99,8 @@ class Esphome < Formula
   end
 
   resource "esphome-dashboard" do
-    url "https://files.pythonhosted.org/packages/b5/2b/65fe53f28643e92713e0a4b5091cda277bd3cd0e2cec236d49a6feee1a09/esphome-dashboard-20220925.0.tar.gz"
-    sha256 "8e51d2f8776ed45595fe726289f7ab39dc93856c88736d6e005165878043f8ce"
+    url "https://files.pythonhosted.org/packages/0a/22/900b160c5ced9fcdb60bb8d7302eb807f26584906a4af607d4711e1153e6/esphome-dashboard-20221007.0.tar.gz"
+    sha256 "33ef3eab0f09ed05a824fbf8b74855bbcf999b039b39a0cffcceccf9ee2c902a"
   end
 
   resource "esptool" do
