@@ -12,7 +12,7 @@ class Libyaml < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libyaml"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1e2d9e9bfab1f494fea08e7c35f18448a9a3b24ad02461e1a284bc3c7f4d986f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "883a5c95daeaa055d7658443e20b5975460c5d34fed7d0293ff0dfc37babfb34"
   end
 
   depends_on "autoconf" => :build
