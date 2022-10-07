@@ -7,12 +7,8 @@ class Coreutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_monterey: "6a9a4988eda436fb5bdb5969044579c2e618e21eee8c8bbe32614ad29fe56bd7"
-    sha256 arm64_big_sur:  "85ef910aa223d48c0e73fc187aba54b86930c86f906e3d079ed0b114762bb24e"
-    sha256 monterey:       "7c9f988b4f9207415a5c96efd32376bc8cf2b280a7a36fbebb0b8fc334a14056"
-    sha256 big_sur:        "e446ef889d70bc377d67fa2d7f6a1fbc9faaee444a9e9086a1f5bd484069e5c0"
-    sha256 catalina:       "0d2117fa63dfcbb678c4e499f9ca0413c2c5bfa0a1bbdefde620434f2ead93a0"
-    sha256 x86_64_linux:   "3c2fbec99344b50d620695d16197eb112cb8bee6d3f9e47cb682484755b91f38"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/coreutils"
+    sha256 aarch64_linux: "fa964d281b430dc2711e85507b29b16b34a23f0ec57faf2c2e929a10652e4c36"
   end
 
   head do
