@@ -33,6 +33,7 @@ class AwsVault < Formula
 
     zsh_completion.install "contrib/completions/zsh/aws-vault.zsh"
     bash_completion.install "contrib/completions/bash/aws-vault.bash"
+    fish_completion.install "contrib/completions/fish/aws-vault.fish"
   end
 
   test do
