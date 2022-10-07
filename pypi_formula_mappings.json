@@ -91,7 +91,7 @@
     "extra_packages": ["wheel"]
   },
   "checkov": {
-    "exclude_packages": ["junit-xml", "six", "tabulate"],
+    "exclude_packages": ["junit-xml", "six", "tabulate", "PyYAML", "typing-extensions"],
     "extra_packages": ["junit-xml-2"]
   },
   "cloudiscovery": {
