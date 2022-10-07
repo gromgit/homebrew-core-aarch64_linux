@@ -7,7 +7,8 @@ class TranslateShell < Formula
   head "https://github.com/soimort/translate-shell.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9ffbfa24a9eb1bb089abe076cf7ae261d9f907f691c6aba360ea528ae00ab3cc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "2aeb23457e19de6d2502a6966e0b312e60435d7c257a19d88ac8bd54063341eb"
   end
 
   depends_on "fribidi"
