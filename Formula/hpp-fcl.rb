@@ -8,12 +8,12 @@ class HppFcl < Formula
   head "https://github.com/humanoid-path-planner/hpp-fcl.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "71790f05b54714ff050bbc112cc5e2f1dfea3f02fe9f602d1b383a8af7c06da2"
-    sha256 cellar: :any,                 arm64_big_sur:  "e637c9886fbe72a5f6cd0feb9c83291b06b5c097745fb2e286406507c253378b"
-    sha256 cellar: :any,                 monterey:       "8a27744bbad8a2ef4e683b712d568d3b0a0ad8ea7c2caf59830812ce3531de9e"
-    sha256 cellar: :any,                 big_sur:        "8dddeb1dada479837a384e5c4d0a08e3bda130804b9848558fbbf17ffc296953"
-    sha256 cellar: :any,                 catalina:       "1b5d15f020b1287ef4e9dd383c75c8de5d4ec8e54be699d318118b5abee09246"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c7527d675a84c83226e99fad32e1ddeba73e3842a184c92576d8e1edbd7880c"
+    sha256 cellar: :any,                 arm64_monterey: "821fd8af881f90d339ef761de7a6a26b6f196560bac1096798964cfe77c81a3e"
+    sha256 cellar: :any,                 arm64_big_sur:  "e8b7f398967271eca2793d9dd4a233a5dd3d75c0d1dd86d3a3b07f3aae86c208"
+    sha256 cellar: :any,                 monterey:       "996d5eb6b243caca2bf90d0cce5c32da3ad3dc54681ef8aeac1b2c327a09258b"
+    sha256 cellar: :any,                 big_sur:        "d78e5ed90c9ff861313bc0d9779175e0018f98187a57add6c198f5bc3cf1fb5b"
+    sha256 cellar: :any,                 catalina:       "318094c42681531d683f67b6a0ed07147e07cf73b11a32d7260029cb98e85c01"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e919ac84e3d1a58bace9319399dd9663b37e07b42f25ef2ea106b29b6674cf6d"
   end
 
   depends_on "cmake" => :build
