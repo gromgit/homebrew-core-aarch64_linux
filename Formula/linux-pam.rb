@@ -8,7 +8,8 @@ class LinuxPam < Formula
   head "https://github.com/linux-pam/linux-pam.git", branch: "master"
 
   bottle do
-    sha256 x86_64_linux: "96727d4bf89b7bc6fdc5e0882e80fbc20a73a595684a749215c5dcd3cf5b0fb4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/linux-pam"
+    sha256 aarch64_linux: "be82e6dd8bdac9365b74fb366be1cf013c2a0dceebe732e5f4dc4329b6b8065e"
   end
 
   depends_on "pkg-config" => :build
