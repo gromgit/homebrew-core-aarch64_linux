@@ -12,13 +12,12 @@ class AircrackNg < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256                               arm64_monterey: "499ece5ad3317410df74ec2ca4de39e198a7739d0be0e6f0a48042a684631f73"
-    sha256                               arm64_big_sur:  "68528c46fdf173d9a8a02c27b39c7d57d19ac87bca2c98e4dd6b3ec11745b470"
-    sha256                               monterey:       "049eedde2f5028350063d74a8fcf406b743ec6c53d019a183f74a27d5f9fc586"
-    sha256                               big_sur:        "21e3668b005f69b9b05acee557079e01abf9dbdd4c7c36ca3da102e266bc4654"
-    sha256                               catalina:       "993529dff2b7b3143497fb057ecdab91a4562830451b6fd4414fd84ae7c9c96d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e23cb441fb4fdef1d74fc2edea0a7a601bb4834f5c2b0f56176c4095a2fc2135"
+    sha256                               arm64_monterey: "ae0d6fe850335049e70c0eed7486182be424fe7e9f1f449687ab2a4248e0816a"
+    sha256                               arm64_big_sur:  "146f8023328aff76b469874b408e00a2bb142e05753badd291be1e0370a21502"
+    sha256                               monterey:       "32bab474db5a9602788ffd7d32f4bd25199732705cc4856b7335c96d6675a961"
+    sha256                               big_sur:        "c7b4666859d336a5219c53d5b9310547495438e460d38c7f1b3175c274245b55"
+    sha256                               catalina:       "09115822ebac9a6d9903635faa0a393dc1bcaaaf2fcbb344a5dee123fe1f02f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72556b434c07c994c66ac4f37b9946884357af00a7543d6e961808ca78a6818c"
   end
 
   depends_on "autoconf" => :build
