@@ -3,8 +3,8 @@ require "language/node"
 class CubejsCli < Formula
   desc "Cube.js command-line interface"
   homepage "https://cube.dev/"
-  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-0.31.1.tgz"
-  sha256 "9fda62f6f1abe745b540c94a3b85ea4f48a8372fb1c2af4031287ac70542b5f9"
+  url "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-0.31.2.tgz"
+  sha256 "4faa6a5befa107cc0aba64983cfe053e0b5f04e365746d9b7980a3428f17f1a5"
   license "Apache-2.0"
 
   bottle do
