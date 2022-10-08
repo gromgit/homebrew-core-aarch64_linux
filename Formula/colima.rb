@@ -2,8 +2,8 @@ class Colima < Formula
   desc "Container runtimes on MacOS (and Linux) with minimal setup"
   homepage "https://github.com/abiosoft/colima/blob/main/README.md"
   url "https://github.com/abiosoft/colima.git",
-      tag:      "v0.4.5",
-      revision: "c0743565c722d9af03bbfd8f75910ac876bf3b56"
+      tag:      "v0.4.6",
+      revision: "10377f3a20c2b0f7196ad5944264b69f048a3d40"
   license "MIT"
   head "https://github.com/abiosoft/colima.git", branch: "main"
 
@@ -21,14 +21,13 @@ class Colima < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d9b638131065532666f6f443164de6972dcbefb8b01c5687ee854a2c5b33a3e"
   end
 
-  # Required latest gvisor.dev/gvisor/pkg/gohacks
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
   depends_on "lima"
 
   def install
     project = "github.com/abiosoft/colima"
     ldflags = %W[
+      -s -w
       -X #{project}/config.appVersion=#{version}
       -X #{project}/config.revision=#{Utils.git_head}
     ]
