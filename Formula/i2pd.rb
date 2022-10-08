@@ -7,12 +7,12 @@ class I2pd < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a12f86351082bae3f4a75a69307cfaa741fca3e79db07c15a6bb29507bbe21bc"
-    sha256 cellar: :any,                 arm64_big_sur:  "b5e5ae177fef767c7135a3db7bca61f67c8f9ad68f80327f0a9f6fd9a565a53b"
-    sha256 cellar: :any,                 monterey:       "506743280af1b2b7b3e4dfe5f222c079a427963226b110e5f74135b6db90cc16"
-    sha256 cellar: :any,                 big_sur:        "15d852e3257f88e3ee31735e385d1f5b72a7479ce80272c12e80886231cd0c89"
-    sha256 cellar: :any,                 catalina:       "f177a2a379f9380cbe1e08e669ef874b2bff81a23e9b4b8cca04e75ccfc15628"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7cd0bb29c1a43c314c5a90d211d02146f82353ab1a55cd331a9aa79fe5f1aeb"
+    sha256 cellar: :any,                 arm64_monterey: "9e432865cf965f2cb060e36eab9898daa3581421aabeeb582e31e700d7ae4a0d"
+    sha256 cellar: :any,                 arm64_big_sur:  "afe25b772d258dfd029759dc54505c585609c5c47dd0fc38dc440d0b0aa1fc42"
+    sha256 cellar: :any,                 monterey:       "bdec83561335dafd0108c691b33e54023ddc58e6342fce3f40d5163ccfc27e90"
+    sha256 cellar: :any,                 big_sur:        "06c21b1cd8df6be40479c522e91fa0d7ed0fc4c7316d401b47a9cb930a88c51f"
+    sha256 cellar: :any,                 catalina:       "314ff35843446d01face4630258cbb3af6c5a73355d058ad9fc2d7b5424b62f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "137234a5b2f210b7bd1db7450120ac8e22c390f256b796d33769ca163a245497"
   end
 
   depends_on "boost"
