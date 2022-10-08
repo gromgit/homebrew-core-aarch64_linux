@@ -16,14 +16,12 @@ class Popt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "70cc83818b69346e152c8d0fa10eafff979b0da3e17355d18bb63ee700da5415"
-    sha256 cellar: :any,                 arm64_big_sur:  "3ebf58493631c204386f60a189af7cc4127240644a0ce4713dd4af4374e45823"
-    sha256 cellar: :any,                 monterey:       "063b3f00f194a65246b589e74daf0ce30e0797068fea4a93062dc0b251f4d73c"
-    sha256 cellar: :any,                 big_sur:        "460da044609e1821375dd248e5bb1a317a0f5e3f0431c4ab19532b2cfa6d7e7a"
-    sha256 cellar: :any,                 catalina:       "a5cbf26e1779c73865c7785adc163117465d321338aa6970dd4980cff4a2ec91"
-    sha256 cellar: :any,                 mojave:         "5d602602f195811a3ea8c29ce4540cca6e1f36890a08b5a262facf3f74a85cf1"
-    sha256 cellar: :any,                 high_sierra:    "554ba881a515b18e53d1abd7f67a544af42d811ea14283e75b13ae5fc2056024"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b1fca748f705b965b222943f75fd97cdef1bfb3e98b478b49745cf50a89f7fa"
+    sha256 cellar: :any,                 arm64_monterey: "1154aeb3aedee17c3dddb8f7896f4b5f6b4d7d9dc5334fd1011fb96768788e9c"
+    sha256 cellar: :any,                 arm64_big_sur:  "36a746fdc0e913f77421aebbde75099112fb452beeca9d5420cd1d3907802fa6"
+    sha256 cellar: :any,                 monterey:       "7d6cc173811a3aa97adae35f9c0a759acec73e0bc2c948fdb012f2691b4aef3d"
+    sha256 cellar: :any,                 big_sur:        "92d031d6010ce339beb5d179471ac14b76e887cba2d8cd7699c41aa1d76bcee5"
+    sha256 cellar: :any,                 catalina:       "bab861fc16b94cf46a1a438503ea5e7a602a2c750be14706210e83f63f4abaaa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eaf6aef4cf756e5ad7d75b04d51efb181e673be05bbc40053123b7e8f975db76"
   end
 
   def install
