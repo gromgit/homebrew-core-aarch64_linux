@@ -7,12 +7,12 @@ class Inxi < Formula
   head "https://github.com/smxi/inxi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "43e0e20fd58605138df8388f4e28e934d2efe699da5941fb24459447c9909a5b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43e0e20fd58605138df8388f4e28e934d2efe699da5941fb24459447c9909a5b"
-    sha256 cellar: :any_skip_relocation, monterey:       "d6b42668a157da9def64b2bedba8dadbecfedddb63499920867cda6ebcb7c32c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d6b42668a157da9def64b2bedba8dadbecfedddb63499920867cda6ebcb7c32c"
-    sha256 cellar: :any_skip_relocation, catalina:       "d6b42668a157da9def64b2bedba8dadbecfedddb63499920867cda6ebcb7c32c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43e0e20fd58605138df8388f4e28e934d2efe699da5941fb24459447c9909a5b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb8ae51171e21cd6b2501c91dbaec8139e8c48fc54e96b468549ce3705d3b7e9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb8ae51171e21cd6b2501c91dbaec8139e8c48fc54e96b468549ce3705d3b7e9"
+    sha256 cellar: :any_skip_relocation, monterey:       "cc6c43d1bebe9e99c3cc111a343f5f333ff28c5f4228fc38edb8315ff5748ae7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cc6c43d1bebe9e99c3cc111a343f5f333ff28c5f4228fc38edb8315ff5748ae7"
+    sha256 cellar: :any_skip_relocation, catalina:       "cc6c43d1bebe9e99c3cc111a343f5f333ff28c5f4228fc38edb8315ff5748ae7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb8ae51171e21cd6b2501c91dbaec8139e8c48fc54e96b468549ce3705d3b7e9"
   end
 
   uses_from_macos "perl"
