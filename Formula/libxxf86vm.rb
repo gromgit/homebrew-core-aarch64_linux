@@ -1,8 +1,8 @@
 class Libxxf86vm < Formula
   desc "X.Org: XFree86-VidMode X extension"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXxf86vm-1.1.4.tar.bz2"
-  sha256 "afee27f93c5f31c0ad582852c0fb36d50e4de7cd585fcf655e278a633d85cd57"
+  url "https://www.x.org/archive/individual/lib/libXxf86vm-1.1.5.tar.gz"
+  sha256 "f3f1c29fef8accb0adbd854900c03c6c42f1804f2bc1e4f3ad7b2e1f3b878128"
   license "MIT"
 
   bottle do
@@ -20,12 +20,6 @@ class Libxxf86vm < Formula
   depends_on "libx11"
   depends_on "libxext"
   depends_on "xorgproto"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
-    sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
-  end
 
   def install
     args = %W[
