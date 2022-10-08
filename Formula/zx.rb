@@ -8,12 +8,12 @@ class Zx < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "69dd8bd86e217078cfd685a21e6dfa272dcbaf1b9be76939cc0ead669a2642fb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69dd8bd86e217078cfd685a21e6dfa272dcbaf1b9be76939cc0ead669a2642fb"
-    sha256 cellar: :any_skip_relocation, monterey:       "4547feea81e6443d2406c50e894e31ed8b28e352fbd1bad7a86c7be4dc780be3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4547feea81e6443d2406c50e894e31ed8b28e352fbd1bad7a86c7be4dc780be3"
-    sha256 cellar: :any_skip_relocation, catalina:       "4547feea81e6443d2406c50e894e31ed8b28e352fbd1bad7a86c7be4dc780be3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69dd8bd86e217078cfd685a21e6dfa272dcbaf1b9be76939cc0ead669a2642fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eaf21aeea6e8d57bed8d4a1b7541e4e54662b1386b30eaf3c281a511f59570f4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eaf21aeea6e8d57bed8d4a1b7541e4e54662b1386b30eaf3c281a511f59570f4"
+    sha256 cellar: :any_skip_relocation, monterey:       "af0e008fbb823b5520a58b889260f12f53579e70c9c8bf48f3ad275598e71c81"
+    sha256 cellar: :any_skip_relocation, big_sur:        "af0e008fbb823b5520a58b889260f12f53579e70c9c8bf48f3ad275598e71c81"
+    sha256 cellar: :any_skip_relocation, catalina:       "af0e008fbb823b5520a58b889260f12f53579e70c9c8bf48f3ad275598e71c81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eaf21aeea6e8d57bed8d4a1b7541e4e54662b1386b30eaf3c281a511f59570f4"
   end
 
   depends_on "node"
