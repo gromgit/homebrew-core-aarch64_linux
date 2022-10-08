@@ -11,12 +11,12 @@ class Libksba < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "846abeac7d61edb4ce5821dceda6d6868a81e6e00478bf822e3d3b8c5b37dd18"
-    sha256 cellar: :any,                 arm64_big_sur:  "2dc564e399f97012c3d123e26b6b866dd4260e0525213555873aac98c0a2b870"
-    sha256 cellar: :any,                 monterey:       "1f6a8d065218a3d9e2958d2baa5a94777178e4eb38329cc3aee6cd748c7cbf93"
-    sha256 cellar: :any,                 big_sur:        "0596d94b8681d6d1cec06ddfbd7efd20bef2dcd409bad38a36a37e9d907f285e"
-    sha256 cellar: :any,                 catalina:       "462c0376fc39e903e2c6cde3124cd5550adacb064d08a6632698beeb7255c0a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fac2e0436d56a611ba26855207d3d3f2c3ec21465e2b23cd66fb012ff727463a"
+    sha256 cellar: :any,                 arm64_monterey: "2042f59a89e3a727c9c9121d7d027cd44b1edb16453dce2d2c9d47c3b8e6aa4f"
+    sha256 cellar: :any,                 arm64_big_sur:  "db844c848945c79498bddf79b6ceb60c1cc45c684b501cf3ff2fe57f9937b976"
+    sha256 cellar: :any,                 monterey:       "8128c13f0baf8d082a45a173060aba740105fdc4acda53d8aae6501a3612bd4a"
+    sha256 cellar: :any,                 big_sur:        "d632c840b68cd06544f1fe942cd075985aa17b046379c4fb8508a85f4eda0241"
+    sha256 cellar: :any,                 catalina:       "288938ed99cf5ed6b99b56db8bf41ddcacf373acc459ef1c495082200ce9a1a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c743fb137f06e9d98612227e3da403281f8ec30e9725560222481d9c2de6db0a"
   end
 
   depends_on "libgpg-error"
