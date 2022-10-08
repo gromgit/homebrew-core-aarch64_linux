@@ -2,8 +2,8 @@ class Vcluster < Formula
   desc "Creates fully functional virtual k8s cluster inside host k8s cluster's namespace"
   homepage "https://www.vcluster.com"
   url "https://github.com/loft-sh/vcluster.git",
-      tag:      "v0.12.1",
-      revision: "86603ca11282e12dd25ecf7c8649dfc93bf196eb"
+      tag:      "v0.12.2",
+      revision: "faaa3c96a1fb737036a628d7e311697530f384a1"
   license "Apache-2.0"
   head "https://github.com/loft-sh/vcluster.git", branch: "main"
 
@@ -28,7 +28,7 @@ class Vcluster < Formula
       -X main.version=#{version}
     ]
     system "go", "build", "-mod", "vendor", *std_go_args(ldflags: ldflags), "./cmd/vclusterctl/main.go"
-    generate_completions_from_executable(bin/"vcluster", "completion", shells: [:zsh, :bash])
+    generate_completions_from_executable(bin/"vcluster", "completion")
   end
 
   test do
