@@ -7,12 +7,12 @@ class Pspg < Formula
   head "https://github.com/okbob/pspg.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "e34cb95261948d0194e1225004f7ed4339b62de9b9c94767255e2fee7172bf6e"
-    sha256 cellar: :any,                 arm64_big_sur:  "831b6556c33d1711b318a595b9af8c222bc458bb6b4c4ed82a291b957efc3579"
-    sha256 cellar: :any,                 monterey:       "03c9bb1e5615320dce4d6bb3255a3f4c05c611cdbf78dae423bbfbdcaff2a527"
-    sha256 cellar: :any,                 big_sur:        "02823e8a9f42c0a96be99417da6993ec1f416e7af1f156e90f8a065887b93a86"
-    sha256 cellar: :any,                 catalina:       "0f1f6ffef52c2277c92c93a6fcf50952740ac5933015a8e585b70fba177e6f1d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "727df27c79e14a8547bb2cccb3af376747e69d28df213339692a0605df526ac6"
+    sha256 cellar: :any,                 arm64_monterey: "4e09ad19e338456249f1d2ff3862fbb059c7704609382686edb8d4b781cf1187"
+    sha256 cellar: :any,                 arm64_big_sur:  "37c0075d494f3fc6f11c27e22862efaf5215ecb423a6576e52e52fbd96cbaab9"
+    sha256 cellar: :any,                 monterey:       "ecb371c2c95df0171e46b857dbb355e54a1cd9e0be8e1513c2583b23a13e3ad1"
+    sha256 cellar: :any,                 big_sur:        "8d084ec1ee67984c8ea873ec94440a84cc06dd2b442f50bf7afb14f9029ede93"
+    sha256 cellar: :any,                 catalina:       "d58be0e4dcdd8a464170920889472cd9c258fb787593840aacf38a933ca3f571"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c39c97a8801bac725baf6d5321e205bda40ac696ea95b11bcc0f5376803faef4"
   end
 
   depends_on "libpq"
