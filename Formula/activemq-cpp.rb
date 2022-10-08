@@ -8,15 +8,12 @@ class ActivemqCpp < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4edbf0e904c82cfd6257eb1addfcfedf7e90ea1d5c20429adb92fc42ddbfff5f"
-    sha256 cellar: :any,                 arm64_big_sur:  "972d1a36b67866aa3181868044bce04ec8b70cc65e5ebf3e638d5b666c6585f5"
-    sha256 cellar: :any,                 monterey:       "1d30730748941d6efb2859248b5e978350cab53ac695b70df886c3a1719b5cf3"
-    sha256 cellar: :any,                 big_sur:        "7fed9bcc79042fde9d0c97ac83a6fb738523772c4247c828ddc4d6b1154db8fb"
-    sha256 cellar: :any,                 catalina:       "c06d4253f9496b49b63c224637a97525b13ecb834884a3548adbdafe4dde0a73"
-    sha256 cellar: :any,                 mojave:         "024bf1c2c3ef8e612180b9f82c98f854235e8e371e01210c142304a762a30b3c"
-    sha256 cellar: :any,                 high_sierra:    "21855925e7e9ecfe125c959c84a6bce710ca409a2a33f4f8d396f45cc52a4ab9"
-    sha256 cellar: :any,                 sierra:         "c994de229e86fb7e80c846d6f2b44acba306014f334ba65550c15102214dbcb8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "031771786d32a435a34662e00a2802fb282ca405401d1b017e91926e1a4ccd50"
+    sha256 cellar: :any,                 arm64_monterey: "aecbae4664dd780644ff782462ea5bcdcc592917dfad01dde5370a93db641319"
+    sha256 cellar: :any,                 arm64_big_sur:  "8848bb4603302677cc482a59e21f5e5651e844d3d981c75c6ab3e82257ddf234"
+    sha256 cellar: :any,                 monterey:       "fc59b7bff98816254d9180614b72606f424c209a97ae1a0a6e28985af8889f6a"
+    sha256 cellar: :any,                 big_sur:        "cce6f6a49cb80accb399d33826380c4220d01701b2b53f14eafde10406f835b5"
+    sha256 cellar: :any,                 catalina:       "296375b0118271838d46daf6722954f6e5a8c791f08245324abd7289b4ded719"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa16d5eb67f51eb3d9e648447398db44713695f5e1c5279c70f7a2229e607a9a"
   end
 
   depends_on "pkg-config" => :build
