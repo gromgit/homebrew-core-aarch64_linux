@@ -54,12 +54,12 @@ class Readline < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9d9d9512c80c6ae7c8281da84533222d90cb5e06accdfa98e0bff37672793cec"
-    sha256 cellar: :any,                 arm64_big_sur:  "08efc469d237689a9619ec6b3ea931793d03597e89bd622ebd122b7256d7a446"
-    sha256 cellar: :any,                 monterey:       "976185ec243284d74eb8b9c554d944cbc0208c26495193bcd28fdf12a08f134e"
-    sha256 cellar: :any,                 big_sur:        "1eaadc077c1584e296810abbcefd2e90bc055ddbcb675f0668e86f95f2229212"
-    sha256 cellar: :any,                 catalina:       "7346c1c37bfa5f9b9661450e8d7b627012dfc551813e3df48508a4fa1a05e6e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b46aff4f720e0f15601aecb2efd4ae7c2a3454b2fad91b196728ed4ee4f12c3"
+    sha256 cellar: :any,                 arm64_monterey: "9406afa0f7aefbbef37ee193b3b17dd0e08bb2a80e99680cde732289f4819ad2"
+    sha256 cellar: :any,                 arm64_big_sur:  "7012f0f3d05e9ca181c67bd55ffeee000aa557aedcee0e260d75085215e80234"
+    sha256 cellar: :any,                 monterey:       "19e6b02f577010a1a33c6ae6f09e40772d6ab22d94b6cf3455cfed9d301d28cf"
+    sha256 cellar: :any,                 big_sur:        "e6dfc7d95895f18657c0fb15e77a8c104362bb87bafdff770a6a352301cc1082"
+    sha256 cellar: :any,                 catalina:       "ef32c6905cc91e0ff5acfce9ad9e7aba1eecbcc5c79ee4e1e3abfe25fa4bf1a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7dc8f7ebbfcb22adcd5535a8da083ed8aa3c42c8579c465a2263d778868bc058"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
