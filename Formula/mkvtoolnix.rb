@@ -12,11 +12,11 @@ class Mkvtoolnix < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "70a12501ee551c04121021611c84ac24a6ad8d215a202a00cb308de6c9497e3e"
-    sha256 cellar: :any, arm64_big_sur:  "0e2ff7c6b1e230e67daa15da163da4c571f9180685e0c209b4a30b5bc4ca660f"
-    sha256 cellar: :any, monterey:       "bff1a227d0d325e76220881daf1b9912aa7ddd11eb0d62caecd1c26108ad5a7c"
-    sha256 cellar: :any, big_sur:        "e3c4b3b3a1ad63c6987b44da6297492dc0bc4733a8126bed97e858edc3a58e0e"
-    sha256 cellar: :any, catalina:       "468352b2d447dec047a85f06f4c54639fdae50fc52d7a20342f4876cea380400"
+    sha256 cellar: :any, arm64_monterey: "652a7004958aa3e10d9fbe522b99202b52053741e5e393104f04ce94a2b5e440"
+    sha256 cellar: :any, arm64_big_sur:  "e0f4daaa47462faf07624b835412a649d45abf3425d48c2480612ca4592e974d"
+    sha256 cellar: :any, monterey:       "b80f360a954506c69414a6740fcbc0b0c12e2941b8138028c462e22e070d2c38"
+    sha256 cellar: :any, big_sur:        "6a7502c1751b74a229261a2ca8ba180fcd32295355bb9fd93178071842628c08"
+    sha256 cellar: :any, catalina:       "81157d9ca708fc0fcf1f2cdfb1f799ecb93e73023c92c2fd315bc4ad27451ae9"
   end
 
   head do
