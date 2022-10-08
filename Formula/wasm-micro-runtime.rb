@@ -1,10 +1,15 @@
 class WasmMicroRuntime < Formula
   desc "WebAssembly Micro Runtime (WAMR)"
   homepage "https://github.com/bytecodealliance/wasm-micro-runtime"
-  url "https://github.com/bytecodealliance/wasm-micro-runtime/archive/refs/tags/WAMR-1.0.0.tar.gz"
-  sha256 "b5c147f91fe02b3457188bf7067ecfd7e00d91c65a08bdd629e65999422a78c4"
+  url "https://github.com/bytecodealliance/wasm-micro-runtime/archive/refs/tags/WAMR-1.1.0.tar.gz"
+  sha256 "608933db9273de222dc183cee3d32f084f91b90205c420d000a3276c522f9263"
   license "Apache-2.0"
   head "https://github.com/bytecodealliance/wasm-micro-runtime.git", branch: "main"
+
+  livecheck do
+    url :stable
+    regex(/^WAMR[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "76b7d0f9fe1be60e1b33091acece2afec12545561663cba4abc75f76a89d10da"
@@ -17,7 +22,7 @@ class WasmMicroRuntime < Formula
 
   depends_on "cmake" => :build
 
-  resource "fib_wasm" do
+  resource "homebrew-fib_wasm" do
     url "https://github.com/wasm3/wasm3/raw/main/test/lang/fib.c.wasm"
     sha256 "e6fafc5913921693101307569fc1159d4355998249ca8d42d540015433d25664"
   end
@@ -46,7 +51,7 @@ class WasmMicroRuntime < Formula
   end
 
   test do
-    resource("fib_wasm").stage testpath
+    resource("homebrew-fib_wasm").stage testpath
     system "#{bin}/iwasm", "-f", "fib", "#{testpath}/fib.c.wasm"
   end
 end
