@@ -8,12 +8,12 @@ class Eksctl < Formula
   head "https://github.com/weaveworks/eksctl.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c8985106214182f5ced21825b015c3c9cb2c402f92c36ded6a41c5df55a2144f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a14dd5b66dd4667984898f268f4a2251b0a9e82e0b5aa7a00030aad0917335f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f69511a73b143724fc3878c927f18fc4f137d87aaf64fe2e68abe21daea9747e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f0bec557d61599f09d9e9ed34a23f2a1356affaf130e90f6ab439f35aa2b6180"
-    sha256 cellar: :any_skip_relocation, catalina:       "c549f604ae7c0e727513281d5014937461a40591b83dcfd416ba7337d91cfab3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04dd97dcbad9a947e29ce0d7f4df6aee15f2ad9e1476711e256302473c5827e6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d1bc10f01c3a5395d6307f7e6c2e8c7ec07c06b56c755e43b8185944f8116ca8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0331f1b5d910edd92d6634cfe853780757cf3258613ee2451f0e567c726e75d"
+    sha256 cellar: :any_skip_relocation, monterey:       "57e52c4752ba4d000f0a5ec6fe97cbac401e027b02e8971a416d8980dba47e2e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "77b432603bddaa7be8a9a68639e7a65a369d55a406d3afde1bcb5b19c5e1194a"
+    sha256 cellar: :any_skip_relocation, catalina:       "561330afdf2f2c09abac8969405cec4a5dc2959cf6e498dcb341a477796452fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "accb1d8857e2262c7dd8b49517e4290ee9f4526325fbe6de82414c3bb9173bfd"
   end
 
   depends_on "counterfeiter" => :build
