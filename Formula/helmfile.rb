@@ -1,8 +1,8 @@
 class Helmfile < Formula
   desc "Deploy Kubernetes Helm Charts"
   homepage "https://github.com/helmfile/helmfile"
-  url "https://github.com/helmfile/helmfile/archive/v0.146.0.tar.gz"
-  sha256 "c61f9efb150793a253660000fa929b0a87552b66bb2a27373f39e93d54ade932"
+  url "https://github.com/helmfile/helmfile/archive/v0.147.0.tar.gz"
+  sha256 "85ae176d6907bd885c1c46f1052467c9b30791192f364bff9e24aec9fce9d0e9"
   license "MIT"
   version_scheme 1
 
@@ -22,7 +22,11 @@ class Helmfile < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/helmfile/helmfile/pkg/app/version.Version=v#{version}
+      -X go.szostok.io/version.version=v#{version}
+      -X go.szostok.io/version.buildDate=#{time.iso8601}
+      -X go.szostok.io/version.commit="brew"
+      -X go.szostok.io/version.commitDate=#{time.iso8601}
+      -X go.szostok.io/version.dirtyBuild=false
     ]
     system "go", "build", *std_go_args(ldflags: ldflags)
 
