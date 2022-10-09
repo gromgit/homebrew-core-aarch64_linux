@@ -11,6 +11,15 @@ class Pytorch < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_monterey: "17dd6a096eee8aecdfd693be17ee30f207f2ada880e52ae3a8bc8a39d7c8cf23"
+    sha256 cellar: :any,                 arm64_big_sur:  "c9a913b6c2a60970338d9ed82f9be168b992f05bbde109f0f65cddaaf0cef602"
+    sha256 cellar: :any,                 monterey:       "41479b4c2d8e9ee045fde9f6f0845c6f154da08e0195acde96462cda084cc863"
+    sha256 cellar: :any,                 big_sur:        "74be80be51c2842d3cd81125f4ea71b2fdff940446c4a513835e66629df88479"
+    sha256 cellar: :any,                 catalina:       "a1654f4f335fa0f76b99355b9ef2118eb4225c41d189c282beb75d0fc0302164"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8621ecee06694da1a68357a4fb40417905b8c3de0c486dfc8f0ce2dcac32804"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "python@3.10" => [:build, :test]
