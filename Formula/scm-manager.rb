@@ -6,7 +6,7 @@ class ScmManager < Formula
   license all_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "29ae96d30e53f7cbb394225b681cd021dde8dd5267b68f71e0baf2bd24b8ffcf"
+    sha256 cellar: :any_skip_relocation, all: "130940defae1b8b956c58d3ad23d4a584940cf84a43093b904e668ea5ded775f"
   end
 
   depends_on "jsvc"
