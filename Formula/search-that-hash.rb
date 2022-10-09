@@ -10,12 +10,13 @@ class SearchThatHash < Formula
   head "https://github.com/HashPals/Search-That-Hash.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "46b1b6a51165c5c82e605c2e2bedbabecec15c058831bf497a1ff509b3bc78dd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dac39add32bf83a3a3cb6c83447137ef8dfb4d2934aa87a397c26eb7c0548b2a"
-    sha256 cellar: :any_skip_relocation, monterey:       "ff167db1e8612206b5e5e804f9b294995da3c7763082b5f363866c20828dde44"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2a9d81d0500a9a18db128b4c1f152ebadd12a93aa9807f10ecdceb81fd802ff8"
-    sha256 cellar: :any_skip_relocation, catalina:       "3e07893fddb549c451fe537ed2dbed00a3acca6eb9aa40238c366bd2713526fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b253b4965cd886fb8af3adac304ebf651b1c403af27404ece1c6ae78113ce880"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f7aa68b0ef42bcc15f44490abacdff5839de7d4c6fd29a99492560cedea62963"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "858a3f9a9ae1711d30d2c1c4a0f529f8cbb1888c800fd0e6c3e00e3a170247c6"
+    sha256 cellar: :any_skip_relocation, monterey:       "54c993810fbc9c4fabd4bb09b1d5885e5cead1c9e611ea71e5ed7a5bdb41ecbe"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bfb1ea46ac75a75ed1dea30bbeb1c76b890cabae69fd3b9443633b8e8ca745cb"
+    sha256 cellar: :any_skip_relocation, catalina:       "4851d49c025e34f73e0da9181aea7ef4536e0a45ec11870f4d55fbe3275f6b8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f59e2c6c31730701e0e026ba129433e060fbece029d3ae92dc5968760cb2ddaa"
   end
 
   depends_on "poetry" => :build
