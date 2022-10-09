@@ -6,12 +6,12 @@ class Genact < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "89ed51d8655586d5ad825d68a32024928f6dd3e320bffb41a8904358a145e49e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d00008a0d2d508b2bfa99893b9b8a639aa205070c15e57ff6a3910a3c405ca85"
-    sha256 cellar: :any_skip_relocation, monterey:       "f7eb817897921a01a64cff11536b366f8937c5974f88e70a6d3223258cbce898"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a45b49d4bda05d0fc9556c5925c4aea53bc89017ede5477a0d9be2620ef36623"
-    sha256 cellar: :any_skip_relocation, catalina:       "80da481cd24279859017296c0124a2aca438ed115b703bd6a5442af73b5f67c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bacc60d0958df84d21d9a4b36cc6cce0088faa56fd4be03e973994cb8ef75098"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5736d97990464286a4766fbbaa718f6516c5f879963ca23ecf50c5ba3fd220b7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a827ee2657e36a63957913609cfdef1b3b3590030e0dda97eebd9a72bc3c957"
+    sha256 cellar: :any_skip_relocation, monterey:       "7fbce14b618c1bee6f1dab5a5b60f7c203ddd5aa447e05c87bee755132e7f4f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9c4791cc5620332568d337607dccc733484ff67536524d611a40c03c67524589"
+    sha256 cellar: :any_skip_relocation, catalina:       "b002d8560145fd9f85c5d23ad04f6184f02cb5377ae45683e0b8cbb5d10f6bc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6901c48390142402f0746ee65bb8d9ac10a6ab85525495a770799fc88d5bd473"
   end
 
   depends_on "rust" => :build
