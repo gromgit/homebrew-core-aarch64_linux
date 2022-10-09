@@ -7,12 +7,12 @@ class Csview < Formula
   head "https://github.com/wfxr/csview.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a9057b70f320c95c241683e8ca4a6bb7968bf51c75ecbe0c2a97f204db309085"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ddf8e67b24eba0d523039711673f0acaa4569c4994f9d423353e5b6b67e8d595"
-    sha256 cellar: :any_skip_relocation, monterey:       "45b6f3365cd1e89b7b3c8d520d7991a9bfcb74fb32d174380d8dce2b21315ca1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "908eb920f858656aa4628b719b7702a0f5567e6be30ded6af1f997942f1e90ef"
-    sha256 cellar: :any_skip_relocation, catalina:       "74010e19e076ab175e05522dea27eb82d34e800d8fcc07c8a70f98e2fb1e34e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f86364490bd2f8afbc273e65c431981b2a4d158f520923ea93d68799954aafb3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bcb6b524bfbe7d4cee5a4ed47eb9fbe6e460165b8a3b1e5b47391e3ccea588c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "714f0dcb10d7d0a00f0c234f999eb1b18521f1f6443a4f781bf192b5603f8100"
+    sha256 cellar: :any_skip_relocation, monterey:       "165a69b5e284288f82e0e70e1a33755c3545a6fa19ef5e2511d21d90fbb22796"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0a0a21831088d78cb6d28567fda931d01a242e5b77eefb21cdf420a4f8db351c"
+    sha256 cellar: :any_skip_relocation, catalina:       "bda29a8d29c3a9263f35151c347b9791b45eb8f40e9709f76d623472c015a6d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47d0c394c85f711c1c98dbbe724f7d0e1820725fffc8a716b9f0fb73c87d34d3"
   end
 
   depends_on "rust" => :build
