@@ -6,7 +6,7 @@ class Numactl < Formula
   license all_of: ["GPL-2.0-only", "LGPL-2.1-only", :public_domain, :cannot_represent]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5684c37cc45e777cecb121708cbf2a18c879c4fdc31ad60d542d0c6f21fb3af8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "809a693e16e891c8ee072c0e403769daedbaf3cbaa52291cc0bb0c008fc8065b"
   end
 
   depends_on :linux
