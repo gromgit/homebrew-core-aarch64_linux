@@ -6,12 +6,12 @@ class Scalingo < Formula
   license "BSD-4-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f459a7e8bdfc991e5c83014be681fb9f35079a5bea3da47c0f8afa83202f3d6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76a2b091fa3960c7592748f9262d69e8c6668b1987eb20f142a195192708250a"
-    sha256 cellar: :any_skip_relocation, monterey:       "171df85a9431ab27b4fd6093eb677ec43ebcda60b746819fd6ade6d6fbe3c376"
-    sha256 cellar: :any_skip_relocation, big_sur:        "06caa466535a00ac3e5e339a46a0571cf3b24ed6cb8ab812f610ed79e68a4877"
-    sha256 cellar: :any_skip_relocation, catalina:       "be5054c018835ee8ad0c72a60beeef4bd13282d756d9a52fdaca33984ab29919"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47c4e7591664bc8519271eaaf9652ce24f5f662593e3b4eeb609322d7854b36b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "de68da00e654b184b425d95f805e8d56c7d11685219aa29394bcf2348c73bafd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1401a8b6a6e864c6924538ebf04bd5f660b6422e3128cb03a77b27d9e74f2d99"
+    sha256 cellar: :any_skip_relocation, monterey:       "f98de494b3ebff663bbd838b19df1ef15cf3c2df03d98cd15b019a4e193e76d6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "37da3df14322eced1066222b25dc827340d9190cd774814a2f989d63ee98b8f1"
+    sha256 cellar: :any_skip_relocation, catalina:       "0e9ee0fb968a788313280e53bc2546d299de376a2edffdd23a1a8f52adce6f7a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1ef39b99b0efcb52d93a65ba2328be37920c5a6bdf2cd04f408f5151b7f5021"
   end
 
   depends_on "go" => :build
