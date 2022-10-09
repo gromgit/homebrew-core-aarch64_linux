@@ -14,13 +14,12 @@ class DosboxStaging < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_monterey: "aee8f83dc640a97a4b757386dd049f06be41c471688be8720f50f224edf6edf7"
-    sha256 cellar: :any, arm64_big_sur:  "3e20ac7db17e1c1cfa454ab71754d5b813bfa7d25b2a109aeef01cbbda2263b1"
-    sha256 cellar: :any, monterey:       "c5eed54e549f66e2781609bee5dbe2216dc2cea88eef2d7df44b78bc711a5e3c"
-    sha256 cellar: :any, big_sur:        "86bfd2c8677f542c8046e80ef60110d24b32ec24f84f6a4779a2f44c031e0dad"
-    sha256 cellar: :any, catalina:       "a616bc8157efa84c5bf4f75bdce6c6717df3fd0349e3e1950906e44a867a88ad"
-    sha256               x86_64_linux:   "508eb77dd99c36837cfa25fd10cdc078b5b551546eed5d356018ebfa53e67b7e"
+    sha256 cellar: :any, arm64_monterey: "0ebe5b3c3213a23dcb4eae6b2bc7cac9ce9ad4e1fe70c840b02e3f72d6d72b49"
+    sha256 cellar: :any, arm64_big_sur:  "52cab7703cfdc21afe3dca8a26ceadd6cfbb4636850728a9fc854ab6560b704b"
+    sha256 cellar: :any, monterey:       "02018c8733f3d3b307b9388efed158883128652dc8a460dd28284ae441f34fae"
+    sha256 cellar: :any, big_sur:        "b71c2f5a96aa2d6f6bf461b11e076279fba7eaf1c508e0792a6e39820a3686c8"
+    sha256 cellar: :any, catalina:       "a266ceb73bd3fcd47d9963e863750545a439e73bc8363ed9f5e425c9a0b4b47e"
+    sha256               x86_64_linux:   "f50fee225c7a21bf3beea92b134fa3c3571dc7fdd1a093e463f114439d346958"
   end
 
   depends_on "meson" => :build
