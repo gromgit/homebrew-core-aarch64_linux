@@ -8,13 +8,12 @@ class ClickhouseCpp < Formula
   head "https://github.com/ClickHouse/clickhouse-cpp.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "377f009e4829cbbf3fd978a5360b1a47c1661a0b863a1c2e5b4c053308d1e1e2"
-    sha256 cellar: :any,                 arm64_big_sur:  "3111e5045934df952b31dd4d85bdcf6dbe189b8ec9ecbcae411b91f6045277c2"
-    sha256 cellar: :any,                 monterey:       "b8403a8fe715ccf41b6cfe9f9f77649d5861e5dd4d9a7b9b9e690b81e7031c76"
-    sha256 cellar: :any,                 big_sur:        "157259692d2c331b507b96002924e3ae11f88da9f9c2d85761a4cf7827975a5b"
-    sha256 cellar: :any,                 catalina:       "081658e3fffc13644721bee90ece9c84079b981a90e6b0bd021334bf14b7104b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2a024eae71d06d64c873ac160e28cf0f296557077b7ef2cede2374f01811e32"
+    sha256 cellar: :any,                 arm64_monterey: "26e39ddc384145868d46d4ce393da2743e2835ea5bfc9d8ea0b7eb9820200336"
+    sha256 cellar: :any,                 arm64_big_sur:  "36ae89dde556bb4f92e180735c505a7f07ee42e9ee6398a7ec3cedf6aa2d19f6"
+    sha256 cellar: :any,                 monterey:       "525f287703a698aeef5daaeeeaf9bf3da115a3bb0019ccd3949edff1ed1c5326"
+    sha256 cellar: :any,                 big_sur:        "c4bbc0a458466f26d915f0d88f08aa18146283dd3a70394b4bc2664e4548476b"
+    sha256 cellar: :any,                 catalina:       "a682490a810ab9b36f1ff3206ebad0e8c232eccd5e878994bd9644dbd487e0d1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1751f82002ec0dcc111aa9ce87a38c2b0db23ff14c545563e5558d86839ea79"
   end
 
   depends_on "cmake" => [:build, :test]
