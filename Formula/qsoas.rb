@@ -11,13 +11,12 @@ class Qsoas < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "a50195188c580b9114e768ea31d8494ea517c4f2206b741029cc7fb9f46e7f4d"
-    sha256 cellar: :any,                 arm64_big_sur:  "6c63199fb6691a9dd48e42469dd194f9869e45919a2f44f48a0f808f26a27ee1"
-    sha256 cellar: :any,                 monterey:       "ac5d93133c50ad22e5fbd4846254fc008a7950c91b6b549967439af172dad87a"
-    sha256 cellar: :any,                 big_sur:        "7e96786652a24b9ecbec0dec30bb3242a193b810d00d2d11ef57ac841195c761"
-    sha256 cellar: :any,                 catalina:       "07a56bd5f057f5344516298230e0bb3b1e4c83ed374e1ca07dd109137508783e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b454039a29528d8fcb8cc6230530b803ab5624f1e7602c77205b01623d8c6427"
+    sha256 cellar: :any,                 arm64_monterey: "49f6b58cb6d42a6ccae90d8e04eb6dccc0a57ff0bb11e192bdd6d31fd37c80f1"
+    sha256 cellar: :any,                 arm64_big_sur:  "fd49438c3fc4171cbeef6e1a9d1366be8782e6417adcd4333566c479d77e6644"
+    sha256 cellar: :any,                 monterey:       "51804fe94d9b83e9c203a3a9f7ec9ec8f3a187fb664723e3abdf89b339d0be79"
+    sha256 cellar: :any,                 big_sur:        "0df6dacf4c5af50ca05e7fa848ea85478e67f8e6b1f811a99a3b2f7697b45949"
+    sha256 cellar: :any,                 catalina:       "374f332ee48449e930b83e2b8b6149546029893fdb049b9e85366b732a79f21e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5537096857b3863d160c8c051e59cb2d86c932a37103b542e974aeeb62cf99f4"
   end
 
   depends_on "bison" => :build
