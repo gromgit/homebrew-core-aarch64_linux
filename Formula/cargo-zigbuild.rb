@@ -7,12 +7,12 @@ class CargoZigbuild < Formula
   head "https://github.com/messense/cargo-zigbuild.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "598353c177514edc970c5272e16effc2c73225ff3e0581ac36adf8566059e738"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c065ded6be0f7d3993d59c595aafef5a65f102429ee6f62aa3408872009e2bb5"
-    sha256 cellar: :any_skip_relocation, monterey:       "bd86bffe0291555dc4645334a2754fe6a2a61a37d54dcca1fb4faf4e0dd1ac8e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e26fcb8bc8939477a78b7f63ef5a6138e17ebf6249e76e592f204e3f48ec3c1"
-    sha256 cellar: :any_skip_relocation, catalina:       "c80fdebc14fce04c794adba18707c250a351dc1b7e23cb6cc9a4b89e586ed2c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32ea74fa836c7265bb7d14c837a32edef24c211cfc29426ba1ccebe0554e672e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9f13c0370e87c91713e8ce1af2a4dd89a0e61f53d661d3d2c6be288cf11ebb1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e5efa80f7343fb6d156b3d2ce24a3d4a1d4713777c3c25768e990eda5b120f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "bc4ed858f78a4845eb077d680a4791d8ec367d94b0da5a11a0db0e9509c8da7c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d1b1c96a73dbc8ed112e3387fc39f37d1b8fd1cf8fec60d3c08d2aaf62443fc0"
+    sha256 cellar: :any_skip_relocation, catalina:       "9fefdf1e51f181807692da63d017fa21f527771da2fa4ad569516f9ed6de3281"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82cd2e1a785a53c9551307ae9597ed1a866b6f867ca35d32cd6069d24a5407f7"
   end
 
   depends_on "rustup-init" => :test
