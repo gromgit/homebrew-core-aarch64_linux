@@ -26,6 +26,7 @@ class Snapcraft < Formula
   depends_on "libpython-tabulate"
   depends_on "libsodium"
   depends_on "lxc"
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "pyyaml"
   depends_on "six"
@@ -364,11 +365,6 @@ class Snapcraft < Formula
   resource "types-Deprecated" do
     url "https://files.pythonhosted.org/packages/45/2f/c0e57815699277d3ecb3cc974c4ffee0afc37a593437328766a42a525dd2/types-Deprecated-1.2.9.tar.gz"
     sha256 "e04ce58929509865359e91dcc38720123262b4cd68fa2a8a90312d50390bb6fa"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/aa/55/62e2d4934c282a60b4243a950c9dbfa01ae7cac0e8d6c0b5315b87432c81/typing_extensions-3.10.0.0.tar.gz"
-    sha256 "50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342"
   end
 
   resource "urllib3" do
