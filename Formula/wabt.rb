@@ -12,13 +12,12 @@ class Wabt < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "02e681e9b25d6171252c035319de538781d0fdf597556314d945ffe946d6a21e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e69c6b33949769cbcc9af2ea6e7d9bb63329d93c354d1d0d6577d223981c36e4"
-    sha256 cellar: :any_skip_relocation, monterey:       "b12757b5ae82647afa2a2642eea763616bdf2f75b2ac2558e7c3eb8514502ce9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "63d035b7f213271905159ef1244a6d771b3b7ae856bc34c610da8a9406f85c06"
-    sha256 cellar: :any_skip_relocation, catalina:       "9916c18c358a468f9364742cf4727b426caa1f0c183e55b384292853cd24f7c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47407a00ee59170838d074e8a4882f60b2307dbd8bfcb4a30334ef1c00925337"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "31bc86948a7785b27832148d2fb46e76af62853dc55c03e119517f73335cfa6d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d02f34c7a5218b39f73b087fd6d010c9af483c86773671b2edee590d72f7eed6"
+    sha256 cellar: :any_skip_relocation, monterey:       "ec14e79b46ba16c83847e035cfc0bf95a9139d087ea986eff44056daf234b523"
+    sha256 cellar: :any_skip_relocation, big_sur:        "258de9ad9dfb11e871f68a5dbe563ac49594653f5beb114d5e2bf5b48c55a182"
+    sha256 cellar: :any_skip_relocation, catalina:       "7dd5359079d92af76aa83135849938023053250ab783212495beda78096708fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64a7381298d48d9af56b67dbef46fc028a2c6a41d934ab658bf8bdbda4c12a1d"
   end
 
   depends_on "cmake" => :build
