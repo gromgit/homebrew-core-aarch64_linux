@@ -1,14 +1,14 @@
 class Autorestic < Formula
   desc "High level CLI utility for restic"
   homepage "https://autorestic.vercel.app/"
-  url "https://github.com/cupcakearmy/autorestic/archive/v1.7.1.tar.gz"
-  sha256 "89ffb11c14eb02bcc66427517a43a42a7e73ea359b579b8c2047c95ce5f9a8d8"
+  url "https://github.com/cupcakearmy/autorestic/archive/v1.7.2.tar.gz"
+  sha256 "aef793c1f2d20fbb219452235cc0d3f737a990166d8193a04526e54f9239bc56"
   license "Apache-2.0"
   head "https://github.com/cupcakearmy/autorestic.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/autorestic"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0ff1a38c6a07f1fe80251355748f7e60cdf4b6cae306ab637bbdc67b19bdc242"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "701c3bc3db7813066a3b516921b168b097dafbde1a8259baf878c5bf5556d16b"
   end
 
   depends_on "go" => :build
@@ -16,9 +16,7 @@ class Autorestic < Formula
 
   def install
     system "go", "build", *std_go_args, "./main.go"
-    (bash_completion/"autorestic").write Utils.safe_popen_read("#{bin}/autorestic", "completion", "bash")
-    (zsh_completion/"_autorestic").write Utils.safe_popen_read("#{bin}/autorestic", "completion", "zsh")
-    (fish_completion/"autorestic.fish").write Utils.safe_popen_read("#{bin}/autorestic", "completion", "fish")
+    generate_completions_from_executable(bin/"autorestic", "completion")
   end
 
   test do
