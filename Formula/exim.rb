@@ -30,12 +30,12 @@ class Exim < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "bfcc18b3b112229974b9f9839b96058b874f63a7bbfc21ac4bef043eeb5850ca"
-    sha256 arm64_big_sur:  "41890d699c864032ea29741455a7617eab29c7bd89b2fe467fd7caeff9287c87"
-    sha256 monterey:       "b0fa89cb8c9dc1366d979062e5826b291dfffde56f51ff46104bb06ebafb117c"
-    sha256 big_sur:        "2364baa048a883702e87bf86a00c6f3d8e66907e9d6d58c057ab4af55adf5997"
-    sha256 catalina:       "44335942f74790d3af88bbaf4052cf625ef9a7890dadfa85fd9e1c9f277442b1"
-    sha256 x86_64_linux:   "4cc61804dd1275dc4091d762ff3aa95c545852089a2b0eefafe597f5e778ed01"
+    sha256 arm64_monterey: "1dcfe9e8ff31d30c8c03c2f6db86d29199e3ad3884626e24a202dbf10da5b815"
+    sha256 arm64_big_sur:  "9a376535eb48485e2cf30910da5da8fbc422f20790639f643f60195a29ad4bba"
+    sha256 monterey:       "8212b900afb9970de0ea5a666d1fdf524d74f638d8233d3edf375ce13668678a"
+    sha256 big_sur:        "2380ffa1a08a087a4ccc85c776fabc661cc377f32cd3fba3ebf79d042ae53727"
+    sha256 catalina:       "e49195d49265f2e1941c71c39811d92a329ae04b5ea33c34116bdb1c0723307c"
+    sha256 x86_64_linux:   "c189cd50a88e4494a00520e2ce63066cea2bcbe8ed3fa1435fcadb73b0d11d29"
   end
 
   depends_on "berkeley-db@5"
