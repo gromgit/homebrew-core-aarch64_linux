@@ -387,6 +387,9 @@
     "exclude_packages": ["six"]
   },
   "pydocstyle": "pydocstyle[toml]",
+  "pygitup": {
+    "exclude_packages": ["typing-extensions"]
+  },
   "pyqt-builder": {
     "exclude_packages": ["packaging", "pyparsing", "sip", "toml"]
   },
