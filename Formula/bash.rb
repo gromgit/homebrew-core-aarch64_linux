@@ -78,7 +78,7 @@ class Bash < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bash"
-    sha256 aarch64_linux: "52653eb0ab22b3064e1837bbdaefe5d62507f1935d8620477a462f1298134217"
+    sha256 aarch64_linux: "2401ac80d44ae7dc556d4bbbfa187a57330372012e7dcb4d13efad7ea1e68f5d"
   end
 
   def install
