@@ -1,8 +1,8 @@
 class Wayland < Formula
   desc "Protocol for a compositor to talk to its clients"
   homepage "https://wayland.freedesktop.org"
-  url "https://wayland.freedesktop.org/releases/wayland-1.20.0.tar.xz"
-  sha256 "b8a034154c7059772e0fdbd27dbfcda6c732df29cae56a82274f6ec5d7cd8725"
+  url "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.21.0/downloads/wayland-1.21.0.tar.xz"
+  sha256 "6dc64d7fc16837a693a51cfdb2e568db538bfdc9f457d4656285bb9594ef11ac"
   license "MIT"
 
   livecheck do
@@ -11,7 +11,8 @@ class Wayland < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "275df617cc2da93855348126801d6125ee081fd045b2e9ac42bdb8105f7422d6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/wayland"
+    sha256 aarch64_linux: "47c0fe645ce5afe67f8c7f76be9e0395b45b8f8288ed2fbf561e78ba1f2693b9"
   end
 
   depends_on "meson" => :build
