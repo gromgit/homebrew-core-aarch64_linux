@@ -12,13 +12,8 @@ class Expect < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "865f91b99656011e6c4cb681a5d5306805f97532158e25eaa6ba74685c9cfc72"
-    sha256 arm64_big_sur:  "aacaef6b4ae9a82f8039722e623ad66117e1154f9ddc0f4cf3a7c450147ba010"
-    sha256 monterey:       "65f7837ddba5bc6efe90b201e853fa117a617e711074546444b98c665238f1d8"
-    sha256 big_sur:        "b7824e3cc83c7b063198bb7505bbd723481327ff40d36ac91ba8950621bcbc49"
-    sha256 catalina:       "366066798dba96afbfbbf5b262bb3df9e6405e79b1e4d7160dd9610308ec4b3e"
-    sha256 mojave:         "da69b859dd682d61f2380523c3e1afbed2d06e453d4e88e0ce6bb5566df24082"
-    sha256 x86_64_linux:   "518fab49b38bf1b7ce6118907dec39e476c4f57e0c1a3dbfc2113d95a6c1760b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/expect"
+    sha256 aarch64_linux: "4dd150eab5ec42aaeba92177b2e9b286f4a664e95c0a204bdd6c5b140589c254"
   end
 
   # Autotools are introduced here to regenerate configure script. Remove
