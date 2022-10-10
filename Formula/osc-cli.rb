@@ -16,6 +16,7 @@ class OscCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6792bee630735a7849cddc8239b7992bf5d1ee5d76af206a3de928836e34f3bc"
   end
 
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -52,11 +53,6 @@ class OscCli < Formula
   resource "termcolor" do
     url "https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz"
     sha256 "1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/fe/71/1df93bd59163c8084d812d166c907639646e8aac72886d563851b966bf18/typing_extensions-4.2.0.tar.gz"
-    sha256 "f1c24655a0da0d1b67f07e17a5e6b2a105894e6824b92096378bb3668ef02376"
   end
 
   resource "urllib3" do
