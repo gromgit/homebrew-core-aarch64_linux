@@ -3,8 +3,8 @@ class SolcSelect < Formula
 
   desc "Manage multiple Solidity compiler versions"
   homepage "https://github.com/crytic/solc-select"
-  url "https://files.pythonhosted.org/packages/48/d6/35f72b61b89c087e7b886ff6511deb6d3193db2ffacdcf03827373e5e312/solc-select-0.2.1.tar.gz"
-  sha256 "e956b04dc7df2209d1fb3b82e2bb62f8e730bb554c4d7f958a14ff2fb2f37212"
+  url "https://files.pythonhosted.org/packages/2f/ac/9b4eab45a899a558d186c1d6830997d35392d15477b083b71c26612e02d7/solc-select-1.0.1.tar.gz"
+  sha256 "46c4e727f4fd5e24cd94972a8082282aff19f300ca6be5b074a1d98453ccd508"
   license "AGPL-3.0-only"
   head "https://github.com/crytic/solc-select.git", branch: "dev"
 
@@ -18,6 +18,16 @@ class SolcSelect < Formula
   end
 
   depends_on "python@3.10"
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
+    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
+  end
+
+  resource "pyparsing" do
+    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
+    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+  end
 
   resource "pysha3" do
     url "https://files.pythonhosted.org/packages/73/bf/978d424ac6c9076d73b8fdc8ab8ad46f98af0c34669d736b1d83c758afee/pysha3-1.0.2.tar.gz"
