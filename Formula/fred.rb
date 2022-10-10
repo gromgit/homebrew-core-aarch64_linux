@@ -7,6 +7,15 @@ class Fred < Formula
   sha256 "f1eddf12fac2f26f656e317a11f61ec0129ba353187b659c20d05a600dba78c8"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9bc6e0ad74f29f56612611c3d9ee28f1d7903f8cc230d18100f52fac35cbeb2f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b38b4ff1dc1f3ff4b0674ce949463bd14814817364a54c107c3344a5389a84a3"
+    sha256 cellar: :any_skip_relocation, monterey:       "2571bea5f0c8627ad5412e71df35701f20bc570140e2b9e3c0e7e3599dde2d45"
+    sha256 cellar: :any_skip_relocation, big_sur:        "60fabae8d4296af852d40f877f2771ed90b3fde6a4be7c0778c6f0f8a973f510"
+    sha256 cellar: :any_skip_relocation, catalina:       "fd910a7aaf68018c1c14e19e5893cf1784143e381ce99adf2e281aa14625dace"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e1180d8a7bd43ffcdf87d36613a7d7dd5b0704eacb88ac16e243314e5bbe218"
+  end
+
   depends_on "python@3.10"
 
   resource "certifi" do
