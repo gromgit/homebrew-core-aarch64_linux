@@ -8,12 +8,13 @@ class TrezorAgent < Formula
   license "LGPL-3.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "900c5c3c10addf12f75e91accae8a6bf933162d81a272933e820fa6934dccd54"
-    sha256 cellar: :any,                 arm64_big_sur:  "2a7a3afa0c69320dae33b6d904d78112fc0f0b24cbe53311efae4553baee2696"
-    sha256 cellar: :any,                 monterey:       "9b48b217ff90e102df03d666a7242c0039b23a5e15f3e6a5e423087ced674f48"
-    sha256 cellar: :any,                 big_sur:        "65b3cdc19097b5b15a13530b70ecfb0a76a7eca3144c9786e1bdd16ff7753a5a"
-    sha256 cellar: :any,                 catalina:       "0454571dfd8ac31b0003aa4f790ca708f1adea781dd024dc5f7004d92d5f42bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cd8f63223ff9b8c405af22a7b2b28ad363a5998bbd1b426a4152230f0c66e97"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "7a74919057c33c6b74f4eb38f14c3f16e9b47439ced61774dfc40e943c82ae47"
+    sha256 cellar: :any,                 arm64_big_sur:  "8272ac471854b3cd8b07e3db79ce256d5cbc3c3d3320a907677266272dba38e2"
+    sha256 cellar: :any,                 monterey:       "5be26300a15d83ad6e96f4b9065a0affaf4e23b32032f5d3a3cae82c4657c3f7"
+    sha256 cellar: :any,                 big_sur:        "cf2ca9f7ba67c2d9353f1b72979ef767a833d6d588867699b7dcfe10592fe4d4"
+    sha256 cellar: :any,                 catalina:       "8672a64aeceb9c125c376c378d2910c8846eac712bfac8a0841859c0c4509a5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0c4ce3c740f7f762ab92983cc90f1dde22560c158da865a89873527ba7e76c9"
   end
 
   depends_on "rust" => :build # python-daemon resource depends on cryptography
