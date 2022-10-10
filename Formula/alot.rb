@@ -10,12 +10,13 @@ class Alot < Formula
   head "https://github.com/pazz/alot.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "115aee284ea01e8462a02340af7bb58ca14b8f527a8d793268de0ad13cbb1cb1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4648afdc1e2671aea2d676dae926f7c9509e97e9b8143202300c69c0f1312af"
-    sha256 cellar: :any_skip_relocation, monterey:       "68d35035900b279084ecf85c55939c69631bc1fa5f3d869f0bf1e89df7437b1e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "470bbd0cf9524ea9473979b0f166471eb8823c5b699067b72200595e003b04b5"
-    sha256 cellar: :any_skip_relocation, catalina:       "c2e93fdeb0845404de1e5e031ed532047006748d9b784b1e8a2604de6d859ddf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02a1334724c43f1aa939afc7adcd6733e9b23dca0803073887efe8674a63533c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "555f0a1bd748b45788f2c2fdb6f5180aac065fde8c62f08b7604be005471fdde"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "893b411b1dff0d8d1cdedc74a46c59f1564a988e0af6d8f949d419147f6897c9"
+    sha256 cellar: :any_skip_relocation, monterey:       "5e121e31acb656955cc38518dbed23f7956198c16292b26ba7bed462151d3f25"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a277a9ceeb0ce579f091720ad0dc9771bef20fc0a9d5ef3ec55fde46d4249f9d"
+    sha256 cellar: :any_skip_relocation, catalina:       "3cc9b6b7ea1a752f57f175db8e065a853e6d2c021587408a0dedd380534db0e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a704bd3b97cef006fa215c85b999be59fa6ed8d710365fa2af3d4f028068317"
   end
 
   depends_on "sphinx-doc" => :build
