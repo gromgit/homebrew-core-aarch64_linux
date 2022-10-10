@@ -7,13 +7,12 @@ class EasyRsa < Formula
   head "https://github.com/OpenVPN/easy-rsa.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9267df5fe6f53503330444514b391a5e35892a3f5f3e381b1016f9402d1d7fc"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5124cc17f73f7467de387d62658658d29907e43e9e50fd25dac4f1c5ec55915b"
-    sha256 cellar: :any_skip_relocation, catalina:      "f8fb06de036f9b9d1b5483054b967c8b0ba61f7617f40c7b2d8443c87b3b54a9"
-    sha256 cellar: :any_skip_relocation, mojave:        "a9e8dd8d94adc330b85d60b74380987bd680103c2b4cac61d407eca7b272174b"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "0e814810990e326f9b20a416d684a05261c6e4b68cd9d092a09898fe50077fa0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb9ed69d68b06a1af68732fcb9722e2016b562b3196d3017416805c81f5f977a"
-    sha256 cellar: :any_skip_relocation, all:           "eb9ed69d68b06a1af68732fcb9722e2016b562b3196d3017416805c81f5f977a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "437812094c85963e49adfb49b8533da608f9bec1a0c64181935f828c012c89bb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "437812094c85963e49adfb49b8533da608f9bec1a0c64181935f828c012c89bb"
+    sha256 cellar: :any_skip_relocation, monterey:       "09a549d3ff88f28ee642dcf3ba74905be122769882ce16256f133d48e8e0d5ca"
+    sha256 cellar: :any_skip_relocation, big_sur:        "09a549d3ff88f28ee642dcf3ba74905be122769882ce16256f133d48e8e0d5ca"
+    sha256 cellar: :any_skip_relocation, catalina:       "09a549d3ff88f28ee642dcf3ba74905be122769882ce16256f133d48e8e0d5ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "437812094c85963e49adfb49b8533da608f9bec1a0c64181935f828c012c89bb"
   end
 
   depends_on "openssl@3"
