@@ -7,12 +7,12 @@ class Fastfetch < Formula
   head "https://github.com/LinusDierheimer/fastfetch.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5d95f6b0da0ef3e71d2c3ba8b012cfec42f2c0a988234d987b16b5a033ed36fe"
-    sha256 cellar: :any,                 arm64_big_sur:  "be410b28bc9ad774369d17ac25a94bff8be919474add200c8e9cdaf3e9d3031c"
-    sha256 cellar: :any,                 monterey:       "20a8c911d3e71395a2c0a01040ecc4aacf30670b2a61b3b6d967e2834f431118"
-    sha256 cellar: :any,                 big_sur:        "5c1261c614c6a975ed6a86241c2932ddc334804522f721f35aff2bd3163806e2"
-    sha256 cellar: :any,                 catalina:       "d7179e65427a18ba75ebef073125c0877a9f5820cca3d694c9fff73121bba662"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71f49630f29fe5db2ff0f8aaf3a40d65ae1dd9256d4480ea2032d4a60286d983"
+    sha256 arm64_monterey: "32f852d50d200f8e1c0dfeb27c55b2caa0d8258201e05610f463278758e74ce5"
+    sha256 arm64_big_sur:  "2550a29c786559fb4ca2cd4a4be34c062af06b570eeebcb692eccec20e5a28ed"
+    sha256 monterey:       "3ec7acc9019fad2dafdda89e206ca9887074854f04dbc289219f267f04feda90"
+    sha256 big_sur:        "43723124be1e0680caf2b25257d18cadf82829d1f2c1b7ff8e1a76a8e3f1e22f"
+    sha256 catalina:       "d01619be3cd21bb231c2cef6b764d367a9c8bf248e390cb9fb438e276c28ee0f"
+    sha256 x86_64_linux:   "839cea8df541b485e957e4760d1c0a4b75bdb198286e63e5e7ce1a0f781d386d"
   end
 
   depends_on "cmake" => :build
