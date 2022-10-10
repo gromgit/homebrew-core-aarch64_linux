@@ -1,8 +1,8 @@
 class Libva < Formula
   desc "Hardware accelerated video processing library"
   homepage "https://github.com/intel/libva"
-  url "https://github.com/intel/libva/releases/download/2.14.0/libva-2.14.0.tar.bz2"
-  sha256 "511e9a74d1ccfb548bc192290603082c11074ac59b17aadfd5d56a3f93e58454"
+  url "https://github.com/intel/libva/releases/download/2.15.0/libva-2.15.0.tar.bz2"
+  sha256 "258ed409458d3e7a000e1908bc852619615ee6a933359c745fcd93eb3e461eca"
   license "MIT"
 
   livecheck do
@@ -11,7 +11,8 @@ class Libva < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "617439340faaca016a688866aaf86cd48f103252d069731e3c944b5713bef838"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libva"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "605eca4767c19e874c85c16e16c12ae7966c95cd16d99fb3618a2f24fc3dff4a"
   end
 
   depends_on "pkg-config" => [:build, :test]
