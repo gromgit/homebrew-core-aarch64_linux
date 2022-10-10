@@ -508,7 +508,7 @@
     "exclude_packages": ["six"]
   },
   "trezor-agent": {
-    "exclude_packages": ["pillow", "six"],
+    "exclude_packages": ["pillow", "six", "typing-extensions"],
     "extra_packages": ["ledger-agent", "keepkey-agent"]
   },
   "trzsz": {

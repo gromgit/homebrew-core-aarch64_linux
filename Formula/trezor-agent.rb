@@ -19,6 +19,7 @@ class TrezorAgent < Formula
   depends_on "rust" => :build # python-daemon resource depends on cryptography
   depends_on "libusb"
   depends_on "pillow"
+  depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -192,11 +193,6 @@ class TrezorAgent < Formula
   resource "trezor" do
     url "https://files.pythonhosted.org/packages/1d/2a/0bc8b6fb9704010beaa856ec78a7ef7b9e749fdf2654ea0a18f94d85d01f/trezor-0.13.3.tar.gz"
     sha256 "055d32174d4ecf2353f7622ee44b8e82e3bef78fe40ce5cdbeafc785b422a049"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/9e/1d/d128169ff58c501059330f1ad96ed62b79114a2eb30b8238af63a2e27f70/typing_extensions-4.3.0.tar.gz"
-    sha256 "e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
   end
 
   resource "Unidecode" do
