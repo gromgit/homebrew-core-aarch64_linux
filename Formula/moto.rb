@@ -3,8 +3,8 @@ class Moto < Formula
 
   desc "Mock AWS services"
   homepage "http://getmoto.org/"
-  url "https://files.pythonhosted.org/packages/87/c7/025a2f53f7d3d3ee003d0f1da6f51ae95129a4bfd103edf4e081e4320d48/moto-4.0.6.tar.gz"
-  sha256 "8627f52bce21f1b95f72a7838f13107e076c0bf18de51acbd1d4a8c37f9545fa"
+  url "https://files.pythonhosted.org/packages/b3/04/9a00642513ff1080a6f23c0397dbeb3cd839d4215f5204e3e4e0b0eabcb5/moto-4.0.7.tar.gz"
+  sha256 "869cac77cfc2e03be955453a224f6c3e887878f4b43f2d68477f236e615bd462"
   license "Apache-2.0"
 
   bottle do
@@ -22,14 +22,9 @@ class Moto < Formula
   depends_on "pyyaml"
   depends_on "six"
 
-  resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
-  end
-
   resource "aws-sam-translator" do
-    url "https://files.pythonhosted.org/packages/3e/71/ae7afb44d810382896eca910bd856cb3589854353a36c09a5716228889a6/aws-sam-translator-1.51.0.tar.gz"
-    sha256 "4c39d78dd92a8d4b46b5b02dc74e6f0ef8713109ebc8910aec234c3b18649ffb"
+    url "https://files.pythonhosted.org/packages/16/c2/f66a1863ca010f7555358142584b8d6e529160e7830fdb2d161bc5bf858f/aws-sam-translator-1.52.0.tar.gz"
+    sha256 "1b5f156695a6772170aefe3f5fe91882c7f2e1cf1ccaa9bb32502c5d96fcc3ea"
   end
 
   resource "aws-xray-sdk" do
@@ -38,13 +33,13 @@ class Moto < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/1c/3e/54fead7fd7e8fee7f4c2b1ccab47695ce3329f9a55a563dfa2487e6991d9/boto3-1.24.84.tar.gz"
-    sha256 "6194763348545bb1669ce8d03ba104be1ba822daa184613aa10b9303a6a79017"
+    url "https://files.pythonhosted.org/packages/97/a0/20dd887905e5056c597c959a0adb452d88aac992418578e18567e2109f23/boto3-1.24.89.tar.gz"
+    sha256 "d0d8ffcdc10821c4562bc7f935cdd840033bbc342ac0e14b6bdd348b3adf4c04"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/69/75/633face702e57b3c01f0b48a18ed93774a0eed36fe211193661cc1e81879/botocore-1.27.84.tar.gz"
-    sha256 "11f05d2acdf9a5f722856704b7b951b180647fb4340e1b5048b27273dc323909"
+    url "https://files.pythonhosted.org/packages/bd/cb/af3d2851d43200724720ba4e81af15cbadeaf5b190eedd1b75582296627e/botocore-1.27.89.tar.gz"
+    sha256 "621f5413be8f97712b7e36c1b075a8791d1d1b9971a7ee060cdcdf5e2debf6c1"
   end
 
   resource "certifi" do
@@ -58,8 +53,8 @@ class Moto < Formula
   end
 
   resource "cfn-lint" do
-    url "https://files.pythonhosted.org/packages/d5/2c/70cdc9da61b7cc27733735d0d52832aaa32747e7dbcffe321892ec694c00/cfn-lint-0.66.0.tar.gz"
-    sha256 "d786da1199575e7fff4e156185365bb5f93fb4a7d678cabcfe804fa00ed8a06f"
+    url "https://files.pythonhosted.org/packages/8f/f2/fd47a4c136f2cb9c23f2f85d7e8e31c58933f037aa40fc7fda4b1ec76bc5/cfn-lint-0.66.1.tar.gz"
+    sha256 "779e3752d534ef9bf61111165e48aaeebb7d71a3df84f6966651816feca58fd0"
   end
 
   resource "charset-normalizer" do
@@ -195,11 +190,6 @@ class Moto < Formula
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
-  end
-
-  resource "pyrsistent" do
-    url "https://files.pythonhosted.org/packages/42/ac/455fdc7294acc4d4154b904e80d964cc9aae75b087bbf486be04df9f2abd/pyrsistent-0.18.1.tar.gz"
-    sha256 "d4d61f8b993a7255ba714df3aca52700f8125289f84f704cf80916517c46eb96"
   end
 
   resource "python-dateutil" do
