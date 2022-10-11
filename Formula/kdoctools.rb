@@ -19,12 +19,12 @@ class Kdoctools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0797ae8328c185b5f9154e6c6611f5c376da7b8f30bb4cd1f6a112054f407190"
-    sha256 cellar: :any,                 arm64_big_sur:  "b25a544044a11171947371b59e099be3ec0a234b23c6ff58801c6f5b270c6c25"
-    sha256 cellar: :any,                 monterey:       "de1af0279fbfbed8a6c7d56ef2f074dc04939714c1a6278d1e034547db512a5d"
-    sha256 cellar: :any,                 big_sur:        "1d3dbc85c984bf294853c09bda07640337a60af224e66638407a36a379150fbe"
-    sha256 cellar: :any,                 catalina:       "e80b8241b099680fda5b9f2e1889250b16c4ac4465e3d76b2f17ae6aa2f42ac1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d30163c87f0d92f10fabb818f29899e0777fcbb2d13490701a7357f59a212507"
+    sha256 cellar: :any,                 arm64_monterey: "2eaea96558c8f9371ef480bd495e8dde7d7e9a38fd41cea2e4baca735bd3d084"
+    sha256 cellar: :any,                 arm64_big_sur:  "8d4ebf59072622b15f40b1c4b20706057d6ae23b613cd9e879bc97ce5a60c488"
+    sha256 cellar: :any,                 monterey:       "e7fae83eef2fde58513536044fe5d7f82c84f49eabcabfc9ffbf80c15df338fb"
+    sha256 cellar: :any,                 big_sur:        "7bfb1cb8004bd0a844495e77488d723d3887f1e874638b05fd7b3131953b104e"
+    sha256 cellar: :any,                 catalina:       "0ffd6b55909ebf17e0deccb8b556f339318eb72fcedd874ce33791e05162d009"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "758701a0a8ee5f17dcb3eb0b39bc3df78b26becedb936cfde82416787886a33b"
   end
 
   depends_on "cmake" => [:build, :test]
