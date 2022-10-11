@@ -7,12 +7,12 @@ class Libfabric < Formula
   head "https://github.com/ofiwg/libfabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2c53e73dfcd784dac33295e84ef45d35794260812f522dbb861d6fbb48f9970e"
-    sha256 cellar: :any,                 arm64_big_sur:  "ed9144b5cb03292a358f4f89e2a7bf7c84d9974dc3dc39162648f70bd0c7c812"
-    sha256 cellar: :any,                 monterey:       "d682d12e279871e48aa7b220cb6907b75d102762e3ea78f876a7c8f5c278edf4"
-    sha256 cellar: :any,                 big_sur:        "e8ba210e6e61540e4a6e04550b62ba36642f9257bda038a804c1a72da1647fb3"
-    sha256 cellar: :any,                 catalina:       "7e855780f1b7e8df553edfa62e2d9b02f708b108a86d74bdc96e1cb69e2cbbe9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa089a18b7fde229d98e57c40e48f623e06870000137240d1c207f15374c8c88"
+    sha256 cellar: :any,                 arm64_monterey: "d0ef41555d16ef392456abd4f7adc4d836ae986d6142265dc967089b5ddfd654"
+    sha256 cellar: :any,                 arm64_big_sur:  "dd53fa0772b081652dbd851a9c9021221b973012a41daf99f4066fbb9921c592"
+    sha256 cellar: :any,                 monterey:       "112ca924b5cca67d91f1ec102e68db13a8a1c934df43f48d78a5319635e2ffbe"
+    sha256 cellar: :any,                 big_sur:        "66cffcac1e77eebf6a7b395f46d8726eba1feb5892a94ef60653a672de95760f"
+    sha256 cellar: :any,                 catalina:       "591163806258adc24cc89a71eeff81ba85dfb67799012bf63facb8febc5f6abf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5bb8f38d64ddc25ec8662866d3b23f46aaae450c8c83c6d214d0e4cd7b81f3a"
   end
 
   depends_on "autoconf" => :build
