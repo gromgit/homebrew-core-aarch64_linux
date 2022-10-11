@@ -6,14 +6,12 @@ class Noti < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "947f45e4f2792140748229ed6ab17f3f2497b0668c643ffd11cf1d76bac4ee89"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4eb0ad59a65cb3c8c870aef3b96754c2ec1b3e62ca79d30bad2abdf746ce9e3"
-    sha256 cellar: :any_skip_relocation, monterey:       "36bf279d975a61d82a48e4618c0c925c283f3bdd383e9bf95b443349ae43acbb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c62799cbbb117b38b1aa7115d9ca4e823caf6eba30bc509638445d82ea7aaa99"
-    sha256 cellar: :any_skip_relocation, catalina:       "fd5b46d0b59943d06196923e4ba4f5628816d3c051d3b982939e3e64d2397fdf"
-    sha256 cellar: :any_skip_relocation, mojave:         "83a2ca79439aaaa5872597f0d937facea22e69eba196eade49a20099c5b6b120"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "f622905f1a8f1ce308b629de6521c17be579de1019a3727ec568a359f852d135"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b5e7f6ed05b1d96d96059281319cbb3fd5cfb95b7b81c58aa7cfc115698cffb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4030645e54ca4c1c8978a4029c21213c0a19687849bb80e72495b94edbbcbf16"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17bf78992c9af85a5ca68e63dde196cdb66ce71690a31de9d3dafa218e4c49aa"
+    sha256 cellar: :any_skip_relocation, monterey:       "18bcb41a040e9e9723253246a151a1ad2bd9f9f03f1854683ffe41ff1f2e03b5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e0c80fcde8f4539a3206045854750395bc300395523b63446df57abe22cf4187"
+    sha256 cellar: :any_skip_relocation, catalina:       "25b7f723c3b55868ca27d253fb655e0165f8ba515242a75907294c87a521aed7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "258775f1024c641237b18515dd6ac2021a1a10a56210bdcfe3bb18f3b2546eb4"
   end
 
   depends_on "go" => :build
