@@ -8,12 +8,12 @@ class Dnstwist < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7a64d3373a3f876d9b236858baf8b5e99a5509456bf7d62f9f7ecb2f13833fc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd782fbff63602f243f96ddca5cfe2c5c52e1664350d965f53afdd9f49298ef0"
-    sha256 cellar: :any_skip_relocation, monterey:       "3fc3b11257846e5dbe9a0dcd5b15cd314adac4a5a6d3a4072005242e7f70095f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "843b8b67a852820db959a5355ad74a88f2eab43cc1dafeb09ac033802345a908"
-    sha256 cellar: :any_skip_relocation, catalina:       "63ead2cb8b7ef6dda56ab8f87d35e6884f737a7d239b016d9510ee6566b54a4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32727d5b63d9691de002f55d0816a39b55c27ea621a6196ec44c40a71a886ae4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1726e429c5aa1a5c3c4ee565f6e39bbfa581265341aa0fd26c1d3011fda21f70"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76b027433af53285f40e8654c5ce0894f3df592c133d0703d16e7f47820ee9d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "4f8805dc47994e013549da6b29a7c0191382e8bd85068ad4348ad3dff680432f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0d7e6d9c408728ebab9b90b4906c95c18077d9384d474e0cfbb1e50787fd9773"
+    sha256 cellar: :any_skip_relocation, catalina:       "ea6501b832b0c72020224e7c52746093caf7cea264fceea44dff8953b3dd780f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d62ddefa38e1ad552fe896a74a84b6ec4cef9feda4ca8cb1c963c3b0e5a5f1c0"
   end
 
   depends_on "geoip"
