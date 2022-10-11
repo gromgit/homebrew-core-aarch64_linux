@@ -7,13 +7,8 @@ class Dungeon < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256                               arm64_monterey: "7b1e99eb8093ed7abf3f8675d73f3a2037a3f290a12940d6075708f161ea86c5"
-    sha256                               arm64_big_sur:  "7486b92b9095713ce8b13ffd23975859f87e0aabd41a25d54d7b888e76229eb9"
-    sha256 cellar: :any,                 monterey:       "453e0f5f0226b78ff6ed0d07181b829839a72100cc06f3f061660a7844c8fe22"
-    sha256 cellar: :any,                 big_sur:        "0abe715ad699601ac7c7452ae0cf5919db535f8402e01e8ed9de9e4ec18c7622"
-    sha256 cellar: :any,                 catalina:       "c6d5bc787bba88658003a4e7bd1fd56c0fbdf485468dd30f41566f06fba56a64"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff530460a2ad3a514894694f78a30e60b2f3683b28f35dd4b61feb055a8343f7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dungeon"
+    sha256 aarch64_linux: "13fb37177fc1f1ad1be6547494c550851b275b23e8efb7fd7e65f2ab44d9e169"
   end
 
   depends_on "gcc" # for gfortran
