@@ -6,12 +6,13 @@ class Axel < Formula
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "483732a5fda41e8592d78ce2d4df86362e60f61bbeb41081beaf382f211edea3"
-    sha256 cellar: :any, arm64_big_sur:  "8eeafff7031764fcc18d94121c6889a7bc3224ecf3f20225ef5cd96f09c6bfb3"
-    sha256 cellar: :any, monterey:       "c5e9ea169ba1985bb10ce39e1c11237bbe4d2c9a1f14b62f38756dcb87456cb9"
-    sha256 cellar: :any, big_sur:        "7ce859bfaebd9429851f7b8fcdaf8983c542c91bbcaec2e2d789e8c0e496306f"
-    sha256 cellar: :any, catalina:       "a9938c2a4753dcc84631739c7ddba105933ab110995b296c7e4a6da2bd9207fc"
-    sha256               x86_64_linux:   "145f3f4fec5782251254a8dd1adbd989118d1be0fe3d4808dce962a586f68119"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "fc825bed920a30d02258383bdf1f14badc453adbf9cce3c8e628e221efbf7db5"
+    sha256 cellar: :any, arm64_big_sur:  "a1815f9d311241ce68c81b0f21daad17ab08f3c0fad600b9116f457a3ae5262f"
+    sha256 cellar: :any, monterey:       "348ee3ec9805d19c50eb3fe8ffae5ddef7c3f123bdd75612dcd9c05c5311ec0a"
+    sha256 cellar: :any, big_sur:        "42d32e7d0d52b145d2965bb88b158f82c232688413d4bd34498e3f25b25b8da7"
+    sha256 cellar: :any, catalina:       "4e9cdfa03a735c0e169f482ab16af3296cbcbd7585eb7134b2de93aa335b7328"
+    sha256               x86_64_linux:   "9cb9766adfe1f050725b01426fd2b499f7a970e7a15406b7fc02e5e4b7b030d2"
   end
 
   head do
