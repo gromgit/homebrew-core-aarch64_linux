@@ -10,7 +10,7 @@ class LuaAT51 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua@5.1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3fe70a5e7125ef03550df1b9d8530bd01a6775b6beadda3f9e64e1abc487d5af"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8bb7d745c921e42b3ab69e9edc7d7d4e4bcf7ac31de3caa184f2800c5d2e4058"
   end
 
   deprecate! date: "2012-02-17", because: :unsupported
