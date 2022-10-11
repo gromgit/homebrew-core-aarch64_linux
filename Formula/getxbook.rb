@@ -12,15 +12,13 @@ class Getxbook < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6b07982832dad4e00d9574247148c61ae88d8aab91130df3268589e129b71f74"
-    sha256 cellar: :any,                 arm64_big_sur:  "dc9c26a35297ffa8f3b40051b6293104dfb3bc03cb2ceccf56d77e0b8e5d7b6f"
-    sha256 cellar: :any,                 monterey:       "578a96921bab3c6c328b7ef2f99f88c333d2831cfe0f7166a1e7547974e60027"
-    sha256 cellar: :any,                 big_sur:        "86d7a091869ff032ca24ddd7979ed545ca17775ad5c99fac92c706857c31eeb0"
-    sha256 cellar: :any,                 catalina:       "a99745b1db4509b84e84c0306bdf4439086670e608e7ff7e4d89e5318547391b"
-    sha256 cellar: :any,                 mojave:         "68f7f76c607807315d1e8305830eaa94d04e1c87f1ea1382fb00bd7ec74f2886"
-    sha256 cellar: :any,                 high_sierra:    "dce13d6e7d9f5f0eb79064858dca9dc3d62b274ba1f07b2ceaca3bf06e4effed"
-    sha256 cellar: :any,                 sierra:         "d4b7500ecfbcf0b0d4ff905b01589a546aa53da5c1c465878305c8b6ee2c363c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "14dc92ce6828cfccce34307bfa2f750faf8612ef92f126797cd5b86e6fb5978b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "2237deb414c3adb1808dd399db44aaa9716d6c015a23091fd0293551caa18d41"
+    sha256 cellar: :any,                 arm64_big_sur:  "00932264ebc086317cc3ef8fbd68c7cc06be424ecd51c331fc84797a1a862268"
+    sha256 cellar: :any,                 monterey:       "95ba1369c672fc85ee368dfeed1854d0c60ead37fb2ee61d970b62e4c0ae5668"
+    sha256 cellar: :any,                 big_sur:        "2af17bd072313e56ca6c199dcf9aadbdfbed69288fb21345a7395777b5d88a45"
+    sha256 cellar: :any,                 catalina:       "431582f1011ac367afc22623e6a5fdf3dfa8839999c69212ce32e986948c3c90"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c87c43136c6d85bd87766fff817a618abedc7392a1a4be393acd0546a02cdc6"
   end
 
   depends_on "openssl@3"
