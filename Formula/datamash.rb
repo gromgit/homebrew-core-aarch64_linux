@@ -1,14 +1,14 @@
 class Datamash < Formula
   desc "Tool to perform numerical, textual & statistical operations"
   homepage "https://www.gnu.org/software/datamash"
-  url "https://ftp.gnu.org/gnu/datamash/datamash-1.7.tar.gz"
-  mirror "https://ftpmirror.gnu.org/datamash/datamash-1.7.tar.gz"
-  sha256 "574a592bb90c5ae702ffaed1b59498d5e3e7466a8abf8530c5f2f3f11fa4adb3"
+  url "https://ftp.gnu.org/gnu/datamash/datamash-1.8.tar.gz"
+  mirror "https://ftpmirror.gnu.org/datamash/datamash-1.8.tar.gz"
+  sha256 "7ad97e8c7ef616dd03aa5bd67ae24c488272db3e7d1f5774161c18b75f29f6fd"
   license "GPL-3.0"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/datamash"
-    sha256 aarch64_linux: "8e874e0d4722d8513ba652f09e41bbc655f17ef396e53b6af97eda7c0ecf8e61"
+    sha256 aarch64_linux: "b156ce5b6518d32ee091b6f885d4c4738ea0bac03db2f372ef19fc71492601ad"
   end
 
   head do
