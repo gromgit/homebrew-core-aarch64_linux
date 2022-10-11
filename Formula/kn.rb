@@ -8,13 +8,12 @@ class Kn < Formula
   head "https://github.com/knative/client.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2830ebe93937c44fbe2b52642abb957d00f4dd959497f1e8cd39dcf76501a96"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2830ebe93937c44fbe2b52642abb957d00f4dd959497f1e8cd39dcf76501a96"
-    sha256 cellar: :any_skip_relocation, monterey:       "da02432562efb0838778ad030238bf39658e94aaa6abb42b36b987c74e92f934"
-    sha256 cellar: :any_skip_relocation, big_sur:        "da02432562efb0838778ad030238bf39658e94aaa6abb42b36b987c74e92f934"
-    sha256 cellar: :any_skip_relocation, catalina:       "da02432562efb0838778ad030238bf39658e94aaa6abb42b36b987c74e92f934"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f795177d69c669a4a2844b5f3917ba8983af3599da271fc6c932283964aee32"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2d2a99fd7e74d94450a50658c6288d7866a11392b21fa353bf73939f0e4daa19"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d2a99fd7e74d94450a50658c6288d7866a11392b21fa353bf73939f0e4daa19"
+    sha256 cellar: :any_skip_relocation, monterey:       "ae3844d5fdcf405b2974b1bb2c18d37a33e6bd213a43e00b24b6c77fe64e5476"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ae3844d5fdcf405b2974b1bb2c18d37a33e6bd213a43e00b24b6c77fe64e5476"
+    sha256 cellar: :any_skip_relocation, catalina:       "ae3844d5fdcf405b2974b1bb2c18d37a33e6bd213a43e00b24b6c77fe64e5476"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4554404bff3257c4cf2d7328bdcb4ccb93bd8ebff814ea8fc2521e627523094f"
   end
 
   depends_on "go" => :build
