@@ -6,12 +6,13 @@ class Felinks < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "62fb5bbd61d30658befb6916bbb5af4699fb2777286746dcaa94e9828abd2d2c"
-    sha256 cellar: :any,                 arm64_big_sur:  "1576662f71a70f08b3bb2b74fa32b8315a9f7a0012979457c805ae01daa770e9"
-    sha256 cellar: :any,                 monterey:       "9c4d8fa6827abd2147a9b20fe30de764acd9a05c6496ac3d751d94041151d39c"
-    sha256 cellar: :any,                 big_sur:        "7e382952edc473bcfd458d9bbce990acd5120588d62af6d3f37c5db55c9785d2"
-    sha256 cellar: :any,                 catalina:       "6338231bbe0e52aaa943e88aa437876604bc45c726b37e91769450b9808c8e43"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c130f71e181e3a807ad0e1951b2b0f97301f7107829d21fb3817d263f918c977"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "e16bb34d706cb774e454993bcd9b3e7355d0dafa41314bd9893bce0a84dd7ae7"
+    sha256 cellar: :any,                 arm64_big_sur:  "674f805753c94b6ae1e4ae3da4d659213e8bbb2b3141d72bb0aed2b3403adf79"
+    sha256 cellar: :any,                 monterey:       "cf7ce03ce6602554161c33dca17bc1ab13cae1f21afea98d185902790ea1a35e"
+    sha256 cellar: :any,                 big_sur:        "89e15011eeac39eda0601814203794c416d8033842a32e95cc71330374401063"
+    sha256 cellar: :any,                 catalina:       "821c66738ec5fa3549eacf6eac30d3fb508c9d01d1ec6bf375b54805fc8e4f21"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a778ac21ccdc917db0bbbfbf7ae7daee9ae56bf10fc9bb81cb3b6cd78ceed9fb"
   end
 
   head do
