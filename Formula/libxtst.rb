@@ -6,14 +6,12 @@ class Libxtst < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4016038d2adf6715b9aa399ca044304035f4bccf88448e1ae7555b6ad202e866"
-    sha256 cellar: :any,                 arm64_big_sur:  "95bac4f4d192887e3cd974a7b78fa7dd7259ba5fd7cd40adbbb9994dd6dd3c6a"
-    sha256 cellar: :any,                 monterey:       "934f99ee58a09de686cc63e835f63ab16d7cfc97808074a9f6af922da79231e9"
-    sha256 cellar: :any,                 big_sur:        "d7d1a150cd828c40a1931f52c1da747b702ad09967e9039582cc6689615f6124"
-    sha256 cellar: :any,                 catalina:       "f92434b774fd9e3907c2cd1c1da713ac5d96b1b1f849499ac6e9de931ea351c2"
-    sha256 cellar: :any,                 mojave:         "ab324bbaded049ed3c6aa72eb768df8d6c20e1c98be3d56f9568ed56be5a9c26"
-    sha256 cellar: :any,                 high_sierra:    "e8d0a57e80cd57e9dbb1034bbcac52ca03812a627cd42e086f73db077ce707e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81dadd1477613a046eca000b17f6c12850ca15769cb8556fff01b4c6d873379c"
+    sha256 cellar: :any,                 arm64_monterey: "3b8d22abd476602cb2892a68c31054a696e760aae1912dee00c08abaff710922"
+    sha256 cellar: :any,                 arm64_big_sur:  "41a2b4709a78d3b00dec19b298dc5551fe1eb2c530556c8daa75ef2f74527ed6"
+    sha256 cellar: :any,                 monterey:       "4ff71b57fb57f02df2b01623684174c826203969bbbf49d9ac77c6f94b60f23c"
+    sha256 cellar: :any,                 big_sur:        "761a44edff4b064f0019e663d8cdd58753ad40910a6bd4fcea6c5e8f946ab3bf"
+    sha256 cellar: :any,                 catalina:       "4b7e04a2af86298d776f8a06da28a466a38f22aa4e24299b357ef7d0e11ec53a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ed487372cd98ae495904e2c0c9b2fcc96cc6d080f0a13be344a37d99849af35"
   end
 
   depends_on "pkg-config" => :build
