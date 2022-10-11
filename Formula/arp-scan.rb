@@ -7,14 +7,12 @@ class ArpScan < Formula
   head "https://github.com/royhills/arp-scan.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "01a5f95378cfa458c106fb3fe0eb723c378ae8dc7b9d2f998c4db81969ec7d81"
-    sha256 arm64_big_sur:  "bab165d30f8039bba63d086234d0c57c64152fe73d586081dfaa7eec177fcefd"
-    sha256 monterey:       "54cd66069c611ce97b77eaa78e5c321b8a5f7990905ef893026694081c1fec7c"
-    sha256 big_sur:        "f3fe2b4b1f70e09f79aaf43b2044068ce5431135a7d7e78ab5022202bfb48ab4"
-    sha256 catalina:       "763b615392ea20ab1900bbc4a21fb0a9a978bbf50d3bbd8d5ff490437defc6f8"
-    sha256 mojave:         "178196ab4312319611ad02c8e086e56fec2217981f9d91d9e7df8cddfeacda4e"
-    sha256 high_sierra:    "f72f46496eecff4c1a86dbdbf3a295e195310827ef50cdc0b007bd7b6311495d"
-    sha256 x86_64_linux:   "4e1dce3dfb01c565542caec5dc02683850118f607a7e343e7dfff1eb08c7b627"
+    sha256 arm64_monterey: "889266ef3963fb2877df0a3445149d798c87f9317f493655598dd7cb540963a7"
+    sha256 arm64_big_sur:  "7d615e04cb2b99c9dfc38f0a58d35914bc6d2fc85e2c2beb16a4f8deacac1791"
+    sha256 monterey:       "0628ba78ca4469f86e41315df57427b976e30985e6af04d09b9111c27b772b6b"
+    sha256 big_sur:        "1c554bca28b60b7695a14ea881b6d73d8b434fa0991b1688e26c17fa5b23d334"
+    sha256 catalina:       "a2c73c508390e1871339f892bfadeb677c0e564bd59c7a9abd003946cbf8b333"
+    sha256 x86_64_linux:   "a5eda727915c262f7a5c9be0599785afd197b89e48bbc8fefc1fb2d81163d1b8"
   end
 
   depends_on "autoconf" => :build
