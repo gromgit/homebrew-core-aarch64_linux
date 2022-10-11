@@ -6,13 +6,13 @@ class Proxytunnel < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "65570cf9f771e78f7c3a08c88630fc5af7100df0025ff1c35286306735e37a40"
-    sha256 cellar: :any,                 arm64_big_sur:  "97ccd9b616094e055755979daed8216f418d2aeb4639cf978b5df289d1c7e4ea"
-    sha256 cellar: :any,                 monterey:       "c3058d31c2f16a210b122115dfdfa5e29a36905185a505abeb4e9f02d04b9d09"
-    sha256 cellar: :any,                 big_sur:        "88027c4126895fb5c1f25b1045df6bd3e79dd9d4c3e0e7c9623c0538f72d0df7"
-    sha256 cellar: :any,                 catalina:       "b69ed34113341b0c25778b0b10af2079d17e32e2f7288fa2feed80677124ec15"
-    sha256 cellar: :any,                 mojave:         "9f941a568397ae9ec164cde36aaafe90237f36b516e1403985e10687601cf15a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f65fb0bf533922b366e1c60989fd0db345afdf7769eb88ae6bdb9aaa5833d482"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "d8a8d893b78c19ce75e2cd68a50b2a90d4f73516e31e73ba601e4ab61159583d"
+    sha256 cellar: :any,                 arm64_big_sur:  "fd5dee02539fd006e3a8e4cdca443131c2a82ee8d4887b753341216f089cb6f5"
+    sha256 cellar: :any,                 monterey:       "de0910229cedf933e6f1090bdf1fc2f6913fe8526416c383ff0a255b6e820549"
+    sha256 cellar: :any,                 big_sur:        "8a87e452920de367641fa92294fed758b62a71e174cbaaa9320edfc7d5b096b3"
+    sha256 cellar: :any,                 catalina:       "8e9ef140d976394e926c488f5c33b0fd342e9669dda178c974f917d00440f1cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8208da2d960f5a7a61e9db2ee8b52f14c2770dccc927bb42032c29b198d64804"
   end
 
   depends_on "asciidoc" => :build
