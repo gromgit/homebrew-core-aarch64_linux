@@ -12,12 +12,12 @@ class Xterm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "db50088a7d5d877b768fca3821310aa2e780bb8ada019c61cec60b9b17e74a25"
-    sha256 arm64_big_sur:  "37c47e44463d846507b5b7b4baa65ac5188990bcc1bb8bfa2f031d6a40010560"
-    sha256 monterey:       "794179c013a3f3bb7d632ebbb2214509c84acba6f43ae1a6ca9d90eef15d51be"
-    sha256 big_sur:        "167dc5b1b2da458d268a51980d22203bb2080902102600d9b59d5ff019fedb37"
-    sha256 catalina:       "b24a3eeba111398157a97b92d9ddc5259ebedd1e658daca81ac8956cb1dc1fcf"
-    sha256 x86_64_linux:   "3b3806d9a02713949cf89cae422c541d600c8ded75e35639ba56e790aa8c1aec"
+    sha256 arm64_monterey: "260564401875feba34d73eb38d0f2682c42655ab270bd104ea4630920e1df43e"
+    sha256 arm64_big_sur:  "150d2bcc808932050ff67de605bfc935f509d43779e1d63aa6a59ca76fe8bab2"
+    sha256 monterey:       "18bdd303954686ea45f43e254bc5e0376c0bb8de77d66cf97e2191cd0193bb20"
+    sha256 big_sur:        "8e250d9bac280675713faba431fae30d85ee6c7c7f240b32efa8e55aa2377a14"
+    sha256 catalina:       "a5341d359a67ddc602437c92e4a3a0b1318a5d9acd5f7372e2f5cbe5be9dd827"
+    sha256 x86_64_linux:   "94617bd9f226e4f1fdcc43b44063dcbc8cb7accc5a5d3ae4692360cce3be12e1"
   end
 
   depends_on "fontconfig"
