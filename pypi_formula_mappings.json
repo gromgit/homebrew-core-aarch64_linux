@@ -501,6 +501,9 @@
   "theharvester": {
     "exclude_packages": ["six", "PyYAML", "typing-extensions"]
   },
+  "tmuxp": {
+    "exclude_packages": ["PyYAML"]
+  },
   "todoman": {
     "exclude_packages": ["six", "tabulate"]
   },
