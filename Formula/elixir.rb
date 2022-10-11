@@ -7,12 +7,12 @@ class Elixir < Formula
   head "https://github.com/elixir-lang/elixir.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "90b3ec6264ad38ec73c7612cfce7d3f6b9738a66156c63e8896827c298c335ad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "419ddd38f0070c9a4742a7153d9379e28166923119779b74d7d96e7c240c007d"
-    sha256 cellar: :any_skip_relocation, monterey:       "2b15f8f6aba2a99af34a32676bae9e27749151c311cae54b5c484a0ad8df106f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "32933c532e5fff3b91922d6e6d9bbadd1fb41408957508e1296d735778c604e5"
-    sha256 cellar: :any_skip_relocation, catalina:       "cc3f455ff4f77f53c53854d924cea5d0564b7266d6c4a28ddc7bf3078df414e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dbcae8c2219987f2df81cae6003943fee3f0e40b9558f27bb8ae80cd188f88ea"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf340a0f6b1eb60d351908238eef2a4d4efd4a46a9dd0b8ada3307acdf2349e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bdb3dd124b76b8c053824c7100267c8e5e13ad28dd01896fca29b970b690e8e8"
+    sha256 cellar: :any_skip_relocation, monterey:       "ce4cc802298ed70ff11b67bd3ea66f7ca31c5622deb32759a667eaf418c2dce7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c4cd28f9a2d4a78f36f47aa40034c73cd71f34841840627343d8632fe68fc14d"
+    sha256 cellar: :any_skip_relocation, catalina:       "c38165840752d0ddebc3f637b1f9a738e52003d2539e03c088fd2de658939ba9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20657ede4c7fc987bb381e5ede14fbc8a49c1ea2d5116ac739b2c81723dbcdab"
   end
 
   depends_on "erlang"
