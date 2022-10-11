@@ -8,12 +8,12 @@ class ProtocGenGrpcWeb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0587fc3aabc068843d2b601ebad74edf5779855603e1fea8d4b78b8974551696"
-    sha256 cellar: :any,                 arm64_big_sur:  "9bcf871e1da065a5a9c86d8b748701a296d2c5188f80d301f9f8ea6a6ed3a50a"
-    sha256 cellar: :any,                 monterey:       "de0f2a8876ad8d2d95e7a19efbd19bf8c147bebd643815839ff7e4b2684fbf0c"
-    sha256 cellar: :any,                 big_sur:        "b2d4399826e54859bf00219c04afb021f8b6ec4ce2bf06d29e37f6fc7623ef7e"
-    sha256 cellar: :any,                 catalina:       "052accf3563010aad3848ad7b0d4a7c55b44ef1e2de34453eb6abf1eaa7b169b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de39b8cb717fa5ebfb1fd591049a28e6677b9d172c3f9542afc1557ad66a60e9"
+    sha256 cellar: :any,                 arm64_monterey: "a4419dc20745e0be397694a0181282c8838f821f535fef33b115e63f37a1a69f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7f1c93ce611e0868db6ef7751022e53a81293034b425922c1cb9cf078729b664"
+    sha256 cellar: :any,                 monterey:       "e4babfc501a777bc4aa343efa55d538b3a70f7ed6e9e937fae0c2f09207e22be"
+    sha256 cellar: :any,                 big_sur:        "503597cdbf99f5174d92e631a2479f6bc103c09f7f47dd0bcb92c31242106bdb"
+    sha256 cellar: :any,                 catalina:       "c810fa95ab9f773a1902e4fba0a045b7de6c349104844014b9cf933d7e6d11b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ade0d016857930b12fc4483f980a71352c3f4e072c6e074a7027af392800d24f"
   end
 
   depends_on "cmake" => :build
