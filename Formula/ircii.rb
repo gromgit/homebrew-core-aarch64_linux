@@ -18,13 +18,13 @@ class Ircii < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "06575e2e48874d7f5650fea61b689028f6b7854ba77cd58fe982a3c0b1c66bfa"
-    sha256 arm64_big_sur:  "5c643f15576e03070991659ede28ea7bce710f091e79bb99bcd315d3bdf4672f"
-    sha256 monterey:       "83e421aa74c85552075cda2c66c98df71e6e6c831eb178ff1557611932054d22"
-    sha256 big_sur:        "45c5ac2c7a6ed25595750c5513d11c1c0bec9797680a37b6245d8140ffd1637d"
-    sha256 catalina:       "d261b8a30b2430dcd089356e56e4165073d0f6f76b13262220ebae0ccb599fce"
-    sha256 x86_64_linux:   "94729a716fd12dbf1b984e8d87c746876dd46e3a5e77ee7ef5513965c78c3d0f"
+    rebuild 2
+    sha256 arm64_monterey: "e1a64a64f9aab81c8fce589945912aa0c459daff48e65f455a181d0391539b23"
+    sha256 arm64_big_sur:  "9daf37b4ec3ed1b47c8ce24d9acffb0a0781f648f97220c09c6100310819344b"
+    sha256 monterey:       "bb15fc3ed62c9a10c8555a53cf3ea89d9025a8ed13ba972f9fd78ce7449998cc"
+    sha256 big_sur:        "4d2671014e366e382805580bba8c328f20b52a5838701f08619f030f43f58ae1"
+    sha256 catalina:       "b621da055243edbf54884b186c1250ef4ab80655e7647aa837d07e523e8e5c1a"
+    sha256 x86_64_linux:   "2c88482345ab4bb6ec095d529259fe14768c6cc7b7918883bf94a3e07b62d700"
   end
 
   depends_on "openssl@3"
