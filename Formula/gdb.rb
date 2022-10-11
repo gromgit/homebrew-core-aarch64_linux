@@ -8,13 +8,13 @@ class Gdb < Formula
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   bottle do
-    sha256 monterey:     "2a067be29153e334e732082adfaf3f7579d6bc355c75250d2a04e19b6ef6c0e8"
-    sha256 big_sur:      "333e8565b1af77ab81aa531a4f088bbe29fff27b259c909eadc90cc62d75cb36"
-    sha256 catalina:     "4e90533da0983000eca1e41e1d77675df3f4af6d68cd573d1e8f7f53e38763c7"
-    sha256 x86_64_linux: "1219b819cc5d73edb71169c8e5052a69bc79e7a2b54c65d1fccae9d44feb4099"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gdb"
+    sha256 aarch64_linux: "c515841519b2a51f393c14982914b7634bba0d170290fcec043b46af6e8de9b0"
   end
 
-  depends_on arch: :x86_64 # gdb is not supported on macOS ARM
+  on_macos do
+    depends_on arch: :x86_64 # gdb is not supported on macOS ARM
+  end
   depends_on "gmp"
   depends_on "python@3.10"
   depends_on "xz" # required for lzma support
