@@ -6,12 +6,13 @@ class BaculaFd < Formula
   license "AGPL-3.0-only" => { with: "openvpn-openssl-exception" }
 
   bottle do
-    sha256                               arm64_monterey: "42489dd6be579995365266af6ac1e9e0efb0f059114ca11aea2e403d7f07c6bc"
-    sha256                               arm64_big_sur:  "10036f12b6348491a9b6721c8df2a1ea79158e6e8c50710aeece83b513c9bbaa"
-    sha256                               monterey:       "bad36d8e6a56caf6ec72230e48d71fcf513a09c7dc019a24f1fa3970f6509d1b"
-    sha256                               big_sur:        "4026b2d20490a6be9d3648e74b074f615c54af6257d9dbb8b2a6608e5bda8e26"
-    sha256                               catalina:       "aee4a24eac06896ca037c18918c264e73e71c5e5ab10cb64758a4baf85ee411d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48579a00a95f1864cb86adf6b9e43bb59faee5b76e7f78d20c9e20159d0e627f"
+    rebuild 1
+    sha256                               arm64_monterey: "0ff0297669fece22344c9d26a49137112d941c8fe6d6821c6d26b81114d1f9e9"
+    sha256                               arm64_big_sur:  "3572aa477e228c9c27b0c408d5fd0201f81c97983846551232c470903b2159bd"
+    sha256                               monterey:       "cb1a1ef69ef2ef0053d2f8ca92279ad0bcd5458cdbe8077bf3acd3c4858dd948"
+    sha256                               big_sur:        "3f8d86143bba66c4e2e41ae275353e843ba8d4934473a1fed73f09609eb37519"
+    sha256                               catalina:       "c11e6a5e698b06bdfe5e02e825c6bc5ae6e6c8a0a5ff1a8605510ba5b3ad7fb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df5b1fa70eca4c5cfb903a7a77ba3d29f1b0097cfc3fdcc4fa0096090ad28421"
   end
 
   depends_on "openssl@3"
