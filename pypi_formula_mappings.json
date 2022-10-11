@@ -474,7 +474,7 @@
     "extra_packages": ["numpydoc"]
   },
   "sqlfluff": {
-    "exclude_packages": ["PyYAML"]
+    "exclude_packages": ["PyYAML", "typing-extensions"]
   },
   "sqlite-utils": {
     "exclude_packages": ["tabulate", "six"]
