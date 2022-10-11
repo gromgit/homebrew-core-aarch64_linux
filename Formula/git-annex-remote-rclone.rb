@@ -6,7 +6,7 @@ class GitAnnexRemoteRclone < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3cc09391797c0e451e94b4b5cf7b909e4fdb834fe7d0dc321c42572c41c39279"
+    sha256 cellar: :any_skip_relocation, all: "d9853f2712e4e5c03a8b5e7a3c8295ab4c7b8720583ff75276f62a476a701f99"
   end
 
   depends_on "git-annex"
