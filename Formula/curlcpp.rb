@@ -6,12 +6,12 @@ class Curlcpp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "87922690e232f15e852f33a4636e9b9a4f8458b1c244c4b8465d80c09bd9522c"
-    sha256 cellar: :any,                 arm64_big_sur:  "f6980da3dd9bf14016f7e7832e4981ea87d077958e2dc225eb4eacc3ddef87bf"
-    sha256 cellar: :any,                 monterey:       "deeef2d85d2923bc14f62f48e91b2581e028de97c6c087e41868b2e7c27eb055"
-    sha256 cellar: :any,                 big_sur:        "205dbd2d04e1b71c31d53d7e331bb27745d05329dd87426ac5906a489cb88755"
-    sha256 cellar: :any,                 catalina:       "73d4a493d900c4d5b03e4fe0eb1b657f84075404c8ceb45ce116e36af169de85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "36a715a64edbd313a814be1d7b31aa792290a1828fef45a0ff4e1c06f3eaa37a"
+    sha256 cellar: :any,                 arm64_monterey: "37b2a88d790badde11d542cb0bc659394ce20ee105b1a594ee20dd93cec53874"
+    sha256 cellar: :any,                 arm64_big_sur:  "38ac3e1bfed36e52a7efc40772dec21a1c417f850bffb320da78009520dcd409"
+    sha256 cellar: :any,                 monterey:       "5b52f0e17d2c6ef7c8e53a038854f331b6a77cc2f4462b6e5b624c59eb27368c"
+    sha256 cellar: :any,                 big_sur:        "6fc716d9475e43222ae78511cc50c8b681fe146aa0628deb8da4abe947e93dc8"
+    sha256 cellar: :any,                 catalina:       "0cb646d8b486010a1503e302fa15c8178807d4d6319b4786a6428f855f1a63aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f7a017f66ccb397d33d10c59c358ccf1c84a4b56ff4a27cdf9a92427dceab86"
   end
 
   depends_on "cmake" => :build
