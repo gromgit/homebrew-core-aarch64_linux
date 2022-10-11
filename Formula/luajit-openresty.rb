@@ -20,7 +20,7 @@ class LuajitOpenresty < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luajit-openresty"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "acb8b325c5c3b0ef0f4075371e953a2ff5933804306a3c6c18d0a9c65f7b6dc7"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a07210ba0dcc52d80361919ff0d0c1689a013ff1a8abe669ea4eeb78ef23578c"
   end
 
   keg_only "it conflicts with the LuaJIT formula"
