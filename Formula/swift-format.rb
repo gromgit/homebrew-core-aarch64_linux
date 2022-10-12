@@ -14,9 +14,9 @@ class SwiftFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2d6a3b4dfd7bf236247ac5f7b56fd9b104eea58bc9c8bd645055f94efe106585"
-    sha256 cellar: :any_skip_relocation, monterey:       "c453684156ee2906ccd23aaba4ae936f77e05be6659dd5fb279483b75ad85976"
-    sha256                               x86_64_linux:   "81360b1b643498e1f1e2a6ed9619cab252953be0ab43e0dff148290856e05fca"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "355e227631c799b2c73f0f9815bf9a05e9404d0a47161d90a0d984d90c49ac97"
+    sha256 cellar: :any_skip_relocation, monterey:       "6c087279fc6cb17d916e16457268ea617360079443fa11aa8a3d521fecd160bb"
+    sha256                               x86_64_linux:   "d68e4d01e9be0aeeab34f2159bd492fbc26620d323b93613cf8a7f223343ad47"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
