@@ -17,11 +17,11 @@ class Swift < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "690808aadd61bf4dd990be508d1af6cd583192f1e5341afa2fc85a1c612e936e"
-    sha256 cellar: :any,                 arm64_big_sur:  "6ff1e5aa199df74e95da9b7db917c23110a6e8fa0b23c4866541e3a228488277"
-    sha256 cellar: :any,                 monterey:       "39e33104563e2160ce6976a376110447fed740c0df3957841e2f9909f0e71912"
-    sha256 cellar: :any,                 big_sur:        "5c684b62fec4dea6d91cb4d698baf48bd667b573096680acf9ef4e8572d20609"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "272fa45941167ad143340d1bfd0ddf0546483ebca36cb2310d24ec118dbb483e"
+    sha256 cellar: :any,                 arm64_monterey: "27fc4f9b3e6da956277755cb0d44341bed37edd39e4189041301afc9c434206f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7352c769002054aa1d11f8b4a51f3635a8fff633d2eea7877ac1f657b7df351d"
+    sha256 cellar: :any,                 monterey:       "f37925bbc0f636c8ac5e55e66612a599ec6c865e2aa26d39d1bd56a2ad8b48e7"
+    sha256 cellar: :any,                 big_sur:        "f628e21fcb52479ae8e7c529653ad734ce2d9ee61c1ba601c68d52ed6ccf0cba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a683d46cd3255c9c6fcf24cda776e23e97ab0812a076a307689363f608290d59"
   end
 
   keg_only :provided_by_macos
