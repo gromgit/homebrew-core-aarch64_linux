@@ -10,13 +10,12 @@ class MysqlClient < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "17895bca9ba923b7fb85e5f7d400fb0ad71f18a4f3899cb737f7c0e2c777b3e8"
-    sha256 arm64_big_sur:  "14cc13aa93faef1ed511d17ccd437feac78fcb6fa47e08749d57f33f286a4b7c"
-    sha256 monterey:       "59effc912ee39a20b56d9c76bb35d2c233ab7f17aabe41dcb64224cee640f7f5"
-    sha256 big_sur:        "3987bd3e7443f6b9332a345e775484b26feec6ddb1e48a96defbea851f02ee15"
-    sha256 catalina:       "13dc71e64aff7cffce2cde557f6c85480c65260f2abe542e039280f928ee9911"
-    sha256 x86_64_linux:   "a4c9f53a1c84a345be737a29403f686a96b813e5c4d4b1002dccb5e74819de56"
+    sha256 arm64_monterey: "b565b9a2fb30bd5d4f1698f8942f499b45d31a70f7df08b21461dfecd9f735fb"
+    sha256 arm64_big_sur:  "54a26c071f2945eb906e9c093f84f61421af8439cbc9441138cb28ebc842e067"
+    sha256 monterey:       "c0c6fa0acae0cd96c7c47c76e9816bcc945517f15080fc9704b9394ba077bc56"
+    sha256 big_sur:        "bd32db39d4bc8d277129968f4bfbf664c8a2ad5844bcfb48d33c2f162c8b974c"
+    sha256 catalina:       "51a429486ee4dec872cc9f8ca1484c0238ec13d8538813a5dc88aac85bd0e9e2"
+    sha256 x86_64_linux:   "97869ddde4569e69dcd162b12cf8fe1c35f348d640630170664d84a2f20a0ecd"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"
