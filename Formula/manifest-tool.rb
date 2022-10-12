@@ -6,12 +6,12 @@ class ManifestTool < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d6a12ae584f23e1940f972f4a672e1cb48c69dd8184b1eb801fe10a1ddaf52fc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5dca5344a17ae9648e59674d1030ca0c82c43f205fb7ad53a9cbd1489ee6343b"
-    sha256 cellar: :any_skip_relocation, monterey:       "9a96c9beb33f49a728814fff6ecb912400d30742e2cca52ff690318b49d4ac95"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bcf583dede09cb63b100109857e5cace05161ac0cf1cf95bf94e2194e257ad1b"
-    sha256 cellar: :any_skip_relocation, catalina:       "16fb73f39fc8fe038d345a921951e2c2a6c4438d29959680f6fc587388bb43d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fcca7bd37323cd666b96ff851b390e786c04ec1639fdb9c161e50515adaae153"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "42b358798b4ec2c454b00f750147bf47d7e801708f8ba84308d302041cfe47ff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8b682e89f12fa2f61e70bcb71636d5a945439411c7e58a332540e8e83589ad8"
+    sha256 cellar: :any_skip_relocation, monterey:       "f9dc01750d364f7124e2ffc0c64a0c9ee065256e5eaf997af5daf70c8568448e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c3c0e5b02efc40a188b6d6e7c288ee91c74bbb18697688ca6152d0f758b65fe3"
+    sha256 cellar: :any_skip_relocation, catalina:       "30e368dfaf1a9363506c56dba4e2e3f90fd8807b7389be70a75270fb2f97b67f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e9c2f5be3048a680e40e5abc459d8d06769afdcaa6ba9d9d93c3c8c2403a107"
   end
 
   depends_on "go" => :build
