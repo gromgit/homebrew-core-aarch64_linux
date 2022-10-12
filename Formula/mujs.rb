@@ -9,12 +9,12 @@ class Mujs < Formula
   head "https://github.com/ccxvii/mujs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5a94e31250222ad2105bb9ada248540edf2709980dc7f160909416f067744647"
-    sha256 cellar: :any,                 arm64_big_sur:  "e7bb9ec701b195dc73bdcea8c888745811b3e1c5ea0db69fd6f5c13d4500b11e"
-    sha256 cellar: :any,                 monterey:       "e77cc955e112e39425ace8bc18456cb5271db4d1f8d1aa730fd8e60a5b1cbfd6"
-    sha256 cellar: :any,                 big_sur:        "0631602182949a2efaa1848b960d182099b426b22f4697744ef2a4708780af91"
-    sha256 cellar: :any,                 catalina:       "0548c920d09d53c3c3da0ecf98cc24e5b47491e41e4d9ccf1c00ebbd6a19083c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8df7e22cd7528ce683daf23345ea3b0b1d32debcb190fad3236ef7ee0533a78"
+    sha256 cellar: :any,                 arm64_monterey: "2cc98920066db183fbc6c024a676254dfb46628d3ba2e41a36cd94e35016c23a"
+    sha256 cellar: :any,                 arm64_big_sur:  "49a0fa9258cb985ffc33ec3317e21ca7ce250a8e6ece38e1b65f21821410baa6"
+    sha256 cellar: :any,                 monterey:       "70e32a32fc2f81d22e499516e97dc771c93e57c88058f59b5a7f9b7e0ce65daa"
+    sha256 cellar: :any,                 big_sur:        "95c9549b0f7969d7ebec612e2d8c35bb5c2fe5a76ab353264b034abe32907eed"
+    sha256 cellar: :any,                 catalina:       "4854410e56af3f104f3cb99efd5657b4a23d40fcda702c7f59701197775eb5bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a414797c314cba62749d4a862dba487d6033e07fba8f04f205962a8e4e46508c"
   end
 
   on_linux do
