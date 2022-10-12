@@ -13,7 +13,7 @@ class Ehco < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ehco"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "42b6b8b1fb3f92ae53105c63cac7ec6d838253f7e023b1505d1eb092dfa051ff"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "61060dfc1d448d152cbba949ce9649905c33c2ecdb0cdb21953aa7cac35afcf2"
   end
 
   depends_on "go" => :build
