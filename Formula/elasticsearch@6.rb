@@ -7,7 +7,7 @@ class ElasticsearchAT6 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/elasticsearch@6"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0a84d7e2e71e18a881d51bfc4e375e418698cb26fc9108fe657ca6c0818d5999"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "462371d043d1466fb78bf950eda34805d4ac1cfc1d7d71320a878637a62ebbc0"
   end
 
   keg_only :versioned_formula
