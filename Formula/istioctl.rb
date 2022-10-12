@@ -2,8 +2,8 @@ class Istioctl < Formula
   desc "Istio configuration command-line utility"
   homepage "https://istio.io/"
   url "https://github.com/istio/istio.git",
-      tag:      "1.15.0",
-      revision: "e3364ab424b70ca8ee1ca76cb0b3afb73476aaac"
+      tag:      "1.15.2",
+      revision: "b542583af7f8240ad0c9cab56eb9f8d55e1357ab"
   license "Apache-2.0"
   head "https://github.com/istio/istio.git", branch: "master"
 
@@ -16,10 +16,8 @@ class Istioctl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "47be9623e692cec34eca7a781611efc551970062d38d5706b476ce997cda7850"
   end
 
+  depends_on "go" => :build
   depends_on "go-bindata" => :build
-  # Required lucas-clemente/quic-go >= 0.28
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
 
   uses_from_macos "curl" => :build
 
