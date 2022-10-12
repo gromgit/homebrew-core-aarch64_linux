@@ -6,6 +6,10 @@ class Typewritten < Formula
   license "MIT"
   head "https://github.com/reobin/typewritten.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a1cfc6eecc7e3de0a1ae5ef9fd86450cbe352646501817c343db1e013e12c1d7"
+  end
+
   depends_on "zsh" => :test
 
   def install
