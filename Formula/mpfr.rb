@@ -39,14 +39,12 @@ class Mpfr < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "81ced499f237acfc2773711a3f8aa985572eaab2344a70485c06f72405e4a5e7"
-    sha256 cellar: :any,                 arm64_big_sur:  "9df11560dd3650ffae35c134cef6e0e91aad0e862f5c8895c568b828cf0598d5"
-    sha256 cellar: :any,                 monterey:       "7eb2f42b8f39d4f721620d1d54417e27fdb93c993e3ffd7e6ad43310cd84de1b"
-    sha256 cellar: :any,                 big_sur:        "1e8eb0326f62d3461d420d98af6fc088daca481cae89fd77a75b420d2e76d776"
-    sha256 cellar: :any,                 catalina:       "5fcf57834f58c18761c6c7b0eb961eb7f9fc54325b5361bf3a17c4dee6ebc08a"
-    sha256 cellar: :any,                 mojave:         "93c0d2ca093819f125300002cd34c1d1b4dfb7a1403729205861bec21388ff12"
-    sha256 cellar: :any,                 high_sierra:    "77581a1df66fb1ef55ffb19777d08b0b60fbc3d2d7ad491a8aceb3a6a4bf7ffd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c5f1cfd038e8fbd640795e34e5e23c11244be3eca7781979600ec0d50bb9c0b"
+    sha256 cellar: :any,                 arm64_monterey: "57c5c5b16ed462b28c2691c8284bdd6849cf668b190a59cc6e1cdb1971f57ce2"
+    sha256 cellar: :any,                 arm64_big_sur:  "7bd20206002bf9839c3477d1c1013b6000953e2f2b13f9f252184037c8c05d88"
+    sha256 cellar: :any,                 monterey:       "1007b284b2bc9825f8aa1f2bf3162ff8d2ca8f5d0c3c9802c8a9be452677648e"
+    sha256 cellar: :any,                 big_sur:        "e220a942ee9fcbe777b8bacee4669f84deddf08bd1dc2f65e44da7ab2349719a"
+    sha256 cellar: :any,                 catalina:       "ec511d6651ef65d53be5f7b2210b0dd78bee017b7a8d48c8db2175ad16a4e086"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "345a3d99db0f4149f84f0aa16c0ee9c4275f695e4fa0f6d2ae1e8054a0d9c279"
   end
 
   head do
