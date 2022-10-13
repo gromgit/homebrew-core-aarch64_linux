@@ -8,12 +8,12 @@ class Helm < Formula
   head "https://github.com/helm/helm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "284e4c49deee49ccec75835fa7e3173cbc9045db1b70a35d4511a9e993339cfc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c65b7a2ce00ae6aeb1a635445b7b63b57dd0ec85719d303198469094c4ee6d6e"
-    sha256 cellar: :any_skip_relocation, monterey:       "09afc8d94008a2b6992739525c590d7e091b78f96593ec8af0196588165cd7c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3010ff191d753526db401e89724e9d60921e168735e4ca3e8e879b51e210c7b1"
-    sha256 cellar: :any_skip_relocation, catalina:       "bbabcdf0470dbbbfd824a4e7530cdbb332ec01b82e53d78a8349007d8e1844dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7675ca97ae59e3c45ed15ee3700ae6d8c6a9a24bb4c2b165fca8274a466f794"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0907773765ef9f2aacd611097a0e108b1a1b6a1bed676952cc1c437b94212205"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b27cd513c5f28b9792e4a48fc67cc3a6ec3bb9a0af7bc24dbcdf6a39c83e9afd"
+    sha256 cellar: :any_skip_relocation, monterey:       "f17c72d19adc8c9bca71c904333ab468fb12cda9b1ecf8d70d108422d2c957bd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "98f13d50afa181547e8cf961f4cf7b1d777b893860ac6d68a355f0b8d90b9fa6"
+    sha256 cellar: :any_skip_relocation, catalina:       "05b224b3dd5bd0efd977a371adc8c09683e91dd3ea8cd592a512e33873558d74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3eecd83504814390df92dfb079481d5cd4c12d5f76a5fe4ed6b96a1b0ba8620"
   end
 
   depends_on "go" => :build
