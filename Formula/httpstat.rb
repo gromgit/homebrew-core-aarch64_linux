@@ -8,7 +8,7 @@ class Httpstat < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "219cfdfb663f1f260322ba637902065e5cad3559eeb2e338c198875f3cfd4b15"
+    sha256 cellar: :any_skip_relocation, all: "6e4abcd3c43514f792ffcdc766d65e22f37b8b1c66d5bb89828c73d33b06f7c1"
   end
 
   uses_from_macos "curl"
