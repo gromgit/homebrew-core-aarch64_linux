@@ -11,12 +11,12 @@ class Findent < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c9c2b26be712bc1bb1ce379e61f00310b7e16c21b407a3bd324033b701503fc3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a8b268dff924a4eef8ac6c1b8a9483eb507a75f0201b7dd6378d15fb58b1ae6"
-    sha256 cellar: :any_skip_relocation, monterey:       "0bd83c8652c99951f4b821fe365448c435d4b5f19c69d0bc23dbc1a7308e1411"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fe2bc46144328becdc142de53d172c2c41bb536a0519cf14dc6404b91dd1c41d"
-    sha256 cellar: :any_skip_relocation, catalina:       "b7f1fc9ce343ada496989a2a7d32498da3db143e034411906c1396a05a3d562a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "670cb312112c73b5a2bf72e1e6a7d1d9c37363d5816670fa1e4011c8fabc1803"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3e368ee56af4db589ab47db471bafec013482b5bda004654f2f9940721c57e2b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4cc6671fa14f2200eceb89a1295a86b0acedd65394b30c9fd0fdcfe081a94ce"
+    sha256 cellar: :any_skip_relocation, monterey:       "f96f5bc60ca81283aed500aed25d8119d19a686596fad3a89b6d36c3dc757da2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b11e38ffcfb79f6acea8865015915e8b05219349cd77da145e3eb2605463be0f"
+    sha256 cellar: :any_skip_relocation, catalina:       "8a5321f528d4d2c1f8f2162bc0aa9fcf5b00e232167ccd85a0e1a3e15ab36fc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae996a3f25762647aa6d4913fe13c4bac465781b71e2abf41844cd1adfb90054"
   end
 
   def install
