@@ -8,7 +8,7 @@ class Sophus < Formula
   head "https://github.com/strasdat/Sophus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "7e329dd9eaeba92ba5d0941be275218a16c93837b1c7f9c6bec4fbb5517ac044"
+    sha256 cellar: :any_skip_relocation, all: "5c03acef1a12656ea660610b57869d2df2ac38655fa4e783e2a959e5a65fa008"
   end
 
   depends_on "cmake" => [:build, :test]
