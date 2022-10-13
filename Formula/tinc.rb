@@ -11,15 +11,13 @@ class Tinc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3952cc168368b8c490fd9ee4886a14c9073736f498b52e37c98a2a5f25001f21"
-    sha256 cellar: :any,                 arm64_big_sur:  "697c1a6266c837ae6f32ef0509b6d5770c7f723e5791b3263693fc8429baeb25"
-    sha256 cellar: :any,                 monterey:       "f345428a6e452522d68cfde7b2d0f29a2a7e12c5880d3991ef7bd614b87f3b6a"
-    sha256 cellar: :any,                 big_sur:        "5059a3bb30eaf4d339742ade7272a838008786010e709781bdf28856131229d5"
-    sha256 cellar: :any,                 catalina:       "fcaaca6b5abf4f30a55149f41871a7c4ec99fe8a9dc87ddb68ea735c03569a66"
-    sha256 cellar: :any,                 mojave:         "ba34dc41517f617c4d61d61e2f76cbafd9b75aa5edacc894e5b24e97cfb269f5"
-    sha256 cellar: :any,                 high_sierra:    "a5ec2ae5f1e6252f80f33158bb0a1140e29764ed1f2e8754dcedf50e4fb49290"
-    sha256 cellar: :any,                 sierra:         "923b15d1dcd7aafbb566f83edc9cced61b13379e857243bbe28b2755270b542d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bda0235985da2297d12129c042544a72ba1e004cd82c996a2a5953b79f341782"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "4fb0f6f2276a92f60c5aad1674c137850d6e0a6ac77adc8ce575aa4288a8b942"
+    sha256 cellar: :any,                 arm64_big_sur:  "88d77dd06ee97bf7c1cc0e330876c992d7d460cc55e8e62ebb5c03a0f4ebb0e2"
+    sha256 cellar: :any,                 monterey:       "58d69be546dceda9a4d413770531633c132cf46a5901553f3d0367cd0bae282f"
+    sha256 cellar: :any,                 big_sur:        "094208fa2043d75696fa60b47a4d26f32e67fbffcce78cc37429a6eac641ddb8"
+    sha256 cellar: :any,                 catalina:       "878a5d0ded29f6b9ad6a18e040508e7597551d4b359c39f9ecaaa7fc6cb91b12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1cf23e958fe70fd7662d67e87ab9adfd4d838550b104216ec70363391ec7595"
   end
 
   depends_on "lzo"
