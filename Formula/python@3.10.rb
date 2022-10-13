@@ -142,13 +142,16 @@ class PythonAT310 < Formula
       --with-openssl=#{Formula["openssl@1.1"].opt_prefix}
       --with-dbmliborder=gdbm:ndbm
       --enable-optimizations
-      --with-lto
       --with-system-expat
       --with-system-ffi
       --with-system-libmpdec
     ]
 
     if OS.mac?
+      # Enabling LTO on Linux makes libpython3.*.a unusable for anyone whose GCC
+      # install does not match the one in CI _exactly_ (major and minor version).
+      # https://github.com/orgs/Homebrew/discussions/3734
+      args << "--with-lto"
       args << "--enable-framework=#{frameworks}"
       args << "--with-dtrace"
     else
