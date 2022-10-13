@@ -6,12 +6,12 @@ class SpirvTools < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3676eb82afbaed373d6890f396c776894e203462236e54dc78c875752d49c1cd"
-    sha256 cellar: :any,                 arm64_big_sur:  "bff478f3a0a4568b59a334ffa58ca36bf28fd2c231d7c45da751748dd959ba6a"
-    sha256 cellar: :any,                 monterey:       "fdd9b70b3a5bb37bcf950d92fdf935858fbe28fddcfdeb26d6cffd6fa20ac384"
-    sha256 cellar: :any,                 big_sur:        "2fd8180138dd9ce986b05a3c99949a1f93e74401c77861108164e0cc858d29c6"
-    sha256 cellar: :any,                 catalina:       "cf5831027fb19732eb90e87581569d21bcf60041abfa0e275aac18f19d9b0cc3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a23cff43a7e33773b6eb205fe5be7a9b28c24863186f148633c5d42ffd4386c5"
+    sha256 cellar: :any,                 arm64_monterey: "37ff0adf025355db66b40860640ff5e6d4425216b3c9a2ab8a9b723dda186baa"
+    sha256 cellar: :any,                 arm64_big_sur:  "586a347e6d52a8b01469ccd62cd24a9d2d532434158a9abad9153ed46315e655"
+    sha256 cellar: :any,                 monterey:       "331935c85bd03884539fc5934bddc339eae754278000f0a1b3baf7fce3e3ca32"
+    sha256 cellar: :any,                 big_sur:        "21469d8e150959f22fc1e826ad7dbb32ccf1594f622e73b157053f4ff6496cb2"
+    sha256 cellar: :any,                 catalina:       "639ffc0722c8dc1359a04fe46ca8a069b015aed20707dfae199185737c749e09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a8d3fbc59d3e6f92e9b6a799ba7b93bac5c844eba1a16f5a1ebceb20f85f0c5"
   end
 
   depends_on "cmake" => :build
