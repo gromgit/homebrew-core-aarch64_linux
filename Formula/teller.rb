@@ -8,12 +8,12 @@ class Teller < Formula
   head "https://github.com/SpectralOps/teller.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2a875942f57f04f5a95cc6df0d438b45ac409a5a0a9707b559b262f28700d1f0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c978fe39f20ae250c838865ebe9aeb58d6999862f32f80d256ea7a2d42a6697"
-    sha256 cellar: :any_skip_relocation, monterey:       "c73ded881c6a0eac5970b01006026e8ab6c94dbe69037a7486cf1264f4ced60a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7db5bc61d796e7eafee59050a68571c345b0f1b24e3d4cede371701f34cc19b9"
-    sha256 cellar: :any_skip_relocation, catalina:       "4b5d533b017988137038cf1382f4a2b9fd12de5bf6994be1be3309f0a8866657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4432101033c78c20387cfadb0ff4fd740bcd95c8bc6ec90b1a7cad316fef8d8c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "880fe24f3d79c196a20b850452274728a9cb135cb0bf19ee1e0888b9025cbf00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c82814b0c169afe96b4315b8a18a95881129c44d607c9a3185f38caba8fb7f71"
+    sha256 cellar: :any_skip_relocation, monterey:       "c95785a51067a6ed798e7a41787bb00d7cf5747bb0a3559e9f7df9442de756db"
+    sha256 cellar: :any_skip_relocation, big_sur:        "04987c4db227ef8fab1288ee03506684c4e49f72d73f06c4035c858cea21b72d"
+    sha256 cellar: :any_skip_relocation, catalina:       "86656bbfd93625dac6daa93ecfaba265c3113a5f00bd4ed811f39aa80c445be5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "234ad493942bf3d5d2b93ff1114dfebf5280a0325c1b6271a7e2b22306a02067"
   end
 
   depends_on "go" => :build
