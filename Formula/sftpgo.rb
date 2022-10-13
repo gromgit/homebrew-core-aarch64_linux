@@ -6,12 +6,12 @@ class Sftpgo < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 arm64_monterey: "c3b0c6e13536a32f7baaa841a5bfd3668dd1211467e32fde7e06a144ffa953c9"
-    sha256 arm64_big_sur:  "ab12bf9b5e8661ac0e73b78e20b68e484f9db034661d5cbcee564eb624752d0b"
-    sha256 monterey:       "8b4dec4c86f885da48337e900eaabd4dc10954aee1ff2544cfdae732b09618a3"
-    sha256 big_sur:        "60d3bddb33df2aeb961b83e647e080718460aad7ddd8b3d2612d85836a0ce45e"
-    sha256 catalina:       "085b491c48d93995c3623d9a9eee3c42db9c79b63f3a7ed3f109775ae0668932"
-    sha256 x86_64_linux:   "dcf488bec2d1ba3690389606908f63341029636f606439a1876e4e77051212fb"
+    sha256 arm64_monterey: "2dc6c002dca5285b082e2087251f3675a684820df36ae9309c72829b498d510a"
+    sha256 arm64_big_sur:  "01089e3962ea05fd48eaea6cb4e434cef9f5a537e02be3ba9262ced218de15b5"
+    sha256 monterey:       "8083269be878b214edb991cb4500836d919cc57872d49299506d61322884ff33"
+    sha256 big_sur:        "65b6e77399e75378449aee0f396043b40c8c46343c4d269e2a64d7443dcd6933"
+    sha256 catalina:       "34390caca6f71b078f6eb44be565288d498a2a28f48a5dcf7566046780c4ff32"
+    sha256 x86_64_linux:   "d0c6b0c27a5e8e0832f0e0ba781ba5990e5b48ec808f5496fdcf40fe9b053bde"
   end
 
   depends_on "go" => :build
