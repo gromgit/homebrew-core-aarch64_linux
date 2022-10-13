@@ -8,12 +8,12 @@ class JoplinCli < Formula
   license "MIT"
 
   bottle do
-    sha256                               arm64_monterey: "d075896c46572bb397fb8bb33eec5397a7bd196af8428737bef136616e42d074"
-    sha256                               arm64_big_sur:  "e8eab26199c344f6a370d1ebf68a925dbf6ad93746ee1ab8ee75b45a428c189c"
-    sha256                               monterey:       "6ae50728292a131ee4cd2679f184d5678843e09335de8c6d24bf627194dbcf21"
-    sha256                               big_sur:        "ea1da65c3f856be2849fabe36e053f15b9adb368b5b3f74779364116f7bebcae"
-    sha256                               catalina:       "ff01bf2bc679496d8de250d25eacadcf59cb315082eccfafb58335fe56230e94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "712d7846deaf2b1b36ae5b6b6bfafa6929d89342dbb7634dc03bfe117d4ebc5e"
+    sha256                               arm64_monterey: "28d6793cd386cfc2bd8e58ec7a7b4b26f1c52b8fcc65d3f461388a7b52b89794"
+    sha256                               arm64_big_sur:  "297b9a9322784b10e26bf452a7292b6391e5c2da2f742639f6f2a311da9fcfc4"
+    sha256                               monterey:       "c1c6edfb7a1a55222aae694b07dd9bca8534f5eccbe0b729f24e55e989941704"
+    sha256                               big_sur:        "73a18cdab03e94b00f3d1ca2aadf760e05c01942659ab1c293bd27f55c7783c9"
+    sha256                               catalina:       "7cd5a4470f986c380025dcb129f8488419b90c565616849cfe6cd3f541551272"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55f34c94997ae0bee23826a25cd56d578cc3a74a576aa8baf1d4762a9d254915"
   end
 
   depends_on "pkg-config" => :build
