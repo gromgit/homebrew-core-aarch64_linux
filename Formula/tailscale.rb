@@ -7,12 +7,12 @@ class Tailscale < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b49b8d5c2c9fd61942d20bf3c4ba1154ba9e987ea0cef4832749d985ae0e8650"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3f185276b717b00bf623e1f663371aca88b4bf0d83e4c9cf268b7c512b8575a4"
-    sha256 cellar: :any_skip_relocation, monterey:       "e75801fefbee372c4f8e30dc0c5378325e438dccd8c9048815e57d2786332962"
-    sha256 cellar: :any_skip_relocation, big_sur:        "28cf48120785eddd638e704208aa658d15ee6b849def6ee4cd5c89db9f4b9022"
-    sha256 cellar: :any_skip_relocation, catalina:       "9d3b26cfd3fac37951943c19cb88ccf4c0237c9c8b445d2e13bf4122a493e546"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf6b0c503bcf441aea55535c2a8daa0bb1e8b0c39709534009d8a02bc0ffb96b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c84179855189c07cfd97bdaacbc15e138792fdb9cf21b5e3b90e507657fa2109"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "928bd229832fec9f08afae5fedce8956a88436de44628a54514700719e81f13c"
+    sha256 cellar: :any_skip_relocation, monterey:       "f2cbcfede0d5496279ed92101a4a0499203895478ea8b71afc18d6fd7a41163e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3b55e4f00ddf0a182d3da2a3b41a4fd54a212f465ae628fcf78cad3ce3057c4f"
+    sha256 cellar: :any_skip_relocation, catalina:       "37028eb48d45de96a6a33f0d4e1a7181d09baddfb7fe4780ccf81e504500a517"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c24051d9f381f598981c3039e7130321e3fa8b5a223e211dad6794ec12d01b8"
   end
 
   depends_on "go" => :build
