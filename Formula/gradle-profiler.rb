@@ -1,8 +1,8 @@
 class GradleProfiler < Formula
   desc "Profiling and benchmarking tool for Gradle builds"
   homepage "https://github.com/gradle/gradle-profiler/"
-  url "https://search.maven.org/remotecontent?filepath=org/gradle/profiler/gradle-profiler/0.18.0/gradle-profiler-0.18.0.zip"
-  sha256 "242f891590353161713c195f01a677d938cc74bb6f56832d2c76a6ab4a5a9d79"
+  url "https://search.maven.org/remotecontent?filepath=org/gradle/profiler/gradle-profiler/0.19.0/gradle-profiler-0.19.0.zip"
+  sha256 "abc1f506a023752d5b4a23c5661baef3761ce802f5bb6904c486b3158bd893ac"
   license "Apache-2.0"
 
   livecheck do
