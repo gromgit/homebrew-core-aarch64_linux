@@ -7,12 +7,12 @@ class Dpp < Formula
   license "BSL-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "da4b8359d7e016ec880089a9b28800b363553af2a9c54de34b6887df092b08b8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28f05c69e09240046206dc0a28743f7ab060bfe833290f6a2a67a41712aa601a"
-    sha256 cellar: :any_skip_relocation, monterey:       "428a66c01b7940ed0d32541fd016d9d8ff17e3cf0f2c309c7ff65bc001df9e12"
-    sha256 cellar: :any_skip_relocation, big_sur:        "43cc9c9c63f3a07dfb756dab9c387e6b64b3a59d8c6f64ff6f36a38ab22cc02c"
-    sha256 cellar: :any_skip_relocation, catalina:       "0fa0e83c5e676237d16bcaa80251f000bb0df19ce768fb7c7db2b6cc3500f8e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cf56aabe53afae0178dafc765d4e99dbe8668ac24d8347868ddc2a7f916c57e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "db424cf9c108a38fe50597513f26f187df360d990f55e6f74b9153c6a85cd13a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efdbbd1136c6320364b15692437dcce9f283f82810eb392595c3440ae8bed034"
+    sha256 cellar: :any_skip_relocation, monterey:       "89d15859ef732a88df7c91281f1af81baa5b783e4248baddec50918b7b365e82"
+    sha256 cellar: :any_skip_relocation, big_sur:        "46be70b12a9fd3103c32dfedbe0ef3f2c71b7bfe5c957dc70ef59f7672a9dc6f"
+    sha256 cellar: :any_skip_relocation, catalina:       "010a0bc89e3e7193e13260a23dcf223a77c5b84f0902c53e57345d2ace0d243f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa2b435911b3a960d25543fe31898d48ffebb7b268fa2423456e8a7c3b9c3f1d"
   end
 
   depends_on "dub" => :build
