@@ -7,7 +7,7 @@ class GetFlashVideos < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/get-flash-videos"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "60a71f0e406208a5d51a016d5f0440b5e6242d228c3bdec5ae51a86219eecffd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "72bb363314ffffcec24efe66cb38ea11f42ccfb31b0e5c8b0d683faf976f68a3"
   end
 
   depends_on "rtmpdump"
