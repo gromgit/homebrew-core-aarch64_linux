@@ -1,8 +1,8 @@
 class Geoserver < Formula
   desc "Java server to share and edit geospatial data"
   homepage "https://geoserver.org/"
-  url "https://downloads.sourceforge.net/project/geoserver/GeoServer/2.20.4/geoserver-2.20.4-bin.zip"
-  sha256 "418ef109c051d997d75d86a6fe51ee5280b87fabdb73cd96d3210f2d43a79b64"
+  url "https://downloads.sourceforge.net/project/geoserver/GeoServer/2.21.1/geoserver-2.21.1-bin.zip"
+  sha256 "2c885bc5768ae481fc73fc3ea13232b70ce78e39bf462cba5d96bba0292147ea"
 
   # GeoServer releases contain a large number of files for each version, so the
   # SourceForge RSS feed may only contain the most recent version (which may
@@ -15,7 +15,8 @@ class Geoserver < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5309f664f62a28dd177bc1ab63c3e59f6ff47f9dc7242a277d4c9abd66d514b0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/geoserver"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "662699e3aea0537bef9cddf0a3e51b73e51439759ecf871ebf8fec51a9f38920"
   end
 
   def install
