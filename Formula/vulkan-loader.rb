@@ -12,12 +12,12 @@ class VulkanLoader < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "07e30b93c9227cef5f998060870db0803e0a18d85867132cc67dc23579edbe37"
-    sha256 arm64_big_sur:  "830f4a3e1c20bf2872a4eccde3b40a6603dd17e904546c159b201116dd7ea13f"
-    sha256 monterey:       "9ab294858ffbfabf0e4e03a6e7f9a99900b7c77cb778182dcfbdae0907cdb5a3"
-    sha256 big_sur:        "c8e292fffb9bd5bd8982a8ed02a4be91f7b298b8c09a68e38621569cb7f01bf5"
-    sha256 catalina:       "9fb0655cda3704b2c9ef884563ed7699945aec2fbb525c5daa3ebabf1977c826"
-    sha256 x86_64_linux:   "5158aaa6aeda722db1c9e8b7fa4b4154dac5e82c9e3a88d5942d53fb138715d0"
+    sha256 arm64_monterey: "d04823c0040c278cfc8d45f1f2202195a436bfb423382636f90ee1b5c349d829"
+    sha256 arm64_big_sur:  "e9635be13f9d8ef0fa53d956beaeaeadc42acec867ceb90954e84fcbec16b114"
+    sha256 monterey:       "40f94cf2787bddce51c1d6c1f627dff68a762eee956bf8b2b3f6eddeee783e1d"
+    sha256 big_sur:        "2f28e75fc0e87a2311942668f4c63987347b070c98dfa20bcbcde443433ffb17"
+    sha256 catalina:       "0c5e41bfad73b02adbceb0bb2b67793c734b46ef3d8b90ba78f506382f5c0b2c"
+    sha256 x86_64_linux:   "404a9e594269ab59f8973aa7b140aa7b4dd863d61c60ac2843f50724c1f3a7cc"
   end
 
   depends_on "cmake" => :build
