@@ -90,7 +90,7 @@
     "exclude_packages": ["junit-xml", "six"]
   },
   "charm-tools": {
-    "exclude_packages": ["six"],
+    "exclude_packages": ["six", "jsonschema", "attrs", "pyrsistent"],
     "extra_packages": ["wheel"]
   },
   "checkov": {
