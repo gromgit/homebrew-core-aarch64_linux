@@ -6,12 +6,13 @@ class Authoscope < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f91ed4573ad840f6838d4404c83a0f033b22e92c14f9fbcff515bd8bcf06923"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1056a76b786037d9c7a1cbd771c166d401c73bd09a376dd70c62b84198b70700"
-    sha256 cellar: :any_skip_relocation, monterey:       "8d8a040107ca7a409bac145c058004f4d7bba78189460743f093a27c7632baed"
-    sha256 cellar: :any_skip_relocation, big_sur:        "831bd7db66a990bf4c5abc1db37c133219bd2a1eded1b050edddcbdc4f78142f"
-    sha256 cellar: :any_skip_relocation, catalina:       "c856e4e6681562182d00fee6f9ce184579ba814fcef9a51c8619b5350256354f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79c3013716f7f6b55d1ee19c69dbb91b84145db43116ec02c865ce42759d2a99"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c51d402bcb2a79225d442a5d291c1eb15d6899c0088704bf2ee7c919c2ade0e7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "751047e5d1259f529ffb995c0199724dccb34a7892418e2ebd9fd9c60f16270c"
+    sha256 cellar: :any_skip_relocation, monterey:       "cd8c5b3960c3474bc2ba1b404116d2e682ae733d699b87c41cc38cd95b5074b7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4e866a906027911bc7f543db28c38cb1ae952f30e51beab743e0b3243f1070ab"
+    sha256 cellar: :any_skip_relocation, catalina:       "977e84fb35259cfc01b4ba789bdf86270675c031bbc9b289034bd9974ca9d9b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cf7f5e3bc8dbe57cc22cd6bbdd5b62a7c69c54e1da1cc6ea7e1e19b0166c413"
   end
 
   depends_on "rust" => :build
