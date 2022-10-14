@@ -9,12 +9,12 @@ class ReorderPythonImports < Formula
   head "https://github.com/asottile/reorder_python_imports.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4af1127c4fa0e5b0d66407c10ace567c55b7ac53228bedbe31813c104f3644e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4af1127c4fa0e5b0d66407c10ace567c55b7ac53228bedbe31813c104f3644e"
-    sha256 cellar: :any_skip_relocation, monterey:       "2138a7bb693852305e22a2a68c6c484c9d609bcdf904ac6f4cad6ade5511c590"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2138a7bb693852305e22a2a68c6c484c9d609bcdf904ac6f4cad6ade5511c590"
-    sha256 cellar: :any_skip_relocation, catalina:       "2138a7bb693852305e22a2a68c6c484c9d609bcdf904ac6f4cad6ade5511c590"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02d3300898f6a246df8876a5a6ccf84b8ec14a21f570cbdb478ae87ee9150a61"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4dc4d39d51f98f0f1196133ff345577c694c9a91873657590347a117b8632214"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4dc4d39d51f98f0f1196133ff345577c694c9a91873657590347a117b8632214"
+    sha256 cellar: :any_skip_relocation, monterey:       "3390df71227d2f07c56946ca0ca3573ee4bb1bae4b99d76094abeba5f22fc6d7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3390df71227d2f07c56946ca0ca3573ee4bb1bae4b99d76094abeba5f22fc6d7"
+    sha256 cellar: :any_skip_relocation, catalina:       "3390df71227d2f07c56946ca0ca3573ee4bb1bae4b99d76094abeba5f22fc6d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d17f41a305d7a5b5d36527a8963f386551d837f2662f93d77c470cb991fec4a7"
   end
 
   depends_on "python@3.10"
