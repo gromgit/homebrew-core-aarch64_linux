@@ -1,6 +1,6 @@
 class Telegraf < Formula
-  desc "Server-level metric gathering agent for InfluxDB"
-  homepage "https://www.influxdata.com/"
+  desc "Plugin-driven server agent for collecting & reporting metrics"
+  homepage "https://www.influxdata.com/time-series-platform/telegraf/"
   url "https://github.com/influxdata/telegraf/archive/v1.24.2.tar.gz"
   sha256 "e0b4bc65dc46a87b14a164c1226f6cee15fabfff14f355344bede3ef3e585925"
   license "MIT"
@@ -23,7 +23,7 @@ class Telegraf < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args, "-ldflags", "-X main.version=#{version}", "./cmd/telegraf"
+    system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/influxdata/telegraf/internal.Version=#{version}"), "./cmd/telegraf"
     etc.install "etc/telegraf.conf" => "telegraf.conf"
   end
 
@@ -41,6 +41,7 @@ class Telegraf < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/telegraf --version")
     (testpath/"config.toml").write shell_output("#{bin}/telegraf -sample-config")
     system "#{bin}/telegraf", "-config", testpath/"config.toml", "-test",
            "-input-filter", "cpu:mem"
