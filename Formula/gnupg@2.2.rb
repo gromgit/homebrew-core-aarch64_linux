@@ -1,8 +1,8 @@
 class GnupgAT22 < Formula
   desc "GNU Pretty Good Privacy (PGP) package"
   homepage "https://gnupg.org/"
-  url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.39.tar.bz2"
-  sha256 "ab74db6685f026d7c0a10b527ecddecd608606a1691d15fda5d0a7f7d27e4c2f"
+  url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.40.tar.bz2"
+  sha256 "1164b29a75e8ab93ea15033300149e1872a7ef6bdda3d7c78229a735f8204c28"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -36,6 +36,14 @@ class GnupgAT22 < Formula
 
   on_linux do
     depends_on "libidn"
+  end
+
+  # Fixes a build failure without ldap.
+  # Committed upstream, will be in the next release.
+  # https://dev.gnupg.org/T6239
+  patch do
+    url "https://dev.gnupg.org/rGa5c3821664886ffffbe6a83aac088a6e0088a607?diff=1"
+    sha256 "41c633362f599fdc5a3d3b49f70831854ac881273aafbbc568ae4e87f4121782"
   end
 
   def install
