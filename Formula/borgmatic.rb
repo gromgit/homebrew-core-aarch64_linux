@@ -16,12 +16,8 @@ class Borgmatic < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "208141fd3850a7f7d9fefd22df09f9b3ef59b243fbb1b90ddf304338f7fa14b1"
   end
 
+  depends_on "jsonschema"
   depends_on "python@3.10"
-
-  resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
-  end
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
@@ -41,16 +37,6 @@ class Borgmatic < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
     sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
-  end
-
-  resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/cf/54/8923ba38b5145f2359d57e5516715392491d674c83f446cd4cd133eeb4d6/jsonschema-4.16.0.tar.gz"
-    sha256 "165059f076eff6971bae5b742fc029a7b4ef3f9bcf04c14e4776a7605de14b23"
-  end
-
-  resource "pyrsistent" do
-    url "https://files.pythonhosted.org/packages/42/ac/455fdc7294acc4d4154b904e80d964cc9aae75b087bbf486be04df9f2abd/pyrsistent-0.18.1.tar.gz"
-    sha256 "d4d61f8b993a7255ba714df3aca52700f8125289f84f704cf80916517c46eb96"
   end
 
   resource "requests" do
@@ -75,6 +61,11 @@ class Borgmatic < Formula
 
   def install
     virtualenv_install_with_resources
+
+    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
+    site_packages = Language::Python.site_packages("python3.10")
+    jsonschema = Formula["jsonschema"].opt_libexec
+    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   test do

@@ -50,6 +50,9 @@
     "exclude_packages": ["PyYAML"]
   },
   "black": "black[d]",
+  "borgmatic": {
+    "exclude_packages": ["jsonschema", "attrs", "pyrsistent"]
+  },
   "bpython": {
     "exclude_packages": ["six"]
   },
