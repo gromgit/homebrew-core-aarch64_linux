@@ -11,12 +11,12 @@ class Gnupg < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "ec60821135b7e94e29698cb1899e738f493791737566799eb01db88e57536b27"
-    sha256 arm64_big_sur:  "596ca0f1d01560b51164b862dda178a36a94c426b026678fe3a68a5006222758"
-    sha256 monterey:       "ad2f839c5d117761debef2be7518ddf24b918fbe252a505d0419862b5e7cd35c"
-    sha256 big_sur:        "243073c93c8d72a79ab462a287da6177888624137276e2e524fe7f71dd301555"
-    sha256 catalina:       "803c23ba6d6fbde8e77611fe5552e3f6a5e99aa181f85d1813bc81cd4d64f201"
-    sha256 x86_64_linux:   "8290c29cd8444ee858e4f5c04c798eaa0d644581d5030aecf1183062f0c6985b"
+    sha256 arm64_monterey: "2097638d35ed8dbdb83634dc720880ec618dbf76e89fdbc28c46b6c3e7ba9998"
+    sha256 arm64_big_sur:  "9f82c84919455dde032dc667a76ada4a443d22ad8309fd7d8fdbb3c36ee06515"
+    sha256 monterey:       "46476571803c002aa14d7f8725db0bbc19784a253cf0498fee8c72966b032806"
+    sha256 big_sur:        "1a727ceaf45887631eaaa4aa1a20c5c906e145ed8e0b145607452fe47a98dfb4"
+    sha256 catalina:       "e82c083cee3b8c1bc5d9eddbd96ff1759f86b4190acd818b43db435304a03b01"
+    sha256 x86_64_linux:   "c7b4f95f9dae0dcc96134a77a7272636ca4a21e4175dc6e5862109ff3bca2c8e"
   end
 
   depends_on "pkg-config" => :build
