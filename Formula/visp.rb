@@ -12,13 +12,12 @@ class Visp < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "fecbe2ce737967f712f32d5ae64f00c31d2dfa4cabb117a1f06c32c666a884dd"
-    sha256 cellar: :any,                 arm64_big_sur:  "3c1244cc2b4f23958717043a607e8ca8fc578790c172adc3b67704f20f860115"
-    sha256 cellar: :any,                 monterey:       "d959e8ae260882359ae3eb79d556dd7722afd2645bca7de9da7938d01737b5b9"
-    sha256 cellar: :any,                 big_sur:        "1ef854161678265eefe57582f14609ab1e4c4345f31fd0558cd765fbcca9125a"
-    sha256 cellar: :any,                 catalina:       "63f27f3350b6239b6734ef06965c1c2ee5ea92d6c72dd2698c57e2a1822f0967"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "295b6f80fd2a437fc818b7e64c17e82f61984318a070e9e4a1bc46c2a329c159"
+    sha256 cellar: :any,                 arm64_monterey: "3cb57ff05df4de15a5d94a8d69431f0fbfe7c5ee732565b0d79cdf7625b5b998"
+    sha256 cellar: :any,                 arm64_big_sur:  "16745787b7890d5eb25a45a5dd465a5fc7ae81c4bcb756d5137a3ebee388ed86"
+    sha256 cellar: :any,                 monterey:       "c3cdea36c932c92464961c614291bc702b96f7374f3078b1b0f6712dcc8e924b"
+    sha256 cellar: :any,                 big_sur:        "d491fdd7d669a019fb3c6eafe63442eabffb7d5ccef762391f3a213723dae0fd"
+    sha256 cellar: :any,                 catalina:       "b6a9d831d8c9e05b407414c1155eae1a14e8ae66543b9a918ce24e13c1a2dc94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21158e5a531553c7e3b4efd075b467732cebf98c8ff8f50cfe607a5cb4f93186"
   end
 
   depends_on "cmake" => :build
