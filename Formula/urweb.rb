@@ -7,12 +7,13 @@ class Urweb < Formula
   revision 6
 
   bottle do
-    sha256 arm64_monterey: "84309cfc8cb6b2e14562ce710309537717b27fbb2ba8e8d03ae77bcc15ab598e"
-    sha256 arm64_big_sur:  "216fa86e471dd591cc187e09ea6cf97f52b54f9f415bc0938ca82365870c475f"
-    sha256 monterey:       "82624c39378509939cb3a3dac20dde40ff2db659b8c01d4e21616c3841cd9dd6"
-    sha256 big_sur:        "d7d9ea068bec51f020dbdf77e642ddb0ba5fc3bc79f694f9e1162c22fffc1074"
-    sha256 catalina:       "7cc49cd4e66b35b3b283a93af77e4ff4d2eb2482478888f645eb05889dde69a3"
-    sha256 x86_64_linux:   "30b601aa8761349f8097b71ee619b3c517a63d2798a5f1ef233d6085ab8a3c80"
+    rebuild 1
+    sha256 arm64_monterey: "bf59d45c3f80fa791e85e2da484773d0e571839076bb9314c57af39b7722cb71"
+    sha256 arm64_big_sur:  "0759a24040fc7112cf1eb8512371e954c1b5b4f84d8a19fb14a938aef021533b"
+    sha256 monterey:       "b91f8faa12123ec1c8b75f431e2a7cd0d172a9fb56bcdd384d8e34d35112c042"
+    sha256 big_sur:        "ec570b4ddd402fd2a2a2cbd9e9be87d1d07e6f888724eb52c4a8d68f93dd9bf4"
+    sha256 catalina:       "2215d28b890d29d68f2d90bf371f606fcf7b07de606b1adcb06ffb73360d3558"
+    sha256 x86_64_linux:   "4ab2001394d21e6a658dc5fd5088ae9949aa4080893ae2731bfff3f2501fa764"
   end
 
   depends_on "autoconf" => :build
