@@ -7,12 +7,12 @@ class Octosql < Formula
   head "https://github.com/cube2222/octosql.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aeb56357efd27196be0ae5fd8d6a91c9a2bea63b54eeb969738acb875b2ba317"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5e14b1343d8883d367544ac11d2649e607df9cc534aa84176df1989c21ae7b2"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b3b20d538db2f7b48417442ce0f257a78d70ca8621dfb96745432c0c13776ad"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f9a257262020cc09f0e416fffcb03ddb76e190ebd7506974cb233cb8030977f"
-    sha256 cellar: :any_skip_relocation, catalina:       "1b1ecc06ede0fc12e199ad21543f5d2ff020dfe72f6b526c307e7cd5474599dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7c043f1a76648e406353a3929294a74e4d04d03ec821535383aa67089a9f9ba"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f32a72383764f82a80daa0eb46a5c2b589934ecfece3c73580f0ceae1f70e74f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eb97184600cab84a0fc661efd63ab134d9ae95464ffba4d4cf5670ab92bc9c24"
+    sha256 cellar: :any_skip_relocation, monterey:       "8988b722768c5b196f3a50542f5c22d9689c0afbb4eb52f112e182167c252dbd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4ea43009b3c70c8b85b78cb0210d8056bafa97fbba15065cace4b42cd331093f"
+    sha256 cellar: :any_skip_relocation, catalina:       "280c7b14d1a91c57df5fa0b4c4115bf4d7cdee9fd10e0509bb08b7320e33fc4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87bca2a8b9f6e9d477a797fcfb9cd9e32cbfb73d86b1e9b39c7e26a179e55661"
   end
 
   depends_on "go" => :build
