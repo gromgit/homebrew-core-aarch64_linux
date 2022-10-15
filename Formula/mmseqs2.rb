@@ -8,13 +8,12 @@ class Mmseqs2 < Formula
   head "https://github.com/soedinglab/MMseqs2.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4cc52d9e04445aad8bb4ff8ad6e5ee2555b5d507143bbb88d20f920fb40240f9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "510d513310f2372e90eb1cd63a3e03e8f86e92d286fc9bc28e11c64c6e953ebb"
-    sha256 cellar: :any_skip_relocation, monterey:       "ac8946e457d058c5ee45f2663b0671e16ea000f51465e963291114af9e0637e0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9c77c3321deb69aa84df7326821c803ecd377dc3f91931c26ca030832c25ee80"
-    sha256 cellar: :any_skip_relocation, catalina:       "f52feb3e6c03379981c6d7af2f2a3d404b0f0eb20ef2de490c1e8d67bd03ef54"
-    sha256 cellar: :any_skip_relocation, mojave:         "72a26a3d303d4150154c8200893ae6f4554b5eb1fe93a24d86c3b88d90aa1a3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c007b75f505bb8b2672da63d4c2d373f1e6162e924172ac52e2f57290548a572"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53e08229adba4c2ec39c92cb25e5a4b2ad1c752aa1db17e3dc98b0b833990e91"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "156945f3cc008daa1bab32387caf5549d494c324947d27bf854a078b551763fb"
+    sha256 cellar: :any_skip_relocation, monterey:       "fbf2cbc58838ccc85bab387fa504b97eedf276f4f85c8661491e657cb5fbfdd9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "09c83c072c409fe05bd901a1ea2fbef1bc0ee585219b13f92986619c5dbf0431"
+    sha256 cellar: :any_skip_relocation, catalina:       "59a314a3ef4f816a19e129675b492e57c92747f2f25f6d4434a8bd14b933d2b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73a3864b001a5703da8513ae515ac4de292200e555ed234af60aeab647528d9c"
   end
 
   depends_on "cmake" => [:build, :test]
