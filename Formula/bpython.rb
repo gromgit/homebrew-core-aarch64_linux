@@ -17,6 +17,7 @@ class Bpython < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b0a3ba363bb9cecb1412d32ea89fb2af68fcd8f455110c85443b1117ed0e5c7"
   end
 
+  depends_on "pygments"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -55,11 +56,6 @@ class Bpython < Formula
     sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
   end
 
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
-  end
-
   resource "pyxdg" do
     url "https://files.pythonhosted.org/packages/b0/25/7998cd2dec731acbd438fbf91bc619603fc5188de0a9a17699a781840452/pyxdg-0.28.tar.gz"
     sha256 "3267bb3074e934df202af2ee0868575484108581e6f3cb006af1da35395e88b4"
@@ -86,8 +82,12 @@ class Bpython < Formula
     venv.pip_install resources
     venv.pip_install buildpath
 
-    # Make the Homebrew site-packages available in the interpreter environment
+    # Allow import from pygments
     site_packages = Language::Python.site_packages(python3)
+    pygments = Formula["pygments"].opt_libexec
+    (libexec/site_packages/"homebrew-pygments.pth").write pygments/site_packages
+
+    # Make the Homebrew site-packages available in the interpreter environment
     ENV.prepend_path "PYTHONPATH", HOMEBREW_PREFIX/site_packages
     ENV.prepend_path "PYTHONPATH", libexec/site_packages
     combined_pythonpath = ENV["PYTHONPATH"] + "${PYTHONPATH:+:}$PYTHONPATH"

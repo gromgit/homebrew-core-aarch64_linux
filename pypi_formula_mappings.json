@@ -54,7 +54,7 @@
     "exclude_packages": ["jsonschema", "attrs", "pyrsistent"]
   },
   "bpython": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "Pygments"]
   },
   "bpytop": "bpytop",
   "breezy": {
