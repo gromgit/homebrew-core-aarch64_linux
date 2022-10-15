@@ -9,12 +9,13 @@ class Bpython < Formula
   head "https://github.com/bpython/bpython.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c92e11ddb4efaa8d76c68ac67a6bec2e50c3ee33eae8b08d8669979220ba8c0d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67c2fde763b8ffac1bbb8f8e0e8d5daf21e78839150fa1b6b6966119661eb8af"
-    sha256 cellar: :any_skip_relocation, monterey:       "22f22b849d88d994e7eb1f560eb0f1df9f018c1cc56a5c46df0c80d112bc515c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "be2d908f6ea82d668f45270c95288974030b749cc1cd754c80eb3689d223372e"
-    sha256 cellar: :any_skip_relocation, catalina:       "7c67cffeffbef6415fd555cfd2cb28574c6d4830970bdd51d1a63f71e6f1ae88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b0a3ba363bb9cecb1412d32ea89fb2af68fcd8f455110c85443b1117ed0e5c7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7ed2ea14c2b6fea2283759479aaae7cbfaad53f6e4b1e5d1aadd6229b5a4413"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "08a3242621f02d8598f187191c1e26f32c4db7104b748e240ab382f39b39e2eb"
+    sha256 cellar: :any_skip_relocation, monterey:       "d3e76bc0ad6d1b59dc0734270ebe4c44afb2b3f41b7fa4a484d1eb29f09db33b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d7bccfc721a29538dd55105acd26447a130c63e35c9a65deae7da57a74e031b3"
+    sha256 cellar: :any_skip_relocation, catalina:       "7fadf2fda048104372b7682b1b27bf7a0678a5b51767e46550ddb2227a821221"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1bf6b71d96e075b3c69bac63a73883b73912ec9c94833944ed6bef7c010aec7e"
   end
 
   depends_on "pygments"
