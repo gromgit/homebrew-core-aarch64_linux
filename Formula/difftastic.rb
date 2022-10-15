@@ -1,8 +1,8 @@
 class Difftastic < Formula
   desc "Diff that understands syntax"
   homepage "https://github.com/Wilfred/difftastic"
-  url "https://github.com/Wilfred/difftastic/archive/refs/tags/0.36.1.tar.gz"
-  sha256 "f7ffd83be50918993669a60821f037af110b809f4cd330ebd59c0b51418a6fa4"
+  url "https://github.com/Wilfred/difftastic/archive/refs/tags/0.37.0.tar.gz"
+  sha256 "a49a329bcde18574e8152b055d5bbd2a10aa9c8492ca677fbf8963fad3220949"
   license "MIT"
 
   bottle do
@@ -27,7 +27,7 @@ class Difftastic < Formula
     (testpath/"b.py").write("print(43)\n")
     expected = <<~EOS
       b.py --- Python
-      1 print(42) 1 print(43)\n
+      1 print(42)                             1 print(43)\n
     EOS
     assert_equal expected, shell_output("#{bin}/difft --color never --width 80 a.py b.py")
   end
