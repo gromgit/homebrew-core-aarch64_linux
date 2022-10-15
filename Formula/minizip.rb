@@ -11,12 +11,12 @@ class Minizip < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ff18fe7d07a68f17366a40f39a05604049a88ac4ce58a63820ac57fa6f8af476"
-    sha256 cellar: :any,                 arm64_big_sur:  "68d0ae9dc6ec0efa701f68af2663fc85da36e33a957743c5b01bae3118a04078"
-    sha256 cellar: :any,                 monterey:       "1d2ce07558bfa685effb10a2ab00683427f60f3d286f99488c5b42017b5f04ff"
-    sha256 cellar: :any,                 big_sur:        "98c64a1187ce693d07d4cfcb0abee35b88157b5491132fb495097641f7803ed8"
-    sha256 cellar: :any,                 catalina:       "ecb193a80dd68f0b38401183294bf282c5046814fd4692afdfb37989df702755"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ac31c56f146beebcebcbee8d51bd680f202e5b7a29588abeca3c0cdee6dc748"
+    sha256 cellar: :any,                 arm64_monterey: "24bd919aa1dde395f929d897743f9235fd6023e017e983c0169a0918987a40ba"
+    sha256 cellar: :any,                 arm64_big_sur:  "a604caa335ee965ce1b29e70ba1cd5db183fb9cfd7f70c9141644a2013423289"
+    sha256 cellar: :any,                 monterey:       "3bca4aaed9dba859600379d30b3f2aaa2cfd06a406208f163366d14c8bb6cb53"
+    sha256 cellar: :any,                 big_sur:        "80e4849ce70b1ac5be25d1886947651629e9ac82ec7a5ec47dd28ee0a3499381"
+    sha256 cellar: :any,                 catalina:       "a0b93c2d3e4beef15171d95e1fe37b3ca9d7764a101dae2f9a6bacc972e047e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1f2d6483bfeb86f7e3266a3e07b96593f4bb383fc9297e86583735c51efb86b"
   end
 
   depends_on "autoconf" => :build
