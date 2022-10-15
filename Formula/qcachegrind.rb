@@ -13,12 +13,12 @@ class Qcachegrind < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ff083c9c111c24d44fe0da28a871c0828230ac8400c03698239d48f30865e227"
-    sha256 cellar: :any,                 arm64_big_sur:  "2abf17beaf89572fc8aeb1571fb42a45185db500abb152c68fe2b46aa40ecb47"
-    sha256 cellar: :any,                 monterey:       "a069d24d44ecb72642fd0ac447a84e1aef27e31519abfc29fdafab2181c5d410"
-    sha256 cellar: :any,                 big_sur:        "cfbbf20db90ae10b02459bc29194d6e8fe38217b0cc5ca75d4b6ecd5b4b3d686"
-    sha256 cellar: :any,                 catalina:       "c2c61b5ad35ebfda3a8e97fdbf6b6e436540220e22c9f8315ec2e2db800fd6c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f811e78bdf4d8d4c1ea93541d9b2f0e4863d87d150cc653a5d7a04f307e4f90d"
+    sha256 cellar: :any,                 arm64_monterey: "4129842b931762f8968bb8fbe9f3a2331e84ba22a1d0e874dad534680f545a9f"
+    sha256 cellar: :any,                 arm64_big_sur:  "629bc35134f5d03c741881b21936a0de4dc923646780622824721d03eb6f553f"
+    sha256 cellar: :any,                 monterey:       "b96f81c384b827326989a8bde1d2e298512ef0d075eaa388d4e46647b016d1f6"
+    sha256 cellar: :any,                 big_sur:        "914996185539c4f9786d5a962cea0164fda961d4a57ea6d144680fdaba5b1bc5"
+    sha256 cellar: :any,                 catalina:       "929a784c0f3c273fd010f85d9d53999a810338dc42ff3477cd50d9f8174d5af1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a17ee355b217871f86a2077a5f95f3e98343281fbe4c1f6e1ccef5cb9d1f183"
   end
 
   depends_on "graphviz"
