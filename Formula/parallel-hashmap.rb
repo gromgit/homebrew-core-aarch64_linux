@@ -7,7 +7,7 @@ class ParallelHashmap < Formula
   head "https://github.com/greg7mdp/parallel-hashmap.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4880cd61e4cc74cbd16d6aa4d302f57e0904c7c6a177a1ba80261e87c5597cc3"
+    sha256 cellar: :any_skip_relocation, all: "d35958ae9cb30dbf15d9cca4b5dc4a6b3d50aced16db2cca21b96d1c2a550216"
   end
 
   depends_on "cmake" => :build
