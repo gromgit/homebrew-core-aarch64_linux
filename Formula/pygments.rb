@@ -17,11 +17,35 @@ class Pygments < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c21d509491a4667da89fb9a3c3de978b0b9fc62426c6df146a46552be05047f"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.10" => [:build, :test]
+  depends_on "python@3.8" => [:build, :test]
+  depends_on "python@3.9" => [:build, :test]
+
+  def pythons
+    deps.select { |dep| dep.name.start_with?("python") }
+        .map(&:to_formula)
+        .sort_by(&:version)
+  end
 
   def install
     bash_completion.install "external/pygments.bashcomp" => "pygmentize"
-    virtualenv_install_with_resources
+
+    pythons.each do |python|
+      python_exe = python.opt_libexec/"bin/python"
+      system python_exe, *Language::Python.setup_install_args(libexec, python_exe)
+
+      site_packages = Language::Python.site_packages(python_exe)
+      pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+      (prefix/site_packages/"homebrew-pygments.pth").write pth_contents
+
+      pyversion = Language::Python.major_minor_version(python_exe)
+      bin.install libexec/"bin/pygmentize" => "pygmentize-#{pyversion}"
+
+      next unless python == pythons.max_by(&:version)
+
+      # The newest one is used as the default
+      bin.install_symlink "pygmentize-#{pyversion}" => "pygmentize"
+    end
   end
 
   test do
@@ -30,7 +54,19 @@ class Pygments < Formula
       print(os.getcwd())
     EOS
 
-    system bin/"pygmentize", "-f", "html", "-o", "test.html", testpath/"test.py"
-    assert_predicate testpath/"test.html", :exist?
+    pythons.each do |python|
+      python_exe = python.opt_libexec/"bin/python"
+      pyversion = Language::Python.major_minor_version(python_exe)
+
+      system bin/"pygmentize-#{pyversion}", "-f", "html", "-o", "test.html", testpath/"test.py"
+      assert_predicate testpath/"test.html", :exist?
+
+      (testpath/"test.html").unlink
+
+      next unless python == pythons.max_by(&:version)
+
+      system bin/"pygmentize", "-f", "html", "-o", "test.html", testpath/"test.py"
+      assert_predicate testpath/"test.html", :exist?
+    end
   end
 end
