@@ -1,10 +1,9 @@
 class Openvdb < Formula
   desc "Sparse volumetric data processing toolkit"
   homepage "https://www.openvdb.org/"
-  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/v9.1.0.tar.gz"
-  sha256 "914ee417b4607c75c95b53bc73a0599de4157c7d6a32e849e80f24e40fb64181"
+  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/v10.0.0.tar.gz"
+  sha256 "fb0b54500464903a2334625e43f3719bd107ab0cf538d7762fd0185086a17a6d"
   license "MPL-2.0"
-  revision 2
   head "https://github.com/AcademySoftwareFoundation/openvdb.git", branch: "master"
 
   bottle do
@@ -26,7 +25,7 @@ class Openvdb < Formula
 
   fails_with gcc: "5"
 
-  resource "test_file" do
+  resource "homebrew-test_file" do
     url "https://artifacts.aswf.io/io/aswf/openvdb/models/cube.vdb/1.0.0/cube.vdb-1.0.0.zip"
     sha256 "05476e84e91c0214ad7593850e6e7c28f777aa4ff0a1d88d91168a7dd050f922"
   end
@@ -46,7 +45,7 @@ class Openvdb < Formula
   end
 
   test do
-    resource("test_file").stage testpath
+    resource("homebrew-test_file").stage testpath
     system bin/"vdb_print", "-m", "cube.vdb"
   end
 end
