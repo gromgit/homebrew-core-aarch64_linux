@@ -6,12 +6,12 @@ class Asciidoctor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a172e2bc9896a3f5be179381721dd4f363ab060150183c4e8323142eb61ae9c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c39047b274589e63cfe274781f7319b632b0e33b5bd263997d9a346f2fddf3fe"
-    sha256 cellar: :any_skip_relocation, monterey:       "a06072325b8a6aae36dd4a13b889bd8b194288e365f9473b0351f702de0dee63"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f86d41fccbb9e0d1b13a09d78780056ef61be028c67649afe5b02cfdf109929"
-    sha256 cellar: :any_skip_relocation, catalina:       "9f86d41fccbb9e0d1b13a09d78780056ef61be028c67649afe5b02cfdf109929"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "493ca3fac0a6b4d1399d8fd30e3add1ef34cd561bbf2ed73ebadc1e15b7b15bf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "966b2a1a8e474335aaee4a1514b60798cd228460e2fd16ca361b34cc5327050b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acdef05b142ea26ac82e9bbf814e7caeeb2e91c34c73d028470c19ab49170bca"
+    sha256 cellar: :any_skip_relocation, monterey:       "838217c6bd960cab0b8cee9f32b2b668c6744b52f7bf3302b788d067a0ff9861"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9ebc210dafcb38de14b1481019e74ad092bbe68cd4165418dd6724b706edf534"
+    sha256 cellar: :any_skip_relocation, catalina:       "9ebc210dafcb38de14b1481019e74ad092bbe68cd4165418dd6724b706edf534"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2fbcfc2cb751e46aff2a4f1cdd67501a479f0f8e780e15dca7bbc30cc6a286c"
   end
 
   uses_from_macos "ruby", since: :catalina
