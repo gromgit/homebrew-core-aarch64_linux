@@ -8,12 +8,12 @@ class Pulumi < Formula
   head "https://github.com/pulumi/pulumi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d6160307dbe32ca87384ea2a23e576e17f2b49790cd39413b0c564fb5a7134a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f616a75ae37d60507d0f9fd29525c725214a5bc53a5b75c9fee2a316def6b4ce"
-    sha256 cellar: :any_skip_relocation, monterey:       "d4b6258cf57a0469e687ff6a2e052a8b14e327bd2706c98847b1b1e082ff936c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "62354caca4506954196db66cb12c93bc44343198c7f121d1255641e4eb424aa4"
-    sha256 cellar: :any_skip_relocation, catalina:       "6101c33066d2b71eff88c9c72da718d2fe37209f1a70486068bf1dd3335655d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1360699ec4e9d5400dcb6aba01cf0c88635cc6dc7b32a5c92dc576b5466f2c55"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9501b8c4d4f4f3e3bc90696ccea88e326baa0db0412ac25d705afc6e2d403344"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb78af945e2b20f08afb132273d4da4fac2fa17a48deffab954ef4f7e1a03b3c"
+    sha256 cellar: :any_skip_relocation, monterey:       "49fe144d13d9cb812637455533a8d7ee4e1129043eb26ea04784bdc6e678ea7b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8ef783b9f42c0786edd40c43d87becbfc3c36286b0194274de70be497fd099f1"
+    sha256 cellar: :any_skip_relocation, catalina:       "10f4087541661b2ddc27db1a80e60220e285f01483c17d2310a993bc96a30481"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "051c2314416d1b0e33a8aa49c60ae43c4267162fa8ef0e3f3ea7c540186674ea"
   end
 
   depends_on "go" => :build
