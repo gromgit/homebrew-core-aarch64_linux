@@ -189,7 +189,13 @@
     "exclude_packages": ["six"]
   },
   "fdroidserver": {
-    "exclude_packages": ["numpy", "pillow", "six", "PyYAML", "yamllint", "pathspec"],
+    "exclude_packages": [
+      "numpy", "pillow", "six", "PyYAML", "yamllint", "pathspec", "fonttools", "Brotli", "Pygments",
+      "ipython", "appnope", "asttokens", "backcall", "debugpy", "decorator", "entrypoints",
+      "executing", "ipykernel", "jedi", "matplotlib-inline", "nest-asyncio", "packaging",
+      "parso", "pexpect", "pickleshare", "prompt-toolkit", "psutil", "ptyprocess", "pure-eval",
+      "pyparsing", "python-dateutil", "pyzmq", "stack-data", "tornado", "traitlets", "wcwidth"
+    ],
     "extra_packages": ["wheel"]
   },
   "flintrock": {
