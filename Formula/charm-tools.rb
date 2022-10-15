@@ -8,12 +8,13 @@ class CharmTools < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "09037c50b63f2a55da3b24a8e61691d215d5a5a049e51c4767eb0b5c2cdff711"
-    sha256 cellar: :any,                 arm64_big_sur:  "36da529b80c1a73749eff88a54e1ee953c8e677d057c8abb7f39238cf63829d5"
-    sha256 cellar: :any,                 monterey:       "e19582cef2fbd9a7d89bbbed563bd00886f84615061af257ccb2e3ae33692707"
-    sha256 cellar: :any,                 big_sur:        "1aa5ddcf9c8017235a400134f542cbe396f0797ff9413e547d119b2ac58962ae"
-    sha256 cellar: :any,                 catalina:       "4b6e4d61f167f03a2b7d051d301eb4d32501b32c7bae6a8c078ac22b57b1685c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6bc052f99f87cb279664b97d25a2958012bc79ee19fd2f3feb063085eb7a3fe0"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "32adfcd00dc5f1dbb6568f4e7fb382eb0f0ea7c4fb8c8bba1a5c946a844153d2"
+    sha256 cellar: :any,                 arm64_big_sur:  "8af18361d19f12242f1f9a61488200f87c33d9e8bece301a14cd43c5263ea827"
+    sha256 cellar: :any,                 monterey:       "86b5e32b33f41ea6a047b4eb5e63fd306edb87e9f0eef00a7c964caf81a6d133"
+    sha256 cellar: :any,                 big_sur:        "440db7a7c937943cc5dadc59fe9e835f46aa6a0b822273138a5768fcec435695"
+    sha256 cellar: :any,                 catalina:       "b4bf7b6d4f27c60a025d66e499391ec44e44f76ebcbe61b7f5f5b0e94fb94dd2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "457385e7a045a7062f08337feec4cfd25e152ba2c867b73ce9215a9d623a9ce3"
   end
 
   depends_on "rust" => :build
