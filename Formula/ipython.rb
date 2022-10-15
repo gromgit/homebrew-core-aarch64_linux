@@ -17,6 +17,7 @@ class Ipython < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cfcfa0c8d87131836d38854108f61779dfd732085a2751746566a385f04bbe4"
   end
 
+  depends_on "pygments"
   depends_on "python@3.10"
   depends_on "six"
   depends_on "zeromq"
@@ -124,11 +125,6 @@ class Ipython < Formula
   resource "pure-eval" do
     url "https://files.pythonhosted.org/packages/97/5a/0bc937c25d3ce4e0a74335222aee05455d6afa2888032185f8ab50cdf6fd/pure_eval-0.2.2.tar.gz"
     sha256 "2b45320af6dfaa1750f543d714b6d1c520a1688dec6fd24d339063ce0aaa9ac3"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "pyparsing" do
