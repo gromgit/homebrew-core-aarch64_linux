@@ -33,7 +33,13 @@ class Showkey < Formula
   test do
     require "expect"
 
-    output = Utils.safe_popen_write("script", "-q", "/dev/null", bin/"showkey") do |pipe|
+    args = if OS.linux?
+      ["script", "-q", "/dev/null", "-c", bin/"showkey"]
+    else
+      ["script", "-q", "/dev/null", bin/"showkey"]
+    end
+
+    output = Utils.safe_popen_write(*args) do |pipe|
       pipe.expect(/interrupt .*? or quit .*? character\.\r?\n$/)
       pipe.write "Hello Homebrew!"
       sleep 1
