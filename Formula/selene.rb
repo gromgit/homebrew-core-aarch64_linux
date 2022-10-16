@@ -7,12 +7,12 @@ class Selene < Formula
   head "https://github.com/Kampfkarren/selene.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96928adb367a3a67a942daebad8329de4fba5c87af534fbf438842142c11e777"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d832d34a72d9f63fb37fefc411ade62acebf13024713e227b2c77662704dbfd1"
-    sha256 cellar: :any_skip_relocation, monterey:       "52f8b8dfaa3e5f5a36676846b7987904443f1346c9b09ea9f6957df79ef0147d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69a0c9ada96537cf285fc36f036f72885994397bbce6ed484a511d642306ac13"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d89f2e77c7532f34c027b1a2748310d0f614f954b3010cd2b74641b18110d71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98958af9ff9fca6eb46b40d4d81e7a5ed83c63ed64bc81636cf5884ad10aabc1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1392ed26b8b19295776c18bcf009efb1fc8f41a12688c93dfbe1e034b2ebd801"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3f1b2ca8986d16dd9d81f7f9ae981e78f8d6f9e974306640bb0777d17ce4cbb"
+    sha256 cellar: :any_skip_relocation, monterey:       "3cc0d4c9c717c4f6a89d400cefbec2a6a7cd5a1ef0af26aff052cdacdaa0451a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "506987d36f558afa039aa21b7e4187b6d147c33e7a2cd0365f3f66a9043f618f"
+    sha256 cellar: :any_skip_relocation, catalina:       "8a6659c962779f1e63bbcc51ac28c8fd6338baaf3a266f659946805ba82d9fdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa809b8d5b3cdac200184013be9ef7c9b453a54842ed0ae38b5b50ee8b671db3"
   end
 
   depends_on "rust" => :build
