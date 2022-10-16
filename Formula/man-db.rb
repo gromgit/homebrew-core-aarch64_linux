@@ -12,13 +12,12 @@ class ManDb < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "883f4fd5751b69d951ebdb4e2de9e76f0149b573720ed9affb3bd088c24cb303"
-    sha256 arm64_big_sur:  "90ebf9877c5aa6d1a2b70685da43dfdb0431644fc108ec878dc33010d137d79c"
-    sha256 monterey:       "ccde90f81fad87af2496c6cda537ad5ce2afcbb104f705ef88959de565e2ae4f"
-    sha256 big_sur:        "f0f874894907bcf1c9bd2cfbfbe70e45758c55475468841a438f81c48fe2792c"
-    sha256 catalina:       "afee12759ff8f4b1eea2fa4356297bcd53af776d11305111a949baacce1c6f12"
-    sha256 x86_64_linux:   "2921653b3a7b781564dc65f0cea507c6c37d46bc80b4a6509056e03c4fcdbf5e"
+    sha256 arm64_monterey: "42fe6e5f26ad7e65f3caa27ccddcec2f56d802267e47bc60202e5ec879d40b66"
+    sha256 arm64_big_sur:  "6889e553cc2a0b22739311d3bd9627277413044eb96ee7cbd87621258a6f081d"
+    sha256 monterey:       "c781fcdd918e80b1446156e43f63cbd391338418e13837c51a7ec8e038ded797"
+    sha256 big_sur:        "01dedef365aa7e1656a5d70d802875ad0d58268f158fb4c3c4815e7a75e70c06"
+    sha256 catalina:       "f573cfb607d1a5ba5b3d295956063804c67d9f0087513da20b57740e9f509950"
+    sha256 x86_64_linux:   "6d2c852650f5cda77a1688ab1426e879b2f6657f196c7701fbf2b3cdf5f1c507"
   end
 
   depends_on "pkg-config" => :build
