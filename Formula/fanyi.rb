@@ -38,6 +38,6 @@ class Fanyi < Formula
   end
 
   test do
-    assert_match "爱", shell_output("#{bin}/fanyi lov 2>/dev/null")
+    assert_match "爱", shell_output("#{bin}/fanyi --no-say love 2>/dev/null")
   end
 end
