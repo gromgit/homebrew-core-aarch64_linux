@@ -7,12 +7,12 @@ class Kubeconform < Formula
   head "https://github.com/yannh/kubeconform.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f1c3955cd514a49b752dd0d257f3d9b9ba8e56d264ca8984b020eda2970c6f51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e79e32e43d8058963dc404ae5032a14fdb5116826604a8aa249777b7e5e242a"
-    sha256 cellar: :any_skip_relocation, monterey:       "6a266e51b3483b03a7074e6b950ceaabc052a7178cb4c9f482a9f8b70284d688"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f1170a54e0555beb4ecce541351c133e6685d5e03abcd2af304abea6bb97cfb2"
-    sha256 cellar: :any_skip_relocation, catalina:       "c128eedeeef0e40f02c17c063c108e6138dfee50f41d6469ea8db4af24734c80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eccc7d5135322bbbcf79cffad2174ef0ae69585515640c270b2811c626549455"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1b9ff374d9b81312bfb4f3ef747cd199dea68b30d0f9936a6355f70735c9141c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f89943724bf63b9312f728cca4bbfb7911043e38751b5d601d65d2cf41bc295a"
+    sha256 cellar: :any_skip_relocation, monterey:       "877d92203a7ca17ef46bc34d1d83da53c83a8374147b8917332dae28c2814507"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5e4b9b605518b3f746217ed3a8079ca9f2e2d9cd7011d8e08fd173dae269faa4"
+    sha256 cellar: :any_skip_relocation, catalina:       "097d1fe5597804e13fe037f855cc1d703e473836b5bf8afbf1a8a7ac8ccc259f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b6d46b781aaeedd609a381c2ee8d621541188801fd09f9d2cd13d94f7bd374b8"
   end
 
   depends_on "go" => :build
