@@ -6,12 +6,12 @@ class Ncspot < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "f30fd80f102b699308af9cbf415697702946bf0fca53f46d661a2a3011677142"
-    sha256 cellar: :any,                 arm64_big_sur:  "a8a3686e504ab9b8ebcec00b55994f3ebd8517d0f91a9ad4779363d4a843af09"
-    sha256 cellar: :any,                 monterey:       "9c619d17795d110fc807fa4c8679be8cec2c946666865561de002c214ecd2cfc"
-    sha256 cellar: :any,                 big_sur:        "94491388e9f0a62f56e1c89cdd40804df821beae7e9764fea9a45c2679094492"
-    sha256 cellar: :any,                 catalina:       "e619708bdf21ebff7d72f21c941608955328c81d3b724a5680c6bc7dfe92389d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d91c74aedcee3583012804ab60999c9692ba06bb4e598fb8ae0966901d49f5b2"
+    sha256 cellar: :any,                 arm64_monterey: "5e85be041e1f6282f54b2a39fb5a9a69da526fe072e2f5073d8d48a9cf64a84a"
+    sha256 cellar: :any,                 arm64_big_sur:  "14f82f6c712d08f1323db0645df34e15121a1c1aaea6e0e4533d5396c9b799d6"
+    sha256 cellar: :any,                 monterey:       "13b8775762c5070ee174548988d5495041cedd886dba3637257076fa6da1c8fb"
+    sha256 cellar: :any,                 big_sur:        "1a77705e1b8b5b3706fee125b4e5dd098386fd78d870c654d81ba9c29b306382"
+    sha256 cellar: :any,                 catalina:       "5eccacc0e822a3b1943f2bbc51ed7694ec2cb59ea902e5583167137b10d094c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d432f52dfc912a31948b811a026eb0dd2dc757d1cbb224a99d417ea13497a0c2"
   end
 
   depends_on "python@3.10" => :build
