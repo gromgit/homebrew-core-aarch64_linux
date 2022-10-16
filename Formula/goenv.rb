@@ -1,8 +1,8 @@
 class Goenv < Formula
   desc "Go version management"
   homepage "https://github.com/syndbg/goenv"
-  url "https://github.com/syndbg/goenv/archive/1.23.3.tar.gz"
-  sha256 "1559f2907ee0339328466fe93f3c9637b7674917db81754412c7f842749e3201"
+  url "https://github.com/syndbg/goenv/archive/2.0.0.tar.gz"
+  sha256 "b0a6ce9d758344145367688088595ec077d556d1682bff817c23861f6d4fd2df"
   license "MIT"
   version_scheme 1
   head "https://github.com/syndbg/goenv.git", branch: "master"
@@ -24,7 +24,6 @@ class Goenv < Formula
       "test/goenv.bats",
       "test/test_helper.bash",
     ]
-    inreplace_files << "test/init.bats" unless build.head?
     inreplace inreplace_files, "/usr/local", HOMEBREW_PREFIX
 
     prefix.install Dir["*"]
