@@ -7,12 +7,12 @@ class Tere < Formula
   head "https://github.com/mgunyho/tere.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dda3e5361db146a16ee3d6db49f4b8f3d70d1aa2d01a3a47b2436b0977246d28"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "463130ac457cd868b3a24a33dc44a4032ca43a8a56b42ab77bcced2300816dfa"
-    sha256 cellar: :any_skip_relocation, monterey:       "fe490bbc6410f9c6ec77aae2cc72d5e59a0282633cb418e1ccc31325cfdc3501"
-    sha256 cellar: :any_skip_relocation, big_sur:        "126f7949c17d719a6507245d090bdcd5cff46731e482bcae902fd3fc539b0bcd"
-    sha256 cellar: :any_skip_relocation, catalina:       "493c43c79a145932fcc0ebe5e2d55e3efb60297c1348d86a5510b56837ceedbf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da9db180e3601339e420fad98c6ae7e48ca765c1ace8f90bea600025145174a7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c6b5419ca46e83391cfce712361640ebf2c2605e0be079e32f9616baa7729d0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44400ec974be0be0d8125944538726881e7756872b5230a55b873e056134bc62"
+    sha256 cellar: :any_skip_relocation, monterey:       "573bba62faa4daa9ec7cab4ab2ceac25f27c6ea493b11b430eaea45db679f226"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6e94cd44fc296dba1d9b68afa56b438406b29657e076a61b8b65e0afdd706cb9"
+    sha256 cellar: :any_skip_relocation, catalina:       "6fb8786fad2b2ec0664af01cf7b711a54bdd09c95dae479e1f020f7fd8add0a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "100a5c9977474ef2c96e220e2930d53af4f15eb17ca7e3b5cc6615b15cc2d0f5"
   end
 
   depends_on "rust" => :build
