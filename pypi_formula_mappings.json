@@ -259,7 +259,7 @@
     "exclude_packages": ["PyYAML"]
   },
   "jrnl": {
-    "exclude_packages": ["six"]
+    "exclude_packages": ["six", "Pygments"]
   },
   "jupyterlab": {
     "exclude_packages": ["six"]
