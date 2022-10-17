@@ -38,6 +38,7 @@ class Gnuradio < Formula
   depends_on "log4cpp"
   depends_on "numpy"
   depends_on "portaudio"
+  depends_on "pygments"
   depends_on "pygobject3"
   depends_on "pyqt@5"
   depends_on "python@3.10"
@@ -76,11 +77,6 @@ class Gnuradio < Formula
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
     sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
-  end
-
-  resource "pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "markupsafe" do
