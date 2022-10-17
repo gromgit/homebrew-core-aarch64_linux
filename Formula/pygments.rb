@@ -9,12 +9,8 @@ class Pygments < Formula
   head "https://github.com/pygments/pygments.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b4c7d99905c7d9895a5480f2f2f1c2a5298e3deb6672f4ff095b6d0901b63ee1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b4c7d99905c7d9895a5480f2f2f1c2a5298e3deb6672f4ff095b6d0901b63ee1"
-    sha256 cellar: :any_skip_relocation, monterey:       "160c038d24aa8d3ad62b15846e72fa092738132c4c33d8382db29b1f771d06e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "160c038d24aa8d3ad62b15846e72fa092738132c4c33d8382db29b1f771d06e8"
-    sha256 cellar: :any_skip_relocation, catalina:       "160c038d24aa8d3ad62b15846e72fa092738132c4c33d8382db29b1f771d06e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c21d509491a4667da89fb9a3c3de978b0b9fc62426c6df146a46552be05047f"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "45a58477db6d4eb21f207849b7262d63215b4892f49ff25394375cc2ab2ca469"
   end
 
   depends_on "python@3.10" => [:build, :test]
