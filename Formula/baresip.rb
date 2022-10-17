@@ -7,12 +7,12 @@ class Baresip < Formula
   revision 1
 
   bottle do
-    sha256 arm64_monterey: "6f6e04207e628d7bb34d408a581b7a0c5dbc7ae4434d433790780f35fa4823e5"
-    sha256 arm64_big_sur:  "3b407d74d28c8e4c788ea79a713e7caa6318a4f35c1952d51aab9653e61033ba"
-    sha256 monterey:       "6232bd9e2b7e9f78becfda0d496e80287240c84c38d45789b15c2a3cda3d693b"
-    sha256 big_sur:        "82b57786699ce01ad2f5fe36d4d09f618f9fb6d4fa1f07e82ea04a8e59dd53a2"
-    sha256 catalina:       "26b12331ef4f5063c043efd2c99a65a8be26c4b7f8ce5e0a0b936b8fa455328d"
-    sha256 x86_64_linux:   "29ca7f57521e6943326a7f70ef2053246d01b124a11785cb8118d147f601f4a8"
+    sha256 arm64_monterey: "045374d1a6ae260b92338bdabb7617cae083753f2c7a4a8be5afc2f2bff10c12"
+    sha256 arm64_big_sur:  "19c5c355692feb77159452a0b0f99ea20eb8cc36797d9a4c0b78e5e20a5a6af4"
+    sha256 monterey:       "a31f0a98e91053bba22a893e80ef4268a481bf2efe6256d17e063723dfa7b447"
+    sha256 big_sur:        "77da6e4b2e97b8e98d8056a071f1156a7bd98db35ca56d0df5a071407aa796a4"
+    sha256 catalina:       "70d4e347490cd3731b88bc7245dc017cb96676d64f8f6370edf6229fb9b3fe7d"
+    sha256 x86_64_linux:   "adc707e1b3e4786a3827de7f7b4dfc2cc7191ba00402d66e2751e5a70a177e66"
   end
 
   depends_on "libre"
