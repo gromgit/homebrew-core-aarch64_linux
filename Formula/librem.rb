@@ -7,12 +7,12 @@ class Librem < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "bd7208a5a64cef0213aaabbfa80abb3f1d21543e5d2ddd7ac8e1deaaf6e13c4e"
-    sha256 cellar: :any,                 arm64_big_sur:  "e642d360e5907bd4bdd59a1a252365e29fcda5c8c681f0a5fd553e806ca3a099"
-    sha256 cellar: :any,                 monterey:       "9c8b1d984fe890ba9a74e87be7ddccedf2a847ff4f3bd79838ee0a5b6fb29de3"
-    sha256 cellar: :any,                 big_sur:        "4738180948fa7172f39f952d9d4da82b96215be623995e5601b1953649e47d9d"
-    sha256 cellar: :any,                 catalina:       "96c0cc1e895077c3c5919084a1d9c0dc74dc87f53b981575f6d4ec5209ce1382"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64c4b1d20a8648aad62260e21597a30c434a1593bafcdd75e27bb6a3096a13cf"
+    sha256 cellar: :any,                 arm64_monterey: "a9021534292e4ff43c5aaf0e60f7c6a865ac1c66804715270eeb9b00591fb7e4"
+    sha256 cellar: :any,                 arm64_big_sur:  "0e6eb849ea3fd48c5518504e081a362fa12ed840daf2efc8e01b411f42e47b2a"
+    sha256 cellar: :any,                 monterey:       "ae085d19b0a5e5cfd8213c6a9bedb29c6f2d6d04908b6fb53c18e60372316d7e"
+    sha256 cellar: :any,                 big_sur:        "dfec71bd9afec828fb575fda158f253f4463cafc3ad6713de6e009a71b45230d"
+    sha256 cellar: :any,                 catalina:       "61cddf830cccc4017bc8f6eda5c8e2e86aba0e97fa17c8b324639f1494fc8aaa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f63af19c3290e075af5daa0af489df283fb3107a7df20ba6f5aad5b91a00ce64"
   end
 
   depends_on "libre"
