@@ -83,12 +83,8 @@ class Bpython < Formula
     venv.pip_install resources
     venv.pip_install buildpath
 
-    # Allow import from pygments
-    site_packages = Language::Python.site_packages(python3)
-    pygments = Formula["pygments"].opt_libexec
-    (libexec/site_packages/"homebrew-pygments.pth").write pygments/site_packages
-
     # Make the Homebrew site-packages available in the interpreter environment
+    site_packages = Language::Python.site_packages(python3)
     ENV.prepend_path "PYTHONPATH", HOMEBREW_PREFIX/site_packages
     ENV.prepend_path "PYTHONPATH", libexec/site_packages
     combined_pythonpath = ENV["PYTHONPATH"] + "${PYTHONPATH:+:}$PYTHONPATH"
