@@ -17,6 +17,7 @@ class Pdm < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8975ea35d619a0ca7f81a9581c212932e87826ecf95a5016e50d714390f5c137"
   end
 
+  depends_on "pygments"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -93,11 +94,6 @@ class Pdm < Formula
   resource "platformdirs" do
     url "https://files.pythonhosted.org/packages/ff/7b/3613df51e6afbf2306fc2465671c03390229b55e3ef3ab9dd3f846a53be6/platformdirs-2.5.2.tar.gz"
     sha256 "58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "pyparsing" do
