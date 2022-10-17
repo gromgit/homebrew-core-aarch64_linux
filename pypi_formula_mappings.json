@@ -20,7 +20,11 @@
     "exclude_packages": ["pycrypto", "six"]
   },
   "ansible-lint": {
-    "exclude_packages": ["PyYAML", "jsonschema", "attrs", "pyrsistent", "yamllint", "pathspec", "ansible-core", "cryptography", "Jinja2", "MarkupSafe", "resolvelib"]
+    "exclude_packages": [
+      "PyYAML", "jsonschema", "attrs", "pyrsistent", "yamllint", "pathspec",
+      "ansible-core", "cryptography", "Jinja2", "MarkupSafe", "resolvelib",
+      "Pygments"
+    ]
   },
   "arxiv_latex_cleaner": {
     "exclude_packages": ["pillow", "six", "PyYAML"]
