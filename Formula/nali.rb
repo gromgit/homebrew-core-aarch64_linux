@@ -1,8 +1,8 @@
 class Nali < Formula
   desc "Tool for querying IP geographic information and CDN provider"
   homepage "https://github.com/zu1k/nali"
-  url "https://github.com/zu1k/nali/archive/v0.5.3.tar.gz"
-  sha256 "e47c330bd66f6969b625571843451913f5667a25b2852e254ab028b3f3ed575b"
+  url "https://github.com/zu1k/nali/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "42ee4b9fefdae3082e0bda2bb93f65f16d50b4b38679ae11776c8563af561eff"
   license "MIT"
   head "https://github.com/zu1k/nali.git", branch: "master"
 
