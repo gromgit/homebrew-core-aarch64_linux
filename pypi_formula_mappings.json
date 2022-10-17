@@ -72,6 +72,9 @@
   "bzt": {
     "exclude_packages": ["numpy", "six"]
   },
+  "censys": {
+    "exclude_packages": ["Pygments"]
+  },
   "certbot": {
     "extra_packages": ["certbot-apache", "certbot-nginx"],
     "exclude_packages": ["six"]

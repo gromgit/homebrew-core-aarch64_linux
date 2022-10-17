@@ -16,6 +16,7 @@ class Censys < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "bdcc975ccc160c5cc79fc2cb9213e1423a96b937f5c3461131c632d6c72ea0ef"
   end
 
+  depends_on "pygments"
   depends_on "python@3.10"
 
   resource "backoff" do
@@ -41,11 +42,6 @@ class Censys < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz"
     sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "requests" do
