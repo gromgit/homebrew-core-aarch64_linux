@@ -16,6 +16,7 @@ class Howdoi < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "52e37bd075a0207f5ff6c1ec6800ca9cc6a4ac504dab6d020392dddd36cee113"
   end
 
+  depends_on "pygments"
   depends_on "python@3.10"
   depends_on "six"
 
@@ -99,11 +100,6 @@ class Howdoi < Formula
   resource "PyGithub" do
     url "https://files.pythonhosted.org/packages/98/36/386d282903c572b18abc36de68aaf4146db4659c82dceee009ef88a86b67/PyGithub-1.55.tar.gz"
     sha256 "1bbfff9372047ff3f21d5cd8e07720f3dbfdaf6462fcaed9d815f528f1ba7283"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "PyJWT" do
