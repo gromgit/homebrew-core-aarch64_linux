@@ -21,6 +21,7 @@ class Molecule < Formula
   depends_on "cookiecutter"
   depends_on "jsonschema"
   depends_on "openssl@1.1"
+  depends_on "pygments"
   depends_on "python@3.10"
   depends_on "pyyaml"
   depends_on "six"
@@ -80,11 +81,6 @@ class Molecule < Formula
   resource "pluggy" do
     url "https://files.pythonhosted.org/packages/a1/16/db2d7de3474b6e37cbb9c008965ee63835bba517e22cdb8c35b5116b5ce1/pluggy-1.0.0.tar.gz"
     sha256 "4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "pyparsing" do
