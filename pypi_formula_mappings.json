@@ -575,7 +575,10 @@
   "xdot": {
     "extra_packages": ["graphviz"]
   },
-  "xonsh": "xonsh[ptk,pygments,proctitle]",
+  "xonsh": {
+    "package_name": "xonsh[ptk,pygments,proctitle]",
+    "exclude_packages": ["Pygments"]
+  },
   "xxh": {
     "exclude_packages": ["PyYAML"]
   },
