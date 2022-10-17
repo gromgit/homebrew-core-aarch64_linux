@@ -350,7 +350,7 @@
     "exclude_packages": ["six", "PyYAML"]
   },
   "organize-tool": {
-    "exclude_packages": ["six", "PyYAML"]
+    "exclude_packages": ["six", "PyYAML", "Pygments"]
   },
   "osc-cli": {
     "exclude_packages": ["six", "typing-extensions"]
