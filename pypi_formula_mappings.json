@@ -72,6 +72,9 @@
     "extra_packages": ["certbot-apache", "certbot-nginx"],
     "exclude_packages": ["six"]
   },
+  "coconut": {
+    "exclude_packages": ["Pygments"]
+  },
   "cfn-flip": {
     "exclude_packages": ["six", "PyYAML"]
   },
