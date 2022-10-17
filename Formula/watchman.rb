@@ -1,8 +1,8 @@
 class Watchman < Formula
   desc "Watch files and take action when they change"
   homepage "https://github.com/facebook/watchman"
-  url "https://github.com/facebook/watchman/archive/v2022.10.10.00.tar.gz"
-  sha256 "eadfd0826e857338d5b839f7b61c9dad4f836ddcf058f4b7ee2f8294deb6be25"
+  url "https://github.com/facebook/watchman/archive/v2022.10.17.00.tar.gz"
+  sha256 "54d2f454e49cc1c44fe5b4712d9f6b38a86323817c8185c66fbaf951c9411f33"
   license "MIT"
   head "https://github.com/facebook/watchman.git", branch: "main"
 
@@ -36,13 +36,6 @@ class Watchman < Formula
   depends_on "python@3.10"
 
   fails_with gcc: "5"
-
-  # Fix build against fmt 9+. Can likely be removed in the next release.
-  # https://github.com/facebook/watchman/pull/1064
-  patch do
-    url "https://github.com/facebook/watchman/commit/224187aa798a0acab9983ac2b96011497d1c7b7d.patch?full_index=1"
-    sha256 "3a40fc8a6e67aa3bf3e22d90ecf423a98c198622ed68ccbbf7c0634e1c971e85"
-  end
 
   def install
     # Fix build failure on Linux. Borrowed from Fedora:
