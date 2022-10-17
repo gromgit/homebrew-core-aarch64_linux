@@ -16,6 +16,7 @@ class Jupyterlab < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "aea919ca3f08b361b61fb15e839e2ff62d3a14602ab181398313838897b33897"
   end
 
+  depends_on "hatch" => :build
   depends_on "python-build" => :build
   depends_on "node"
   depends_on "pandoc"
@@ -165,6 +166,11 @@ class Jupyterlab < Formula
   resource "jupyter-client" do
     url "https://files.pythonhosted.org/packages/4d/d1/b6161a5e8639a0d35aeb59a50d944dc4928775db2408ea10b23087e354b6/jupyter_client-7.3.5.tar.gz"
     sha256 "3c58466a1b8d55dba0bf3ce0834e4f5b7760baf98d1d73db0add6f19de9ecd1d"
+  end
+
+  resource "jupyter-console" do
+    url "https://files.pythonhosted.org/packages/1b/2f/acb5851aa3ed730f8cde5ec9eb0c0d9681681123f32c3b82d1536df1e937/jupyter_console-6.4.4.tar.gz"
+    sha256 "172f5335e31d600df61613a97b7f0352f2c8250bbd1092ef2d658f77249f89fb"
   end
 
   resource "jupyter-core" do
@@ -401,8 +407,9 @@ class Jupyterlab < Formula
     ENV["JUPYTER_PATH"] = etc/"jupyter"
 
     # gather packages to link based on options
-    linked = %w[jupyter-core jupyter-client nbformat ipykernel jupyter-console nbconvert notebook]
-    dependencies = resources.map(&:name).to_set - linked
+    linked = %w[jupyter-core jupyter-client nbformat ipykernel nbconvert]
+    linked_setuptools = %w[jupyter-console notebook]
+    dependencies = resources.map(&:name).to_set - linked - linked_setuptools
     dependencies -= ["appnope"] if OS.linux?
 
     # `jupyterlab-pygments` requires `jupyterlab` to build. Since Homebrew doesn't
@@ -410,7 +417,8 @@ class Jupyterlab < Formula
     # using the pre-built PyPI wheels for `jupyterlab` and its dependencies.
     dependencies -= ["jupyterlab-pygments"]
     resource("jupyterlab-pygments").stage do
-      system "pyproject-build", "--wheel"
+      pybuild = Formula["python-build"].opt_bin/"pyproject-build"
+      system pybuild, "--wheel"
       venv.pip_install Dir["dist/jupyterlab_pygments-*.whl"].first
     end
 
@@ -418,7 +426,17 @@ class Jupyterlab < Formula
     dependencies.each do |r|
       venv.pip_install resource(r)
     end
-    venv.pip_install_and_link linked
+    linked_setuptools.each do |r|
+      venv.pip_install_and_link resource(r)
+    end
+    hatch = Formula["hatch"].opt_bin/"hatch"
+    linked.each do |r|
+      resource(r).stage do
+        system hatch, "build", "-t", "wheel"
+        venv.pip_install_and_link Dir["dist/*.whl"].first
+      end
+    end
+
     venv.pip_install_and_link buildpath
 
     # remove bundled kernel
