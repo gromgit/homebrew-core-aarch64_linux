@@ -1,9 +1,9 @@
 class Cproto < Formula
   desc "Generate function prototypes for functions in input files"
   homepage "https://invisible-island.net/cproto/"
-  url "https://invisible-mirror.net/archives/cproto/cproto-4.7t.tgz"
-  mirror "https://deb.debian.org/debian/pool/main/c/cproto/cproto_4.7t.orig.tar.gz"
-  sha256 "3cce82a71687b69e0a3e23489fe825ba72e693e559ccf193395208ac0eb96fe5"
+  url "https://invisible-mirror.net/archives/cproto/cproto-4.7u.tgz"
+  mirror "https://deb.debian.org/debian/pool/main/c/cproto/cproto_4.7u.orig.tar.gz"
+  sha256 "64ebbbcc5e0501aff296f431d06f9fb70863afe5b0ce66c3b3479072914fc51e"
   license :public_domain
 
   livecheck do
