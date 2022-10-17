@@ -111,7 +111,7 @@
     "exclude_packages": ["six"]
   },
   "conan": {
-    "exclude_packages": ["six", "PyYAML"],
+    "exclude_packages": ["six", "PyYAML", "Pygments"],
     "extra_packages": ["distro"]
   },
   "commitizen": {

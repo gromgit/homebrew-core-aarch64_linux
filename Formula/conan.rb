@@ -20,6 +20,7 @@ class Conan < Formula
   depends_on "pkg-config" => :build
   depends_on "cmake" => :test
   depends_on "openssl@1.1"
+  depends_on "pygments"
   depends_on "python@3.10"
   depends_on "pyyaml"
   depends_on "six"
@@ -82,11 +83,6 @@ class Conan < Formula
   resource "pluginbase" do
     url "https://files.pythonhosted.org/packages/f3/07/753451e80d2b0bf3bceec1162e8d23638ac3cb18d1c38ad340c586e90b42/pluginbase-1.0.1.tar.gz"
     sha256 "ff6c33a98fce232e9c73841d787a643de574937069f0d18147028d70d7dee287"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "PyJWT" do
