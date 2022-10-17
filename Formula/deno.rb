@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.land/"
-  url "https://github.com/denoland/deno/releases/download/v1.26.1/deno_src.tar.gz"
-  sha256 "fee389f62ff7b558bcaec0ff4a9ec3894c07a981b12b5b122cbc4175dd5285d7"
+  url "https://github.com/denoland/deno/releases/download/v1.26.2/deno_src.tar.gz"
+  sha256 "69dcc7ea1e52a209c5fd386341e37b3c93b3e12f62fe645bf5bdd04cc8c86689"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -37,13 +37,13 @@ class Deno < Formula
   # We use the crate as GitHub tarball lacks submodules and this allows us to avoid git overhead.
   # TODO: Remove this and `v8` resource when https://github.com/denoland/rusty_v8/pull/1063 is released
   resource "rusty-v8" do
-    url "https://static.crates.io/crates/v8/v8-0.51.0.crate"
-    sha256 "e72791f754a6517e86d88e4521baad3a7d428ce54e266ba560b8747b2a99b946"
+    url "https://static.crates.io/crates/v8/v8-0.53.1.crate"
+    sha256 "e952e936bcb610c9f22997f50dc7f65887afe76e1fedd37daf532a20211335ca"
   end
 
   resource "v8" do
-    url "https://github.com/denoland/v8/archive/652f540e7eb25fba4598c66be9cd875c171e1810.tar.gz"
-    sha256 "4fedc7fe94f6164e2ffdbc465a5a8d5808b6b057e05993d384524cd77e195d5a"
+    url "https://github.com/denoland/v8/archive/b948377e7ee0948e0111ffc724989f8017567584.tar.gz"
+    sha256 "1a562b9e21e9d9381ecc6fdcb17ece279b530e69c430d5204401152dc70756d7"
   end
 
   # To find the version of gn used:
