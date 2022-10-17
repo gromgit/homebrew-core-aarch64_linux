@@ -275,7 +275,7 @@
   },
   "lexicon": {
     "package_name": "dns-lexicon[full]",
-    "exclude_packages": ["six", "PyYAML"]
+    "exclude_packages": ["six", "PyYAML", "Pygments"]
   },
   "legit": {
     "exclude_packages": ["six"]
