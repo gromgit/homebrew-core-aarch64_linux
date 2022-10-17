@@ -21,6 +21,7 @@ class Pgcli < Formula
   depends_on "libpq"
   depends_on "libpython-tabulate"
   depends_on "openssl@1.1"
+  depends_on "pygments"
   depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "six"
@@ -58,11 +59,6 @@ class Pgcli < Formula
   resource "psycopg" do
     url "https://files.pythonhosted.org/packages/3e/9b/2af032b1befdfdb8c9af1cf9e88cf1b3ad54b03d0135af3f60e421e6befc/psycopg-3.1.1.tar.gz"
     sha256 "3ee0af9cf944d9579441c15702835a949788b5a57894823f0a916c2598c96f40"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "python-dateutil" do
