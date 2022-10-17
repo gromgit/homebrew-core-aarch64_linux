@@ -500,7 +500,7 @@
     "exclude_packages": ["docutils", "Pygments"]
   },
   "sqlfluff": {
-    "exclude_packages": ["PyYAML", "typing-extensions"]
+    "exclude_packages": ["PyYAML", "typing-extensions", "Pygments"]
   },
   "sqlite-utils": {
     "exclude_packages": ["tabulate", "six"]

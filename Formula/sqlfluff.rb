@@ -17,6 +17,7 @@ class Sqlfluff < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b374618f99658ace173b8494d813b339dd84348f2f7d10ec5d2fe63b2358533"
   end
 
+  depends_on "pygments"
   depends_on "python-typing-extensions"
   depends_on "python@3.10"
   depends_on "pyyaml"
@@ -84,11 +85,6 @@ class Sqlfluff < Formula
   resource "py" do
     url "https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a61af3b40c723a961e8828319fbcb15b868dc/py-1.11.0.tar.gz"
     sha256 "51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "pyparsing" do
