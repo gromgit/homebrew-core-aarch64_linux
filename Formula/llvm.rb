@@ -1,8 +1,9 @@
 class Llvm < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.2/llvm-project-15.0.2.src.tar.xz"
-  sha256 "7877cd67714728556a79e5ec0cc72d66b6926448cf73b12b2cb901b268f7a872"
+  # NOTE: `ccls` will need rebuilding on every version bump.
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.3/llvm-project-15.0.3.src.tar.xz"
+  sha256 "dd07bdab557866344d85ae21bbeca5259d37b4b0e2ebf6e0481f42d1ba0fee88"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
@@ -440,14 +441,18 @@ class Llvm < Formula
     lib.glob("*.a").each do |static_archive|
       mktemp do
         system bin/"llvm-ar", "x", static_archive
+        rebuilt_files = []
+
         Pathname.glob("*.o").each do |bc_file|
           file_type = Utils.safe_popen_read("file", bc_file)
           next unless file_type.match?("LLVM bitcode")
 
+          rebuilt_files << bc_file
           system bin/"clang", "-fno-lto", "-Wno-unused-command-line-argument",
                               "-x", "ir", bc_file, "-c", "-o", bc_file
-          system bin/"llvm-ar", "r", static_archive, bc_file
         end
+
+        system bin/"llvm-ar", "r", static_archive, *rebuilt_files if rebuilt_files.present?
       end
     end
   end
