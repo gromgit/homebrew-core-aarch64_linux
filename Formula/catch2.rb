@@ -6,13 +6,12 @@ class Catch2 < Formula
   license "BSL-1.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b07f3763a2b490e635e522921ce46bf394630cc890cc3c25eefbfbc7916b3a9f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e1bfdeee516c57508fc966f8c8e597ac3027d14f15c8a66ee3c34f246a041170"
-    sha256 cellar: :any_skip_relocation, monterey:       "d2933b99b16a54f70c41b93187b3e832f24b5a98ebf0034162dac506611eb992"
-    sha256 cellar: :any_skip_relocation, big_sur:        "58efdf7d1cee6b5bfb3d641b20a4387dc7cf09c451dca4b170766d762a9d39e1"
-    sha256 cellar: :any_skip_relocation, catalina:       "0922e33d2d012d83970787e66af3f497490c31f3ba3f935b6a1f793fd82b284d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a2beac4f21835c7d8178c0aeabc0931fe7328bc64b086d0a329c6be458737ae"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d08d118313865cf5920e3fc27f1907891ac78ec4b129e42ba9190704b8029ba0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c97e1c2aba9ef2e87d35e14a2bf0ede6a48547f6858442e6ee0b72db9202a1dd"
+    sha256 cellar: :any_skip_relocation, monterey:       "f6899222c3a1a90b15be147932609acb45fb8c79813516ffd746d3d68ed9de39"
+    sha256 cellar: :any_skip_relocation, big_sur:        "26849060c5a91a5cd66d1f1531b159674164a3b33367dc7b11d1efbd41f97a7e"
+    sha256 cellar: :any_skip_relocation, catalina:       "2c5d60aeb2d343e0485f48386c767592e2d21bab8b022ecedb39de2a088f58bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9f9812f4d91d9b9c7608422a71080437d487a063df94038342bde742bd6933f"
   end
 
   depends_on "cmake" => :build
