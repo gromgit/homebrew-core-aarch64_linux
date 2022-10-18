@@ -13,8 +13,12 @@ class Goenv < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "18e8cdaeba562696634782aff8f2affff1201d91fab4334346942b11ece548a5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c907313711c6d59f30992102c9c7dd63edfb36c7d1bd5103e3545df13b89450c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c907313711c6d59f30992102c9c7dd63edfb36c7d1bd5103e3545df13b89450c"
+    sha256 cellar: :any_skip_relocation, monterey:       "cb6cb190a223d9e86c4a8ffbecad50adc1e1d567e4ee5054ed068aac62c997b3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cb6cb190a223d9e86c4a8ffbecad50adc1e1d567e4ee5054ed068aac62c997b3"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb6cb190a223d9e86c4a8ffbecad50adc1e1d567e4ee5054ed068aac62c997b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c907313711c6d59f30992102c9c7dd63edfb36c7d1bd5103e3545df13b89450c"
   end
 
   def install
