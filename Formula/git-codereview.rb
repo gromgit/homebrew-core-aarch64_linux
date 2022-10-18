@@ -6,12 +6,12 @@ class GitCodereview < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f5ab453d7bacf9c5eeba18eae8ad7b16439f52e7f889f51733b20640be3204a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a0af942b19fe91507cbe4578e7bf498227bb6d7f373ce5f7aaab442b73092897"
-    sha256 cellar: :any_skip_relocation, monterey:       "5340884803d60ad763eaec05ae8ae89cfcf439ff1af1e09b53ce3b7fb22882d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "885362ec1afdf32f2f8886e35b6c75ba8cd55fd304988f047fc4bf06a8dd4720"
-    sha256 cellar: :any_skip_relocation, catalina:       "42a93d8109e0cb7713b4fb46526bf89cf3a6a9a1803c2dcb1af344e730d0c678"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2424c58b54caf81d5efa611dd5e4ef09a510b7d159ab8ddfb386bf9385a96f3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a022cf724cf39fd6dc92cad7a55446a9f0302c845ef87e03f46210dcf199988e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2fd65180b6856bee67ae21817cbf2a726fe7c1d35bd3002918db11b1202130e4"
+    sha256 cellar: :any_skip_relocation, monterey:       "ed3cee8c351d10e662060dd4fb2cfac24e2de656afbb03650ef0a1fa8c9052f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bf79d08c1c6707b3694dc4160432fc6edea8b76a9093c6644613b7d2a8c14833"
+    sha256 cellar: :any_skip_relocation, catalina:       "c7b20e3b59d51981043502b8d5269708b7da52d671495c93504945422f601a1f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95eb854057332df92b876d9d779b6131f53d2dba28ccf7bad1a08fa48d2f47ce"
   end
 
   depends_on "go" => :build
