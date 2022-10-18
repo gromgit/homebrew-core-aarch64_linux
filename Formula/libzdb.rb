@@ -1,10 +1,9 @@
 class Libzdb < Formula
   desc "Database connection pool library"
   homepage "https://tildeslash.com/libzdb/"
-  url "https://tildeslash.com/libzdb/dist/libzdb-3.2.2.tar.gz"
-  sha256 "d51e4e21ee1ee84ac8763de91bf485360cd76860b951ca998e891824c4f195ae"
+  url "https://tildeslash.com/libzdb/dist/libzdb-3.2.3.tar.gz"
+  sha256 "a1957826fab7725484fc5b74780a6a7d0d8b7f5e2e54d26e106b399e0a86beb0"
   license "GPL-3.0-only"
-  revision 3
 
   livecheck do
     url :homepage
@@ -28,12 +27,6 @@ class Libzdb < Formula
   depends_on "sqlite"
 
   fails_with gcc: "5" # C++ 17 is required
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
 
   def install
     system "./configure", *std_configure_args
