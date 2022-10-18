@@ -6,14 +6,13 @@ class Openmama < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "2e7a0417aeac01af231fb8302c4fbe3c212d81f2d657fbef9a54894aa0e3d52f"
-    sha256 cellar: :any,                 arm64_big_sur:  "e68c9fee04206d5f5b21d84889bf645c7f4b2b2922a886e9bbcc226a05faa183"
-    sha256 cellar: :any,                 monterey:       "af3c17bf4293979ab3fb40f6fbfaf6ffedb4dc5ec74eb1345770da6da7ff5597"
-    sha256 cellar: :any,                 big_sur:        "b3d28de466d5f2d17ddb57b2f5004e3defc7f8d48922814f61f733aa7015639c"
-    sha256 cellar: :any,                 catalina:       "50fe6f8436bd5d7729f9f20c21de8d398e50546754514708e24715a097bd21f1"
-    sha256 cellar: :any,                 mojave:         "b0a5d95139fce5f6f72b5a2906c5e2e6b604aef25e2b76e7c448ab1bfcefe6d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cec891fa1150c54fb96efaf979e1efbbaf50b0327978c55a59242c83cb96a73e"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "81aa664271767ec190b914b079f6aaddb4712ea5071ae983f41904ccabacbf75"
+    sha256 cellar: :any,                 arm64_big_sur:  "a123162e2ba61eb5c30e56460e0946071d905555dc83183b6f20f8ce6bc65193"
+    sha256 cellar: :any,                 monterey:       "178483d87eda050e29c6b646436c0ece4a14dcd5c1d98aec8103a49b97e2857c"
+    sha256 cellar: :any,                 big_sur:        "45153901e833685b76160a45e283b21c52e2382f4a1a65092acd97035f75e2ca"
+    sha256 cellar: :any,                 catalina:       "363d1c76bec6373017daa21a142f07793f818a2d871960641699b54ef54de980"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "643e5f3db30c0f6ae816f6131f0325e58d2bb82665756449347a0a5751bd88be"
   end
 
   depends_on "cmake" => :build
