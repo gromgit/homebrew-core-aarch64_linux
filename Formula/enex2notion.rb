@@ -8,12 +8,12 @@ class Enex2notion < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "880cb3065edddb3a7ba8399eda777dfed095716dbf81e002722e9041e10d7ad5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cfb072d54d6311664195fa412a1019b9963e038dace97ac3f7f3411337f8f75f"
-    sha256 cellar: :any_skip_relocation, monterey:       "961985f785c195ab716cffce00be5a737f8e6368eb3b170822ce6d385ab902c2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e93007607e078f6d12c49af42687d1654522d373c7ffe9eca545a165e7abfb93"
-    sha256 cellar: :any_skip_relocation, catalina:       "8925dbf2c92b2c0d3c524c9ba7c7c8dc5261373201a1b96af021bc5bae56fb82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58b501865b85e8b292ff3336683427f298102a8fbea5e8fab1e3b1fbb378b2b2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "367aea02ba0f55b48f217d35aca22fac08f0bd13840ff354ac6da9d70d4c9b14"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d707f8f1103174d485336670ce06769eabd95c20b02a28cf0d89ee098a6c2953"
+    sha256 cellar: :any_skip_relocation, monterey:       "2fbb2c3aa5fbe527bdbfc2f63e191a6bb9d22b38e04dccb05e3eda34ec840e4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e978aea5b4a775129297af4c84d092dba47119d7d2c794222014fe8d6fc6ed7f"
+    sha256 cellar: :any_skip_relocation, catalina:       "78a13f110b52f0ea14f30b039517f1909061235a3a09e8c568a9cc2fa6732b52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "079e171bfe5b3013fff0eb1dbb5a9f4fd7a56e2181ca668cbcdcaaf4729fa7a6"
   end
 
   depends_on "pymupdf"
