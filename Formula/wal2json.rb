@@ -12,12 +12,12 @@ class Wal2json < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d6e1da3ff100ef985fcfd0ce5b9ad4095209c9625447a33764f73383e0174f6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14407a5bc84e8db3b3a73555b31e7a27f229376bc449b51a62d936020f7c525d"
-    sha256 cellar: :any_skip_relocation, monterey:       "257d8f5d6803fe88f3c0635aea44c1d67ea1c77a45ce064ba2e3f361e7c98642"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ec66adbf5d0932d50f6a3e75bb44ae8c051e49d14e312c9b171614b252297e3e"
-    sha256 cellar: :any_skip_relocation, catalina:       "22010d68d3ae9e7c2f021666e9b245fd6d61e237d37ffe0152dbf6d61eceb7cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2e6b41d55bf757d3554f9c199c8be44d2edc422864aa224395fbe0573f6c817"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c9dec0653716cd5dcb63a76150b399252776bfa0013dfabdfbc0a2f3e700e89"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e49db0bc27c9bb9355f9c9c6a032b5dd56b4e70ec03950355367c809e54088d"
+    sha256 cellar: :any_skip_relocation, monterey:       "9c340985060a45681159a662d4fe4ff6a19fdf6735c28d2c67f9ae38a052ef20"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e961f33e907f86ced624dbbddfabc25e66007a83cc89f9e2f6c1a83e440f9e43"
+    sha256 cellar: :any_skip_relocation, catalina:       "3438e2f5355834993c39f5a9488138643be8e88ec643420647a38a83d65ac4ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6cec39726b0b3dc1f51319d2831875716e1dec9e5a50a27981f7cee77db1447"
   end
 
   depends_on "postgresql@14"
