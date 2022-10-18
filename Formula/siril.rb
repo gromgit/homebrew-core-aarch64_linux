@@ -7,12 +7,12 @@ class Siril < Formula
   head "https://gitlab.com/free-astro/siril.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "e32f148b276101d6841dfb8c211898a1d7272d4916a284da8c8183c835a1b88e"
-    sha256 arm64_big_sur:  "dab00cd2e285de9b6f3a64cb088d1e8f0aac71392b60b96e0f16a6c0bed310d6"
-    sha256 monterey:       "a6a7bbf11fb0ec6e0642ea75f6f199f8df3050df9877a1d39e8c04d88beba6f6"
-    sha256 big_sur:        "d4eb9b1bd38a4353e37974e732aee0d9ee5f09d4a46a84a4a557de692e5ac0b2"
-    sha256 catalina:       "f1173327fd55e2feb7d866af35677fc98ee54a142b3dad4c635f19545ecc7315"
-    sha256 x86_64_linux:   "8da1ab7b1d365d5177ae4be0cf2fcd0a631d5329fb539e2659b25539b3d39a85"
+    sha256 arm64_monterey: "e0dc10be674471441b1bdf17334582cbcf927169e088d5962a86223b84d92588"
+    sha256 arm64_big_sur:  "363c451176ab23459568cbf6c31c84fa9ff24026c38ca44f671e0cffa1c3277e"
+    sha256 monterey:       "9cc7ce4042232c80c6fd6feaf8e2189162be550d514efc4eeb01cb63e33d3661"
+    sha256 big_sur:        "d17a42f115cd8093c55eacb63ee06ab961c58e3b033485882388232f461881f6"
+    sha256 catalina:       "37ce14f936455a5b3f70818495cbaf50312c5851c48f751fb31fdcfdae1aeae4"
+    sha256 x86_64_linux:   "7e88d1a3b045ecb2e2dd53458da0f0fac42003b72cfc93a7187e11cdff9d935c"
   end
 
   depends_on "autoconf" => :build
