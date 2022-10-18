@@ -12,12 +12,12 @@ class Ncdu < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "5b2f014ed878a5402ab588810bfab00ad3c53bea56fb540f638c757d69ff37fb"
-    sha256 cellar: :any,                 arm64_big_sur:  "c5cd8b46859d78923d564b30a797cc0e631591c41df84f54cd1897b13d9543be"
-    sha256 cellar: :any,                 monterey:       "04f5c6961fe800ceac83d793a4781adcbcb87a58be6c0836798f73462bfac5d2"
-    sha256 cellar: :any,                 big_sur:        "fc687682b0a3a6c8524adc6b0c8803079121f7ce2ca40b257e7e56131ec03515"
-    sha256 cellar: :any,                 catalina:       "a1a6be988dbeb8b211bd29964b85fca0d66c0935e05402519e3793c75521a3c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c165a42d391ca8ad87f1a9d8f4234841cbe1aa51db7f65dc873c1c0cf4a30d59"
+    sha256 cellar: :any,                 arm64_monterey: "8fba33d5bca5d0b4fdadd28cc9a287de19a46d5df77a7c1535bc285a048fd094"
+    sha256 cellar: :any,                 arm64_big_sur:  "6120a796bc6b311b8b8415ab9d6fa6d6434bdbaffe559b83e58ad7545e67227c"
+    sha256 cellar: :any,                 monterey:       "40cde85940209ac41b64646ec5462791cfdcea1d2419e95a835b0de0554cdbdc"
+    sha256 cellar: :any,                 big_sur:        "53810b01d02b7d09c200d9f221fcb5a52accd9d40180c4ca3cc74ea5abea9b14"
+    sha256 cellar: :any,                 catalina:       "3575ae3f1050a7cf12f1a6b64ee1a28cd366971eec9f8854f2a39cf876402568"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01148e8937e60ed15cc2c928e986fa3e74541e15c677083f51ad6f208ca9b53f"
   end
 
   depends_on "pkg-config" => :build
