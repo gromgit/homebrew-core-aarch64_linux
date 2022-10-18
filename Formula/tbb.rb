@@ -6,12 +6,12 @@ class Tbb < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d429069173b1bbc6a4fc473596b1f56f9ae505961420d141f91e1fd6134ad766"
-    sha256 cellar: :any,                 arm64_big_sur:  "93a6e5780531240b7e78444cb364a9cf4f7dff1275a19e42d8a1adb0877001f7"
-    sha256 cellar: :any,                 monterey:       "fa514d241a73a459cc92171cccf64a9867e31fc2285c7130e8b4b3a6323c0db9"
-    sha256 cellar: :any,                 big_sur:        "0026d3ff334c394482b8b252f4a7de078554cf59d0db31f9e7e94b0947bc3376"
-    sha256 cellar: :any,                 catalina:       "379b4e7d6b4b40964b80211adff9d7224b3c10b5091eb8127ce939015e031526"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7e97e1ba13401a2f358a5a2477ca0d78fe806a75375d2636dfa39cc198f6fbce"
+    sha256 cellar: :any,                 arm64_monterey: "ae7e8f1af052a35b96f5dafa33b6c7034a72467e6d6d57a2940e81eca38f10ab"
+    sha256 cellar: :any,                 arm64_big_sur:  "f98ddae67691e3cd8c1f89db0b3f9dfd117b147d21e628fb1681fc59bc7a4905"
+    sha256 cellar: :any,                 monterey:       "d73ec8f94707e2545b4ae057d8876d20ba47a0e53c75276ab9406e0895a6066c"
+    sha256 cellar: :any,                 big_sur:        "87fc6a4cd9e698357d156140e8a98d4538d069d977ad1ee6840b170cf6568113"
+    sha256 cellar: :any,                 catalina:       "8fb9a240fddfe26367118f82e409d1028773faac1996821abfc41c9c6bb17807"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6a630dac8201adfad7c9861ad3590a2053b417f5e5ea088087b8233343afdea"
   end
 
   # If adding `hwloc` for TBBBind, you *must* add a test for its functionality.
