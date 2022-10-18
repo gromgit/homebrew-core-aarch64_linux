@@ -6,12 +6,12 @@ class Procs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bd1ea214ae9a040421ec2c2f5899ea6ce2b96b5dc94818c80a76e645e098e72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0fe619a018f825ba5d2c9d2f139c0573996237e5aaf541476847bf169480d520"
-    sha256 cellar: :any_skip_relocation, monterey:       "15af60f6cb0bdc6975403c26968ef657eff145c79571e973a97b1e8b338470ea"
-    sha256 cellar: :any_skip_relocation, big_sur:        "89c8c315d850b79e9b62222a393fd54389daa185193d9f53c354154bae60a47f"
-    sha256 cellar: :any_skip_relocation, catalina:       "097223bca981e48634fe0c6b82c5610b900d5f9567fcc79a439c22f6d74dc4ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c63ecc468c6f5fdc73863e103f9c58f3aca48281d8c1770bab626e4aef7fc7d3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be1ed73314de635fcdf4cb4361e86b5bdf597058a717c6ae6558d5e69e0d5ae0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f9068c46fe2f378479efc299bb36649f3c269d78dde5f7d907b9b9d56cf77f6a"
+    sha256 cellar: :any_skip_relocation, monterey:       "c39c70e498bd5b88b33935fff5eed339f756951ea4d26c2c4b65dba0eecb76a1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "16875429b6cffec8de519fe7b33f6279332f1a9b94ee0249a9765bc63f10c783"
+    sha256 cellar: :any_skip_relocation, catalina:       "7ba04a5851c39fd04dd171ad9230f7b0b3faa1388f703e767fad15e825baf07b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b03cf50be16bd72f2fe75fa43bdd734b98f0d827b37c1cdee057a1167a5c32f"
   end
 
   depends_on "rust" => :build
