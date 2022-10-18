@@ -1,8 +1,8 @@
 class Libnetworkit < Formula
   desc "NetworKit is an OS-toolkit for large-scale network analysis"
   homepage "https://networkit.github.io"
-  url "https://github.com/networkit/networkit/archive/9.1.1.tar.gz"
-  sha256 "0376b3b7b8ba1fefb46549c7dd2cf979237a24708293715b1da92b4da272a742"
+  url "https://github.com/networkit/networkit/archive/10.0.tar.gz"
+  sha256 "77187a96dea59e5ba1f60de7ed63d45672671310f0b844a1361557762c2063f3"
   license "MIT"
 
   livecheck do
@@ -10,16 +10,13 @@ class Libnetworkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d70f28d4cd0e0f131bf702bc28145ac29c6bed7735c56ed32a7d172f22a287be"
-    sha256 cellar: :any,                 arm64_big_sur:  "e980cfd47eea34350c5fefd5f293413b29396b1320b2661182db608596edabe1"
-    sha256 cellar: :any,                 monterey:       "b795b14c903c6280b050abaa2b36f7a692ec3b4422b46f45e67fe9d8a3424edb"
-    sha256 cellar: :any,                 big_sur:        "b3d03f22419474b830163e6f67a113c96393095311ae3014f7b09c7e52ba22ca"
-    sha256 cellar: :any,                 catalina:       "43e0aecc9ced86dd1e9cfcbef96965bbbe767beb9114f095952c8b8cf8ab6317"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76ebf53f601b9e20661d5c3bdcf2d8335eb9f8d1d9f4073367cd6e2ad25d0184"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libnetworkit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "92d03906e979390441a2ac45e6229cf3f805d55f119eaba08d97a9e335ecf116"
   end
 
   depends_on "cmake" => :build
   depends_on "tlx"
+  depends_on "ttmath"
 
   on_macos do
     depends_on "libomp"
