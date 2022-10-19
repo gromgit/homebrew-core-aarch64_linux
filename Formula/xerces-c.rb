@@ -7,14 +7,12 @@ class XercesC < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "c71f69f6824b64a6bbd0b685fe9b77ee579c52c5cf93236997c3ecaa81244141"
-    sha256 cellar: :any,                 arm64_big_sur:  "ad9251257543aee28e08fbc5f433a5ad72c0065511c09d19c888bf28b5bbf21f"
-    sha256 cellar: :any,                 monterey:       "60a660d35a1ae9bb8b7b51413deb0defcf4247e5718c8128949d952f6fdb0662"
-    sha256 cellar: :any,                 big_sur:        "6a561a0f4175e7da6790b2beaedf185516a118116402a674a6b936d5c3236575"
-    sha256 cellar: :any,                 catalina:       "743af0adcd563f604bf3f057d1144b9e11bc1b5a9e842f82d430301d2b5fc185"
-    sha256 cellar: :any,                 mojave:         "cf22a3e57f6e6e279e9eb476bb80c08d18979938f54d19347fd103ccdc7cf78e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a5d21760453dc1ddc1ed3e9971a1304801f50b402bfc5461fe88df04915c3a5"
+    sha256 cellar: :any,                 arm64_monterey: "55a07ff428b5caeafc5628df1af7b39ac340d3ec1130bbaf5474363a374c01db"
+    sha256 cellar: :any,                 arm64_big_sur:  "20fc19025ac2b500e659dd8ec35136e13ac789c6f26d3a720a793e0ee7f2983b"
+    sha256 cellar: :any,                 monterey:       "52590592166754dff35051432cf0d5e8f656ecc4774e21d47dcf2ad936ef3f80"
+    sha256 cellar: :any,                 big_sur:        "8238563eea46d61d137b62d3f4b7ef7e8184f06b5c89b140c7c657b724ea34ec"
+    sha256 cellar: :any,                 catalina:       "2829258e76d45883ab076906aa1e3649a0d7775932353ea642e6ead0cc5e5371"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76d7da011335635adf76ec6ae5f48980174673effb6d6cfcb3ebb48db4eb5720"
   end
 
   depends_on "cmake" => :build
