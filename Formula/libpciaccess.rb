@@ -6,7 +6,7 @@ class Libpciaccess < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "40ad780e2eca51034f9203259b5970978932f5d437124f333717863a0b900e43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "6ea67393c5a32066f823858c124136a6b0e296fb033321c7bb073a618c65d2b9"
   end
 
   depends_on "pkg-config" => :build
