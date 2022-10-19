@@ -6,14 +6,12 @@ class Libxkbfile < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "22592ddf483ed0ec9ccf361ca77513fda5a19954cc4e5e52c3079bbff07d4ad5"
-    sha256 cellar: :any,                 arm64_big_sur:  "5d9fb616a049f24910c9f71e3f70cbb3920df9adadfb146cdbd550ad0ac508ca"
-    sha256 cellar: :any,                 monterey:       "e31419789815b526116f7ace2e9063ad49401731bba80b8f6c0aa2867d7cf52e"
-    sha256 cellar: :any,                 big_sur:        "ad23cdb5cd188e6581ccb16dd1b007a66448738f687a35523633432295f6524b"
-    sha256 cellar: :any,                 catalina:       "18d3314727b519379948c4b69a242d0f52bfdba78cf2d2bc0f1cd1384510dda4"
-    sha256 cellar: :any,                 mojave:         "19c4c1ad6066ba36e079e5b7b66ed2e66d6202dc9fbda01fd8ff6cf802264c5b"
-    sha256 cellar: :any,                 high_sierra:    "94703acd3591d5ccec71ac964adce8b86ad370498add6026b9ba9dea0bc04d13"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e0a9a6f4d9583aecb25f5e635be3a87665738350dfeceae207eeabe9b72a82e"
+    sha256 cellar: :any,                 arm64_monterey: "ee43a751acb1d2368c2002d81b87c71c4729a34aa95c18540071cd1b2eaf1f8b"
+    sha256 cellar: :any,                 arm64_big_sur:  "e33a381dd6b30b86920adbbd64c48e18e2cc549bcab25a6c8f40c72705fd8fc2"
+    sha256 cellar: :any,                 monterey:       "4d0447b062d2b7a25314138c27c7541101d494ee3ea366905bcbbe1265cdadb5"
+    sha256 cellar: :any,                 big_sur:        "d03791354356b615e28d6764beb46ec25eb02b5400f9ab44afc9344886997f03"
+    sha256 cellar: :any,                 catalina:       "f9ee4cdf0be6c785c3a1eef84490cfb3f9caabb0f838d38a3369c2493fed825c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e7e9fc16f4f7a6c9b2f5457fd231e5c7ad89ebaab966daa83b21fecfa2be3896"
   end
 
   depends_on "pkg-config" => :build
