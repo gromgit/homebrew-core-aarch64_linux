@@ -12,13 +12,11 @@ class Qjackctl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "0f3e64ef2b94a5e8d58c837b6fcd60a788977ff00f847bd9e8379e7303308bb8"
-    sha256 arm64_big_sur:  "e987344fe0fbd559ac3ece1aa750932051f87eb345242e37b202d95ea1fe8431"
-    sha256 monterey:       "c06b8e8e299414b51a498812d61a5200e80903184eb01136acf7ee7eca7038b8"
-    sha256 big_sur:        "87baabe3f3790a992f9309d9f877efd74dd76c3f03df7b6dead6199100141e90"
-    sha256 catalina:       "b2ead9c2ef60464193f4d1b1d32454024d5f4fbd8c712d56c1cea2c2bb780340"
-    sha256 x86_64_linux:   "18e9599c50eea0ed17ea7b01f1c0cc1bfadc04403e06b85f9d2a99d61be4d9ae"
+    sha256 arm64_monterey: "ae0dc29135764e483923c8b68ab2bc591e90dcf75e468bc46536871d561f58da"
+    sha256 arm64_big_sur:  "269e87d8ad4089315682ae72712c5237894308262179420977b6f7ab1dafce56"
+    sha256 monterey:       "1c10210499c4fdc95ec7c68c1faa8d58102015ee31122a2c5901c31b7250c020"
+    sha256 big_sur:        "b0485a54fb9dcc3ffca4e775ea51af05772c929a62fbaae61df42774fe949e03"
+    sha256 catalina:       "b0ac3dc4132c0c4c018256dde8a01ab7e61d56d635b9e1801264571b314e4a86"
   end
 
   depends_on "cmake" => :build
