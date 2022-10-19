@@ -14,12 +14,13 @@ class Xxhash < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "6e4991033c6714cb11fc90c0996431c9aedcd141c7bfc0238c67be3f50515b1a"
-    sha256 cellar: :any,                 arm64_big_sur:  "553d5087a9245c5b042acfedf197685439abbf3e2e881c6c89003fbbf60e37fd"
-    sha256 cellar: :any,                 monterey:       "cbd0ae700a55045c4682a022e995d95355f7dcbc78fb2b0c4e8b358cc017be06"
-    sha256 cellar: :any,                 big_sur:        "d48e3747318130322dad17df3dc6ec849bf289cd0ad13b370ff663f3f69833d7"
-    sha256 cellar: :any,                 catalina:       "4cfb42ff9c138e3cca0d1c85ef63714f990f459867b9bf77b1709cd2918f35a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "925e35424449086364bee67e756ed7de0997e04d7c291a4ee7a5e778b3555f65"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "3d75964698a3beb04236d1632f6e69a2b58f1c552fee4720467c5ff47b1356b5"
+    sha256 cellar: :any,                 arm64_big_sur:  "047255a58b02b965c7a8c1a7a6216bda9c0a386fd0847b019568de321ca81c27"
+    sha256 cellar: :any,                 monterey:       "05eaeee75ca864298a1c85c6b917401bce6b429da391c83be347c321013f298e"
+    sha256 cellar: :any,                 big_sur:        "7fbfb9c5e821cb3e373c44577f7839eb331287b84fb9ad56f048e98aff42a143"
+    sha256 cellar: :any,                 catalina:       "b04f17e55ef5a2e48b0668453d0da1ec4af00752a62f12316a178f19b0f292b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1031dd4f8c86ee0e53242872aec9e4599be6b4f36c1ca58735651847f23c480c"
   end
 
   def install
