@@ -11,12 +11,13 @@ class Links < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "76fb5f1a9d251d92333e8df5edc86fbef944505b170064103b0b8d6461208045"
-    sha256 cellar: :any,                 arm64_big_sur:  "5361e3e06d2e4fa36cfc0c1403631bb78f5c05586ec1efc202e94c644f0adeac"
-    sha256 cellar: :any,                 monterey:       "6e9cd63f5a1d9afc355588214ade40ad1f1806ead876c9819381db826bb22aa9"
-    sha256 cellar: :any,                 big_sur:        "7a22dc4ce071dab1a7c95b8d6ca0a9a97421356ad4eb101a7cad44ad8978c733"
-    sha256 cellar: :any,                 catalina:       "fff8f7b8a3f42d039b18aaaa043228b5b9915c86ea121620f988f9eae0b44e37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7fc2d0fe4b55cfeea3a19f0a68a78515d20ede04aaeea1127835d22ef5606638"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "86447d391cbadebc15d53bdba2dc5e824d7a8fd554ac9e805894f58dab48f6d5"
+    sha256 cellar: :any,                 arm64_big_sur:  "eeb988eb931d99c381b413f7623596aafe8f0c8c573b5291cbaf157115046ee1"
+    sha256 cellar: :any,                 monterey:       "d472501f6e0e5f18babd9f3f40503d774229ba9476034c7e0eca8455cce2870c"
+    sha256 cellar: :any,                 big_sur:        "4dcfbaad5a0e797b81674c6454912b2a9ab192af1f8e434794a4a3938a6e0d82"
+    sha256 cellar: :any,                 catalina:       "0d676b66beb64c78ba9d6e1e4af1e2c533a3e2ce2c9c6fa826edb525ff86ec5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cf574763d64bf60fa5f757fb70c560cc65934cd410e7a581a099e188849578d"
   end
 
   depends_on "pkg-config" => :build
