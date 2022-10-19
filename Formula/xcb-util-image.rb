@@ -6,13 +6,12 @@ class XcbUtilImage < Formula
   license "X11"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "781bc1666bfdcbb20db4ed78d805853806139b483b7c79b17d1318ebce3b0174"
-    sha256 cellar: :any,                 arm64_big_sur:  "d6d1fa4758e6e7f5cb8a2d738259cd63d8f5e165ca9dc0731e4fc74198948a06"
-    sha256 cellar: :any,                 monterey:       "b3d4fd8cd60922f641fb36ddf5039e6140300eeb2acfb2c4e18f389643058ba0"
-    sha256 cellar: :any,                 big_sur:        "be6e0bdd4cd0ddde48bca0e424da9661ca5ecfa6f64f8184e88f1df4e44186f2"
-    sha256 cellar: :any,                 catalina:       "556a8960b5ee6b2290eb223df2dda18054b113b3284b91c4d10cdc3f905ef75c"
-    sha256 cellar: :any,                 mojave:         "3aeb055928e61fddb3473ea17005774aa6f0b0f32af8323f3da8963d836c7baf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "257c444348495e9fe4832ef14d7c800888981be7bb39929ade0cfe18ce5f45c8"
+    sha256 cellar: :any,                 arm64_monterey: "a4e026015349c95cc815a4875b5b9aa1149888e0f8f3d1bd7075de107e09f524"
+    sha256 cellar: :any,                 arm64_big_sur:  "fd3852b6c3b6b93d835cc2f67f60ceb69a2bba35ff61b290e40a55bd325a3b85"
+    sha256 cellar: :any,                 monterey:       "f92b6aa70eb06235ba8288bad7b15ad7f02bc718904b84500b6b3372872c6603"
+    sha256 cellar: :any,                 big_sur:        "bb01ed34a0c656065eeebf407b5e014f5ecd8a23b0caf231dfeb79e733aa1136"
+    sha256 cellar: :any,                 catalina:       "814b9a0c7d70118ee2da43f32311121b9da52f995c790fe4b4143e701a443c8b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "edac92f05202f6a66955b860ff1a3cf65e851568f6ad6ffce0237af6833c5087"
   end
 
   head do
