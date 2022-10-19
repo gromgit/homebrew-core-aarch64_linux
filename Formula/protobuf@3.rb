@@ -6,12 +6,12 @@ class ProtobufAT3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3951f5b59adfae94b4a6713dca404cb22e02b6a0d7bf59567920c45147a28af0"
-    sha256 cellar: :any,                 arm64_big_sur:  "3841a64bfe6cf8095d7cb282e10514a630fe979cb5b464957351771b6b747b8e"
-    sha256 cellar: :any,                 monterey:       "7e37643e16e29ad7fc9c68b91d389fb87e72d4f36d875b93e45a1da08fa1d22a"
-    sha256 cellar: :any,                 big_sur:        "651bbf4f120fb332c8d1ce7c8b73a8422357ac2c51d223a057140507cc8ae502"
-    sha256 cellar: :any,                 catalina:       "32f50ae919d727a1b633a50206370d032b553270373c4d13574707fb232ea151"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc3cb502279e7153fba94fdfdb5fbd5ad431c2e9cbfc3928a0e8f570063bf3ff"
+    sha256 cellar: :any,                 arm64_monterey: "6d43d690893a0dc2e18de52be03f748a854f310a89a120314a163cde52d6749e"
+    sha256 cellar: :any,                 arm64_big_sur:  "24a6c8831bf3297652ffa6a634886b243ca5709742e39f16b6de9929f22a3b74"
+    sha256 cellar: :any,                 monterey:       "04e654c28bac719703534f2b2e44cdba72de4456ba71d6419dd67eb70f04c398"
+    sha256 cellar: :any,                 big_sur:        "c19c82512f5b10c0bac857b0ef6db324190d35a8d71388d98689501bfe531054"
+    sha256 cellar: :any,                 catalina:       "bb463286e99f61928ced590368aca6b5e3a25892c53a4e0fa0d0e4713b9f2026"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e069e9dbb3a04247616c94ed0c0a42dfd96914ab38d89760ed47765a465738a9"
   end
 
   keg_only :versioned_formula
