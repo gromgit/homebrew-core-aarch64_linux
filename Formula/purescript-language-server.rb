@@ -8,7 +8,7 @@ class PurescriptLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "710079a48094127024baab26beb1672b4ebfcc321eafc45533ffdbf132d8e4ba"
+    sha256 cellar: :any_skip_relocation, all: "06bd4b346cd402388f5bf6b76c6c35a65c248a77a5e7096f8d43418feb1a7912"
   end
 
   depends_on "node"
