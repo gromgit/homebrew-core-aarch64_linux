@@ -6,12 +6,12 @@ class FuegoFirestore < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "43d3593e573723181fe4da638d570f0034f8c2519a9ac77bfd2602458c7218e4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dcf5919c53141d78d342055f54b41adf50241ae267e00d348ad15c824458e921"
-    sha256 cellar: :any_skip_relocation, monterey:       "1477fe001d7cfe97a6b8088e653850586530fbb7b1c927756521e2a57d36d866"
-    sha256 cellar: :any_skip_relocation, big_sur:        "990b84e1a29ef178ec6f7461e85f766057dffd3f9ee6f7676cb5f55fc5171d71"
-    sha256 cellar: :any_skip_relocation, catalina:       "c12a445ad59d1afc8e25a8df0111ad2d46b31aa3ea496a1278f988b56e0a45f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a8f43c1327e2d9c89db3dc544c0f9cbb7f5fd123635b992897d9acb356a65cd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc240ed9789e51dd98fc97fdf57ef8efd0e958a1d4cdcc0ca04e0e64514428c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40f3d2090e79cdb60d7dd33c6e73770b95315104946b4bf3c92411818440f26e"
+    sha256 cellar: :any_skip_relocation, monterey:       "d9b1c188b58dcf13c0739fb9d28ee1c5120896b8c102aaf021116fd95ab8808e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "74a6937a4934a46b957dcfc32647258e6a6cd5e6f3ab169daa8289323eadce36"
+    sha256 cellar: :any_skip_relocation, catalina:       "700165708e3a16b6d3abb5da34713a92b34dbb1acbb5b212c23165192938748f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cdf98e557eef00cb0e50546607d62df01656e47f1834b270041755b64693045"
   end
 
   depends_on "go" => :build
