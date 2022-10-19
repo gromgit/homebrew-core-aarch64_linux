@@ -8,12 +8,12 @@ class DroneCli < Formula
   head "https://github.com/harness/drone-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e7db30f414e4fed8855cdf0ebfd23704ca5d98481c1e4b9cce1c432c818c39c6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c3fa702e5a13f34f1dc989c216b84147ad896112fe503932aa34d5b911157a73"
-    sha256 cellar: :any_skip_relocation, monterey:       "0acbad2a3c296d8c07606aff9f246675fe04bca6e801900ec26b4b9a310d3690"
-    sha256 cellar: :any_skip_relocation, big_sur:        "65cc3a62fabbb34266675510fa01c9a924b3aa158231404d6ed440e519fc0b97"
-    sha256 cellar: :any_skip_relocation, catalina:       "cf0e94994336f4345837b93628ab2b70e17211eccd7d581eb2704469307597ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6ed05521633d4cb92588ad4adb811f2c86ecd0c388f01b4cc2de183af643f55"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5e6941535a65f93badb692d8406cb660a2e2bac95a104d141875706cfe74b666"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e6941535a65f93badb692d8406cb660a2e2bac95a104d141875706cfe74b666"
+    sha256 cellar: :any_skip_relocation, monterey:       "f96707b73294e5fe0a0fea4211faa7bfc5569113189d364dc1f60ba134dcc900"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f96707b73294e5fe0a0fea4211faa7bfc5569113189d364dc1f60ba134dcc900"
+    sha256 cellar: :any_skip_relocation, catalina:       "f96707b73294e5fe0a0fea4211faa7bfc5569113189d364dc1f60ba134dcc900"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df28106af37511f83eb18d3a53038dd56abc73ab2e7b02cca071cefeaf1fbbf7"
   end
 
   depends_on "go" => :build
