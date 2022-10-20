@@ -8,12 +8,13 @@ class Howdoi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "411f6b4a721569026d26749e412762dcc0bb673b5b06c3025d7f177423f16553"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1bedefcb510937ef18e9f92e512d3435d6b433cdd87204a19b6d9a95c2642260"
-    sha256 cellar: :any_skip_relocation, monterey:       "76113081baa88476d3ac6ce80fb7a8479372f818c4bb5e03b3e940b0494c8a1a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ea400ff9348167925863e0e86fc48cd1ec72a4182508f308a9d04a91060adefd"
-    sha256 cellar: :any_skip_relocation, catalina:       "d5e1fbbfd8567c36160c12788ac83d802cea186930049776965f7b043575bce7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52e37bd075a0207f5ff6c1ec6800ca9cc6a4ac504dab6d020392dddd36cee113"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8cc5fec6b0207f7519b4859da9021d17dc960ebda9eff9253124bd7d79cc8f1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd50be1788570b884e4e453c6d2e9a46cbac2d65f9ffb25cbfc33832ca941d03"
+    sha256 cellar: :any_skip_relocation, monterey:       "2d707599f1fd43b4229ea0d512c7375d82f1bcd10915788c9ff37f1e1f789221"
+    sha256 cellar: :any_skip_relocation, big_sur:        "99c5c7eb44d3cc270f50173fdb244b38707e3840ef2152b5c88a7f1db0870fc1"
+    sha256 cellar: :any_skip_relocation, catalina:       "bee39dc93c8c2252fe5e2d1ca25492d9571b50ee4d2777acb23349acc111ccc2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5780edaaf816f662bdca7c0346ee22d2e9f7afed5e585c9b0c1c36c8ce1027f9"
   end
 
   depends_on "pygments"
