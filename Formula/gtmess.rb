@@ -7,15 +7,13 @@ class Gtmess < Formula
   revision 2
 
   bottle do
-    sha256                               arm64_monterey: "7eb7cec9ea1616182e027e04380178c3ae21483d04c51049966e0b745ce76b12"
-    sha256                               arm64_big_sur:  "107b687b5c567bfec9de27d948f1ead0a9c97e7c2a1abfc3d1a819f756bf508d"
-    sha256                               monterey:       "eb982bdf6b40c199e5fcf9fd0a6aa76627211617166505cd1c02095333e9c302"
-    sha256                               big_sur:        "e11c66ecdaba54ce45967b358c5be1cd036a6763e840d842dd5f855578d45e9b"
-    sha256                               catalina:       "3c8e2979b478bfe761e2baf263ce4bfdee03426d853ee10faaba353481a21420"
-    sha256                               mojave:         "9b5e2ecdb133c3a069305f572ec6d172dfaf10371459e44cc84574b08d2db19c"
-    sha256                               high_sierra:    "90d1a2aeab88db7022e64335d101d2a10a045a3b8d6c443381ade99b2c13e2d1"
-    sha256                               sierra:         "e8568ea56b4f24521472ae51b4f00bcd704791ec1bcbd6a8a250c7a1e2c43c04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1b0c868a2e1dbcbf16de92df7ab76ee8ef25f8981c3773760a07fdadfbd124d"
+    rebuild 1
+    sha256                               arm64_monterey: "19e8f974e8f84874a9d06a195d5a45b8c2d881689f767706eec5692589a6af4c"
+    sha256                               arm64_big_sur:  "a0b6c3219910c5014fb968fad3d3cf06694f5f2fc173b615df3d04e8e8b5e93d"
+    sha256                               monterey:       "ff05dfd808dd3c468e004dfa944117208e9f44bfe542bd45cbaa851f8981e04a"
+    sha256                               big_sur:        "28119023b99b93091412443d9ca881c06cd120b97f60719bf3705680d8c2eb39"
+    sha256                               catalina:       "b371a2eba5b1703eb6598daae20d72b08a866fe1db95505a9cfddacc470d4804"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae09e63f26ccef723a73cf04f5dc36ba60ab1588b558d15b5e248132d7d88eea"
   end
 
   head do
