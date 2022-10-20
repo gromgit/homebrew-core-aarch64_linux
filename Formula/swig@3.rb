@@ -6,7 +6,7 @@ class SwigAT3 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/swig@3"
-    sha256 aarch64_linux: "ad43a88d307ae46efc0e8c725e98f535e4b6ca512eb2e959cf4d04d2b8eb1708"
+    sha256 aarch64_linux: "b2662233b258388f3d0d8b2777f39b35988d965087106bc693866360b0b4a9cd"
   end
 
   keg_only :versioned_formula
