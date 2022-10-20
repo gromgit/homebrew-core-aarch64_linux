@@ -7,7 +7,7 @@ class Typewritten < Formula
   head "https://github.com/reobin/typewritten.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a1cfc6eecc7e3de0a1ae5ef9fd86450cbe352646501817c343db1e013e12c1d7"
+    sha256 cellar: :any_skip_relocation, all: "f0561ef935eb07b69c7d71ec06e2b9a043b92d7f974107e548785d2f27f9e429"
   end
 
   depends_on "zsh" => :test
