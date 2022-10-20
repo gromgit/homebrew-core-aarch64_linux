@@ -6,12 +6,13 @@ class Iperf3 < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d5134c2caeafb982bba9847e5bd526c87b3c9f7497771c7c69d17698a8916d56"
-    sha256 cellar: :any,                 arm64_big_sur:  "151522a09666e687025f63b8df9bd11aa6661fa7a2a8b7e4597e061bc4325034"
-    sha256 cellar: :any,                 monterey:       "85f04bc7125b2c8e2271d3b028d8f5b2f06106d4006f320675fa31595894b291"
-    sha256 cellar: :any,                 big_sur:        "c344dff846ad280292bfdd074e324fa291eb07d118df71c5c09d37f13e1d5ffd"
-    sha256 cellar: :any,                 catalina:       "5ec5c9c380371b11077e6f3d15cb321cf40f0ba5007b3a2dbacb3204b55974e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e787012937dbfe79a67f32d36715c12d6903278cfd57fd64704fdd5157731a79"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "9207226775b4889c2bcc0c0144b46b69f400048c62123ab4bdc0c8132bed79b0"
+    sha256 cellar: :any,                 arm64_big_sur:  "a9771e4a890b5b56a184a90cc1bfb8b7549e95d412d732a64a5327f5b52fad2f"
+    sha256 cellar: :any,                 monterey:       "21aafa39e3e3cb2cb7aa7cb19f8d720f12bb65a80994ae38f477e4f22664dff6"
+    sha256 cellar: :any,                 big_sur:        "f8c46352bf2b270fc4bb61035c05f04edfc96a2bb2fdeea0c36f38d5311f41f2"
+    sha256 cellar: :any,                 catalina:       "89e90520f268578ece5cf6c2f3a39dc7e54830e02f4996b22447c015ef4d821f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c20145292980f9529b8637aac27300a8359967a53c1a85c5fb3c2e8c03a2c77"
   end
 
   head do
