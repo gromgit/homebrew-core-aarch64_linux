@@ -14,12 +14,13 @@ class Wrk < Formula
   head "https://github.com/wg/wrk.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "105d8b08ec6d0931a3f781f80590ce9d8f4cb6b916a16739acabd7b935c4df98"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad9927f8d62c05e5b7b0e81a8d0cd055d3489957d64c8313f77e4f7520455154"
-    sha256 cellar: :any_skip_relocation, monterey:       "4579ff219025872daf408da70f8ca45f496bc3f768b6baad68bd04a6e555ff10"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bfdae1263316f4d65344b2c7890e3d4bfe14938146aad47eba5598e93f6ef0c4"
-    sha256 cellar: :any_skip_relocation, catalina:       "e589229b31a5b4d71028c39dbacd91b392ccfc88e548868fd227b35495761230"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "971a44b8fc296eb7148763277306af8e022210f4ed518a0a290c82730bd1bfef"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "1737a2d76852d610856555bc8993e6edb3104f5a897895edf1cb3ccc696d6e27"
+    sha256 cellar: :any,                 arm64_big_sur:  "e60b7b38483ad19e764bc0528ab7e7cb5af9a5361d860b4e8861c3922e154604"
+    sha256 cellar: :any,                 monterey:       "f3d502b3ada2613ff452cd8797bdc767d101c13f269c0d90c0f9e94a0596e279"
+    sha256 cellar: :any,                 big_sur:        "46dfc59a95a38d1f882ad7ad148e05f3c1796131b3387397388635ef4a404573"
+    sha256 cellar: :any,                 catalina:       "1c346f928ed78e9eed6b8224eff05dc0f58ea34c2415e4bc103d2ce19dea9330"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd6d51e49ac6dc2dbbb7ac18aa1569dc615f04d241491517afb427e173c3d8e8"
   end
 
   depends_on "luajit"
