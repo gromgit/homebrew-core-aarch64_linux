@@ -12,7 +12,7 @@ class Tcpflow < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tcpflow"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "8fe8ac526e9bfc1fd7bb4b2d002ebbc38f531275f82cb2390c88c6ea12167b6b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bdd0b2503415eb9d8dc1878737b3618163c5319421a8b68a9fa2c029423a00c9"
   end
 
   head do
