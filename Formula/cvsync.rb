@@ -11,16 +11,13 @@ class Cvsync < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "9ee4057c81aa9063514f81c3fc00ed20805f242f690693c800377fbd163b0fa0"
-    sha256 cellar: :any,                 arm64_big_sur:  "7dd613fd76d65b1e25ca4a75c9828173b74351a441b69a59ba9f49fc9b8497a6"
-    sha256 cellar: :any,                 monterey:       "b82e0615b8b97d12b8ac155b0512b67e922dfe2eb9646a54f18787869d401683"
-    sha256 cellar: :any,                 big_sur:        "2af52706862f05ef89344f0f18bd95948c675e489912ae90840c7b010720ed9c"
-    sha256 cellar: :any,                 catalina:       "da10e78630bf61ac77576e3f10033730bf335e24324681f32c973cd9a2d645be"
-    sha256 cellar: :any,                 mojave:         "1a7f82970b208df4bafed99ce20de7f4d94be51f79152ad75c85fb69ecaff51e"
-    sha256 cellar: :any,                 high_sierra:    "1ea4fcb1bcb64f91915919e485b374eb2e16b69fb60f589242c3a140d3c16c7f"
-    sha256 cellar: :any,                 sierra:         "4e92dd3b6a74831724c2da74f761660fa25630d9c44be9d80a0d72dc522e1fae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a20f451681f3519d67c49bc202f0db2297c3c799bfbbec9f27c85ae97a5a425"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_monterey: "151a5a709d78dfd6fe1db43686e7d0a7bf9464184133b5a79152a8d21aeb44e0"
+    sha256 cellar: :any,                 arm64_big_sur:  "284f786b36c5890da6c1d889cbf02a50c116a03661183b088dedb6a3ccdf4c05"
+    sha256 cellar: :any,                 monterey:       "8f9856b5b0be6da7e213fb287be69259d8aaf8425fa057702242109f393aeae9"
+    sha256 cellar: :any,                 big_sur:        "c53b78803c36ffe5b389b7891a51c8197b05e9d660c5100417fa5fd9f743cfd8"
+    sha256 cellar: :any,                 catalina:       "358f4234cde20c14d3af19a226c294154361a8159802755029f43a7f6d81fd27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "450f89a4983c03d8b007667d044047796ed721e7a6ce3fac437260c25d33219d"
   end
 
   depends_on "openssl@3"
