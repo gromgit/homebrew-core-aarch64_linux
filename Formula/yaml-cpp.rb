@@ -6,12 +6,8 @@ class YamlCpp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "870e42a85ee38ad3e908d2316f084ea62d01ee79aaa99975226457acdc0267df"
-    sha256 cellar: :any,                 arm64_big_sur:  "73eb2c62c966671c744577b1ee6661edd0c1f993756ecdd68845aed7d67cc89a"
-    sha256 cellar: :any,                 monterey:       "352369aa5a46cbbc4f28296f51707ac0adfe30884a11d8b3e75b6a877d5f92e4"
-    sha256 cellar: :any,                 big_sur:        "d78ff4565c1d214901754ec12f0e410d60c907a9a312ea246197bbf18fca4e8c"
-    sha256 cellar: :any,                 catalina:       "7b8fb20fdf64723b7aa72127d070484ec9e3e3225c4ab5f3c6247743b987e9f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16923a628827f80bea57cad5c5a2ca222b2b00d0105367cb265f6c3df7f4b5c2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/yaml-cpp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b575f32b61a84a9e558b2363c66bdcdc3f84d942c6f7dd156b29b305828188a6"
   end
 
   depends_on "cmake" => :build
