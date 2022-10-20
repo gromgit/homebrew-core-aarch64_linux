@@ -8,12 +8,12 @@ class Terminator < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "098c77a630f6f02fa66e6eb7a592f3229bd70cb91584ac2de78c75944bd8fa19"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0c2883a811abc01c06c9386915c6fd3a74f1e0ea62319bc7314d33651165d3f3"
-    sha256 cellar: :any_skip_relocation, monterey:       "1c85992e04ffab1a37b0fe92dfbef27e89c2eceb83fda20eaf5c4c57c0147289"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fe4124f38acbd8f8a8632e6b56b6f6556a8317343ac3dcc5c41ac45507e3570a"
-    sha256 cellar: :any_skip_relocation, catalina:       "6ea19d85c2f874bd47e34fc6b25ecd72e9c64a73c18390a1088ce75bf3633144"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9b2da44020cf6178179d8fe022202e14cd95b76e4ac0c24d87d49cce361b0ce"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "776a2436154ebd9c70182bdaa0d925574b14d2813dc40ae7cca4f06ff74b6526"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2444b4441dd5c6f815d9c728f342457475409c8a122c11085f42da1c69f6b444"
+    sha256 cellar: :any_skip_relocation, monterey:       "aafa29fcd069edba6d0e019a8f334d3ad572555e8d65f47da01236ed98249b00"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6060df119de704db1e6b7f9a11a64a954991450ae54e3514ecf56e7c250d220c"
+    sha256 cellar: :any_skip_relocation, catalina:       "64ce7c125a245ceae49f80077ca9ae45068743dc17be8fdd2c6d068a83e49d62"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63da3e0a44a01a16ce19c045b7180a3225cf013a768a03966cb15254f1844821"
   end
 
   depends_on "pygobject3"
