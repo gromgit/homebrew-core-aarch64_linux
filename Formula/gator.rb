@@ -7,12 +7,12 @@ class Gator < Formula
   head "https://github.com/open-policy-agent/gatekeeper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b797d677073a9f4a7c9b2919f74d6594af766006c637f90933788d0a9a22e72b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2d2c39766b2fd3b88e7e7db33a119b07fde8a33790219a016f749653467ded2"
-    sha256 cellar: :any_skip_relocation, monterey:       "8ab57af3eea2d9bc3b0cc4d7c4aeb2632cf108d976642c5b607526878a222cbe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dfe468b7556bd2d66d5de6ecd4de2700b903da7e9d1bf583d90ac9283920bc96"
-    sha256 cellar: :any_skip_relocation, catalina:       "6591cd22bbc4e0f93f7110921ea88cc4553e7da143dea21bce16a0bd2f33eb13"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c1a5ea28d15af4c06ff32e1f362af677810d3de04bc5ff427ca69fa0e9117cb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad03529186c8e1c0c7afaa5289966bc8cf81aadcf7c7f686c0d63e770dffedc2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3afd0effdcd419f6c37a271b8172dd510e57762cd98b4fe110424c9c6ec5f4e3"
+    sha256 cellar: :any_skip_relocation, monterey:       "b5c3dccddb6c948b7ae0170cb4f983124f4753f428738a9be0654f4e0df18788"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cbde7da56dabf4e055326a881b20298983120264d346926a636e1d41ac353c3b"
+    sha256 cellar: :any_skip_relocation, catalina:       "80b93cdf2db60f9a2f0cab6c64d002fe2cf9bc4ad300950c96b93dc3d2237185"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b31ddafeb957487731427126d30d590b66d60e73c8482f7750c9e602a32f874"
   end
 
   depends_on "go" => :build
