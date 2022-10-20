@@ -7,12 +7,12 @@ class Imgproxy < Formula
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "38626b6fb55500e91add910b256c1c85003069a4a1aaaf8ff8f3a4c589ee0668"
-    sha256 cellar: :any,                 arm64_big_sur:  "4154aaec6586a4ce65801147049eec769ba2b2ebaeb2c48c172a8851624c2c13"
-    sha256 cellar: :any,                 monterey:       "7c15f2be4d84bba235118fbbf47f70c0e3e253f233127639b0640546fa31101f"
-    sha256 cellar: :any,                 big_sur:        "c9a80aae3b51b93f4e8647f0e4813268ac6c3bc1e4f4bbf60fdf597d2a76591f"
-    sha256 cellar: :any,                 catalina:       "95815a8b11c49332a152a801c82f4faeb8914672d0eecda3b82f352ede2c05d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1d22f79a5eed79695aab7a1b262db65b65a00dda9c37fd89412ad67ab7fd499"
+    sha256 cellar: :any,                 arm64_monterey: "56ce199c083a77bf813242946ddae8ef0344fddecd0df6d429cc3c34dd9210df"
+    sha256 cellar: :any,                 arm64_big_sur:  "5acffa368a4340e763d0e66d6a97d66cce91f72769c858a47baca2c164def8fc"
+    sha256 cellar: :any,                 monterey:       "5e4ad926992134d275030fb11cd09e15bab101b456b29ae2095c753abdda4f66"
+    sha256 cellar: :any,                 big_sur:        "d7951cc51d060338d293207e60a0c88cdf54162ea6b20f135c29a2f1b86a7b9e"
+    sha256 cellar: :any,                 catalina:       "f6a51a4bbc92d3fd22d07d14cdcbced2023722852f0ae03644a3224fea4f1809"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b60cabc7cb46034b4e2b127334561b244db17a227038176d584cfbe5aa2ffa51"
   end
 
   depends_on "go" => :build
