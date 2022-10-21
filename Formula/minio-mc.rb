@@ -2,9 +2,9 @@ class MinioMc < Formula
   desc "Replacement for ls, cp and other commands for object storage"
   homepage "https://github.com/minio/mc"
   url "https://github.com/minio/mc.git",
-      tag:      "RELEASE.2022-10-12T18-12-50Z",
-      revision: "3fe6778ee739504b169743cf43fa7b3010e05b99"
-  version "20221012181250"
+      tag:      "RELEASE.2022-10-20T23-26-33Z",
+      revision: "ad254a8fe2c7a72c3ae8a1a0ec44b799d9f6ef9a"
+  version "20221020232633"
   license "AGPL-3.0-or-later"
   head "https://github.com/minio/mc.git", branch: "master"
 
@@ -31,17 +31,17 @@ class MinioMc < Formula
 
   def install
     if build.head?
-      system "go", "build", "-trimpath", "-o", bin/"mc"
+      system "go", "build", *std_go_args(output: bin/"mc")
     else
-      minio_release = `git tag --points-at HEAD`.chomp
+      minio_release = stable.specs[:tag]
       minio_version = minio_release.gsub(/RELEASE\./, "").chomp.gsub(/T(\d+)-(\d+)-(\d+)Z/, 'T\1:\2:\3Z')
       proj = "github.com/minio/mc"
-
-      system "go", "build", "-trimpath", "-o", bin/"mc", "-ldflags", <<~EOS
+      ldflags = %W[
         -X #{proj}/cmd.Version=#{minio_version}
         -X #{proj}/cmd.ReleaseTag=#{minio_release}
         -X #{proj}/cmd.CommitID=#{Utils.git_head}
-      EOS
+      ]
+      system "go", "build", *std_go_args(output: bin/"mc", ldflags: ldflags)
     end
   end
 
