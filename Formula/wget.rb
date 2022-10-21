@@ -6,6 +6,7 @@ class Wget < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 arm64_ventura:  "fb2b2297226438cf2e9af9f1cf94f450730fc515eace8e21dd2db03700e77629"
     sha256 arm64_monterey: "fc83eec77acee50d2d7ce3bb0cca08d80acccc148e909921de42e57dd5fc7f3d"
     sha256 arm64_big_sur:  "a0c491ae7de2b722320efa94704567e36f3a0bd04bd946b1431ecbd1bcbfb899"
     sha256 monterey:       "aa706c58ae7e97abf91be56e785335aff058c431f9973dffac06aacbea558497"
