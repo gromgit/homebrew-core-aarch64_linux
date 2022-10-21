@@ -11,6 +11,7 @@ class Libusb < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "ea8a4a04b5cc81eff38d0c5cdfe2fbac519ca2c7652c64371074f4abaf766a0b"
     sha256 cellar: :any,                 arm64_monterey: "ab90516396d8dc99f96d31615bcbddfcfd2082fcc7494dabb9d22b275628e800"
     sha256 cellar: :any,                 arm64_big_sur:  "d9121e56c7dbfad640c9f8e3c3cc621d88404dc1047a4a7b7c82fe06193bca1f"
     sha256 cellar: :any,                 monterey:       "e79be7d4c611f0017567172771761b1df62d140e79ffa6d2538577eb24a48e44"
