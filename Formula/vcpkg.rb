@@ -18,7 +18,7 @@ class Vcpkg < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vcpkg"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f74458788fc20019b9c46e7736538ea03f2ffc1bd3e30ba5a599a997aa853ee2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bc4988dbf9beb65210807c4b7ae7b418981caa95840b20f0bb7260b761254c07"
   end
 
   depends_on "cmake" => :build
