@@ -12,12 +12,7 @@ class Ddclient < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f1bb00351331eb6595be094e2c0a2e508f7cb12e7eb126eea25b6ee6ca8dfce0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bec2f1275e4b3ab4c39af7ba4f8d9a4a12782549ebda1b36f0ccf62126ad49dd"
-    sha256 cellar: :any_skip_relocation, monterey:       "242c680a8427a15d2ea8570e3bb87dd507c17424aa2325fdd1dc71f6d2d0ffb1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7dc3fcde51897744a371694203d03664cddb655bac7ef4249b1c753917db8040"
-    sha256 cellar: :any_skip_relocation, catalina:       "356aa5bc066e521429ae4474ee978bad0c596045a9d1d4efa4cc46acd0e0e66f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90860f823cc3568a81e12dda3412adbe8d6fdcf13ea50b343489c584c9d3d384"
+    sha256 cellar: :any_skip_relocation, all: "3a0a4ceb683ea6e8513a35882976dc58f7664708f054a32027320938e2257ae7"
   end
 
   depends_on "autoconf" => :build
