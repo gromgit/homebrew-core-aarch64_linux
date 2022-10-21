@@ -6,13 +6,12 @@ class Virtuoso < Formula
   license "GPL-2.0-only" => { with: "openvpn-openssl-exception" }
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "ee2e4a5e99a4b489028c7d5a8f1a28b832a5ac9c57632d37b72992e462163b04"
-    sha256 cellar: :any,                 arm64_big_sur:  "4334a020863749bd59ef5ad2a9d22e9d47dfa05d20afa7c9f2097665fed444cf"
-    sha256 cellar: :any,                 monterey:       "e1c6970ad1befbda4b335ae8c0f82d584db209745da7c2af6da89ac68e754e27"
-    sha256 cellar: :any,                 big_sur:        "9409cf1078a6ca2acdc53834cb7e6a7402fe8c3ef52ede37180ac96457610aad"
-    sha256 cellar: :any,                 catalina:       "074a26ddddb44f656c37f0784b68872ce2b770c3f28a291138fcc1855cdebcd1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b6c037f39025c0a2693414951494a117294824e4f15a57f2af0c22b838b47e2"
+    sha256 cellar: :any,                 arm64_monterey: "a6aca0e48229e1f7758e5cb676876faac4e8866a94d1e0c13ba64fee14776895"
+    sha256 cellar: :any,                 arm64_big_sur:  "9e6b80ef1795a03f3e857d495c8f88cc0badc0860e8c337478672f28a90573ce"
+    sha256 cellar: :any,                 monterey:       "3cc49b38a93736781daef10bb283fff16dc6dd9491a415ac452e260bb1ac10ef"
+    sha256 cellar: :any,                 big_sur:        "1f84117306bcf67c000a6ebc460e449ec510cf30203bc4f50035aadb229d80cf"
+    sha256 cellar: :any,                 catalina:       "8d64e4a3e591c41076a7c145699a3f6be6f031b240c1058e4588408b10006551"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "030d688ffd43f34d323f59686b98da19a90c424e8ab7826b1d2c3066142fbe69"
   end
 
   head do
