@@ -8,12 +8,12 @@ class OdoDev < Formula
   head "https://github.com/redhat-developer/odo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ccd1659bef55782660366226e5c3b98d59e979c9a33e77c609ba25bb059f19b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07a113911a23917f2d797bf76fcae16fd8f7596fc2f897aa2314e8c8ec6b96e9"
-    sha256 cellar: :any_skip_relocation, monterey:       "d9e50dfaaae7aba3c10637c1a49867848409bdd83a78458a7a15933c4c0801ff"
-    sha256 cellar: :any_skip_relocation, big_sur:        "915e4475508f99bd976092ccb9982b89877d0ae87b8f9f761a650ad28acb2939"
-    sha256 cellar: :any_skip_relocation, catalina:       "7ba020986b1be4cd3b4d919320bfabea50ee575869be6f43860c7851f0078fa4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd3d5e5ffb98d731541c5da735965a4b0c65918e2999e8c62b77c0135e491d09"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "029a56dc8bf722a2e55e303d0f416408ed5456d20d7957d69144953d38631e40"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "35a6cda9b20affc5f14644bf479a39ea6720fd0643281104e4e716c3eb1f6e53"
+    sha256 cellar: :any_skip_relocation, monterey:       "97e421a215634d394a299afe1b2da4c1157f4299112b39737134cb43700e3f41"
+    sha256 cellar: :any_skip_relocation, big_sur:        "03f3220ebafac589e1df323a1b58e92d1c9e41f87eb235b21f6ab8528b7b9330"
+    sha256 cellar: :any_skip_relocation, catalina:       "729e0b98d95d6722596efdf9c24e5ca4e89147632857514e428dad8b8eda36d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3dbc34c5e5299e2b95ddc67e2badfa672fc851dd4a73a6dbf606158679edbd00"
   end
 
   depends_on "go" => :build
