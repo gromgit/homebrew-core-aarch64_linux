@@ -12,13 +12,12 @@ class Rlwrap < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "2e026b8952dfc5806e289f72d741d03c3a53fa028a5aab2965b4b7793cdd1bf7"
-    sha256 arm64_big_sur:  "d7f6b7527f6b090fe587c18ba314460a84949a81158399ff143521c2bf949e91"
-    sha256 monterey:       "7a3f36bd7365d80d9182e1b1ff9f77177d9203c2358a36794fba1547dadc51fa"
-    sha256 big_sur:        "4776bfe5bf3753463d331b150b37be72f4729aa144d9bb45030c56e9ad16c6a0"
-    sha256 catalina:       "ca0fa52e2eb8649716938dd6d21a15652a7eeaf2ba0acfcb9cbd6cb9a5dae490"
-    sha256 mojave:         "fcfe56a0eac619bcf9d9d1f8f5ddda648e09719c8c78c0db3d599f7edb7a59b7"
-    sha256 x86_64_linux:   "525f35129e98623fbebda88c217862faf363bd9641d20858a9b8c14c120f4458"
+    sha256 arm64_monterey: "62b83711d4fb986ce4216fb0f363afb141f85fa040cb30cbedd12edf0e054a4f"
+    sha256 arm64_big_sur:  "3bd849c8af633cd43cd51ba1ab2dab4dc1458258096522bc6ed999b280c15382"
+    sha256 monterey:       "24fda363caa29db839258191f120746962dd1bc733a955b36c2596757998be2d"
+    sha256 big_sur:        "626e1bae064bac19505b0223a136be38e49e1eb0c758ef2f1945d627d39a28e6"
+    sha256 catalina:       "e70efc49a4b5dab8031b72714acc9ec0cb14c08ea84f0230a6510069bd68e42a"
+    sha256 x86_64_linux:   "d5bcb12857bf4730cdfaa1a04dd8cc6b54952fef83c1660a2795e7a10d87f560"
   end
 
   depends_on "autoconf" => :build
