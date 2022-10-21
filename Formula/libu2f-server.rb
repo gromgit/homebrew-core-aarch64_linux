@@ -12,14 +12,13 @@ class Libu2fServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a85f201ad491b24e25e8e3048885e91fec5c47dc00140b609c00100d2fefeb14"
-    sha256 cellar: :any,                 arm64_big_sur:  "f1746f86987f50d9ffaf415b51420dba4dab8e64d620c99d63c6c9aed39d524b"
-    sha256 cellar: :any,                 monterey:       "de7343ed2a419e8fb63c497d1c8487bdad15261f9d5b07b4cc907f6fd2d106c1"
-    sha256 cellar: :any,                 big_sur:        "fa0d80a1f6345e7b7323a837ba5acb031f4728eb674c48a590ae1c3b0a6c3a01"
-    sha256 cellar: :any,                 catalina:       "3a5038a64a9820c04a4ad1067ebcf8076936474cc5c18a0d93f7c986adcf0169"
-    sha256 cellar: :any,                 mojave:         "a1d26284fa87629ecf5bf965433cd6eeba9eb151e064e22a47ca42a115d5e15c"
-    sha256 cellar: :any,                 high_sierra:    "03e06751297ad4aab253d7b1f742fd5c2ad8d79b35836eb132c3c82c20b485e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "508085d21397af83fb5393afe912b5ac8804ee180832ef10dbce5d991889e391"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "78d60a35c880f7f993f07eb38dc6d1944082ca6325d88c6ee4f22a34fe9cb50f"
+    sha256 cellar: :any,                 arm64_big_sur:  "8e294e52f4bc809affacf5a39d61eda94851600d345c946c942bbeda202dc607"
+    sha256 cellar: :any,                 monterey:       "d45bdb7ea77081757ae316157db4dea008f06a2998345f6e3c64c98f46830535"
+    sha256 cellar: :any,                 big_sur:        "f22956d7adce96f3e73bf0e6584f864f2f2aec7137398f5e6a151965f30655fd"
+    sha256 cellar: :any,                 catalina:       "33ecd6fbd1b611fec3ef7cdf3aeb90ddfce9be4cfb70211add5540faa79556ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7e4dfb9db89bfc5720aba123638286a77d5d76d9bb108a1bf7b2c1bf01ffa6e"
   end
 
   depends_on "check" => :build
