@@ -11,6 +11,7 @@ class PythonAT38 < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "956238a99a5ba7077a15dd6834110b34c5232af662b2f2a344061929f2135549"
     sha256 arm64_monterey: "3e95fbf0f18b59af7aeaa957be4499a9c521ec199f2ec2a419b8a7b9ac627a3a"
     sha256 arm64_big_sur:  "23eedeb485f756fb4ef5a2500cca0f53663424f8eadcb64daeb9bb1b73bb11e2"
     sha256 monterey:       "c247a261048c510b963705acfbea23b09cc193b5d4256a5d10b42d199a8f8869"
