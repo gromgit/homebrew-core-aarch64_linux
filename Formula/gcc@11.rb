@@ -13,7 +13,7 @@ class GccAT11 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc@11"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "dd75cf4d896188f71246f0a4a4eb2fb3873edfd5766f04bb9167ddf5170bae95"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f0e6c5ae14f1b8b084b0c731f1c7fb20f98d39657b498cdade9d7c7f29376aab"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
