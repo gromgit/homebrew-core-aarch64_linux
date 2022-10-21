@@ -7,6 +7,7 @@ class Texinfo < Formula
   license "GPL-3.0"
 
   bottle do
+    sha256 arm64_ventura:  "be3460b3563c42d02a20be0b36fffcc241693907d88fa5366dc2e961dc5f46e6"
     sha256 arm64_monterey: "6b185cadbb07d199bf703390b6e3f0ca33ee7a4c2aa7efa685ebaeee9609323a"
     sha256 arm64_big_sur:  "d83beb6d79c93216c6f33021cd23aeea041d9691d4d5efc0bf43ab15562a3fed"
     sha256 monterey:       "0ba38973389c7e3c37241a4d1730c2686feb51ddfd3f275059af268f44302aff"
