@@ -7,12 +7,12 @@ class Weechat < Formula
   head "https://github.com/weechat/weechat.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "a4b8803067d09d05ddd2eefc690627488d1c049f67d0a6909769602bb05b36d0"
-    sha256 arm64_big_sur:  "ed5ff3c975fa7c5aabb01f5ff045492e8df06d898564f14e487bec5b6bad4298"
-    sha256 monterey:       "321cfe51bc153a875c6b2df8df4f4231c065cad8e69b049ed89c9aac804fe0c8"
-    sha256 big_sur:        "864ef4abaaf06929bb043d62e3d042dd1ef7218ececf067afde9e1e3c32c9b49"
-    sha256 catalina:       "411ba0fbde5ad5fd43f5cc3de1bd6e95536a4ed89179892106baace0b74e5c5a"
-    sha256 x86_64_linux:   "3df6173f04596dafa32385e3bea9938b40b7249a351ad8b46bdd8de33085350c"
+    sha256 arm64_monterey: "eb85c23c42b7a2b0962c2926c55bce19ab33c1fec790428c52abf322e536763a"
+    sha256 arm64_big_sur:  "9ac39226c800db6c682d7403a0d7ce160853a4338f39330546bd4963c2e40dde"
+    sha256 monterey:       "3371b53f6ad1a8893d4a433ce9f5a7bdd2bdda43d0dce816d5cf1cfd9b68e795"
+    sha256 big_sur:        "bff8dcbe08c52b6da68f3f152d62f15864d0cba35cf57f65020c7c48c2eaea3b"
+    sha256 catalina:       "86bcca70d770c16030cd51c842d0e470112ea71054ff0275d611402de32090f7"
+    sha256 x86_64_linux:   "3aa301ebd122d1ab34c5f6d3864a94b694be257ca21b7999c2886fbba6aa6d19"
   end
 
   depends_on "asciidoctor" => :build
