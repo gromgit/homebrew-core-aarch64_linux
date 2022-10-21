@@ -7,6 +7,7 @@ class GnuSed < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5dde23e1ebfa02cdd69d805e72f046d45fc8c2042c1cd6f98933785b459fd484"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "78481cc3509f617328d3c361c21beef829f24f4b130cabfc08ed6e4ce83f2286"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72bc2b8cf7c7e18d106d79c7db382f7160408aafa8fb765b084cbe965e92db9b"
     sha256 cellar: :any_skip_relocation, monterey:       "b1f4ae7364418a3555f4be7c24c61d9bcb9bdb16660091f144737f79551ce90f"
