@@ -8,6 +8,7 @@ class Grep < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "d2450448352fb2c389634cab3dec581882f6fc0f02a79489b4ba9c603b8f780b"
     sha256 cellar: :any,                 arm64_monterey: "2a97d1431a8c367299b3ec1a62836136ad0474f78bd515f29b2210cc85591a66"
     sha256 cellar: :any,                 arm64_big_sur:  "b23c8e00f85e4a10c1827619248a117ab2df3bd1503b5191c4467533fd299bec"
     sha256 cellar: :any,                 monterey:       "5b13dfd3339908dedfb233c3ba77a45fff7f55569b9252979349eb7fb0a45b5a"
