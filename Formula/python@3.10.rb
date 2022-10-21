@@ -12,6 +12,7 @@ class PythonAT310 < Formula
 
   bottle do
     rebuild 1
+    sha256 arm64_ventura:  "58948035f391012f3f7dadfbb43351453a6217bc7d28a1bdf993e8767000c350"
     sha256 arm64_monterey: "8b1c01441f2dca4793a105919327a88418791ff6c9bb30575e7fe59991781cea"
     sha256 arm64_big_sur:  "adcafc7cfb161b1bac9097c831dd05a0f598a9872decad4e9c1c266da22ff371"
     sha256 monterey:       "017d295e8091cf75e95c8002806865dca73d47b898984fff0a4d00df63a28962"
