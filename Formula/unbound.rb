@@ -15,6 +15,7 @@ class Unbound < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "7f6b083215495c918232e28acc05407a7539e4aacf8243a526b06f244c4864f5"
     sha256 arm64_monterey: "cd06e5b7f62103ad750fab0d5cfdb933c93fc1e40c7769605697b4c8777986b6"
     sha256 arm64_big_sur:  "8dfe71d7aaf0cae625b9c6d1e781e7a83426df3aed669ddee756c49d3442197a"
     sha256 monterey:       "6cf8bdba19831e794bbe0e929e773bb0b7eaab510d99db125aebc473c285e0f2"
