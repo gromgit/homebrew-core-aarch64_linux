@@ -13,6 +13,7 @@ class Gh < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "63af5a91fdef4ce52e9e43b66258a9612dbd0d73c188a8a278b5a3f24c2d2d13"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "110facf8dafaa1a7205d2d3b923d0543e895b1651a87778113ff32f7d995a40c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c34c1bb03866232dde5adc27ea464636ead19dae032ecfed52675b8f5e4fcd8e"
     sha256 cellar: :any_skip_relocation, monterey:       "5dc4545dfb08f83aa474d0bb1797bd6ca1dc8687793c0a9c93eab784f582bd82"
