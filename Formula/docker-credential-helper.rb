@@ -1,8 +1,8 @@
 class DockerCredentialHelper < Formula
   desc "Platform keystore credential helper for Docker"
   homepage "https://github.com/docker/docker-credential-helpers"
-  url "https://github.com/docker/docker-credential-helpers/archive/v0.6.4.tar.gz"
-  sha256 "b97d27cefb2de7a18079aad31c9aef8e3b8a38313182b73aaf8b83701275ac83"
+  url "https://github.com/docker/docker-credential-helpers/archive/v0.7.0.tar.gz"
+  sha256 "c2c4f9161904a2c4fb8e3d2ac8730b8d83759f5e4e44ce293e8e60d8ffae7eef"
   license "MIT"
   head "https://github.com/docker/docker-credential-helpers.git", branch: "master"
 
@@ -17,6 +17,7 @@ class DockerCredentialHelper < Formula
   end
 
   depends_on "go" => :build
+
   on_linux do
     depends_on "pkg-config" => :build
     depends_on "libsecret"
@@ -24,15 +25,13 @@ class DockerCredentialHelper < Formula
 
   def install
     if OS.mac?
-      system "make", "vet_osx"
       system "make", "osxkeychain"
-      bin.install "bin/docker-credential-osxkeychain"
+      bin.install "bin/build/docker-credential-osxkeychain"
     else
-      system "make", "vet_linux"
       system "make", "pass"
       system "make", "secretservice"
-      bin.install "bin/docker-credential-pass"
-      bin.install "bin/docker-credential-secretservice"
+      bin.install "bin/build/docker-credential-pass"
+      bin.install "bin/build/docker-credential-secretservice"
     end
   end
 
@@ -45,7 +44,7 @@ class DockerCredentialHelper < Formula
       assert_match "{}", run_output
 
       run_output = shell_output("#{bin}/docker-credential-secretservice list", 1)
-      assert_match "Error from list function in secretservice_linux.c", run_output
+      assert_match "Cannot autolaunch D-Bus without X11", run_output
     end
   end
 end
