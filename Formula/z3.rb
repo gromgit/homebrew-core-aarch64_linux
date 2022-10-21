@@ -14,6 +14,7 @@ class Z3 < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "60748396c0bab9ca138b0ac2517fca11add17d94d2c0f16e9a9a980916349f4f"
     sha256 cellar: :any,                 arm64_monterey: "cd1bc06fbd7e30b76bb7a0f35ee0ef52a68459c27014ee90fb7a3fa588e7bbcf"
     sha256 cellar: :any,                 arm64_big_sur:  "7b5fadd9f6aae033204b2a487c7ce4717ab1f517731f19a6a11a7b4efd3af7f5"
     sha256 cellar: :any,                 monterey:       "e457a273130050594a4c71166392cad9d19e4d3159770cf6173adae279d77247"
