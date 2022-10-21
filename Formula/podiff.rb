@@ -11,13 +11,12 @@ class Podiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "03f87fb2717a64e8f1783b9795df1cc257e1d972c48813261f3dd08d72dc112d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2502706ba85e9c2f373180fdeacced6d93c3495f7a73dbccb86a750d65a127ca"
-    sha256 cellar: :any_skip_relocation, monterey:       "30517e646bd79bc46167c3aee26a3a55069bb121abdedac6490cfa503a4f329a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cf8359a976f7bccc111f28c41d2b33fdd5ee3bb28077d25c79f3c5fedb5c7286"
-    sha256 cellar: :any_skip_relocation, catalina:       "8178fa230e77c829fce5aed7fc48dd3727dea6a3247008094cfc0d8fb5209964"
-    sha256 cellar: :any_skip_relocation, mojave:         "421503a19273f2dc2149549229d6a51508f23c6b9151ed6046afdcef9a54bfce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "499d50ac3ad81f197ca3c7e158e488d00cd2fbfcf76c194b7799d85a5a89dd1c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9a2621d0ce49422987139fd852a650667b5a2985c8c216c318af66c144d6d8b2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9e7f705d124f8b240f16ab6edacd30c094275e5ebcb5814ba5e9bdf9ae7bfeba"
+    sha256 cellar: :any_skip_relocation, monterey:       "0c49d38d09ff613608a0aa1347e9fdd08d4a59056b74843e4a81cbd2d6f3e84d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "102324c4a33351f8ade8b7ca889945300a5dc36a7b1fb93460b0d26124bda63f"
+    sha256 cellar: :any_skip_relocation, catalina:       "72109e409ad2097e8e6137b7cf7cc2464df145ff2e2c8db65504f0185f9c4ac0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b64d367ffe00d91903f42a1b643e1b467b219f773f8d34b722d1c88ddfcc30c"
   end
 
   def install
