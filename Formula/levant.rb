@@ -7,12 +7,12 @@ class Levant < Formula
   head "https://github.com/hashicorp/levant.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "74eb2be4120b08e97ce53de373dc0046b42f72aaf4cb15bac6392a1166007080"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1259dae3795fb890f07dcd7d3e57dc51728384d5a64474285153e57579816c2f"
-    sha256 cellar: :any_skip_relocation, monterey:       "78e5ea41d85bbe1e283db7bfed22d8eddd371b9bce562f01e2f9601e33920515"
-    sha256 cellar: :any_skip_relocation, big_sur:        "67bbafd86a8294a11f29367650d2fdd49d5ed95c600c1036c1bc47677b0058fb"
-    sha256 cellar: :any_skip_relocation, catalina:       "b781aa48880e56dfec66535a0684c7dc99eedfbb4c66ce3cfaaf5f68b2fd7bbb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d2ae7deebc5c0eb7666688d15a79fb129d328abb78747280658a3239e4e6711"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "698d495bff4fea26d8d85a35e44d70a29b6a46fe052e9d0cd7a4a5f381a2682b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "74a1511f41e293e36a03331fe767beedde31d511db67a1516cdc99d523a08ba6"
+    sha256 cellar: :any_skip_relocation, monterey:       "b1debb65e23d4a1831a4d37d7276b28fbb7903cfdeb501ad3b3c15027161f9fe"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b16a163a59df0456d7eec9c90d8427850b474097b3ec331f18067be084649b74"
+    sha256 cellar: :any_skip_relocation, catalina:       "52700d152ae1b7734c947afe1ca000ce60c9efdb2c72b7d13e3cdd1081a16d2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9843fd7bb066819d4957c1f58d18f6ddab5428dd1ead5a8d6e9426eb853c7ac5"
   end
 
   depends_on "go" => :build
