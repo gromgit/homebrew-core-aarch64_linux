@@ -2,8 +2,8 @@ class DroneCli < Formula
   desc "Command-line client for the Drone continuous integration server"
   homepage "https://drone.io"
   url "https://github.com/harness/drone-cli.git",
-      tag:      "v1.6.0",
-      revision: "2497a260702f1098dfe335fd8ee51afbb768769b"
+      tag:      "v1.6.1",
+      revision: "d32315e6671030780095222d84f7280c23491dd4"
   license "Apache-2.0"
   head "https://github.com/harness/drone-cli.git", branch: "master"
 
@@ -20,9 +20,8 @@ class DroneCli < Formula
 
   def install
     ENV["CGO_ENABLED"] = "0"
-    system "go", "build", "-ldflags", "-s -w -X main.version=#{version}", "-trimpath", "-o",
-           bin/"drone", "drone/main.go"
-    prefix.install_metafiles
+    ldflags = "-s -w -X main.version=#{version}"
+    system "go", "build", *std_go_args(output: bin/"drone", ldflags: ldflags), "drone/main.go"
   end
 
   test do
