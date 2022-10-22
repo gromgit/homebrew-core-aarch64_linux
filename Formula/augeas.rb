@@ -21,6 +21,7 @@ class Augeas < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "916e1603688af06ca325d7ecf378f379c82e88f3712d015e0874a560103d47de"
     sha256 arm64_monterey: "c2b38e9d3f4611a7d7c569ce62d19e35b6d9da3feb4706abddc27828fd4e2a09"
     sha256 arm64_big_sur:  "64fd8945d6a7408664bad5acc707e587f9c54a78fe3e320c57f13bf456c61553"
     sha256 monterey:       "8978eb7d972b143ab12e895b3fc72a4e9a12bd980e02e37eb0dadba9977d8fcd"
