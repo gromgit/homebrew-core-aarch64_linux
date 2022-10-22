@@ -6,6 +6,7 @@ class Atk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
+    sha256 cellar: :any, arm64_ventura:  "8da3539576393ec7998816f209eeb3fc0b681264ffe722613de22258562b2d44"
     sha256 cellar: :any, arm64_monterey: "078fba0fd9c27175313b3232fdf2fe36e72a19e1efdef97a3c622d23869313c4"
     sha256 cellar: :any, arm64_big_sur:  "97a4d14824805cdd1c6b9bdee415e3420bfd54beab814d343648395fcc684f69"
     sha256 cellar: :any, monterey:       "faca1ff938b34b23e284321d8037673f270030aae0c7ea8b44f8a4088c8e9ab5"
