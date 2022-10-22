@@ -6,6 +6,7 @@ class Libvmaf < Formula
   license "BSD-2-Clause-Patent"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "ddf330046166c9f25ad89679d04bc12375d3ad8b4454edeebb2e39667af53dce"
     sha256 cellar: :any,                 arm64_monterey: "780fe80d3941971968a0dfe1f8384fc5fc240e9994b09da41175a7d5fc56b513"
     sha256 cellar: :any,                 arm64_big_sur:  "76b4b46c07bde41001d5dd6660de656c369b1cf9653638538348e97ffaeec55f"
     sha256 cellar: :any,                 monterey:       "a30aaf6bd5878809c3dec5f47d643e4adbda5811a13f5a20d21a3472d5151e2a"
