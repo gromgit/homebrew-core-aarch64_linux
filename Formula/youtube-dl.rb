@@ -8,6 +8,7 @@ class YoutubeDl < Formula
   license "Unlicense"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "49ae088fe33b3012a271daf5a5b7fbd08ca67aa9e962c19deea7809d7eda9290"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "79bc7ca875b43074c1a7097674b900835c5358e80d81a177b1eecf0e69b77a7a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79bc7ca875b43074c1a7097674b900835c5358e80d81a177b1eecf0e69b77a7a"
     sha256 cellar: :any_skip_relocation, monterey:       "a8da6929ac2005f3bf5e004ccd1f860c6368cc49ea4d4846a0b902d21cc0cb7b"
