@@ -7,6 +7,7 @@ class Agg < Formula
   head "https://github.com/asciinema/agg.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "037ad58be3fc8b4fb9d35ea87af3a560fa407f3f83fc41a51fbf641dc6cb7106"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b851b428d4dfa04a0d74765bc0968889cd944da2022c56ccae9b9d8dcb7c3849"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "89b40ebb79fc932d8603b77dfe70deef6c6263199192a29e7567f6d6d1f50e62"
     sha256 cellar: :any_skip_relocation, monterey:       "1232bc241ed1dc1c93a0c3864ef77380effc03cc4d4f4630ea2a73601a8996ac"
