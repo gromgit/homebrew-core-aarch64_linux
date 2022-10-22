@@ -7,6 +7,7 @@ class Zimg < Formula
   head "https://github.com/sekrit-twc/zimg.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "67bf243cac048e9834cabe798291937c500bb79406932a438ac1dc02fbd648a3"
     sha256 cellar: :any,                 arm64_monterey: "afc67759e761ce7569c11a844f4af29802880ed9ac955b08a2bd7cfc56133c9b"
     sha256 cellar: :any,                 arm64_big_sur:  "40efe797c81967168a03455886ae5bca77f8fbd887ad852bf6075e9cbea163a5"
     sha256 cellar: :any,                 monterey:       "67e43a8f648f630798a701cfce4dabe306c9fed320e272ee7e3108971bcdaf80"
