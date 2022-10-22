@@ -10,6 +10,7 @@ class Mypy < Formula
   head "https://github.com/python/mypy.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a9460f5caac8b75b79eb37d53a10fb28cc884bd6d7d2ea7e29d64fd2175661e1"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5db98491c63eada82a16a653defdf64a0db77656a7804ed8930ee8ef6eff2684"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0de2856e1a828a882ca37717ac40591c53df72021d20ecf23e5628c0c6267c81"
     sha256 cellar: :any_skip_relocation, monterey:       "1a09db3fce6bab31a0fd32c4f990dc2c5442911dcd38a040781ff3b0cff30112"
