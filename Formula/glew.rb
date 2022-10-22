@@ -9,6 +9,7 @@ class Glew < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "33b1499e0219c3980310dee9e6b115af3ef0324723af7c3a0ff9a68ac7b3e841"
     sha256 cellar: :any,                 arm64_monterey: "a116faecf407ee2a00cb775a3b668fe0f5753ceecd73678d20b3656e6c56d163"
     sha256 cellar: :any,                 arm64_big_sur:  "088dedfcd45fe37b0d027b52bb1c730e01aeacda4d7b00ce14f67a19d1961bce"
     sha256 cellar: :any,                 monterey:       "9d8d8c93eec4287a9231cd0378b45ee3b9735afca387fc1f5def7e2c68533097"
