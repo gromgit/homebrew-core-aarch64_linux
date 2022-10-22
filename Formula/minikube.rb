@@ -8,6 +8,7 @@ class Minikube < Formula
   head "https://github.com/kubernetes/minikube.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cf8a3d7336573ae82d572f2c94fd5240e7bfab44933ff203565eef122d312a78"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "214bb7cf503615d4ab6dc6f85e080fcd2988bca4e3a40e31efe850bebf18ce9b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b09badc559320f75d4a29a3561d9b2dc3cabdf7352886afaf66b61add37fc06"
     sha256 cellar: :any_skip_relocation, monterey:       "c1615fe34a1a9d5fc8f2c4714dab60e5140bfcf0dd9fd8ab681da58b414779fe"
