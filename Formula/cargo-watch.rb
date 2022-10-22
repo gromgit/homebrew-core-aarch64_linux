@@ -7,6 +7,7 @@ class CargoWatch < Formula
   head "https://github.com/watchexec/cargo-watch.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "15d594afd165a96d462caf38bb84e0ebebcee894ea7091dab05a46ece5dee549"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2d617d05683d1c666f8e00cc05a0e8e0c7d81fff44777bd6b12044b43712214f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41839511953c5bda8f7fef793cde6487b030dd7ce7af5beec2bc58ad5de109d7"
     sha256 cellar: :any_skip_relocation, monterey:       "9dd97ca487a988880facee84a0f1d9238a216ad3835fb9e63da508faced1d661"
