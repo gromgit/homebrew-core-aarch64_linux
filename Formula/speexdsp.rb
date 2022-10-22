@@ -6,6 +6,7 @@ class Speexdsp < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "c794738735292d75e590ba371e29ac57fdfc465f712dd20823634a310759e824"
     sha256 cellar: :any,                 arm64_monterey: "f43bb5f238f0c3b74a4b08c09d4cc98c8935e77024f3c2e109b2683e5197f18c"
     sha256 cellar: :any,                 arm64_big_sur:  "78f624d4cb561115ca94e9caa71dc45f2b4227eb443245b7ae07674fb54bd81b"
     sha256 cellar: :any,                 monterey:       "b4d9cbbd5ad3e85630759fe8183c61fa94d772888c62f9a819b11b32ed1b7664"
