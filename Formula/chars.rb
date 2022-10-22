@@ -7,6 +7,7 @@ class Chars < Formula
   head "https://github.com/antifuchs/chars.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ee69a8455622d2561dd6ead1727c8f4006070f3679b4e94b5927f7c42aa1097c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "65d4047f46ba1526f22d731c7b74de64ca33d59acda6791ff25f9680ad92d261"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c1f8f9c18e61de6516ffacd7a8d0012dc5a79440d91ba27e3c444c90346375e"
     sha256 cellar: :any_skip_relocation, monterey:       "d500b53477aa281423107e2671e7375da0b653b387a2f7397e6c5692c34dbb0c"
