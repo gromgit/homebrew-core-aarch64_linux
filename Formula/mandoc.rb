@@ -13,6 +13,7 @@ class Mandoc < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "086aeecdaad50178bb76546745cf350195ed758d02a495e4128c1dc210ec5b5f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "86fc7de6ddf02952dd6615916d2a787d0e87954337d7b214c760f3871575a771"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a009788bd3b10af69f0563904143dda9a41f0872514ac7e64e8a08a46fcf5fb"
     sha256 cellar: :any_skip_relocation, monterey:       "6e8f22f43770525c78280535cf293a4500eba441baab688dbe04e4c872a505a7"
