@@ -7,6 +7,7 @@ class CloudflareWrangler < Formula
   head "https://github.com/cloudflare/wrangler.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6fc9e1228716d8eda62a4919dc70ba86a71d57930b9ca9114aa8bff56da85e12"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "770767175d90b1b0ce0efba7e0ed89a9455a1c3b7597a2121215175fc7d40918"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a6bb4463361a162f236e8d7f7714e643ea5318928ada6b527ceefdcd8eb435d"
     sha256 cellar: :any_skip_relocation, monterey:       "fb5ee30ee2c08e317bf17a36e2219bd06a9be8ce41551a769e64c6d79ea8d7cb"
