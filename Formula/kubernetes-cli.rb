@@ -13,6 +13,7 @@ class KubernetesCli < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d0d3f48680d26489d3b8276f1cdd212ea03200e06007061ddc0ccea55771184a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cb48abbc94fc3df921c34de03a1e77085455ce632995d31ac9252d22ee367577"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31c27fcace3f51d69ef3d201dede0b0d58c041a37cf2d2ab1ca4a6df064b95a9"
     sha256 cellar: :any_skip_relocation, monterey:       "36bdd3acde18d00ba58c05cb609d1d21d4dcaebd2ab97c94814cb50b5f63e284"
