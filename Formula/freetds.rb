@@ -20,6 +20,7 @@ class Freetds < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "fe417f276667e008be239e9ee594b918bb66dcf38037c79352363f1e0a6b2775"
     sha256 arm64_monterey: "2b4301a10d1b9e0028bee7fbcf25e1a3ab820d55f42757840ef8585effed8bf2"
     sha256 arm64_big_sur:  "9fd5197b165701fd7fd8440c81f1c2398855014164beb1fa479e445acd6cd3ea"
     sha256 monterey:       "61e9683fdeb50cba00ddcd6522dccae2215eb151c08b9cb8dbd31024cea663c3"
