@@ -10,6 +10,7 @@ class Bzt < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "59e212ebbff2c17533689e1927c1296c43495c0ea9d8c431e6ab0b866e862ab1"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3a228984a89db439172445a70fda9e378c3e251deec4c14e838dc22c6e496a83"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c6702804cf7c6df9fd920266f12ec1b509400fa8e060ae839d41f9fbe550a697"
     sha256 cellar: :any_skip_relocation, monterey:       "2ec3594e11bf3f370a5e83f5d7746b6a9f06e11d8f8d2b3c8ba47228b3e7b9b3"
