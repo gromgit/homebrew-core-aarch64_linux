@@ -7,6 +7,7 @@ class Gsl < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "2430e5586457f35f98014639a19d40c4d8d4b821949bb0cc7e091ac2aa9987bb"
     sha256 cellar: :any,                 arm64_monterey: "207ba177628696ce2179fe94125ecd637794396a442a7550c92f9a8a202c03bf"
     sha256 cellar: :any,                 arm64_big_sur:  "1184a75460c96dc80a9fa5299f3f0931bbff729b556607e2b7492608dd7e44d7"
     sha256 cellar: :any,                 monterey:       "3125ff756739ec6eea0ddac3c3b01e879f525eb3b7de88586d6438cd954e28a8"
