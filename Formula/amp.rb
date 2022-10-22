@@ -8,6 +8,7 @@ class Amp < Formula
   head "https://github.com/jmacdonald/amp.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a6bef80decc131b3d73c527c72c7e669e66a56fb1730108e87475e7b10c482b6"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5c99dae746f17d7d8e4143e4443ebf9ad1781e27d3061beb919c466f3157e50e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7b4c3f1b6f8141a900f33c21ecf4e5429cd2e1fc470ed3cbceb487e5e3ce9bf1"
     sha256 cellar: :any_skip_relocation, monterey:       "72d80518bdae9da8407b87dc47c7feb070b48c5a840e27cd828d69379c717860"
