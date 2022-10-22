@@ -7,6 +7,7 @@ class XercesC < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "e858e931c939d044e591755091c6db66feb4c526e47279d02d430a7620e2eab7"
     sha256 cellar: :any,                 arm64_monterey: "55a07ff428b5caeafc5628df1af7b39ac340d3ec1130bbaf5474363a374c01db"
     sha256 cellar: :any,                 arm64_big_sur:  "20fc19025ac2b500e659dd8ec35136e13ac789c6f26d3a720a793e0ee7f2983b"
     sha256 cellar: :any,                 monterey:       "52590592166754dff35051432cf0d5e8f656ecc4774e21d47dcf2ad936ef3f80"
