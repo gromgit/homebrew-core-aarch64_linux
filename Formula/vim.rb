@@ -17,6 +17,7 @@ class Vim < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "bb245aeca16fe576bbc88e4b30ee3e6818e3b279727f04d89572f347f2b8451a"
     sha256 arm64_monterey: "94167ed87b49361bb2a5769070b8b1be4c33819baaae64610b50966f7654884e"
     sha256 arm64_big_sur:  "07ba972e080d8fb8a6fac1b1fc9fcc3c3273eda0333969e82cc34163ebf9cf30"
     sha256 monterey:       "5f775ede2c1b12ae5a4e1fe16be03acb4e5ee19ed1946b3aab860a77db852a61"
