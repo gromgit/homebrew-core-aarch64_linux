@@ -6,6 +6,7 @@ class Utf8proc < Formula
   license all_of: ["MIT", "Unicode-DFS-2015"]
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "5923291e5ffbbf1802c6cdde7b8e9c566c6adfc84e09b0254150e73673f4d4b3"
     sha256 cellar: :any,                 arm64_monterey: "72863230e3a49a319ccf71db211b7866decc25b424c24b57a6e3417211222c90"
     sha256 cellar: :any,                 arm64_big_sur:  "d7b7ee1475f28c34e6702a93bf9fb16abaa49fcd84bdb28c3d07a8d13040f4a6"
     sha256 cellar: :any,                 monterey:       "43f71ce7d7399280dfe784c8c10091d33d4fcd3680366720ea56c8c5d3c8330c"
