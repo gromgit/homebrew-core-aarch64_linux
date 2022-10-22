@@ -12,6 +12,7 @@ class Leptonica < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "b777db0134c92c82863e85a8e9241ea0f36a8d9c31b5ff422f27939a2529287f"
     sha256 cellar: :any,                 arm64_monterey: "f12078d1dd4aaeaad14a7f83e3fc80531b44c5468db5e4de2ac7e7e15c05b2ae"
     sha256 cellar: :any,                 arm64_big_sur:  "7149a71af47d2c56ee6d42b3bfbbd3e1acd028b5d88c06fd12ba9f53b8bce25d"
     sha256 cellar: :any,                 monterey:       "d38cfdaa7ef6c06742a68619a4a6ff1832693fc5a3fc17326e5ada7562a64232"
