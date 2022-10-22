@@ -10,6 +10,7 @@ class Awscurl < Formula
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "b16aaf66956585384ce478a8c7312d8ecea21b58c0f2bdcef26dc278a92257ae"
     sha256 cellar: :any,                 arm64_monterey: "cc1c76a0950ca8db5882e6ff1f9ce5cf674ca200eda0546cdad927c86332cce0"
     sha256 cellar: :any,                 arm64_big_sur:  "7216b2622a8fb8bc0fef57870a3003d8b099f3245c117436c70e899b9d3cd1e6"
     sha256 cellar: :any,                 monterey:       "c74c2b4cf6e468f5f583b89fb3f3bb0556bbfba5f73eb56d4108680985d02d95"
