@@ -6,6 +6,7 @@ class YamlCpp < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "c0c34d815d25a11a6d2abcdd1d48491880a6c52ccb834517583d417be32da89d"
     sha256 cellar: :any,                 arm64_monterey: "870e42a85ee38ad3e908d2316f084ea62d01ee79aaa99975226457acdc0267df"
     sha256 cellar: :any,                 arm64_big_sur:  "73eb2c62c966671c744577b1ee6661edd0c1f993756ecdd68845aed7d67cc89a"
     sha256 cellar: :any,                 monterey:       "352369aa5a46cbbc4f28296f51707ac0adfe30884a11d8b3e75b6a877d5f92e4"
