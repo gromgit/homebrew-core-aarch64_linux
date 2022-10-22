@@ -7,6 +7,7 @@ class Pygobject3 < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any, arm64_ventura:  "d7b7d9279a14042c0c478f949cbeb91d1094915b9b1e9727c7ed614cc7f26841"
     sha256 cellar: :any, arm64_monterey: "b23d2ff0d41aa60565d2d39d686fdb303b460736fbb3d90a6a0216f69e3c8340"
     sha256 cellar: :any, arm64_big_sur:  "11066e4adfe52f9af0091504ad7207d6587503dbe96d07ef5ab880ec36e49442"
     sha256 cellar: :any, monterey:       "d57091970521b9d1aefc9a904aa2ddf7e3c80c40f28ccdbe48d2381dfc1bc2b6"
