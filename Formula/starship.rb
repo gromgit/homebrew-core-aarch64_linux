@@ -7,6 +7,7 @@ class Starship < Formula
   head "https://github.com/starship/starship.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e82c237024245b338dbf0f3c928a05331d660e1f7e34882bc02796c13b90dd54"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f74ee071e7bfe07eafa8669e5535f7f6779366ad80d03fe7609ebdd8338b4fc4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ca97b358ec38bc8ee0e7f969d737358452db909c819f9aeb9b24cb4c1acd904"
     sha256 cellar: :any_skip_relocation, monterey:       "0307c6c463623dc15883119240259c1938daced16c133329e9163c8544cf63d3"
