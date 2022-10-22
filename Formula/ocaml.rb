@@ -32,6 +32,7 @@ class Ocaml < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "fea680c0c2345edadc91fa0b9102ab2b1223a0f4312370a8fc4f917164f98e51"
     sha256 cellar: :any,                 arm64_monterey: "4627e987e1517d78cfd6f40aa84a7f8c29b1d20ae845d345038fc7b548148413"
     sha256 cellar: :any,                 arm64_big_sur:  "dd4cddcad1dd890d90d2db3cd4119ec0dc8b30e10053ca480812e16a90dff342"
     sha256 cellar: :any,                 monterey:       "f744606227e8187baacabccec4baf57aca0f4309eb3bf93623a6789861369dab"
