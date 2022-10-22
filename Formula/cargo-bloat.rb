@@ -7,6 +7,7 @@ class CargoBloat < Formula
   head "https://github.com/RazrFalcon/cargo-bloat.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "29a0aae147c67975c93dac3ca09c67350eea1aac47746cbeab74b9575687d639"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2ae767141d1028021318b1886ad5b96e2fcc79ff627367a4b0ec2a6d974b9ec0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d20fe302801586a94fa4baf15d975abbffc6de9d4fe40433ceedab2043511f2f"
     sha256 cellar: :any_skip_relocation, monterey:       "5d9e92a49a5a5adbb556967210fb908b4ba49a1dfa31ad4278d043506d16867b"
