@@ -7,6 +7,7 @@ class Emacs < Formula
   license "GPL-3.0-or-later"
 
   bottle do
+    sha256 arm64_ventura:  "d020b6a9144f8fa619c067eeb0885969d5f1a171f238950ead32c8a037681c84"
     sha256 arm64_monterey: "109fb5a7ab9ad048b04169c10bc7af54814ea366a1b7d8d45a54692aed585a41"
     sha256 arm64_big_sur:  "824782de415411e7bb107143d1505fc9f844ecc15ffa2157a0987e0e282a396f"
     sha256 monterey:       "d47f7fabda9e2e2e3679608253debb6865061a28f45045c8319b65d569268096"
