@@ -6,6 +6,7 @@ class Cbindgen < Formula
   license "MPL-2.0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d7138c40d52a94efd75576d132c6575c869c6ac0dec342e637e75c52a1d4b76d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b0c1a36521b5e49fcaf8a6926a17495273312e28ba8dd5e9595bf8f02884ae5b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aaefb1afec80860483ed1561f2da6f6f76c2a9b7f76064ff7c63632d433bb294"
     sha256 cellar: :any_skip_relocation, monterey:       "a25cc4ddd2e539f7fed0c848494c4139c77519cb6b9e72958312b25fb27fc5bd"
