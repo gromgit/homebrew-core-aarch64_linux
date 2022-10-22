@@ -11,12 +11,12 @@ class Liquibase < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "eed708873e5b17ab2b5b17ff4e3ec84fb58936a57221f9846b83807b035befbd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eed708873e5b17ab2b5b17ff4e3ec84fb58936a57221f9846b83807b035befbd"
-    sha256 cellar: :any_skip_relocation, monterey:       "57df05faf2f1d433f81e2fd9c5afb3998782b07a41e0d83e8606b809c98d01b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "57df05faf2f1d433f81e2fd9c5afb3998782b07a41e0d83e8606b809c98d01b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "57df05faf2f1d433f81e2fd9c5afb3998782b07a41e0d83e8606b809c98d01b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eed708873e5b17ab2b5b17ff4e3ec84fb58936a57221f9846b83807b035befbd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "caefb17af8afeed82b6c8e759a27a39a389571fd62e9916548509a1f7d4c3cdb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "caefb17af8afeed82b6c8e759a27a39a389571fd62e9916548509a1f7d4c3cdb"
+    sha256 cellar: :any_skip_relocation, monterey:       "b31abd175313658f69e1a5f6fc8b530d33ac06b19f53f138b591acffcbd46d34"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b31abd175313658f69e1a5f6fc8b530d33ac06b19f53f138b591acffcbd46d34"
+    sha256 cellar: :any_skip_relocation, catalina:       "b31abd175313658f69e1a5f6fc8b530d33ac06b19f53f138b591acffcbd46d34"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "caefb17af8afeed82b6c8e759a27a39a389571fd62e9916548509a1f7d4c3cdb"
   end
 
   depends_on "openjdk"
