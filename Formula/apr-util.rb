@@ -8,6 +8,7 @@ class AprUtil < Formula
   revision 4
 
   bottle do
+    sha256 arm64_ventura:  "534b2aef9b78f3e0c3af062fb496917b9ede4972c9e3a77675b840285cf862cd"
     sha256 arm64_monterey: "3fbbe5ef907dc7f8b259f49c0891987f088ecaa0ad0fd75d47345804ec5d2976"
     sha256 arm64_big_sur:  "72585edce1997ea0ac5be884f0fbed79f2746d3252e035ed63b1bd04ad501d94"
     sha256 monterey:       "7695efa17e538d71459020c3838081629629c3c1169bd9ac166865d2bdacb213"
