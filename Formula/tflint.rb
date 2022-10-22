@@ -7,6 +7,7 @@ class Tflint < Formula
   head "https://github.com/terraform-linters/tflint.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d2d173aaa6daa466c198d23c400c9d1be27829e3beb579a0759863f5bf6e2c41"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3d27841ae337a4417fead8a0169a96a24f14452ddda1783f94b5e55fd7e5dfa4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "abb3dbc6d0693b9543925df76863e8f86810ca7b844107fee01b842273bdb507"
     sha256 cellar: :any_skip_relocation, monterey:       "32219b604c51b3306d99fde287c10baf393c8242e10d55b5a46d487eee41ac1c"
