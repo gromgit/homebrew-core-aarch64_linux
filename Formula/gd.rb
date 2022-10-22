@@ -7,6 +7,7 @@ class Gd < Formula
   revision 4
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "62e2d11e1a556084beab6320187c522647cb15308233f164d9fe1e177701d37f"
     sha256 cellar: :any,                 arm64_monterey: "22dba9b654ae0a2907e77fdaff796412da28510243b75df5a2685b3e9339d7b3"
     sha256 cellar: :any,                 arm64_big_sur:  "cfdb218c7e0327c118eb6b780ce42b0b833dce71f835990736d184207169b885"
     sha256 cellar: :any,                 monterey:       "220d7e3cd2bef8d4b61f7bc6b636f4eb09e8b0959dc55faef033e6b3ceaddc04"
