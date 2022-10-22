@@ -7,6 +7,7 @@ class Rustfmt < Formula
   head "https://github.com/rust-lang/rustfmt.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e352b563780350c071653e08726177278b9714b798aa3099331c24b67d249348"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cb6fd59f94829c11bffcf88cc8006fcdc5ad5b52815663f4b0eafd96639de423"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1aa9eef452302f36090c19add716914fae83e6cf78aeb00276c961992c7fac5f"
     sha256 cellar: :any_skip_relocation, monterey:       "0f7c8bf155fc7289caeb261421d4dddd18f6ba496ff8d8d3abb017615903a449"
