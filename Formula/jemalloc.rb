@@ -6,6 +6,7 @@ class Jemalloc < Formula
   license "BSD-2-Clause"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "33e0c3fbe56642e081018a9674df734d34afdc35af7d03f5dd2b484a804555e3"
     sha256 cellar: :any,                 arm64_monterey: "b7ef9abad498e6eb53fb476fde4396fc9ab99a23092ea14bcf576548e198f9bd"
     sha256 cellar: :any,                 arm64_big_sur:  "b24e4a9413b347397a10ebc9a7a2d309d88c0f9479c1cdebe6c302acba9a43a9"
     sha256 cellar: :any,                 monterey:       "27ae29c02d718c38ee5f623c3ef08ad3530a6fd3595d16d2ddadd6552bf32c12"
