@@ -8,6 +8,7 @@ class Scons < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e49979efbc0d53d0ad0ab5dda8c0aaf4b827c2ecbffd4459fecdd86673500ed2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e53074519b96a32b1359d58664b934fc9cdaac37e1a414d2e7d43963e8f4c3a0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e53074519b96a32b1359d58664b934fc9cdaac37e1a414d2e7d43963e8f4c3a0"
     sha256 cellar: :any_skip_relocation, monterey:       "f4b2dc4152373424f8df6f9d8fff6e23e231443bd8897128445318468f23753d"
