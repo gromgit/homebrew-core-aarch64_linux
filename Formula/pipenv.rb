@@ -8,6 +8,7 @@ class Pipenv < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a5280ec6f458b24f94400d50027f13c0eaa6c793109c0f9572bc48bb06363c03"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6eecd0507589ec2fb3a4f00c8a2bf048232cf4c1dc8be27d9cd3bc765ee14c84"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a9b8a6653d2a901536862d14ed1f30237752c48933b70f54c32c2dbc504d19ce"
     sha256 cellar: :any_skip_relocation, monterey:       "020487cdaa75152b1a79d3701f46c2c2bfc9aab381e02bf1835a2e781b04c675"
