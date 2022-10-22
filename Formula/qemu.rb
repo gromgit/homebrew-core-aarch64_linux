@@ -8,6 +8,7 @@ class Qemu < Formula
 
   bottle do
     rebuild 2
+    sha256 arm64_ventura:  "c671494a256a88f1f3a66a7bdb5bd675127c0aba1635894d6c4a74b0983d2d52"
     sha256 arm64_monterey: "e3366feb468fab143e6d332f3acc38f4df0141c94d41c28fba2328f2370a3f94"
     sha256 arm64_big_sur:  "9709da0099d23fd5c2ba3ced0757f177229276005969f7fa737377e9b83c21af"
     sha256 monterey:       "684ebfa66c19080b76ece0751951d49a462941bebbf4a4cbd119f6c380a5396e"
