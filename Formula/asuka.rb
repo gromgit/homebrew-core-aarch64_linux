@@ -12,6 +12,7 @@ class Asuka < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d1c02f51ae8c0a6bfa92468fa67574c31a5ac69680fa9aed4d0ff56028755a16"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5bf321cdfb82c2c08f69c1a7e48eed33d00e71c569e7eef10004ffd833c36bb5"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bdd3adc10b5f906817abc3929dff9cb8e1420b2d91a88c5ac41d83106c9150bd"
     sha256 cellar: :any_skip_relocation, monterey:       "3f55b85765e46142ec4916bf0979283853e4442a116e2afc52282aa011d542be"
