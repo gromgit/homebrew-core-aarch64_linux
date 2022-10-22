@@ -7,6 +7,7 @@ class Cython < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a0bacf71713fc06516224737da332607e62570dd9b09db621e2bcbbc3f9f1fd7"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bf2d6933b68b87cfa36a047f49774f59e8f0193a2f53fd4284d2e81b8c6e13f6"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb954cb6e538d5619560ff5598f58dfff45071599be7593bc9477ea96e606dac"
     sha256 cellar: :any_skip_relocation, monterey:       "37c7b39c9ea3300d07dbf86e96d6365f2fd305ebd953ed87e6231606960a4c65"
