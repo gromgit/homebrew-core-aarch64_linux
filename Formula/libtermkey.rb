@@ -12,6 +12,7 @@ class Libtermkey < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "7d8785550b878770b207750a28a857906ddcca4dd23ad01d2c1c342adca32e2a"
     sha256 cellar: :any,                 arm64_monterey: "7ffaeabbe372926ca45094684424add804cb1a8140c88a19115e7e41e02dedc9"
     sha256 cellar: :any,                 arm64_big_sur:  "fc0c8e944f2a0e93500e6b93823b685aa085badbf298cf933ef2be6c615ab9a1"
     sha256 cellar: :any,                 monterey:       "4acf8f693e3ca76abb35a77f32edd5f54dbe47419fa690a9c32c396536a30b00"
