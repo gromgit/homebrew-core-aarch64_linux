@@ -6,6 +6,7 @@ class CargoUdeps < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "07b27a60948306993490ee377d9d70c0f6e938895f4fdd60f87ee255f05fb47a"
     sha256 cellar: :any,                 arm64_monterey: "6d6845df1ba34370c3b9fa0c7b769847aa6cb745ee88545ed1efaf221fc20867"
     sha256 cellar: :any,                 arm64_big_sur:  "faa69a6ef582697317d33915cea601728d53fbaaba09497a0bc1b96c26308e8c"
     sha256 cellar: :any,                 monterey:       "cfcc243896eb4d948935368e87fda1241e98cf8a675accca000d4b8689372ca4"
