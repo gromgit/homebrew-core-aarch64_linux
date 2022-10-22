@@ -6,6 +6,7 @@ class Bupstash < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "b00df34a47cd99e9080deb42ba59b875f45444499ad0a1c5f18518e5e4aae077"
     sha256 cellar: :any,                 arm64_monterey: "a0f4b5a3553ba1ff2e170935ec847274764eade20975ff6d5508caf2074eaea6"
     sha256 cellar: :any,                 arm64_big_sur:  "4e91d7e3036edfa4b3d63f338156a0521ace45c9d3cec2cd1570abad97c78262"
     sha256 cellar: :any,                 monterey:       "3a25f52779809a6d650798fed2d885acd471170f05ed01fab141e81c34148b00"
