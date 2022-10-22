@@ -13,6 +13,7 @@ class BerkeleyDb < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "9f95fac93b53a02ecf42f3abf60c5657f74aea8fccd7b8077c1b567a959bf750"
     sha256 cellar: :any,                 arm64_monterey: "8da7ddbf86ba57c94235796b4acddefba7a67b20cef9c4955e5601f80f8a0e23"
     sha256 cellar: :any,                 arm64_big_sur:  "5a9de497a3fb74b8b7fd3b1be77fcd0b808361a3adf228c04132106a16f03aa5"
     sha256 cellar: :any,                 monterey:       "923b8995be6b3da9742b8c283d18dbf3142f73b478b60f85f76db97c37e9b280"
