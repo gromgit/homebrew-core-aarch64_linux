@@ -7,6 +7,7 @@ class Argo < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "578c1521ee5191d7ad7af7efba9a67923fa7580ddaa1ec4f35a733b94444acad"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1d1276b608c2445976ed5103a4a1c7e996cebd142d7c6c4e7d1f59a79f9c7d17"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a38bb88490f764a84a98b669f2f46a0e3177aab90ed72000feaadb0f30e55ba8"
     sha256 cellar: :any_skip_relocation, monterey:       "bc4030d81c946ee9e06d7a374690d16d7c56125f0efe287743041afe01d6cd39"
