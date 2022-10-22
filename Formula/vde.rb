@@ -12,6 +12,7 @@ class Vde < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "d0db1dd42cba0815587a9919f242dc7708a6b450fbb390fedb7be0f43df8691d"
     sha256 arm64_monterey: "e4d5fbb28025cb50acf1a1c8e11a2aeb33e1324b42b49d7f3709fab81a708c55"
     sha256 arm64_big_sur:  "d504166629275fb173304ee78b134a6c5b5eabba65c054f2fede1949204382dd"
     sha256 monterey:       "c043ada3aefd2f0a9eeb6f60db1003cc6b340da282d7fb93d940be47aac9fc6b"
