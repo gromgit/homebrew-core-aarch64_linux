@@ -6,6 +6,7 @@ class Xtrans < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "24285595cf66a05c9399cb7e9b3d1899ff2c494e0dbce260a2c6e4f748f76f0a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "24285595cf66a05c9399cb7e9b3d1899ff2c494e0dbce260a2c6e4f748f76f0a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1738fd7b80c0ebfe717716a192b00400e804df83d42edf172d42acba1cf09fee"
     sha256 cellar: :any_skip_relocation, monterey:       "24285595cf66a05c9399cb7e9b3d1899ff2c494e0dbce260a2c6e4f748f76f0a"
