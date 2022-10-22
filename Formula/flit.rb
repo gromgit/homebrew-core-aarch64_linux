@@ -9,6 +9,7 @@ class Flit < Formula
   head "https://github.com/pypa/flit.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "08a335c0611f87be56f9e5e8f6808305578af3367a98d85f5009f75868c6de9e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e81e7df88cf7e1327777442cd65f9b2405b842ab47eaaa288f4ec26daa2e220e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1b732032f051ad55558b9ede3c59d5e7bb6ea57432f1a70a372c92561047a1d"
     sha256 cellar: :any_skip_relocation, monterey:       "498a7c3edd623e6fe7249e164fea4eb0a80dd3a8b2714038f876c24eb70c8707"
