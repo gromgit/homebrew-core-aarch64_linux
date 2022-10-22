@@ -6,6 +6,7 @@ class Libavif < Formula
   license "BSD-2-Clause"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "9b4735a70692b1e1cb060a3239bc22b2226cb663c7321474aaaa7b237772a68c"
     sha256 cellar: :any,                 arm64_monterey: "7894a74f1c218445038333053255a70edd4e5bbd7db601df3f9544c53c19b5e6"
     sha256 cellar: :any,                 arm64_big_sur:  "89dae84c1c6432e7fce025d72236606fe3cad655b596a19638754e593d608092"
     sha256 cellar: :any,                 monterey:       "62c3120e7b162a29839b38a1eb53db3f25caa15495aee7cf5c9c54b353d9c965"
