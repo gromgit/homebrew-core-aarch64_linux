@@ -6,6 +6,7 @@ class Hunspell < Formula
   license any_of: ["MPL-1.1", "GPL-2.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "9bc2a6289a536f8147dc07bc64df5b50ecd67b599f0039737ce49d2a09f6da19"
     sha256 cellar: :any,                 arm64_monterey: "e2b55b5d8ba672d91525b15ef165eec3bc1292e1e46ee9dbf01a069eda621a4d"
     sha256 cellar: :any,                 arm64_big_sur:  "849e8289515dc32df0e28fb66371dbb6db15d4b283f970bc1fb5067c2d9bf225"
     sha256 cellar: :any,                 monterey:       "134ffae149cb7cef8adbf76a165219a88ba0a9057b64ed03cee8cbe22444c004"
