@@ -11,6 +11,7 @@ class Gnupg < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "6969503746990439b1bee07939dd9558aa41e9360b91173f30d8b53814bdeb87"
     sha256 arm64_monterey: "2097638d35ed8dbdb83634dc720880ec618dbf76e89fdbc28c46b6c3e7ba9998"
     sha256 arm64_big_sur:  "9f82c84919455dde032dc667a76ada4a443d22ad8309fd7d8fdbb3c36ee06515"
     sha256 monterey:       "46476571803c002aa14d7f8725db0bbc19784a253cf0498fee8c72966b032806"
