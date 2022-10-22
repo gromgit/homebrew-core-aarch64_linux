@@ -12,6 +12,7 @@ class Click < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "378d469167903f2e710632b8772be7850479fb315328d8c54892358f59685409"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f76b66970956c90477e04413d87df51ff77b39017b0886de7ee26fc841aa8afa"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57384e9bf27b21e149e8b94ce37db79dd687eb9b4fc9d5301e51c00f235858b3"
     sha256 cellar: :any_skip_relocation, monterey:       "14c31910f9c5030803f8c8b4140b1a174a063af87f28838c47e97ad3b084a02c"
