@@ -6,6 +6,7 @@ class CloudformationGuard < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1dce491dfc20fa1b3e992b21e8fd08c0a1304df7b96484854add75e33f170e70"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e679636e6f6dfb96f827f0859eca3e2482de67ac499322fbdef1b11d8c4a8c32"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64582c694ac3f8f621a4bbb11c63873d5a17c807d59cbe4fc2a5804d534ac218"
     sha256 cellar: :any_skip_relocation, monterey:       "54c9a9abda8ba5b06f41cf21698cc68c7dad8f0ea6f4810439186b3067a6c6a0"
