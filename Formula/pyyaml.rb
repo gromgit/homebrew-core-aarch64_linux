@@ -6,6 +6,7 @@ class Pyyaml < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "bd9d1f9a1987f96ed83b5d66bc8aeb6989807dcfcaa7f9f720ddfa29ddff5b5a"
     sha256 cellar: :any,                 arm64_monterey: "dcb5f25585264c27766cb706e535877243d7d6fd694daa297b854833907cf9a3"
     sha256 cellar: :any,                 arm64_big_sur:  "d825c57bca790ad92f58e03627e06371cd4f480071a0a5ca58141aca39d12d5a"
     sha256 cellar: :any,                 monterey:       "13436e5862d0648d93dcc9798775fbfcacf02b716dc92387f32ebfa837df5e2b"
