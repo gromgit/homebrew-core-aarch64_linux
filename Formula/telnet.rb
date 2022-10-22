@@ -6,6 +6,7 @@ class Telnet < Formula
   license all_of: ["BSD-4-Clause-UC", "APSL-1.0"]
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "746c9c9d0361bd7e1df57aac06cf39f718b0dacb6152f0655661d9e38fab94dd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cf76f3b47cf35efd4d271adf52227e463298005ec9b1ac586b629d5ad94522cf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee7b09914ace1a19c919373b7199f90bbe1204137ac3412e4d6b129af8afef88"
     sha256 cellar: :any_skip_relocation, monterey:       "e7d411ac808b074f661caf470c170e0c3e01746e818e5654400b7adbc418e941"
