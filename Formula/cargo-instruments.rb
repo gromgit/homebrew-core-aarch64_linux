@@ -7,6 +7,7 @@ class CargoInstruments < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "6103256cade5723bcc04e76f498e4440d4ae43539f1c420269cb4ff242ecb6cf"
     sha256 cellar: :any, arm64_monterey: "2b0ce97529579c5124ddd1e84f211e580deac0f40131aa5ab2846d69a77d423e"
     sha256 cellar: :any, arm64_big_sur:  "fbb59a8f1de72c02abbf7d4ddd3f77847782cf007511c6a0ee99fa85efdfcb72"
     sha256 cellar: :any, monterey:       "1ed4dc681fca9a241681bfd81551c4160b617def4488766580ff61a4aebfbba3"
