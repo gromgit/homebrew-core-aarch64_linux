@@ -12,6 +12,7 @@ class Unixodbc < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "4c0380e01085731950092d3fdbcb24865abcb7745cbb318759e21d77e14c2fa1"
     sha256 arm64_monterey: "41252118b5c049b7fb24be4d68aa0efd821d1b263db205b6b8395d538acdebbc"
     sha256 arm64_big_sur:  "d7c4effd78343a0e35e1ed173321299393132c84d383b34dacaa82abb09bfbcc"
     sha256 monterey:       "a4d5de6d53870f610840a88bd31c0d0442bc3580068f9330207ab8e0488fa523"
