@@ -7,6 +7,7 @@ class Act < Formula
   head "https://github.com/nektos/act.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "19123180d771993499589065c3491aa79aa1b28676f058f6f4fa73f619a07ad9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1352a308c4fb2aef385ab35b12af1f5cf8e424addaea5e8c3c59e1b66797abaf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f408433a1f0eee8accdfef5548ef36703fee0ad47e121e77fe661ee068b8bb76"
     sha256 cellar: :any_skip_relocation, monterey:       "802d1a6a9644cabc1e1c78fb110ebad9ce34b82097051d6c9a94de8379155931"
