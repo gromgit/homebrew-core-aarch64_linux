@@ -7,6 +7,7 @@ class Mprocs < Formula
   head "https://github.com/pvolok/mprocs.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "61a747b05db601efdda2d237bc4300d147f7da2582a9a5cd0a729e80b6baaa89"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5a6a16b22ae3a23bf0f6ed801ea04d788a4403d2c5d333f36df6cba762100346"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb8d5528980d10e5323792524a8d0b5904f7587541fb57c42e39e72c4e861e89"
     sha256 cellar: :any_skip_relocation, monterey:       "9c300454d04d824541f12a7b5a9ea9575c3c04ce42fbd759e16643e01876379c"
