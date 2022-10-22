@@ -6,12 +6,12 @@ class Faad2 < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "7d3ed82ad0bc48a71b7341db0d578545bc9fcdd4ea084b4e651d99319c1e7b63"
-    sha256 cellar: :any,                 arm64_big_sur:  "8032f53b871aa9c01950efd796f73f66f3cbd514e5078a0a81cf7f36e42723a8"
-    sha256 cellar: :any,                 monterey:       "fbb0d45e57a091f43f049152b505525a060f4a15c65f455769f88adfafc4e46e"
-    sha256 cellar: :any,                 big_sur:        "3b213d8ff392515c908a505c0ec902f195fcbd7a8ae470896a0a4ed0080a5445"
-    sha256 cellar: :any,                 catalina:       "efc7c8b92b7411b12fb4f63ef641f92d2278b212f49614b7322449dcd24971fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "720a60fc65bf50a3645009ab1e4046f897ebadfc06be17e84e00eec0dfd49a56"
+    sha256 cellar: :any,                 arm64_monterey: "ed24e5dd89144695008089fc3f8de7031db3906cd64391e99eb67ba440056dad"
+    sha256 cellar: :any,                 arm64_big_sur:  "90f7a0219e6f512686cb37c39c7436c3572d19822c5687dfe6244a4deea1bc4a"
+    sha256 cellar: :any,                 monterey:       "b749443a3607f7c18ac3dce49432d684f0446df8bc21173ab89b280bedaa5d7d"
+    sha256 cellar: :any,                 big_sur:        "23ce45f3f6c3fc6959e0b09595e129411d8b45443888a1f1c272f5645805cca1"
+    sha256 cellar: :any,                 catalina:       "9ff6536a2a0fa6b561750fa3d8886192de865edad71029e4ad68a27af18abe4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "300156e7a30d3e2b449f78f6671d1769f559a659241a55d9f074c8026193ab99"
   end
 
   depends_on "autoconf" => :build
