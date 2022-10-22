@@ -13,6 +13,7 @@ class Dbus < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "e264fa8a3de36755c0737b539686c65141752af33b12743841ea8b1abec06317"
     sha256 arm64_monterey: "c9fd5fca636d95d017c791c0b5b87ec99cd3ac3ef7d194c3bb05448a52e2933a"
     sha256 arm64_big_sur:  "26e8143ae21a90e27e9d3218c69fe7ac509379bf6adc75e0293234c366a89b35"
     sha256 monterey:       "25e7cbac037a07c9bef1f0cf8346c6c755fa46ce1b71471e46f64f396441f734"
