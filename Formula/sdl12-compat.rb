@@ -8,6 +8,7 @@ class Sdl12Compat < Formula
   head "https://github.com/libsdl-org/sdl12-compat.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "09ce734f6282d5286ddab46b655d15ea860243503969f4f3632e0fcb6627bfd4"
     sha256 cellar: :any,                 arm64_monterey: "9fa81c93ccaac2f1d2593b66b6964abbc4d3d503cc9985051b2ffc22b23737ef"
     sha256 cellar: :any,                 arm64_big_sur:  "f6debd32dfc5afe87c10af3558c8403eba7b11b5336e9743a845ee6d0e5c5bf5"
     sha256 cellar: :any,                 monterey:       "421b2ed2509c5137903a72d509c4d0370d31882e9dcf5ab4a4b821bc0a498ac1"
