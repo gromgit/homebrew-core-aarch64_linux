@@ -12,6 +12,7 @@ class Gnutls < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "be387b61bde3f06d690ab88984d1d8490163f5341d9190cc7d7e40f7afac73df"
     sha256 arm64_monterey: "2de64828679245123f641ecdc5b166b444f24586184d0d5717b4ac446406009f"
     sha256 arm64_big_sur:  "4792aaa463b7f12a7ea0ec855f47a37970797b578083a717356a16cd4a4fdad6"
     sha256 monterey:       "6bd29803c8373834e2a202a1998fe8b278b65a0dcd828e9b05d76b9be1d5a623"
