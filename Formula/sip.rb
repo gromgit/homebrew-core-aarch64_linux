@@ -9,6 +9,7 @@ class Sip < Formula
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1adbaf9bbed7accdf67a733e7b94e8361175e93c633bcb57572aa73d478c79a0"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f74454e414778baee52d3aaf39512f8a6895b5cfe9308395ab821908db064943"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efcb705e94a633217705d51344b14c98d57aaeb4c3e70b1915dbb645af26bc2d"
     sha256 cellar: :any_skip_relocation, monterey:       "1d28201501a44c082edcfbddaaafe4216258a36b9a0b5a85fbb8e914b8f8f71e"
