@@ -7,6 +7,7 @@ class DockerCompose < Formula
   head "https://github.com/docker/compose.git", branch: "v2"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c31b51fa7366371b248629265ba6111f19b144c643b96b74e3110fc91a4ba3d4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c31b51fa7366371b248629265ba6111f19b144c643b96b74e3110fc91a4ba3d4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c31b51fa7366371b248629265ba6111f19b144c643b96b74e3110fc91a4ba3d4"
     sha256 cellar: :any_skip_relocation, monterey:       "5b797a67934a1c2cd7eb82ce10f891d4232729d457372a6d67ebb782565398d5"
