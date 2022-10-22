@@ -7,6 +7,7 @@ class Googletest < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "136df6bbe33562625a64654a7a5e398b13a02f6bd1cf004fb1ab461848ba702b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e8d15f600c78e4189affaf098ac674308eb67c9dca60e2f64f2b8eefd4b82d05"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e72dd7898776d58f31b6ed5b487d95a08e38b75a1bff696d5e622724633c880"
     sha256 cellar: :any_skip_relocation, monterey:       "59e79a6ad6278dd1a0ffba9f65067ff8e2095d4599da64c632de2f4b5f3db00e"
