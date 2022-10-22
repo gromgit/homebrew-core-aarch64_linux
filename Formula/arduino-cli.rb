@@ -13,6 +13,7 @@ class ArduinoCli < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "65341e1dc50c6bc8342295f5eb189b9ca4d58d15e0a40fc20853631bd37ff9d7"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "aa68f85cf87610e99629b2af369a60dcbcb0f8d0a1c2d242f127bc9feb58063c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "213a79311164d42ecccf7db7790cf0427117510d5752f661a54d9b2335a86d75"
     sha256 cellar: :any_skip_relocation, monterey:       "cfde519741ae2cf221065a6b720b29b03c4a579e3561fddf5bbb0d54c76ae9e2"
