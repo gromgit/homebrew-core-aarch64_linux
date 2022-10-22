@@ -7,6 +7,7 @@ class Bvm < Formula
   head "https://github.com/bvm/bvm.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "051f1c853a4bbc5c96496ec6f49ddd634b851c7a26b0922c4ca2bb6252480bfe"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a284f10dc418073f3f9920acd946b6d494e9d81c6c9628532d352546ff47c683"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e05342a9aaa52b60891218158811a9c6848a4f7e37919e9029e022db54226490"
     sha256 cellar: :any_skip_relocation, monterey:       "03fa1710f7665d0910ee7a501572de68fcd5977b98ed265d456674e7aedf5d1d"
