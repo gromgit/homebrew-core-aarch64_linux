@@ -7,6 +7,7 @@ class Py3cairo < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "72e0477409bb584ddb14da3d348ff4a4dd8ca210a2f47aa89c83e6639d85287d"
     sha256 cellar: :any,                 arm64_monterey: "ff63b1420cb6450a4ad5d7099cfe3de573af17bff5a6eac905d1052ff8b1577f"
     sha256 cellar: :any,                 arm64_big_sur:  "2483f93ce39583d9fde00e42c0081c86572ec15de319ff15d4ea705aefc7fda0"
     sha256 cellar: :any,                 monterey:       "03e594802bce3f9c7e3cbcc55d0007330b0205d61c74e084a54e919eb9b69653"
