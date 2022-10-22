@@ -6,6 +6,7 @@ class Libde265 < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "e088b089bec796671d7a00c3d8aad4e2911efd0d649dcd72c15ee4cf97756e31"
     sha256 cellar: :any,                 arm64_monterey: "1e98138f0c8b39ef2d30ee5e27a2dfc67fd9c58585911517f9602e3e770c9ce7"
     sha256 cellar: :any,                 arm64_big_sur:  "448d589857e6ebac7a90f49e18cfc83ecf5c2bd45df346f8bbb85fe4f01103c4"
     sha256 cellar: :any,                 monterey:       "2d258e7db5020ce6f359b4825b62b497de6e4a689bb0ad1502e46c49c8b139dc"
