@@ -7,6 +7,7 @@ class Trivy < Formula
   head "https://github.com/aquasecurity/trivy.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0995dec6d72d1a7cab54e1abfc4650f08c9269a6d86dcf1d2e68f665bb829348"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b02b9071d847176e8b93f5131f01b6bbb24e62bd39dd5c0346ce4327fdf955aa"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f1aa39971f0518aca53651801925783b7407aca7a8811ad8f429035b19d5baf"
     sha256 cellar: :any_skip_relocation, monterey:       "05c01edbe4afe3d5270a0f1d0366f93eb9357a9c10a9b4c16b45f9c5970bbe18"
