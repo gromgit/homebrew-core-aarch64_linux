@@ -8,6 +8,7 @@ class Apr < Formula
   revision 3
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "e0a879c211c9c211262e55211187abb8c8c87f2ca14d6f41e144039312058e54"
     sha256 cellar: :any,                 arm64_monterey: "02e6b44b3284fa471cce15592a8666356f8d43b256bb08b391efbd521eddedd0"
     sha256 cellar: :any,                 arm64_big_sur:  "26736a76f4ad71f17a1a5068bbe0a1bfa2c48e26622d3ed959f3ce42165ddd0c"
     sha256 cellar: :any,                 monterey:       "365d71d8598761991d7c37831d11a4d355a5dc007863e5a677afd39d664d8351"
