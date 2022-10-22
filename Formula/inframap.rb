@@ -7,6 +7,7 @@ class Inframap < Formula
   head "https://github.com/cycloidio/inframap.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a8346b10cb9a2054a86aaefba38ffa80f36bb2696b987aca77ab9e2c7e68dca3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "763af27a8d3dbb2ccb3c7bcb63d337ee96e7f5c011dcecbee7768d76214814e4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee096fc9fe0909cc34675dbd7a7269c8092ffee0d6ba71fa333e75afc4ff28c1"
     sha256 cellar: :any_skip_relocation, monterey:       "36b5b88b60390bc015fb56166cb7b890c8e5eb2f736a30384dc3fa92cda9f351"
