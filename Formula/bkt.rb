@@ -6,6 +6,7 @@ class Bkt < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d60a21ff1ba0923b1325f001f9ad0cca3005eafb6fe2bdbf6a5e84e6a8cfe0ff"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c87900965e5e508b6396358f50efdc787cdff1a2acc25675015ff2455f880be8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c8eb2c951c880edf5e91608c490c4bfd89e20c8c4cb03b9c55a2855ff0a2ee4"
     sha256 cellar: :any_skip_relocation, monterey:       "116af084ee4a7c6200245b311b140a7e6bb73ee4a71cc15fb810e2473b1c1027"
