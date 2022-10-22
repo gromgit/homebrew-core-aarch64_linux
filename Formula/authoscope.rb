@@ -7,6 +7,7 @@ class Authoscope < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b6c02326d8bba708c177e946f59b3074609f27eb0250e74f52760a39360aff7c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c51d402bcb2a79225d442a5d291c1eb15d6899c0088704bf2ee7c919c2ade0e7"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "751047e5d1259f529ffb995c0199724dccb34a7892418e2ebd9fd9c60f16270c"
     sha256 cellar: :any_skip_relocation, monterey:       "cd8c5b3960c3474bc2ba1b404116d2e682ae733d699b87c41cc38cd95b5074b7"
