@@ -40,6 +40,7 @@ class X264 < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "faa0ab633b7f74cf08046227a361a6ca9e196aa0509cc18fab98e0a80cb8dcfe"
     sha256 cellar: :any,                 arm64_monterey: "b3748da590329fe70fb41861508badcfcc1b8ffb0c6b0ac45d4a7e49dfc1dad2"
     sha256 cellar: :any,                 arm64_big_sur:  "f1be2560ce48268a304fe501add92441dd3cee52fac2e59701cbe00e67aa4b23"
     sha256 cellar: :any,                 monterey:       "98f235930f557572e2fcf3015ef25a285941b0d5529a6816194811632759ee18"
