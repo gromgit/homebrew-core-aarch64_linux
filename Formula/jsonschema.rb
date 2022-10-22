@@ -9,6 +9,7 @@ class Jsonschema < Formula
   head "https://github.com/python-jsonschema/jsonschema.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ce180eb18c06431d9989772421f986a0072718ba16411e2719b98401aef18d43"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f2cbc72063ebad79f42f38edad5506d31428d43c13d4d97e515675567b2121b8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dadf3a23d0852ef48a76dddac36499a43acc890a570f2b2d205de89f4ba2b650"
     sha256 cellar: :any_skip_relocation, monterey:       "b533591c57e4e6074045a198e8be3429a79169e5dbc98755b5e36e5bbe466b06"
