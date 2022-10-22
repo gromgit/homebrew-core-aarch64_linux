@@ -13,6 +13,7 @@ class Docker < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9a28a60429b1a7f70e783e22c4b032ef90022469efe224a67f134bd467abdbb2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "933e81d367250e74f62fc460f6321b8215aeadb76f19bd0cdaf6bfcbe7c6f144"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "516d4f94b2851c895d384ebc2b1b1015ddc272e441a00f75a18963772d2fbb53"
     sha256 cellar: :any_skip_relocation, monterey:       "e8c2e5463b0e80a8d492a8c0ff30714fcc41d8fd32b885344ff519961ded6b69"
