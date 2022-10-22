@@ -20,6 +20,7 @@ class Flac < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "de4e318d796c0e7b6c441cbf6fe4df74add1e94e8f1906fec0426c73eb31afc2"
     sha256 cellar: :any,                 arm64_monterey: "d22c0a596ada320cf5c19301e16443098576c1e8b95c5877ec22e5aec7c4fb12"
     sha256 cellar: :any,                 arm64_big_sur:  "ef3f6bb794adea4850253007ba13b5c76786476884e7331c667f358a52220e0c"
     sha256 cellar: :any,                 monterey:       "8a7039889d7d38f0eb28f01c63b3e8b38fe334467e31887dfef3af06b3aaa321"
