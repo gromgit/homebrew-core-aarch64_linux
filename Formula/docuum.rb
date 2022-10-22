@@ -6,6 +6,7 @@ class Docuum < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "304892bc65b2714237adf1feafe21bbd7c7c6440d328911b54c3757b46a7457a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "621cd7b8f28627bce234a6895402f152bd81a81f97d91d34ef780226a5b81b28"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cceb92da75b1c92689b0ae2fa771c8b1e25e9662fa900be5b7a2cb568bef584c"
     sha256 cellar: :any_skip_relocation, monterey:       "e0109727463946234cd667db2eab532fd44094101d9be557fd7558747ec63cd6"
