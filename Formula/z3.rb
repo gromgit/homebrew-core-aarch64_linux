@@ -13,14 +13,13 @@ class Z3 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "60748396c0bab9ca138b0ac2517fca11add17d94d2c0f16e9a9a980916349f4f"
-    sha256 cellar: :any,                 arm64_monterey: "cd1bc06fbd7e30b76bb7a0f35ee0ef52a68459c27014ee90fb7a3fa588e7bbcf"
-    sha256 cellar: :any,                 arm64_big_sur:  "7b5fadd9f6aae033204b2a487c7ce4717ab1f517731f19a6a11a7b4efd3af7f5"
-    sha256 cellar: :any,                 monterey:       "e457a273130050594a4c71166392cad9d19e4d3159770cf6173adae279d77247"
-    sha256 cellar: :any,                 big_sur:        "66edef24ae8885d0caacfa3b708b968df8d784653704cfb8052848382d6ebbd8"
-    sha256 cellar: :any,                 catalina:       "62f3afca0e299f799396399839c6c0bf98f56e607a8887fcf294d3b09b10f9f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19fea9a2eade95898190d751a651886b973591ec9f2e0e8ad327cd8abf75a607"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_monterey: "f4105981678b6bd31c32287e36528e1dd67add716992099064d8619c1083c2da"
+    sha256 cellar: :any,                 arm64_big_sur:  "aaebd36b98db60eb30f2854e23e6d57579701b4467a0a95bf3566912f747d95f"
+    sha256 cellar: :any,                 monterey:       "f8c5ff44aaf7d0ca43fd5d47c687dd30856162290f9e06c7cf447013f0c96013"
+    sha256 cellar: :any,                 big_sur:        "77a1c6b2fd240446b9d8b7b5fac451bd83c100df370f7ad5d718081a6646dd1a"
+    sha256 cellar: :any,                 catalina:       "8c95b118eb284a9f6f9e58429553c643ed50e38dea4eb625a3d77f26e0c17079"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf1f56a098a185de89c0fb2341cbae1e8f8a0aa0de74623db7d45e2a62e2d3ca"
   end
 
   depends_on "cmake" => :build
