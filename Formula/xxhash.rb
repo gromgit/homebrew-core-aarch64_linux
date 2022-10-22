@@ -15,6 +15,7 @@ class Xxhash < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "daf4e0c7861f6ac2addb81a87f3b511fc972a332c517a3ea0ec00afb5558ae94"
     sha256 cellar: :any,                 arm64_monterey: "3d75964698a3beb04236d1632f6e69a2b58f1c552fee4720467c5ff47b1356b5"
     sha256 cellar: :any,                 arm64_big_sur:  "047255a58b02b965c7a8c1a7a6216bda9c0a386fd0847b019568de321ca81c27"
     sha256 cellar: :any,                 monterey:       "05eaeee75ca864298a1c85c6b917401bce6b429da391c83be347c321013f298e"
