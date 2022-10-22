@@ -12,6 +12,7 @@ class GoAT118 < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "104c982ff0bfa8f60ea7d6b257103836101774bb4b76281077c0bc516d5f034d"
     sha256 arm64_monterey: "139c8fea435a5e54054c48efa2613a275a5847adb264ba516a5828a9e41285bc"
     sha256 arm64_big_sur:  "14c8e9eafc8749f09fa4a283a49d2695af80cd6525c6b0eaaf54732a3200941a"
     sha256 monterey:       "7cc509841d6635b7f4f966b7b27d3e606af515455f3959b71c7421916e3cd02b"
