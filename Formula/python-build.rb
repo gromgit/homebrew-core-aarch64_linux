@@ -9,6 +9,7 @@ class PythonBuild < Formula
   head "https://github.com/pypa/build.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "00925e1e78d04e1dea1ade5e4d282aa6a6d21a78e437f333fbc5424daba95956"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "610649cc03c756ee41fcb9f4cf554b81e650faabb2e6faa3bc71d75598b82d10"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79ece43d227ab21d3fdb1b16a8c69f1c1b479fca33733cfa995b2a6120271199"
     sha256 cellar: :any_skip_relocation, monterey:       "ad1c8d2b82c17d4efaa10819a55386ceb263db6e6c8fdcb96e709e379d2294f0"
