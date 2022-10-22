@@ -10,6 +10,7 @@ class Libcython < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "61e0e5390171dcb28b9a98af49eb7a5b1ebbec980a3bdc7bfa20809c201f053c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "03da2421a3ee299de5c0faa2830aa98025e235a8992a3ee2a8705387b4c63de2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "78b4e2d714c1b787bd695dab44825f0115ed0f1982b946185c8c6ac9893c455e"
     sha256 cellar: :any_skip_relocation, monterey:       "1ec609eb60279d5200fbdc69034ab2511450395fd19d729e0bed5ed154df0516"
