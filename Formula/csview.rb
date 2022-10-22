@@ -7,6 +7,7 @@ class Csview < Formula
   head "https://github.com/wfxr/csview.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e42c9e597ae8be86fb856bb117a9342495b3813f06b930efb14333ceb54c44d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2bcb6b524bfbe7d4cee5a4ed47eb9fbe6e460165b8a3b1e5b47391e3ccea588c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "714f0dcb10d7d0a00f0c234f999eb1b18521f1f6443a4f781bf192b5603f8100"
     sha256 cellar: :any_skip_relocation, monterey:       "165a69b5e284288f82e0e70e1a33755c3545a6fa19ef5e2511d21d90fbb22796"
