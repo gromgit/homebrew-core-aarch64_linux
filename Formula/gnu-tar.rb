@@ -9,6 +9,7 @@ class GnuTar < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "828558d1246976fe4ea4f2d5e7395b2e768c7b1874e42c959a4416f424dfc991"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d30acbafc1fafafd0e20b926fae992e246c8eb7f833ef349b9af330ca1c104f6"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "984b478a4567b7435d3e5ccda4adecea05b076f7d906a5e38a2941b125cf9182"
     sha256 cellar: :any_skip_relocation, monterey:       "50e95002e10bc01900248602282baf407d2984ee0037bce5ae7aa179c052e393"
