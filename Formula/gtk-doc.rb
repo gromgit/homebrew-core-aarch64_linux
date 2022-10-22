@@ -16,6 +16,7 @@ class GtkDoc < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "93e6aed51806396d5e3a18b9fefb7312f8764f8ea0bfffc79f2cd3f4f2d02f83"
     sha256 cellar: :any,                 arm64_monterey: "0b3951853e56b258fe93abc736c0abfec944df20a94776a822ed87fd93465c79"
     sha256 cellar: :any,                 arm64_big_sur:  "cb797d7ebc987004400d9b1b8d3d8e4cfbf2515f1055d429690c4e5fc6c16316"
     sha256 cellar: :any,                 monterey:       "374f73b607a5a32880a33cc0e16835b2e10fbdd01ad65e36c161e08ffa474055"
