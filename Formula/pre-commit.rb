@@ -10,6 +10,7 @@ class PreCommit < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "34639a234fbc17a4e619763eb0f32b0ddb1ce1cf3e55d8c6160fddc651373526"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "4a480973522d0180cfd1414ec3d31f8aa284f26243a89036098dd3343ace6a96"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb061bc7f86b3149975d8bee8a209410c786d11ffa4091ad7769d6810a37ef5a"
     sha256 cellar: :any_skip_relocation, monterey:       "b822f396ca2e6523195d6c17ac8bf41eb6aee2e7ceac2ac0c18fbfd708c6a3ab"
