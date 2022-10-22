@@ -19,6 +19,7 @@ class Gawk < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "6b4cee627ba48875cb56511c3a18a09bff2a763765e186b32b680c07880ab32c"
     sha256 arm64_monterey: "6289d1f8da329535dcb50a610286cd4ec29225668df5d55b7d0fc25592ad4a1a"
     sha256 arm64_big_sur:  "18af9a141a7e82895f2f578d376fdecfb3924144872e9d1e86085785745f8472"
     sha256 monterey:       "21b5da026357aeb9a588da81c1170ed256fd9084fbf2fda489db3deb03bbe90c"
