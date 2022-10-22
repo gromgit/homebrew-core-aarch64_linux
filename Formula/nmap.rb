@@ -12,6 +12,7 @@ class Nmap < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "fa9ecaf07f3f0bf52b15823ebdda6d6a06eb87ed9fca10be319e924507fd46b5"
     sha256 arm64_monterey: "fcda26d55da7618f8085ef42ac88e268704d85abdebdd6335885d66d53e481b3"
     sha256 arm64_big_sur:  "7bb55a3cf90dec4eb58b7cc64ac271423c2399b0326fcf65825eaee980f6fb1b"
     sha256 monterey:       "48442b1126bd29ff0d1912452ffff383f9569f69fc3dd06d8cebb728ee6c80eb"
