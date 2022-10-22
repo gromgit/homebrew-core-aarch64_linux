@@ -8,6 +8,7 @@ class Itstool < Formula
   head "https://github.com/itstool/itstool.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6b9f7a4ddf5a15f67751b6dc0429dd9226f2b8c1bf81d13b5068c29fc1d7e65f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "108962bdce11e7b353a94f61ae30c82212295963d157cd667fb9af6069801cbd"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "108962bdce11e7b353a94f61ae30c82212295963d157cd667fb9af6069801cbd"
     sha256 cellar: :any_skip_relocation, monterey:       "211f56048a0498fd935fac91466be64590276ae236d5a60be45ff2061713087f"
