@@ -7,6 +7,7 @@ class Srt < Formula
   head "https://github.com/Haivision/srt.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "a8f0a85c0e017f661d07dda9b6a039e67ae213fdb73837cc0d075d1f83ff10a7"
     sha256 cellar: :any,                 arm64_monterey: "53f96b0133e3829e7ed06a5221facff13b9a0b6f0aa785e96e5a124dec83802e"
     sha256 cellar: :any,                 arm64_big_sur:  "2cf874a22d85df40da98de8fb6ce690511ff68071043784d6088ade342b9d9cf"
     sha256 cellar: :any,                 monterey:       "9cb143f5b2a095225e6d7901f9cd65636024c0800fc6fb42c5d3879d6fb2459d"
