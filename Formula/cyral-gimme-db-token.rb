@@ -8,6 +8,7 @@ class CyralGimmeDbToken < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "e23594cc5b5fbd3871e4af48af5bd0212d79829803f9fe41d0d5e3a79ca9a679"
     sha256 cellar: :any,                 arm64_monterey: "02189487ce552fef4ff780a8c3a1f007dd34aaf3671f456eec2ca625981816e2"
     sha256 cellar: :any,                 arm64_big_sur:  "222b9c7b096a82a4793b709f9388fc1c7f73ad4f7c8378c15f76e295d5a31395"
     sha256 cellar: :any,                 monterey:       "6509267dca45c57eb5975f1d9bb41b1b1b14fb26e1088d5bf2b68690b0158f17"
