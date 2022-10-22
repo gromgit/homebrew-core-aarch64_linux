@@ -7,6 +7,7 @@ class Bottom < Formula
   head "https://github.com/ClementTsang/bottom.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ef0e9f55346d0bf1d0f53036fa20b4d61756ed310b940b5b89bf0863a4bd5076"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8548c890b957a6eab9aa8a7d118002e26dbac34052475fa78f1d3d49487c4026"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8c839fdca05a6d950252783d523fac967a88fc0c082b7fbd2011e7ca81230d2"
     sha256 cellar: :any_skip_relocation, monterey:       "cf22cc7eb878dcaf924d180ad4dd594dc35757621a792b8587cf86191d3e3246"
