@@ -11,6 +11,7 @@ class Libzip < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "6da42edf5cc6f80780ace956a3d01cd213633ff4a06588d53f25c455efdf26a5"
     sha256 cellar: :any,                 arm64_monterey: "e27a1b53f6b09e0bb04071f66d878ef4594dbc3fde6e27a0b644d33a8ce34e0a"
     sha256 cellar: :any,                 arm64_big_sur:  "bd41180937e22a75118330708505944e31c613e303abdef8b247c5655fa5f82d"
     sha256 cellar: :any,                 monterey:       "9ebb3c03505035e35eb8b7f00fe6d9e25cce7a0ddd191334e5f090b37c5cb7ca"
