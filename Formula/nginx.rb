@@ -14,6 +14,7 @@ class Nginx < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "dd146745e55a270c49ccbe7db443c597f918ef6b6713cbb584d44d101b9e9a82"
     sha256 arm64_monterey: "aa21d5f57a4ded0df4979cde9b14f150a9206d7fb9a7e0482d6725061ab6bf84"
     sha256 arm64_big_sur:  "739c2671d45664a07b635e2427b5bc22ffa55efa3a3c77900559a714818f869f"
     sha256 monterey:       "83c85727bbcfff076950edf8d7f68609cf7e2917d7b6519a359405d68b401f78"
