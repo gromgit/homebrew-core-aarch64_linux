@@ -11,6 +11,7 @@ class Libmagic < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "3582dd895b1952ed0c9071ab9a1dd7b59c8921c1c5941f6fc1bed4d346ecccd4"
     sha256 arm64_monterey: "d90f8e7fc431a98c90512506dd89e39f50b566329efbefa83a1926392a4d2454"
     sha256 arm64_big_sur:  "dc07c487e28ec071a5e001504062dd742c8dc87ee14c9d28fb95024760c5c902"
     sha256 monterey:       "1de7baf672db48278eab882713c696e07ef0fbd5d410c6fa20975ee80b52497f"
