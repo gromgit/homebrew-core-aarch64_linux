@@ -8,6 +8,7 @@ class ArgocdAutopilot < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "100477e26d585c3a7b02939722e7dc00671587dafe88ef076476b1511e9e0420"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "876ca69f502c5c80a6f16c272e639f93c433cf1ca39ed926edff263f88c2524e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e256a4e72f5f82756e6d8e4d5118e94758c6b32e377ab8739555c04b4901e3a5"
     sha256 cellar: :any_skip_relocation, monterey:       "31ecab406a7024c3e464e653fed9d0d5e122498a4124e9c2ae55918f9884be7e"
