@@ -7,6 +7,7 @@ class Luv < Formula
   head "https://github.com/luvit/luv.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "7c8432625ecd382168eac3d0bc3615519528a8e338f8f33ee0c6761bf9f5dd65"
     sha256 cellar: :any,                 arm64_monterey: "1d5aaf149019d3d775b093efaa51fda452248eccf109e961325d0a8de917f947"
     sha256 cellar: :any,                 arm64_big_sur:  "ce3cf05ca363a0978151a8f1ae096bb1d13d26718d2dfc25c3618e6156a4f6e2"
     sha256 cellar: :any,                 monterey:       "1644986934f6275f3f7f632e074cdc9866ad3c2b83661035cd99f5f7912831c9"
