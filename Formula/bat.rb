@@ -7,6 +7,7 @@ class Bat < Formula
   head "https://github.com/sharkdp/bat.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "44ca10d2732acc1ea598f366f57b13354700def18a170307b8a80c1252badd05"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "01aeb3e1ede73d04f64213e670127511eb50153875ffb5a8f708e7b7b56638fe"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e001f7da90ae6ff14ac240c79f8c781d0f9d92f8ae05b1993c233eeb5cbc3945"
     sha256 cellar: :any_skip_relocation, monterey:       "c6ad09d3eba478b679c9666ea7bd8f7a5732273abba93d0a897af3d6020cd495"
