@@ -23,6 +23,7 @@ class Perl < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "060d846955f6c1263f550709f425b02b232a9f61adc755af6a4749fac8250f13"
     sha256 arm64_monterey: "aef200b8035eb1fbf5b6aa219c053df7f73d9c07da10f503f08889ae70e2e92a"
     sha256 arm64_big_sur:  "f0f893e0ceb2e9855bfcec2ceafaaaa8202df3477d11f39b88722eb776ee4f34"
     sha256 monterey:       "5b63dfe448c0b7a69cb8a3d0b4220074848ae0680a2f245080a8f4cfd1be3baf"
