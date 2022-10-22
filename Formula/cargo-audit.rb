@@ -13,6 +13,7 @@ class CargoAudit < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "57ebd47f98f071c23b5ce42960b7623bad11d87e7d222ffb0e5a0abef2e52576"
     sha256 cellar: :any,                 arm64_monterey: "aa70beb8a8a9e6e1da08bff1e4a1151a1433caaddcdf55f0efc8563ebeafcbf4"
     sha256 cellar: :any,                 arm64_big_sur:  "f25e756272b472793238f7bc2d2ba223d293873e8bb77d0eca13a87024b7ece2"
     sha256 cellar: :any,                 monterey:       "de6eaf91a4e7b92e4ef3efbc913fa841024993410ca89e9be554fe35e3a3b653"
