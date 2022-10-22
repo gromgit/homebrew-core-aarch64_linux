@@ -7,12 +7,12 @@ class Vnstat < Formula
   head "https://github.com/vergoh/vnstat.git", branch: "master"
 
   bottle do
-    sha256 arm64_monterey: "a9d126ced5b400cfd9fdd67762f0abb7b68d484168eb1d376de589e26401cafb"
-    sha256 arm64_big_sur:  "9c449b01cc80fcdffad166dd457f08cd5060a4ebbd40d4f947c4abb401b6084a"
-    sha256 monterey:       "bba4e7167e3d1ae02c828a3a5cc561b98f3915aa2b4d058300d62414f7d446cc"
-    sha256 big_sur:        "095e49284800aa41b7cd7808b902a1b451c302c1a4bea0b4a41d93c3de0ede2f"
-    sha256 catalina:       "f6f4328d86add848e05f6a14a59844bb8a32fabc1f9b77cccd86958eba2ffc83"
-    sha256 x86_64_linux:   "8d8dd227883a9cdfcf31b7a8bd6478bef463fc2efb03d162ca643e293c8ac03a"
+    sha256 arm64_monterey: "5e96e31ef8696a64e1906d4ffae3c4eac62c4bd253bcdf5b8338b4d6d01d0941"
+    sha256 arm64_big_sur:  "37aa0b638d91053d9cf4db7f8018e916dda834f78dc7dadcc9035d7da051b588"
+    sha256 monterey:       "930bbc22109b08c0a26176980d02035df26b0cc9708a5fb0cdbc4a3fd5882e4c"
+    sha256 big_sur:        "8436229f2365d0651efb45aecd9779c2dd55fccd4582d0b537d2c2755cecc349"
+    sha256 catalina:       "0ed1bb9f2b172352da86411952bb6497e5a8de075c0f0eab3567ce4a23369080"
+    sha256 x86_64_linux:   "585625ad0406edac731722bfa00226da552b038b73bd185f39dd638c7fc7081b"
   end
 
   depends_on "gd"
