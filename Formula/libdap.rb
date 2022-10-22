@@ -19,6 +19,7 @@ class Libdap < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "93b76a54876a5ce5bea5ae9725bbd7a463aacb3b381da12a5882833056276033"
     sha256 arm64_monterey: "0110dd93e378ea92ffdb3ef93a55e6f0318b0213afc47c34672167ef3838569e"
     sha256 arm64_big_sur:  "0bb35b663ee9c9ee835781a2b3fd370d4af6342673d64e90791e6e673a9f2d5f"
     sha256 monterey:       "74a2d396f08b072b0255351185d5cd1fab6ec822fb267d55ee969aec41a1266a"
