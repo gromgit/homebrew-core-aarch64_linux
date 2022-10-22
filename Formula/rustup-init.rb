@@ -6,6 +6,7 @@ class RustupInit < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5ec3eb3dee50695fd9d623fb2a47ad0c03c29adb0581991024d000138b789b3b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b9ee3f915e1049efd38f7c4600a6c8843f8f7382f2f9683b4decbc635b71c524"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "75d1be12dc64d53f7baf0e3743a0e4cc39c5955c5b484892ca35629ab3659b7c"
     sha256 cellar: :any_skip_relocation, monterey:       "85fc35fbacf815142d73a35d7eb55c5d3b00a86f289c5e9ced526df590fd1460"
