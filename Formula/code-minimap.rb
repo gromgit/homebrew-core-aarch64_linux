@@ -6,6 +6,7 @@ class CodeMinimap < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "100facb5c8d6a513e166da58d438f81afe7f763169746aeb0e522539e8847240"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "150f80c5d2cb16d491b4bc445aae8e1577153a5a0dceab8b0afde845b49ae034"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "730ceac5fb901e950ddeb35c32d3122f71eb029dedd77970f728da1af0237942"
     sha256 cellar: :any_skip_relocation, monterey:       "dd1d8d898b78b22485744f6a38f106a486200aeb9e527fc6c815b48e916f4cc6"
