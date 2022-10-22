@@ -10,6 +10,7 @@ class Httpie < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "67b838dcef080218caa1dc6e2abcf7924d3dc9dea6dbc0a7ecf6aabe43708e4a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e12605678bbcb4ab0f5c25b5499bedf5c996b00bee3052086f4bd50c4b9a53b8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4016f1c0b06ee81218e2d19009d33f4ecf5232db1108cb2a9f0c7d5a2929aa5c"
     sha256 cellar: :any_skip_relocation, monterey:       "e4fcbe860e592d5102e46d382f86c458cacec16429c0b7ea60732ce921c40342"
