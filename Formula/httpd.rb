@@ -8,6 +8,7 @@ class Httpd < Formula
   revision 1
 
   bottle do
+    sha256 arm64_ventura:  "b5aa09fc9b4bf09525650c295ca34e74f4ac86722362d1a7b022ca7811766076"
     sha256 arm64_monterey: "3f62a259d006b6edb185630e69dc388a29445a409b50f737ab1f4a01df47445a"
     sha256 arm64_big_sur:  "d837cd002696e9215283031669a63bcbbfe018c2a94fdf13946198779975159b"
     sha256 monterey:       "c02ce41fea0925e48986f3997d447c5aab462b1fa9bf74a5d0ebe3234b95cd85"
