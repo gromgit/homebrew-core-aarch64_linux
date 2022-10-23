@@ -6,6 +6,7 @@ class Graphene < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any, arm64_ventura:  "49970a5217fa4aaa048e4181172a9170b171531d58a31cfb4ced72a68eda386c"
     sha256 cellar: :any, arm64_monterey: "93468985e1d6a4b6ef69387b400d23ad39da4a154140a759dd3154bcfd19b9ed"
     sha256 cellar: :any, arm64_big_sur:  "639518b4843e05532985844875c3a9a41c93eb8fee9019c2b8bb589b692a4846"
     sha256 cellar: :any, monterey:       "65b24ac035b8b5550dc314648c4cc3b3e2416692efcc44186450e1e76e27e396"
