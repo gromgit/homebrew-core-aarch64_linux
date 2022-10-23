@@ -6,6 +6,7 @@ class Libxinerama < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "f35dc2f74442910425efc2e1bde592d70cb7f30b8c5f77a77f26058ac9386bca"
     sha256 cellar: :any,                 arm64_monterey: "c2cf58a269245d13420185604cd5a991302147ffe6205b3f8c59f72a4d3b2ca7"
     sha256 cellar: :any,                 arm64_big_sur:  "f372ba853bd1ce9ef1c38d575e1ac3f2e7d5bdcba4ed938a87dfb017c9c0d5f2"
     sha256 cellar: :any,                 monterey:       "2bafbd2eb579da382c9651fa3941adec8e50be044fba7f63259508f890480aa6"
