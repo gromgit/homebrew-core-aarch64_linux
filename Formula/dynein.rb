@@ -7,6 +7,7 @@ class Dynein < Formula
   head "https://github.com/awslabs/dynein.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "635583bc18c063999d9135bb322742a17caf167afa6752de58ca871c71894a54"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "db55aa07dfe414452a0d7137077b8baefe3881ed327623f881f38941cdcfe284"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "739c8a91f706fe1738bd9ba41dac317f0db5728ab17dfe5d7526a3894f6d412c"
     sha256 cellar: :any_skip_relocation, monterey:       "da3f54319ce86e2bdd1dc9896612a1e6180752f967793a1536e53d3525851f4f"
