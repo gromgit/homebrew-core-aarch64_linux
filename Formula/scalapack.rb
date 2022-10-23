@@ -12,6 +12,7 @@ class Scalapack < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "29ba1d098896c7724994f1c43eb6796390759a184220419ebcef8c5600f871be"
     sha256 cellar: :any,                 arm64_monterey: "a0cd4b382932d32799b88c4e7f99488414d7feb86ff5fbb1a22fa6b1980c84ea"
     sha256 cellar: :any,                 arm64_big_sur:  "564ea01e76cc0dcd9a74de0f9e9edece929059d972a7954ca139a55d0150c920"
     sha256 cellar: :any,                 monterey:       "388e65a24aa3813825a03601f2d8ca839f00b40c0b082ecf8207e30b9bc9d481"
