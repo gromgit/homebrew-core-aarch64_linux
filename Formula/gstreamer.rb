@@ -12,6 +12,7 @@ class Gstreamer < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "56fd9dc0ee41a036c50abb44f9696aef57876cbf4951ef2db7debad6f438b56a"
     sha256 arm64_monterey: "7f03d06580c258e8ff4cdde94e5932ef2a99c7c3f15f8f36ecdbc0c4c9f17905"
     sha256 arm64_big_sur:  "033ee78615f10343a529047b3854cc88f4fd69df97e763b8e5f9ecf4c05e1151"
     sha256 monterey:       "f248dc88833ae6536f94203f2e3f0ebd72c4d93e5c75ab3c971e9df951ccd5fa"
