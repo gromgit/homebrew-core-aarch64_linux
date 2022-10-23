@@ -6,6 +6,7 @@ class Libxkbfile < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "d168e608eb86d667cb38159b7a1d8a7075dc2a27452ddd01a79e98f774768373"
     sha256 cellar: :any,                 arm64_monterey: "ee43a751acb1d2368c2002d81b87c71c4729a34aa95c18540071cd1b2eaf1f8b"
     sha256 cellar: :any,                 arm64_big_sur:  "e33a381dd6b30b86920adbbd64c48e18e2cc549bcab25a6c8f40c72705fd8fc2"
     sha256 cellar: :any,                 monterey:       "4d0447b062d2b7a25314138c27c7541101d494ee3ea366905bcbbe1265cdadb5"
