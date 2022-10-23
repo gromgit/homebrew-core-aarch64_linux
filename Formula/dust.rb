@@ -12,6 +12,7 @@ class Dust < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "51ef20196274c0215f30106eae09b7c7e09e4f4c0863a461c0a9fe583fba7e4b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "47bd509813fa238a1a0f9a4b68eb26564b6b44d3d0bb867d2d92c0b0df2a299f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "408cbc4f8e8fbefee0a34b5490bebbca70cb8113e7624cc7140fbcd711d930c4"
     sha256 cellar: :any_skip_relocation, monterey:       "5b867d86d19c6d8fa0aafd251e81905db27ca2a9a11b4cf452a1fa706ba694e1"
