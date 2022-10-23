@@ -6,6 +6,7 @@ class Dssim < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fb12b2add154282922168473a3ab67ebab8c49764697cf68192b50cba6c2bc86"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "67f00244823dc82399e3f8e81313c7a4c12cc4d22991feb0737fb59cd130bf07"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7bddee07ec4de319e79fc9bf3ed915e81f95125eb55d8e5cfaa207cbf0ede8ba"
     sha256 cellar: :any_skip_relocation, monterey:       "3006b3e0f9d29ce1070ad35088af491854f2863ae2d6e6f9e679a99c00bd1418"
