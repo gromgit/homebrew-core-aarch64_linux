@@ -7,6 +7,7 @@ class OpenclHeaders < Formula
   head "https://github.com/KhronosGroup/OpenCL-Headers.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
     sha256 cellar: :any_skip_relocation, monterey:       "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
