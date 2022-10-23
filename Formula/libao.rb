@@ -8,6 +8,7 @@ class Libao < Formula
 
   bottle do
     rebuild 3
+    sha256 arm64_ventura:  "cca7befa22b09e8ecfb3746d8c6de3cd1a519cf76ab970c8e78acde4dd92cef3"
     sha256 arm64_monterey: "87276ccd471ed61409cc6b1fc45b33e3b9ae60414695629cb519a2d7f03bb7e4"
     sha256 arm64_big_sur:  "4ffbc11b951c7c833881d1a60d20d8969e30bfb85e817b660e38a3fc581ccb9c"
     sha256 monterey:       "14bc27effce651df160ad5efbb377773479c6ea28b65f585760aa5316c3dc6ad"
