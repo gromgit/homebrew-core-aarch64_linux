@@ -6,6 +6,7 @@ class Libapplewm < Formula
   license "MIT"
 
   bottle do
+    sha256 cellar: :any, arm64_ventura:  "5292c56db7842b7784fc2d8cb11ca61ea9cfc1ec4c8293c4faeeaf9a8b8de876"
     sha256 cellar: :any, arm64_monterey: "054032d8ea48004ed41b659815c0d934cb386280d7651ea304118395bafdc360"
     sha256 cellar: :any, arm64_big_sur:  "0356059f0accd7c74e4082d944d1404c5b36457d8b3ecc7bee80faeb7523b16b"
     sha256 cellar: :any, monterey:       "05a90d77f0c0803ee859872051157b3070f97b8ab7999d7f4c7ed02e1df57a24"
