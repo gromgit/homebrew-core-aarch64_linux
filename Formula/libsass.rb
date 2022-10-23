@@ -13,6 +13,7 @@ class Libsass < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "d31f8559377771a63d27ce86a6eb9f102c55f380d3b8401edc4e6ca59c6c5832"
     sha256 cellar: :any,                 arm64_monterey: "2117b0fa30facdc407537232daa889995d87ce5f4988163017f62ed56580b32b"
     sha256 cellar: :any,                 arm64_big_sur:  "22ecfef684130e0eb31c60574970b5549d4d17eca862304b4603f2ced11e01cb"
     sha256 cellar: :any,                 monterey:       "072b22e5429cc1e86436667ccd5ea3353c10162f3523ede8534b7ba58e6b5d11"
