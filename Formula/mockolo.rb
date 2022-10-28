@@ -1,8 +1,8 @@
 class Mockolo < Formula
   desc "Efficient Mock Generator for Swift"
   homepage "https://github.com/uber/mockolo"
-  url "https://github.com/uber/mockolo/archive/1.7.1.tar.gz"
-  sha256 "0ea108672945eade97d78ec07e193611b180279215fc2e3399bc87a881559964"
+  url "https://github.com/uber/mockolo/archive/1.8.0.tar.gz"
+  sha256 "9d289eede8080bcf3f0fbd2ec4f6a0616a78743c09cd58575e48e6e4b946f357"
   license "Apache-2.0"
 
   bottle do
@@ -16,8 +16,21 @@ class Mockolo < Formula
   depends_on :macos # depends on os.signpost, which is macOS-only.
 
   def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
+    # Swift >= 5.6
+    if MacOS::Xcode.version >= "13.3"
+      require_internal_swift_syntax_parser = true
+      swift_rpath = ["-Xlinker", "-rpath", "-Xlinker", libexec]
+    end
+
+    system "swift", "build", "-c", "release", "--disable-sandbox", *swift_rpath
     bin.install ".build/release/mockolo"
+
+    if require_internal_swift_syntax_parser
+      libexec.install ".build/release/lib_InternalSwiftSyntaxParser.dylib"
+
+      # lib_InternalSwiftSyntaxParser is taken from Xcode, so it's a universal binary.
+      deuniversalize_machos(libexec/"lib_InternalSwiftSyntaxParser.dylib")
+    end
   end
 
   test do
