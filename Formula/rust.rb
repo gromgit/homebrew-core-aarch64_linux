@@ -4,37 +4,33 @@ class Rust < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   stable do
-    url "https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz"
-    sha256 "a7c8eeaee85bfcef84c96b02b3171d1e6540d15179ff83dddd9eafba185f85f9"
+    url "https://static.rust-lang.org/dist/rustc-1.63.0-src.tar.gz"
+    sha256 "1f9580295642ef5da7e475a8da2397d65153d3f2cb92849dbd08ed0effca99d0"
 
     # From https://github.com/rust-lang/rust/tree/#{version}/src/tools
     resource "cargo" do
       url "https://github.com/rust-lang/cargo.git",
-          tag:      "0.60.0",
-          revision: "49d8809dc2d3e6e0d5ec634fcf26d8e2aab67130"
+          tag:      "0.64.0",
+          revision: "fd9c4297ccbee36d39e9a79067edab0b614edb5a"
     end
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "51869c798355307b59992918e9a595c53072d7a29458dbe5b8d105b63d3dd1c0"
-    sha256 cellar: :any,                 arm64_big_sur:  "c6986c77e3cde24130639e1beeffe27c67e5afa9b83932ca49699a5a27f4965c"
-    sha256 cellar: :any,                 monterey:       "b377dbe44d8eed401316cba6a645e8619d5424d6c2aa2bd087642091105a3fc1"
-    sha256 cellar: :any,                 big_sur:        "88dd52b9c0f0415922396c497c52ca806aaae1e84b2ddc976711da3a54bcd9ed"
-    sha256 cellar: :any,                 catalina:       "d5a1552c08362eadd8dbda60301eb53a550a56a9df62a3459f43ba15bf6a5999"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be3004d2ab648af503f39d7a840e435a15ebce5eee31f239ccd2ec09aeefeefd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rust"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e0a04e84526abc84d0a5eca26f057cb6aac6c176b76b3d08e83500e89c4d0716"
   end
 
   head do
-    url "https://github.com/rust-lang/rust.git"
+    url "https://github.com/rust-lang/rust.git", branch: "master"
 
     resource "cargo" do
-      url "https://github.com/rust-lang/cargo.git"
+      url "https://github.com/rust-lang/cargo.git", branch: "master"
     end
   end
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.9" => :build
+  depends_on "python@3.10" => :build
   depends_on "libssh2"
   depends_on "openssl@1.1"
   depends_on "pkg-config"
@@ -45,30 +41,45 @@ class Rust < Formula
   resource "cargobootstrap" do
     on_macos do
       # From https://github.com/rust-lang/rust/blob/#{version}/src/stage0.json
-      if Hardware::CPU.arm?
-        url "https://static.rust-lang.org/dist/2022-01-13/cargo-1.58.0-aarch64-apple-darwin.tar.gz"
-        sha256 "9144ee0f614c8dcb5f34a774e47a24b676860fa442afda2a3c7f45abfe694e6a"
-      else
-        url "https://static.rust-lang.org/dist/2022-01-13/cargo-1.58.0-x86_64-apple-darwin.tar.gz"
-        sha256 "60203fc7ec453f2a9eb93734c70a72f8ee88e349905edded04155c1646e283a6"
+      on_arm do
+        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-aarch64-apple-darwin.tar.gz"
+        sha256 "8a4c0f52491382d537753531a51a45355135e0b19f85f20588785d604f1eff2b"
+      end
+      on_intel do
+        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-x86_64-apple-darwin.tar.gz"
+        sha256 "4957c596cc5327921be523fb1de935b1072caa12f9cedaa68cff3e85898fd09a"
       end
     end
 
     on_linux do
       # From: https://github.com/rust-lang/rust/blob/#{version}/src/stage0.json
-      url "https://static.rust-lang.org/dist/2022-01-13/cargo-1.58.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "940aa91ad2de39c18749e8d789d88846de2debbcf6207247225b42c6c3bf731a"
+      on_arm do
+        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-aarch64-unknown-linux-gnu.tar.gz"
+        sha256 "2b55f7073846cd269a2c0b002800699de89ed7ed38852457cf2dbae35f5e73fa"
+      end
+      on_intel do
+        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-x86_64-unknown-linux-gnu.tar.gz"
+        sha256 "fb0141db9fdea4606beb106ca10494548f24866b39a10bde8d1e162f653e94d8"
+      end
     end
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
 
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
     ENV["OPENSSL_DIR"] = Formula["openssl@1.1"].opt_prefix
 
-    args = ["--prefix=#{prefix}", "--enable-vendor"]
+    if OS.mac? && MacOS.version <= :sierra
+      # Requires the CLT to be the active developer directory if Xcode is installed
+      ENV["SDKROOT"] = MacOS.sdk_path
+      # Fix build failure for compiler_builtins "error: invalid deployment target
+      # for -stdlib=libc++ (requires OS X 10.7 or later)"
+      ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version
+    end
+
+    args = %W[--prefix=#{prefix} --enable-vendor --set rust.jemalloc]
     if build.head?
       args << "--disable-rpath"
       args << "--release-channel=nightly"
@@ -116,7 +127,7 @@ class Rust < Formula
       }
     EOS
     system bin/"rustc", "hello.rs"
-    assert_equal "Hello World!\n", `./hello`
+    assert_equal "Hello World!\n", shell_output("./hello")
     system bin/"cargo", "new", "hello_world", "--bin"
     assert_equal "Hello, world!", cd("hello_world") { shell_output("#{bin}/cargo run").split("\n").last }
   end
