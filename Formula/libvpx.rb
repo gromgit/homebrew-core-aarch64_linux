@@ -1,14 +1,14 @@
 class Libvpx < Formula
   desc "VP8/VP9 video codec"
   homepage "https://www.webmproject.org/code/"
-  url "https://github.com/webmproject/libvpx/archive/v1.11.0.tar.gz"
-  sha256 "965e51c91ad9851e2337aebcc0f517440c637c506f3a03948062e3d5ea129a83"
+  url "https://github.com/webmproject/libvpx/archive/v1.12.0.tar.gz"
+  sha256 "f1acc15d0fd0cb431f4bf6eac32d5e932e40ea1186fe78e074254d6d003957bb"
   license "BSD-3-Clause"
   head "https://chromium.googlesource.com/webm/libvpx.git", branch: "main"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libvpx"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebf2734161dcc33ad47c2ebd85f62ee816d4e66ec814cde7924ae057ab0fb8d7"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "21505329d6f3d71cd1c45d898f727e36c22cd988d076099fb32fe5a208490498"
   end
 
   depends_on "yasm" => :build
@@ -32,9 +32,6 @@ class Libvpx < Formula
       ENV.runtime_cpu_detection
       args << "--enable-runtime-cpu-detect"
     end
-
-    # https://bugs.chromium.org/p/webm/issues/detail?id=1475
-    args << "--disable-avx512" if MacOS.version <= :el_capitan
 
     mkdir "macbuild" do
       system "../configure", *args
