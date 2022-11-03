@@ -3,10 +3,9 @@ class Netpbm < Formula
   homepage "https://netpbm.sourceforge.io/"
   # Maintainers: Look at https://sourceforge.net/p/netpbm/code/HEAD/tree/
   # for stable versions and matching revisions.
-  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "4311"
-  version "10.86.32"
+  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "4365"
+  version "10.86.34"
   license "GPL-3.0-or-later"
-  revision 1
   version_scheme 1
   head "https://svn.code.sf.net/p/netpbm/code/trunk"
 
@@ -17,16 +16,12 @@ class Netpbm < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "50fe4b8bd38c95a636876c50eaa56ba7c08bc40260d2e41af83cd5851ecfdd27"
-    sha256 arm64_big_sur:  "c1afd6d892fd167b850996d6ef6d8c91777827d51e1c336a06ebe724559f238d"
-    sha256 monterey:       "160dbd102087ec169f5019527839bfe9d01454a0267196ab09a8fa8b3d852dd6"
-    sha256 big_sur:        "a08508f82df946861034ba7b5f5d48e30a344e3aa3b4ab3d66c0c3b21706cada"
-    sha256 catalina:       "3c55ba437d3991e17750144f586b83cc36294d615a2c9739b780fce1b0e06c3a"
-    sha256 x86_64_linux:   "f7372e3d244bff638ab0a62dff8df5e17b7ede9602a0a2f7a0e4bc0dc3080154"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/netpbm"
+    sha256 aarch64_linux: "ef0a007c6d2ece0a9930f0529607f3cecef08db712f22891eb9740e141280196"
   end
 
   depends_on "jasper"
-  depends_on "jpeg"
+  depends_on "jpeg-turbo"
   depends_on "libpng"
   depends_on "libtiff"
 
@@ -46,8 +41,8 @@ class Netpbm < Formula
       s.change_make_var! "PNGLIB", "-lpng"
       s.change_make_var! "ZLIB", "-lz"
       s.change_make_var! "JASPERLIB", "-ljasper"
-      s.change_make_var! "JASPERHDR_DIR", "#{Formula["jasper"].opt_include}/jasper"
-      s.gsub! "/usr/local/netpbm/rgb.txt", "#{prefix}/misc/rgb.txt"
+      s.change_make_var! "JASPERHDR_DIR", Formula["jasper"].opt_include/"jasper"
+      s.gsub! "/usr/local/netpbm/rgb.txt", prefix/"misc/rgb.txt"
 
       if OS.mac?
         s.change_make_var! "CFLAGS_SHLIB", "-fno-common"
@@ -71,7 +66,7 @@ class Netpbm < Formula
       end
 
       prefix.install %w[bin include lib misc]
-      lib.install Dir["staticlink/*.a"], Dir["sharedlink/#{shared_library("*")}"]
+      lib.install buildpath.glob("staticlink/*.a"), buildpath.glob("sharedlink/#{shared_library("*")}")
       (lib/"pkgconfig").install "pkgconfig_template" => "netpbm.pc"
     end
   end
@@ -79,8 +74,8 @@ class Netpbm < Formula
   test do
     fwrite = shell_output("#{bin}/pngtopam #{test_fixtures("test.png")} -alphapam")
     (testpath/"test.pam").write fwrite
-    system "#{bin}/pamdice", "test.pam", "-outstem", testpath/"testing"
-    assert_predicate testpath/"testing_0_0.", :exist?
+    system bin/"pamdice", "test.pam", "-outstem", testpath/"testing"
+    assert_predicate testpath/"testing_0_0.pam", :exist?
     (testpath/"test.xpm").write <<~EOS
       /* XPM */
       static char * favicon_xpm[] = {
