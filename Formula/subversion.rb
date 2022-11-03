@@ -16,12 +16,8 @@ class Subversion < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "cc7272eb04cb9564921a7479ad81ba0f6af0ac5f27aff9c78666471c999a25a5"
-    sha256 arm64_big_sur:  "6420f6a0aaf382043a6f82510a48c98a8255e36e95960c3212594a288ed04b78"
-    sha256 monterey:       "8e32c2e3a9c0a87a109f78987d1271f0b477a261ec1eadebdb906690f948b8ee"
-    sha256 big_sur:        "c9eead079b25c32aae6dc376ca1e28313f6ff17cfb8cb625c4f018716f24118f"
-    sha256 catalina:       "519405e1ed9e5c0f7b6c962188223b3c2609f6cfd6b47e56b59d46aabd9779a7"
-    sha256 x86_64_linux:   "9c1001ca80d3443d9556f7db973ff2079acd6b8d5b66a865d26d0b868e6610e4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/subversion"
+    sha256 aarch64_linux: "708acc1055dc5e5b5590b1ac24321329075db6828a9f591a33ecb03332c861d5"
   end
 
   head do
