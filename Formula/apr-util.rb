@@ -8,12 +8,8 @@ class AprUtil < Formula
   revision 4
 
   bottle do
-    sha256 arm64_monterey: "3fbbe5ef907dc7f8b259f49c0891987f088ecaa0ad0fd75d47345804ec5d2976"
-    sha256 arm64_big_sur:  "72585edce1997ea0ac5be884f0fbed79f2746d3252e035ed63b1bd04ad501d94"
-    sha256 monterey:       "7695efa17e538d71459020c3838081629629c3c1169bd9ac166865d2bdacb213"
-    sha256 big_sur:        "94a9d60abb422a135295ac6c8425af4c72a0f49f46323aa19abd4b358c03270e"
-    sha256 catalina:       "8e62fdfe79eaa75a700fb97ea3264aa5bcd77dabcf526240d35537325387c353"
-    sha256 x86_64_linux:   "588c3c2c34bd3078f4b181da19d07e4bb509c7cb8afbf5ab6a5d707a730dce20"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apr-util"
+    sha256 aarch64_linux: "2fbe93acb34d3252199d99a5d742cf6684379d4e105772a0c3efbade27609508"
   end
 
   keg_only :shadowed_by_macos, "Apple's CLT provides apr (but not apr-util)"
