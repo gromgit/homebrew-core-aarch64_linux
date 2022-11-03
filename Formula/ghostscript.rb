@@ -14,12 +14,8 @@ class Ghostscript < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "29539f2c18615fb82e82e4dab331005fcde1a2310332d7edf1227d77784ef1e6"
-    sha256 arm64_big_sur:  "9909bbaac3747aac9815d27837e8c9d6e1e092dfaeaeec60834ad851dc576271"
-    sha256 monterey:       "3ac4eb5ecab09d810f5a866d6752d18a5cb6bb9ea4ffc2592f4cc77105633fe5"
-    sha256 big_sur:        "2602d48b7b9c23249cf8791c4526988301de44910645d5f4ebab068d3bf40f6c"
-    sha256 catalina:       "5b2e9e395d05d52805e3e22082207425b9ac85613cb02918e336de1809ed26e0"
-    sha256 x86_64_linux:   "c0bb4afef0ba69db933901e280a820e93a02c239a2eddde6b736820de8eb17a3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ghostscript"
+    sha256 aarch64_linux: "1fee0bdd523e95e75ba9d61f9d1b1ac617b2072dd8c420c3925a41744aa30b45"
   end
 
   head do
