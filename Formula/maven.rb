@@ -13,9 +13,8 @@ class Maven < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/maven"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f96bc88d323fa027fbecb2959f3c14a80920b3a7fd365956f7c3765910baf70d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2324c48a817d45d8a9ca99ae66438238228b8286a3acc0ac2a56a25052413416"
   end
-
 
   depends_on "openjdk"
 
