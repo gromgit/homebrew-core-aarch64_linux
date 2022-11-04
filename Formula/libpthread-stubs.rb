@@ -7,7 +7,7 @@ class LibpthreadStubs < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libpthread-stubs"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "bd7d616f4e1f648d6742e37ff3594150026c7cfe57b3c6a451167a80a295200c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0e2a902d47c330837158b68c909e16dfa8887a92d4805456181f6d56f401d0b7"
   end
 
   depends_on "pkg-config"
