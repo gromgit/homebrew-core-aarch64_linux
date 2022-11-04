@@ -13,7 +13,7 @@ class Expect < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/expect"
-    sha256 aarch64_linux: "4dd150eab5ec42aaeba92177b2e9b286f4a664e95c0a204bdd6c5b140589c254"
+    sha256 aarch64_linux: "9d6188c73431c9e8f533121fef130bb98450796ca403b4a45d46740567045b8b"
   end
 
   # Autotools are introduced here to regenerate configure script. Remove
