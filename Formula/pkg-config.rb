@@ -15,7 +15,7 @@ class PkgConfig < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pkg-config"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "67d28c658349af0a21dacb400efc35e8fd873f98a4843c41c41b3c2e85aa4af9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b31a723af746b588adaa4488cd56df22b4165cb35ff580c15d825c48a081827a"
   end
 
   # FIXME: The bottle is mistakenly considered relocatable on Linux.
