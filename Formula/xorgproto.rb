@@ -12,9 +12,8 @@ class Xorgproto < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xorgproto"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "bfe6bc43cb57e9f5d33e386d6cfd9ee280da8702969bf9ac2827d07303fddfcb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b09065794fb4bd91a028dc5d31e2e66bae9cf83449fe7d7b58785611d3bc85ca"
   end
-
 
   depends_on "pkg-config" => [:build, :test]
   depends_on "util-macros" => :build
