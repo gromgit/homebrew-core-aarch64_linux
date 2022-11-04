@@ -7,7 +7,7 @@ class Vile < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vile"
-    sha256 aarch64_linux: "c60444f11de06728ecc4fbec31dfb2d0b9e2b97eb16af8b8f5fdaf058bd15f25"
+    sha256 aarch64_linux: "2f142af61db675b1288042bf0c659d309c118207ac8bcd761038afd5a143cc84"
   end
 
   uses_from_macos "flex" => :build
