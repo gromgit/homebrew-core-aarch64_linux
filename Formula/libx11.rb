@@ -7,9 +7,8 @@ class Libx11 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libx11"
-    sha256 aarch64_linux: "b67d6009ce42a153d2bd39d5c476e67ddef490c1ee9983a268f0f3bfaee70931"
+    sha256 aarch64_linux: "577e360740de1c9a66cba510dd77a0d1d2016c0cd1d5af50574a0ebc62a8b89c"
   end
-
 
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
