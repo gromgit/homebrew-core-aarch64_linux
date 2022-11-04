@@ -7,7 +7,7 @@ class Libxdmcp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxdmcp"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ea89264f69cca8978330a93e27ff76f4a1393653599a9454f96294b78329977f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "955834b05a4c426e2bc557875e10d875a4ab3112ce4e7de9f450d96c68839e9e"
   end
 
   depends_on "pkg-config" => :build
