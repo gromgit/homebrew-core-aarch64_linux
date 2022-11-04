@@ -7,9 +7,8 @@ class Libxcb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxcb"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "18d3c5f79ee28801e4605a01246197638b8296d2197c87ec08789add6d426d11"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2f76805471394b9aee65544f9678660bdf3bd94e30ed05da503dfabc062ed1ff"
   end
-
 
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build
