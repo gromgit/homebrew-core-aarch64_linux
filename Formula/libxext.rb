@@ -7,9 +7,8 @@ class Libxext < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxext"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a64c2641067a81989c06a369c9e63da0a7a90682b4402db36cd3306af117a78a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5e958571ab96143c499a66cadf809d9749b7724d76c167b48bf344e025134521"
   end
-
 
   depends_on "pkg-config" => :build
   depends_on "libx11"
