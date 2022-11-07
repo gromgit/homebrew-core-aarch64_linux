@@ -9,7 +9,7 @@ class Glew < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glew"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0b92c106cf3f227d22f476b28015f4f04e29c88a1091e312e8ce572e5a94e9ee"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b096b58ebb3ac4938d8f94e6d1595b5f4c14daf98e692626609c27c575e5cefb"
   end
 
   depends_on "cmake" => [:build, :test]
