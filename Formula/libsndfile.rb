@@ -11,13 +11,8 @@ class Libsndfile < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "230aeebecdac8844737f4d4a83ad6c337b2fe58866dbaf140f9b94d72405c86c"
-    sha256 cellar: :any,                 arm64_big_sur:  "6d19ec5ab5743e79fd49ae7155d062c262c324809e24f798e7be02c386a3b058"
-    sha256 cellar: :any,                 monterey:       "ac4657b0a1614c0eec103a32d1ddc01a357272995cb72beaa7df9568d1ecf78d"
-    sha256 cellar: :any,                 big_sur:        "0878aea928e51a22ba735372f4c3a6f2a144b8b63481c5a4667161747acc2e2f"
-    sha256 cellar: :any,                 catalina:       "a16623865682e6fd8bfe3751d2f1f72eedba36b90cd09dde3d5d5e378b669f74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d628a31397f0c0f7bf691b526f05fbac3167705d6f6cd9a474a84621eeeefda9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsndfile"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c61d3782bad3de98cbbc02a93183618252b1dd0e0fb05f7c0a64000644af1570"
   end
 
   depends_on "autoconf" => :build
