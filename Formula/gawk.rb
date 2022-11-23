@@ -1,22 +1,11 @@
 class Gawk < Formula
   desc "GNU awk utility"
   homepage "https://www.gnu.org/software/gawk/"
+  url "https://ftp.gnu.org/gnu/gawk/gawk-5.2.1.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gawk/gawk-5.2.1.tar.xz"
+  sha256 "673553b91f9e18cc5792ed51075df8d510c9040f550a6f74e09c9add243a7e4f"
   license "GPL-3.0-or-later"
   head "https://git.savannah.gnu.org/git/gawk.git", branch: "master"
-
-  # Remove stable block when patch is no longer needed.
-  stable do
-    url "https://ftp.gnu.org/gnu/gawk/gawk-5.2.0.tar.xz"
-    mirror "https://ftpmirror.gnu.org/gawk/gawk-5.2.0.tar.xz"
-    sha256 "e4ddbad1c2ef10e8e815ca80208d0162d4c983e6cca16f925e8418632d639018"
-
-    # Patch taken from:
-    # https://git.savannah.gnu.org/cgit/gawk.git/patch/?id=53d97efad03453b0fff5a941170db6b7abdb2083
-    # This fixes build on macOS arm64. Persistent memory allocator (PMA) is not
-    # working there.
-    # Remove on next release, which will supposedly come with this patch.
-    patch :DATA
-  end
 
   bottle do
     sha256 arm64_ventura:  "6b4cee627ba48875cb56511c3a18a09bff2a763765e186b32b680c07880ab32c"
@@ -38,10 +27,19 @@ class Gawk < Formula
 
   def install
     system "./bootstrap.sh" if build.head?
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--without-libsigsegv-prefix"
+
+    args = %W[
+      --disable-debug
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+      --without-libsigsegv-prefix
+    ]
+    # Persistent memory allocator (PMA) is enabled by default. At the time of
+    # writing, that would force an x86_64 executable on macOS arm64, because a
+    # native ARM binary with such feature would not work. See:
+    # https://git.savannah.gnu.org/cgit/gawk.git/tree/README_d/README.macosx?h=gawk-5.2.1#n1
+    args << "--disable-pma" if OS.mac? && Hardware::CPU.arm?
+    system "./configure", *args
 
     system "make"
     if which "cmp"
@@ -61,28 +59,3 @@ class Gawk < Formula
     assert_equal "Homebrew", output.strip
   end
 end
-
-__END__
---- a/configure
-+++ b/configure
-@@ -12722,8 +12722,18 @@ fi
- 
- 			;;
- 		*darwin*)
--			LDFLAGS="${LDFLAGS} -Xlinker -no_pie"
--			export LDFLAGS
-+			# 30 September 2022: PMA works on Intel but not
-+			# on M1, disable it, until it gets fixed
-+			case $host in
-+			x86_64-*)
-+				LDFLAGS="${LDFLAGS} -Xlinker -no_pie"
-+				export LDFLAGS
-+				;;
-+			*)
-+				# aarch64-*
-+				use_persistent_malloc=no
-+				;;
-+			esac
- 			;;
- 		*cygwin* | *CYGWIN* | *solaris2.11* | freebsd13.* | openbsd7.* )
- 			true	# nothing do, exes on these systems are not PIE
