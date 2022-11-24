@@ -9,6 +9,7 @@ class Libgr < Formula
     sha256 arm64_ventura:  "7872614a37cb0e23e565284df482b14b5353fa906f69b28df968737cbc7791c0"
     sha256 arm64_monterey: "d69f82202fa35b0e846bd48bf0002a551c37c1a87ebaa3e3babdac11510171fe"
     sha256 arm64_big_sur:  "72079e824e60d450d18433ea6b49f719093c9da37bc2a1daf416e24c408deba5"
+    sha256 ventura:        "6bc766af8c5ff2dbeb152886e11af50aa2f4b0a46f44b6e88ae0d9a733d4789d"
     sha256 monterey:       "f5473f45649ba4458e3f84169641e3aa133659cd952ae1f9bbaea350a831e597"
     sha256 big_sur:        "b40abdf3b9b69949099f7bddf3b588d2db761dc153f82769238f15885556c422"
     sha256 catalina:       "ab792634dd6748291d8b0748f36a2c9f85e67d74b1c496abc5ced6e9424fd3a8"
