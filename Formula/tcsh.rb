@@ -15,6 +15,7 @@ class Tcsh < Formula
     sha256 arm64_ventura:  "ea9da55b46eaf978247aad58f0051526c0d5ca808eb3b67cfd4cf4f0fe7f40cd"
     sha256 arm64_monterey: "2fdc5b2fb9d5b820d155169b50ef281acdc07e0a12024187c506d676c20f4059"
     sha256 arm64_big_sur:  "b595809dbd7e033cb5fb9aa63a6d482fcc059fd501e2b6e9d1d2734bd6dbd81c"
+    sha256 ventura:        "cd231f885d07918c409e5a52f059668032ace05dc4c6b22bf99982daf7693c78"
     sha256 monterey:       "b9b3b26b60c854d7de4e2454358610310e526a54d9faa74f8ddb7c9c551fba18"
     sha256 big_sur:        "869c57feeb8ccd0ad58fcb9f2a08ef6e6794dcac8b027944dc576547828f365e"
     sha256 catalina:       "f93d55cd42f92fda08961f16acac43290c59b135a87e742d47b355e62c6d5446"
