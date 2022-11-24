@@ -16,6 +16,7 @@ class Never < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "00a7deb123f322baf99db81fb91976bc33fa7b8a7caa156dd418022e3e9d1467"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2e65bdb33bc931bd228cf68d7af2f69da95f06b5d8c72a5f8acdeeedd7f57a76"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b905f6979c6ec036a74152d97e91f781f172605191ba4d44bd6dfc15ec541850"
+    sha256 cellar: :any_skip_relocation, ventura:        "5164b7637fc16dbc4ed53ec87ea713ef484b53f1b856ccd02b5d80659a3d147d"
     sha256 cellar: :any_skip_relocation, monterey:       "14ea02dd081e33a0b890e056e233678f5df727f8c27c04bb09a71690bc12f395"
     sha256 cellar: :any_skip_relocation, big_sur:        "bbf2f7aa7d819529ef54afd73a0e06b3f4fd828444d11d0a966450b12cdc0c34"
     sha256 cellar: :any_skip_relocation, catalina:       "1ee5c77bd6eda59076c0c33e38b3b0ef75b27350b0a4f2947923b9a0a177022e"
