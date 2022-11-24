@@ -16,6 +16,7 @@ class Ppl < Formula
     sha256 arm64_ventura:  "7b34ee3fa741ad47e0ec32a5fac0dffddea220097ea7938618586d1b1016f9ba"
     sha256 arm64_monterey: "3b7d7b75d9c40347d165192e5189725d94129dc5f95d848cc86251f493ccef91"
     sha256 arm64_big_sur:  "f607e5d5ebefa0cb480bc84b1ba6e4eb1f2f07e7d7a00ae1f4c71958b5c82323"
+    sha256 ventura:        "c37e9a48bbaa4eee1c8c25b3e04cb6886da8bc19f684316dd93c7c121ba262c1"
     sha256 monterey:       "f75956df3abc16149ff87a0df7347973863331d8cadad40fef8dc3b760bfd6cf"
     sha256 big_sur:        "ceae5dd7024558587efdf935a870154a38e0cbf7e4882ba507cb3cebf574bed3"
     sha256 catalina:       "65aa31c0201a860d32e874ab34cbdea7132101fc6461510e06641a11ca762e82"
