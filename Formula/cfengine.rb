@@ -14,6 +14,7 @@ class Cfengine < Formula
     sha256 arm64_ventura:  "1046b1ca16180985e623da5ca9eddb9aff4a336fdc485d4ef0fd54f385d7236e"
     sha256 arm64_monterey: "a670b2d8d6798b60e014861d33a03ec7ffa1a92be20318c229f5f7f103a950f8"
     sha256 arm64_big_sur:  "345dd97cead01bef152249188308372d56e81f88aad2136740ca483ff365ce9a"
+    sha256 ventura:        "b1efead7eaf34e140561618a91d34125ab3937c7023bae61a22481b55a8dfb73"
     sha256 monterey:       "0955ee45e6250716784ab57c5b57a6700d7c4c68adec81cc198eb6221cd4a638"
     sha256 big_sur:        "76fd3b393e53ad84bc370aeb4a78eaf3c1f147ebb2f2ea7e228d3820986d67d9"
     sha256 catalina:       "d4c88a63b0fd86dbe31389c36cb029f51ab5444833cfa410ba2ee7c0fcd2144d"
