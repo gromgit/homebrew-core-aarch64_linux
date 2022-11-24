@@ -10,6 +10,7 @@ class Vis < Formula
     sha256 arm64_ventura:  "e624a3eaeb09a8522138ac81ee9ad3b81ec1c7b6fd238cdea7194c2944e700d6"
     sha256 arm64_monterey: "004c30d61df29525fbe9a94ef464a9ae916f099e0a075f007865c0fe90ed5739"
     sha256 arm64_big_sur:  "95785ac7f450bed5ae94819aa7a85ac6dcc1951e35943aec9e11a3ce2cb9fced"
+    sha256 ventura:        "f4569fef5ef9b0602698e5f502f9269eed63787255a51bc1282152020ae60869"
     sha256 monterey:       "9ff736b13ca53eba09c26c6e849b6f0583f2d72ef757f2fe28470f32f97383e6"
     sha256 big_sur:        "665268298b26ffa45e392f6a82f6be94378be38bd82c1cf2db7b7b7fbf94d36d"
     sha256 catalina:       "35216215a7cda04fea95361b9094031c9ed1598bae9267c4b7776d0772a56e2d"
