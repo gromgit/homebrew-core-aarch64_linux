@@ -14,6 +14,7 @@ class Trailscraper < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd6794ada78df92b5543194fbce4f6da6e26ebde864fca19fe834f7f62baf5db"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ea86aaf4571e9a0a6b04cd63cf265eceb4e1e0501add7e03d34ef6403eb6874e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14f98091da770e1f69b54b9457c583dea2202afb91fe70fad909192d3b8bb377"
+    sha256 cellar: :any_skip_relocation, ventura:        "8dcbbbfc12c9d5127529c9e883e1e14f6d7aa3bb90a7bbbd57bea45c7d0feeb3"
     sha256 cellar: :any_skip_relocation, monterey:       "4aba6586e5e9902a0ce1cab93a57ebe6c7ef2797ce00c07f36943abbd3bd858e"
     sha256 cellar: :any_skip_relocation, big_sur:        "836c585ae4f12ef2ec8389e8647e4056e0a16a4bf6952fd30bcdda7907768c96"
     sha256 cellar: :any_skip_relocation, catalina:       "257b4fba89023afaf7cd8cf7eeae67d9d6bc7c21859067e028434e48555cdc3f"
