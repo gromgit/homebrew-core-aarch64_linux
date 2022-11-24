@@ -16,6 +16,7 @@ class Kamel < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "74eebc398ce4445577cebfc79727785770bc6b7dec226d2eed1326295deea927"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "be9c9208581b0d8e29e5ab8e7603c890a60b3742f7d55956f9729cc2d97e9f22"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "abbc1438041e05f2cbdf4bd80022fb2a55a61f3c83638585eb90844c2defc028"
+    sha256 cellar: :any_skip_relocation, ventura:        "313579ba8d6b37bdc9f47ae809eb352a2410853660d2a93ab6c61ed72ceb66eb"
     sha256 cellar: :any_skip_relocation, monterey:       "62da5fc6dfe638fd46a54fb61e6c5ab489db1aade41a9e56a48e1998d11fc6af"
     sha256 cellar: :any_skip_relocation, big_sur:        "b64342d6a382bd9b51cbd6a0917d2da3ca1d9b61235d1b09ca39c031ec0e6b86"
     sha256 cellar: :any_skip_relocation, catalina:       "8adead3ec454382591ae079bae7fe147f0e680aea905a2eee67bb32ffaeaff85"
