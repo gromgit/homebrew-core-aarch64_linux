@@ -9,15 +9,13 @@ class Flake8 < Formula
   head "https://github.com/PyCQA/flake8.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0cb596301e1b096efdd66c47f9c13b8672437fd103a4ef6c5e9aa33848f03474"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0cb596301e1b096efdd66c47f9c13b8672437fd103a4ef6c5e9aa33848f03474"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0cb596301e1b096efdd66c47f9c13b8672437fd103a4ef6c5e9aa33848f03474"
-    sha256 cellar: :any_skip_relocation, ventura:        "7a3efaabddb5162598329bbc426893fe167482a05bd33033b17de800c9cbccb7"
-    sha256 cellar: :any_skip_relocation, monterey:       "7a3efaabddb5162598329bbc426893fe167482a05bd33033b17de800c9cbccb7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7a3efaabddb5162598329bbc426893fe167482a05bd33033b17de800c9cbccb7"
-    sha256 cellar: :any_skip_relocation, catalina:       "7a3efaabddb5162598329bbc426893fe167482a05bd33033b17de800c9cbccb7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f23f9aeb9b1499a79c1aef028e73545bf2c5e3c784e527aa191bdb83d367885d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9e1fffd844232e4fae4b7ba7b7d34d8af57be04d43ef550c311c751ac7b53fe9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9e1fffd844232e4fae4b7ba7b7d34d8af57be04d43ef550c311c751ac7b53fe9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9e1fffd844232e4fae4b7ba7b7d34d8af57be04d43ef550c311c751ac7b53fe9"
+    sha256 cellar: :any_skip_relocation, monterey:       "afc41a21bfc1664a09f5618a16a7b2d959e5f48f262855fbc5408162bc064c2e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "afc41a21bfc1664a09f5618a16a7b2d959e5f48f262855fbc5408162bc064c2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "afc41a21bfc1664a09f5618a16a7b2d959e5f48f262855fbc5408162bc064c2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75e22c8fc2e47031ae6a2c30bb10ad607e8f990483c710f4a458d7383ecf3ea7"
   end
 
   depends_on "python@3.11"
