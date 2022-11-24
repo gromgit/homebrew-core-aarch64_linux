@@ -10,6 +10,7 @@ class Nali < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b331c49ecedb1271acde3f0d1759ab85da1707e7addf2d4e02233d999bcbf3f1"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "4f1d21f8121e9a1ef256626e8e67fe1b0a45f241ab033f6336490c6b41538508"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23fd50f6782635f134458c84842c2180bd06e5ed62988e9af72b8e794c90c2fa"
+    sha256 cellar: :any_skip_relocation, ventura:        "ad85e9eff12ac51ec158479d29204b6b09f395eb228bb6e0bbfdbb264564cc41"
     sha256 cellar: :any_skip_relocation, monterey:       "e78ad61d89303d35e38f756c8d8f527dda2db5803de2339494aa2e4a34924e6d"
     sha256 cellar: :any_skip_relocation, big_sur:        "efcf7ffac197af834a1dc2312307be3f6da99ce7c95a00bc691a8b786c366500"
     sha256 cellar: :any_skip_relocation, catalina:       "18c0323f0fd366919b5ec4e8e878c612d8dd72f3442908852e601c3d25de60f0"
