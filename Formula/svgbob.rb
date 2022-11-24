@@ -11,6 +11,7 @@ class Svgbob < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7069ee90b4e75610f0cd521bcdfc257005eb265f63a376a00f6b8d904731abb"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d58f6a2a324e58304062a9dab476ed881beffc249e1086526cc121c18c36f4d6"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b937566a070a3a45a1fb2f251d10b82b082b39c44e1691c43f04cad423fa240"
+    sha256 cellar: :any_skip_relocation, ventura:        "5f7861ab6d7cff59709b775b2e9ad43ca167cf61957db951c6e5727fa80c6c0b"
     sha256 cellar: :any_skip_relocation, monterey:       "6efe06b3835e4a9e9d330a2cbbda2e994853231f81f2c906ba84dda64f2f235e"
     sha256 cellar: :any_skip_relocation, big_sur:        "3b3540039e243c64cfb3c1ee67355fa93c31e89ef3673414720239fd7f258672"
     sha256 cellar: :any_skip_relocation, catalina:       "3ab6faf174e991e452ead5bb511e2c9d3526c0079f23acf48378d9473033579a"
