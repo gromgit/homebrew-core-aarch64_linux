@@ -15,6 +15,7 @@ class UBootTools < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a5c755402325271f4d814154e572295ffc79a2d3ab9d551d564743ea519b547e"
     sha256 cellar: :any,                 arm64_monterey: "fcf481e76ad286781a9e74b2395a263def5382c6c0e6d29a7a0dfcd7255decbf"
     sha256 cellar: :any,                 arm64_big_sur:  "35e09390026f8dd3b12a7781bc93e5a0c6314844d622e1d8e91913997cf6be06"
+    sha256 cellar: :any,                 ventura:        "d1da94a16a07548f7374f70406b8568bbe49db80cf9fd88c55640660068a75fa"
     sha256 cellar: :any,                 monterey:       "67df4d2ddfa5dea5250bbefb453f5947a5f886bbb75aceb4a7dfdaf69ae685a6"
     sha256 cellar: :any,                 big_sur:        "b2354f8b5f468df0dd4f0a4d00049867eb68ca08d0bc7e069c63b3f13ad690f6"
     sha256 cellar: :any,                 catalina:       "020d650fbcc7230aad7b0243d08889a551449cb842369dfd5488960a3be6550d"
