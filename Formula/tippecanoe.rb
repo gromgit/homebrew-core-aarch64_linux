@@ -9,6 +9,7 @@ class Tippecanoe < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "85158cf0490bf3f623c2dbdb48f816df927add8f358156f4e17cf9003d7950fc"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "856ef3867257027ca66acdbfb0001264f8b535c3fef2456c15536c66bdcbd6fa"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8ad8374defc28bfc70f0463e5107fc3f11601e574201f0e563bcc96ea5c97d5c"
+    sha256 cellar: :any_skip_relocation, ventura:        "5d17ed3dec32f4c38c8ac46328e32980e6c6e2e296e1c362e0b4a96cd336ac2b"
     sha256 cellar: :any_skip_relocation, monterey:       "bc526900de024d24a4d3afb45ad442b1e0cf65cebd4a947e6ccae251185852db"
     sha256 cellar: :any_skip_relocation, big_sur:        "31b001c7673f605c8035b17cee0d83717549278e838e865c6dc748e050d9a13f"
     sha256 cellar: :any_skip_relocation, catalina:       "805b74422744b9a2593cf2dd5ac30fa2d0ec727c6f7edfb53998581a1cee379d"
