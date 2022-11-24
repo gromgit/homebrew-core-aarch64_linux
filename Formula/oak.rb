@@ -10,6 +10,7 @@ class Oak < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e49abb41ea0758574abb99e97cfae07adeedb324060114815b4c0ead6cbbc674"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2c258ac6aacad5e27decb196cb329fc4cb8339950fa110ee1540712872a0ddc4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cbae1b116dcccc5199d3af3e8deb66246c39be3afb5156209b814f83a946599a"
+    sha256 cellar: :any_skip_relocation, ventura:        "472a8b58caef8874e3cd7a0a43780a0a3b5fca519815d2646b2fb6488b049e32"
     sha256 cellar: :any_skip_relocation, monterey:       "538fdce9778c8c182d6c369356f02c0d8cd0ba120168eaa204d9ea5d6e423fe6"
     sha256 cellar: :any_skip_relocation, big_sur:        "50e687e3532068bd0948b8760e0bdcf136a6f357600ab1abc5c2089f0d372436"
     sha256 cellar: :any_skip_relocation, catalina:       "c206c1cb5f34b507830290b8e273cf65d2c76f08ce5f014a17fd8653a63cce0e"
