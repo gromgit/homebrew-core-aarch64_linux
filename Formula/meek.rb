@@ -10,6 +10,7 @@ class Meek < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "adb45229efe44b56e9badf0b4955b76e735c46e2a814afe9601579acfa3f0c44"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e87890b269d99509242918f0b49d0e974ec5d714cab804791420e2ba3a889961"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b1bc91a0c81ce93bb3d274a8e44b1e16dfc9aa4377cd17f53e17a61cbb614a4"
+    sha256 cellar: :any_skip_relocation, ventura:        "a04e4162bfabc0dca75f79e0b96485249060c7352618ec3e44d2af8219b33d8c"
     sha256 cellar: :any_skip_relocation, monterey:       "ea7c31b3bd02bab4d3951a0ea38a8e9a8c707c981a07929e3e540a05bcd97405"
     sha256 cellar: :any_skip_relocation, big_sur:        "cdeb7f4ecb736d27d60786ef384b12fdfb6c6ec3f91ffc6e94e72b892e93829a"
     sha256 cellar: :any_skip_relocation, catalina:       "e7b9e140649a3c62b86417a271ac39c5d080b0e065934ddc47b7c71eb158cb09"
