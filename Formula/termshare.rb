@@ -14,6 +14,7 @@ class Termshare < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d03f8115638afa5340156196462d325f4ba3c2912f3ee628314120f3a654a142"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "fc4614ca141bf850bcf6d6a79e2ae20aea42e09c8ee4ce448a33132a6de1a7c7"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "75a187c25803562d3116f85b629b1957e56a335a5345cce0bd4a5a9b798e064d"
+    sha256 cellar: :any_skip_relocation, ventura:        "3390e7dd0749fae18a51cef50ef08324a5f2893f1ec5867b2ec8eb8590e46a15"
     sha256 cellar: :any_skip_relocation, monterey:       "d51e1af4004ca47642d84f8749fe1cafa4c5343e64d6568e7e871eccab973978"
     sha256 cellar: :any_skip_relocation, big_sur:        "8fdfd431495e9ec1131134560723d80db8b95f72d3ba47725294914c96f3490b"
     sha256 cellar: :any_skip_relocation, catalina:       "4dd298c36b89e861cbcbc96746c8174c034ee8fbe1878973e8cee862659fa65a"
