@@ -6,13 +6,13 @@ class Epinio < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7f133a5604d1db37f7b0b8a5db0f430bf9ce545aea33af52cdd22e7c562786e9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aeb0b440b90072f6110c301b9dd034a243f3575e277a4fe52c69307fb25b3268"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "859043f587437fb8891a65fa0d5f3f13352be71d78368e349f003e0155adbe07"
-    sha256 cellar: :any_skip_relocation, monterey:       "05ad17370f33778d1f730a1a7524c1c743acd280fda304e132db34f3b8852e06"
-    sha256 cellar: :any_skip_relocation, big_sur:        "16009407d24e535ebb3d05a20cf30efbe2c7f29f78c824a6acd36004deb424da"
-    sha256 cellar: :any_skip_relocation, catalina:       "e57557769dbf691c2a857a857cf688e72f852c54230d8fbad78eb223d1dc461d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da97a8841d2812a4bb56637a7c8ce29961a1cafc25d1d6d1965e109f9c2935eb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "62fa19622acf35ad4c14b45c0e831c93ff5dce1e21d5ec03210a4d9493a7957d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "92688b8d37f7ebd021750f76a6b77d4fa3b4dd499fe783b11f5935493c68b66e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ccf1cb26cb5a4af28a2916e823af6c51d73569164583b88d2649d0c8a88306da"
+    sha256 cellar: :any_skip_relocation, monterey:       "5c6d1eab60ba43716192bbbdcf70ae07a0475f9b0ecad25825fd5fc219dc626b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "59aec3058b61e835f41af499bd1bb7b5dac64eaa326c930edd03008e6ef7f2b4"
+    sha256 cellar: :any_skip_relocation, catalina:       "e00e09b5c9adb98e727090914b36d17c52d50fd903282028660a1ed41fe7dc1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e44b87eaa00209c47a49c5e69135a49d25b005b2166abf955fd40140eb2841bf"
   end
 
   depends_on "go" => :build
