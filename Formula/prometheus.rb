@@ -14,6 +14,7 @@ class Prometheus < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "852a0512909bdc84bf7b0fe77cd6e99a88f3b7ae48a47f3e8eca39e02918b81b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "44dbcef1ca8cf82b32746d38e311778525754cdbb4458194c69f62722182d2b1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce8634c033673c379568241cfdaad334e8ade545096fc44e4b308b64a6024abf"
+    sha256 cellar: :any_skip_relocation, ventura:        "0789c58e02e8ebc48ecb07894f6be3fe16eaf302738e1b19ddd6300441f19b5a"
     sha256 cellar: :any_skip_relocation, monterey:       "a549fd9bbe10c352c055532f1b29a92c07660a73f746a2a47ee25cf26c481d6f"
     sha256 cellar: :any_skip_relocation, big_sur:        "6d4c9908e1a066a793d7e9fcef390265b8802e42633ebce33439b836e415c191"
     sha256 cellar: :any_skip_relocation, catalina:       "95b2d50c1d612c0d24416916b5440b504fb07f9647e499a794d7bc50b1c76f77"
