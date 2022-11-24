@@ -9,6 +9,7 @@ class WebpPixbufLoader < Formula
     sha256 cellar: :any, arm64_ventura:  "334127befcdb1c988eaaceb43bee6a4c338c0ba9a1a6b02ec553e0756739ae88"
     sha256 cellar: :any, arm64_monterey: "603ebbb5dd68650a0deb2c41fc9682de704bfeb5831a93441fb07e69911355d5"
     sha256 cellar: :any, arm64_big_sur:  "1d4c1ce0cfe5f675cc8c59a939e5b8a735237648e1c6691e94e0771c9bbf50b8"
+    sha256 cellar: :any, ventura:        "3282db36b28614cee57d5008dcbc2fcdf3057b9298e667e9c522e940e60cb1e9"
     sha256 cellar: :any, monterey:       "b5c40535c457150fc1654a5072f4162230b17bf661aac05a65512f13f32e94e1"
     sha256 cellar: :any, big_sur:        "dc06cb83d1f768769e089d1227db8198ba4af1808bcd5dad50b12b3cb63fa6d7"
     sha256 cellar: :any, catalina:       "7cd01445a1d5214530530f7338c486e6dad5b05e3d06735511c7400eb1444075"
