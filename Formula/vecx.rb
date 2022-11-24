@@ -11,6 +11,7 @@ class Vecx < Formula
     sha256 cellar: :any,                 arm64_ventura:  "ce3b5f31fe3c070a48743dbe9080f1f51d00e61f6d34c3162b09f34776e1041d"
     sha256 cellar: :any,                 arm64_monterey: "75779f24618178fb98ad78e8cdbfcbd9769a4878eadd6580f2fb4381ae9ba60e"
     sha256 cellar: :any,                 arm64_big_sur:  "085f8f3d413a6259c8dd804d4ad4cccaacadb2446eee33b1140d46e7bca7af29"
+    sha256 cellar: :any,                 ventura:        "fc475a68ec03c55cef85782b038177fe344356c1ce19d99174ec8e32cf2f4003"
     sha256 cellar: :any,                 monterey:       "f3452a9fcd0b85f1c3debe208630b26d42e86be1af61a23336fa7c0f90753ad9"
     sha256 cellar: :any,                 big_sur:        "f00822462c70b4b6eb84c831b2c5d771b50671ecb1d51b7a03319e785f911984"
     sha256 cellar: :any,                 catalina:       "442ddb9d1e87e21f642e6785e170b3ef754ab9329c5ffd2d04b49b998f90f512"
