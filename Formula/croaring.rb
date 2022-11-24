@@ -10,6 +10,7 @@ class Croaring < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "bfa53698ab021d3f6f4b6435daaa608094bb2945a4c7f412065065c164810a48"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1b59b01ab9dadeed19321ebea91389ed228e4db2f7cd6aeca12eee58c4e51b8c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b542a7fbf688538547f31fa9d2a94b496552924cb9aa8f6dbc72efe6856b09e9"
+    sha256 cellar: :any_skip_relocation, ventura:        "147bb8f8be5ab1ac3f273d4f44f97f4d3e2b51993a1f8d60da51588e63eb15ab"
     sha256 cellar: :any_skip_relocation, monterey:       "bd204ea967617d9c3ef08ac6f86f19a0017c4296b3b0a54c9b1c54e1018a7f88"
     sha256 cellar: :any_skip_relocation, big_sur:        "3598e943f08ffce1247088fc79dc4c2d127efd61c3398e62dc5d10101a1fa545"
     sha256 cellar: :any_skip_relocation, catalina:       "cb28c348e3314d458e7d56adb1533b270349cf758ed02541db121e4192bb2de7"
