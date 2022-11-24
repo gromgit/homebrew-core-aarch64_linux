@@ -10,6 +10,7 @@ class Hugo < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f8094c5fd7847a9f8bb146578392ae60ed0e6f7fb47f4d5f3ce40fb07d9c2925"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "4d5655c87621f8aeb67489806fc24474876dfcc02cd932acced539890a1a5039"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d41d8af7990c1426e44fb3d4f194545b18df0150e153b34d515aec3118d68d52"
+    sha256 cellar: :any_skip_relocation, ventura:        "6e00a37f952ad854c8d1f3206a12b0566f9af16abd0facec3d05b8c4cb65cafc"
     sha256 cellar: :any_skip_relocation, monterey:       "e53bd439f7763013906e2a7a993bbbb10859fe4fd1839745dc8e87fec791360a"
     sha256 cellar: :any_skip_relocation, big_sur:        "94fa5e5d60cd28b8481a9d91c0cdf2815abd09b1f5f044187f44306cb29e1581"
     sha256 cellar: :any_skip_relocation, catalina:       "b7caa2b21c631fe493fe56f493e797630b810095a97100fe179ff702bb5f8929"
