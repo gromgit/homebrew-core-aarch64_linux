@@ -14,6 +14,7 @@ class Sqldiff < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b5d77ed53e2906ef7254c8c4e44aa9628030ee2e3155494f3956499de67ea1c8"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a8a3baac89dd382ed5c732476c40bc0e3340d25773e450fd6a30131d2b84f488"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fc193af281b4e26b15084c8729acfcb9b01c09dd0b0048c827fbcddb570c93f1"
+    sha256 cellar: :any_skip_relocation, ventura:        "f15d508c5e9ce5211625ad79f7e406ae21d4c3a21f8dc6b524a3dcd7c7590025"
     sha256 cellar: :any_skip_relocation, monterey:       "b8e5e78522ae98fd60b5f21e2713ab20e0b8929286a5ef7e9000964494aa0edc"
     sha256 cellar: :any_skip_relocation, big_sur:        "3a9c268aeef0baba12616d0f9e890d2fa1db947306ecdeb2ca1bfa5ac442d795"
     sha256 cellar: :any_skip_relocation, catalina:       "e59807b98af44caa7ab68859de34a3289aaaef07729f8af5f0982d5c9ae65419"
