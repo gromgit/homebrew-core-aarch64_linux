@@ -14,6 +14,7 @@ class BandcampDl < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fd0d6e2100fd334a573a6e2adb3759d4df76d6643c4892c01b55d5825ffbe260"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "328c1e9d1608e8a982949175f44ae77320aefa49c4bf4a676d9a3df534271f08"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "253093dd02e6dee303d7f6e9f119ab24ee132724696bad655011f941a47735b2"
+    sha256 cellar: :any_skip_relocation, ventura:        "b653eb576e56aac15a90ff4f87c70ca1d4e2645c56fd1223ca3608c19e62c6f6"
     sha256 cellar: :any_skip_relocation, monterey:       "5f5590040e253372a98de14771f01e73421157dd147f68721f63c282f881ecb6"
     sha256 cellar: :any_skip_relocation, big_sur:        "596206bbf596dbcb317f99814cf07cbb48d3be981891e09d137773df05fc7bda"
     sha256 cellar: :any_skip_relocation, catalina:       "cb766afbee33d2dc937f6b8c8574a0e3ae41d2a2b16c8bcaffef5b3133976782"
