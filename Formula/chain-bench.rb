@@ -7,14 +7,13 @@ class ChainBench < Formula
   head "https://github.com/aquasecurity/chain-bench.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "997209311ff1af7648a4f84f43258fa0d9e82c97fdfe82dce63cfd9e62563130"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "000b4b2b1a4c6407ec4c6b420fafa70b5a26318246dd2aa6ed029316c745296f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15b481b75553ea413fc1908f768dc6799ef5e49ecb544224c98ab2c391ec8ca2"
-    sha256 cellar: :any_skip_relocation, ventura:        "44f7b9f50cb6582af6896268b509055a086d6841ba0064eeeaa959a908d3d4cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "39f705e5598ef3ca853cc489c666b8a9cea8c0fd17a5cef9d6f912855ff31604"
-    sha256 cellar: :any_skip_relocation, big_sur:        "70cfcbfa2c38b88762131b9cd3fa880191f2e21043507f13d0a0762217be2531"
-    sha256 cellar: :any_skip_relocation, catalina:       "4488882a383b954872eaf5f85e0a06e941d7bd339665e73d946bbb1053daf8f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ba0d7b9d85346074ae4ce41a8e5b3f764b3f027ef740ec79b6d86408867fd96"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c86422a1ddd597f84353351f5c77e3ba2f798552d4b4ae30ab1a2f2de612145d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "35983e5f6f4c054c2d2c517cb6465994097e0353575f0739f44f693729c96b02"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c2fdcc6689aad1a4423cb5ef265694759562854410bd41bfcaae5530ed26b0f7"
+    sha256 cellar: :any_skip_relocation, monterey:       "988a2f425eb35a050aca2a354cfd1f2552b31270e295e488866f7534fb4cc470"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eaf5fda8e47568cf818eb9f07b586b04b7973c8dac9290fc89a6280d3cdd8909"
+    sha256 cellar: :any_skip_relocation, catalina:       "3ba54ed8c1422ae0f3c9067f3ad898af922b94caa6a0a8ddb60e2a8ba829d746"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "39585a1d4be722d0b0588e7403f1491c919fb06b95f55a82b4246a1879b2c24b"
   end
 
   depends_on "go" => :build
