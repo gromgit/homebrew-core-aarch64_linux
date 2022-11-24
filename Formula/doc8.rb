@@ -13,6 +13,7 @@ class Doc8 < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a35e6213f12f7da625eae2c78b59b2bf03da6a94efdba67cec7125425769ba02"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a2bf743768fd3cb7d32c36f339c09602db87a4add2f53bc5517d56f5a4d5fde0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "834c488f7fa94a9fc92b5622e91af6fc02bc0fb8161074040e3936e66de7622b"
+    sha256 cellar: :any_skip_relocation, ventura:        "a3b0019d1a05ee56b56e2d3ff9d9f9bed34b2e9bcc0fdff0d15ac99983c4053d"
     sha256 cellar: :any_skip_relocation, monterey:       "e0ac76ac677bac9f95f7923eef4eb4f6f3599377dfc59cd1f889b59ac3d5d8e4"
     sha256 cellar: :any_skip_relocation, big_sur:        "ba07a0233f03adc42b62e7db510355177b89d5fcfaa44c221b2ceb8495da14b3"
     sha256 cellar: :any_skip_relocation, catalina:       "73bd19e07cb54c1267411ccb3621c0b82f0c8e82aa0976bde51a8a05adf67596"
