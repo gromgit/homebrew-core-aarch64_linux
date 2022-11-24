@@ -10,6 +10,7 @@ class C2rust < Formula
     sha256 cellar: :any,                 arm64_ventura:  "021c790568ddb4693f2dd068cb4ce5e5e58144877d41c509e4f810ad1653c486"
     sha256 cellar: :any,                 arm64_monterey: "3273e2b69c83050f500993c11f7f64fd2f93249c123bf4680b3f1321132452a2"
     sha256 cellar: :any,                 arm64_big_sur:  "a77f2a4bf5276333f97711bb7dd39bebe1bb621a8d0ddad389ccb76d7b3fef51"
+    sha256 cellar: :any,                 ventura:        "6d2f738f210810787e76bfb8bb1e223d6d79b2d50c7f87651d496ddc879e5720"
     sha256 cellar: :any,                 monterey:       "5644197dcaf9d4c3ad60bb9c23f37d3ab9b9f6e9372501a0e7baaa4cc2633e43"
     sha256 cellar: :any,                 big_sur:        "d62b726bf0c9c547366eb30b56f6e779aaffded61f09e5dbbabf276daf9ca794"
     sha256 cellar: :any,                 catalina:       "5726ecc28aced3d728e39a42ca0bb63319a16680bf392d89570511177ed39fe4"
