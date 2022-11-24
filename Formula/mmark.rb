@@ -9,6 +9,7 @@ class Mmark < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "00800bff20cfa2374563794b173f75f06f68330a03b588d961b9f3b9058b7934"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0cdb15b9f7cb1fba55cccd36032edb017d9ef23d20d53d796b96216281f17e5f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0cdb15b9f7cb1fba55cccd36032edb017d9ef23d20d53d796b96216281f17e5f"
+    sha256 cellar: :any_skip_relocation, ventura:        "2b40b9be63162e2fb3ed470a7faf0f3e5edcb853c9db96afc1f9e93537d60720"
     sha256 cellar: :any_skip_relocation, monterey:       "4a1975b84425301a4c08cb1a71dc83f4ea4b6dbee3954a4d79b84fad517d10fc"
     sha256 cellar: :any_skip_relocation, big_sur:        "4a1975b84425301a4c08cb1a71dc83f4ea4b6dbee3954a4d79b84fad517d10fc"
     sha256 cellar: :any_skip_relocation, catalina:       "4a1975b84425301a4c08cb1a71dc83f4ea4b6dbee3954a4d79b84fad517d10fc"
