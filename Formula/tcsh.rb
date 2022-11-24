@@ -1,9 +1,9 @@
 class Tcsh < Formula
   desc "Enhanced, fully compatible version of the Berkeley C shell"
   homepage "https://www.tcsh.org/"
-  url "https://astron.com/pub/tcsh/tcsh-6.24.01.tar.gz"
-  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/tcsh/tcsh-6.24.01.tar.gz"
-  sha256 "5659a1b973b1f947e36238cb17a00210ac4cff3b496f8f851acd77172ab91d7e"
+  url "https://astron.com/pub/tcsh/tcsh-6.24.02.tar.gz"
+  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/tcsh/tcsh-6.24.02.tar.gz"
+  sha256 "6691e15af0719575cad91ce9212c77a754f6c89f0a1f70454625e5e21ba0bdad"
   license "BSD-3-Clause"
 
   livecheck do
@@ -22,6 +22,7 @@ class Tcsh < Formula
     sha256 x86_64_linux:   "4d2662db222e8b7d6c6e66f748564a1eb4a854cc7b71bed0d0968d82991f6336"
   end
 
+  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
 
   def install
