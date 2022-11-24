@@ -9,6 +9,7 @@ class Libxc < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1592191d5c7338e37a0ea731effce5518f9ba99dbea83695b032bce2523551d3"
     sha256 cellar: :any,                 arm64_monterey: "c79670f57d0b3a0d10876f02f50cf0061c530e97ddf6e412d0f17a0a6644f6ad"
     sha256 cellar: :any,                 arm64_big_sur:  "e07b6d39d96b23c2f67fee2f93737414653141e62be76b20261173628f54edcb"
+    sha256 cellar: :any,                 ventura:        "b79350f6f492c8d7c001c82648b1b162c1d281eaa0013e54e7884d2129a9749a"
     sha256 cellar: :any,                 monterey:       "981570c3575c0002c486b25ccbf162e6c212c5bd9dee5c9d5d685ed010942a82"
     sha256 cellar: :any,                 big_sur:        "8ca05881128815959c1ba12d69e243fa9ec5396560b89d41dc3c99054b755913"
     sha256 cellar: :any,                 catalina:       "3778d34932ecf2ea3df3dbe49f8c8732384b7d1fd7d8470c65cce7515cd30617"
