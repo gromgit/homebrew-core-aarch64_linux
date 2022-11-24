@@ -16,6 +16,7 @@ class Php < Formula
     sha256 arm64_ventura:  "d6b3b3da1ecf71eef7385eb1bdd8df46ed87f5b3634b5f21793d7e5ffcad18b7"
     sha256 arm64_monterey: "e38cf09c4a4a42a13eeb485b1e49b05623c65c22de79f4f1d6008c0bb402eba4"
     sha256 arm64_big_sur:  "0082443a794c70eb50bd9004cad7c5c72636be9c755dee80501fd7f5a0852954"
+    sha256 ventura:        "ca6e3f3cc64abd84389edd4c7f054470ef9a7380597843967ddeefe7a9c5432a"
     sha256 monterey:       "fe11be88dfd7ee67d3cc522650e0024e557122080fcd83999edeed572bd457c7"
     sha256 big_sur:        "a98e467ee71397e0a9d9848558082b88cd1c56ac0d0941e4469e43eb7d713fcf"
     sha256 catalina:       "cf3305c4abe9e50ca8a7eb2c9f1608438d6e3feb1f411bedf730aebb689ac874"
