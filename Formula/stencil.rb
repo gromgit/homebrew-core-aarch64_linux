@@ -10,6 +10,7 @@ class Stencil < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "58eaaa4d6a56360e10e9f2aea8a6c7b19dd1a41fea8fadbb80cfa069def837eb"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ed834947acdb56b2d048ae81b55ceac7d8dd2be1c90bdd82661543a992b9091d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc5811b33320b34f9531901b447ef1252bc7850828ecba05d21ff8ceb3ba7053"
+    sha256 cellar: :any_skip_relocation, ventura:        "8450446d8edd3f32dd43ecc4a025e21c1f344302a997c22a22388855138fdea5"
     sha256 cellar: :any_skip_relocation, monterey:       "c0bb98b53b446fb0a330c19232c357185de72af29c9967e9a2ac41d2f96238d5"
     sha256 cellar: :any_skip_relocation, big_sur:        "a0b3166c0eca737a0761891127d75233dae82c0bcbe66387cf7571169f981dc6"
     sha256 cellar: :any_skip_relocation, catalina:       "2f7fb07b7ff5e6d96f85e99931022a0a67875767ae71b6cc88c520cc20872b2d"
