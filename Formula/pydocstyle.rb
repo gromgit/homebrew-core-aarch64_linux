@@ -14,6 +14,7 @@ class Pydocstyle < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "11591f3472ce083fd8f56068da5a7441954d66f4afad42500b6650b2a3814d9b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "79d16bee35a3b67c8953b524bc40924a9ae6f362116d9c8716d73c5816574b76"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f3596d75b4c7799708e2af41e2e55202ee09554b74e535e0be90f946a88c710"
+    sha256 cellar: :any_skip_relocation, ventura:        "4191bca163eb8ced72cacb8fde273314ca8be9ccfb03d8115500a04ed1563093"
     sha256 cellar: :any_skip_relocation, monterey:       "f36bd57c1c1b64bea7d05f66c93150c897a9c49fb4923d50d847b25856e2a0dd"
     sha256 cellar: :any_skip_relocation, big_sur:        "af34d12a6df41fb57f8cbe3f75b41c001300fca417a40a5e3a3a34524cb9479d"
     sha256 cellar: :any_skip_relocation, catalina:       "efe358f510174eb6d12b900d692e54b740425f85dbd1390db3d57b618e8278b4"
