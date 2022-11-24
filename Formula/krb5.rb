@@ -14,6 +14,7 @@ class Krb5 < Formula
     sha256 arm64_ventura:  "671c6257abcf1a03022ef9a8d7a1338abd7d2ecdad39fd918370af865595ed69"
     sha256 arm64_monterey: "a6ef38ba592b8b2b541db10011c301006c25f94b1db786b0a8f7c904755a3e1e"
     sha256 arm64_big_sur:  "000cda91ae0da2d286b8329765eaeb3da555e93a33990a0df1901c9b14891a5f"
+    sha256 ventura:        "273a7b14a23c96a18cb1a59549d0446502ee979f90de438185c970c9ecfb2d01"
     sha256 monterey:       "c529cf22c6e2191065a6c60c35875f83de8247cd4fbad5c84d0c9ed40d806a3f"
     sha256 big_sur:        "5f825fc34ad2db50f2acdb6c770035bbde7b2de486eb67659ced48e0644f9cec"
     sha256 catalina:       "2c050f2444b887f5da029ee28a9add072729906bce035632ffd15f886de86ce4"
