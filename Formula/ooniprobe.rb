@@ -11,13 +11,13 @@ class Ooniprobe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7d633c9a6ece69d4a9f895b781a315006728a7634c8e029831d1ddab866619f8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3cdb760cc27ab366ee78c82fb8f05b9475107ab5901f19ddfef06f5c1345e4b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2a390f7c970bcc259cabc7bc504bcf17112de989c4d39babe2a68f6deec89184"
-    sha256 cellar: :any_skip_relocation, monterey:       "1b44a2a89bc3c70bd756dacdc65b29bfee14b6173296925bb3f98ac8249cbd62"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6b527162c4ea8dc0be6d5ba0ae2d26061ad11bfaac2b72dd4a9baeac5b32f3af"
-    sha256 cellar: :any_skip_relocation, catalina:       "4cda823ea7c917ff8a4761cce935533fffc499627e94540e176c8884792bd86d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fdd24b58bb2d4f6391eabf2f8a3f32884e494f38c5a9bce490ef8e6f6d3e732c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cbde54f799ce92e075015aac9369eb85b5b44d4677b54cdebcb18b509a04b11a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9afaa9b3929d1395dacff1839f9463cdaa1e9ebfde244f7139f0b7e61e351cc9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f6690cd176c774a9e9dcc89139454a5cf7350ee8a3ec09e14f8c833437e90e32"
+    sha256 cellar: :any_skip_relocation, monterey:       "287e841f1ab850f09f498a17d62048d53b6c5ec20f65aca7c60c682cc991a4b7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "487ff675456a4c7d2692bf01d7f57db1a5a28c0582f5f47f62c72c6794bdf171"
+    sha256 cellar: :any_skip_relocation, catalina:       "a3fd9e6eee9672b16e5bf1e8883617b966721a1cae576a02deda698b6209fc28"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81be00242327253522b19fb14195db75f1c221af7634012229c84ac011279d0b"
   end
 
   depends_on "go" => :build
