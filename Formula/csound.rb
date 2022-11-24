@@ -13,13 +13,13 @@ class Csound < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "4127a58ac9823cca00717ceb5908387bf8175566c698def90d37631bec9fbc40"
-    sha256 arm64_monterey: "fe0178a5610cbf9be705bdb6bc0eb12c2e4e7edf99b115fcc53152fd744e561a"
-    sha256 arm64_big_sur:  "bf72e89c87b6e8204b9b20d8d457d9f77c26fd9e29cabd525dfb49ad8fc58160"
-    sha256 monterey:       "bd030d8999a6a0cd958408f71432fc8233080aa75f32db981e2a7bcc31101ec5"
-    sha256 big_sur:        "8075d251a547c27e84055c43298120de81a289258ea226826f091f39e27fe873"
-    sha256 catalina:       "65e209e1fc848b56f806be9b273f95080a7f3c721083291f118d171e3b479ea7"
-    sha256 x86_64_linux:   "00996dcdc227b095142852b9e7696c7dc6d97829fb0c72394bfc14b51c6c52c6"
+    sha256 arm64_ventura:  "1fa3f5ecd493502c6f8a380233ddf7ecaccf5590c1d0cb206eddf312e6195729"
+    sha256 arm64_monterey: "a1d5e7f06bc3b999b0cbc943e694b8ae0a2a7862e2c720f3cd73e3b929ceff98"
+    sha256 arm64_big_sur:  "8bed3925dc5b9741ec6f4d20f1cb17e9c1b22a77987fdcbef35b941f72e936bb"
+    sha256 monterey:       "847442c274b43b8d327b5fe4767ec41a19db8b3f01597310f254c2e5526eabdd"
+    sha256 big_sur:        "9fc1ef9ec6ce05f8d0661eb2a72f537d50a9c2fbdfd0ab0cf0b84febb05e21df"
+    sha256 catalina:       "a857c9ab223839877ecc31a819ff2ae7a6691358306cc6f0a55b2fce905fb854"
+    sha256 x86_64_linux:   "4e73a8fabb3e9dc1fad120d8808db75d166403c99145d7cdb74eee7164d0f8e0"
   end
 
   depends_on "asio" => :build
