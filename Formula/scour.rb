@@ -15,6 +15,7 @@ class Scour < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "281cc65233bf8de758ea2a034b28ac6f062731fd5777f0039c302ce6b0a9be9f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "281cc65233bf8de758ea2a034b28ac6f062731fd5777f0039c302ce6b0a9be9f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "281cc65233bf8de758ea2a034b28ac6f062731fd5777f0039c302ce6b0a9be9f"
+    sha256 cellar: :any_skip_relocation, ventura:        "e9a2c2597476cc5d8b127fa7c7d6b6ec086ad922b1098e9635140d107b0aca16"
     sha256 cellar: :any_skip_relocation, monterey:       "e9a2c2597476cc5d8b127fa7c7d6b6ec086ad922b1098e9635140d107b0aca16"
     sha256 cellar: :any_skip_relocation, big_sur:        "e9a2c2597476cc5d8b127fa7c7d6b6ec086ad922b1098e9635140d107b0aca16"
     sha256 cellar: :any_skip_relocation, catalina:       "e9a2c2597476cc5d8b127fa7c7d6b6ec086ad922b1098e9635140d107b0aca16"
