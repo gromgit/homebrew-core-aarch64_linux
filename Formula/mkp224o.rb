@@ -10,6 +10,7 @@ class Mkp224o < Formula
     sha256 cellar: :any,                 arm64_ventura:  "168d1f78395804cde88bc0ad7c087c18ed1b8d3d986efd4f9ab77cb7cefe944d"
     sha256 cellar: :any,                 arm64_monterey: "5fd449e1ed8792a81732494b7362c75507fa96567b5b1248c76522193762a3d0"
     sha256 cellar: :any,                 arm64_big_sur:  "77672818a99d4b11411863bd952acf9472b1b2b89415839c41600c8c7bae3cfd"
+    sha256 cellar: :any,                 ventura:        "2385ca2636a695be5689171e96f562355d3055386166855549bafb512d07cb56"
     sha256 cellar: :any,                 monterey:       "3cef4d9204063c22271e2faca7e67b7b603ba5c2e4270431933d6715b7048dd7"
     sha256 cellar: :any,                 big_sur:        "a3766fdff5c7010b3995300f688a0545961a19bec4137aad2c5304d3f849da85"
     sha256 cellar: :any,                 catalina:       "4133de045c807282326009a66f7bc1d5e56be43d75cd2be4201ac450391add06"
