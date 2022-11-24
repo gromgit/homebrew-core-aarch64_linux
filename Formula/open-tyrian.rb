@@ -7,13 +7,13 @@ class OpenTyrian < Formula
   head "https://github.com/opentyrian/opentyrian.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "ec2a291ac5f1347f43f269632b1d8d3f2b9e53d92d035c89807d921c607637e6"
-    sha256 arm64_monterey: "39a8c8ce3eb29356265616c12f10d23fd1fab1384e2c14bb664594111d2daaa0"
-    sha256 arm64_big_sur:  "b4d5f6274b1ea73030ec283ceae442a11b82b461514ceead9d1cfb6d835d0976"
-    sha256 monterey:       "4b9fdf300031dd097e1e204a65db08ead73e5139d6e43571eebdd60e07298a5a"
-    sha256 big_sur:        "b815a24ff59c0748826dc34b72d691dd4d3a48fdf5ee5650650a7f89c7087d63"
-    sha256 catalina:       "e537f93b6c659004897ae34ee7a21741a2e66621cb09ae725042e6032435edef"
-    sha256 x86_64_linux:   "d83c9e026139d4bd492da588dfa1f00976bee1ef11f4f76c2ea44bbc8d581e6f"
+    sha256 arm64_ventura:  "97b601296652fbd37fa910ae6ee874ebe3fd0d6a6744f4518b1dbdb77db31544"
+    sha256 arm64_monterey: "fe7198245df131d6e19dfb50e409b8e22d069d36e9375932525cac283b0cf5f9"
+    sha256 arm64_big_sur:  "bebfff0ef49176f0141b8c9d386609bd3ce2bb0dcbb6e2e2899c3fa1cefa481a"
+    sha256 monterey:       "dd82b9fb887fb98fc009442c650b35a16c486d20d0b8b1dac74cb43f102d670f"
+    sha256 big_sur:        "16549c5626bed5dd265ee914b75075da381cc81e1883e2a09cf841d1acfaa920"
+    sha256 catalina:       "e23f7e095081f02181e4f7c17f5d2165da83c99691fbdacf12b036e8adb8e803"
+    sha256 x86_64_linux:   "20d32afb8db3ce9038cdbc8424c16a081b93e0060ac43f35a3d62bcde0c54fbd"
   end
 
   depends_on "pkg-config" => :build
