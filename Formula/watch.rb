@@ -8,14 +8,13 @@ class Watch < Formula
   head "https://gitlab.com/procps-ng/procps.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "332c6e6f4708517197d3d2cfad3dc03e95225f5fab0695d2e399570fce877024"
-    sha256 cellar: :any,                 arm64_monterey: "99135b41e5c85d6faaeaa3b3f9c74b17eea68d1394b639e3f4824ed4a582e9c4"
-    sha256 cellar: :any,                 arm64_big_sur:  "4560b743e716fa5aaff0b809fbf8e0fbcc9c71f4e4f502b77acb2f9130b846e0"
-    sha256 cellar: :any,                 ventura:        "791a9173763eaa59a6228b18f83604279b17be88fd4c5d409841778d27560446"
-    sha256 cellar: :any,                 monterey:       "2133244ca4acb47a37f24fa3930c5ab7d200b98d0d46fb80a7fb459373389e0e"
-    sha256 cellar: :any,                 big_sur:        "77383edb8de69055e0156ac24ba26f9c786b0d40e72d8e72a2c068d36f64c45e"
-    sha256 cellar: :any,                 catalina:       "32271afc05e243444040094864b075f61079a3464197699870b5026d4b3f62a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6b323f891f08beffb572b77b70e371906ec9a263de9176bcf444e5d91c41719"
+    sha256 cellar: :any,                 arm64_ventura:  "ef337cb24a0b691a5d5d7d41bb6d3f2e1d056cb2dae41dc0d7e8511c1bb4406c"
+    sha256 cellar: :any,                 arm64_monterey: "88aa76633ada5e20079fd09d4a1fa72e3a7315a93774baddca05bf1a71fab9d0"
+    sha256 cellar: :any,                 arm64_big_sur:  "7d81da07b4ab53b96c95796ddb0e144cdeaa5c9bcd1b29fce482638b89c33095"
+    sha256 cellar: :any,                 monterey:       "d62ec054a92933495ca94e193923a4137776a28704e3426a9fae50e1b80b5046"
+    sha256 cellar: :any,                 big_sur:        "86dc7c8a7d9bf3938dc25766a7b4a4cee6540d7e821f76030136b6c939577e81"
+    sha256 cellar: :any,                 catalina:       "637ebed20d7e68d640df48580ed42a9e87389509c3634dc295dc4b04c5d6d575"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2626dfdcc5f306d14c2342d27d59ee9c7dfa04fd0c525e064ee801bd4fe2ec97"
   end
 
   depends_on "autoconf" => :build
