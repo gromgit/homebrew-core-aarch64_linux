@@ -11,6 +11,7 @@ class Spim < Formula
     sha256                               arm64_ventura:  "884c825255b5915044db2bb49779018a5439749355b0d42ced7afbf50470b5a5"
     sha256                               arm64_monterey: "bdc5c60be138784fc2abc92e1f75db7024c81867a53f6f9eeedfbb092f4c6534"
     sha256                               arm64_big_sur:  "75f374887912346bd6acf5639a0f1b506c99feea75f0d4647ed233310be2f060"
+    sha256                               ventura:        "ef5643eabf9261c32c62cf0c305d2ddb4d5aae0cc5602b5c2f6146185daa3391"
     sha256 cellar: :any_skip_relocation, monterey:       "1d5234fbb252011107f344fdbc7f249591ae3f3fe851e1e28a8b531ec37d46c3"
     sha256 cellar: :any_skip_relocation, big_sur:        "c1d1629354ab4e842c9254e47b420f56974c0611c24d267ba048fa5bf6055079"
     sha256 cellar: :any_skip_relocation, catalina:       "c6f9828c0a790cf3aa2f9bc0b2a7c6ce5f2ea730a942508921950bc6da601cae"
