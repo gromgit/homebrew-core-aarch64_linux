@@ -10,6 +10,7 @@ class ClickhouseCpp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d416b409e0b3ea994d1862f98423903676b157bcb394b17b3ebbbd955f720620"
     sha256 cellar: :any,                 arm64_monterey: "ad860cfc340915f420ac3a0f9f43a4ededae2af88f1f9d82d325ee78b59b7a81"
     sha256 cellar: :any,                 arm64_big_sur:  "c1c3be5c26eba1691038d78ae71872f9b05674bde112b59f8f829045a82808a4"
+    sha256 cellar: :any,                 ventura:        "b0546b51446c0e27351f1890de99746d2fbd3b85053b8d21f299861515d15294"
     sha256 cellar: :any,                 monterey:       "1c76150b5684c38b6cafc40fdf26a4eec68f664fab64b5cf672d9bd3623e50b0"
     sha256 cellar: :any,                 big_sur:        "55b7fde1c2ac15a34defc526a4ccb12107c757263f5202ac7fc72d81d91ef572"
     sha256 cellar: :any,                 catalina:       "b1a57158ed078088f38ce5da4207b4c10544e9268c35a17dd867e5788807ae7b"
