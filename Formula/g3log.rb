@@ -9,6 +9,7 @@ class G3log < Formula
     sha256 cellar: :any,                 arm64_ventura:  "9ce7da10cc769d71f54eada1899be07111f115bd31dfa5b54c2c7cab4c40f79d"
     sha256 cellar: :any,                 arm64_monterey: "99997b6ac31ba2e254baa6b045dc0852c80960ec164955541c2e397d46fe376c"
     sha256 cellar: :any,                 arm64_big_sur:  "f7986791faae29689a5c14f0610f0ed28df3cc9fa777b6b8af1a93d5c839d687"
+    sha256 cellar: :any,                 ventura:        "9d0cd1b6d544755cb332a3f274d6d92b3a31c368cd83074c945f1d21c7d24a12"
     sha256 cellar: :any,                 monterey:       "1a6a132534a972a432226947aab60285475b0ade28754518a96852add9f3eba4"
     sha256 cellar: :any,                 big_sur:        "1944ed238a728e517ad30758607f11e955252f9eead61e777b82c8f8f1f317b2"
     sha256 cellar: :any,                 catalina:       "eb81f87d497f5c9fc69bcafa7563aafd48ea9a76f880ee18a56e7bf51aa355a6"
