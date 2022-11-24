@@ -14,6 +14,7 @@ class Clair < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "3385e3ea407d0e37896de6a9c4162621d2a7c786c8feed6387511eab462fe7f6"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "fe0318b20f8257649db32233d68476358acb4bda3149bf128fbf1b7aa4f28452"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe6f6ab7ee6984c44c8631339dd881c0486cf0e032fb5b524c254726d691c2df"
+    sha256 cellar: :any_skip_relocation, ventura:        "e68de8dfe963cf4ef345fe58cd8d71ec2b4ff4d60e5e8fec7c40328fd00048fa"
     sha256 cellar: :any_skip_relocation, monterey:       "dc4e83d6284e510aadc27e87fb6a6f9ac5d260a26a3d3c27946f627e26ff53bb"
     sha256 cellar: :any_skip_relocation, big_sur:        "eee1ad5f4103bd3a0b4707b451a00e9eeba3e30066d514ed1646abcac74f7450"
     sha256 cellar: :any_skip_relocation, catalina:       "edcc194f963aa58dbd2d0b77cda92ed351b593cfb85cfb36fbae0df346e27ee6"
