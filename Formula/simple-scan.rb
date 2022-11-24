@@ -9,6 +9,7 @@ class SimpleScan < Formula
     sha256 arm64_ventura:  "44ce53c6ce4db8a2852b2bfe791b2eb2c1b76dd4c2b43c50cb35194f3084b387"
     sha256 arm64_monterey: "80acb3bb82bdfc4ae6311c9a8188fcdd93a4357434248f21e47d7d9490682c22"
     sha256 arm64_big_sur:  "ac9800eb3bab125883229ed260f55c3a0b440fc03287f8d823d1fb38edfe5218"
+    sha256 ventura:        "d1422a16ec6e767acc9a6048f8eddd646be4ada7cf6a34b488b9b93d69c22208"
     sha256 monterey:       "e9805d0b210633beca14b395cf8fa4d9fe182e8dde09a065403901c44796e91e"
     sha256 big_sur:        "a1cc322c0ce81cf2bc2e2e9aab706542bd52c93941c295c756c4ecfc6481ba4b"
     sha256 catalina:       "9d484fd5d6baf6180b3e6d9946dd752f4f485f029fd1e2edc8d6945e11f5ebc3"
