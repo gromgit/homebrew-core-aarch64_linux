@@ -10,6 +10,7 @@ class Fabio < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "cc2a65219ca38763639f0c2f1b96f90bef99c3a501e182c28d0a0ea08fbc0658"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2e026048e68fbb30c0c9cf919f8a2e999229235cc4664519e74f5a5a54b008b7"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c67d7f2250abe334b63ae79e7defd7a359a3359c51e5b0a11b18f5cc879ffbd"
+    sha256 cellar: :any_skip_relocation, ventura:        "0371ce6586ef3e5f9b81744ea6d62c7004da355ff8394405d62cd20725942c06"
     sha256 cellar: :any_skip_relocation, monterey:       "cf14d2e7044c8f3fb921f0164fae9fb003d52cd508a16e16c8bb490948813f6b"
     sha256 cellar: :any_skip_relocation, big_sur:        "2935f766cb066054fe48e3e784ffca0430afb329e023dc9ecfde3e29659b6e6a"
     sha256 cellar: :any_skip_relocation, catalina:       "bab3551ce6db98ad5bc0fce72263cf7adc482ceb10c9e58d1d3dd05e8771c5b5"
