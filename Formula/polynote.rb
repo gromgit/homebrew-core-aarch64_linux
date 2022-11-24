@@ -11,6 +11,7 @@ class Polynote < Formula
     sha256 cellar: :any, arm64_ventura:  "87874fa32ab06a4344b003a53b18c0b07d2fe31271e5b4f9c197aed2d7ab9f15"
     sha256 cellar: :any, arm64_monterey: "ae1360c0e00a9a4b3da148053ea6faa578b41b6c4ef524771d110d7e67d44498"
     sha256 cellar: :any, arm64_big_sur:  "7e964925acabf6c3a6ce355cd6481d96daf4861e73cda963da5dc70326389548"
+    sha256 cellar: :any, ventura:        "343846aa34344c1e5b4704bcf8c01113297d5682b916cc638ac88e3060b09a36"
     sha256 cellar: :any, monterey:       "58b34b1b44f326c8aa1fc357ef4124e1064da05566f5c3a37e98fa325e43eae5"
     sha256 cellar: :any, big_sur:        "5990e8cf346855098c4b6af3761ba77b74b7edaa422f58f35bd5b676984ea36e"
     sha256 cellar: :any, catalina:       "7a3d9d4084596c2de11b6ed19369789bde963fdcfacc8b9ec87b2aeedff95d55"
