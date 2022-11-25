@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.land/"
-  url "https://github.com/denoland/deno/releases/download/v1.28.1/deno_src.tar.gz"
-  sha256 "1f5c0ee6c805508316f065f1540ca95f887d040d531c4bba688c656bd3bd6abd"
+  url "https://github.com/denoland/deno/releases/download/v1.28.2/deno_src.tar.gz"
+  sha256 "ec42e4aac15308efee702c92e9651dd0894b7c0728edbe5dcd49f6d14990a7e8"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -58,6 +58,9 @@ class Deno < Formula
         revision: "bf4e17dc67b2a2007475415e3f9e1d1cf32f6e35"
   end
 
+  # textwrap 0.15.1 was yanked, update to use 0.15.2
+  patch :DATA
+
   def install
     # Work around files missing from crate
     # TODO: Remove this at the same time as `rusty-v8` + `v8` resources
@@ -68,9 +71,9 @@ class Deno < Formula
     resource("v8").stage do
       cp_r "tools/builtins-pgo", buildpath/"v8/v8/tools/builtins-pgo"
     end
-    inreplace %w[core/Cargo.toml serde_v8/Cargo.toml],
+    inreplace "Cargo.toml",
               /^v8 = { version = ("[\d.]+"),.*}$/,
-              "v8 = { version = \\1, path = \"../v8\" }"
+              "v8 = { version = \\1, path = \"./v8\" }"
 
     if OS.mac? && (MacOS.version < :mojave)
       # Overwrite Chromium minimum SDK version of 10.15
@@ -112,3 +115,22 @@ class Deno < Formula
                    "#{testpath}/hello.ts")
   end
 end
+
+
+__END__
+diff --git a/Cargo.lock b/Cargo.lock
+index 5b9a49f5e..e5b4e2676 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -4803,9 +4803,9 @@ dependencies = [
+
+ [[package]]
+ name = "textwrap"
+-version = "0.15.1"
++version = "0.15.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "949517c0cf1bf4ee812e2e07e08ab448e3ae0d23472aee8a06c985f0c8815b16"
++checksum = "b7b3e525a49ec206798b40326a44121291b530c963cfb01018f63e135bac543d"
+
+ [[package]]
+ name = "thiserror"
