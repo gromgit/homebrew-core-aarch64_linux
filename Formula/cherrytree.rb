@@ -11,14 +11,13 @@ class Cherrytree < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "7522f94e63a4740bf8eef59572e00092d258a0cef42d5d64a6b264f4c1ce5e79"
-    sha256 arm64_monterey: "fbadb047e383f75a0e2bab0733fe03c71900122b4fe15c7b4fafbbdb6c4eb270"
-    sha256 arm64_big_sur:  "4bbd4ab9921b4f0589b5f1331f9a7b8b084918bd50c3b3c62a0bdbba66b55318"
-    sha256 ventura:        "fce2d04ab74c54ee78d4dfb0ad55fca60857f925c0221d04a85205bcce2590e8"
-    sha256 monterey:       "4dc6f9c75199d4d19258af2e676d12eb7776fea30f03457e15d5f51ca8f1c550"
-    sha256 big_sur:        "241c66fa21a304aa24b3bda20b4897cd3c836cdd152612360db9887ce0b29c82"
-    sha256 catalina:       "392b924031fe36ebc2043a53a507fb14d702de5aef8daf6f76b4b6676aeedd6f"
-    sha256 x86_64_linux:   "a42030e5a180dc18bb50bcd7fa775741d788deb07fd9de39a482ebc645a73767"
+    sha256 arm64_ventura:  "ed06a3801eec16f08994358a2b61169b02a2661282e6ece52dc5213eb13a04ff"
+    sha256 arm64_monterey: "5821db47514696faedc5f9c1efa63f67fce8a2265f9043f5c1b3bb1b098cfcd4"
+    sha256 arm64_big_sur:  "5dc1c67be7342c92c80d3fa14686071696c5b890b7f12e3c202da90d1c433985"
+    sha256 monterey:       "cbebba4389bf66a7462564afeabf839456fd9f33512ef717b8acb29f7a6e8a05"
+    sha256 big_sur:        "e615aae8dc34c097209312ea316524cf136496967b1d5ad3502abc60f1c028c5"
+    sha256 catalina:       "1e6d1097ddbd7eb1a65b5d061118a84187c00d4465bd5bd6d909b8552201cb22"
+    sha256 x86_64_linux:   "b2409945a56f772bc6a11dcbdc9de9dec500b3992d7c3db316bbbd6fab4241fb"
   end
 
   depends_on "cmake" => :build
