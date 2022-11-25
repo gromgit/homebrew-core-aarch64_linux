@@ -9,6 +9,7 @@ class ElixirLs < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e13ea97c7ad0f5ccd06807619f500f78cbc1bbf686114e67984f4dd046f2e5a5"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5467e24cda93cb6f08f9db820f7d9e9c624935a8b7dae37398b7f388669b4847"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2a5bda7b31255283eade45dbf9f1b0e16139a5cc849030d73f1f142ba0d60aa"
+    sha256 cellar: :any_skip_relocation, ventura:        "346826a1ee5ff0ab04ac39f56cbd6e873b0b175e7997da83cb6a4a5ee0be0c35"
     sha256 cellar: :any_skip_relocation, monterey:       "bf9f6a487572b4f8630e1994ac73b89bedf150c7830bdff26b3cd8acab4fe625"
     sha256 cellar: :any_skip_relocation, big_sur:        "e306161b58393478801bcad0bad8a7e776f56a8db5cce1953977221cb2d6728b"
     sha256 cellar: :any_skip_relocation, catalina:       "fe49393124566234cc76a42cda2e7bdab3b6fd8d028468cb7ac5b43a2a7d5d8f"
