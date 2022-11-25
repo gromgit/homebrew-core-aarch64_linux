@@ -22,6 +22,7 @@ class Burp < Formula
     sha256 arm64_ventura:  "bcdb7b1ba0bc260b156b7a981694ece3695bb5d4a56936009e317e2cb56bc655"
     sha256 arm64_monterey: "5b49f738c6755ed1661d0f4d17b2cfd5543316f775d6a17eac32bed217c6b84a"
     sha256 arm64_big_sur:  "b61e5e1920d691c06ef16e4fd2ec8a9ccca26c305bd9e8403c6d25a95327403b"
+    sha256 ventura:        "c2f02eb0dbd7fa42452392ca27aafdda72ede38e6917aea3fef4efcc7d57bcbe"
     sha256 monterey:       "6917c1084a60abd9e9f3c4b598550364d0e48ec834794ae874628535fa9b49f1"
     sha256 big_sur:        "d542ee4aede6d4fb0d651b9888cac192fde50285889fd716b224d62ccd3b0cf2"
     sha256 catalina:       "7dda2191539b4da970fcab02ff231b13a897bb809972f7a505fa74f676ec026d"
