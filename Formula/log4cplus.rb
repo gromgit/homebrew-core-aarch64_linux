@@ -14,6 +14,7 @@ class Log4cplus < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a0a8e4ba248749650e1444954c18d7fcbd91297bcd9514f611d8d17323c73432"
     sha256 cellar: :any,                 arm64_monterey: "1c462b9d31dce4812a51fe1a620d423bacc424d12abfba3b9e161a3debda65b6"
     sha256 cellar: :any,                 arm64_big_sur:  "fe85d95a5749af4c54332c4f799a121b8d15a11f949e96abbb22a8287a8c4c2c"
+    sha256 cellar: :any,                 ventura:        "b5398e0afde62a5e3fb2dc982ce2223daceda1152ad94bb7ebe523fef9c5c806"
     sha256 cellar: :any,                 monterey:       "affad148e3fc8a11f5c3cfcca7aaa0b78a6fb0c1c1a23c43107b12af159274bc"
     sha256 cellar: :any,                 big_sur:        "7130b433ddac37a7c5f7621b7e715944286432464d484bb1002863d1551c4066"
     sha256 cellar: :any,                 catalina:       "59a7948863b88c2c47a138fc2a436aebbaae49ad4d674e0f5ce6489ad0ff9c3d"
