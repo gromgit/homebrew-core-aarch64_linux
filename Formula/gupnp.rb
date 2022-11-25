@@ -12,6 +12,7 @@ class Gupnp < Formula
     sha256 cellar: :any, arm64_ventura:  "c881ee736478e6b589d986be0170ca74288d72dc1aaf1e8a80c96bc8ce73f54b"
     sha256 cellar: :any, arm64_monterey: "20a8225bd3f69fb56b37b09260e43699ac2ca88529178593c09b3b0ac6a05516"
     sha256 cellar: :any, arm64_big_sur:  "cc2a5d6a8a5755eeddf83c5e39be393b9a8597ca4d35b4e230755cf2e25d2d78"
+    sha256 cellar: :any, ventura:        "34fed8ab99e60430b4fef8b1f51bb0bc2f482f8c9ed7178323a0ee1a35567ce3"
     sha256 cellar: :any, monterey:       "bde4dbd7e0104c45f2776b1327fbf06876f98c376549b88221563a5e25b2597a"
     sha256 cellar: :any, big_sur:        "a9aacbb2274395fcf56e2d8d18a6f91d342d09fbb1b1cf73e1fe51065b31af3a"
     sha256 cellar: :any, catalina:       "ba073cf84ba7e26fa06dd14b4d6a0502650c99e0225822168d784520b2c7b036"
