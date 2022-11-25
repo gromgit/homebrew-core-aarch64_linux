@@ -17,6 +17,7 @@ class Couchdb < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1861396808675089a1605817913ec967a42b20b6ebba377a2b778240efb1b92a"
     sha256 cellar: :any,                 arm64_monterey: "10915b592f151923cfdbb897fdfce09472428acf706c47270be15bbb7e03519d"
     sha256 cellar: :any,                 arm64_big_sur:  "2fa3cd31dc3c53a80f389cca0cfcb01e6437f5769fd016af407e71a07454b5f6"
+    sha256 cellar: :any,                 ventura:        "3c3f87a257aca14d55eb434487b0384b625a0be3b9c52e51ecb0954e0b99b7a8"
     sha256 cellar: :any,                 monterey:       "f62c2ccecaadc5de7caccd62d4f4500afebca0dc69d8d4d2dbe0b7ad5d68bd1e"
     sha256 cellar: :any,                 big_sur:        "5f927c75898000afb985bd0574ac155869f1348fe018fc0b7c15ba4ae3950de5"
     sha256 cellar: :any,                 catalina:       "ace6e1b4a44b08522fc49bfa65e194502a886fec1c0d5a8edad890eee43ecc3a"
