@@ -10,6 +10,7 @@ class Cpr < Formula
     sha256 cellar: :any,                 arm64_ventura:  "daf5f4894c2478834e450baac837154179fc88a2ec3d7d06ddf6c3be24ad4ffc"
     sha256 cellar: :any,                 arm64_monterey: "2d53f0135afc4e4b3767a5a3293d7cf467830d7c0a634d663f4bfd353054991e"
     sha256 cellar: :any,                 arm64_big_sur:  "95ec7967fa535c4b6d80ebb3f5112f91b74432a372b4ee15b88fae50b5f9c3c4"
+    sha256 cellar: :any,                 ventura:        "7fb242be16db5b1d40f897c9ae3c9c3707c4bae8550af47f27177106aff45eb8"
     sha256 cellar: :any,                 monterey:       "36a7fe15e003dd3bf20d1f8e3dbb8101ca4db8d52864b701ca5f4e956086d67b"
     sha256 cellar: :any,                 big_sur:        "8f04311199164cf7afb2d552b177fe0f61c0bae1f226161fb4bca5492e3dc3da"
     sha256 cellar: :any,                 catalina:       "58275768c618ee0fb50833391bcc6ffe4ed380eba1cb86ffdf65f2d935b3b140"
