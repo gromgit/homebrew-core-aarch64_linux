@@ -14,6 +14,7 @@ class ArgyllCms < Formula
     sha256 cellar: :any,                 arm64_ventura:  "97e1af541220a0aeeebd4cf5dbec4b95910d18cbe80ff7d4b1a2550baea18a03"
     sha256 cellar: :any,                 arm64_monterey: "2eb28a59cef2bdcc142008d4d36470e586e8e22285273303802a7e16bb95d08f"
     sha256 cellar: :any,                 arm64_big_sur:  "253c5434082b4237f8067ad31ee6fae81811048f76d2cad8e2ae3ca360d51be8"
+    sha256 cellar: :any,                 ventura:        "efc91bb914a5c0e7a66d674c06ea9f8b7c552611bb5bd16538acbdad95a30709"
     sha256 cellar: :any,                 monterey:       "efa97d39822d0ded97541bc095e59a976eb3f893da6bd4cbb2a90a3174cd9830"
     sha256 cellar: :any,                 big_sur:        "eb7a9fd709675ccd7f1b59ae9d3e17bc301b4f7c15857a4c32f8f71e6801dc05"
     sha256 cellar: :any,                 catalina:       "36860658ac2513441fcf1968c16d57fa6fbb5b7385d5437df24ffebe84ed7e1b"
