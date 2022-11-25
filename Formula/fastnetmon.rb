@@ -7,12 +7,12 @@ class Fastnetmon < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4874712b56f6a317241d571e9d4bee4074f274f33aba957d199472b20848d1ca"
-    sha256 cellar: :any,                 arm64_monterey: "9397f1e85a14fe01376745907976ec8a37eeafc966ff6a8e13fe407cc07e75b3"
-    sha256 cellar: :any,                 arm64_big_sur:  "81b7e06d431a6724e583644bf93acb7ae44adb53a607bb42c2fe824a558f6c73"
-    sha256 cellar: :any,                 monterey:       "4cb65b6511be83942070039e28600819b69d7c9dc829fd577ead6878220ef76e"
-    sha256 cellar: :any,                 big_sur:        "24199e0f552c17d7a47264aa6063724c0cac654d36d95257ef0907d00912ffd0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bdd46a7180c296104f938969aca42df7e21f7e9b8b5e15405fde15c03df23d73"
+    sha256 cellar: :any,                 arm64_ventura:  "cb74138117b205fd0785e4326277fa4a5be02f604a242782b7096b30395c4528"
+    sha256 cellar: :any,                 arm64_monterey: "1c543c1dbbf305b10bd06392467592c4ec1119253a72420a0fe6a8b239c1548d"
+    sha256 cellar: :any,                 arm64_big_sur:  "30ffcbd99102b8d0b4c93ab3030bc5004c5d1739097ae7b50c0f7ef72f92ad69"
+    sha256 cellar: :any,                 monterey:       "a34b6feb8327ee0a96a144e547343c348a57945e8e765b600c501e96802ccc19"
+    sha256 cellar: :any,                 big_sur:        "f7c18f84a8b233949d71c8a382aec8f9493cb033320e82b2e1e8fb199ea8e056"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae301c6886451f615f0791b76a5cfa67ef5688432411e1c02bf99f2142d2bee8"
   end
 
   depends_on "cmake" => :build
