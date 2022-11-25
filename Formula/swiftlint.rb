@@ -10,6 +10,7 @@ class Swiftlint < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7d447fe250b531775462560ed2179b284addb279f7dd0b6d2533da12b3c9b42f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "77a486aa11b6a3cfea372752d945ff5a7f20a953261449199bdb0b0ed62da336"
+    sha256 cellar: :any_skip_relocation, ventura:        "d2c6d79212a79f3b1acee88ab44018eccf20e9fce12c69c31c782536f92493d6"
     sha256 cellar: :any_skip_relocation, monterey:       "af0964ac41d78b6dd2eb3affba7b1a01cdb43649196fe0bf139d72589195e110"
     sha256                               x86_64_linux:   "13328073f6c8f572ab9c5e5e1fe170b54ff43ac7038b13d602e361619cbea474"
   end
