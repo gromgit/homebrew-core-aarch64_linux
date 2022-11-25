@@ -11,6 +11,7 @@ class Trafficserver < Formula
     sha256 arm64_ventura:  "70624fddac88e4b9358006484f69064d205d0573f3f138ec348c6127fd8d3040"
     sha256 arm64_monterey: "ad1c4081325f16e88ab2e0a5b28fd40e73773ddd991aa58e6e34245ddb186e22"
     sha256 arm64_big_sur:  "56104bf78296d6ae59562fadeda12ea162c14a201c28cb17a5d492c9ecbb2d13"
+    sha256 ventura:        "ccba3cb74efc81dc4e1386cc943449c49968bee610b8fc8de96441f0448699d8"
     sha256 monterey:       "9514ddec436b6ca4e6b15745a82bc8e34a442c661422a603bfa5b9bd7c79746b"
     sha256 big_sur:        "4f106b8242e5f85b470d7ee182426a4fd7f10d4cb48c77cd15b2d494fdf0981a"
     sha256 catalina:       "cdef360aff3c14b9811e69da4c543bc62edbac14b02c36e3a1a8d70e856a07d2"
