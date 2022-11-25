@@ -10,6 +10,7 @@ class Luau < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1127a481258b2b242ae4a5787cc50a632e7c085c605979a60e5ec15972ef80e9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "18f332db9e7b8bd4d87b4b25a1b4107f66365cdd5a24e86625614cf1fab1c813"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f77b1c8f4e835b527cd562ff88b63e992a2dde37c7b5c78ee0c2e9b27d0a282"
+    sha256 cellar: :any_skip_relocation, ventura:        "5b48d9f0338e51b1f5f6f0787b4f2e0ba0512f709f0d41efe3c5c091ca0c8314"
     sha256 cellar: :any_skip_relocation, monterey:       "ae478472adafa43ed348ac6505ba250afe07592dcb9999bb47f0efc065b1fca7"
     sha256 cellar: :any_skip_relocation, big_sur:        "17e410450a603eba42c1e10fb4acb2cfa9373ceaf068ca854347082d813eec84"
     sha256 cellar: :any_skip_relocation, catalina:       "b5419de39ec2378d8c74354485e65a05113d43eff131e67ac440fd631cb6b854"
