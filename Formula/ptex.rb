@@ -14,6 +14,7 @@ class Ptex < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c7282fd8fe44376f04b4b3c1696a30f36f1bb150b9f2894a689ac456b8121620"
     sha256 cellar: :any,                 arm64_monterey: "c8166dbf7e60e50c6a602d9cd086c95d3ff6ffd174532195e06cc7b8ee4b5e5f"
     sha256 cellar: :any,                 arm64_big_sur:  "cd30bbf7d22f7cda90f8c3af76b4d9ff36a606384ba1f4c04859053a230c2b11"
+    sha256 cellar: :any,                 ventura:        "de4e10f772f79cb92fdd3bd56d2e5d8d24eef5ffdaa81674215c6449bdaad812"
     sha256 cellar: :any,                 monterey:       "22a62f337bcab936818db4534f04b38615592278d8baba30cc14312c7646453b"
     sha256 cellar: :any,                 big_sur:        "21815b74081a6e0129e400f656a33ad927247ee228c1dec5e47a3affed08c8e6"
     sha256 cellar: :any,                 catalina:       "2793ce52bb20a2274fa5b3e4b69133150ee5b52a212edfc403985784f62601e1"
