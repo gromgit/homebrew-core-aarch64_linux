@@ -10,6 +10,7 @@ class Caire < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "510be9ef3971dd6594e3d662a8a4a8f97fe5d587a902cabb803425a61b531b8f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "7d59ce1a8791d14ee71f54abe8b0cadfe19ba512b90b13f2f8f7625b0e1a5ade"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6dc0a2e1542d2843ebca8f84d72c5cc74db54b6c09a3cf77bf71879156f9812b"
+    sha256 cellar: :any_skip_relocation, ventura:        "aab352ffb29304bf5b53fd7f17781e615bb6e2968fcf553dfb6c8b66c1a024e1"
     sha256 cellar: :any_skip_relocation, monterey:       "9201a9019646d54bd87e4b04eb93249e6b423a985fa8562b8c6153f140d69c5a"
     sha256 cellar: :any_skip_relocation, big_sur:        "56c8c4cc534e40b5b9d157f4ab6327fa660d4b86bf4884340b74fb1fdd0f9d20"
     sha256 cellar: :any_skip_relocation, catalina:       "2e2a3e4286f0358b389ad7e991959428bd8afb9fc5c2936aa74d007d6e8497e1"
