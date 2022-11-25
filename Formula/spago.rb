@@ -15,6 +15,7 @@ class Spago < Formula
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e6447a607985494aed97909b0583f6d82d280adb3e739e0c0cb3c427fe1c1c86"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ea6c1ae274ae86a19b1b5e476a01cf3cff396dcca7bf0a004b931767bb29d5b4"
+    sha256 cellar: :any_skip_relocation, ventura:        "c97e12c317c389b7279a4b4f173b8c521ece15da4c1fca3ca6cba63bbd6768f5"
     sha256 cellar: :any_skip_relocation, monterey:       "e8974b1ff24ce317a5c94a225b669d0d7c7e35dbf2df1a27c9b29ff1d60854be"
     sha256 cellar: :any_skip_relocation, big_sur:        "e5fa3a596084f77f2c4504afab744fe8ab18eef868353196c512af1991d9366a"
     sha256 cellar: :any_skip_relocation, catalina:       "316fc107f6b9ced5eed8f3fd8cf08bd73f9f03818bad293fed3568516d76b63f"
