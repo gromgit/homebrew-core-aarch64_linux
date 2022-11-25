@@ -17,6 +17,7 @@ class ZabbixCli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "54d0f8f076a88e46ce0c7a46a95f7916208320b25acdd9d53c5cc883bb404d78"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a17c1846fbb86ed35ff45fe93afa0d68be89ba302bd95692223f9a5734b865d2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d50c80e8d4f1850ee8e4588404ad6e018fe538ee328a14b3f0567e2e08ff7109"
+    sha256 cellar: :any_skip_relocation, ventura:        "74f0c543d6a4d5510a844e44f8775da8386b5be5eb72cf15e896b3f10dd8ab44"
     sha256 cellar: :any_skip_relocation, monterey:       "eb09b94bf7ae3692ee2bb80f2d6f9ee22e383895deccc56ba59c9930ff4386a9"
     sha256 cellar: :any_skip_relocation, big_sur:        "eee58916c80f877ca81f7f978f8ef3d4db59f90437ced3dedf8dde77a1bf443b"
     sha256 cellar: :any_skip_relocation, catalina:       "e695321a2879cd0a7169048c64bdea06c0c761d5dfc8bdbbfcfd565ea0747253"
