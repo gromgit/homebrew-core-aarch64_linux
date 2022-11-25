@@ -13,6 +13,7 @@ class Honcho < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "746b94c6cffbacc10ce88ddc5052262342cc26d729acfc4e2201a2208e08bb97"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "746b94c6cffbacc10ce88ddc5052262342cc26d729acfc4e2201a2208e08bb97"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "746b94c6cffbacc10ce88ddc5052262342cc26d729acfc4e2201a2208e08bb97"
+    sha256 cellar: :any_skip_relocation, ventura:        "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
     sha256 cellar: :any_skip_relocation, monterey:       "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
     sha256 cellar: :any_skip_relocation, big_sur:        "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
     sha256 cellar: :any_skip_relocation, catalina:       "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
