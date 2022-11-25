@@ -16,6 +16,7 @@ class TclTk < Formula
     sha256 arm64_ventura:  "55a38f29acf61f16d9a7d91546e14bb102708b9ece4dce5e243cf94a22134259"
     sha256 arm64_monterey: "03f3d27e2c369dc54fd6ddf037991c7c9eb3bf1e4af9efea87a5f0425cc171d8"
     sha256 arm64_big_sur:  "f9f9c8e0e9fbea41b9a2890045a2a01f94a74ac8890e49406cc098782fb7e4d3"
+    sha256 ventura:        "6891661ab80a18459d23ac3ebaffa9def7e996bd6f15f229a1a5291faad047fd"
     sha256 monterey:       "ca15b6e71d81499f80bce95b854138b07bc3843fc8c8d832edef1585da698996"
     sha256 big_sur:        "7d61f627dce342477e4ebd5e86c226fa2aa77dde6e1e0feb6ae3b5f54cecb7cd"
     sha256 catalina:       "a6c5e70dcaa9144148b330f06af8209ddae6a6438799ed6aea3d0ca4d97c5444"
