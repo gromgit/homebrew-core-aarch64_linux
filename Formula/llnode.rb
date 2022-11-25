@@ -9,6 +9,7 @@ class Llnode < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c11ee956c445277d3a77bfe5ab6b3fa9553c922aabf22731af6e2135d1c2b361"
     sha256 cellar: :any,                 arm64_monterey: "e1c93fd5aefebd887138fd244b50db737433cc30c278c6d18a3e87f0d6316f29"
     sha256 cellar: :any,                 arm64_big_sur:  "a86c196564ac07429bc188fbeb4780d408865721cc7e929e9aceaf24f8e79109"
+    sha256 cellar: :any,                 ventura:        "ec584fb90528046e31353b134abf6e017a72da189ff394a72d3d9e1affc6b9f6"
     sha256 cellar: :any,                 monterey:       "0737158c515f49e2cb56c68df835f789daa8d13f5b85a9a300532078318a86e5"
     sha256 cellar: :any,                 big_sur:        "fb32b0d19ff9f0c760a79bafdc830f0574a85165601ab493a9b8c7737e5dfef7"
     sha256 cellar: :any,                 catalina:       "d8d1926e4447e8a07e56744001bccd5661fce6186fbb33e75218d11bf57c4908"
