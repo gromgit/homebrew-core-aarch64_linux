@@ -14,6 +14,7 @@ class Findent < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1e5a7beb16d379418feed1bf0a09f4797f79ffbf7f08a1c1979ae78eb88bc401"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "421593e9181a0b27e6204e1ec6890eb658357f6987089cfdd0902a9522e652ca"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "054f72650aba62b06fc435085906d72a311914f816358eaec4a6f49c94d2b94c"
+    sha256 cellar: :any_skip_relocation, ventura:        "e121f00dadd1637588677e0ff0eca41045e8e16d296a8bb58ab3a2f6d43b95be"
     sha256 cellar: :any_skip_relocation, monterey:       "4902b19c53ffac5517065d85112060d06904d5157a3584b58d8752a37b1d62af"
     sha256 cellar: :any_skip_relocation, big_sur:        "57e35571c405ca206b87eac801964b17ae234db9d7fe870863740de0a85fa2f2"
     sha256 cellar: :any_skip_relocation, catalina:       "4f4ecb21d0049d8256dd6c5b4b5a102a024c4b35f9a86c670f7580416792372e"
