@@ -13,6 +13,7 @@ class Folderify < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd3aeb5647cf823634c8d5ddeea89e3ea5f5a0c1d63953a26dcf47c2c14784b1"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b35bc64a01041e596b159c71533eb632ad3d2a278b3f850d5bc2dea5ff5b542c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b9491bd61efa21a3fb11de4048bf3976549737f5519fa9c8707d3d29aa88495"
+    sha256 cellar: :any_skip_relocation, ventura:        "9a1ccdc83f2e7212e30c3bc8a9762a23b705c62e13d96cbc6a618f2462eb1c6f"
     sha256 cellar: :any_skip_relocation, monterey:       "d494fd1ad63d3dbee0d088fea5ccaaea738f790a4c0017f60d1c9933cfa6dc57"
     sha256 cellar: :any_skip_relocation, big_sur:        "1c35e9f509ca6b82360b58f5ce7ddf8f08f2922ac88357e298846849400cab8a"
     sha256 cellar: :any_skip_relocation, catalina:       "f77da3ff2274fcff4d3fec345b63f31d8d2eb21b9d59a59f1b9e236b3567fc3a"
