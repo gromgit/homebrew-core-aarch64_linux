@@ -10,6 +10,7 @@ class Atlas < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "91118dde707f7733b5ef0e492b994fd30df8c983a9a83103800ab8329e7c0bb5"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "7355f9b10ae5982bead5b86755b4959fe7bba61c83e4f3b52c9fe1beb39256e3"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e78a0a9fed74982b10ffeca4958f5db4ef6f5f2ceefdb43b40a959972c1b11e3"
+    sha256 cellar: :any_skip_relocation, ventura:        "ba2b6cd90e0f77a53b28995368ed90674ad5c0fbe5a8437d1b79640266642b18"
     sha256 cellar: :any_skip_relocation, monterey:       "a6dd1f50d5b16b06971ae3e89aeec4e79df3989ccaab9378828e2dee5ea37035"
     sha256 cellar: :any_skip_relocation, big_sur:        "b27f8fd26eeed106c8ab99c561d912c5671c96408c08cfd11565ab1bbcab639e"
     sha256 cellar: :any_skip_relocation, catalina:       "552e6539d5a89503f7919c019cc1491427f9b3fd633d87351eca7a626d2b6e68"
