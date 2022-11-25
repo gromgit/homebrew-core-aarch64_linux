@@ -11,6 +11,7 @@ class Packmol < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2a9742646629889b014e28455493ed34e7fa12c7c41ff996916d8d2936544320"
     sha256 cellar: :any,                 arm64_monterey: "fecff45f74a420d0130da37bf0cf5a28af97374bf937d420224c0b788c9f3484"
     sha256 cellar: :any,                 arm64_big_sur:  "71e139ba5f9087ca1138850734c38b2deb8ab1796f31c9eac69995e614039360"
+    sha256                               ventura:        "99d1fdfd466aee58154eead944dccbe8d2626dbce9766bfe00a86dfd8b281e4b"
     sha256                               monterey:       "a542c7ba163c2c80ee6cff96d723d870365805857cc33850a5cb476a9d4fc7fa"
     sha256                               big_sur:        "f70726c2caa17229c95639622cc67cb6a7e8328b8159a1802bee7ad5ad6f486a"
     sha256                               catalina:       "d97c6f8b4ae3d70ddb8dd2a18f2ad16708a0d6b4e5cb98af4def6cd44b760e49"
