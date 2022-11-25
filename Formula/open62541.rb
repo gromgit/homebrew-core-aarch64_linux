@@ -14,6 +14,7 @@ class Open62541 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "85293f5e208ac641c186a906b7a841489b4bd38d02b443acc5c4398bf9ab1eca"
     sha256 cellar: :any,                 arm64_monterey: "07478af723841eb386d0a00d3f202fa565bf307adec029732743fe913e4972fe"
     sha256 cellar: :any,                 arm64_big_sur:  "e3297ff0fe53a3f1f09d24aaac946724e436e5748605b367aa223de7328a7a84"
+    sha256 cellar: :any,                 ventura:        "3b5ac959355d001600cc8b86dbbcecfa60d6eef5f781cb6573ccb91529a671dc"
     sha256 cellar: :any,                 monterey:       "600fd9b32911885b3587583f174c65c2f35f5d09488b327f17248155ded73e90"
     sha256 cellar: :any,                 big_sur:        "561390143dc08bb6c8e1daea0bc0f1b1fb6fa05a3582d2c77983f734d90bde5a"
     sha256 cellar: :any,                 catalina:       "3480fc2987acf0c6ed31a7e2ca2e097387fbc975a242ca5df45a1f3e6e088135"
