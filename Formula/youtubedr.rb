@@ -10,6 +10,7 @@ class Youtubedr < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "c954d5d7093b8b2d31e38ec6124e74871a47346c0d813afadf036a46f0bbfa1f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c954d5d7093b8b2d31e38ec6124e74871a47346c0d813afadf036a46f0bbfa1f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c954d5d7093b8b2d31e38ec6124e74871a47346c0d813afadf036a46f0bbfa1f"
+    sha256 cellar: :any_skip_relocation, ventura:        "62a051a3cc2211b15006dc5311ceaad1a5c2c320a5116702a21f6f1b0a10f1a1"
     sha256 cellar: :any_skip_relocation, monterey:       "62a051a3cc2211b15006dc5311ceaad1a5c2c320a5116702a21f6f1b0a10f1a1"
     sha256 cellar: :any_skip_relocation, big_sur:        "62a051a3cc2211b15006dc5311ceaad1a5c2c320a5116702a21f6f1b0a10f1a1"
     sha256 cellar: :any_skip_relocation, catalina:       "62a051a3cc2211b15006dc5311ceaad1a5c2c320a5116702a21f6f1b0a10f1a1"
