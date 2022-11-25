@@ -6,13 +6,12 @@ class Xclogparser < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "24ab6f9fc9a46af3491347aae04b72a1767a72280e9972970d448b3bb9ecfb8b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "49ea11aedeba42960d68e097ef21a0296cceb6c295b3cd5e461975335957e6cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2e7e6d595a5695da985c616618f41adbdd41deb1032e29c4e0d0b3478f1de795"
-    sha256 cellar: :any_skip_relocation, ventura:        "f1ada4a1b0546aace2fdd176835de8eab0e838f7cd691018ec6f996a851cb37d"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf21af81160749d42337cfb922a297be534087caf8ef47d7bd564e5a2d4b5066"
-    sha256 cellar: :any_skip_relocation, big_sur:        "02a5d2f1a0a9c8be0369f403fd2a7877039c73d9f73c7f468a8fe00d07410897"
-    sha256                               x86_64_linux:   "096bf37eeb2ded008e06cd959be0a85011d759ccbc2cfd715530f757a124eaa5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4563ff5ac2c03cb10b0bc33b41b3d97a56c99bf0a3c0511924d5ef18374602c3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb83245ca0057d737291cc85e863341cfe4fdfcadbb5863bd9d462e748b38599"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b422ad12e5b7a6113460778c5e1f78bd728d926b8e0a3bd37697d82f15a34e51"
+    sha256 cellar: :any_skip_relocation, monterey:       "e9fffc983c4c0b6657e064e512b18bafb20a56c98a2d3305ad8fff34e7120c97"
+    sha256 cellar: :any_skip_relocation, big_sur:        "de504bfd1d8d5ec7b84f7755461187d9718fe9b814fc6d781f566fa7c6968496"
+    sha256                               x86_64_linux:   "ca6680fd588fa15a2227693d76ec24f87b46185e9cf4366e9476e9b77c31b0a5"
   end
 
   depends_on xcode: "13.0"
