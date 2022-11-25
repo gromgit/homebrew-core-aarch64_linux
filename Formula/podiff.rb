@@ -14,6 +14,7 @@ class Podiff < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "657c4211b999a913ed69c42f55bb522c35d27988a8ea6ab72eb165780a2238b4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9a2621d0ce49422987139fd852a650667b5a2985c8c216c318af66c144d6d8b2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9e7f705d124f8b240f16ab6edacd30c094275e5ebcb5814ba5e9bdf9ae7bfeba"
+    sha256 cellar: :any_skip_relocation, ventura:        "96d7320bfcaf7ca38f215341e709c4236b75a29f467381a77352e343399cbfd0"
     sha256 cellar: :any_skip_relocation, monterey:       "0c49d38d09ff613608a0aa1347e9fdd08d4a59056b74843e4a81cbd2d6f3e84d"
     sha256 cellar: :any_skip_relocation, big_sur:        "102324c4a33351f8ade8b7ca889945300a5dc36a7b1fb93460b0d26124bda63f"
     sha256 cellar: :any_skip_relocation, catalina:       "72109e409ad2097e8e6137b7cf7cc2464df145ff2e2c8db65504f0185f9c4ac0"
