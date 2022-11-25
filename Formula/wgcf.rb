@@ -10,6 +10,7 @@ class Wgcf < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1b80a3b598dbafad58fcbe14e6df54749d6a65416200755718871ddb2cdcc9d3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "21806515169afe21892fb75d0d432b93d4cfe3a6daed3b09909421714f9bf471"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b28486cb0c67bcedb961ad51906329059eb15a77bc78f4533291d4b5fd892d0"
+    sha256 cellar: :any_skip_relocation, ventura:        "040afe4a2de7863019f117dc0a47b0bea3207aecaecb1383d3ca8e50b0da0d1e"
     sha256 cellar: :any_skip_relocation, monterey:       "f2c573408077ecec57f0ae3aec7774f1aee1843c9d0cbb5384a3c951e939ccf4"
     sha256 cellar: :any_skip_relocation, big_sur:        "8b10d1a574c8b78023c0b6c5ca96b270ddba0031703f4e8776ec99baa6eeb175"
     sha256 cellar: :any_skip_relocation, catalina:       "f85d8abe59bddf8fd4c1a69badae9226a28c716ebceb9a5382377f7f2a525ea8"
