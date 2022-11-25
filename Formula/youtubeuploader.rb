@@ -7,14 +7,13 @@ class Youtubeuploader < Formula
   head "https://github.com/porjo/youtubeuploader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9a870022483bf4b3f493e5594c606c73542e9532de1cbb3360e3baff498b6e44"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d05b0bde055295fac779352ad3239407ea77104728d051c810f33bee13794bdc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "406a27d6c0a58b2837c841372dc8ec6645a384e6d2ce734cb668dfec1ad47685"
-    sha256 cellar: :any_skip_relocation, ventura:        "69569746d54d2d6939b4cf000d587862ffff7d05a87436d99ba937e4547dbe74"
-    sha256 cellar: :any_skip_relocation, monterey:       "b02ffa02fb0b1042ecd656a22d16427fb6d22d5603905d9e7df5b06b8dfe746a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ea7f5b67f09eab0a4d9ff32fc6e64a9987e0a9e28479693189d53e3a290830a2"
-    sha256 cellar: :any_skip_relocation, catalina:       "33a1cd3cbf234e3586b9cfd6c4ee5c39137ce6c565209e4f181854a8e37bc672"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e7357282936af1ee6a447cc8e94a20e4723403f133fd70e3094d008e7208624"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7607706fdf7aa184bbffae10012705d6c48752550f3dc4d3aa351f367881c71e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf637386f6edf508a3c4b0a63f3ea8beb30f7e7a4fd0523e90253d508459ba8a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e73336a16d884c032dcbbf00ba249d6be8a0101f337b1c9d3ac331524439cf3"
+    sha256 cellar: :any_skip_relocation, monterey:       "4b3a029b1bf0b3f9a4ed2d71130828286624fb9e2e66bd6e5a9b8963eea71dce"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3d5ebc4f26f516589229cc6fc02c39529b3f3e674da4ebdb7591ba85afe816a1"
+    sha256 cellar: :any_skip_relocation, catalina:       "9e9b394c72f50c3049269e23aa8534ab5f036c2a10a98f6347f682fc577a5b81"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8013181d71607e29d777511a64fd3244451414fd2f37c69ec56bfedb4864ce9b"
   end
 
   depends_on "go" => :build
