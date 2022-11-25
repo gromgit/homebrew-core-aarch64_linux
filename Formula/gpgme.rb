@@ -15,6 +15,7 @@ class Gpgme < Formula
     sha256 cellar: :any,                 arm64_ventura:  "09eb6844769020807f538ccd6ff6fd916a2428e7cbe495eab1d20c751849304e"
     sha256 cellar: :any,                 arm64_monterey: "f2f1b75a4d35488bca401ca201d5c4f5a89a5acaa2bebe19a44fc802b5bc0bfc"
     sha256 cellar: :any,                 arm64_big_sur:  "bad5ec42359aa1170e1e533a9c498bc07520ecaf0572549c7b36e91dca1c9252"
+    sha256 cellar: :any,                 ventura:        "d59f5b10eef0d6f07726d815abb2e3ff424616897c89feef05aa3266298a0155"
     sha256 cellar: :any,                 monterey:       "c58808e22d846af48572e08e85ea92d96a661dc44efb0ac065fe05f43f28cea0"
     sha256 cellar: :any,                 big_sur:        "80181351cad6da30c7068b48b446727185bf2ee8483418863a30e4ec379a1ce4"
     sha256 cellar: :any,                 catalina:       "b359235849a1eaa43513f81458eec55a2e166daa5e91d56d0f82ce789214d0db"
