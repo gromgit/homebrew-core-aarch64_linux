@@ -23,6 +23,7 @@ class Codec2 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "84e1dd751ad7f76185abdb9d037387fc8ff8f78962521f641f5ce09ba6657360"
     sha256 cellar: :any,                 arm64_monterey: "cd00d6cd6f106536cbc112c99467c6dc74b2acbffb1ea00bf7c01e3ca0217962"
     sha256 cellar: :any,                 arm64_big_sur:  "a338784e3a2208443d87601cb991671049de6c1ccafbe1b67c6138ecc7d8e327"
+    sha256 cellar: :any,                 ventura:        "49f69b6b8e634f183bf90d9c402287cfc0977847844bb4685abaef6e0dc5bb00"
     sha256 cellar: :any,                 monterey:       "27a4827a1f91d6c03080ce82f59269de4f47240927f00d4a12006dba5d016cc8"
     sha256 cellar: :any,                 big_sur:        "0321ce7f26dadb87386fb44a40d88e6536b87b2b66f50152104c58628b4d419c"
     sha256 cellar: :any,                 catalina:       "5b359ad9a7919a7df40fd5048ad6f2b54a374fba46ffb7f0796e1627a8326a32"
