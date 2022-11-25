@@ -15,6 +15,7 @@ class ApacheArrowGlib < Formula
     sha256 cellar: :any, arm64_ventura:  "32a3e16a0b4c31bdde63578f6aefbec8321136170fbb06aa33555e75d05c2944"
     sha256 cellar: :any, arm64_monterey: "2442b79d3ad5bc99bdc236d3127246d634f3ee2bd5d9296683e1971e02dc3a09"
     sha256 cellar: :any, arm64_big_sur:  "98f46404207b503ee006148039a2bf9b3d61241fdaed8cfe5c83c4150a164975"
+    sha256 cellar: :any, ventura:        "229109fcd848b355250a9f91a7d291151babadb95d48b6519ec235250e10e11f"
     sha256 cellar: :any, monterey:       "e1ba0b790ac8053bbfe583a25c2d268b75833c5b34b035ebccb5da58085eb8d5"
     sha256 cellar: :any, big_sur:        "10412170b194e02e67c7a5d989cf6a608d4f914419d4d5b8b01675b935297542"
     sha256 cellar: :any, catalina:       "af2c6353228d403a1d10bc41cdea77c4f738895385e8078cf0b06da9b187bd7d"
