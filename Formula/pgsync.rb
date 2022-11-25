@@ -9,6 +9,7 @@ class Pgsync < Formula
     sha256                               arm64_ventura:  "4cd172793979fd2ac562fd95818b4e5010a18535aacab4384d2ae71437e15c99"
     sha256                               arm64_monterey: "d187674c50b563f9e25229fd21bc87da94417658b7d7160be4165e3179855f45"
     sha256                               arm64_big_sur:  "ba6666d65b53adec240851ab0ae99a25bc056e9927f9ef05890af14164602b3f"
+    sha256                               ventura:        "0ff3b44272aba0a3cafcf280b8fe6de1a6bf8a27413bf9c1d7cc5ef2ef8cae26"
     sha256                               monterey:       "3f77099f18c937132cac897e7bca7461c40d6a4a69d7a59ed51122cd451646ba"
     sha256                               big_sur:        "235552086ef38602a102e86f09d3625d7a86fd74df3b0394a008387a9f784f37"
     sha256                               catalina:       "e135ab9d372ef1d88056d2fc271937c8053461c6a1ef74c784681731b5b8be4b"
