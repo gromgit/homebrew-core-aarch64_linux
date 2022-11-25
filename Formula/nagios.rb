@@ -14,6 +14,7 @@ class Nagios < Formula
     sha256 arm64_ventura:  "0637ec5ac33730cfe9e01e8796ff24bf4ba69aa8487bde4c457999e9958ce61d"
     sha256 arm64_monterey: "689b180a922aa24bce6cd47e85bd7e09f415217b94b93619b90078677e131088"
     sha256 arm64_big_sur:  "b285d96affcdae36672b789bb3e6fb5d6e8155d34cd500542e4e4196e4452973"
+    sha256 ventura:        "43cae1695d0d079a4935db9baef3409b0746cadef009a36e359ccc10af6ecddb"
     sha256 monterey:       "8c0d9035ed0a74b33d2d33f1448e3b0393afce8d1d80b2a91188367ff2e8ea0c"
     sha256 big_sur:        "a6a423daa32f7a08789b904d83bec0673d2574ee8c891b422974e131fc69f6ea"
     sha256 catalina:       "cc3e0037b069eee5e7819d32861872dad58869cae36939fe546b6624e321fb0c"
