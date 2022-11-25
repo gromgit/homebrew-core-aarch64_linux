@@ -11,6 +11,7 @@ class Nbdime < Formula
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1553392c5720fd680644d4d617abebe012ece27b89c1fe96aeb9b7e968f5d896"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a33accd3f14e9c11a65be4c198cffbbd2f8e5275d4aa0359d1b5800528074540"
+    sha256 cellar: :any_skip_relocation, ventura:        "438e55d4b673b9a866a83de50a315daaed0d50c23358edb6f24ee243f4e1afdd"
     sha256 cellar: :any_skip_relocation, monterey:       "e84db732813f0b699bed48ead024f4a98237e01afc1d27a5b2b920e5c036f6c7"
     sha256 cellar: :any_skip_relocation, big_sur:        "9a1c6227149374482850bd68647cdbc003fd937fadd00e87e525e630e38dd3b6"
     sha256 cellar: :any_skip_relocation, catalina:       "b84dcbdc0504a31ab8cb2c7ec1ad0a2f4bda29856d36488ca7e89d5f0d7c7d37"
