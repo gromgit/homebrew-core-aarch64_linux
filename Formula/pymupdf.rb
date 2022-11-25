@@ -10,6 +10,7 @@ class Pymupdf < Formula
     sha256 cellar: :any,                 arm64_ventura:  "dcf2e8cdf1a1284cafef1e6e95479acba8a38a8b7ccbed985fd72b0918699dce"
     sha256 cellar: :any,                 arm64_monterey: "576d765863e5bba94e6acac66f6e735692b8f181282a9311ce0ebc1038f0e0bb"
     sha256 cellar: :any,                 arm64_big_sur:  "db5275f8904bc7647ac25ca568aadc896abd997da21b7cfeca377fb59264f243"
+    sha256 cellar: :any,                 ventura:        "61ed19a669b4deb0ad6763a2ed00d772c8635dc47270565e0d5671dab9ecb651"
     sha256 cellar: :any,                 monterey:       "0443c617bf6a5987f9f16ed95e2ef9a7cae2c053d94ffa86d8c184e59aa4209a"
     sha256 cellar: :any,                 big_sur:        "05491551aca406b23bde071e65b8c197a8e601154eecd9b6ae68839a487f0f06"
     sha256 cellar: :any,                 catalina:       "485853a0e4709f10cefeaca2b6fd7ae8ee908a37c32c8aa606dcff94aea51eb2"
