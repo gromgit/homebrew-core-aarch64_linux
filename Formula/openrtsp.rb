@@ -13,13 +13,14 @@ class Openrtsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1d2f9e71a40ed99e13e0e77669ff2856c880ed500daa96bc38560c7eec38c158"
-    sha256 cellar: :any,                 arm64_monterey: "2f23bfb28041072267b6eac9f6a3f8521d8161433d740595106802fd2e38523d"
-    sha256 cellar: :any,                 arm64_big_sur:  "5a87c21be839b97e370c6eac38d1f4fddefe7e961a87d037f3256e4c3e5ca338"
-    sha256 cellar: :any,                 monterey:       "67063e9d9f7ef7ca62fa05b4fd21ccc04c418f61f9ec00431336d5e291e013a0"
-    sha256 cellar: :any,                 big_sur:        "ea76ffb5939ea76773c704cb0e456d8308702aab34cf37bf3fc45854904971c8"
-    sha256 cellar: :any,                 catalina:       "b16a2c4f725481f275d66692ee249e318891c27a7317742659f83fc6f0a91889"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "333e241c8d6aaef1fe8e9ac94305af36f6bf8905acd281a47d7f1eab79ac8cb9"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "6aac9bb9d3d0062af0841bf474e68b33d39643c4e63383ee9f6b1d446eb268dc"
+    sha256 cellar: :any,                 arm64_monterey: "daccddb45b414c2e3d82cd5358a48432cf0aacdf245887fd84f0b7838088d6ce"
+    sha256 cellar: :any,                 arm64_big_sur:  "a3395fe4703cfe776bf0e088a88a473d43f70bfc6dc45734ad254b32264dad85"
+    sha256 cellar: :any,                 monterey:       "c8733ed1d4afc4039448b003ded884f2483bd799ef67981fe174527f36f99a21"
+    sha256 cellar: :any,                 big_sur:        "823f0acb202ab171a1c084616de4951113463d282d90182290667488e1be0e2d"
+    sha256 cellar: :any,                 catalina:       "7b175ddda9e973ed2a51f3262cd9158f71babdc9bb933994f604d9c036c66d10"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0503bb86661dc1c229390b18fbc1ca133019e5b204603e6cc64c99c58a5bc68"
   end
 
   depends_on "openssl@3"
