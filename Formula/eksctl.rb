@@ -11,6 +11,7 @@ class Eksctl < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "8a9ccfd7f4ee86def623b529a5ae8f9ccde52a02e2d0a0a8074e628c8cf625ba"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "52f981c33721e80c228949f51c4d125e6fd0a2e7da21ea072106d7175fe4950d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f066a41b0ee4ce8591a01163fd90f832bf720a6ea7ee1aaca11954ef16b378a"
+    sha256 cellar: :any_skip_relocation, ventura:        "4b32c126fe7f52382db235ac96d5a113ba958aa5df8e1fb8b10fa1a90eafcd35"
     sha256 cellar: :any_skip_relocation, monterey:       "5003ce7ed9f5039869cfcbbc92215b3988b77fc5e69079ff0fb86e100e6edfb5"
     sha256 cellar: :any_skip_relocation, big_sur:        "7f1fa6a52201fe15fe89dec9b79f70ca661a0350c5102dff3da61201c0e0bacf"
     sha256 cellar: :any_skip_relocation, catalina:       "4dd39fa6c5ec235224937280e55c6f680799b1838f148a6c4672800002cd4cbd"
