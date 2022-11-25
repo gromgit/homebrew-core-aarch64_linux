@@ -12,6 +12,7 @@ class Censys < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "8e4f720ffea10c8b33f5664165e001667c3d5e253a059cced71a7d3aadc13e2e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "61634a1f1bab414835f2370a8326cbffc124e16a3e2293d4304c8ee663c60146"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "895b358c869ac1d649af52642c30c9144226e640e0913e58b9b2d5f0172d423a"
+    sha256 cellar: :any_skip_relocation, ventura:        "ba01e8344bcebea36605c7a4969b2bc736cf3ad5f97dd5afed7e5909f76b894b"
     sha256 cellar: :any_skip_relocation, monterey:       "51a1a461f5d4602ae29aaf7081283fb4a4de40090223bd4a69bda05cd9fc9616"
     sha256 cellar: :any_skip_relocation, big_sur:        "25797d090339da2fc9197884d3a46ba678091b11e893bfd478968a325a069ba4"
     sha256 cellar: :any_skip_relocation, catalina:       "f35f564e23dc1bf9133c04ca171b7a178b32d9f5905a99f16f96787c5aab43b4"
