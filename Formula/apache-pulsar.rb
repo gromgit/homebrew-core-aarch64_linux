@@ -8,6 +8,7 @@ class ApachePulsar < Formula
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, ventura:      "affabf6e195e874f11c0ae7e87a49ae164ba95964b32b02596b4b9afd73cbeb8"
     sha256 cellar: :any_skip_relocation, monterey:     "265bcbfb605f91cd333a8558a8d2889f8249b409b3110235796a10a33a43794c"
     sha256 cellar: :any_skip_relocation, big_sur:      "8be561a9f0e660f85d7923269cdf9739f3c162040cc52507f4a50d6dc21ccac9"
     sha256 cellar: :any_skip_relocation, catalina:     "e84214120c05b9b6ede37c8a9ee4349638c3df2bff7a4ae73fa81c71edc315c6"
