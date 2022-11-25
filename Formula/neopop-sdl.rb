@@ -10,6 +10,7 @@ class NeopopSdl < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2e05cd5ba9c3f61c061bff01607a5fca678439b287e0ad052bfc4a4ec142f3e1"
     sha256 cellar: :any,                 arm64_monterey: "75d72c03b2f65fedee641b74515ebbbc021009d7ac281f284b48d6eca1ff145b"
     sha256 cellar: :any,                 arm64_big_sur:  "8ec87c1aa5a6544628143aff2edc8b0db59185b2998c1e7f14a9f3490db3c991"
+    sha256 cellar: :any,                 ventura:        "583778caac90e4d3e9ae9f0fed5c2610ea46edd041684cc39ac23f95b531bba9"
     sha256 cellar: :any,                 monterey:       "7a07a0dc510ed83c174dd54ad3a0a8005dce9e9c2be44b61b622a455f9a9bced"
     sha256 cellar: :any,                 big_sur:        "ed8e6cb23919f63c24ff387d81b531e1e64af40387d2f60b7fc751bfd8141e04"
     sha256 cellar: :any,                 catalina:       "6b988af217b9dc042b17495a45d2f9ec7481025d941e31a749d798e4039d2f23"
