@@ -3,8 +3,8 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://github.com/ansible/ansible-lint/"
-  url "https://files.pythonhosted.org/packages/6a/83/08cd79e47452c0faf9325e19c9a1dd26fabfeaaa8733804165a066c19479/ansible-lint-6.8.7.tar.gz"
-  sha256 "de3de4e57cd54e17c1ec3a0b4a21d4811838e77d67b56cbe8f91107f2a434432"
+  url "https://files.pythonhosted.org/packages/59/c9/bebba18cfb0eb91208fbfaf44156225aa55bfe7f2dbd5afeb6f020fa5dcb/ansible-lint-6.9.0.tar.gz"
+  sha256 "14ef919920c4acc980547ded0bd423a7a27a0b2327738e593343f446f3b126c6"
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
@@ -68,8 +68,8 @@ class AnsibleLint < Formula
   end
 
   resource "subprocess-tee" do
-    url "https://files.pythonhosted.org/packages/48/20/a38a078b58532bd44c4c189c85cc650268d1894a1dcc7080b6e7e9cfe7bb/subprocess-tee-0.3.5.tar.gz"
-    sha256 "ff5cced589a4b8ac973276ca1ba21bb6e3de600cde11a69947ff51f696efd577"
+    url "https://files.pythonhosted.org/packages/76/1b/653bc93bf15738ab2fe83a875d28354cbe7402b12e22801d35e5461fe3f2/subprocess-tee-0.4.0.tar.gz"
+    sha256 "7ea885ff32cdb2b2d3b2a6c464492f2ee1ebbf324e50598d75de4f6f3ea0f149"
   end
 
   resource "wcmatch" do
