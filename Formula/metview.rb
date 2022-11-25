@@ -10,6 +10,7 @@ class Metview < Formula
     sha256 arm64_ventura:  "2344adb27c00fd086c3955b6315e1911ae42955e2f06bc5c7ceb7875775877c2"
     sha256 arm64_monterey: "3677958feeac1339f0d7c0686a6df3e460ddcd0b8a351b54e93d33358568db09"
     sha256 arm64_big_sur:  "070adc24a43cb86f6c50fd1131f5b6580f0bcdd6bc25f4ff8dcea93f123a8bdb"
+    sha256 ventura:        "623f0cb819c209cfa35880df2b17425ccf491c22890637abfa53d29fe47f8cd2"
     sha256 monterey:       "c45814f3848ac335a37e4d3f1cc21d00407e04945ecc8ad815f309eb1ce591f5"
     sha256 big_sur:        "f622ea0f7fd6cc5984399b58d8a80d434f91aeb2ea4c45bab2b730aec645d135"
     sha256 catalina:       "a48faecade4a7feb1da6e2b6b76b8151318a2cc34077967abcebe64272910fbb"
