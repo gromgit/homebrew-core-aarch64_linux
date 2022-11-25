@@ -10,6 +10,7 @@ class Mlpack < Formula
     sha256 cellar: :any,                 arm64_ventura:  "5293e16fd5e4a768188d45f985a9b259837cfdc7d306c5eae9f4511393f55a9e"
     sha256 cellar: :any,                 arm64_monterey: "9054a85591ea7e35da63fcacaaf45fb703eab442bfc517c24395badb1500b2c0"
     sha256 cellar: :any,                 arm64_big_sur:  "0a4363df84ff60bf4abdf5574e972b71f1d590ed2db3df8f8d65b8a1a0cc1f01"
+    sha256 cellar: :any,                 ventura:        "2d68ff0aeddcaf5e3e433f2cb9c73d8757359f818f9f3a0c17220e4b18d77e74"
     sha256 cellar: :any,                 monterey:       "39d2ecbe49028f2e47aad8c937544a8ed6ea9a3b261cacef49ad8f6432d4e0e9"
     sha256 cellar: :any,                 big_sur:        "3ce0402749604bbdebfbbcd71a5773b54cfbb2205b10a811a55176307394a4f0"
     sha256 cellar: :any,                 catalina:       "d9f4ae02319dd3c35b8a04878d80cf351241d67ce1d731ffdcba0d945e8eaf7e"
