@@ -14,6 +14,7 @@ class Xml2 < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "615cb5af6813aecc3220f1387c4e183cf63c82d6711e3c107111b8a8a908d2ec"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2a8bc2144c34a087bd0ec424f1079c0813e3de5e069e1cf23fa5c904125d42be"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23f1ef27cd811f9b846f80775e4f0981998a7cad1230b0f98261ba42dc85c325"
+    sha256 cellar: :any_skip_relocation, ventura:        "8dd7076fdc053fb5cbb7f57fb59e138bbff0468f2db116323b8e8c8a742f5b78"
     sha256 cellar: :any_skip_relocation, monterey:       "52c859eeda679620c5b02db82a7a7d1353c53bd43fae6e53c9028b99afe48b1d"
     sha256 cellar: :any_skip_relocation, big_sur:        "c6e91ba5879e8891be5aca28eba77249f18c8860d2d387447da0ca13efbe066c"
     sha256 cellar: :any_skip_relocation, catalina:       "832aa209cf47c4f18ad512f7eca2acf76aa047522b3a417466722203203bd71e"
