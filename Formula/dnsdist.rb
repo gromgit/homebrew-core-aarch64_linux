@@ -14,6 +14,7 @@ class Dnsdist < Formula
     sha256 cellar: :any,                 arm64_ventura:  "b2618d623a6a288fcbb58d54ec068917b7191e80a870f6accc0427bc3fe32384"
     sha256 cellar: :any,                 arm64_monterey: "abfa99eee8c4be2d34e9ffd41a84c8e65c6587370da052b77e893b0210388d8a"
     sha256 cellar: :any,                 arm64_big_sur:  "1525cbf43df195c3646f11dd414e9e1c406bd022745f10cbe0db89767cface3d"
+    sha256 cellar: :any,                 ventura:        "e808a27eaf447b30beb6bdf7df4966c8e689314f12fada22301ecd7111b271d6"
     sha256 cellar: :any,                 monterey:       "d45fd758a8dc3aa9c5853dda842ac3d73f1b51a915dc23ff20787933b9d532c5"
     sha256 cellar: :any,                 big_sur:        "ee36153f8036513e45a536cf0b5acf442707e42eb5800a430680d185cbd80cbe"
     sha256 cellar: :any,                 catalina:       "3156bb8c2786805c491b7e8b0b9c5bfc241403edd546fbb86df0b70f3999dfc7"
