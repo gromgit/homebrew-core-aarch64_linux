@@ -13,14 +13,13 @@ class Dub < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1279c482fa5f76b4f12f9fdd2155d06c8210321a6b7f32ac3821e7d89611bdba"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "084b64b8299fc45a2466a7ce0cbc2dde2a2302097a5f7af058475f789cfca267"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "300d04b9cdaf03c410bfb29540af2e1df1f88705b120632e47b5796fb2d5f2d6"
-    sha256 cellar: :any_skip_relocation, ventura:        "373b08f6dbf53b6acdac80675ab543a214e6cf12bed570b68a2cf58f0fa3d0cf"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d2dd534cf44a3793809443aa003d17dc83f8370d3c0f9ffe8987da6ba70b82d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "24fc05d36186fe08d103b62ba4145112c1c995360671cd406d76195844549656"
-    sha256 cellar: :any_skip_relocation, catalina:       "12420e7460ba50e22aeee6d2cacdf7bc0ac9057e86a99909b40979da142f84cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67253c6642eab447d0cc34aef79be92b9bf5d6482de19b6ca0bcfb9e2a4a7b9c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b4d65020cdde5fac667c6aefdb25968c4179eea7c776b2aaa9671cffd4edb9e0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "83b94fba9b7886a0aca23cc3d11fd8add55a4c861c648b990998f2436a037585"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "59bce14e8905a2f2dcb0ae35ed425755026defbfb7aabab69a8e93910188a809"
+    sha256 cellar: :any_skip_relocation, monterey:       "ddfcf25c04859be3b74eeca843b1072b00a779deb408a12013dc26090b48c84b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0031bae24192fbc918c4462dfa0ce5a539685f0cb4ed2bc1f85c1bdfb3d762c9"
+    sha256 cellar: :any_skip_relocation, catalina:       "22c9691136ed173c667a0b2c4c2f598488ae260c3b6e47188696e9414f18b4c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c743c8316481b0030e2dc749d732aef8d5b7d9e39029419f7ae7ff0e2b64903"
   end
 
   depends_on "ldc" => :build
