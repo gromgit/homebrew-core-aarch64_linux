@@ -11,6 +11,7 @@ class Zk < Formula
     sha256 cellar: :any,                 arm64_ventura:  "e4e556d0e5e3c0428bd1cd7bb3d64c3fdcc7d4e99930d35247cb7057066305c5"
     sha256 cellar: :any,                 arm64_monterey: "7583df1a2bc12b3c70dcfdd02484a057d659a7aed167241af27457d3f9a6f2c6"
     sha256 cellar: :any,                 arm64_big_sur:  "cdc7eb09c7a77ba562d146b72e215f4bb4f0386bc91c56881e5b6c3cefa7d757"
+    sha256 cellar: :any,                 ventura:        "dc0172575404a59d53148d55c87a6da5c368208e23c58b5095388ff446176a04"
     sha256 cellar: :any,                 monterey:       "410df6600a4bbbbcef8e61a9c15c0f620988325826a296250fea5c4ba6cf16f3"
     sha256 cellar: :any,                 big_sur:        "21f5fca1009f3e9239f0109992332b7ba534d00a08dc83913a891f1c4597e2ac"
     sha256 cellar: :any,                 catalina:       "c6107720d53ce13225f3909ce9c2a47d79539f542e86fa6895f04300fe1214e6"
