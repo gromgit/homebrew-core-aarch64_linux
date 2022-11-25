@@ -10,6 +10,7 @@ class EditorconfigChecker < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "385c4709db6ab2a7d38f9f022ac51bb60787478ddb2409deba9e03430f6d4587"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "07aaae3448d74c1135ff5b3e35f8cd8bedd8f0b3727c6b6c7a3b37c5cc669a5f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "07aaae3448d74c1135ff5b3e35f8cd8bedd8f0b3727c6b6c7a3b37c5cc669a5f"
+    sha256 cellar: :any_skip_relocation, ventura:        "42584005a18f4a1af03ae436b17ce742c43ccf1e5114c21b6cca0c19027e63b3"
     sha256 cellar: :any_skip_relocation, monterey:       "a1e76c97a829f2b4bb869c90b7cb52ba89163c97b06910e9b060c9478d5f0a65"
     sha256 cellar: :any_skip_relocation, big_sur:        "a1e76c97a829f2b4bb869c90b7cb52ba89163c97b06910e9b060c9478d5f0a65"
     sha256 cellar: :any_skip_relocation, catalina:       "a1e76c97a829f2b4bb869c90b7cb52ba89163c97b06910e9b060c9478d5f0a65"
