@@ -15,6 +15,7 @@ class Yazpp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "f5323351a62f51e6eeb4b4844808bb418f181866f81d546bb4d304e9afb8b59d"
     sha256 cellar: :any,                 arm64_monterey: "aa97daf6d2b5261aeac38b913d4987be6b3061cc2623f316f3dfc2290722c265"
     sha256 cellar: :any,                 arm64_big_sur:  "3fc6095e006360bca8b4c911c9b81b473c1da8c35f791c0c6a719aeba59d7323"
+    sha256 cellar: :any,                 ventura:        "0dd42e0aa75b787281468307c34a7c9ef24423e2bb059559f793d4f7e71286c2"
     sha256 cellar: :any,                 monterey:       "3c9e3071b8fd04b9aaf2bfbb0c535b7634aef29f613e45ec1c780f86cca0aa62"
     sha256 cellar: :any,                 big_sur:        "7d1a3021270686dc8164533c8dfc7d9d944bf4ba093b1f7f89087c9bf7c456e1"
     sha256 cellar: :any,                 catalina:       "2eaa4f5d58881c7ef007a18506bec5311044e958dd0ab37f1bf10984481faff3"
