@@ -7,14 +7,13 @@ class Swiftformat < Formula
   head "https://github.com/nicklockwood/SwiftFormat.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fca75bfe7fda2151c2972e7e9262e9ca6ce2f50e3fc562e0688dd817550813c2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f03398746b42c97a4057eb74c740a842b96b7fbb49b003057daf114d72db74b4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff1b0f20ebaaa03a580817e8f4c670e54227c86c3c53d813899c276d03415461"
-    sha256 cellar: :any_skip_relocation, ventura:        "301a0781e3c1f49d078efcbcefdc58e7b90a59a8416d4acc07b1c668b88ee717"
-    sha256 cellar: :any_skip_relocation, monterey:       "5dddca5459af2ad28f1a9ef1e664da40ed664ae907c0351dc92b3cd0af52c29e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7427e072a246141371df90135c5cea00c832bf2c511b62ef1cf49c1148b5bf23"
-    sha256 cellar: :any_skip_relocation, catalina:       "a3de195f76316795eb6a56e240265a8fd41c042c7d515ae1df254aa3f577b540"
-    sha256                               x86_64_linux:   "8557726207a8ce0871b950bf44ae9f2b8e95973ba026a77cf728d31cefc3ac00"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "53f6e5214441b614db425d1ac357c657e7443264a4a74742010b450b24fdbe60"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "43fc053c7756222f020834f8576147e9e7a169b200fda6932e136edb7ffc1fec"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dea73c07942d96b474df70aad68a67bed77e2198b6f4d09bf4104365a5a8c3e9"
+    sha256 cellar: :any_skip_relocation, monterey:       "15328aa92a92188a04a1d2ef9336d35516157152ac3a5a70aa4ecd88d9354fca"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1881593eb078d6af8ca3add44e39fe0a3df2fc3fcd35a4edbe4731b42650c73a"
+    sha256 cellar: :any_skip_relocation, catalina:       "c2f385eb894035279f3ba687454a75f08da0cd357a27b5175be8914d4fe69a49"
+    sha256                               x86_64_linux:   "afde911f5ec389217feb72ca5795b418a9e10050aff9559e0f61f89287463786"
   end
 
   depends_on xcode: ["10.1", :build]
