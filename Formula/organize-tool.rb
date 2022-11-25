@@ -12,6 +12,7 @@ class OrganizeTool < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "756fc29231ad1c8f308ee0b2f92ea47c59165767e4e686c58d0fa12a8ce8f01d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cd4200f30ffadbe37f90227762064f21b83290df7b27b5a48c3d23699ea4e87d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "371c5ad233362931903b33df7eac359366a3026784ef6ccb01fcdaaf90b8cca8"
+    sha256 cellar: :any_skip_relocation, ventura:        "f78d30830e904aed36d542a086f64b64f7e5a324f9b706cb7b485e5c4d7758a6"
     sha256 cellar: :any_skip_relocation, monterey:       "663766a3bc1331ee2d21eaed5c300bcbbdf8e8e0f6b75e18a6751afbaad25290"
     sha256 cellar: :any_skip_relocation, big_sur:        "b41ce406bb75c97fc8155af671a6c9156ce954160070ed21c836aa691ca9b9e6"
     sha256 cellar: :any_skip_relocation, catalina:       "295d42141511cc4379e6407a060b8f4b9f4004713b7a19d9cf694bc8383fabbc"
