@@ -10,6 +10,7 @@ class Libstrophe < Formula
     sha256 cellar: :any,                 arm64_ventura:  "f9ae71b8f0ae88f3de87811b61d325ba1a986c1ceaceaf891fd47e3c71f1c164"
     sha256 cellar: :any,                 arm64_monterey: "da9690a4006d8011fffc155eda0e6860f2c76296b24ffcebf99bda9005d901f7"
     sha256 cellar: :any,                 arm64_big_sur:  "7898879a8407daf35cebacaee1f9bd9a282596bdf5497f49dc25f8211d9afa66"
+    sha256 cellar: :any,                 ventura:        "471537873386ed1e4a6df9f37eb6040d6ab7a113f4aa27a11580058d099ec9bc"
     sha256 cellar: :any,                 monterey:       "4be10d525522a176fdc10d37c4206eef981ecd326c4717ac43e929a0ecdbe99c"
     sha256 cellar: :any,                 big_sur:        "7da045515977c9457f38384687bc1e3a0b271b228aa8f5f5dc737dc42aea46fa"
     sha256 cellar: :any,                 catalina:       "a6bb42211705f771de89f0f89d007eeaabb7aa61bd41650b5e40f6add8f43027"
