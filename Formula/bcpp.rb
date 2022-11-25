@@ -14,6 +14,7 @@ class Bcpp < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0a7bee1cf07a63413b46211dc0aceaf8da2fbd994e9c4bd2c0839e36674f753f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1da20cc17b58e3c8e50e625466fafcfeb982a29c6112788e8d3d725a8a301c75"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f47f8f238b0196c31f31bf94c3a2f10743f21656da26e8e5049a3c964493b528"
+    sha256 cellar: :any_skip_relocation, ventura:        "db8212d94848763824e279f3fbce53b168d91e4d107a890724779bfc83f4a738"
     sha256 cellar: :any_skip_relocation, monterey:       "07c75d2ddb2e040d14c4dd35112579ebc815d8ad623a093ba34785d110e9e9c6"
     sha256 cellar: :any_skip_relocation, big_sur:        "abf240394669e9cf1729060888eaa8076fbc39093788ff5c395db996718941a3"
     sha256 cellar: :any_skip_relocation, catalina:       "8527335dbcc1422c229a02962c692e22636c3cdf14de756460d2daf87de4e7b2"
