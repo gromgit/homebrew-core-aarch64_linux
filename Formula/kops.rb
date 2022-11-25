@@ -12,14 +12,13 @@ class Kops < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3d751e4c2acff1f146842eebf3f5b3e1c7b409776bc22b01c89ee85992530c0b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "48bfc69bf5fe102dd03df369e376bebdd295f7e216ef5f15419783ff73bb5d62"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ffd67ff997c84e36c8aa7ac3b5e9980b17624175e90910f6ee9883c3fd70df2c"
-    sha256 cellar: :any_skip_relocation, ventura:        "08e8b084de6dbe193170bb94b5c43b02598df5029ecf4cecd91f356d0632c2e2"
-    sha256 cellar: :any_skip_relocation, monterey:       "f151541fccaa8e301eaf5c5e7c3b98bcd3414571b5d7b003bd9a65e87f094c3b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3b33124556aa9d385014a791ef27dae5ef7ed9bea8e9bf18adaa26a644b1f75a"
-    sha256 cellar: :any_skip_relocation, catalina:       "824cee5a1500e0a9361af5aef146e2bb79eb61106f08df42305a0fb394fc480a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d189e8ebcd5cb22314450d4807cec26132bf41866d697583c8227c88070baeaa"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2ab459b3293cbcd8d6b0827d4b23af8449a3810b38d0bc0c4c821e66f7b3a9e8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8ebbebc2f36d16b1b9987d57fd18d4134e0a697c737235799bf9f5eeb81a2430"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6c77aef751e0bf2972508f0b087b5817cd21307090072d5724e112d710e2b60"
+    sha256 cellar: :any_skip_relocation, monterey:       "9745c086b5a923336a992c2acf92d0a1f8462a3462a55f31e1bfe6526ba6bbe1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d42775fb0cf3d22ae072d933ade1efad35ec6fdc8b58d5fdde13f598af24933a"
+    sha256 cellar: :any_skip_relocation, catalina:       "07096057856cfb9620419a150bede943dc961d9f53bf8f9e82cca6d4db797382"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abd9a621067522b14e18e3c5ad67209b897c56723176259d6a61a3f8dce38b0e"
   end
 
   depends_on "go" => :build
