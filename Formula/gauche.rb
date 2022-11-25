@@ -19,6 +19,7 @@ class Gauche < Formula
     sha256 arm64_ventura:  "ba3aa4703856a6110324a934d9adb7d582ecc6f867765f0a8900da43315cc10f"
     sha256 arm64_monterey: "25d1c5b0b52dcfb4dbef2f10bbd6a92ece2c4e1e8591a88634794de32cbd21a9"
     sha256 arm64_big_sur:  "3f242d37322198df162a1a8856a2c67aeaf36911dbdd82f47c232b27e6470e88"
+    sha256 ventura:        "d01fd7953fb2334da860972303fc417ffa27a3d4962f94103551d19d0f86d12b"
     sha256 monterey:       "cbe7f1d2fe876a9efdb2baba1614564c5d8c75a63712af816b9932fefc75b5d6"
     sha256 big_sur:        "aad52aa6cbceca54d2904cfc839c21a8b5df724d1fc590b7fbefd73b2a17bb9f"
     sha256 catalina:       "5b87364ccf20291e52457a04b715336bd9c8020b116e016aaabe4569bf56730f"
