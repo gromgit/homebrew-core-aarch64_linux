@@ -10,6 +10,7 @@ class Fastfetch < Formula
     sha256 arm64_ventura:  "587b22b41203aeb074ecbde8fd42fbf81eeb21db93fa0b2d3aac3f57dd8ecbe1"
     sha256 arm64_monterey: "e4f9348bbe03561de4b6d55cdd557740ee22e3e118f00050511dfb386fab4a8e"
     sha256 arm64_big_sur:  "d62b2f6a57999492c2e16f447e5c57d497633d547fad3566729e7ce64b962312"
+    sha256 ventura:        "c5c6208369ded1b2a5db4d875f3a93b5dda621fa32022e0f7e5aff8c4ce78009"
     sha256 monterey:       "f2d21ac38ab7bb72ea50029b13bfd9d81fcc0b4df2d3a7815c421d0258fb864c"
     sha256 big_sur:        "5077d6d8806e9812699de854902f8064fa8af5a3662db5b01226b56ad44231df"
     sha256 catalina:       "d980f2fd4d0eacd09f4821a982d27a5d52744fcacc18d26229596ad2b99a334e"
