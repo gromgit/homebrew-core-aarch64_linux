@@ -14,6 +14,7 @@ class Pdnsrec < Formula
     sha256 arm64_ventura:  "33b9a6459851bdd4dcaefcfc502dc6036c4141af9709151b9cc9a93563d0a1f1"
     sha256 arm64_monterey: "db3ed7e89803589ff1367a1c2a37c7d893aaa2d223a9766584714eb2917916c0"
     sha256 arm64_big_sur:  "e30e5e8b23e6249ee8089670f16c3bd2afd3f0a9af7851d4b8815f87a720a72e"
+    sha256 ventura:        "fda97eacdf011d62e1df556f0bf8dacbb868838b39280ae012a53a852e910487"
     sha256 monterey:       "bafcc08610b09459297933cd1a24e1b458a01bcbf65013a16d4800fd7d8a3a83"
     sha256 big_sur:        "f9cb1785e7203e5f24d77a0af7affe46af99cd4b53f90bde21db2300d5c55b61"
     sha256 catalina:       "093f84bd403d9af6f680392daa4a0245ba559e879e25d5eaa03acacdbf6d5a14"
