@@ -11,6 +11,7 @@ class Bear < Formula
     sha256 arm64_ventura:  "0746483d865b83e8811b9ea5706beb14872d6da3ecbb4153ce8cb26482ef167c"
     sha256 arm64_monterey: "e89cc7e6a7a4cde8fef8d2f83fa6788682a43a702f87d4b4399bb8df78f36ad7"
     sha256 arm64_big_sur:  "8d6efb13da7a86918cd50c84a7392c4cd6ef07a89f7fe309583cfa1c52d417aa"
+    sha256 ventura:        "bcccafa23f9c02fd21042eac278d5637744396333320c7eb0186b832a2c5c3eb"
     sha256 monterey:       "87a438616fd6e9b00fa1da8551d53e4fc5d468d67de6ccdc4bfcddb9d8d0d43f"
     sha256 big_sur:        "3715d37014fad3eedf55c6b80161014b3122483d3ba17d748e24a6377facff1e"
     sha256 catalina:       "c3e77c5a0e394d30a6b0f06b2dffc9d16e0ddc8b8a871ca8aa55f4b3f6a9242a"
