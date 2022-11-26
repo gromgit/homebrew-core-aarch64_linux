@@ -9,6 +9,7 @@ class Futhark < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cde37b2d259338ddea47ffa9891ca146eb05c93fc0c17979b2387ae5b40ad35a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67bb3657770861d0cbd137d41d5cfe42996d3575f0a17568eba4582bd3da69bb"
+    sha256 cellar: :any_skip_relocation, ventura:        "d74907762132860969d642b075eb0e4d4053d3571118e282cdaed901ef311f8a"
     sha256 cellar: :any_skip_relocation, monterey:       "931ddbd6c489218eb4930fe67ed975a329a1d0ee8d0bac6fba016008e77c7a9a"
     sha256 cellar: :any_skip_relocation, big_sur:        "ad4a3d57b6c629c89b86662966d8c2fb473adea14b945775d2377583a770c32b"
     sha256 cellar: :any_skip_relocation, catalina:       "831516499f46080702479c3c5f159a25910cadd10e9e68ca389e0b9f96f3779b"
