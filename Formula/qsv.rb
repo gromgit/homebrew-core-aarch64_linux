@@ -7,13 +7,13 @@ class Qsv < Formula
   head "https://github.com/jqnatividad/qsv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4433bbf444e8e924dc3b7983ceafc6a0533cc12c855e666ce359686928cad53"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "55a751e11a8083f7179ec8d6e00156399d249513f9837642f5b987990b3d9e92"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c39ba1c65532c3f6e64f2ae0ed9feb76568ee3e8d65ccd3f0fa6496c832e32ce"
-    sha256 cellar: :any_skip_relocation, monterey:       "17fc80771ded4aeefd9b938ab2387799a9012707b43b5da04f5d7387b9fa0342"
-    sha256 cellar: :any_skip_relocation, big_sur:        "be0f427280c8dae54bd8ef668d8b74b7b9fb37fae57cc75e39e884722ca54650"
-    sha256 cellar: :any_skip_relocation, catalina:       "69a3d5780f21d4a2c11401814d72a6d0777dbfc3f34f075b8e3ae59bfc372c1e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11783404324b9d93e844fec08b5e0123e5199341578f25cedc2ae7c7a576bdc9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "031324e12524831bd941f65fc482738cc1e20e7d80d8b76e7ea1bf23951d520d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bb794cbec7e0dcbf0047469e06dc98864638cf495f600d0ebaa99991408ed5dd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd08e4d7a9e648ac4fe2fb5b4a8574924117e9d5edb29ef2cc62138acdb20c3b"
+    sha256 cellar: :any_skip_relocation, monterey:       "70da383616cbe3f2619b6a5cd506467b7beb5c3023f4f54b6752195a403d19ff"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7fc8b89414e424e9678b24636354cafe98ef36717a12f57f6c23383354ad4649"
+    sha256 cellar: :any_skip_relocation, catalina:       "b3f8d11eaaa47cd0c3181234c66a44da2a852e1534f479c5f11ff5bb4a80bd67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f6648f27eb921d99bf0366928d80e583e45ad4545abfcf6a2c594011fda13a4"
   end
 
   depends_on "rust" => :build
