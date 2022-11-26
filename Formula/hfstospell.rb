@@ -15,6 +15,7 @@ class Hfstospell < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d21a7121daacd03b5126fdf0a692d99710165ad0a9a6f99b71c4e55b2831137e"
     sha256 cellar: :any,                 arm64_monterey: "6de7d9025440009c2c87b1375592eb793811433198dde9801ff798f5fa69b16c"
     sha256 cellar: :any,                 arm64_big_sur:  "49232ba8c7574e62a7c73666fc9b5d9fef31836427a3f82c62577fe8b574d449"
+    sha256 cellar: :any,                 ventura:        "47abb1b4cae44b8cd3eb7a67cb40de5fa45d491a698238a1b4939acf1cd22c3f"
     sha256 cellar: :any,                 monterey:       "fe864e0624035d668eb5f1d195eb37b8659ee09de8b25755a6e11ec0fffb625e"
     sha256 cellar: :any,                 big_sur:        "4d520153b42510bc5b35c6e43ae40b8e2977b12ce4ab6e2e916009496e1a6e60"
     sha256 cellar: :any,                 catalina:       "699018bb946b1ff47cfa36eb49cb4f82b304a6c00f28884058e5f207cc7e3688"
