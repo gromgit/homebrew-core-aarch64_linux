@@ -13,6 +13,7 @@ class Parliament < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "2d1a007e440c4a05547d8e71e9b0784150c8f1ff423b097812535deb0f98c2c2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "084335ad41b5c41f03d257666820cd8a4df31f67ab54e7629215a928286aeeab"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "99df83d72b24d57320e75dad3de07a6787fc9e7b4292899c3da93715d6687b11"
+    sha256 cellar: :any_skip_relocation, ventura:        "34079d2c687af4a481712cad543e52f6d18ecd60a19d9bab117be228560e4c5a"
     sha256 cellar: :any_skip_relocation, monterey:       "f14798318df7aee9f382e0f495aa19023eb8f68d59df1f0a887aaf8d09e0d237"
     sha256 cellar: :any_skip_relocation, big_sur:        "26ebb19e82b2d7fb5baaf77743e972a15a473d924def8001b60673e969a5ebe5"
     sha256 cellar: :any_skip_relocation, catalina:       "0efbf4eeeb931fb3c3b003f47706301ceee50bb3076f68eb5e44035dca8d2bbd"
