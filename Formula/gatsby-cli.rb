@@ -12,6 +12,7 @@ class GatsbyCli < Formula
     sha256                               arm64_ventura:  "0ade3e822f2cb53ad09cf44a7a517b720505ae1b5af0e0cc9300acf9a80b2796"
     sha256                               arm64_monterey: "00635bc47eb8d6706a361a1c24e4e2df50c28b658b381a50e5ee519ee7fbc17b"
     sha256                               arm64_big_sur:  "fd15f263c27b67da59700a3d7030dc1da0eb7e19e3f184c751921d95fe7971d0"
+    sha256                               ventura:        "ee62203998060482dc0f47b36cf2cba42424d351762e91d10e191f1f72326efe"
     sha256                               monterey:       "b5fbacfb1c2e2c5fe84cc98c0e2143f11c29c16c8db18e73127f30b7ee7f3ed1"
     sha256                               big_sur:        "72726715f2ed90b391d71b71a48c277b96a81373f62a90a6a36eaa45b80ccf63"
     sha256                               catalina:       "015b0c4f353d05eadf78567c2001392868983830280c893447c3a370163f346f"
