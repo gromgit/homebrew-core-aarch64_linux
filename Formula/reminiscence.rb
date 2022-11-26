@@ -13,6 +13,7 @@ class Reminiscence < Formula
     sha256 cellar: :any,                 arm64_ventura:  "7bb3a7ba7f08c9aadd9a95eb5f1ed7936ec593f50f14070627c060d30b58a5cc"
     sha256 cellar: :any,                 arm64_monterey: "71f92aa98545a961759a62af80f7ca5f83f5fe2c0d933811421c63b846517fd0"
     sha256 cellar: :any,                 arm64_big_sur:  "65baa88dd4251db9f003eda17b92c9b730eaa3592577944bf0c3cd1ee931eb74"
+    sha256 cellar: :any,                 ventura:        "3e8f935a4eec174be5f37cb71745060e1238ca6f14231edea2d0d4f3a1dfbeba"
     sha256 cellar: :any,                 monterey:       "0263ce7602723fbf4205670cb0d7125eca9c24b5301d732d1a102c6788510a77"
     sha256 cellar: :any,                 big_sur:        "2ffac4bed71ad59f04e9d2c124d9cc1f46be04b228aed0636278bec4dcf10380"
     sha256 cellar: :any,                 catalina:       "f849d254d724d242cd41d0338ab7e7da9e04bce1a2dab4a2f3147a867ede36c4"
