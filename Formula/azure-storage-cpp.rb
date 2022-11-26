@@ -10,6 +10,7 @@ class AzureStorageCpp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "b47dacae19d53efa3e73b64ed99ac6c44f5971ae762c5ee76daf25a49eae8619"
     sha256 cellar: :any,                 arm64_monterey: "eceac6e6f0593179a3534c2eab359edf6649e7aa17dcebd8ae4440183e73ae5d"
     sha256 cellar: :any,                 arm64_big_sur:  "0d9d71cc5cf69d7fcb77cfc333c7e2d6c636f5bc3699a0f58c2efd0afb22e03b"
+    sha256 cellar: :any,                 ventura:        "58e1f3f02eea58c160b77390f452689a504bc3e819c97182153297d24e5ebadc"
     sha256 cellar: :any,                 monterey:       "6b915ca380a9aef0e0d5e517570204f9f68ec019d7085ab8d3701c420365cbc6"
     sha256 cellar: :any,                 big_sur:        "d57014fd7bebf8938b6c9961e47454053778fd8055ef330df727d8e109d19474"
     sha256 cellar: :any,                 catalina:       "527e53429a66ab82caaf15b83c3cbc98e6a5fccc875d9a7111eff14daaeb6ccb"
