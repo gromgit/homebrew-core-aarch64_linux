@@ -8,6 +8,7 @@ class Io < Formula
   head "https://github.com/IoLanguage/io.git", branch: "master"
 
   bottle do
+    sha256 ventura:      "48d3b14d0c9b9fc74b24bbd9b5e4cc5283a00ef49c1c0854a7d768b68f6a4bea"
     sha256 monterey:     "7e191e8affbfeb613d6cf895ae482a077f54de8f2087ca2f4a8742fc488c73f2"
     sha256 big_sur:      "fae9b76e33ac8a9f4dd4f3c2335b13b003c2bdc01b81c4a2efbf5d7435c51e15"
     sha256 catalina:     "c4c862d20a8e4ddb1e6e588414a9e23ae2a17baa490e3beb621614aca7a8ca87"
