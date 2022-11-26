@@ -16,6 +16,7 @@ class Cgns < Formula
     sha256 cellar: :any,                 arm64_ventura:  "03b714ec53de2f79deb450ea1609f8fa13454ceba9602d756096d0e1e70ca373"
     sha256 cellar: :any,                 arm64_monterey: "31c4c8fb55e1b0445f2a0bffd5891e88f76d103c91ce718ba7b13a5506ebc7ee"
     sha256 cellar: :any,                 arm64_big_sur:  "b40fb01503689516098100b3c493dee84cf3a182c6751d35778fd7e7f6067705"
+    sha256 cellar: :any,                 ventura:        "9d9933171d051d02fedb804e2f4137a5525f62b86d9ae6ffd5c17a9b668e378e"
     sha256 cellar: :any,                 monterey:       "ef0306b868e4bdbe5884234dcadf93da65d0178d1b2cf9ecf5b85a3087efeb1d"
     sha256 cellar: :any,                 big_sur:        "c59cacfb19bd04311ea1296643e53badb53a6e8c4b355703743dd0cecfca9dc0"
     sha256 cellar: :any,                 catalina:       "32711a2b525fac2a509440ec5837ff0b4c68ca9d5e37400afd8bc628fe53f08b"
