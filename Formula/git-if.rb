@@ -11,6 +11,7 @@ class GitIf < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1816d6ea69848e3c6c01454ca2c06e305d18fa56167f5daa88737e814bcb5315"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e276ffffb24bbdb9fe565c7c55f79aec5df8d3a4c7b64541bbe73c757e2e45b2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb7f09ba2cb7c865b0ee80dd312e28250635a79173c0c2d3781acca03d519ee3"
+    sha256 cellar: :any_skip_relocation, ventura:        "405055ae1de47eb0af8b88dbc141b0c9ab8a8b246cc710d2833cdbcc31ff0adf"
     sha256 cellar: :any_skip_relocation, monterey:       "a69998ddf6e70dacfbc12c9c17912fb7ece0e0dad9437201209554a50154f802"
     sha256 cellar: :any_skip_relocation, big_sur:        "5d2791d14db4f96ff76532d537d12d9eda5298e1a7190bd538801cdc3813739f"
     sha256 cellar: :any_skip_relocation, catalina:       "0188ac542b752d94d6b8b544ab5a95ac8608ec0261a40be55ca6fa87140d2e9f"
