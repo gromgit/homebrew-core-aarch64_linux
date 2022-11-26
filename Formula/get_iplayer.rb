@@ -11,6 +11,7 @@ class GetIplayer < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "bb0bf5e440e1c1d58f12ebd3d21e2527bb6c1261966d676ce10f92a2839450e4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bb0bf5e440e1c1d58f12ebd3d21e2527bb6c1261966d676ce10f92a2839450e4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "668a4cf53137a695f95bb8eafbb59e076fd056a7bfebc77ae78a6107b844770e"
+    sha256 cellar: :any_skip_relocation, ventura:        "c31aab2a5580f74314ad0bc73ecb2dc69e77e5cae0893e27b71fe9788444cad3"
     sha256 cellar: :any_skip_relocation, monterey:       "c31aab2a5580f74314ad0bc73ecb2dc69e77e5cae0893e27b71fe9788444cad3"
     sha256 cellar: :any_skip_relocation, big_sur:        "881b1fd3b06c54671ae67424f6afd2214a89324d639b2d05cc2e5457a140adb0"
     sha256 cellar: :any_skip_relocation, catalina:       "4d92de4cd3d8e960450dadce7570a2ed7eae8b7e9eb95d6321370dcfdcc21102"
