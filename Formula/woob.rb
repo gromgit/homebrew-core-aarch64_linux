@@ -18,6 +18,7 @@ class Woob < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a85ca3288f8ac45a939cb1b8c007a71a50fc683302a4781259e580fcf3af5548"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2eb93552da75bc048abd5c3591e52fe11e00c6b3c51d72723f2923515117057d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "96574dcbb5d6439ca5b631068dc8900d2e2e4c9b4c8c9438ccf84875f0980db8"
+    sha256 cellar: :any_skip_relocation, ventura:        "6c7778220a2f66cec2d7de3fe67161e9dc2201fc5f549b99fb86f2b1040833d6"
     sha256 cellar: :any_skip_relocation, monterey:       "13e9d79aadc0cd9d9f918bdfbaa6704470069ceb9b8b984bc7de690a0954e571"
     sha256 cellar: :any_skip_relocation, big_sur:        "5d0fb624a55152b4c975458b6877b65dc42df04698975ae3fd1195ed9f7d5873"
     sha256 cellar: :any_skip_relocation, catalina:       "850ddb1215c6e4dee4523cf996d834daa4a0e10239d629d146b9a405e26cf082"
