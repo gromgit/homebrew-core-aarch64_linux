@@ -1,11 +1,11 @@
 class Hysteria < Formula
   desc "Feature-packed proxy & relay tool optimized for lossy, unstable connections"
-  homepage "https://github.com/HyNetwork/hysteria"
-  url "https://github.com/HyNetwork/hysteria.git",
-    tag:      "v1.3.0",
-    revision: "385c2d6845b085ae788367be659ff7c752d44804"
+  homepage "https://hysteria.network/"
+  url "https://github.com/apernet/hysteria.git",
+    tag:      "v1.3.1",
+    revision: "7a7fda67f2658dd1cad777689dcfa2bda2dcdeca"
   license "MIT"
-  head "https://github.com/HyNetwork/hysteria.git", branch: "master"
+  head "https://github.com/apernet/hysteria.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "473c3b83bf6e681705e87a78a196a83468adde355c58962c9d0de155588a6815"
@@ -21,7 +21,7 @@ class Hysteria < Formula
 
   def install
     ldflags = "-s -w -X main.appVersion=v#{version} -X main.appDate=#{time.rfc3339} -X main.appCommit=#{Utils.git_short_head}"
-    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd"
+    system "go", "build", *std_go_args(ldflags: ldflags), "./app/cmd"
   end
 
   service do
