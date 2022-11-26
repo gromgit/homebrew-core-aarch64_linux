@@ -9,6 +9,7 @@ class Cryptol < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "21bf30e80d822a11359a5edada042837a294a82e9a2375e39e19fb059957e1b8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "091eca3d557fc8f34f9f08734731c70d4235c701238fec389e8746b0c9875a97"
+    sha256 cellar: :any_skip_relocation, ventura:        "6e5819a8ca3426c7c22c8af2d4f0a63e67209d3c4f7e6b5b4ac182f4f3316986"
     sha256 cellar: :any_skip_relocation, monterey:       "2c2d695b1976a46096f711490a0fde3d036cee5eea965e0eaa431fe43764a77e"
     sha256 cellar: :any_skip_relocation, big_sur:        "649566c85d028a8affea145c1c4236f9462f8fd17daf7d649e894d4d54d191ae"
     sha256 cellar: :any_skip_relocation, catalina:       "45e33fc7108b2f070b587b040fb16e0bb6dbd107871cbff0a1dc92d49c190c94"
