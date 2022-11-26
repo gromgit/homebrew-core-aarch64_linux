@@ -25,6 +25,7 @@ class Sysdig < Formula
     sha256                               arm64_ventura:  "56f06fce0f517306e085ecaad7ce6d4e5a0fa2e4dbb9e21263c4d023ea715ed6"
     sha256                               arm64_monterey: "ff684cddac03d6c30fd4b2ceae492eb5528d5c22b3b32324303b15c31be662a4"
     sha256                               arm64_big_sur:  "65114a1660c646dfbaa095cd922f6840f8e8b2658fbb4b3e7890fa82f566484f"
+    sha256                               ventura:        "9ecf14d8ce20e8859e239ad7497e244a15c459e4110e4277245ce34d2cfcb7bf"
     sha256                               monterey:       "cbc6554ef1ea6abeafca41cf198287725570b4e42a81c649537197897c87fd08"
     sha256                               big_sur:        "4e2198aed7509c1367e63fbec1e6a1f46bead140e2ea4c1cde3b60a421269dfd"
     sha256                               catalina:       "ddacde082b4e2b358cd7602ee1826fb777f132f36d733a7f57bc1f6572873660"
