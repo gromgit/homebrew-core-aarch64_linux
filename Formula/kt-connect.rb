@@ -10,6 +10,7 @@ class KtConnect < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "362298aae0856a0ea10cf766d3ad97ea78c890137e71f98201ad0529df3141fe"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "201a9bc8a61ee90706957c3fccf6ae1623639bda3820fb50ff1a80648935bedf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8c5c2566756210068ffbd9de28df50a18509e9139089626d739a31a16ea01b9"
+    sha256 cellar: :any_skip_relocation, ventura:        "d4918a79d6ace9040f470a0fee07ec771640b434126573c75876f1b7a349c582"
     sha256 cellar: :any_skip_relocation, monterey:       "5121833c6caae40c1feab413ca5ee4df9d8148ec4bc4135eb94d2beeadf3dff2"
     sha256 cellar: :any_skip_relocation, big_sur:        "f34314cfc0ea7d23bb903b074d55b1694c8ec001b037051c5622cbc2e8262654"
     sha256 cellar: :any_skip_relocation, catalina:       "0de5ef15714fffa9cbddf23e60afd497e2fbf3a39f29b0f8f062f92aa26fb031"
