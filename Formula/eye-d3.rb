@@ -19,6 +19,7 @@ class EyeD3 < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1f4883bcbee1f7a8c72a814ceda0bdd774dab13090f5788abe618e27a20c75dc"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "dd6b0258622b3307eb3bf54bcabcd8cf62c1585d77656817a25281fc387a9903"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f7f2c3f630ae636d131e25e7c6751e7e303c93853078ff5d91ec1a48fdb6ec1"
+    sha256 cellar: :any_skip_relocation, ventura:        "2eeb90f36cce98ebb93f4b9ce76118449e38f7736a7a1d6a6d77839110decec0"
     sha256 cellar: :any_skip_relocation, monterey:       "b1e52d17783493b79d1c3ee81dcec2d3ea807c8593e436f0507dc95f5e96b683"
     sha256 cellar: :any_skip_relocation, big_sur:        "aaffc02514d0c8810236b9a67650e67c3b76e41057afc6f15429102c28a3571c"
     sha256 cellar: :any_skip_relocation, catalina:       "ef09a7738882c59ae2adf8939dd5237118668c7fe11e61c953f36c992d3648c0"
