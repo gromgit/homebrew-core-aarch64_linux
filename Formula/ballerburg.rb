@@ -16,6 +16,7 @@ class Ballerburg < Formula
     sha256 cellar: :any,                 arm64_ventura:  "fdd4855a7c3dc5acf1a3f63f684ef23f55886df256002bd92284608269b6e4c3"
     sha256 cellar: :any,                 arm64_monterey: "41d2f33620f8f0c8b418d7362f40d618785db53d624fb5eec3be48ee0361c8f9"
     sha256 cellar: :any,                 arm64_big_sur:  "e0917508a2b1eb6721bf4694ca269349dc523a210cf8fdcc1395d266742e1f70"
+    sha256 cellar: :any,                 ventura:        "a569610cfc27ecc87a0c4455b2693e564c5d0cf08d8c36d6ab4ecb5e419ba018"
     sha256 cellar: :any,                 monterey:       "8c7f3a3a864e9095ba740202e528b73b2e19d604f1e8179b4c09db4aa71be8de"
     sha256 cellar: :any,                 big_sur:        "e8d832e1d5400c66663f8090893073c6c3748b9fb6461b960c227c19f4583649"
     sha256 cellar: :any,                 catalina:       "862a6435cf14376e0c5dd7a12337bd03dc1d5b1d1917dbaaa3a0e704d025929e"
