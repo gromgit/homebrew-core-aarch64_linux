@@ -27,6 +27,7 @@ class Libdc1394 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "9a16dd0bb058c51d700fc93c1cbe13d2b185cfeccd9ff90eb300088fd76f595b"
     sha256 cellar: :any,                 arm64_monterey: "df7e187b4be0fd2c0b1d44ae4affaf06c880d10405b49676c46654f7578c578e"
     sha256 cellar: :any,                 arm64_big_sur:  "1130efff7b225327ca8743b863d808f509c1391afb19692be2b14b01f65fc3bf"
+    sha256 cellar: :any,                 ventura:        "0f2463909e7b1e94ace46e3a13125073f1ed0b3126e2787b3840ce0900777497"
     sha256 cellar: :any,                 monterey:       "9a293bb439cf246d321f3a2f3b913a0cabcec397dec51134d6bb5c315949d2d4"
     sha256 cellar: :any,                 big_sur:        "d2783838520007d2620ce7a640dc68e7aaf3c47e9ff857d03404594b0343ddc1"
     sha256 cellar: :any,                 catalina:       "392b2fc67276fabb361f3e9d88878c79baff7b50f8666c63e6b3c58f04af81cc"
