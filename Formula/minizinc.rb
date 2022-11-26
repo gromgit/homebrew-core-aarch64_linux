@@ -11,6 +11,7 @@ class Minizinc < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1193b0a0333c98a90e740e7b83494bd2b2c594cdf58f78c330daee0ee5827206"
     sha256 cellar: :any,                 arm64_monterey: "1e9b22bedeac1d802335797e45a482806b607aa20b1a38e406f10fcb0d933473"
     sha256 cellar: :any,                 arm64_big_sur:  "4543525b1036daa085faff48d9ea158bcb029683f2b207be1f4c86832d1169b0"
+    sha256 cellar: :any,                 ventura:        "9fc9fde36a396fde4644334ae7a7f65d05febe1ba2162c7ae97768cd3b7b4fe9"
     sha256 cellar: :any,                 monterey:       "08544ad457361b71dd8bb8b223d22e4c4ccbcb9dd544d5f706a50a177414ef8e"
     sha256 cellar: :any,                 big_sur:        "90d6a2c51750101f1efc1797de6a0f127b797dda2f502e3673ac23c5ed012e76"
     sha256 cellar: :any,                 catalina:       "8a9e1de8f0b12cda3283b4113ca6e948ef6ccfa1c70a422c009169c0291cf1f1"
