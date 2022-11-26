@@ -10,6 +10,7 @@ class Muffet < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "397feee05639034b937542fe808de0c4a82cddb7e7b6cdf177c67d8d257cfdcb"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ca593882662c0ddbd75fdc3ac173e8e1443cd3ded92b082b271078b9638b221a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4f7692e22960e489ce3c303ddc58ed3042a613a5009793769bc8df4f635c204"
+    sha256 cellar: :any_skip_relocation, ventura:        "1c95f993354c7c20f80321b4c5c5531795500e3e4a48f52958e0d2130a96dfdf"
     sha256 cellar: :any_skip_relocation, monterey:       "d94463479a35add6f9017cd6195add5d7f770460fbc7affb88cf4cb65b5eda34"
     sha256 cellar: :any_skip_relocation, big_sur:        "be38d809c1d492133b7dae92ad6cf6a6c88db65020840e493de0655011b28eac"
     sha256 cellar: :any_skip_relocation, catalina:       "1e7b4be591c708ee6478eba3dc6c344f7e08bc22d0a43eefda4e8cf418eaa785"
