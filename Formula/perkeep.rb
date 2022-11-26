@@ -21,6 +21,7 @@ class Perkeep < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4ac74693fe6eee20f743e6894fceb543514f9d2a034f7f1e394c2f43fa60e67"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "80b74aa6f9784371b2a2b4f79ed15fb8d998a3589f1cc85885ba60d259196dea"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b02cb9968771e49d46b9f605d53f88b61bb32cd765d46146280b2426abffc00f"
+    sha256 cellar: :any_skip_relocation, ventura:        "90b59df7cdc6b91b7031503fc9ad0ee22ea55da5fc40481a15200788750c1d8f"
     sha256 cellar: :any_skip_relocation, monterey:       "a30e484cd077d745047fcf919d857ed2d1ca68589b7017e91e0417fa5c256b6b"
     sha256 cellar: :any_skip_relocation, big_sur:        "663b51444cae568b049afdc4c3bffb0dadd70dc0d63764cf6a9e9d9f5568afc1"
     sha256 cellar: :any_skip_relocation, catalina:       "6ccd732cc142a7efb8b78b150909eb0eabde2d9fbb9683fdfaaf550c2ebbbbdb"
