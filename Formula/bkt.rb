@@ -10,6 +10,7 @@ class Bkt < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7012deda4dc41076875dfb71b2939b8fb3d5b70774c800c65cb3995e643a364c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "020ffff4d753c9048f178ca23fe4294e371485e4ffeb75f4fb4771e65c2ed313"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb4994a9537b696ed3aa5327751d6b147ac17c5c32a08d4891c93a547a9fc818"
+    sha256 cellar: :any_skip_relocation, ventura:        "e7e8d9de0fdb557a5781af8348394195e5fcb5635047c41123491e6896557e6b"
     sha256 cellar: :any_skip_relocation, monterey:       "bd0ade61029b216b1dd19e0e19ad635df0b39bc9ec2537edbc04278b34213326"
     sha256 cellar: :any_skip_relocation, big_sur:        "2a370ef7c828a155cad72d4776bd14b3a84a1a5ef1b7392741bd4186d5613746"
     sha256 cellar: :any_skip_relocation, catalina:       "c12826cb4085ad2a67eb168cf043c1587df4c6fc876036568bceac64be1874b9"
