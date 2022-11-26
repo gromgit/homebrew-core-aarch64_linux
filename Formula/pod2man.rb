@@ -10,15 +10,13 @@ class Pod2man < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "43be4d4635b4c90f5d5a9518229d45d6e9ef4956a16b8e41d373ae4ab88c6d83"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "43be4d4635b4c90f5d5a9518229d45d6e9ef4956a16b8e41d373ae4ab88c6d83"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "342ed828eb46d48381a7a3273a1858cccb0818f893bf1c384508842c49864fc8"
-    sha256 cellar: :any_skip_relocation, ventura:        "ee09c8d2a8e36c1bd0e3532028f6603ae9fb8d6cd46882a903b12c41a90d5da0"
-    sha256 cellar: :any_skip_relocation, monterey:       "ee09c8d2a8e36c1bd0e3532028f6603ae9fb8d6cd46882a903b12c41a90d5da0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "53e3c8c329177d03b2894745c6d679fa752f828daafaff0ef2bc10800b6dbcf5"
-    sha256 cellar: :any_skip_relocation, catalina:       "ca1fb674f4d5ffd23945ec684b4ba2ca48241cb5e273fbd4b4007753277e2e4a"
-    sha256 cellar: :any_skip_relocation, mojave:         "09c560e15e46d7eb4836ced38a0eea6900ddce5d5230a86578c33ed61328ce5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daf311d7a284678c630a79a0c812b98288937291973742af5bca2712f8399548"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57e6c0e470b8138e4c14d74072a2a2fd18e6a1fd2cf5de274cbb6883b5e74c20"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57e6c0e470b8138e4c14d74072a2a2fd18e6a1fd2cf5de274cbb6883b5e74c20"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acfffaf34dca9ea5dabfc050f169fc1448361c0177cf80c97a6930dddd785789"
+    sha256 cellar: :any_skip_relocation, monterey:       "90cd0485e9d729fb4064e7e470c098e8a781d833d999a9b5ef7624106005f40d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f8e5c75883dca82a09d5c38e211a0e28f7a427d575de78a59093249b8fed53d4"
+    sha256 cellar: :any_skip_relocation, catalina:       "0e3dbd2c66fde6944e6493ca208720d45c55fe79ae271fb3dbc63e96f19871a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59fe8c67d225d8f1761783c2981fe0637045963897230875120f31fa01f0f155"
   end
 
   keg_only "perl ships with pod2man"
