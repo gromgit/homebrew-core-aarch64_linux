@@ -15,6 +15,7 @@ class Coq < Formula
     sha256 arm64_ventura:  "a0058990f3f38468311a6b8d21dc9190e0c85e0a3d6b0566f2fa999bf269e255"
     sha256 arm64_monterey: "3bc7aa1ac3c19daaf0067b05ef7f3e657220de11ff58d4df10aa98f1a0dabd7e"
     sha256 arm64_big_sur:  "69601869940c2f3e0fcfb39de3414cbfb741913988ab35e44db9725245e10af7"
+    sha256 ventura:        "54bb8ebd69af1d5f2e947ac44b34153e40e9fa9ba3e17d42f4d865605d4d465d"
     sha256 monterey:       "346ea8b3daf2398ba4fad2ffb7f814bdb94ede607f8831ef54874dae9079abaf"
     sha256 big_sur:        "d2736451cb3e1233209f850fb3a33fafadcb081af9fffbf10bb09c2fd43fd2a7"
     sha256 catalina:       "e31207f3bda0fedf8b15e0cff39d450628784dc55e1acd388c8cb7ec33b41e62"
