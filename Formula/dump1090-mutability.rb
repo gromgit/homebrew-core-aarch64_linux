@@ -10,6 +10,7 @@ class Dump1090Mutability < Formula
     sha256 cellar: :any,                 arm64_ventura:  "65a2246aa5277b6eac0a934c32db640af72b39bdf4913788cea5711ff3f599a8"
     sha256 cellar: :any,                 arm64_monterey: "74d4061c93d647ace683380b85ab320e96b7e115a30ffe7587bc0c0672a097b5"
     sha256 cellar: :any,                 arm64_big_sur:  "53aa50bb97ebb0923c0ea340562f523e61018454bfcf78dcc6a6b5509aef6462"
+    sha256 cellar: :any,                 ventura:        "bcdfc614e9496a402d75b7e4decb92704c7c9739fe8fff3f56cc3b1945184065"
     sha256 cellar: :any,                 monterey:       "7c2a4fc31ec409abf1ac74f68b65325f8d5ff38389b7f2be44b51d8529eeb338"
     sha256 cellar: :any,                 big_sur:        "331470e3b5efe1732916e5d6e5267dfee973d7be2c5573a4c6a9c2e8f207b1e9"
     sha256 cellar: :any,                 catalina:       "c2b702a7432ab1dd5086c693d4930103d2386782e43453fb7811a8d415505459"
