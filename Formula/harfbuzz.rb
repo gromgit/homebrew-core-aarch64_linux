@@ -11,6 +11,7 @@ class Harfbuzz < Formula
     sha256 cellar: :any, arm64_ventura:  "d4e91ccdbfeb4b1ff203ecf5576e6b1378e5583c8df63482856fb302b3bcbe1c"
     sha256 cellar: :any, arm64_monterey: "469ab0b63c782e98514493a4f70ac6202298af815abe6f7fa9f8facf44247550"
     sha256 cellar: :any, arm64_big_sur:  "e6ec119055a076145cdf6c6a440cd5d57a8d81a7f91b988e7bd020993a267332"
+    sha256 cellar: :any, ventura:        "8c545e7d68fa90b70c7004521b81f3e15005f2021919fd3ead6d61b934ec762a"
     sha256 cellar: :any, monterey:       "38b0743c9e1b989ef9e5b724c3a99ec25c34bd56c8c43ec51e803e81d93f50ce"
     sha256 cellar: :any, big_sur:        "faf83eb7fdd6f2ea498274676ac7152656cacab6af7217a9b09875e7127a8de8"
     sha256 cellar: :any, catalina:       "385447700d9f6f09f5042eabafecfafdffb56a09d14cde9ce895c6dce569afb5"
