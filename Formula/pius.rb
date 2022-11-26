@@ -14,6 +14,7 @@ class Pius < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1e031f7d3ef469e8f1f4d99cc683122ba9b44ce3b663263ba5a7e39070e808f9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1e031f7d3ef469e8f1f4d99cc683122ba9b44ce3b663263ba5a7e39070e808f9"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e031f7d3ef469e8f1f4d99cc683122ba9b44ce3b663263ba5a7e39070e808f9"
+    sha256 cellar: :any_skip_relocation, ventura:        "984bb44f8297fd26d73884d90085ae21a80e7465fa5ada5e89796f83d6dacca3"
     sha256 cellar: :any_skip_relocation, monterey:       "984bb44f8297fd26d73884d90085ae21a80e7465fa5ada5e89796f83d6dacca3"
     sha256 cellar: :any_skip_relocation, big_sur:        "984bb44f8297fd26d73884d90085ae21a80e7465fa5ada5e89796f83d6dacca3"
     sha256 cellar: :any_skip_relocation, catalina:       "984bb44f8297fd26d73884d90085ae21a80e7465fa5ada5e89796f83d6dacca3"
