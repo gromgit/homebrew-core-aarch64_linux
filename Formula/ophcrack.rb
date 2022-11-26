@@ -12,6 +12,7 @@ class Ophcrack < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2944016f7c83334b70e9be541ddb4dc1da3fd8153234897cfe133ae29e336afc"
     sha256 cellar: :any,                 arm64_monterey: "37ecbad244ecc446c4bbdffe9d0826c76ef775e40e690b4f41dbc6c6630fdfde"
     sha256 cellar: :any,                 arm64_big_sur:  "d8c3ea08b451c0c0d27ca20e531f902fdf9b4fde1eb1fb76759dc5a7e931faab"
+    sha256 cellar: :any,                 ventura:        "fe4a6f346518d3efcfeefba25b473deb83ff1ca2701110551eed83c8c53e0e9a"
     sha256 cellar: :any,                 monterey:       "c96ec9cc73e454864271c1a8decfa64b7a5b81a2a7a26a54713167d12fd7e770"
     sha256 cellar: :any,                 big_sur:        "5a15aea7e8140b19119e29c2d4b8766a1f61bdef196458e684a95bcaaa81ad7d"
     sha256 cellar: :any,                 catalina:       "0b0e6f27354207ce5939fd31581c7913c64824752ba6e217c097dcc17041221c"
