@@ -12,6 +12,7 @@ class SaltLint < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "87fc6f52e39cca360c96a70a329080dae9beed83737c8b6f9127962bde43ae25"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5854dd0330baaf0f6d0d26fe4e0910932164de550fc5759b1d2832f6aa646a51"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a9f38d3c5d28634fb1543ba4ba6f61c1e97719e2bed569132968d532260cbf44"
+    sha256 cellar: :any_skip_relocation, ventura:        "d22336a46b4e08fbb17f7220a5bbf145c5429ecd59fafe29b42c216770878a61"
     sha256 cellar: :any_skip_relocation, monterey:       "23df453884270f756913358f4b7e1d9fc6b08a92e72d180a9646060e0458376e"
     sha256 cellar: :any_skip_relocation, big_sur:        "05150cd861ee2d091d7a006e2026adec3a08c6d4f0b35515916ee911c9853acb"
     sha256 cellar: :any_skip_relocation, catalina:       "74394670e09ff7757149be51d66049b0d0b3d8cb2f2dfe3c8fe2cbb9f517911f"
