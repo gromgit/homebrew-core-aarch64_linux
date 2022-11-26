@@ -12,6 +12,7 @@ class Schemathesis < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "caafd55ccc3ec95891d9264b72639dd43eb31b83fb14581a2c124895ff9693e0"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "930902c9aefc426d51f12a1a656214c8269d8afaa33b4aea26b8c6b7fbceeee4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b52591bf0d246e3d5cc1dcc9834ada22eadc14bee1c2602c84a0adfd1a545114"
+    sha256 cellar: :any_skip_relocation, ventura:        "a1c69bef13156a2e2e13b1ba72b1e3f0d28a95fb24016a5e63b47c0bc17f4f0e"
     sha256 cellar: :any_skip_relocation, monterey:       "c19323e76cc2de091a259a1d0d38b900da3256a4f8480ad8e059a11e2d819bf7"
     sha256 cellar: :any_skip_relocation, big_sur:        "4d5f715c5670557e34632a9ce5db246542c2264eb4ab164fdaa4eebcb7badfc3"
     sha256 cellar: :any_skip_relocation, catalina:       "d5fa4a0e69e9792207b463ee50b7aa0b3908615c89f1d170750c02417ddff0d0"
