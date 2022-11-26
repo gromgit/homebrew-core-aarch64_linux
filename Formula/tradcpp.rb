@@ -9,6 +9,7 @@ class Tradcpp < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a96734bf959182df15d329812a1f492f962e8011a84ee7f98915fdbde7faa839"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9584ff61e602fe8001d9c39dcaec1e348731955bd65583155953edc41ef989a3"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ef32ad298a9059d8bfb8a9216d878b38c2f9283e04cdfba4f0a80d20302ea5a"
+    sha256 cellar: :any_skip_relocation, ventura:        "1319c923b8db5cdde40fa4785c1a1ce2153f290e693a94252fe9bad201d4be0c"
     sha256 cellar: :any_skip_relocation, monterey:       "7d111d68702a671f85be5da6f8b8022dd92ae8bf62dadbb5d3c40660b5b9d19a"
     sha256 cellar: :any_skip_relocation, big_sur:        "a9989ef6884603abbc66752b56adcf52ad8976b8c5cb0faa1904fdf8646d2725"
     sha256 cellar: :any_skip_relocation, catalina:       "23d6d5712e23e1467f95e432f223a6e088d3a94e5ca179c6ad48b40b200e8878"
