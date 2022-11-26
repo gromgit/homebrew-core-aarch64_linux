@@ -11,6 +11,7 @@ class Libwbxml < Formula
     sha256 cellar: :any,                 arm64_ventura:  "98d058e5bcb1eb4846a21d474774cbec312ce4b49c37585eae02c601c64e201e"
     sha256 cellar: :any,                 arm64_monterey: "fe2ac6ea506094bb84685b873d59cb9b0ea225b2ce56cb13b2fc1197bcd6b906"
     sha256 cellar: :any,                 arm64_big_sur:  "ac5e42ae5a76a5d3cf1d731b80b40ae019ffd90c0cef0ea4ad24d700958f3dc3"
+    sha256 cellar: :any,                 ventura:        "a3d9904a0466a386a6572f5dbe8834960511574475511cc5096e5751c5a2c1c1"
     sha256 cellar: :any,                 monterey:       "08e5267c81b874f8115b1fb110a3a0553553863b139c950e60aeead99701ac7f"
     sha256 cellar: :any,                 big_sur:        "1d656b5fd3c1c1486db641b7e00a129b71071c1f26a522dad2bc29795d6c2a85"
     sha256 cellar: :any,                 catalina:       "1a5739cb2c803bc0580ef5cab2c58effaa2d849f7f0d55060f325a5cd9cf8ec2"
