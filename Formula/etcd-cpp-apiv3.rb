@@ -10,6 +10,7 @@ class EtcdCppApiv3 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c2ca7f7d6163bd00085cff6c638aaaeeab6d5c989ab5cfc2fc8cd1d5fa265207"
     sha256 cellar: :any,                 arm64_monterey: "52d5d1efe7cea26e46fa2e6c480f975b608fdd286b9553ac1999e9bae9d9a1b5"
     sha256 cellar: :any,                 arm64_big_sur:  "f43bc27d5097934575234a84b2ba06d3d5d7e99a82a20bcb80fdf847ad5ffeba"
+    sha256 cellar: :any,                 ventura:        "709fb5e6ec697880224ca2426b44d3886b0fd5fa9aeb1ad2be0c079f5c22f36d"
     sha256 cellar: :any,                 monterey:       "5d6691e57d8e8b1c41c97e4b5bb8b69b39c984e4befb62f6075b78c893ca541e"
     sha256 cellar: :any,                 big_sur:        "077dc3cb57e5caa7ab246f36f47dcec2104e952d10622708d0bcf393f4cfbf66"
     sha256 cellar: :any,                 catalina:       "674d32fd9d883ebef3d1b13710cf68982c7c5b7c8d7a6eeb3fcb34e34e989e31"
