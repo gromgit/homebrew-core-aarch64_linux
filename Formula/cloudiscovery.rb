@@ -12,6 +12,7 @@ class Cloudiscovery < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "73d5840db5ac1ec0fccd5be7680e3057aa0d70d06c1f84e0c172175527d836fc"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5ef79edc6e888965160451f43b0302215fa803757b33339a271798185a599b99"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01d9470ba205b1de5b4149eb7cb2a636b0e52b8129b6fdae85c7e559e5bc5707"
+    sha256 cellar: :any_skip_relocation, ventura:        "718c552503df45b02994f3d96d56f37c52e41627463cb08b15b64adbbf096b6e"
     sha256 cellar: :any_skip_relocation, monterey:       "af2a5e29595010b8b7410ca110da562900dfea8932ba56873fe7224f914c0666"
     sha256 cellar: :any_skip_relocation, big_sur:        "aec275f119f6ceb6093eb2bd27832ea6ebd25ffa26fcf5766ac5bc625f0abcd9"
     sha256 cellar: :any_skip_relocation, catalina:       "bd6f1255f9f95402ed607c49e352189854a884260585b710aa84b9c9e6e5bb85"
