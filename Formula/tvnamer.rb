@@ -14,6 +14,7 @@ class Tvnamer < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "44bcd455f8e36aa40ab7e0d5a300752264520b18ffd739eefca7d760c2ae105a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ea4e7305d39b4960cf73fbf8fa9767aad646e83bb9d4cb36ae4271aa2b2eba94"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44270b65aab543ed23b67d0e803ee8ed12b1053198fde809e8d09de945d91084"
+    sha256 cellar: :any_skip_relocation, ventura:        "426084e68945da49d1442a506117965f5c41ba4f1d337a94767e9855bb0ef8c2"
     sha256 cellar: :any_skip_relocation, monterey:       "94be19c99705477fdd53b7f05f1b4c00ea511897f522c5e32590c4a4fb86a98e"
     sha256 cellar: :any_skip_relocation, big_sur:        "c1a6f5ec60abccddfb3ab65731e70c579cee559d103a22609c8e002a71157412"
     sha256 cellar: :any_skip_relocation, catalina:       "a4d03019f5357d1c4303d5a1efb3da25107ff401ed3051340173926b1177733b"
