@@ -9,6 +9,7 @@ class KotlinLanguageServer < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f09637fcfa885a9987c91d5d9dfe86af6083cea44efdb0d5f9513cf408bc8e4f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ad521214d25e1c4ca6f66cbbfb7b877de45b7f6aeecbdfeb3d812a35d2367d34"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "42be778c6f2825ec713f5a65a8ab55623b8a8b3ec1a8712bd30880f873e25242"
+    sha256 cellar: :any_skip_relocation, ventura:        "04ee29da214e02cb50fd3d877335ce9e75e74b7f4a9d6701fdbf6b5d701d2b6a"
     sha256 cellar: :any_skip_relocation, monterey:       "cacdac3c30827ebdba6ec8ba7c3194467a43ac05b2fd4e9bc667ee78cbef2b6f"
     sha256 cellar: :any_skip_relocation, big_sur:        "d49a6301254a3824575a106eb4b7cd87f4497851a17a1e8b8cff36162ac7300d"
     sha256 cellar: :any_skip_relocation, catalina:       "864d2c7571e16472b304581106e2d718cfe3e3df0924416c41a10f9a335cae49"
