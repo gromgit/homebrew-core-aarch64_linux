@@ -9,6 +9,7 @@ class Skylighting < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3ef5720c53c0e8a04abd32f0de09f2407444678e4eb0fe852218fb85d3f3ed43"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "58513fd3da1994f58e546e60894996a71b9bb952d5ebd71caea1819a5a06258c"
+    sha256 cellar: :any_skip_relocation, ventura:        "bdb3dc89ee2539469b85f6a9aec8b6a6f20fbd1a4d3a1b53cd989428c5b60262"
     sha256 cellar: :any_skip_relocation, monterey:       "08e8bbeb9093f13b7804e17ff615654436faa7b9f061f79ec05bb81a0750ea04"
     sha256 cellar: :any_skip_relocation, big_sur:        "affbc76f6bdf3c5777f360f9ef5487c0632b0c07f85e5d582ee7c241a73cdcd0"
     sha256 cellar: :any_skip_relocation, catalina:       "a417c0ef564abbfca0880a83c3487e6e95e986c8cbafab73bdb565726ad7803e"
