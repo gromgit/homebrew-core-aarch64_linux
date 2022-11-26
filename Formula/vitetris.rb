@@ -11,6 +11,7 @@ class Vitetris < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7e9d7a5f17a0ecec24844b5170fa3a022e98e957bc8c957aed74278f90b5e6f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1abdb3a699387c63bb17e24037ba5f6233758ba792964c076db235622de37c0c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ab846d19502cc5c5aea07435f491a2e7e73f84b37bae0d40e79dffed69a8e6b"
+    sha256 cellar: :any_skip_relocation, ventura:        "ffb6b3d04c4295734d3278c42f819ff40a9b17e4b01869cb9c8fdadba2e8657f"
     sha256 cellar: :any_skip_relocation, monterey:       "8430ca0038c16d9e4b3e65d2ff25ed6b97bde494b28d06d55386dd01288de711"
     sha256 cellar: :any_skip_relocation, big_sur:        "1fa572cc6545ae0b7dffcabbab5d15f256c29d0a7d8f8af1bfef4371bf31401c"
     sha256 cellar: :any_skip_relocation, catalina:       "9b92a065c5c65480ac9fbe8b3414e3c8c467ba6decbe72054a269f18b77e4280"
