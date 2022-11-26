@@ -15,6 +15,7 @@ class Unum < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "9c22bef3d871c22b2ae47fe00da1c301a0acae08e51268a6807747fac0939b4a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9c22bef3d871c22b2ae47fe00da1c301a0acae08e51268a6807747fac0939b4a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd5abefdf57460ea0ebdc949267fc2b3443c71aaf2af7cb70701c8fd797b977d"
+    sha256 cellar: :any_skip_relocation, ventura:        "8a80b4ff18e6259cf34baaadb8a37e773225b14bd90b2104835fab1fee239f1f"
     sha256 cellar: :any_skip_relocation, monterey:       "22e5c8640275d380cfe78193668b1c7444add4abf05b7390cbd360d1e3d37fe0"
     sha256 cellar: :any_skip_relocation, big_sur:        "fd97a83fe0f4c0bb3c1ff8966c9f116237cdd243db8b2d057454642ab67ccd18"
     sha256 cellar: :any_skip_relocation, catalina:       "81439219eeb57ab4ea2ece284592bff4bba3a55be535a6302ccd8106f56caafd"
