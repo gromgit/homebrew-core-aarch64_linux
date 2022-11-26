@@ -12,6 +12,7 @@ class Notifiers < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0b17e48870ffb0ac17252abaa76ccaf79dac1d6b5c6fca5e92b2cd31a1b3cb93"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6278250a454ed0d67f2df0c4f85698935195b304de0d9cab4adc2928b8f4eae5"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b62cfcbf9eb4e3e71ba7f65fdb48e424a4487bcd0cdee7d181eabf396dbd91f3"
+    sha256 cellar: :any_skip_relocation, ventura:        "21320f001355939b553247fd35df487919f0c74776fce9eb2cfb9ffbe68ed1f0"
     sha256 cellar: :any_skip_relocation, monterey:       "638ef0b76de81b4a2973a03ac04b1b24f6026bd20bfe427fd5c6a0388aa0e7ae"
     sha256 cellar: :any_skip_relocation, big_sur:        "339d9f8d5fe2be12371ee065c2c22b0d2c1010ffc885dd9488a4b6c6c9e15024"
     sha256 cellar: :any_skip_relocation, catalina:       "7bbf411c52bbdef5d3cd7d450d464d1751aab537286ee7da2a4d010d9d81a73e"
