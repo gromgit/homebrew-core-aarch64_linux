@@ -14,6 +14,7 @@ class Goredo < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "458e97faccdf2f6c46970ce24b281e444036b27b7a322263e2f52a71972a7ba4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "458e97faccdf2f6c46970ce24b281e444036b27b7a322263e2f52a71972a7ba4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "458e97faccdf2f6c46970ce24b281e444036b27b7a322263e2f52a71972a7ba4"
+    sha256 cellar: :any_skip_relocation, ventura:        "c42f642bf6c4c4b9c7953cc8139372fa0b2b18c09f79d7fd980dee5edf720d22"
     sha256 cellar: :any_skip_relocation, monterey:       "c42f642bf6c4c4b9c7953cc8139372fa0b2b18c09f79d7fd980dee5edf720d22"
     sha256 cellar: :any_skip_relocation, big_sur:        "c42f642bf6c4c4b9c7953cc8139372fa0b2b18c09f79d7fd980dee5edf720d22"
     sha256 cellar: :any_skip_relocation, catalina:       "c42f642bf6c4c4b9c7953cc8139372fa0b2b18c09f79d7fd980dee5edf720d22"
