@@ -12,6 +12,7 @@ class Twarc < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "16f45938acb8d43bfa9e40f473889a37a974d3c31e97f8b8ab26e4cb4f0efbd2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "26bae59cafc93b21b2d8a367c9a87ac597a63423b34128660d4d5d1bc3311a96"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "13647f56f5d3d28e17ac6fbd55d310a1b6cf35d0381bb09d3ba7e50457baf763"
+    sha256 cellar: :any_skip_relocation, ventura:        "a2a0ed4c790636ba5d3e935ffb3ee9c4b079657208e4b5bdc0f07be1f40aa197"
     sha256 cellar: :any_skip_relocation, monterey:       "4e33004710bca3a964fab510705ccb3f085fc6aef616b853248a1bbe925ee4a1"
     sha256 cellar: :any_skip_relocation, big_sur:        "53d2b4c6db7a56108d388d93bd0db90a5aa71c5f2655a461ada1c7e1a1e5e4d7"
     sha256 cellar: :any_skip_relocation, catalina:       "15a703d6c4ee3b4711af8ff58f06b6fc21a141b728d5a303b6a918976ffcea52"
