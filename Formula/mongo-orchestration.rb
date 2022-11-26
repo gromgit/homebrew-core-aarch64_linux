@@ -14,6 +14,7 @@ class MongoOrchestration < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "405127e453e31ede09efe2d9f227f1c3eb73284d83acfdfd6b7e8f933cf98ae5"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6d23d95a71adb37e14c4e38e026d7e764af41480dd90841d74a7a2422f7f1f0d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90a4581f44b9dbdeb3acd2178844740b9c972d9ab482012fd621e0298fd2f2e6"
+    sha256 cellar: :any_skip_relocation, ventura:        "2ae530fa702c4b5ab68fe65c83ce5311fc4196685fc406b824c29368c55468ce"
     sha256 cellar: :any_skip_relocation, monterey:       "9cd9b0ad3bfdda51c34bf4ae6fb0a8389b8d0eb2706f0bd08225d5ee8e0c66ed"
     sha256 cellar: :any_skip_relocation, big_sur:        "ba9a03b8247ec1bdb1beb5dcc3ba9ec4d92950af2e1a15db1eefc9f2b4d802f9"
     sha256 cellar: :any_skip_relocation, catalina:       "6653fea0b774f6007ac75652a1a90c4719c3e913d8b35f3af9e0616baa7fc46c"
