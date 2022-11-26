@@ -9,6 +9,7 @@ class TtyShare < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "c0a7c784ad44fcdd0d90dc72c0f755ced57104118bd40a592616598054ee748e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cbcd192686b309a7ac1464e8d5ad9f08629b7111a1d6df176d0035f8f96c9bb2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7466e5d42ceb6f8e44a88277a35a3da363fc4c045bdf5387356cd57be25be60"
+    sha256 cellar: :any_skip_relocation, ventura:        "e93c0812427d8ca2598bed21d0edf709f81c480b5a847a4a83ce20697d129436"
     sha256 cellar: :any_skip_relocation, monterey:       "a026b1cc81ea6aabcbdaa66d4b1dec583346db66cefe5d2c69828aada3b37f93"
     sha256 cellar: :any_skip_relocation, big_sur:        "c443d3f7c93183efb992b8ea9eae1998228d9a2193d70c217a1c5840c9487be0"
     sha256 cellar: :any_skip_relocation, catalina:       "0e202c44071ec49a25c615c91e4ea5ed41924b74a092dd7a911a0004ef953397"
