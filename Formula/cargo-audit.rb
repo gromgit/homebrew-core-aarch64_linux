@@ -15,6 +15,7 @@ class CargoAudit < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a25978fc10c6e5a866c65e5499bac99afbfdbc6040a55a6a77feb5a91329f229"
     sha256 cellar: :any,                 arm64_monterey: "1f77289a447bd70ee44f130390252c796a5ff106be47d8f6902234e15607aef3"
     sha256 cellar: :any,                 arm64_big_sur:  "90a241cec355f4a7605e7966bf9e724bbd820d3d01bc23f1c2f59002c1bbc0c5"
+    sha256 cellar: :any,                 ventura:        "ca69389acf8f6fc29460a13b3f08c9f8d198f4e140f6785a5f6127618057f8e3"
     sha256 cellar: :any,                 monterey:       "208722f6bd8ba55a8f364ddb2192c426805bf474718552273f20da7b32aa34ce"
     sha256 cellar: :any,                 big_sur:        "302d943e65d921a9ba71302cdef3eb25d0f4940b78d28e05b7e7c80bc8055bba"
     sha256 cellar: :any,                 catalina:       "c85985bb7aaff3603202fb4ab8eaa7fead50c532e2f009fc283f8e612974c638"
