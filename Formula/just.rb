@@ -15,6 +15,7 @@ class Just < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "4727d5f0e260127fd304cabab76c143125a551183ac2d2edb9cd545404e90b6a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a36deb2db553afc77013b5cb147e59797c80b0fad78a777be3bbb29fef67d3b2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b97c3fa020eef11cc10057acda77821125a540580714fb16324d30a18baa70a"
+    sha256 cellar: :any_skip_relocation, ventura:        "d7e4484843b6db0d75889e190115ea3d8e0535c644816258ba9a6fc7665f9006"
     sha256 cellar: :any_skip_relocation, monterey:       "44229bcee3df7217a984d994878544d75b64e97c4b011951c2d42108cec3943d"
     sha256 cellar: :any_skip_relocation, big_sur:        "b60fc285d141729f148996bf81e1760a0a74bbd2e4c5a88d78409a4e1cef0ef1"
     sha256 cellar: :any_skip_relocation, catalina:       "bee6f3ed7ec708aa9f1473ab35ab12cd711f3bf9674fcd4c15d205eabd3574bf"
