@@ -14,6 +14,7 @@ class Qd < Formula
     sha256 cellar: :any,                 arm64_ventura:  "bc67a1611a730d5a0e3ad87ed5c18ab92eabedf6502b849df81f2885056d64d4"
     sha256 cellar: :any,                 arm64_monterey: "c1cef2704e1fcd44953f70cdde726d584a09b4dab2ad4622783deabc6f64caf5"
     sha256 cellar: :any,                 arm64_big_sur:  "98047f6136ad8b68370755021b1e127e60b5050a6a5b903c68943527b28ecfae"
+    sha256 cellar: :any,                 ventura:        "deaae413218273ffa3a41a629f7ca98eaf72a45e4ba6bfdfcc64da4f60d0ecb0"
     sha256 cellar: :any,                 monterey:       "2f324b4dd203182d4f6b4944ce69d62bcf0720365e19a77903d4829570a6b6a9"
     sha256 cellar: :any,                 big_sur:        "e9b1241f3d1d0f3b78d129ee8bd863eaaa42db2b6bfa74c5d53b419d47cfd331"
     sha256 cellar: :any,                 catalina:       "d9900fff146db8cf036730fa0ac5c6cbed48c9ea362e91875dcd3393f30093cc"
