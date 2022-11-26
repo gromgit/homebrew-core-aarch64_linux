@@ -10,6 +10,7 @@ class BoreCli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "c6edbfb09b9e6e21689d08cceecf988fe00dac7f4647a658578cb65dd603c85d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "304093791d0143ed8dd62c78de29a43578a0a0e9d378b2b93523351b7c674327"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "32cc03ab79420e849a1997bb55b3d8f951bcb70ebb1840c92a83ff4446137642"
+    sha256 cellar: :any_skip_relocation, ventura:        "1473a1140befada8a22394096192d623e538bfb0326c07695ab3e5cd256eed9a"
     sha256 cellar: :any_skip_relocation, monterey:       "b528f1f77d6afbc20803c94378b8f25e5dfa6b305fe3de677abec629cfbf2032"
     sha256 cellar: :any_skip_relocation, big_sur:        "2027a1f499b7b624e38f1d89a076fa5a1a893e8f7c47941b9bf01a3d690b6f87"
     sha256 cellar: :any_skip_relocation, catalina:       "c8369c6b80646f4cb337414689f46149a8a1bdf9e2837e77a9d3bfb40ec55c69"
