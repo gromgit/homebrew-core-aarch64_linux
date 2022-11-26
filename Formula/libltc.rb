@@ -9,6 +9,7 @@ class Libltc < Formula
     sha256 cellar: :any,                 arm64_ventura:  "317e8d1f146e9c5118dabea794de694186057e4c71688523946fb24859ed4de7"
     sha256 cellar: :any,                 arm64_monterey: "8289e0f5389ee652949981fbde5d3955d78048707c2731619e2d9d046cf1f89a"
     sha256 cellar: :any,                 arm64_big_sur:  "d003af07740326535cc95332c180cc467b29eaab2d227438e1486c8891bd5560"
+    sha256 cellar: :any,                 ventura:        "846224f71e3bc2254b94c41e62e8f02bb125d421bc24e9559fd6fca16ee8da44"
     sha256 cellar: :any,                 monterey:       "9a4cdb442f640d04e8886b888bbc5427b448cc9d7a160672a505fda5fa1371c8"
     sha256 cellar: :any,                 big_sur:        "a8a22a13e7faa84038e3833a7ad379d5ca3afe26670476fad9f87afc5312338a"
     sha256 cellar: :any,                 catalina:       "2489b05efb1e77a52635ff5cded3850b9c1abe861b01145bccba7a2f6edaafaa"
