@@ -10,6 +10,7 @@ class Gops < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ecd9424cc032ac9284d624d4073c23ab8757fdb4a55a7f8c7385d8d0904d2267"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "815c17c46ab42a3568b402880f086a45884f42dbb8addf1a1ab16fad8404ddcb"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aa9b882eceb26785e964ccbae13094255c221a151f3d42c0fc112535f26b0f2c"
+    sha256 cellar: :any_skip_relocation, ventura:        "f4c5656e5f137daae4bcef99a71f6c10f2edf2dcfee26c4ed4603cd9f5abc813"
     sha256 cellar: :any_skip_relocation, monterey:       "1986c45a82376c07fa1ab0646b027ab6aed85f9c75ed1fcc0fff21edeab070ab"
     sha256 cellar: :any_skip_relocation, big_sur:        "9525396fbc7888f003893eef06a7302bdc1e9f39354ad45b8cbbd34d18d183f5"
     sha256 cellar: :any_skip_relocation, catalina:       "82e7b45bce74679899c6aa5cd9cd8fc1160c80722f6d1a5fcf9a929c83ef1789"
