@@ -11,6 +11,7 @@ class Cedille < Formula
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "2318e5ad7d619a967f30b26760b65b1dfd7048068b5e503c0188ed5dab39611b"
     sha256 cellar: :any,                 arm64_big_sur:  "41f57c5915cba1a95fc1b3cbeee9cef65fb2e904c38ff4a177fb1d79afe3ae77"
+    sha256 cellar: :any,                 ventura:        "0bc436c470c761ff9c17178736140e6f635ac3513a6bf3d5a1d6112ab7a1ff1e"
     sha256 cellar: :any,                 monterey:       "cc7b9b167a8b0cdbd89e252d5d9f3c512f0118ebc9f55d2f62dab1c853fe96d9"
     sha256 cellar: :any,                 big_sur:        "013c15005c3d4af904552a1dc93476e227950604440855d7f5bc7ada73f5846d"
     sha256 cellar: :any,                 catalina:       "0a38e0707fa92d31747e2e53bc9e2b4ad6b771c66ba698386e2f96d024ec9469"
