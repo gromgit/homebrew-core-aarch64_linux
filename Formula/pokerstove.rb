@@ -10,6 +10,7 @@ class Pokerstove < Formula
     sha256 cellar: :any,                 arm64_ventura:  "312fc979078e0c61ac8736219da32b523c58448362a1cf104b0bb7aa3ce5481c"
     sha256 cellar: :any,                 arm64_monterey: "505ed83a6d1a32c5730eb7543e26caf0fc6e1cf2be9ac258f65287aaa9f0f0da"
     sha256 cellar: :any,                 arm64_big_sur:  "421bf090b59bb08de95e1f288f63aef85f3b00ee809691e6053b473dc189f630"
+    sha256 cellar: :any,                 ventura:        "aae2b25921e8e3690a695bc59922fec6c0df8663259adb97a56ecf1ec8306417"
     sha256 cellar: :any,                 monterey:       "63c43267ec9ba346ded19cd765cb9b8fb6ac403d9d6a8c581fc6183a557179d3"
     sha256 cellar: :any,                 big_sur:        "354ad4f655fdbda20dd9ae0a6b23db9323cd1fd56d9b26292af8c57f8d2a9517"
     sha256 cellar: :any,                 catalina:       "c0d554d15641d04605d0c4fadd25afced0a4d4dbf74f2304f5d9e95190ffaaeb"
