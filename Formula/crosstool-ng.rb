@@ -15,6 +15,7 @@ class CrosstoolNg < Formula
     sha256 cellar: :any,                 arm64_ventura:  "f6223cf7c6803e398858cc426bb25480e679517180d9d98f27621bc4e07e2fbd"
     sha256 cellar: :any,                 arm64_monterey: "3ed8b07aa9c0250edf408d7fd4dc79c02b7cd40a847730f4bd9eb152779d6385"
     sha256 cellar: :any,                 arm64_big_sur:  "652c574f396d1be709de7ac74bc39943d173a9a69992004e0c1f84c0694a4347"
+    sha256 cellar: :any,                 ventura:        "8889a40fdd9de06b65ebdf84954ab81c04ef1912f852a9832a12c661c6e24fba"
     sha256 cellar: :any,                 monterey:       "fc72ddfe1f31d0de37248f49686ddc6ef4caef94c0574367c0fae00cf65189f0"
     sha256 cellar: :any,                 big_sur:        "be3beb87b1beabdf57468e41cb7604fd22b3623c27e2d027af02a68dc1a78b7f"
     sha256 cellar: :any,                 catalina:       "4b0bb05c4f7770ebe17085b4e34c45125989daa01e734ef6fc1d9269e0e6eb38"
