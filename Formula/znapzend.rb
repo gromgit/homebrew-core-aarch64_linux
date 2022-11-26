@@ -18,6 +18,7 @@ class Znapzend < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed74911dd6e3516670a060ebca133178e450247d27ddad061038f52beaf5d41b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "12f39e6dd76784910e3db0296309bdeaf5edc3c71872c4b47e27dc6aae018efb"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6cc4e37853b49ca05491ecf1736b2dc9b670e50763b45252ef93f9ca7ed0eb7a"
+    sha256 cellar: :any_skip_relocation, ventura:        "f17a76be4d3058b002805c2c72ca21ef57a40674b697eb30d66ee7a81330540d"
     sha256 cellar: :any_skip_relocation, monterey:       "9eefd9fcafcf5e7cf5966e5970a808431672d1ee939e6db175348f696234ffc9"
     sha256 cellar: :any_skip_relocation, big_sur:        "13449e4ddb4e8235101837cb6c170ffca97260a76f22774020e7cc534946a27d"
     sha256 cellar: :any_skip_relocation, catalina:       "8c30fbfdf41fbbd7ae1a45ca4e7de4c9787c826cc67209d50f0df27e91247e63"
