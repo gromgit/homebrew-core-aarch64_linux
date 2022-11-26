@@ -11,6 +11,7 @@ class Matplotplusplus < Formula
     sha256 cellar: :any,                 arm64_ventura:  "09f1065112d8fab2b6b7a4505de70b8e8f72cf3f165bfb779b4e5aa0bd6b75cb"
     sha256 cellar: :any,                 arm64_monterey: "bf944af3d150c4d06d0d5ba4c4005a36c263fa4ff63d0b6048612970bab99b39"
     sha256 cellar: :any,                 arm64_big_sur:  "49ed10a408488bc95f3d3efddd435ef858b910b046f36615461db38efd3a04c4"
+    sha256 cellar: :any,                 ventura:        "a04c9052fd35660c346bcf9d122eac5378d63f97b4fcb8846921b36fdd46225f"
     sha256 cellar: :any,                 monterey:       "3325d540aad16f1d48eddbe316a95f7bbe0948e36644dbd3839d25df5d647ef4"
     sha256 cellar: :any,                 big_sur:        "b57950328175d4dbfd5c46c5f2e587227d11d5031f06eb3a31df781d425570d3"
     sha256 cellar: :any,                 catalina:       "a0830f3c946d045384f6b91511688baafc0ea91b3e1e7f34f4c6c10173179efe"
