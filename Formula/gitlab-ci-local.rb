@@ -12,6 +12,7 @@ class GitlabCiLocal < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0287072c69871b3a00e32e810e4f53926bf013383d7627ea05580d5b0480ed46"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0287072c69871b3a00e32e810e4f53926bf013383d7627ea05580d5b0480ed46"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0287072c69871b3a00e32e810e4f53926bf013383d7627ea05580d5b0480ed46"
+    sha256 cellar: :any_skip_relocation, ventura:        "8504b1ccf9cee92582473fa076d244b8cc79ee2da0ba5a3e40e9b0e14ef4edda"
     sha256 cellar: :any_skip_relocation, monterey:       "8504b1ccf9cee92582473fa076d244b8cc79ee2da0ba5a3e40e9b0e14ef4edda"
     sha256 cellar: :any_skip_relocation, big_sur:        "8504b1ccf9cee92582473fa076d244b8cc79ee2da0ba5a3e40e9b0e14ef4edda"
     sha256 cellar: :any_skip_relocation, catalina:       "8504b1ccf9cee92582473fa076d244b8cc79ee2da0ba5a3e40e9b0e14ef4edda"
