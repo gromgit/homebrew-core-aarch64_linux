@@ -14,6 +14,7 @@ class SqlTranslator < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a5b569d3339ab37e0c8e963f4c314f05cfa4a7607cabc0c3b8076171a1b98415"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a5b569d3339ab37e0c8e963f4c314f05cfa4a7607cabc0c3b8076171a1b98415"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f655162409fb6814c1825c7ea6d6fc728fe48f92f2b8f0fd189e6e552112d97"
+    sha256 cellar: :any_skip_relocation, ventura:        "37aa9abf5b79546cd961291b7ce884cbeb774b8c00f8830fba7837001e47111e"
     sha256 cellar: :any_skip_relocation, monterey:       "37aa9abf5b79546cd961291b7ce884cbeb774b8c00f8830fba7837001e47111e"
     sha256 cellar: :any_skip_relocation, big_sur:        "6f0b5a13935877fdf7e614525082c532ef76af02644dfda6acfdc427b6904668"
     sha256 cellar: :any_skip_relocation, catalina:       "e099ac2d4b73aca1beaa61f8a267c8334256c9ae5b0073f86a53a25e6f9ce9c5"
