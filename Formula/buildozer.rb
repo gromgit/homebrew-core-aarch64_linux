@@ -10,6 +10,7 @@ class Buildozer < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "9c1c0595ee5439c327d4dec797ac8f2a85cefb2cba706ac446b3a857ce4dd67a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c19fee167e41f0d485a14ea49548d4e75b56619fc8dac0e911f2fa0fb59928a6"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c19fee167e41f0d485a14ea49548d4e75b56619fc8dac0e911f2fa0fb59928a6"
+    sha256 cellar: :any_skip_relocation, ventura:        "3a7c2a7a899105b4a90bf5384f271bb648121c4ef657b4a493843d94fb706d9e"
     sha256 cellar: :any_skip_relocation, monterey:       "2df8fb4b87991360d76697945d91da54970364f14f7368ef0ac48899cdbac405"
     sha256 cellar: :any_skip_relocation, big_sur:        "2df8fb4b87991360d76697945d91da54970364f14f7368ef0ac48899cdbac405"
     sha256 cellar: :any_skip_relocation, catalina:       "2df8fb4b87991360d76697945d91da54970364f14f7368ef0ac48899cdbac405"
