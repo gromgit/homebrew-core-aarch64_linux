@@ -14,6 +14,7 @@ class Cherrytree < Formula
     sha256 arm64_ventura:  "ed06a3801eec16f08994358a2b61169b02a2661282e6ece52dc5213eb13a04ff"
     sha256 arm64_monterey: "5821db47514696faedc5f9c1efa63f67fce8a2265f9043f5c1b3bb1b098cfcd4"
     sha256 arm64_big_sur:  "5dc1c67be7342c92c80d3fa14686071696c5b890b7f12e3c202da90d1c433985"
+    sha256 ventura:        "5306d842e5a7282ab5ecdf234ff011dc330349defa09d7f5103da7f267e5510a"
     sha256 monterey:       "cbebba4389bf66a7462564afeabf839456fd9f33512ef717b8acb29f7a6e8a05"
     sha256 big_sur:        "e615aae8dc34c097209312ea316524cf136496967b1d5ad3502abc60f1c028c5"
     sha256 catalina:       "1e6d1097ddbd7eb1a65b5d061118a84187c00d4465bd5bd6d909b8552201cb22"
