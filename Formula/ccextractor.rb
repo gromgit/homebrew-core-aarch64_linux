@@ -11,6 +11,7 @@ class Ccextractor < Formula
     sha256 cellar: :any,                 arm64_ventura:  "12a98eca4d3a7de01e7320a4c949caab7b4d83ee822c928a06bdb0a51995ed1e"
     sha256 cellar: :any,                 arm64_monterey: "2921edfc33b26f792398dfbf85806ea3c26e3c74606fbf9fad69e19132a93633"
     sha256 cellar: :any,                 arm64_big_sur:  "720a3d22c73a265a998dbab7a964e12f024fa010c31252684c8606ec39abf498"
+    sha256 cellar: :any,                 ventura:        "18d2fa35c8d99364be1ccf249dd885aab6005eb89a9ca9b3b40f0bdca1c5e0c5"
     sha256 cellar: :any,                 monterey:       "050b1f5cb459d30810e584d8ab21041db0442f904e3bda4b83abf4979a47fa59"
     sha256 cellar: :any,                 big_sur:        "a36cf52162b6f847e16de881ec74dfc3468b893b939dde44445ec78f92c930b4"
     sha256 cellar: :any,                 catalina:       "2d69f8155bd877d19cf90681b34ea1183ee0f10c3262887f4c16f8d9cd956a34"
