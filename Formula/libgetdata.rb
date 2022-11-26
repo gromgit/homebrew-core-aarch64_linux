@@ -10,6 +10,7 @@ class Libgetdata < Formula
     sha256 cellar: :any,                 arm64_ventura:  "917a20050ad2954e99688f9fd7306a5b6dd9da6f41d38085535620de42fdebc4"
     sha256 cellar: :any,                 arm64_monterey: "4e167251c910442b10cd6c7da9c7dd0f3ded3926669c87d618f2330e8c76af82"
     sha256 cellar: :any,                 arm64_big_sur:  "e8a11d9e2b1ab217a0984ba6dffd8f7bf721df6d1846f9d7ec07c3fa9816c808"
+    sha256 cellar: :any,                 ventura:        "b8cb912d3b3dbee12c5377ee4f7da7a7a0895a872f3dce088df009a40ce54f9a"
     sha256 cellar: :any,                 monterey:       "3050afede9476adb4b8af36a097218742decd02873eb20a9dc8e3876a1c6b085"
     sha256 cellar: :any,                 big_sur:        "8d192c117f205049f5547300b397c792d35d8d5f95854043563d02ca144b1a11"
     sha256 cellar: :any,                 catalina:       "8d05ffb11f957a9dc351f4b969c4d63d5878b5099c18efd6a4c454cb2b3a7069"
