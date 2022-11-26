@@ -13,6 +13,7 @@ class QtUnixodbc < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d979aec2236581625fce5dcda03bf8c5701890284d743612fa40141f33d85004"
     sha256 cellar: :any,                 arm64_monterey: "c0344251ca2fb6f9c0f35332daf1ee1c6ae7d70d55e333eff30e02a8a5506a4d"
     sha256 cellar: :any,                 arm64_big_sur:  "367688f26e931c06e3bba11165c501b9a993f34b1402321e38e4233a76509d2f"
+    sha256 cellar: :any,                 ventura:        "18e407e974eb1243b2a0a00a0a80bc52aa94465daa3f702b2df0a0119b98a689"
     sha256 cellar: :any,                 monterey:       "0a04311016edfa0a47e164ce475370a04277a9e6d54c8a13c14dea6f809a66f9"
     sha256 cellar: :any,                 big_sur:        "c02b5dff267082674db5bccda102cea2bad9dd503612ade9f50863a81d346aba"
     sha256 cellar: :any,                 catalina:       "29d58b8b96a0077f3e8818803fd650d7c575e1e1290de0d74042862906699c07"
