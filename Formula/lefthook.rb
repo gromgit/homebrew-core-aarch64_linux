@@ -7,14 +7,14 @@ class Lefthook < Formula
   head "https://github.com/evilmartians/lefthook.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1494febae2ebe75e037919c053ee5b473663039f661054903894370cfa2ac0ce"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d2561794e3c703af2a4ee7aca240f3e21c6c43211c4a69a4fea6218866c7fc12"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c204d61fb0e86a09516f294f11fb06991cbde6c270ae172d894dc27a1cdd98f"
-    sha256 cellar: :any_skip_relocation, ventura:        "9457626366449cbf3ee1779919a025e78186ab6f22c179bcab09237b05f372cb"
-    sha256 cellar: :any_skip_relocation, monterey:       "4d35de622a72ed14fab4f0870bdf265f7f24b6907deccbe66545a04a6992d467"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7dcf50691d83210540d8c9347ab5558b242aae06fdeb5ba1615ae3167afdfa36"
-    sha256 cellar: :any_skip_relocation, catalina:       "aa933d78fc6080aeff1cce4984b94d422f9064914609633da003e783bd388033"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ac9a8b50e899aa37cfad496693c664a77f9ff07faa50e5f5e3e70faffa08b8e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7a7509d2b5d082b70e8e0af872e545b5ad7747902879e5fcc61f2c310fa212d1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57535aadf91cec738070aa48bb77dcefddc67f6f8f44de68bacf28e3ee307ea7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "333fb565c49aed503d3e7a806764ec528d142c7160e295dc95ddc6fade53ae5d"
+    sha256 cellar: :any_skip_relocation, monterey:       "e495d55239947696d918fb5c726daa60e95c85f66300b5475c3a5c2e511d4900"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5f13eefb342c030da993f1ae90a49b84bac3f169bd30cb6984015893737da6ca"
+    sha256 cellar: :any_skip_relocation, catalina:       "f6e1c5fe2da70b7ba41e5b8ad762e8ba6e425aad4a41d226f3e33569c6d47c42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f3dafbffcc80d96263d1f454fc0233d1c26f91a305ada53f89204d6ba8ebcdc"
   end
 
   depends_on "go" => :build
