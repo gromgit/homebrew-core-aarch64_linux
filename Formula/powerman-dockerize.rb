@@ -9,6 +9,7 @@ class PowermanDockerize < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "45a990f6b8bac33e5002be13cbdaea5bfa719c22d18211a846d88c6a5e755c38"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8642d0c12f327e67adc39a35cc0090e6104b7c45a1c76f298c3a628d0ce2fc81"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "629931a80f250d3ba752ffc3cac7f2a3e0fe22b64acaf83a9e7ca89fa9f1013b"
+    sha256 cellar: :any_skip_relocation, ventura:        "ea5dacb9e5dd17bbe6d225de2ade424429526bf1f08cda85da7c8015c6c7793a"
     sha256 cellar: :any_skip_relocation, monterey:       "b198f6fe1903346a08094580f67a39992efef4af256839ccb459f0c140a6fe0a"
     sha256 cellar: :any_skip_relocation, big_sur:        "17adffb61cc731ad5a9488df5a91aecf78d9385bded4aca98505abaf0135756e"
     sha256 cellar: :any_skip_relocation, catalina:       "276d36926bfc3a980148363e01a4fe0e891580e8dbb2e14c8a122913457f4446"
