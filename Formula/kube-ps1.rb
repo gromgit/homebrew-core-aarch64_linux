@@ -7,7 +7,7 @@ class KubePs1 < Formula
   head "https://github.com/jonmosco/kube-ps1.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "686ec71211705bf86fd229811e89ee26f5714654d4b09de2eca68b36e8b987c3"
+    sha256 cellar: :any_skip_relocation, all: "e5d9cf3512efbda9b7fcbabd2726adbee97ae8c38596835197f648b14b7d94ab"
   end
 
   depends_on "kubernetes-cli"
