@@ -12,6 +12,7 @@ class Ptpython < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "aeed5663a32409d4304fe52f78209a626b541e3e526406d5a623bb02d57106eb"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ec295138817ebb7bd620d458841575494b925e4a7441f91e631f1d95d0a33691"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb5ca41cf2eb07ac7f9fafd0610ae7487a4614fd4aaaf44b2c3a1424a86486a8"
+    sha256 cellar: :any_skip_relocation, ventura:        "f90a827c2bc79b18a5f1e300cf6e383cc46c9d08e9e3601c76c615b2d4885546"
     sha256 cellar: :any_skip_relocation, monterey:       "da67eebd48454f67723a483d93819fec01b035b18dd19eb52d4a02fdd0e5fc18"
     sha256 cellar: :any_skip_relocation, big_sur:        "bb03e83101a85159ed14bede937622fce3f20b2fb8fbf18b4b53920951203b0d"
     sha256 cellar: :any_skip_relocation, catalina:       "bc8ec8fe589bb4cce90b5b5927cae33eba98a3dab4a059eeeade4dc23c75e2bd"
