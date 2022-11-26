@@ -10,6 +10,7 @@ class Jackett < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2b8d7076f597f24f25f29916a418dad15629628ee9302f7422d4472d17d38170"
     sha256 cellar: :any,                 arm64_monterey: "12b40dc85eabfaab1b1d1ced84b3176049d034d36629602798e70c6c35d70716"
     sha256 cellar: :any,                 arm64_big_sur:  "940b15f0be89b0f76c4a1d6b5235f5dbe1f07ef8fc32e913cc6661e7e65b6431"
+    sha256 cellar: :any,                 ventura:        "000f50a2b03518a1be7d54aa94b91fc300cf8b19bcfeb23ded30378d43e584ed"
     sha256 cellar: :any,                 monterey:       "4a472a66dd96aadb86971dfe65c4cdb815830ad5586369563a045e8f05d7f69b"
     sha256 cellar: :any,                 big_sur:        "e7adde50b9de04fc8a9c6a684ed37c4249d9737f09033d73cc49a3d324605684"
     sha256 cellar: :any,                 catalina:       "ae951b7e7652b47b3ecfb3f2ecea3680d6aa251d2ad0b82698886f25069575fa"
