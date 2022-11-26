@@ -16,6 +16,7 @@ class Allegro < Formula
     sha256 cellar: :any,                 arm64_ventura:  "767b880d9f35d12373a635578af1402c5b7d97b4d5fa593634592142da23005f"
     sha256 cellar: :any,                 arm64_monterey: "682fd6cdea13cffd8c110b6b1c9b7e29069bb2d9512fe844312e31c5ec75ef7d"
     sha256 cellar: :any,                 arm64_big_sur:  "14b1fc80e206b3de73587af7d80a263bbbf590aecfde59bb969e0a960b8c493e"
+    sha256 cellar: :any,                 ventura:        "f48100e5de55327d2a3cc92e47fb8afb1d146cfea7764de4b90278bf4b967431"
     sha256 cellar: :any,                 monterey:       "f81cb442d6555108894de9c4b57c0bbb688b9952789bbdfb2125d740219bb766"
     sha256 cellar: :any,                 big_sur:        "faaffa7b7fc9c685cb21a7b03ea26a334b615875db6d2dc8a184b24218e787e9"
     sha256 cellar: :any,                 catalina:       "d4a9c21e7b0ea0ef1d10ef78b100ac2f7cf4e8098dc1a0a4a7c52f90beb11bed"
