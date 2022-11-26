@@ -11,6 +11,7 @@ class Sslsplit < Formula
     sha256 cellar: :any,                 arm64_ventura:  "74357200610d41f36a3f2704cf7c877a3ad874ab9d1f032d711f7045f73f4fe8"
     sha256 cellar: :any,                 arm64_monterey: "8d28aedb6e1d3750430f1016b5f3ec4a4181afbc2186174c06bae99a186b6de8"
     sha256 cellar: :any,                 arm64_big_sur:  "ccfd4cc54565e58d41ce627ab1ee785de30c96fa29ca3637c3ee6e84320499dc"
+    sha256 cellar: :any,                 ventura:        "ed9f42f9154b927c949d4e3c0d00c12a6869ef734de00a2c59effc46dc646be4"
     sha256 cellar: :any,                 monterey:       "29d3d71987797256fd0b5e628673701823d2aebd6d75a27316bd8e728852bd84"
     sha256 cellar: :any,                 big_sur:        "4d2d0096b82dfb0104f014f69363a34c1242e2bc32ef585466dc938677c33d26"
     sha256 cellar: :any,                 catalina:       "a533ccfc4c05e2affcfa4c697c38d995239abfd1fe4c383ffaa1a8ed42a933e6"
