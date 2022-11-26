@@ -11,6 +11,7 @@ class GitSeries < Formula
     sha256 cellar: :any,                 arm64_ventura:  "76107d37585c43d3c7ea8f69971b1a2485a221e3ce0c87b2b1860ff097e76f17"
     sha256 cellar: :any,                 arm64_monterey: "908fc5596af1e413b3f9aa6a50f50adda016ddb025f2eeaf4b532072e0364d95"
     sha256 cellar: :any,                 arm64_big_sur:  "24739f0dd29b00b52ef26a38658662184801d30b7dc8c33e9e46e5e1ec351aeb"
+    sha256 cellar: :any,                 ventura:        "9afeaf659a5b2b490e829c9d1cd75dc26458af33402e63738ecda3998bbe4008"
     sha256 cellar: :any,                 monterey:       "386da3ab9a088239de9d642c164768504517293fff3d0189783e3ab8aad8f791"
     sha256 cellar: :any,                 big_sur:        "caf6563a0c6f3ff85c59c97464b05e2e27509d87ed344f1693d68d903b297770"
     sha256 cellar: :any,                 catalina:       "3df33788f9498b11b518b7555b4ad7f3d4fd188777483eab9ab2d1aa3ce05e0a"
