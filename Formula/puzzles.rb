@@ -18,13 +18,13 @@ class Puzzles < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "52b01b54de851cb5e487bcf6a94c4c6168c1e2c40789274868a1fd0dadec3b6d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3430ba90eb8dc567255a19b9b01ae4563390db6fa676a726e13fb8d33f99a3d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "964a29be93adf4f146a4bf5e44a8ddf059ec6da8e700667169fcad6cc5038e0a"
-    sha256 cellar: :any_skip_relocation, monterey:       "42b47167280362d438cfe326f5fb837f22f50210222e5f05aaf27a0016555cbf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c4ff211d38fca114cfe673575f4c758535847d2b6813d9e89fb90b28476bbf1c"
-    sha256 cellar: :any_skip_relocation, catalina:       "2465d64fe8e5e3f64a071877c6b136772465a289b1beda6b193ffd5bce579480"
-    sha256                               x86_64_linux:   "5fad9cee8234bc7f6b89e413c372d64de21a64f6e784cd094bb863c7d4da51eb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2c95f86e330aebcb8b418921653e1d623680fa2a4ccc15c3af8f1e4859be5c56"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcde27b1f8c0caca71d707229dbe0fbe4ea385a1a538c4e6fc25f402ed7f1f77"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "449d561d1cc596c20a2e62e5494afde610b6a9cdeae042ba5a372d8b10f98b9a"
+    sha256 cellar: :any_skip_relocation, monterey:       "2c1e694c39f49132038d9e3d5a4e78e6e8621195dac49d7226427b4b266cea3e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d644d3e9be7a0b146c91e4816ea82ab3792a0d2038b7210b3c362751bb84170b"
+    sha256 cellar: :any_skip_relocation, catalina:       "05acad712bf3e9ceb288589e24d56ef6484c25ca72ca7868248f7e3d227a23f2"
+    sha256                               x86_64_linux:   "24b7c99a52e4460f051b3748600d40b076de57b8eebb83b6f59d9e6b35a5e714"
   end
 
   depends_on "cmake" => :build
