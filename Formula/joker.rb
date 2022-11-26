@@ -10,6 +10,7 @@ class Joker < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "78db2f172c3be5c8e5f4064064d7ba5af424ceb774ccf9a33fa18244c66c06cd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0ffbe9fd80ff1f0cd2ec1957e26d71b4743d49b49b45f4f00444a4bef5141863"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ee09baccac49fd5580d178fa766dd1132c4168461001b1bacca66b223070910"
+    sha256 cellar: :any_skip_relocation, ventura:        "ce4438952eb98d70acfd3344cee74f1514387ea09f5d75a152f8d728eeda56f6"
     sha256 cellar: :any_skip_relocation, monterey:       "f761309ac5ac79ee9dc2ea176869e76c968e8f3ef35f057d2d11c041d313d89c"
     sha256 cellar: :any_skip_relocation, big_sur:        "033facd463c6e3a686cc30442c8f00fe1c791472c7f44db009d2b3b2302fd57e"
     sha256 cellar: :any_skip_relocation, catalina:       "4ce83961819e735ee331d1a89777f31827082a5f8f02c564bcf9d60877c12003"
