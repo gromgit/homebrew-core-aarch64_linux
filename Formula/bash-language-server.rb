@@ -11,6 +11,7 @@ class BashLanguageServer < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7ed55f1fd62aedf756a02c28c930c413f2c798b542a045197b506c34104a2847"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "7ed55f1fd62aedf756a02c28c930c413f2c798b542a045197b506c34104a2847"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ed55f1fd62aedf756a02c28c930c413f2c798b542a045197b506c34104a2847"
+    sha256 cellar: :any_skip_relocation, ventura:        "c2fc7edaaa5269ebc074b3a76bd000dfc2f5121c5bf95554022aad4f65f4790e"
     sha256 cellar: :any_skip_relocation, monterey:       "c2fc7edaaa5269ebc074b3a76bd000dfc2f5121c5bf95554022aad4f65f4790e"
     sha256 cellar: :any_skip_relocation, big_sur:        "c2fc7edaaa5269ebc074b3a76bd000dfc2f5121c5bf95554022aad4f65f4790e"
     sha256 cellar: :any_skip_relocation, catalina:       "c2fc7edaaa5269ebc074b3a76bd000dfc2f5121c5bf95554022aad4f65f4790e"
