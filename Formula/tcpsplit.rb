@@ -13,6 +13,7 @@ class Tcpsplit < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a3d3cd3c37dce379aa221133969b74a0b2bd61a6d7605172b952b26e3398a0cf"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5bf4362d064b7f982e0fb8cb2e79010c80c19f555b79f18dd0e4f3a9dbfda8a1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f40f957faef51ed496030a97cda8ca0eb0716826969872185080bb8e94780f36"
+    sha256 cellar: :any_skip_relocation, ventura:        "1931a69c46a6669e5a5a9716b260413bcbf24af89bb567ccde1bb17e1827f55a"
     sha256 cellar: :any_skip_relocation, monterey:       "51e4f267ddd4cd76011a85b0e094d78d4df67b4a3d16d6dd918834a929cba203"
     sha256 cellar: :any_skip_relocation, big_sur:        "49781c99d1496c5c0c8ec3e56e2edc604f5e8643f36e93b0ff8b974d448363d1"
     sha256 cellar: :any_skip_relocation, catalina:       "ab3131cd8829f943cc4142dc616adfa696ff9d0af5dc21f94408d114f59434cd"
