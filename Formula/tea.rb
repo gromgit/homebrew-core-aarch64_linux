@@ -1,19 +1,14 @@
 class Tea < Formula
   desc "Command-line tool to interact with Gitea servers"
   homepage "https://gitea.com/gitea/tea"
-  url "https://gitea.com/gitea/tea/archive/v0.9.0.tar.gz"
-  sha256 "b7658a074508c117c2af3a55b7b37abf194f84fe94939c9b6b7ff324696258b9"
+  url "https://gitea.com/gitea/tea/archive/v0.8.0.tar.gz"
+  sha256 "6c73c0a7b66cdfd1e5a302257d54df06a3a41eb9bdbfeb547966db431ae23b23"
   license "MIT"
-  head "https://gitea.com/gitea/tea.git", branch: "main"
+  head "https://gitea.com/gitea/tea.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "00ac204b980d7fa67baf2249a1ffc3140aeeca17cd8fdbee8298ff129fa8a4dc"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "72ed7e62d0351ce4fa2e436d936cc71c013ebd8b661c9089b07089b400d96bc2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d7fccfecbb9112a710228b5ceb620fd3454b4c399109d8fc26bd5842c8c24195"
-    sha256 cellar: :any_skip_relocation, monterey:       "6a01a3797506300a0c9330271c166ef7c5df2bd106ea2673e54351471c80c45b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9ba3da0603ccc227287346a7d1b42a588b34ccdfc0ddd461279f1568ae66c007"
-    sha256 cellar: :any_skip_relocation, catalina:       "99aa421cdb6f6ab65af67ffb7adfd38f7ec5c1b97d1243179d7808a8db34b202"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f3bcf729083a050eddbb4ff61a27183b72844728dee08628cc469ecd4456989"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tea"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8040315e2fbd9e8ce31e3912de3c573ad464475495aa8ccf482e7a04925fea0d"
   end
 
   depends_on "go" => :build
