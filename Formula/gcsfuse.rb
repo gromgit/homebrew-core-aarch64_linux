@@ -1,23 +1,24 @@
 class Gcsfuse < Formula
   desc "User-space file system for interacting with Google Cloud"
   homepage "https://github.com/googlecloudplatform/gcsfuse"
-  url "https://github.com/GoogleCloudPlatform/gcsfuse/archive/v0.41.8.tar.gz"
-  sha256 "c8d340121fce011015d74f347bf4071101ef24689fcb354cacc3e1e5797a8733"
+  url "https://github.com/GoogleCloudPlatform/gcsfuse/archive/v0.41.0.tar.gz"
+  sha256 "7c3833ed090da8aa762fe831fd7c27d73273c5f47ce431dff4100c330bf53047"
   license "Apache-2.0"
   head "https://github.com/GoogleCloudPlatform/gcsfuse.git", branch: "master"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "bacde7045f120f672172a84558fac45caf573c6b93147eb723dca9a9ea4303fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a27112808fc54795d62d27a921977a88428587c1c1415050d7934634ac0cf638"
   end
 
   depends_on "go" => :build
-  depends_on "libfuse"
-  depends_on :linux # on macOS, requires closed-source macFUSE
+
+  on_macos do
+    disable! date: "2021-04-08", because: "requires closed-source macFUSE"
+  end
+
+  on_linux do
+    depends_on "libfuse"
+  end
 
   def install
     # Build the build_gcsfuse tool. Ensure that it doesn't pick up any
@@ -30,8 +31,25 @@ class Gcsfuse < Formula
     system "./build_gcsfuse", buildpath, prefix, gcsfuse_version
   end
 
+  def caveats
+    on_macos do
+      <<~EOS
+        The reasons for disabling this formula can be found here:
+          https://github.com/Homebrew/homebrew-core/pull/64491
+
+        An external tap may provide a replacement formula. See:
+          https://docs.brew.sh/Interesting-Taps-and-Forks
+      EOS
+    end
+  end
+
   test do
     system "#{bin}/gcsfuse", "--help"
-    system "#{sbin}/mount.gcsfuse", "--help"
+    separator = if OS.mac?
+      "_"
+    else
+      "."
+    end
+    system "#{sbin}/mount#{separator}gcsfuse", "--help"
   end
 end
