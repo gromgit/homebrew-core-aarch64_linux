@@ -1,9 +1,10 @@
 class PythonAT39 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.9.15/Python-3.9.15.tar.xz"
-  sha256 "12daff6809528d9f6154216950423c9e30f0e47336cb57c6aa0b4387dd5eb4b2"
+  url "https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz"
+  sha256 "125b0c598f1e15d2aa65406e83f792df7d171cdf38c16803b149994316a3080f"
   license "Python-2.0"
+  revision 4
 
   livecheck do
     url "https://www.python.org/ftp/python/"
@@ -11,14 +12,8 @@ class PythonAT39 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "270f1f9e0c81ba681a51778be48498d3712d30b85ff2db8ae051fed0730114df"
-    sha256 arm64_monterey: "2ba7e333b6c6bf71d8444339906227892075fde039b9dd70ee3d73ba32a95cf0"
-    sha256 arm64_big_sur:  "e8a12f40f6e3b91926a39710ee7654e07811541f93b98a79bce752dd7183e0f9"
-    sha256 ventura:        "b21df62da603fae0415b35941adc26f7820661bd4f5ccd06a3c5c9a1e0a21c95"
-    sha256 monterey:       "15e10e163d4e24b12ba288b00bc9a7d4c4369a42dbbec76c0e03a21b320cb32d"
-    sha256 big_sur:        "9bbf3371cf792487352bfbc9423bc554613a5a055fb0b2c733ae2c4aae3e7444"
-    sha256 catalina:       "f4af885fc1e5061c394bbac16ac52c3154a1217faff39fd7a6738fa0f9566e8f"
-    sha256 x86_64_linux:   "0f118daee16082599c2593343a81f083719f52a29dd612f90a64acb3ef617350"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python@3.9"
+    sha256 aarch64_linux: "10417c9eee21b7ed051bfded17754ac5ad42a15b91ceb4b8ca75eaeb27eec9db"
   end
 
   # setuptools remembers the build flags python is built with and uses them to
@@ -51,8 +46,8 @@ class PythonAT39 < Formula
 
   # Always update to latest release
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/03/c9/7b050ea4cc4144d0328f15e0b43c839e759c6c639370a3b932ecf4c6358f/setuptools-65.4.1.tar.gz"
-    sha256 "3050e338e5871e70c72983072fe34f6032ae1cdeeeb67338199c2f74e083a80e"
+    url "https://files.pythonhosted.org/packages/5b/ff/69fd395c5237da934753752b71c38e95e137bd0603d5640df70ddaea8038/setuptools-63.4.3.tar.gz"
+    sha256 "521c833d1e5e1ef0869940e7f486a83de7773b9f029010ad0c2fe35453a9dad9"
   end
 
   resource "pip" do
