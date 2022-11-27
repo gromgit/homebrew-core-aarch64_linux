@@ -6,15 +6,8 @@ class Ots < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9f5f84707582f95c31be184797264f4dee0b5dd24ea70425808c99e34ae120d8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68af7e8f449b5a6d577c5813b7557878e7f238d5788e1106f6a4e6433f89b31f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3705d1c7a9cbc6df6c147db6d1f4f6b118d35a4284a801cfa6bb86ee4f88e8ac"
-    sha256 cellar: :any_skip_relocation, ventura:        "6a2df441f1410725b8ebf4336c54c9394b42c10810b402124ac85fbab65ef49b"
-    sha256 cellar: :any_skip_relocation, monterey:       "25b7152c6a0056227e8634bf407c05e1a229a4712660dc870db4f270f95cde67"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0500a25106f7d6c5c91592e286ba700fb6855984f8e5f908897329419a569497"
-    sha256 cellar: :any_skip_relocation, catalina:       "f497591d14ee77cc308d1c266ca55d0f5c1b6dcaabdfee1116abfedaed448e86"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3df62978ffc296bd2032e03ec1e2fdb752eae3eb5b25f50e0fcc83c9e33608b1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ots"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "257d6f2c13b5d5d5ab82881c964d246883c9867ca350099ae8b7fd0e95189e72"
   end
 
   depends_on "go" => :build
@@ -22,8 +15,6 @@ class Ots < Formula
   def install
     ldflags = "-s -w -X github.com/sniptt-official/ots/build.Version=#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags)
-
-    generate_completions_from_executable(bin/"ots", "completion")
   end
 
   test do
