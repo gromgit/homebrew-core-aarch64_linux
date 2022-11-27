@@ -15,6 +15,7 @@ class SpatialiteGui < Formula
     sha256 cellar: :any,                 arm64_ventura:  "cb7ec546fad4b883d21d24a13aff2b7d8d942d0a5ecb76f90256b2f869981a79"
     sha256 cellar: :any,                 arm64_monterey: "73f1e25197c6c4827cbf233a4632b8085ef0058979a750d80aef5c11eca76f80"
     sha256 cellar: :any,                 arm64_big_sur:  "5918728fd8b0d18f0ea692111483c0d661a7dab1dca4af8e8d5c6ec2434cbf0b"
+    sha256 cellar: :any,                 ventura:        "c3ae66f5b32065a16d659c67d051acb16533252c62722b4b651d7d56a4d9e71d"
     sha256 cellar: :any,                 monterey:       "004c0a7798340bb9481e79d4370c33534c2ddd557c191ebb26c141bf8e878636"
     sha256 cellar: :any,                 big_sur:        "a42be0d23841e5886582fbe07ea770d3e8b21feab1ffe3aedf46f651b7ae3ed0"
     sha256 cellar: :any,                 catalina:       "65e8e797b4af25572ee1e8ddba79ca07bdc8f6c7498c58a35e40ac1d0164e870"
