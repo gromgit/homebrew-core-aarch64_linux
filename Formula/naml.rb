@@ -10,6 +10,7 @@ class Naml < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "c77699304de1696f3c92d571ff1665310464ffd6b737bcaef0c90c68c624408f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8620c41653aff4870bcc091d644b0f6845a38cb344c18ba61673fe4ef6bd04a0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "731c3edcac16fcce065e0bf79674ca20273a2874cb0a28e0dd3aa4b354a46a9d"
+    sha256 cellar: :any_skip_relocation, ventura:        "26cea66677bb7672bfb8fd52ddffb96478442c48b72c2d08eec9cf45557a8c6d"
     sha256 cellar: :any_skip_relocation, monterey:       "2171e40ba252fb5716f30dc8cf05d2a83ea88616c92ed5c2b9e45d48f6521061"
     sha256 cellar: :any_skip_relocation, big_sur:        "7e4965a3e7d56956ba85367b8bb70bf78e096dd3cf2f07648c2e0efcfff503aa"
     sha256 cellar: :any_skip_relocation, catalina:       "badeb70412ea16c9b1e98efb7889cb6145d0f44a090c0d688b5e331c913c2cf3"
