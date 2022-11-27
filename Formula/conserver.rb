@@ -11,17 +11,11 @@ class Conserver < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "8c85d9e24aeeb0f9e6ef4840f5927511db3179ad29fcccfc4643d8d17660402c"
-    sha256 cellar: :any,                 arm64_monterey: "cbe78e9a34501f728a0815e9ccf11c3a149b6e16fd902339ccf1680cebefcebe"
-    sha256 cellar: :any,                 arm64_big_sur:  "a01d04c6b9b777e20f96e1a05d32040d636b624c647f114c2093e04d117d11b3"
-    sha256 cellar: :any,                 monterey:       "3184c7059ff555f33cfe4e8c6b06c58266bd6cfd17991493ec1edd2f79436091"
-    sha256 cellar: :any,                 big_sur:        "909d45ca31f883bc661141cb2fa173c2c218dd5cd9305ddb5737aac0081eb81d"
-    sha256 cellar: :any,                 catalina:       "73e2f36eedeb506e1730c6b5b55eea95899f69232f52e86796964ad61e81e856"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e543125304a0b15fb67371473346c48ebd27ce69377ce920ac8645f2f0cdea8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/conserver"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7eeb08a0aa968e0363b24f4c735bb4c999dc5244cfb06dfa768f2a538edcf9db"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "libxcrypt"
 
