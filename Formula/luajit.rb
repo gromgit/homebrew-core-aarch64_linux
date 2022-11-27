@@ -9,12 +9,12 @@ class Luajit < Formula
   # Update this to the tip of the `v2.1` branch at the start of every month.
   # Get the latest commit with:
   #   `git ls-remote --heads https://github.com/LuaJIT/LuaJIT.git v2.1`
-  url "https://github.com/LuaJIT/LuaJIT/archive/46aa45dcbd9f3843503ddf3e00f8dda89eac6789.tar.gz"
+  url "https://github.com/LuaJIT/LuaJIT/archive/03080b795aa3496ed62d4a0697c9f4767e7ca7e5.tar.gz"
   # Use the version scheme `2.1.0-beta3-yyyymmdd.x` where `yyyymmdd` is the date of the
   # latest commit at the time of updating, and `x` is the number of commits on that date.
   # `brew livecheck luajit` will generate the correct version for you automatically.
-  version "2.1.0-beta3-20221122.1"
-  sha256 "110c043716ca683573b8417b70d49c09443826e100776182ca7288d780db8d6a"
+  version "2.1.0-beta3-20220815.3"
+  sha256 "382f6782b19fd33d4fe0f5eb3b770f1de7191f051b111a0e745f6f29c660c27c"
   license "MIT"
   head "https://luajit.org/git/luajit-2.0.git", branch: "v2.1"
 
@@ -40,14 +40,8 @@ class Luajit < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "53624095c335c1004432399288ffe5b8a33414d180409628dae262b89a228c38"
-    sha256 cellar: :any,                 arm64_monterey: "0e8707e1f1174cea380af3560a598d208ed93c08b4f04e1211e0cece629226f7"
-    sha256 cellar: :any,                 arm64_big_sur:  "6e499b5ac5678970f4abe5379eef8e53dedd4ddcb7384bfe28be2a2d3b655f71"
-    sha256 cellar: :any,                 ventura:        "f124fd2bc53f9098df6a0fb476bc29baa81a90740e3a36e502c52b004b468693"
-    sha256 cellar: :any,                 monterey:       "92bc944b76fbe171ad9368a12bd41de3125ff6ae9d6057ddf7ac61cbcd15bd27"
-    sha256 cellar: :any,                 big_sur:        "f45c208e73054a6ae23edc4345c7a7d85b5a594ae219a78e1bd932d15e78443e"
-    sha256 cellar: :any,                 catalina:       "1888331daaaf829cab31d74ff4042e9436052eedef9259f09924f168e6943027"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ef12974254ef812bb93406d75515d6ece4dce1a996b97e5baab373e1c6508aa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luajit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "264f403535a36e3194d3e399ff6ce9da1ababa5024f8e0de52330172f520e1b2"
   end
 
   def install
