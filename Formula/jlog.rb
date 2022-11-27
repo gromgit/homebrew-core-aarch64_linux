@@ -1,20 +1,14 @@
 class Jlog < Formula
   desc "Pure C message queue with subscribers and publishers for logs"
   homepage "https://labs.omniti.com/labs/jlog"
-  url "https://github.com/omniti-labs/jlog/archive/2.5.4.tar.gz"
-  sha256 "a6f00f9f41d3664a2f66f6c6aee0d33d6f295354f13a5f7f4033ca7ed20685cd"
+  url "https://github.com/omniti-labs/jlog/archive/2.5.3.tar.gz"
+  sha256 "66730afc62aa9c9f93ef686998a5396f8721edca3750097d4a2848a688d55bf9"
   license "BSD-3-Clause"
   head "https://github.com/omniti-labs/jlog.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "34c8486ef107bd15562d5b15b20a1892d4c859a3407c39c90b45b9f6497764f4"
-    sha256 cellar: :any,                 arm64_monterey: "ca940d44eec020e82f8416245f4634d543ff471150e4579817344d944c445085"
-    sha256 cellar: :any,                 arm64_big_sur:  "32b7e00c10405ce4aa979adfef936eb67e59abc62f016df1a3b82e4e98c2393d"
-    sha256 cellar: :any,                 ventura:        "d6964c475f6e70d7025dc37da7c67dac1c3bdcd7efba3dd3a9c927dd1860477c"
-    sha256 cellar: :any,                 monterey:       "f65c6a850701989de8355e2db39e479103090b2b22c073c0f461d4c3e74818c2"
-    sha256 cellar: :any,                 big_sur:        "3968856ea5fbca1aa88feae8c9978d08bf35b380dcf486841c3e71a3937e794e"
-    sha256 cellar: :any,                 catalina:       "ef9a6e2a85b5bdb48b50a6e8f86e53288c1e82ed7d1a1b404335b8e3c3db84fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6349b0d48318cc98416da8a2481b4524a3b03b8b510cf1a2b043d78b3b142459"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jlog"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fc9683a30ff5764b9ffc65120cb97c68118e4888e9928c861131df9056db9209"
   end
 
   depends_on "autoconf" => :build
