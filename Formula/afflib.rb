@@ -6,53 +6,43 @@ class Afflib < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "50d62d9c03fd0e7440d660bcb60a85e1b75e9c9249ab9dbb7049729f20d05fa1"
-    sha256 cellar: :any,                 arm64_monterey: "3e5919d12d9513c23e82822dd2ffd2947af505ed2f70ef1231e3355abe576faa"
-    sha256 cellar: :any,                 arm64_big_sur:  "6dd3ec1e1f3e71c9c57229dd23db7e6cfd7d1ce1ab06834f490597f5ba57ae13"
-    sha256 cellar: :any,                 ventura:        "7c9b57955330197f76b579d9f029f9daf80f66a45b3b2af19904d42d2f1e3cf0"
-    sha256 cellar: :any,                 monterey:       "b97d1449f77720b8893095c05b07a2a24af9744aaa4a5f120e500bec638ee924"
-    sha256 cellar: :any,                 big_sur:        "afe54b17929f33962a429e78e73aff41d8ea7c6c52d0e1a3fcdf41004a3a0de6"
-    sha256 cellar: :any,                 catalina:       "d6bececfde0fa878628d15954d4e3300f94be5f50a9e82493c1e96938ca885fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "39c23676a86073eb745c7437c2ae69de89b0c1672030a8f3c989b440f2b7a292"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/afflib"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6207c3ad579811c00c16c7630a36e3fa522bb07254423ac210020396758c5a40"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "libcython" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "openssl@1.1"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   uses_from_macos "curl"
   uses_from_macos "expat"
 
-  def python3
-    which("python3.11")
+  # Fix for Python 3.9, remove in next version
+  patch do
+    url "https://github.com/sshock/AFFLIBv3/commit/aeb444da.patch?full_index=1"
+    sha256 "90cbb0b55a6e273df986b306d20e0cfb77a263cb85e272e01f1b0d8ee8bd37a0"
   end
 
   def install
-    # Fix build with Python 3.11 by regenerating cythonized file.
-    (buildpath/"pyaff/pyaff.c").unlink
-    site_packages = Language::Python.site_packages(python3)
-    ENV.prepend_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
 
-    ENV["PYTHON"] = python3
-    system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", *std_configure_args,
-                          "--enable-s3",
-                          "--enable-python",
-                          "--disable-fuse"
+    args = %w[
+      --enable-s3
+      --enable-python
+      --disable-fuse
+    ]
 
-    # Prevent installation into HOMEBREW_PREFIX.
-    inreplace "pyaff/Makefile", "--single-version-externally-managed",
-                                "--install-lib=#{prefix/site_packages} \\0"
+    system "autoreconf", "-fiv"
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
+                          *args
     system "make", "install"
   end
 
   test do
     system "#{bin}/affcat", "-v"
-    system python3, "-c", "import pyaff"
   end
 end
