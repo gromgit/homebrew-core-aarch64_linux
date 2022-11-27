@@ -7,15 +7,11 @@ class CpuFeatures < Formula
   head "https://github.com/google/cpu_features.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "f70fec844e2ca2df114289c7231bcf0e3e100be11048a72487f6686ca73b25a5"
-    sha256 cellar: :any,                 monterey:     "96d648cebc111c56cc4ce8d8c371dcfd61ec9a0b5ded7ade4f7382d2f6fbc2e7"
-    sha256 cellar: :any,                 big_sur:      "f38f676b5869a9e36c57a6e06f0fc8406155e274f6fa6e40fa619d677ab6f2ed"
-    sha256 cellar: :any,                 catalina:     "b0a9fe84986d1905ce1f05319e05b4b3f7b382c9816cdbec5107d6583845dca7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "861a3a31b94d4f853f252f6b430fc20f4aba9aa704eb83c8b85a83478f3e8678"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cpu_features"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d2541ef216a260b033d86d81788550c61f186910081ca5a7ca0b35c5747ebbfd"
   end
 
   depends_on "cmake" => :build
-  depends_on arch: :x86_64 # https://github.com/google/cpu_features#whats-supported
 
   def install
     system "cmake", "-S", ".", "-B", "build",
