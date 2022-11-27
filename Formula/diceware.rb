@@ -8,22 +8,14 @@ class Diceware < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5b3dea6379d779fcb283ba0bd71a8955ca4e3dd1ba3a3b007ff88543d0a76d3c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b3dea6379d779fcb283ba0bd71a8955ca4e3dd1ba3a3b007ff88543d0a76d3c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5b3dea6379d779fcb283ba0bd71a8955ca4e3dd1ba3a3b007ff88543d0a76d3c"
-    sha256 cellar: :any_skip_relocation, ventura:        "72b062456e3ff046ed6cb143ed36aa89d762f245d6f8a4278fc404a14d2d5979"
-    sha256 cellar: :any_skip_relocation, monterey:       "72b062456e3ff046ed6cb143ed36aa89d762f245d6f8a4278fc404a14d2d5979"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72b062456e3ff046ed6cb143ed36aa89d762f245d6f8a4278fc404a14d2d5979"
-    sha256 cellar: :any_skip_relocation, catalina:       "72b062456e3ff046ed6cb143ed36aa89d762f245d6f8a4278fc404a14d2d5979"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf96f6848831e2b09a09cea6559df72f621314df4c567b3313dc6404fdb04845"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/diceware"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d2fc88a58c01f255a5e5d0a6af2e3607ad1f1073b2baf1c0efec8f4c8018cc80"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     virtualenv_install_with_resources
-    man1.install "diceware.1"
   end
 
   test do
