@@ -2,8 +2,8 @@ class Arkade < Formula
   desc "Open Source Kubernetes Marketplace"
   homepage "https://blog.alexellis.io/kubernetes-marketplace-two-year-update/"
   url "https://github.com/alexellis/arkade.git",
-      tag:      "0.8.50",
-      revision: "238a5fc390147e6658bd8d1562f257dfedf88f43"
+      tag:      "0.8.23",
+      revision: "be5a8cc594cbe860055ede8ec36635fcf36ae283"
   license "MIT"
 
   livecheck do
@@ -12,14 +12,8 @@ class Arkade < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "68537f914eed114e0aa2738581870325f22cf973bf0f6f3f6eb73dbd2a038851"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0876158894783b08edecb7010bfef58420c5b4889858ca7ebc972ede4c5b8613"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68f3792b7716d31c5474c90751ea28cbcf277ee6c19a5d973ec0fc60272036a1"
-    sha256 cellar: :any_skip_relocation, ventura:        "fe3c4f5f3a52e136be6f067e860140fdadd03418e41f96ba1ff3559fef0a4d69"
-    sha256 cellar: :any_skip_relocation, monterey:       "af9f0cefbd784f22c7b7402b32ca4b0623bf9d983261009cba7529b66b21559c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "873048d40653c65c5637d3ad66d4e217d7492d9a1abe617002a15f677ca4c6be"
-    sha256 cellar: :any_skip_relocation, catalina:       "e57a48f4c839a20e772f8e744580b2eabb77ab244b9ad48337dcdd0de05139c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b93f11d14739a5847aeb369cd2480eede1443ff25daa371cc234f9c06fb645d3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/arkade"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a8e29fd2a31ff720e099d7718dc4043e4423248cd885f8dd22d5a5085138696c"
   end
 
   depends_on "go" => :build
@@ -36,7 +30,7 @@ class Arkade < Formula
 
     generate_completions_from_executable(bin/"arkade", "completion")
     # make zsh completion also work for `ark` symlink
-    inreplace zsh_completion/"_arkade", "#compdef arkade", "#compdef arkade ark=arkade"
+    inreplace zsh_completion/"_arkade", "#compdef _arkade arkade", "#compdef _arkade arkade ark=arkade"
   end
 
   test do
