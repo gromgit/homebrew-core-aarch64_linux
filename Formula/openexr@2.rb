@@ -10,13 +10,8 @@ class OpenexrAT2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3ae1ca91a7366461c5b30a91cafe68bf36a64a80f3fbea628f86dfbf4f985a81"
-    sha256 cellar: :any,                 arm64_monterey: "f7c2ccf2e653530b225b40b9bf1335d6b9d52b012cf8c62d95e3d059467c69be"
-    sha256 cellar: :any,                 arm64_big_sur:  "dc090a9d4021cf97628c0e81fe80b88b2a96c1d0551e3a842bfc0881e41553bb"
-    sha256 cellar: :any,                 monterey:       "02e353301cea377a3626c5808dcacca9e56df56d7604387615e3a113e5261db9"
-    sha256 cellar: :any,                 big_sur:        "4eff58e68aa817929e3b925bb429825d2b1c2f9ce4885053cd438597aebcb688"
-    sha256 cellar: :any,                 catalina:       "ba23000d17c6dd21b2db620aebeb96e04eb6dfd630b9714965b4256ff0d81736"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54ea5e352139db9724ee3c1c11629a24523bb33d1e0e7d08b8b8f15f455b302c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openexr@2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "edac18f9fbf0535a8e0a013528a41cbfa073253396eb71715e7a5b4ce5e76722"
   end
 
   keg_only :versioned_formula
