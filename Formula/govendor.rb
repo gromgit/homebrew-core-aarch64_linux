@@ -7,21 +7,11 @@ class Govendor < Formula
   head "https://github.com/kardianos/govendor.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ea2d42be793724ecbbd148825c9874e1b6f344226aa70a64a14db6f937b262d6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "037aa26c2ac7ad0d1fef83fbf0001e9c6812adb0cc35b26a7ee2ca4c18c3cbcc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6dfce4585d00e1429cbc2f2f6f25d8e5623f5b5689220918b3dca99ca5e0bccd"
-    sha256 cellar: :any_skip_relocation, ventura:        "e2b8fb0b395a29c07c89be66c78fca0cc49551664c8067ab7c4b0f7b62877a2d"
-    sha256 cellar: :any_skip_relocation, monterey:       "b281b7fe76751ad3a79605a3fc17457710e7693145f151dab3e999152758158a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "479d963acb5e5d0446e223291e301581b55390c80b0e5263ad2a216b0a3acffa"
-    sha256 cellar: :any_skip_relocation, catalina:       "85a344d1c8a2488bd4303b2b2bb4deb4d902bb88e2004160588b4c863d664fd0"
-    sha256 cellar: :any_skip_relocation, mojave:         "28492791ec9b8c58e472a7276c9b86450112ef642e2aa10d025eb623e0921f40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24497503629e520a1fe718029ab520b05c012677df065c9fd104afe4d898b8b8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/govendor"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e97291b530edebf410187077b2246a1b5ace434e1b2c98011e1d6ca31c10d9cf"
   end
 
-  # Original deprecation date: 2020-03-02
-  # Temporarily undeprecated from 2022-07-29 to 2022-10-02
-  disable! date: "2023-01-02", because: :repo_archived
+  deprecate! date: "2020-03-02", because: :repo_archived
 
   depends_on "go"
 
