@@ -1,8 +1,8 @@
 class Cortex < Formula
   desc "Long term storage for Prometheus"
   homepage "https://cortexmetrics.io/"
-  url "https://github.com/cortexproject/cortex/archive/v1.13.1.tar.gz"
-  sha256 "aa742a608c8201fcca41061cd2264d1b8eebe61c22259a5289de3a226aeee7e3"
+  url "https://github.com/cortexproject/cortex/archive/v1.13.0.tar.gz"
+  sha256 "dd955b58091b7b0596e4bdc716cb855b8b15fdafa878c35c86ebbf4eac922064"
   license "Apache-2.0"
 
   livecheck do
@@ -11,13 +11,8 @@ class Cortex < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8945b4b91777966b7843829e9da158cee4d49e1e4ecaf584bafa414301ffc605"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e575c8db34f377faa212eec5f0ec7d478b3daf4cf10bd2698a9a1f1faec8332b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "344f842dddbf81a1169f8b53ab9e550101e088177b328472642a583528e9b166"
-    sha256 cellar: :any_skip_relocation, monterey:       "f9dcf2a61dbe5bb8312b7853834ab1524b15fac15f7f968c9c690aa93ba9bada"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a5ac2445ad9eea5364c0ec13d306965ccf7bf3156e71deaf5fd1eb87a8837982"
-    sha256 cellar: :any_skip_relocation, catalina:       "5169ce5a37d08f88fcd7defe6549f83a0cf3da9a3fa84535e6d4e8427abbb5ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0c6fd5209e864083236ece46e0603f764ac910a47183e08d12e747b89be6f9e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cortex"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b4c34b570aded568e3a30477b79905fa954ae8b8ff13835cd026ef6d164300d8"
   end
 
   depends_on "go" => :build
