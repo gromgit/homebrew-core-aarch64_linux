@@ -13,6 +13,7 @@ class Darglint < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fab11572b650056b2368d8080f6497ad5f507286e147089fa323fd3257a2801c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d7de9e8485bfa9da6ac8741b977349f65ce6f27e4067c609d52f07449cc470d0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "848f5aa7fd155b1a9c047e5b5c6f01dd57fd8dd69468b88d5fb3ffae3ba77687"
+    sha256 cellar: :any_skip_relocation, ventura:        "f1a7962cd4b099e328025393476d02a6ab69f342ae7a99496aa3ec6927da5d8d"
     sha256 cellar: :any_skip_relocation, monterey:       "c1421450b1625a080b39a54a8721dcdef12bcfd35c04196e36df96da6be45720"
     sha256 cellar: :any_skip_relocation, big_sur:        "8fa0e26b846c3b2ef823e2b296b89fa4e194a490590573e2515b77347457c78e"
     sha256 cellar: :any_skip_relocation, catalina:       "50ff6168116a577d6b16edc02c4f71195aeb608234b64666d627dacaec0b0400"
