@@ -23,15 +23,8 @@ class Gcc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256                               arm64_ventura:  "8f274798b5ce632bf4bbcf499a67a80e58b0bdee71aa5f965290ef56a42f06c6"
-    sha256                               arm64_monterey: "f37b8d3764f63e11a6e11dc23774eba527453de89fedb4e3b13aa3996059d386"
-    sha256                               arm64_big_sur:  "5d98731c711f17707fe13276090a6a3669a9d68e766e56ead8c842465ff164bb"
-    sha256                               ventura:        "bdfde44b04290f5d6cbc1a8bcce6dee4186e9d2ef29b6f64607bf766c494cd80"
-    sha256                               monterey:       "453199069048503be8f072463aaa3cd60fc2764875528f234374872354528564"
-    sha256                               big_sur:        "1f2aca239e706f455125dcb2c08df7744b8905b5b62d7aed4cdeae6cf5d5fcee"
-    sha256                               catalina:       "98f37e3468e2a15343e02f613a2f8d7761d30eead960d04b2317f8292122e9ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7f773f9af560766b2d971d815a8d224c267088c05ed1f2b864bd1d9ebc26e1a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4980beda02e3629ce9bcdaf1c7e4b1a43ad308279b1463d357f3295990bf9351"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -108,7 +101,9 @@ class Gcc < Formula
 
       # Change the default directory name for 64-bit libraries to `lib`
       # https://stackoverflow.com/a/54038769
-      inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
+      Dir["gcc/config/*/t-linux64"].each do |f|
+        inreplace f, "m64=../lib64", "m64="
+      end
     end
 
     mkdir "build" do
@@ -206,8 +201,8 @@ class Gcc < Formula
       #   * `-idirafter <dir>` instructs gcc to search system header
       #     files after gcc internal header files.
       # For libraries:
-      #   * `-nostdlib -L#{libgcc} -L#{glibc.opt_lib}` instructs gcc to use
-      #     brewed glibc if applied.
+      #   * `-nostdlib -L#{libgcc}` instructs gcc to use brewed glibc
+      #     if applied.
       #   * `-L#{libdir}` instructs gcc to find the corresponding gcc
       #     libraries. It is essential if there are multiple brewed gcc
       #     with different versions installed.
@@ -221,7 +216,7 @@ class Gcc < Formula
         + -isysroot #{HOMEBREW_PREFIX}/nonexistent #{system_header_dirs.map { |p| "-idirafter #{p}" }.join(" ")}
 
         *link_libgcc:
-        #{glibc_installed ? "-nostdlib -L#{libgcc} -L#{glibc.opt_lib}" : "+"} -L#{libdir} -L#{HOMEBREW_PREFIX}/lib
+        #{glibc_installed ? "-nostdlib -L#{libgcc}" : "+"} -L#{libdir} -L#{HOMEBREW_PREFIX}/lib
 
         *link:
         + --dynamic-linker #{HOMEBREW_PREFIX}/lib/ld.so -rpath #{libdir}
