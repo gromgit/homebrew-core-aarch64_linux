@@ -13,14 +13,8 @@ class Ldns < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a5829a339bbe5301ac8cc728a2aae72f15649ac41686d306d189580c8e24caa3"
-    sha256 cellar: :any,                 arm64_monterey: "84fa570a26a953f4a793d8498c95fd4d2e63646673e514566b43096e6d01944b"
-    sha256 cellar: :any,                 arm64_big_sur:  "c165e0faa3f490a9f7c7baebb538cf79b48c1334fa4ea6da3a19ca0401b36bef"
-    sha256 cellar: :any,                 ventura:        "e753f68dacce2ca64f06a5949e60fb5e2954a586a09acb3fa962f9cd90ab6a6f"
-    sha256 cellar: :any,                 monterey:       "424b3710704a509032718b9e82c3814c7eeb3391b7ac4cc8fd2ce7e7fda8946d"
-    sha256 cellar: :any,                 big_sur:        "2187a1082edbca32be2bf59a8222f05c6fb68c371324116d288547c5cca60ce3"
-    sha256 cellar: :any,                 catalina:       "5e9493ff659d9b2e8587494f94df59bb7f97897dca0292c1880d4ebe9cef28e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d82fc8ab9aa3917ad9e3d565271a6e32231eb3aa914445002f4b52053e640455"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ldns"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc409e8e9ed68a270268faaa1762ef2e4494acd9c1bcb2fcd58ff167263861ca"
   end
 
   depends_on "swig" => :build
@@ -30,14 +24,13 @@ class Ldns < Formula
   conflicts_with "drill", because: "both install a `drill` binary"
 
   def install
-    python3 = "python3.10"
     args = %W[
       --prefix=#{prefix}
       --with-drill
       --with-examples
       --with-ssl=#{Formula["openssl@1.1"].opt_prefix}
       --with-pyldns
-      PYTHON_SITE_PKG=#{prefix/Language::Python.site_packages(python3)}
+      PYTHON_SITE_PKG=#{prefix/Language::Python.site_packages("python3")}
       --disable-dane-verify
       --without-xcode-sdk
     ]
@@ -45,7 +38,7 @@ class Ldns < Formula
     # Fixes: ./contrib/python/ldns_wrapper.c:2746:10: fatal error: 'ldns.h' file not found
     inreplace "contrib/python/ldns.i", "#include \"ldns.h\"", "#include <ldns/ldns.h>"
 
-    ENV["PYTHON"] = which(python3)
+    ENV["PYTHON"] = which("python3")
     system "./configure", *args
 
     if OS.mac?
