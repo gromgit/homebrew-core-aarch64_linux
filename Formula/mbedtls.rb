@@ -13,14 +13,8 @@ class Mbedtls < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0948e0625c71944abefcf31521f53675a69a5c22578e8d90be287eeb016b2625"
-    sha256 cellar: :any,                 arm64_monterey: "21009291bc1c17051363355c2815cd4826603f3a3f4d0d071f78a78be2b22ae9"
-    sha256 cellar: :any,                 arm64_big_sur:  "772fc2c15da4aa90218b3afdcb1c2cd076dd8333f89c951a4946fca5cbfcd227"
-    sha256 cellar: :any,                 ventura:        "98585bbc5e72a7006d9da98fcb34f525224d5c7261004487d312dd4bb6d7bbdb"
-    sha256 cellar: :any,                 monterey:       "b473d94ce270b5b795b842708329334a04eec7cb43fa15f4e06d9e66f8d48e3d"
-    sha256 cellar: :any,                 big_sur:        "c6788160e03dfe51b88224991adecef63c269c1033349aa66e5b2b69c9247e88"
-    sha256 cellar: :any,                 catalina:       "a3cba57dd337562c7793f7afc32e6ce0406c5ad31211a3250ebe7cd0b3ce9229"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb233f2a360971476b190253ab1e778800309ced62c44f3409cd0d1af7a73d25"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mbedtls"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5a82121f37b7a29dcaed241bc8dcef59a07489ecf62d0ca7f7657d0311e99536"
   end
 
   depends_on "cmake" => :build
@@ -36,7 +30,7 @@ class Mbedtls < Formula
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DUSE_SHARED_MBEDTLS_LIBRARY=On",
-                    "-DPython3_EXECUTABLE=#{which("python3.10")}",
+                    "-DPython3_EXECUTABLE=#{which("python3")}",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",
                     "-DGEN_FILES=OFF",
                     *std_cmake_args
