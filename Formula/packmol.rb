@@ -7,14 +7,13 @@ class Packmol < Formula
   head "https://github.com/m3g/packmol.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2a9742646629889b014e28455493ed34e7fa12c7c41ff996916d8d2936544320"
-    sha256 cellar: :any,                 arm64_monterey: "fecff45f74a420d0130da37bf0cf5a28af97374bf937d420224c0b788c9f3484"
-    sha256 cellar: :any,                 arm64_big_sur:  "71e139ba5f9087ca1138850734c38b2deb8ab1796f31c9eac69995e614039360"
-    sha256                               ventura:        "99d1fdfd466aee58154eead944dccbe8d2626dbce9766bfe00a86dfd8b281e4b"
-    sha256                               monterey:       "a542c7ba163c2c80ee6cff96d723d870365805857cc33850a5cb476a9d4fc7fa"
-    sha256                               big_sur:        "f70726c2caa17229c95639622cc67cb6a7e8328b8159a1802bee7ad5ad6f486a"
-    sha256                               catalina:       "d97c6f8b4ae3d70ddb8dd2a18f2ad16708a0d6b4e5cb98af4def6cd44b760e49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8eabbc1b2d945ee2c28a7df09863d4d36754e4d0f925c0b458931a89d245348c"
+    sha256 cellar: :any,                 arm64_ventura:  "f9b0671562d5d5c490af41b77af3e4e62708883a2a2f9aa465fd42df7471c85a"
+    sha256 cellar: :any,                 arm64_monterey: "4f1afb57de63afe102cedf900ae3e6fd7d3ed6eaee7d4221f6c1c9453813b931"
+    sha256 cellar: :any,                 arm64_big_sur:  "3adfa0f57afadf605e10d6ffbad8270683fa2a289bffcb56d4d5389af76a1fe9"
+    sha256                               monterey:       "b8456629364d20ecd067449dbcd38dde85f5fe09069129c71602f07ec1097c0d"
+    sha256                               big_sur:        "8a31e699d23377960bf668e5c715f6ee13b7514a287e7bfed3ecb81aa7223078"
+    sha256                               catalina:       "f3320c503509b9fe783c5953ef0dd25818ee13d310beafdb9bf048b126d450c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c62ae6f6b423fc5a4da7ef21251afb5230511800540c69aa187926dbdf89c44e"
   end
 
   depends_on "gcc" # for gfortran
