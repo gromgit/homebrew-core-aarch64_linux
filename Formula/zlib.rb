@@ -1,11 +1,9 @@
 class Zlib < Formula
   desc "General-purpose lossless data-compression library"
   homepage "https://zlib.net/"
-  url "https://zlib.net/zlib-1.2.13.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.13/zlib-1.2.13.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/zlib-1.2.13.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/zlib-1.2.13.tar.gz"
-  sha256 "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30"
+  url "https://zlib.net/zlib-1.2.12.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.12/zlib-1.2.12.tar.gz"
+  sha256 "91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9"
   license "Zlib"
   head "https://github.com/madler/zlib.git", branch: "develop"
 
@@ -15,14 +13,8 @@ class Zlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "55e71e5c7907eb8870b3f8b00349c620dc6115d5139dcb45cc3a87101663162c"
-    sha256 cellar: :any,                 arm64_monterey: "27b22a6738cbf4a4f3925ace7c72aebcb53a7c13c002ff78492718e15774e8e0"
-    sha256 cellar: :any,                 arm64_big_sur:  "83700f7752031794c295557ee3c6aa9783f93ec9de44ac117f7958a83d823dfa"
-    sha256 cellar: :any,                 ventura:        "cfbda79e30416433d6a554f187a99fa9769c79a35e73ccabb53c3c02170ce26c"
-    sha256 cellar: :any,                 monterey:       "8473a260917ecc2595a8f903bdd8a23a034683eac350839000a26b17286c7462"
-    sha256 cellar: :any,                 big_sur:        "495733577a835472554be619e26ad09fa62684d1d1eba3efae5a8beaeeee9a56"
-    sha256 cellar: :any,                 catalina:       "4da7de2b14c12452d4612417e571e04188c6a7594b7f583e7bc72e27f9d965c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0082aa29a61507e237389ee4e9fb6a6ed0cbd5d341e3905527c089c88e730411"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zlib"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "320dfabd758f050436c939cf7f4b3f23e1b8981c8fadebd03fc3642f3f158ab2"
   end
 
   keg_only :provided_by_macos
@@ -32,6 +24,20 @@ class Zlib < Formula
     url "https://zlib.net/zpipe.c"
     version "20051211"
     sha256 "68140a82582ede938159630bca0fb13a93b4bf1cb2e85b08943c26242cf8f3a6"
+  end
+
+  # Patch for configure issue
+  # Remove with the next release
+  patch do
+    url "https://github.com/madler/zlib/commit/05796d3d8d5546cf1b4dfe2cd72ab746afae505d.patch?full_index=1"
+    sha256 "68573842f1619bb8de1fa92071e38e6e51b8df71371e139e4e96be19dd7e9694"
+  end
+
+  # Patch for CRC compatibility issue
+  # Remove with the next release
+  patch do
+    url "https://github.com/madler/zlib/commit/ec3df00224d4b396e2ac6586ab5d25f673caa4c2.patch?full_index=1"
+    sha256 "c7d1cbb58b144c48b7fa8b52c57531e9fd80ab7d87c5d58ba76a9d33c12cb047"
   end
 
   def install
