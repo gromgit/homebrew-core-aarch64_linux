@@ -6,17 +6,11 @@ class Snobol4 < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "505e0a672763a6722cdac5f45129c79172a17b62cc2ca8e16166c00e39ae28e6"
-    sha256 arm64_monterey: "a53dcbc020bfb1f4717e77b9b329fedef3be50f57fa30bb2c55cde9a124eb9bd"
-    sha256 arm64_big_sur:  "4ed47b83e9a1e747c178a7b1ebb17d1c752c8f354d91f8e03f4c31e7a9b7f6ed"
-    sha256 monterey:       "9273da745ee760883553c560010c999831afcadbf1cf220188f260cb7a2269d3"
-    sha256 big_sur:        "ac601704cde8de8f0334349e32f82cd2a9ce6cd5467d995fe8ac1ea79747c42b"
-    sha256 catalina:       "1196997d82a94df4c3ec3438f02d3a32360f809a2d66af7205a6ee9959ede4b6"
-    sha256 x86_64_linux:   "bc243751bbaf442dea44e1e571ab0d8ca129e91615a45be6024b275e085191ad"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/snobol4"
+    sha256 aarch64_linux: "82eb41672d5fcdd1673df3151695b3dd867f46d3747d4491241eadc01bee1da5"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "m4" => :build
   uses_from_macos "libffi"
