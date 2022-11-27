@@ -2,25 +2,19 @@ class Auditbeat < Formula
   desc "Lightweight Shipper for Audit Data"
   homepage "https://www.elastic.co/products/beats/auditbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v8.5.2",
-      revision: "1ebd0940bd56943642ea8d63d1fe8227f86e7435"
+      tag:      "v8.2.0",
+      revision: "045da3a1bb89944373c33332c18ca99ef6192df2"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "15c1f728206dae8fc41add8b930d68ae3cf10992dd7b500ff724adb38fec719d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "76b4fe47ef81cca19203f6a5cb13402a0fad41bdbb01bfd92e6ef0ed1d21b971"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b9146904a3368fd1940ad0fb30812618f0e21e690cab07382339801f9ed42e8"
-    sha256 cellar: :any_skip_relocation, ventura:        "c8090d3794e7a6797fec1842338bf642ec2595aff952a6c917d51c4bbc822e7e"
-    sha256 cellar: :any_skip_relocation, monterey:       "20d0d8c361b1c2cfd9528b914c48208e9965310cd03142b5ee2a34a77621f7ef"
-    sha256 cellar: :any_skip_relocation, big_sur:        "55e0c1fa48285daa885761491159fa1fd2c470b28321d0ac490a1a9521e192ff"
-    sha256 cellar: :any_skip_relocation, catalina:       "08d80b272677de4e6c0aea32f83d5fde416967fefbccafab0739d8f7935baf35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "add3c75896f8c6a0294a5fbddf48584dd94b55b621d9d836d724ced46d8735a7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/auditbeat"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "deceff47aeba93f4e52bfb0a129992e3604b08dfffe3ffe66aed2bbfff1fb58d"
   end
 
   depends_on "go" => :build
   depends_on "mage" => :build
-  depends_on "python@3.11" => :build
+  depends_on "python@3.10" => :build
 
   def install
     # remove non open source files
@@ -51,9 +45,6 @@ class Auditbeat < Formula
         --path.logs #{var}/log/auditbeat \
         "$@"
     EOS
-
-    chmod 0555, bin/"auditbeat"
-    generate_completions_from_executable(bin/"auditbeat", "completion", shells: [:bash, :zsh])
   end
 
   def post_install
