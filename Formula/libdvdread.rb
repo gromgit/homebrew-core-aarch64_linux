@@ -20,14 +20,8 @@ class Libdvdread < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "221b4cb3ad771cc650454a1624a89348973c3ef5bedc5f526b77e4bbb281b938"
-    sha256 cellar: :any,                 arm64_monterey: "7c258b5c5be30d3ee53dacd0b137d7faadb5e21e06e5cf98859e7728e91cf303"
-    sha256 cellar: :any,                 arm64_big_sur:  "e8642520b4bc06ac122e5c7e3affa0c80ed79678b09d220c1973e042aa11d30f"
-    sha256 cellar: :any,                 ventura:        "dbf236d4d32bb5e6d4180910f464225e5a09989d8fc542ec8bd5d3493a962308"
-    sha256 cellar: :any,                 monterey:       "6ba400a8d928d2cd478969406000895023049c5a2257f11b6fab2791ff8b7105"
-    sha256 cellar: :any,                 big_sur:        "cd57db884506fccb0b37b4cde83db05ba9cb15cddf1092f401918ae0972ac495"
-    sha256 cellar: :any,                 catalina:       "5cd4a9df11e095e001d9d8a2a587f4701696de974b5527aea260afc9c5cc4f49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5805295785ab4ce6aeb1bdfeb7fe1aab4946ea9df2555f2016bbc540322f9c81"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libdvdread"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "96b706f0eb145df620f8e27530cff8f10f55ebae87d4ce50b5d1fc22f75dadc4"
   end
 
   head do
