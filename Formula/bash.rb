@@ -5,32 +5,36 @@ class Bash < Formula
   head "https://git.savannah.gnu.org/git/bash.git", branch: "master"
 
   stable do
-    url "https://ftp.gnu.org/gnu/bash/bash-5.2.tar.gz"
-    mirror "https://ftpmirror.gnu.org/bash/bash-5.2.tar.gz"
-    mirror "https://mirrors.kernel.org/gnu/bash/bash-5.2.tar.gz"
-    mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.2.tar.gz"
-    sha256 "a139c166df7ff4471c5e0733051642ee5556c1cc8a4a78f145583c5c81ab32fb"
-    version "5.2.12"
+    url "https://ftp.gnu.org/gnu/bash/bash-5.1.tar.gz"
+    mirror "https://ftpmirror.gnu.org/bash/bash-5.1.tar.gz"
+    mirror "https://mirrors.kernel.org/gnu/bash/bash-5.1.tar.gz"
+    mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.1.tar.gz"
+    sha256 "cc012bc860406dcf42f64431bcd3d2fa7560c02915a601aba9cd597a39329baa"
+    version "5.1.16"
 
     %w[
-      001 f42f2fee923bc2209f406a1892772121c467f44533bedfe00a176139da5d310a
-      002 45cc5e1b876550eee96f95bffb36c41b6cb7c07d33f671db5634405cd00fd7b8
-      003 6a090cdbd334306fceacd0e4a1b9e0b0678efdbbdedbd1f5842035990c8abaff
-      004 38827724bba908cf5721bd8d4e595d80f02c05c35f3dd7dbc4cd3c5678a42512
-      005 ece0eb544368b3b4359fb8464caa9d89c7a6743c8ed070be1c7d599c3675d357
-      006 d1e0566a257d149a0d99d450ce2885123f9995e9c01d0a5ef6df7044a72a468c
-      007 2500a3fc21cb08133f06648a017cebfa27f30ea19c8cbe8dfefdf16227cfd490
-      008 6b4bd92fd0099d1bab436b941875e99e0cb3c320997587182d6267af1844b1e8
-      009 f95a817882eaeb0cb78bce82859a86bbb297a308ced730ebe449cd504211d3cd
-      010 c7705e029f752507310ecd7270aef437e8043a9959e4d0c6065a82517996c1cd
-      011 831b5f25bf3e88625f3ab315043be7498907c551f86041fa3b914123d79eb6f4
-      012 2fb107ce1fb8e93f36997c8b0b2743fc1ca98a454c7cc5a3fcabec533f67d42c
+      001 ebb07b3dbadd98598f078125d0ae0d699295978a5cdaef6282fe19adef45b5fa
+      002 15ea6121a801e48e658ceee712ea9b88d4ded022046a6147550790caf04f5dbe
+      003 22f2cc262f056b22966281babf4b0a2f84cb7dd2223422e5dcd013c3dcbab6b1
+      004 9aaeb65664ef0d28c0067e47ba5652b518298b3b92d33327d84b98b28d873c86
+      005 cccbb5e9e6763915d232d29c713007a62b06e65126e3dd2d1128a0dc5ef46da5
+      006 75e17d937de862615c6375def40a7574462210dce88cf741f660e2cc29473d14
+      007 acfcb8c7e9f73457c0fb12324afb613785e0c9cef3315c9bbab4be702f40393a
+      008 f22cf3c51a28f084a25aef28950e8777489072628f972b12643b4534a17ed2d1
+      009 e45cda953ab4b4b4bde6dc34d0d8ca40d1cc502046eb28070c9ebcd47e33c3ee
+      010 a2c8d7b2704eeceff7b1503b7ad9500ea1cb6e9393faebdb3acd2afdd7aeae2a
+      011 58191f164934200746f48459a05bca34d1aec1180b08ca2deeee3bb29622027b
+      012 10f189c8367c4a15c7392e7bf70d0ff6953f78c9b312ed7622303a779273ab98
+      013 c7acb66df435d284304c16ca83a5265f9edd9368612095b01a733d45c77ed5ad
+      014 6a4ee0c81b437b96279a792c1efcec4ba56f009195a318083db6b53b096f83d0
+      015 1b37692ef1f6cc3dcec246773443276066e6b1379868f8c14e01f4dfd4df80f0
+      016 8899144f76a5db1fb41a89ed881c9f19add95728dd71db324f772ef225c5384f
     ].each_slice(2) do |p, checksum|
       patch :p0 do
-        url "https://ftp.gnu.org/gnu/bash/bash-5.2-patches/bash52-#{p}"
-        mirror "https://ftpmirror.gnu.org/bash/bash-5.2-patches/bash52-#{p}"
-        mirror "https://mirrors.kernel.org/gnu/bash/bash-5.2-patches/bash52-#{p}"
-        mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.2-patches/bash52-#{p}"
+        url "https://ftp.gnu.org/gnu/bash/bash-5.1-patches/bash51-#{p}"
+        mirror "https://ftpmirror.gnu.org/bash/bash-5.1-patches/bash51-#{p}"
+        mirror "https://mirrors.ocf.berkeley.edu/gnu/bash/bash-5.1-patches/bash51-#{p}"
+        mirror "https://mirrors.kernel.org/gnu/bash/bash-5.1-patches/bash51-#{p}"
         sha256 checksum
       end
     end
@@ -73,14 +77,8 @@ class Bash < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "3a5dd0289fe6acf9153a358c6ca77b1ca7e447fa91f09d76fc9d6f971dc31200"
-    sha256 arm64_monterey: "7d73afad09c38eed297ccbdae885fc6c01de1e7f7b00d39fb88532193f582038"
-    sha256 arm64_big_sur:  "b84fcc00de20c957408222103c060a7eb6f6ef7cbe4cd6ead95f368289aebda0"
-    sha256 ventura:        "fc4818d6a55c5861a7f7aa15f276f542d5f20495198849088a9a81c22666292b"
-    sha256 monterey:       "d0cb4298c7ed6f9d634e3687a74c61dd3f955c169f36ef6ce53bd816842f899e"
-    sha256 big_sur:        "7ca197c70c3d5986389be319db6afb1530715e89dcd2c1d94329a1bbaf0f5b43"
-    sha256 catalina:       "80f0ae13cca14bc3b75ce28f06a59debd5b782b2f2f1af8145bee1ecd3328878"
-    sha256 x86_64_linux:   "76e31c1e2aff9068e25736f111d8bf56a5f5ccb07b3591c00cebe8476c239788"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bash"
+    sha256 aarch64_linux: "bda80d779754a7c91d258b0c387dd020600be05bff47c9112e8a6da4da464582"
   end
 
   def install
