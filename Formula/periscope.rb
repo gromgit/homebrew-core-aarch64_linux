@@ -11,6 +11,7 @@ class Periscope < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "333a5aa8a2e0355a024ea1778b69195ae74d6dc55d9a531cdf94d65c9dd213df"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "fb703f5a039afb1320ce823bd1f3380d901ad27df0a16d1b21a9536540d0ddfa"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "af13a3dc34d5c9503ada0c6616b4d438abeb7f1328e87540b12895b68f85ce5c"
+    sha256 cellar: :any_skip_relocation, ventura:        "5e2e69dfd4cb029246a57c0b227c37f28ac29aeea7533cee1fbbddd80b2d2888"
     sha256 cellar: :any_skip_relocation, monterey:       "18c34f3e8ad43b73e4fe4ab5bc212a515b908fd142a891086333d194b9f29674"
     sha256 cellar: :any_skip_relocation, big_sur:        "bf6c1bc225c635708e7e928093c6d010b08687017166019131789fdaebd48a8c"
     sha256 cellar: :any_skip_relocation, catalina:       "31123f9309c7d37633d5116e4854d2a0e9dc7c36b02290f54fdd2d01613e4a3f"
