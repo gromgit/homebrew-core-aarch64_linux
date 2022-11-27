@@ -6,13 +6,8 @@ class Dateutils < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_ventura:  "357e119eca0f8b05aa9e15ca847fb65e8d62739f44c8a1a671fea692955e89a7"
-    sha256 arm64_monterey: "1f9136ae36f078bc62bb4a156789182c8be9db5263ff5c8181178bf0dddafda1"
-    sha256 arm64_big_sur:  "af290ad842df546fa9b2280741bbaebb8f2bd1b0c6480311950179a1216acb9e"
-    sha256 monterey:       "81a67f3ef6fc31ccfc373abba87c97a123897a5c95af0d1d09775914acfbc704"
-    sha256 big_sur:        "d64298bb58e3f4cbb9515c47d2da2afd28ef4723e048e74bcd82b100852e5933"
-    sha256 catalina:       "d466942058dc6d8d0d6bbdbd3d8e923b025b8f64a845f558263985cc40bd5b4d"
-    sha256 x86_64_linux:   "dd75e3c37e59d4a89d04f0e8b5383b2e938c2c2d8dbe4d32bc60de434cf9e5e2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dateutils"
+    sha256 aarch64_linux: "7bc3adc4d16b3dec03793213c007385fb86339475e216fde87277b1048f3b025"
   end
 
   head do
