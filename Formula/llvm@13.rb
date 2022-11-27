@@ -5,17 +5,19 @@ class LlvmAT13 < Formula
   sha256 "326335a830f2e32d06d0a36393b5455d17dc73e0bd1211065227ee014f92cbf8"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
-  revision 2
+  revision 1
+
+  # This should be removed when LLVM 15 is released, so we only check the
+  # current version (the `llvm` formula) and one major version before it
+  # (to catch any patch version that may appear, however uncommon).
+  livecheck do
+    url :stable
+    regex(/^llvmorg[._-]v?(13(?:\.\d+)+)$/i)
+  end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c1a3b007a5da85217acd18b3b2bb390be6faf46f09f1073c28927c3ea592dae7"
-    sha256 cellar: :any,                 arm64_monterey: "f261f288461d9babc19d79c2fe5d984e5b589fb675f172cc2492f7bfd64e56d0"
-    sha256 cellar: :any,                 arm64_big_sur:  "9e6f60b8d6b8b464345e7d9b9bf728f49fd2ad8c5cf45a7918ce3b60cc9efd91"
-    sha256 cellar: :any,                 ventura:        "02b9401a889bd8f3cdd564e90a925803c9c57415410d3ea0fae039e2c8af6293"
-    sha256 cellar: :any,                 monterey:       "703cc19867f51a059f71b9fe7c9ac20c0c10d1e39e04a57bbd272c2965f542bc"
-    sha256 cellar: :any,                 big_sur:        "8933be1d408ab802e7049201774922ff045e470d7e80fd570700e79bcf7055b9"
-    sha256 cellar: :any,                 catalina:       "b91e1b1154707fce05d16ef54abd886d9bf0fc38a625f0bf254420ad6e4474c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b6ad468ae8d3316c54fb5770f9a2f66f8be6970729b32f7daadd3c41ddbd6f75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/llvm@13"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7d23ce05eac7010bfa88935e405bf39c8ab400784445f8d390d6da1b5a52d18e"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
@@ -28,10 +30,11 @@ class LlvmAT13 < Formula
   # See: Homebrew/homebrew-core/issues/35513
   depends_on "cmake" => :build
   depends_on "python@3.10" => :build
+  depends_on "swig" => :build
 
-  uses_from_macos "python" => :test
   uses_from_macos "libedit"
   uses_from_macos "libffi", since: :catalina
+  uses_from_macos "libxml2"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
@@ -39,18 +42,10 @@ class LlvmAT13 < Formula
     depends_on "pkg-config" => :build
     depends_on "binutils" # needed for gold
     depends_on "elfutils" # openmp requires <gelf.h>
-  end
-
-  def python3
-    "python3.10"
+    depends_on "glibc" if Formula["glibc"].any_version_installed?
   end
 
   def install
-    # The clang bindings need a little help finding our libclang.
-    inreplace "clang/bindings/python/clang/cindex.py",
-              /^(\s*library_path\s*=\s*)None$/,
-              "\\1'#{lib}'"
-
     projects = %w[
       clang
       clang-tools-extra
@@ -73,7 +68,7 @@ class LlvmAT13 < Formula
     python_versions = Formula.names
                              .select { |name| name.start_with? "python@" }
                              .map { |py| py.delete_prefix("python@") }
-    site_packages = Language::Python.site_packages(python3).delete_prefix("lib/")
+    site_packages = Language::Python.site_packages("python3").delete_prefix("lib/")
 
     # Apple's libstdc++ is too old to build LLVM
     ENV.libcxx if ENV.compiler == :clang
@@ -117,27 +112,21 @@ class LlvmAT13 < Formula
       args << "-DFFI_LIBRARY_DIR=#{Formula["libffi"].opt_lib}"
     end
 
+    # The latest stage builds avoid the shims, and the build
+    # will target Penryn unless otherwise specified
+    ENV.append_to_cflags "-march=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
+
     runtimes_cmake_args = []
     builtins_cmake_args = []
 
     if OS.mac?
       args << "-DLLVM_BUILD_LLVM_C_DYLIB=ON"
       args << "-DLLVM_ENABLE_LIBCXX=ON"
-      args << "-DLIBCXX_INSTALL_LIBRARY_DIR=#{lib}/c++"
-      args << "-DLIBCXXABI_INSTALL_LIBRARY_DIR=#{lib}/c++"
       args << "-DDEFAULT_SYSROOT=#{macos_sdk}" if macos_sdk
-      runtimes_cmake_args << "-DCMAKE_INSTALL_RPATH=#{loader_path}"
-
-      # Prevent CMake from defaulting to `lld` when it's found next to `clang`.
-      # This can be removed after CMake 3.25. See:
-      # https://gitlab.kitware.com/cmake/cmake/-/merge_requests/7671
-      args << "-DLLVM_USE_LINKER=ld"
-      [args, runtimes_cmake_args, builtins_cmake_args].each do |arg_array|
-        arg_array << "-DCMAKE_LINKER=ld"
-      end
+      runtimes_cmake_args << "-DCMAKE_INSTALL_RPATH=#{rpath}"
     else
-      # Disable `libxml2` which isn't very useful.
-      args << "-DLLVM_ENABLE_LIBXML2=OFF"
+      ENV.append_to_cflags "-fpermissive -Wno-free-nonheap-object"
+
       args << "-DLLVM_ENABLE_LIBCXX=OFF"
       args << "-DCLANG_DEFAULT_CXX_STDLIB=libstdc++"
       # Enable llvm gold plugin for LTO
@@ -220,7 +209,7 @@ class LlvmAT13 < Formula
 
     # Create symlinks so that the Python bindings can be used with alternative Python versions
     python_versions.each do |py_ver|
-      next if py_ver == Language::Python.major_minor_version(python3).to_s
+      next if py_ver == Language::Python.major_minor_version("python3").to_s
 
       (lib/"python#{py_ver}/site-packages").install_symlink (lib/site_packages).children
     end
@@ -235,12 +224,10 @@ class LlvmAT13 < Formula
   end
 
   def caveats
-    on_macos do
-      <<~EOS
-        To use the bundled libc++ please add the following LDFLAGS:
-          LDFLAGS="-L#{opt_lib}/c++ -Wl,-rpath,#{opt_lib}/c++"
-      EOS
-    end
+    <<~EOS
+      To use the bundled libc++ please add the following LDFLAGS:
+        LDFLAGS="-L#{opt_lib} -Wl,-rpath,#{opt_lib}"
+    EOS
   end
 
   test do
@@ -339,14 +326,12 @@ class LlvmAT13 < Formula
 
     # link against installed libc++
     # related to https://github.com/Homebrew/legacy-homebrew/issues/47149
-    cxx_libdir = opt_lib
-    cxx_libdir /= "c++" if OS.mac?
     system "#{bin}/clang++", "-v",
            "-isystem", "#{opt_include}/c++/v1",
            "-std=c++11", "-stdlib=libc++", "test.cpp", "-o", "testlibc++",
-           "-rtlib=compiler-rt", "-L#{cxx_libdir}", "-Wl,-rpath,#{cxx_libdir}"
+           "-rtlib=compiler-rt", "-L#{opt_lib}", "-Wl,-rpath,#{opt_lib}"
     assert_includes (testpath/"testlibc++").dynamically_linked_libraries,
-                    (cxx_libdir/shared_library("libc++", "1")).to_s
+                    (opt_lib/shared_library("libc++", "1")).to_s
     (testpath/"testlibc++").dynamically_linked_libraries.each do |lib|
       refute_match(/libstdc\+\+/, lib)
       refute_match(/libgcc/, lib)
@@ -425,8 +410,8 @@ class LlvmAT13 < Formula
         return 0;
       }
     EOS
-    assert_includes shell_output("#{bin}/scan-build make scanbuildtest 2>&1"),
-                    "warning: Use of memory after it is freed"
+    assert_includes shell_output("#{bin}/scan-build #{bin}/clang++ scanbuildtest.cpp 2>&1"),
+      "warning: Use of memory after it is freed"
 
     (testpath/"clangformattest.c").write <<~EOS
       int    main() {
@@ -434,14 +419,6 @@ class LlvmAT13 < Formula
     EOS
     assert_equal "int main() { printf(\"Hello world!\"); }\n",
       shell_output("#{bin}/clang-format -style=google clangformattest.c")
-
-    # This will fail if the clang bindings cannot find `libclang`.
-    with_env(PYTHONPATH: prefix/Language::Python.site_packages("python3")) do
-      system "python3", "-c", <<~EOS
-        from clang import cindex
-        cindex.Config().get_cindex_library()
-      EOS
-    end
 
     # Ensure LLVM did not regress output of `llvm-config --system-libs` which for a time
     # was known to output incorrect linker flags; e.g., `-llibxml2.tbd` instead of `-lxml2`.
