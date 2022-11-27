@@ -1,8 +1,8 @@
 class Spot < Formula
   desc "Platform for LTL and ω-automata manipulation"
   homepage "https://spot.lrde.epita.fr/"
-  url "https://www.lrde.epita.fr/dload/spot/spot-2.11.2.tar.gz"
-  sha256 "3e63458f0da4863e1cd0d2cfe851a1015d322205d7e406c6a9d95680b9ea754e"
+  url "https://www.lrde.epita.fr/dload/spot/spot-2.10.6.tar.gz"
+  sha256 "c588d1cb53ccea3e592f99402b14c2f4367b349ecef8e17b6d391df146bc8ba4"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,16 +11,15 @@ class Spot < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0c403f642c3088aa2383b6315ffb34d28321cb6ecdae0131cd21dbeecccae3e5"
-    sha256 cellar: :any,                 arm64_monterey: "ecbe5a528c52ea17b1515a385a3ca9ee9dbcdaff429c2c77f106bd1e21dc72af"
-    sha256 cellar: :any,                 arm64_big_sur:  "a1c00fce9f54d4de1daf8c18e33e5f7b55a131511ee3004e654e319b5c535dc3"
-    sha256 cellar: :any,                 monterey:       "53992a2350103a44b6d0b9421da6548ab806223345ad75babff2d718fde39139"
-    sha256 cellar: :any,                 big_sur:        "c75afe336e8ee43ade8eadb7c6d398e4395ccd705cb47428762a5650c9d40833"
-    sha256 cellar: :any,                 catalina:       "f3ac4a91ded54f3c5343e8591cba5ff3aa7e3fa39b8ee4df4bbff71940cf81f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "802afd5354c80e5964aa606e61a54d98785d67177821aa80b98518f32dde42d4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/spot"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ed814a33266da99c8268c0318b3479d2e1361400801a7364ea663bc56af3d795"
   end
 
   depends_on "python@3.10" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5" # C++17
 
