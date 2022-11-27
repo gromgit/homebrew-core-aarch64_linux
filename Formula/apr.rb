@@ -5,24 +5,16 @@ class Apr < Formula
   mirror "https://archive.apache.org/dist/apr/apr-1.7.0.tar.bz2"
   sha256 "e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea"
   license "Apache-2.0"
-  revision 3
+  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e0a879c211c9c211262e55211187abb8c8c87f2ca14d6f41e144039312058e54"
-    sha256 cellar: :any,                 arm64_monterey: "02e6b44b3284fa471cce15592a8666356f8d43b256bb08b391efbd521eddedd0"
-    sha256 cellar: :any,                 arm64_big_sur:  "26736a76f4ad71f17a1a5068bbe0a1bfa2c48e26622d3ed959f3ce42165ddd0c"
-    sha256 cellar: :any,                 ventura:        "3e01846ed6a8996e8bddb4c65fb352d185ead8ca56e42bb75b9be7640937c9e4"
-    sha256 cellar: :any,                 monterey:       "365d71d8598761991d7c37831d11a4d355a5dc007863e5a677afd39d664d8351"
-    sha256 cellar: :any,                 big_sur:        "e397174ca8509867732b3b39bd3620288d84504584320355c9b1d85df0350e9a"
-    sha256 cellar: :any,                 catalina:       "ee9d9b6e5bb722c31ffac5ea0d2497f65feae2e69d73cafa44d63c99312d373d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9166ca46f30bc3f48b1087f107370800bb97ed74493cca5fc887b66ebc4c481b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1c91bfbac38c2427246b5eab7cb7e9c3c382de87dc5905f8a12b1f4162e2eda8"
   end
 
   keg_only :provided_by_macos, "Apple's CLT provides apr"
 
   depends_on "autoconf@2.69" => :build
-
-  uses_from_macos "libxcrypt"
 
   on_linux do
     depends_on "util-linux"
