@@ -7,15 +7,8 @@ class Blogc < Formula
   head "https://github.com/blogc/blogc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a042dd99d35a1bf290cf530b21adf7a248e1fc33010b64497e689c9e3ba49680"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c132ce8fffa573a857c2ce019118f46bf11b52748dc9da184f3cc42779f7cfd1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f51d0d693775155a5eb1199a7ee90abb00e35a00a7469e02f3a31c074aff57cf"
-    sha256 cellar: :any_skip_relocation, ventura:        "947fede34167be2c54235e21108c6bc1cf4457d1fcf6416f917a2b1aec6a5860"
-    sha256 cellar: :any_skip_relocation, monterey:       "cebc47838829ba79f58cf14561233d6af355ea261206969fcb63abfe24bbf266"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ff83c11472e9295479779c6e27d5ae59efb77bdb216ba4d4efb30ae88f847981"
-    sha256 cellar: :any_skip_relocation, catalina:       "16c4393bd90b76d031af46bcd959705ef627e49823912c543f5a76683b5b48e2"
-    sha256 cellar: :any_skip_relocation, mojave:         "f1409e887cc77c191a561e71c497d95dffd281cdf673a5b474003902aaa44099"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5188455011d94f56149adb535c9a159e925eba66e28ab4362639ebb3e72ba5ba"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/blogc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "250fd2d8a62ec0c2f7f71b5ddc77df725cb170965c81ca3f452d73dfbadd6ed0"
   end
 
   def install
