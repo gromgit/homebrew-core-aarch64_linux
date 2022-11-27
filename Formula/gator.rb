@@ -1,19 +1,14 @@
 class Gator < Formula
   desc "CLI Utility for Open Policy Agent Gatekeeper"
   homepage "https://open-policy-agent.github.io/gatekeeper/website/docs/gator"
-  url "https://github.com/open-policy-agent/gatekeeper/archive/refs/tags/v3.10.0.tar.gz"
-  sha256 "cfe47f54738bcd648de94be6fedf182858771fa6938a609cfa416a72a54a7682"
+  url "https://github.com/open-policy-agent/gatekeeper/archive/refs/tags/v3.9.0.tar.gz"
+  sha256 "af77ac7eedbe429e2b7df2f8470bc98d0af41a99f0829d95fc7883d34e23ba4d"
   license "Apache-2.0"
   head "https://github.com/open-policy-agent/gatekeeper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "59b5dc5b5f4a5bf8239f8b0266d8a71959d3776827478168618b7ffe7add14f7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad03529186c8e1c0c7afaa5289966bc8cf81aadcf7c7f686c0d63e770dffedc2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3afd0effdcd419f6c37a271b8172dd510e57762cd98b4fe110424c9c6ec5f4e3"
-    sha256 cellar: :any_skip_relocation, monterey:       "b5c3dccddb6c948b7ae0170cb4f983124f4753f428738a9be0654f4e0df18788"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cbde7da56dabf4e055326a881b20298983120264d346926a636e1d41ac353c3b"
-    sha256 cellar: :any_skip_relocation, catalina:       "80b93cdf2db60f9a2f0cab6c64d002fe2cf9bc4ad300950c96b93dc3d2237185"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b31ddafeb957487731427126d30d590b66d60e73c8482f7750c9e602a32f874"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gator"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "339de43a983c98a5a5bdeace150b677fb3f88f39168b29a7458f921fa36f00f4"
   end
 
   depends_on "go" => :build
@@ -24,8 +19,6 @@ class Gator < Formula
       -X github.com/open-policy-agent/gatekeeper/pkg/version.Version=#{version}
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/gator"
-
-    generate_completions_from_executable(bin/"gator", "completion")
   end
 
   test do
