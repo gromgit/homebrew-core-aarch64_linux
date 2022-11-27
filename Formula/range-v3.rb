@@ -6,11 +6,15 @@ class RangeV3 < Formula
   license "BSL-1.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "02f3ca79cf8dbd85b63afb67fbecc0f0e6b753754d20dabffe444c311e132574"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/range-v3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f93402844737dfd78847e950ee96fe8d95e0dba1a1c71a3e3cdefd11e5b1ec9b"
   end
 
   depends_on "cmake" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
