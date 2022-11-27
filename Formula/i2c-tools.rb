@@ -12,26 +12,22 @@ class I2cTools < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b17d7eb58e6a534bc87f6ce9963032a647add81c9355020e18730722775e0bec"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/i2c-tools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "032fd6071e46b6160831a10b82b0defbde34d13d01f70b745eb4f711c5602720"
   end
 
-  depends_on "python@3.11" => [:build, :test]
+  depends_on "python@3.10" => [:build, :test]
   depends_on :linux
-
-  def python3
-    "python3.11"
-  end
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "EXTRA=eeprog"
     cd "py-smbus" do
-      system python3, *Language::Python.setup_install_args(prefix, python3)
+      system "python3", *Language::Python.setup_install_args(prefix)
     end
   end
 
   test do
-    system python3, "-c", "import smbus"
+    system Formula["python@3.10"].opt_bin/"python3", "-c", "import smbus"
     assert_empty shell_output("#{sbin}/i2cdetect -l 2>&1").strip
     assert_match "/dev/i2c/0': No such file or directory", shell_output("#{sbin}/i2cget -y 0 0x08 2>&1", 1)
     assert_match "No EEPROM found", shell_output("#{bin}/decode-dimms 2>&1")
