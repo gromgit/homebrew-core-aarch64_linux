@@ -14,6 +14,7 @@ class Rgf < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b4c1f942c801c42fb03224c8b844b9a93c2c4b10c03f2473b0b8023336bcabdd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b0af19017e4f72fab3f3d8d0d76b8b3071bc2b2788c4db4dea67d2e8f5b1abe1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1cf3bea65341e90b931287b0171dcb3cf56368ee38d290fc8e42c58527bea22a"
+    sha256 cellar: :any_skip_relocation, ventura:        "3bdd9e308cab9ee5cf6f32082cad81c72de1dbdbca272650e9792b04996fb832"
     sha256 cellar: :any_skip_relocation, monterey:       "38590bb69ccb839d3e426f41c8ab17027f22e6de79fcee7eab17836f94c73728"
     sha256 cellar: :any_skip_relocation, big_sur:        "e487b14cb36a718bdf90e2b5d8fecc8850664045bdd0a54437704f98a3abcc12"
     sha256 cellar: :any_skip_relocation, catalina:       "e7865fed340b07b2bdf21c3e70fe2ec82019a58e5758e66314d0a48ba7982d4a"
