@@ -8,21 +8,12 @@ class Shairport < Formula
   head "https://github.com/abrasive/shairport.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "6ec34c1a6192a444706e3bec92cb08424651737c23428cf32bd09fb87e08ec22"
-    sha256 cellar: :any,                 arm64_monterey: "cc2f0f9f0a61452bbc6024ff53289c9769478d6c869e14c6b82eb122c2417e61"
-    sha256 cellar: :any,                 arm64_big_sur:  "4ec084bdb28e1a1402ea518d2a7f9342ba3310b2b69d61e41c4aa1cbcfa2cd0c"
-    sha256 cellar: :any,                 monterey:       "50066fb9c883277e109868b5023557545c56ed1424f3b2dae4b39c7491f09203"
-    sha256 cellar: :any,                 big_sur:        "241a4d9155fb3a9c0e0e5f0fcb46c79e9d1febf07d09780d0865cd80379fdfcb"
-    sha256 cellar: :any,                 catalina:       "eb61653e41a172eef6f5458c35e7f8a3627d730e44c2e361903cb75b96fd747b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "510b4ed23f8c1c12f5a2c756bcdeaf4e7b86ff0574b29b951b9b26c806a29cf4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/shairport"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "806a1c28252a7e2d713e651019846091c02e1fc1529b37549adebd87643fb83c"
   end
 
-  # https://github.com/abrasive/shairport#shairport-is-no-longer-maintained
-  deprecate! date: "2022-10-16", because: :unmaintained
-
   depends_on "pkg-config" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     system "./configure"
