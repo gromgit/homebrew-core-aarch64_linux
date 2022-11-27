@@ -9,14 +9,8 @@ class Global < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "fc5220bc90cdbae9f5943afb92fab2a578764079288914243bc74943cca442d8"
-    sha256 arm64_monterey: "f695539cab306291779614dc48a7e711307499b448e18d88aaee41335717cfb8"
-    sha256 arm64_big_sur:  "4798c08d49b918a026a10457575f301dae7943d9f61d234a1c50dc2fe0159121"
-    sha256 ventura:        "5293be6d86806e1f71c6f1afeb75c99819bab17c57fa2a7d94ae60903f7a7327"
-    sha256 monterey:       "612fd73df9f636ce6fd323ad96475bb6fab68076ccddf0e7b064d0c3673ea0a9"
-    sha256 big_sur:        "b4981a0ed6b7445ddb0f21ce8005fb36c0f530cfbd20a3a95c1d840cdf81886b"
-    sha256 catalina:       "cbba064cb529f3a5f20e27d02f261f636afb2f099c32e09a3b6c210d4af3024f"
-    sha256 x86_64_linux:   "77a768a84867fbefbb58cf0cea3baa42a30584966e6725013361cef031b6d6f4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/global"
+    sha256 aarch64_linux: "aa5c15505b02526ffc24f258c83dd9e6117b1f1bc081773f07a05048aa6889d1"
   end
 
   head do
@@ -46,11 +40,10 @@ class Global < Formula
   def install
     system "sh", "reconf.sh" if build.head?
 
-    python3 = "python3.10"
-    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
+    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages("python3")
 
     resource("Pygments").stage do
-      system python3, *Language::Python.setup_install_args(libexec, python3)
+      system "python3", *Language::Python.setup_install_args(libexec)
     end
 
     args = %W[
