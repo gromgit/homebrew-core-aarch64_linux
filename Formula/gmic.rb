@@ -15,6 +15,7 @@ class Gmic < Formula
     sha256 cellar: :any,                 arm64_ventura:  "75979cdccedcca7601cb38adfc1ad7ba41e7dede4d53bcb4c9b9309762c51df3"
     sha256 cellar: :any,                 arm64_monterey: "72dcacdcda2094a8e45e3e661c90f6212dc4a318770cf96e1663959f6615adb7"
     sha256 cellar: :any,                 arm64_big_sur:  "71d73eaa67e5f4d725a99b97da172060590db4372f8ee66998cb928e0df75da5"
+    sha256 cellar: :any,                 ventura:        "aeafac0b2ac23f70acba6797e2d64661d45abaa379531ee555891baf1c79078c"
     sha256 cellar: :any,                 monterey:       "69bcbea5efe9cdb517b4845f2cd68098fc49f562c8ce7120a350698811b760e9"
     sha256 cellar: :any,                 big_sur:        "30f5ff5725f9a534e53b00f20131eac293fddc06e1be616af8e537eca7dabe7a"
     sha256 cellar: :any,                 catalina:       "17237ebe1d43273a2a0862f90162f5e5a3f8bf59083f31bbe313082095565ec8"
