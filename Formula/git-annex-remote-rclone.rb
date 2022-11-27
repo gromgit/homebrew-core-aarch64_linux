@@ -1,12 +1,12 @@
 class GitAnnexRemoteRclone < Formula
   desc "Use rclone supported cloud storage with git-annex"
   homepage "https://github.com/DanielDent/git-annex-remote-rclone"
-  url "https://github.com/DanielDent/git-annex-remote-rclone/archive/v0.7.tar.gz"
-  sha256 "a119e3a4c194ff24a07aa1620714d60e0dc2a3148f5479cb07faf31e0e31889c"
+  url "https://github.com/DanielDent/git-annex-remote-rclone/archive/v0.6.tar.gz"
+  sha256 "fb9bb77c6dd30dad4966926af87f63be92ef442cfeabcfd02202c657f40439d0"
   license "GPL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d9853f2712e4e5c03a8b5e7a3c8295ab4c7b8720583ff75276f62a476a701f99"
+    sha256 cellar: :any_skip_relocation, all: "3cc09391797c0e451e94b4b5cf7b909e4fdb834fe7d0dc321c42572c41c39279"
   end
 
   depends_on "git-annex"
