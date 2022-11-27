@@ -14,11 +14,10 @@ class NicovideoDl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "52badfb4e41a21255af84eeb934194421b8ebe6a82e6f577f9825880345b91f8"
+    sha256 cellar: :any_skip_relocation, all: "bd14d4d14a48df2134225b9fd2de504a41f505140eeab321d49521298fb86345"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     rewrite_shebang detected_python_shebang, "nicovideo-dl"
