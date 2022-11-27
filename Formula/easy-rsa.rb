@@ -1,33 +1,31 @@
 class EasyRsa < Formula
   desc "CLI utility to build and manage a PKI CA"
   homepage "https://github.com/OpenVPN/easy-rsa"
-  url "https://github.com/OpenVPN/easy-rsa/archive/v3.1.1.tar.gz"
-  sha256 "35032fa0a07288e87504703fd6546f310c4e2692ccc23b94cb66acdd664badd5"
+  url "https://github.com/OpenVPN/easy-rsa/archive/v3.0.8.tar.gz"
+  sha256 "fd6b67d867c3b8afd53efa2ca015477f6658a02323e1799432083472ac0dd200"
   license "GPL-2.0-only"
   head "https://github.com/OpenVPN/easy-rsa.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6a041662e1abcfba6bddc70ac6f4416d4a84e75f10c5fa7b104fbeab8e842b81"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a041662e1abcfba6bddc70ac6f4416d4a84e75f10c5fa7b104fbeab8e842b81"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6a041662e1abcfba6bddc70ac6f4416d4a84e75f10c5fa7b104fbeab8e842b81"
-    sha256 cellar: :any_skip_relocation, ventura:        "d18291c09bc93374aefda8f1a8311cbca7fcdd325f2803b0fff6863624c95df6"
-    sha256 cellar: :any_skip_relocation, monterey:       "d18291c09bc93374aefda8f1a8311cbca7fcdd325f2803b0fff6863624c95df6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d18291c09bc93374aefda8f1a8311cbca7fcdd325f2803b0fff6863624c95df6"
-    sha256 cellar: :any_skip_relocation, catalina:       "d18291c09bc93374aefda8f1a8311cbca7fcdd325f2803b0fff6863624c95df6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a041662e1abcfba6bddc70ac6f4416d4a84e75f10c5fa7b104fbeab8e842b81"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f9267df5fe6f53503330444514b391a5e35892a3f5f3e381b1016f9402d1d7fc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "5124cc17f73f7467de387d62658658d29907e43e9e50fd25dac4f1c5ec55915b"
+    sha256 cellar: :any_skip_relocation, catalina:      "f8fb06de036f9b9d1b5483054b967c8b0ba61f7617f40c7b2d8443c87b3b54a9"
+    sha256 cellar: :any_skip_relocation, mojave:        "a9e8dd8d94adc330b85d60b74380987bd680103c2b4cac61d407eca7b272174b"
+    sha256 cellar: :any_skip_relocation, high_sierra:   "0e814810990e326f9b20a416d684a05261c6e4b68cd9d092a09898fe50077fa0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb9ed69d68b06a1af68732fcb9722e2016b562b3196d3017416805c81f5f977a"
+    sha256 cellar: :any_skip_relocation, all:           "eb9ed69d68b06a1af68732fcb9722e2016b562b3196d3017416805c81f5f977a"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
-    inreplace "easyrsa3/easyrsa", "'/etc/easy-rsa'", "'#{pkgetc}'"
     libexec.install "easyrsa3/easyrsa"
     (bin/"easyrsa").write_env_script libexec/"easyrsa",
-      EASYRSA:         pkgetc,
-      EASYRSA_OPENSSL: Formula["openssl@3"].opt_bin/"openssl",
+      EASYRSA:         etc/name,
+      EASYRSA_OPENSSL: Formula["openssl@1.1"].bin/"openssl",
       EASYRSA_PKI:     "${EASYRSA_PKI:-#{etc}/pki}"
 
-    pkgetc.install %w[
+    (etc/name).install %w[
       easyrsa3/openssl-easyrsa.cnf
       easyrsa3/x509-types
       easyrsa3/vars.example
@@ -50,13 +48,12 @@ class EasyRsa < Formula
         #{etc}/pki
 
       The configuration may be modified by editing and renaming:
-        #{pkgetc}/vars.example
+        #{etc}/#{name}/vars.example
     EOS
   end
 
   test do
     ENV["EASYRSA_PKI"] = testpath/"pki"
-    assert_match "'init-pki' complete; you may now create a CA or requests.",
-      shell_output("#{bin}/easyrsa init-pki")
+    assert_match "init-pki complete", shell_output("easyrsa init-pki")
   end
 end
