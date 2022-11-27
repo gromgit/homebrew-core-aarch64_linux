@@ -7,14 +7,8 @@ class DoubleConversion < Formula
   head "https://github.com/google/double-conversion.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "208098fabee3e07ea7ef4fa6f95ba28d0dd461d17df90c33d23b95b280b642e3"
-    sha256 cellar: :any,                 arm64_monterey: "dcd8a50bf98490fae00d73325210c5f9f65f1b20a59a1979afdb28e9c91d3ba9"
-    sha256 cellar: :any,                 arm64_big_sur:  "7996dcb8fafcc3aee6fee04da51533a15f297cb34de699a7ec0cfede53f4447a"
-    sha256 cellar: :any,                 ventura:        "8c37957d1059538da20b3d562b59abef18239b662c57d33e4a5d1b1f115965f7"
-    sha256 cellar: :any,                 monterey:       "ab33e3194744d91e611c402d1f5ed5243ffa7bb9a776abec12b05d674b210880"
-    sha256 cellar: :any,                 big_sur:        "f20cd36d2cb176b5ea9e5bbc15241f7a2f57bbea16196adfaa0ee51918541992"
-    sha256 cellar: :any,                 catalina:       "2299213ea5c53ce8c80818d0256911227e7dd9f3c444eff84993d7b266180a36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad1dbba4e56ae238b08b842855f8ca8ca1c929644a09a9f91c24d4c7fafc2e9f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/double-conversion"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2ac67b8f6800fc38da9bb2eef053eb82b3c6dbcbd9ee964cf10fa215d5b03664"
   end
 
   depends_on "cmake" => :build
