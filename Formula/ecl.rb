@@ -21,21 +21,14 @@ class Ecl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "d1833fcfef55781606e6793becf3f235c6d27b32d65f969f606bfd4c23e654c7"
-    sha256 arm64_monterey: "c0e158eaeda959f3502a2c08d9640fdb3d9ed42c4a562d504f883703320952ec"
-    sha256 arm64_big_sur:  "06222b960fadf45796e2570b8d1304dc5c111bcb12f216820962020677207ea0"
-    sha256 ventura:        "c30e496ebece4e2b03b3ec7f06c1950967be0b2efec95114b60a88a7d50d441d"
-    sha256 monterey:       "ebe596bb4a260b50143fff6a4c7b9a215ba37035e7014e661cd801580d40852e"
-    sha256 big_sur:        "b7249ea59449d4fc8b3e509f3f61f6c9f660659745ecb30f7dc056e73edde275"
-    sha256 catalina:       "c47af2ea084746d721142998ed720ca7c627a428134fe6c1e38e067c5aa24b6b"
-    sha256 x86_64_linux:   "c61e19e3dfc2f9e971ecd48ac1eb68246dbd0db41e154c214fe4b2ab20c17695"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ecl"
+    sha256 aarch64_linux: "125a3f58a646188f57ce2ff83d4a0eeed535a26b8c152b333cc48f394dd95d57"
   end
 
   depends_on "texinfo" => :build # Apple's is too old
   depends_on "bdw-gc"
   depends_on "gmp"
-  uses_from_macos "libffi", since: :catalina
+  depends_on "libffi"
 
   def install
     ENV.deparallelize
@@ -43,17 +36,12 @@ class Ecl < Formula
     # Avoid -flat_namespace usage on macOS
     inreplace "src/configure", "-flat_namespace -undefined suppress ", "" if OS.mac?
 
-    libffi_prefix = if MacOS.version >= :catalina
-      MacOS.sdk_path
-    else
-      Formula["libffi"].opt_prefix
-    end
     system "./configure", "--prefix=#{prefix}",
                           "--enable-threads=yes",
                           "--enable-boehm=system",
                           "--enable-gmp=system",
                           "--with-gmp-prefix=#{Formula["gmp"].opt_prefix}",
-                          "--with-libffi-prefix=#{libffi_prefix}",
+                          "--with-libffi-prefix=#{Formula["libffi"].opt_prefix}",
                           "--with-libgc-prefix=#{Formula["bdw-gc"].opt_prefix}"
     system "make"
     system "make", "install"
@@ -99,7 +87,7 @@ index c6ec0a6..a1fa9fd 100644
 @@ -181,10 +181,30 @@
  (defun wt-temp (temp)
    (wt "T" temp))
-
+ 
 +(defun wt-fixnum (value &optional vv)
 +  (declare (ignore vv))
 +  (princ value *compiler-output1*)
@@ -121,7 +109,7 @@ index c6ec0a6..a1fa9fd 100644
  (defun wt-number (value &optional vv)
 +  (declare (ignore vv))
    (wt value))
-
+ 
  (defun wt-character (value &optional vv)
 +  (declare (ignore vv))
    ;; We do not use the '...' format because this creates objects of type
@@ -132,7 +120,7 @@ index 0c87a3c..4449602 100644
 --- a/src/cmp/cmptables.lsp
 +++ b/src/cmp/cmptables.lsp
 @@ -182,7 +182,7 @@
-
+ 
      (temp . wt-temp)
      (lcl . wt-lcl-loc)
 -    (fixnum-value . wt-number)
