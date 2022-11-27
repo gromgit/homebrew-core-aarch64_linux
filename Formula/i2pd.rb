@@ -1,23 +1,18 @@
 class I2pd < Formula
   desc "Full-featured C++ implementation of I2P client"
   homepage "https://i2pd.website/"
-  url "https://github.com/PurpleI2P/i2pd/archive/2.44.0.tar.gz"
-  sha256 "b653c845ac7a16fefab2ace78e3ae496c12b05304bb66e41e776071635d4e070"
+  url "https://github.com/PurpleI2P/i2pd/archive/2.43.0.tar.gz"
+  sha256 "db1679653491a411dd16fa329488d840296c8f680e0691f9fe0d0e796e5d7bca"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "428523046ee5eb138bf0d745c7adc20604a2b8348dfd37952226c09ef717db6c"
-    sha256 cellar: :any,                 arm64_monterey: "e2a7c0001e541b027b7b969c417aa07fe66b979cd42f4f91ff94d545d92ed608"
-    sha256 cellar: :any,                 arm64_big_sur:  "fd309abd53ba63105aa276b5b5d27d561095057d9c71da25ae8fb2b1e0464933"
-    sha256 cellar: :any,                 monterey:       "7da92d874561d362b3fd66a2fd413a3464c86137fe94b1cd599925b752835617"
-    sha256 cellar: :any,                 big_sur:        "55b2608f0ab14401ea035344687c757c346714a5aee34d54909c9c0d7e0910c4"
-    sha256 cellar: :any,                 catalina:       "11a7435ef5962ba2fc2f8836faa5494fa9a80780e279df004d7045a77ad96bfe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe5ef7064d6ba3018e64288510c5d5fd59bafd79af8ef817d51177528f767286"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/i2pd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f4e8e46584cf1ae952dcf3e3d964e049a9dd1ed4ead22c5eb31146de0337df4c"
   end
 
   depends_on "boost"
   depends_on "miniupnpc"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     args = %W[
@@ -25,9 +20,8 @@ class I2pd < Formula
       HOMEBREW=1
       USE_UPNP=yes
       PREFIX=#{prefix}
-      BREWROOT=#{HOMEBREW_PREFIX}
-      SSLROOT=#{Formula["openssl@3"].opt_prefix}
     ]
+
     args << "USE_AESNI=no" if Hardware::CPU.arm?
 
     system "make", "install", *args
