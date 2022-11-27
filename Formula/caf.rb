@@ -8,30 +8,25 @@ class Caf < Formula
   head "https://github.com/actor-framework/actor-framework.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "7574a28e493137da640b85d8e703375dadaf052f1f4c7015a9673776bea575cb"
-    sha256 cellar: :any,                 arm64_monterey: "1313480b89b8ab7151ec4c585b2c7470b756a9b281f8944dbf85eb5ee16b82d7"
-    sha256 cellar: :any,                 arm64_big_sur:  "e3552ca90aa71ce07d710f27180b54c2f3c5bab37a0811e8dacf0efc144fcb03"
-    sha256 cellar: :any,                 ventura:        "f905ae1e408b513128cb0d84b9aceffa2eb67d3883943c897dc2323915672937"
-    sha256 cellar: :any,                 monterey:       "d34c094aa418f1fa3b17e0dabc9d31f78b1e33a7e83bbba6e6eb00998cdd3320"
-    sha256 cellar: :any,                 big_sur:        "fd895f94627410078a14281a8cf201d8ea0399f3393b55c4c6742da8922f2e90"
-    sha256 cellar: :any,                 catalina:       "4e4f922feb8b8da760941ca4dfc3c050536938edaef0b7f3ea3c328b4d23c038"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0604ff641db3478a78639cac72937792e4efe4593a22f2ad027c09cf793f9f5d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/caf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fb7dcfcc9af0e09871e99a578a5997968ba4df71c465a5443032cbbaf20fbb82"
   end
 
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
 
+  on_linux do
+    depends_on "gcc" # For C++17
+  end
+
   fails_with gcc: "5"
 
   def install
-    tools = pkgshare/"tools"
-    rpaths = [rpath, rpath(source: tools)]
-    args = ["-DCAF_ENABLE_TESTING=OFF", "-DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}"]
-
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DCAF_ENABLE_TESTING=OFF"
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do
