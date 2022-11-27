@@ -3,10 +3,11 @@ class Exiftool < Formula
   homepage "https://exiftool.org"
   # Ensure release is tagged production before submitting.
   # https://exiftool.org/history.html
-  url "https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-12.50.tar.gz"
-  mirror "https://exiftool.org/Image-ExifTool-12.50.tar.gz"
-  sha256 "bce841fc5c10302f0f3ef7678c3bf146953a8c065c0ba18c41f734007e2ec0a8"
+  url "https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-12.42.tar.gz"
+  mirror "https://exiftool.org/Image-ExifTool-12.42.tar.gz"
+  sha256 "31d805ed59f2114f19c569f8a2aaffb89fa211453733d2c650d843a3e46236df"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
+  revision 1
 
   livecheck do
     url "https://exiftool.org/history.html"
@@ -14,14 +15,8 @@ class Exiftool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b37887c8ff3fa3be1526f5916e9b67ef97c19b9320028f2fa0a31bb34276d8d0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b37887c8ff3fa3be1526f5916e9b67ef97c19b9320028f2fa0a31bb34276d8d0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "86e334f07d75121f937d2b0bac40787626a5abcb4222f044a9a7cb98993d8396"
-    sha256 cellar: :any_skip_relocation, ventura:        "dcf4b052ee5c8cc96cc90a8b514f1c6117a5792e40b0f8d97983c991ad4eab51"
-    sha256 cellar: :any_skip_relocation, monterey:       "dcf4b052ee5c8cc96cc90a8b514f1c6117a5792e40b0f8d97983c991ad4eab51"
-    sha256 cellar: :any_skip_relocation, big_sur:        "71467ad6fc4d358e207845142ab8fa709f6abb746261e3007940fd732a33b72f"
-    sha256 cellar: :any_skip_relocation, catalina:       "f7d892599342e76812b207a804ce906179f188dbf189729d9d9caec2a8e43d02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a7936fe430d4f1430ef2eda8550527a06d8981be0257015532f577a581f4f4d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/exiftool"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "556ebed125f716d10585ada95a24af50aa493ca4609644389b8d190083ca832d"
   end
 
   uses_from_macos "perl"
