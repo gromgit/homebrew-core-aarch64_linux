@@ -12,6 +12,7 @@ class RichCli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f4492d8c928ebda3b6e86cb46e6197d208a72b85faca96758a72de4e29d055e9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "37bf0cd19fa25cbf319c0e4c56e816d5a4c68903ed2d60d064b7ac1f974d83ab"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cf5026209eaaf4d6461189265e3ee44e69dd2c5b9bb368c6c96145ce5fd43f7a"
+    sha256 cellar: :any_skip_relocation, ventura:        "06803a17b9844bcee518b0a5ae5cbb15c0b480a0298a1332217266903eff879d"
     sha256 cellar: :any_skip_relocation, monterey:       "8e2d65735999bfee2e7dd163011fbd3772dc235cbd33ae811eb10e9a0c088a3f"
     sha256 cellar: :any_skip_relocation, big_sur:        "9f522aed4a64c53bd7847489880433e42c4a0bf47623ba004f2993953c56fd4e"
     sha256 cellar: :any_skip_relocation, catalina:       "daeb78e1a385242712c3dcdc8aaa43437ed2051512d14b70e640005d242bb4f3"
