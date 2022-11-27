@@ -6,14 +6,8 @@ class Hblock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, ventura:        "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, catalina:       "9f1a12561e4c1d6a5c2fc4bc4178b4f9d49382ae2ab33e5e283264ecf3ee7ac8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98e84a25a424c03fb5c17c155925ef0ffe838ee12b6f96965907d4b682668e31"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hblock"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "47d00fdba6c2771c0f856bfa4f22696b0f7d875fe6cf871a99f47836b435c332"
   end
 
   uses_from_macos "curl"
