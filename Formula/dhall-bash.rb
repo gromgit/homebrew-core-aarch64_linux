@@ -9,6 +9,7 @@ class DhallBash < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "94344bb3dfd3036109853ecb36f28d04b4acb13caafe370c3255650eb320663c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9c5cf8510f9d239e8fee400c48136e4b441ba901fbdc0335c9d1f65b452a3394"
+    sha256 cellar: :any_skip_relocation, ventura:        "c40f45337092d7c647c4b89a474f995463dd8ef7ab61303c5a50d54ac18237aa"
     sha256 cellar: :any_skip_relocation, monterey:       "7f1007390145c0b45b374a2b7eb0d956143fa88b3ffb35807bfef971109f0d33"
     sha256 cellar: :any_skip_relocation, big_sur:        "e93ab3c056dae0d029ff346018e1e49a45343f126fc523af5ada94dd73e8da75"
     sha256 cellar: :any_skip_relocation, catalina:       "c388e918ddc4a2416535cf53173325e483216d92e9dfd24fbfad46acaf6b1ea3"
