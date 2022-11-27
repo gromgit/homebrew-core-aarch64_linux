@@ -10,6 +10,7 @@ class Ffsend < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "2dc95f39cd9bb2f8baeb56317a533574ca1131c7194d520de67f1db735de0cae"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9f63f21a83b7dc43a87be7967553bd47609f9312e757c6f7507794db5cd8bdc8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d62f3d93e561b4650c6c114cb94e4dfc32c5d3ca6270177b92096f13c8a6a049"
+    sha256 cellar: :any_skip_relocation, ventura:        "0bcba3c1fb284510e939769c87c65dc6d8a133398862c3b2fa0dba5615ab86d7"
     sha256 cellar: :any_skip_relocation, monterey:       "8c05334fa4eff966e49b299a2ed37b40c96c75536c40c41ada9153db20a97154"
     sha256 cellar: :any_skip_relocation, big_sur:        "3e04f2de4d511942c43918b56d4e332e35afeb62f91241e07f9586c08c3ef785"
     sha256 cellar: :any_skip_relocation, catalina:       "a654b06bcd03da8833f6effb8d5ace4315bcc4942d4c7bab2fa947a295367b15"
