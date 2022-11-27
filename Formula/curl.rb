@@ -1,11 +1,11 @@
 class Curl < Formula
   desc "Get a file from an HTTP, HTTPS or FTP server"
   homepage "https://curl.se"
-  url "https://curl.se/download/curl-7.86.0.tar.bz2"
-  mirror "https://github.com/curl/curl/releases/download/curl-7_84_0/curl-7.86.0.tar.bz2"
-  mirror "http://fresh-center.net/linux/www/curl-7.86.0.tar.bz2"
-  mirror "http://fresh-center.net/linux/www/legacy/curl-7.86.0.tar.bz2"
-  sha256 "f5ca69db03eea17fa8705bdfb1a9f58d76a46c9010518109bb38f313137e0a28"
+  url "https://curl.se/download/curl-7.85.0.tar.bz2"
+  mirror "https://github.com/curl/curl/releases/download/curl-7_84_0/curl-7.85.0.tar.bz2"
+  mirror "http://fresh-center.net/linux/www/curl-7.85.0.tar.bz2"
+  mirror "http://fresh-center.net/linux/www/legacy/curl-7.85.0.tar.bz2"
+  sha256 "21a7e83628ee96164ac2b36ff6bf99d467c7b0b621c1f7e317d8f0d96011539c"
   license "curl"
 
   livecheck do
@@ -14,14 +14,8 @@ class Curl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5b7a7da687d38bd0af866ac9cfe9742dae6768be3f85ec6818e0aaab7e5a2559"
-    sha256 cellar: :any,                 arm64_monterey: "0cdd9eb396948516734173c50c6141e1ad9a903e160f4b23a872f97d0e2002f0"
-    sha256 cellar: :any,                 arm64_big_sur:  "045534938a2eb05616f953e9fe4eefebdad68ab4c669b0a178c5345e6ceb882f"
-    sha256 cellar: :any,                 ventura:        "cac2c7b368a10971764a97dc09dddb8080753f1c040167345389b48c79399235"
-    sha256 cellar: :any,                 monterey:       "db7f89126bfe8e395d66f85c32248aa661c67b3c43239dd3e005e7f0c2207382"
-    sha256 cellar: :any,                 big_sur:        "b12dec85a01d31a0df5533eae23faa1bf3eaf5288ff4aa5723492d3ad0a26a37"
-    sha256 cellar: :any,                 catalina:       "e47bfdea8a239cff79569297ff9a2d35b528b1f569acefd57a8e1470b7e8d4c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "14a6850f668db26c218ea436d0792f4e26b1951e1ecbcc9d8e820b6fc433ac65"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/curl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "840ccb6930b9165214223fc90bd5f49aa6741e24f8ba9854d7cce467ed2807ed"
   end
 
   head do
