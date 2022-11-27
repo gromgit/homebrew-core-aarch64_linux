@@ -11,14 +11,8 @@ class Iperf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed84fdcdc9fd2034bf6c32acd4821dc00e11db4512552d5c879b4bc996b09619"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "40ebdb5ef396a522db73aaba0f3232b8af14c247fd5f503b39f9f3da2e90f50b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f3a7478e33428ce4f5d6fbd0b8cc2d8082b54298ccb8a71b29e60b52ff2b4b8"
-    sha256 cellar: :any_skip_relocation, ventura:        "fb0b611615484521a45895e6d695e99de7db6534e3a207bd65471bb09ab6e767"
-    sha256 cellar: :any_skip_relocation, monterey:       "a3a130ee28a7969fd6e6f4d8c316c55588e178cf3c2b33a337e98cf55a2812b7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c039d85e7ef0e1d4f265f11ae90a68a9b4b7c992b2d0df6ecca20db96dd0c1d5"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f89f4022a0f9a21dc5b768e9b081c0597583fedf8d705abcfb53a42a574d705"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "786e18cafe8103a4ac02fb1a318f1501911ba8a67f4e18fe439c7335721350c5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/iperf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1b9e17fde47bc49e0e5d0c5ba2a32cf6733ddf153c85c8cbe82e28b8b46251d0"
   end
 
   def install
