@@ -11,14 +11,8 @@ class Aarch64ElfGcc < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "8a5a2ca3d7e53db7899cf03e878f17413c7604e87c8fc80d639e04e79c19aa36"
-    sha256 arm64_monterey: "f5d9fd202404e69e3d69f59e4258896fa0b8e27f8f9cc6873b66c769ebfadaae"
-    sha256 arm64_big_sur:  "49c73ae5b7fd21768d3467465c2e0a7da1be3f414757a9a72fc6c582f91537ba"
-    sha256 ventura:        "09121e3fb58af2f29a841faa421b3865ec36848942b598ee83051f511e9cafb0"
-    sha256 monterey:       "28bd30c6e0beecd74e080bac0676916933479154e6e067409d1a45558a5e7cab"
-    sha256 big_sur:        "651f6c7cf15bd9e4751e4295b03fb2b3be7956a61593696c150bab57c8fdd64b"
-    sha256 catalina:       "89c4fde526913e9aa04fffa842f4a1e1f7a95b05a7dcc5427e44aa466cc6c4ac"
-    sha256 x86_64_linux:   "2c9a3e4a9165547f2364e15f5c642a99689c755139a8b93bdbe15344957320a1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aarch64-elf-gcc"
+    sha256 aarch64_linux: "da2b21262d1b5cc136358a3dac01c1f1ccd3c4418c80319c6d012462b20bc025"
   end
 
   depends_on "aarch64-elf-binutils"
