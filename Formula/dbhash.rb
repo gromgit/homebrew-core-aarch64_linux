@@ -1,9 +1,9 @@
 class Dbhash < Formula
   desc "Computes the SHA1 hash of schema and content of a SQLite database"
   homepage "https://www.sqlite.org/dbhash.html"
-  url "https://sqlite.org/2022/sqlite-src-3400000.zip"
-  version "3.40.0"
-  sha256 "48550828142051293e179ffc6a8520f6fbfd82e1cdca78b93792f766cc89b8e2"
+  url "https://sqlite.org/2022/sqlite-src-3390300.zip"
+  version "3.39.3"
+  sha256 "18c12f2e1da112421173c85c4f8aed43261272c1b0474aa0759288fd30fab9fc"
   license "blessing"
 
   livecheck do
@@ -11,14 +11,8 @@ class Dbhash < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "67196b4b0bd8f4ef8afb47f58c2a183295f8aac8923bb61c9fcb8759b4d9821e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14092f4d2dc61bd11f329d784fb1c8d8a8c728119cbee69d6c3ec72602ed9cee"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "05d927f54ca338e9e65d6804113d01e3c701ca84795fd1ee91d0fc6bd49ccb8a"
-    sha256 cellar: :any_skip_relocation, ventura:        "9d289019f320194744a1b391b2db1ae2e632ed43f638cbd0a31eab8247c77b15"
-    sha256 cellar: :any_skip_relocation, monterey:       "3735d8e37b13112d47fc95e9a7e6fdc59b124f740b64d5c16aa52c5cb15c45a9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "94a64e2afad390fbdabe843c9d6d817053612edf414a5c1f3a8116273ddeb692"
-    sha256 cellar: :any_skip_relocation, catalina:       "bdae7f2044e740ce3ffebb39adaa8bb05a4aec4d966d7c61fb8aaf4452b67b9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c19a7aab5170e7d4ce3c36d9e0aa4d4f544855c46c6ab5a276e32f7f6db03b6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dbhash"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a4b75c854474d17ca06ed2dbfb07effd829d3eff290e641b39ab143a3c7466ea"
   end
 
   uses_from_macos "tcl-tk" => :build
