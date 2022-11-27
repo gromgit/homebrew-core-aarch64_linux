@@ -1,17 +1,13 @@
 class Ntfs3g < Formula
   desc "Read-write NTFS driver for FUSE"
   homepage "https://www.tuxera.com/community/open-source-ntfs-3g/"
-  url "https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2022.10.3.tgz"
-  sha256 "f20e36ee68074b845e3629e6bced4706ad053804cbaf062fbae60738f854170c"
+  url "https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2022.5.17.tgz"
+  sha256 "0489fbb6972581e1b417ab578d543f6ae522e7fa648c3c9b49c789510fd5eb93"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.0-or-later"]
 
   livecheck do
     url :head
     strategy :github_latest
-  end
-
-  bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9f01b6417761a27488f21014880e88995297233709e3b71965502dc56222197f"
   end
 
   head do
@@ -26,10 +22,18 @@ class Ntfs3g < Formula
   depends_on "pkg-config" => :build
   depends_on "coreutils" => :test
   depends_on "gettext"
-  depends_on "libfuse@2"
-  depends_on :linux # on macOS, requires closed-source macFUSE
+
+  on_macos do
+    disable! date: "2021-04-08", because: "requires closed-source macFUSE"
+  end
+
+  on_linux do
+    depends_on "libfuse@2"
+  end
 
   def install
+    ENV.append "LDFLAGS", "-lintl" if OS.mac?
+
     args = std_configure_args + %W[
       --exec-prefix=#{prefix}
       --mandir=#{man}
@@ -77,6 +81,18 @@ class Ntfs3g < Formula
           "$@" >> /var/log/mount-ntfs-3g.log 2>&1
 
         exit $?;
+      EOS
+    end
+  end
+
+  def caveats
+    on_macos do
+      <<~EOS
+        The reasons for disabling this formula can be found here:
+          https://github.com/Homebrew/homebrew-core/pull/64491
+
+        An external tap may provide a replacement formula. See:
+          https://docs.brew.sh/Interesting-Taps-and-Forks
       EOS
     end
   end
