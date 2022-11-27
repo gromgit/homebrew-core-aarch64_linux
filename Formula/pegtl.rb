@@ -6,11 +6,15 @@ class Pegtl < Formula
   license "BSL-1.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "7688f9b9cba1325c28f231fa6266c7a7c4177dfb5fe4467147878aec7b7778da"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pegtl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6ace8be1e11acef6ecf8edd2c38b26c04a1f6c2fdde528e24ced956298db798d"
   end
 
   depends_on "cmake" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
