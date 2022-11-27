@@ -9,6 +9,7 @@ class Run < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "064ba836c8f0c5bf55687f32a31a5c3ca2697a35ee179fb0008ee2088852ad01"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "064ba836c8f0c5bf55687f32a31a5c3ca2697a35ee179fb0008ee2088852ad01"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "064ba836c8f0c5bf55687f32a31a5c3ca2697a35ee179fb0008ee2088852ad01"
+    sha256 cellar: :any_skip_relocation, ventura:        "35befd6adc7d143999df865c38b28c4794e59d8ce211a7ed2259ef5e394f215d"
     sha256 cellar: :any_skip_relocation, monterey:       "35befd6adc7d143999df865c38b28c4794e59d8ce211a7ed2259ef5e394f215d"
     sha256 cellar: :any_skip_relocation, big_sur:        "35befd6adc7d143999df865c38b28c4794e59d8ce211a7ed2259ef5e394f215d"
     sha256 cellar: :any_skip_relocation, catalina:       "35befd6adc7d143999df865c38b28c4794e59d8ce211a7ed2259ef5e394f215d"
