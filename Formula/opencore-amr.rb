@@ -11,14 +11,8 @@ class OpencoreAmr < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "673be457f0de7494de04b1d079de9074e79e03a74f1fe520227f75d7c7953265"
-    sha256 cellar: :any,                 arm64_monterey: "9641b13b82cf4d325e2fc5a0b2576a9ffb6d8d3bead8c6637e4b22a35ed24776"
-    sha256 cellar: :any,                 arm64_big_sur:  "6dea7b138a3e3399d4295b70cd1dd9311ecec98bf6eedb24617b91d2020404f4"
-    sha256 cellar: :any,                 ventura:        "b9aa683edb4806619271a8f462c455cf2982124660fb03219b5858c22d2eb721"
-    sha256 cellar: :any,                 monterey:       "cc0a074376ddcb0b30ab94027b603f8228fa951e35fda58b7bd274ae2efb4206"
-    sha256 cellar: :any,                 big_sur:        "f235307e30e1ff626c14009955d924826d86cf92518ea36707c5e63469d29a8c"
-    sha256 cellar: :any,                 catalina:       "afe967f68360acc0d6c3aa40853170f228499bf6917d13257ab3b90a341d1968"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63626c6d52b176f1289a792a8dea8845104f85e86538054e88efadbf920a9835"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/opencore-amr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "713fcf6740c35b5befba0d624046d7a343bdfefba0599d1ac54be55149e69e04"
   end
 
   def install
