@@ -1,9 +1,9 @@
 class Parallel < Formula
   desc "Shell command parallelization utility"
   homepage "https://savannah.gnu.org/projects/parallel/"
-  url "https://ftp.gnu.org/gnu/parallel/parallel-20221122.tar.bz2"
-  mirror "https://ftpmirror.gnu.org/parallel/parallel-20221122.tar.bz2"
-  sha256 "aa3d9d22434df148d693f1a6232331a126729b6a22d2f7261b17fba9ad99539d"
+  url "https://ftp.gnu.org/gnu/parallel/parallel-20220822.tar.bz2"
+  mirror "https://ftpmirror.gnu.org/parallel/parallel-20220822.tar.bz2"
+  sha256 "9d0d4457c40b45ac6034f3085a11fee94489e5d58e422c0b492cb143d71ab016"
   license "GPL-3.0-or-later"
   version_scheme 1
   head "https://git.savannah.gnu.org/git/parallel.git", branch: "master"
@@ -14,7 +14,8 @@ class Parallel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "bc21627807775dee444c907c0bf6be310985afc998646a36f604f3c8178e6c5c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/parallel"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "80151ca9c399f789cf6c5031de083d408feb98498dd450753187c4c10fa724d3"
   end
 
   conflicts_with "moreutils", because: "both install a `parallel` executable"
@@ -27,12 +28,9 @@ class Parallel < Formula
 
     inreplace_files = [
       bin/"parallel",
-      doc/"parallel.texi",
       doc/"parallel_design.texi",
-      doc/"parallel_examples.texi",
       man1/"parallel.1",
       man7/"parallel_design.7",
-      man7/"parallel_examples.7",
     ]
 
     # Ignore `inreplace` failures when building from HEAD or not building a bottle.
