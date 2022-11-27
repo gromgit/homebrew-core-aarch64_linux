@@ -1,20 +1,13 @@
 class Sourcery < Formula
   desc "Meta-programming for Swift, stop writing boilerplate code"
   homepage "https://github.com/krzysztofzablocki/Sourcery"
-  url "https://github.com/krzysztofzablocki/Sourcery/archive/1.9.0.tar.gz"
-  sha256 "53cf70e490491a7b57897314b58f8af904b46fe648f26ceffbd98ed9295c3c0e"
+  url "https://github.com/krzysztofzablocki/Sourcery/archive/1.8.2.tar.gz"
+  sha256 "116a6ac617a6a58b36dc428f7989ea6a033d26a722f54c82abc7a778be6d52ea"
   license "MIT"
   head "https://github.com/krzysztofzablocki/Sourcery.git", branch: "master"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4aa90413e0543370a174f8c597d0e0b064746a3a20f1c0e27f2dae765f3f51e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f8ad70cf4d9dba61f8621513dc8db1c25bcee74c0a2da3a1013763e37add80c"
-    sha256 cellar: :any_skip_relocation, ventura:        "8842b7677b7a49e5d6416d537dde593f6e55bfad4dd5a971f8c63c4800c25f5c"
-    sha256 cellar: :any_skip_relocation, monterey:       "9cc7c91be67833c608e94ec72d57531a86953318e97ec751bcaf86daf798c263"
-  end
-
   depends_on :macos # Linux support is still a WIP: https://github.com/krzysztofzablocki/Sourcery/issues/306
-  depends_on xcode: "13.3"
+  depends_on xcode: "13.0"
 
   uses_from_macos "ruby" => :build
 
