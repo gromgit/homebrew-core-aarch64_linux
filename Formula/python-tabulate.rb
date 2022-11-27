@@ -7,16 +7,16 @@ class PythonTabulate < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "61e7d23a6d7de917886da888949aef4363ee874ce4d1f153344992b6f2e2c9e5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python-tabulate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b20506759f16ed7543ebdeaa246bd4c79db8e70eaad2ead97d5170dc374060fc"
   end
 
   depends_on "libpython-tabulate"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     # Install the binary only, the lib part is provided by libpython-tabulate
-    system "python3.11", "setup.py", "--no-user-cfg", "install_scripts", "--install-dir=#{bin}", "--skip-build"
+    system "python3", "setup.py", "--no-user-cfg", "install_scripts", "--install-dir=#{bin}", "--skip-build"
   end
 
   test do
