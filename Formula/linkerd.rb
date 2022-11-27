@@ -2,8 +2,8 @@ class Linkerd < Formula
   desc "Command-line utility to interact with linkerd"
   homepage "https://linkerd.io"
   url "https://github.com/linkerd/linkerd2.git",
-      tag:      "stable-2.12.2",
-      revision: "d1dff27842c5364fe0d03fabc517940b8d7e5805"
+      tag:      "stable-2.11.2",
+      revision: "d7a3ddf4bf41babc32aef79fdc5c40ef2bfb9283"
   license "Apache-2.0"
 
   livecheck do
@@ -12,14 +12,8 @@ class Linkerd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7308e1e256ec3108df97d92646741c502a8e07caaeab089695521759acecbaa"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "33d409422d18f07135db4e8b1d847c85b62e611d4e19ceb8690d397a4886727f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "33200b67fbd57471bbced08241c5a86c563ab378376e55682c373ef9ad50accb"
-    sha256 cellar: :any_skip_relocation, ventura:        "7dca6d91782c5f72a28f915af18abe6a9c71989785b9e61f7b4c3233a4cf9e45"
-    sha256 cellar: :any_skip_relocation, monterey:       "b98d167b20f04b3d2e4f3d120f96770e0da3a8b2c29da6a1239d544621f4ea71"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c4428b08620995afafe0b669a2389a093998525e576e70be890c85049a3108ce"
-    sha256 cellar: :any_skip_relocation, catalina:       "0b515ae45e02873762d2170128d0d27f659e5954b0b3778316b7504ea99bd255"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "14d24a5f9e9f0edf0c2a82f2d4b3e35a5ca5bd91d5b36ada45e1940cacf86765"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/linkerd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebc29e96eb7cbfca62e904260394d3066cb680e1c5dcc5ca8fb9e9e8d46b85a8"
   end
 
   depends_on "go" => :build
@@ -31,7 +25,17 @@ class Linkerd < Formula
     bin.install Dir["target/cli/*/linkerd"]
     prefix.install_metafiles
 
-    generate_completions_from_executable(bin/"linkerd", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"linkerd", "completion", "bash")
+    (bash_completion/"linkerd").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"linkerd", "completion", "zsh")
+    (zsh_completion/"_linkerd").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"linkerd", "completion", "fish")
+    (fish_completion/"linkerd.fish").write output
   end
 
   test do
