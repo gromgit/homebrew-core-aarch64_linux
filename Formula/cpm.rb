@@ -7,14 +7,8 @@ class Cpm < Formula
   head "https://github.com/skaji/cpm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0015dd05fc705d3aecdcccfb97728baabbe88d6a120ffa130d1156e1488d46a4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "df08ac5ad02edb0fce680578cbbabed954a7d36d3a1d0a23ec44ba92263e50a7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df08ac5ad02edb0fce680578cbbabed954a7d36d3a1d0a23ec44ba92263e50a7"
-    sha256 cellar: :any_skip_relocation, ventura:        "18a09246fcd6b89af574fede520cef78efa12424dee38842c8644f11fa1bfe0d"
-    sha256 cellar: :any_skip_relocation, monterey:       "509ffe2455227c4cb8016ca11f79227401c83bbea4927889ea7ad55a81f48060"
-    sha256 cellar: :any_skip_relocation, big_sur:        "509ffe2455227c4cb8016ca11f79227401c83bbea4927889ea7ad55a81f48060"
-    sha256 cellar: :any_skip_relocation, catalina:       "509ffe2455227c4cb8016ca11f79227401c83bbea4927889ea7ad55a81f48060"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "603ce2eacd2d15d21b9f1a213d222d52b96d2a3f0bc2db8e5ab20b4dbbf5fff0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cpm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "195a6948a8d3cfa806ce9f60cd05fe0940d81942b7f912c8a440f4c81b8a07a3"
   end
 
   depends_on "perl"
