@@ -5,17 +5,11 @@ class AvroCpp < Formula
   mirror "https://archive.apache.org/dist/avro/avro-1.11.0/cpp/avro-cpp-1.11.0.tar.gz"
   sha256 "ef70ca8a1cfeed7017dcb2c0ed591374deab161b86be6ca4b312bc24cada9c56"
   license "Apache-2.0"
-  revision 3
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "420cac15fff9dda19db5497843b911a74a054f6fd0d510b42bf6e6d783fccdb1"
-    sha256 cellar: :any,                 arm64_monterey: "77718ea59837565dd4e1c18261dce764f0289e77037b3f9a98cf25f86177ddb7"
-    sha256 cellar: :any,                 arm64_big_sur:  "00aefc17916fcf9db163d87277e8cc6a39de888808fe632b65c85502e9b8ad6e"
-    sha256 cellar: :any,                 ventura:        "5ca3629631713d14a6aeddfebeaf7f19647f64f0da5fe78754db83925aec1aca"
-    sha256 cellar: :any,                 monterey:       "f2c81739502b2119c1193b6a085c7c8dbd50af8b844ff38834f2a5b6413e0298"
-    sha256 cellar: :any,                 big_sur:        "a5201a6b40e7be69951a963b87f68e1eeb27a1beaa3b3a2234bb4422bd728b0c"
-    sha256 cellar: :any,                 catalina:       "9826694c526d5e952bafa2b547d5a85b877210c5f04955f0ec9e2dcc3e67c732"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b85f66f032be7576b415536acf99121444cf81b7ee257422fc516f4a6f27c041"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/avro-cpp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a7574446d37df2897f18bc0682872b317531fdd5d2066ea6fc7722697fe50992"
   end
 
   depends_on "cmake" => :build
