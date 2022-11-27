@@ -5,7 +5,6 @@ class I386ElfGdb < Formula
   mirror "https://ftpmirror.gnu.org/gdb/gdb-12.1.tar.xz"
   sha256 "0e1793bf8f2b54d53f46dea84ccfd446f48f81b297b28c4f7fc017b818d69fed"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   livecheck do
@@ -13,25 +12,17 @@ class I386ElfGdb < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "f5ccc087f76eace4b1544afe60d987f05c8052b23524040ad527ceb6ea445a3f"
-    sha256 arm64_monterey: "f520ed3c18a712eed4b571785a1f192321f623590a6b8c36edd005c43ec1f053"
-    sha256 arm64_big_sur:  "daebe979b8bee0deb6aa8fdbd68e7a43fe44fcac2f28bfcf6e959623111eb7ec"
-    sha256 monterey:       "b72a57b8324ee31030aed88b6c05ab5581fec70d2ed297c170a780fc047ba109"
-    sha256 big_sur:        "cea0b666233da65d7eecfaf9c7cdcaa59f16800270e2601fb9127169744097f6"
-    sha256 catalina:       "a1cfbe75ae76a7e7580334e945d59a4a29bfbc3a1f4f9d9af791527cd34ed902"
-    sha256 x86_64_linux:   "bb47cca7ec1eab9ef45ca0c227094c709ebfbbf56dd31014ee559ec498f5093f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/i386-elf-gdb"
+    sha256 aarch64_linux: "815d5a5834c47ad3d148a53f21ee2047075601f0b7488c6cc495bc715d583ae0"
   end
 
   depends_on "i686-elf-gcc" => :test
   depends_on "gmp"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "xz" # required for lzma support
 
+  uses_from_macos "texinfo" => :build
   uses_from_macos "zlib"
-
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
 
   def install
     target = "i386-elf"
@@ -45,7 +36,7 @@ class I386ElfGdb < Formula
       --disable-debug
       --disable-dependency-tracking
       --with-lzma
-      --with-python=#{Formula["python@3.11"].opt_bin}/python3.11
+      --with-python=#{Formula["python@3.10"].opt_bin}/python3
       --with-system-zlib
       --disable-binutils
     ]
