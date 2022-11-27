@@ -6,13 +6,8 @@ class Hubble < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b17475745a6c2fcfdabccc46ae09d3cac8b00460899d687bfe9119d744a96fa4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9951a81a642354bd455e52e373e05357721b2bf88c83f143163d84c337fd3688"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f1a4a5f613c7a9e5b08d9d973a1123abce1d00f9c4a9488b3eea1b4af9147eb"
-    sha256 cellar: :any_skip_relocation, monterey:       "af33f9f06d83688c492f4d39ddab38fd62804d571591c41a7b9f42d04fc238ee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "88c9ec5cd0ae74188b81265bc7aa0280a591485f83633ee347ea3a21293ef36a"
-    sha256 cellar: :any_skip_relocation, catalina:       "c080bc80f4b0054623252480a8432d146ae065bf12b57e96323d1ca9c15eb41c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4dbc77d9cae59b29a3a503298be9cf3799fbc678d5c35f9732554d0a3246045"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hubble"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "561512eb033314bc8e919f43f037397134fcb8fa5cdcb1b8e43b92eccb80a723"
   end
 
   depends_on "go" => :build
