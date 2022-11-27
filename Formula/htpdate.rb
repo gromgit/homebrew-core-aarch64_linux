@@ -11,14 +11,8 @@ class Htpdate < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a8e9117e974b451de897cd9c09cc5ad01ce002c0cb08ecc8b477ce1770d773bd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c0e9b954e33c77390997f36c4f0595b4fbf5c745f03630976e8f93a045885dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dfead617fa38a6cacd01f760983dd72f587ca0b1d5cb31192835aae5f3480497"
-    sha256 cellar: :any_skip_relocation, ventura:        "e70c5771412b68ab00eb8878782d4e4bb9c55b2cc239359408968ae0a26306e9"
-    sha256 cellar: :any_skip_relocation, monterey:       "819881fadf593bbbf4be2a95e63626d0bb866d9ce838192fe8f82e2e7b9f404b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3cbc51687acaed114db92084f031d139b9db01d3d6d402fc50f24cc7b4125f6f"
-    sha256 cellar: :any_skip_relocation, catalina:       "4d3484226b6458a4b3e20a016f276c821fe5b2628349b8d48745655be686d760"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d750d20c8464e6ccdfd4be8ca3d8a9b7a6b182703ad07fd096254bde39860a03"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/htpdate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f3e342a397d270003fa1a4942bb7ff78bdc46851b701ab2318c6db133c0226fe"
   end
 
   def install
