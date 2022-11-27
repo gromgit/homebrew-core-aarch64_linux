@@ -10,6 +10,7 @@ class GnuSmalltalk < Formula
 
   bottle do
     rebuild 1
+    sha256 ventura:      "0d0749c9612ed7111d1e923e6cdee688f5aa2943dfbd45a62ab4701074b06fcf"
     sha256 monterey:     "a1fc98f122660e0bcf6005eb04cdc7ab941e4e44ee888ca20de10a411f1d2938"
     sha256 big_sur:      "3de7522ec83425a3ad683f0050298630d3a1dfe4065cd5f57c8e18e266e434d8"
     sha256 catalina:     "b389791ed3f702f317883b54421e9a47122326607b603a592dd5903a057ff344"
