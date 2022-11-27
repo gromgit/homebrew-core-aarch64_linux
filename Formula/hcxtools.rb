@@ -7,19 +7,12 @@ class Hcxtools < Formula
   head "https://github.com/ZerBea/hcxtools.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "8185ea5bf24763e28884679562966c84985056eebb4dbb69ff1e022c91ffabf6"
-    sha256 cellar: :any,                 arm64_monterey: "6156b1ef29b02fdadfbdc54f71b3a078b96d3d8b9796dbd04718867dd8b00456"
-    sha256 cellar: :any,                 arm64_big_sur:  "186091dc51a382aa1333327948c39332ee2f27d486c2f1fc53078ffbd4ea3310"
-    sha256 cellar: :any,                 ventura:        "eb789fb97c96d8317a35b641c9aa81ac1b894667f32a6ffc8c25f76c19c49e9e"
-    sha256 cellar: :any,                 monterey:       "5904fbf23939d2088b281db6b7b57644489b56abc853359e5d7816c5d58de976"
-    sha256 cellar: :any,                 big_sur:        "5958acc14ba6fdf7f0caf618ebf8df79adfea1f25fd639010691e9540aea4304"
-    sha256 cellar: :any,                 catalina:       "52b1f37012a6a76b4cdecc0bfb8675fdb1ce04119d8910602121f0727fdf7dd9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b34c7c93cbe7fe057686b5c46a68b91d7a618d413d1052ff61acd422d869686"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hcxtools"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "48854bb0aabf4346255b90817cb80c7fa23dc2b8920849b1e0a1ec428ae50a48"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "curl"
 
