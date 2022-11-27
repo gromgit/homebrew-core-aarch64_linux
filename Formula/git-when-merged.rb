@@ -9,8 +9,8 @@ class GitWhenMerged < Formula
   head "https://github.com/mhagger/git-when-merged.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "351c05a7dfe0568ffde09a4633ab23d253ab10e0c3e0b2421e3f9b4740bae4b7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-when-merged"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "00f52d1fdf74ecb58187df897e301f45dcfd2f41a62761f7afab4d61ceabb27a"
   end
 
   # TODO: Update this to whichever python has `bin/python3`.
@@ -26,7 +26,6 @@ class GitWhenMerged < Formula
   end
 
   test do
-    system "git", "config", "--global", "init.defaultBranch", "master"
     system "git", "init"
     system "git", "config", "user.name", "BrewTestBot"
     system "git", "config", "user.email", "BrewTestBot@example.com"
