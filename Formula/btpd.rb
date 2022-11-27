@@ -7,20 +7,15 @@ class Btpd < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "bdde460a80660a0afd8811c961ffd495be84550578f4a3125181605438500e0f"
-    sha256 cellar: :any,                 arm64_monterey: "78f27d75fcd843c49964eb16b4391a4f356aa608738ec4783baccba2636f5a0b"
-    sha256 cellar: :any,                 arm64_big_sur:  "0e4467a0d042844b00c6b5f896468dada066d0372e060d788733afada425b87b"
-    sha256 cellar: :any,                 monterey:       "423f7dc95d5fbb92a4e8cefdca992b20eb20e3a4548248281ed5d135a6a675c8"
-    sha256 cellar: :any,                 big_sur:        "0a69fd078eb310b051cc151295ec20619a5aa8309adde05fc281a66bf7652df5"
-    sha256 cellar: :any,                 catalina:       "e3aaa9dc2e6cafa9e9a2672fe9bad6da2871e1f496029ad2f12004c6c24f0895"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "483442aed198f237fd3d92bde41c2b12db3e150e44bab84bd2fab6d96a25d8c5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/btpd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4d72763ac2f2075366f7ed96a8255e17dccd5a867cdc199b060d1fe10aa2b018"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
-    system "./configure", *std_configure_args
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 
