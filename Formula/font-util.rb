@@ -7,14 +7,8 @@ class FontUtil < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e12c0d135ebb8f71ca2a975689b82f89779b4a2b2147c38e6a9a5fbcd489864e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "57edda9390b2123b1f9b31651b5ad03e8888ccd7a1f5409d7795c18f9fa6a31d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c668bc56ced30ffb6ac8838ed40fd219538b2155cd810d5978ac5ce4b34d6992"
-    sha256 cellar: :any_skip_relocation, ventura:        "db0993a605544bcffd74440bbc1c322768afa11fc6fcb9abe82c2141b34bb1f7"
-    sha256 cellar: :any_skip_relocation, monterey:       "cd192a5dfbc1dc6667caacc87445fb028905141d059c33c61124f544a17f6838"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6b7d236e3d49b24292959ccfd78bf2479887eef9d7c0a7ac670008c9f410af5b"
-    sha256 cellar: :any_skip_relocation, catalina:       "198d4383e2e254f2c81f0227e416635a8435ea4cf2fd6a8ce814315ecadd2a80"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1225cda3cc0e81f7a85285b12ebba475b219041749de9b0e8a31af87ef651f46"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/font-util"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "46bef7f9c3d49e43817ac729479fcce0adf8c0d34317eb076de636aba757b953"
   end
 
   depends_on "pkg-config" => [:build, :test]
