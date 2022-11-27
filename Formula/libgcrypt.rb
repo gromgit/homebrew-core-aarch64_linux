@@ -3,7 +3,7 @@ class Libgcrypt < Formula
   homepage "https://gnupg.org/related_software/libgcrypt/"
   url "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.1.tar.bz2"
   sha256 "ef14ae546b0084cd84259f61a55e07a38c3b53afc0f546bffcef2f01baffe9de"
-  license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  license "GPL-2.0-only"
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/libgcrypt/"
@@ -11,14 +11,8 @@ class Libgcrypt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ef9a5094a7c7a547478e915590ae959be75a7b636d72a503ef91c2ef586c6d75"
-    sha256 cellar: :any,                 arm64_monterey: "3fe47336e43abb2d06395af3ddb83aceb9a08b826f338d2f740eb57271f1eddc"
-    sha256 cellar: :any,                 arm64_big_sur:  "3350e668f3ff1a912cb16c74104eb835134fe0343bea9db4d6bf027f24616593"
-    sha256 cellar: :any,                 ventura:        "1c6b5f0a0cad1600420c5db0445caa00fdf544a9b49b3d8383adc1a5f95ca82d"
-    sha256 cellar: :any,                 monterey:       "ac2f757bc87dac1c676d14d4382aa3baa1b3dadc3850aedd99b6acd8c06e4719"
-    sha256 cellar: :any,                 big_sur:        "e3c2dfd3c1a92117d52ca06de3e05f427c7c045031957cd61ebbf0e8146c7052"
-    sha256 cellar: :any,                 catalina:       "39658feb6872c97f486ea8c88cd515411a612baf459721f4b88196067fb91ff4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dff2a2b4cf7e623f895acb2cec5a85c5878d1db618637eb8495e2f6850ab21ed"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libgcrypt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2f71a0c58e60fbdb66d9d99b4e337ec37acfe0366fc96c98e9c10d0207f456d7"
   end
 
   depends_on "libgpg-error"
