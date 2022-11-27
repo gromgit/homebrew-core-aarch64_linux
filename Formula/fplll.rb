@@ -6,14 +6,8 @@ class Fplll < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "6b4c2dbeed3ebe441c0f5d207c4696d6f174c67534848f439b637abcaccd4c5f"
-    sha256 arm64_monterey: "414ee65d613528dd9a06be25332d02380947f6c59dcd9748c2f37ccbc488abf8"
-    sha256 arm64_big_sur:  "0905f8ae083002a515a21e432e2791c9bedcec86d484a5a2aa6f346c97dab676"
-    sha256 ventura:        "693a3f36163799ff52438065eac2f860f2bf39478402e78be6f80fc5697e5e34"
-    sha256 monterey:       "c938c1e07f6a68c06c7067769c09fe74c1cb871b9469cb10e6f65de319629427"
-    sha256 big_sur:        "79194ecb9a976d2a2e9a706243c6228315c3b359502047126fddf9954e37ed5c"
-    sha256 catalina:       "18d1d69b5cdf78dd4df55b830c072c785c4d70e1e198c3797c5cc90438d5e17f"
-    sha256 x86_64_linux:   "ad4a0f31e4cacd074b206095aa2d6b51db3a3b344f454d7b837ecae2a1d8bcff"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fplll"
+    sha256 aarch64_linux: "4957ef7963a8e708af21f56d7f4387833a28c67940ee23f9f9b96051e1bb3d07"
   end
 
   depends_on "automake" => :build
