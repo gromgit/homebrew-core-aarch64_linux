@@ -10,6 +10,7 @@ class Diffr < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7a2201cc3f5028be6c18b5ddc25f04330bc7839100ec339a937619f4af77d73"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "173967f25b9a31abea026ec8407772ad49342790d788a310ec236089d3de78b7"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "758130aee49d62c9e306cb7d918e3159e2171e81983b2e29c8703a88324eed73"
+    sha256 cellar: :any_skip_relocation, ventura:        "ac6c7b87bd5d0ed9f82fdce3f6e36cd88c2b449b33a2faabd6d3180cf44193fe"
     sha256 cellar: :any_skip_relocation, monterey:       "777f831f84ac617912b6986abe746e6fed8f7281977481f304d1c3e55440bb37"
     sha256 cellar: :any_skip_relocation, big_sur:        "6d34f32e85384bc92262c412c8a91ee01bb3e81a2430deb248db2b175a4ec125"
     sha256 cellar: :any_skip_relocation, catalina:       "278533a0a51eb1952eb4f95b7f7d68a3fe7cff3ae5968d5a91605f1b91c0a04c"
