@@ -2,9 +2,9 @@ class Dbus < Formula
   # releases: even (1.12.x) = stable, odd (1.13.x) = development
   desc "Message bus system, providing inter-application communication"
   homepage "https://wiki.freedesktop.org/www/Software/dbus"
-  url "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.4.tar.xz"
-  mirror "https://deb.debian.org/debian/pool/main/d/dbus/dbus_1.14.4.orig.tar.xz"
-  sha256 "7c0f9b8e5ec0ff2479383e62c0084a3a29af99edf1514e9f659b81b30d4e353e"
+  url "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.0.tar.xz"
+  mirror "https://deb.debian.org/debian/pool/main/d/dbus/dbus_1.14.0.orig.tar.xz"
+  sha256 "ccd7cce37596e0a19558fd6648d1272ab43f011d80c8635aea8fd0bad58aebd4"
   license any_of: ["AFL-2.1", "GPL-2.0-or-later"]
 
   livecheck do
@@ -13,18 +13,12 @@ class Dbus < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "bd47d7e498d2c564cc9e1a72171c188a579baa2b0b1ae7fdbc90403f0b40ff56"
-    sha256 arm64_monterey: "a7c5e9ebfa5e456cfbb3e78ee917898e89cb4672b8fd0aa5bec679723d8685f5"
-    sha256 arm64_big_sur:  "77c1c3aa6d4e2d86d5c0e505326297bb4873d9cfb475eb0faad0ae588384d8af"
-    sha256 ventura:        "44e1e11140160c1aba37a011693779ebf5313735f9febce5a60958099ab76506"
-    sha256 monterey:       "0ac396a8e236fb1324f0008017e2e2dc096eec1e804e80082096974df86038f2"
-    sha256 big_sur:        "1e5f498229eb4607bad387c03b7fa29b28e5cd3d5189fbd506abfdc7e8e5bdb2"
-    sha256 catalina:       "ddc436c75350923f396fc2296b7c2e432190a1d7efec209db34b0b50fc523a9b"
-    sha256 x86_64_linux:   "d7bdfb3e9401543b28b9db7fc137ed1129f5cdd23335fbe544ed438edfba3354"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dbus"
+    sha256 aarch64_linux: "2f76d7bf5730318c4ecbc6c7e9a76597c5e49b84d4d83b57a583c6f1828246fc"
   end
 
   head do
-    url "https://gitlab.freedesktop.org/dbus/dbus.git", branch: "master"
+    url "https://gitlab.freedesktop.org/dbus/dbus.git"
 
     depends_on "autoconf" => :build
     depends_on "autoconf-archive" => :build
