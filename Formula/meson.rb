@@ -1,20 +1,21 @@
 class Meson < Formula
   desc "Fast and user friendly build system"
   homepage "https://mesonbuild.com/"
-  url "https://github.com/mesonbuild/meson/releases/download/0.64.1/meson-0.64.1.tar.gz"
-  sha256 "3a8e030c2334f782085f81627062cc6d4a6771edf31e055ffe374f9e6b089ab9"
+  url "https://github.com/mesonbuild/meson/releases/download/0.63.2/meson-0.63.2.tar.gz"
+  sha256 "16222f17ef76be0542c91c07994f9676ae879f46fc21c0c786a21ef2cb518bbf"
   license "Apache-2.0"
   head "https://github.com/mesonbuild/meson.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ea1af29d1db8aaa9afc3a9adf78e8aba2205825f50d89d3c2e9625b922fefd8b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/meson"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "013802b655ed04ff632182f399d5aa87fd535972624ed6276ab6debeb2047944"
   end
 
   depends_on "ninja"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
-    python = "python3.11"
+    python = "python3.10"
     system python, *Language::Python.setup_install_args(prefix, python), "--install-data=#{prefix}"
 
     bash_completion.install "data/shell-completions/bash/meson"
@@ -30,7 +31,7 @@ class Meson < Formula
       dependencies/boost.py
       dependencies/cuda.py
       dependencies/qt.py
-      utils/universal.py
+      mesonlib/universal.py
       modules/python.py
     ].map { |f| mesonbuild/f }
     inreplace_files << (bash_completion/"meson")
