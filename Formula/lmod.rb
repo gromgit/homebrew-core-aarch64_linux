@@ -9,6 +9,7 @@ class Lmod < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e82ca2b9323cedf9a102568d0f840463cb8fa837f886ec472d9b12c1b924f86f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "47cca74d973d0c4e0be0a7de48168c632645a9b00f7a6697df7642ee41df876e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ea4d30f3c0461f71382cb0edde7d8c0e3acac2ee329c67aee723c8ad7aa8c7de"
+    sha256 cellar: :any_skip_relocation, ventura:        "e0630b4eb6b2a07ed52e606543212ec3feb7b18eaefbae2c4f890bedb1c0116f"
     sha256 cellar: :any_skip_relocation, monterey:       "d407951ad42a23364577ffbc5ddc73a5d3d9e1615283abe212d3da47ae0d5f2c"
     sha256 cellar: :any_skip_relocation, big_sur:        "608a5258c4f77092ecf4a612a46d8bcc514d6403ceb2d9b7800876999d37e929"
     sha256 cellar: :any_skip_relocation, catalina:       "b33aa380ae9825829b1d8affdd42b4f46f9b855ede58894b1a50caa7235c75f3"
