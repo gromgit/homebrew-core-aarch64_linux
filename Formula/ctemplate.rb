@@ -12,6 +12,7 @@ class Ctemplate < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2d9ca0bd9eed0b2c8beb26822d3da0a59c9a818cf6288d2737ccd090d5e7431c"
     sha256 cellar: :any,                 arm64_monterey: "fc6f772b98ecb4ac32af2525fb14e00e78d3869965b0b2cef4e9052ae7920f15"
     sha256 cellar: :any,                 arm64_big_sur:  "4857a36c04ea358a584ccc4bf814cf14ea132f719044982bba4295ca3bee54ce"
+    sha256 cellar: :any,                 ventura:        "64a6958f3a69142eb06780025183147a59f602862f961a80f89b5f37b164a4ca"
     sha256 cellar: :any,                 monterey:       "1186d9da15756058d715022d75e654ddf8c30573f79490a6d945ba3501e651d9"
     sha256 cellar: :any,                 big_sur:        "5e2edf873c559dbe6fee25404fb5f73dd0237358d553384c65284db99c1e1aeb"
     sha256 cellar: :any,                 catalina:       "03716a690ca0715b4832e3cbc95441a3e9765c36b277a33f85ac7806469d9928"
