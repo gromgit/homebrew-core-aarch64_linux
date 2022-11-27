@@ -11,13 +11,8 @@ class Qbe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2a688a0a860fa5ea45fce179551f31dbf1002b2e2cf4173bd5cb67b98fdbbbc9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ede097fbd833309d4afb675ef089aee3fe5bff6fced0a5551dc4111688ed31a1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72c102e7eb668d52ea3d369450d30d19b0272d3bfe35049cf99d0c003bd7ff98"
-    sha256 cellar: :any_skip_relocation, monterey:       "62feb0473090724b350a1a8a5afa8ee48f0e3d9062e5afce63a4d690ec2c9a5c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6f042b0d40491ed8ff1641814abd41ff67584405dce9f1c112b96b787b8c7d8e"
-    sha256 cellar: :any_skip_relocation, catalina:       "f840bba007e227ace59e8cd04df766c2610c1b28331ec90f46c35d17e7db4924"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "29cff072dab5d807051b2371e810c57cdcff9e27d7720a1d25c11d9ed0803c56"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/qbe"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8c75c62763b554f31b22612a40bd9683572da29841d789c20ebe765369a769ca"
   end
 
   def install
