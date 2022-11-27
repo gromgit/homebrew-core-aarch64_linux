@@ -7,14 +7,8 @@ class Ocrad < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "01e67cda156e5752f29d8702f353a37c62a4e7e9712bb8aa63349ac75ce76489"
-    sha256 cellar: :any,                 arm64_monterey: "443fa5aa2aba1104b638287c43df241736769328d32f234ec3af8da24bccc2ea"
-    sha256 cellar: :any,                 arm64_big_sur:  "ca07488430da95c3c7c59fc8658a8009942ddd05ce4ebb5986b3530d95551366"
-    sha256 cellar: :any,                 ventura:        "8bae7a6878fa7fa8d272a36e9320db3633b13067d617eddb448fc1b3a1e9f6c6"
-    sha256 cellar: :any,                 monterey:       "ec671c1d8ea4e8fb12bc40fc502e1c462e9f6ffb320fd8d9fedc1698267a92e5"
-    sha256 cellar: :any,                 big_sur:        "f942c1124e0e1061808f6981e0dd9ddbf2bed352e4f325a38a0514ffcd6f24d8"
-    sha256 cellar: :any,                 catalina:       "5abeb11db2bc2f220afbc610ddbc59ca04352dd2318b6dfd8ae289e357b2661e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d8d1bdfa4d338a02ba6293b7527b81d3093a07dbbc9943461c4fe7c3291a3a1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ocrad"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "78ce30f9fc03582bd16df557320bfeec3d9c26147d046d1fd87a21a1736dffb2"
   end
 
   depends_on "libpng"
