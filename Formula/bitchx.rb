@@ -21,6 +21,7 @@ class Bitchx < Formula
     sha256 arm64_ventura:  "13c3a23d3e7316d509646ddbd5ee5442c096856124a4f2cc9123afee2ab66bfd"
     sha256 arm64_monterey: "2176f208cf2ef65ebe0fc9ea27d2581e21450a01f2b399aba4d0620085245bc2"
     sha256 arm64_big_sur:  "e92a812a3fdb12ef256f677a923b1343bd9a478beb41c988ea36845e6e154d75"
+    sha256 ventura:        "c793d5d32ff5b4bb73d9c33f12b047459245ecc9f80883c66fac3ae9a30e2f6e"
     sha256 monterey:       "60c248c5f1b0a85a655ec9462b28982c4c0a089babdac242aedf9e0313a36f8e"
     sha256 big_sur:        "fb716a19bd25719a59a53270eb4dd4087d11946f44fe2a7adde6aeee183917fd"
     sha256 catalina:       "ea43f6d0776072e4a73f77621b676920c7a85c0b35446e29d61612c2e68d1ce8"
