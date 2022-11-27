@@ -7,13 +7,8 @@ class Gost < Formula
   head "https://github.com/ginuerzh/gost.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6a81534d045deb44b39556ce97e51be20321516dc4f132c09e2a7a0123153f43"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8073e645fde2616cbbfd0683e54138d4ec2873d4e9bdb7cb3c6c5db88653ea69"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "680ffc34810e6bed784a107e3ba0ed086b3b36ac90b8b6f7b8552443d8714843"
-    sha256 cellar: :any_skip_relocation, monterey:       "20612e5f65817db4d93a8f48e11878d4635954fc1c48bec5d2ce2a1e61979aec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8b961b9add49fb17f7a5217a2e7854201f7c1b20e47dd97b77c0e84742169079"
-    sha256 cellar: :any_skip_relocation, catalina:       "f292653429cd8023e8eb93e2c3b088351587f53a8b01d86f7009628b6c3ed6d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe525661ef844eff98698b6a354b101340ff857039dc7c4b4878b29c86d44b5e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gost"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3dfa0e9a1524fb40524fbcd3a0c25b97ee1293bd1df680c23fa9c848dfad7a59"
   end
 
   depends_on "go" => :build
