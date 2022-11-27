@@ -1,9 +1,9 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.19.3.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.19.3.src.tar.gz"
-  sha256 "18ac263e39210bcf68d85f4370e97fb1734166995a1f63fb38b4f6e07d90d212"
+  url "https://go.dev/dl/go1.19.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.19.src.tar.gz"
+  sha256 "9419cc70dc5a2523f29a77053cafff658ed21ef3561d9b6b020280ebceab28b9"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/go.git", branch: "master"
 
@@ -13,14 +13,8 @@ class Go < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "6e7f284d44cfd7cb22e783350c428154b6a7867bef3eb4c40c2c914d0fc6fd7f"
-    sha256 arm64_monterey: "5566ef32f95654fb2729d739e8d5208848b83b577c82c873c98ef9c8b9c79406"
-    sha256 arm64_big_sur:  "251e3c47fa7fc5beee48c41037a736cc13c5d3d1b8e62c69a612419aa99ec493"
-    sha256 ventura:        "029df5024e097c0c44b556c457c0bc242a1f4ca6ef3d092349da0983cba3d2f2"
-    sha256 monterey:       "30f1ceb685ec8589c2b40f832cdbf45f23354704d109b1c428bfe5952791c5f3"
-    sha256 big_sur:        "4f8b1fae32e814117d3fe23880f66d94bbff7951933d60ae26402f081e693f06"
-    sha256 catalina:       "2b29ff8bc520e4fd469248ddb1e79bb8c2714c6a06430f80b3a26ac5c1886bb9"
-    sha256 x86_64_linux:   "0eef78ee9d77f1e81eb233d2459181438cc26b3400f746206a83addcfa63cca7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go"
+    sha256 aarch64_linux: "189254a8510958d770a6f6c7f1c8d2339b40a6785594bb421613080b2f993676"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
@@ -69,6 +63,7 @@ class Go < Formula
     # Remove useless files.
     # Breaks patchelf because folder contains weird debug/test files
     (libexec/"src/debug/elf/testdata").rmtree
+    (libexec/"src/debug/dwarf/testdata").rmtree if OS.linux? && Hardware::CPU.arm?
     # Binaries built for an incompatible architecture
     (libexec/"src/runtime/pprof/testdata").rmtree
   end
