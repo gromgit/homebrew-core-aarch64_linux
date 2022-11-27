@@ -11,15 +11,8 @@ class Libtermkey < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "7d8785550b878770b207750a28a857906ddcca4dd23ad01d2c1c342adca32e2a"
-    sha256 cellar: :any,                 arm64_monterey: "7ffaeabbe372926ca45094684424add804cb1a8140c88a19115e7e41e02dedc9"
-    sha256 cellar: :any,                 arm64_big_sur:  "fc0c8e944f2a0e93500e6b93823b685aa085badbf298cf933ef2be6c615ab9a1"
-    sha256 cellar: :any,                 ventura:        "78d8398b5a79c26bf5b6cb85d71293309ed5533abd6de7ab0ff5d0b77bbfd4d6"
-    sha256 cellar: :any,                 monterey:       "4acf8f693e3ca76abb35a77f32edd5f54dbe47419fa690a9c32c396536a30b00"
-    sha256 cellar: :any,                 big_sur:        "4a463c5f31b1748ce885716a2f709f3ff1791725bb67e71bd9b44080148d6ff2"
-    sha256 cellar: :any,                 catalina:       "d011f1ac8c14c605e8614cac5328a8b41f0a8f5775d8919104d1495acdc9e135"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "359504c1b88e079ed34f73484c6196c5e5a2f6ca402088cbb7a537177cc22f93"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtermkey"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4778caccd0f3d55e7ed077df6e21cb1679ca13217740265c0206def63a689c8f"
   end
 
   depends_on "libtool" => :build
