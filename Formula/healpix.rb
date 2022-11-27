@@ -7,13 +7,8 @@ class Healpix < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3e9e1fccdb358503b5a6574c55fe4e9b6443f5e546fc71d800706577d88eacb8"
-    sha256 cellar: :any,                 arm64_monterey: "cadea8f03edf6b0be477bad212d7d9430acfdd1dda5f323bb2b31ce5ad846455"
-    sha256 cellar: :any,                 arm64_big_sur:  "03d1980b6da3acaa9b2dafad82a978b0d30a747ad6856bc9225551ab21c6fac7"
-    sha256 cellar: :any,                 monterey:       "5d38090ecd6924a73ba6c384198f14605335eeb752abbedf5783bd06e6fc8a27"
-    sha256 cellar: :any,                 big_sur:        "153d21ddb88d85138eb6c2d5e839ca892e40af84fdf8c9871bbf7937c34191b2"
-    sha256 cellar: :any,                 catalina:       "bab37de0e96ff73ec0866c512fb91d67603770249f51897a4e2535b5f37ae7b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5abc18ed2b8160be9e93ec394bdd672fa39b9abbbe618ceab1479965d15ee232"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/healpix"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4112502b79d9ee6b07389a13d42b2e783d15fd483e0efe493c827fa81e64ea91"
   end
 
   depends_on "autoconf" => :build
