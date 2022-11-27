@@ -1,8 +1,8 @@
 class PythonTkAT310 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.10.8/Python-3.10.8.tgz"
-  sha256 "f400c3fb394b8bef1292f6dc1292c5fadc3533039a5bc0c3e885f3e16738029a"
+  url "https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tgz"
+  sha256 "848cb06a5caa85da5c45bd7a9221bb821e33fc2bdcba088c127c58fad44e6343"
   license "Python-2.0"
 
   livecheck do
@@ -10,24 +10,14 @@ class PythonTkAT310 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "08c243168db901bed54f2596034c578283eefd8a9744eca346f4fbe1dca8d799"
-    sha256 cellar: :any, arm64_monterey: "b28fa88f88581f432a9c17c5dcc065e81b16d7eaf739ed702e9de511ebbef048"
-    sha256 cellar: :any, arm64_big_sur:  "b9633cfa0899bdad1bb0568ca8f8731ba124c2a7f00f4970558fa124280e5d2b"
-    sha256 cellar: :any, ventura:        "81c3360cf1d2fc74a7809af4d9deaccfb9d0a3b653826204c866945f7235f8b5"
-    sha256 cellar: :any, monterey:       "367b3dfc45ac1c33655181e9fdd28bd0984c6fafad3edf7538ec2b5d611ddf95"
-    sha256 cellar: :any, big_sur:        "d0f6ee0c2b06cb096c59868b1c8116fae96d3aa3a7ab8e89d6e2b9f160b217ff"
-    sha256 cellar: :any, catalina:       "62469dbf3c34554e9ca8bf21b91ed6efa2af595d7f06990476dbe97552b3ab23"
-    sha256               x86_64_linux:   "378de196b95470e825f1df2691c4fa9f04f429bc277a4f629038d93f8d3eec72"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python-tk@3.10"
+    sha256 aarch64_linux: "14056d073353b92c889305125574fe203af576cbf6f85fb41cc9cafaf8b49e3b"
   end
 
   keg_only :versioned_formula
 
   depends_on "python@3.10"
   depends_on "tcl-tk"
-
-  def python3
-    "python3.10"
-  end
 
   def install
     cd "Modules" do
@@ -47,17 +37,17 @@ class PythonTkAT310 < Formula
               ]
         )
       EOS
-      system python3, *Language::Python.setup_install_args(libexec, python3),
-                      "--install-lib=#{libexec}"
+      system Formula["python@3.10"].bin/"python3", *Language::Python.setup_install_args(libexec),
+                                                  "--install-lib=#{libexec}"
       rm_r Dir[libexec/"*.egg-info"]
     end
   end
 
   test do
-    system python3, "-c", "import tkinter"
+    system Formula["python@3.10"].bin/"python3", "-c", "import tkinter"
 
     return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
-    system python3, "-c", "import tkinter; root = tkinter.Tk()"
+    system Formula["python@3.10"].bin/"python3", "-c", "import tkinter; root = tkinter.Tk()"
   end
 end
