@@ -12,14 +12,8 @@ class Gpsd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5ab821af7843c11f7c3478b1ec38272c4eff0d6a1e074fb06bf0bbad97768e9d"
-    sha256 cellar: :any,                 arm64_monterey: "9ee32da6d1a4cebc72344070d1f446a95e62446253453426a227a784a9986a2a"
-    sha256 cellar: :any,                 arm64_big_sur:  "538fd1fc7101ca412dea133b318cabe4111708bb8b64d6fc14e74e92ec334d79"
-    sha256 cellar: :any,                 ventura:        "15f28de95d7d78a035d172b8f509d389f7cd998f46472dffc0cd79f2233369ab"
-    sha256 cellar: :any,                 monterey:       "fb3def1aeef8ecbc9e771bdcce032a808bcdaeaa72f48511c3a3d61baa6b5a72"
-    sha256 cellar: :any,                 big_sur:        "771bb0164955c209ec3bfd4cc1801da5a4ca44feffdc493192906b39d245e833"
-    sha256 cellar: :any,                 catalina:       "dfeda18cdf0234e2d2b3d8cc4146f3a1ba5f923b26cfdd8f4e97f6a1d72e3492"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b8f2870eb113ea890064d3011f1508869211a0dc2679cf41c02aff5fe7e9022"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gpsd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2e65934a1f0349f49d8337cbeaff8cc881147b188f420a18989a84cf57c9eb58"
   end
 
   depends_on "asciidoctor" => :build
