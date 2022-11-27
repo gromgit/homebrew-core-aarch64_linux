@@ -9,20 +9,11 @@ class FortranLanguageServer < Formula
   head "https://github.com/hansec/fortran-language-server.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "17c7e96365f45c2bc3f9bd8262cc4817665613c50cb50be547c35284027b3e36"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "17c7e96365f45c2bc3f9bd8262cc4817665613c50cb50be547c35284027b3e36"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17c7e96365f45c2bc3f9bd8262cc4817665613c50cb50be547c35284027b3e36"
-    sha256 cellar: :any_skip_relocation, ventura:        "59ed4a2e6b58298c6c0578ba43dffbeeb83e3f0a11287b1e6ca64a98aa9c2260"
-    sha256 cellar: :any_skip_relocation, monterey:       "59ed4a2e6b58298c6c0578ba43dffbeeb83e3f0a11287b1e6ca64a98aa9c2260"
-    sha256 cellar: :any_skip_relocation, big_sur:        "59ed4a2e6b58298c6c0578ba43dffbeeb83e3f0a11287b1e6ca64a98aa9c2260"
-    sha256 cellar: :any_skip_relocation, catalina:       "59ed4a2e6b58298c6c0578ba43dffbeeb83e3f0a11287b1e6ca64a98aa9c2260"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5faf0297d9b3999acc76939265cafc7adbe5a2298ba0719f9a0969feb83784fd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fortran-language-server"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d250f2657cddd7b73707b2eee7db9088e2087f903096f48b346559df0a7f2e4d"
   end
 
-  depends_on "python@3.11"
-
-  conflicts_with "fortls", because: "both install `fortls` binaries"
+  depends_on "python@3.10"
 
   def install
     virtualenv_install_with_resources
