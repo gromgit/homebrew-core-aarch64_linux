@@ -12,17 +12,15 @@ class Sentencepiece < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "a26dad273b288318b7c23ed4a4796055fd59bd5c14cbb9df354160f028816582"
-    sha256 cellar: :any,                 arm64_monterey: "6595fbab298f93719142bd70c3bac237641487025035ff6848c397272a6c5edc"
-    sha256 cellar: :any,                 arm64_big_sur:  "a5b6bb58a27e411450031bc2360a7bf6c3430e3f648e974bf40f9e5234c2dc51"
-    sha256 cellar: :any,                 monterey:       "74c92c3a643c7742cd7d29b5b1bd57f13a92f362108f6a63c57a27451711dfec"
-    sha256 cellar: :any,                 big_sur:        "5bb87653c65a19cd69df12fc8c790bf53569be7138774705b77c34b56c291851"
-    sha256 cellar: :any,                 catalina:       "8e44940c9a90d847c96f96b6a83dbdf72320c1790dd08ab9175bf9a9c5d498c0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a8d7bbde801110c585f23f468a347b9c5d24e1aa7f0941ee1afa62bf3a5e6ce"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sentencepiece"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a5b1fa9761d6c664088ca706296b7950c6043ea28129ba484fb9a527def272f6"
   end
 
   depends_on "cmake" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
