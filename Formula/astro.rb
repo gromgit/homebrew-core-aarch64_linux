@@ -1,8 +1,8 @@
 class Astro < Formula
   desc "To build and run Airflow DAGs locally and interact with the Astronomer API"
   homepage "https://www.astronomer.io/"
-  url "https://github.com/astronomer/astro-cli/archive/refs/tags/v1.8.2.tar.gz"
-  sha256 "60766bd5ae79cf1a72f50430f040b26571b6a071d222cfd0f1628e26ac8b1c8a"
+  url "https://github.com/astronomer/astro-cli/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "904be5c6f2a0d50fdec8b750b5cea81efb9a8b39efa38376427baa2f32008cc6"
   license "Apache-2.0"
 
   livecheck do
@@ -11,14 +11,8 @@ class Astro < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3338b9b5b50efc61eca58a7262c3e20e30aa4e8afb86bf030d14d19cb5b20fe0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3338b9b5b50efc61eca58a7262c3e20e30aa4e8afb86bf030d14d19cb5b20fe0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3338b9b5b50efc61eca58a7262c3e20e30aa4e8afb86bf030d14d19cb5b20fe0"
-    sha256 cellar: :any_skip_relocation, ventura:        "a905182b2bba2580dfd6839ea37b09cc3073bdb94524a8681caae45256f4e98d"
-    sha256 cellar: :any_skip_relocation, monterey:       "a905182b2bba2580dfd6839ea37b09cc3073bdb94524a8681caae45256f4e98d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a905182b2bba2580dfd6839ea37b09cc3073bdb94524a8681caae45256f4e98d"
-    sha256 cellar: :any_skip_relocation, catalina:       "a905182b2bba2580dfd6839ea37b09cc3073bdb94524a8681caae45256f4e98d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f284de96a738182a1459fe737361c55afa8cbb8f7b31e89fe41518bc8cd4048e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/astro"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "26789fa6e5d65307b4249fc94620423bd6b3ab58dadbb7778a2420e7bf07f754"
   end
 
   depends_on "go" => :build
@@ -26,8 +20,6 @@ class Astro < Formula
   def install
     ENV["CGO_ENABLED"] = "0"
     system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/astronomer/astro-cli/version.CurrVersion=#{version}")
-
-    generate_completions_from_executable(bin/"astro", "completion")
   end
 
   test do
