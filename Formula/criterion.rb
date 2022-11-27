@@ -4,17 +4,11 @@ class Criterion < Formula
   url "https://github.com/Snaipe/Criterion/releases/download/v2.4.1/criterion-2.4.1.tar.xz"
   sha256 "d0f86a8fc868e2c7b83894ad058313023176d406501a4ee8863e5357e31a80e7"
   license "MIT"
-  revision 1
   head "https://github.com/Snaipe/Criterion.git", branch: "bleeding"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "888bccff3d928fd176d226117ae69b1ae6ee0f093158ee55abaacfffb64051ba"
-    sha256 cellar: :any, arm64_monterey: "936db451f3b333687d75ee02f987793b5a2a6e799bdf19d4c402f4942a6466bb"
-    sha256 cellar: :any, arm64_big_sur:  "893ed763895b094bfdcfaae2891fcb9c07c308d1d207da5aa988340a6d41f56b"
-    sha256 cellar: :any, monterey:       "ccea6bdbe908966b8152948d39672bbe475a85dfa2d34e702a02ab17df236358"
-    sha256 cellar: :any, big_sur:        "d6f833935149e7b6a85b2735db748251c076cdc3e4fb4ad9268ca26df0392d51"
-    sha256 cellar: :any, catalina:       "5abf4ef75d576ccdfdd7d482cd74e9a97b82f86aef95c8aa731722da87bc93d0"
-    sha256               x86_64_linux:   "6953412c2e5eb4676c7c3f8a46faf5329455f3416a076a23a71d4fdc163a72cc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/criterion"
+    sha256 aarch64_linux: "c283cbacd50da667135904658f961ceedcb80b865c1610eb285f9ce05b30a364"
   end
 
   depends_on "cmake" => :build
