@@ -14,6 +14,7 @@ class S4cmd < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "56fbd838e588d65381bbf8aed3502dc32f8ebfb72cc4853ee2ed31af2cc8a9ea"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "579c89b3b9fa40c0ac1a426e55bd5b9a88f9f8e0560e08f89f5faccafa1d797c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bddd00a80e1ebe79b113c0f7f5d42158f438f5c4382dfe7c7a25eb24a453c65a"
+    sha256 cellar: :any_skip_relocation, ventura:        "b5f8276bab65617391c6ec39c73481cd318c2b914beb729b29eea4343e89face"
     sha256 cellar: :any_skip_relocation, monterey:       "4fb07106e61b0d9317a091193d4a221053f24a5f02dc81e106c34710f749457e"
     sha256 cellar: :any_skip_relocation, big_sur:        "7bb2576ce8c56705a123814b30d90e20f0361fb763aadf6c141fef33b3b64b06"
     sha256 cellar: :any_skip_relocation, catalina:       "ff4ceeea473f6e83f1a9c59c16a056d6d6c1829bf3aad1770aeb82248f883ce6"
