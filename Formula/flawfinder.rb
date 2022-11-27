@@ -15,18 +15,11 @@ class Flawfinder < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "baa4ede546ed9ce3bc3283002cde1fb529a6c91030614df0a5e30adadf38b933"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "baa4ede546ed9ce3bc3283002cde1fb529a6c91030614df0a5e30adadf38b933"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "baa4ede546ed9ce3bc3283002cde1fb529a6c91030614df0a5e30adadf38b933"
-    sha256 cellar: :any_skip_relocation, ventura:        "914cd86fc8a41d17755bd041e7f57233d09d591257dba66ee2b166ebeed49e70"
-    sha256 cellar: :any_skip_relocation, monterey:       "914cd86fc8a41d17755bd041e7f57233d09d591257dba66ee2b166ebeed49e70"
-    sha256 cellar: :any_skip_relocation, big_sur:        "914cd86fc8a41d17755bd041e7f57233d09d591257dba66ee2b166ebeed49e70"
-    sha256 cellar: :any_skip_relocation, catalina:       "914cd86fc8a41d17755bd041e7f57233d09d591257dba66ee2b166ebeed49e70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "baa4ede546ed9ce3bc3283002cde1fb529a6c91030614df0a5e30adadf38b933"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flawfinder"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0a7fea83c428051df2c32d2981803226dfc66bcb767fc70718189d9670748ceb"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     rewrite_shebang detected_python_shebang, "flawfinder.py"
