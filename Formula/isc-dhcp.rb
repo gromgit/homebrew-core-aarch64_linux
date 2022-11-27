@@ -1,8 +1,8 @@
 class IscDhcp < Formula
   desc "Production-grade DHCP solution"
   homepage "https://www.isc.org/dhcp"
-  url "https://ftp.isc.org/isc/dhcp/4.4.3-P1/dhcp-4.4.3-P1.tar.gz"
-  sha256 "0ac416bb55997ca8632174fd10737fd61cdb8dba2752160a335775bc21dc73c7"
+  url "https://ftp.isc.org/isc/dhcp/4.4.3/dhcp-4.4.3.tar.gz"
+  sha256 "0e3ec6b4c2a05ec0148874bcd999a66d05518378d77421f607fb0bc9d0135818"
   license "MPL-2.0"
 
   livecheck do
@@ -11,14 +11,8 @@ class IscDhcp < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "ca26d2145b3c8040d94c1ee2b8065d1facdf47f00e4d26e93d8a15a9bab3b209"
-    sha256 arm64_monterey: "53454eb5ae86cb4fe52825f7bcfec568ed205ee417d21526fa42d1c5b90141dd"
-    sha256 arm64_big_sur:  "11182828a03788759a737535d2db69aa96d12df98889e62c4b8147f709b00a92"
-    sha256 ventura:        "1e27788709ff517345a449edc508cfc9dc5426baa08bb3f34167acffc84c010f"
-    sha256 monterey:       "a55472a7338f26f7138000677df04f90eec5eec5120168b87c72ed14b9536fbe"
-    sha256 big_sur:        "a0ca57af4461f5ecad3f0882c72e3afaa78a78d46ad2393cbf553226c471107a"
-    sha256 catalina:       "0c39f7765fb83025a5b24012b692c04aaf4e78cfa6a1e450e93b191b9d33e90d"
-    sha256 x86_64_linux:   "6085ad7064a861fe03a25bf6ba6172d1a50cdf0f5985dc652ba32484fb7e08ca"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/isc-dhcp"
+    sha256 aarch64_linux: "35ab35c6aad74e6968b822619db014c5e6bf4286184e61d996590f01242801d8"
   end
 
   def install
