@@ -1,29 +1,30 @@
 class Verilator < Formula
   desc "Verilog simulator"
   homepage "https://www.veripool.org/wiki/verilator"
-  url "https://github.com/verilator/verilator/archive/refs/tags/v5.002.tar.gz"
-  sha256 "72d68469fc1262e6288d099062b960a2f65e9425bdb546cba141a2507decd951"
+  url "https://github.com/verilator/verilator/archive/refs/tags/v4.226.tar.gz"
+  sha256 "70bc941d86e4810253d51aa94898b0802d916ab76296a398f8ceb8798122c9be"
   license any_of: ["LGPL-3.0-only", "Artistic-2.0"]
-  head "https://github.com/verilator/verilator.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "c04c58b6d86b02df1e878d6ee889600a406f639fc3ceae334ca0d118bb4caf2e"
-    sha256 arm64_monterey: "cec176513d3bb689ae84f4201825fd1bbaa1294d33b654e04833d2f57044ed30"
-    sha256 arm64_big_sur:  "91b0279e48bc38f89928fd02fada9f0fcd89bccf7b6d1c944dd5106a92c32c28"
-    sha256 ventura:        "a3bb98befc539edefa7219c970a1f704ed8e81a96465194f3edbc1327c2c48bf"
-    sha256 monterey:       "49cf2ec7dc6c68e91c8788b3a93ce55002cf44005139441c381a14ce1859039d"
-    sha256 big_sur:        "596d5d599a9c6f0481fedfa10d5062e50d16801a4c32baedf462fc0dec88b3a9"
-    sha256 catalina:       "d84997d31523118754f06202d8627ace7d4ac9ec422ab779b0364c0f1b6274e2"
-    sha256 x86_64_linux:   "7f34ecb6d032f90cdff80f504b7ca1b3d38062a74bdbb6399b7c7909d418a41f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/verilator"
+    sha256 aarch64_linux: "ffcb90c3deffb227e71371156eec2d2a50f956625b337a1ab1bd8cac0ccd9723"
+  end
+
+  head do
+    url "https://github.com/verilator/verilator.git", using: :git
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "python@3.10" => :build
 
-  uses_from_macos "bison" => :build
-  uses_from_macos "flex" => :build
+  uses_from_macos "bison"
+  uses_from_macos "flex"
   uses_from_macos "perl"
-  uses_from_macos "python", since: :catalina
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   skip_clean "bin" # Allows perl scripts to keep their executable flag
 
@@ -36,6 +37,18 @@ class Verilator < Formula
     # `make` and `make install` need to be separate for parallel builds
     system "make"
     system "make", "install"
+  end
+
+  def post_install
+    return if OS.mac?
+
+    # Ensure the hard-coded versioned `gcc` reference does not go stale.
+    ohai "Fixing up GCC references..."
+    gcc_version = Formula["gcc"].any_installed_version.major
+    inreplace(pkgshare/"include/verilated.mk") do |s|
+      s.change_make_var! "CXX", "g++-#{gcc_version}"
+      s.change_make_var! "LINK", "g++-#{gcc_version}"
+    end
   end
 
   test do
@@ -55,7 +68,7 @@ class Verilator < Formula
           exit(0);
       }
     EOS
-    system bin/"verilator", "-Wall", "--cc", "test.v", "--exe", "test.cpp"
+    system "/usr/bin/perl", bin/"verilator", "-Wall", "--cc", "test.v", "--exe", "test.cpp"
     cd "obj_dir" do
       system "make", "-j", "-f", "Vtest.mk", "Vtest"
       expected = <<~EOS
