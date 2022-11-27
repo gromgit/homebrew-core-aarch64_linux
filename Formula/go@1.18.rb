@@ -1,9 +1,9 @@
 class GoAT118 < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.18.8.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.18.8.src.tar.gz"
-  sha256 "1f79802305015479e77d8c641530bc54ec994657d5c5271e0172eb7118346a12"
+  url "https://go.dev/dl/go1.18.5.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.18.5.src.tar.gz"
+  sha256 "9920d3306a1ac536cdd2c796d6cb3c54bc559c226fc3cc39c32f1e0bd7f50d2a"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,14 +12,8 @@ class GoAT118 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "ae71f0865a9cebfd34201a83477545abaf128522d076f252e0b587322112a3a2"
-    sha256 arm64_monterey: "d65e237ccc5a3e49d5e2fb8384950500c1073bc4f72647daa90a4a354bb36c48"
-    sha256 arm64_big_sur:  "6cbd1bc3aca598fc30a97423493eae8737db95d31605fc81bac85bbcfb520b23"
-    sha256 ventura:        "f2e14af7d3bb8635dfdb4f3f656e85499c47d475d41e4d3290d981c15f2bd5f8"
-    sha256 monterey:       "555bb5c31e7ecc2f0818e44ccb5e811b37057c3f93485438b7b272d85163eee5"
-    sha256 big_sur:        "d74b1dace5e3248234526bea467b9fe3d8be00fb2234318b1f54195563f11884"
-    sha256 catalina:       "cdd22c4193d33f2bc695719d569c1f022dbbdc03c0804456b46a31569548b7b8"
-    sha256 x86_64_linux:   "a5b8e2135e087f1770932b58da9ef94d97edf20be30c692dc1042b93308eab41"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go@1.18"
+    sha256 aarch64_linux: "56a6556aa21832c9a8532d632b0e546608db0bc26c6b4db38cb5617e95c4ef6d"
   end
 
   keg_only :versioned_formula
