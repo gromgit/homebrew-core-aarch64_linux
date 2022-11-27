@@ -1,8 +1,8 @@
 class GitSubrepo < Formula
   desc "Git Submodule Alternative"
   homepage "https://github.com/ingydotnet/git-subrepo"
-  url "https://github.com/ingydotnet/git-subrepo/archive/0.4.5.tar.gz"
-  sha256 "bb2f139222cfecb85fe9983cd8f9d572942f60097d6d736e2e6b01d1292e0a8a"
+  url "https://github.com/ingydotnet/git-subrepo/archive/0.4.3.tar.gz"
+  sha256 "d2e3cc58f8ac3d90f6f351ae2f9cc999b133b8581ab7a0f7db4933dec8e62c2a"
   license "MIT"
   head "https://github.com/ingydotnet/git-subrepo.git", branch: "master"
 
@@ -12,14 +12,8 @@ class GitSubrepo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1a39768821ddd16240f8a467ef1a90b4e59ad609ae14f36ea4dedc81438ac8cf"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a39768821ddd16240f8a467ef1a90b4e59ad609ae14f36ea4dedc81438ac8cf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a39768821ddd16240f8a467ef1a90b4e59ad609ae14f36ea4dedc81438ac8cf"
-    sha256 cellar: :any_skip_relocation, ventura:        "1980304e4b65652e9ffd9b211844698ecf19b5a963819616681733fb98302b3a"
-    sha256 cellar: :any_skip_relocation, monterey:       "1980304e4b65652e9ffd9b211844698ecf19b5a963819616681733fb98302b3a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1980304e4b65652e9ffd9b211844698ecf19b5a963819616681733fb98302b3a"
-    sha256 cellar: :any_skip_relocation, catalina:       "1980304e4b65652e9ffd9b211844698ecf19b5a963819616681733fb98302b3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a39768821ddd16240f8a467ef1a90b4e59ad609ae14f36ea4dedc81438ac8cf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-subrepo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0fdf5584a02fa9360578ab3a0f892f1ae6a77cd7092aa80b336a8b5a89384721"
   end
 
   depends_on "bash"
