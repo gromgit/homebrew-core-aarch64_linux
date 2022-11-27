@@ -1,20 +1,14 @@
 class Glab < Formula
   desc "Open-source GitLab command-line tool"
-  homepage "https://gitlab.com/gitlab-org/cli"
-  url "https://gitlab.com/gitlab-org/cli/-/archive/v1.23.0/cli-v1.23.0.tar.gz"
-  sha256 "4fe9dcecc5e601a849454a3608b47d709b11e2df81527f666b169e0dd362d7df"
+  homepage "https://glab.readthedocs.io/"
+  url "https://github.com/profclems/glab/archive/v1.22.0.tar.gz"
+  sha256 "4b700d46cf9ee8fe6268e7654326053f4366aa3e072b5c3f3d243930a6e89edc"
   license "MIT"
-  head "https://gitlab.com/gitlab-org/cli.git", branch: "trunk"
+  head "https://github.com/profclems/glab.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "554ec290b218a792f6a9dc92aae2ae07e1bf75866e5a9692082ad85ed3e785ad"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "85be6d55b367e8ec9c0e76b54890762d6c9706fd75aa5b39207ea3e967bd923e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41fa0e14f613d1cbfe01700a65c65f30a4b43f2c99e564ec83ef07a494387a95"
-    sha256 cellar: :any_skip_relocation, ventura:        "54bb6b7d6d967200e4639ef3886d8a0178d2b798ec9b51bf0a2c497024f20037"
-    sha256 cellar: :any_skip_relocation, monterey:       "36de37f5d3a92c4e40333017653095be16eac1611bdf4450729b145c6e7b3157"
-    sha256 cellar: :any_skip_relocation, big_sur:        "89730fe4b38d7e9efbcc7cfbeeab32e3ce80a3302cf56556e2bca185ef206e62"
-    sha256 cellar: :any_skip_relocation, catalina:       "20a17704b7feac3e972e85fceecd844ec765c5a123727dd38aaaac3980e0fa43"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98e2558a21a45a846efd44ad07e5fbb2a04dc8fb0e916e3dfa352bfff6ec7bc6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glab"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "18f33cdf3dacd683bb92239bf54e3632e5760faea4c9e012e44af87b2bd78012"
   end
 
   depends_on "go" => :build
@@ -24,7 +18,7 @@ class Glab < Formula
 
     system "make", "GLAB_VERSION=#{version}"
     bin.install "bin/glab"
-    generate_completions_from_executable(bin/"glab", "completion", "--shell")
+    generate_completions_from_executable(bin/"glab", "completion", shell_parameter_format: :arg)
   end
 
   test do
