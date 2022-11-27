@@ -14,6 +14,7 @@ class Prips < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "5c4217811128ab612a4433b630d1a3d2c9e4805e1c163bfa22eeec7d03e095b9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "50a8faf4130d6ad1b281078e788aa0bdd8a34b32fda4f9dbde6247f0dcdbcfdf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "255619fe70f19aa2f4ce8616a48bcc96892678ddba5c2b40ba0191bee5dfe28d"
+    sha256 cellar: :any_skip_relocation, ventura:        "ab6328571f6d30d60848ab91a95fbc3c2f4da337dc8f80ba91a7e43feb80512f"
     sha256 cellar: :any_skip_relocation, monterey:       "97c8079a862f2f3957c23762eb50034de5b6317c67696a18c5a6792da2b9cfb2"
     sha256 cellar: :any_skip_relocation, big_sur:        "32e889ecb796175e17ad03eb59ae8e7fea9ca015e228ef2369cbc21db55a7d0e"
     sha256 cellar: :any_skip_relocation, catalina:       "76f6e8fcbc1f60861023f6e035b04bec61d57fefb3bbfb87fbdeeafb47b68456"
