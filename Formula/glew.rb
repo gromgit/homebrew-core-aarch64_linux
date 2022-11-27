@@ -8,15 +8,8 @@ class Glew < Formula
   head "https://github.com/nigels-com/glew.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "33b1499e0219c3980310dee9e6b115af3ef0324723af7c3a0ff9a68ac7b3e841"
-    sha256 cellar: :any,                 arm64_monterey: "a116faecf407ee2a00cb775a3b668fe0f5753ceecd73678d20b3656e6c56d163"
-    sha256 cellar: :any,                 arm64_big_sur:  "088dedfcd45fe37b0d027b52bb1c730e01aeacda4d7b00ce14f67a19d1961bce"
-    sha256 cellar: :any,                 ventura:        "a9850b75eb81c4b3d5f81209fe7a9b3cd848444df83c6a391ff9d77096ba6e58"
-    sha256 cellar: :any,                 monterey:       "9d8d8c93eec4287a9231cd0378b45ee3b9735afca387fc1f5def7e2c68533097"
-    sha256 cellar: :any,                 big_sur:        "728e40242af0b9a53ae837de3d2658f205e121a04285de29f3964c2dd7512a9d"
-    sha256 cellar: :any,                 catalina:       "ee50985ccbbcd0ec1980960b7fb31fce80e99450f14ae02a751a731056182d34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bc36f86706af951931a2c4c905b8b680cf67606406d238fbfd8923f6109e626"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glew"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b096b58ebb3ac4938d8f94e6d1595b5f4c14daf98e692626609c27c575e5cefb"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -27,9 +20,11 @@ class Glew < Formula
   end
 
   def install
-    system "cmake", "-S", "./build/cmake", "-B", "_build", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
-    system "cmake", "--build", "_build"
-    system "cmake", "--install", "_build"
+    cd "build" do
+      system "cmake", "./cmake", *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
     doc.install Dir["doc/*"]
   end
 
