@@ -12,14 +12,8 @@ class Maven < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0468fde1ed91dda88ce1be54ca222c23f9436e579e5e45a2ca38c26dda304e7f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0468fde1ed91dda88ce1be54ca222c23f9436e579e5e45a2ca38c26dda304e7f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0468fde1ed91dda88ce1be54ca222c23f9436e579e5e45a2ca38c26dda304e7f"
-    sha256 cellar: :any_skip_relocation, ventura:        "016e037ae5ca2e5ec6e3268839bec1dbc2e4af0e30960efd16ef12ed0aa56969"
-    sha256 cellar: :any_skip_relocation, monterey:       "016e037ae5ca2e5ec6e3268839bec1dbc2e4af0e30960efd16ef12ed0aa56969"
-    sha256 cellar: :any_skip_relocation, big_sur:        "016e037ae5ca2e5ec6e3268839bec1dbc2e4af0e30960efd16ef12ed0aa56969"
-    sha256 cellar: :any_skip_relocation, catalina:       "016e037ae5ca2e5ec6e3268839bec1dbc2e4af0e30960efd16ef12ed0aa56969"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0468fde1ed91dda88ce1be54ca222c23f9436e579e5e45a2ca38c26dda304e7f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/maven"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2324c48a817d45d8a9ca99ae66438238228b8286a3acc0ac2a56a25052413416"
   end
 
   depends_on "openjdk"
