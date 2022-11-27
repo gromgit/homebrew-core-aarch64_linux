@@ -6,8 +6,8 @@ class Mdds < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "69b451e38108463d874aa74896add69ed039c0aace5cd92ddf1af00aface4383"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mdds"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2c5400bc8e73fdc54ef7e1b6c87279f7624f80528da0e3f7a8afccfc57104e0e"
   end
 
   head do
@@ -19,7 +19,11 @@ class Mdds < Formula
   depends_on "autoconf" => :build
   depends_on "boost"
 
-  fails_with gcc: "5" # for C++17
+  on_linux do
+    depends_on "gcc" # for C++17
+  end
+
+  fails_with gcc: "5"
 
   def install
     args = %W[
