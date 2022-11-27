@@ -6,14 +6,8 @@ class Liblbfgs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "06c8d7b71b75a24838acbd0a60a071d146b8befb750d18dd0197acc7a3f4552a"
-    sha256 cellar: :any,                 arm64_monterey: "e65a09362f54852c0b5bbd9a38fc2df634bdd0cd1f151ad2497b287688edb334"
-    sha256 cellar: :any,                 arm64_big_sur:  "77960d72a78a9bfae97e725b8bcf37b5105b5e3254ce319487e0a5b3a707db5f"
-    sha256 cellar: :any,                 ventura:        "1f48ca57c0b49cd4414d8a7462c7495951285c63d4d9490be95bd355e695a431"
-    sha256 cellar: :any,                 monterey:       "7000437bee7f617b05b7f6f6a9adef00f8f8664f37fc34cc6758d461af136b89"
-    sha256 cellar: :any,                 big_sur:        "3b6468ee0f05eae6289940247c51e1012e929a8a033e2227be767d17396f88a7"
-    sha256 cellar: :any,                 catalina:       "668f1c5336818e566dd0cb2e4b1deb0eacdb38fd8c956b1b2e49929f18714104"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c462aa266b91b96ed0f85ce8a495cb29ed9c571943ffb0eb8b65f5bd7406d7cc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/liblbfgs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8fadbb9bd3f1206199918f2fed1d9ae0101f808c0337ebd16dfbcdfa4a46c0df"
   end
 
   depends_on "autoconf" => :build
