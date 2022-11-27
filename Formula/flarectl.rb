@@ -10,6 +10,7 @@ class Flarectl < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "9da163b1680a6cbf8226ebb3dac5dad21564f88cc5aea05c97425313f8872e40"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "54e5c675c84c03899a68916b7ad2a5477a156d3cbbc7ef512252c2e2b5b7ed67"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f048e38cac0f4baf30be52336384e3c517c07a961d90a3c0f847aad62f31906"
+    sha256 cellar: :any_skip_relocation, ventura:        "02ac8abac5e974ec871f6b39c3b57fffc8e2ac202bc529b1b46d678ab8c1ff81"
     sha256 cellar: :any_skip_relocation, monterey:       "309829400937ca37389b4a8e44fdbc2acbda23c586f1a9e4a5efe1c108c2eaec"
     sha256 cellar: :any_skip_relocation, big_sur:        "b007b8787aea4602e65443642443ac7bba86b941d8c0b473588d6eb39195ab92"
     sha256 cellar: :any_skip_relocation, catalina:       "fd476ed991ecdc5d70b2e364a382a93a31e710ea60b60a5d17046a88b309b049"
