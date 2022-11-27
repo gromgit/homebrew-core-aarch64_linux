@@ -1,8 +1,8 @@
 class OpenjdkAT17 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk17u/archive/jdk-17.0.5-ga.tar.gz"
-  sha256 "a3a72a1897b6c01a68307a80a3b987114b7722f2541debd018e362a7c0917b85"
+  url "https://github.com/openjdk/jdk17u/archive/jdk-17.0.4.1-ga.tar.gz"
+  sha256 "9b3e2558590fbb06ae4c02355919b1f75af9c696b786b113088ab6630e425824"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -11,14 +11,8 @@ class OpenjdkAT17 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "0ad3ce7237dbc948aa314be7cebcc729c30bcd8eef08277fa464287f9211c426"
-    sha256 cellar: :any, arm64_monterey: "0e2244e35a350256474b6eb6e03d11af5c0270ab7ca4e6bc710c6273cb087b24"
-    sha256 cellar: :any, arm64_big_sur:  "911d64028e026092ce9f8f4b1a7d3c95bd7d631941d057afd5fec646a5e968d1"
-    sha256 cellar: :any, ventura:        "5c424f6cf45913e05b1b394c2aff0281c0d4e32982a0ee33e05d16144e1a05af"
-    sha256 cellar: :any, monterey:       "c1ac28437f8c07409f386e1a3d4d1738fc70b80081579efb64dd6e831a2d78fc"
-    sha256 cellar: :any, big_sur:        "b9093c0c83b7964496208e4abb8805c335f2c8fc916c85148c08324c64e26a10"
-    sha256 cellar: :any, catalina:       "9e21c33ba30e623252df8f74a33b8db56d61753a56f1c3c2aa9891f174152439"
-    sha256               x86_64_linux:   "75bfd5b65e8718cc6f2818a78d5d279520901f6f049fcbcbe9928304220b7e60"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk@17"
+    sha256 aarch64_linux: "b07332f6c6dd8ff09450f0756bf1d13dede973e03565b80f42cdaedb21317ebe"
   end
 
   keg_only :versioned_formula
@@ -31,6 +25,7 @@ class OpenjdkAT17 < Formula
     depends_on "alsa-lib"
     depends_on "cups"
     depends_on "fontconfig"
+    depends_on "gcc"
     depends_on "libx11"
     depends_on "libxext"
     depends_on "libxrandr"
@@ -40,9 +35,6 @@ class OpenjdkAT17 < Formula
     depends_on "unzip"
     depends_on "zip"
 
-    # FIXME: This should not be needed because of the `-rpath` flag
-    #        we set in `--with-extra-ldflags`, but this configuration
-    #        does not appear to have made it to the linker.
     ignore_missing_libraries "libjvm.so"
   end
 
@@ -61,8 +53,14 @@ class OpenjdkAT17 < Formula
       end
     end
     on_linux do
-      url "https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
-      sha256 "6c714ded7d881ca54970ec949e283f43d673a142fda1de79b646ddd619da9c0c"
+      on_arm do
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz"
+        sha256 "13bfd976acf8803f862e82c7113fb0e9311ca5458b1decaef8a09ffd91119fa4"
+      end
+      on_intel do
+        url "https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
+        sha256 "6c714ded7d881ca54970ec949e283f43d673a142fda1de79b646ddd619da9c0c"
+      end
     end
   end
 
@@ -89,12 +87,10 @@ class OpenjdkAT17 < Formula
       --without-version-pre
     ]
 
-    ldflags = ["-Wl,-rpath,#{loader_path}/server"]
     args += if OS.mac?
-      ldflags << "-headerpad_max_install_names"
-
       %W[
         --enable-dtrace
+        --with-extra-ldflags=-headerpad_max_install_names
         --with-sysroot=#{MacOS.sdk_path}
       ]
     else
@@ -104,7 +100,6 @@ class OpenjdkAT17 < Formula
         --with-fontconfig=#{HOMEBREW_PREFIX}
       ]
     end
-    args << "--with-extra-ldflags=#{ldflags.join(" ")}"
 
     chmod 0755, "configure"
     system "./configure", *args
@@ -120,7 +115,7 @@ class OpenjdkAT17 < Formula
       include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/darwin/*.h"]
       man1.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/man/man1/*"]
     else
-      libexec.install Dir["build/linux-x86_64-server-release/images/jdk/*"]
+      libexec.install Dir["build/*/images/jdk/*"]
       bin.install_symlink Dir[libexec/"bin/*"]
       include.install_symlink Dir[libexec/"include/*.h"]
       include.install_symlink Dir[libexec/"include/linux/*.h"]
