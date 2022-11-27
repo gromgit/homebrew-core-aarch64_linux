@@ -11,19 +11,11 @@ class I686ElfBinutils < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "65a12a7a0fda3fa76164498228ca38199a684e587aeb7191027f062e2c9dcd15"
-    sha256 arm64_monterey: "b165b5ea4d9c0f6c48ae911424b947d0b5fbefe7326a4b08264bcab238adc311"
-    sha256 arm64_big_sur:  "e6fd77d3044070196bcc97994e30103314c202cafbb8d388297b016fe743906a"
-    sha256 ventura:        "d4d611501501328f9de1ca66dc1d9467dc8c5fea3005a8c9ae7f8b60f323439c"
-    sha256 monterey:       "9f98933cb5be01be6656c48b0a6af873d052c0a8d2035764aabacb0aa30f7609"
-    sha256 big_sur:        "770b6be941d02848584d1cde5563ccd28c858016818283ac74e57e5c88026f3b"
-    sha256 catalina:       "de959fa65f1b4ecbf25f0684f652fab3b65fd1112e17a4b92d1295a49dea7c08"
-    sha256 x86_64_linux:   "02f56bd4afbcefb52a060a677150939ccbdb13c19cfa6fc3e99796564c1cb864"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/i686-elf-binutils"
+    sha256 aarch64_linux: "5f849bad31a7563cd0edced66234beedb5fdc8162d15c0d2929c7cd4f29d4d55"
   end
 
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
+  uses_from_macos "texinfo"
 
   def install
     target = "i686-elf"
