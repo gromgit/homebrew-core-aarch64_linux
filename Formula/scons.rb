@@ -8,18 +8,11 @@ class Scons < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aa18ea62fe2e200bc398f7cfa52c480877ac55336893aa749ef4a86328e8bd14"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa18ea62fe2e200bc398f7cfa52c480877ac55336893aa749ef4a86328e8bd14"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aa18ea62fe2e200bc398f7cfa52c480877ac55336893aa749ef4a86328e8bd14"
-    sha256 cellar: :any_skip_relocation, ventura:        "f6d6e507ea5bbeabae6fa2798e660bd809a240aad0fb33f89bbecf4795157448"
-    sha256 cellar: :any_skip_relocation, monterey:       "f6d6e507ea5bbeabae6fa2798e660bd809a240aad0fb33f89bbecf4795157448"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f6d6e507ea5bbeabae6fa2798e660bd809a240aad0fb33f89bbecf4795157448"
-    sha256 cellar: :any_skip_relocation, catalina:       "f6d6e507ea5bbeabae6fa2798e660bd809a240aad0fb33f89bbecf4795157448"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2ffa8002a575f2c7e36d6bb2fa1c2f561cd391681ff6bf8afa0156645066d77"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/scons"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "190d0846f22a0ad3841a7ce2b13c5f3cf985026dccda6ecc40b23d530cd9b895"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     virtualenv_install_with_resources
