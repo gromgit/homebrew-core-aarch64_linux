@@ -2,8 +2,8 @@ class Bluepill < Formula
   desc "Testing tool for iOS that runs UI tests using multiple simulators"
   homepage "https://github.com/MobileNativeFoundation/bluepill"
   url "https://github.com/MobileNativeFoundation/bluepill.git",
-      tag:      "v5.12.1",
-      revision: "dd6d563d8b822113190896dea400d1a837671a6a"
+      tag:      "v5.8.1",
+      revision: "2dfc0a965ab564d015a2a0f00be89edf53c0f256"
   license "BSD-2-Clause"
   head "https://github.com/MobileNativeFoundation/bluepill.git", branch: "master"
 
@@ -16,25 +16,14 @@ class Bluepill < Formula
     regex(/^v(\d+(?:\.\d+)+)$/i)
   end
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e388da5ec366c5bd219f326408e9ec61e039ec088651fbb08ba7cd03524e500"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7373831fe04c0d176b524b5b6b6691f85978938361a943ad61f6d8afd4220cbd"
-    sha256 cellar: :any_skip_relocation, ventura:        "122cdbacd6aef5d7f23813b536e6593531eaed48566e8f25fb071f2336ed55f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "ef1e09d0fe5e2d21734c10e3fee0c9e2756c8ecf53d420e109aa7c672b215cf5"
-  end
-
-  depends_on xcode: ["14.0", :build]
+  depends_on xcode: ["11.2", :build]
   depends_on :macos
 
   def install
-    pbxprojs = ["bluepill", "bp"].map { |name| "#{name}/#{name}.xcodeproj/project.pbxproj" }
-    inreplace pbxprojs, "x86_64", Hardware::CPU.arch.to_s
-
     xcodebuild "-workspace", "Bluepill.xcworkspace",
                "-scheme", "bluepill",
                "-configuration", "Release",
-               "SYMROOT=../",
-               "ARCHS=#{Hardware::CPU.arch}"
+               "SYMROOT=../"
     bin.install "Release/bluepill", "Release/bp"
   end
 
