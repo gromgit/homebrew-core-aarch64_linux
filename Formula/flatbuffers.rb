@@ -1,8 +1,8 @@
 class Flatbuffers < Formula
   desc "Serialization library for C++, supporting Java, C#, and Go"
   homepage "https://google.github.io/flatbuffers"
-  url "https://github.com/google/flatbuffers/archive/v22.11.23.tar.gz"
-  sha256 "8e9bacc942db59ca89a383dd7923f3e69a377d6e579d1ba13557de1fdfddf56a"
+  url "https://github.com/google/flatbuffers/archive/v2.0.8.tar.gz"
+  sha256 "f97965a727d26386afaefff950badef2db3ab6af9afe23ed6d94bfb65f95f37e"
   license "Apache-2.0"
   head "https://github.com/google/flatbuffers.git", branch: "master"
 
@@ -12,14 +12,8 @@ class Flatbuffers < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a8da20e54eac4faa2871abe2bb8f99b183b25083328adf2b9d1cb262a69eac57"
-    sha256 cellar: :any,                 arm64_monterey: "f844a16cacc5c337ce88a1afe6f7fbea2db98c63a63085281c47da9337decb3a"
-    sha256 cellar: :any,                 arm64_big_sur:  "96264bfdb14634ef2712397b2bbcbc5c98ab54ce82ecc8d49aa0b520b394b883"
-    sha256 cellar: :any,                 ventura:        "65bb7edad4778afe70173c252d40363af4e8fc71c9d1a4ec42a92b314f92114d"
-    sha256 cellar: :any,                 monterey:       "997d22279049f9e39844c80f316f72a169a8d5d13e4a5e796dd49d4a8f98a9f0"
-    sha256 cellar: :any,                 big_sur:        "b5a652182350c30e246cf7917e92768ef6e337e013d83f7d01091ffeb6dd3610"
-    sha256 cellar: :any,                 catalina:       "9b6835be6c9cd1b624b3ce93ac85b9104e27c0ed49b91b4f40044cdb18066195"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d2cd1cd803dad119d35e41536ad16ef89e92561d5ca830215c46048f76c4e3b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flatbuffers"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "70df88bc94c2df483c091f63525918f8a1ef53b95350e7025f53265df3f389e6"
   end
 
   depends_on "cmake" => :build
