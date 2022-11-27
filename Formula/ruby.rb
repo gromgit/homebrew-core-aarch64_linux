@@ -1,21 +1,9 @@
 class Ruby < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
+  url "https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.2.tar.gz"
+  sha256 "61843112389f02b735428b53bb64cf988ad9fb81858b8248e22e57336f24a83e"
   license "Ruby"
-  revision 1
-
-  stable do
-    url "https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.2.tar.gz"
-    sha256 "61843112389f02b735428b53bb64cf988ad9fb81858b8248e22e57336f24a83e"
-
-    # Should be updated only when Ruby is updated (if an update is available).
-    # The exception is Rubygem security fixes, which mandate updating this
-    # formula & the versioned equivalents and bumping the revisions.
-    resource "rubygems" do
-      url "https://rubygems.org/rubygems/rubygems-3.3.11.tgz"
-      sha256 "64184aec5bf3d4314eca3b8bae2085c5ddec50564b822340035187431dc1c074"
-    end
-  end
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
@@ -23,19 +11,12 @@ class Ruby < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "75974aaea5681d1d141f12625c15c19e0e0324ade9a5bbe37945c7b4a7323c58"
-    sha256 arm64_monterey: "5059cc4f626901ce0950998db499678b325f1c15c3a60e9cf0715c9dcb001ee0"
-    sha256 arm64_big_sur:  "93b9525b14a167cea3556c9aa1b28a6762524d2fd4d74a4667f01992e7ce9feb"
-    sha256 ventura:        "a02550452c7860b643f73c9cbdf05bae7804c9f45835e8bc5d04b7286ffef742"
-    sha256 monterey:       "ae2d89c336dc4a267ddf433bbd82b1046c24485ca4016430c0fc3c17e5d0ffaf"
-    sha256 big_sur:        "38af8aaf630259083bc70d19d742258ea556a2ae32cdbafa48345c9da000f32d"
-    sha256 catalina:       "49c8242c555781b3bb355e1307fd8ab9757a10b7c4083b824274146f87040b59"
-    sha256 x86_64_linux:   "c6187c24c90f94b51cb5fdc6e20dca92f0e4e3f54c561446f61f4b4bd845a1ec"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby"
+    sha256 aarch64_linux: "8aa861ac7573975f35e788b78e9a2fb8f6e4d0e3bda31bfe95dc2a32f49bf8b0"
   end
 
   head do
-    url "https://github.com/ruby/ruby.git", branch: "master"
+    url "https://github.com/ruby/ruby.git", branch: "trunk"
     depends_on "autoconf" => :build
   end
 
@@ -47,8 +28,15 @@ class Ruby < Formula
   depends_on "readline"
 
   uses_from_macos "libffi"
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
+
+  # Should be updated only when Ruby is updated (if an update is available).
+  # The exception is Rubygem security fixes, which mandate updating this
+  # formula & the versioned equivalents and bumping the revisions.
+  resource "rubygems" do
+    url "https://rubygems.org/rubygems/rubygems-3.3.11.tgz"
+    sha256 "64184aec5bf3d4314eca3b8bae2085c5ddec50564b822340035187431dc1c074"
+  end
 
   def api_version
     Utils.safe_popen_read("#{bin}/ruby", "-e", "print Gem.ruby_api_version")
@@ -104,8 +92,6 @@ class Ruby < Formula
 
     # A newer version of ruby-mode.el is shipped with Emacs
     elisp.install Dir["misc/*.el"].reject { |f| f == "misc/ruby-mode.el" }
-
-    return if build.head? # Use bundled RubyGems for --HEAD (will be newer)
 
     # This is easier than trying to keep both current & versioned Ruby
     # formulae repeatedly updated with Rubygem patches.
