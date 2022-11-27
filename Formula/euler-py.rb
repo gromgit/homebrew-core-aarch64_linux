@@ -8,11 +8,10 @@ class EulerPy < Formula
   head "https://github.com/iKevinY/EulerPy.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "1913cf5a79895977ea9c9bf1e6c3d2e76fb965ebb062c86087859fbd80ecc227"
+    sha256 cellar: :any_skip_relocation, all: "5fc159b1ad9e6d6cd8fd7f7ab14186f6e894e0be2f46d6966f13f72723effec2"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "click" do
     url "https://files.pythonhosted.org/packages/7b/61/80731d6bbf0dd05fe2fe9bac02cd7c5e3306f5ee19a9e6b9102b5784cf8c/click-4.0.tar.gz"
@@ -20,16 +19,20 @@ class EulerPy < Formula
   end
 
   def install
-    ENV["PYTHON"] = python3 = which("python3.11")
-    site_packages = Language::Python.site_packages(python3)
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
 
-    ENV.prepend_create_path "PYTHONPATH", libexec/site_packages
+    xy = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", "#{libexec}/lib/python#{xy}/site-packages"
     resource("click").stage do
-      system python3, *Language::Python.setup_install_args(libexec, python3)
+      system "python3", "setup.py", "install", "--prefix=#{libexec}",
+                        "--single-version-externally-managed",
+                        "--record=installed.txt"
     end
 
-    ENV.prepend_create_path "PYTHONPATH", prefix/site_packages
-    system python3, *Language::Python.setup_install_args(prefix, python3)
+    ENV.prepend_create_path "PYTHONPATH", "#{lib}/python#{xy}/site-packages"
+    system "python3", "setup.py", "install", "--prefix=#{prefix}",
+                      "--single-version-externally-managed",
+                      "--record=installed.txt"
 
     bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
