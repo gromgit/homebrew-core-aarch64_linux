@@ -1,18 +1,13 @@
 class Lout < Formula
   desc "Text formatting like TeX, but simpler"
   homepage "https://savannah.nongnu.org/projects/lout"
-  url "https://github.com/william8000/lout/archive/refs/tags/3.42.2.tar.gz"
-  sha256 "521fcbf9368b248015eac4a836067a68d604949fd29c8ee269159f18d44f8d98"
+  url "https://github.com/william8000/lout/archive/refs/tags/3.42.1.tar.gz"
+  sha256 "b0b2f66a0f959bc80835966c69ae4d4eef2cb0def2b03e634bf1c7e55b1fe6dd"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "8c410ce3f37c6f9c3bdb3242221be764c0088527fb04e0d2162e7cf6d3da7d47"
-    sha256 arm64_monterey: "4f441eb3dae5b3177b2fa97c45560052388a01ef190d7a4a5e6de0d10fe3c20a"
-    sha256 arm64_big_sur:  "8a88cbdcd832cd802454a7895e9ddee449ce5c221237e85ea8352b11b2907593"
-    sha256 monterey:       "b0d5caf6b3f0f11c78b0ca20e07371be67e417119c8801e406819c6b191bcb89"
-    sha256 big_sur:        "6f854396e27fcde9548e2134aa5ee807050d2575134a80c0fc8250312399e736"
-    sha256 catalina:       "30fee71b8a0dff7b5b189734fb23f6d1cc7e8919f88ea88e142a7f6b3c047352"
-    sha256 x86_64_linux:   "339d1a881b67599feaa47478c743ea32be1536b2b4361b1a3947c10779291e03"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lout"
+    sha256 aarch64_linux: "cd10127215070160ec620ca3c3d8161a5e17724b18a66011753ccf07695e7ab3"
   end
 
   def install
