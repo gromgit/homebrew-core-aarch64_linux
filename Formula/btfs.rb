@@ -6,17 +6,20 @@ class Btfs < Formula
   license "GPL-3.0-only"
   head "https://github.com/johang/btfs.git", branch: "master"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ffdfc0e854a9f980b9df510458c5baa0910e5d6fd74862f106ff97f2fc0fe2cc"
-  end
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
-  depends_on "curl"
-  depends_on "libfuse@2"
   depends_on "libtorrent-rasterbar"
-  depends_on :linux # on macOS, requires closed-source macFUSE
+
+  uses_from_macos "curl"
+
+  on_macos do
+    disable! date: "2021-04-08", because: "requires closed-source macFUSE"
+  end
+
+  on_linux do
+    depends_on "libfuse@2"
+  end
 
   def install
     ENV.cxx11
@@ -24,6 +27,18 @@ class Btfs < Formula
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make", "install"
+  end
+
+  def caveats
+    on_macos do
+      <<~EOS
+        The reasons for disabling this formula can be found here:
+          https://github.com/Homebrew/homebrew-core/pull/64491
+
+        An external tap may provide a replacement formula. See:
+          https://docs.brew.sh/Interesting-Taps-and-Forks
+      EOS
+    end
   end
 
   test do
