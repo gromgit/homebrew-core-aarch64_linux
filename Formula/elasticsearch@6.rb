@@ -6,21 +6,15 @@ class ElasticsearchAT6 < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5fb1d3e9bcae848e77b8041e8c870806d4dcf7977ad5c75c6849c4162f16f816"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5fb1d3e9bcae848e77b8041e8c870806d4dcf7977ad5c75c6849c4162f16f816"
-    sha256 cellar: :any_skip_relocation, ventura:        "c76ba900eb45c5187af15e086aa14b5de3455e447b926909a8e27d518cc39c00"
-    sha256 cellar: :any_skip_relocation, monterey:       "c76ba900eb45c5187af15e086aa14b5de3455e447b926909a8e27d518cc39c00"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c76ba900eb45c5187af15e086aa14b5de3455e447b926909a8e27d518cc39c00"
-    sha256 cellar: :any_skip_relocation, catalina:       "c76ba900eb45c5187af15e086aa14b5de3455e447b926909a8e27d518cc39c00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53077defdc696108ea6436fe66aba3b5b6eae9158b5ea2bcd10c015b8c6689b0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/elasticsearch@6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "462371d043d1466fb78bf950eda34805d4ac1cfc1d7d71320a878637a62ebbc0"
   end
 
   keg_only :versioned_formula
 
   deprecate! date: "2022-02-10", because: :unsupported
 
-  depends_on "openjdk@17"
+  depends_on "openjdk"
 
   def cluster_name
     "elasticsearch_#{ENV["USER"]}"
