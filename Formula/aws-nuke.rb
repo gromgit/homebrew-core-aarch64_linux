@@ -2,19 +2,14 @@ class AwsNuke < Formula
   desc "Nuke a whole AWS account and delete all its resources"
   homepage "https://github.com/rebuy-de/aws-nuke"
   url "https://github.com/rebuy-de/aws-nuke.git",
-      tag:      "v2.20.0",
-      revision: "8062fc7d7a4b62772f6d0835aa6b0e46322fa288"
+      tag:      "v2.19.0",
+      revision: "357aa44f5a04df9d1faa8c57bb5ce924871a910a"
   license "MIT"
   head "https://github.com/rebuy-de/aws-nuke.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8cd71872b72b87ee8881ca6ec95eb2e58a9375dfa76a0ba9124d7b9ef8a3ef97"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a76eb92fdc7b43eec7768de8179200cd63b6cd35a316b8403bb664673a3f820"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a76eb92fdc7b43eec7768de8179200cd63b6cd35a316b8403bb664673a3f820"
-    sha256 cellar: :any_skip_relocation, monterey:       "11e96567908e330c5aa577ed5a892e9f0846415fe10145b25a93b52aa37a525a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "11e96567908e330c5aa577ed5a892e9f0846415fe10145b25a93b52aa37a525a"
-    sha256 cellar: :any_skip_relocation, catalina:       "11e96567908e330c5aa577ed5a892e9f0846415fe10145b25a93b52aa37a525a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "940fa58d60e8a4e5e934dc6155ca4b9ef58b2c98fdaa19ee04d59756274991db"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aws-nuke"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c9aa1d7b31a4f20172891a2385c010b547fc1fe1e3bad5da62adc1d03721e386"
   end
 
   depends_on "go" => :build
@@ -36,7 +31,9 @@ class AwsNuke < Formula
 
     pkgshare.install "config"
 
-    generate_completions_from_executable(bin/"aws-nuke", "completion")
+    (bash_completion/"aws-nuke").write Utils.safe_popen_read("#{bin}/aws-nuke", "completion", "bash")
+    (fish_completion/"aws-nuke.fish").write Utils.safe_popen_read("#{bin}/aws-nuke", "completion", "fish")
+    (zsh_completion/"_aws-nuke").write Utils.safe_popen_read("#{bin}/aws-nuke", "completion", "zsh")
   end
 
   test do
