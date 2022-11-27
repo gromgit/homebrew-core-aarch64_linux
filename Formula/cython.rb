@@ -7,15 +7,8 @@ class Cython < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f9f4dc2920d4e31725778411b6922e21c347cdd75148428c23e15de4db901d1a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d9702d7c3cac259bf540260539d96e5cb03d6f2d8fd71b35dfcb55538f4d76d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f92aef3f7e177e949def01ae805c9ba8b37c62857dae46f3f16ec2ed85035382"
-    sha256 cellar: :any_skip_relocation, ventura:        "11531c28dd566645b887d02a2afb80de4885ad657386a44093021d0a48ab6b62"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ef112e38bc7dcd82751a0f322d8a8c88639c3452788ac1a9f1772f558834041"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dd075ab129ce7f981560d2b56459d4741c674293a9d9d0f7398dde8b9496192d"
-    sha256 cellar: :any_skip_relocation, catalina:       "79688ff4f1a8eb6e2c29e5e8eaafd262e19d4437b424f46258de84feab637936"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d2a91820415ec12b81e747aa5b64875a3ea67bbf2eefe2c651641827e16720e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cython"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "04f7303c2bf72e26ab671c8cff537c8e738ff3f7c1c652a9ad8c938811934896"
   end
 
   keg_only <<~EOS
@@ -23,10 +16,10 @@ class Cython < Formula
     Users are advised to use `pip` to install cython
   EOS
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
-    python = "python3.11"
+    python = "python3.10"
     ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python)
     system python, *Language::Python.setup_install_args(libexec, python)
 
@@ -35,7 +28,7 @@ class Cython < Formula
   end
 
   test do
-    python = Formula["python@3.11"].opt_bin/"python3.11"
+    python = Formula["python@3.10"].opt_bin/"python3.10"
     ENV.prepend_path "PYTHONPATH", libexec/Language::Python.site_packages(python)
 
     phrase = "You are using Homebrew"
