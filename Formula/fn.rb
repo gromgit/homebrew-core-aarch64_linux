@@ -10,6 +10,7 @@ class Fn < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed604b55ae49715482f78a62e9ffc1f9bc9d4ce8319e9fa309981d1b6f305e3e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5421d5d17008f4875e0ad4d668c8577e4fbf099361448fea87693e9ebef625c0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4df8321d69f919d23372426207b07fce0e702e8fa6d34014347cfdc121277d20"
+    sha256 cellar: :any_skip_relocation, ventura:        "f5ed8f1dede6bd2b914e538dc43cf7e38e4a344b2ed0daafd886bf6fe44165bb"
     sha256 cellar: :any_skip_relocation, monterey:       "80db7dacc20937b4a32a46718a85d57f13468467bf4e1b3e4b4ccb86d1ca6faf"
     sha256 cellar: :any_skip_relocation, big_sur:        "5903e71285bdbe6076501bce58562eb902dfa0371b19b196be021407182ef430"
     sha256 cellar: :any_skip_relocation, catalina:       "67b518b567ea6a5b00d068693f6efb3b4aad5839296633e9124f5470ff15c657"
