@@ -14,6 +14,7 @@ class Gcalcli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "647db2920a3aac360641d94ff3aba55aba409ff30bfc3dda18ec4c35bf9ed235"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0cb737f803ec855e7d82cc9e45767bec4c3a5f2a5bc9dcf5e71691a1551f33d1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3c926180129ccce11722b008d2076e4b60ccde8afd465214b1645a27a5d44e5"
+    sha256 cellar: :any_skip_relocation, ventura:        "40e153cd7ae1340effb8d7753dbe404df5580d388157caae0c804539c3d2e12c"
     sha256 cellar: :any_skip_relocation, monterey:       "954673f5cec0e8f3f302f21f7542791aef6ccc6a910ceaa0332509d45682b241"
     sha256 cellar: :any_skip_relocation, big_sur:        "15d2d1e712430ed3d19f43bc8acf4609446fc30376471bfd6259b16afa422647"
     sha256 cellar: :any_skip_relocation, catalina:       "cab8f9e8a0d8a56ab6d6fc56de7fac11fd17e575efff7ca35a64835f0bc7259f"
