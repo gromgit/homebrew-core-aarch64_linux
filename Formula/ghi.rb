@@ -7,14 +7,8 @@ class Ghi < Formula
   head "https://github.com/drazisil/ghi.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "43ccd9845bf6f7e2a99d4ced9f23ee0f9e859d15af547ce115d61c149ef12f4c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "43ccd9845bf6f7e2a99d4ced9f23ee0f9e859d15af547ce115d61c149ef12f4c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c96d29c0f571a6444c7472f9b607ceb76d21ca1d05eb5152d97d4d4b7549a8f3"
-    sha256 cellar: :any_skip_relocation, ventura:        "43ccd9845bf6f7e2a99d4ced9f23ee0f9e859d15af547ce115d61c149ef12f4c"
-    sha256 cellar: :any_skip_relocation, monterey:       "43ccd9845bf6f7e2a99d4ced9f23ee0f9e859d15af547ce115d61c149ef12f4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c96d29c0f571a6444c7472f9b607ceb76d21ca1d05eb5152d97d4d4b7549a8f3"
-    sha256 cellar: :any_skip_relocation, catalina:       "c96d29c0f571a6444c7472f9b607ceb76d21ca1d05eb5152d97d4d4b7549a8f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed8ec4aa3e0a7ce79f81e4581d07700c1cc1cc2b6bfbfd59086de317f020340"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ghi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3b755f40e04c92cc2e94477a99f1b2ae9b9e3e843edfa045f38f89e9f37dc517"
   end
 
   uses_from_macos "ruby"
