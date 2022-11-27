@@ -18,6 +18,7 @@ class FbClient < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d46a63ecf65fd97065166fcab2f4386d4c15ae430a49570d645d5744ef594846"
     sha256 cellar: :any,                 arm64_monterey: "4dadf3cfa163f2a583c73c4fa73084d36962566876994c1363d7d779a9654238"
     sha256 cellar: :any,                 arm64_big_sur:  "717e43653007dd176bd23a11099b809d1244d7637aeb1847bfba05bfcfbc78a3"
+    sha256 cellar: :any,                 ventura:        "2b862bdfdce5f2a7b6c167fc96c905b951fc1335669d8b297fdc873449cd7703"
     sha256 cellar: :any,                 monterey:       "6bdf26e1eefe758a492a24c686986513cf79e6db8f3ce36c2116b915b7e3657b"
     sha256 cellar: :any,                 big_sur:        "c0904d61b7d29333c7d2c9d5736c3562506a5500400bf336668b5573864d8b3e"
     sha256 cellar: :any,                 catalina:       "8489f0e39c1ccb91dd6bb54ecddc2c124b3f943587d08e4616d2342a48f3662c"
