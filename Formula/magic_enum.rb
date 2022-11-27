@@ -6,13 +6,17 @@ class MagicEnum < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "b6f522d37fbd96ef7ddff60d8ab46a72843dd9757e858c641f6637b34689cbd3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/magic_enum"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cbbf990e5e834f76e58837dacd4cb4d5b55d45ad57fb90379a3c34ec5caad337"
   end
 
   depends_on "cmake" => :build
 
-  fails_with gcc: "5" # C++17
+  on_linux do
+    depends_on "gcc" # C++17
+  end
+
+  fails_with gcc: "5"
 
   def install
     system "cmake", ".", *std_cmake_args
