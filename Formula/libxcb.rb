@@ -6,28 +6,20 @@ class Libxcb < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "1c61b275a2a61d1f0d089e7c0836e3515f0d344726ff5098f7ae550577b47b4a"
-    sha256 cellar: :any,                 arm64_monterey: "0cdfcc168853b8f09f431c1790ae9b8de5d8567b5fab5381f26af300bb7dc5b3"
-    sha256 cellar: :any,                 arm64_big_sur:  "6bf77051114dec12e0c541bc478d7833a992792047553fc821f3e1a17b82ec38"
-    sha256 cellar: :any,                 ventura:        "87313e4ffe14ad6a8495a2b909963625886a82869e4463c7dc26ee803ad8d23a"
-    sha256 cellar: :any,                 monterey:       "3847eca62ce6198e7a728df8ae431f628091fb8e83956efdc9d527f4d2795ef3"
-    sha256 cellar: :any,                 big_sur:        "c1436addb2cb20e446f6147c10752e517336245b6dcdd946273537e60aa040eb"
-    sha256 cellar: :any,                 catalina:       "035b1d299e3f1b41581e759981cf9a83aee2754c4b744cdcad4c7fe32de83ffb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8e96bb6f8a1e84ddc0b7e32ca3bd3ae05e4006785ca58b8356db00bd81879fa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxcb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2f76805471394b9aee65544f9678660bdf3bd94e30ed05da503dfabc062ed1ff"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.11" => :build # match version in `xcb-proto`
+  depends_on "python@3.10" => :build
   depends_on "xcb-proto" => :build
   depends_on "libpthread-stubs"
   depends_on "libxau"
   depends_on "libxdmcp"
 
   def install
-    python3 = "python3.11"
-
     args = %W[
+      --prefix=#{prefix}
       --sysconfdir=#{etc}
       --localstatedir=#{var}
       --enable-dri3
@@ -35,13 +27,14 @@ class Libxcb < Formula
       --enable-xevie
       --enable-xprint
       --enable-selinux
+      --disable-dependency-tracking
       --disable-silent-rules
       --enable-devel-docs=no
       --with-doxygen=no
-      PYTHON=#{python3}
+      PYTHON=python3
     ]
 
-    system "./configure", *std_configure_args, *args
+    system "./configure", *args
     system "make"
     system "make", "install"
   end
