@@ -12,14 +12,8 @@ class GoAT117 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ea6bf463fa3ccf337f7603dacf55e6aa802b992b018a2f02cdbd6f888cf986f0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1615510e28c108a3793d14da975e1553175b455d315e89ba1d40a6a1379aee6e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a89848112b03e93b55963c98291990b1e8e0e5156a8c8b25210fee9296cebf8c"
-    sha256 cellar: :any_skip_relocation, ventura:        "9ee08494e55609d8ec2f6cc6e86c9648ca34b3409a365ada7268e321a950ef7b"
-    sha256 cellar: :any_skip_relocation, monterey:       "b67539ffcfcd8d21d08bbcc8122eca9ee447aeeec1f69ea186b14196b5a9f208"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f175e7d545df1fd9166d6cdfda5a2a707f9fcb816a9759fa8c75a7db11b4c3b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "086b1fb9f0565cc361ac4f64283a86df7d8de77ff61ecca36082bbd1665914cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae8069616fb2fdbade309d51ef420e3e6c04f9df6a23d4d63178be0ef4bdb640"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go@1.17"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "461577044e8f8b1625b6847e0db3a5d402c5d8a6d44be20be7fc579b35293b53"
   end
 
   keg_only :versioned_formula
