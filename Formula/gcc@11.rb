@@ -12,13 +12,8 @@ class GccAT11 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256                               arm64_monterey: "635922720bf544c76e12f2baf7a567894f516cc84c340c202cf82643181726d8"
-    sha256                               arm64_big_sur:  "6a5bed7fde188c06c9878b922863c4969e0714b45e46795ee5a516f1ce7742d1"
-    sha256                               monterey:       "83f319563787b58129663404c80997ba11adb962f7101cf7711e0337c7763f6f"
-    sha256                               big_sur:        "2cbf39f31657e9d04e872676aedf1d0ff324172adba16d8959a7bdce0cbe323c"
-    sha256                               catalina:       "fbd468d951dfb5b28281300a73dff018dc6ae23044f479bfcd1b8d778a6a67ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4aa2521ece6b78eb7937a86bb184024db6954ac17f9d6be67b3634abe5b2c495"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc@11"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f0e6c5ae14f1b8b084b0c731f1c7fb20f98d39657b498cdade9d7c7f29376aab"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -105,14 +100,10 @@ class GccAT11 < Formula
       system "../configure", *args
       system "make"
 
-      # Do not strip the binaries on macOS, it makes them unsuitable
-      # for loading plugins
-      install_target = OS.mac? ? "install" : "install-strip"
-
       # To make sure GCC does not record cellar paths, we configure it with
       # opt_prefix as the prefix. Then we use DESTDIR to install into a
       # temporary location, then move into the cellar path.
-      system "make", install_target, "DESTDIR=#{Pathname.pwd}/../instdir"
+      system "make", "install-strip", "DESTDIR=#{Pathname.pwd}/../instdir"
       mv Dir[Pathname.pwd/"../instdir/#{opt_prefix}/*"], prefix
     end
 
@@ -187,7 +178,7 @@ class GccAT11 < Formula
       #   * `-idirafter <dir>` instructs gcc to search system header
       #     files after gcc internal header files.
       # For libraries:
-      #   * `-nostdlib -L#{libgcc} -L#{glibc.opt_lib}` instructs gcc to use brewed glibc
+      #   * `-nostdlib -L#{libgcc}` instructs gcc to use brewed glibc
       #     if applied.
       #   * `-L#{libdir}` instructs gcc to find the corresponding gcc
       #     libraries. It is essential if there are multiple brewed gcc
@@ -202,7 +193,7 @@ class GccAT11 < Formula
         + -isysroot #{HOMEBREW_PREFIX}/nonexistent #{system_header_dirs.map { |p| "-idirafter #{p}" }.join(" ")}
 
         *link_libgcc:
-        #{glibc_installed ? "-nostdlib -L#{libgcc} -L#{glibc.opt_lib}" : "+"} -L#{libdir} -L#{HOMEBREW_PREFIX}/lib
+        #{glibc_installed ? "-nostdlib -L#{libgcc}" : "+"} -L#{libdir} -L#{HOMEBREW_PREFIX}/lib
 
         *link:
         + --dynamic-linker #{HOMEBREW_PREFIX}/lib/ld.so -rpath #{libdir}
