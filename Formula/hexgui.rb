@@ -11,6 +11,7 @@ class Hexgui < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "43ce6a38f7648dea8565662c92ca28a992360b3b6d37fb3183b378f7e8e5b9b5"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0f149b8a959fc5ebcb74812f2a7a510ed6b2eb81e5dd4e2c38884227230f7d3b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd232f1904e299ac277879e1336ed8c3bb79b74cdd52a54a45a3f8f28b319a1b"
+    sha256 cellar: :any_skip_relocation, ventura:        "9fd7cce8968fcc39cd73aad8c222263947c8902f26355f40da3e7fc071cb088f"
     sha256 cellar: :any_skip_relocation, monterey:       "0bf896b0edea271ffc39eb6e88ce67f7a11af82fa4fc34300e0f683d62740cd7"
     sha256 cellar: :any_skip_relocation, big_sur:        "c97d11e9eb40d0d036fc47e824535fbd182a9929518413983d097ae069324161"
     sha256 cellar: :any_skip_relocation, catalina:       "208f0a509c18272214b091e415c3b79b936a7d225d003ffaf9d238247bf85b27"
