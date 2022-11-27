@@ -11,6 +11,7 @@ class Cmctl < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "c88f2ea9a0dcf0f7e24e46ba4506ac0eec424e9c85e37cfd86a349d623fa6be2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c8cce9a92d95288546d4199e659e01b1e1ce616dffb2971b3d59a1f372ec9870"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d62264141d530b64c04b11698c2bf2f0e08fe906c6247e8fc78b14aa8f697411"
+    sha256 cellar: :any_skip_relocation, ventura:        "765fb5e70ed9e8e5a94639bcb2a3c282815494cbe8ad2450adf236a06110c9cc"
     sha256 cellar: :any_skip_relocation, monterey:       "3d7a533e94c2ded66842d08ca132b63aa960f3bda2d852d0b6f308757cb280bd"
     sha256 cellar: :any_skip_relocation, big_sur:        "b383fceb63fd840e44cdc2378b62a5129fe209c80618d2c33935a1dd9588f359"
     sha256 cellar: :any_skip_relocation, catalina:       "20fe4d7528c07f392f00c3e18a7b18ae2d37a2775db70a984342727c7655ccee"
