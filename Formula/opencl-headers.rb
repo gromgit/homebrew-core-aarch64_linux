@@ -1,20 +1,14 @@
 class OpenclHeaders < Formula
   desc "C language header files for the OpenCL API"
   homepage "https://www.khronos.org/registry/OpenCL/"
-  url "https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2022.09.30.tar.gz"
-  sha256 "0ae857ecb28af95a420c800b21ed2d0f437503e104f841ab8db249df5f4fbe5c"
+  url "https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2022.05.18.tar.gz"
+  sha256 "88a1177853b279eaf574e2aafad26a84be1a6f615ab1b00c20d5af2ace95c42e"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/OpenCL-Headers.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, ventura:        "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, monterey:       "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, catalina:       "a7c4edafd1bf9f65e7773083fa37a437ca3cc2f653e816588dfb8f52e4c94d35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4699d569be5355b3de7b80a016467d697dda6e2359465d1c687d8968364b0b8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/opencl-headers"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1a014e5a97f25ae5432c9b37f1bb7ad1165f1b4b22751640c5ff65a0b07799de"
   end
 
   keg_only :shadowed_by_macos, "macOS provides OpenCL.framework"
