@@ -1,9 +1,9 @@
 class TomcatAT9 < Formula
   desc "Implementation of Java Servlet and JavaServer Pages"
   homepage "https://tomcat.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.tar.gz"
-  mirror "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.tar.gz"
-  sha256 "ef6564505f43f8f50afc25b7aa3b1ee4bae8c937f1d93131007f179fab92805a"
+  url "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz"
+  mirror "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz"
+  sha256 "e92330e6b0103eb0a5af1ec42f8c0aaaf0da712b7449b962e181a191e8f2264b"
   license "Apache-2.0"
 
   livecheck do
@@ -11,7 +11,8 @@ class TomcatAT9 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c19569699d590e6310b1c82b8d4a3e0dc0d6541d0b25e97cc12df2d99a86c7c7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tomcat@9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5c55e0c387c589a7a5677804c3d4707d85c95937a644253cbe2326d832afebeb"
   end
 
   keg_only :versioned_formula
