@@ -7,14 +7,8 @@ class OclIcd < Formula
   head "https://github.com/OCL-dev/ocl-icd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "646b216df67d7b7e735b31b4a1d24e034ea35d7815bc4cef00dcaf863b8f2234"
-    sha256 cellar: :any,                 arm64_monterey: "7fb55097c6ef597b45a65e372b897f1ced819174b5d2be6998c08f83ec63f7e6"
-    sha256 cellar: :any,                 arm64_big_sur:  "47b40dd06f5bd6a11d7e2ed89e8d257e17f35625b61326114439181d2d53d488"
-    sha256 cellar: :any,                 ventura:        "251788ad1ce52b3d42bb6724df586a3fe8ad5e72a7365a75f058fe96bde1189f"
-    sha256 cellar: :any,                 monterey:       "f40f52fd6d1f469581f51ce37d17ddb865cfa9483b4ff393a19512428828c1f9"
-    sha256 cellar: :any,                 big_sur:        "d943f89dc5553e17dd5135392360658164936a21602213588a879ae6da43a6a7"
-    sha256 cellar: :any,                 catalina:       "669aa5385b9467f450bdbb51bb0a6928d4bd6740589f634e9886bfa2929c065c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8725f2b095bda280dbc3225f40490fc2a1d47c37b0dc50a619e2a2e5e9da3e1e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ocl-icd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c8ae3e8c03a65f10790ff2758e9ee5db464954cd12af05a0885e55ef09a13e84"
   end
 
   keg_only :shadowed_by_macos, "macOS provides OpenCL.framework"
