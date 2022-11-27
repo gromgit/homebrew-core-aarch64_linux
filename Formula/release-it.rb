@@ -3,19 +3,13 @@ require "language/node"
 class ReleaseIt < Formula
   desc "Generic CLI tool to automate versioning and package publishing related tasks"
   homepage "https://github.com/release-it/release-it"
-  url "https://registry.npmjs.org/release-it/-/release-it-15.5.0.tgz"
-  sha256 "6167426a9f25c07743e6723a168bb16ee1f635c8661953439cdc8bc2220c1baa"
+  url "https://registry.npmjs.org/release-it/-/release-it-15.4.1.tgz"
+  sha256 "5142bf2981cb56f0d13ffd7c1c584b106bac732b5cf115786828e641d0f2ab62"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b814c078f96716487e6b6f9c1a5a4a82154d35d2fda6ca5ae65820dc95bd3add"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "403af15d31615e3a4fecc777ac02e52c50d67011d112a76b1946149cb2d18307"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "403af15d31615e3a4fecc777ac02e52c50d67011d112a76b1946149cb2d18307"
-    sha256 cellar: :any_skip_relocation, ventura:        "fc8d0cbdc0a55a9443a96a9958f95e113aac66da7d87dc9c45463c0825839e2d"
-    sha256 cellar: :any_skip_relocation, monterey:       "a0c39c774a4485e968c32f18ed381fcfe4213fc1616671c9cb49006d34aff7e8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a0c39c774a4485e968c32f18ed381fcfe4213fc1616671c9cb49006d34aff7e8"
-    sha256 cellar: :any_skip_relocation, catalina:       "a0c39c774a4485e968c32f18ed381fcfe4213fc1616671c9cb49006d34aff7e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "403af15d31615e3a4fecc777ac02e52c50d67011d112a76b1946149cb2d18307"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/release-it"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "72c36314b269218a43a7636b472d3d5e8adcc7618c7010fd9473b271ef51489c"
   end
 
   depends_on "node"
