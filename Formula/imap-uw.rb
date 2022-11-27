@@ -18,6 +18,7 @@ class ImapUw < Formula
     sha256 cellar: :any,                 arm64_ventura:  "853cb9eabed350f511e68b7198005a276b86efecf79846ed68858d226df546de"
     sha256 cellar: :any,                 arm64_monterey: "52ef7c6c326e06a85524eab3a22f29ff095877b1a640979958b72cede3dc8758"
     sha256 cellar: :any,                 arm64_big_sur:  "3598566905f97346d6691c708ae0c6673d28924265f5e10d33bdb2f8d40aa90b"
+    sha256 cellar: :any,                 ventura:        "3752df02ec24ffaed9fb630721492c24647a5426a0b53678fb4d574b1c99babb"
     sha256 cellar: :any,                 monterey:       "b103e67bafbc727288fe497dc634d65489b9c9272ed23971a35348988e0fd21d"
     sha256 cellar: :any,                 big_sur:        "03c5fc6a4e888a756809749d359b45141b95fbb8b3cfa662ebd9687e55ba958a"
     sha256 cellar: :any,                 catalina:       "f98ac44c956015b954474247210e3b19dbcf629280b69ab2c33386ad6f298c31"
