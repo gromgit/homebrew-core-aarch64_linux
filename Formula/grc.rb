@@ -10,11 +10,10 @@ class Grc < Formula
   head "https://github.com/garabik/grc.git", branch: "devel"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "841503533bb5af397541ac6231a6c836b8079d9024c5045a754759d7c163bf85"
+    sha256 cellar: :any_skip_relocation, all: "f097a568c20af374d96e4261f3188d85dea8b815c1b77f3b85ebf4494932fc0a"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   conflicts_with "cc65", because: "both install `grc` binaries"
 
