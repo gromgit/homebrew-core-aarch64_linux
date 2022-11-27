@@ -11,14 +11,8 @@ class Dvdauthor < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "03d576e3150005a3c6524683afa2d234ac698fc9da7645645f43afb42ffac95a"
-    sha256 cellar: :any,                 arm64_monterey: "0db62ec5affa472a427aecab0add45800f986518df8aba5026e01aff8fbee17e"
-    sha256 cellar: :any,                 arm64_big_sur:  "962690a3bb6779862c3a13bda8e005928743d76106dd5b39e35b22040697b5b3"
-    sha256 cellar: :any,                 monterey:       "7b32bfedcf0a84223d860c886930d507a26006e6f79646fe0746ec681f4228fa"
-    sha256 cellar: :any,                 big_sur:        "0522363b372b042bb8a672ee3d245b8f0551f8dec40bdf791b4c6eb787e810aa"
-    sha256 cellar: :any,                 catalina:       "d79a1513ecb8ba4433fd4a368aaec314416c3ca8c4ab8fcabac6ed1f523e0b14"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7837acd0fce47d23873d6b1f1df3ba1dd75985a60e0b5c33778435eeb3094c08"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dvdauthor"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e0bb4cff2b96079ed3337a76e3746d7702fcc6bb85b85ef114f58fbcbc536883"
   end
 
   # Dvdauthor will optionally detect ImageMagick or GraphicsMagick, too.
@@ -28,8 +22,9 @@ class Dvdauthor < Formula
   depends_on "freetype"
   depends_on "libdvdread"
   depends_on "libpng"
-
-  uses_from_macos "libxml2"
+  on_system :linux, macos: :el_capitan_or_older do
+    depends_on "libxml2"
+  end
 
   def install
     system "./configure", "--disable-dependency-tracking",
