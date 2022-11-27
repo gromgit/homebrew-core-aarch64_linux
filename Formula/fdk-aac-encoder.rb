@@ -6,13 +6,8 @@ class FdkAacEncoder < Formula
   license "Zlib"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "9bbbd22db23e92042e772b5780ad37636cc6c6b8da5f94d016edec8da81a8dd6"
-    sha256 cellar: :any,                 arm64_monterey: "bef622b7d5d4026b6d8615f6a747bcf0128826cfabe9bbe3cce6c0cd139591b9"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd84a279e61d463b1651f1bc2c4fef060f6bc0059cf25c798a2161123cf1368b"
-    sha256 cellar: :any,                 monterey:       "9903add3d37f84fd89d0ba40c8f719a093126dbe5f47c4639c3399109fb855e1"
-    sha256 cellar: :any,                 big_sur:        "f9103b8b675603ca90b3e7f4efb0074a1452e9852d1a1659d2f59a5a025a8c83"
-    sha256 cellar: :any,                 catalina:       "6de255d18252acbcc3e0b8214b9eb46c3c4d2a29b46e6cc15bc7cbc81cd61115"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e40141a65ef6f0c04974df102db68f08866701c9b2e018efcb2c11e84253174f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fdk-aac-encoder"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f8ed630377bb7808d5a6233337abdd46957b9d2f0243bb4605dc11e1bc21caf0"
   end
 
   depends_on "autoconf" => :build
