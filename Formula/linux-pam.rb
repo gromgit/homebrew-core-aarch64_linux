@@ -4,22 +4,19 @@ class LinuxPam < Formula
   url "https://github.com/linux-pam/linux-pam/releases/download/v1.5.2/Linux-PAM-1.5.2.tar.xz"
   sha256 "e4ec7131a91da44512574268f493c6d8ca105c87091691b8e9b56ca685d4f94d"
   license any_of: ["BSD-3-Clause", "GPL-1.0-only"]
-  revision 2
+  revision 1
   head "https://github.com/linux-pam/linux-pam.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 x86_64_linux: "8ae64b723c369fdb8193bbdbc3f825c6daf21c9645a7eb8ba0ea333ae88ebe6c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/linux-pam"
+    sha256 aarch64_linux: "be82e6dd8bdac9365b74fb366be1cf013c2a0dceebe732e5f4dc4329b6b8065e"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "libnsl"
   depends_on "libprelude"
   depends_on "libtirpc"
   depends_on "libxcrypt"
   depends_on :linux
-
-  uses_from_macos "libxcrypt"
 
   skip_clean :la
 
