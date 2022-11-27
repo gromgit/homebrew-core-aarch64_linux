@@ -4,7 +4,6 @@ class RubyAT30 < Formula
   url "https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.4.tar.xz"
   sha256 "8e22fc7304520435522253210ed0aa9a50545f8f13c959fe01a05aea06bef2f0"
   license "Ruby"
-  revision 1
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
@@ -12,14 +11,8 @@ class RubyAT30 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "f60fa5015c6a0accc49de3bb5ec58aa373680c360cce2ef7e40e4d3782c07f30"
-    sha256 arm64_monterey: "ea3b5314bc744f15be0bd5c62070c54ca272fa04190c94e77a28b043ba20dc85"
-    sha256 arm64_big_sur:  "317f70b4a1c98e5e48fe066544e1437fc500af3a155e558dfcbc59550324b6fc"
-    sha256 monterey:       "07da862786dd7246bcb7c77361a8e1dabe867e828804e1e8ae51cb7e9b9c9a1b"
-    sha256 big_sur:        "73b0a3444681005900d75bcfa7a10119c613682ac5f5292c89ef1619461cdbcf"
-    sha256 catalina:       "e20c6864f3a74e86ffc2e529a6bb8bb146f1f0662e430d3995d88e3893f3ed65"
-    sha256 x86_64_linux:   "522e047191cf9e91223903203b9729d4f7a433cabe5a48e51aeaa99847a652fa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby@3.0"
+    sha256 aarch64_linux: "03f6efc38978182c1ff95182ea9fa31c9b2078832176ef7b2e39d90bb48d36c7"
   end
 
   keg_only :versioned_formula
@@ -29,7 +22,6 @@ class RubyAT30 < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   # Should be updated only when Ruby is updated (if an update is available).
