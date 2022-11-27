@@ -9,6 +9,7 @@ class Vrpn < Formula
     sha256 cellar: :any,                 arm64_ventura:  "30798e598e05078f5ce75ca7451df08ccef3810848f61f6870a440c802c2008f"
     sha256 cellar: :any,                 arm64_monterey: "e16ae039e897123feecad339bba4ebdb34773a30924ac0046e5785c86c37e243"
     sha256 cellar: :any,                 arm64_big_sur:  "7937578e438051b79f3270c6fbcd9025d1f4cf42785aa04d72d2c4d245733fa3"
+    sha256 cellar: :any,                 ventura:        "7ad5e83677486dc1cee37c5a2a80c599f9065780af1a7c0660ecbac0fa000bd4"
     sha256 cellar: :any,                 monterey:       "2b172896f3d3c3103643f4d7ded96c1302730677741ee3db5b2cd1d94a65d4b0"
     sha256 cellar: :any,                 big_sur:        "994b39680e7cb653839053a76ad471e29b1fefbce14a9bbf5434d9de8625732d"
     sha256 cellar: :any,                 catalina:       "c3fb15bbfbde5f246e3776cde0489227836a695bef07a7a25cc928f2e28a935b"
