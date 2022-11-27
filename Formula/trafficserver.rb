@@ -7,15 +7,8 @@ class Trafficserver < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "70624fddac88e4b9358006484f69064d205d0573f3f138ec348c6127fd8d3040"
-    sha256 arm64_monterey: "ad1c4081325f16e88ab2e0a5b28fd40e73773ddd991aa58e6e34245ddb186e22"
-    sha256 arm64_big_sur:  "56104bf78296d6ae59562fadeda12ea162c14a201c28cb17a5d492c9ecbb2d13"
-    sha256 ventura:        "ccba3cb74efc81dc4e1386cc943449c49968bee610b8fc8de96441f0448699d8"
-    sha256 monterey:       "9514ddec436b6ca4e6b15745a82bc8e34a442c661422a603bfa5b9bd7c79746b"
-    sha256 big_sur:        "4f106b8242e5f85b470d7ee182426a4fd7f10d4cb48c77cd15b2d494fdf0981a"
-    sha256 catalina:       "cdef360aff3c14b9811e69da4c543bc62edbac14b02c36e3a1a8d70e856a07d2"
-    sha256 x86_64_linux:   "de988a5a2170b86814d457217b72f7f5c0f82f166fbfbea233b25177f3282b0a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/trafficserver"
+    sha256 aarch64_linux: "7cadc0ea4cfb408e9d2955aa40d7c34cc4e5ec10398b5729322fe62497ad96d4"
   end
 
   head do
@@ -39,6 +32,10 @@ class Trafficserver < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool"  => :build
+  end
+
+  on_linux do
+    depends_on "gcc"
   end
 
   fails_with gcc: "5" # needs C++17
