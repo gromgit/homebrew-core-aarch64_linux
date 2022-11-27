@@ -7,14 +7,8 @@ class Libtasn1 < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "9fcf93a7992888a29caf2bc3ad37fb27ee8ceef180367797f4a11040fa761eac"
-    sha256 cellar: :any,                 arm64_monterey: "cf95a18e2fabf1675d77ec8a1abb41fdb091cef689dec3318a420ad2f25beb76"
-    sha256 cellar: :any,                 arm64_big_sur:  "19c6df6badb6b13631670b917595f63a49a06cadd73e2484e5546129cadcf04c"
-    sha256 cellar: :any,                 ventura:        "ee3b036d7d82561e743131c0ec97d4a425e18a593253830753c519a04db6b200"
-    sha256 cellar: :any,                 monterey:       "2aa4f8396ba40b05b237d503eb4de02c37175903d3e0f26d7a48a031707a71b5"
-    sha256 cellar: :any,                 big_sur:        "45a9352536560b5a69bef3e85ca615bad19d44eab23c6ad797c4305a27bd15d8"
-    sha256 cellar: :any,                 catalina:       "7bf11a4603037c490e83caaddc03fba59dfae11385e2f6bd4555b8ee9aaf1507"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e994c7b8c16afb59368d8d09a3f193451c9deab1e4a83f8a94650e27674d9278"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtasn1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa9fe62fe807f60df312f356c9ba5846b32c2fff53068c206d1503328562bca6"
   end
 
   def install
