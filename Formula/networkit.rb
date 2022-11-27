@@ -12,6 +12,7 @@ class Networkit < Formula
     sha256 cellar: :any,                 arm64_ventura:  "225043994ead9033a8edcdcab33b4b2cd8c911058260432712916f528ddd7d3b"
     sha256 cellar: :any,                 arm64_monterey: "b3b2832093a52d3d961fe42465e054ed671fe42dd5ed61e8bd60824e726c8ef5"
     sha256 cellar: :any,                 arm64_big_sur:  "e9e5c140bfb05a6332828086675d8e4bcf068c2c04029ee3d0cc259358c61f23"
+    sha256 cellar: :any,                 ventura:        "e7a30d8fcc8c1c0e2201dc0ccf8f29c29adc6fb83bf5cf379b7defad4edc9821"
     sha256 cellar: :any,                 monterey:       "481afe37e6d16ced50eae8d67ad9740eaba8f696eef74d14af6fee662b11f4ee"
     sha256 cellar: :any,                 big_sur:        "216f7679271686d87637ab1ffbba1b785af560e0b5938da6095891d6d79589f0"
     sha256 cellar: :any,                 catalina:       "3a4d7a959f666b9dfdfa2df033f208de73feb1b08c4f70b72c54ce925760c569"
