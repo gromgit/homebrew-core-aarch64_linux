@@ -9,17 +9,11 @@ class GitRevise < Formula
   head "https://github.com/mystor/git-revise.git", revision: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "187dca8b0f934d9b42adcb5b515fd7949b31893c32be6696d91252fb34601c4f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "187dca8b0f934d9b42adcb5b515fd7949b31893c32be6696d91252fb34601c4f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "187dca8b0f934d9b42adcb5b515fd7949b31893c32be6696d91252fb34601c4f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f6eea6ab552651d2c45035be1db8c1203e0239b4c763612c3e3996f1b94c150f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f6eea6ab552651d2c45035be1db8c1203e0239b4c763612c3e3996f1b94c150f"
-    sha256 cellar: :any_skip_relocation, catalina:       "f6eea6ab552651d2c45035be1db8c1203e0239b4c763612c3e3996f1b94c150f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fd6f6b10d6617c98b3ecf7752848224130a1ad14cc776888d17d65bf0360554"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-revise"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "61ccc3aa347e9a3d4772e18e526c6667e1945af640d7ba69b623aca77c88fe3e"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     virtualenv_install_with_resources
