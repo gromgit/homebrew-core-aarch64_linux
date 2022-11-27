@@ -4,7 +4,6 @@ class HttpLoad < Formula
   url "https://www.acme.com/software/http_load/http_load-09Mar2016.tar.gz"
   version "20160309"
   sha256 "5a7b00688680e3fca8726dc836fd3f94f403fde831c71d73d9a1537f215b4587"
-  license "BSD-2-Clause"
   revision 2
 
   livecheck do
@@ -20,17 +19,11 @@ class HttpLoad < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "4349eea05cac8aef36a6243f8051208cddfda24966252b1ca079c3a89855b913"
-    sha256 cellar: :any,                 arm64_monterey: "b4a5b7e79f524a59d414c14ff40ea8ad5a0871a6c98606e721c8f83320cdd230"
-    sha256 cellar: :any,                 arm64_big_sur:  "f8ad486c4e8c9eb7f5204584c74de6e366e3e2ab1452682dc9904badec75e4d5"
-    sha256 cellar: :any,                 monterey:       "03949d76fa9a565a4e52e3219a097eef0453bb082a77674a16a66e407f6bba24"
-    sha256 cellar: :any,                 big_sur:        "04650d6cbf5dce7109ed1ce45a1bad45ae6d2706d3b5dd2baf411b198a3c5e27"
-    sha256 cellar: :any,                 catalina:       "6989c80f8d5213ed9e9586707e8ce2ab503b5d7bf6d10fadddd8bc310575f452"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5172c491fea4e76a68983d8fe6563a97e2ed2bef73b6bb0c95f5290282343116"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/http_load"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "42a318f3474100a7ff115650ea439d7bd10bf9b9746856e017e17c250354d32c"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     bin.mkpath
@@ -41,7 +34,7 @@ class HttpLoad < Formula
       LIBDIR=#{lib}
       MANDIR=#{man1}
       CC=#{ENV.cc}
-      SSL_TREE=#{Formula["openssl@3"].opt_prefix}
+      SSL_TREE=#{Formula["openssl@1.1"].opt_prefix}
     ]
 
     inreplace "Makefile", "#SSL_", "SSL_"
