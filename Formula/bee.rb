@@ -1,12 +1,13 @@
 class Bee < Formula
   desc "Tool for managing database changes"
   homepage "https://github.com/bluesoft/bee"
-  url "https://github.com/bluesoft/bee/releases/download/1.99/bee-1.99.zip"
-  sha256 "0a7e9000a4891b285d3abfe24beae81eb220fbbe9fdf494d4a1da3e9ce22c572"
+  url "https://github.com/bluesoft/bee/releases/download/1.98/bee-1.98.zip"
+  sha256 "1ee5f4f902103d73d6711c4378e1ed14774e795778132973fadf2173ad6cc0ec"
   license "MPL-1.1"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5f128fa4e7b68524c566ec317267734f961a0b85143bca34f72288c19ed77b17"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bee"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "896b635d45b0fd891b0394a1e218b13c2f9955af064c55c92f473ed711be4d9d"
   end
 
   depends_on "openjdk"
