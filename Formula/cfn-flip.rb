@@ -6,27 +6,27 @@ class CfnFlip < Formula
   url "https://files.pythonhosted.org/packages/ca/75/8eba0bb52a6c58e347bc4c839b249d9f42380de93ed12a14eba4355387b4/cfn_flip-1.3.0.tar.gz"
   sha256 "003e02a089c35e1230ffd0e1bcfbbc4b12cc7d2deb2fcc6c4228ac9819307362"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "74bf24bbe2143370918782c493b21b39abc6257e0ebd307e42ebd15fe8511824"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "74bf24bbe2143370918782c493b21b39abc6257e0ebd307e42ebd15fe8511824"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "74bf24bbe2143370918782c493b21b39abc6257e0ebd307e42ebd15fe8511824"
-    sha256 cellar: :any_skip_relocation, ventura:        "703b9ce40aa1b8cab19e85ce08e228d949d13af32512af0984af022ca9e0c93c"
-    sha256 cellar: :any_skip_relocation, monterey:       "703b9ce40aa1b8cab19e85ce08e228d949d13af32512af0984af022ca9e0c93c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "703b9ce40aa1b8cab19e85ce08e228d949d13af32512af0984af022ca9e0c93c"
-    sha256 cellar: :any_skip_relocation, catalina:       "703b9ce40aa1b8cab19e85ce08e228d949d13af32512af0984af022ca9e0c93c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "362d11490de8c297b78c382109f617f09beb4f8c38f40204923744844a1e1704"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cfn-flip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e06e726ee2e3865c4851f6b1b5d80f9d80c6eb6666e9fb87cbae3d7f5b2bb8f1"
   end
 
-  depends_on "python@3.11"
-  depends_on "pyyaml"
-  depends_on "six"
+  depends_on "python@3.10"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/21/83/308a74ca1104fe1e3197d31693a7a2db67c2d4e668f20f43a2fca491f9f7/click-8.0.1.tar.gz"
+    sha256 "8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"
+  end
+
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/a0/a4/d63f2d7597e1a4b55aa3b4d6c5b029991d3b824b5bd331af8d4ab1ed687d/PyYAML-5.4.1.tar.gz"
+    sha256 "607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
