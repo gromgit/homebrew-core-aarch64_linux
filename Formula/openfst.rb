@@ -11,17 +11,15 @@ class Openfst < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "46eb8cddc071ee5bdf2df6cdb6f1891f2a0cffe8453cdc024970204866ea1918"
-    sha256 cellar: :any,                 arm64_monterey: "ec9cdf817cbee846c502f05800db8d5106d558cd16afa935df22877ef71f98a5"
-    sha256 cellar: :any,                 arm64_big_sur:  "277c268e760b1ea193494379b4e33e2c6d1ea0692be304f80363570dbf04aebf"
-    sha256 cellar: :any,                 monterey:       "1f8a3f063ceef921bd4517956b4706897374f71b4a179bd118704688bd90e572"
-    sha256 cellar: :any,                 big_sur:        "5d66b6cee648a6b9e29bf32b341fa57b0605d331e3a4acebb1f03fc3aa0373b3"
-    sha256 cellar: :any,                 catalina:       "0cfbe1901bd76a5e5ec5fc5a30e9d902b91e70b7305dbc0ee3945ff5e23dde27"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4eb7f68ee3bf2995d4ad13203bc4de0fc4b0c7b29a4e2ff5d884d73f969613b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openfst"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3d6c526aca0529fe919509c8b0552ae784040d456cf31878202f8d92489035cc"
   end
 
-  fails_with gcc: "5" # for C++17
+  on_linux do
+    depends_on "gcc" # for C++17
+  end
+
+  fails_with gcc: "5"
 
   def install
     system "./configure", "--disable-dependency-tracking",
