@@ -1,8 +1,8 @@
 class Sbcl < Formula
   desc "Steel Bank Common Lisp system"
   homepage "http://www.sbcl.org/"
-  url "https://downloads.sourceforge.net/project/sbcl/sbcl/2.2.10/sbcl-2.2.10-source.tar.bz2"
-  sha256 "8cc3c3a8761223adef144a88730b2675083a3b26fa155d70cf91abb935e90833"
+  url "https://downloads.sourceforge.net/project/sbcl/sbcl/2.2.6/sbcl-2.2.6-source.tar.bz2"
+  sha256 "3e23048c8fa826fb913220beb2ac3697dbc5c0cdf2e89fed8db39ed1712304a0"
   license all_of: [:public_domain, "MIT", "Xerox", "BSD-3-Clause"]
   head "https://git.code.sf.net/p/sbcl/sbcl.git", branch: "master"
 
@@ -11,14 +11,8 @@ class Sbcl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3a969c7c463cd42d021f108804db0f1b12d7d1e3e29fb3fd539ff2bfc5e3ccd1"
-    sha256 cellar: :any,                 arm64_monterey: "2b69d1a2cbe7ae55f403f11351a8eb97948e8b5e5cbba76c577c0b01f46be810"
-    sha256 cellar: :any,                 arm64_big_sur:  "8e5becbf68466e0055f970153258fbc11ccef290bd2b9ec11e1566b00981861a"
-    sha256 cellar: :any,                 ventura:        "0214bb4b40301754e78438734a434172411a56c93afc68afdfe7225a7e6c0124"
-    sha256 cellar: :any,                 monterey:       "08ceb2f905fba55983d3851af5b23fa940794b810bd4d6538b2c71f436b83629"
-    sha256 cellar: :any,                 big_sur:        "15c45e72bbfdeee3c3c888c58e9e79f05d7121c3e4c48553751348058fb459a4"
-    sha256 cellar: :any,                 catalina:       "c2cfcb89a28c6c04de8185f40e7acc004bb2d34e892272d9771e678072c2fffa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eaab47f875d930dbb9593074f46157b4a1f8950144d1479bd8a56ddba5002904"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sbcl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d9a5343e7a6d6f7dba4a1ac8546c7dcaa7cf5adb35fb6e39b864fe8e9f1587b9"
   end
 
   depends_on "ecl" => :build
