@@ -7,15 +7,8 @@ class Gistit < Formula
   head "https://github.com/jrbasso/gistit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "49d1941ce30616b39307aa87bb628785e9dbd1017f8b4c312f7d24ff2ebdc40b"
-    sha256 cellar: :any,                 arm64_monterey: "a56fc428aa4bb3b6c0f81c25542fe92b5c78ddc7f10159b1e626dad75356c4f7"
-    sha256 cellar: :any,                 arm64_big_sur:  "ad2652284c1907697535715d31eec9dfb558fe123b8cfe6aabf76ef0bd858cc7"
-    sha256 cellar: :any,                 ventura:        "d1c3d1b689d9f2493532bcde527ce8a8627a40e5a9b40235a6d4934706864ba7"
-    sha256 cellar: :any,                 monterey:       "f4f4aa3d57eb29d34654abc12b9919879e34ecb532b0b77e139216dbc9b6b30e"
-    sha256 cellar: :any,                 big_sur:        "090920bf2761a37d9b9877386a1c0b4466ba80a8c412e807a7a03de14239a3a0"
-    sha256 cellar: :any,                 catalina:       "844955e49de622786a9a676e91b767926ff9953c950db2affa98f6d82978899f"
-    sha256 cellar: :any,                 mojave:         "c55986f583c7d8744c4009f7856d00568ee5c3a31836075dd8b44af7b9807284"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4bf0e5e2cfdb3adf8c3e9170c7239c8d5fe95339c36b13b607adfc926978e61"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gistit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e204aebb46a4845b3838c49a07c43ad92ca5e0acb965a8fdf2fe8848e529699b"
   end
 
   depends_on "autoconf" => :build
