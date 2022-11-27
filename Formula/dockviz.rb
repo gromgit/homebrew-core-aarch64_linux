@@ -2,25 +2,29 @@ class Dockviz < Formula
   desc "Visualizing docker data"
   homepage "https://github.com/justone/dockviz"
   url "https://github.com/justone/dockviz.git",
-      tag:      "v0.6.4",
-      revision: "3ebdb75ed393d6f2eb0b38d83ee22d75c68f6524"
+      tag:      "v0.6.3",
+      revision: "15f77275c4f7e459eb7d9f824b5908c165cd0ba4"
   license "Apache-2.0"
   head "https://github.com/justone/dockviz.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f0cbe120e8493fc17a646efd6bbeb83afa33a4139afe331dbbd2fdf8a4c78a4e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "156ba01d0f667ff0b607b53ca512ac44853d7ade5854f7101e9da9079eaf80ed"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "12168679a5a86a9c4603bea3e4943b92acecc3078dad07c0dc780d036691c8e6"
-    sha256 cellar: :any_skip_relocation, monterey:       "09de9aa1782b96c318d4e2965d565963880dce43fbc6dcca52a396c62f9a44d5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "55392d3b7f022460d56c241b9cc9a382b6b97273ccaf2d94549e6ffd0cbf9a2e"
-    sha256 cellar: :any_skip_relocation, catalina:       "ed054cbc368e35e27139571d63d390f626ff081f7bcff4c4b9ec2a73c9d19814"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d00d55a57d1f8162f08e60ec07d7ac34e5ddc04e6865b09babf4072f4b52c513"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dockviz"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "07d0d95dd9bcbd8be3cd045455cca261e087cdb3c56651cd363b83970318c71e"
   end
 
   depends_on "go" => :build
+  depends_on "govendor" => :build
 
   def install
-    system "go", "build", *std_go_args
+    ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
+
+    (buildpath/"src/github.com/justone/dockviz").install buildpath.children
+    cd "src/github.com/justone/dockviz" do
+      system "govendor", "sync"
+      system "go", "build", "-o", bin/"dockviz"
+      prefix.install_metafiles
+    end
   end
 
   test do
