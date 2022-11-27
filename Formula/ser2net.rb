@@ -14,6 +14,7 @@ class Ser2net < Formula
     sha256 cellar: :any,                 arm64_ventura:  "0cd19c4d51f4229a049fa9590ee8cc1c9c473cbbf249a3147ee37ba3ef552c68"
     sha256 cellar: :any,                 arm64_monterey: "a08aea19b56221d59e84f89d93a374bbf273b72bf66a885e0cc40261c30c9337"
     sha256 cellar: :any,                 arm64_big_sur:  "57058315827d56c4fccf3e203895ec60e6191a250b3c65beee42f570bf6f4599"
+    sha256 cellar: :any,                 ventura:        "dd9787b852f531524268269830a4cdbd463a10549825d2ea6f22bf80342e67f6"
     sha256 cellar: :any,                 monterey:       "2a7f2f26850a05d31b6db0ff196d9baaaca00b70cf62119467476cbde8559661"
     sha256 cellar: :any,                 big_sur:        "cd79c15831a196c95faab70f4a1d158917f293ac7dbbaa71c72b72e4d2b48890"
     sha256 cellar: :any,                 catalina:       "b796023b7cbe8d52c775b0d7dc6afaf32d2b89859b9db0b1fd464db6d37ce37d"
