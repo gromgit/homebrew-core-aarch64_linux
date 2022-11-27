@@ -3,22 +3,17 @@ class GiDocgen < Formula
 
   desc "Documentation tool for GObject-based libraries"
   homepage "https://gnome.pages.gitlab.gnome.org/gi-docgen/"
-  url "https://files.pythonhosted.org/packages/4d/0d/84d2a72a79ba7874b34680cac5b81019f17d58f2b53d88f341c710f1f3cf/gi-docgen-2022.2.tar.gz"
-  sha256 "fc56df0c7d4ab9e5ed83f35b7483cb07d0bf91761e4f139eed363d7e42ffe0c0"
+  url "https://files.pythonhosted.org/packages/25/11/64ea759ba610d7442e8827306d1adba233ca69547d2a0e974f5ea74fa320/gi-docgen-2022.1.tar.gz"
+  sha256 "f91d879ff28d7d5265cde84275ee510e32386bfeb7ec6203a647342aead55cec"
   license any_of: ["Apache-2.0", "GPL-3.0-or-later"]
   head "https://gitlab.gnome.org/GNOME/gi-docgen.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "28fbf04dad49ead32302a60a9e88eaf90115e808e5df9a35e4f90e68ddfd3bd4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bdc1e61f8f6a8cd066c2debbffa52848930ebce700e2481acbcf111ada1df4c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cbc18cdca02978e370cd4994c97e02bdb9083a12a3b9cc5e6647464426d734c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "194f50b12ce008e6c0533b3e658e99e16211edca7eabfc8599eabd742e31eecf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "77f7543d7583217d4092f25743dd70c59f42c75ae3da32f4142c28b2fc33bba5"
-    sha256 cellar: :any_skip_relocation, catalina:       "78d73e32cfc350ea7f501074753dee254854c0c9127955db6377777a9669cd74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "edd16dfe78250cbdc8ce461aa9a925c2121754539f494ad978bc4c21be77a275"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gi-docgen"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8f16bcc90807f03e5506e3a05fd37b5a27ccaeccdf12c7e9a3d58721ce447e78"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   # Source for latest version is not available on PyPI, so using GitHub tarball instead.
   # Issue ref: https://github.com/leohemsted/smartypants.py/issues/8
@@ -28,13 +23,13 @@ class GiDocgen < Formula
   end
 
   resource "Jinja2" do
-    url "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz"
-    sha256 "31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"
+    url "https://files.pythonhosted.org/packages/89/e3/b36266381ae7a1310a653bb85f4f3658c462a69634fa9b2fef76252a50ed/Jinja2-3.1.1.tar.gz"
+    sha256 "640bed4bb501cbd17194b3cace1dc2126f5b619cf068a726b98192a0fde74ae9"
   end
 
   resource "Markdown" do
-    url "https://files.pythonhosted.org/packages/85/7e/133e943e97a943d2f1d8bae0c5060f8ac50e6691754eb9dbe036b047a9bb/Markdown-3.4.1.tar.gz"
-    sha256 "3b809086bb6efad416156e00a0da66fe47618a5d6918dd688f53f40c8e4cfeff"
+    url "https://files.pythonhosted.org/packages/15/06/d60f21eda994b044cbd496892d4d4c5c708aa597fcaded7d421513cb219b/Markdown-3.3.6.tar.gz"
+    sha256 "76df8ae32294ec39dcf89340382882dfa12975f87f45c3ed1ecdb1e8cefc7006"
   end
 
   resource "MarkupSafe" do
@@ -43,8 +38,8 @@ class GiDocgen < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
+    url "https://files.pythonhosted.org/packages/94/9c/cb656d06950268155f46d4f6ce25d7ffc51a0da47eadf1b164bbf23b718b/Pygments-2.11.2.tar.gz"
+    sha256 "4e426f72023d88d03b2fa258de560726ce890ff3b630f88c21cbb8b2503b8c6a"
   end
 
   resource "toml" do
@@ -87,8 +82,7 @@ class GiDocgen < Formula
       </repository>
     EOS
 
-    output = shell_output("#{bin}/gi-docgen generate -C brew.toml brew.gir")
-    assert_match "Creating namespace index file for brew-1.0", output
+    assert_empty shell_output("#{bin}/gi-docgen generate --quiet -C brew.toml brew.gir").chomp
     assert_predicate testpath/"brew-1.0/index.html", :exist?
     assert_predicate testpath/"brew-1.0/struct.Formula.html", :exist?
     assert_match %r{Website.*>https://brew.sh/}, (testpath/"brew-1.0/index.html").read
