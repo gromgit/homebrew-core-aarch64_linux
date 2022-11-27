@@ -7,17 +7,15 @@ class Jinx < Formula
   head "https://github.com/JamesBoer/Jinx.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b2d93c00b2d144ef99c24429b26dea72b62f3cda448c6a926cba1e5b72a4d004"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d860754de69cd9d21e3c09e17e95de5f6e788280d821604a665f0caac7b44e9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a0bbf1aabba2dc324df0900386ad1e3c75f8ec10a61374e23a3ccf16d442a80"
-    sha256 cellar: :any_skip_relocation, monterey:       "07ab4faca2d623a0184edefa4025b099241cb59d257d4c9f1abff32e0aadb1f6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fb9b426b226f2fc1388a52d97acfc55780baf6c7e4f148ce8e114b3a50f453ec"
-    sha256 cellar: :any_skip_relocation, catalina:       "3de90aa148fad5638d83f7214e30aa8a51c7b8c216ed8ce6cce5998be1fd71ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b9985239e95b1b0bb0960948ec9f68263ebf0e53a1954c464674ddbfd4040ef"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jinx"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "672eb113d94dc062dd0b1c1522dc1fc490eb47f4113d6c6776e64e85b8757b7f"
   end
 
   depends_on "cmake" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
