@@ -7,38 +7,28 @@ class Box2d < Formula
   head "https://github.com/erincatto/Box2D.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1f944702e28ec7033d7c7da6daee29d1b6153b737fe515754adf898a701b3cfc"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "360bc1f63ba8cb1f6c97316c00da7ae547bcdb0be6c18f1dd441a338dbed67f6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8f7821254f00753fc07028c94c0c08e42b3e05dbee86119887c43d446b786270"
-    sha256 cellar: :any_skip_relocation, monterey:       "ce38e11785a57c7cd416fd4cb6a9cd2567363e1f1bc4938d010b13e0b2eefc34"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bec33552a3bf184fd75f6adbb193b15595c7729dd7f457c833b7826c6253c28d"
-    sha256 cellar: :any_skip_relocation, catalina:       "5c6508a2d661409273a28ac5f0495d7d7c506b5d1bc7ceeb9ab90298db225178"
-    sha256 cellar: :any_skip_relocation, mojave:         "51709abf7cf22ce487b7fb543c2760add5f6935459b00163567448f47ab6d86c"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "0312b876dd91ae896fc127fa6afe21736b7dd1d55569389a6cfc20af90f83cd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a36a72d0a0d92cc4c981ad6950fcaa106ad23c273e573dd82bdc971379e0ea70"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/box2d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b4ae2b24d8e30a44d9eb5438185f42bbec560bb3d6f7082be68c9d96620b5916"
   end
 
   depends_on "cmake" => :build
-  depends_on "doctest" => :test
 
   def install
-    args = %w[
+    args = std_cmake_args + %w[
       -DBOX2D_BUILD_UNIT_TESTS=OFF
       -DBOX2D_BUILD_TESTBED=OFF
       -DBOX2D_BUILD_EXAMPLES=OFF
     ]
 
-    system "cmake", ".", *args, *std_cmake_args
+    system "cmake", ".", *args
     system "cmake", "--build", "."
     system "cmake", "--install", "."
-    pkgshare.install "unit-test/hello_world.cpp"
+    pkgshare.install "unit-test/hello_world.cpp", "unit-test/doctest.h"
   end
 
   test do
-    system ENV.cxx, pkgshare/"hello_world.cpp",
-                    "-I#{Formula["doctest"].opt_include}/doctest",
-                    "-L#{lib}", "-lbox2d",
-                    "-std=c++11", "-o", testpath/"test"
+    system ENV.cxx, pkgshare/"hello_world.cpp", "-L#{lib}", "-lbox2d",
+      "-std=c++11", "-o", testpath/"test"
     assert_match "[doctest] Status: SUCCESS!", shell_output("./test")
   end
 end
