@@ -6,16 +6,9 @@ class CassandraAT22 < Formula
   sha256 "5496c0254a66b6d50bde7999d1bab9129b0406b71ad3318558f4d7dbfbed0ab9"
   license "Apache-2.0"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "5974043dab4a42016e29a066ec3350be4dd797129b63c3ef5e5037e316b015d8"
-    sha256 cellar: :any_skip_relocation, catalina: "3e083c6e07585547684fa42039189bebe5b5c2f03044f21f984477a2286a6eeb"
-    sha256 cellar: :any_skip_relocation, mojave:   "95c54bb74536958101d4c7c8d659a68d65495c12ea454d98216f782ec58f9e9d"
-  end
-
   keg_only :versioned_formula
 
-  # Original deprecation date: 2022-03-01
-  disable! date: "2022-11-04", because: :unsupported
+  deprecate! date: "2022-03-01", because: :unsupported
 
   depends_on "cython" => :build
   depends_on arch: :x86_64 # openjdk@8 is not supported on ARM
