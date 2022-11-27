@@ -1,18 +1,19 @@
 class Readline < Formula
   desc "Library for command-line editing"
   homepage "https://tiswww.case.edu/php/chet/readline/rltop.html"
-  url "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
-  mirror "https://ftpmirror.gnu.org/readline/readline-8.2.tar.gz"
-  version "8.2.1"
-  sha256 "3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35"
+  url "https://ftp.gnu.org/gnu/readline/readline-8.1.tar.gz"
+  mirror "https://ftpmirror.gnu.org/readline/readline-8.1.tar.gz"
+  version "8.1.2"
+  sha256 "f8ceb4ee131e3232226a17f51b164afc46cd0b9e6cef344be87c65962cb82b02"
   license "GPL-3.0-or-later"
 
   %w[
-    001 bbf97f1ec40a929edab5aa81998c1e2ef435436c597754916e6a5868f273aff7
+    001 682a465a68633650565c43d59f0b8cdf149c13a874682d3c20cb4af6709b9144
+    002 e55be055a68cb0719b0ccb5edc9a74edcc1d1f689e8a501525b3bc5ebad325dc
   ].each_slice(2) do |p, checksum|
     patch :p0 do
-      url "https://ftp.gnu.org/gnu/readline/readline-8.2-patches/readline82-#{p}"
-      mirror "https://ftpmirror.gnu.org/readline/readline-8.2-patches/readline82-#{p}"
+      url "https://ftp.gnu.org/gnu/readline/readline-8.1-patches/readline81-#{p}"
+      mirror "https://ftpmirror.gnu.org/readline/readline-8.1-patches/readline81-#{p}"
       sha256 checksum
     end
   end
@@ -54,14 +55,8 @@ class Readline < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "fba42a9bd6feaa8902ae4491ffdf177662e0a165a0d0ddef0988ad6ecf0f23dd"
-    sha256 cellar: :any,                 arm64_monterey: "9406afa0f7aefbbef37ee193b3b17dd0e08bb2a80e99680cde732289f4819ad2"
-    sha256 cellar: :any,                 arm64_big_sur:  "7012f0f3d05e9ca181c67bd55ffeee000aa557aedcee0e260d75085215e80234"
-    sha256 cellar: :any,                 ventura:        "abe9d3f3eec3ba2339860faa6a978b9909194c65c97a60b0d16f3d6d118879ea"
-    sha256 cellar: :any,                 monterey:       "19e6b02f577010a1a33c6ae6f09e40772d6ab22d94b6cf3455cfed9d301d28cf"
-    sha256 cellar: :any,                 big_sur:        "e6dfc7d95895f18657c0fb15e77a8c104362bb87bafdff770a6a352301cc1082"
-    sha256 cellar: :any,                 catalina:       "ef32c6905cc91e0ff5acfce9ad9e7aba1eecbcc5c79ee4e1e3abfe25fa4bf1a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7dc8f7ebbfcb22adcd5535a8da083ed8aa3c42c8579c465a2263d778868bc058"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/readline"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a1e4722f364ef68edddcb6e2a269c2e7be00be76dca5b0e3a8bb0474ad0f3e85"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
@@ -69,12 +64,17 @@ class Readline < Formula
   uses_from_macos "ncurses"
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--with-curses"
-    # FIXME: Setting `SHLIB_LIBS` should not be needed, but, on Linux,
-    #        many dependents expect readline to link with ncurses and
-    #        are broken without it. Readline should be agnostic about
-    #        the terminfo library on Linux.
-    system "make", "install", "SHLIB_LIBS=-lcurses"
+    args = ["--prefix=#{prefix}"]
+    args << "--with-curses" if OS.linux?
+    system "./configure", *args
+
+    args = []
+    args << "SHLIB_LIBS=-lcurses" if OS.linux?
+    # There is no termcap.pc in the base system, so we have to comment out
+    # the corresponding Requires.private line.
+    # Otherwise, pkg-config will consider the readline module unusable.
+    inreplace "readline.pc", /^(Requires.private: .*)$/, "# \\1"
+    system "make", "install", *args
   end
 
   test do
@@ -89,8 +89,8 @@ class Readline < Formula
         return 0;
       }
     EOS
-
     system ENV.cc, "-L", lib, "test.c", "-L#{lib}", "-lreadline", "-o", "test"
-    assert_equal "test> Hello, World!\nHello, World!", pipe_output("./test", "Hello, World!\n").strip
+    assert_equal "test> Hello, World!\nHello, World!",
+      pipe_output("./test", "Hello, World!\n").strip
   end
 end
