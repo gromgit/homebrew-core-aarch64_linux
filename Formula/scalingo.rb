@@ -9,6 +9,7 @@ class Scalingo < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ef29a3c472091c0ae87334f797ee7717e5af82bb94e0d3aab118fd91e3ccbe83"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bc1d905b97896fadc15c35fd9b1919e870340447ccdba670123e70f1584d8d22"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d72435f55a6ed71af99dde9e6616984976316573649aca5eb4fa3486f567f258"
+    sha256 cellar: :any_skip_relocation, ventura:        "325a7f6395bdd216ddc9ad1530930f62d3d1e32806c5bc89e70fd1a5825acafb"
     sha256 cellar: :any_skip_relocation, monterey:       "7b0b27bc708f76ff706f1e42b46b12938bb14ef3ef63694eaea209b5178f3214"
     sha256 cellar: :any_skip_relocation, big_sur:        "16b83553c886a92f9b690c88e52a60cb2086baa21640421d417136bda7c3ded8"
     sha256 cellar: :any_skip_relocation, catalina:       "ad58eee161d0eb5f9ab3e41084055b684e4213bf1b37be1470bfb39739c63bf8"
