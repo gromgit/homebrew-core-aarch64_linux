@@ -12,14 +12,8 @@ class Certigo < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7030162d50a9cc7a151ef7e5bb30c6ec6de9717c5ed71c56fc207548334142a0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a663a86882876335dfd364332494270957a0b6778975aa0f9e8ba2fd83f8aa52"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c632fa6622d2cd6f5899c3f1682f6646803e9d33efb56b4bc39417d09b55a72"
-    sha256 cellar: :any_skip_relocation, ventura:        "30402885e7dd0a6a968f324ad7da21682b494977c18f8d0ee8ae10fe3b8c471d"
-    sha256 cellar: :any_skip_relocation, monterey:       "f923b26c0f5b4115434a770994e0c791d192a482121840bf82323ae14b1627d5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a69ecd639ae8ae13f627bfb182a1fc29467b6ca58b917863d5d01d09731f98ff"
-    sha256 cellar: :any_skip_relocation, catalina:       "e3f412c147bc0a3b42167d3b0c349b4d6bd175bb4a89fe4603cb68400630c471"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10522c5a7fcd8524a1a0ce6755c2ffba1a6e76e63249f77d24326400c9ddc243"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/certigo"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "90863c5c4497d8da5d548942ab9075fb0d0770156aaccc0b81a8ffd276175aa8"
   end
 
   depends_on "go" => :build
