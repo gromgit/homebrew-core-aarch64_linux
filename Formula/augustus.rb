@@ -1,43 +1,65 @@
 class Augustus < Formula
   desc "Predict genes in eukaryotic genomic sequences"
   homepage "https://bioinf.uni-greifswald.de/augustus/"
-  url "https://github.com/Gaius-Augustus/Augustus/archive/refs/tags/v3.5.0.tar.gz"
-  sha256 "5ed6ce6106303b800c5e91d37a250baff43b20824657b853ae04d11ad8bdd686"
+  url "https://github.com/Gaius-Augustus/Augustus/releases/download/v3.3.3/augustus-3.3.3.tar.gz"
+  sha256 "4cc4d32074b18a8b7f853ebaa7c9bef80083b38277f8afb4d33c755be66b7140"
   license "Artistic-1.0"
-  revision 1
+  revision 2
   head "https://github.com/Gaius-Augustus/Augustus.git", branch: "master"
 
-  bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f1532d78fc1a8b788cf0f3bff293f0ca037157ea1bd84718e61063e6ceff1c4d"
-    sha256 cellar: :any,                 arm64_monterey: "bb001f41a131cf3065eca32fe225afa567728d35b163f98dfd71a57b2aaf2a3d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ce56e04aa4c4f706485616f2a7947ae59538391ec58100e20cbf5216bd3311a9"
-    sha256 cellar: :any,                 monterey:       "ae8d067cd836352d3aea30d22563eba8167fbc8223e24edfab93af36f623f63d"
-    sha256 cellar: :any,                 big_sur:        "955b4dc7f98c97aef46a05c8c1075054186bffa7b79bc49305ae8086f494ec02"
-    sha256 cellar: :any,                 catalina:       "0c01281063e3b4a3de714959e04e30229713e6043ea12fb050e546f7f69f62a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9850f064f781034382d8f821bfffbb2d11492ead09af7f55ebe74a8756ccf8c"
+  livecheck do
+    url "https://bioinf.uni-greifswald.de/augustus/binaries/"
+    regex(/href=.*?augustus[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  depends_on "bamtools"
-  depends_on "boost"
-  depends_on "htslib"
+  bottle do
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/augustus"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b90a9952806f0ee051113d428508015b4bc675cf07d1cfa00bc2f82ad5c02000"
+  end
 
-  uses_from_macos "python" => :build, since: :catalina
+  depends_on "boost" => :build
+  depends_on "bamtools"
+
   uses_from_macos "zlib"
 
+  on_macos do
+    depends_on "gcc"
+  end
+
   def install
+    # Avoid "fatal error: 'sam.h' file not found" by not building bam2wig
+    inreplace "auxprogs/Makefile", "cd bam2wig; make;", "#cd bam2wig; make;"
+
+    # Fix error: api/BamReader.h: No such file or directory
+    inreplace "auxprogs/bam2hints/Makefile",
+      "INCLUDES = /usr/include/bamtools",
+      "INCLUDES = #{Formula["bamtools"].include/"bamtools"}"
+    inreplace "auxprogs/filterBam/src/Makefile",
+      "BAMTOOLS = /usr/include/bamtools",
+      "BAMTOOLS= #{Formula["bamtools"].include/"bamtools"}"
+
+    # Prevent symlinking into /usr/local/bin/
+    inreplace "Makefile", %r{ln -sf.*/usr/local/bin/}, "#ln -sf"
+
     # Compile executables for macOS. Tarball ships with executables for Linux.
     system "make", "clean"
 
-    system "make", "COMPGENEPRED=false",
-                   "INCLUDE_PATH_BAMTOOLS=-I#{Formula["bamtools"].opt_include}/bamtools",
-                   "LIBRARY_PATH_BAMTOOLS=-L#{Formula["bamtools"].opt_lib}",
-                   "INCLUDE_PATH_HTSLIB=-I#{Formula["htslib"].opt_include}/htslib",
-                   "LIBRARY_PATH_HTSLIB=-L#{Formula["htslib"].opt_lib}"
+    cd "src" do
+      if OS.mac?
+        # Clang breaks proteinprofile on macOS. This issue has been first reported
+        # to upstream in 2016 (see https://github.com/nextgenusfs/funannotate/issues/3).
+        # See also https://github.com/Gaius-Augustus/Augustus/issues/64
+        gcc_major_ver = Formula["gcc"].any_installed_version.major
+        with_env("HOMEBREW_CC" => Formula["gcc"].opt_bin/"gcc-#{gcc_major_ver}") do
+          system "make"
+        end
+      else
+        system "make"
+      end
+    end
 
-    # Set PREFIX to prevent symlinking into /usr/local/bin/
-    (buildpath/"tmp/bin").mkpath
-    system "make", "install", "INSTALLDIR=#{prefix}", "PREFIX=#{buildpath}/tmp"
-
+    system "make"
+    system "make", "install", "INSTALLDIR=#{prefix}"
     bin.env_script_all_files libexec/"bin", AUGUSTUS_CONFIG_PATH: prefix/"config"
     pkgshare.install "examples"
   end
