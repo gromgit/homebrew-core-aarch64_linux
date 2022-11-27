@@ -12,14 +12,13 @@ class TclTk < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "55a38f29acf61f16d9a7d91546e14bb102708b9ece4dce5e243cf94a22134259"
-    sha256 arm64_monterey: "03f3d27e2c369dc54fd6ddf037991c7c9eb3bf1e4af9efea87a5f0425cc171d8"
-    sha256 arm64_big_sur:  "f9f9c8e0e9fbea41b9a2890045a2a01f94a74ac8890e49406cc098782fb7e4d3"
-    sha256 ventura:        "6891661ab80a18459d23ac3ebaffa9def7e996bd6f15f229a1a5291faad047fd"
-    sha256 monterey:       "ca15b6e71d81499f80bce95b854138b07bc3843fc8c8d832edef1585da698996"
-    sha256 big_sur:        "7d61f627dce342477e4ebd5e86c226fa2aa77dde6e1e0feb6ae3b5f54cecb7cd"
-    sha256 catalina:       "a6c5e70dcaa9144148b330f06af8209ddae6a6438799ed6aea3d0ca4d97c5444"
-    sha256 x86_64_linux:   "d519790e632e4f6d8ce636c09eef1847335c959ff1ed87d71a7535b27ec53d80"
+    sha256 arm64_ventura:  "53300b4a5e2d7ef71b25b5ecb7b1b20ae435234dd114d2163e643d5857b1de21"
+    sha256 arm64_monterey: "c5878a4780414050c132dfd8cefaf7f009d8809f55ee3049dd7122a54e50dea9"
+    sha256 arm64_big_sur:  "4cab30160b2e7d926c52ad639c53a1471844b114a15cd19b414829615385ad67"
+    sha256 monterey:       "e175685883ef770c7220b5c0b3058acd61dedddc8bbefae348828b68cbeb6514"
+    sha256 big_sur:        "3d0f9ac84a5a01f5d9d241005b6fa93e1a4f356b329dd56746242ff402649d7f"
+    sha256 catalina:       "9a0d3538f62527944ea7905d32532ad8239f6a6dd45f94742a3b2cb72d9f1c10"
+    sha256 x86_64_linux:   "7183c92a7b716deaf436a4a468c6866936a9f1f2b145516c7e6d83f323369da0"
   end
 
   keg_only :provided_by_macos
