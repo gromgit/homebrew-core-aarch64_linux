@@ -7,18 +7,15 @@ class Blis < Formula
   head "https://github.com/flame/blis.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "103cdd90012dd567134b27ed704d763a04d3b1d628e3cea3c17106f5efabc640"
-    sha256 cellar: :any,                 arm64_monterey: "b00ba6ef35a226e90b0bfdf30d7a89ba81d00305fa8d960ccb6fd0aac63d3925"
-    sha256 cellar: :any,                 arm64_big_sur:  "b7bf20b1149ef17db68e5e5626f258e8369f00dbbb22be6c752c298138177aef"
-    sha256 cellar: :any,                 ventura:        "dcec254cbee261d15eebc4d3bd8d698f8af275886c9aca7bb4ce3dc0da961437"
-    sha256 cellar: :any,                 monterey:       "08dc73c2cbce4359b51c2a4c4f78df6350aa24df087b0c1613bb9995717edd68"
-    sha256 cellar: :any,                 big_sur:        "0c21276af8ad03e16deaed43bc146f57aec908e6e4bc95f748cedf2af8c1d3c0"
-    sha256 cellar: :any,                 catalina:       "1feac3394dab398ede9e1540b84c4782ee6e7b916e93327ec68324d1d451db17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "caf7db98c4ec255521ef31d28156bac9f2149ff02be40ad978b6be0c32ac2ba8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/blis"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5fa8f23f998f5a18af371a3a7f79b8f45f764d5beb796876a0ee23d9e14e5a27"
   end
 
   uses_from_macos "python" => :build
+
+  on_linux do
+    depends_on "gcc" => [:build, :test]
+  end
 
   fails_with gcc: "5"
 
