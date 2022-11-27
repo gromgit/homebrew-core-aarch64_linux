@@ -1,21 +1,14 @@
 class Assimp < Formula
   desc "Portable library for importing many well-known 3D model formats"
   homepage "https://www.assimp.org/"
-  url "https://github.com/assimp/assimp/archive/v5.2.5.tar.gz"
-  sha256 "b5219e63ae31d895d60d98001ee5bb809fb2c7b2de1e7f78ceeb600063641e1a"
+  url "https://github.com/assimp/assimp/archive/v5.2.4.tar.gz"
+  sha256 "6a4ff75dc727821f75ef529cea1c4fc0a7b5fc2e0a0b2ff2f6b7993fe6cb54ba"
   license :cannot_represent
   head "https://github.com/assimp/assimp.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "38267be8c3911c4269de574dbb3f7a95523cf3eee9a37867900e35c62304d72a"
-    sha256 cellar: :any,                 arm64_monterey: "41d4dac7a778c2ce90ac37fed8719342f01955f853cc5f22e003039cff473706"
-    sha256 cellar: :any,                 arm64_big_sur:  "3193797fdee877db77e530640ed40ffaedc4faea785e7fb635a33f8f53276cab"
-    sha256 cellar: :any,                 ventura:        "df603dc822f5590620aada3ec00d52e3d4f701ed2ec5dba6c3fd93674fa10ba8"
-    sha256 cellar: :any,                 monterey:       "45a132fbf709f176c786bc68d46762278bb1becb970af8e1c6eae57536d549fa"
-    sha256 cellar: :any,                 big_sur:        "9e9aaeec7e775d4dabfa0bd8fdd7829e1fe41052ffc94e1463012a9c4a0991ab"
-    sha256 cellar: :any,                 catalina:       "36735fe1df202f856c7a30297b99283497ad7bb4d48e95aca55db30c03009084"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2014dd56de28ba603d88dc9df9744569abe50b62d631e2d78e0a08f8e9ff62a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/assimp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4f55ae1144f9de97030b15e46cca63c3b605b8015e2545e16aa1ff8a17e79268"
   end
 
   depends_on "cmake" => :build
@@ -23,24 +16,23 @@ class Assimp < Formula
 
   uses_from_macos "zlib"
 
-  fails_with gcc: "5"
-
-  # Fix for macOS 13, remove in next version
-  patch do
-    url "https://github.com/assimp/assimp/commit/5a89d6fee138f8bc979b508719163a74ddc9a384.patch?full_index=1"
-    sha256 "a5fa5be12dd782617d81cc867b40a0bca32718fda0c6cedcca60e2325de03453"
+  on_linux do
+    depends_on "gcc"
   end
 
+  fails_with gcc: "5"
+
   def install
-    args = %W[
+    args = std_cmake_args + %W[
+      -GNinja
       -DASSIMP_BUILD_TESTS=OFF
-      -DASSIMP_BUILD_ASSIMP_TOOLS=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
 
-    system "cmake", " -S", ".", "-B", "build", "-G", "Ninja", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", *args, ".."
+      system "ninja", "install"
+    end
   end
 
   test do
