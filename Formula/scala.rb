@@ -1,30 +1,37 @@
 class Scala < Formula
   desc "JVM-based programming language"
   homepage "https://www.scala-lang.org/"
-  url "https://github.com/lampepfl/dotty/releases/download/3.2.1/scala3-3.2.1.tar.gz"
-  sha256 "914e96e6d1d73df2fc68985a394e27ccbfb299306d95a9663fa4fefe83349e59"
+  url "https://downloads.lightbend.com/scala/2.13.8/scala-2.13.8.tgz"
+  mirror "https://www.scala-lang.org/files/archive/scala-2.13.8.tgz"
+  mirror "https://downloads.typesafe.com/scala/2.13.8/scala-2.13.8.tgz"
+  sha256 "2cb31d8469c651839f0e9c837a1ab06550d031726752f54906be1b9de01314cf"
   license "Apache-2.0"
 
   livecheck do
-    url "https://www.scala-lang.org/download/"
-    regex(%r{href=.*?download/v?(\d+(?:\.\d+)+)\.html}i)
+    url "https://www.scala-lang.org/files/archive/"
+    regex(/href=.*?scala[._-]v?(\d+(?:\.\d+)+)(?:[._-]final)?\.t/i)
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "de973b41793c7d09a86f220f23c5b2bcd8852a60c3528db3cf1eff5fce4a2f21"
+    sha256 cellar: :any_skip_relocation, all: "933846b03dd486789e966e81e8910129a4f4ccc3d6a29435440a9bf340ef2438"
   end
 
   depends_on "openjdk"
 
   def install
-    rm Dir["bin/*.bat"]
-    libexec.install "lib"
-    prefix.install "bin"
+    # Replace `/usr/local` references for uniform bottles
+    inreplace Dir["man/man1/scala{,c}.1"], "/usr/local", HOMEBREW_PREFIX
+    rm_f Dir["bin/*.bat"]
+    doc.install Dir["doc/*"]
+    share.install "man"
+    libexec.install "bin", "lib"
+    bin.install Dir["#{libexec}/bin/*"]
     bin.env_script_all_files libexec/"bin", Language::Java.overridable_java_home_env
 
     # Set up an IntelliJ compatible symlink farm in 'idea'
     idea = prefix/"idea"
-    idea.install_symlink libexec/"lib"
+    idea.install_symlink libexec/"src", libexec/"lib"
+    idea.install_symlink doc => "doc"
   end
 
   def caveats
