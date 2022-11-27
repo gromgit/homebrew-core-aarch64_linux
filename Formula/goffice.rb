@@ -1,19 +1,26 @@
 class Goffice < Formula
   desc "Gnumeric spreadsheet program"
   homepage "https://gitlab.gnome.org/GNOME/goffice"
-  url "https://download.gnome.org/sources/goffice/0.10/goffice-0.10.53.tar.xz"
-  sha256 "27fd58796faa1cd4cc0120c34ea85315a0891ec71f55bc6793c14ecf168a3f57"
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
+  stable do
+    url "https://download.gnome.org/sources/goffice/0.10/goffice-0.10.52.tar.xz"
+    sha256 "60b9efd94370f0969b394f0aac8c6eb91e15ebc0ce1236b44aa735eb1c98840c"
+
+    # Fix -flat_namespace being used on Big Sur and later.
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+      sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+    end
+  end
+
   bottle do
-    sha256 arm64_ventura:  "2fb61cc9cf1a09b28dd4cce9e605afd312c91650ae6ab8ba4bf70e869aa095eb"
-    sha256 arm64_monterey: "2426ed9aaf3e27647f2c1d2f94f1bbec28508a523a7b3d3c85275b3c3c7be6e4"
-    sha256 arm64_big_sur:  "1f4b90257ea35b0ab860a699a4157c58f516fd1eb4e5b96db57df1b97749b517"
-    sha256 ventura:        "f175281be8b894ac62b17ccbce96fe1fa70f4ef33b191f33cdab07ef7655a66e"
-    sha256 monterey:       "57727191aa501e1a7f354f02bdc3afdcd3dc416fc0341115852d15bd9170cec5"
-    sha256 big_sur:        "4d58399efa826a093d22b526c5d3e8a6411dcd3eebec6dea69741b0338c251d0"
-    sha256 catalina:       "e9d2ffd833d7d450c00deb779bac5dba5721db7b45350ca41b827bb232e50bbe"
-    sha256 x86_64_linux:   "7aca0ab34ebbae29dbe4ea367f1e58feb4e00ca7e011152172265074b561afd6"
+    sha256 arm64_monterey: "822a9b41a614f5c29c665d3f89baf9a0fd35f202f882bc8ba310bca314ba5040"
+    sha256 arm64_big_sur:  "f19ff9d2176f8559fa2c2adcd962cd1d4825922584cdc542ecaec3b0f4f6dabb"
+    sha256 monterey:       "45a0a3a6b8d1dcf201123cd7e2ca3d4d9b73f041cfc8b37613e70d789b255e7d"
+    sha256 big_sur:        "ad365fedda8bde06db2383ea8ec8e7b2eb8a73f144119c039d757f7ae17a8729"
+    sha256 catalina:       "1a2355d6299eb4a1e23927e24f2fedc891b105a6d3401b49a43c48ffc035122d"
+    sha256 x86_64_linux:   "92f81d59a2b32d40cfd3c850a23ccd930c28989520672f326bd25a9478acc66f"
   end
 
   head do

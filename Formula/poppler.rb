@@ -1,8 +1,8 @@
 class Poppler < Formula
   desc "PDF rendering library (based on the xpdf-3.0 code base)"
   homepage "https://poppler.freedesktop.org/"
-  url "https://poppler.freedesktop.org/poppler-22.08.0.tar.xz"
-  sha256 "b493328721402f25cb7523f9cdc2f7d7c59f45ad999bde75c63c90604db0f20b"
+  url "https://poppler.freedesktop.org/poppler-22.05.0.tar.xz"
+  sha256 "a969ced458e050d6202367bd7427054e2bd19bae39e8f969910d3b9151abf958"
   license "GPL-2.0-only"
   head "https://gitlab.freedesktop.org/poppler/poppler.git", branch: "master"
 
@@ -12,15 +12,12 @@ class Poppler < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "0f4133a4f9f614220457adb5f2010f5e38507003ea683f2b495ddbe7849b85eb"
-    sha256 arm64_monterey: "7d082645e0272f32dce02ba14e538961daafbadc0506104c24aa8704e348caca"
-    sha256 arm64_big_sur:  "eecb637cec87c66ac8ff95e2215a632e31e4ec1e8d797dbbddc6b016c341adcf"
-    sha256 ventura:        "7f191ff7754a1ea08e25aa4302d6896eea4c681e44ca4e42f3ce8ba89f0fc103"
-    sha256 monterey:       "7677b6f6205b0cea6269c1dc8c5580e25b7183d64869b3c5493e0f4f2f89b717"
-    sha256 big_sur:        "f27f2e75915739ca671a4c524527f80add251b44076ccd818a0225a7acc37207"
-    sha256 catalina:       "4b7c11b5a1c1fb89435662a0761b1922250eac8727be6f3524a72fe67904ea2e"
-    sha256 x86_64_linux:   "954439909c67a1f4f105040e267be6a58be9a20956e57a29bc7a1cc504a19bd9"
+    sha256 arm64_monterey: "6a9a03ef00b96147cb7dd8f1d55d318ac98577255d21b24b3556514426372127"
+    sha256 arm64_big_sur:  "580dc54efe7f80a7696c3d5a52b3435b6b909d1d34eb334e68fe8d9af7d8a179"
+    sha256 monterey:       "347cea91f23b1c28233e33b891de63326627f20f4b6e2c451f67e7fe11ab7d81"
+    sha256 big_sur:        "c2c904b91a1a56af30804ab486371693daabe5d32d0b82a4e916ac1d551e28ac"
+    sha256 catalina:       "5bb6da938581b58c4c396a988c1cce2c7b0d21196889bf81fc614c36670706f0"
+    sha256 x86_64_linux:   "34b88907d8a4ec05ae6f5a1935593aa605850d3cddce4e9405348bf77c1fd22a"
   end
 
   depends_on "cmake" => :build
@@ -31,17 +28,22 @@ class Poppler < Formula
   depends_on "freetype"
   depends_on "gettext"
   depends_on "glib"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "little-cms2"
   depends_on "nspr"
   depends_on "nss"
   depends_on "openjpeg"
+  depends_on "qt"
 
   uses_from_macos "gperf" => :build
-  uses_from_macos "curl", since: :catalina # 7.55.0 required by poppler
+  uses_from_macos "curl"
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   conflicts_with "pdftohtml", "pdf2image", "xpdf",
     because: "poppler, pdftohtml, pdf2image, and xpdf install conflicting executables"
@@ -56,41 +58,45 @@ class Poppler < Formula
   def install
     ENV.cxx11
 
-    # Fix for BSD sed. Reported upstream at:
-    # https://gitlab.freedesktop.org/poppler/poppler/-/issues/1290
-    inreplace "CMakeLists.txt", "${SED} -i", "\\0 -e"
-
-    # removes /usr/include from CFLAGS (not clear why)
-    ENV["PKG_CONFIG_SYSTEM_INCLUDE_PATH"] = "/usr/include" if MacOS.version < :mojave
-
-    args = std_cmake_args + %W[
+    args = std_cmake_args + %w[
       -DBUILD_GTK_TESTS=OFF
       -DENABLE_BOOST=OFF
       -DENABLE_CMS=lcms2
       -DENABLE_GLIB=ON
       -DENABLE_QT5=OFF
-      -DENABLE_QT6=OFF
+      -DENABLE_QT6=ON
       -DENABLE_UNSTABLE_API_ABI_HEADERS=ON
       -DWITH_GObjectIntrospection=ON
-      -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
 
-    system "cmake", "-S", ".", "-B", "build_shared", *args
-    system "cmake", "--build", "build_shared"
-    system "cmake", "--install", "build_shared"
-
-    system "cmake", "-S", ".", "-B", "build_static", *args, "-DBUILD_SHARED_LIBS=OFF"
-    system "cmake", "--build", "build_static"
-    lib.install "build_static/libpoppler.a"
-    lib.install "build_static/cpp/libpoppler-cpp.a"
-    lib.install "build_static/glib/libpoppler-glib.a"
-
+    system "cmake", ".", *args
+    system "make", "install"
+    system "make", "clean"
+    system "cmake", ".", "-DBUILD_SHARED_LIBS=OFF", *args
+    system "make"
+    lib.install "libpoppler.a"
+    lib.install "cpp/libpoppler-cpp.a"
+    lib.install "glib/libpoppler-glib.a"
     resource("font-data").stage do
       system "make", "install", "prefix=#{prefix}"
+    end
+
+    if OS.mac?
+      libpoppler = (lib/"libpoppler.dylib").readlink
+      [
+        "#{lib}/libpoppler-cpp.dylib",
+        "#{lib}/libpoppler-glib.dylib",
+        "#{lib}/libpoppler-qt#{Formula["qt"].version.major}.dylib",
+        *Dir["#{bin}/*"],
+      ].each do |f|
+        macho = MachO.open(f)
+        macho.change_dylib("@rpath/#{libpoppler}", "#{opt_lib}/#{libpoppler}")
+        macho.write!
+      end
     end
   end
 
   test do
-    system bin/"pdfinfo", test_fixtures("test.pdf")
+    system "#{bin}/pdfinfo", test_fixtures("test.pdf")
   end
 end

@@ -11,8 +11,10 @@ class Acl < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "bda9616eeceada8e39117a143c7ab5a581e58d26c9a6c32acb930c07d8a934d8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/acl"
+    sha256 aarch64_linux: "d0ed605c87873f86934287491bcd0c4cf5221220ac03221c3c9d18abc56db5da"
   end
+
 
   depends_on "attr"
   depends_on :linux

@@ -7,15 +7,12 @@ class AgePluginYubikey < Formula
   head "https://github.com/str4d/age-plugin-yubikey.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6d665ef1bbc559bfa4a217c72ffd3b5cbf3a3328011542881cc695feb3d156b7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1555003a7a5038f24683ca5f6f2dc66913c99518d00a218c1c2cc4f3c65fc04e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44d21604e8bd515f30999a3aa018f1fa58777e63ed30c8958cd16fa10b6758fa"
-    sha256 cellar: :any_skip_relocation, ventura:        "9923d88d3c57492eb4ebee271bbc25d30c96a20f316d2980f0691661c8762852"
-    sha256 cellar: :any_skip_relocation, monterey:       "0c25f61d6a39223f03a30ac927c3696960c92f801fa2de5b1cd88d1eb4b81c3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "29021a7735ca80bef0a0203b12a5e60545c647ef36df11d4e96e2bbee03114d6"
-    sha256 cellar: :any_skip_relocation, catalina:       "ebb3da6e34a60964092ef091785bf7f3bc52ac77718c5bc3b92b48068224720c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2380eb6016c5178c0b6308337606ecc87288fd6c1eab13dcbcac3d114f87dcf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "68a0561a3dce577840b28c257b669d36d642eb4c88f0da84a2f5618bff6aca59"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7cd5ef000e9f3542628a393c64508457224e728fbe6e0299fa0ce5e30bc87103"
+    sha256 cellar: :any_skip_relocation, monterey:       "0cfb5d2c8207d5154aee8229ea6bb8492b50189a7185d8a157fbe7ade9760589"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ea1e1c9b62ef9facf8f3aef7f78be4d4f31d5dfba1b34b8ec19e86619ccc9212"
+    sha256 cellar: :any_skip_relocation, catalina:       "4a2c473eceb783b4a8e3d9d386a467c905b1f818f4872f5a30067d2e56189215"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67361a81761fa0c03aef292d8b0b5c2e91c4798f1b9aa6e898abbf9e71647f06"
   end
 
   depends_on "rust" => :build

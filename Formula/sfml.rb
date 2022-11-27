@@ -5,24 +5,25 @@ class Sfml < Formula
   url "https://www.sfml-dev.org/files/SFML-2.5.1-sources.zip"
   sha256 "bf1e0643acb92369b24572b703473af60bac82caf5af61e77c063b779471bb7f"
   license "Zlib"
-  revision 2
+  revision 1
   head "https://github.com/SFML/SFML.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ca56d2babc673b63418e28ff62d1836e6a6759315327f9ebba79740261f929d4"
-    sha256 cellar: :any,                 arm64_monterey: "31276f049496d80aed1bd4872b5764f26a74693445beb5d1142af08be061dad3"
-    sha256 cellar: :any,                 arm64_big_sur:  "66629eea47ae1f4be17c0c8a662b5a748d508bfd1fa45baac102b6d43977295a"
-    sha256 cellar: :any,                 ventura:        "233a8fb75fbdc79eb9b03c519aa7e9b3e209a74476d113152c6f60d5311b05dd"
-    sha256 cellar: :any,                 monterey:       "2dea0d7dd5f7580840e0610bcdda13bb330009cb72d0d95dc57e5e2bdcbd7cad"
-    sha256 cellar: :any,                 big_sur:        "53876147c9bd9b7dd1f4f165eb398ada5afd80c416ab937868903a5798dadaed"
-    sha256 cellar: :any,                 catalina:       "6cd5cb0527db2de9870ce49e57d74195b1c42be618a28416c8ccfd5c6e82419f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76eb5b0e6826209822a4e8fff4606f6c964e8aa8aaffd4edaef4d7a3811f7ed7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "1c47115d6352b6c60d3d99630532107ee64aa55d1e4f0c0e4cb5da969c6e99fb"
+    sha256 cellar: :any,                 arm64_big_sur:  "ef472896cd55333ffe21c531b3edb055e487f5a675174feacfa6e02269877a6d"
+    sha256 cellar: :any,                 monterey:       "62789446ecdd1939ae40c7a793c5089d44a945245b7169c66c0423e5e76c845d"
+    sha256 cellar: :any,                 big_sur:        "3b8efaafe447f0f3a218eb81a65d92715c35e3a703373256031cb0c3d9d21084"
+    sha256 cellar: :any,                 catalina:       "12898a75c1d21de54fef1ca9c42c2d115d30ffcc9d7b10546c9c8d7428b467fa"
+    sha256 cellar: :any,                 mojave:         "c45c383d9e0049ad94cbadb1f5bdd7b870bb01a9cdc8804f495e3ac48e8955d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35d1a87aeb3e38917032e7cd318742cbe3edc159deb39cfe70534c9ff149d7a1"
   end
 
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "flac"
   depends_on "freetype"
+  depends_on "jpeg"
   depends_on "libogg"
   depends_on "libvorbis"
 
@@ -35,11 +36,13 @@ class Sfml < Formula
     depends_on "systemd"
   end
 
+  # https://github.com/Homebrew/homebrew/issues/40301
+
   def install
     # Fix "fatal error: 'os/availability.h' file not found" on 10.11 and
     # "error: expected function body after function declarator" on 10.12
     # Requires the CLT to be the active developer directory if Xcode is installed
-    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version <= :high_sierra
+    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version <= :sierra
 
     # Always remove the "extlibs" to avoid install_name_tool failure
     # (https://github.com/Homebrew/homebrew/pull/35279) but leave the
@@ -53,9 +56,8 @@ class Sfml < Formula
 
     args << "-DSFML_USE_SYSTEM_DEPS=ON" if OS.linux?
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", *std_cmake_args, *args
+    system "make", "install"
   end
 
   test do

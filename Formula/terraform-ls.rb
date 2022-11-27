@@ -1,8 +1,8 @@
 class TerraformLs < Formula
   desc "Terraform Language Server"
   homepage "https://github.com/hashicorp/terraform-ls"
-  url "https://github.com/hashicorp/terraform-ls/archive/v0.30.0.tar.gz"
-  sha256 "2146c84247c509fb839f575c5917e3b5e5e3a66bb0de6acfc8cb4931c57e6347"
+  url "https://github.com/hashicorp/terraform-ls/archive/v0.27.0.tar.gz"
+  sha256 "25ef850db974bc54d30f6d66d534313c61c16e5bddf8d137654f26fd2c4c274d"
   license "MPL-2.0"
   head "https://github.com/hashicorp/terraform-ls.git", branch: "main"
 
@@ -12,25 +12,14 @@ class TerraformLs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fc6a3777d8108af454680087865081b3732ec2bb69d02a2c9461174672479886"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d4e3bf3d1050c98f9370ef218e64cad548e5959a3fd4d2d7994ed87095945214"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0e5939646d5f1e5ebdbffb16ccbf624f6bbc18c80d625e861fabd7b3afcc8b7c"
-    sha256 cellar: :any_skip_relocation, ventura:        "2c1263714630f1ae96c75e4ca18dd9f554f506deaf3904e2bafd46156b80e5c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "523c9e77595c00eb9ff483ae491d62b8469b9a1a7b407f2488fbf9e30e5d322b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1f4f378671404497329c14b253a654b4874677fb8ecb97504b5a87b45fb859cc"
-    sha256 cellar: :any_skip_relocation, catalina:       "c75b00273c3002896039e711eb3e31e9b69e5a4c99955b2104135ac402053b98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1288f5d6306a690cc599dc987fb39fe26f0a81d69b28f4e2d0687e207a089b15"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/terraform-ls"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c391fd93be163bc9baa23c97f5df7ffa3f4889651530d1d44731843f19d3084d"
   end
 
   depends_on "go" => :build
 
   def install
-    ldflags = %W[
-      -s -w
-      -X main.version=#{version}
-      -X main.versionPrerelease=#{tap.user}
-    ]
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" "))
+    system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
   test do

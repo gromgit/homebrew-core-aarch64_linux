@@ -3,19 +3,17 @@ class Stanc3 < Formula
   homepage "https://github.com/stan-dev/stanc3"
   # git is needed for dune subst
   url "https://github.com/stan-dev/stanc3.git",
-      tag:      "v2.31.0",
-      revision: "554a2ab9aa2c1d3afbd450a93aa19a587d8ed5f1"
+      tag:      "v2.29.2",
+      revision: "2c254b3b11a4dbb82395f016886b557201dad130"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b15f1dc3e954473aa8568dfceb4fd4dc07ec47cff7e6fd43135520039e0c8653"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "866e9100eb80851e0af28ee3e9fca945e1077abc5b6d9a7fc663407f5cddb03a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fbe9f4dadd5549fb10a479b2c4288b39e2f78d20cbf1f978fca935c852acb6e1"
-    sha256 cellar: :any_skip_relocation, ventura:        "8c7d917c01b2ba4b2c2dafc953a5f41ec08f4f98906205ec40304654bd57da90"
-    sha256 cellar: :any_skip_relocation, monterey:       "b787b1138d0dc3ae0e0374e7a73931d0d0d412e11c1ed906e1b3c8e845780bb1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a851b62a300f00fe97c52ba92e369b1f587cc7a40ff3e9a7a30e74fe271647db"
-    sha256 cellar: :any_skip_relocation, catalina:       "9fe673c94fe2c1323ae1218aab6fad68d42a996afd5b20c10829f0d6eb2b3556"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5418bfff61951b04e00ffd6391106ebc8657fffe3cf4bfe24a737eeaee3d5cfb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd4b41210dbcf5a6ffef5c4290ee15323dbe03b9fc79d80d9511e6900f699a6b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ab7b4f9ebd51d78882c0864ef03386060152690b8712b1b6153d5995e785430"
+    sha256 cellar: :any_skip_relocation, monterey:       "3bf2f015ff3055d27aac8cd834f946c6ab357bc7bbd4a7f6c910a90473b6ae88"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d951f0550f2f650e96b642e9fccb9722116098e07c7561075adeeb674698e3d0"
+    sha256 cellar: :any_skip_relocation, catalina:       "5010820eb8e638d588eccfe8a7de119326ed999ea63e4fc748a178ffa9bf8895"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "315bc18c788eae0d1c8498446c75949c56c95c8b9570b702606356efa9237c71"
   end
 
   depends_on "ocaml" => :build

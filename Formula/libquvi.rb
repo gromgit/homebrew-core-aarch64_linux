@@ -5,11 +5,14 @@ class Libquvi < Formula
   sha256 "f5a2fb0571634483e8a957910f44e739f5a72eb9a1900bd10b453c49b8d5f49d"
   revision 2
 
+  livecheck do
+    url :stable
+    regex(%r{url=.*?/libquvi[._-]v?(\d+(?:\.\d+)+)\.t}i)
+  end
+
   bottle do
-    sha256 arm64_ventura:  "75a912bb4c1a1783244fddb4a155dc1dacf1386c782a4da6b477707d42ad74dc"
     sha256 arm64_monterey: "c7334e914191fed570ebfb0c19f3d99c2d6558d9e585f6c7618507e8fa768bf4"
     sha256 arm64_big_sur:  "167718e2a3981fdbfa9b34cddc3c94ed4e0c80f4cbe82749535cd7b7c644d9a5"
-    sha256 ventura:        "c049ae8260d9c3d0d17e653308307ce1cba81ca11ff3fe6593b63c058581468e"
     sha256 monterey:       "f7c71a0bd940fef6b1334b4fe4f3f8022cffb10adffc64a5499b6ca20b420026"
     sha256 big_sur:        "bcabb1b6f7812088c7dce8c919e1200ebc8f726ada4e5dadbf813ae20ec35835"
     sha256 catalina:       "6f98f88d5f98ef09c1aee13b24e89be731c79170b3bce5af1617a5309eade725"
@@ -19,8 +22,6 @@ class Libquvi < Formula
     sha256 el_capitan:     "d91506a098fa564598b4aecbad97a2fa30728fafd8ad82bf8c4ff4bedb8d6c0a"
     sha256 x86_64_linux:   "86842f87a749f377843293787a9ce31911d10715e08e783cebe404d8ecd64e21"
   end
-
-  deprecate! date: "2022-07-04", because: :unmaintained
 
   depends_on "pkg-config" => :build
   depends_on "lua@5.1"

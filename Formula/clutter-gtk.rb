@@ -6,10 +6,8 @@ class ClutterGtk < Formula
   revision 4
 
   bottle do
-    sha256                               arm64_ventura:  "7bdda03538852053c87def6ab4bf02a8a040389e25ddbaafc3a3d1d29de499ae"
     sha256                               arm64_monterey: "28a3283252422dbc864b7beb4c69e377688c33fbb2a0e535c62a9362264162bf"
     sha256                               arm64_big_sur:  "2fe413931adfbb5801835172149dbf10aa1f1cdc669a0a8f973d834a6251fe0f"
-    sha256                               ventura:        "f26d721d02014fdc016c0fec68ed9d2d58b2ea101ed3460bd16566ccd009ea4b"
     sha256                               monterey:       "3940367b212abbe0c266ea8982aa82cc890d8ab8f24c2c851362283a0aef5a3f"
     sha256                               big_sur:        "4d0e9365bfeff618403fb3fa6db9319eb684b4c614af80f1ad6ed0f0fec57db1"
     sha256                               catalina:       "4b5c17d3567f1a5c03f98ccc8d9275f07fa733770d4ee741800505b8894442a1"
@@ -17,9 +15,6 @@ class ClutterGtk < Formula
     sha256                               high_sierra:    "90929f36d6105b2b046e32f2d661c91305b785da535a7654fde19eb89617008e"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae50137a8bf0f24cc4ea36fe43e5d16f295968ab2efa30c9af8abcb5513ba70f"
   end
-
-  # https://blogs.gnome.org/clutter/2022/02/16/retiring-clutter/
-  deprecate! date: "2022-09-21", because: :deprecated_upstream
 
   depends_on "gobject-introspection" => :build
   depends_on "pkg-config" => :build

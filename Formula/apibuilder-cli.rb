@@ -6,8 +6,10 @@ class ApibuilderCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "928a2a30b122f17f8d1c297b5440c8a7b58755aa3da21e0f98f34600171486c4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apibuilder-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "32df141964fc2d4029c510c758333051244147eccd84931d71a21b3903025167"
   end
+
 
   uses_from_macos "ruby"
 

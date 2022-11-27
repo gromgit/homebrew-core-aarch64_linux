@@ -10,20 +10,18 @@ env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_GITHUB_ACTIONS: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
+  HOMEBREW_CHANGE_ARCH_TO_ARM: 1
 
 concurrency:
   group: "tests-${{ github.ref }}"
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
-permissions:
-  contents: read
-
 jobs:
   tap_syntax:
     if: github.repository == 'Homebrew/homebrew-core'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     container:
-      image: ghcr.io/homebrew/ubuntu22.04:master
+      image: ghcr.io/homebrew/ubuntu16.04:master
     env:
       HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
     outputs:
@@ -42,28 +40,22 @@ jobs:
         id: formulae-detect
 
   setup_tests:
-    permissions:
-      pull-requests: read
     if: github.event_name == 'pull_request' && github.repository == 'Homebrew/homebrew-core'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: tap_syntax
     outputs:
       syntax-only: ${{ steps.check-labels.outputs.syntax-only }}
       linux-runner: ${{ steps.check-labels.outputs.linux-runner }}
-      logs-dir: ${{ steps.check-labels.outputs.logs-dir }}
       fail-fast: ${{ steps.check-labels.outputs.fail-fast }}
       test-dependents: ${{ steps.check-labels.outputs.test-dependents }}
       timeout-minutes: ${{ steps.check-labels.outputs.timeout-minutes }}
+      container: ${{ steps.check-labels.outputs.container }}
       test-bot-formulae-args: ${{ steps.check-labels.outputs.test-bot-formulae-args }}
       test-bot-dependents-args: ${{ steps.check-labels.outputs.test-bot-dependents-args }}
     steps:
       - name: Check for CI labels
         id: check-labels
         uses: actions/github-script@v6
-        env:
-          TESTING_FORMULAE: ${{needs.tap_syntax.outputs.testing_formulae}}
-          ADDED_FORMULAE: ${{needs.tap_syntax.outputs.added_formulae}}
-          DELETED_FORMULAE: ${{needs.tap_syntax.outputs.deleted_formulae}}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -85,8 +77,7 @@ jobs:
             if (label_names.includes('CI-linux-self-hosted')) {
               core.setOutput('linux-runner', 'linux-self-hosted-1')
             } else {
-              core.setOutput('linux-runner', 'ubuntu-22.04')
-              core.setOutput('logs-dir', '/github/home/.cache/Homebrew/Logs')
+              core.setOutput('linux-runner', 'ubuntu-latest')
             }
 
             if (label_names.includes('CI-no-fail-fast')) {
@@ -148,13 +139,24 @@ jobs:
               }
             }
 
+            const container = {}
+            if (label_names.includes('CI-linux-wheezy')) {
+              console.log('CI-linux-wheezy label found. Using Linux Debian 7 (Wheezy) container.')
+              container.image = 'homebrew/debian7:latest'
+            } else {
+              console.log('No CI-linux-wheezy label found. Using default Homebrew (Ubuntu 16.04) container.')
+              container.image = 'ghcr.io/homebrew/ubuntu16.04:master'
+            }
+            container.options = '--user=linuxbrew -e GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED'
+            core.setOutput('container', JSON.stringify(container))
+
             const test_bot_formulae_args = ["--only-formulae", "--junit", "--only-json-tab", "--skip-dependents"]
-            test_bot_formulae_args.push(`--testing-formulae="${process.env.TESTING_FORMULAE}"`)
-            test_bot_formulae_args.push(`--added-formulae="${process.env.ADDED_FORMULAE}"`)
-            test_bot_formulae_args.push(`--deleted-formulae="${process.env.DELETED_FORMULAE}"`)
+            test_bot_formulae_args.push('--testing-formulae=${{needs.tap_syntax.outputs.testing_formulae}}')
+            test_bot_formulae_args.push('--added-formulae=${{needs.tap_syntax.outputs.added_formulae}}')
+            test_bot_formulae_args.push('--deleted-formulae=${{needs.tap_syntax.outputs.deleted_formulae}}')
 
             const test_bot_dependents_args = ["--only-formulae-dependents", "--junit"]
-            test_bot_dependents_args.push(`--testing-formulae="${process.env.TESTING_FORMULAE}"`)
+            test_bot_dependents_args.push('--testing-formulae=${{needs.tap_syntax.outputs.testing_formulae}}')
 
             if (label_names.includes('CI-test-bot-fail-fast')) {
               console.log('CI-test-bot-fail-fast label found. Passing --fail-fast to brew test-bot.')
@@ -178,13 +180,6 @@ jobs:
               console.log('No CI-skip-recursive-dependents label found. Not passing --skip-recursive-dependents to brew test-bot.')
             }
 
-            if (label_names.includes('CI-skip-livecheck')) {
-              console.log('CI-skip-livecheck label found. Passing --skip-livecheck to brew test-bot.')
-              test_bot_formulae_args.push('--skip-livecheck')
-            } else {
-              console.log('No CI-skip-livecheck label found. Not passing --skip-livecheck to brew test-bot.')
-            }
-
             core.setOutput('test-bot-formulae-args', test_bot_formulae_args.join(" "))
             core.setOutput('test-bot-dependents-args', test_bot_dependents_args.join(" "))
 
@@ -194,16 +189,15 @@ jobs:
     strategy:
       matrix:
         include:
-          - runner: "13-arm64-${{github.run_id}}-${{github.run_attempt}}"
-          - runner: "12-arm64"
-          - runner: "12-${{github.run_id}}-${{github.run_attempt}}"
-          - runner: "11-arm64"
-          - runner: "11-${{github.run_id}}-${{github.run_attempt}}"
-          - runner: "10.15-${{github.run_id}}-${{github.run_attempt}}"
+          - runner: '12-arm64-${{github.run_id}}-${{github.run_attempt}}'
+            ephemeral: true
+          - runner: '12-arm64'
+          - runner: '12'
+          - runner: '11-arm64'
+          - runner: '11'
+          - runner: '10.15'
           - runner: ${{needs.setup_tests.outputs.linux-runner}}
-            container:
-              image: ghcr.io/homebrew/ubuntu22.04:master
-              options: --user=linuxbrew -e GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED
+            container: ${{fromJson(needs.setup_tests.outputs.container)}}
             workdir: /github/home
             timeout: 4320
       fail-fast: ${{fromJson(needs.setup_tests.outputs.fail-fast)}}
@@ -222,6 +216,8 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           echo 'PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' >> $GITHUB_ENV
+          # TODO: remove the line below once set in the runner .env file
+          echo 'GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED=1' >> $GITHUB_ENV
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -238,31 +234,24 @@ jobs:
           cd bottles
           brew test-bot ${{ needs.setup_tests.outputs.test-bot-formulae-args }}
 
-      - name: Failures summary for brew test-bot --only-formulae
+      - name: Failures summary for brew test-bot ${{ needs.setup_tests.outputs.test-bot-formulae-args }}
         if: always()
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/steps_output.txt
-          step_name: 'Build summary on ${{ matrix.runner }}'
+        run: |
+          touch bottles/steps_output.txt
+          cat bottles/steps_output.txt
+          rm bottles/steps_output.txt
 
       - name: Output brew linkage result
         if: always()
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/linkage_output.txt
-          step_name: '`brew linkage` output on ${{ matrix.runner }}'
-          collapse: 'true'
+        run: |
+          cat bottles/linkage_output.txt
+          rm bottles/linkage_output.txt
 
       - name: Output brew bottle result
         if: always()
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/bottle_output.txt
-          step_name: '`brew bottle` output on ${{ matrix.runner }}'
-          collapse: 'true'
+        run: |
+          cat bottles/bottle_output.txt
+          rm bottles/bottle_output.txt
 
       - name: Run brew test-bot ${{ needs.setup_tests.outputs.test-bot-dependents-args }} --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
         if: ${{(success() || failure()) && fromJson(needs.setup_tests.outputs.test-dependents)}}
@@ -272,19 +261,17 @@ jobs:
 
       - name: Failures summary for brew test-bot ${{ needs.setup_tests.outputs.test-bot-dependents-args }} --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
         if: ${{always() && fromJson(needs.setup_tests.outputs.test-dependents) == true}}
-        uses: Homebrew/actions/failures-summary-and-bottle-result@master
-        with:
-          workdir: ${{matrix.workdir || github.workspace}}
-          result_path: bottles/steps_output.txt
-          step_name: 'Dependent summary on ${{ matrix.runner }}'
-          collapse: 'true'
+        run: |
+          touch bottles/steps_output.txt
+          cat bottles/steps_output.txt
+          rm bottles/steps_output.txt
 
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@main
         with:
           name: logs-${{ matrix.runner }}
-          path: ${{ runner.os == 'Linux' && needs.setup_tests.outputs.logs-dir || format('{0}/bottles/logs', matrix.workdir || github.workspace) }}
+          path: ${{matrix.workdir || github.workspace}}/bottles/logs
 
       - name: Delete logs and home
         if: always()
@@ -318,7 +305,7 @@ jobs:
         run: rm -rvf bottles/failed
 
       - name: Upload bottles
-        if: always() && steps.bottles.outputs.count > 0
+        if: always() && steps.bottles.outputs.count > 0 && !matrix.ephemeral
         uses: actions/upload-artifact@main
         with:
           name: bottles

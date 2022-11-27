@@ -1,8 +1,8 @@
 class Bazel < Formula
   desc "Google's own build tool"
   homepage "https://bazel.build/"
-  url "https://github.com/bazelbuild/bazel/releases/download/5.3.2/bazel-5.3.2-dist.zip"
-  sha256 "3880ad919592d1e3e40c506f13b32cd0a2e26f129d87cb6ba170f1801d7d7b82"
+  url "https://github.com/bazelbuild/bazel/releases/download/5.1.1/bazel-5.1.1-dist.zip"
+  sha256 "7f5d3bc1d344692b2400f3765fd4b5c0b636eb4e7a8a7b17923095c7b56a4f78"
   license "Apache-2.0"
 
   livecheck do
@@ -11,13 +11,12 @@ class Bazel < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "26f9fc1f9997b0c9e644f47d2ba65057e9b5b92437bec769b5166082d74373d0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57a0872da19e741ab0f80654aeea840b0298ff854568c683a444b34bf7f93378"
-    sha256 cellar: :any_skip_relocation, ventura:        "db1e8176e47e4119629efe0fc7b84d788ba835d990b96a09d008dc0231b23d86"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3fa6eeb3cde5a1146ab81cf47bfc4e8553505de816682b51e07c9c5a5c75d4f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b2a6154e42833bc6b95288c1506e03218e856671d59f386933f036162483f99c"
-    sha256 cellar: :any_skip_relocation, catalina:       "6d3f80d9893f122a93ed8808ab4bd2e1eaa26ddf19e7d0f9922d66f886c42187"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff2d7abde2f67dbd37ef09ac47796ecaa748253ef8817bc4b3d9ccbaa3f951b6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e645907b78298101e6bc245aea0d45367ebd2a2e3d29f43c00fbd0dc74bc045"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "debe0b683d1db63c758fead8c4d3f7d71ae31f56ec1ddb855c778c311ed37ad6"
+    sha256 cellar: :any_skip_relocation, monterey:       "f8ffa9d8a6b09958b4dff10c0449b06a1cab5e504c409d0e8cb787f94a0400b1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5bfd75cf4c88196ab4a83519d3ed45fe66b045e40b2da3e68ba5b83a0ce8aa5b"
+    sha256 cellar: :any_skip_relocation, catalina:       "255b0b5cd354106d3af40604eefc3e16f5f6f921260dc1f6d1bd89f8a8ead6b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f11486934ca61d04c4e9430a1b79901e25f02e743cc8b1b392bb966eda5a59f1"
   end
 
   depends_on "python@3.10" => :build
@@ -70,10 +69,6 @@ class Bazel < Formula
   end
 
   test do
-    # linux test failed due to `bin/bazel-real' as a zip file: (error: 5): Input/output error` issue
-    # it works out locally, thus bypassing the test as a whole
-    return if OS.linux?
-
     touch testpath/"WORKSPACE"
 
     (testpath/"ProjectRunner.java").write <<~EOS

@@ -9,19 +9,17 @@ class Tarsnapper < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8690c0a428a6aec75099a4074a09fec690b075b637faf4516e31689ba0895997"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "115d72f69bbae2c7d0bcb2a6fd29c6a81b4d4c396f323291260de87ec994ed69"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68cd9c18598e426c1543864175e1750c79b3226cba74dc2407c8458bbb1f38ec"
-    sha256 cellar: :any_skip_relocation, ventura:        "491055fc9954b048f053a207620e530ccf0c9f6316165be99c68304d04276c22"
-    sha256 cellar: :any_skip_relocation, monterey:       "132423d27552e162f1559a74619216f82989b45ba6180023eab2f819de89e3cc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a1b48f1909e44f5c9e80320b4c3f3b8a73393c23aab7e6a37d35a33ff403b04d"
-    sha256 cellar: :any_skip_relocation, catalina:       "2e8d49bfaef413323218d6ef7f49e55d360d554c29abcd4e64a1b3c20198955a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f08e3a8c30c95c7242dd60019f249fc5de32e1b4483d403976c986d06632b4de"
+    sha256 cellar: :any,                 arm64_monterey: "ac8f71359974b87ec296543400b6feed59990d637bb39bd76693f532901a9ba1"
+    sha256 cellar: :any,                 arm64_big_sur:  "fb9e4083414f5e3c529a444047e4a840fbe008d8e1210ca35183c95e284712c5"
+    sha256 cellar: :any,                 monterey:       "30725e21171a6c3151f778e5c710ce155aba69a5778610596df6b3b6fe6b944f"
+    sha256 cellar: :any,                 big_sur:        "766dad885fa778bda3d99c853e14d4e3d179b9a1c11131165c4dd7875553d29f"
+    sha256 cellar: :any,                 catalina:       "4e95af80521f93738700549a1683cf9a73c776d637587c065e7c0fa56985168e"
+    sha256 cellar: :any,                 mojave:         "09e4372f39f9cb0d141ebc4d89835ebb6787baa3c0a20e6b791a919168035428"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f9c0304d01b9274fcd7acb0a8cb66610cac32f1c3aaf7e0b05b36c7ddd1b384"
   end
 
-  depends_on "python@3.11"
-  depends_on "pyyaml"
+  depends_on "libyaml"
+  depends_on "python@3.10"
   depends_on "six"
   depends_on "tarsnap"
 
@@ -38,6 +36,11 @@ class Tarsnapper < Formula
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+  end
+
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   def install

@@ -1,21 +1,18 @@
 class Rustfmt < Formula
   desc "Format Rust code"
   homepage "https://rust-lang.github.io/rustfmt/"
-  url "https://github.com/rust-lang/rustfmt/archive/refs/tags/v1.5.1.tar.gz"
-  sha256 "dc29a1c066fe4816e1400655c676d632335d667c3b0231ce344b2a7b02acc267"
+  url "https://github.com/rust-lang/rustfmt/archive/refs/tags/v1.4.38.tar.gz"
+  sha256 "4856cac540a6d894bc019285b690cebd2076aa8067bd8509ec176645c47a31bf"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/rust-lang/rustfmt.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ae00013ef65a9ed015c968b8ee9daff7e6147cc5a99c8cdac657ee92f4a8461d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f3812711969be43a9a8a2636b5aa7a76fdf8f1a4b59301cf3224cf36e1ab3422"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b44fb4f1512e6932dae71f77992458c47ef45d26efcfe2915c734b692385d19"
-    sha256 cellar: :any_skip_relocation, ventura:        "f35c099a16fd131a423d5a181730d569332963687e9b9d052b1ccda54daa5569"
-    sha256 cellar: :any_skip_relocation, monterey:       "95e6c58fe6e57aab6b4824e79eca7f1985cdd57c30e4d8dbb8bdc6c54b4c57c6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f1a7a2e82215d39777dd959159ae96d130265f8186e64b15254912b1553e4181"
-    sha256 cellar: :any_skip_relocation, catalina:       "1a2d1361705ac673b214c228679a84ede04c843448eb756ae71f5b1ab3e7db01"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b770894376d5273adc2e8731db63e00a32ea93b05cad6ab94a401e7aa1a9ead"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "afb003f601f7e97ce4ef1a4cf23f9e5b35eab087d31757b37c4ea804a278e274"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1047fcdd002ac5189641374ba680ea9cb92d13b52ced30698d8d3d8853ad7dd6"
+    sha256 cellar: :any_skip_relocation, monterey:       "e780b81a82b67a572eb2a46d7392db6f107ce1d4870e5d77ae169c0095d65dac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2cfa6db0233217adb5d9a0f9ff64253afa137ca9b0983a5d332b0b7c9ca705eb"
+    sha256 cellar: :any_skip_relocation, catalina:       "4a2eae7078777ddb02514994cece25febf9600cc1c107b74a5f616dc93f5ffc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24bb85331af1fdf0aa6eebb41ee687254dba63ef921faade71752fa576b34fa1"
   end
 
   depends_on "rustup-init" => :build

@@ -1,8 +1,8 @@
 class Gwyddion < Formula
   desc "Scanning Probe Microscopy visualization and analysis tool"
   homepage "http://gwyddion.net/"
-  url "http://gwyddion.net/download/2.62/gwyddion-2.62.tar.gz"
-  sha256 "6c71fda9f783be5beabd21bfd749a91b2404b24cd74b7115adec31d235d40688"
+  url "http://gwyddion.net/download/2.59/gwyddion-2.59.tar.gz"
+  sha256 "b777eaa9a53a971c55a5ae2f7cd6695d1dbde78ffb84b9cf8885361400f051c7"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,13 +11,10 @@ class Gwyddion < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "7f1e88f594b85b1ff14136954abd497c76c6f714a424c4c5f60eebf5090eff71"
-    sha256 arm64_monterey: "6d89eceaff946e5fa27619df49db3489cfa9faf0b84134d0973f7ff13345c939"
-    sha256 arm64_big_sur:  "4edda3a2def3d79679378aef727ca9a5f2c64d2f4aea813ff80fc384e1f5dd20"
-    sha256 monterey:       "accc13498182cc7f5dd0216afcee03825a6ed823a5eae8a58bdbe97c155cf1c1"
-    sha256 big_sur:        "2a91c616047f1a3b9cb339490a2e4491bea9b78b4d954fc3bf4ee31d90f1c5ef"
-    sha256 catalina:       "bfb19b06d490f42a69db28807db6eedd064d00b5a63d5ec37562fd78951b4cab"
-    sha256 x86_64_linux:   "ac5ab5522b9803996f26a5107e35bcff7ba90bc89577d442eb50bf64e674350c"
+    sha256 arm64_big_sur: "84daa1965a976e10f7fc3c86181060ab41de374e60e40f4c583d1708c62f4e2d"
+    sha256 big_sur:       "0843f910f945f7ccfa32b172e499733f03f5bd1ffb5651cd09dd9e4908bfa098"
+    sha256 catalina:      "ff6670705c707245cc11ae74a4b7c3ae973e6a5fdda03a4edf2cd1a114da0c13"
+    sha256 mojave:        "78eb5e116ce465537772408846a45680195b1184f616fc3663fe60fa3db6a02b"
   end
 
   depends_on "pkg-config" => :build
@@ -29,17 +26,10 @@ class Gwyddion < Formula
   depends_on "minizip"
 
   on_macos do
-    # Regenerate autoconf files to avoid flat namespace in library
-    # (autoreconf runs gtkdocize, provided by gtk-doc)
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "gtk-doc" => :build
-    depends_on "libtool" => :build
     depends_on "gtk-mac-integration"
   end
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose" if OS.mac?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-desktop-file-update",
                           "--prefix=#{prefix}",
@@ -110,11 +100,15 @@ class Gwyddion < Formula
       -lfftw3
       -lfontconfig
       -lfreetype
+      -lgdk-quartz-2.0
       -lgdk_pixbuf-2.0
+      -lgdkglext-quartz-1.0
       -lgio-2.0
       -lglib-2.0
       -lgmodule-2.0
       -lgobject-2.0
+      -lgtk-quartz-2.0
+      -lgtkglext-quartz-1.0
       -lgwyapp2
       -lgwyddion2
       -lgwydgets2
@@ -124,20 +118,10 @@ class Gwyddion < Formula
       -lpango-1.0
       -lpangocairo-1.0
       -lpangoft2-1.0
+      -framework AppKit
+      -framework OpenGL
     ]
-
-    if OS.mac?
-      flags += %w[
-        -lintl
-        -lgdk-quartz-2.0
-        -lgdkglext-quartz-1.0
-        -lgtk-quartz-2.0
-        -lgtkglext-quartz-1.0
-        -framework AppKit
-        -framework OpenGL
-      ]
-    end
-
+    flags << "-lintl" if OS.mac?
     system ENV.cc, "test.c", "-o", "test", *flags
     system "./test"
   end

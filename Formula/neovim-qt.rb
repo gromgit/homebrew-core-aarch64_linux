@@ -1,26 +1,29 @@
 class NeovimQt < Formula
   desc "Neovim GUI, in Qt5"
   homepage "https://github.com/equalsraf/neovim-qt"
-  url "https://github.com/equalsraf/neovim-qt/archive/v0.2.17.tar.gz"
-  sha256 "ac538c2e5d63572dd0543c13fafb4d428e67128ea676467fcda68965b2aacda1"
+  url "https://github.com/equalsraf/neovim-qt/archive/v0.2.16.1.tar.gz"
+  sha256 "971d4597b40df2756b313afe1996f07915643e8bf10efe416b64cc337e4faf2a"
   license "ISC"
   head "https://github.com/equalsraf/neovim-qt.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "ba069626e6a18a2d6a4d7c53b1b6807ca7b47ed4fb11253c747183f13715406d"
-    sha256 cellar: :any,                 arm64_monterey: "c43685139264ca10c57b80a7328340f9036c2c07fca44f507104cea67274d9e4"
-    sha256 cellar: :any,                 arm64_big_sur:  "e35446a4b5b00b7b82387c523fbf229333426707a17a42c4016dfa7862681d2e"
-    sha256 cellar: :any,                 ventura:        "504ec4239004f831968b089d78a28c7633210c1de1eacbce2281c0ec8e6a71df"
-    sha256 cellar: :any,                 monterey:       "937fa07572c5bc168106b2bdd8d47d168ed722aa6c1ca99aa12514312abefe90"
-    sha256 cellar: :any,                 big_sur:        "3cb5e4c689e23d40c5c397fb11292bd1efceb5aac51a08d42c24e2247b584996"
-    sha256 cellar: :any,                 catalina:       "850cf1963c335f59b923d7085ed76d004e55ba9c058303f88886c007b8b7bff7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91244720218a0ab7daeaa8a2e91e287aa1c635c33f513bf898006405b671badf"
+    sha256 cellar: :any, arm64_monterey: "6dcf4d452effff77aa85c4d556fb82f6cf7bf616d4bb6c937dac8c7c6fd9516a"
+    sha256 cellar: :any, arm64_big_sur:  "2459483bd8c8a6d9520a729b3c7b37881908fce5da4b01755d42ac4370bf350e"
+    sha256 cellar: :any, monterey:       "04550c385410779e9af1f8982a7317cfeefc95ef09f9a62fcfa66efba5a28ab7"
+    sha256 cellar: :any, big_sur:        "42019f88da4ede0e143b06779a6d89c3c02c7b61e5029e97a11966ac62e8a4a8"
+    sha256 cellar: :any, catalina:       "14c3958fc58680157c242535783da6b4979667630ca634983ab30700f220f455"
+    sha256 cellar: :any, mojave:         "787697eae5c8c23f259fada57c9f3ea2b54c2db356f0635d5982dc2041341c81"
+    sha256               x86_64_linux:   "23dada7f611b7e124eeb7ac6795028ced6da817e6286250e0dd8dc9b8d9c67bb"
   end
 
   depends_on "cmake" => :build
+  depends_on "neovim-remote" => :test
   depends_on "neovim"
   depends_on "qt@5"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
@@ -38,28 +41,28 @@ class NeovimQt < Formula
   test do
     # Disable tests in CI environment:
     #   qt.qpa.xcb: could not connect to display
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"].present?
+    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
     # Same test as Formula/neovim.rb
 
     testfile = testpath/"test.txt"
     testserver = testpath/"nvim.sock"
 
-    testcommand = ":s/Vim/Neovim/g<CR>"
+    testcommand = "s/Vim/Neovim/g"
     testinput = "Hello World from Vim!!"
     testexpected = "Hello World from Neovim!!"
     testfile.write(testinput)
 
-    nvim_opts = ["--server", testserver]
+    nvr_opts = ["--nostart", "--servername", testserver]
 
     ohai "#{bin}/nvim-qt --nofork -- --listen #{testserver}"
     nvimqt_pid = spawn bin/"nvim-qt", "--nofork", "--", "--listen", testserver
     sleep 10
-    system "nvim", *nvim_opts, "--remote", testfile
-    system "nvim", *nvim_opts, "--remote-send", testcommand
-    system "nvim", *nvim_opts, "--remote-send", ":w<CR>"
+    system "nvr", *nvr_opts, "--remote", testfile
+    system "nvr", *nvr_opts, "-c", testcommand
+    system "nvr", *nvr_opts, "-c", "w"
     assert_equal testexpected, testfile.read.chomp
-    system "nvim", "--server", testserver, "--remote-send", ":q<CR>"
+    system "nvr", *nvr_opts, "-c", "call GuiClose()"
     Process.wait nvimqt_pid
   end
 end

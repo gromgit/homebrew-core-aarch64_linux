@@ -7,29 +7,28 @@ class Libtins < Formula
   head "https://github.com/mfontanini/libtins.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "7763232c7635a53780c8551c70d3bb9bf84bd49923d938a9effc870d1a34e1f8"
-    sha256 cellar: :any,                 arm64_monterey: "8a24df35212971a0ae637ad99b2ee620b2aee53f81cd54b59286ef6b8cf292c2"
-    sha256 cellar: :any,                 arm64_big_sur:  "0c025e0d1f700a52261b010df05c94f225ddb812052e50307faa269c80c340c7"
-    sha256 cellar: :any,                 monterey:       "6633c883fcbbc4e0cc6f3fe8c9822df234d2370bd60c3e40a49a11d658311e5a"
-    sha256 cellar: :any,                 big_sur:        "7ff918d08fbb7a958d05a6c236dbaa50735392c9a07ed8765779033f1eb87d19"
-    sha256 cellar: :any,                 catalina:       "25d420dde9c19f24a3882213bd64766c7cccc341086ace29f699e489ef404223"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35c1e1cecccf02775bd99842818bb2f3f5f0f05deee9ec3ee6c29fe8ed26c213"
+    sha256 cellar: :any,                 arm64_monterey: "55e2d98465b2837a223cca0bb92e5ecc4d566c9cda05cf6f179aa017d1c36d2c"
+    sha256 cellar: :any,                 arm64_big_sur:  "5fa4b31697124737566a7d7e3c61afc792a3e2a88af27a8f11d3023a76dcd7ec"
+    sha256 cellar: :any,                 monterey:       "2562ccd8c4a866e5e1386882b31e9ac206558af6d10ed3f2e14c7e44d07a49b8"
+    sha256 cellar: :any,                 big_sur:        "db8c030a72a519cdf99e31d6269a213852908df81f9b180d1273a17db1f9e6f8"
+    sha256 cellar: :any,                 catalina:       "976fd4c5b7d38e489fefb4c481850c76b0cb3b0fc2885621c2286d7529600fa0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "287989d06b4d0cc921189658011a6a5fc2735037a7d8774cb304dc47c2faf3ec"
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "libpcap"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DLIBTINS_BUILD_EXAMPLES=OFF",
-                    "-DLIBTINS_BUILD_TESTS=OFF",
-                    "-DLIBTINS_ENABLE_CXX11=ON",
-                    *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DLIBTINS_ENABLE_CXX11=1"
+      system "make", "install"
+      doc.install "examples"
+    end
+
+    # Clean up the build file garbage that has been installed.
+    rm_r Dir[share/"doc/libtins/**/CMakeFiles/"]
   end
 
   test do

@@ -1,23 +1,21 @@
 class Silicon < Formula
   desc "Create beautiful image of your source code"
   homepage "https://github.com/Aloxaf/silicon/"
-  url "https://github.com/Aloxaf/silicon/archive/v0.5.1.tar.gz"
-  sha256 "784a6f99001f2000422b676e637fe83a5dc27f5fc55ad33e227c882ce20e6439"
+  url "https://github.com/Aloxaf/silicon/archive/v0.4.3.tar.gz"
+  sha256 "68d64ade34ac571cf2d092f9a6f124e2c7d0441a91e3ba00ca1c8edcdd008630"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "17a640d9f978ea53a493a0a25a9933415d75ae33c9603df132a7ea5a708869eb"
-    sha256 cellar: :any,                 arm64_monterey: "7f73cd522e22922998f413298446ad3ce5833d27ada76ff274f463946f609a4f"
-    sha256 cellar: :any,                 arm64_big_sur:  "c7f1bdcc81caf5fe5be38bf12a6cad388d2f4af2e00425984b957601a3b95cfc"
-    sha256 cellar: :any,                 ventura:        "b2d7ef24d95632abf6b2c5c0201f8e67d72c8e062e89cd211f2d9d12da7d608f"
-    sha256 cellar: :any,                 monterey:       "07715b57308906eb249be0ed024f2654d5d465902a50dbc330920a78aa0224c7"
-    sha256 cellar: :any,                 big_sur:        "fb26a58ede0e4e3dd1c3d4e2868c3aff83612074e1fb30cf672921a573915ca7"
-    sha256 cellar: :any,                 catalina:       "e13e8d92e068ed65cb01d3f99ecead8f44051cc31082346ee75f1c20ca2d86f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "268361c7b38595c9856a75173ff14d537224a7e3102f2ea447ecdb1c7985bd62"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c86c964cda89cdaae682dd8ab5b945da6596ebaaef72913f7af8ec87642dd68"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eff39c0548c3343ac95f31882e756a71479d9ef083300e95cf128d9aaff36540"
+    sha256 cellar: :any_skip_relocation, monterey:       "f0f92dfa72158ce5526cd04e5a79815da3f87f1d42f4a7f1264a4ca7ae166d19"
+    sha256 cellar: :any_skip_relocation, big_sur:        "27f31389064da033eae7fa05d2f5d2b3e12bf44349879652ebd971802757d1ac"
+    sha256 cellar: :any_skip_relocation, catalina:       "262b846fb34927ef56ad5e12e39e766875d6f0a5e9e4217bff55fe23b7a6675d"
+    sha256 cellar: :any_skip_relocation, mojave:         "440068b068edee61d6a001c7095935121cfd4575aaf6d9d6379b9685cba97d58"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a33e3ca032e5181d2fb741f5084944be9ab4bb8806e275a142d79296a450d081"
   end
 
   depends_on "rust" => :build
-  depends_on "harfbuzz"
 
   on_linux do
     depends_on "pkg-config" => :build

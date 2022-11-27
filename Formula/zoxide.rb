@@ -1,20 +1,17 @@
 class Zoxide < Formula
   desc "Shell extension to navigate your filesystem faster"
   homepage "https://github.com/ajeetdsouza/zoxide"
-  url "https://github.com/ajeetdsouza/zoxide/archive/v0.8.3.tar.gz"
-  sha256 "eb1839a4ab0ce7680c5a97dc753d006d5604b71c41a77047e981a439ac3b9de6"
+  url "https://github.com/ajeetdsouza/zoxide/archive/v0.8.1.tar.gz"
+  sha256 "89002fe436b2a268b84a7e651cfd20d4b58ebc021c4e41d650af072d1c09f1d9"
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fabb92b6d10a220689a314adcd7d94d10585a7243fdac41a70825f4a98281d7d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a04655e8974432dd241aef77a33aaf514f0a4b9569d876c7552e73a31b4a674"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45fd44d2eb79fcc05e4ba14b7f789148eece72cb996842b9aa478466858f926f"
-    sha256 cellar: :any_skip_relocation, ventura:        "fee8d8c837efb9cce1b9b7b5f706d72afab08eafe4a619693b47e008990f6368"
-    sha256 cellar: :any_skip_relocation, monterey:       "d1baaa014412d638388f7a5cb7b3ed8704bbcb2277c0b6b09e2222c5fc204fc6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d17d1b527fce22d7cc08e67276ccac8dce07188f77647adc1139c1dbe83dfd1b"
-    sha256 cellar: :any_skip_relocation, catalina:       "0d95ed5c8cb92b344dde292c2932d39bc6efd2e6bb197b1da7c7349ba52f4f98"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b68e7bf24424f1be96c8978b0bab394f7c1a341f74c603b98773b88b59a969d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b2d16f68c91366e37c2e43b848e0c60c1ba1acc0439e526a404fdb598997b31"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "505d07fcd2b5c2b0dac778f5453a6e619c4dfd79d8b4e715c57ca61384afb527"
+    sha256 cellar: :any_skip_relocation, monterey:       "dcf89db8e4bc31ea079217991fb8c60604b5b5f5b472395de3c161a288aa901d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9e3dbe9ce30a09ff75a61d88fe1f6e3b825d8953517e5cad3a1c938ef9c6898e"
+    sha256 cellar: :any_skip_relocation, catalina:       "c546ee501c536e5fd210f64f75b7c6c097cb5334e798647d5e6b22c320c10147"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4595f05c5f6ea9dde7920ef72037e167850cb4e734466ca6d3c784409cf16f06"
   end
 
   depends_on "rust" => :build
@@ -24,7 +21,6 @@ class Zoxide < Formula
     bash_completion.install "contrib/completions/zoxide.bash" => "zoxide"
     zsh_completion.install "contrib/completions/_zoxide"
     fish_completion.install "contrib/completions/zoxide.fish"
-    share.install "man"
   end
 
   test do

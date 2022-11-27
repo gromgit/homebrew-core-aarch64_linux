@@ -4,23 +4,27 @@ class Flactag < Formula
   url "https://downloads.sourceforge.net/project/flactag/v2.0.4/flactag-2.0.4.tar.gz"
   sha256 "c96718ac3ed3a0af494a1970ff64a606bfa54ac78854c5d1c7c19586177335b2"
   license "GPL-3.0-or-later"
-  revision 3
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3001213e4495dbd9233ac08e813c08585b088ba64d745325f7e4535ea78dbb6d"
-    sha256 cellar: :any,                 arm64_monterey: "b4597b28bbb74064cfaea808a8df076be45e2b880ee25cb31b2fd44458c96a3c"
-    sha256 cellar: :any,                 arm64_big_sur:  "d5672d80720f2c28af768c625d5edb4c692e7e736919ba51cd3b00eee7e67d12"
-    sha256 cellar: :any,                 monterey:       "8862898f2f33cf41525624ec33b4f5cf88503e7264f966e28113015f77d9bf5d"
-    sha256 cellar: :any,                 big_sur:        "9b1a3d438c30843b6c63128238f70963281a4121695791dabae453a2c1f7715e"
-    sha256 cellar: :any,                 catalina:       "bdaf5ac180b818984e89db82432c26f2b65f658b96518ecef1cf160623e44b01"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0a89fbe55fc02cd3ccc2696f44caba3002d0f204ca2c3a63a093eab01a4c550"
+    sha256 cellar: :any,                 arm64_monterey: "1a5bde31200979e346adc3a7e9d498ca38479818c53d87a1a8f4a077b0af3b92"
+    sha256 cellar: :any,                 arm64_big_sur:  "959006d7aa293066610af7cff0ae1be3a9d21ceb3badfe6012d52d3e2830416a"
+    sha256 cellar: :any,                 monterey:       "3dc5913b1b5ad973d03232d55d15235f96e57b39599208e0c388aad9f50403f4"
+    sha256 cellar: :any,                 big_sur:        "fd81ade08727163108bf6eb86fa4c971a7e7f902b720b7eec59e21cbe10fd945"
+    sha256 cellar: :any,                 catalina:       "3bd18beb32b957d6adb4a4221fc5b833f4c9099798857911f8552294a104659b"
+    sha256 cellar: :any,                 mojave:         "89733c2da8653a9e86b2a4fc3e5693c3c7c434305d9aade353e52fd76f457dda"
+    sha256 cellar: :any,                 high_sierra:    "d066a517308ad0f3cbc6603fd7eeb53dba73dc796298163b6c1ec8c0379f72f6"
+    sha256 cellar: :any,                 sierra:         "c23293dce964c701fbaa822bda3a5f87602b28216b3862afced4da53c12728f3"
+    sha256 cellar: :any,                 el_capitan:     "d3e7a517f69ba267c5ff36c065837a4c2925a31d2b0cfe6f5cb32d8d0582fd8a"
+    sha256 cellar: :any,                 yosemite:       "f5f0123f156ccf4c40e810fc5f0acc83638e35da13ed900b2f7165fbea28e080"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1c0e0338dfba95d544567150993403813011ed31406ebeae071777cff0573e2"
   end
 
   depends_on "asciidoc" => :build
   depends_on "docbook-xsl" => :build
   depends_on "pkg-config" => :build
   depends_on "flac"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libdiscid"
   depends_on "libmusicbrainz"
   depends_on "neon"
@@ -39,7 +43,8 @@ class Flactag < Formula
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
     ENV.append "LDFLAGS", "-liconv" if OS.mac?
     ENV.append "LDFLAGS", "-lFLAC"
-    system "./configure", *std_configure_args
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 

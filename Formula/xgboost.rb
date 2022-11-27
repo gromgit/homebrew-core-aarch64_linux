@@ -2,26 +2,30 @@ class Xgboost < Formula
   desc "Scalable, Portable and Distributed Gradient Boosting Library"
   homepage "https://xgboost.ai/"
   url "https://github.com/dmlc/xgboost.git",
-      tag:      "v1.7.1",
-      revision: "534c940a7ea50ab3b8a827546ac9908f859379f2"
+      tag:      "v1.6.1",
+      revision: "5d92a7d936fc3fad4c7ecb6031c3c1c7da882a14"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5c9a6b40a61e41079dce30312a21e34063aa629d46954e5f6eabcb0d384d3b8f"
-    sha256 cellar: :any,                 arm64_monterey: "5699f2ee005dd0b4dedbf2dd34fe5cc4791d1bdd97635cc4fe7b78b0571b9f44"
-    sha256 cellar: :any,                 arm64_big_sur:  "b4656fcac167a7d25c6ac2c17da55e386ed1ab23e7ae8826f0c87d1cd3ab34db"
-    sha256 cellar: :any,                 ventura:        "c135fd9335b8d53ce52cd182c4a601500b1184cf91f538ebbaf920bb67a60fbf"
-    sha256 cellar: :any,                 monterey:       "e3053a67e6bffdfdc079cab28ff9702632072fa9c3167522bf9cff8a05604667"
-    sha256 cellar: :any,                 big_sur:        "97ab1f489d0e9e95b9c4a91437243215b17f16c27b0e65f074caf48a770a886a"
-    sha256 cellar: :any,                 catalina:       "a4303c48b289ef9de464f7994d6acdc604a0a377c701a01b108052b1261d537c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0275c44baaec5b6d38726d49a2526c3cb08a4656a133c133b941106ab2d96a83"
+    sha256 cellar: :any,                 arm64_monterey: "fceacabe97ff4b138eb3067bc3231afe1af30fa388dfa671d7db6024cbb54205"
+    sha256 cellar: :any,                 arm64_big_sur:  "4dfdef1e85d26bcf291d57638b4fd446c434b1b7ae2aa35c47b7ed2f63cfc52b"
+    sha256 cellar: :any,                 monterey:       "a59e16026bc4305411e4d28b656c0ebad8ea9fb89407ddde848de24fcdade58e"
+    sha256 cellar: :any,                 big_sur:        "edff7930532c9a798103e54675b7748c6131e223a1b64e6d33242621c791796d"
+    sha256 cellar: :any,                 catalina:       "f46cfe285a917c4e66f536888291b620f7fb3b99ab38aa8f34ba10bc7dc3b867"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76644ec7af83a810fb69b95c69fc01031d87d2a5b221b9f2425d0febd224dd43"
   end
 
   depends_on "cmake" => :build
+  depends_on "numpy"
+  depends_on "scipy"
 
   on_macos do
-    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1100
     depends_on "libomp"
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1100
+  end
+
+  on_linux do
+    depends_on "gcc"
   end
 
   fails_with :clang do
@@ -40,11 +44,14 @@ class Xgboost < Formula
   fails_with gcc: "5"
 
   def install
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", *std_cmake_args, ".."
+      system "make"
+      system "make", "install"
+    end
     pkgshare.install "demo"
   end
 

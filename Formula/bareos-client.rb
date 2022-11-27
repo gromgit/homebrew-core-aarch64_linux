@@ -1,87 +1,49 @@
 class BareosClient < Formula
   desc "Client for Bareos (Backup Archiving REcovery Open Sourced)"
   homepage "https://www.bareos.org/"
-  url "https://github.com/bareos/bareos/archive/Release/21.1.5.tar.gz"
-  sha256 "2bdae1c7b0667e49b62cea236c96c108a5b663b379170ab273a96f07494b01f0"
+  url "https://github.com/bareos/bareos/archive/Release/19.2.9.tar.gz"
+  sha256 "ea203d4bdacc8dcc86164a74f628888ce31cc90858398498137bd25900b8f723"
   license "AGPL-3.0-only"
 
   livecheck do
-    url :stable
+    url "https://github.com/bareos/bareos.git"
     regex(%r{^Release/(\d+(?:\.\d+)+)$}i)
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "904e5300c5033605ca9386b4d64f31a0f65a6bf8fe52cdae5afcc5abc621cf8e"
-    sha256 cellar: :any, arm64_monterey: "2eb590149448bc26586d83bae3005b40e88296f6e0dc4b58b45bcc4c8e578071"
-    sha256 cellar: :any, arm64_big_sur:  "7c33ac81be7b4a6737a15c73ded062b6c50cd30268e2a1aa71a4c894e07f4ac7"
-    sha256 cellar: :any, monterey:       "5c29931f6e4ba576f88c899b0b4212a7c6842cf5ecbe4d9d9122facb5434ea43"
-    sha256 cellar: :any, big_sur:        "5581dd3a339e743cf1487e2799a1f55747139fa2fa932c72f1f93f5bbaa2e6ff"
-    sha256 cellar: :any, catalina:       "4197a24939fda5fcbff4b1b3843d82673b42b524d87cd4a096be40238e25c429"
-    sha256               x86_64_linux:   "7faf4a5e8e663dc928cf07ebdb090e433f2729b1404a7a0ca929b07609920e66"
+    sha256 big_sur:  "bff8a75230cdc455bacd679e173d373d7ff11f10c57ed54ede298b7e7cb96816"
+    sha256 catalina: "40e1558c583639b7788c4a5fb30a984abaa00a3a552f00b30466ac0bf8ce4e73"
+    sha256 mojave:   "c1f6aa579b9a1923592818b041a165bc029d66bc88745895f6662ce2a3c83f8e"
   end
 
   depends_on "cmake" => :build
-  depends_on "jansson"
-  depends_on "lzo"
-  depends_on "openssl@3"
+  depends_on "gettext"
+  depends_on "openssl@1.1"
   depends_on "readline"
 
-  uses_from_macos "zlib"
-
-  on_macos do
-    depends_on "gettext"
-  end
-
-  on_linux do
-    depends_on "acl"
-  end
-
-  conflicts_with "bacula-fd", because: "both install a `bconsole` executable"
+  conflicts_with "bacula-fd",
+    because: "both install a `bconsole` executable"
 
   def install
-    # Work around Linux build failure by disabling warning:
-    # lmdb/mdb.c:2282:13: error: variable 'rc' set but not used [-Werror=unused-but-set-variable]
-    # TODO: Try to remove in the next release which has various compiler warning changes
-    ENV.append_to_cflags "-Wno-unused-but-set-variable" if OS.linux?
-
-    # Work around hardcoded paths to /usr/local Homebrew installation,
-    # forced static linkage on macOS, and openssl formula alias usage.
-    inreplace "core/CMakeLists.txt" do |s|
-      s.gsub! "/usr/local/opt/gettext/lib/libintl.a", Formula["gettext"].opt_lib/shared_library("libintl")
-      s.gsub! "/usr/local/opt/openssl", Formula["openssl@3"].opt_prefix
-      s.gsub! "/usr/local/", "#{HOMEBREW_PREFIX}/"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args,
+                            "-Dworkingdir=#{var}/lib/bareos",
+                            "-Darchivedir=#{var}/bareos",
+                            "-Dconfdir=#{etc}/bareos",
+                            "-Dconfigtemplatedir=#{lib}/bareos/defaultconfigs",
+                            "-Dscriptdir=#{lib}/bareos/scripts",
+                            "-Dplugindir=#{lib}/bareos/plugins",
+                            "-Dfd-password=XXX_REPLACE_WITH_CLIENT_PASSWORD_XXX",
+                            "-Dmon-fd-password=XXX_REPLACE_WITH_CLIENT_MONITOR_PASSWORD_XXX",
+                            "-Dbasename=XXX_REPLACE_WITH_LOCAL_HOSTNAME_XXX",
+                            "-Dhostname=XXX_REPLACE_WITH_LOCAL_HOSTNAME_XXX",
+                            "-Dclient-only=ON"
+      system "make"
+      system "make", "install"
     end
-    inreplace "core/src/plugins/CMakeLists.txt" do |s|
-      s.gsub! "/usr/local/opt/gettext/include", Formula["gettext"].opt_include
-      s.gsub! "/usr/local/opt/openssl/include", Formula["openssl@3"].opt_include
-    end
-    inreplace "core/cmake/BareosFindAllLibraries.cmake" do |s|
-      s.gsub! "/usr/local/opt/lzo/lib/liblzo2.a", Formula["lzo"].opt_lib/shared_library("liblzo2")
-      s.gsub! "set(OPENSSL_USE_STATIC_LIBS 1)", ""
-    end
-    inreplace "core/cmake/FindReadline.cmake",
-              "/usr/local/opt/readline/lib/libreadline.a",
-              Formula["readline"].opt_lib/shared_library("libreadline")
-
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
-                    "-DENABLE_PYTHON=OFF",
-                    "-Dworkingdir=#{var}/lib/bareos",
-                    "-Darchivedir=#{var}/bareos",
-                    "-Dconfdir=#{etc}/bareos",
-                    "-Dconfigtemplatedir=#{lib}/bareos/defaultconfigs",
-                    "-Dscriptdir=#{lib}/bareos/scripts",
-                    "-Dplugindir=#{lib}/bareos/plugins",
-                    "-Dfd-password=XXX_REPLACE_WITH_CLIENT_PASSWORD_XXX",
-                    "-Dmon-fd-password=XXX_REPLACE_WITH_CLIENT_MONITOR_PASSWORD_XXX",
-                    "-Dbasename=XXX_REPLACE_WITH_LOCAL_HOSTNAME_XXX",
-                    "-Dhostname=XXX_REPLACE_WITH_LOCAL_HOSTNAME_XXX",
-                    "-Dclient-only=ON"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
   end
 
   def post_install
-    (var/"lib/bareos").mkpath
     # If no configuration files are present,
     # deploy them (copy them and replace variables).
     unless (etc/"bareos/bareos-fd.d").exist?

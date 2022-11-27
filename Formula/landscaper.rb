@@ -20,7 +20,7 @@ class Landscaper < Formula
   end
 
   # also depends on helm@2 (which failed to build)
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2020-04-22", because: :repo_archived
 
   depends_on "dep" => :build
   depends_on "go" => :build

@@ -1,9 +1,10 @@
 class Cdo < Formula
   desc "Climate Data Operators"
   homepage "https://code.mpimet.mpg.de/projects/cdo"
-  url "https://code.mpimet.mpg.de/attachments/download/27481/cdo-2.1.0.tar.gz"
-  sha256 "b871346c944b05566ab21893827c74616575deaad0b20eacb472b80b1fa528cc"
+  url "https://code.mpimet.mpg.de/attachments/download/26823/cdo-2.0.5.tar.gz"
+  sha256 "edeebbf1c3b1a1f0c642dae6bc8c7624e0c54babe461064dc5c7daca4a5b0dce"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url "https://code.mpimet.mpg.de/projects/cdo/files"
@@ -11,14 +12,12 @@ class Cdo < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "658298956b3aebee777f901467bb9fdddde601688fc139462c494d2be0c15e42"
-    sha256 cellar: :any,                 arm64_monterey: "943621910a2b925167e8ccb033f6bb4e0c77ee656e34584174f42b56f32b2b37"
-    sha256 cellar: :any,                 arm64_big_sur:  "76c7f5f7e341927c3a3d7c6fc2ee4c17f8c39913da433bb2d55273c1f703150e"
-    sha256 cellar: :any,                 ventura:        "4f53994e9b834e81cd3d5fab6d4db0675da8f1d11228ad9f71fc517d558af050"
-    sha256 cellar: :any,                 monterey:       "7ee57212a33e25e92eb38bf327c1e1b791a421de44e59f442791c33352cf45ff"
-    sha256 cellar: :any,                 big_sur:        "7cd3563b890c8b1e92d1d65d0d2efb4904ab75d29c7b033c91d70770e9c32a12"
-    sha256 cellar: :any,                 catalina:       "b335737fe1136b096013d944a33612865142d2d6304955d87f3816a74126173a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7f1abbfe0336eda54bf2bee575e5eebf7e297f414baea50f85fba81a958eb54"
+    sha256 cellar: :any,                 arm64_monterey: "6263a211f02fdafd51bbfa3a0773a9fa81979b4c29b9d4e33da4417ab6dc6d51"
+    sha256 cellar: :any,                 arm64_big_sur:  "2656dc32acb71d11f5288aba8571de98a4411ee58e426437971759edfd38f1c3"
+    sha256 cellar: :any,                 monterey:       "043bece96c7875b42f3f5315a4beea11f2eeda4947199c206b01b29173c22e9f"
+    sha256 cellar: :any,                 big_sur:        "dd422128a9b8b836e849abcec45448435d3c2b21c33f9374cada7d98eed057e7"
+    sha256 cellar: :any,                 catalina:       "95c9af1513fe44f93dea7e59677c57d165588febe490b02b322701517e6e823b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd9ff737755e92c5a1a21d5a9aa8f30ef8f66eab9c8e3e1f62c0e4b0d4e5dd01"
   end
 
   depends_on "eccodes"

@@ -7,6 +7,13 @@ class Mpw < Formula
   license "GPL-3.0-or-later"
   head "https://gitlab.com/MasterPassword/MasterPassword.git", branch: "master"
 
+  # The first-party site doesn't seem to list version information, so it's
+  # necessary to check the tags from the `head` repository instead.
+  livecheck do
+    url :head
+    regex(/^v?(\d+(?:\.\d+)+[._-]cli[._-]?\d+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_monterey: "e9888d9cfb2d36d1b764cb66f63f6dd46007a1971a4103207cb443029c1d12ee"
     sha256 cellar: :any,                 arm64_big_sur:  "ae3c6d9c4698beed61f7d0ee6330d1afa63b993c8ff3ecd3dae5fea25dc052be"
@@ -16,8 +23,6 @@ class Mpw < Formula
     sha256 cellar: :any,                 mojave:         "8592cadcded1acf97d687135d7f9f88674c05837e6f9646bb514c0b7fc18c954"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0aaf191d28ba5c097800350caa11f37f351f8f0ff336aed7f0e479d884321e86"
   end
-
-  disable! date: "2022-06-13", because: :unmaintained
 
   depends_on "json-c"
   depends_on "libsodium"

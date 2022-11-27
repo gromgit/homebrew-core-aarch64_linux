@@ -3,9 +3,8 @@ class Pyside < Formula
 
   desc "Official Python bindings for Qt"
   homepage "https://wiki.qt.io/Qt_for_Python"
-  url "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.4.0.1-src/pyside-setup-opensource-src-6.4.0.tar.xz"
-  version "6.4.0.1"
-  sha256 "6e5be5defccacd21ec7e2579d6d6493366dd8e00f8899746abd174f1eb1eff14"
+  url "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.2.4-src/pyside-setup-opensource-src-6.2.4.tar.xz"
+  sha256 "d9680ff298ee8b01a68de20911c60da04568a0918b3062d4c571ef170b4603ff"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
 
   livecheck do
@@ -14,74 +13,65 @@ class Pyside < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "dffbf25bf38b3fe04450096e9dadebae039a805aab71b34f3ca52c64b9185555"
-    sha256 arm64_monterey: "e57c3a873abd31a3dc62c7fa2ea13602ce55e5dcd2aaa6ec3060ea66ff4f895f"
-    sha256 arm64_big_sur:  "2826b9af79bce4a0c637cce74ca0d51592e29d7f976ee20ff188dc7cc03f06ee"
-    sha256 ventura:        "e26b777b21e4130aee323de0e8ae70d96131237f3e8907bd2dbc3249e96b2f27"
-    sha256 monterey:       "9431f8fdbadf747ed47725a6db282924f8446cf165fbbc29d984c12ab8090e11"
-    sha256 big_sur:        "71804120f03ca26ef7c430c4254f4c59c774624a5117d3726ddf8e274ef61dd6"
-    sha256 catalina:       "104c59b3bbb34cb563bf65080c2a04d2b2872509c186dc88a4435f2e054026af"
+    sha256 cellar: :any, arm64_monterey: "9cea688bda5a035c77b8a29082299afa6ca5631f40a595edcebfcd620cc12aec"
+    sha256 cellar: :any, arm64_big_sur:  "50cf359b927d953109db619829781d08d91ae955f6dae91d84873ae45d5447a2"
+    sha256 cellar: :any, monterey:       "07b7313eb6dae6cce800a3979fddca8c8a80411f5390b175fe5716d3aea1743e"
+    sha256 cellar: :any, big_sur:        "fb4e1508f78608ed78fedb54698d145071a4163b3ecb598c128eef9c7930c06c"
+    sha256 cellar: :any, catalina:       "a7ba2a9575b211c8a160f5f0aeaba8c2c212e383fb99edd483329f50c8509edb"
   end
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on xcode: :build
   depends_on "llvm"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "qt"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
 
-  on_linux do
-    depends_on "mesa"
-  end
-
   fails_with gcc: "5"
 
-  def python3
-    "python3.10"
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
+    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
   end
 
   def install
-    ENV.append_path "PYTHONPATH", buildpath/"build/sources"
-
-    extra_include_dirs = [Formula["qt"].opt_include]
-    extra_include_dirs << Formula["mesa"].opt_include if OS.linux?
-
     # upstream issue: https://bugreports.qt.io/browse/PYSIDE-1684
     inreplace "sources/pyside6/cmake/Macros/PySideModules.cmake",
               "${shiboken_include_dirs}",
-              "${shiboken_include_dirs}:#{extra_include_dirs.join(":")}"
+              "${shiboken_include_dirs}:#{Formula["qt"].opt_include}"
 
-    # Fix build failure on macOS because `CMAKE_BINARY_DIR` points to /tmp but
-    # `location` points to `/private/tmp`, which makes this conditional fail.
-    # Submitted upstream here: https://codereview.qt-project.org/c/pyside/pyside-setup/+/416706.
-    inreplace "sources/pyside6/PySide6/__init__.py.in",
-              "in_build = Path(\"@CMAKE_BINARY_DIR@\") in location.parents",
-              "in_build = Path(\"@CMAKE_BINARY_DIR@\").resolve() in location.parents"
+    python = Formula["python@3.9"]
+    venv = virtualenv_create(buildpath/"venv", python.opt_bin/"python3")
+    venv.pip_install resources
 
-    # Install python scripts into pkgshare rather than bin
-    inreplace "sources/pyside-tools/CMakeLists.txt", "DESTINATION bin", "DESTINATION #{pkgshare}"
-
-    args = std_cmake_args + [
-      "-DCMAKE_CXX_COMPILER=#{ENV.cxx}",
-      "-DCMAKE_PREFIX_PATH=#{Formula["qt"].opt_lib}",
-      "-DPYTHON_EXECUTABLE=#{which(python3)}",
-      "-DBUILD_TESTS=OFF",
-      "-DNO_QT_TOOLS=yes",
-      "-DCMAKE_INSTALL_RPATH=#{lib}",
-      "-DFORCE_LIMITED_API=yes",
+    qt = Formula["qt"]
+    site_packages = prefix/Language::Python.site_packages(python.opt_bin/"python3")
+    site_pyside = site_packages/"PySide6"
+    pyside_args = %w[
+      --no-examples
+      --no-qt-tools
+      --rpath @loader_path/../shiboken6
+      --shorter-paths
+      --skip-docs
     ]
+    system buildpath/"venv/bin/python3", *Language::Python.setup_install_args(prefix), *pyside_args
 
-    system "cmake", "-S", ".", "-B", "build", *args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    # install tools symlinks
+    %w[lupdate lrelease].each { |x| ln_s (qt.opt_bin/x).relative_path_from(site_pyside), site_pyside }
+    mkdir_p site_pyside/"Qt/libexec"
+    %w[uic rcc].each do |x|
+      ln_s (qt.opt_pkgshare/"libexec"/x).relative_path_from(site_pyside/"Qt/libexec"), site_pyside/"Qt/libexec"
+    end
+    %w[assistant linguist].each { |x| ln_s (qt.opt_bin/x).relative_path_from(site_pyside), site_pyside }
+    ln_s (qt.opt_libexec/"Designer.app").relative_path_from(site_pyside), site_pyside
   end
 
   test do
-    system python3, "-c", "import PySide6"
-    system python3, "-c", "import shiboken6"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import PySide6"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import shiboken6"
 
     modules = %w[
       Core
@@ -93,20 +83,14 @@ class Pyside < Formula
       Widgets
       Xml
     ]
+    modules << "WebEngineCore" if OS.mac? && (DevelopmentTools.clang_build_version > 1200)
 
-    modules << "WebEngineCore" if OS.linux? || (DevelopmentTools.clang_build_version > 1200)
+    modules.each { |mod| system Formula["python@3.9"].opt_bin/"python3", "-c", "import PySide6.Qt#{mod}" }
 
-    modules.each { |mod| system python3, "-c", "import PySide6.Qt#{mod}" }
-
-    python3_config = Formula["python@3.10"].opt_bin/"#{python3}-config"
-    pyincludes = shell_output("#{python3_config} --includes").chomp.split
-    pylib = shell_output("#{python3_config} --ldflags --embed").chomp.split
-    if OS.linux?
-      pylib += %W[
-        -Wl,-rpath,#{Formula["python@3.10"].opt_lib}
-        -Wl,-rpath,#{lib}
-      ]
-    end
+    pyincludes = shell_output("#{Formula["python@3.9"].opt_bin}/python3-config --includes").chomp.split
+    pylib = shell_output("#{Formula["python@3.9"].opt_bin}/python3-config --ldflags --embed").chomp.split
+    pyver = Language::Python.major_minor_version(Formula["python@3.9"].opt_bin/"python3").to_s.delete(".")
+    site_packages = prefix/Language::Python.site_packages("python3")
 
     (testpath/"test.cpp").write <<~EOS
       #include <shiboken.h>
@@ -119,8 +103,8 @@ class Pyside < Formula
       }
     EOS
     system ENV.cxx, "-std=c++17", "test.cpp",
-           "-I#{include}/shiboken6",
-           "-L#{lib}", "-lshiboken6.abi3",
+           "-I#{site_packages}/shiboken6_generator/include", "-L#{site_packages}/shiboken6",
+           "-lshiboken6.cpython-#{pyver}-darwin.#{version.major_minor}",
            *pyincludes, *pylib, "-o", "test"
     system "./test"
   end

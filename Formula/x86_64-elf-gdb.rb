@@ -5,7 +5,6 @@ class X8664ElfGdb < Formula
   mirror "https://ftpmirror.gnu.org/gdb/gdb-12.1.tar.xz"
   sha256 "0e1793bf8f2b54d53f46dea84ccfd446f48f81b297b28c4f7fc017b818d69fed"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   livecheck do
@@ -13,26 +12,21 @@ class X8664ElfGdb < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "8f54e210560e8955c6958e7fc3cf393d7f80802daa05388a219ef263d46b6992"
-    sha256 arm64_monterey: "191c3e0bad3cc372dea61561969af4677adde8ab7ef9cf68fba19513d284d925"
-    sha256 arm64_big_sur:  "63bb893d29d721407ef3c87f05fc3e05b69b0a42e6d7b384585200cc0dd6234b"
-    sha256 ventura:        "23e916acc24c7d36b23bf248c872675a83d78ff16739cef9fa8c6ba2715618b4"
-    sha256 monterey:       "08dae6d26be05a6659f7e055e4faa57fccb7bcc4bada84e833230bd93681c9a1"
-    sha256 big_sur:        "d7ebcc85c5821a8f68ccf90200cc765dad25f8ebf274643399d71384bbfb197b"
-    sha256 catalina:       "22e6d34b47387dceee96d9f4dd1952b8f11b9c4f6d1d55d9de3558eaf498e4cc"
-    sha256 x86_64_linux:   "91a4fbb0eab6d2a6558cc0b9248b0e6e61c23a4faa0b62edb303372a018dbebe"
+    sha256 arm64_monterey: "054449618f9e658d1502a3ffb3dcdf3d8f55e1d19ffde152e52b2ed5887faf84"
+    sha256 arm64_big_sur:  "5eebf4b0ccf95ac324212f34509b6f63bbde83b48664abef093058090322b132"
+    sha256 monterey:       "afaa638b4875f3e7a09e4ca7c0dae4d09ab606e7fdc2c17703075226441dbced"
+    sha256 big_sur:        "bc816667d3bb402ec66316afa4b4b7ebd5972353a06d9ac34b38f82a514a5a52"
+    sha256 catalina:       "44ee92bc25f8ea4fc9179dbf9fb0c94fb1c3f9db6a17003c2d961cda2053228e"
+    sha256 x86_64_linux:   "99c96d3a5aba8289446082e8dd9e7b931b79d5eea945ba2b2516cd398c966b03"
   end
 
   depends_on "x86_64-elf-gcc" => :test
   depends_on "gmp"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "xz" # required for lzma support
 
+  uses_from_macos "texinfo" => :build
   uses_from_macos "zlib"
-
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
 
   def install
     target = "x86_64-elf"
@@ -46,7 +40,7 @@ class X8664ElfGdb < Formula
       --disable-debug
       --disable-dependency-tracking
       --with-lzma
-      --with-python=#{Formula["python@3.11"].opt_bin}/python3.11
+      --with-python=#{Formula["python@3.10"].opt_bin}/python3
       --with-system-zlib
       --disable-binutils
     ]

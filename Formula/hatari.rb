@@ -1,9 +1,10 @@
 class Hatari < Formula
   desc "Atari ST/STE/TT/Falcon emulator"
   homepage "https://hatari.tuxfamily.org"
-  url "https://download.tuxfamily.org/hatari/2.4.1/hatari-2.4.1.tar.bz2"
-  sha256 "2a5da1932804167141de4bee6c1c5d8d53030260fe7fe7e31e5e71a4c00e0547"
+  url "https://download.tuxfamily.org/hatari/2.3.1/hatari-2.3.1.tar.bz2"
+  sha256 "44a2f62ca995e38d9e0874806956f0b9c3cc84ea89e0169a63849b63cd3b64bd"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://git.tuxfamily.org/hatari/hatari.git", branch: "master"
 
   livecheck do
@@ -12,47 +13,44 @@ class Hatari < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "e07bbcf4adbb8d5d79cf789d689d4fedc1ddebe9863ed8339825e3e904565177"
-    sha256 cellar: :any,                 arm64_monterey: "667e12e353a24d45995f336f687a23b44d6bfc6deca23f84e966e32e1e978571"
-    sha256 cellar: :any,                 arm64_big_sur:  "b193a4d9e107c34a4a07a1aeef77786953e8d328ee085ca242342a6d107312fe"
-    sha256 cellar: :any,                 ventura:        "4e343b2fc064affbd0d39b6f4d7460d71d9b18eaedf3c9b76b7ff6a0e7547bc0"
-    sha256 cellar: :any,                 monterey:       "a3257660008936e85dbcc3227ddeb5014c39aa04e0a08e5f1ef5214abfd4c0e6"
-    sha256 cellar: :any,                 big_sur:        "44257d9e4a6cf65ce62aec936a36dbcabee429d66341376f0749454e14c7d247"
-    sha256 cellar: :any,                 catalina:       "95d8de415e6c641dc64dd92636b4aee0ff8c0d3a0b7fc60cab57406868b9fb7f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f2c1ce5731913973b4d8caab05d82c893a85260ee47d95cea565526a4404c1d"
+    sha256 cellar: :any,                 arm64_monterey: "5f31dc6f5ac2f5a7785841b8a1bf2cd61bf6f61655392ebc1fe326424d490216"
+    sha256 cellar: :any,                 arm64_big_sur:  "5733267d71db6559a05fb67249929ea882614d8b318e4ae5d68362d8193aceb4"
+    sha256 cellar: :any,                 monterey:       "3fe0d58f4ff6cc654d25ddf53fbf76a1035960403dfd3e67f4b99da0491dc2c9"
+    sha256 cellar: :any,                 big_sur:        "b5d322e4d68cd6e8b65432fedfb2f5807b66bb7ebce9a9faba97e846fd9d73fe"
+    sha256 cellar: :any,                 catalina:       "aa1ad23ac7d636cb1702461d1eb6ecb2ec5df195a10bfbffcaa036db8f3b3c39"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21c89b23ed14051eecf598ce07ec906f46910ee00145b3275708421fe94e463a"
   end
 
   depends_on "cmake" => :build
   depends_on "libpng"
+  depends_on "portaudio"
+  depends_on "python@3.10"
   depends_on "sdl2"
-
-  uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "readline"
-  end
 
   # Download EmuTOS ROM image
   resource "emutos" do
-    url "https://downloads.sourceforge.net/project/emutos/emutos/1.2/emutos-1024k-1.2.zip"
-    sha256 "65933ffcda6cba87ab013b5e799c3a0896b9a7cb2b477032f88f091ab8578b2a"
+    url "https://downloads.sourceforge.net/project/emutos/emutos/1.0.1/emutos-512k-1.0.1.zip"
+    sha256 "96c698aa0fc0f51ecdb0f8b53484df9de273215467b5de3f44d245821dff795e"
   end
 
   def install
     # Set .app bundle destination
     inreplace "src/CMakeLists.txt", "/Applications", prefix
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
+      "-DPYTHON_EXECUTABLE=#{Formula["python@3.10"].opt_bin}/python3"
     system "cmake", "--build", "build"
     if OS.mac?
       prefix.install "build/src/Hatari.app"
-      bin.write_exec_script prefix/"Hatari.app/Contents/MacOS/hatari"
+      bin.write_exec_script "#{prefix}/Hatari.app/Contents/MacOS/hatari"
     else
       system "cmake", "--install", "build"
     end
     resource("emutos").stage do
-      datadir = OS.mac? ? prefix/"Hatari.app/Contents/Resources" : pkgshare
-      datadir.install "etos1024k.img" => "tos.img"
+      if OS.mac?
+        (prefix/"Hatari.app/Contents/Resources").install "etos512k.img" => "tos.img"
+      else
+        pkgshare.install "etos512k.img" => "tos.img"
+      end
     end
   end
 

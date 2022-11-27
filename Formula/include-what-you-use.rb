@@ -1,8 +1,8 @@
 class IncludeWhatYouUse < Formula
   desc "Tool to analyze #includes in C and C++ source files"
   homepage "https://include-what-you-use.org/"
-  url "https://include-what-you-use.org/downloads/include-what-you-use-0.19.src.tar.gz"
-  sha256 "2b10157b60ea08adc08e3896b4921c73fcadd5ec4eb652b29a34129d501e5ee0"
+  url "https://include-what-you-use.org/downloads/include-what-you-use-0.17.src.tar.gz"
+  sha256 "eca7c04f8b416b6385ed00e33669a7fa4693cd26cb72b522cde558828eb0c665"
   license "NCSA"
   head "https://github.com/include-what-you-use/include-what-you-use.git", branch: "master"
 
@@ -16,14 +16,12 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "9cd980ebf2328c24e34e5b8f383f845e8c5de2d29d5904f61d5c1ec1e5f7758f"
-    sha256 cellar: :any,                 arm64_monterey: "74bffb0dc7dce47d0dc66a334ae2f97d706832527d8238d87b1b55ac7f774426"
-    sha256 cellar: :any,                 arm64_big_sur:  "395a9b31cb4e9024488e33dff157836d6c833cdda34b57f1882aa18140027870"
-    sha256 cellar: :any,                 ventura:        "5055c407f01109a7c2791335c3ae8d49cf5e43eb30d8d39a99c83a582da088e7"
-    sha256 cellar: :any,                 monterey:       "a3c265161618434e2f7309e3a40d4450a52be8a2ad10ad6866b3fbc489a62ede"
-    sha256 cellar: :any,                 big_sur:        "d468ab80a9508cd22dc08d5fba619209aef43d3b527db3522fc2a13dfaabec27"
-    sha256 cellar: :any,                 catalina:       "7c460a64c73fc4b03690b68c1928b2a0bd8afb1aa4a62a11ba2f28898a47833f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3518a3e1f2fa504af9571c3988f626df0b3b0842f2c811d9b3c89d85e1c011eb"
+    sha256 cellar: :any,                 arm64_monterey: "c849e210107d49902d6cefe58ca3af7afc4a1a197f1239da4d26639e6eef4a49"
+    sha256 cellar: :any,                 arm64_big_sur:  "47ced9c1ae76704cb14d2ea2d3e1ab29c66d650387576d1f931b102ee44c96ed"
+    sha256 cellar: :any,                 monterey:       "0a84098cd52678381ca12ee9986e59c6cda595a10877ecb974d4445251017fe6"
+    sha256 cellar: :any,                 big_sur:        "657ab0dd0639344d923f288e3ab5130b1ad6094d516eea05526dc4fc966dc230"
+    sha256 cellar: :any,                 catalina:       "e817cfbf7abeced52eb5596dc1b2a59da1c624b7adcb276677a9d7ed71762ef2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "257d7f45e2b1c30d46254a6b7786b38eefb483853ab599995a296b230908d128"
   end
 
   depends_on "cmake" => :build
@@ -35,7 +33,7 @@ class IncludeWhatYouUse < Formula
   fails_with gcc: "5" # LLVM is built with GCC
 
   def llvm
-    deps.map(&:to_formula).find { |f| f.name.match?(/^llvm(@\d+(\.\d+)*)?$/) }
+    deps.map(&:to_formula).find { |f| f.name.match? "^llvm(@\d+(\.\d+)*)?$" }
   end
 
   def install
@@ -88,7 +86,7 @@ class IncludeWhatYouUse < Formula
       ---
     EOS
     assert_match expected_output,
-      shell_output("#{bin}/include-what-you-use main.c 2>&1")
+      shell_output("#{bin}/include-what-you-use main.c 2>&1", 4)
 
     (testpath/"main.cc").write <<~EOS
       #include <iostream>
@@ -101,6 +99,6 @@ class IncludeWhatYouUse < Formula
       (main.cc has correct #includes/fwd-decls)
     EOS
     assert_match expected_output,
-      shell_output("#{bin}/include-what-you-use main.cc 2>&1")
+      shell_output("#{bin}/include-what-you-use main.cc 2>&1", 2)
   end
 end

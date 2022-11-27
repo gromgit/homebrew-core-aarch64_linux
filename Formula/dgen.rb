@@ -3,16 +3,17 @@ class Dgen < Formula
   homepage "https://dgen.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/dgen/dgen/1.33/dgen-sdl-1.33.tar.gz"
   sha256 "99e2c06017c22873c77f88186ebcc09867244eb6e042c763bb094b02b8def61e"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f0b41b3312ecd8654034554cc0b986a8eb5d77db1a7c973f2d51aabbf6d41ac3"
-    sha256 cellar: :any,                 arm64_monterey: "818fa7b9017947cead9d4b8d0ae13e940f59bce44868c41536ed6140159c8ed9"
-    sha256 cellar: :any,                 arm64_big_sur:  "1107fdda6b8977cb8e962d9a7d353576f5a6e41d1de97f0c64fdfedb98253fe1"
-    sha256 cellar: :any,                 monterey:       "1fbc47cc8c293c0c1284bdc01cb08216deabd210f806be8c4555416094a4265f"
-    sha256 cellar: :any,                 big_sur:        "5b5217280e09f36cdd8650b7d0951c2a10e7996ec6bde83d90843d08e876d7b7"
-    sha256 cellar: :any,                 catalina:       "3d68b5d75ca02d4686dc87be5f5d8da36925d26964aec24a6850bfccefc8a85d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55774c1de8d53707d3e330814f836d6e034a0f68f87d0507768dd0eed55f7336"
+    sha256 cellar: :any,                 monterey:     "56176497529b9b9e348c9f81e8e3eaa35a02a86d8158d6eaf9083d2506b43e90"
+    sha256 cellar: :any,                 big_sur:      "476760ba116d162e64497c9bfec9e8222f55b455c31083269789057a76776228"
+    sha256 cellar: :any,                 catalina:     "753f4d198c110edbcadb1b81db8200a161d67104b2e9ffa75b44d9fde6521bc0"
+    sha256 cellar: :any,                 mojave:       "7ebcef39d27013a647585ab076ca31fc1be468c85aeafe2d504242b4194a3d2e"
+    sha256 cellar: :any,                 high_sierra:  "bac08b08f7cfb9c108ccf0bfe2d4623324e5038f01e508c1fb5da6b3c4d58dff"
+    sha256 cellar: :any,                 sierra:       "50383807ec76387aa156cf6157ea537465bf20ad35e4e9eddda7d34685ded635"
+    sha256 cellar: :any,                 el_capitan:   "ebcab68ba8d0aa9c6aacae94d43a67ce016dcdd219c5770c3b7d6d9c3590ef9f"
+    sha256 cellar: :any,                 yosemite:     "53f1fc72dbaab000eae45e143ca46a054a6ff655f91190d6aa30e71e8e505494"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d6e7a76934be220bc54372894c23fd17a56eafad2e7baf6c8c551a789c6eb47b"
   end
 
   head do
@@ -23,7 +24,7 @@ class Dgen < Formula
   end
 
   depends_on "libarchive"
-  depends_on "sdl12-compat"
+  depends_on "sdl"
 
   def install
     args = %W[
@@ -32,7 +33,6 @@ class Dgen < Formula
       --disable-sdltest
       --prefix=#{prefix}
     ]
-    args << "--disable-asm" if Hardware::CPU.arm?
     system "./autogen.sh" if build.head?
     system "./configure", *args
     system "make", "install"

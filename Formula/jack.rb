@@ -11,10 +11,8 @@ class Jack < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "9cf54ddb51aba0829825dcec602d85e18b232eac4c8557efe7a7e5bdcca05608"
     sha256 arm64_monterey: "5b8c6629a97e463b96bb2672c3a0cfb8da8b5cf91d147f632c7f6d351a7fe3cb"
     sha256 arm64_big_sur:  "a9732675aef73bf6a133a8130b46a81a275aad83abfc0d0d72b91f34580d11fb"
-    sha256 ventura:        "4153adcbb219bfafaaf25aed11df7268222e255201f75b1ae16b1a59e6b54da7"
     sha256 monterey:       "8047fbdd9eefa085dd3e66584d907bbbcfee2e7651f80836ff621844d39a53aa"
     sha256 big_sur:        "f1f19dbf7ba59e389e51d325997b6c4173ebcf3c076732edd1d3ebbf51af5ab0"
     sha256 catalina:       "d4ac8617761bb59dfaa1390d237ef7ad2b2733283353a8484fd4a1c8a82b4f79"
@@ -46,10 +44,9 @@ class Jack < Formula
       ENV.append "LDFLAGS", "-Wl,-compatibility_version,1"
       ENV.append "LDFLAGS", "-Wl,-current_version,#{version}"
     end
-    python3 = "python3.10"
-    system python3, "./waf", "configure", "--prefix=#{prefix}", "--example-tools"
-    system python3, "./waf", "build"
-    system python3, "./waf", "install"
+    system Formula["python@3.10"].opt_bin/"python3", "./waf", "configure", "--prefix=#{prefix}", "--example-tools"
+    system Formula["python@3.10"].opt_bin/"python3", "./waf", "build"
+    system Formula["python@3.10"].opt_bin/"python3", "./waf", "install"
   end
 
   service do

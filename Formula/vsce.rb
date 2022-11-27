@@ -3,8 +3,8 @@ require "language/node"
 class Vsce < Formula
   desc "Tool for packaging, publishing and managing VS Code extensions"
   homepage "https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce"
-  url "https://registry.npmjs.org/vsce/-/vsce-2.14.0.tgz"
-  sha256 "160b2e5e3a381ec249d13615e104ceadb52972a43eff1d0bdb177f488025d96c"
+  url "https://registry.npmjs.org/vsce/-/vsce-2.7.0.tgz"
+  sha256 "68016d50a3208624c525dd8d214ac81fb37772d94f1565740a2e9d061a25327c"
   license "MIT"
   head "https://github.com/microsoft/vscode-vsce.git", branch: "main"
 
@@ -14,14 +14,12 @@ class Vsce < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "acd2af0b9a1893ec75d6253ee63c16f01de621102db1cd59fa8a82043a38470d"
-    sha256                               arm64_monterey: "7672b5b42555b9500014fbe0519d019909f05f7dccbdbc98eced30a7b82e65cc"
-    sha256                               arm64_big_sur:  "b6346460c8f5dabbee25108816a01bd322ab28c7bf05715c8a2f706e4d6e9c73"
-    sha256                               ventura:        "3ac06e43e71cdddbed3c9ff51d34681909424bc13c5299188051726930f7ea05"
-    sha256                               monterey:       "c88b50cb8939e8ed22a1eb9c1fb805b633228e5d9af44d1e80c3899c833f95e4"
-    sha256                               big_sur:        "6015efbc69fa2ba06c6187d9139599d4391041d2398e02a4ce3c07b6298f2357"
-    sha256                               catalina:       "7ac92b45d332653e98ea6a7f2a98e2233d5f75699cf4a0a243dfd8a1508faade"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b01d508db4acd83a8ed5f5e0991ef8dd4a1069817a070797118b4255f7715a5"
+    sha256                               arm64_monterey: "0027e8e5cb8c412c8d1585b5d3053913c68ca27c060fffafe6b677b4a9ad05d7"
+    sha256                               arm64_big_sur:  "83cabca0ad09235e8acde307b6a3af0438cca088eda6a7c0675c36125fec360c"
+    sha256                               monterey:       "fcead3c7ed4125817ce3e3eac450f7d61fba1380a7402945876c945e044316d3"
+    sha256                               big_sur:        "9e0088850df24f9b4ece0e65f2c151ef2a0942d4ca75a35f4e435e6dfa5b2a4d"
+    sha256                               catalina:       "aeb254b3198f42b4d7b8cbe487480dcb1a7fc1c2e03fdcecdb714a99d359287c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "978a1f4e0a0bc438825e4f598b631b30215979d4d59a151cba112bc33499e72d"
   end
 
   depends_on "node"

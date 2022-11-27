@@ -7,7 +7,8 @@ class Liquidprompt < Formula
   head "https://github.com/nojhan/liquidprompt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "407ac67632d4c74525162eedfbc1033ca4ea69ca70a8ce225531d09c35d195eb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/liquidprompt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "85b6c43ad094ce516ea27402ef069af47630a9a3b8eb540e46554a40a8481952"
   end
 
   def install

@@ -1,27 +1,21 @@
 class Topgrade < Formula
   desc "Upgrade all the things"
-  homepage "https://github.com/topgrade-rs/topgrade"
-  url "https://github.com/topgrade-rs/topgrade/archive/refs/tags/v10.2.0.tar.gz"
-  sha256 "66f11d3a08981a883c20afd40d036a7e42d8e12f8d88e0671455a83f70b495da"
+  homepage "https://github.com/r-darwish/topgrade"
+  url "https://github.com/r-darwish/topgrade/archive/v8.3.1.tar.gz"
+  sha256 "f90f25b1701e544ca1eb935b552065c0eca584eaff659920148f278aa36ee10b"
   license "GPL-3.0-or-later"
 
-  livecheck do
-    url :stable
-    strategy :github_latest
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "be61a6d5a52d399009141e985c3ae1377432cdd258a1c850c0a9f2a40eda45a1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "21218b52c1469516333ed88468235b69054ca67d2033d61a60ae4e00c06845c2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8cf03f1d04eee0b769ac32372f20512a7b91d2da5d4910d5cd7e2330d9c98691"
-    sha256 cellar: :any_skip_relocation, ventura:        "134ee6b94adea333b8f0aa69cb51aad59d4c36f07604f27d3008b50320bea1ab"
-    sha256 cellar: :any_skip_relocation, monterey:       "89c839ab77dd40616c5a44f56098e0ea58b39a0a6e4810385e0b64bd7b829716"
-    sha256 cellar: :any_skip_relocation, big_sur:        "104eb42179e3c68506c02713b3f42e1039400e385bfa3834e5b7fd9d3ed4510e"
-    sha256 cellar: :any_skip_relocation, catalina:       "7ddf8f8ae35900be2b6a52bf571e88b8d18135680ede5ea48133f82ed264c7ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ef93f705ab433972f26b99379faa688d37b2d764b04a5647cfe74c127f7461d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3f6563b3c082a921179b30af0e59b2df3a86d7fedcf2fb64945166b5f0691c76"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7831e9589ef7360c8a34e1300b89b8aec7be73109d55e93f92ad328bde066cb6"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7f55084bc043d824ce30011ce617ccd6f3ce96f366ffdce413642138c40adbf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9c429848a1b5ea1d67c23078b24de00a2df7a745a583f426557a2141d26fba32"
+    sha256 cellar: :any_skip_relocation, catalina:       "eeb60ffc1bcdcc0fc581354ae6a3c046a4f55c545a8f0a5439af7536709b9f8a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3191f48d6ec0db5bdb91a62f67a749e762daa5bd4e4d7f2be5e1fddb1c97c7c"
   end
 
   depends_on "rust" => :build
+  depends_on xcode: :build if MacOS::CLT.version >= "11.4" # libxml2 module bug
 
   def install
     system "cargo", "install", *std_cargo_args

@@ -1,8 +1,8 @@
 class Gwenhywfar < Formula
   desc "Utility library required by aqbanking and related software"
   homepage "https://www.aquamaniac.de/rdm/projects/gwenhywfar"
-  url "https://www.aquamaniac.de/rdm/attachments/download/465/gwenhywfar-5.10.1.tar.gz"
-  sha256 "a2f60a9dde5da27e57e0e5ef5f8931f495c1d541ad90a841e2b6231565547160"
+  url "https://www.aquamaniac.de/rdm/attachments/download/415/gwenhywfar-5.9.0.tar.gz"
+  sha256 "e88c7d3383a3cbbe46cb3b2299f71dfb9e6fa565f5a1668b4297391c874b0e12"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,14 +11,12 @@ class Gwenhywfar < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "3b16dc36d846d40413b684b6bb4b58a5c83102c04e200241c70ec5851a92ceff"
-    sha256 arm64_monterey: "a4a56e458f247380a5766377a718b25e8488101cf528d791d3e54f0b70d0d289"
-    sha256 arm64_big_sur:  "ed089ad54b5d4f967a27517759dbc2e89a76324c90e9520e28239cea774c2337"
-    sha256 monterey:       "1656453fb187a695e920960e8e95c4504b428c867d5124ab5ee6d180eec7a5e9"
-    sha256 big_sur:        "583bb7775e565b01b56787c51fcbf48a98ef9a38e247781c60a54839303aef90"
-    sha256 catalina:       "39e119ae0c67f3282b9323d79253f47b471e347fcb737f523b1d74fc1d128eef"
-    sha256 x86_64_linux:   "f48d3868cd3b66a3a76897984c2d567f7c35e21dc5376d030c62b550233d59b5"
+    sha256 arm64_monterey: "fff0a9c1b61acc58e4916356b8ae9790d6390f92793cd6b19acd19c41db5aee4"
+    sha256 arm64_big_sur:  "6df6fd8af83a216de5bc80c5beaa2cb1e79a043d13ee63b16de50a9709c09944"
+    sha256 monterey:       "7ae5f189ba9ba9b89585ad98c9222262921ff7426d626f3f4a63a3fad605831d"
+    sha256 big_sur:        "d07022854cd1f1d9155d1840d31d88079368f17661e328e7204354f38ec9a960"
+    sha256 catalina:       "87f3d218ac732ef0be68decfaf0e230c5bf40f98916d623ee85f2a81f7d95be3"
+    sha256 x86_64_linux:   "1aa388288fe7fd86bb667e5b778839de858571a08de78051148b049e694cfa82"
   end
 
   depends_on "autoconf" => :build
@@ -31,12 +29,15 @@ class Gwenhywfar < Formula
   depends_on "pkg-config" # gwenhywfar-config needs pkg-config for execution
   depends_on "qt@5"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
   def install
     inreplace "gwenhywfar-config.in.in", "@PKG_CONFIG@", "pkg-config"
-    # Fix `-flat_namespace` flag on Big Sur and later.
-    system "autoreconf", "--force", "--install", "--verbose"
+    system "autoreconf", "-fiv" # needed because of the patch. Otherwise only needed for head build (if build.head?)
     guis = ["cpp", "qt5"]
     guis << "cocoa" if OS.mac?
     system "./configure", "--disable-debug",

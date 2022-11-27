@@ -6,7 +6,6 @@ class Jove < Formula
   sha256 "9c9e202607f5972c382098d10b63c815ac01e578f432626c982e6aa65000c630"
 
   bottle do
-    sha256 arm64_ventura:  "b201d1acdef17d2d3a74b4c6aa7d6e59e4c9d74ee208ef508b56017441ac719c"
     sha256 arm64_monterey: "7a4e8fb6e7fb7fbe40fe89e458fa7e1fbd991ebaa1d1ba68c112bc0734603375"
     sha256 arm64_big_sur:  "410dc581e7eae19afab271eea74bd002fc7e48d4cfded7e4e8de33a277dc38b7"
     sha256 monterey:       "8cc9a947664f8284103b39ff1a2969f43c176a85e2d408add27d7575a8da855b"
@@ -16,14 +15,12 @@ class Jove < Formula
     sha256 high_sierra:    "852bb69e61f542d5741b4a442c72c8f72304468d0c1101c2843b1c272111a6d1"
     sha256 sierra:         "a4559511caca50cf08e01049dda2a35a9423b5c976bf0d930ba819afebc1387b"
     sha256 el_capitan:     "c083761f33516e9d18718b6f78f6468b9aa72c0c80bb625987c60c05cc4f1895"
+    sha256 yosemite:       "4e741042364faa5ef07f7957d9e811c204561ecad03ebbcd98f82761211ec78c"
     sha256 x86_64_linux:   "16b980f6ffc7e4d3d3ee8a98d89b9e3786b630e6847130fe412ea7dac5d17050"
   end
 
+  uses_from_macos "groff" => :build
   uses_from_macos "ncurses"
-
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "groff" => :build
-  end
 
   # Per MacPorts, avoid clash with libc getline
   patch :p0 do

@@ -1,10 +1,8 @@
 class Ngspice < Formula
   desc "Spice circuit simulator"
   homepage "https://ngspice.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/38/ngspice-38.tar.gz"
-  sha256 "2c3e22f6c47b165db241cf355371a0a7558540ab2af3f8b5eedeeb289a317c56"
-  license :cannot_represent
-  revision 1
+  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/36/ngspice-36.tar.gz"
+  sha256 "4f818287efba245341046635b757ae81f879549b326a4316b5f6e697aa517f8c"
 
   livecheck do
     url :stable
@@ -12,14 +10,12 @@ class Ngspice < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "47d12fc23fbbd5790eed5901cb40b44e8f4cecface33fd4e6627175b11cf7347"
-    sha256 arm64_monterey: "b9ea5fe131b79626bce3e45ed9164d9a82c6b9bf9b200cde968e7e54e255c3cc"
-    sha256 arm64_big_sur:  "5b3a0017abf06f683abadf300f57e3c6b0bda63ac33e78c6579b9eb0e0ea4787"
-    sha256 ventura:        "9d561a78aa04a69bebb38da569f088d8a61bd893430f8981ba9f1aa5be423d82"
-    sha256 monterey:       "afcbe1770ae25464eff3c5f6f40c1946992e634b387957cf94826a79ec8db9c2"
-    sha256 big_sur:        "155d852cbf551404e160f45871d251f9832e6f8ea0992f8e2f7093ce4f7be20b"
-    sha256 catalina:       "70a9f330cfee34bbcd6666384faeb309f8d778ab3d1f51883deeb14ceae5b4c1"
-    sha256 x86_64_linux:   "8d791ed65ceb5c9de344d0b94a7a5b00f35d2358c7b61ead3be3aaa1c564e350"
+    sha256 arm64_monterey: "d9ede6e35d7f1ab796ec2c19e785359dfa19f14c1ee2f84c8a0e1af5d6a138f0"
+    sha256 arm64_big_sur:  "8107e3a0dbb732b3da2e9b4f0dc7115f147c4df5203d2740cf356530414fbaa1"
+    sha256 monterey:       "8f9f6742807f18fedd725bd51d09cf4fbfce072a4646d03ff96839935326acbb"
+    sha256 big_sur:        "06e7103236e3bf1aa3037c25a2b47a916574677632749c4fc461d6ddfd976470"
+    sha256 catalina:       "857b80d8491645039822df8c422a662667501295598b4c89c63e573b31fc0aea"
+    sha256 x86_64_linux:   "777b72adb972fd06b5456835016d6625a45f6bc9473792c6e013eb3765b4254f"
   end
 
   head do
@@ -32,25 +28,21 @@ class Ngspice < Formula
   end
 
   depends_on "fftw"
-  depends_on "libngspice"
   depends_on "readline"
 
   def install
     system "./autogen.sh" if build.head?
 
-    args = %w[
+    args = %W[
       --disable-dependency-tracking
-      --disable-silent-rules
+      --prefix=#{prefix}
       --with-readline=yes
       --enable-xspice
       --without-x
     ]
 
-    system "./configure", *args, *std_configure_args
+    system "./configure", *args
     system "make", "install"
-
-    # fix references to libs
-    inreplace pkgshare/"scripts/spinit", lib/"ngspice/", Formula["libngspice"].opt_lib/"ngspice/"
 
     # remove conflict lib files with libngspice
     rm_rf Dir[lib/"ngspice"]

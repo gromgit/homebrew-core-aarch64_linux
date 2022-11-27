@@ -3,23 +3,20 @@ class MuRepo < Formula
 
   desc "Tool to work with multiple git repositories"
   homepage "https://github.com/fabioz/mu-repo"
-  url "https://files.pythonhosted.org/packages/fc/3f/46e5e7a3445a46197335e769bc3bf7933b94f2fe7207cc636c15fb98ba70/mu_repo-1.8.2.tar.gz"
-  sha256 "1394e8fa05eb23efb5b1cf54660470aba6f443a35719082595d8a8b9d39b3592"
+  url "https://files.pythonhosted.org/packages/05/6b/27768e4cc1464a2b7c6b683c096edbdf38b8b994670e42814519ff067853/mu_repo-1.8.1.tar.gz"
+  sha256 "1eb67031ff9d697adce375b122e0a76beb675c5ee6dfcabc848e78bdcfb4ed3d"
   license "GPL-3.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6812873e9642055410a5a4f71928affeb2720b147c4567e8436529c1e2867ec1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6812873e9642055410a5a4f71928affeb2720b147c4567e8436529c1e2867ec1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6812873e9642055410a5a4f71928affeb2720b147c4567e8436529c1e2867ec1"
-    sha256 cellar: :any_skip_relocation, ventura:        "69148e98fc1134364d9bf43e8264fd71ce2869af08ff3ac5f2f41eb802e2b062"
-    sha256 cellar: :any_skip_relocation, monterey:       "69148e98fc1134364d9bf43e8264fd71ce2869af08ff3ac5f2f41eb802e2b062"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69148e98fc1134364d9bf43e8264fd71ce2869af08ff3ac5f2f41eb802e2b062"
-    sha256 cellar: :any_skip_relocation, catalina:       "69148e98fc1134364d9bf43e8264fd71ce2869af08ff3ac5f2f41eb802e2b062"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40bdf36a9090b54702f4f5857c8df633ea07049acb8447439de047cbda68a753"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9bfa8b88548cb8bde371ba82d961023fb6380097fc0f9725738a3e8ef9e2c5ca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9bfa8b88548cb8bde371ba82d961023fb6380097fc0f9725738a3e8ef9e2c5ca"
+    sha256 cellar: :any_skip_relocation, monterey:       "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
+    sha256 cellar: :any_skip_relocation, catalina:       "f22765952278d1299a518c8c9835a613045c46e5da7a68f746764402b265f590"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "753d0bded50ce2ea748a30779ff838e56dd6436a85d3f608386f3517c04568b4"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   conflicts_with "mu", because: "both install `mu` binaries"
 

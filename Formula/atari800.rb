@@ -1,10 +1,9 @@
 class Atari800 < Formula
   desc "Atari 8-bit machine emulator"
   homepage "https://atari800.github.io/"
-  url "https://github.com/atari800/atari800/releases/download/ATARI800_5_0_0/atari800-5.0.0-src.tgz"
-  sha256 "eaa2df7b76646f1e49d5e564391707e5a4b56d961810cff6bc7c809bfa774605"
+  url "https://github.com/atari800/atari800/releases/download/ATARI800_4_2_0/atari800-4.2.0-src.tgz"
+  sha256 "55cb5568229c415f1782130afd11df88c03bb6d81fa4aa60a4ac8a2f151f1359"
   license "GPL-2.0"
-  revision 1
 
   livecheck do
     url :stable
@@ -13,18 +12,18 @@ class Atari800 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4bcc92710eebd07c09b0701d6722f838a4bd2d6c7c79386f5b2e01d6ec2e9d4e"
-    sha256 cellar: :any,                 arm64_monterey: "f49c2cf42413abdd1ba0d7b5fd3e628b794eb806c2248a0f50c4c6661d04a064"
-    sha256 cellar: :any,                 arm64_big_sur:  "aa9c15ae0bf8bd5ab442836b71297d802abed3e3c7ba63ea2651dc15accd9c79"
-    sha256 cellar: :any,                 ventura:        "ff0725ca690bf0e9bb6148498420d979e626aab303a8782dca4e825ec21d1a61"
-    sha256 cellar: :any,                 monterey:       "a427841ac1585534dfe1e1692a662720d6ff8936cef1ca9649316ffc3099189c"
-    sha256 cellar: :any,                 big_sur:        "452c89fa2cb96c4bd68939bf5f0db5cad245367e152d93721d964cf548fb18cf"
-    sha256 cellar: :any,                 catalina:       "d05b2717c26e4ddf292f4ad85df1485a735e7522f965533de0856978bd9b093e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffe078392f7bbbf2753bb4e42b9e02fdd85b14d60816ef8f873ffb9741aca9bb"
+    sha256 cellar: :any,                 arm64_monterey: "ec108e68eea3d1c64c07bcc15ceab3eaa89a73140942c313f60d9f93dfb2cbbd"
+    sha256 cellar: :any,                 arm64_big_sur:  "48470ef79c6f3917d2af5cd4fbf76a6dd2b3ff8f88304765c10d81fa2ef5d647"
+    sha256 cellar: :any,                 monterey:       "43d09a8a70e5aeffbc83e57756f2cb0cbe2fec794912150d35ecb5f94d34452a"
+    sha256 cellar: :any,                 big_sur:        "b2ea1619d6fba699f3936cfb82c28b6d73aafc9d41ad39ee51e9bd49a5840ab2"
+    sha256 cellar: :any,                 catalina:       "5bc2d96418e21a76809abfa2513f630cb207848b0894f27cda34b2f55bace81c"
+    sha256 cellar: :any,                 mojave:         "f5508c8a0021a0fcbd1e35d7a4313d8c9ba52ab937d0fde59ccc5f81e3c49ac0"
+    sha256 cellar: :any,                 high_sierra:    "497ce17afc99e76180b94b76b08c1aca973eab554ee3ccecfd14818c71e97035"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86b93a07278133bc50a98dc5ca69f96a9f50951b9663905697d26adbcac8e879"
   end
 
   depends_on "libpng"
-  depends_on "sdl12-compat"
+  depends_on "sdl"
 
   def install
     system "./configure", "--prefix=#{prefix}",

@@ -3,51 +3,43 @@ class Volk < Formula
 
   desc "Vector Optimized Library of Kernels"
   homepage "https://www.libvolk.org/"
-  url "https://github.com/gnuradio/volk/releases/download/v2.5.2/volk-2.5.2.tar.gz"
-  sha256 "ead6d39d390a03cec0d65d474b5222654103b304f7f00c730d69ea54a2ca7006"
+  url "https://github.com/gnuradio/volk/releases/download/v2.5.1/volk-2.5.1.tar.gz"
+  sha256 "8f7f2f8918c6ba63ebe8375fe87add347046b8b3acbba2fb582577bebd8852df"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
-    rebuild 2
-    sha256 arm64_ventura:  "5e9d7d3ad47fd6aa48f00671aa60a533dc6fc956c24f3c15890d1c45d84270df"
-    sha256 arm64_monterey: "9bf109cded4de487f53c6cbb51c33c85ed15d8b4361a7c5d43f9f4c5bdbe683e"
-    sha256 arm64_big_sur:  "68cd76a336bb15bc607f66c4af0bd73d700ddc7ae831fb90f137c15532b65a05"
-    sha256 monterey:       "e7580fa2cbb6de6837df1361ccfb403fa3106a009ac8bd2e08a02eb7a10ea12a"
-    sha256 big_sur:        "541026b784ba6ed5e0067088330eb7226dab2b6a97e259841321938f0aa8843d"
-    sha256 catalina:       "332e9cfa3b5b8d1a812aa32da50a51acdd1af5b884901f3de7e3f89a917e75fb"
-    sha256 x86_64_linux:   "84df5dd567f628ac17713aefbb1a40c1e5795801d6baa7d159ad4aaef820bc10"
+    sha256 arm64_monterey: "cd08be9bd078c3132652c270cfd6af087adc72855e36f2919e049d39fc22ba3a"
+    sha256 arm64_big_sur:  "e7e77a6f19eaf1443460933a1937794300c76b00bc64fca7b0ebf9535e771f5e"
+    sha256 monterey:       "0c8208cf15c8b3013fa8f1901fc06c0612458991a10e15db6f50744259e82e8e"
+    sha256 big_sur:        "e5edefdbf14fdba429f56369c8c4b10f5fb7be7f5f3cd09a84d4542d0cd181a2"
+    sha256 catalina:       "568e33a05f0a5efc390fd7181f1876bab39ca96abbbd9d9aca46027f61c540e8"
+    sha256 x86_64_linux:   "985a55137a6942852d81447f577458d174979718475d60fc0e0cd9d2f4167fc5"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
+  depends_on "cpu_features" if Hardware::CPU.intel?
   depends_on "orc"
-  depends_on "pygments"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
 
-  on_intel do
-    depends_on "cpu_features"
+  on_linux do
+    depends_on "gcc"
   end
 
   fails_with gcc: "5" # https://github.com/gnuradio/volk/issues/375
 
   resource "Mako" do
-    url "https://files.pythonhosted.org/packages/6d/f2/8ad2ec3d531c97c4071572a4104e00095300e278a7449511bee197ca22c9/Mako-1.2.2.tar.gz"
-    sha256 "3724869b363ba630a272a5f89f68c070352137b8fd1757650017b7e06fda163f"
-  end
-
-  resource "MarkupSafe" do
-    url "https://files.pythonhosted.org/packages/1d/97/2288fe498044284f39ab8950703e88abbac2abbdf65524d576157af70556/MarkupSafe-2.1.1.tar.gz"
-    sha256 "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
+    url "https://files.pythonhosted.org/packages/af/b6/42cd322ae555aa770d49e31b8c5c28a243ba1bbb57ad927e1a5f5b064811/Mako-1.1.6.tar.gz"
+    sha256 "4e9e345a41924a954251b95b4b28e14a301145b544901332e658907a7464b6b2"
   end
 
   def install
-    python = "python3.10"
-
     # Set up Mako
     venv_root = libexec/"venv"
-    ENV.prepend_create_path "PYTHONPATH", venv_root/Language::Python.site_packages(python)
-    venv = virtualenv_create(venv_root, python)
-    venv.pip_install resources
+    ENV.prepend_create_path "PYTHONPATH", venv_root/Language::Python.site_packages("python3")
+    venv = virtualenv_create(venv_root, "python3")
+    venv.pip_install resource("Mako")
 
     # Avoid references to the Homebrew shims directory
     inreplace "lib/CMakeLists.txt" do |s|
@@ -66,9 +58,9 @@ class Volk < Formula
     system "cmake", "--install", "build"
 
     # Set up volk_modtool paths
-    site_packages = prefix/Language::Python.site_packages(python)
+    site_packages = prefix/Language::Python.site_packages("python3")
     pth_contents = "import site; site.addsitedir('#{site_packages}')\n"
-    (venv_root/Language::Python.site_packages(python)/"homebrew-volk.pth").write pth_contents
+    (venv_root/Language::Python.site_packages("python3")/"homebrew-volk.pth").write pth_contents
   end
 
   test do

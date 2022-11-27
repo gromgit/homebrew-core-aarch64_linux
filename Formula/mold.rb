@@ -1,35 +1,31 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
-  url "https://github.com/rui314/mold/archive/v1.7.1.tar.gz"
-  sha256 "fa2558664db79a1e20f09162578632fa856b3cde966fbcb23084c352b827dfa9"
+  url "https://github.com/rui314/mold/archive/v1.2.1.tar.gz"
+  sha256 "41868663ff18afee3fa35e5e3fdf3d9575eb2e4ff49967b8f42f479c61c1ec34"
   license "AGPL-3.0-only"
   head "https://github.com/rui314/mold.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "2cc6b8ae6a7c0e648848c2373d07cb67997e5101e4e57d8fc656dc353f46c841"
-    sha256 cellar: :any,                 arm64_monterey: "68c9fd5f6b82627ac8d929f317a36ed00b6e7a4f1432bd3776ce966bfaf72ddf"
-    sha256 cellar: :any,                 arm64_big_sur:  "1bfa53833bf1c63c0303d5573d424152af2987c9d777f88890143d38dbfa329c"
-    sha256 cellar: :any,                 ventura:        "6790cf80be66f43a76bb2ba6b0ac1412a0a8be9818bc165030823c0ff0d80bb4"
-    sha256 cellar: :any,                 monterey:       "afbacda1543ba674aa2136f95b9ae8c067746e7b84359507c0b587ff651e0204"
-    sha256 cellar: :any,                 big_sur:        "6943c6d65bf51b164b9fd0de46bbe6904972c7f4fbe314ea71bf852cfd112f56"
-    sha256 cellar: :any,                 catalina:       "32a875674d984b8a26ca348331a8f951608df0fa0924f0b9937a8e7faa5754f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b4e5937fb04da867788249c3d4ebe51a2127e75b43d57afca493a12f215bc34"
+    sha256 arm64_monterey: "92f9195d7831a97e17b6b9c1e82b1b93b5294e1c14aeeb179c71dcd3bdd85805"
+    sha256 arm64_big_sur:  "644571572b427e47dc20dc8783e715ace2f57f43628f3530587fa3ee796a24a9"
+    sha256 monterey:       "234ab51333ca2569f322d039d77a2fc440ddb4d65c939de84ca9b933d427d3a5"
+    sha256 big_sur:        "07454d53ebef64bb9f4b872e5940b6b0acc732b5d8bfc1201abab23d2d3d3e75"
+    sha256 catalina:       "a0fcf049e0038568b4f6ce8607e8e724c9231b760b8a60631c834855bfaa9e4f"
+    sha256 x86_64_linux:   "76a1d6dc558bf8f111d877df13d25300db7ce10f40c76ab1252ae00465462c8a"
   end
 
-  depends_on "cmake" => :build
   depends_on "tbb"
-  depends_on "zstd"
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1200
+    depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1200
   end
 
   on_linux do
+    depends_on "gcc"
     depends_on "mimalloc"
-    depends_on "openssl@3" # Uses CommonCrypto on macOS
+    depends_on "openssl@1.1" # Uses CommonCrypto on macOS
   end
 
   fails_with :clang do
@@ -37,77 +33,60 @@ class Mold < Formula
     cause "Requires C++20"
   end
 
-  fails_with :gcc do
-    version "7"
-    cause "Requires C++20"
-  end
+  # Requires C++20
+  fails_with gcc: "5"
+  fails_with gcc: "6"
+  fails_with gcc: "7"
 
   def install
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
 
-    # Avoid embedding libdir in the binary.
-    # This helps make the bottle relocatable.
-    inreplace "config.h.in", "@CMAKE_INSTALL_FULL_LIBDIR@", ""
-    # Ensure we're using Homebrew-provided versions of these dependencies.
-    %w[mimalloc tbb zlib zstd].map { |dir| (buildpath/"third-party"/dir).rmtree }
-    args = %w[
-      -DMOLD_LTO=ON
-      -DMOLD_USE_MIMALLOC=ON
-      -DMOLD_USE_SYSTEM_MIMALLOC=ON
-      -DMOLD_USE_SYSTEM_TBB=ON
-      -DCMAKE_SKIP_INSTALL_RULES=OFF
+    args = %W[
+      PREFIX=#{prefix}
+      LTO=1
+      SYSTEM_MIMALLOC=1
+      SYSTEM_TBB=1
     ]
+    args << "STRIP=true" if OS.mac?
+    system "make", *args, "install"
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
-
-    inreplace buildpath.glob("test/macho/*.sh"), "./ld64", bin/"ld64.mold", false
-    inreplace buildpath.glob("test/elf/*.sh") do |s|
-      s.gsub!(%r{(\./|`pwd`/)?mold-wrapper}, lib/"mold/mold-wrapper", false)
-      s.gsub!(%r{(\.|`pwd`)/mold}, bin/"mold", false)
-      s.gsub!(/-B(\.|`pwd`)/, "-B#{libexec}/mold", false)
+    inreplace buildpath.glob("test/*/*.sh") do |s|
+      s.gsub!(/^mold=.+?((?:ld64\.)?mold)"?$/, "mold=\"#{bin}/\\1\"")
+      s.gsub!(/"?\$mold"?-wrapper/, lib/"mold/mold-wrapper", false)
     end
     pkgshare.install "test"
   end
 
   test do
+    # Avoid use of the `llvm_clang` shim.
+    ENV.clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
+
     (testpath/"test.c").write <<~EOS
       int main(void) { return 0; }
     EOS
 
+    # GCC 12.1.0+ can also use `-fuse-ld=mold`
     linker_flag = case ENV.compiler
-    when /^gcc(-(\d|10|11))?$/ then "-B#{libexec}/mold"
-    when :clang, /^gcc-\d{2,}$/ then "-fuse-ld=mold"
-    else odie "unexpected compiler"
+    when :clang then "-fuse-ld=mold"
+    when /^gcc(-\d+)?$/ then "-B#{libexec}/mold"
+    else raise "unexpected compiler"
     end
 
     system ENV.cc, linker_flag, "test.c"
     system "./a.out"
-    # Tests use `--ld-path`, which is not supported on old versions of Apple Clang.
-    return if OS.mac? && MacOS.version < :big_sur
+    # Lots of tests fail on ARM Big Sur for some reason.
+    return if MacOS.version == :big_sur && Hardware::CPU.arm?
 
-    cp_r pkgshare/"test", testpath
     if OS.mac?
-      # Delete failing test. Reported upstream at
-      # https://github.com/rui314/mold/issues/735
-      if (MacOS.version >= :monterey) && Hardware::CPU.arm?
-        untested = %w[libunwind objc-selector]
-        testpath.glob("test/macho/{#{untested.join(",")}}.sh").map(&:unlink)
-      end
-      testpath.glob("test/macho/*.sh").each { |t| system t }
+      cp_r pkgshare/"test", testpath
+      # Remove some failing tests.
+      untested = %w[headerpad* pagezero-size basic response-file]
+      testpath.glob("test/macho/{#{untested.join(",")}}.sh").map(&:unlink)
+      (testpath/"test/macho").children.each { |t| system t }
     else
-      # The substitution rules in the install method do not work well on this
-      # test. To avoid adding too much complexity to the regex rules, it is
-      # manually tested below instead.
-      (testpath/"test/elf/mold-wrapper2.sh").unlink
-      assert_match "mold-wrapper.so",
-        shell_output("#{bin}/mold -run bash -c 'echo $LD_PRELOAD'")
-      # This test file does not have permission to execute, so we skip it.
-      # Remove on next release as this is already fixed upstream.
-      (testpath/"test/elf/section-order.sh").unlink
-      # Run the remaining tests.
-      testpath.glob("test/elf/*.sh").each { |t| system t }
+      system bin/"mold", "-run", ENV.cc, "test.c", "-o", "test"
+      system "./test"
     end
   end
 end

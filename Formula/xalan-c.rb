@@ -6,8 +6,12 @@ class XalanC < Formula
   sha256 "ee7d4b0b08c5676f5e586c7154d94a5b32b299ac3cbb946e24c4375a25552da7"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    regex(/href=["']?xalan[_-]c[._-]v?(\d+(?:\.\d+)+)(?:[._-]src)?\.t/i)
+  end
+
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "26f8a177f0c16a0a9fb184683a37e0a7bc9b7ca44c6b71a4537aa0893afd59bf"
     sha256 cellar: :any,                 arm64_monterey: "7c3a09c8295eee985ae29bbb413117f3bcf561c2fb12ac2cf694812a0552a402"
     sha256 cellar: :any,                 arm64_big_sur:  "68fa397917ca7521f087e321c3f2c5201fd4692bdc61c7f807386ccfa2080486"
     sha256 cellar: :any,                 monterey:       "3e45d82c41f1a30500ef0f9cc3614cae511ff88d9d25b4e041071d99ef2b364c"
@@ -16,20 +20,13 @@ class XalanC < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "809520d5fb3e9f89472b262c52884303ee41b8e4cf845a36783c042419882c85"
   end
 
-  # https://marc.info/?l=xalan-dev&m=166603389016762&w=2
-  deprecate! date: "2022-10-22", because: :deprecated_upstream
-
   depends_on "cmake" => :build
   depends_on "xerces-c"
 
   def install
     ENV.cxx11
 
-    system "cmake", "-S", ".", "-B", "build",
-                    "-Dtranscoder=default",
-                    "-Dmessage-loader=inmemory",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

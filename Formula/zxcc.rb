@@ -11,7 +11,6 @@ class Zxcc < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "e2fe6fa77252015a020de63bb4973171a8b9a9c90f866f2835f1e36e4e5714de"
     sha256 arm64_monterey: "b72dfe0dda214485bb604b56b731e04109c964d10f45eb3b6fedceffdedf61ca"
     sha256 arm64_big_sur:  "3f7d36f3115f3dc9310aa01045a455fe7dab1732612421b5451777c140bf952a"
     sha256 monterey:       "015f6a038fa59edef9b58d8edef90d4ad957c1275e581d2d9e645868b37dc9e1"
@@ -21,6 +20,7 @@ class Zxcc < Formula
     sha256 high_sierra:    "0b6a6d166b5b4822b46d8a53b0a2b850619882d9d13080ecdad8b0ae492a5cc0"
     sha256 sierra:         "79aa0631d52d2d69ae554319db0027ffd59f2baa3d1c35473925f72a5c1965e3"
     sha256 el_capitan:     "11bd1697b8a6b5a3a77ce417d35ad7e1da9e6df18a36ebccfa18a47ce470d3cb"
+    sha256 yosemite:       "824c8a2511a55f9fc00b7058247e3e76d9579c14d20f2d17b5e57aaf1388671f"
     sha256 x86_64_linux:   "8a5baf11b9060b7aedcf4f25afca690fbad80df406a66a70389ddd32fe2c6075"
   end
 

@@ -1,24 +1,22 @@
 class Hyperkit < Formula
   desc "Toolkit for embedding hypervisor capabilities in your application"
   homepage "https://github.com/moby/hyperkit"
-  url "https://github.com/moby/hyperkit/archive/v0.20210107.tar.gz"
-  sha256 "095f5f5ef550d7cad10e4d13e9c9ce8b58cc319d654a6d837d8d87ee70537835"
+  url "https://github.com/moby/hyperkit/archive/v0.20200908.tar.gz"
+  sha256 "e13bdb9dc5c18ca59ae6cd2b447d704d8d58f27cf4ae5a1f0a026deeb13bd0d7"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, ventura:  "3b67078315551718bc3c752b943b933713ddb69058f3cb72a0f65faa6e9295ab"
-    sha256 cellar: :any_skip_relocation, monterey: "da3b0d0374a85af5c649c86fb7796c1eecae468f5783bbb994a96d807e60712a"
-    sha256 cellar: :any_skip_relocation, big_sur:  "f96e7270e9e853ce33f2195136b11338a5cf4d612ee50f3dd51b5c8506b4efcb"
-    sha256 cellar: :any_skip_relocation, catalina: "cd58afe172473278d3ed9404e9d25e10bee487fb4e27cd6de39c950a0ccaca87"
+    sha256 cellar: :any_skip_relocation, catalina:    "26a203b17733ff5166d8c31069e3ecd5af15c74448a51d8b682689cb07e911e8"
+    sha256 cellar: :any_skip_relocation, mojave:      "f662bb10b9bab8a2f3b8e92f51b2fae3f1d8d24310732cc77a164e63d7eaa5d2"
+    sha256 cellar: :any_skip_relocation, high_sierra: "f057fe7b3856421d0fdf1df3d9981e0729ee77c27ed3d4cb918e9523f7d5d9be"
   end
 
+  depends_on "aspcud" => :build
   depends_on "ocaml" => :build
   depends_on "opam" => :build
-  depends_on "pkg-config" => :build
   depends_on xcode: ["9.0", :build]
-  depends_on arch: :x86_64
+
   depends_on "libev"
-  depends_on :macos # Uses Hypervisor.framework, a component of macOS.
 
   resource "tinycorelinux" do
     url "https://github.com/Homebrew/homebrew-core/files/6405545/tinycorelinux_8.x.tar.gz"
@@ -29,19 +27,20 @@ class Hyperkit < Formula
     system "opam", "init", "--disable-sandboxing", "--no-setup"
     opam_dir = "#{buildpath}/.brew_home/.opam"
     ENV["CAML_LD_LIBRARY_PATH"] = "#{opam_dir}/system/lib/stublibs:#{Formula["ocaml"].opt_lib}/ocaml/stublibs"
+    ENV["OPAMEXTERNALSOLVER"] = "aspcud"
     ENV["OPAMUTF8MSGS"] = "1"
     ENV["PERL5LIB"] = "#{opam_dir}/system/lib/perl5"
     ENV["OCAML_TOPLEVEL_PATH"] = "#{opam_dir}/system/lib/toplevel"
     ENV.prepend_path "PATH", "#{opam_dir}/system/bin"
 
-    system "opam", "exec", "--",
-           "opam", "install", "-y", "uri.4.2.0", "qcow.0.11.0", "conduit.2.1.0", "lwt.5.3.0",
+    system "opam", "config", "exec", "--",
+           "opam", "install", "-y", "uri.3.1.0", "qcow.0.11.0", "conduit.2.1.0", "lwt.5.3.0",
            "qcow-tool.0.11.0", "mirage-block-unix.2.12.0", "conf-libev.4-11", "logs.0.7.0", "fmt.0.8.8",
            "mirage-unix.4.0.0", "prometheus-app.0.7"
 
     args = []
     args << "GIT_VERSION=#{version}"
-    system "opam", "exec", "--", "make", *args
+    system "opam", "config", "exec", "--", "make", *args
 
     bin.install "build/hyperkit"
     man1.install "hyperkit.1"

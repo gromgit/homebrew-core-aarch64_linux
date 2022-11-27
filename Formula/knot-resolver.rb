@@ -1,10 +1,9 @@
 class KnotResolver < Formula
   desc "Minimalistic, caching, DNSSEC-validating DNS resolver"
   homepage "https://www.knot-resolver.cz"
-  url "https://secure.nic.cz/files/knot-resolver/knot-resolver-5.5.3.tar.xz"
-  sha256 "a38f57c68b7d237d662784d8406e6098aad66a148f44dcf498d1e9664c5fed2d"
+  url "https://secure.nic.cz/files/knot-resolver/knot-resolver-5.5.0.tar.xz"
+  sha256 "4e6f48c74d955f143d603f6072670cb41ab9acdd95d4455d6e74b6908562c55a"
   license all_of: ["CC0-1.0", "GPL-3.0-or-later", "LGPL-2.1-or-later", "MIT"]
-  revision 1
   head "https://gitlab.labs.nic.cz/knot/knot-resolver.git", branch: "master"
 
   livecheck do
@@ -13,14 +12,12 @@ class KnotResolver < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "12dbcfb549ef5b68b6a6a6fcf9b7fc47602ebccc92f455086d4092efaa158f64"
-    sha256 arm64_monterey: "de3f1e1f8fea0e292f9acea823802778a1d40c1c4bda863ba343d51117acaf85"
-    sha256 arm64_big_sur:  "b3546f2546f4a2c9a62c815530eb72577050eebb74fa6051c6b4259556a8aa0d"
-    sha256 ventura:        "cb391b0b9e7392dcdcc5a2e86dcc760ae4eff483395339b4cf34ed25eb43ade3"
-    sha256 monterey:       "072de42c2782eb5022257d1c0b4f4161cc8f049fcb27b897a8d026d506f710d8"
-    sha256 big_sur:        "e0f5dea3577e23596ceaa94049c7aac2e2d80617d9cab5da3a70a3e5eb51581f"
-    sha256 catalina:       "efc2b3769d9097e9cb34c5265f105e25372502511e7eeb11efdfba804dc28f79"
-    sha256 x86_64_linux:   "937ea3e6cccfe623ac7ecb6483e5ff4c6823bd3be7a198668e84646fa0a93f4f"
+    sha256 arm64_monterey: "00a6b08095cf50df34c95a4045fed42b15a8f4aa25d7233dfe60744f76272f54"
+    sha256 arm64_big_sur:  "50b5f1de099fc2abfcc0884d62a1c62fb891a83d4f0394b1474c8f8c2903eddd"
+    sha256 monterey:       "25bd87b99ee1628ae8e1b5d141c0f7ed05475aca252c76b659ab2353c0ab49f8"
+    sha256 big_sur:        "bee12b1f2fbbfb70c441ee447baf892f90ae61807edb18abdfc40f474e2d224f"
+    sha256 catalina:       "77f451db9bc36f6710e928e1b905da2f2b86249fad3af4ec685a66748885b111"
+    sha256 x86_64_linux:   "06625a977631bd6db573b45631324db57107bc98885927ff714367180a7feefb"
   end
 
   depends_on "meson" => :build
@@ -31,7 +28,7 @@ class KnotResolver < Formula
   depends_on "libnghttp2"
   depends_on "libuv"
   depends_on "lmdb"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
 
   on_linux do
     depends_on "libcap-ng"

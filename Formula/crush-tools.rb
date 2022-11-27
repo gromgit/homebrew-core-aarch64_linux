@@ -15,10 +15,8 @@ class CrushTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2965fb45027df30c48246aaa1db54932d7ab914dc45d44efc542e365d2b1faa1"
     sha256 cellar: :any,                 arm64_monterey: "d00690bd134ad5019aefa7b28a705a3adbb5f4487ea807ecc88f72dd1094f1f9"
     sha256 cellar: :any,                 arm64_big_sur:  "c126bcdab0ba561df10768d423dd6b9336e7464707e3af7c17e65178cbffd4f5"
-    sha256 cellar: :any,                 ventura:        "85877e38560a463505235eaa44659374a880311fa5c020b140312cd6a08d879b"
     sha256 cellar: :any,                 monterey:       "81e41d4da27071d4e43a0dfcee470375f00a9629924165deb4a098cc0a205192"
     sha256 cellar: :any,                 big_sur:        "1e4c85501024bcfef0641f3e16abd540597f68accc5118b6da5a7f24218fba00"
     sha256 cellar: :any,                 catalina:       "c5172b5ab0e1d85d0e1e87e0dc83b66b5ee8ffda0d86f85f586e4e8850268861"
@@ -26,6 +24,7 @@ class CrushTools < Formula
     sha256 cellar: :any,                 high_sierra:    "729196f80c05c5e395c145752a7a54cc1488a6cf1767b43ed9f639c2f3f3c463"
     sha256 cellar: :any,                 sierra:         "28286e04a7baf7790f446f2f474a74387e6c0282df70d89ade39c84187394ce4"
     sha256 cellar: :any,                 el_capitan:     "0c7c58b9f2ec87237934eda55932b200c6d7b7f6dbb07a35e0a49ed389e984d3"
+    sha256 cellar: :any,                 yosemite:       "90c901bd6daf8178407232c6b3be7f3c5056e9cf2ab88750d09b151e0973d4ff"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f998134ebcc5e99fe863e63924fcdc15f731bd1c0315c0a9a5f9ac0045fc4f1"
   end
 

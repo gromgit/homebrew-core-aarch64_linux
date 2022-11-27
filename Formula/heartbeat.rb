@@ -2,25 +2,23 @@ class Heartbeat < Formula
   desc "Lightweight Shipper for Uptime Monitoring"
   homepage "https://www.elastic.co/beats/heartbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v8.5.2",
-      revision: "1ebd0940bd56943642ea8d63d1fe8227f86e7435"
+      tag:      "v8.2.0",
+      revision: "045da3a1bb89944373c33332c18ca99ef6192df2"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c7c2813e08476efe1a30b1f197f57fb34ac42ca89f63a29621f965891aa55597"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0ef0ef548710f10ae94e944e4dc6ab73540cf438b01d792d874b1d4b3302d746"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e995c0ac1ad8bdd50c38641aa26b2bf2a94ad3ac8f467b5cfaff4fb73a19ba8"
-    sha256 cellar: :any_skip_relocation, ventura:        "7cb64c42313282e7f4d6662b42b912f77c2c0dab4cd9df8032485e5fc5405df4"
-    sha256 cellar: :any_skip_relocation, monterey:       "82130c68ee3eaa973205e665404c7fc21b78e3c6fd0413fa03630ffba3eef670"
-    sha256 cellar: :any_skip_relocation, big_sur:        "60b9b4ee6861391013533127b228232b191ba5b7af95f60af0ba26d9f3b81a24"
-    sha256 cellar: :any_skip_relocation, catalina:       "229a78e622640a6406ad05cf10faf0f9531d417f7420167b439d1aa47d0cacda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1faa14814140cbbca2f46a4b82d09e748cff168c559105a54d1f87e3b09c5f6f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c95d2303c7d4287628a1e2b26d04d48879af09b221d6662c84476cd647e9184"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "522325fb833796fcdb62692ae59499d401ee62bfad3efe9fda42841efa4bb292"
+    sha256 cellar: :any_skip_relocation, monterey:       "7d63e71b34bb7a365b5cb994a53dd0d8cf4565aac37eb17aabd972e15a66d088"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e4116e2713cfa07306a66924c289cfc194d92b10827ed5df0be82dac9e94f1e8"
+    sha256 cellar: :any_skip_relocation, catalina:       "7a6add849e3b4b6afc992ac229bee6f089e352b19b581525e52fa92a055fec7f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7780bcf21236579a1d9e3a564116b5c416a55727bb8c1b53ba4a1317fbc610b5"
   end
 
   depends_on "go" => :build
   depends_on "mage" => :build
-  depends_on "python@3.11" => :build
+  depends_on "python@3.10" => :build
   uses_from_macos "netcat" => :test
 
   def install
@@ -47,9 +45,6 @@ class Heartbeat < Formula
         --path.logs #{var}/log/heartbeat \
         "$@"
     EOS
-
-    chmod 0555, bin/"heartbeat" # generate_completions_from_executable fails otherwise
-    generate_completions_from_executable(bin/"heartbeat", "completion", shells: [:bash, :zsh])
   end
 
   def post_install

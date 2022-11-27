@@ -11,7 +11,8 @@ class Libseccomp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "49db89117b474de352eabc99840644ff081d9120d54d1eaf5cda150798852075"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libseccomp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e160450cbc23ba7f1320e30250575acda5e0a9608ba6df3b449b4b5535d3ad55"
   end
 
   head do

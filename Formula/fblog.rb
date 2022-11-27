@@ -1,20 +1,18 @@
 class Fblog < Formula
   desc "Small command-line JSON log viewer"
   homepage "https://github.com/brocode/fblog"
-  url "https://github.com/brocode/fblog/archive/v4.2.0.tar.gz"
-  sha256 "de7e7e012301eec9df891a4bbc27088e43a7fdbf8066532fc35e85a38edde5f1"
+  url "https://github.com/brocode/fblog/archive/v4.0.0.tar.gz"
+  sha256 "99435529eec82e65b58dcbccaece6f7e015d110486189c0f4ceaf2bc5f117771"
   license "WTFPL"
   head "https://github.com/brocode/fblog.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6d04993d81da88cabeec38f9d9df24864e990f29b032683452e93b675377f422"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3088629c9a095488e5552344936f0c68c6a9a268b3ff63598a962f93aad14499"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e5ad3d4e789259423bb7ae925cef056d2782ba7826d313501f76ab14bc52c54"
-    sha256 cellar: :any_skip_relocation, ventura:        "7240cec6d6655f265ae1bbd05c2c79233b236829f7def25da528ad62130fc9a9"
-    sha256 cellar: :any_skip_relocation, monterey:       "cb8ffaa8fc6904afa6af235422c9f995f5df6d7b5a9e9e2ee86d8736f12d53bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7170652b1db3877a9af8a14c1fbc19f8e391ebfcb3d74a7befcbeef291b99717"
-    sha256 cellar: :any_skip_relocation, catalina:       "e4ad5c34818a46e526deb93cdfe167ec1f66a05130cf5271c1e20cd610bde77c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bee91c7619b1403655f893d7a1fe5c954fe8ac5b5771c7aa4fc386bafc9b6cbc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf9b90c36f92db2ec2302933915e87fe56104ef40f02fe1b3b8d33b6b32d8fc8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9602925427ca716d933840bffc787db4704727e7ab685681a12c093c0b73f8e7"
+    sha256 cellar: :any_skip_relocation, monterey:       "3193892a2b75f7b76660daef4977caf14fc9252de58d6af2ce7b37ac9532b0d5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "23cb7a7623f5b23ac193df73740fcd5a339e4b6b6bad61c92a143a36331b3090"
+    sha256 cellar: :any_skip_relocation, catalina:       "2d7f9ea616ec070143b6c2d8bfd8657ed5335f4a92e7c6b2419203187c12200a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2871eb08a0f31e59e20bef69c1ba5c9b96b2c0525faa1dc1ddf679e64a1ee3dc"
   end
 
   depends_on "rust" => :build

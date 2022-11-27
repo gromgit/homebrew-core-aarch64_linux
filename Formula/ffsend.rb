@@ -1,27 +1,25 @@
 class Ffsend < Formula
   desc "Fully featured Firefox Send client"
   homepage "https://gitlab.com/timvisee/ffsend"
-  url "https://github.com/timvisee/ffsend/archive/v0.2.76.tar.gz"
-  sha256 "7d91fc411b7363fd8842890c5ed25d6cc4481f76cd48dcac154cd6e99f8c4d7b"
+  url "https://github.com/timvisee/ffsend/archive/v0.2.74.tar.gz"
+  sha256 "e6092fc4f40be6d79ddf46a0fb4a739310a2db5407fd3f5db2c43cafc8c41485"
   license "GPL-3.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2dc95f39cd9bb2f8baeb56317a533574ca1131c7194d520de67f1db735de0cae"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f63f21a83b7dc43a87be7967553bd47609f9312e757c6f7507794db5cd8bdc8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d62f3d93e561b4650c6c114cb94e4dfc32c5d3ca6270177b92096f13c8a6a049"
-    sha256 cellar: :any_skip_relocation, ventura:        "0bcba3c1fb284510e939769c87c65dc6d8a133398862c3b2fa0dba5615ab86d7"
-    sha256 cellar: :any_skip_relocation, monterey:       "8c05334fa4eff966e49b299a2ed37b40c96c75536c40c41ada9153db20a97154"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e04f2de4d511942c43918b56d4e332e35afeb62f91241e07f9586c08c3ef785"
-    sha256 cellar: :any_skip_relocation, catalina:       "a654b06bcd03da8833f6effb8d5ace4315bcc4942d4c7bab2fa947a295367b15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "529ad4316bd7047a2261b662630cea1742b5749bfd2e66d41c2272775a6ae51a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b53cd1075514afca5d97f9132b1abdecd1c6e0da8085493572084c0f4924e00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb28f76fd8ce6bdd41178a7c019b74a181bc10c6af7bc4577c39f42cb8a5aad4"
+    sha256 cellar: :any_skip_relocation, monterey:       "03593e8ec608b4906bd3e02324fb8ebb01fec7f6f346f66c2adcb48d3b2b48cf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b0cf6c1a3c746a12a9fb654c772ec117378d63acaa9027811641a7ce81493f2d"
+    sha256 cellar: :any_skip_relocation, catalina:       "17e152eadf259130498d4b99008244646fa13d5ab35ca55998dbaa587b39283b"
+    sha256 cellar: :any_skip_relocation, mojave:         "8721d410afecbffa858783fadedc162294924ea4aba35ba0c929956df7bbe899"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1eaeb9b9f408a6a0766c84fe6cc7bfada070b859a9a66c36dff3d80b7d198b38"
   end
 
   depends_on "rust" => :build
 
   on_linux do
     depends_on "pkg-config" => :build
-    depends_on "openssl@3"
+    depends_on "openssl@1.1"
   end
 
   def install

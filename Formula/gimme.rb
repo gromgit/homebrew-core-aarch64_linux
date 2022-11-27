@@ -6,7 +6,8 @@ class Gimme < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "fd677d17e7c2316bce3c567ce9cc708b2c3e6bf57ed867f64554e202b7b78746"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gimme"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9485cae307f09938d1e5d045c12f44bf3087f7eed5b0eb3cd331c8f4ea8f3579"
   end
 
   def install

@@ -1,18 +1,17 @@
 class Shtools < Formula
   desc "Spherical Harmonic Tools"
   homepage "https://shtools.github.io/SHTOOLS/"
-  url "https://github.com/SHTOOLS/SHTOOLS/releases/download/v4.10.1/SHTOOLS-4.10.1.tar.gz"
-  sha256 "f4fb5c86841fe80136b520d2040149eafd4bc2d49da6b914d8a843b812f20b61"
+  url "https://github.com/SHTOOLS/SHTOOLS/releases/download/v4.10/SHTOOLS-4.10.tar.gz"
+  sha256 "03811abb576a1ebc697487256dc6e3d97ab9f88288efea8a2951d25613940dd1"
   license "BSD-3-Clause"
   head "https://github.com/SHTOOLS/SHTOOLS.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7227085a1a3038518cbd30a4b53dd0fea5d43078cbe9168c870c673aaf03856b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "038729713c3013c2c06e453ea99ff52eb83f01adcd3bfd6435e1101054d4698f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "063c1e3013bf6dfc56ae3c0dbafe3214d52c3446b84f084accc2214838cd8d46"
-    sha256 cellar: :any_skip_relocation, monterey:       "8164fa3de31c5909455ec628c680e35c051b0858fd643e0694b10debbd85d134"
-    sha256 cellar: :any_skip_relocation, big_sur:        "170def5eead4a05b223b214bdff418edd84c62008687a246117362ea0e0f4cb3"
-    sha256 cellar: :any_skip_relocation, catalina:       "e1e43ac26408f5592cc0b2140d18dee20048d91efb55782fe93389229fceba3c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2fe638c34f0ec33f504a990ccab910339912a634330cbc0935a89a157feaf1ee"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57b9dc9c75b80fad0002b3e813d501ac12ea6f6f7e4bdad18c56dc03844a954b"
+    sha256 cellar: :any_skip_relocation, monterey:       "3ef8010ed479290fa79b47aa891f3f8af18645c0d7bcc48f686e422be304ba99"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f15a2bb074aee900190a141b3115ada6c4bbb820112d9b518a6f3d3f0ce00677"
+    sha256 cellar: :any_skip_relocation, catalina:       "f6a1f62c15469c160092763e470822f81bbc5d9138f3ed618f8887c64f70758b"
   end
 
   depends_on "fftw"

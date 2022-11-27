@@ -3,18 +3,12 @@ class Urweb < Formula
   homepage "http://www.impredicative.com/ur/"
   url "https://github.com/urweb/urweb/releases/download/20200209/urweb-20200209.tar.gz"
   sha256 "ac3010c57f8d90f09f49dfcd6b2dc4d5da1cdbb41cbf12cb386e96e93ae30662"
-  license "BSD-3-Clause"
-  revision 6
+  revision 5
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "d0f58536193daaf1e310003f073a9979a526de2cedbd7eeca59fe13b07d5d79a"
-    sha256 arm64_monterey: "bf59d45c3f80fa791e85e2da484773d0e571839076bb9314c57af39b7722cb71"
-    sha256 arm64_big_sur:  "0759a24040fc7112cf1eb8512371e954c1b5b4f84d8a19fb14a938aef021533b"
-    sha256 monterey:       "b91f8faa12123ec1c8b75f431e2a7cd0d172a9fb56bcdd384d8e34d35112c042"
-    sha256 big_sur:        "ec570b4ddd402fd2a2a2cbd9e9be87d1d07e6f888724eb52c4a8d68f93dd9bf4"
-    sha256 catalina:       "2215d28b890d29d68f2d90bf371f606fcf7b07de606b1adcb06ffb73360d3558"
-    sha256 x86_64_linux:   "4ab2001394d21e6a658dc5fd5088ae9949aa4080893ae2731bfff3f2501fa764"
+    sha256 monterey: "2fb09ccebbdbfdc2998bf14704d9c492b8ae6f2f8a64666dda46f22bf27592f7"
+    sha256 big_sur:  "237fd9890464fefa4e795d80d61284d83e337b35d89580fa77e9d38c87635986"
+    sha256 catalina: "5fe0d1ed8d65d2195df7f4f0e4e0db22787fc96069b468ef8cbe5d353be3aac4"
   end
 
   depends_on "autoconf" => :build
@@ -23,7 +17,7 @@ class Urweb < Formula
   depends_on "mlton" => :build
   depends_on "gmp"
   depends_on "icu4c"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   # Patch to fix build for icu4c 68.2
   patch do
@@ -38,12 +32,18 @@ class Urweb < Formula
   end
 
   def install
-    system "./configure", *std_configure_args,
-                          "--disable-silent-rules",
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
-                          "SITELISP=$prefix/share/emacs/site-lisp/urweb",
-                          "ICU_INCLUDES=-I#{Formula["icu4c"].opt_include}",
-                          "ICU_LIBS=-L#{Formula["icu4c"].opt_lib}"
+    args = %W[
+      --disable-debug
+      --disable-dependency-tracking
+      --disable-silent-rules
+      --with-openssl=#{Formula["openssl@1.1"].opt_prefix}
+      --prefix=#{prefix}
+      SITELISP=$prefix/share/emacs/site-lisp/urweb
+      ICU_INCLUDES=-I#{Formula["icu4c"].opt_include}
+      ICU_LIBS=-L#{Formula["icu4c"].opt_lib}
+    ]
+
+    system "./configure", *args
     system "make", "install"
   end
 

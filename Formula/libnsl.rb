@@ -7,8 +7,10 @@ class Libnsl < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ed70b285939e2ab21ba53d122ce2d4beab4cd0f9c86925c3d3a2cfb1b0eeecb3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libnsl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a98809c73f3f9510b6bfe946f70376ab12acf8611df41e8182e8b82dbf32d574"
   end
+
 
   depends_on "pkg-config" => :build
   depends_on "libtirpc"

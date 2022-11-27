@@ -3,28 +3,27 @@ class Doitlive < Formula
 
   desc "Replay stored shell commands for live presentations"
   homepage "https://doitlive.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/02/5a/ec8769dc1c6f81939c0f7839b885f27b62b79b67fe69fcc67f347c0dd3ff/doitlive-4.4.0.tar.gz"
-  sha256 "1b0031d6ce97778a292b247ccb762fda8212c1b935bc7da6a2be92f677a4ea60"
+  url "https://files.pythonhosted.org/packages/e5/d9/4ce969d98f521c253ec3b15a0c759104a01061ac90fb9d8636b015bcb4ea/doitlive-4.3.0.tar.gz"
+  sha256 "4cb1030e082d8649f10a61d599d3ff3bcad7f775e08f0e68ee06882e06d0190f"
   license "MIT"
+  revision 11
   head "https://github.com/sloria/doitlive.git", branch: "dev"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d31aad0b83d8280f4b1f6c10817673cd51a0639ca85cc0198816be672e5bac93"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f2e6d437381c9a10e6c4aeebe42b2d6c96ab9c620a10bf0c29f0f92d0aef6fe2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b6652d74f01868cafb8e0f4faa77156a945f002548865fdbf8b7b0daa16e80e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "ea27be8ba7ad56eaf391ff746ae8a137bcb5a2caadb4d02822ab14c7409efd49"
-    sha256 cellar: :any_skip_relocation, big_sur:        "68ea581db0c9699196e1a062a575d6fb1da95cdd73d838e7eac973a97157eb50"
-    sha256 cellar: :any_skip_relocation, catalina:       "3749631070070d4301391a6d813a71cb5bf3607871805bed026d5e0f34e7b453"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "108bf4e293620543a8b051d47c33b1cc710449644162a4ccf528548e32b435b0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "db9f2b7d0d10e6662a6a1e480f34269426785250e4b19905c76036aa6535b099"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d255c6f29d081000aaeabea4f9c9f5b80ff7137cb08847adf496da40a11c5810"
+    sha256 cellar: :any_skip_relocation, monterey:       "5c624c044497e28cd05f548e31d0ef7f54053b5b9340264b84855aad2f3378f4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d99853ddec222d0d01ef3ba1ba72cdeda38319a197efb3ef189eb2585d53c10a"
+    sha256 cellar: :any_skip_relocation, catalina:       "d4388aef22bc837e5320c771a967b8d7a6f71db70e94da883e00ffa5b47634f8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cdf154cd5e51833492be7e08131269b45d4df6fd78c85f03ef67cd0239d1ffa"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "six"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/27/6f/be940c8b1f1d69daceeb0032fee6c34d7bd70e3e649ccac0951500b4720e/click-7.1.2.tar.gz"
-    sha256 "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"
+    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
+    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
   end
 
   resource "click-completion" do
@@ -47,26 +46,19 @@ class Doitlive < Formula
     sha256 "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
   end
 
-  resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
-  end
-
-  resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
-  end
-
   resource "shellingham" do
-    url "https://files.pythonhosted.org/packages/bd/e6/fdf53ebbf08016dba98f2b047d4db95790157f0e2eed3b14bb5754271475/shellingham-1.5.0.tar.gz"
-    sha256 "72fb7f5c63103ca2cb91b23dee0c71fe8ad6fbfd46418ef17dbe40db51592dad"
+    url "https://files.pythonhosted.org/packages/9c/c9/a3e3bc667c8372a74aa4b16649c3466364cd84f7aacb73453c51b0c2c8a7/shellingham-1.4.0.tar.gz"
+    sha256 "4855c2458d6904829bd34c299f11fdeed7cfefbf8a2c522e4caea6cd76b3171e"
   end
 
   def install
     virtualenv_install_with_resources
 
-    generate_completions_from_executable(libexec/"bin/doitlive", "completion",
-                                         shells: [:bash, :zsh], shell_parameter_format: :none)
+    output = Utils.safe_popen_read({ "SHELL" => "bash" }, libexec/"bin/doitlive", "completion")
+    (bash_completion/"doitlive").write output
+
+    output = Utils.safe_popen_read({ "SHELL" => "zsh" }, libexec/"bin/doitlive", "completion")
+    (zsh_completion/"_doitlive").write output
   end
 
   test do

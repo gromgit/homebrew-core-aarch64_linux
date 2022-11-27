@@ -1,8 +1,8 @@
 class Ice < Formula
   desc "Comprehensive RPC framework"
   homepage "https://zeroc.com"
-  url "https://github.com/zeroc-ice/ice/archive/v3.7.8.tar.gz"
-  sha256 "f2ab6b151ab0418fab30bafc2524d9ba4c767a1014f102df88d735fc775f9824"
+  url "https://github.com/zeroc-ice/ice/archive/v3.7.7.tar.gz"
+  sha256 "3aef143a44a664f3101cfe02fd13356c739c922e353ef0c186895b5843a312ae"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,14 +11,12 @@ class Ice < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "49d742e66f44d924bc3b625847a4845f6edeab5ea687e257d4cb235044650401"
-    sha256 cellar: :any,                 arm64_monterey: "6650cecd9095c96c494edf121678aa8e89566f8d0bdfe4d5540c7222b951179e"
-    sha256 cellar: :any,                 arm64_big_sur:  "8afe5f234ae949865fddca70ab16e15e33319f286075089f752f6b146abeba5f"
-    sha256 cellar: :any,                 monterey:       "aa346abe07a352e4ea23803bc9c7bf73a95e6f2efa026d5ca47ea8d109f6dfae"
-    sha256 cellar: :any,                 big_sur:        "1e078df1a92a1cd953d2d6ec66363ea8ca52e731c73bd650bc4156eee6f45d9f"
-    sha256 cellar: :any,                 catalina:       "80efcfad8576c1357f1932dce4b5d46910839018fba3f006e433cb29f228ca23"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f73974710d6af39e7bca7ada86590b5be72aa9304bc4ee6af062fdf6e20203d4"
+    sha256 cellar: :any,                 arm64_monterey: "84a1443177a249485c5145eb66c5340b695c10f0fa4adc4e1774f8ef93cee8d0"
+    sha256 cellar: :any,                 arm64_big_sur:  "9c35f817128b493f9440a792c64eb0deb4cd1a98041957023dd738101f12a60a"
+    sha256 cellar: :any,                 monterey:       "2ba70590d88f2ef43bc58f74e53b6ec3962824ea44722add7e103da9b44fd07c"
+    sha256 cellar: :any,                 big_sur:        "bb488143d325598a93be666428349ea4198825d34750ec072b321e16ee1804fb"
+    sha256 cellar: :any,                 catalina:       "6b500bcedbd8382f7aeadd47a98238a753da9ebf0109bb150c2d0eea6387bd8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea59f20451a871f4a35d13bf0b104075dede25e36b306083018c5faa7599b1fd"
   end
 
   depends_on "lmdb"
@@ -27,7 +25,6 @@ class Ice < Formula
   uses_from_macos "bzip2"
   uses_from_macos "expat"
   uses_from_macos "libedit"
-  uses_from_macos "libxcrypt"
 
   on_linux do
     depends_on "openssl@3"

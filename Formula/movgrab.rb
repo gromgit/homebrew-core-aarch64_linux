@@ -4,17 +4,16 @@ class Movgrab < Formula
   url "https://github.com/ColumPaget/Movgrab/archive/3.1.2.tar.gz"
   sha256 "30be6057ddbd9ac32f6e3d5456145b09526cc6bd5e3f3fb3999cc05283457529"
   license "GPL-3.0-or-later"
-  revision 5
+  revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "7fbbd62fc17257b90c9fe91b83062f2d42c8e7112c74e38e3f9e69ac08c59f39"
-    sha256 cellar: :any,                 arm64_monterey: "17ab24e1802ce6001bac7698b77016147e3cd65e08b00bd306d83dbdbda24a47"
-    sha256 cellar: :any,                 arm64_big_sur:  "a59426ffc7941233eebd052796c1827884fe9ba508dbc57d2f24d8b1d1e64a59"
-    sha256 cellar: :any,                 ventura:        "4d3a6b36fc96ea07500f4102847be29b9de1d0cc77555a8ed49465d97cc38301"
-    sha256 cellar: :any,                 monterey:       "a4a6388501b014b23c14682d78350ad7f80e2cdf13990db1ab426680cd5fe46b"
-    sha256 cellar: :any,                 big_sur:        "711c6f888dd3aee65b4f8b095a833f14c7bb14d4c6ab972825a64f565e3627c3"
-    sha256 cellar: :any,                 catalina:       "08e18d14b3208844a4fdf805ea914770c4ea140ae1e11d643b425e5ecf50abcf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae91e23b93a7761f927bb2aa7dd68af847fe70d0b873a4e93f4b7af6fdf86d0c"
+    sha256 cellar: :any,                 arm64_monterey: "fea9cd52cd0634afbd55be9028a83cd12c63f7a593874c09a30ee4c9bc08c0f2"
+    sha256 cellar: :any,                 arm64_big_sur:  "9077d56a321c79670336e9555f5fb9ad6f9f2c6ba2c126e2ce0d264931a4677b"
+    sha256 cellar: :any,                 monterey:       "723f43345aa8c9466522f8c0392da8d6c70979f647e69f955f8f324357da2a10"
+    sha256 cellar: :any,                 big_sur:        "d2e316d743c633fd84585d13beb1beeeffd3e3fd62bf2710c2ccdaf8c59f77a6"
+    sha256 cellar: :any,                 catalina:       "dec3edfeac8cd03ab450cdd0196b488401ab38d459c603b0726726b6b886a599"
+    sha256 cellar: :any,                 mojave:         "c7a2f93864d81d263606610375253820937134c9f6d90cb4c5697cf21dc7c23c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be8c01fd9136b88a5b217a8581d7d7dd969eedffeb01aea19af5a8275e9e4b5c"
   end
 
   depends_on "libressl"
@@ -75,18 +74,3 @@ index 04ea67d..5516051 100755
 
  clean:
  	@rm -f movgrab *.o libUseful-2.8/*.o libUseful-2.8/*.a libUseful-2.8/*.so config.log config.status
-diff --git a/libUseful-2.8/DataProcessing.c b/libUseful-2.8/DataProcessing.c
-index 3e188a8..56087a6 100755
---- a/libUseful-2.8/DataProcessing.c
-+++ b/libUseful-2.8/DataProcessing.c
-@@ -420,8 +420,8 @@ switch(val)
-
- if (Data->Cipher)
- {
--Data->enc_ctx=(EVP_CIPHER_CTX *) calloc(1,sizeof(EVP_CIPHER_CTX));
--Data->dec_ctx=(EVP_CIPHER_CTX *) calloc(1,sizeof(EVP_CIPHER_CTX));
-+Data->enc_ctx=EVP_CIPHER_CTX_new();
-+Data->dec_ctx=EVP_CIPHER_CTX_new();
- EVP_CIPHER_CTX_init(Data->enc_ctx);
- EVP_CIPHER_CTX_init(Data->dec_ctx);
- Data->BlockSize=EVP_CIPHER_block_size(Data->Cipher);

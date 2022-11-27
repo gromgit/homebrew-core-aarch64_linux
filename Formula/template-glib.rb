@@ -1,19 +1,17 @@
 class TemplateGlib < Formula
   desc "GNOME templating library for GLib"
   homepage "https://gitlab.gnome.org/GNOME/template-glib"
-  url "https://download.gnome.org/sources/template-glib/3.36/template-glib-3.36.0.tar.xz"
-  sha256 "1c129525ae64403a662f7666f6358386a815668872acf11cb568ab39bba1f421"
+  url "https://download.gnome.org/sources/template-glib/3.34/template-glib-3.34.1.tar.xz"
+  sha256 "9ec9b71e04d4f5cb14f755ef790631cd0b45c0603e11c836fc7cfd9e268cd07a"
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "a628c43a450581b900844970e893e39ad08a9767b16f5a88df93858c5b93c8ff"
-    sha256 cellar: :any, arm64_monterey: "975a75a08cb72d71009a1d07f399f6847134af9b06492d746f4d86c9204b4c72"
-    sha256 cellar: :any, arm64_big_sur:  "505dfa99643c6f897cf481ca1af19aba67af9bb7c5c020d375f51cf93eed1b9f"
-    sha256 cellar: :any, ventura:        "8ef983234e3de51baedbc3e4d00dde51266b1c0f863800d23b950145131c8036"
-    sha256 cellar: :any, monterey:       "0abef023dfcaebcb376cac80a907ccdf7ad200955bba1fbdd64c11dcbb12b48e"
-    sha256 cellar: :any, big_sur:        "cc7bb0842a23032fd361459b61b49fe7bce110dd027e658e30cb905a0a09a338"
-    sha256 cellar: :any, catalina:       "73a0b311cedc2ae831aceb252b1c9215194ef4f75274bd5b8fc9e2dad8af79f1"
-    sha256               x86_64_linux:   "dab5fe31f0bcd02ccc610f8aa9544a9d8cb813903250ecb87cc35e7e4ada1917"
+    sha256 cellar: :any, arm64_monterey: "be8fc4d72fbfb17644f0b2ed2b7d75491d2530b2710b078b02cbfdf5304a0682"
+    sha256 cellar: :any, arm64_big_sur:  "0228c360582623dcb8bd4bb14b2d47baf6ae637e4bb4776780ae75fc86ffeba6"
+    sha256 cellar: :any, monterey:       "2808b8b2d0eee2992afcda86682184b347c502fd84c48029edf69819072ac606"
+    sha256 cellar: :any, big_sur:        "ef0d03c969f03f069ad1f7ba60a160dc1c9c04adfb6d39b5c9af8b43ad84fcf6"
+    sha256 cellar: :any, catalina:       "e74fa0049981920556c9f421a117c623abca2795b9a3a4c6ccad886ce4fe341c"
+    sha256               x86_64_linux:   "8231a498d96ef26c2da9bfb311ca936c57fffb14f59177aef8594dcb6a02ed7d"
   end
 
   depends_on "bison" => :build # does not appear to work with system bison
@@ -26,9 +24,11 @@ class TemplateGlib < Formula
   uses_from_macos "flex"
 
   def install
-    system "meson", "setup", "build", "-Dvapi=false", "-Dintrospection=enabled", *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Dwith_vapi=false", ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do

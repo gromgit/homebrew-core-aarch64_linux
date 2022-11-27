@@ -1,19 +1,18 @@
 class Cava < Formula
   desc "Console-based Audio Visualizer for ALSA"
   homepage "https://github.com/karlstav/cava"
-  url "https://github.com/karlstav/cava/archive/0.8.3.tar.gz"
-  sha256 "ce7378ababada5a20fa8250c6b3fe6412bc1a7dd31301a52b8b4a71d362875b9"
+  url "https://github.com/karlstav/cava/archive/0.8.2.tar.gz"
+  sha256 "99bc302ce77f8093a4ac1cf94be51581e37c075428117f248ffe1fee650f47d8"
   license "MIT"
   head "https://github.com/karlstav/cava.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "d9dfab68c25b0611aefcc14a14536f854a0794d4ca8f11208dfed9ab6c26f570"
-    sha256 cellar: :any, arm64_monterey: "2f5e951e4c9c6fbd64ddd4403c33b48c7367e03c8f0d8f1acb4cb27fc7b72dfd"
-    sha256 cellar: :any, arm64_big_sur:  "458780bb7131958baa5b9abe176cb52c3082a403fb5bbc91fffdae6570b8c9d1"
-    sha256 cellar: :any, monterey:       "c19ebbd4247a0a705ff515fbd69da8606b5803cfca8e9e1b55424f6cbbb444e5"
-    sha256 cellar: :any, big_sur:        "ac96c19d44f043541d965ab4b44196c598c64b404dbbc9463bd40489b6859c94"
-    sha256 cellar: :any, catalina:       "195e10dc98dc6070ef4a876618b66f73217cd85da70089e5d9202ff7dd996991"
-    sha256               x86_64_linux:   "7281c3eb4ae6ec6535148729c725978c88bc45655b357e4b9d983b24f8556e0d"
+    sha256 cellar: :any, arm64_monterey: "89c862723b2716b7679e5efc78e716b09d1f45fd2c2a1edbd51a9c65b80d4343"
+    sha256 cellar: :any, arm64_big_sur:  "ac197a673c179b5cc6b908238b390d0895c0c6687310ce242ff906bb833085b7"
+    sha256 cellar: :any, monterey:       "fc8442ab578524fae2beb5b1ee7a27b685201d9cef2156193bd92734300a4948"
+    sha256 cellar: :any, big_sur:        "abc65c805ead74fb13a651f664a692afa4cc208670570123d6fdeb359d8a64f8"
+    sha256 cellar: :any, catalina:       "d96daa890f9abd0fe8d8cd56feb7d9462cc57fe8fbbf59967c88074ffd062fa8"
+    sha256               x86_64_linux:   "2f8f05f61182fd20761e06eb7255f03f34466b7ecd992e72a12bf555e0f5c280"
   end
 
   depends_on "autoconf" => :build
@@ -42,7 +41,7 @@ class Cava < Formula
     cava_config = (testpath/"cava.conf")
     cava_stdout = (testpath/"cava_stdout.log")
 
-    cava_config.write <<~EOS
+    (cava_config).write <<~EOS
       [general]
       bars = 2
       sleep_timer = 1

@@ -6,7 +6,8 @@ class Fnlfmt < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "28781ba4b856d98bae1c75b51e9d164dbb1f91c569ea421e5a41586410c363d5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fnlfmt"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0698e6f840f6682f69eeb95da63d3ba414acdf3604efcbaf9a3011b4a8259280"
   end
 
   depends_on "lua"

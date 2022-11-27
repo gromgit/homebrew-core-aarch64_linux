@@ -1,19 +1,17 @@
 class ElixirLs < Formula
   desc "Language Server and Debugger for Elixir"
   homepage "https://elixir-lsp.github.io/elixir-ls"
-  url "https://github.com/elixir-lsp/elixir-ls/archive/refs/tags/v0.12.0.tar.gz"
-  sha256 "14f8a51b6f29c242bee5f963d16596afe3f0bfc8447ff2220570162f42c63641"
+  url "https://github.com/elixir-lsp/elixir-ls/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "eaa2f5fd4ab9e497889e25419e4409cfaf808daca06259718668a71de8616e3f"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e13ea97c7ad0f5ccd06807619f500f78cbc1bbf686114e67984f4dd046f2e5a5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5467e24cda93cb6f08f9db820f7d9e9c624935a8b7dae37398b7f388669b4847"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2a5bda7b31255283eade45dbf9f1b0e16139a5cc849030d73f1f142ba0d60aa"
-    sha256 cellar: :any_skip_relocation, ventura:        "346826a1ee5ff0ab04ac39f56cbd6e873b0b175e7997da83cb6a4a5ee0be0c35"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf9f6a487572b4f8630e1994ac73b89bedf150c7830bdff26b3cd8acab4fe625"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e306161b58393478801bcad0bad8a7e776f56a8db5cce1953977221cb2d6728b"
-    sha256 cellar: :any_skip_relocation, catalina:       "fe49393124566234cc76a42cda2e7bdab3b6fd8d028468cb7ac5b43a2a7d5d8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ececbbf2d642570e9c1d026d047632d05bf56d9802a501badab96cb9fb66285c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "58db48a0b346fa46459a1ce9f218a7d6ff0dc04dd04cd036e9f22e7790d5e265"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d7741ff3f47a66c229add6d8cb41fe36743323d34ebcbf86927555530fa7abf9"
+    sha256 cellar: :any_skip_relocation, monterey:       "1465b0c582eb53a898cfdc107f9569b09905cf85060a82739124ac30bc0d4472"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c93d53ef7e88d9c4718f2cf968bd45dd71585c8dc585a3c0f3fee588f3e8c0fa"
+    sha256 cellar: :any_skip_relocation, catalina:       "cb7117dbc37b193f3e41b85d06b780c72cb2ed4e589d51096ada2402d8469eec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ca791a9e0f4e50fb5eb8b52aaf15965fb9f85fe9d98b7036f918a91762d1dc5"
   end
 
   depends_on "elixir"

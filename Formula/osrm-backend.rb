@@ -1,9 +1,10 @@
 class OsrmBackend < Formula
   desc "High performance routing engine"
   homepage "http://project-osrm.org/"
-  url "https://github.com/Project-OSRM/osrm-backend/archive/v5.27.1.tar.gz"
-  sha256 "52391580e0f92663dd7b21cbcc7b9064d6704470e2601bf3ec5c5170b471629a"
+  url "https://github.com/Project-OSRM/osrm-backend/archive/v5.26.0.tar.gz"
+  sha256 "45e986db540324bd0fc881b746e96477b054186698e8d14610ff7c095e906dcd"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/Project-OSRM/osrm-backend.git", branch: "master"
 
   livecheck do
@@ -12,13 +13,12 @@ class OsrmBackend < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2d998ee491cf85784a042b9f7e2670a9992b1e2e3c0d3788adafe9ed7e606c72"
-    sha256 cellar: :any,                 arm64_monterey: "6bac4fd2ddd10c1adf9168a840ce61f72120b2bbb6437e904486c91099586942"
-    sha256 cellar: :any,                 arm64_big_sur:  "39be94c81ca0dae090db3d08274a0c2e523ba21f8d2e38daed7b5d017fffdc64"
-    sha256 cellar: :any,                 monterey:       "624391fecd8061b5025729c4b4660630155ea50a85584f060e6e4b835399d77f"
-    sha256 cellar: :any,                 big_sur:        "e3f27f007ab6cb98966d2e72508de09bd570848668c54319d7877e2c3f6fbf03"
-    sha256 cellar: :any,                 catalina:       "96e63874022b3d48a147707aa067d1f59c655a95261babd15478e4c2e7110960"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb266283ec549aeca3a4e948a90f16857356ab414b201ab1269c37ff68858187"
+    sha256 cellar: :any,                 arm64_monterey: "4a88710e2228747584c05029032b01ec71634bc470487c3da79d8e374fe12ffa"
+    sha256 cellar: :any,                 arm64_big_sur:  "273e540157c193740db4b9490bd4da38261b8479ff9b40431545d72c5507696e"
+    sha256 cellar: :any,                 monterey:       "d74e62b2ffba6f19c1995da7548881c71b054693763a620488d510b8b0dfeb9d"
+    sha256 cellar: :any,                 big_sur:        "170a08f79eafd445d62ccf687bbdee628380c3b836739bf8fc0b7fcb8d5e3bb7"
+    sha256 cellar: :any,                 catalina:       "71573db82a0f2c535e3a391c112ed29d6002b1f26f9bc9835be004dd99735079"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e8b8d4e023babe2136dda873d997505af6925045d0a6d41138c79ebbacb5cb6"
   end
 
   depends_on "cmake" => :build
@@ -27,29 +27,21 @@ class OsrmBackend < Formula
   depends_on "libxml2"
   depends_on "libzip"
   depends_on "lua"
-  depends_on "tbb"
-
-  uses_from_macos "expat"
+  depends_on "tbb@2020"
 
   conflicts_with "flatbuffers", because: "both install flatbuffers headers"
 
   def install
-    # Work around build failure on Linux:
-    # /tmp/osrm-backend-20221105-7617-1itecwd/osrm-backend-5.27.1/src/osrm/osrm.cpp:83:1:
-    # /usr/include/c++/11/ext/new_allocator.h:145:26: error: 'void operator delete(void*, std::size_t)'
-    # called on unallocated object 'result' [-Werror=free-nonheap-object]
-    ENV.append_to_cflags "-Wno-free-nonheap-object" if OS.linux?
-
     lua = Formula["lua"]
     luaversion = lua.version.major_minor
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DENABLE_CCACHE:BOOL=OFF",
-                    "-DLUA_INCLUDE_DIR=#{lua.opt_include}/lua#{luaversion}",
-                    "-DLUA_LIBRARY=#{lua.opt_lib/shared_library("liblua", luaversion)}",
-                    "-DENABLE_GOLD_LINKER=OFF",
-                    *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", "-DENABLE_CCACHE:BOOL=OFF",
+                            "-DLUA_INCLUDE_DIR=#{lua.opt_include}/lua#{luaversion}",
+                            "-DLUA_LIBRARY=#{lua.opt_lib}/#{shared_library("liblua", luaversion)}",
+                            *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
     pkgshare.install "profiles"
   end
 
@@ -81,6 +73,6 @@ class OsrmBackend < Formula
     EOS
     safe_system "#{bin}/osrm-extract", "test.osm", "--profile", "tiny-profile.lua"
     safe_system "#{bin}/osrm-contract", "test.osrm"
-    assert_predicate testpath/"test.osrm.names", :exist?, "osrm-extract generated no output!"
+    assert_predicate testpath/"test.osrm", :exist?, "osrm-extract generated no output!"
   end
 end

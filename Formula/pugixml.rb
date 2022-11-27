@@ -1,8 +1,8 @@
 class Pugixml < Formula
   desc "Light-weight C++ XML processing library"
   homepage "https://pugixml.org/"
-  url "https://github.com/zeux/pugixml/releases/download/v1.13/pugixml-1.13.tar.gz"
-  sha256 "40c0b3914ec131485640fa57e55bf1136446026b41db91c1bef678186a12abbe"
+  url "https://github.com/zeux/pugixml/releases/download/v1.12.1/pugixml-1.12.1.tar.gz"
+  sha256 "dcf671a919cc4051210f08ffd3edf9e4247f79ad583c61577a13ee93af33afc7"
   license "MIT"
 
   livecheck do
@@ -11,24 +11,20 @@ class Pugixml < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8342cbe96ddcb6316547c3e153988ebbe8df9377e3d7e40f596862606231a2f1"
-    sha256 cellar: :any,                 arm64_monterey: "00b008f8d19c4d9f9c2ab610978622cd356958da8ad37dbf7295b6e05e2aae03"
-    sha256 cellar: :any,                 arm64_big_sur:  "40f7fed3e7b4f7ebd33d7909c7db5513ae64b5476329ea598bfaf93f95740e13"
-    sha256 cellar: :any,                 ventura:        "5223925a625c1e3f6a2c8bb229ebae09b95c3c26a3f08132e6c905c416833efd"
-    sha256 cellar: :any,                 monterey:       "c394eed7f1a3076d2e52d8e4cd4adc008f3456cf94234bbea761c32997bf7fdc"
-    sha256 cellar: :any,                 big_sur:        "0267ec889e6b5699a0c98619c3c5d88cbac35b92cf053b9ed9935b134853d441"
-    sha256 cellar: :any,                 catalina:       "1830a4ad92d8991fd85590414f710c11f8ab4a760537f00ad24e6b7623fc7ecc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d0c2c12331bf2c09d4e96c83bd1fab2cbac2637e2f3aad28f6e33682bf73b33"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7413361442c9abad17da7d95698553b64f32218d45bfbfb25c0eccbadc64b3d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a8bcaab7ffa6bc363b3ee06bc27d93512d86fb3b805fd52b15f2cf22850d4c0"
+    sha256 cellar: :any_skip_relocation, monterey:       "9a053f8669cb6a274c35bbd2c3c070a8d42d68e7f25f870cc49344b15cc1f06f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ea310c8f98a257ef09cd30c6dcd7e811b198b8612e277151a312d9b8c3554842"
+    sha256 cellar: :any_skip_relocation, catalina:       "7a047ad63c666fabf1c3a65b7e3d9d6f5156dba4e663f0fa37c13e6ba3fb4517"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad31c8f9950b70f43cc6f28ebaae6c9ce755a5c65c2fd1aab52707a8329bca1a"
   end
 
   depends_on "cmake" => :build
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DPUGIXML_BUILD_SHARED_AND_STATIC_LIBS=ON"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", "-DBUILD_SHARED_AND_STATIC_LIBS=ON",
+                         "-DBUILD_PKGCONFIG=ON", *std_cmake_args
+    system "make", "install"
   end
 
   test do

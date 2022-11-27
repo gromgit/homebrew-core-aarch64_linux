@@ -1,8 +1,8 @@
 class Fheroes2 < Formula
   desc "Free Heroes of Might and Magic II is a recreation of HoMM2 game engine"
   homepage "https://ihhub.github.io/fheroes2/"
-  url "https://github.com/ihhub/fheroes2/archive/0.9.21.tar.gz"
-  sha256 "863e78cd239b577068957843d5926fccf72c8bfd0531522cc242040f3108341c"
+  url "https://github.com/ihhub/fheroes2/archive/0.9.15.tar.gz"
+  sha256 "5325cbb6fe96ff80a27584d9fd3ea1d572eb6e21f863fbc72d0d245752b5444e"
   license "GPL-2.0-or-later"
   head "https://github.com/ihhub/fheroes2.git", branch: "master"
 
@@ -12,14 +12,12 @@ class Fheroes2 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "6a73e94c8df18177f049d3785ef4e28a0267b91472ebcac0d146bb131eca7399"
-    sha256 arm64_monterey: "e67d12fdc4e5f8373bcdf8594f8b568bb597dd72979c07b13c242c2ef6743abb"
-    sha256 arm64_big_sur:  "e0b060803bc67b57b82957c0cf8522c051725a56daab79b459c98d9b873be54e"
-    sha256 ventura:        "b978a8e383c0e6281d1df10de85c1d8801dbf556e03b6d278b4e0cf14d69012e"
-    sha256 monterey:       "0d6035e9935f6cdae70763d9ead23e85120633edc51789dc4b42007f2f4d2567"
-    sha256 big_sur:        "a279a685c019074c94626ed1d600f7f7b9b961a6c2194f793a5e30de8241fb12"
-    sha256 catalina:       "2aeeb745b4259d6da07077738d970e81a3a321f56ac7acc2ed91fc24a4275b32"
-    sha256 x86_64_linux:   "d956e5e5e27acae5b567741dbfeee3a768cd4abd5fc48f8bc9f306db5452c767"
+    sha256 arm64_monterey: "792bba85281821c52b5c4d6385d5aa176e8c8d504df7963ca08f7f8be88dbfb2"
+    sha256 arm64_big_sur:  "56305633a054df27bbf05427c2383562b67ac2858d457ed07eb514990d6dbfc6"
+    sha256 monterey:       "56747a817de732c3bca91295173a377f872483058d7cb8330d71c697461d2545"
+    sha256 big_sur:        "c631ca1b8c5eea6c982f816c115783c79cbc61be4da96b716beca17d6327c4c0"
+    sha256 catalina:       "db3634bfc0acac8649b691dbfa76584c8786584187815ea6e4d353f87234fb79"
+    sha256 x86_64_linux:   "9cc6bcedd1fdadc4c6ff4d5ea5b65469d23e5e6d816542a2880cc125bead427c"
   end
 
   depends_on "cmake" => :build
@@ -32,14 +30,16 @@ class Fheroes2 < Formula
 
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    bin.install "script/demo/download_demo_version.sh" => "fheroes2-install-demo"
   end
 
   test do

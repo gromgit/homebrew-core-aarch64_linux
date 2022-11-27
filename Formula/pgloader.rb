@@ -1,34 +1,48 @@
 class Pgloader < Formula
   desc "Data loading tool for PostgreSQL"
   homepage "https://github.com/dimitri/pgloader"
-  url "https://github.com/dimitri/pgloader/releases/download/v3.6.9/pgloader-bundle-3.6.9.tgz"
-  sha256 "a5d09c466a099eb7d59e485b4f45aa2eb45b0ad38499180646c5cafb7b81c9e0"
+  url "https://github.com/dimitri/pgloader/releases/download/v3.6.2/pgloader-bundle-3.6.2.tgz"
+  sha256 "e35b8c2d3f28f3c497f7e0508281772705940b7ae789fa91f77c86c0afe116cb"
   license "PostgreSQL"
+  revision 2
   head "https://github.com/dimitri/pgloader.git", branch: "master"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "75ce4938747c4ba2698e4a4ff2b5fbaaf62ffd89605a6d1415d1268b4e32fbb6"
-    sha256 cellar: :any, arm64_monterey: "7e85385f26dd4ad116fb0dea28bcf0ee2960638dff826133ef41d4aedbd2b788"
-    sha256 cellar: :any, arm64_big_sur:  "083409384a573f93aecfdb87bef99dd47f560c4c60ca6377ba333248938a09bf"
-    sha256 cellar: :any, ventura:        "ef9d295d03f153fe8854a066e9a766f026d5add13db9431a9c86e4cbf6ef8e72"
-    sha256 cellar: :any, monterey:       "e12f91551cedd8c3e34fd97471bc51bf2f6bf50121a9a9ede7147a64fe2c20ab"
-    sha256 cellar: :any, big_sur:        "6d6b3011d7463da5de24c79c2003787f348141c829e1538c71b39c4b76bb00a2"
-    sha256 cellar: :any, catalina:       "23243450dfa58c5f7114f820203f4709c529a9273fadaa43d9743a2a848b4ed3"
+    sha256 cellar: :any_skip_relocation, big_sur:  "d7f926192e26b7e8a0e5d269370590d23a1d1c28e2323b6c2001e71088b2b8cd"
+    sha256 cellar: :any_skip_relocation, catalina: "89145353b5e7cd483e99f88f9db350f678ee7281ebf06d2e02263d8ffa5a626c"
+    sha256 cellar: :any_skip_relocation, mojave:   "d380bc8ea035e70afaaa5c913cf0ee4e4aedce19d7b29a6545297b59e512d0a8"
   end
 
   depends_on "buildapp" => :build
   depends_on "freetds"
-  depends_on "libpq"
   depends_on "openssl@1.1"
+  depends_on "postgresql"
   depends_on "sbcl"
+
+  # From https://github.com/dimitri/pgloader/issues/1218
+  # Fixes: "Compilation failed: Constant NIL conflicts with its asserted type FUNCTION."
+  patch :DATA
 
   def install
     system "make"
     bin.install "bin/pgloader"
   end
 end
+__END__
+--- a/local-projects/cl-csv/parser.lisp
++++ b/local-projects/cl-csv/parser.lisp
+@@ -31,12 +31,12 @@ See: csv-reader "))
+     (ignore-errors (format s "~S" (string (buffer o))))))
+
+ (defclass read-dispatch-table-entry ()
+-  ((delimiter :type (vector (or boolean character))
++  ((delimiter :type (or (vector (or boolean character)) null)
+               :accessor delimiter :initarg :delimiter :initform nil)
+    (didx :type fixnum :initform -1 :accessor didx :initarg :didx)
+    (dlen :type fixnum :initform 0 :accessor dlen :initarg :dlen)
+    (dlen-1 :type fixnum :initform -1 :accessor dlen-1 :initarg :dlen-1)
+-   (dispatch :type function :initform nil :accessor dispatch  :initarg :dispatch)
++   (dispatch :type (or function null) :initform nil :accessor dispatch  :initarg :dispatch)
+    )
+   (:documentation "When a certain delimiter is matched it will call a certain function
+     T matches anything

@@ -5,7 +5,6 @@ class Somagic < Formula
   sha256 "3a9dd78a47335a6d041cd5465d28124612dad97939c56d7c10e000484d78a320"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2d42167b5e235d77834fe886a10590e23b8e91aaec16eb1ce7406ba68efb8653"
     sha256 cellar: :any,                 arm64_monterey: "cc20451f949f3dd25732f6090526d638d9d368a3dacfcd923440501788a39c3f"
     sha256 cellar: :any,                 arm64_big_sur:  "5a8bb98812f68221bf3db7667aa281e9c18b111837bf1b5167adf30e498b53ff"
     sha256 cellar: :any,                 monterey:       "375696b4885e66a0c87c4cbefa8702bfa2c47ac9d75e7f7027f06839b0fd2b1b"
@@ -15,6 +14,7 @@ class Somagic < Formula
     sha256 cellar: :any,                 high_sierra:    "b6c11695d2c25a49a4a2c5795764a83615a214630bc25914e65fc691662617fc"
     sha256 cellar: :any,                 sierra:         "377ecbdc01ebaab2acf1101aa00bbf5554e7d56b1b630baa28ef70d9deb10811"
     sha256 cellar: :any,                 el_capitan:     "ed8a82423daaabaca0a7ab203edc68b3c0a1a1d617eb24d46486dfa974e9eb4f"
+    sha256 cellar: :any,                 yosemite:       "9c87f9d7a694509b446ce726cedcb731c0185b589a1cdfa96c0346f883a75e5d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d574fbe24e39eaf6e35a4d8317c689ae890983a801e8abf8e5dc0a2941a1104b"
   end
 

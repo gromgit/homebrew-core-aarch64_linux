@@ -1,6 +1,4 @@
 class Keepassc < Formula
-  include Language::Python::Virtualenv
-
   desc "Curses-based password manager for KeePass v.1.x and KeePassX"
   homepage "https://github.com/raymontag/keepassc"
   url "https://files.pythonhosted.org/packages/c8/87/a7d40d4a884039e9c967fb2289aa2aefe7165110a425c4fb74ea758e9074/keepassc-1.8.2.tar.gz"
@@ -9,17 +7,16 @@ class Keepassc < Formula
   revision 4
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c02be2745a47b1fb4802248f9579dd8214ed297781cdfca0cea7b65e24a3334d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d112080490c1ab470cd58204b5291c990d3b16e7ff03ad4c262e0be4dac1bfb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7fe53a11452ba978f94dad6108491e7c4dfa10e5db50360fc001df82a28e6b8"
-    sha256 cellar: :any_skip_relocation, monterey:       "9add6a5aad14f32e943ad62426db39625dff78f16e0b6523a7664e359594b566"
-    sha256 cellar: :any_skip_relocation, big_sur:        "920fc5fa7f2ff135b74e010cd2b8137921546a7f1443a25ce7b17ad75c23a194"
-    sha256 cellar: :any_skip_relocation, catalina:       "4b35da05d90e26cde3fd506fd7cabb0d7d1297cbc07113c4664bd8a019c3e27b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be222d829ded563759764d798a2aff74c32873f9ac704ea12001714e2679bd9b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8556297abd34b591ddb4d93ada1059039f78927bec4858f5ad8ced245e9083ea"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c84dd256b4392893dc1b756f16486f8c98ba6f6fbffdfb2573100b4bfd3efbc1"
+    sha256 cellar: :any_skip_relocation, monterey:       "b25905da9514361ee40ea00e8e027bcb07aaeadab8bda8fcd37c595af909decb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e1cf6e43638026d1deaa3e90e07ff03dec482e6f8fb19be895309c9be2a9abe9"
+    sha256 cellar: :any_skip_relocation, catalina:       "c3b6090b7cb27dfcbd563b152bac02444979535a97aa422f3458bd701246c0eb"
+    sha256 cellar: :any_skip_relocation, mojave:         "512d04b7df021f0a3a29dad0a2efc0262483a4cfe3e9385938afa346f73ac92e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fee5bf5f8161aa727c06397811e1d7a2910dfefbffbf8fcb2cad0ec5cc55ac15"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "kppy" do
     url "https://files.pythonhosted.org/packages/c8/d9/6ced04177b4790ccb1ba44e466c5b67f3a1cfe4152fb05ef5f990678f94f/kppy-1.5.2.tar.gz"
@@ -27,13 +24,29 @@ class Keepassc < Formula
   end
 
   resource "pycryptodomex" do
-    url "https://files.pythonhosted.org/packages/52/0d/6cc95a83f6961a1ca041798d222240890af79b381e97eda3b9b538dba16f/pycryptodomex-3.15.0.tar.gz"
-    sha256 "7341f1bb2dadb0d1a0047f34c3a58208a92423cdbd3244d998e4b28df5eac0ed"
+    url "https://files.pythonhosted.org/packages/14/90/f4a934bffae029e16fb33f3bd87014a0a18b4bec591249c4fc01a18d3ab6/pycryptodomex-3.9.9.tar.gz"
+    sha256 "7b5b7c5896f8172ea0beb283f7f9428e0ab88ec248ce0a5b8c98d73e26267d51"
   end
 
   def install
-    virtualenv_install_with_resources
-    man1.install_symlink libexec.glob("share/man/man1/*.1")
+    pyver = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{pyver}/site-packages"
+    install_args = %W[setup.py install --prefix=#{libexec}]
+
+    resource("pycryptodomex").stage do
+      system "python3", *install_args, "--single-version-externally-managed", "--record=installed.txt"
+    end
+
+    resource("kppy").stage do
+      system "python3", *install_args
+    end
+
+    system "python3", *install_args
+
+    man1.install Dir["*.1"]
+
+    bin.install Dir[libexec/"bin/*"]
+    bin.env_script_all_files libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"]
   end
 
   test do

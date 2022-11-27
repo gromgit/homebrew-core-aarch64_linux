@@ -4,22 +4,22 @@ class Ophcrack < Formula
   url "https://downloads.sourceforge.net/project/ophcrack/ophcrack/3.8.0/ophcrack-3.8.0.tar.bz2"
   mirror "https://deb.debian.org/debian/pool/main/o/ophcrack/ophcrack_3.8.0.orig.tar.bz2"
   sha256 "048a6df57983a3a5a31ac7c4ec12df16aa49e652a29676d93d4ef959d50aeee0"
-  license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
+  license "GPL-2.0-or-later"
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "2944016f7c83334b70e9be541ddb4dc1da3fd8153234897cfe133ae29e336afc"
-    sha256 cellar: :any,                 arm64_monterey: "37ecbad244ecc446c4bbdffe9d0826c76ef775e40e690b4f41dbc6c6630fdfde"
-    sha256 cellar: :any,                 arm64_big_sur:  "d8c3ea08b451c0c0d27ca20e531f902fdf9b4fde1eb1fb76759dc5a7e931faab"
-    sha256 cellar: :any,                 ventura:        "fe4a6f346518d3efcfeefba25b473deb83ff1ca2701110551eed83c8c53e0e9a"
-    sha256 cellar: :any,                 monterey:       "c96ec9cc73e454864271c1a8decfa64b7a5b81a2a7a26a54713167d12fd7e770"
-    sha256 cellar: :any,                 big_sur:        "5a15aea7e8140b19119e29c2d4b8766a1f61bdef196458e684a95bcaaa81ad7d"
-    sha256 cellar: :any,                 catalina:       "0b0e6f27354207ce5939fd31581c7913c64824752ba6e217c097dcc17041221c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "18e7c06d3f04cebc060e100f2b1a8c5825736fbd13047e6f1732a7e2d006235e"
+    sha256 cellar: :any,                 arm64_monterey: "c6fe8bc24a9051ab7ef2421ddd67dafb4e7c1b80397d8f184aad4cf85bce096d"
+    sha256 cellar: :any,                 arm64_big_sur:  "fdc3b1275b2e59028aa2edc99bda3fb93f6ad139f9e5a34aa3e4382b5dc6208e"
+    sha256 cellar: :any,                 monterey:       "945f82a2cb3da5abfc71fdf54d2e10356ee581cd7d895da64e53764722526ff6"
+    sha256 cellar: :any,                 big_sur:        "d8a76360167fc2fa268916d26cb250b2f5d398c9cd21f6ae6470b145697b83d6"
+    sha256 cellar: :any,                 catalina:       "47361d9c18591930ce871fa3c7ab36eaa43003a8a5339238648787cdd748d962"
+    sha256 cellar: :any,                 mojave:         "0bdbfbee37e693edff5fc8f71c52f1fb12d6dd07c1e64aa1a20401df0789853a"
+    sha256 cellar: :any,                 high_sierra:    "a1061331c1e9b4a726c818005a3d795ba8c73b29ecd78a3828b5e5eafac18107"
+    sha256 cellar: :any,                 sierra:         "6229ee0c1e44192fa0d513b7e72e5c72e7fbd29b5ad7f61cd5c5824d76d49105"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2bf28a5dccb7020470c149992f9afc7cf2d407b4a92be3fcf81855bd2951eb0"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "expat"
 
@@ -27,7 +27,7 @@ class Ophcrack < Formula
     args = %W[
       --disable-debug
       --disable-gui
-      --with-libssl=#{Formula["openssl@3"].opt_prefix}
+      --with-libssl=#{Formula["openssl@1.1"].opt_prefix}
       --prefix=#{prefix}
     ]
     args << "--with-libexpat=#{Formula["expat"].opt_prefix}" if OS.linux?

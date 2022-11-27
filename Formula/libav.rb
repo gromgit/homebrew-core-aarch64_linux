@@ -18,7 +18,7 @@ class Libav < Formula
   end
 
   # See: https://lists.libav.org/pipermail/libav-devel/2020-April/086589.html
-  disable! date: "2022-07-31", because: :unmaintained
+  deprecate! date: "2020-04-16", because: :unmaintained
 
   depends_on "pkg-config" => :build
   # manpages won't be built without texi2html
@@ -32,7 +32,7 @@ class Libav < Formula
   depends_on "libvorbis"
   depends_on "libvpx"
   depends_on "opus"
-  depends_on "sdl12-compat"
+  depends_on "sdl"
   depends_on "theora"
   depends_on "x264"
   depends_on "xvid"

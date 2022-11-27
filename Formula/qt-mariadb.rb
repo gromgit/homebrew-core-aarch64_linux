@@ -1,8 +1,8 @@
 class QtMariadb < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.4/6.4.0/submodules/qtbase-everywhere-src-6.4.0.tar.xz"
-  sha256 "cb6475a0bd8567c49f7ffbb072a05516ee6671171bed55db75b22b94ead9b37d"
+  url "https://download.qt.io/official_releases/qt/6.2/6.2.3/submodules/qtbase-everywhere-src-6.2.3.tar.xz"
+  sha256 "34d6d0072e197241463c417ad72610c3d44e2efd6062868e9a95283103d75df4"
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
   livecheck do
@@ -10,14 +10,11 @@ class QtMariadb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "da666b63bf4f31dd38b0b2e1fc1e0c88227eea73337c11fa87a2cf88d039ded6"
-    sha256 cellar: :any,                 arm64_monterey: "6a0e03af5e444950d373b096968d243fdbfa8125746216c01f3b1c854128654a"
-    sha256 cellar: :any,                 arm64_big_sur:  "4838fba0827ff853bf969a7dc9e4701ceb4579fa545855a098d38b1eb298e9cd"
-    sha256 cellar: :any,                 ventura:        "75b152ba9e0455200a3e01a315301ab355cdc89f5b3d872b7ef899eafe5ef7c6"
-    sha256 cellar: :any,                 monterey:       "d271bb4dcd43cf63d0971776773309b0f88d69a4d7a1609dc9c6f5ab4baa0349"
-    sha256 cellar: :any,                 big_sur:        "22fbe6fab629d559336816dc27ef9e5266d21c19547c1a79989d2568a560ed34"
-    sha256 cellar: :any,                 catalina:       "a429e2533b6d310d32fd60ba5e0829bd3f40017b5656f4828135b13356f88423"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ebe913183678f1b0dbe7518e29c2cac2a047eab2cae06f4e68b19edd47898c3"
+    sha256 cellar: :any, arm64_monterey: "6ee30746a2eef7c9d0f29e9343b6e5c395481485112df9c5adcf46f2795f016a"
+    sha256 cellar: :any, arm64_big_sur:  "424504dd822c21cf4fe56f58ba2b76ffcce863876e976657128cc258ac65b8c8"
+    sha256 cellar: :any, monterey:       "cf409955bcdb811c9e064be4090460e2183087a394edb312dc5d79da84e09f6f"
+    sha256 cellar: :any, big_sur:        "04a2fca379b07afeafba02596234066ab7e604868d7e7b9ddf618752343e6555"
+    sha256 cellar: :any, catalina:       "d92b742d9fbe8aa422b0429308a4b13461914f81f32669585422942d81344c2e"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -27,8 +24,6 @@ class QtMariadb < Formula
 
   conflicts_with "qt-mysql", "qt-percona-server",
     because: "qt-mysql, qt-mariadb, and qt-percona-server install the same binaries"
-
-  fails_with gcc: "5"
 
   def install
     args = std_cmake_args + %W[
@@ -81,7 +76,6 @@ class QtMariadb < Formula
       #include <cassert>
       int main(int argc, char *argv[])
       {
-        QCoreApplication::addLibraryPath("#{share}/qt/plugins");
         QCoreApplication a(argc, argv);
         QSqlDatabase db = QSqlDatabase::addDatabase("QMARIADB");
         assert(db.isValid());

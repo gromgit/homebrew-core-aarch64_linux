@@ -1,9 +1,10 @@
 class Jython < Formula
   desc "Python implementation written in Java (successor to JPython)"
   homepage "https://www.jython.org/"
-  url "https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.3/jython-installer-2.7.3.jar"
-  sha256 "3ffc25c5257d2028b176912a4091fe048c45c7d98218e52d7ce3160a62fdc9fc"
+  url "https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.2/jython-installer-2.7.2.jar"
+  sha256 "36e40609567ce020a1de0aaffe45e0b68571c278c14116f52e58cc652fb71552"
   license "PSF-2.0"
+  revision 1
 
   livecheck do
     url "https://search.maven.org/remotecontent?filepath=org/python/jython-installer/"
@@ -11,14 +12,12 @@ class Jython < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "eafebcb36c11b6406b8c314e932317482257acabee5594d3c50eb874201dd8a8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68df644ec1a6d98aa9fa16a928d935d9a0a5b22f4d5b0dfaa19c9352ae3f35c7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d118994b7fb4b6353adf4bd24fcd64556a06755c8f5409995cb11a225b950798"
-    sha256 cellar: :any_skip_relocation, ventura:        "e3b34345a333541f41a7fad39d180764c39767506c8c30de05ee034301a9d165"
-    sha256 cellar: :any_skip_relocation, monterey:       "0e4b255160c9cf926c8d0960ad4c304fed55479e07b3182749eb11dd90d74051"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9fea67ce3f805db15d3dc5e263efb3bc949d1ab3c474533ee15a5207686aeb27"
-    sha256 cellar: :any_skip_relocation, catalina:       "b1a7f234b54746d1127bf17ec5a95122ef0d942b2ca97fef87bc32d0e71bcc91"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9964506ee25d6ef2336c9d27e443f463a48d59df07f550070833bd29b91ea78"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "df7449a61b5503533837daa4e6b482433846bcd7711fb6a217ffe3186c359870"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df7449a61b5503533837daa4e6b482433846bcd7711fb6a217ffe3186c359870"
+    sha256 cellar: :any_skip_relocation, monterey:       "839d5567f080b613bfd533136098e600f6364b371aad688dd2427dd33a7eea1f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "774e319da7e0c604ac7c6bd894aee3e4bebe83a94d0c87ec847e63ba3f4dca33"
+    sha256 cellar: :any_skip_relocation, catalina:       "01daf9373cdf4140ff89acb5dd8b6a3537eae8cc6a9d3200cc8dddff83ce9e0e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2a44cf702b9351f1687ada2ac71f552e641d3230fe39fccd30a101c40946f7f"
   end
 
   depends_on "openjdk"

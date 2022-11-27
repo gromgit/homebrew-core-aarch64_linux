@@ -10,35 +10,38 @@ class Ranger < Formula
   head "https://github.com/ranger/ranger.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3a4d109e42f3146daeb999e613a9cedca98cbd851f98f950f54cfaab5e872c58"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3a4d109e42f3146daeb999e613a9cedca98cbd851f98f950f54cfaab5e872c58"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3a4d109e42f3146daeb999e613a9cedca98cbd851f98f950f54cfaab5e872c58"
-    sha256 cellar: :any_skip_relocation, ventura:        "92e4fd7b02e9314319342a86b176bcb78c902ab326b6db482c653194ec5389df"
-    sha256 cellar: :any_skip_relocation, monterey:       "92e4fd7b02e9314319342a86b176bcb78c902ab326b6db482c653194ec5389df"
-    sha256 cellar: :any_skip_relocation, big_sur:        "92e4fd7b02e9314319342a86b176bcb78c902ab326b6db482c653194ec5389df"
-    sha256 cellar: :any_skip_relocation, catalina:       "92e4fd7b02e9314319342a86b176bcb78c902ab326b6db482c653194ec5389df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a4d109e42f3146daeb999e613a9cedca98cbd851f98f950f54cfaab5e872c58"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2972a3ffed7cb61dcd1abe64cb6d24b902ffc50ef78e10fc279ebda56175a1d8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2972a3ffed7cb61dcd1abe64cb6d24b902ffc50ef78e10fc279ebda56175a1d8"
+    sha256 cellar: :any_skip_relocation, monterey:       "12656acfac655b9a648d8cb877ef38fd6ef644f74cb182cff4075b333523d996"
+    sha256 cellar: :any_skip_relocation, big_sur:        "12656acfac655b9a648d8cb877ef38fd6ef644f74cb182cff4075b333523d996"
+    sha256 cellar: :any_skip_relocation, catalina:       "12656acfac655b9a648d8cb877ef38fd6ef644f74cb182cff4075b333523d996"
+    sha256 cellar: :any_skip_relocation, mojave:         "12656acfac655b9a648d8cb877ef38fd6ef644f74cb182cff4075b333523d996"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2972a3ffed7cb61dcd1abe64cb6d24b902ffc50ef78e10fc279ebda56175a1d8"
   end
 
-  depends_on "python@3.11"
-
-  def python
-    Formula["python@3.11"].opt_libexec/"bin/python"
-  end
+  depends_on "python@3.10"
 
   def install
-    system python, *Language::Python.setup_install_args(prefix, python), "--install-data=#{prefix}"
+    man1.install "doc/ranger.1"
+    libexec.install "ranger.py", "ranger"
+    rewrite_shebang detected_python_shebang, libexec/"ranger.py"
+    bin.install_symlink libexec/"ranger.py" => "ranger"
+
+    (buildpath/"rifle.py").write <<~EOS
+      #!/usr/bin/python -O
+      import sys
+      from ranger.ext import rifle
+      sys.exit(rifle.main())
+    EOS
+    chmod 0700, buildpath/"rifle.py"
+    libexec.install "rifle.py"
+    rewrite_shebang detected_python_shebang, libexec/"rifle.py"
+    bin.install_symlink libexec/"rifle.py" => "rifle"
+
+    doc.install "examples"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/ranger --version")
-
-    code = "print('Hello World!')\n"
-    (testpath/"test.py").write code
-    assert_equal code, shell_output("#{bin}/rifle -w cat test.py")
-
-    ENV.prepend_path "PATH", python.parent
-    assert_equal "Hello World!\n", shell_output("#{bin}/rifle -p 2 test.py")
   end
 end

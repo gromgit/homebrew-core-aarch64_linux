@@ -4,8 +4,8 @@ class Strongswan < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://download.strongswan.org/strongswan-5.9.8.tar.bz2"
-    sha256 "d3303a43c0bd7b75a12b64855e8edcb53696f06190364f26d1533bde1f2e453c"
+    url "https://download.strongswan.org/strongswan-5.9.6.tar.bz2"
+    sha256 "91d0978ac448912759b85452d8ff0d578aafd4507aaf4f1c1719f9d0c7318ab7"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
@@ -20,13 +20,8 @@ class Strongswan < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "e2ce9175afc09037bc4ed27faa94a8b67e39da94aa96c192b2f7d90d77b114b3"
-    sha256 arm64_monterey: "e3bb47ea4d170a2d5fea7b474d95ec236651e631f470034c8d9ed58b8159416f"
-    sha256 arm64_big_sur:  "8e88ec4ce51468217d447de72c72aa1ec4ab7ed3daeaf7d1231e192652933c90"
-    sha256 ventura:        "cbf5e8a7c6032b867c63cae263da142e31cacf5eff314c90d6632970d8c7d9cd"
-    sha256 monterey:       "b64777a6a4dd13eca9fc201c8da36e81c9a356be2ecae6ea37876da1b8f2a659"
-    sha256 big_sur:        "126a9e7b798f5330db940fd6d361f4a563521d849af63924329b2a4cb237a823"
-    sha256 catalina:       "5b8d29d581a539c5bc1bd40667c3584cf58c01eb2ddbbb6402e33512fafb4fde"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/strongswan"
+    sha256 aarch64_linux: "8f381b043a741029a5fd9ba0625ea0826418d397636e20ccb3821b58da959bac"
   end
 
   head do
@@ -40,7 +35,7 @@ class Strongswan < Formula
     depends_on "pkg-config" => :build
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     args = %W[

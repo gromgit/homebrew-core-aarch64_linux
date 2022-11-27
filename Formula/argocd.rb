@@ -2,23 +2,21 @@ class Argocd < Formula
   desc "GitOps Continuous Delivery for Kubernetes"
   homepage "https://argoproj.github.io/cd"
   url "https://github.com/argoproj/argo-cd.git",
-      tag:      "v2.5.2",
-      revision: "148d8da7a996f6c9f4d102fdd8e688c2ff3fd8c7"
+      tag:      "v2.3.3",
+      revision: "07ac038a8f97a93b401e824550f0505400a8c84e"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5aabd710228bbefef3fc8517ad1c28d4505e6579740a40454421062fb33e4ea6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c6e50f65b0f38b9d124c0f6bc49544aa2dbd5265e3823ad90355fa18ea742ad9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "db46f65a509fd980120e1410bae5a4c4fded3a71223c37798bf55ce8b80a6372"
-    sha256 cellar: :any_skip_relocation, ventura:        "7291112a9879e3b5fd15e9e2e448cce9ebdefe2751a265e1768883b943f50939"
-    sha256 cellar: :any_skip_relocation, monterey:       "021d508f4cd8d0208c4ea0ba1f493ba337950136d914f98d4933872e5aa6c7e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f33d2a51399ac0b35ce549f3996ffa220ab61e087e1798e374e97b6977cbbe72"
-    sha256 cellar: :any_skip_relocation, catalina:       "02c99c100608a5b02a3e4ea153001c8f50fe936d14832d117f08c52fc0e241f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5d709a1b7e322b6a6e2399abeab3e98230668be8c2d8e291bd481cb1e49f0ac"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf9d6d379d4a48f29b8571026cf6dc169b9af1c0e321d606fb087ac4b4bce432"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2bfb242508ee231f367a030f3756d59fe055c3082806cdbf70072c77f76478e"
+    sha256 cellar: :any_skip_relocation, monterey:       "be39af6af6d7fd332c41d6b62e563669d25d9c433d9c0ce15603a044bb05c27a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7db4276adac72c78c35ec851e5837de398e94bc66600503711c8c0c5a1d37e2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "13519b9564baae77d7df97b96c378af45a23346db1abe53c3d303bd4ebd93f91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a3f7a6035058d3fdfdde2f657e5bc5aafeacc0cb821802395a3e342af394e9c"
   end
 
   depends_on "go" => :build
-  depends_on "node" => :build
+  depends_on "node@14" => :build
   depends_on "yarn" => :build
 
   def install
@@ -32,7 +30,10 @@ class Argocd < Formula
     system "make", "cli-local"
     bin.install "dist/argocd"
 
-    generate_completions_from_executable(bin/"argocd", "completion", shells: [:bash, :zsh])
+    output = Utils.safe_popen_read("#{bin}/argocd", "completion", "bash")
+    (bash_completion/"argocd").write output
+    output = Utils.safe_popen_read("#{bin}/argocd", "completion", "zsh")
+    (zsh_completion/"_argocd").write output
   end
 
   test do
@@ -41,7 +42,6 @@ class Argocd < Formula
 
     # Providing argocd with an empty config file returns the contexts table header
     touch testpath/"argocd-config"
-    (testpath/"argocd-config").chmod 0600
     assert_match "CURRENT  NAME  SERVER\n",
       shell_output("#{bin}/argocd context --config ./argocd-config")
   end

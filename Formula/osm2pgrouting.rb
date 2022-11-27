@@ -4,28 +4,24 @@ class Osm2pgrouting < Formula
   url "https://github.com/pgRouting/osm2pgrouting/archive/v2.3.8.tar.gz"
   sha256 "e3a58bcacf0c8811e0dcf3cf3791a4a7cc5ea2a901276133eacf227b30fd8355"
   license "GPL-2.0-or-later"
-  revision 5
+  revision 2
   head "https://github.com/pgRouting/osm2pgrouting.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0186ed30fb28a6910c3b9e792de81b473528bf591b4a56a4df143dc1a5588b1a"
-    sha256 cellar: :any,                 arm64_monterey: "50a6b839a749405b1a8ed973112ec404588f9689cb6f9d1838fc93e069113aaa"
-    sha256 cellar: :any,                 arm64_big_sur:  "f014ee852c616ed7e4bc83c06137c57a9005a21a6cc3a3d94867c368fcd3d4de"
-    sha256 cellar: :any,                 monterey:       "98c0e8d3b2fa3eceda49deaf76a4577bfe2101b298f579a725fa9c06cc426e06"
-    sha256 cellar: :any,                 big_sur:        "e8c9c756dedb666562e01bb2a617b11f81d176d1ce4c3caebf6390cd0e510790"
-    sha256 cellar: :any,                 catalina:       "3e7d0bcb78fd7b62ebee99080133aae026a77a4b2b8d6f58e84f67b98d777039"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "092b3158861c3d646c8fb955c41fa8f4a3999cc6040cc08111c9d7278ce3a52d"
+    sha256 cellar: :any, arm64_monterey: "7a16273c49d8a30b48460b6ec896d979d06c06e46bfb38b655633190827779cb"
+    sha256 cellar: :any, arm64_big_sur:  "eae9b9f7b4fc4229bc85a8e484c3c85b6fdf10bb4eadf334efd3bc9d5a46cde4"
+    sha256 cellar: :any, monterey:       "8ad1a0713c06714fb3aa63f6ddbf4c73985cd71b74cec74d3b89c2f881c222c4"
+    sha256 cellar: :any, big_sur:        "e9c0bcc9363b8291d5e3e729b0ac32c14036dfcf7c4eb4920e46b5c8bec924e8"
+    sha256 cellar: :any, catalina:       "fca50921c8c7058ee70868858e3581cbd90606db8617a057a6af6f9b95393c3e"
   end
 
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "expat"
-  depends_on "libpq"
   depends_on "libpqxx"
   depends_on "pgrouting"
   depends_on "postgis"
-
-  fails_with gcc: "5"
+  depends_on "postgresql"
 
   def install
     mkdir "build" do

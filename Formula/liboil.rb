@@ -11,7 +11,6 @@ class Liboil < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "d9163cdae71515f1281691a77d77cd635f9f5d0e001eece4ac204f0156ecc393"
     sha256 cellar: :any,                 arm64_monterey: "1301c11b0befc6f72c27cdf4c659caa989c472a4a04d5fda6d1815baff7c381e"
     sha256 cellar: :any,                 arm64_big_sur:  "915b7c9defeb1e3d056cd4ead9442b6da74c033d776a3d29eab11f3a74cc4bc6"
     sha256 cellar: :any,                 monterey:       "85dc36f48c6496097f4aa02b580573a1c21a399e418464121a8f935f50a4a951"
@@ -21,6 +20,7 @@ class Liboil < Formula
     sha256 cellar: :any,                 high_sierra:    "3214b8910deb69c2c0138a5ece603515c089fa2178ead16e4106695dd6b4c4b4"
     sha256 cellar: :any,                 sierra:         "f242435c284690879f84812481843e92c54adc190a8201aa31d550c262e1951d"
     sha256 cellar: :any,                 el_capitan:     "7d76b7a220caeb8dbaef27b879f4f3ac0ad5b236b563961abd9484e8bc9e0160"
+    sha256 cellar: :any,                 yosemite:       "9ea78f801296e8643f366d634449a043376e9015e9329dc1c591a9ad55a37b66"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "64127180a4182632dbde62deafdcba4fa391ff4a675e85a6821cebee298887e1"
   end
 

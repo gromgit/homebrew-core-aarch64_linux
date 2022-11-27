@@ -12,17 +12,15 @@ class Spago < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6447a607985494aed97909b0583f6d82d280adb3e739e0c0cb3c427fe1c1c86"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ea6c1ae274ae86a19b1b5e476a01cf3cff396dcca7bf0a004b931767bb29d5b4"
-    sha256 cellar: :any_skip_relocation, ventura:        "c97e12c317c389b7279a4b4f173b8c521ece15da4c1fca3ca6cba63bbd6768f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "e8974b1ff24ce317a5c94a225b669d0d7c7e35dbf2df1a27c9b29ff1d60854be"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e5fa3a596084f77f2c4504afab744fe8ab18eef868353196c512af1991d9366a"
-    sha256 cellar: :any_skip_relocation, catalina:       "316fc107f6b9ced5eed8f3fd8cf08bd73f9f03818bad293fed3568516d76b63f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ae695f9eb22eef6a1b98a56c87400cd52fda8d91b00da354e59c4f1b47b3e16"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e0bdbfd6c263b7887da4f8031a5c6263b7bd2345bd50df31cbdecb9af3075ef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b13c6566d9d4c40d34dfb9293fd39e3cf66ebb54e82999257a47475f0ade1ddd"
+    sha256 cellar: :any_skip_relocation, monterey:       "a3d4cf0264b4fea348f09122552279ac9515bff3003d7fcb01808d465da89f8d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "771754939dc4374b84a3cd39214a3b0749e665d590a736f397cf91657d48a8be"
+    sha256 cellar: :any_skip_relocation, catalina:       "9dbe38aaceb447ea90a4aeb7911f3111e60f18f84729af89b5a6e431acd13738"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8bee7f77a2ab534fc5c83201fe3ba287a2581be9a7470baed0dd4e870ad7670"
   end
 
-  depends_on "ghc@8.10" => :build
+  depends_on "ghc" => :build
   depends_on "haskell-stack" => :build
   depends_on "purescript"
 
@@ -57,10 +55,8 @@ class Spago < Formula
     end
 
     system "stack", "install", "--system-ghc", "--no-install-ghc", "--skip-ghc-check", "--local-bin-path=#{bin}"
-    generate_completions_from_executable(bin/"spago", "--bash-completion-script", bin/"spago",
-                                         shells: [:bash], shell_parameter_format: :none)
-    generate_completions_from_executable(bin/"spago", "--zsh-completion-script", bin/"spago",
-                                         shells: [:zsh], shell_parameter_format: :none)
+    (bash_completion/"spago").write `#{bin}/spago --bash-completion-script #{bin}/spago`
+    (zsh_completion/"_spago").write `#{bin}/spago --zsh-completion-script #{bin}/spago`
   end
 
   test do

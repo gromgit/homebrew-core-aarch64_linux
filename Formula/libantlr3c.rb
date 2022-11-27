@@ -7,7 +7,6 @@ class Libantlr3c < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b7265d5141b9b1115b4db096b40a131aa140fe4a6b2d97a08152d880665ed196"
     sha256 cellar: :any,                 arm64_monterey: "192faf2b2502946c3a8b27cade6a6febbd579de8fb1b9da136c48ea6a74bc621"
     sha256 cellar: :any,                 arm64_big_sur:  "0ba9d61434c3b1a05ef0ff9bb86e1e6d238c91723383204daeb5115976b05b02"
     sha256 cellar: :any,                 monterey:       "8fa311163c90642a02332aebc6b4bd77d24fc2d0a45ecbc6f5670acb54e29977"
@@ -17,6 +16,7 @@ class Libantlr3c < Formula
     sha256 cellar: :any,                 high_sierra:    "2de7942e4bc89830c0d92bfda55e60a4ad82723430bcc7477abb5d1b1ade7f86"
     sha256 cellar: :any,                 sierra:         "a5e779c431e16bdaab829c774468ce11f8e7ea359412800e294433b011704541"
     sha256 cellar: :any,                 el_capitan:     "fea1cde8ae732cdbbffa6a6d329239b1da067d2b69424d53178e60309748c403"
+    sha256 cellar: :any,                 yosemite:       "8026d876b20980138c076cb4008f358deb858204b6399c436cf45e93594274e7"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "acd166cf59163343b31b229124ddf4e982c4fa42b196ec443b5ff8b02e12566a"
   end
 

@@ -1,20 +1,17 @@
 class Csview < Formula
   desc "High performance csv viewer for cli"
   homepage "https://github.com/wfxr/csview"
-  url "https://github.com/wfxr/csview/archive/v1.2.2.tar.gz"
-  sha256 "c8c4d1207b225e4257f301af6333d28cfee611781cfa51bf8227b742b043105a"
+  url "https://github.com/wfxr/csview/archive/v1.0.1.tar.gz"
+  sha256 "34df6838dd9407197511887cdc9b2a3ed08b4b508f9c6bb660def326ea953e8c"
   license any_of: ["MIT", "Apache-2.0"]
-  head "https://github.com/wfxr/csview.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e42c9e597ae8be86fb856bb117a9342495b3813f06b930efb14333ceb54c44d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bcb6b524bfbe7d4cee5a4ed47eb9fbe6e460165b8a3b1e5b47391e3ccea588c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "714f0dcb10d7d0a00f0c234f999eb1b18521f1f6443a4f781bf192b5603f8100"
-    sha256 cellar: :any_skip_relocation, ventura:        "6f62c3017653188b898c1aea5376ffe1ccbf0041aad78cf85c2b5266d0841d54"
-    sha256 cellar: :any_skip_relocation, monterey:       "165a69b5e284288f82e0e70e1a33755c3545a6fa19ef5e2511d21d90fbb22796"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0a0a21831088d78cb6d28567fda931d01a242e5b77eefb21cdf420a4f8db351c"
-    sha256 cellar: :any_skip_relocation, catalina:       "bda29a8d29c3a9263f35151c347b9791b45eb8f40e9709f76d623472c015a6d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47d0c394c85f711c1c98dbbe724f7d0e1820725fffc8a716b9f0fb73c87d34d3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea5d8b3edfe9549584da1f2550bf57c6a9ed6d415bc7cb1a113d429154989c6e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a0f4600bb7c94e7c021ba27155f25ca4d3af4605cb02a59c09b789e681a23815"
+    sha256 cellar: :any_skip_relocation, monterey:       "ae25c1b64d95399a046d79e1ad974e96c8578261b439496d04f6a5703ca8ecd0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f1a7702a85d3752f18609707e4c65ee0330de495b9c4c994c2ed28b4cbce96a3"
+    sha256 cellar: :any_skip_relocation, catalina:       "bfbf60817be5424b5f75a144b80d6da10e81a846b208ebf67c9073a0bb58a368"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4098aaa0251e12198718faa550477c8657fc56694ed78f43fc7a5813ccf5207b"
   end
 
   depends_on "rust" => :build

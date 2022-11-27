@@ -2,26 +2,30 @@ class Glslviewer < Formula
   desc "Live-coding console tool that renders GLSL Shaders"
   homepage "http://patriciogonzalezvivo.com/2015/glslViewer/"
   url "https://github.com/patriciogonzalezvivo/glslViewer.git",
-      tag:      "3.0.7",
-      revision: "b1a9a41f77c535e58e5dd31a71afa7c24f9d313f"
+      tag:      "2.0.5",
+      revision: "788bb17bfa10759dd88def6979f1d16b31591ff6"
   license "BSD-3-Clause"
   head "https://github.com/patriciogonzalezvivo/glslViewer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "81067a7d0156aaed4c7efad225a1533d822a9261c3cfaa2df57c9be2d1967ecd"
-    sha256 cellar: :any,                 arm64_monterey: "cf33a11e088d40d9d5ae96ed374756c60984cabeb2de33d52af670c091e4a81e"
-    sha256 cellar: :any,                 arm64_big_sur:  "67f4455d6abf22ee9bd69b7651f7e4346af09e27afaa3272cd1f9a22cfefce22"
-    sha256 cellar: :any,                 ventura:        "5093442e72a18fe1ed34385e9a024f6da103229dcac44d7c916b3cba6af06f7f"
-    sha256 cellar: :any,                 monterey:       "c5123fc4e0c8d1d2fb26ab0b2b787d865f1c3301df19b8b2c8d7dd777d5b8c23"
-    sha256 cellar: :any,                 big_sur:        "6fcacd65216707ce3ec09c031626cb158cf757d6a59a74ba3b0684f4518dd2be"
-    sha256 cellar: :any,                 catalina:       "6bb4be1650a54e23c4c124b229eb01d2b945df3278ba930cd28a667c109cc09c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8c23e67dd736ed411333a91adbb5cc69e82dd8b017dd394242bf3824f436734"
+    sha256 cellar: :any,                 arm64_monterey: "f1f56f94f020e9cbd7687a4050b593c994f88c7171cf9b8844269f274a63b154"
+    sha256 cellar: :any,                 arm64_big_sur:  "1cd53a4a542feeb3339d14b6864385431dafde36b4c0c40168932fe1b6ccaddd"
+    sha256 cellar: :any,                 monterey:       "60e3894913d8fe9ca335bdce56bcf3500c50980524751dbe091c48a7208cc7c9"
+    sha256 cellar: :any,                 big_sur:        "83847db14457a67a4018444b572da153f64faee492cad55bf25fcdd2b7258c30"
+    sha256 cellar: :any,                 catalina:       "4193fa09eca8907ea14c05d04a843396c0610cd85af7f483f21242884cc5c6d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9871545c27387e50f6f0ca0a36791b1e8c27e47857ad7c1bf457547c15a2b2c"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "ffmpeg"
+  depends_on "ffmpeg@4"
   depends_on "glfw"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5" # rubberband is built with GCC
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

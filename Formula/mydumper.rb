@@ -1,25 +1,17 @@
 class Mydumper < Formula
   desc "How MySQL DBA & support engineer would imagine 'mysqldump' ;-)"
   homepage "https://launchpad.net/mydumper"
-  url "https://github.com/mydumper/mydumper/archive/v0.12.7-3.tar.gz"
-  sha256 "28701956a2d6793290592cab36eb9ca6d5764a62845203fdfde4549c7acaa2f9"
+  url "https://github.com/mydumper/mydumper/archive/v0.12.3-1.tar.gz"
+  sha256 "bf502e724205b8c7a79385d32c1d7264121116e70b1fbc3934c6660aae43ff54"
   license "GPL-3.0-or-later"
 
-  livecheck do
-    url :stable
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+(-\d+)?)["' >]}i)
-    strategy :github_latest
-  end
-
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4d531126bc2a58d6e4b2bce6d4ddc76bf00444c8308a8b40f7a476e6f6d118bd"
-    sha256 cellar: :any,                 arm64_monterey: "70b1477d5ac79ccba9f262994616bf7fc0d574acae10c9ed3a329c1d2ce0b6db"
-    sha256 cellar: :any,                 arm64_big_sur:  "431f5b4b94f1887cddc0f3d46eb1f1883351c7d1a49d62163f40a67767f57edb"
-    sha256 cellar: :any,                 ventura:        "d7f242fa425c6464f2b1edd3a376cd24c2254351bf0c2a7cd9ed20cb3e2cea84"
-    sha256 cellar: :any,                 monterey:       "6c7247025d4dfe2cf643cb25fd5abd88de7a4f5d5514902ed5f98d7356e82981"
-    sha256 cellar: :any,                 big_sur:        "efc50499675ac124c4496be1072443584cb7d115a7ff7db5617d401940d425bc"
-    sha256 cellar: :any,                 catalina:       "adb864ab56386526f3dee82dd26d15272d7e31be07ef454f81982b62df0e67c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21b9becb8d297ac64f5bf6b320d81894509ba9ee6e27dff4a33d218061fc203d"
+    sha256 cellar: :any,                 arm64_monterey: "f8dcdf00e92dd854349c1e0698934c8b337c38ea653288dedabdf1ad61c916b0"
+    sha256 cellar: :any,                 arm64_big_sur:  "66b108fa2909b02a98fffa1197270f6cf5a3c5b46c8c648940a42a2985abaaad"
+    sha256 cellar: :any,                 monterey:       "62168e340cdfc0d1fdc63831218b52ad3a2cab6c723e21277a837451139574ed"
+    sha256 cellar: :any,                 big_sur:        "4c5707d62cf6152d8106e1a17e36b8dc62e67663045bd29448b8f50cf8f92ee7"
+    sha256 cellar: :any,                 catalina:       "ca473525bb5b1d3ba3fc2917c38235afa930536fcca4b83b4d57c7d14d1529ae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdce77ac9629c4dc3f624692de449bf9c144a1e9f0f789c20abe13f2ea7e6c57"
   end
 
   depends_on "cmake" => :build
@@ -31,6 +23,10 @@ class Mydumper < Formula
   depends_on "pcre"
 
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

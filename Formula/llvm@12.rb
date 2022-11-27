@@ -7,16 +7,22 @@ class LlvmAT12 < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
   revision 1
 
+  # This should be removed when LLVM 14 is released, so we only check the
+  # current version (the `llvm` formula) and one major version before it
+  # (to catch any patch version that may appear, however uncommon).
+  livecheck do
+    url "https://releases.llvm.org/"
+    regex(/["'](12(?:\.\d+)+)["']/i)
+  end
+
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "a450c4527222e41c437ea4986d12d808b26af73bb72cf90ac0e4aab91a72061c"
-    sha256 cellar: :any,                 arm64_monterey: "ff433ce6b78be82fae375dc3735c19272a14d7f62f0724e31d5e6fb438716700"
-    sha256 cellar: :any,                 arm64_big_sur:  "4424885d3b2d3dbfef7a9ceb64e4d6f325f6aa88b66a334f89409c27a6054787"
-    sha256 cellar: :any,                 ventura:        "e59faa5fc23a597bfc3d9649bfe968bdaa3f753ab125ef4fad40484ebb0a16ca"
-    sha256 cellar: :any,                 monterey:       "ea1bd6a3e69f76a43f7acb9ca9e2fb4ef14c444cfc854ccba4188e88b6a28c8b"
-    sha256 cellar: :any,                 big_sur:        "4635d7fab2baae3b65c031c7d9afb107554a9e529347160164c44ae960726699"
-    sha256 cellar: :any,                 catalina:       "ac5f61a1bc47001ebb52dec1a3278b4fce04a1a579b855245a3aa533cff63ad3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8786b4ef7bd5d287feda6aa51aedd29a1856116895f1893066b44040e2a81c87"
+    sha256 cellar: :any,                 arm64_monterey: "11c9ec1e717ef4ad5d4a42623bd870172fef6bbc7dc42a4877c8c49e54de9f6c"
+    sha256 cellar: :any,                 arm64_big_sur:  "c62023e2c07a07cd8542e0e1b4b85565661da157db3f6268739d5d35cb548e0c"
+    sha256 cellar: :any,                 monterey:       "bb8b8b93cf4730c12a3d6da0bd29fbe2f29f6562170bc7a89efe0917e0806b4e"
+    sha256 cellar: :any,                 big_sur:        "847c2612b62065f013b39fd2048f7f042af007eb0f80513ccd407e13cced1dcd"
+    sha256 cellar: :any,                 catalina:       "4279577631cb75c72deffa53d6432593e50d768f5148d2e830510466b98ddb75"
+    sha256 cellar: :any,                 mojave:         "2154dddeea8e331a80297abf51ca9d7ebaa881678479d24155721fa1d0f45057"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "903bd8127fe9d88bb17b2d5b1055db99d815878bd8b7f08a53bb33b5fea80fbf"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
@@ -28,19 +34,20 @@ class LlvmAT12 < Formula
   # We intentionally use Make instead of Ninja.
   # See: Homebrew/homebrew-core/issues/35513
   depends_on "cmake" => :build
-  depends_on "python@3.11" => :build
   depends_on "swig" => :build
+  depends_on "python@3.9"
 
   uses_from_macos "libedit"
   uses_from_macos "libffi", since: :catalina
+  uses_from_macos "libxml2"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
   on_linux do
+    depends_on "glibc" if Formula["glibc"].any_version_installed?
     depends_on "pkg-config" => :build
     depends_on "binutils" # needed for gold
     depends_on "elfutils" # openmp requires <gelf.h>
-    depends_on "glibc" if Formula["glibc"].any_version_installed?
 
     # Apply patches slated for the 12.0.x release stream
     # to allow building with GCC 5 and 6. Upstream bug:
@@ -68,8 +75,6 @@ class LlvmAT12 < Formula
   end
 
   def install
-    python3 = "python3.11"
-
     projects = %w[
       clang
       clang-tools-extra
@@ -86,8 +91,8 @@ class LlvmAT12 < Formula
       libunwind
     ]
 
-    py_ver = Language::Python.major_minor_version(python3)
-    site_packages = Language::Python.site_packages(python3).delete_prefix("lib/")
+    py_ver = Language::Python.major_minor_version("python3")
+    site_packages = Language::Python.site_packages("python3").delete_prefix("lib/")
 
     # Apple's libstdc++ is too old to build LLVM
     ENV.libcxx if ENV.compiler == :clang
@@ -118,9 +123,9 @@ class LlvmAT12 < Formula
       -DLLVM_OPTIMIZED_TABLEGEN=ON
       -DLLVM_TARGETS_TO_BUILD=all
       -DLLDB_USE_SYSTEM_DEBUGSERVER=ON
-      -DLLDB_ENABLE_PYTHON=OFF
+      -DLLDB_ENABLE_PYTHON=ON
       -DLLDB_ENABLE_LUA=OFF
-      -DLLDB_ENABLE_LZMA=OFF
+      -DLLDB_ENABLE_LZMA=ON
       -DLLDB_PYTHON_RELATIVE_PATH=libexec/#{site_packages}
       -DLIBOMP_INSTALL_ALIASES=OFF
       -DCLANG_PYTHON_BINDINGS_VERSIONS=#{py_ver}
@@ -146,11 +151,12 @@ class LlvmAT12 < Formula
       args << "-DLLVM_ENABLE_LIBCXX=ON"
       args << "-DRUNTIMES_CMAKE_ARGS=-DCMAKE_INSTALL_RPATH=#{rpath}"
       args << "-DDEFAULT_SYSROOT=#{macos_sdk}" if macos_sdk
-    else
-      ENV.append_to_cflags "-fpermissive -Wno-free-nonheap-object"
+    end
 
-      # Disable `libxml2`, which isn't very useful.
-      args << "-DLLVM_ENABLE_LIBXML2=OFF"
+    if OS.linux?
+      ENV.append "CXXFLAGS", "-fpermissive -Wno-free-nonheap-object"
+      ENV.append "CFLAGS", "-fpermissive -Wno-free-nonheap-object"
+
       args << "-DLLVM_ENABLE_LIBCXX=OFF"
       args << "-DCLANG_DEFAULT_CXX_STDLIB=libstdc++"
       # Enable llvm gold plugin for LTO

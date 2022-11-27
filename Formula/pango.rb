@@ -1,20 +1,18 @@
 class Pango < Formula
   desc "Framework for layout and rendering of i18n text"
   homepage "https://pango.gnome.org"
-  url "https://download.gnome.org/sources/pango/1.50/pango-1.50.12.tar.xz"
-  sha256 "caef96d27bbe792a6be92727c73468d832b13da57c8071ef79b9df69ee058fe3"
+  url "https://download.gnome.org/sources/pango/1.50/pango-1.50.6.tar.xz"
+  sha256 "a998bcf36881c3ac20495d40bceb304f4eaa9175bd2967c85656434cbdafe86a"
   license "LGPL-2.0-or-later"
   head "https://gitlab.gnome.org/GNOME/pango.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "51b7e3860cd156895f0490cc129b566a1651aff7f7cce73c323696848ae20023"
-    sha256 cellar: :any, arm64_monterey: "7dc6606472b236915266dfb94c50f28f5861b52ef99f56d4d72a2227258872a0"
-    sha256 cellar: :any, arm64_big_sur:  "56c1e63e58b97e32da1f37f2db2433b9c5658d097bb3d92911821ca97fd7ecab"
-    sha256 cellar: :any, ventura:        "ab5f532dbd4d3bb1fd639c11e8209491bbff430d20db66b108496dfa13ff1bfb"
-    sha256 cellar: :any, monterey:       "8c06a68283a051294430d1d21b69488f5bfc9e75d4517c5edfb0cce50c85c0b3"
-    sha256 cellar: :any, big_sur:        "c33f8819693d365cff97fa9fb2cfebb8ee0d61421e28625b817b8e33b80c569a"
-    sha256 cellar: :any, catalina:       "80e859a35cd76f439534fc3d33b983d90662cef6d94abc0ccb06177e144ac4dd"
-    sha256               x86_64_linux:   "b9c7127cc6d731fbedf6cb96c67b6ab1997b00965fcc8485375fa499e5659cf9"
+    sha256 cellar: :any, arm64_monterey: "5f2fcb84957b49bc2764be3f6ce3b5309967ef93e8d39fbbc04d7fa20c65d142"
+    sha256 cellar: :any, arm64_big_sur:  "61196356dd6f636d28957e2b7c48674254693c1e175d7ccc7cb2207a55c3c7f5"
+    sha256 cellar: :any, monterey:       "f1452a4c0b3ccff2dd9ed4d0d5153c202a98e40602cbaa6faa59648b2c4f1318"
+    sha256 cellar: :any, big_sur:        "c4ed05228db80d461dac1d44479c4d71a7161307ef1e041e28d47363b9c9c891"
+    sha256 cellar: :any, catalina:       "d2a309a053431e56086a8ffa4f3d9e674f22b341f3c7ee349423cfb3f037f01a"
+    sha256               x86_64_linux:   "47c20a93f7f50984817766e16626ae24817838c3c3e478576223bcde099cb11b"
   end
 
   depends_on "gobject-introspection" => :build
@@ -29,18 +27,21 @@ class Pango < Formula
   depends_on "harfbuzz"
 
   def install
-    system "meson", *std_meson_args, "build",
-                    "-Ddefault_library=both",
-                    "-Dintrospection=enabled",
-                    "-Dfontconfig=enabled",
-                    "-Dcairo=enabled",
-                    "-Dfreetype=enabled"
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args,
+                      "-Ddefault_library=both",
+                      "-Dintrospection=enabled",
+                      "-Dfontconfig=enabled",
+                      "-Dcairo=enabled",
+                      "-Dfreetype=enabled",
+                      ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
-    system bin/"pango-view", "--version"
+    system "#{bin}/pango-view", "--version"
     (testpath/"test.c").write <<~EOS
       #include <pango/pangocairo.h>
 

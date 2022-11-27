@@ -3,27 +3,22 @@ class PreCommit < Formula
 
   desc "Framework for managing multi-language pre-commit hooks"
   homepage "https://pre-commit.com/"
-  url "https://files.pythonhosted.org/packages/1e/ba/8cf8b88d0e07588818de46877effc9971305541d9421bc6377b06639d135/pre_commit-2.20.0.tar.gz"
-  sha256 "a978dac7bc9ec0bcee55c18a277d553b0f419d259dadb4b9418ff2d00eb43959"
+  url "https://files.pythonhosted.org/packages/d0/3c/f0906f9e015c2fd38ca912cb9a6d2eb10c6ca0ce0fd318239993466613b7/pre_commit-2.19.0.tar.gz"
+  sha256 "4233a1e38621c87d9dda9808c6606d7e7ba0e087cd56d3fe03202a01d2919615"
   license "MIT"
-  revision 1
-  head "https://github.com/pre-commit/pre-commit.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bc4ab3b751e5a0aafab0d8943ea66309034aed85392e8d09d252e0f14e17f08e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1cf2fbb0c8ffe108e30a425fc95eb2942fc07f5af69dc9cc023c2ef85cf56591"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7503a587bdf501da0dcef03fa9a56839d35f6f8750eb420397ed334bb9728fe3"
-    sha256 cellar: :any_skip_relocation, ventura:        "f5082e39ff0265fdaf0d6b34e5711f447b5442df8d39db831cce7b28718ea30b"
-    sha256 cellar: :any_skip_relocation, monterey:       "a2c37345ccf7aaf9bc5f46559f3f1fff0651f2af4370e5f8c20ed1dc20513580"
-    sha256 cellar: :any_skip_relocation, big_sur:        "72c36305b1d3fb44c59e11c3b937339c4e9759cdbe6671e134fd3f58b25131e6"
-    sha256 cellar: :any_skip_relocation, catalina:       "bb51f828d685794021556971cd2269c141fdb2f696f26e475f22104527673a3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ce40596bbb828e137dcf918ba0954a3095f99b922c053cc4e9c13bb55a5b283"
+    sha256 cellar: :any,                 arm64_monterey: "35830ae8dc83700b547c078a43e0cae5b99c69d820e6a70b7dd43872105cc075"
+    sha256 cellar: :any,                 arm64_big_sur:  "ae925eb818c247559e36558216c63a5298653d65ecd528383340a0ee8b92c07e"
+    sha256 cellar: :any,                 monterey:       "fa8795f2fc5231708ac69b3447732d3342ac77084c75d4cd92636e4cb3306918"
+    sha256 cellar: :any,                 big_sur:        "1eb31671ec49ce4703bdf821c46238a541ef5972f462174f4765dac8a2cf72c3"
+    sha256 cellar: :any,                 catalina:       "4852270ec8f9249be28101899cfc2f5718b8b5ac79432089484af3e754a075cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6376d63fa6a158bd89dcf23bf75c6b684c542ca933c4c47e434287f92649cd17"
   end
 
-  depends_on "python@3.11"
-  depends_on "pyyaml"
+  depends_on "libyaml"
+  depends_on "python@3.10"
   depends_on "six"
-  depends_on "virtualenv"
 
   resource "cfgv" do
     url "https://files.pythonhosted.org/packages/c4/bf/d0d622b660d414a47dc7f0d303791a627663f554345b21250e39e7acb48b/cfgv-3.3.1.tar.gz"
@@ -36,18 +31,18 @@ class PreCommit < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/f3/c7/5c1aef87f1197d2134a096c0264890969213c9cbfb8a4102087e8d758b5c/filelock-3.7.1.tar.gz"
-    sha256 "3a0fd85166ad9dbab54c9aec96737b744106dc5f15c0b09a6744a445299fcf04"
+    url "https://files.pythonhosted.org/packages/4d/cd/3b1244a19d61c4cf5bd65966eef97e6bc41e51fe84110916f26554d6ac8c/filelock-3.6.0.tar.gz"
+    sha256 "9cd540a9352e432c7246a48fe4e8712b10acb1df2ad1f30e8c070b82ae1fed85"
   end
 
   resource "identify" do
-    url "https://files.pythonhosted.org/packages/e5/8e/408d590e26fbc75a2e974aa1103d95a3ffef014209967f66f491306c4824/identify-2.5.1.tar.gz"
-    sha256 "3d11b16f3fe19f52039fb7e39c9c884b21cb1b586988114fbe42671f03de3e82"
+    url "https://files.pythonhosted.org/packages/e7/de/5c84c44cf63f89418927c206da12008287767fe57c95f901f47300dd17f8/identify-2.5.0.tar.gz"
+    sha256 "c83af514ea50bf2be2c4a3f2fb349442b59dc87284558ae9ff54191bff3541d2"
   end
 
   resource "nodeenv" do
-    url "https://files.pythonhosted.org/packages/f3/9d/a28ecbd1721cd6c0ea65da6bfb2771d31c5d7e32d916a8f643b062530af3/nodeenv-1.7.0.tar.gz"
-    sha256 "e0e7f7dfb85fc5394c6fe1e8fa98131a2473e04311a45afb6508f7cf1836fa2b"
+    url "https://files.pythonhosted.org/packages/75/8d/14c4ac588711f8de0dd02a11460ed72f48cab65a998994ca20f40c6e1a8f/nodeenv-1.6.0.tar.gz"
+    sha256 "3ef13ff90291ba2a4a7a4ff9a979b63ffdd00a464dbe04acf0ea6471517a4c2b"
   end
 
   resource "platformdirs" do
@@ -55,32 +50,33 @@ class PreCommit < Formula
     sha256 "58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"
   end
 
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+  end
+
   resource "toml" do
     url "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz"
     sha256 "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
   end
 
-  def python3
-    "python3.11"
+  resource "virtualenv" do
+    url "https://files.pythonhosted.org/packages/5f/6c/d44c403a54ceb4ec5179d1a963c69887d30dc5b300529ce67c05b4f16212/virtualenv-20.14.1.tar.gz"
+    sha256 "ef589a79795589aada0c1c5b319486797c03b67ac3984c48c669c0e4f50df3a5"
   end
 
   def install
     # Avoid Cellar path reference, which is only good for one version.
     inreplace "pre_commit/commands/install_uninstall.py",
               "f'INSTALL_PYTHON={shlex.quote(sys.executable)}\\n'",
-              "f'INSTALL_PYTHON={shlex.quote(\"#{opt_libexec}/bin/#{python3}\")}\\n'"
+              "f'INSTALL_PYTHON={shlex.quote(\"#{opt_libexec}/bin/python3\")}\\n'"
 
     virtualenv_install_with_resources
-
-    # we depend on virtualenv, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.11")
-    virtualenv = Formula["virtualenv"].opt_libexec
-    (libexec/site_packages/"homebrew-virtualenv.pth").write virtualenv/site_packages
   end
 
   # Avoid relative paths
   def post_install
-    xy = Language::Python.major_minor_version Formula["python@3.11"].opt_bin/python3
+    xy = Language::Python.major_minor_version Formula["python@3.10"].opt_bin/"python3"
     dirs_to_fix = [libexec/"lib/python#{xy}"]
     dirs_to_fix << (libexec/"bin") if OS.linux?
     dirs_to_fix.each do |folder|

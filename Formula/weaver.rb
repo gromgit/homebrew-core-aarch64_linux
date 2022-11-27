@@ -1,23 +1,19 @@
 class Weaver < Formula
   desc "Command-line tool for Weaver"
   homepage "https://github.com/scribd/Weaver"
-  url "https://github.com/scribd/Weaver/archive/1.1.4.tar.gz"
-  sha256 "d3bb488a618fa96e0c1b50db317ae7e9da9cb62d42c2da643731aa94f2fcb724"
+  url "https://github.com/scribd/Weaver/archive/1.0.8.tar.gz"
+  sha256 "eefdd5f986be6da6256e132c83ea4a7ed711ae492a158e685385ea65670cc88d"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9da5c1e57db6f181627f53f6c65bc18e9b8533b7ee43691c9d607237a6c1510c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c638f6c406f19d043f309a18841212b7430c69fdbe30e79e442a4eb0fe233c97"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6500563e47b77a95931aac8c28e80ceb7bc47ff0db38a25d1c3a91c52b573a85"
-    sha256 cellar: :any_skip_relocation, ventura:        "a1523ae7a3e959d4b12caa8c0a19e7636e616e7b63c37383e8983edbdb6d704d"
-    sha256 cellar: :any_skip_relocation, monterey:       "11e99cdd2ca89e7da78b3c31e08f4b9c0c09c21a8bd2d553040ccd85e98ed88a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "37789b704af76fddb2f995729014255b7bbd5729ab22596fd63f373b79dfe744"
-    sha256 cellar: :any_skip_relocation, catalina:       "0927144fcebd86ea362e17ce08e64a2253b2a35e647264d784ecda4f433386b7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ef608bc19d4f7b73774a664163c8b134d5110203dee5008a513d60704cbb68f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d940db79ce543334b7d888033adc22a517ed37b607bc2e1d0a37d2831ef26608"
+    sha256 cellar: :any_skip_relocation, monterey:       "9d5648c31c7dba7867ad7a9915a54ad67342eb96b8347e8e6bf834606ec9d38c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a94e918e25975679aac042648547d882887b52e2f67c2271d1a6f63011043716"
+    sha256 cellar: :any_skip_relocation, catalina:       "ec79048231822f03c6dc5be241f215c650ef148036292e3be6e1fd6000d92325"
   end
 
   depends_on xcode: ["11.2", :build]
-
-  uses_from_macos "swift"
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
@@ -27,6 +23,6 @@ class Weaver < Formula
     # Weaver uses Sourcekitten and thus, has the same sandbox issues.
     # Rewrite test after sandbox issues investigated.
     # https://github.com/Homebrew/homebrew/pull/50211
-    system bin/"weaver", "version"
+    system "#{bin}/weaver", "version"
   end
 end

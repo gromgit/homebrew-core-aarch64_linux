@@ -1,18 +1,17 @@
 class Sonic < Formula
   desc "Fast, lightweight & schema-less search backend"
   homepage "https://github.com/valeriansaliou/sonic"
-  url "https://github.com/valeriansaliou/sonic/archive/v1.4.0.tar.gz"
-  sha256 "953314a8c711fde89ac5a7e41ab37d35fffa2b5cc6428d849bc65968e45a8cde"
+  url "https://github.com/valeriansaliou/sonic/archive/v1.3.2.tar.gz"
+  sha256 "e07baccdc24dea6a6c0e6ef32e7faa3945318cfb2577127806c8558f1809283d"
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ba4c2939b999ae73c46cceecb21e25f67f2c0107d8fc53b4ffbe5337299a66c3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "88a2d41df229febf3a5fc32b1af2c78657810e12ef94ca9522a318b590365bf6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "42ec66f78a25bd41bfb235b6684aa4f17c7360a5cdc2fdff6206b9be0c0b62e0"
-    sha256 cellar: :any_skip_relocation, monterey:       "00d1c7357fcb1261433e54856267d7c653701b8d154e4951cd16ba70fe66c3c6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "322caf905b32c77a887ac05a5c9d78d1116e3af9701ecc27652c813d86c9f1a6"
-    sha256 cellar: :any_skip_relocation, catalina:       "9396cb130cd9db11186a103e19371ff06d1e6e72ef784f5b9f94415ef29dfef3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12a26ea1c3ca5619ac1f72d37526b47862512c136bc0e56b24c5b023b72c1d42"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "54a83b70518118c60edcffeab87cfb3cba1b9aef41aabd3f5e669617891cae25"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69a14bebca8661994dc69b839f3dfce7102521ac8ddbea53d8787f0e7529cfdc"
+    sha256 cellar: :any_skip_relocation, monterey:       "6f7b0d809dfe6ba57810405827a63daabe4c342c9fc49b4be82a21b20880c226"
+    sha256 cellar: :any_skip_relocation, big_sur:        "792785661a775679892c9bafa85c35672e8d2ef2d165ea288cdcff840e156ccc"
+    sha256 cellar: :any_skip_relocation, catalina:       "bf838a42756d6b49113bc80343bfc97c86ad18d3f6535ab556dbab3fbded1974"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3f700885fd76cf4dc2df760b710e6fd20b7dd1a4d5519895f43b820224c04dd"
   end
 
   depends_on "rust" => :build

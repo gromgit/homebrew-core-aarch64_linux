@@ -3,18 +3,17 @@ require "language/node"
 class Asyncapi < Formula
   desc "All in one CLI for all AsyncAPI tools"
   homepage "https://github.com/asyncapi/cli"
-  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-0.26.2.tgz"
-  sha256 "d857e9a02a60ec1ad43c37d47442c9db29f9ccdbb01d2b16d7c2546518deac08"
+  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-0.19.1.tgz"
+  sha256 "c261968c6d86a07cb56e3d633031c55428d37dde1cd7087a345d46ea595f89e0"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e2cee76f548f764c911fe36b8a4ef84cb7d5ab946ab2f3021b9416f970f210c8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2cee76f548f764c911fe36b8a4ef84cb7d5ab946ab2f3021b9416f970f210c8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2cee76f548f764c911fe36b8a4ef84cb7d5ab946ab2f3021b9416f970f210c8"
-    sha256 cellar: :any_skip_relocation, monterey:       "1239cdbd7adffdc00fb3da33851cc148eb2ce127f1af650dba3d3007811c1835"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1239cdbd7adffdc00fb3da33851cc148eb2ce127f1af650dba3d3007811c1835"
-    sha256 cellar: :any_skip_relocation, catalina:       "1239cdbd7adffdc00fb3da33851cc148eb2ce127f1af650dba3d3007811c1835"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75f871ce4a14fcb1c51bc52f7da5568eee95ff06d89bbdf45eb27ef370828b12"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1fc0a2286e9fabe1b5b363e320f23b0c4073f8e17652722f0cf4bf8b51e14a1c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1fc0a2286e9fabe1b5b363e320f23b0c4073f8e17652722f0cf4bf8b51e14a1c"
+    sha256 cellar: :any_skip_relocation, monterey:       "107a962302e6efafcdf685c2608aa3b34976f13f6392896b08cf0e8d58dbc6f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "107a962302e6efafcdf685c2608aa3b34976f13f6392896b08cf0e8d58dbc6f5"
+    sha256 cellar: :any_skip_relocation, catalina:       "107a962302e6efafcdf685c2608aa3b34976f13f6392896b08cf0e8d58dbc6f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be9f0b0f339f41284713a121ca95c11140ba1ae633c16e09dcfebbef61b9f571"
   end
 
   depends_on "node"

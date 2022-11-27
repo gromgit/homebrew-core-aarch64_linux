@@ -1,20 +1,18 @@
 class Jsvc < Formula
   desc "Wrapper to launch Java applications as daemons"
   homepage "https://commons.apache.org/daemon/jsvc.html"
-  url "https://www.apache.org/dyn/closer.lua?path=commons/daemon/source/commons-daemon-1.3.2-src.tar.gz"
-  mirror "https://archive.apache.org/dist/commons/daemon/source/commons-daemon-1.3.2-src.tar.gz"
-  sha256 "5dde89fd338608302d065ddb68a2673989f3b491fe0be2f6f9ef510b4054a84c"
+  url "https://www.apache.org/dyn/closer.lua?path=commons/daemon/source/commons-daemon-1.3.0-src.tar.gz"
+  mirror "https://archive.apache.org/dist/commons/daemon/source/commons-daemon-1.3.0-src.tar.gz"
+  sha256 "533cd76fe3113d535313c1d8b01ff23caf6babccc699b1a68b4446937cc4474b"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "639947d6d2ac84c7339820c23285ae3fcf863f66c26cfd76aa212fb3a0247c5f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd279e71ff6295eeb2f610215e96f7b1b3315abe63878406b8e287deb22fafa3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1f5f3a1d20e6da90dfe2e63a91ad43343b5c734ef4835cd3157cb204c284c9b"
-    sha256 cellar: :any_skip_relocation, ventura:        "0f0608b2eac63676d9b997c59324a3d4abae62fdf53e4fede311a35dfcfa249f"
-    sha256 cellar: :any_skip_relocation, monterey:       "b7beb523aa6aaaa660b14592cc7e83b3af241397b93d8e98c477930e35621a0a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7ca8e7af372e8d0ca52ada25068c0e762a9000335fcbda8e8951c7f8ec2f9cac"
-    sha256 cellar: :any_skip_relocation, catalina:       "b663e3f04c50764a1339a4de0b579d3933860a19dc30ba970cd2f7312dc9bdb8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2b2b984aea61dfa943f3677dac28acf09bb44339e6da4adc2de397bdb95388e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eaab68414a0b2baa923b44d8586f1fbf1a425d37c06870ca4e063dffa2bbb933"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43261838f40f1df64555476046fffb114742f7399297bdc414e9a177e87872f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "b04c71b4afdd14a4e1867af564ebe444f44a1204b6b4615a4868d33ba85ed0cf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "de514757fbeafe3d8dbaeb1f4d097380c4b017d6e10937862f625f4c3968f75f"
+    sha256 cellar: :any_skip_relocation, catalina:       "5c7308e3495ffd2af09ac54f61df59a9ce3aa46899a96a1d4ab125f27149e5d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "34999c468ea8a823fd2dd6a27a9ddd25a863a3c536e980f1a66d9e36745a3622"
   end
 
   depends_on "openjdk"

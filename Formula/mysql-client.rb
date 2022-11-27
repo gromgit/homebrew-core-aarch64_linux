@@ -1,8 +1,8 @@
 class MysqlClient < Formula
   desc "Open source relational database management system"
   homepage "https://dev.mysql.com/doc/refman/8.0/en/"
-  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.31.tar.gz"
-  sha256 "7867f3fd8ca423d283a6162c819c766863ecffbf9b59b4756dc7bb81184c1d6a"
+  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.29.tar.gz"
+  sha256 "fd34a84c65fc7b15609d55b1f5d128c4d5543a6b95fa638569c3277c5c7bb048"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
 
   livecheck do
@@ -10,14 +10,12 @@ class MysqlClient < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "904fe3369d3c805047ba09ad48a1bce232df4cfcb765a1a989f016b5fa1d4e27"
-    sha256 arm64_monterey: "b565b9a2fb30bd5d4f1698f8942f499b45d31a70f7df08b21461dfecd9f735fb"
-    sha256 arm64_big_sur:  "54a26c071f2945eb906e9c093f84f61421af8439cbc9441138cb28ebc842e067"
-    sha256 ventura:        "3bc026f867b5aaf17181b80e03cf6c32a9afeea9b29eaade1c7e34547618cfbb"
-    sha256 monterey:       "c0c6fa0acae0cd96c7c47c76e9816bcc945517f15080fc9704b9394ba077bc56"
-    sha256 big_sur:        "bd32db39d4bc8d277129968f4bfbf664c8a2ad5844bcfb48d33c2f162c8b974c"
-    sha256 catalina:       "51a429486ee4dec872cc9f8ca1484c0238ec13d8538813a5dc88aac85bd0e9e2"
-    sha256 x86_64_linux:   "97869ddde4569e69dcd162b12cf8fe1c35f348d640630170664d84a2f20a0ecd"
+    sha256 arm64_monterey: "0570baf2cf4c4b82ee8ea9fbcbe46ed296bf8d35e67af0c8825b9f771dc1b225"
+    sha256 arm64_big_sur:  "a7c4c56992572994ede23bf0439bff5311e3591f84ec88841ba673cb1ae25562"
+    sha256 monterey:       "25d0a5b775dbeb01c853132138b206cff6d5678ffd944ac3e28bc06f67d6a1d5"
+    sha256 big_sur:        "8d952a3e0a7d6c43066aae7cc390a7c1acaef3519d1b25dc3196fc2e55dc320f"
+    sha256 catalina:       "b7db816c2e28cd360ae4f460a2d4829243f7d260df89f8acc6611adde29df196"
+    sha256 x86_64_linux:   "f7f7a44320c99f7ae6fe9eb0cc3da00a255b2070559be9ce9dcae35197983f68"
   end
 
   keg_only "it conflicts with mysql (which contains client libraries)"
@@ -29,10 +27,14 @@ class MysqlClient < Formula
   # GCC is not supported either, so exclude for El Capitan.
   depends_on macos: :sierra if DevelopmentTools.clang_build_version < 900
   depends_on "openssl@1.1"
-  depends_on "zlib" # Zlib 1.2.12+
   depends_on "zstd"
 
   uses_from_macos "libedit"
+  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

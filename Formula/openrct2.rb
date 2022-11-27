@@ -2,31 +2,27 @@ class Openrct2 < Formula
   desc "Open source re-implementation of RollerCoaster Tycoon 2"
   homepage "https://openrct2.io/"
   url "https://github.com/OpenRCT2/OpenRCT2.git",
-      tag:      "v0.4.2",
-      revision: "8ceea458774d37ab87fd0e7672180b119f8d8b31"
+      tag:      "v0.4.0",
+      revision: "c6302a1dae09e2539ed053390ca0dd1816448a14"
   license "GPL-3.0-only"
   head "https://github.com/OpenRCT2/OpenRCT2.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "bf7ccc0e3db2c746a0f70390decac3c231d212777e519eec65381488ad05b97f"
-    sha256 cellar: :any, arm64_monterey: "6ad2c1ef2e5f49fe73ae0d918fc3f6941299e79f56f21d1fba242e8f0a3d4a48"
-    sha256 cellar: :any, arm64_big_sur:  "03d952b355b1db4e398b23b7e5668cbdf7f1b458e51389b3528e6538ea4ba1c5"
-    sha256 cellar: :any, monterey:       "b372100620c71a46d88dc9fe17e777bf7ab0af7eadd59d6c948a957e77101892"
-    sha256 cellar: :any, big_sur:        "f6ed0d0a300fca742fdbd80273246b701802941581c522b47942cef5f8de7b0b"
-    sha256 cellar: :any, catalina:       "af6dcce43bee1412dd9c832111fbdca9fcd2236f1be5710e3733a3d58760a2ee"
-    sha256               x86_64_linux:   "d54175b7b577d6a21f9471022fdb72d2678cdeef682384bdd246718302ec5ef5"
+    sha256 cellar: :any, arm64_monterey: "a2ee8367042840c57fa5d75a7251645b04a44367fd3b1c5a3d6080df09fb1bbf"
+    sha256 cellar: :any, arm64_big_sur:  "00d148141e96617fe0329c19758dbc9389548ef095085fa032e8b6f46f5865e5"
+    sha256 cellar: :any, monterey:       "0a201d49bb9c2470052dc7ad589d0b45f4398a8ecc3b685660795ebca3334955"
+    sha256 cellar: :any, big_sur:        "c2c92d7f274ad0e3b367ab44726890d0acd00cc6beecb4260c760d14f6f00a4d"
+    sha256 cellar: :any, catalina:       "9444c48070a07bcc412ce737a652cacc0cf79b8e12f382d7c2ff5be73eab81fe"
+    sha256               x86_64_linux:   "73b8a305ad9eb561d24d517f30fe996c2bfe81aca4a0d5384ca3e0da7b98fcf3"
   end
 
   depends_on "cmake" => :build
   depends_on "nlohmann-json" => :build
   depends_on "pkg-config" => :build
   depends_on "duktape"
-  depends_on "flac"
   depends_on "freetype"
   depends_on "icu4c"
-  depends_on "libogg"
   depends_on "libpng"
-  depends_on "libvorbis"
   depends_on "libzip"
   depends_on macos: :mojave # `error: call to unavailable member function 'value': introduced in macOS 10.14`
   depends_on "openssl@1.1"
@@ -47,8 +43,8 @@ class Openrct2 < Formula
   end
 
   resource "objects" do
-    url "https://github.com/OpenRCT2/objects/releases/download/v1.3.5/objects.zip"
-    sha256 "4859b7a443d0969cb1c639202fe70f40ac4c2625830657c72645d987912258ff"
+    url "https://github.com/OpenRCT2/objects/archive/v1.2.7.tar.gz"
+    sha256 "ec9a4f862365477b24a9eea16159131b235e05330fa2becefa1a113b17e6bceb"
   end
 
   def install

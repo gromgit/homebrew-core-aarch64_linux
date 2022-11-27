@@ -1,19 +1,18 @@
 class StylishHaskell < Formula
   desc "Haskell code prettifier"
   homepage "https://github.com/haskell/stylish-haskell"
-  url "https://github.com/haskell/stylish-haskell/archive/v0.14.3.0.tar.gz"
-  sha256 "27f8b372e5ff18608f1db22598c99bb3d535083a65b02ebc40af5fc0b3b4ed38"
+  url "https://github.com/haskell/stylish-haskell/archive/v0.14.2.0.tar.gz"
+  sha256 "e70081f863a406f0f048799d9fb2e6d92ad486bf9d5364609902155bfd2c3ea8"
   license "BSD-3-Clause"
   head "https://github.com/haskell/stylish-haskell.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "51d558bc19d94bf7ce019e4be28fe016e8ca51f80b7f8853b3287f5705f14760"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6171291422a4cf5d2281f6cf0d4f9cfc3aa6c3b68beb38b81bfdee37fc4a60da"
-    sha256 cellar: :any_skip_relocation, ventura:        "66e5d594e32b86480288e83ae9589c754e9796a6148b8b4992c1bb405688c7ef"
-    sha256 cellar: :any_skip_relocation, monterey:       "4b89870742215a1bf3e88b9c5bef2e999b5ec611c8134efbab034c240a6f2846"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6b6506f2723daf41c9ca4f072211b7021b238f16451a41b8345cfa7984dcf674"
-    sha256 cellar: :any_skip_relocation, catalina:       "05bdaee2bff49b3e3853f66a0e9da5c68785e17ba97012e02f0e27a98744982d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7f9a242e4cde7e144b70997f992e3e40c6f11c83644cd43282c227e06a61b7b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8492583c2c98984f12b0aaa8a49bc40778236e939a19359e1e9b17d2c949cd04"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f938218d664df786dbabfff415d3d3849ff7dfb31fe0224ef07240f96c9213f"
+    sha256 cellar: :any_skip_relocation, monterey:       "4d0bc56f858f8f60acc7b78abac39c075985ab5caecf5d8cefdc8826c360dbc2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "29d61a1b5bd338b7e9ae143afc2512140ed1f67db8ff8b6aa0a59680cb08d336"
+    sha256 cellar: :any_skip_relocation, catalina:       "e9bbb68478ac1ec25e17b2b27f552120a744aa59fd4c30fdcc9bcbcfb3aab595"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "662314c0c7f3388ff069c5a31fed485c5a93ff54b2f4c84ba680686509c2772c"
   end
 
   depends_on "cabal-install" => :build
@@ -21,12 +20,7 @@ class StylishHaskell < Formula
 
   def install
     system "cabal", "v2-update"
-    # Work around build failure by enabling `ghc-lib` flag
-    # lib/Language/Haskell/Stylish/GHC.hs:71:32: error:
-    #     • Couldn't match expected type 'GHC.Settings'
-    #                   with actual type 'ghc-lib-parser-9.2.4.20220729:GHC.Settings.Settings'
-    # Issue ref: https://github.com/haskell/stylish-haskell/issues/405
-    system "cabal", "v2-install", *std_cabal_v2_args, "--flags=+ghc-lib"
+    system "cabal", "v2-install", *std_cabal_v2_args
   end
 
   test do

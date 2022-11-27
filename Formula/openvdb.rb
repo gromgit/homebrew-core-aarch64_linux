@@ -1,18 +1,19 @@
 class Openvdb < Formula
   desc "Sparse volumetric data processing toolkit"
   homepage "https://www.openvdb.org/"
-  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/v10.0.0.tar.gz"
-  sha256 "fb0b54500464903a2334625e43f3719bd107ab0cf538d7762fd0185086a17a6d"
+  url "https://github.com/AcademySoftwareFoundation/openvdb/archive/v9.0.0.tar.gz"
+  sha256 "ad3816e8f1931d1d6fdbddcec5a1acd30695d049dd10aa965096b2fb9972b468"
   license "MPL-2.0"
+  revision 1
   head "https://github.com/AcademySoftwareFoundation/openvdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3c6573a80c64d2113eadebb6588a74e214412230ad431ae11222c263e1e48b5b"
-    sha256 cellar: :any,                 arm64_big_sur:  "bb6600f6bef2d7a79c43f1531afca274a113dda161c2ad48541462b945db62f9"
-    sha256 cellar: :any,                 monterey:       "bc3db85b839c088af4271ffd305ca1084aea3b6035ef00a9571ec10702438e02"
-    sha256 cellar: :any,                 big_sur:        "53249d9fb08ef2fadd93f19c280ad6359a662c52b0aa25dc0a6bf5dd049d42aa"
-    sha256 cellar: :any,                 catalina:       "c16844a686000d6074da1cc7d57918b7f84a5783a1720ae65451621989e53dde"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e0b5ebef2b1e369f90e4ede4f30eebe3268a33cddf317624ebe6026e0997154"
+    sha256 cellar: :any,                 arm64_monterey: "29ca05b8a12fc73fc8077fd7036a40a5bd2833a08b691e34f06e0906f1327bd8"
+    sha256 cellar: :any,                 arm64_big_sur:  "1be18c439e2f597acb6ab7b6c5015e8c0bde503433edfc14b7a95cdea0fef0cb"
+    sha256 cellar: :any,                 monterey:       "e5e41fcadf23b328b30703d4d952dcc4ad2cfb6a29eeb5e4d0455e6964717c6b"
+    sha256 cellar: :any,                 big_sur:        "4e70a60cafb9635500c69863519d4b084a3dafbb3bcec6bcf17d89c9181e295c"
+    sha256 cellar: :any,                 catalina:       "e8c0ab754b18fd72603c9d48ce2b985a70096f419f35266c2e3b3f5fd11ac8e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffd1aa828c4e1d1e20eada6d5d6276347722378e643013cc8630362cf646a262"
   end
 
   depends_on "cmake" => :build
@@ -23,9 +24,13 @@ class Openvdb < Formula
   depends_on "openexr"
   depends_on "tbb"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
-  resource "homebrew-test_file" do
+  resource "test_file" do
     url "https://artifacts.aswf.io/io/aswf/openvdb/models/cube.vdb/1.0.0/cube.vdb-1.0.0.zip"
     sha256 "05476e84e91c0214ad7593850e6e7c28f777aa4ff0a1d88d91168a7dd050f922"
   end
@@ -45,7 +50,7 @@ class Openvdb < Formula
   end
 
   test do
-    resource("homebrew-test_file").stage testpath
+    resource("test_file").stage testpath
     system bin/"vdb_print", "-m", "cube.vdb"
   end
 end

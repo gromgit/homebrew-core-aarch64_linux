@@ -1,19 +1,18 @@
 class Ormolu < Formula
   desc "Formatter for Haskell source code"
   homepage "https://github.com/tweag/ormolu"
-  url "https://github.com/tweag/ormolu/archive/0.5.1.0.tar.gz"
-  sha256 "889747cf0cd751dae2cc6ea607aeed85191a14c560fa9e3843bb73fc1f9d1675"
+  url "https://github.com/tweag/ormolu/archive/0.4.0.0.tar.gz"
+  sha256 "c87b2e09cef54aa7568b9bc990bb6ffd7b8dae3d8b950557fbe60ec286039353"
   license "BSD-3-Clause"
   head "https://github.com/tweag/ormolu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "93c07f5e65714f5235a66d264e03ded0389ee5f17d7ce535dd85ff0fa64f6e21"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "88a0e722d763286d25df1f804b1fe5a364679330ee21af8edf689b2be97d41b8"
-    sha256 cellar: :any_skip_relocation, ventura:        "f0d7ed9c5f7d798958b774cf2281adf8bf7699bece19ed6dfca1b8cc6efc9b38"
-    sha256 cellar: :any_skip_relocation, monterey:       "b7161af8d79a0f4d106881fc2c00fbc16fd82dd7e8b113042ed96e4d428b592f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d0326abd4734ee2aa4078b6858fbaf3985b786ad5f9236e8ec96831a364642c2"
-    sha256 cellar: :any_skip_relocation, catalina:       "b1a706b4c77d213e08be73417a751c147f55475151e1d50e878d74bf14557d04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e293ef7522c75afa1663bda7b000c40384c9b4155e71da80a7462988d47af71e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "828054e2764d487af77e04880eff00bbbfb810d2150eb1ea45c0e6bfb7f14d6f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14450fe96a3025dc81dd53dbe85317b9f660f5983cdbe217b6996306f9a378d1"
+    sha256 cellar: :any_skip_relocation, monterey:       "d5a10db06a3bc92a52516852f1cc8dc984c1c1a3730e3c6c4d9058c5204b65f0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0e28da5886bdb97c288f824071f2de68e4f59c3d5e445492468a4985386db531"
+    sha256 cellar: :any_skip_relocation, catalina:       "d3c334f656ea463f853e223e858825d8a5443ec4d83b2990b83ead818258600c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6d111b4cbbeba91601a5e4ca3dc28cac17b89a41b8b8270b05e35566af35ca0"
   end
 
   depends_on "cabal-install" => :build
@@ -21,7 +20,7 @@ class Ormolu < Formula
 
   def install
     system "cabal", "v2-update"
-    system "cabal", "v2-install", "-f-fixity-th", *std_cabal_v2_args
+    system "cabal", "v2-install", *std_cabal_v2_args
   end
 
   test do

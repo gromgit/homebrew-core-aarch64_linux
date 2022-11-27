@@ -1,20 +1,18 @@
 class Reshape < Formula
   desc "Easy-to-use, zero-downtime schema migration tool for Postgres"
   homepage "https://github.com/fabianlindfors/reshape"
-  url "https://github.com/fabianlindfors/reshape/archive/v0.6.1.tar.gz"
-  sha256 "5d22b7b2f015c79734f35d0fcd43b21bac89d9032dd66307450b3b8c4cc0a33b"
+  url "https://github.com/fabianlindfors/reshape/archive/v0.6.0.tar.gz"
+  sha256 "4a69ec4476e0983224d446b63ebf78e3f764b57ac4e73aab49ac34b8f506851c"
   license "MIT"
   head "https://github.com/fabianlindfors/reshape.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6c0ba6cc6e8cb823b6ae4b723e262ac9559dcb32e63830dfb6f6a49c5c5a1617"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb86556a181a162f1137ff6725c7f1261080369a8d888aadc82c5fc2ed11ccec"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e03b64855b0ead19d73ecc3ef909a848be65cad053ac90064685ecb83321896c"
-    sha256 cellar: :any_skip_relocation, monterey:       "2758bb9ece62be0961b0372269349912414abc658a6501eade88a2c055cd92fe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e1e1609d559dabfcad4979db9a14621aa44c644cb662493d07efe3147ecc1115"
-    sha256 cellar: :any_skip_relocation, catalina:       "596f99930552bc9101e29a11b38effb1ac12ac7b571306cc0c3b3820f97800e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56244c04af16653423ae6ed64c2bcc8bd116af638ef48dfeeeaf4ae39de01062"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa5c1056855d5b1c4a0ea5cb6e12ebc589903148de91e38f67b2036b59e7efcc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "961b890dcaa875d478cbb368de239eca807b236f08ad7067c9f082333d60b521"
+    sha256 cellar: :any_skip_relocation, monterey:       "0963250e57b8b8cc51afb6ff4eed611e8fa6b3591d48196194aecfa0069527d8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b27d2e05c280a2f613d89a4f687b9378388c3bea4d818e669794d7bfd2217c88"
+    sha256 cellar: :any_skip_relocation, catalina:       "ec7f968b52f5821c235394ef1d81299d237167f7ba95ed9420c3606c33658ba5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d3ed3ac9d59201a69ef95d2fa3c1216bb7a1586143a6dddb23ddd345ee41ee1"
   end
 
   depends_on "rust" => :build

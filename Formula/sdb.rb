@@ -1,20 +1,18 @@
 class Sdb < Formula
   desc "Ondisk/memory hashtable based on CDB"
-  homepage "https://github.com/radareorg/sdb"
-  url "https://github.com/radareorg/sdb/archive/1.9.2.tar.gz"
-  sha256 "58f45a1de7eace53d0bc1d7daf20c63102e1dda00198ca3799fe57dcfb1f06cc"
+  homepage "https://github.com/radare/sdb"
+  url "https://github.com/radareorg/sdb/archive/1.8.8.tar.gz"
+  sha256 "646add20d2fcb4beb2d5a7910368ac7c8245a63fa243ab1d3bb3732fa3a2b148"
   license "MIT"
-  head "https://github.com/radareorg/sdb.git", branch: "master"
+  head "https://github.com/radare/sdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "bebf2b31f8bd420872a49157e681331a095c2ed21f3be24ab0ce1e06aefaf4e5"
-    sha256 cellar: :any,                 arm64_monterey: "77a1325cf44ed544e7cbb728aa9ca00d011866c2b76aa14e6d82670d20f4eae1"
-    sha256 cellar: :any,                 arm64_big_sur:  "b2df40d1da24458b2ebe5618f2cef4d2c0c3ac62850b5cdf9af394b856f6c942"
-    sha256 cellar: :any,                 ventura:        "73b2144282da3ebba7437ca54acafc525a1896e2d9e0e4789d91fd649fb95046"
-    sha256 cellar: :any,                 monterey:       "c699238e0a5b460168187b8a620abde00fccf3250d57bf0c7698e47f437b57b1"
-    sha256 cellar: :any,                 big_sur:        "be2ca6db7a7aad2bca2cd1adf5df27f480fd6cb8c429ece0e97b5939725eff89"
-    sha256 cellar: :any,                 catalina:       "2804ccfd79accc3247685aaee3187f14331bc8a4b02a911a13c84fdae8550e00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa4b90d38a6a06bbfb716fcb12d2c0b605b0558abb9dd3c2566f4d2973ea180f"
+    sha256 cellar: :any,                 arm64_monterey: "7a4065eb647b0b58d67819fc581813fef16e9b0b489c14b4bb510f65dff7e781"
+    sha256 cellar: :any,                 arm64_big_sur:  "f02dabbac809bcf85a23dcd8361839643d6d79d8a2e8a716b3f014a8032b1eb8"
+    sha256 cellar: :any,                 monterey:       "6160ad028353f086087c56601ff7c47a3522e8249898a4dc2869ee56ae57e667"
+    sha256 cellar: :any,                 big_sur:        "f3c1f0e9f9fd6cad879a6b1c58445876400b099b6e581210d5088978a860840e"
+    sha256 cellar: :any,                 catalina:       "2504b2cf1b92990e415f45154545a0a92ffdfb4df536a5ca274f22cf402123fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1633e6de9e6ef24ba56638b3207ca205c2bce652aba9d3bfe3ac456f188e9ed1"
   end
 
   depends_on "pkg-config" => :build

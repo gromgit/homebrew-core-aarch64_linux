@@ -1,9 +1,9 @@
 class ApacheArrowGlib < Formula
   desc "GLib bindings for Apache Arrow"
   homepage "https://arrow.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-10.0.1/apache-arrow-10.0.1.tar.gz"
-  mirror "https://archive.apache.org/dist/arrow/arrow-10.0.1/apache-arrow-10.0.1.tar.gz"
-  sha256 "c814e0670112a22c1a6ec03ab420a52ae236a9a42e9e438c3cbd37f37e658fb3"
+  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-8.0.0/apache-arrow-8.0.0.tar.gz"
+  mirror "https://archive.apache.org/dist/arrow/arrow-8.0.0/apache-arrow-8.0.0.tar.gz"
+  sha256 "ad9a05705117c989c116bae9ac70492fe015050e1b80fb0e38fde4b5d863aaa3"
   license "Apache-2.0"
   head "https://github.com/apache/arrow.git", branch: "master"
 
@@ -12,14 +12,12 @@ class ApacheArrowGlib < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "32a3e16a0b4c31bdde63578f6aefbec8321136170fbb06aa33555e75d05c2944"
-    sha256 cellar: :any, arm64_monterey: "2442b79d3ad5bc99bdc236d3127246d634f3ee2bd5d9296683e1971e02dc3a09"
-    sha256 cellar: :any, arm64_big_sur:  "98f46404207b503ee006148039a2bf9b3d61241fdaed8cfe5c83c4150a164975"
-    sha256 cellar: :any, ventura:        "229109fcd848b355250a9f91a7d291151babadb95d48b6519ec235250e10e11f"
-    sha256 cellar: :any, monterey:       "e1ba0b790ac8053bbfe583a25c2d268b75833c5b34b035ebccb5da58085eb8d5"
-    sha256 cellar: :any, big_sur:        "10412170b194e02e67c7a5d989cf6a608d4f914419d4d5b8b01675b935297542"
-    sha256 cellar: :any, catalina:       "af2c6353228d403a1d10bc41cdea77c4f738895385e8078cf0b06da9b187bd7d"
-    sha256               x86_64_linux:   "30b2626abbf7e65899bb786edb98aeb454f64e302c3b9cf119e624e88f408a39"
+    sha256 cellar: :any, arm64_monterey: "d5ca4c03e21608573570d28055ff7dba54ff16237c4e2e85953f85ab2b297400"
+    sha256 cellar: :any, arm64_big_sur:  "6a21e83c704d9734adafc7cbb4087ae6f0389c3cc537d0598fae0ec186cfcd4e"
+    sha256 cellar: :any, monterey:       "014cc1483619a6a4686d0e8a73fbd618ee41fb3a16e5e969d598af7c4ff28744"
+    sha256 cellar: :any, big_sur:        "7e407ababc447ecdcba628a18f6d1d974172db8fadb9fb1784196f023e50eb72"
+    sha256 cellar: :any, catalina:       "1c04df7e3fb2431974ecc8dbf3231611be54ca76799abe2d505bc807a8291555"
+    sha256               x86_64_linux:   "d049b74d0292bb4c61e40f353c4ca6e5a465e47e3a06d60a979eeccd355ca652"
   end
 
   depends_on "gobject-introspection" => :build
@@ -28,6 +26,10 @@ class ApacheArrowGlib < Formula
   depends_on "pkg-config" => :build
   depends_on "apache-arrow"
   depends_on "glib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

@@ -10,7 +10,6 @@ class Ftgl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "9c7cd41984f3696dd61d7ecd78c32f68f35121a1f7f8f0b2d0a9ccb2825016c2"
     sha256 cellar: :any,                 arm64_monterey: "ed10911135d6af44315967a7fe2d81e5bf1bac34347274a49545ab777bb12c86"
     sha256 cellar: :any,                 arm64_big_sur:  "85368ec5c37bb2cffd87cd30775a78956708c71749f8da56239fd93e57cf576d"
     sha256 cellar: :any,                 monterey:       "fd4e1c8a08042ce2a0f96f79e899815009fd56cafbf550f88a9eb9685ff84b7d"
@@ -20,6 +19,7 @@ class Ftgl < Formula
     sha256 cellar: :any,                 high_sierra:    "f6da52f5e9f06f984aad457058876e88b5b7053288f40c87a17d7d5749936cd6"
     sha256 cellar: :any,                 sierra:         "946a9530f7eae5c8f2bc71dfc91b3a8138ae2228cd441fd7cf39f047b957ce47"
     sha256 cellar: :any,                 el_capitan:     "6462eb0b97ab120639f1a191f6e3a39419bbb813abd71f5c741303dbf0aed7fb"
+    sha256 cellar: :any,                 yosemite:       "26db05485600adfb7ead23d04fae9b1ee1d1a4b7ac304e1453ad83b4b2c39f64"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a53d8292298b4c6974e04fd8ab744860aec65b58149a704d9e2dad61aba0c4f6"
   end
 

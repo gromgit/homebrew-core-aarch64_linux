@@ -6,7 +6,8 @@ class Doctest < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2e5ebc4806487a67ed7207327f42484a1f9e0ef79616ed1b67d09d25d98629cf"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/doctest"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9654e30233407c473a25c0bcd44aadf0b05f9a556f9f1dad88c73f334f18eda5"
   end
 
   depends_on "cmake" => :build

@@ -1,19 +1,17 @@
 class EcflowUi < Formula
   desc "User interface for client/server workflow package"
   homepage "https://confluence.ecmwf.int/display/ECFLOW"
-  url "https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.9.1-Source.tar.gz"
-  sha256 "40f09a4a3d4dfbd1081aabf3dd0c949d394455c6989820ee469d4328f2d57af1"
+  url "https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.8.3-Source.tar.gz"
+  sha256 "1d890008414017da578dbd5a95cb1b4d599f01d5a3bb3e0297fe94a87fbd81a6"
   license "Apache-2.0"
 
   bottle do
-    sha256                               arm64_ventura:  "ec7de105accd483779ab8a5e6c0883befb41331a30a3a41e499fd70494b3c082"
-    sha256                               arm64_monterey: "6ae1e4af4d37930f8b3f9f2ac9eee1b21ce144f3ef3df8668d4a16d585e8dd41"
-    sha256                               arm64_big_sur:  "b390efe842995399d306f2b2b3a80b6208129d01a4572172997ebaea899e514d"
-    sha256                               ventura:        "1556ad699b95553e2c25edc641e5d15832b1656ade27f761e43fed9d9115d9fa"
-    sha256                               monterey:       "eb02666119c06fc883ae3259c003cdc29b7c15bc4fd35215f926e7a05c0ced38"
-    sha256                               big_sur:        "71d788e687f913a6679a9ab86048bd34001a955780917670299c002cc1986c01"
-    sha256                               catalina:       "6fe63e6d15f115811414b11a7adc75c95c6a34ac1a14ec02b298e7d0ba6a9f1e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b39d53e2aec7fbc02b39bbffbc361b2a8d0753aeabde1061ce44ab2429a568c0"
+    sha256                               arm64_monterey: "86e6d6883e027f5c3bd6c2bfcae9e7ccab9b65106549f66d8428b9700e4af6bc"
+    sha256                               arm64_big_sur:  "ba72b11ed9b1d3f48e05b55b64038848a71faceb938358fd5373ee86881222b9"
+    sha256                               monterey:       "43514c728d08c672163f83888ac80816decda1c3ab40bd9072e3295ee2e6f833"
+    sha256                               big_sur:        "0743fa962cda76a4f4b2b1ca4d1f7709fd94c548dd934fd0c2c7607fd437b97e"
+    sha256                               catalina:       "f4a15c29f3ef85fafbd3570ea5916faf61cf7df4bab5df40db9088c471ccf949"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daecd6c25b804a444dc996fb7e6409d429a46df4f971b27d3c6cc25c788ad470"
   end
 
   depends_on "boost" => :build

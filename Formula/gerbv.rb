@@ -1,19 +1,17 @@
 class Gerbv < Formula
   desc "Gerber (RS-274X) viewer"
   homepage "https://gerbv.github.io/"
-  url "https://github.com/gerbv/gerbv/archive/refs/tags/v2.9.5.tar.gz"
-  sha256 "a90b3e50941bed90eaf45e9b0d19b2d074eec1f433dcf3a1b3cbf14d8dc7c1ec"
+  url "https://github.com/gerbv/gerbv/archive/refs/tags/v2.8.2.tar.gz"
+  sha256 "588ec0bf86994ff5fff50716f9644562c5b74332e19ada5ec8af2256f040c0a0"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "c078f973a81f5ca0c840cabe5d84bca8046a38e2bdd32cda2ef8bc49c24cd1e5"
-    sha256 arm64_monterey: "950b0b1ca9d3eeba0969942d3dae2cbec4763486d019487722cc499dafc1ca26"
-    sha256 arm64_big_sur:  "8b33c2b141d62e56e7f1614338b869d0f7c5c6e9b7f0d82402377f4303436b53"
-    sha256 ventura:        "722f3d5a190b233a91710c4c4a3e856423f56ff80031b9e8c79d0c62f7530f88"
-    sha256 monterey:       "7adea609399112bf9ac696eb8e5d1f6f6fda7074d6f2c4e24fbe25d613301f0a"
-    sha256 big_sur:        "95788334f0a71a78241df7e808e4563a1d8a13d9a4e0865b5369726064788fca"
-    sha256 catalina:       "09d4f39eee02503e116457a291a7252bde5da85e2951a29bae23533187a3ee88"
-    sha256 x86_64_linux:   "be57eadae3680d2486074e14762b15c3ed5473a066994b2e069662be676f0001"
+    sha256 arm64_monterey: "f66e716949ccfc877189a277f4e478f4033b0468a4f913485dfc09e74a58883a"
+    sha256 arm64_big_sur:  "111759f730af4169548f0916f07adbb1b3af0ae2eb9492db25ec3f7a998521e0"
+    sha256 monterey:       "49a9b2b0cdbdffc46674672b2059ad8d60c876a5e2c3f9152c2b68ff0cfa25ac"
+    sha256 big_sur:        "1176f012cc14ceccedfdc2efa037bb8ade39999c768cd1e498d83959e3e19845"
+    sha256 catalina:       "40348ebda0206d74e078b53fa1c9216695bcf42d5f6d9a9b01a1af43e6684a92"
+    sha256 x86_64_linux:   "44e9c379266b404e38397cf5982d75f9c835a59dc57a620057ff6fcd443ac18a"
   end
 
   depends_on "autoconf" => :build

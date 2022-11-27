@@ -1,23 +1,26 @@
 class SpirvLlvmTranslator < Formula
   desc "Tool and a library for bi-directional translation between SPIR-V and LLVM IR"
   homepage "https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
-  url "https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v15.0.0.tar.gz"
-  sha256 "b1bebd77f72988758c00852e78c2ddc545815a612169a0cb377d021e2f846d88"
+  url "https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v13.0.0.tar.gz"
+  sha256 "b416c06525c8724be628327565956c418755fbb471b4fe23d040ca56e1a79061"
   license "Apache-2.0" => { with: "LLVM-exception" }
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a7b45cd6bfc64d4577938959ee39dbab00b910340b4ce110c8601827b0542066"
-    sha256 cellar: :any,                 arm64_monterey: "080883216778e904458b872f6bf66a11be2aafa4618e9a09ad67dc4932eca1f8"
-    sha256 cellar: :any,                 arm64_big_sur:  "222a404360350f7f3a498882e74adeac6118c39ab21aff5caeb913d453272581"
-    sha256 cellar: :any,                 ventura:        "ba287facef25b6bb14f7fbb90bdc7ab477a7f7b62bcadf652d147e604d1ec752"
-    sha256 cellar: :any,                 monterey:       "65c90b93e2649a7fa4d28c45902a768f6883068a6f6ad1f7a5713abd9ac1f9bc"
-    sha256 cellar: :any,                 big_sur:        "e1a94df6543392c2679b0d0e9e65201e69d9b9542c72a5d9254c05cbd2805a11"
-    sha256 cellar: :any,                 catalina:       "eab80f7162c66b933b6041934bab45f9aee1aaa53e26e68c777bdec5f993c612"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec199d4e665b66f9ee4c6d23cc4ec9add293efdb7c3f1a75967d4d9aa50a2308"
+    sha256 cellar: :any,                 arm64_monterey: "1d456f3222c431416e1b44700c2d82c7292aa678326506e7b351706985d9ee2f"
+    sha256 cellar: :any,                 arm64_big_sur:  "92e5cd447c4697efb1426b15971cee928c5352e0ba7c3ba40c0e258290e2eeec"
+    sha256 cellar: :any,                 monterey:       "cbf2377048c5b50dbab41c60baea31604c9bae41d3d350ee5ae66ede16c46ea8"
+    sha256 cellar: :any,                 big_sur:        "7c1833d0f5f8160fdb143eb2ef45a8e501f5c4558e4adf99ed5c05dff778d751"
+    sha256 cellar: :any,                 catalina:       "3f6aadbe72ef0487be0bcbe21612e2c50f5b91eb17ae0a4364ebcd0e86864e97"
+    sha256 cellar: :any,                 mojave:         "879aa8f4b115e9f854f08b0bca109c733c5cef1a05c3af151b295a02a759fd49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "474b5dd87cb87ec81fea6028e8ec6736626e7a70e7440cd647073c785374c709"
   end
 
   depends_on "cmake" => :build
   depends_on "llvm"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   # See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56480
   fails_with gcc: "5"

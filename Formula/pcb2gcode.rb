@@ -1,20 +1,19 @@
 class Pcb2gcode < Formula
   desc "Command-line tool for isolation, routing and drilling of PCBs"
   homepage "https://github.com/pcb2gcode/pcb2gcode"
-  url "https://github.com/pcb2gcode/pcb2gcode/archive/v2.5.0.tar.gz"
-  sha256 "96f1b1b4fd58e86f152b691202a15593815949dc9250fab9ab02f2346f5c2c52"
+  url "https://github.com/pcb2gcode/pcb2gcode/archive/v2.4.0.tar.gz"
+  sha256 "5d4f06f7041fe14a108780bdb953aa520f7e556773a7b9fb8435e9b92fef614d"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/pcb2gcode/pcb2gcode.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b3e6b48f2e5e63272ee3d97167c56c9a28f110d42f36b9b3c03455729377b155"
-    sha256 cellar: :any,                 arm64_monterey: "e83354a49d5ca3beff774b097e789b79330bbce4d9d5388da8006334c66b2c25"
-    sha256 cellar: :any,                 arm64_big_sur:  "f73a00e3c21ffa00009b450f2d728144417055009f2a82ba6a3ae969ba3003db"
-    sha256 cellar: :any,                 monterey:       "a1ce70052b5b1746a6b4f1997787aefed336bc01aa5767eac444be929e026882"
-    sha256 cellar: :any,                 big_sur:        "def348fc4f16ba1c61f8ea4397b14e4d8af171f2654a6403456072bb3da22509"
-    sha256 cellar: :any,                 catalina:       "6c6dc43876c7f7103f6d8864040f3c32f6cc733ccb0258e5dcbf121ce9e3477d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aea298c9b282ad8e1750dee166976200463891bfd78e397d3570e29526550507"
+    sha256 cellar: :any,                 arm64_monterey: "4facc148f0dd1ed67cb098258f40210f13431239f36dd859a3605d8aba62a663"
+    sha256 cellar: :any,                 arm64_big_sur:  "596ef4d44d9da58ce8ce77fc51605c9a1229a8b763e47f785baf202b0ba2a208"
+    sha256 cellar: :any,                 monterey:       "20d4b84b6d91188a05455d39e7bf5a75314b641e11f41a860dc65ce318d78381"
+    sha256 cellar: :any,                 big_sur:        "d08a9c3c499b9b9d510942cb8e7f6bae057eb29cadeab474ce0bbd13ae452d43"
+    sha256 cellar: :any,                 catalina:       "5872fbb4710e05c4ad1795ea8cbb75fe26bc031cd00041156efc30f9fe632101"
+    sha256 cellar: :any,                 mojave:         "73c321af8bd386af20ec60cf9e0c98600f12681b5bdd8bac70504457ebcc8bad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53b4615757ee9604da2668158f7e420add1e4dfe6bdf8fc7183bb906322ead46"
   end
 
   # Release 2.0.0 doesn't include an autoreconfed tarball
@@ -34,11 +33,23 @@ class Pcb2gcode < Formula
   depends_on "boost"
   depends_on "gerbv"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
+  # Apply upstream commit to fix build with GCC 11.  Remove with next release.
+  patch do
+    url "https://github.com/pcb2gcode/pcb2gcode/commit/01cd18a6d859ab1aac6c532c99be9109f083448d.patch?full_index=1"
+    sha256 "b5b316b14e9b615ee9114261eb5d04a0b234823847a18bb5ab4d8e2af4210750"
+  end
+
   def install
-    system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "autoreconf", "-fvi"
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 

@@ -3,7 +3,6 @@ class Udis86 < Formula
   homepage "https://udis86.sourceforge.io"
   url "https://downloads.sourceforge.net/project/udis86/udis86/1.7/udis86-1.7.2.tar.gz"
   sha256 "9c52ac626ac6f531e1d6828feaad7e797d0f3cce1e9f34ad4e84627022b3c2f4"
-  license "BSD-2-Clause"
   revision 1
 
   livecheck do
@@ -12,7 +11,6 @@ class Udis86 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4b94655d1de023c07b206dc196d082d727fb4d912b712e4c43ace873236ec5ed"
     sha256 cellar: :any,                 arm64_monterey: "d21c7de8ded29dbf2218802883f3a2e702e338722345b06aeab3a5146b81b29e"
     sha256 cellar: :any,                 arm64_big_sur:  "97a5c453ede751fa70387f5c66f3c618bdc421d29ed1da6ec6e002b0efd7705f"
     sha256 cellar: :any,                 monterey:       "d3b5ae26039dad3f35b3ead709fb8ee9be23ccaeb619d0b009830e7d94e151db"
@@ -32,7 +30,7 @@ class Udis86 < Formula
   def install
     system "./configure", "--prefix=#{prefix}",
                           "--enable-shared",
-                          "--with-python=#{which("python3.10")}"
+                          "--with-python=#{which("python3")}"
     system "make"
     system "make", "install"
   end

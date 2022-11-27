@@ -1,21 +1,19 @@
 class Scipy < Formula
   desc "Software for mathematics, science, and engineering"
   homepage "https://www.scipy.org"
-  url "https://files.pythonhosted.org/packages/0a/2e/44795c6398e24e45fa0bb61c3e98de1cfea567b1b51efd3751e2f7ff9720/scipy-1.9.3.tar.gz"
-  sha256 "fbc5c05c85c1a02be77b1ff591087c83bc44579c6d2bd9fb798bb64ea5e1a027"
+  url "https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz"
+  sha256 "31d4f2d6b724bc9a98e527b5849b8a7e589bf1ea630c33aa563eda912c9ff0bd"
   license "BSD-3-Clause"
-  revision 1
-  head "https://github.com/scipy/scipy.git", branch: "main"
+  head "https://github.com/scipy/scipy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5f2d0282453b41cdbc0750d0241915aae8ddd5f578fa0991fc0f947608e59656"
-    sha256 cellar: :any,                 arm64_monterey: "ff285792a40ad19198f37acd98a0175d5b7fe09d8a7b1224992f13e184d92110"
-    sha256 cellar: :any,                 arm64_big_sur:  "c050d550c8d1561e24898ce83d4c11e2cfefbf2a625844c5a4b7251bca4ea290"
-    sha256 cellar: :any,                 ventura:        "6291305df18f2618fba9eac317873e85df015360c4214c1cb9f348b096a6e269"
-    sha256 cellar: :any,                 monterey:       "feeb8006b35425d76b509d36ed34080b6471dbc3e10d87d380a83bf70ec9259f"
-    sha256 cellar: :any,                 big_sur:        "92428d7c2109237e028de547a43ce45741b84ac8febb96f75ab37b66150716ab"
-    sha256 cellar: :any,                 catalina:       "42ee88e1701bf6387a1df6c69de26222e1d38f10fc0fc56dd70d7daddf48332d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "830db952065a41d1859420d39a1de97ffeedd59843c336e49bf209647513e342"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "3750231845bfdb26a1f4295c3f91e70b879be62e3e3b6106e537da2c2d71870f"
+    sha256 cellar: :any, arm64_big_sur:  "c2dd138f5a909512fb5756196e90f2220640b9629d3474250a1632a50d6ef96b"
+    sha256 cellar: :any, monterey:       "116114cd1d9a36e3646c457a758286b143f31a82be833de512421b7fe33afbed"
+    sha256 cellar: :any, big_sur:        "5bc525993c6524fe61f04abfd47d6e5447ab8d7ad5c5df1baca97fbe2a3e255e"
+    sha256 cellar: :any, catalina:       "637f5820cad2cff149bf8471ad431ab4593b9bf458e4f62bae134252802cc3cd"
+    sha256               x86_64_linux:   "97be2faad3606d207d1def7ed58074b3223be18a0867e9061fc863c6e1a162fe"
   end
 
   depends_on "libcython" => :build
@@ -25,20 +23,16 @@ class Scipy < Formula
   depends_on "numpy"
   depends_on "openblas"
   depends_on "pybind11"
-  depends_on "python@3.11"
+  depends_on "python@3.9"
 
   cxxstdlib_check :skip
 
   fails_with gcc: "5"
 
-  def python3
-    "python3.11"
-  end
-
   def install
-    openblas = Formula["openblas"]
+    openblas = Formula["openblas"].opt_prefix
     ENV["ATLAS"] = "None" # avoid linking against Accelerate.framework
-    ENV["BLAS"] = ENV["LAPACK"] = openblas.opt_lib/shared_library("libopenblas")
+    ENV["BLAS"] = ENV["LAPACK"] = "#{openblas}/lib/#{shared_library("libopenblas")}"
 
     config = <<~EOS
       [DEFAULT]
@@ -46,20 +40,21 @@ class Scipy < Formula
       include_dirs = #{HOMEBREW_PREFIX}/include
       [openblas]
       libraries = openblas
-      library_dirs = #{openblas.opt_lib}
-      include_dirs = #{openblas.opt_include}
+      library_dirs = #{openblas}/lib
+      include_dirs = #{openblas}/include
     EOS
 
     Pathname("site.cfg").write config
 
-    site_packages = Language::Python.site_packages(python3)
-    ENV.prepend_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
-    ENV.prepend_path "PYTHONPATH", Formula["pythran"].opt_libexec/site_packages
-    ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_prefix/site_packages
+    site_packages = Language::Python.site_packages("python3")
+    ENV.prepend_create_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
+    ENV.prepend_create_path "PYTHONPATH", Formula["pythran"].opt_libexec/site_packages
+    ENV.prepend_create_path "PYTHONPATH", Formula["numpy"].opt_prefix/site_packages
     ENV.prepend_create_path "PYTHONPATH", site_packages
 
-    system python3, "setup.py", "build", "--fcompiler=gfortran", "--parallel=#{ENV.make_jobs}"
-    system python3, *Language::Python.setup_install_args(prefix, python3)
+    system Formula["python@3.9"].opt_bin/"python3", "setup.py", "build",
+      "--fcompiler=gfortran", "--parallel=#{ENV.make_jobs}"
+    system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
   end
 
   # cleanup leftover .pyc files from previous installs which can cause problems
@@ -69,10 +64,6 @@ class Scipy < Formula
   end
 
   test do
-    (testpath/"test.py").write <<~EOS
-      from scipy import special
-      print(special.exp10(3))
-    EOS
-    assert_equal "1000.0", shell_output("#{python3} test.py").chomp
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import scipy"
   end
 end

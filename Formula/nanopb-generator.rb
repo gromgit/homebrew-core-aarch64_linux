@@ -3,9 +3,10 @@ class NanopbGenerator < Formula
 
   desc "C library for encoding and decoding Protocol Buffer messages"
   homepage "https://jpa.kapsi.fi/nanopb/docs/index.html"
-  url "https://jpa.kapsi.fi/nanopb/download/nanopb-0.4.6.tar.gz"
-  sha256 "e379d9babd86b9cfd8f8900fd0da8705cbd9bea4491178fb2b8be5e217bf02ab"
+  url "https://jpa.kapsi.fi/nanopb/download/nanopb-0.4.5.tar.gz"
+  sha256 "7efc553d3d861bceb1221f79d29b03e4353f0df2db690cbced0f4a81882d95fd"
   license "Zlib"
+  revision 1
 
   livecheck do
     url "https://jpa.kapsi.fi/nanopb/download/"
@@ -13,12 +14,11 @@ class NanopbGenerator < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "ac1eb681935c128508d1d5f2159ec8fe2cb4c7d248b8f955ce53f35f7ca0a63e"
+    sha256 cellar: :any_skip_relocation, all: "6901779f65d9c073574e8889a856d9e7543b7b5a551520b796837a9529353465"
   end
 
   depends_on "protobuf"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   conflicts_with "mesos",
     because: "they depend on an incompatible version of protobuf"

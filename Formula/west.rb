@@ -3,30 +3,26 @@ class West < Formula
 
   desc "Zephyr meta-tool"
   homepage "https://github.com/zephyrproject-rtos/west"
-  url "https://files.pythonhosted.org/packages/ae/9c/16f4df520be759b8de1b35d6959fabb86ec81b44ba0300ec68d5d869f006/west-0.14.0.tar.gz"
-  sha256 "9a52a78565fd4d69c64b75c549f61b131892b1b6d26c1cc162cdead1a3cf4b8f"
+  url "https://files.pythonhosted.org/packages/f4/6e/abf9f0bbfc9803b988ed2a98143480ba121cb5c55e799fab829c64fdff9f/west-0.13.1.tar.gz"
+  sha256 "07a07bb2167c14ce69c97cd792726ff66c2bf8446ae24884cd17f98cb4c289c3"
   license "Apache-2.0"
   head "https://github.com/zephyrproject-rtos/west.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bfd642c688a6faf1e631076913634527aeec5ba2a491cbfbe04f416a863a3dd1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b24b137ec120b1309da110333531ecd95c563db9033ce3244619f933facfa8d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c5a6cba418e165f66aeebd6c9a0320aac87f97edd800ef0a6342f9d41c4cf9ea"
-    sha256 cellar: :any_skip_relocation, ventura:        "c075c2cfa7ebed2005a9f00cf870a9344f6951d70c31cc9d0e731a88b05c24e0"
-    sha256 cellar: :any_skip_relocation, monterey:       "c6d775b67b23fae50928f859f67a9224b1c665e93cad3edc92559bc206e78e09"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f91d9ee4e59bdf503b98c14faca5102aff2bf75a94031b58faf4ef3b45eb0e70"
-    sha256 cellar: :any_skip_relocation, catalina:       "284d97fb4bfe590b937404ab2b5d6915e211f7fb9a1e15791b2d88158e3ce158"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cbcbd3f97e2da46276cb1be5df0b99c6b0bfdcc93e89783965842866208964a3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa10f9eeb85e32ce88a5ffd92efbb236b75a53549f898f153bbb4052cc566f7f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b4911fbec3de339ba9a44d4440d14effc0c753f5e0e1624af425050e847d773"
+    sha256 cellar: :any_skip_relocation, monterey:       "b71bfba3afcba91dcfc821520a0c4fa04fb180eccff67d390f241be7162459ed"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1ae1874f3470b82d37c078010decb9deb4c061af2d1fc9f3b7e0c1e26b267d82"
+    sha256 cellar: :any_skip_relocation, catalina:       "8a31845ea2d2833656521764494844f4624e020f82a581fc2febdb0661228a60"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08a7224d77364b35806c0bb736f29b5a1a0deebb6b3daa09acdd9b60d3506841"
   end
 
-  depends_on "python@3.11"
-  depends_on "pyyaml"
+  depends_on "python@3.10"
   depends_on "six"
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
-    sha256 "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
+    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
   end
 
   resource "docopt" do
@@ -45,8 +41,8 @@ class West < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/31/df/789bd0556e65cf931a5b87b603fcf02f79ff04d5379f3063588faaf9c1e4/pyparsing-3.0.8.tar.gz"
+    sha256 "7bf433498c016c4314268d95df76c81b842a4cb2b276fa3312cfb1e1d85f6954"
   end
 
   resource "python-dateutil" do
@@ -54,9 +50,19 @@ class West < Formula
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
   end
 
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+  end
+
   resource "ruamel.yaml" do
     url "https://files.pythonhosted.org/packages/46/a9/6ed24832095b692a8cecc323230ce2ec3480015fbfa4b79941bd41b23a3c/ruamel.yaml-0.17.21.tar.gz"
     sha256 "8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"
+  end
+
+  resource "ruamel.yaml.clib" do
+    url "https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz"
+    sha256 "4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"
   end
 
   def install

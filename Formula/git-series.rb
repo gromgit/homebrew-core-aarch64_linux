@@ -4,18 +4,15 @@ class GitSeries < Formula
   url "https://github.com/git-series/git-series/archive/0.9.1.tar.gz"
   sha256 "c0362e19d3fa168a7cb0e260fcdecfe070853b163c9f2dfd2ad8213289bc7e5f"
   license "MIT"
-  revision 7
+  revision 6
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "76107d37585c43d3c7ea8f69971b1a2485a221e3ce0c87b2b1860ff097e76f17"
-    sha256 cellar: :any,                 arm64_monterey: "908fc5596af1e413b3f9aa6a50f50adda016ddb025f2eeaf4b532072e0364d95"
-    sha256 cellar: :any,                 arm64_big_sur:  "24739f0dd29b00b52ef26a38658662184801d30b7dc8c33e9e46e5e1ec351aeb"
-    sha256 cellar: :any,                 ventura:        "9afeaf659a5b2b490e829c9d1cd75dc26458af33402e63738ecda3998bbe4008"
-    sha256 cellar: :any,                 monterey:       "386da3ab9a088239de9d642c164768504517293fff3d0189783e3ab8aad8f791"
-    sha256 cellar: :any,                 big_sur:        "caf6563a0c6f3ff85c59c97464b05e2e27509d87ed344f1693d68d903b297770"
-    sha256 cellar: :any,                 catalina:       "3df33788f9498b11b518b7555b4ad7f3d4fd188777483eab9ab2d1aa3ce05e0a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d5130d7d0265432d2f1dc775f20bbb09d6ff7ce5c98e9b839972c94308c2332"
+    sha256 cellar: :any,                 arm64_monterey: "8e62e399cbba54341ee1bc7102862926e8c12d08b852d24fab6b8e45e253cdcb"
+    sha256 cellar: :any,                 arm64_big_sur:  "e394b22f7dad47f5fad8551ac8ec850581dfb30014a476a6adbdadb170d89d98"
+    sha256 cellar: :any,                 monterey:       "85dc9d45f805faf62c56845d34dbbcba950ff1a894399b8ada665349c58141db"
+    sha256 cellar: :any,                 big_sur:        "e5e96220146d2666fffa5bfbf61c56a03213227583e09f7f82780a5113233f1e"
+    sha256 cellar: :any,                 catalina:       "628b077ef0b4a60f22637802a65369eeea31d778af2ce926f548f8b4e1aefcd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdd1be3900aa1bf6e374228cb0f8bf0bd37e34592bf077fe412109e28c9ea8d0"
   end
 
   depends_on "cmake" => :build

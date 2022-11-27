@@ -1,9 +1,10 @@
 class Tracker < Formula
   desc "Library and daemon that is an efficient search engine and triplestore"
   homepage "https://gnome.pages.gitlab.gnome.org/tracker/"
-  url "https://download.gnome.org/sources/tracker/3.4/tracker-3.4.1.tar.xz"
-  sha256 "ea9d41a9fb9c2b42ad80fc2c82327b5c713d594c969b09e1a49be63fb74f4fae"
+  url "https://download.gnome.org/sources/tracker/3.1/tracker-3.1.2.tar.xz"
+  sha256 "da368962665d587bb2e4f164d75919a81dacb35c7d4cfae6f93a94c60f60ec8f"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 2
 
   # Tracker doesn't follow GNOME's "even-numbered minor is stable" version scheme.
   livecheck do
@@ -12,46 +13,34 @@ class Tracker < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "d042f24c2c9d9573b589e53932b1d2175db61af7d031a97209544faa7eb913ae"
-    sha256 arm64_monterey: "cb6ca6a5912870098e1ca387311a0902d92018ad5cc0f46a615b959d18c77a30"
-    sha256 arm64_big_sur:  "f55db3219384185dffe058a2849d57b4bcfbbe28ea1c04185381e90b0313bc10"
-    sha256 ventura:        "a901228c0dce04129cea33796f1f81b0e4ed3e89687800720944d33902e31059"
-    sha256 monterey:       "1ed6c8de2983a9991230ccf8e32c6fee32cd1d5d18cc2c7d303b0d6bb76df9b5"
-    sha256 big_sur:        "1825b70268c0b02075686c7623bbc9bfa000ce42badb09693c7b655fa12645d3"
-    sha256 catalina:       "f09dbe67cd27bd66748b220fc0596b8c2007ac14b6dcd077d21bc94d8078cd6d"
-    sha256 x86_64_linux:   "c8a5a3209753d81aebf2f49dcbf4212f4784a6c84fdcfd82238b376cf8f8c9b5"
+    sha256 arm64_monterey: "91f76976c6f234c9a9349b7fd3049a5004a5c557577e6e9c24aeba0e5818c3a3"
+    sha256 arm64_big_sur:  "121d8f5ee8518474aa90f5fc7e02e88b2cb0b17ca5b94b181b3204eb761727fa"
+    sha256 monterey:       "e1e4da63da95c45ce6b717d20e544f84104a7d42e3fb207dae41cab4eedf2cfa"
+    sha256 big_sur:        "0d3e0b8be3a4422e04bd665ad59d566889d9cecd7237ef0ef7168b7c6c32a6f2"
+    sha256 catalina:       "980958cbbf2d74eadde9cf0043934ed1a56698520d764bee24cf83691b41b4ca"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "pkg-config" => [:build, :test]
-  depends_on "pygobject3" => :build
+  depends_on "pkg-config" => :build
   depends_on "vala" => :build
   depends_on "dbus"
-  depends_on "glib"
   depends_on "icu4c"
   depends_on "json-glib"
-  depends_on "libsoup"
-  depends_on "sqlite"
-
-  uses_from_macos "python" => :build, since: :catalina
-  uses_from_macos "libxml2"
+  depends_on "libsoup@2"
 
   def install
     args = std_meson_args + %w[
       -Dman=false
       -Ddocs=false
       -Dsystemd_user_services=false
-      -Dtests=false
-      -Dsoup=soup3
     ]
 
     ENV["DESTDIR"] = "/"
     mkdir "build" do
       system "meson", *args, ".."
-      # Disable parallel build due to error: 'libtracker-sparql/tracker-sparql-enum-types.h' file not found
-      system "ninja", "-v", "-j1"
+      system "ninja", "-v"
       system "ninja", "install", "-v"
     end
   end
@@ -66,13 +55,13 @@ class Tracker < Formula
 
       gint main(gint argc, gchar *argv[]) {
         g_autoptr(GError) error = NULL;
-        g_autoptr(GFile) ontology;
+        g_autoptr(GFile) store, ontology;
         g_autoptr(TrackerSparqlConnection) connection;
         g_autoptr(TrackerSparqlCursor) cursor;
         int i = 0;
 
         ontology = tracker_sparql_get_ontology_nepomuk();
-        connection = tracker_sparql_connection_new(0, NULL, ontology, NULL, &error);
+        connection = tracker_sparql_connection_new(0, store, ontology, NULL, &error);
 
         if (error) {
           g_critical("Error: %s", error->message);
@@ -103,8 +92,19 @@ class Tracker < Formula
         return 0;
       }
     EOS
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["icu4c"].opt_lib/"pkgconfig" if OS.mac?
-    flags = shell_output("pkg-config --cflags --libs tracker-sparql-3.0").chomp.split
+    glib = Formula["glib"]
+    flags = %W[
+      -I#{glib.opt_include}/glib-2.0
+      -I#{glib.opt_lib}/glib-2.0/include
+      -I#{include}/tracker-3.0
+      -D_REENTRANT
+      -L#{glib.opt_lib}
+      -L#{lib}
+      -ltracker-sparql-3.0
+      -lgio-2.0
+      -lglib-2.0
+      -lgobject-2.0
+    ]
     system ENV.cc, "test.c", "-o", "test", *flags
     system "./test"
   end

@@ -1,8 +1,8 @@
 class SonarqubeLts < Formula
   desc "Manage code quality"
   homepage "https://www.sonarqube.org/"
-  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip"
-  sha256 "9a8e1edae1a687356b2895b0d3fd60034a8e59b535e653563de605d1e2b17960"
+  url "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.8.54436.zip"
+  sha256 "a491240b2066222680d9770c6da4d5f0cf9873c86e0d0e3fbe4d1383bbf3ce85"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -11,13 +11,12 @@ class SonarqubeLts < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8216e77fa076368806c31b2dd9a7407cd9b56ac1c71c8f7d9d3e9300991294df"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ba2c787766ebc3353063d6587529ace383b8d3e1a2b3ad853d6d1603734fe89e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df64c44ab8dfaf70244a6dcb2fe439a34b963e2cc2018f3d5aa250ba8f054d24"
-    sha256 cellar: :any_skip_relocation, monterey:       "d69dd0f8179bd50bc8a017868f0c4fdc4367a20d2d0821ce408995df13f5277f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4bff3fa4e9c6cdf563a464d2c15bc4cf41b64e1bba6caa3bdd543b32be004c28"
-    sha256 cellar: :any_skip_relocation, catalina:       "e779f6c1c826f9210c1cdab545e94965a9587a6630a7acd861e5114751d866cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc58a80f7dd387a6e05462def97df3db4e974427fc5a78c6809565ef162289c6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6bf0b208857351951429718a39d82f2dd0b51278236c7b7cd55f66bd9209eb01"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b5fa361559222f53d3656fa0d0bc77ec9730da116352a8845a7768082882f093"
+    sha256 cellar: :any_skip_relocation, monterey:       "dce9a4bcf3774a6643a5f366cac487f1cb4857f4d8b8d2c1ecabfe3c760da9c7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d67233026ad942789ed3b4723794bb7833b20f04637ebf2eaab0e850fd3d0530"
+    sha256 cellar: :any_skip_relocation, catalina:       "8408beee73e1c2622f4917d340110f390e2795378040e758754ef4c7bda01094"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d30b7b0fe6cba81a74746c3ba186c4a785c2d934a5c012550a2b4e89f0dd4eda"
   end
 
   depends_on "java-service-wrapper"

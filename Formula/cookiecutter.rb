@@ -3,26 +3,22 @@ class Cookiecutter < Formula
 
   desc "Utility that creates projects from templates"
   homepage "https://github.com/cookiecutter/cookiecutter"
-  url "https://files.pythonhosted.org/packages/96/43/65a3dad94dceaaaa12807ce4d4eff1064db6e91a8c6fb6945e3e61e63552/cookiecutter-2.1.1.tar.gz"
-  sha256 "f3982be8d9c53dac1261864013fdec7f83afd2e42ede6f6dd069c5e149c540d5"
+  url "https://files.pythonhosted.org/packages/58/f5/6f41fa38e6efe4a0e85771f99a4ad8c33b4c14f03b4cc53b459aac4a629a/cookiecutter-1.7.3.tar.gz"
+  sha256 "6b9a4d72882e243be077a7397d0f1f76fe66cf3df91f3115dbb5330e214fa457"
   license "BSD-3-Clause"
+  revision 2
   head "https://github.com/cookiecutter/cookiecutter.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "976519ec3673bc4c250bc0a0e82088ee0d6281a8e686ad69749076d72d47e5f0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "898929c74f9af6b3d1f6d92f65fbf9a7ed6a36c0946fb93bd78ebf854b69f3ff"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9578c5ade6ab9ed951f170f23e1a586f8831c56025d7502c36d5b5f84c32aa35"
-    sha256 cellar: :any_skip_relocation, ventura:        "1b28228bce1ef73af75efb6214146a994f124e670664505798beca6e41cc326a"
-    sha256 cellar: :any_skip_relocation, monterey:       "bd3d3c2896c70991f56ba7677a038c4d50e2dc8c5844ad0861549ced5d8b4ea1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "561e540f569764e56c252d7f75c1530086c14bbb863973cd959d4b6c2b42ff6a"
-    sha256 cellar: :any_skip_relocation, catalina:       "9239818f56d62ec3c3bae26d8f3609d92dc75cd57032f2b5b23df8e7603273c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9e81a06db0941468d398e43d0db11a7e4cb39ef0b6b69a2873e782c657a79d6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c8d60cc57b85011479418b9d8f2e4927ebf57b5b82add438a7e24de427167e4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c4ed1a9fa3fe80b9bdc7c4abc3a4b108168516391a6db95596b526ad127d9e9c"
+    sha256 cellar: :any_skip_relocation, monterey:       "0edc5c9c4de3ed9844a14b7f7b300073407e89ca533637eb585d16ae9756fbec"
+    sha256 cellar: :any_skip_relocation, big_sur:        "769b31d9f39b991c523802b425cb9ff0a3817119144d3d584b4486d6e5bcb55c"
+    sha256 cellar: :any_skip_relocation, catalina:       "ea6170b3fb86366083c47d8be6acd88aa3558e32f196a49c76449123eb8ebe57"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7da42836fc695a9307fb420e4cd7e15e535d98df521a38f9c78977c505278c39"
   end
 
-  depends_on "python@3.11"
-  depends_on "pyyaml"
-  depends_on "six"
+  depends_on "python@3.10"
 
   resource "arrow" do
     url "https://files.pythonhosted.org/packages/48/28/30a5748af715b0ab9c2b81cf08bd9e261e47a6261e247553afb7f6421b24/arrow-1.2.2.tar.gz"
@@ -35,8 +31,8 @@ class Cookiecutter < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "chardet" do
@@ -74,6 +70,11 @@ class Cookiecutter < Formula
     sha256 "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
   end
 
+  resource "poyo" do
+    url "https://files.pythonhosted.org/packages/7d/56/01b496f36bbd496aed9351dd1b06cf57fd2f5028480a87adbcf7a4ff1f65/poyo-0.5.0.tar.gz"
+    sha256 "e26956aa780c45f011ca9886f044590e2d8fd8b61db7b1c1cf4e0869f48ed4dd"
+  end
+
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
@@ -87,6 +88,11 @@ class Cookiecutter < Formula
   resource "requests" do
     url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
     sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "text-unidecode" do

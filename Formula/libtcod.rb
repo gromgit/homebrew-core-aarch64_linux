@@ -1,28 +1,30 @@
 class Libtcod < Formula
   desc "API for roguelike developers"
   homepage "https://github.com/libtcod/libtcod"
-  url "https://github.com/libtcod/libtcod/archive/1.23.1.tar.gz"
-  sha256 "dd00be7dde66aa7456bab8acf98b6a0ae73871bd5bee10a7838752fdd7007c6e"
+  url "https://github.com/libtcod/libtcod/archive/1.20.1.tar.gz"
+  sha256 "e36dccd1ad531503d1ceefe794a57b3b661e5e669c3d1db1d5bfaf0b95c933df"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4d3d7be32377aa333d1e5352f28ace0d5985ebb0a2f95910e18553deb206463b"
-    sha256 cellar: :any,                 arm64_monterey: "d7777853052eee7141bdf456a8be5e96b2065d7f50c9b948a3f307c00f2c1f37"
-    sha256 cellar: :any,                 arm64_big_sur:  "1dd1c1908bc001d8d3fc6148b841bf64f774d49cecd84f99a59d5b5df8359abd"
-    sha256 cellar: :any,                 ventura:        "6e01727ebeac536f92ce375cc2a51aff1309e901ebe84b5d03558d61686bb3b6"
-    sha256 cellar: :any,                 monterey:       "375b0bd3b779a058256c33c65a84b94a035b038ce6e49a8030a27e6162e858e6"
-    sha256 cellar: :any,                 big_sur:        "ec1a87e97f42dabad818aa501b92a94df612eed7f7e20380a4a806a69ad25c82"
-    sha256 cellar: :any,                 catalina:       "8827b6154dbdf32f0806390d613321de3126dc89658cbc9a1fe0e3a45a5c5bf4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c481d057b749803c27882166d1e66c5877aef2f80cf5c38c18e6afed900287a7"
+    sha256 cellar: :any,                 arm64_monterey: "ad5ff63a79a4dc88a396c2354a35069b1b6a071f1a74fe1bc1c7409cee7a3306"
+    sha256 cellar: :any,                 arm64_big_sur:  "e0c79bd33806e5778030ed58f8713f20ba330abb8db1863e35a30fa296233986"
+    sha256 cellar: :any,                 monterey:       "a48f8f4b894bf0bdf686e32b68aaec6f3c7b542b6ceb6e034fa28e3460653a84"
+    sha256 cellar: :any,                 big_sur:        "b0b8a769e7517133a3b18afb736818f33f1f43bffa7e5bad6718d1d5b9a8b4a6"
+    sha256 cellar: :any,                 catalina:       "42fae47e69489901101dd96237ee313752814f58a07f2470d00354e34b90eb72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b32e1acd83a46d4bad26511e01c4f13f405f503256b8228b6c235bc835e1625d"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.11" => :build
+  depends_on "python@3.10" => :build
   depends_on macos: :catalina
   depends_on "sdl2"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   conflicts_with "libzip", "minizip-ng", because: "libtcod, libzip and minizip-ng install a `zip.h` header"
 

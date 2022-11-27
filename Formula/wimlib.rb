@@ -1,8 +1,8 @@
 class Wimlib < Formula
   desc "Library to create, extract, and modify Windows Imaging files"
   homepage "https://wimlib.net/"
-  url "https://wimlib.net/downloads/wimlib-1.13.6.tar.gz"
-  sha256 "0a0f9c1c0d3a2a76645535aeb0f62e03fc55914ca65f3a4d5599bb8b0260dbd9"
+  url "https://wimlib.net/downloads/wimlib-1.13.5.tar.gz"
+  sha256 "32fcc9e9b144b7cb1db4c86e104ca78283cdc225e13fe82b273660586aefe323"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,20 +11,24 @@ class Wimlib < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "9c9fa0796708c4abda9a4f319fea21949fa087bfd55fef5a3afb85810540e462"
-    sha256                               arm64_monterey: "511b7f7dd4a2f604c79b77e4730df771a72c0d42ff9a0d75016aadef18bfea02"
-    sha256                               arm64_big_sur:  "8987877ff4c56d34096c3cb7b34447b55296ee443205b535edbb1e304642acd3"
-    sha256 cellar: :any,                 ventura:        "bf7b4fdb7aa71fcaa04efe8dcd716d969c418a1544f763b0542045938e7b6c09"
-    sha256 cellar: :any,                 monterey:       "2eaa7b1ad62ecee16880f8e12bbce465b2ffaaa43e446758f19390daf00d1450"
-    sha256 cellar: :any,                 big_sur:        "da2511a595e4c203f2f2ea20f543011acbe7a95cbdc5372206616d7589ea17d8"
-    sha256 cellar: :any,                 catalina:       "a59ad26171c1affffdc53d90a63802ffe973d74b593ae85c582f10c940767b6e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "befcc8cb24bcb7b41af8e8d85cb0e0f14b23abc713ca5004c8a5c9d52da14dca"
+    sha256                               arm64_monterey: "40559e92c437d4118aaa00083d30f725487fb5ee81855de4b861bfac3eeef9e2"
+    sha256                               arm64_big_sur:  "00339068d980da7bf1aecae841ed84cd9826744cd3146260d36b88b2aa1ad739"
+    sha256 cellar: :any,                 monterey:       "5d0795512b9d00a7176ca12daf4ae066abe9cbdfa18b069c49dc2594aba6a711"
+    sha256 cellar: :any,                 big_sur:        "c67102fbaa4bc9d44cac47140bedbbbe4230e11a97c41044acdf46366566edba"
+    sha256 cellar: :any,                 catalina:       "e0555889517aed6ec2163c0c79e1d3c76c48768a1544193905b719dec74d62fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb62fa15600f1d34ab960a2744adc21e502320fe88b3da6a78b57d87c227ba08"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "libxml2"
+
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
 
   def install
     # fuse requires librt, unavailable on OSX

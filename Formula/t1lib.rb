@@ -8,7 +8,6 @@ class T1lib < Formula
 
   bottle do
     rebuild 2
-    sha256                               arm64_ventura:  "4178a1b4a03a25c8216994221938a31ea77cf68bc4e80e61995d3375423d12f2"
     sha256                               arm64_monterey: "015a6d7c251045c97f334922342d56d1ba93a398f32ba4c0b32ce9ef494fa02a"
     sha256                               arm64_big_sur:  "e9a134358b78dfcbf7d13a6edc7de434eb72981c14ec81d461527b05f2e32b1d"
     sha256                               monterey:       "3989c26968d5f2d39ee4f6677121b3bafc455f7780eeb1394250792535f2392e"
@@ -18,6 +17,7 @@ class T1lib < Formula
     sha256                               high_sierra:    "a36bc3913f6b51cb7772609a52049f90fc6241ffca3bf18c4295455ef5f4df4c"
     sha256                               sierra:         "94789287c849a04f05a40c79940aee6efe3e03318c95db9c2be69ee4e6806d82"
     sha256                               el_capitan:     "fa356a5405f5b0cf57c15ebd5b680c215e1e498189914e9b9663eb132655a8c1"
+    sha256                               yosemite:       "6d1bf242eb7a5201180b9d4b505a7f83663802383d358180cea696714ae57fc8"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "51b691773063f4f7c0e6cbfa5be259516c77ad7b1c52bb189d045b8056216bf9"
   end
 

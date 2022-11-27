@@ -1,18 +1,20 @@
 class Logstalgia < Formula
   desc "Web server access log visualizer with retro style"
   homepage "https://logstalgia.io/"
-  url "https://github.com/acaudwell/Logstalgia/releases/download/logstalgia-1.1.3/logstalgia-1.1.3.tar.gz"
-  sha256 "82e6a33c3c305c1f1d32d7e115ba0b307bb191ed2a70368a3cd9138ced0a98d9"
+  url "https://github.com/acaudwell/Logstalgia/releases/download/logstalgia-1.1.2/logstalgia-1.1.2.tar.gz"
+  sha256 "ed3f4081e401f4a509761a7204bdbd7c34f8f1aff9dcb030348885fb3995fca9"
   license "GPL-3.0"
+  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "0995a316323b353da37e7127c74cc2e40c43cfba78eba1e2978f5738c2177ca3"
-    sha256 arm64_monterey: "51b1ebf735b6c26e34fd57234ca790d26c717b4b9a9697ce5bceedd23254ccea"
-    sha256 arm64_big_sur:  "2ec489672c5e729652dc221d3b8a6d328136c3250d06ee66ee4a6b565c316a95"
-    sha256 monterey:       "960950464fb35574b0231a78c4ed6c5bb5020966d001df95a1455c7862a7c8f5"
-    sha256 big_sur:        "6e947997e8b1d5b617413dca058ea0ee75cf17f61b84a328fdc2d3812525c558"
-    sha256 catalina:       "a74087e845875519b13535d3046cafe897f89e25a2993a17347ce1a898213486"
-    sha256 x86_64_linux:   "28f069755a8b6f4d20b2aec317340fe9620d1251ef741ca6f6c983fb18ceed89"
+    sha256 arm64_monterey: "613467e1f9bd7b051fbb6c31370f8e7a39c0889037d545a303d88ecac5a59fa3"
+    sha256 arm64_big_sur:  "9c8e8ae7c6d2fecce41f7ee986b0070c00abcc26a9ede7c0a89710e3921e73e9"
+    sha256 monterey:       "ae779187ec2efaea84f01a3602ce99876d75e6fefcfa64825a6a43f3cc4bae07"
+    sha256 big_sur:        "8317c3e8cc8d1ae6d10457ccb7b2fb4d9add7b7b8b208dc70fccd49c556213d8"
+    sha256 catalina:       "e292916be0cc939d985c4f42930d5217cf06d1e57fa2a3e376d55a44c4b21fd9"
+    sha256 mojave:         "ecc61da046585777d74c682a14f6e3963570603188d2d447d3fbc4c5f87895dd"
+    sha256 high_sierra:    "c0411062c997c5ca8aaf27726d2205601438a50ccbecc9a166c26c30bd3c08aa"
+    sha256 x86_64_linux:   "c21a106cfe8e3cb7538c31f7bbfebb571765ae0265f401070dfb8a69609c2877"
   end
 
   head do
@@ -23,13 +25,13 @@ class Logstalgia < Formula
     depends_on "libtool" => :build
   end
 
+  depends_on "boost" => :build
   depends_on "glm" => :build
   depends_on "pkg-config" => :build
-  depends_on "boost"
   depends_on "freetype"
   depends_on "glew"
   depends_on "libpng"
-  depends_on "pcre2"
+  depends_on "pcre"
   depends_on "sdl2"
   depends_on "sdl2_image"
 
@@ -44,8 +46,8 @@ class Logstalgia < Formula
     # Handle building head.
     system "autoreconf", "-f", "-i" if build.head?
 
-    system "./configure", *std_configure_args,
-                          "--with-boost-libdir=#{Formula["boost"].opt_lib}",
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
                           "--without-x"
     system "make"
     system "make", "install"

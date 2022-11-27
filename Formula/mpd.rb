@@ -1,8 +1,8 @@
 class Mpd < Formula
   desc "Music Player Daemon"
   homepage "https://www.musicpd.org/"
-  url "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.10.tar.xz"
-  sha256 "605c8ceb42cc48144cbdbe9e9682b6dc0df0348258a4a62bde095a02ca24e6a8"
+  url "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.6.tar.xz"
+  sha256 "cbc5928ee3ee1ef7ff6a58f6ba4afaee16c07e9eb42d0107bcc098010f4f26ed"
   license "GPL-2.0-or-later"
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"
 
@@ -12,14 +12,12 @@ class Mpd < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "19a99f3763111a8d1e7805a8da23504f51d07af76e10beb752194a5c1d873c35"
-    sha256 cellar: :any, arm64_monterey: "88004b01ce7fa715629a3126efa7eae71b1ed3611f6bce59a36ca92b7c69aae2"
-    sha256 cellar: :any, arm64_big_sur:  "22a15d7beaecd89052f9b97063eca4342ad9f403e5d04308a95e15bdfda2f52e"
-    sha256 cellar: :any, ventura:        "d26ac4cb40b6e2cbd19728713d63ab3575a61cfaf144682d0f18b93980fba3ae"
-    sha256 cellar: :any, monterey:       "a231409697e99305ff053745522160937d2ed1a15971a341a7490faa0a8ef7c6"
-    sha256 cellar: :any, big_sur:        "6a296e86f10b20962f65adf75fb85b79562501dd7891b860920f152a222b88f4"
-    sha256 cellar: :any, catalina:       "c1cd1608f248759fd6ab00614e5af6982b66f44c216e521fc53bfe1adfc1930c"
-    sha256               x86_64_linux:   "da70a4472197fbbf75005ab1a8d87739d525492dadf2701f9682bbdd6d07f711"
+    sha256 cellar: :any, arm64_monterey: "53d1e2e5265ae152438c0dd6bf7add88f97383651351050f7a240536a70ad282"
+    sha256 cellar: :any, arm64_big_sur:  "c99d2f275d6f0412e8f0de48df6a43ffaf1b9c1fcb23bcac2b706c7a2313168c"
+    sha256 cellar: :any, monterey:       "7ce24984d226d46a5312e5c44b850d2b69b03fee8acd2a5382310e6889aa922d"
+    sha256 cellar: :any, big_sur:        "dca4d1c83bb289d68f0c3f1cda7abd0b7a8b65e4e8c49b2767cd3110f3565038"
+    sha256 cellar: :any, catalina:       "05fdd73fba1d2a32f5e0c9643a470bb9df754a097a01ba6386788e3bd7fb5fb4"
+    sha256               x86_64_linux:   "0b2ceadf8b29cc437da40f48e8f6d7c2d7a1210559c57577180c91b6d9c91905"
   end
 
   depends_on "boost" => :build
@@ -50,6 +48,10 @@ class Mpd < Formula
 
   uses_from_macos "curl"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
   def install
@@ -58,7 +60,7 @@ class Mpd < Formula
     # The build is fine with G++.
     ENV.libcxx
 
-    args = %W[
+    args = std_meson_args + %W[
       --sysconfdir=#{etc}
       -Dmad=disabled
       -Dmpcdec=disabled
@@ -74,12 +76,12 @@ class Mpd < Formula
       -Dvorbisenc=enabled
     ]
 
-    system "meson", "setup", "output/release", *args, *std_meson_args
-    system "meson", "compile", "-C", "output/release"
+    system "meson", *args, "output/release", "."
+    system "ninja", "-C", "output/release"
     ENV.deparallelize # Directories are created in parallel, so let's not do that
-    system "meson", "install", "-C", "output/release"
+    system "ninja", "-C", "output/release", "install"
 
-    pkgetc.install "doc/mpdconf.example" => "mpd.conf"
+    (etc/"mpd").install "doc/mpdconf.example" => "mpd.conf"
   end
 
   def caveats

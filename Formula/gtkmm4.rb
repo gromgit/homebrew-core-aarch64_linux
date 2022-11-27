@@ -1,8 +1,8 @@
 class Gtkmm4 < Formula
   desc "C++ interfaces for GTK+ and GNOME"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/gtkmm/4.8/gtkmm-4.8.0.tar.xz"
-  sha256 "c82786d46e2b07346b6397ca7f1929d952f4922fa5c9db3dee08498b9a136cf5"
+  url "https://download.gnome.org/sources/gtkmm/4.6/gtkmm-4.6.1.tar.xz"
+  sha256 "0d5efeca9ec64fdd530bb8226c6310ac99549b3dd9604d6e367639791af3d1e0"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,13 +11,12 @@ class Gtkmm4 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "528dbb1dbb63538c5e603848ca21924a6788e051b1db9aa6c277472ca412e63e"
-    sha256 cellar: :any, arm64_monterey: "dec88e65848253c7a4d434a2d2f8f203bd41815ca6b03caa19c40b38c9210a7c"
-    sha256 cellar: :any, arm64_big_sur:  "9b85467c73912e156db432c26f8d65d20eb34d557849549e300ca7da48f47b61"
-    sha256 cellar: :any, monterey:       "c9149bef97843c81b6f2345eecae097c88232164acfea98a09f63a7d4f283b29"
-    sha256 cellar: :any, big_sur:        "2c7247708b823ce00462cf419513ba5cee394951f7a6db411a0654011bb68751"
-    sha256 cellar: :any, catalina:       "8a1da65e7de51882a9815e05b20afc3a00c81e9dfff4a10d3c74f587ccc574bb"
-    sha256               x86_64_linux:   "bbb9b2f21354e474597d8c4ac91af3ac1a86396b5e5d43a3259487f6aae9fe28"
+    sha256 cellar: :any, arm64_monterey: "d0a29a1b6856c7e1b43254ab5648d8cee10fc118e893b774e91bbf1e64c7fc62"
+    sha256 cellar: :any, arm64_big_sur:  "63206963d3f5e963e1ea9478a52615bae880ce196f8ca47c30bde6e821adb0ee"
+    sha256 cellar: :any, monterey:       "ce1bdb42ba696680e8950eb8bbc7b2fe3f4adc16cbf69f54ce543729234b2ca3"
+    sha256 cellar: :any, big_sur:        "8fe3a6122f0e7669953da0bf617095cf062ede423ce9eec112b5bfe5e59ca6c4"
+    sha256 cellar: :any, catalina:       "fbb4f9ecf8b3b16d7c56cf7a9e056b80884e3db21389f27710fc4ffb5898845c"
+    sha256               x86_64_linux:   "7ad7516dfea72e57da04c003e66294bea0b262dbe7ee695fb506aa9ffb4d83c7"
   end
 
   depends_on "meson" => :build
@@ -26,6 +25,10 @@ class Gtkmm4 < Formula
   depends_on "cairomm"
   depends_on "gtk4"
   depends_on "pangomm"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

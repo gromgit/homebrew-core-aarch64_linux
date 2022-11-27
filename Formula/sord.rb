@@ -1,8 +1,8 @@
 class Sord < Formula
   desc "C library for storing RDF data in memory"
   homepage "https://drobilla.net/software/sord.html"
-  url "https://download.drobilla.net/sord-0.16.14.tar.xz"
-  sha256 "220fd97d5fcb216e7b85db66f685bfdaad7dc58a50d1f96dfb2558dbc6c4731b"
+  url "https://download.drobilla.net/sord-0.16.8.tar.bz2"
+  sha256 "7c289d2eaabf82fa6ac219107ce632d704672dcfb966e1a7ff0bbc4ce93f5e14"
   license "ISC"
 
   livecheck do
@@ -11,28 +11,24 @@ class Sord < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "20489ceee76a03468222d1664ab094b742974816d2dfee437eab8c12009a16c4"
-    sha256 cellar: :any, arm64_monterey: "96032d07b0ac3f7364b721c935a215c6f792abbf79a8ad6004638794ae65a4d5"
-    sha256 cellar: :any, arm64_big_sur:  "b7ceac3c480159338053a7dd2da2ecab47bf61c238332a10f8700470101cc226"
-    sha256 cellar: :any, ventura:        "2dcbcfef5db2ad4ab4e44addeda16ba5490d9e773015e8137c7005956dd40c28"
-    sha256 cellar: :any, monterey:       "5181253c794efcb69212b0b22573cadd5d2d92161c1b6a725a74c40dcd718f6f"
-    sha256 cellar: :any, big_sur:        "b2f8da7c926a2280fcd124bf494a7307c5a655cd3d266791b03b34556839fda8"
-    sha256 cellar: :any, catalina:       "faf8da2bf68426cb85aafdc8f3caaf2cbb246c2d8369b7c390b803e53b209331"
-    sha256               x86_64_linux:   "b1f84037affacbb7878f87d88c10944681091bc4633f24170e7869ac72aa0182"
+    sha256 cellar: :any,                 arm64_monterey: "65060c80a5f82092e950d54d4e0c161c276ab4011511c67b8045675c4a92e872"
+    sha256 cellar: :any,                 arm64_big_sur:  "ec9d443ac5fc598d0718dd33a9c19fc8f2d2f38975512ce79acabd2d5e509fd7"
+    sha256 cellar: :any,                 monterey:       "eb739359d67f246df683e696269444efda918395d3755f5b078b3a4727c5865b"
+    sha256 cellar: :any,                 big_sur:        "30fed8a7b4747de9ed632640e1b2aa326e0c5bb71030d0924b934d820fe87ef5"
+    sha256 cellar: :any,                 catalina:       "e0ca8e8fd6e2ba8ccec9cb75c8bb2f1d1fe09ba8ebce886f78eed4c87343ab93"
+    sha256 cellar: :any,                 mojave:         "2d69dca2635bf0808ce19d65e6a795d1591b5f197b2cc703fa9fa084d81d6c2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16c2362dcac47cf4f10c118678422f327c9d09d90574718c93000bd30b526ef1"
   end
 
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "python@3.10" => :build
   depends_on "pcre"
   depends_on "serd"
 
   def install
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Dtests=disabled", ".."
-      system "ninja"
-      system "ninja", "install"
-    end
+    system "python3", "./waf", "configure", "--prefix=#{prefix}"
+    system "python3", "./waf"
+    system "python3", "./waf", "install"
   end
 
   test do

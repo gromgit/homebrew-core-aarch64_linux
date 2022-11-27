@@ -1,20 +1,18 @@
 class Caire < Formula
   desc "Content aware image resize tool"
   homepage "https://github.com/esimov/caire"
-  url "https://github.com/esimov/caire/archive/v1.4.5.tar.gz"
-  sha256 "f352d6ec03bda53329a9888c6b3073429d6b081e2113d7a464a90eddaee1cb50"
+  url "https://github.com/esimov/caire/archive/v1.4.4.tar.gz"
+  sha256 "2786ab0af06aeb8357ae835340b96f30ad1b134280faa346f0f250df5c7567b1"
   license "MIT"
   head "https://github.com/esimov/caire.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "510be9ef3971dd6594e3d662a8a4a8f97fe5d587a902cabb803425a61b531b8f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d59ce1a8791d14ee71f54abe8b0cadfe19ba512b90b13f2f8f7625b0e1a5ade"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6dc0a2e1542d2843ebca8f84d72c5cc74db54b6c09a3cf77bf71879156f9812b"
-    sha256 cellar: :any_skip_relocation, ventura:        "aab352ffb29304bf5b53fd7f17781e615bb6e2968fcf553dfb6c8b66c1a024e1"
-    sha256 cellar: :any_skip_relocation, monterey:       "9201a9019646d54bd87e4b04eb93249e6b423a985fa8562b8c6153f140d69c5a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "56c8c4cc534e40b5b9d157f4ab6327fa660d4b86bf4884340b74fb1fdd0f9d20"
-    sha256 cellar: :any_skip_relocation, catalina:       "2e2a3e4286f0358b389ad7e991959428bd8afb9fc5c2936aa74d007d6e8497e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c393ce400070a99e19f770ab66b0a3b0c581d7eeb1e91a120979e94c4f97949d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4dd11795109c0ee09d0ab81c1a35861215b8a7afedb6fa7d4148535ffb23a8b4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a35ffdc4052f39ff43b89c2cac5b55385d46ecf0501b014ba5cad3b3f96b4249"
+    sha256 cellar: :any_skip_relocation, monterey:       "1ad74bdcdc3786d799e8394748683aa78137f97a7ed98c10cc6d287cf9be2fe5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8754892375d921d9700607d68d85ac0a430f0e98759a787b76bc20586490faf5"
+    sha256 cellar: :any_skip_relocation, catalina:       "58836775c2ee4ac9a78747499daf4582cbb193461a280cd798beb0dcba7e7291"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f80998cf1355ffaf5939ae34b17b747c999132b18b5efeffee2dc945b72cdd41"
   end
 
   depends_on "go" => :build

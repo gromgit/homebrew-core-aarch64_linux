@@ -6,6 +6,11 @@ class AbiDumper < Formula
   license "LGPL-2.1-or-later"
   head "https://github.com/lvc/abi-dumper.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/abi-dumper"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "07bd02c972eb9f7c60ff957c83ae709dd81ebc8420f2ba900a7b9dc141f5d80b"
+  end
+
   depends_on "abi-compliance-checker"
   depends_on "elfutils"
   depends_on :linux

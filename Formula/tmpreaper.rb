@@ -1,28 +1,21 @@
 class Tmpreaper < Formula
   desc "Clean up files in directories based on their age"
   homepage "https://packages.debian.org/sid/tmpreaper"
-  url "https://deb.debian.org/debian/pool/main/t/tmpreaper/tmpreaper_1.6.17.tar.gz"
-  mirror "https://fossies.org/linux/misc/tmpreaper_1.6.17.tar.gz"
-  sha256 "1ca94d156eb68160ec9b6ed8b97d70fbee996de21437f0cf7d0c3b46709fecbc"
+  url "https://old-releases.ubuntu.com/ubuntu/pool/universe/t/tmpreaper/tmpreaper_1.6.14.tar.gz"
+  mirror "https://fossies.org/linux/misc/tmpreaper_1.6.14.tar.gz"
+  sha256 "4acb93745ceb8b8c5941313bbba78ceb2af0c3914f1afea0e0ae1f7950d6bdae"
   license "GPL-2.0-only"
 
-  livecheck do
-    url "https://deb.debian.org/debian/pool/main/t/tmpreaper/"
-    regex(/href=.*?tmpreaper[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6f9987a8435e18ce63b2214cd6bedbb56902c09c8cf88614c0dfab73d418c003"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b17b5648f769f3c80d2d596deecd90a5af28bdd9b3317944f933bf7b469627a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f3c26e98c4ec6ccd7d0f4d8724732009a657c6d147d3343bec352cd3e9fc6805"
-    sha256 cellar: :any_skip_relocation, monterey:       "ff0057f9690d3aa599b4a9d7c5fbeb9f40b1ac9034883609c15945d0e23fe9f6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d01353b90faaf5008d624b4230578610b957db76447b48e03f67a53b8b5f7a11"
-    sha256 cellar: :any_skip_relocation, catalina:       "f93c52bb2db3eab2e179e1184847d867a008300c7d00cee89f868e60a161eec2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c41062bf046a8d1ca4d6cbb1a9ee38133d4e50d85d83ccac9afcd812139a164"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a525dbdab528dbe840e9961e8cfeb888b43d4d3cf0075fc5dda698023d2b6d72"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c05f46196469020a65a07a6a8baeb270268ce8c8b917ee304a7c791a70ead0de"
+    sha256 cellar: :any_skip_relocation, monterey:       "cb95aa07c368174b5f2027b567dbe5e0f431325c51f69fea8c3a799e1ab31380"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3cc58bad3b6929386bb6e21e7d68156fc99fed84a80d56b4de22a92759b81179"
+    sha256 cellar: :any_skip_relocation, catalina:       "29ebae2263adcd7765e873802308c380b1419fef6fb1f78064c3245c5b7d5f04"
+    sha256 cellar: :any_skip_relocation, mojave:         "2e526cb2d2a7e7e2fa82becbee314478158aec96a6c5a2963072cc8e1092f42c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dbb3e26d1d6ef72c484371f2e9e2614e8118d18eccbceba255f10a198a7a0663"
   end
-
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
 
   on_linux do
     depends_on "e2fsprogs"

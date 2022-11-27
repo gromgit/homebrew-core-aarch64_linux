@@ -1,22 +1,21 @@
 class VapoursynthImwri < Formula
   desc "VapourSynth filters - ImageMagick HDRI writer/reader"
   homepage "https://github.com/vapoursynth/vs-imwri"
-  url "https://github.com/vapoursynth/vs-imwri/archive/R2.tar.gz"
-  sha256 "f4d2965d32877005d0709bd8339828f951885a0cb51e0c006d123ede0b74307b"
+  url "https://github.com/vapoursynth/vs-imwri/archive/R1.tar.gz"
+  sha256 "6eed24a7fda9e4ff80f5f866fa87a63c5ba9ad600318d05684eec18e40ad931f"
   license "LGPL-2.1-or-later"
   version_scheme 1
+
   head "https://github.com/vapoursynth/vs-imwri.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura:  "5f9055a5a4e55cdbf1f103b09f6c4b77a7544fe15e27fdf64af23ac7e74cc60d"
-    sha256 cellar: :any, arm64_monterey: "7ac213c90b5bdddce15d0e72b3f790560c9dcc3cd411874daa81bfe5164ddf67"
-    sha256 cellar: :any, arm64_big_sur:  "a3bf24671c674731b767334263fc0a8ae86d8aca14d3c9e0f3e0425bed7e5e3a"
-    sha256 cellar: :any, ventura:        "4594a357ab6099a587e746b28c54f38cc62aa02b1e42b7c26007edc2d6047e9d"
-    sha256 cellar: :any, monterey:       "9f7a746dc9d06d744b246ab6486cb01dfc0862a239945c9da43f3fc2fd35a281"
-    sha256 cellar: :any, big_sur:        "6e695d666d479b69bff01083f0a3ac68e79f055c26cc30ef5253dfaff7d6ac78"
-    sha256 cellar: :any, catalina:       "83f865c98f2b83384a2714589824beddabe0f1180fc028fd529e01c1ba873655"
-    sha256               x86_64_linux:   "b06f11cf0fe16bc8447d1d66a9c56c2fa19ec9900bed475f4330500fec591d6c"
+    sha256 cellar: :any, arm64_monterey: "af2367f974a7cf578dc1570fdf03722baf54b9846d6c35748c805a5c4903843e"
+    sha256 cellar: :any, arm64_big_sur:  "080c31181821b981cf47e913b5b91d99e36ed648c5c0bfc8a8ea7200e297f9ab"
+    sha256 cellar: :any, monterey:       "03f768ac9fc321dc96d4fda5165d967dbffd55067e7fb82ec5094de65b067620"
+    sha256 cellar: :any, big_sur:        "ef9f021e687b36a382c2f589b60c5c21fec61a25b687d555162be857a607b04e"
+    sha256 cellar: :any, catalina:       "6041a275aaf72e45651a334d8cbaef9f9ecccc054b2fd32d9454c1aa82ee1fc7"
+    sha256 cellar: :any, mojave:         "0ece8962763da6ebc44b85e22907ae218841be3b311d6062047ce59803c6ec3d"
+    sha256               x86_64_linux:   "dd97dc5792768f831374845c07b347de5cd09d1f1f68a72f72c01fb4872deab1"
   end
 
   depends_on "meson" => :build
@@ -24,6 +23,10 @@ class VapoursynthImwri < Formula
   depends_on "pkg-config" => :build
   depends_on "imagemagick"
   depends_on "vapoursynth"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
@@ -34,16 +37,14 @@ class VapoursynthImwri < Formula
               "install_dir = vapoursynth_dep.get_variable(pkgconfig: 'libdir') / 'vapoursynth'",
               "install_dir = '#{lib}/vapoursynth'"
 
-    system "meson", *std_meson_args, "build"
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do
-    python = Formula["vapoursynth"].deps
-                                   .find { |d| d.name.match?(/^python@\d\.\d+$/) }
-                                   .to_formula
-                                   .opt_libexec/"bin/python"
-    system python, "-c", "from vapoursynth import core; core.imwri"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "from vapoursynth import core; core.imwri"
   end
 end

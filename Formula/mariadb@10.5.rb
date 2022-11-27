@@ -1,8 +1,8 @@
 class MariadbAT105 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.com/MariaDB/mariadb-10.5.18/source/mariadb-10.5.18.tar.gz"
-  sha256 "3593b0dcc0f2e80e98177019f5dcfa5cc8c14172ce161a6fa50f8084f2cef749"
+  url "https://downloads.mariadb.com/MariaDB/mariadb-10.5.13/source/mariadb-10.5.13.tar.gz"
+  sha256 "16f008c66831130e9263b2601265d566ffc4e890d37bacecd4dcecebfd0d1c58"
   license "GPL-2.0-only"
 
   # This uses a placeholder regex to satisfy the `PageMatch` strategy
@@ -23,13 +23,12 @@ class MariadbAT105 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "bc80c77d9f4a3a28e0153a1dac034cef0fc9aaa9d9351a1595e1834a75d4b9bd"
-    sha256 arm64_monterey: "bf27d9ea362b63d341bdeda012038353aa4c60fcc7c3f047ec0fd21da330be6a"
-    sha256 arm64_big_sur:  "f72530344593bd8a62a978e2231be8790a6e45fcc0175c5ebaa88d6a9dc74396"
-    sha256 monterey:       "73610fe37c88a355e8bf355fc1f4ed3fa7a0e2751aa5252fd0bd3d92ded087bb"
-    sha256 big_sur:        "2ba8f105270ce3d186f0c275ae83c019dafc3d69c6dfc825b3812e5f2d5d1893"
-    sha256 catalina:       "316b4c289dd011c0324b8f6efa35531bd021ecbafd623becda73121a80526c45"
-    sha256 x86_64_linux:   "cf20e43dd1ee034cb495e08110bde9b5f4cc3388e7cb5a3255c4fd4919985127"
+    sha256 arm64_monterey: "2322c2510dbdb27d86eeac241546ed104c7694b467f77ab01c736838b2e399ec"
+    sha256 arm64_big_sur:  "1472148610a61980e7b0fb76ec1378b6f779629426cc171d8f1fecd7e77e1fa4"
+    sha256 monterey:       "b06e92ad53be0eab0ff3bd6c6db07a74b9cfa57bd3eea7174e0629b27c97ae0d"
+    sha256 big_sur:        "4bc3f7715a0b3ab678d6761200b799a03f849ab765451bf5e28a72bb765166ef"
+    sha256 catalina:       "685496c152f6cfee0e7a09e50feb18da069a737a10c2bbb8414f344d2402b602"
+    sha256 x86_64_linux:   "bda33140b0afa3443a83c2fd1d5f77322399ababc244098cdffb2cd572eb9b6a"
   end
 
   keg_only :versioned_formula
@@ -45,11 +44,11 @@ class MariadbAT105 < Formula
   depends_on "pcre2"
 
   uses_from_macos "bzip2"
-  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
   on_linux do
+    depends_on "gcc"
     depends_on "linux-pam"
   end
 
@@ -88,10 +87,6 @@ class MariadbAT105 < Formula
       args << "-DWITH_NUMA=OFF"
       args << "-DENABLE_DTRACE=NO"
       args << "-DCONNECT_WITH_JDBC=OFF"
-    end
-
-    if OS.mac?
-      args << "-DWITH_READLINE=NO" # uses libedit on macOS
     end
 
     # disable TokuDB, which is currently not supported on macOS

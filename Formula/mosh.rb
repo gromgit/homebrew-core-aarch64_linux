@@ -1,20 +1,52 @@
 class Mosh < Formula
   desc "Remote terminal application"
   homepage "https://mosh.org"
-  url "https://github.com/mobile-shell/mosh/releases/download/mosh-1.4.0/mosh-1.4.0.tar.gz"
-  sha256 "872e4b134e5df29c8933dff12350785054d2fd2839b5ae6b5587b14db1465ddd"
   license "GPL-3.0-or-later"
+  revision 18
+
+  stable do
+    url "https://mosh.org/mosh-1.3.2.tar.gz"
+    sha256 "da600573dfa827d88ce114e0fed30210689381bbdcff543c931e4d6a2e851216"
+
+    # Fix mojave build.
+    patch do
+      url "https://github.com/mobile-shell/mosh/commit/e5f8a826ef9ff5da4cfce3bb8151f9526ec19db0.patch?full_index=1"
+      sha256 "022bf82de1179b2ceb7dc6ae7b922961dfacd52fbccc30472c527cb7c87c96f0"
+    end
+
+    # Fix Xcode 12.5 build. Backport of the following commit:
+    # https://github.com/mobile-shell/mosh/commit/12199114fe4234f791ef4c306163901643b40538
+    patch :p0 do
+      url "https://raw.githubusercontent.com/macports/macports-ports/72fb5d9a79e581a5033bce38fb00ee25a0c2fdfe/net/mosh/files/patch-version-subdir.diff"
+      sha256 "939e5435ce7d9cecb7b2bccaf31294092eb131b5bd41d5776a40d660ffc95982"
+    end
+
+    # Fix crashes when mosh gets confused by timestamps. See:
+    # https://github.com/mobile-shell/mosh/issues/1014
+    # https://github.com/mobile-shell/mosh/pull/1124
+    patch do
+      url "https://github.com/mobile-shell/mosh/commit/57b97a4c910e3294b1ed441acea55da2f9ca3cb1.patch?full_index=1"
+      sha256 "6557cb33d4c58476e4bc0ddb1eef417f6ac56eb62e07ee389b00d2d08e6f3171"
+    end
+
+    patch do
+      url "https://github.com/mobile-shell/mosh/commit/87fd565268c5498409d81584b34467bd7e16a81f.patch?full_index=1"
+      sha256 "66f8fff80fa6d7373f88abf940c1fb838d38283b87b4a8ec9bfb1bd271e47ddc"
+    end
+  end
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?mosh[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "270731aad2028b9dab43ed87dae0b650880f34aa059a3584a0b6f7609c7e8453"
-    sha256 cellar: :any,                 arm64_monterey: "2780be65178f382963fd1759ff1b9df15807cc30b4a7cab5a766da1a4157ef49"
-    sha256 cellar: :any,                 arm64_big_sur:  "5b52e78e946518d87bbac09cd450188e65869ebab91dfb7617534c5c913b1b01"
-    sha256 cellar: :any,                 ventura:        "77609ce1bdfddcc59df543c61ac2728ea17b8ab349839e1fa5291f9c4a574d95"
-    sha256 cellar: :any,                 monterey:       "3e096f0100dd45fd8e292c59fb9c1fe42af3e6edfe3f662abb3cdb8dda8b508b"
-    sha256 cellar: :any,                 big_sur:        "26537bd45fcc9a86274b84b9f6b741ffb677fa769c3be1a0d2dd568aa0447986"
-    sha256 cellar: :any,                 catalina:       "2df281372623a61e3a9a7d3c795f4aefa0d2514da4c545f7c86646b28205c918"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f657bf329013d80922dc46fdbf4ec6303a5d665826affc0008bcb0deb2da6f3d"
+    sha256 cellar: :any,                 arm64_monterey: "e3a5496b74f6d67bc7076816a84ff0c9930eb8ceab3896f87aafeddda2f6929a"
+    sha256 cellar: :any,                 arm64_big_sur:  "8e44cdac777141ab536453dd0ad8447e04667f5f430ef3aa488b265467e9e3da"
+    sha256 cellar: :any,                 monterey:       "e2eee04b536a255c89b52eab59c02f86aa1e0681a423b18c5d4346d4cef2b1e3"
+    sha256 cellar: :any,                 big_sur:        "5bee0e9377ff2080ba8fd98403253bd108f1978e2151c1145a4fc2eea6171dbd"
+    sha256 cellar: :any,                 catalina:       "cfa559a5216d7a863d33952dda1e7058bcb2015aeb38bed5d1b9f48cd7a31d74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55a704a28b09a60c5f7aaf2676555c171d6e162a3bc53a962391ad228173559c"
   end
 
   head do
@@ -24,6 +56,10 @@ class Mosh < Formula
     depends_on "automake" => :build
   end
 
+  # Remove autoconf and automake when the
+  # Xcode 12.5 patch is removed.
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "pkg-config" => :build
   depends_on "protobuf"
 
@@ -37,14 +73,12 @@ class Mosh < Formula
   def install
     ENV.cxx11
 
-    # https://github.com/protocolbuffers/protobuf/issues/9947
-    ENV.append_to_cflags "-DNDEBUG"
-
     # teach mosh to locate mosh-client without referring
     # PATH to support launching outside shell e.g. via launcher
     inreplace "scripts/mosh.pl", "'mosh-client", "\'#{bin}/mosh-client"
 
-    system "./autogen.sh" if build.head?
+    # Uncomment `if build.head?` when Xcode 12.5 patch is removed
+    system "./autogen.sh" # if build.head?
     system "./configure", "--prefix=#{prefix}", "--enable-completion"
     system "make", "install"
   end

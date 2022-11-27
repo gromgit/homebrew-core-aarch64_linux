@@ -4,17 +4,16 @@ class Pokerstove < Formula
   url "https://github.com/andrewprock/pokerstove/archive/v1.0.tar.gz"
   sha256 "68503e7fc5a5b2bac451c0591309eacecba738d787874d5421c81f59fde2bc74"
   license "BSD-3-Clause"
-  revision 3
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "312fc979078e0c61ac8736219da32b523c58448362a1cf104b0bb7aa3ce5481c"
-    sha256 cellar: :any,                 arm64_monterey: "505ed83a6d1a32c5730eb7543e26caf0fc6e1cf2be9ac258f65287aaa9f0f0da"
-    sha256 cellar: :any,                 arm64_big_sur:  "421bf090b59bb08de95e1f288f63aef85f3b00ee809691e6053b473dc189f630"
-    sha256 cellar: :any,                 ventura:        "aae2b25921e8e3690a695bc59922fec6c0df8663259adb97a56ecf1ec8306417"
-    sha256 cellar: :any,                 monterey:       "63c43267ec9ba346ded19cd765cb9b8fb6ac403d9d6a8c581fc6183a557179d3"
-    sha256 cellar: :any,                 big_sur:        "354ad4f655fdbda20dd9ae0a6b23db9323cd1fd56d9b26292af8c57f8d2a9517"
-    sha256 cellar: :any,                 catalina:       "c0d554d15641d04605d0c4fadd25afced0a4d4dbf74f2304f5d9e95190ffaaeb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2a3781f7d90682ae4f17b28ed6569ed57f1a3922d1efff3e75be9e6d0c6620a"
+    sha256 cellar: :any,                 arm64_monterey: "6d1a9c1e9d1fa2f42419f47edc9a1231f6b5612f3d374c846e35052b1a2efd72"
+    sha256 cellar: :any,                 arm64_big_sur:  "96b40ae847f00d3af538948aa95f68de0743385882222724b4e36598ba365d02"
+    sha256 cellar: :any,                 monterey:       "520e0b5d47b1d734f519e5d763cd23f7b5863a360e7e315bc06dd3b4ba57a2ca"
+    sha256 cellar: :any,                 big_sur:        "2417f672e669862eeb6a2529e3ace1bbaa78ee8f55b7ba555ed2d503d5f6a485"
+    sha256 cellar: :any,                 catalina:       "cad8646a452226baa12e3f8de7a2b0edc8c7df8a33af36c2983e9105d60537fd"
+    sha256 cellar: :any,                 mojave:         "6e8fededfc09e60dd3b3180360c257ede7cd8fcc3c2bfe83b68d82fcb2bfcab8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8218fe4c78eb9c3a0f78b23091aa7e0527c2bbc6037a0ccbef25d45e4c6619a2"
   end
 
   depends_on "cmake" => :build

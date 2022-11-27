@@ -3,35 +3,32 @@ class ArxivLatexCleaner < Formula
 
   desc "Clean LaTeX code to submit to arXiv"
   homepage "https://github.com/google-research/arxiv-latex-cleaner"
-  url "https://files.pythonhosted.org/packages/50/94/1ef60b7f751ab669a420c13a6c0421efa9e9166c1ff47b76541905873758/arxiv_latex_cleaner-0.1.30.tar.gz"
-  sha256 "f665fb21be34f7cfd519805f2a9cb2dfeb4ef9b2c15313824f118df49deb4b1d"
+  url "https://files.pythonhosted.org/packages/d7/82/b32e1991ee2a8fd0db2f02ba8e135430aaeed9507e8008d5e9c8beec8eff/arxiv_latex_cleaner-0.1.27.tar.gz"
+  sha256 "f347fc6082417316247dca97bb76f15ac677eb1f5e65f091013086a30cac4eda"
   license "Apache-2.0"
   head "https://github.com/google-research/arxiv-latex-cleaner.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "13d4bc2fb0b6417dd149e8dc2bb053ba0846d67d959aae6f8c9287321368543c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "024da2f783e05aa704cba94f75160ad86253194cdf87f738a849aa375df907d8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "22e05dffefb48066a17e4ed6fb63436f454341b5fcc50b33fc37bde2126639d7"
-    sha256 cellar: :any_skip_relocation, ventura:        "0891d0f0ea62f286f90890310d3c1b8c4d10af0fc07daf9e5e1bf269e72aaf57"
-    sha256 cellar: :any_skip_relocation, monterey:       "93c637a795f3605087dc3fc5f968f2f026560628660221f51e715da240c85b3e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5be54dbb295f50ee167f2f200b1a50b9a52ed91c09b365ed42efea1258b18938"
-    sha256 cellar: :any_skip_relocation, catalina:       "cad55a024117b20d31f8ea334f2c2c8260be8c95d31732731edce3c08062ccb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52f9f057e82c56d4a251cd4d61485becb83e4a0ae4317fbfaf3bdfe46fe420b5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9c603251ca83de97eb58fd76af0f2ee2cdcf0409d9d30474e37e4511e0daaa4b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9cd5f50cb2db8b9c881e5671d5883e0e9ef361c71945907a3b0337cc47e6c8af"
+    sha256 cellar: :any_skip_relocation, monterey:       "8747083f2512160f739f4b95ac2d3fdee31fc8817dfd9927a54318efb70af8e2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7eb0a1b1dd83e0a6b76f93fe676571493ae3ccb2eb68bd697379db1d56a9281a"
+    sha256 cellar: :any_skip_relocation, catalina:       "81305bb01f4d3bf1d3e34af381cb29bdddc8e34066e3741374c1e73eeb1d8c8a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd9ecb403ac536e919cb8d0eae0f23fbd4355ff7456701697cff5f69d253ecf4"
   end
 
   depends_on "pillow"
-  depends_on "python@3.11"
-  depends_on "pyyaml"
+  depends_on "python@3.10"
   depends_on "six"
 
-  resource "absl-py" do
-    url "https://files.pythonhosted.org/packages/a8/66/2b190f1ad948a0f5a84026eb499c123256d19f48d159b1462a4a98634be3/absl-py-1.3.0.tar.gz"
-    sha256 "463c38a08d2e4cef6c498b76ba5bd4858e4c6ef51da1a5a1f27139a022e20248"
+  resource "absl_py" do
+    url "https://files.pythonhosted.org/packages/bc/44/3ab719b4fea06882351cd9f9582c15ba5b4d376992ac40c3ed377761a172/absl-py-1.0.0.tar.gz"
+    sha256 "ac511215c01ee9ae47b19716599e8ccfa746f2e18de72bdf641b79b22afa27ea"
   end
 
-  resource "regex" do
-    url "https://files.pythonhosted.org/packages/27/b5/92d404279fd5f4f0a17235211bb0f5ae7a0d9afb7f439086ec247441ed28/regex-2022.10.31.tar.gz"
-    sha256 "a3a98921da9a1bf8457aeee6a551948a83601689e5ecdd736894ea9bbec77e83"
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   def install

@@ -1,56 +1,45 @@
 class Poac < Formula
   desc "Package manager for C++"
   homepage "https://github.com/poacpm/poac"
-  url "https://github.com/poacpm/poac/archive/refs/tags/0.4.1.tar.gz"
-  sha256 "3717a873120a7125fcdcc99227f5c7d42c4e170f7572feee19ab458d657f9451"
+  url "https://github.com/poacpm/poac/archive/refs/tags/0.3.7.tar.gz"
+  sha256 "2ad6c082252d15cc8e9db8d129e7dd9cb27275f0d72de33c73ada5c09667a87f"
   license "Apache-2.0"
-  revision 4
   head "https://github.com/poacpm/poac.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "22ff6c3c8e3516e8fea9482aa3db8d2ea3c5068ec20cd029b9894fa8f069e06a"
-    sha256 cellar: :any,                 arm64_monterey: "62eb08441a7e574ba07f6693fd9ce2ef246b7cc4502137cdf35bd26d60d84a8c"
-    sha256 cellar: :any,                 arm64_big_sur:  "fb02b40300ae7f52e6dbe41ee68b915b4a211315b48401681700702050c1ff15"
-    sha256 cellar: :any,                 monterey:       "6f1c53ec7c7bd21b2b774f869570a63fb5267259ff2008be863b72f391cf5d8f"
-    sha256 cellar: :any,                 big_sur:        "195f49d03013e49265f199fe5b03f78c2836a01d11988f7c2fd983ca3234a4c1"
-    sha256 cellar: :any,                 catalina:       "fac554b882507bb5dac69ba90eca3605eac91e143680130779ec61b28e362643"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f53ef4f70d181243cadbbe001c22b15b204dc6ec276c59d3e47234ef3e1c61bd"
+    sha256 cellar: :any,                 arm64_monterey: "ba0a4ef79bfd3b0949c3f00811d55203484351642b1593a547a325963294fdf4"
+    sha256 cellar: :any,                 arm64_big_sur:  "57a61b9ea9e166d06312941056f912f29fe616a50a3da18b71bf771155bed8cf"
+    sha256 cellar: :any,                 monterey:       "8e61e3a2e92f2a685b0361f10400b17e10283cfd70fab3c2751c6ff85df56715"
+    sha256 cellar: :any,                 big_sur:        "970c0f8398c48fe1d340037f10037d299c758594cadf20a239ce3afbe3e19cd0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38a2ab431efbbac134a4e90c5aa394d84f96771c8dd6bf11701b55c41f2f1a6c"
   end
 
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "fmt"
   depends_on "libgit2"
+  depends_on macos: :big_sur # C++20
   depends_on "openssl@1.1"
   depends_on "spdlog"
 
   uses_from_macos "libarchive"
 
-  on_macos do
-    depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1200
+  on_linux do
+    depends_on "gcc"
   end
-
-  fails_with :clang do
-    build 1200
-    cause "Requires C++20"
-  end
-
   fails_with gcc: "5" # C++20
 
   def install
-    ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
-
     system "cmake", "-B", "build", "-DCPM_USE_LOCAL_PACKAGES=ON", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    man.install "src/etc/man/man1"
-    bash_completion.install "src/etc/poac.bash" => "poac"
-    zsh_completion.install_symlink bash_completion/"poac" => "_poac"
+    man1.install (buildpath/"src/etc/man/man1").children
+    bash_completion.install_symlink "src/etc/poac.bash" => "poac"
+    zsh_completion.install_symlink "src/etc/poac.bash" => "_poac"
   end
 
   test do
-    ENV.clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1200)
     system bin/"poac", "create", "hello_world"
     cd "hello_world" do
       assert_match "Hello, world!", shell_output("#{bin}/poac run")

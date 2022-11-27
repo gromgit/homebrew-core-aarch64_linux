@@ -4,7 +4,6 @@ class Lablgtk < Formula
   url "https://github.com/garrigue/lablgtk/archive/2.18.12.tar.gz"
   sha256 "43b2640b6b6d6ba352fa0c4265695d6e0b5acb8eb1da17290493e99ae6879b18"
   license "LGPL-2.1"
-  revision 1
 
   livecheck do
     url :stable
@@ -12,14 +11,12 @@ class Lablgtk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "b77e7e12785ed1b84c04e2d7f33745b3d63a8aa101c7d3d10189a9a0ffd0956a"
-    sha256 cellar: :any, arm64_monterey: "97abc8b9ca15184d58e73218a5617d417efc94183ae8ff6bb2bb5e6e4dd2efd2"
-    sha256 cellar: :any, arm64_big_sur:  "4cacdcf4beb3a2d2621a2728b816c32b732a76fa48ae5a2db81aa5c2ceb083b3"
-    sha256 cellar: :any, ventura:        "79e1eb9e719529c7d5fb0fd7be0f96017a7409fb9af4c8d6e2ebcc44540eb630"
-    sha256 cellar: :any, monterey:       "3481e18fe254c2bd1933ff9ef091b4d3345635825482540a014645e8b16219ed"
-    sha256 cellar: :any, big_sur:        "4535ca14378ec4580014e81f636cbccd335e03d40de2710cbbc2102cca02c3a3"
-    sha256 cellar: :any, catalina:       "6693d979ec1eba98402d6b5f6747de3ce204567b53e37144231b26731173a620"
-    sha256               x86_64_linux:   "30f9191323a86ef69a1794027fdf8c6ef6b49b97df043732038bb0c9423c1b2e"
+    sha256 cellar: :any, arm64_monterey: "f46ccbac4b613f1542bdbe5bf0747c4875c2e89b2978589468d97aa6168a3ffc"
+    sha256 cellar: :any, arm64_big_sur:  "33da190e1a69924c98e6a745380228562182abe3e13406301da4dd76dd42b694"
+    sha256 cellar: :any, monterey:       "2d7d514c6d7c31faa53b5e0292a7d4962f1c60e4bc524f4344b7895b15756e5d"
+    sha256 cellar: :any, big_sur:        "acd2ebe952607c8ad6d2fdb430fc5ad7f2f06742c3b3c571e943afc315293116"
+    sha256 cellar: :any, catalina:       "6d376c548d8cc2580b3756daedbcd24b8f33900509977a6192b34f009dc6964b"
+    sha256               x86_64_linux:   "d86fc0946e8a9d7d568c50cbb3f8af0d5aa1bedc1fdaf376b900a051bcb84d1f"
   end
 
   depends_on "pkg-config" => :build

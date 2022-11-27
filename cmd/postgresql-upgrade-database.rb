@@ -98,7 +98,8 @@ module Homebrew
       ]
       locale_settings.each do |setting|
         sql = "SELECT setting FROM pg_settings WHERE name LIKE '#{setting}';"
-        value = Utils.popen_read("#{old_bin}/psql", "postgres", "-qtAX", "-U", ENV.fetch("USER"), "-c", sql).strip
+        value = Utils.popen_read("#{old_bin}/psql", "postgres", "-qtAX", "-U", ENV.fetch("USER", nil), "-c",
+                                 sql).strip
 
         next if value.empty?
 

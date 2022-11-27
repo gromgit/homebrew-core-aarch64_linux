@@ -1,37 +1,36 @@
 class YelpTools < Formula
-  include Language::Python::Shebang
   include Language::Python::Virtualenv
 
   desc "Tools that help create and edit Mallard or DocBook documentation"
   homepage "https://github.com/GNOME/yelp-tools"
-  url "https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.1.tar.xz"
-  sha256 "3e496a4020d4145b99fd508a25fa09336a503a4e8900028421e72c6a4b11f905"
+  url "https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.0.tar.xz"
+  sha256 "2cd43063ffa7262df15dd8d379aa3ea3999d42661f07563f4802daa1149f7df4"
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "e7cc6e200f40714f724c9404263bea7fac8c755009bd1c746fe8276030964fc7"
-    sha256 cellar: :any,                 arm64_monterey: "affcfae3eb27ae13708420d35449ebe13697fda1beb688ecbfffd3761c7b330b"
-    sha256 cellar: :any,                 arm64_big_sur:  "a79aa15319cb78c0fedc81fe45863c59cad4734950943a0ae5bc6461ac6fbcd5"
-    sha256 cellar: :any,                 monterey:       "6745f5e8df7512be08e32ecaa78a9dedcfbaa5be651217c6a943dee9c96bec83"
-    sha256 cellar: :any,                 big_sur:        "ec25c2e18a31003a341426372ce29f6e40cbd4fea755d576a6973db900b0e6bb"
-    sha256 cellar: :any,                 catalina:       "22baf7a21bf5e4555b78d0662c93078c8d51e5eb5c0b7c651c15118f8f28c6d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c3b19081095b30311a3c48a0dd8ab7a5d8dba19045f6297e47c96de798c5bb5"
+    sha256 cellar: :any,                 arm64_monterey: "ca3f4b5f6ccd93dd16c9a0ee89ebdeb706f248d8f9d07595796ca46d98d4f2c3"
+    sha256 cellar: :any,                 arm64_big_sur:  "f6d66e76d44ae461e4d1f1daf0ad41d6c48c7db0a47c8acd4b568164a74e7255"
+    sha256 cellar: :any,                 monterey:       "f3c65f220e83ba866346587345b28a9c181a35b45086960353372d912045e55c"
+    sha256 cellar: :any,                 big_sur:        "8da6622c231bfe66fa2d8018d661348555e7f114402908ff463102ef7c524bb7"
+    sha256 cellar: :any,                 catalina:       "3fd4f5cbde318c595ee805eb9c6851567cbe6f106dd2b89967e80db2094cc7dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ec11ce5badedfe5e12dd658fc5aa4323bffad28a4c991ff3769f485a00186fe"
   end
 
   depends_on "gettext" => :build
+  depends_on "itstool" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "gtk+3"
   depends_on "itstool"
   depends_on "libxml2"
-  depends_on "python@3.11"
+  depends_on "python@3.9"
 
   uses_from_macos "libxslt"
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz"
-    sha256 "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
+    url "https://files.pythonhosted.org/packages/3b/94/e2b1b3bad91d15526c7e38918795883cee18b93f6785ea8ecf13f8ffa01e/lxml-4.8.0.tar.gz"
+    sha256 "f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"
   end
 
   resource "yelp-xsl" do
@@ -40,29 +39,36 @@ class YelpTools < Formula
   end
 
   def install
-    python = "python3.11"
-
-    venv = virtualenv_create(libexec, python)
+    venv = virtualenv_create(libexec, "python3")
     venv.pip_install resource("lxml")
     ENV.prepend_path "PATH", libexec/"bin"
 
     resource("yelp-xsl").stage do
-      system "./configure", *std_configure_args, "--disable-silent-rules"
+      system "./configure", "--disable-dependency-tracking",
+                            "--disable-silent-rules",
+                            "--prefix=#{prefix}"
       system "make", "install"
-      ENV.append_path "PKG_CONFIG_PATH", share/"pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{share}/pkgconfig"
     end
 
-    system "meson", *std_meson_args, "build"
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
 
     # Replace shebang with virtualenv python
-    rewrite_shebang python_shebang_rewrite_info("#{libexec}/bin/#{python}"), *bin.children
+    inreplace Dir[bin/"*"], "#!/usr/bin/python3", "#!#{libexec}/bin/python"
+  end
+
+  def post_install
+    system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache",
+           "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
   end
 
   test do
-    system bin/"yelp-new", "task", "ducksinarow"
-    system bin/"yelp-build", "html", "ducksinarow.page"
-    system bin/"yelp-check", "validate", "ducksinarow.page"
+    system "#{bin}/yelp-new", "task", "ducksinarow"
+    system "#{bin}/yelp-build", "html", "ducksinarow.page"
+    system "#{bin}/yelp-check", "validate", "ducksinarow.page"
   end
 end

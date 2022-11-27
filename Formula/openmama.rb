@@ -6,46 +6,34 @@ class Openmama < Formula
   license "LGPL-2.1-only"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "d2e54f54c813146bda879ee2e18102bf825fee2e883b6d2780e686db413709dc"
-    sha256 cellar: :any,                 arm64_monterey: "81aa664271767ec190b914b079f6aaddb4712ea5071ae983f41904ccabacbf75"
-    sha256 cellar: :any,                 arm64_big_sur:  "a123162e2ba61eb5c30e56460e0946071d905555dc83183b6f20f8ce6bc65193"
-    sha256 cellar: :any,                 monterey:       "178483d87eda050e29c6b646436c0ece4a14dcd5c1d98aec8103a49b97e2857c"
-    sha256 cellar: :any,                 big_sur:        "45153901e833685b76160a45e283b21c52e2382f4a1a65092acd97035f75e2ca"
-    sha256 cellar: :any,                 catalina:       "363d1c76bec6373017daa21a142f07793f818a2d871960641699b54ef54de980"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "643e5f3db30c0f6ae816f6131f0325e58d2bb82665756449347a0a5751bd88be"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "2e7a0417aeac01af231fb8302c4fbe3c212d81f2d657fbef9a54894aa0e3d52f"
+    sha256 cellar: :any, arm64_big_sur:  "e68c9fee04206d5f5b21d84889bf645c7f4b2b2922a886e9bbcc226a05faa183"
+    sha256 cellar: :any, monterey:       "af3c17bf4293979ab3fb40f6fbfaf6ffedb4dc5ec74eb1345770da6da7ff5597"
+    sha256 cellar: :any, big_sur:        "b3d28de466d5f2d17ddb57b2f5004e3defc7f8d48922814f61f733aa7015639c"
+    sha256 cellar: :any, catalina:       "50fe6f8436bd5d7729f9f20c21de8d398e50546754514708e24715a097bd21f1"
+    sha256 cellar: :any, mojave:         "b0a5d95139fce5f6f72b5a2906c5e2e6b604aef25e2b76e7c448ab1bfcefe6d6"
   end
 
   depends_on "cmake" => :build
   depends_on "apr"
   depends_on "apr-util"
   depends_on "libevent"
+  depends_on "ossp-uuid"
   depends_on "qpid-proton"
 
   uses_from_macos "flex" => :build
 
-  # UUID is provided by util-linux on Linux.
-  on_linux do
-    depends_on "util-linux"
-  end
-
   def install
-    uuid_args = if OS.mac?
-      ["-DUUID_INCLUDE_DIRS=#{MacOS.sdk_path_if_needed}/usr/include", "-DUUID_LIBRARIES=c"]
-    else
-      []
+    mkdir "build" do
+      system "cmake", "..", "-DAPR_ROOT=#{Formula["apr"].opt_prefix}",
+                            "-DPROTON_ROOT=#{Formula["qpid-proton"].opt_prefix}",
+                            "-DCMAKE_INSTALL_RPATH=#{rpath}",
+                            "-DINSTALL_RUNTIME_DEPENDENCIES=OFF",
+                            "-DWITH_TESTTOOLS=OFF",
+                            *std_cmake_args
+      system "make", "install"
     end
-
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DAPR_ROOT=#{Formula["apr"].opt_prefix}",
-                    "-DPROTON_ROOT=#{Formula["qpid-proton"].opt_prefix}",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    "-DINSTALL_RUNTIME_DEPENDENCIES=OFF",
-                    "-DWITH_TESTTOOLS=OFF",
-                    *uuid_args,
-                    *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
   end
 
   test do

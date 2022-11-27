@@ -1,25 +1,22 @@
 class Idris2 < Formula
   desc "Pure functional programming language with dependent types"
   homepage "https://www.idris-lang.org/"
-  url "https://github.com/idris-lang/Idris2/archive/v0.6.0.tar.gz"
-  sha256 "7f5597652ed26abc2d2a6ed4220ec28fafdab773cfae0062a8dfafe7d133e633"
+  url "https://github.com/idris-lang/Idris2/archive/v0.5.1.tar.gz"
+  sha256 "da44154f6eba5e22ec5ac64c6ba2c28d2df0a57cf620c5b00c11adb51dbda399"
   license "BSD-3-Clause"
+  revision 2
   head "https://github.com/idris-lang/Idris2.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 monterey:     "d905ded56aaa8c99d992c3e84e7e02d9d5f9c77089143abce7ddd4d8f8f1f4b2"
-    sha256 cellar: :any,                 big_sur:      "6f4a6e589b386f30801c0cf36ee61cfc35017ded177bcae84235c2562058417c"
-    sha256 cellar: :any,                 catalina:     "ff005be1e9e4fafc1a20f04f51aa4d72ecc918df190b2dac6b2b341bd3e455ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6ed08bd3734a40d1ecebc329afdddc7165d894dc043966fcc7e03ea354347194"
+    sha256 cellar: :any,                 big_sur:      "39fe90502cd4a8a064b4f69bcc5b4e99295826cad363092b47d3353ed41db2da"
+    sha256 cellar: :any,                 catalina:     "f29bcc24fc1a0581eb3f17823641c5444acc4df10e93c17eae573deab9a18fa7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fdd19a501c9b80da87fd4519ed43e9ed31647e17e03d582392d2b3d1517f7c74"
   end
 
+  depends_on "coreutils" => :build
   depends_on "gmp" => :build
-  depends_on arch: :x86_64 # because of chezscheme
   depends_on "chezscheme"
-
-  on_high_sierra :or_older do
-    depends_on "zsh" => :build
-  end
+  uses_from_macos "zsh" => :build, since: :mojave
 
   def install
     ENV.deparallelize
@@ -28,8 +25,7 @@ class Idris2 < Formula
     system "make", "install", "PREFIX=#{libexec}"
     bin.install_symlink libexec/"bin/idris2"
     lib.install_symlink Dir["#{libexec}/lib/#{shared_library("*")}"]
-    generate_completions_from_executable(bin/"idris2", "--bash-completion-script", "idris2",
-                                         shells: [:bash], shell_parameter_format: :none)
+    (bash_completion/"idris2").write Utils.safe_popen_read(bin/"idris2", "--bash-completion-script", "idris2")
   end
 
   test do

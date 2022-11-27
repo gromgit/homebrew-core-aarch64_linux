@@ -7,20 +7,17 @@ class CassandraCppDriver < Formula
   head "https://github.com/datastax/cpp-driver.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "1f94b7c0d0411f6c14267d82f7161a885fb740854ad919e738e3de2fe79f6837"
-    sha256 cellar: :any,                 arm64_monterey: "9bc308348bd4255276447d174fc29a2c542213bf169408363896dfc49956ca35"
-    sha256 cellar: :any,                 arm64_big_sur:  "cac923a6c616a2e1bc661803649147b908087590f92a1481715c41b03bd326c0"
-    sha256 cellar: :any,                 ventura:        "a9a4ab72c7ced27cf60d95b402659425e946dad16bd3eaa35f66ac8b1eedf929"
-    sha256 cellar: :any,                 monterey:       "d2b5345fb271d6828ee7dd30066e9052130ccce62290d08e679e2d0d461ee778"
-    sha256 cellar: :any,                 big_sur:        "55ff95e3125b9b9fb85e77b3a41f11b76f3717cc9d8ed444e86d12bd50c52e6c"
-    sha256 cellar: :any,                 catalina:       "388592bafbc1a2d775cea095a5fc7bbb81996542eac910ae00621af12803ed9e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90e70a2b4e18cf01957a124f1f5143102d03a8a20d9ad650f48a5241278aa14d"
+    sha256 cellar: :any,                 arm64_monterey: "64ed2de59c0135b2a2854c3797ba35301c8e195261c8d3fa22be15e7e0f6213a"
+    sha256 cellar: :any,                 arm64_big_sur:  "7b0a531d7126d0156ddb87365462739b3f1fedc09a8dc16d3962d60405e6dc27"
+    sha256 cellar: :any,                 monterey:       "c43517117152e217a879d11c94793c4b3dfe89d88c3482775342a331ac2400a0"
+    sha256 cellar: :any,                 big_sur:        "40e7b2c90c71303e92a7a42f0722a6802c4b420084b2e6fbef91b6d8a9135f8b"
+    sha256 cellar: :any,                 catalina:       "5789724888e6c63971817c676a6fb4508993ec220b5b837fbda1bfccb9ac09bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f81a2d5931a0d5132d72509b07970a1c110bb7e80910acfcbd345caa65e48dac"
   end
 
   depends_on "cmake" => :build
   depends_on "libuv"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "zlib"
 
@@ -29,10 +26,11 @@ class CassandraCppDriver < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
-                    "-DLIBUV_ROOT_DIR=#{Formula["libuv"].opt_prefix}"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DLIBUV_ROOT_DIR=#{Formula["libuv"].opt_prefix}"
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do

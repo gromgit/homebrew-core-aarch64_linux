@@ -4,44 +4,38 @@ class Soapysdr < Formula
   url "https://github.com/pothosware/SoapySDR/archive/soapy-sdr-0.8.1.tar.gz"
   sha256 "a508083875ed75d1090c24f88abef9895ad65f0f1b54e96d74094478f0c400e6"
   license "BSL-1.0"
-  revision 1
   head "https://github.com/pothosware/SoapySDR.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "6b73c034ca3f25efac4922bf336bff165074d79bc2ee0c276c74275728b81025"
-    sha256 cellar: :any,                 arm64_monterey: "28ed02a75df0cafb919f0d9e30c0a312884762736868fe094fbaacec27bb12a8"
-    sha256 cellar: :any,                 arm64_big_sur:  "d20855a9fdd81d185e576cd308b00ab1f657736c721167bdb61fc7ec2d17b507"
-    sha256 cellar: :any,                 ventura:        "1479afce35a2e6b61412bd416041d85fe051a2ed6879734f6092c5fa1fe72f70"
-    sha256 cellar: :any,                 monterey:       "9f3a6c8d3c6a9f0b8aaa9030da6d246dd40119309372bebc9e0952dc271d7dfe"
-    sha256 cellar: :any,                 big_sur:        "3b7dfa0601c4c808ffb3f5195d1194f65adfb26a9182a8bd7ba61d0fdcd73202"
-    sha256 cellar: :any,                 catalina:       "a47d2eca6bf6f4c4c4aaf15887cb2ac5ee22c0f6b1859e7bd2ec1d008fa19b28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8708223be2fc61637991a16921166770a1977f19634aa61e4b7ec6473f0ee8e"
+    sha256 cellar: :any,                 arm64_monterey: "47ef75bd1eea67779a6f5ca82f903992edab8d32b5591e6885c6ad302b3bbf97"
+    sha256 cellar: :any,                 arm64_big_sur:  "a6fdf172d9d0bc7338b9792211cd9b5f945656908b1d642b987b84d68e1c7704"
+    sha256 cellar: :any,                 monterey:       "3dd61b2a4f2af673c1b1a85fb08cf4d4d7ed50a3bbded643843f50f691c0a4d7"
+    sha256 cellar: :any,                 big_sur:        "43f22365e9bc1ecb07cc3c4ee22c198f25c3465ae5cf72f2681223aee30f357b"
+    sha256 cellar: :any,                 catalina:       "befa2166bf6dd66c45cb2aa00a439d480c227972a5a17242b5a11f50ffdbc25e"
+    sha256 cellar: :any,                 mojave:         "73f853d0e804e3b3253bd0e23a2387254d8a178850f989f9a7c7cb87e6bafc7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e97e253fa6202490eb430f278841871382d35caf9f5f9734a80820a0cf73600f"
   end
 
   depends_on "cmake" => :build
   depends_on "swig" => :build
-  depends_on "python@3.11"
-
-  def python3
-    "python3.11"
-  end
+  depends_on "python@3.9"
 
   def install
-    args = %W[
-      -DPYTHON_EXECUTABLE=#{which(python3)}
+    args = std_cmake_args + %W[
+      -DENABLE_PYTHON=OFF
+      -DENABLE_PYTHON3=ON
       -DSOAPY_SDR_ROOT=#{HOMEBREW_PREFIX}
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
     args << "-DSOAPY_SDR_EXTVER=release" unless build.head?
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make", "install"
+    end
   end
 
   test do
     assert_match "Loading modules... done", shell_output("#{bin}/SoapySDRUtil --check=null")
-    system python3, "-c", "import SoapySDR"
   end
 end

@@ -27,18 +27,14 @@ class MitScheme < Formula
   depends_on "openssl@1.1"
 
   uses_from_macos "m4" => :build
+  uses_from_macos "texinfo" => :build
   uses_from_macos "ncurses"
 
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
-
   resource "bootstrap" do
-    on_intel do
+    if Hardware::CPU.intel?
       url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/11.2/mit-scheme-11.2-x86-64.tar.gz"
       sha256 "7ca848cccf29f2058ab489b41c5b3a101fb5c73dc129b1e366fb009f3414029d"
-    end
-    on_arm do
+    else
       url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/11.2/mit-scheme-11.2-aarch64le.tar.gz"
       sha256 "49679bcf76c8b5896fda8998239c4dff0721708de4162dcbc21c88d9688faa86"
     end

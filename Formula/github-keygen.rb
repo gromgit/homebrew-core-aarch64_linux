@@ -7,7 +7,8 @@ class GithubKeygen < Formula
   head "https://github.com/dolmen/github-keygen.git", branch: "release"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "136695a8f7aabb99fe75ad524d6143d8998a27b136971513c5e58853ee7d4d95"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/github-keygen"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8f0a239ea1439c0cfc2e01858831beb85549633c649a9bd5c3e6b0d679c3abd5"
   end
 
   def install

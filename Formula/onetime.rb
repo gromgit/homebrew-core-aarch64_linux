@@ -6,6 +6,11 @@ class Onetime < Formula
   license "MIT"
   revision 1
 
+  livecheck do
+    url "https://www.red-bean.com/onetime/get"
+    regex(/href=.*?onetime[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "d6b4a7ac553f33266044258c1b8cc8e703428990ec7c329ec1abcec649c94eaf"
     sha256 cellar: :any_skip_relocation, big_sur:       "3537657d8ff718b94fa84714b0105b95ef613fe778d04ff573a19df687798747"
@@ -16,8 +21,6 @@ class Onetime < Formula
     sha256 cellar: :any_skip_relocation, el_capitan:    "9f73f9cdb465fce1aefc3cf80c00bc8e43b41a33c3e999fb3ec531251cfc3da0"
     sha256 cellar: :any_skip_relocation, all:           "93ec90f57aaf9235f925eb7146e3446a2265b5e6d573188bc129178aa516b1ad"
   end
-
-  deprecate! date: "2022-05-26", because: :unmaintained
 
   # Fixes the Makefile to permit destination specification
   # https://github.com/kfogel/OneTime/pull/12

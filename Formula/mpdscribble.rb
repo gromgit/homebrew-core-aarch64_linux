@@ -1,8 +1,8 @@
 class Mpdscribble < Formula
   desc "Last.fm reporting client for mpd"
   homepage "https://www.musicpd.org/clients/mpdscribble/"
-  url "https://www.musicpd.org/download/mpdscribble/0.24/mpdscribble-0.24.tar.xz"
-  sha256 "f6b4cba748b3b87e705270b4923c8e23e94c2e00fedd50beb1468dbe2fb2a8e7"
+  url "https://www.musicpd.org/download/mpdscribble/0.23/mpdscribble-0.23.tar.xz"
+  sha256 "a3387ed9140eb2fca1ccaf9f9d2d9b5a6326a72c9bcd4119429790c534fec668"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,13 +11,13 @@ class Mpdscribble < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "ae57ca49a553d9b3c52d221c988fd7db50cb2b73a6bfa8770f40afe2072b7818"
-    sha256 arm64_monterey: "101f7677113534f4432b89ff1ca9cd9a9677a1ca15697cf876b7c430c6883b23"
-    sha256 arm64_big_sur:  "c473ded7b091401379daf8b14d076c7e4ea835e0da5915f689c10482e413fc55"
-    sha256 monterey:       "7c8ac2c91c994368d5978770ceeb9f63960bec3b043b4b22538804268f1c0db8"
-    sha256 big_sur:        "fbd81b4642294a6d2362ee03d17315d20c3aefc8aa07731bc9ff01cf9134be96"
-    sha256 catalina:       "82a9465072feede3c7e85f39253901d2eaf2342bdff720ce0c0cf1245e9fafa8"
-    sha256 x86_64_linux:   "bfec788d81176ae3f6e668a741b95db6ed9765c1a27d07504e4e120538fe3df5"
+    sha256 arm64_monterey: "0ad5540e3f2b665958dfa9deaeb1551287d4946be5b143744c0c476cd9e69a71"
+    sha256 arm64_big_sur:  "b40d1cf7f4b28d8633fa6f7d3dc9600edab132a0dde8e2d506bea70411051796"
+    sha256 monterey:       "a4b7ad909b76117a64e76beb3da3206e45c70d006e581f020520fa5210813a6c"
+    sha256 big_sur:        "0abaf443ebb52e23fd027970737ae42d912c66a43b650e5a5ebc5b8abb0483f2"
+    sha256 catalina:       "0d75bbf947da0c0fd231994339f0b2c7d23ec9fa5a04532f3c20733064de5394"
+    sha256 mojave:         "d2ac4631cea6e610b6ae6b9a007b8c5b2141b0ff55c76b57fbacdbb1a7904a9c"
+    sha256 x86_64_linux:   "0ad8f7427437e00cc7e140e52a997d18e8c8bfba665f2f5b1bc308288155b075"
   end
 
   depends_on "boost" => :build
@@ -28,12 +28,6 @@ class Mpdscribble < Formula
   depends_on "libmpdclient"
 
   uses_from_macos "curl"
-
-  # build patch, remove in next release
-  patch do
-    url "https://github.com/MusicPlayerDaemon/mpdscribble/commit/0dbcea25c81f3fdc608f71ef71a9784679fee17f.patch?full_index=1"
-    sha256 "df312bf1b60c371d33c05a6d8c82fb10e702e5eea91ed0dbe5bcee7f4302f550"
-  end
 
   def install
     mkdir "build" do

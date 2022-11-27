@@ -4,45 +4,25 @@ class Texlive < Formula
 
   desc "Free software distribution for the TeX typesetting system"
   homepage "https://www.tug.org/texlive/"
-  url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-source.tar.xz"
-  mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-source.tar.xz"
-  sha256 "5ffa3485e51eb2c4490496450fc69b9d7bd7cb9e53357d92db4bcd4fd6179b56"
+  url "https://github.com/TeX-Live/texlive-source/archive/refs/tags/svn58837.tar.gz"
+  sha256 "0afa6919e44675b7afe0fa45344747afef07b6ee98eeb14ff6a2ef78f458fc12"
   license :public_domain
-  revision 3
+  revision 1
   head "https://github.com/TeX-Live/texlive-source.git", branch: "trunk"
 
   livecheck do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/"
-    regex(/href=.*?texlive[._-]v?(\d+(?:\.\d+)*)[._-]source\.t/i)
-    strategy :page_match do |page, regex|
-      # Match years from directories
-      years = page.scan(%r{href=["']?v?(\d+(?:\.\d+)*)/?["' >]}i)
-                  .flatten
-                  .uniq
-                  .map { |v| Version.new(v) }
-                  .sort
-      next if years.blank?
-
-      # Fetch the page for the newest year directory
-      newest_year = years.last.to_s
-      year_page = Homebrew::Livecheck::Strategy.page_content(URI.join(@url, newest_year))
-      next if year_page[:content].blank?
-
-      # Match version from source tarball filenames
-      year_page[:content].scan(regex).flatten
-    end
+    url :stable
+    regex(%r{href=["']?[^"' >]*?/tag/\D+(\d+(?:\.\d+)*)["' >]}i)
+    strategy :github_latest
   end
 
   bottle do
-    rebuild 3
-    sha256 arm64_ventura:  "09129b9914fd386e7a25365369bda149d639859674b7ceaf215722c58d59fc20"
-    sha256 arm64_monterey: "1e998f152614b4b21f4c8cdce0325cd64579bd22d2a201ea44be37f49e1d1d12"
-    sha256 arm64_big_sur:  "9423fd98a2d79873a6f89fef27d2555f95d9f3020aa432f0fd567fd49c19cef6"
-    sha256 ventura:        "21b570f9314e9827913d30493be4e3d95813c41d478a23d07d7f1495d2ffdd50"
-    sha256 monterey:       "7fd4ec2e1ebfc231c6b4a2b0b38ef720dd1c7ab943de1f8d07829bb0c428ee86"
-    sha256 big_sur:        "bad097cc26ea1a8fcc9969596266f1ec6ed1c9ddadb1063a4b582158d52253b8"
-    sha256 catalina:       "6f6ed35a1ed40069cae4299a4d939c3dbd6378276578da4fab36e63889ff0ead"
-    sha256 x86_64_linux:   "4917ec16ad9c4ae5966f20f9182df8c23d38831481e43b56d067aebb5635ffea"
+    sha256 arm64_monterey: "dadc23bdbb5e8a28e231260a051b412b94aa495aaf276fda2c6412714c1fba99"
+    sha256 arm64_big_sur:  "1bba9c18fcf44f87ad9245d209805192615a439b907a68964bd2a092b661d050"
+    sha256 monterey:       "7972330fb8840fb2ef35e506c202ea47345f47a5b1c75c3eba2b032a6545eb3c"
+    sha256 big_sur:        "0b9c9752210fdaa7146296e98199ac3ce34b3912772a4a7235d9b725bf760af3"
+    sha256 catalina:       "5efff1fce1fd763fe81e56fe34954e5072a372c137cc62c83c7e00c0d9e8f4ac"
+    sha256 x86_64_linux:   "b7ea4c16d38ffa6c4e2fa87d9756a32d1b7748456c48d38f2949044b90ce0669"
   end
 
   depends_on "cairo"
@@ -57,7 +37,7 @@ class Texlive < Formula
   depends_on "libpng"
   depends_on "libxft"
   depends_on "lua"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
   depends_on "mpfr"
   depends_on "openjdk"
   depends_on "openssl@1.1"
@@ -65,8 +45,7 @@ class Texlive < Formula
   depends_on "pixman"
   depends_on "potrace"
   depends_on "pstoedit"
-  depends_on "pygments"
-  depends_on "python@3.11"
+  depends_on "python@3.9"
 
   uses_from_macos "icu4c"
   uses_from_macos "ncurses"
@@ -76,8 +55,8 @@ class Texlive < Formula
 
   on_linux do
     depends_on "pkg-config" => :build
+    depends_on "gcc"
     depends_on "libice"
-    depends_on "libnsl"
     depends_on "libsm"
     depends_on "libx11"
     depends_on "libxaw"
@@ -94,21 +73,18 @@ class Texlive < Formula
   fails_with gcc: "5"
 
   resource "texlive-extra" do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-extra.tar.xz"
-    mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-extra.tar.xz"
-    sha256 "0284cf368947be8cc7becd61c816432a7d301db3c1e682ddc0a180bd3b6d9296"
+    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/texlive-20210325-extra.tar.xz"
+    sha256 "46a3f385d0b30893eec6b39352135d2929ee19a0a81df2441bfcaa9f6c78339c"
   end
 
   resource "install-tl" do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/install-tl-unx.tar.gz"
-    mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/install-tl-unx.tar.gz"
-    sha256 "e67edec49df6b7c4a987a7d5a9b31bcf41258220f9ac841c7a836080cd334fb5"
+    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/install-tl-unx.tar.gz"
+    sha256 "74eac0855e1e40c8db4f28b24ef354bd7263c1f76031bdc02b52156b572b7a1d"
   end
 
   resource "texlive-texmf" do
-    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-texmf.tar.xz"
-    mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-texmf.tar.xz"
-    sha256 "372b2b07b1f7d1dd12766cfc7f6656e22c34a5a20d03c1fe80510129361a3f16"
+    url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/texlive-20210325-texmf.tar.xz"
+    sha256 "ff12d436c23e99fb30aad55924266104356847eb0238c193e839c150d9670f1c"
   end
 
   resource "Module::Build" do
@@ -167,8 +143,8 @@ class Texlive < Formula
   end
 
   resource "URI" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.12.tar.gz"
-    sha256 "66abe0eaddd76b74801ecd28ec1411605887550fc0a45ef6aa744fdad768d9b3"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.10.tar.gz"
+    sha256 "16325d5e308c7b7ab623d1bf944e1354c5f2245afcfadb8eed1e2cae9a0bd0b5"
   end
 
   resource "TimeDate" do
@@ -222,8 +198,8 @@ class Texlive < Formula
   end
 
   resource "HTTP::Request::Common" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Message-6.37.tar.gz"
-    sha256 "0e59da0a85e248831327ebfba66796314cb69f1bfeeff7a9da44ad766d07d802"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Message-6.36.tar.gz"
+    sha256 "576a53b486af87db56261a36099776370c06f0087d179fc8c7bb803b48cddd76"
   end
 
   resource "HTML::Tagset" do
@@ -232,8 +208,8 @@ class Texlive < Formula
   end
 
   resource "HTML::Parser" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.78.tar.gz"
-    sha256 "22564002f206af94c1dd8535f02b0d9735125d9ebe89dd0ff9cd6c000e29c29d"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.76.tar.gz"
+    sha256 "64d9e2eb2b420f1492da01ec0e6976363245b4be9290f03f10b7d2cb63fa2f61"
   end
 
   resource "HTML::TreeBuilder" do
@@ -257,8 +233,8 @@ class Texlive < Formula
   end
 
   resource "File::Listing" do
-    url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Listing-6.15.tar.gz"
-    sha256 "46c4fb9f9eb9635805e26b7ea55b54455e47302758a10ed2a0b92f392713770c"
+    url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Listing-6.14.tar.gz"
+    sha256 "15b3a4871e23164a36f226381b74d450af41f12cc94985f592a669fcac7b48ff"
   end
 
   resource "HTTP::Cookies" do
@@ -267,8 +243,8 @@ class Texlive < Formula
   end
 
   resource "HTTP::Daemon" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.14.tar.gz"
-    sha256 "f0767e7f3cbb80b21313c761f07ad8ed253bce9fa2d0ba806b3fb72d309b2e1d"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.13.tar.gz"
+    sha256 "d184d1f3e51e690d60e4b00195aa69f679169c858f2aab419997c70892014516"
   end
 
   resource "HTTP::Negotiate" do
@@ -287,8 +263,8 @@ class Texlive < Formula
   end
 
   resource "LWP" do
-    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.67.tar.gz"
-    sha256 "96eec40a3fd0aa1bd834117be5eb21c438f73094d861a1a7e5774f0b1226b723"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.61.tar.gz"
+    sha256 "2f69069bd0df0ee222e25d41093bcc42e58d0a45885fba400356454c25621a5f"
   end
 
   resource "CGI" do
@@ -297,8 +273,8 @@ class Texlive < Formula
   end
 
   resource "HTML::Form" do
-    url "https://cpan.metacpan.org/authors/id/S/SI/SIMBABQUE/HTML-Form-6.10.tar.gz"
-    sha256 "df8393e35e495a0839f06a63fb65d6922842c180d260554137728a9f092df9d3"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Form-6.07.tar.gz"
+    sha256 "7daa8c7eaff4005501c3431c8bf478d58bbee7b836f863581aa14afe1b4b6227"
   end
 
   resource "HTTP::Server::Simple" do
@@ -307,8 +283,8 @@ class Texlive < Formula
   end
 
   resource "WWW::Mechanize" do
-    url "https://cpan.metacpan.org/authors/id/S/SI/SIMBABQUE/WWW-Mechanize-2.15.tar.gz"
-    sha256 "91d0dc3235027d19fc485e93833ec92497bc508e31d391eb07ee664f988ca9b3"
+    url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/WWW-Mechanize-2.06.tar.gz"
+    sha256 "d97cd31e35fd1ff7078d3f568b62e3fe3911843a64d3c2d078eebd3ff9b8b38d"
   end
 
   resource "Mozilla::CA" do
@@ -336,22 +312,29 @@ class Texlive < Formula
     sha256 "32aa7271a6bdfedc3330119b3825daddd0aa4b5c936f84ad74eabb932a200a5e"
   end
 
+  resource "Pygments" do
+    url "https://files.pythonhosted.org/packages/94/9c/cb656d06950268155f46d4f6ce25d7ffc51a0da47eadf1b164bbf23b718b/Pygments-2.11.2.tar.gz"
+    sha256 "4e426f72023d88d03b2fa258de560726ce890ff3b630f88c21cbb8b2503b8c6a"
+  end
+
   def install
-    python3 = "python3.11"
     # Install Perl resources
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
     ENV["PERL_MM_USE_DEFAULT"] = "1"
     ENV["OPENSSL_PREFIX"] = Formula["openssl@1.1"].opt_prefix
 
     tex_resources = %w[texlive-extra install-tl texlive-texmf]
+    python_resources = %w[Pygments]
 
     resources.each do |r|
       r.stage do
         next if tex_resources.include? r.name
 
+        next if python_resources.include? r.name
+
         if File.exist? "Makefile.PL"
           system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}",
-                 "CCFLAGS=-I#{Formula["freetype"].opt_include}/freetype2"
+            "CCFLAGS=-I#{Formula["freetype"].opt_include}/freetype2"
           system "make"
           system "make", "install"
         else
@@ -361,6 +344,10 @@ class Texlive < Formula
         end
       end
     end
+
+    # Install Python resources
+    venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resource("Pygments")
 
     # Install TeXLive resources
     resource("texlive-extra").stage do
@@ -385,14 +372,29 @@ class Texlive < Formula
 
     # Set up config files to use the correct path for the TeXLive root
     inreplace buildpath/"texk/kpathsea/texmf.cnf",
-              "TEXMFROOT = $SELFAUTOPARENT", "TEXMFROOT = $SELFAUTODIR/share"
+      "TEXMFROOT = $SELFAUTOPARENT", "TEXMFROOT = $SELFAUTODIR/share"
     inreplace share/"texmf-dist/web2c/texmfcnf.lua",
-              "selfautoparent:texmf", "selfautodir:share/texmf"
+      "selfautoparent:texmf", "selfautodir:share/texmf"
 
-    # Fix build failure due to conflicting config.h files.  Reported upstream here:
-    # https://www.tug.org/pipermail/tex-live/2022-May/048183.html
-    inreplace buildpath/"texk/web2c/Makefile.in", "$(DEFAULT_INCLUDES) $(INCLUDES) $(libmfluapotrace_a_CPPFLAGS)",
-              "$(libmfluapotrace_a_CPPFLAGS) $(DEFAULT_INCLUDES) $(INCLUDES)"
+    # Fix path resolution in some scripts.  The fix for tlmgr.pl, TLUTils.pm, and
+    # tlshell is being upstreamed here: https://www.tug.org/pipermail/tex-live/2021-September/047394.html.
+    # The fix for cjk-gs-integrate.pl is being upstreamed here: https://github.com/texjporg/cjk-gs-support/pull/50.
+    # The author of crossrefware and pedigree-perl has been contacted by email.
+    pathfix_files = %W[
+      #{buildpath}/texk/texlive/linked_scripts/cjk-gs-integrate/cjk-gs-integrate.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bbl2bib.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bibdoiadd.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bibmradd.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/biburl2doi.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/bibzbladd.pl
+      #{buildpath}/texk/texlive/linked_scripts/crossrefware/ltx2crossrefxml.pl
+      #{buildpath}/texk/texlive/linked_scripts/texlive/tlmgr.pl
+      #{buildpath}/texk/texlive/linked_scripts/pedigree-perl/pedigree.pl
+      #{buildpath}/texk/texlive/linked_scripts/tlshell/tlshell.tcl
+      #{share}/tlpkg/TeXLive/TLUtils.pm
+    ]
+
+    inreplace pathfix_files, "SELFAUTOPARENT", "TEXMFROOT"
 
     args = std_configure_args + [
       "--disable-dvisvgm", # needs its own formula
@@ -475,15 +477,15 @@ class Texlive < Formula
     end
 
     # Wrap some Python scripts so they can find dependencies and fix depythontex.
-    python_path = libexec/Language::Python.site_packages(python3)
+    python_path = libexec/Language::Python.site_packages("python3")
     ENV.prepend_path "PYTHONPATH", python_path
     rm bin/"pygmentex"
     rm bin/"pythontex"
     rm bin/"depythontex"
     (bin/"pygmentex").write_env_script(share/"texmf-dist/scripts/pygmentex/pygmentex.py",
-                                       PYTHONPATH: ENV["PYTHONPATH"])
+      PYTHONPATH: ENV["PYTHONPATH"])
     (bin/"pythontex").write_env_script(share/"texmf-dist/scripts/pythontex/pythontex3.py",
-                                       PYTHONPATH: ENV["PYTHONPATH"])
+      PYTHONPATH: ENV["PYTHONPATH"])
     ln_sf share/"texmf-dist/scripts/pythontex/depythontex3.py", bin/"depythontex"
 
     # Rewrite shebangs in some Python scripts so they use brewed Python.
@@ -549,7 +551,7 @@ class Texlive < Formula
       \\begin{equation} \\label{eu_eqn}
       e^{\\pi i} + 1 = 0
       \\end{equation}
-      The beautiful equation \\ref{eu_eqn} is known as Euler's identity.
+      The beautiful equation \\ref{eu_eqn} is known as the Euler equation.
 
       \\section*{Lorem Ipsum}
       \\lipsum[3]

@@ -7,12 +7,10 @@ class Xctool < Formula
   head "https://github.com/facebookarchive/xctool.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, catalina:    "0cf8c734d095ab97b2d5537b67d3f13e6ff8f38c46503ea02b9eba98ff35942c"
-    sha256 cellar: :any, mojave:      "8b116346555e2616619e577d3ce3c69a24d66cb505ee048ba316ab2880736043"
-    sha256 cellar: :any, high_sierra: "055172ba606bf94416513e418007f849a08ff24a3b3484fb67c1b4f854123bb9"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2021-05-24", because: :repo_archived
 
   depends_on :macos
   depends_on xcode: "7.0"

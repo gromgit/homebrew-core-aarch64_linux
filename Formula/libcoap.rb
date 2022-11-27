@@ -1,19 +1,18 @@
 class Libcoap < Formula
   desc "Lightweight application-protocol for resource-constrained devices"
   homepage "https://github.com/obgm/libcoap"
-  url "https://github.com/obgm/libcoap/archive/v4.3.1.tar.gz"
-  sha256 "074a71deca01e06d3acb00a1416d0fbeb87d130f40a3c0f6fda3a5c711855dca"
+  url "https://github.com/obgm/libcoap/archive/v4.3.0.tar.gz"
+  sha256 "1a195adacd6188d3b71c476e7b21706fef7f3663ab1fb138652e8da49a9ec556"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3bad1beba15ee306b2b2f6245d889aef8c9477ce52f6eb5223338d1390b0e156"
-    sha256 cellar: :any,                 arm64_monterey: "7dd5d4c8918ca7bf9f05c86d020ccfda6fd9cbab6770aa8b693c818b3c4155cc"
-    sha256 cellar: :any,                 arm64_big_sur:  "876e1c10f9a7fab51e2462db44e95b23f1d8ac0085c9cfe02b11181ea64988f0"
-    sha256 cellar: :any,                 ventura:        "71f33b9d774289ee9197f4b4cb6568051732abc784ec69ee550a8973c07b071c"
-    sha256 cellar: :any,                 monterey:       "f275fc1b8e5aca8b3c179ab40d9a30058df7a501e62530dcd2f5fdf8d47e09c7"
-    sha256 cellar: :any,                 big_sur:        "ff567b66ad0ad10162c4f54561a4a0eaf97fe562efb6ff6b68e72c3973b3177d"
-    sha256 cellar: :any,                 catalina:       "b20f8aa33cdb7f91bff0215748b7c14f10952e7b03a3c56bb9f021209489afc4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69dfa73e553e3aa8e22c312a8163b511cf2f495ec99f8d18e18790f4b40da08a"
+    sha256 cellar: :any,                 arm64_monterey: "76d9f7fd3f8d00e43c75bf88360d7da28ec62ab5185e728cf19438b3bd79aa49"
+    sha256 cellar: :any,                 arm64_big_sur:  "57300cff98f6ad59e6c4cf95de26bf0a4dbcf0fb64d2d911d6bdddadf63da1dc"
+    sha256 cellar: :any,                 monterey:       "7f5739f30b40e5df1af1ffb15fbfc81402d0fd9bfd457e027ce7f7715647ff1b"
+    sha256 cellar: :any,                 big_sur:        "f82b84bbe8f8db3b33810627b2a6d68462fc93a82daa6385a79afe7738534ae5"
+    sha256 cellar: :any,                 catalina:       "4e2fa796da56bec1271a091dc6262b812ece25b989c62be4e4d4d08943dfbe7d"
+    sha256 cellar: :any,                 mojave:         "09ad4d7b446860842318c4f21a4ee112e1dda916a36f9023811d7abb7bd66001"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46a37f7b8518d442a2d1781a0d794d8725e9417d8009daff0fe0771282c3fc4d"
   end
 
   depends_on "autoconf" => :build
@@ -21,7 +20,7 @@ class Libcoap < Formula
   depends_on "doxygen" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     system "./autogen.sh"
@@ -35,8 +34,8 @@ class Libcoap < Formula
   test do
     %w[coap-client coap-server].each do |src|
       system ENV.cc, pkgshare/"examples/#{src}.c",
-        "-I#{Formula["openssl@3"].opt_include}", "-I#{include}",
-        "-L#{Formula["openssl@3"].opt_lib}", "-L#{lib}",
+        "-I#{Formula["openssl@1.1"].opt_include}", "-I#{include}",
+        "-L#{Formula["openssl@1.1"].opt_lib}", "-L#{lib}",
         "-lcrypto", "-lssl", "-lcoap-3-openssl", "-o", src
     end
 

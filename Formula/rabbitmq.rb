@@ -1,8 +1,8 @@
 class Rabbitmq < Formula
   desc "Messaging broker"
   homepage "https://www.rabbitmq.com"
-  url "https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.11.3/rabbitmq-server-generic-unix-3.11.3.tar.xz"
-  sha256 "8006e6f95462f2c6b01205d2a6913dcbc8424a55d7f58579aec1f8f0c6cfa228"
+  url "https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.10.0/rabbitmq-server-generic-unix-3.10.0.tar.xz"
+  sha256 "5058fc0d33305a016b0c08c9a54e328f63f51267366f07c31ce8d0a9cef508ea"
   license "MPL-2.0"
 
   livecheck do
@@ -11,7 +11,7 @@ class Rabbitmq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "103b120f5eb997342ddfc4410121005e70098b1b83eee423b74856604fc62bad"
+    sha256 cellar: :any_skip_relocation, all: "ba28125d2a395eaa225e96177b5dacc68519fee5abe28ef079ceabf83e284ad6"
   end
 
   depends_on "python@3.10" => :build
@@ -51,8 +51,7 @@ class Rabbitmq < Formula
 
     sbin.install prefix/"plugins/rabbitmq_management-#{version}/priv/www/cli/rabbitmqadmin"
     (sbin/"rabbitmqadmin").chmod 0755
-    generate_completions_from_executable(sbin/"rabbitmqadmin", "--bash-completion", shells: [:bash],
-                                         base_name: "rabbitmqadmin", shell_parameter_format: :none)
+    (bash_completion/"rabbitmqadmin.bash").write Utils.safe_popen_read("#{sbin}/rabbitmqadmin", "--bash-completion")
   end
 
   def caveats

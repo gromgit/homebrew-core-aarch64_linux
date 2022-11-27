@@ -1,22 +1,19 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.11.5.tar.gz"
-  sha256 "8a71f9e44681e05790f8b6ca7c9e1b2390ef80cb4403218e7cca734ea6725f4c"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.10.5.tar.gz"
+  sha256 "36db3cf393c4f36e38560f33002a59a5efab4f8fe23a309c85be3da377826d6f"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "377e2126c8b2cea7d5bc1a717f30b22c61048afea5a37bc3600e841c17d64032"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c12dd661e474a9e08e0d56390e735b632872f4a4529f0e699d238850d5840da"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8b3bdcbff336e9573e376a86d89e1b88239dcbab6f070c43d8860e8fb28071a"
-    sha256 cellar: :any_skip_relocation, ventura:        "cef386a6e330182dbef50cafd262c0d7b1e45cc69ef79b54975fa2acfac3a0ef"
-    sha256 cellar: :any_skip_relocation, monterey:       "b21f900f66628582be6173226f70e041d1ea90e68d4c8bf57343a99e70f41a3b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a4d8637961d7f0aa3934ad571a9a0a4946a4ec12041ba4309ee8ffb920d1ea3c"
-    sha256 cellar: :any_skip_relocation, catalina:       "d10d3c0baaa8c35a49a927062c7fd054bbdb8f0e90971b9349c1d81b23277aed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af1ed2f23127c41210a171328a0e18caf2e2abfed788f441d458deae59fe99e2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "30c03a15648cb752351194dd1e5b709f183d94b26678b25391a61167d432e98c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "780f8b540269323ed593f84b17e9dbe502f6d36ba016b7bc853d5d4d3f68fe9f"
+    sha256 cellar: :any_skip_relocation, monterey:       "57dcf6f1e8d756a766ccbd316363728859abbf9ae50b95d00b5324c1ad9a7bb1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d86c38f0b807dc5b15139ee8e1ab8a0c5765485a467ede319bf47f2252b6d9f4"
+    sha256 cellar: :any_skip_relocation, catalina:       "099a291ab30e1438a1bab66849e53dec3bd44b48c2a51c503100534582fa2ba7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c91d27feea555d4ff60c1a598d6e517bcf577ba81b7fab2ab2fa41185fe1a061"
   end
 
-  depends_on "cmake" => :build # For `boring-sys` crate in `libsignal-client`
   depends_on "gradle" => :build
   depends_on "protobuf" => :build
   # the libsignal-client build targets a specific rustc listed in the file
@@ -27,20 +24,19 @@ class SignalCli < Formula
 
   depends_on "openjdk"
 
-  uses_from_macos "llvm" => :build # For `libclang`, used by `boring-sys` crate
   uses_from_macos "zip" => :build
 
   # per https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#libsignal-client
   # we want the specific libsignal-client version from 'signal-cli-#{version}/lib/libsignal-client-X.X.X.jar'
   resource "libsignal-client" do
-    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.21.1.tar.gz"
-    sha256 "1dd527ea0f5e7bb37c855b2e092d8b6d3ae496fd22f2c9684501c29c36c106cc"
+    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.15.0.tar.gz"
+    sha256 "48e0b8d92c4482a2a79045bc72cf538421ea461f0cbfa1cdc2351678b188350a"
   end
 
   def install
     system "gradle", "build"
     system "gradle", "installDist"
-    libexec.install (buildpath/"build/install/signal-cli").children
+    libexec.install Dir["build/install/signal-cli/*"]
     (libexec/"bin/signal-cli.bat").unlink
     (bin/"signal-cli").write_env_script libexec/"bin/signal-cli", Language::Java.overridable_java_home_env
 
@@ -51,10 +47,7 @@ class SignalCli < Formula
     resource("libsignal-client").stage do |r|
       # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#building-libsignal-client-yourself
 
-      libsignal_client_jar = libexec.glob("lib/libsignal-client-*.jar").first
-      embedded_jar_version = Version.new(libsignal_client_jar.to_s[/libsignal-client-(.*)\.jar$/, 1])
-      odie "#{r.name} needs to be updated to #{embedded_jar_version}!" unless embedded_jar_version == r.version
-
+      libsignal_client_jar = libexec/"lib/libsignal-client-#{r.version}.jar"
       # rm originally-embedded libsignal_jni lib
       system "zip", "-d", libsignal_client_jar, "libsignal_jni.so", "libsignal_jni.dylib", "signal_jni.dll"
 

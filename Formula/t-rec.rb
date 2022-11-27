@@ -1,19 +1,17 @@
 class TRec < Formula
   desc "Blazingly fast terminal recorder that generates animated gif images for the web"
   homepage "https://github.com/sassman/t-rec-rs"
-  url "https://github.com/sassman/t-rec-rs/archive/v0.7.5.tar.gz"
-  sha256 "384230f2246a869cd8132a8fa7663051c1b4d5786a27cd34e184f837b8d5c5d8"
+  url "https://github.com/sassman/t-rec-rs/archive/v0.7.3.tar.gz"
+  sha256 "8da8681b6632a95d05c6461fcbf0e4b9dc93e523957c8b34aeba3fc08aeddbcc"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "72d31a1b73c2a3c4a9107be704a910fdf302ecbfc5b68795a253e0ed383767ce"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed68d59b8c44bbe9f61703ec48a509b37016c3e9d4259e88a3a8be67521f41d5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9dc160993cf6715e05a1286bb888eb1703b1da261c8f43ec29109271a40e153a"
-    sha256 cellar: :any_skip_relocation, ventura:        "96f6a8e6b8067b2f88d9111223d212265760690df0ecd73624855a7a8d10e304"
-    sha256 cellar: :any_skip_relocation, monterey:       "2adc34152d4b1b50b314778d5236906e5e07f4e31232a45a3302c1a64abcd191"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ca333ea15d2e13356c245d293ae241f2a855240ee851ee70112cf444edd2a682"
-    sha256 cellar: :any_skip_relocation, catalina:       "8a4093d1a9512e2b09cdacb726a38fede7e84f74e20985aad5d243c4144ea112"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f035ede2751d186b99c826a7727a90b83a71aa4e4c9961b695e56aa586f34541"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3bbd03ac1450b9374153511aa656e6bdf042c4eab97efab328b0c2545c7b3a69"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e3517d2237d18fb22f885564d3e39412c27c616c0bc7c827b20067b8f93b995"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1a2e54084ffc7671e3719090cf74984ff3cdb9c56fc14dfc76b7918b65b60ea"
+    sha256 cellar: :any_skip_relocation, big_sur:        "777cb5fda48e7c58855c91c321991a07a7608fdf80805a9dbeeedda22110707e"
+    sha256 cellar: :any_skip_relocation, catalina:       "6239d0a1d3118aad1b70bf982bd5d9473dc9b73a9aeda32daab34f679d76a133"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8dd4a1546273b6940595a713ab26df6e4534a7924ba8781fba50e4cdd735bda"
   end
 
   depends_on "rust" => :build

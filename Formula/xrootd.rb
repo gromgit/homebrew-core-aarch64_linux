@@ -1,8 +1,8 @@
 class Xrootd < Formula
   desc "High performance, scalable, fault-tolerant access to data"
   homepage "https://xrootd.slac.stanford.edu/"
-  url "https://xrootd.slac.stanford.edu/download/v5.5.1/xrootd-5.5.1.tar.gz"
-  sha256 "3556d5afcae20ed9a12c89229d515492f6c6f94f829a3d537f5880fcd2fa77e4"
+  url "https://xrootd.slac.stanford.edu/download/v5.4.2/xrootd-5.4.2.tar.gz"
+  sha256 "d868ba5d8b71ec38f7a113d2d8f3e25bbcedc1bc23d21bba1686ddfdb2b900c1"
   license "LGPL-3.0-or-later"
   head "https://github.com/xrootd/xrootd.git", branch: "master"
 
@@ -12,26 +12,22 @@ class Xrootd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2977803b0ad82bab2bcd695a2367af781a3e9e97d76507edc45a7eb862a8ff57"
-    sha256 cellar: :any,                 arm64_monterey: "1c167ab2da3c4f78eaa80b5306ee8cbf015a8d29db420bfcd79eecfd9d53a514"
-    sha256 cellar: :any,                 arm64_big_sur:  "8b87fe62c1ce8698d7cb34fec96eaf2b5333719027638895d6264413ed21bae8"
-    sha256 cellar: :any,                 ventura:        "ddfa75293506519ded76e9d0c2611736d98ab9750a2cec180ec2d98e5ca39f4e"
-    sha256 cellar: :any,                 monterey:       "19af39f982ea8059f26bb6fe352cd0b0bba7bef3bda1648fb5a34849dbeb3487"
-    sha256 cellar: :any,                 big_sur:        "c4d34d6f0aadb5a94f1b9338ed839009f0d7236761b51e7bb88a1f2f625dba40"
-    sha256 cellar: :any,                 catalina:       "56b5e1f2161ac941a50a656134024aeb0d924fc8477a6f158fe2db2b226340a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e665252ff42f1e3283c1ca42ea94d28ec43641fd8665d67db4dd833cb070ddbd"
+    sha256 cellar: :any,                 arm64_monterey: "53c07b0982bb005408782eb035d3e815a8cd0d0bff7f258b1ead626c39ccba66"
+    sha256 cellar: :any,                 arm64_big_sur:  "ed558e22a0a4450671776a041abee0523dc0d388bc84d278704c314cf562e0c3"
+    sha256 cellar: :any,                 monterey:       "4df6a692c33fd59f33f0a213d6ee44480a76acc95af48ba157aabcb1bbc0b4ad"
+    sha256 cellar: :any,                 big_sur:        "c2bfc586c71c003c98148888293d98237d573c43b31d2d827d588c269a12e87b"
+    sha256 cellar: :any,                 catalina:       "89f0aa461ed5d48b54cce126c1a7b4d72a61863f3220d1ad893592ef541e32b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cab5ebc73b8bbb6b381a2f2e3b217de962e649df4f17dcb6e8701a205725c90"
   end
 
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
   depends_on "readline"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "pkg-config" => :build
     depends_on "util-linux"
   end
 

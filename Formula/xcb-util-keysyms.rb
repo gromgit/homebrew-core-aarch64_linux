@@ -1,19 +1,18 @@
 class XcbUtilKeysyms < Formula
   desc "Standard X constants and conversion to/from keycodes"
   homepage "https://xcb.freedesktop.org"
-  url "https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.1.tar.gz"
-  sha256 "1fa21c0cea3060caee7612b6577c1730da470b88cbdf846fa4e3e0ff78948e54"
+  url "https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.0.tar.bz2"
+  sha256 "0ef8490ff1dede52b7de533158547f8b454b241aa3e4dcca369507f66f216dd9"
   license "X11"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4d62cd700f85b3ba39740bd2dd9872d45aef018e603db2907f9bd1c3e6213d88"
-    sha256 cellar: :any,                 arm64_monterey: "8f81bf9c5f646f94ab25dfc84953ae28fc166316263eea913b00cf9e569d455a"
-    sha256 cellar: :any,                 arm64_big_sur:  "fab1de02f3c8f6ca3b93921678f2c5c7317f230b05b27790b805d8e2585a1901"
-    sha256 cellar: :any,                 ventura:        "1d54ce19d60722d3b41fe752c4703876c8a17fa62d1be1d8840c8a943374afd7"
-    sha256 cellar: :any,                 monterey:       "246f9361f2802f7dac2fdc20c762c2cb50a86c0393b519529b52201e69fff053"
-    sha256 cellar: :any,                 big_sur:        "0e25691158d5d28c473634d285e0fbb7ae59eeca5ec55305ea814536e03cd069"
-    sha256 cellar: :any,                 catalina:       "9b08f8c1ee577cea420903ab5593ed8367eedd92da4cddc0d4c6ef2235dd7c76"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "269947922f6128006e0201a6972c1cf622dc93200268c0dfa5801b8899902c35"
+    sha256 cellar: :any,                 arm64_monterey: "69a84ccc0447bbdc514eedac2af0215a24d48311bf9c246afdd0bc8ede0ac0fd"
+    sha256 cellar: :any,                 arm64_big_sur:  "dd74abb9e12be716ae5d6007a734710eb4b1974c34c14b851cf0184079b1136f"
+    sha256 cellar: :any,                 monterey:       "33eedf949073b6c2cd62f03119b3a99951aa27b9c5bed62d705779c3dd8d1f37"
+    sha256 cellar: :any,                 big_sur:        "702425d6d222f48788f38ab247dd84664f5a4d349484634a9f775b64045cbaca"
+    sha256 cellar: :any,                 catalina:       "6ad4d1328c04a6ef44033161542d0f27f94160cb326af4572c86473e8d0cba09"
+    sha256 cellar: :any,                 mojave:         "a6abcd84a8ded46e939d3551642e08a87fddb9fd8a2744071351086ddd35170c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61a2fd627120ba5f0c2112dee13affe8f9fc6d4f65ca9160b2e196522181475b"
   end
 
   head do

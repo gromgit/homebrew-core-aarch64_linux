@@ -2,8 +2,8 @@ class Openj9 < Formula
   desc "High performance, scalable, Java virtual machine"
   homepage "https://www.eclipse.org/openj9/"
   url "https://github.com/eclipse-openj9/openj9.git",
-      tag:      "openj9-0.35.0",
-      revision: "e04a7f6c1c365a6b375deb5f641c72309b170b95"
+      tag:      "openj9-0.32.0",
+      revision: "9a84ec34ed321967cdbe67b29ddcd732b591d051"
   license any_of: [
     "EPL-2.0",
     "Apache-2.0",
@@ -17,12 +17,9 @@ class Openj9 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "9570aad125859a5ab095905d6cdc64e2f537dddc8762419d9bea87230c045cba"
-    sha256 cellar: :any, arm64_big_sur:  "a45ff6f91ee86d0fcc2bfbd3ce83f4aea20715aa01df3e01680f163b74e36c24"
-    sha256 cellar: :any, ventura:        "2763ff46d605b2a7173fc85ee04413f111f800343779644d698a86f54988274d"
-    sha256 cellar: :any, monterey:       "a1ec2be6a1104b63db5dd1da2c71da3a746478cfca5a6037eb6744426dd22a89"
-    sha256 cellar: :any, big_sur:        "432828659e46fed219dcd4ce9e89a16555c054f85077b001f67b18dcbddcd145"
-    sha256 cellar: :any, catalina:       "89d89fc29751a74527f9d4a465a9a36adccb19a5935ef0e70e0ddea864f0058c"
+    sha256 cellar: :any, monterey: "bfb85bf3b8fb2467c09737099c9c6d7bad7ac7f2403a788fe7c0378b6411cab4"
+    sha256 cellar: :any, big_sur:  "1758d93cfaef40edff506f410a86da434085c4a9c6647fc40084150387bb7be6"
+    sha256 cellar: :any, catalina: "fefdcb19393018f7f9ecb749ecbf3681da8f8790eb3d774b767e53670a342292"
   end
 
   keg_only :shadowed_by_macos
@@ -30,12 +27,15 @@ class Openj9 < Formula
   depends_on "autoconf" => :build
   depends_on "bash" => :build
   depends_on "cmake" => :build
+  depends_on "nasm" => :build if Hardware::CPU.intel?
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on arch: :x86_64 # https://github.com/eclipse-openj9/openj9/issues/11164
+
   depends_on "fontconfig"
   depends_on "giflib"
   depends_on "harfbuzz"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "little-cms2"
 
@@ -58,22 +58,11 @@ class Openj9 < Formula
     depends_on "numactl"
   end
 
-  on_intel do
-    depends_on "nasm" => :build
-  end
-
   # From https://github.com/eclipse-openj9/openj9/blob/openj9-#{version}/doc/build-instructions/
-  # We use JDK 17 to bootstrap on Apple Silicon since there is no JDK 16 prebuilt.
   resource "boot-jdk" do
     on_macos do
-      on_arm do
-        url "https://github.com/AdoptOpenJDK/semeru17-binaries/releases/download/jdk-17.0.4.1%2B1_openj9-0.33.1/ibm-semeru-open-jdk_aarch64_mac_17.0.4.1_1_openj9-0.33.1.tar.gz"
-        sha256 "50e4c324e7ffcf18c2e3ea7b1bfa870672203dab3fe61520c09fb2bdbe81f2c0"
-      end
-      on_intel do
-        url "https://github.com/AdoptOpenJDK/semeru16-binaries/releases/download/jdk-16.0.2%2B7_openj9-0.27.0/ibm-semeru-open-jdk_x64_mac_16.0.2_7_openj9-0.27.0.tar.gz"
-        sha256 "89e807261145243a358a2a626f64340944c03622f34eaa35429053e2085d7aef"
-      end
+      url "https://github.com/AdoptOpenJDK/semeru16-binaries/releases/download/jdk-16.0.2%2B7_openj9-0.27.0/ibm-semeru-open-jdk_x64_mac_16.0.2_7_openj9-0.27.0.tar.gz"
+      sha256 "89e807261145243a358a2a626f64340944c03622f34eaa35429053e2085d7aef"
     end
     on_linux do
       url "https://github.com/AdoptOpenJDK/semeru16-binaries/releases/download/jdk-16.0.2%2B7_openj9-0.27.0/ibm-semeru-open-jdk_x64_linux_16.0.2_7_openj9-0.27.0.tar.gz"
@@ -83,14 +72,14 @@ class Openj9 < Formula
 
   resource "omr" do
     url "https://github.com/eclipse-openj9/openj9-omr.git",
-        tag:      "openj9-0.35.0",
-        revision: "85a21674fdf30403b75c3000a4dc10605ca52ba2"
+        tag:      "openj9-0.32.0",
+        revision: "ab24b6666596140516d3f240486aa1c84a726775"
   end
 
   resource "openj9-openjdk-jdk" do
     url "https://github.com/ibmruntimes/openj9-openjdk-jdk17.git",
-        tag:      "openj9-0.35.0",
-        revision: "32d2c409a3325231f58eed81de0f0f1a229b43d6"
+        branch:   "v0.32.0-release",
+        revision: "9a84ec34ed321967cdbe67b29ddcd732b591d051"
   end
 
   def install
@@ -146,9 +135,6 @@ class Openj9 < Formula
         --with-fontconfig=#{Formula["fontconfig"].opt_prefix}
       ]
     end
-    # Ref: https://github.com/eclipse-openj9/openj9/issues/13767
-    # TODO: Remove once compressed refs mode is supported on Apple Silicon
-    config_args << "--with-noncompressedrefs" if OS.mac? && Hardware::CPU.arm?
 
     ENV["CMAKE_CONFIG_TYPE"] = "Release"
 

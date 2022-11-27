@@ -4,27 +4,23 @@ class Sz81 < Formula
   url "https://downloads.sourceforge.net/project/sz81/sz81/2.1.7/sz81-2.1.7-source.tar.gz"
   sha256 "4ad530435e37c2cf7261155ec43f1fc9922e00d481cc901b4273f970754144e1"
   license "GPL-2.0"
-  revision 1
   head "https://svn.code.sf.net/p/sz81/code/sz81"
 
   bottle do
-    sha256 arm64_ventura:  "b69dac8446f5aa0d3939925eac7dc0b8ef904ee5b437b86600ac697a15bd80c2"
-    sha256 arm64_monterey: "388474d15ee05fa83bb0517e807838b65b84ae022b7854ccd52cf5a8b8497926"
-    sha256 arm64_big_sur:  "a0e1bf1c53a8d7412894cc05ea871514c3e2078bf1698551c78c74a9f02c66be"
-    sha256 ventura:        "aa2af256cfba3c34e59449c8f80c452c11955abff1eacac534eb2db09beac044"
-    sha256 monterey:       "2e4b260f47d8079aeda161b05533219e1074ed4e9ec8f8dbff8a495170d4e70a"
-    sha256 big_sur:        "3fab5d79a3994f71580732051ab9cb927927388850d1323245720c638642e2e0"
-    sha256 catalina:       "d5cf814d1ad80e3487bec11a5a1d79adef5dae89dc099c7ee2abef7ffe11e4db"
-    sha256 x86_64_linux:   "99dd0e53ec8daf391aa95acda0fa68578248088e6ab944f5615607a18cddfd82"
+    sha256 arm64_big_sur: "d2a39ef1e7b6a82ac49f7da0a5ba0d9cb0eb8367d45c1665d818887254e75112"
+    sha256 big_sur:       "77f285b59f8f2d758ff01086455bdfc267c26d4ccfb960d68e680410915cf74a"
+    sha256 catalina:      "97f54508894d2dca7948b2798d0c76164a1ebea685a14f8be12e992883348455"
+    sha256 mojave:        "b90dc9986a1f3f6fa93967745f331d55d4e8837e05e47b9b28d3ee9245e561d3"
+    sha256 high_sierra:   "c23507f4f58b7144b2b4c0dd42ed6ae22a6d65661d15ea024ab8b65fd2a774ba"
+    sha256 sierra:        "853475dfc7991beea12b01669e81fc35ce10e6a9b067716eb026e0ff693d5c4c"
+    sha256 el_capitan:    "7a9b6ffa108486dea9514df6fbdd820a0e7b829c893ecb1b76a1b69ca8f39a21"
+    sha256 yosemite:      "a7f7cc5af1a1a42449da3169e18587df907369c94debf6bb15edba62acf0e199"
+    sha256 x86_64_linux:  "a9d7763f36159bd7cbba2ca56357e61de0dc72fe906c2f6e2feb53d9f14a941c"
   end
 
-  depends_on "sdl12-compat"
+  depends_on "sdl"
 
   def install
-    # Work around failure from GCC 10+ using default of `-fno-common`
-    # /usr/bin/ld: common.o:(.bss+0x127e0): multiple definition of `sdl_zx80rom'
-    ENV.append_to_cflags "-fcommon" if OS.linux?
-
     args = %W[
       PREFIX=#{prefix}
       BINDIR=#{bin}

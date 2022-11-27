@@ -4,7 +4,6 @@ class Hdf5 < Formula
   url "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.2/src/hdf5-1.12.2.tar.bz2"
   sha256 "1a88bbe36213a2cea0c8397201a459643e7155c9dc91e062675b3fb07ee38afe"
   license "BSD-3-Clause"
-  revision 2
   version_scheme 1
 
   # This regex isn't matching filenames within href attributes (as we normally
@@ -16,14 +15,12 @@ class Hdf5 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "06113cd41180b8047be4a086f8a06ad9912a44520e95915a9aab75dc13e57c9d"
-    sha256 cellar: :any,                 arm64_monterey: "be3e935473b18d51e1d8fcd3ac08ab24084bad5304fca18f55811ffd21bb4c74"
-    sha256 cellar: :any,                 arm64_big_sur:  "86cb013d39a9b59dc71fbcdb12fcc2051f2e3fa3abcc47e49a44b9447ada3a49"
-    sha256 cellar: :any,                 ventura:        "81645c3e11c047ed7c9d43ae478ede4d700d939c3dc90f5605a9631c84ce32f7"
-    sha256 cellar: :any,                 monterey:       "4857771f10068ad7bde8c0fd7bad17069a3ccd58862a0ab19ce1f093dc173ab4"
-    sha256 cellar: :any,                 big_sur:        "42b85f81e839ad8e5c0667d13b55ab56e83336a00809538c4bbb84c72825c00d"
-    sha256 cellar: :any,                 catalina:       "c4a7d6bc2b3c233b802f8584e30236eb7d62f911274f93c99321bcae61df49cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "308e114d6b3c43eec5e6933d2fd823d59dc1ec0e0444598278f9599cacd73e28"
+    sha256 cellar: :any,                 arm64_monterey: "ef569e1536a1ee2051380aed7d89284a1baace5b1c0b66280e7905fa852a7992"
+    sha256 cellar: :any,                 arm64_big_sur:  "7ffeb068662160d8f844154198a257f0f545c1972b76f16cf8fdcbfc3c44e4f4"
+    sha256 cellar: :any,                 monterey:       "42715c0074ee5c1afc370a70bb669ed01a384b40f26a2b97661cb94e0e6d8702"
+    sha256 cellar: :any,                 big_sur:        "75b6c8d5fd1c1e296e31b6a41d2c3c0e0b1de08632d4b6bce6b6b50adb25c6f3"
+    sha256 cellar: :any,                 catalina:       "fcd9f1dfc408887eb131a56c2fa9963f64edf756f620d58e2d8ad071f29eb9f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce1e43594ac459f4eaaafe9a979d7109d1003f613efc22d5e0571a93ce477a1a"
   end
 
   depends_on "autoconf" => :build

@@ -2,36 +2,31 @@ class JingTrang < Formula
   desc "Schema validation and conversion based on RELAX NG"
   homepage "http://www.thaiopensource.com/relaxng/"
   url "https://github.com/relaxng/jing-trang.git",
-      tag:      "V20220510",
-      revision: "84ec6ad578d6e0a77342baa5427851f98028bfd8"
+      tag:      "V20181222",
+      revision: "a3ec4cd650f48ec00189578f314fbe94893cd92d"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5dcb20d5192ca4d965c42beae8adab82fc8b919ee96a11d2d315a06e7aa214d6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ee7b261bf84183f59e0c0b8d37c8fe8802297eaf894a5d132cf58a15b66c57ba"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a22bf4effa32d1b17b54a975e7b8dc7ca08b9991696fee7e9d95d649d6a021ec"
-    sha256 cellar: :any_skip_relocation, monterey:       "6e5d22a93244e1234b68ff9aec22c9f757def6cdfd127f00ecf9c426071f321c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c44cb54e793d544152dd0cb28564d52a731da574aa704e4197f21c04097875a1"
-    sha256 cellar: :any_skip_relocation, catalina:       "7dcf958640d82be13d25eaebd84af8f1db6f151ada7c942609a58a14dedb5c5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4eed5e67a543cf3259aed905ee2a34be05ccc664e5744395609d1d7c2a093d35"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f0bfd7ca4e0fb2e0a60df34fdb19d0ede3b2338299f369a4c577357e3c5334df"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a3f51890fe283b8408e95ecad3b5a6b0d9708fc73b4b6427cb333d08d8b4464"
+    sha256 cellar: :any_skip_relocation, monterey:       "2b41d463c8dc2c3e870b0818ed31b0d6bc93122cf1039875cbcfe41ca578f74a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fbfaf15a1309a394ba34f78a6fd28062e56c05d0f118061031cb84a1f0cd2695"
+    sha256 cellar: :any_skip_relocation, catalina:       "1448a797ce37ead9d47b398a2c96af6da95acecf60532fd9edc302a1468308a3"
+    sha256 cellar: :any_skip_relocation, mojave:         "10424ca3b36b8219a58894bb23a29ce3abf67feb4a18e7f03a3daf2c328d459b"
+    sha256 cellar: :any_skip_relocation, high_sierra:    "7d7c7ba57430d123a9b53e8f4f9e7427d1ab2c1fb0b37149572cd4dc5eb1ddeb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "816cb02200808cafe1cf7665d701311d681b2eefe1ee0e554972e4844f77b0b1"
   end
 
   depends_on "ant" => :build
   depends_on "openjdk@11"
 
-  uses_from_macos "unzip" => :build
-
   def install
     ENV["JAVA_HOME"] = Formula["openjdk@11"].opt_prefix
-    system "./ant", "jing-dist"
-    system "./ant", "trang-dist"
-    system "unzip", "-o", "-d", "build/dist", "build/dist/jing-#{version}.zip"
-    system "unzip", "-o", "-d", "build/dist", "build/dist/trang-#{version}.zip"
-    libexec.install Dir["build/dist/jing-#{version}"]
-    libexec.install Dir["build/dist/trang-#{version}"]
-    bin.write_jar_script libexec/"jing-#{version}/bin/jing.jar", "jing", java_version: "11"
-    bin.write_jar_script libexec/"trang-#{version}/trang.jar", "trang", java_version: "11"
+    system "./ant", "jar"
+    libexec.install Dir["*"]
+    bin.write_jar_script libexec/"build/jing.jar", "jing", java_version: "11"
+    bin.write_jar_script libexec/"build/trang.jar", "trang", java_version: "11"
   end
 
   test do

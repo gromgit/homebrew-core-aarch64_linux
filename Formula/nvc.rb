@@ -1,18 +1,17 @@
 class Nvc < Formula
   desc "VHDL compiler and simulator"
   homepage "https://github.com/nickg/nvc"
-  url "https://github.com/nickg/nvc/releases/download/r1.7.2/nvc-1.7.2.tar.gz"
-  sha256 "37148d03e9b476f824fcee94c864620d1c393c096a4f952e0608c2cb29cd6c4e"
+  url "https://github.com/nickg/nvc/releases/download/r1.6.2/nvc-1.6.2.tar.gz"
+  sha256 "e6e2db8e086ef0e54e0745b0346e83fbc5664f9c4bda11645843656736382d3c"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "1da0360a74abc007ace21b006b2937be3f4ae2193bd89fab2e53f4a8cbb2f677"
-    sha256 arm64_monterey: "641504c3c6c9abcb8e54dca8598adf0dc2dd839758a4eb494be16a8782a0a41b"
-    sha256 arm64_big_sur:  "b30be3c8262503c93de5bd55d45512c23532ea43192f5f48069a26c7a8b03d66"
-    sha256 monterey:       "3d241eb45e92b2ddc121a00de0e8b589b6c7b9299a0dd9242ff62a41757d14a8"
-    sha256 big_sur:        "6d6ffdc873283b2540de59ffad9e416d47db2d152e3d6d2e199dc696921be28b"
-    sha256 catalina:       "ecf0c94b5703a52afedb94e816ad96b9f1b0be8212e3e25b91cac9c48742ac98"
-    sha256 x86_64_linux:   "fe048c665f32a095959d377d40f6f991e1a6d6f4fac87cc3c371db5d849fadd7"
+    sha256 arm64_monterey: "d94444247597cbc17c3e446519777ef98af2f890b4ddec04580aaab124f09fc3"
+    sha256 arm64_big_sur:  "b556f95f7dd3ad3fe13600a087c4a9b180a2f0299e6275648cf3af398e423868"
+    sha256 monterey:       "978ca721f49f993579acab15ba13ec1a6cd106107cb721d3f25ba4605178b0a3"
+    sha256 big_sur:        "85e996f111a1e044b618c3668e8a7e4f90d1199e62b541255a38ffff19220e39"
+    sha256 catalina:       "46167192b6dc41d9cc8ebd3f6e2fd51c5733541f83eaed8e53d06f57bdd25bb2"
+    sha256 x86_64_linux:   "12c4126806168b0c08fbd201e4b1cadefd2fb0dcafa24927ff11bc4c54826796"
   end
 
   head do
@@ -39,23 +38,24 @@ class Nvc < Formula
     system "./autogen.sh" if build.head?
 
     # Avoid hardcoding path to the `ld` shim.
-    ENV["ac_cv_path_linker_path"] = "ld" if OS.linux?
-
-    # In-tree builds are not supported.
-    mkdir "build" do
-      system "../configure", "--with-llvm=#{Formula["llvm"].opt_bin}/llvm-config",
-                             "--prefix=#{prefix}",
-                             "--with-system-cc=#{ENV.cc}",
-                             "--disable-silent-rules"
-      inreplace ["Makefile", "config.h"], Superenv.shims_path/ENV.cc, ENV.cc
-      ENV.deparallelize
-      system "make", "V=1"
-      system "make", "V=1", "install"
+    if build.head? && OS.linux?
+      inreplace "configure", "#define LINKER_PATH \\\"$linker_path\\\"", "#define LINKER_PATH \\\"ld\\\""
+    elsif OS.linux?
+      inreplace "configure", "#define LINKER_PATH \"$linker_path\"", "#define LINKER_PATH \"ld\""
     end
+
+    system "./configure", "--with-llvm=#{Formula["llvm"].opt_bin}/llvm-config",
+                          "--prefix=#{prefix}",
+                          "--with-system-cc=#{ENV.cc}",
+                          "--enable-vhpi",
+                          "--disable-silent-rules"
+    ENV.deparallelize
+    system "make", "V=1"
+    system "make", "V=1", "install"
   end
 
   test do
     resource("homebrew-test").stage testpath
-    system bin/"nvc", "-a", testpath/"basic_library/very_common_pkg.vhd"
+    system "#{bin}/nvc", "-a", "#{testpath}/basic_library/very_common_pkg.vhd"
   end
 end

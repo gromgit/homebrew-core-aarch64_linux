@@ -2,7 +2,6 @@ class Agda < Formula
   desc "Dependently typed functional programming language"
   homepage "https://wiki.portal.chalmers.se/agda/"
   license "BSD-3-Clause"
-  revision 1
 
   stable do
     url "https://hackage.haskell.org/package/Agda-2.6.2.2/Agda-2.6.2.2.tar.gz"
@@ -15,13 +14,12 @@ class Agda < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "075fb9d1c1d3bb2ce9786958aad1c166c207e042c257422fed60fb7b56f6cd48"
-    sha256 arm64_big_sur:  "2db89fc4cfb9bc3b3676c042ca42dff4c7991b70ae42a5e370cd323487fed5d0"
-    sha256 ventura:        "0b37ca6a111814a20b4ace1022cdeb43eed65fee44c4f4e2360b1a46e923dd9b"
-    sha256 monterey:       "e1d3778a1e0293edba2759e000fc7ee8cc2bda1042255c0a02d176b15c6653ce"
-    sha256 big_sur:        "c40f2ab5942348b945ca36cba679f0d55dfcdf14fa3d048e4712d450687ab9e5"
-    sha256 catalina:       "66e344fc29367ea27a055218f1cedb66019849c58110711409fdd52f38a839e2"
-    sha256 x86_64_linux:   "4742399788dd43bb888c31f95e176be233c2569d8999191f69902179509fac8a"
+    sha256 arm64_monterey: "f9450332b803dc4212b194b5692bccd0cc4e2f7935cc0b5e0f4aeb2f3a2ace3c"
+    sha256 arm64_big_sur:  "96def5d383e8004c2165cc75b561789efa33a8d2a61940cc77a9f51c2a2e0462"
+    sha256 monterey:       "89218cc3cc71273dfccb03c1da82d5207ce30cc308b0cc100fd8b3158efff337"
+    sha256 big_sur:        "610fde4f70b27f6ad76f5a1c28e477b9dc7454f079ee209a8ad609e8fbc61bc6"
+    sha256 catalina:       "be368491b302813d8b0f6e8a7b49ae3476ab2fdb2e0782561071b37af2fda7bc"
+    sha256 x86_64_linux:   "29bd833cdec176b7f3eebafb68579613c413fb6de62adc76f615920f1573d29e"
   end
 
   head do
@@ -36,18 +34,45 @@ class Agda < Formula
   depends_on "emacs"
   depends_on "ghc"
 
-  uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
+  resource "alex" do
+    url "https://hackage.haskell.org/package/alex-3.2.7.1/alex-3.2.7.1.tar.gz"
+    sha256 "9bd2f1a27e8f1b2ffdb5b2fbd3ed82b6f0e85191459a1b24ffcbef4e68a81bec"
+  end
+
+  resource "cpphs" do
+    url "https://hackage.haskell.org/package/cpphs-1.20.9.1/cpphs-1.20.9.1.tar.gz"
+    sha256 "7f59b10bc3374004cee3c04fa4ee4a1b90d0dca84a3d0e436d5861a1aa3b919f"
+  end
+
+  resource "happy" do
+    url "https://hackage.haskell.org/package/happy-1.20.0/happy-1.20.0.tar.gz"
+    sha256 "3b1d3a8f93a2723b554d9f07b2cd136be1a7b2fcab1855b12b7aab5cbac8868c"
+  end
+
   def install
+    ENV["CABAL_DIR"] = prefix/"cabal"
     system "cabal", "v2-update"
-    system "cabal", "--store-dir=#{libexec}", "v2-install", *std_cabal_v2_args
+    cabal_args = std_cabal_v2_args.reject { |s| s["installdir"] }
+
+    # happy must be installed before alex
+    %w[happy alex cpphs].each do |r|
+      r_installdir = libexec/r/"bin"
+      ENV.prepend_path "PATH", r_installdir
+
+      resource(r).stage do
+        mkdir r_installdir
+        system "cabal", "v2-install", *cabal_args, "--installdir=#{r_installdir}"
+      end
+    end
+
+    system "cabal", "v2-install", "-f", "cpphs", *std_cabal_v2_args
 
     # generate the standard library's documentation and vim highlighting files
     resource("stdlib").stage lib/"agda"
     cd lib/"agda" do
-      cabal_args = std_cabal_v2_args.reject { |s| s["installdir"] }
-      system "cabal", "--store-dir=#{libexec}", "v2-install", *cabal_args, "--installdir=#{lib}/agda"
+      system "cabal", "v2-install", *cabal_args, "--installdir=#{lib}/agda"
       system "./GenerateEverything"
       system bin/"agda", "-i", ".", "-i", "src", "--html", "--vim", "README.agda"
     end

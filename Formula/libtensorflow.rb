@@ -1,28 +1,36 @@
 class Libtensorflow < Formula
   desc "C interface for Google's OS library for Machine Intelligence"
   homepage "https://www.tensorflow.org/"
-  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.11.0.tar.gz"
-  sha256 "99c732b92b1b37fc243a559e02f9aef5671771e272758aa4aec7f34dc92dac48"
+  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.8.0.tar.gz"
+  sha256 "66b953ae7fba61fd78969a2e24e350b26ec116cf2e6a7eb93d02c63939c6f9f7"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6338d2b8b3783529d2b88bc1dd2952b7be6eeb47a4fb92046773538ddb42a52f"
-    sha256 cellar: :any,                 arm64_monterey: "6338d2b8b3783529d2b88bc1dd2952b7be6eeb47a4fb92046773538ddb42a52f"
-    sha256 cellar: :any,                 arm64_big_sur:  "f7bf9ae6bbb912322dbf159a429cf8d2c02a69499def33e0d50e5fc67a103a06"
-    sha256 cellar: :any,                 ventura:        "bda2efd536cf339b515c30bc2358087cdb0ec01b79c258e7287086f6013b060b"
-    sha256 cellar: :any,                 monterey:       "bda2efd536cf339b515c30bc2358087cdb0ec01b79c258e7287086f6013b060b"
-    sha256 cellar: :any,                 big_sur:        "8cbf67ceeaf31bafcd5f567ad4476b98ba7c2b13bb16ca4856a7e46f3e0a496b"
-    sha256 cellar: :any,                 catalina:       "0e659810b7c74403b61217c99c52a95e7e812f81d9395b916f2260e7b24586ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9388c60f0faab1e4cff146b63b8a7870250aa2109c6cef7c218cbf3e4ed08b67"
+    sha256 cellar: :any, arm64_monterey: "6aa2a99c8e73733fe1fd7a26059fc70578e081a01b9629019c1c3b5ee7d61a7e"
+    sha256 cellar: :any, arm64_big_sur:  "6f3baf6c3b57c380597b889e0035152d5335f1fdb309883e8e0121afcf8df100"
+    sha256 cellar: :any, monterey:       "eb5c728c7908ff9985966372ceeaa8febe5a6a137c0b56e6d1ad7be3cbb7385d"
+    sha256 cellar: :any, big_sur:        "7159d50875021f9899d409a339fa8ca71149f2373725815c9e2f3dcd0f450494"
+    sha256 cellar: :any, catalina:       "c3a75be02233777e1187f44c75d136a985099a1351dfd733963fe2776f2e07ae"
   end
 
   depends_on "bazelisk" => :build
   depends_on "numpy" => :build
   depends_on "python@3.10" => :build
 
-  resource "homebrew-test-model" do
+  resource "test-model" do
     url "https://github.com/tensorflow/models/raw/v1.13.0/samples/languages/java/training/model/graph.pb"
     sha256 "147fab50ddc945972818516418942157de5e7053d4b67e7fca0b0ada16733ecb"
+  end
+
+  # Fix build for host without python2
+  # Remove in the next 2.9 release
+  patch do
+    url "https://github.com/tensorflow/tensorflow/commit/1dd61c1f744227ad2434a7a9813fc57f623bc9a2.patch?full_index=1"
+    sha256 "f73a590f19962c097251efa6f4f40b80dfa944e3440b298973436016aea67c70"
+  end
+  patch do
+    url "https://github.com/tensorflow/tensorflow/commit/739002567ff81d731179a4b949def7e0f14737c8.patch?full_index=1"
+    sha256 "23c96cf491a6445db18353504bdb0b01f58770f1c0da405da42b91381259ce0e"
   end
 
   def install
@@ -34,7 +42,7 @@ class Libtensorflow < Formula
       "-march=native"
     end
     ENV["CC_OPT_FLAGS"] = optflag
-    ENV["PYTHON_BIN_PATH"] = which("python3.10")
+    ENV["PYTHON_BIN_PATH"] = Formula["python@3.10"].opt_bin/"python3"
     ENV["TF_IGNORE_MAX_BAZEL_VERSION"] = "1"
     ENV["TF_NEED_JEMALLOC"] = "1"
     ENV["TF_NEED_GCP"] = "0"
@@ -63,13 +71,6 @@ class Libtensorflow < Formula
       --linkopt=-Wl,-rpath,#{rpath}
       --verbose_failures
     ]
-    if OS.linux?
-      env_path = "#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin"
-      bazel_args += %W[
-        --action_env=PATH=#{env_path}
-        --host_action_env=PATH=#{env_path}
-      ]
-    end
     targets = %w[
       tensorflow:libtensorflow.so
       tensorflow:install_headers
@@ -104,10 +105,10 @@ class Libtensorflow < Formula
         printf("%s", TF_Version());
       }
     EOS
-    system ENV.cc, "test.c", "-L#{lib}", "-ltensorflow", "-o", "test_tf"
+    system ENV.cc, "-L#{lib}", "-ltensorflow", "-o", "test_tf", "test.c"
     assert_equal version, shell_output("./test_tf")
 
-    resource("homebrew-test-model").stage(testpath)
+    resource("test-model").stage(testpath)
 
     summarize_graph_output = shell_output("#{bin}/summarize_graph --in_graph=#{testpath}/graph.pb 2>&1")
     variables_match = /Found \d+ variables:.+$/.match(summarize_graph_output)

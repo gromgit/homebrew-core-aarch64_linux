@@ -1,45 +1,74 @@
 class Ghex < Formula
   desc "GNOME hex editor"
   homepage "https://wiki.gnome.org/Apps/Ghex"
-  url "https://download.gnome.org/sources/ghex/42/ghex-42.3.tar.xz"
-  sha256 "add40f8ab24921db30d27be58f00273201977d87fdc8d79eceadfa8b0e354def"
+  url "https://download.gnome.org/sources/ghex/3.18/ghex-3.18.4.tar.xz"
+  sha256 "c2d9c191ff5bce836618779865bee4059db81a3a0dff38bda3cc7a9e729637c0"
+  revision 3
 
   bottle do
-    sha256 arm64_ventura:  "d53e8c59361907d9b0348de0278366f8ab32629e02b0c08514f29038772ab12f"
-    sha256 arm64_monterey: "4d7254cc2ef96df2c6187e904e2a63613cfa2963b1c4aa4965f10f49dac318ef"
-    sha256 arm64_big_sur:  "c493a5c7d8421dbd84ab8bf8e61ba469fa57afe70f99728a17a95046ccfb85a5"
-    sha256 monterey:       "54fe13e40831f5e0032ce82bbded59c5521043e41fcbfed8d532ea2b878e90df"
-    sha256 big_sur:        "54c7098a34cbc2cc9c5d32881bf19160fd9506dd81f06c9037036fbd5e08bf4c"
-    sha256 catalina:       "b95753839545d3a7e8d664b7afb87cbf4a585635d49fef7ee5cb93ec9e890bd1"
-    sha256 x86_64_linux:   "1726f4384ae6dc10dba8cae6bfdb7621abb987fb0390ee7ca8b43bbc597f19a9"
+    sha256 arm64_monterey: "292f84d1b19188dcb9b6ad7e8c812e1b4bb0189fbf377009118905daa4db7017"
+    sha256 arm64_big_sur:  "0b3953f55c7d99378104344d01d3f3207cf4e0f8364906c90561ca43484e9d34"
+    sha256 monterey:       "617fc014643a58da71c63bc935d01589c3f0df7b257c840a32250a9303556917"
+    sha256 big_sur:        "3c7a8c7f133ff63b1398074340ed06140645d258b94e971d897f912b8631f609"
+    sha256 catalina:       "b152b5f03f5bc0d7a50a834fef582ea7fb477dd7560afb4a0b1f4df88e229970"
+    sha256 mojave:         "c2e68caac31470d6dbc66050b2dc42333b3dfc6956ee7453fba9032b5cf894a4"
+    sha256 high_sierra:    "4de4a0a7ee3f81c7f7b36d7368380b2ff2a063c5d444302cd5979ee33727fb1c"
+    sha256 x86_64_linux:   "162e20b386fe920b63142876b0e0100a471d69b9737c516a9c30ed04b27d5801"
   end
 
-  depends_on "desktop-file-utils" => :build
   depends_on "itstool" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "gtk4"
+  depends_on "gtk+3"
   depends_on "hicolor-icon-theme"
+
+  # submitted upstream as https://gitlab.gnome.org/GNOME/ghex/merge_requests/8
+  patch :DATA
 
   def install
     # ensure that we don't run the meson post install script
     ENV["DESTDIR"] = "/"
 
-    system "meson", *std_meson_args, "build", "-Dmmap-buffer-backend=#{OS.linux?}"
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   def post_install
     system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
-    system "#{Formula["gtk4"].opt_bin}/gtk4-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
+    system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
   end
 
   test do
-    # (process:30744): Gtk-WARNING **: 06:38:39.728: cannot open display
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
-    system bin/"ghex", "--help"
+    system "#{bin}/ghex", "--help"
   end
 end
+
+__END__
+diff --git a/src/meson.build b/src/meson.build
+index fdcdcc2..ac45c93 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -23,9 +23,9 @@ libghex_c_args = [
+   '-DG_LOG_DOMAIN="libgtkhex-3"'
+ ]
+
+-libghex_link_args = [
++libghex_link_args = cc.get_supported_link_arguments([
+   '-Wl,--no-undefined'
+-]
++])
+
+ install_headers(
+   libghex_headers,
+@@ -36,6 +36,7 @@ libghex = library(
+   'gtkhex-@0@'.format(libghex_version_major),
+   libghex_sources + libghex_headers,
+   version: '0.0.0',
++  darwin_versions: ['1', '1.0'],
+   include_directories: ghex_root_dir,
+   dependencies: libghex_deps,
+   c_args: libghex_c_args,

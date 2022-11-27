@@ -7,15 +7,12 @@ class Rslint < Formula
   head "https://github.com/rslint/rslint.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6697bbdc7195bc43b2da2d32c7d1e53fbba9748c7f9f462dc08239e11cfd1c9a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "add49e65c3cc1f8d0e544dd43212efa4508082b9c6fdaaa8bf54e2f6ee3880fb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f935da848cd21f5f58b4cffc7625ec321c51a48a3c167fb956f230cea14684e9"
-    sha256 cellar: :any_skip_relocation, ventura:        "3e7dfc37a22fe9075f6b8b45fdfac7e60b56a8baf356d46744ca0cb57b708bd3"
-    sha256 cellar: :any_skip_relocation, monterey:       "6e5a4f7bb10c80874a93dec67e40d8cd9288782bb5d97259ec4aa5993bd82bc8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "67894ab1b9743c341e0032f8a62140494625d9196fe53040b7de5482cd2fae35"
-    sha256 cellar: :any_skip_relocation, catalina:       "ee4645f20575b26bb225f0cc02f8d16fbf2bee3d567e61f9ac62205deaa2a2e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7afca2f2944a01e7f7605e4e8f63ca50a4881c5655aa61a50ca939b5c800790"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c31bc15e61ed4cf42203a3e658c1eb71b3d806b4babf99e683e9f365fcedccb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f196a45f40c69b3dbdc20adc1255301306ba98b016e397901bae778f2a6cb04"
+    sha256 cellar: :any_skip_relocation, monterey:       "7c51e40ac4683471f768d958bf5fe2375d226534395b2bc882f1060138c442e0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d1fed3b6b5f370f98cacb49bae2275d20a1e3b96615c0433098c047e98648c4e"
+    sha256 cellar: :any_skip_relocation, catalina:       "d4343b248401217eee1ae79f9c8125f753fced9400810eff170e7ff902f5c92a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94c0c4400342ef622293d652665f592894fc472810efb11b94526b80373d75e0"
   end
 
   depends_on "rust" => :build

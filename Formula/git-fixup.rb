@@ -7,7 +7,8 @@ class GitFixup < Formula
   head "https://github.com/keis/git-fixup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6de34acd070e73748e8412252fad584ffeddacd87b11d1cd1d28fccfeb9e15c1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-fixup"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5925dd060ec1169528e8997eccd1f5bf27efe3d5221861e66c4faa4d3135176d"
   end
 
   def install

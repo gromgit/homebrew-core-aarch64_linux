@@ -1,9 +1,9 @@
 class Neon < Formula
   desc "HTTP and WebDAV client library with a C interface"
   homepage "https://notroj.github.io/neon/"
-  url "https://notroj.github.io/neon/neon-0.32.4.tar.gz"
-  mirror "https://fossies.org/linux/www/neon-0.32.4.tar.gz"
-  sha256 "b1e2120e4ae07df952c4a858731619733115c5f438965de4fab41d6bf7e7a508"
+  url "https://notroj.github.io/neon/neon-0.32.2.tar.gz"
+  mirror "https://fossies.org/linux/www/neon-0.32.2.tar.gz"
+  sha256 "986566468c6295fc5d0fb141a5981e31c9f82ee38e938374abed8471ef2fb286"
   license "LGPL-2.0-or-later"
 
   livecheck do
@@ -12,14 +12,12 @@ class Neon < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a9fd781dc1834be9e1066f51793ba4f377d33a085ec777a2f657968e2b61d77d"
-    sha256 cellar: :any,                 arm64_monterey: "8a9d15eed842a8cde2a71a19b3fc2fae4e29213c1d356c568383350bfde14f25"
-    sha256 cellar: :any,                 arm64_big_sur:  "421c1b74a8a1d8a60d64d839d483914e65d93d1c2005d5642aac81d0dad715ff"
-    sha256 cellar: :any,                 ventura:        "403ffe3d4e963180933120bd279e5c6a17612794e56713b8e18a254ab26cdd4c"
-    sha256 cellar: :any,                 monterey:       "b480974e79ffe9f828b0cc7068db7d336a2eef8ad311ef4e3e70f08aa95ec601"
-    sha256 cellar: :any,                 big_sur:        "a06568dabaf8ebac45d53833a5bfb558aac0f97e07014fd80fe3ecb28dbff780"
-    sha256 cellar: :any,                 catalina:       "8bdcc4e6be196c4cffccee3d185154094c7938ffc40a37f43394a58b5770e113"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eef06a3735703c5e37bdf6973045db324a21719af799c1e92809fcfb6bafe5c1"
+    sha256 cellar: :any,                 arm64_monterey: "5b10f6c1be6a6897763339f92831344a2ca97a27e26bc8c27399358f6214961f"
+    sha256 cellar: :any,                 arm64_big_sur:  "c3e6c0140a0761348ec6ebb26ff464bc3baf250b3674df7a9692a0af7a6d4068"
+    sha256 cellar: :any,                 monterey:       "2a3ce9b7329c7abcbbe9167e8d5fef45a242d1ae2d876a989b41cabbec19171a"
+    sha256 cellar: :any,                 big_sur:        "ddf63fc6da79aa76871cf66c88237c2a0cb83a35fd01263c608c9c8dbf122ff7"
+    sha256 cellar: :any,                 catalina:       "25216dfe96706b6e1cab7cc6b15300571fe38a00973e0c31209886a1005cf290"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9929c188b7c2bac00ea1bbb3b169481e02feb41d04157b80ba19b47e78b9add7"
   end
 
   depends_on "pkg-config" => :build

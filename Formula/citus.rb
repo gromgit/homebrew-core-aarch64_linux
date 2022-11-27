@@ -1,69 +1,43 @@
 class Citus < Formula
   desc "PostgreSQL-based distributed RDBMS"
   homepage "https://www.citusdata.com"
-  url "https://github.com/citusdata/citus/archive/v11.1.4.tar.gz"
-  sha256 "7c60de176c02c7082716c0c98d7084f0d4e0bef7862a53487411ee0e5622ab2c"
+  url "https://github.com/citusdata/citus/archive/v10.2.5.tar.gz"
+  sha256 "748beaf219163468f0b92bf5315798457f9859a6cd9069a7fd03208d8d231176"
   license "AGPL-3.0-only"
-  head "https://github.com/citusdata/citus.git", branch: "main"
+  head "https://github.com/citusdata/citus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8463888de4ced29c89328b4d2b6f9c884ba63e5e940e15ad33515fbebd4d15a8"
-    sha256 cellar: :any,                 arm64_monterey: "f37360c3a53ba771527889b30cf374fb1a1a2d7843b6170a4033639bfcadd609"
-    sha256 cellar: :any,                 arm64_big_sur:  "3fa5cbfcfa015284ccf9e8b2f41b0c772abac4085ddff1e8c30a670d60ab2dfb"
-    sha256 cellar: :any,                 ventura:        "62f159bd9bfc9f80f3c08ef2c7f210cec2ce2437af43954258e8780c819440f7"
-    sha256 cellar: :any,                 monterey:       "9f96a4093f7567b3eee91f285b438da3c1d66d0f8cec24ae77e09e18e444c9dc"
-    sha256 cellar: :any,                 big_sur:        "963d98999189f952d5a024e409d5132519776b324d1af2aaa2325cd3b9e8e891"
-    sha256 cellar: :any,                 catalina:       "c05d2ec56cfc657dbf61338c23dcd5c2344f96371acdb57ff9d678eea483041a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7115a0eb7db6e4d8398a76cb73bc1483a4b9b94512019e164c8f7805bc2f33c"
+    sha256 cellar: :any,                 arm64_monterey: "5c1284be900f79340a7deb11cab8ec6ae499ae4d5fb3a353c38af68294f605ee"
+    sha256 cellar: :any,                 arm64_big_sur:  "8d8da700da3660cd9bc01aa509a25c7500e571d6353f0b718504d0307462692b"
+    sha256 cellar: :any,                 monterey:       "aed158c5fc1a817655cf33f8fdf52a4b35735ad81740fd40100e93247c3acad4"
+    sha256 cellar: :any,                 big_sur:        "c081472f3ea377cba1898543bbc45f9fbc750c8a53dd538645b16ccda66ba555"
+    sha256 cellar: :any,                 catalina:       "8d206df19b0d0c30e866571deb14ad101f170e8e5cd6574de218a41a266e7b36"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed813a71d6e8c6e3c78627707f6bfbf1dd135959f1518748318b956666f62400"
   end
 
   depends_on "lz4"
-  depends_on "postgresql@14"
+  depends_on "postgresql"
   depends_on "readline"
   depends_on "zstd"
 
   uses_from_macos "curl"
 
-  def postgresql
-    Formula["postgresql@14"]
-  end
-
   def install
-    ENV["PG_CONFIG"] = postgresql.opt_bin/"pg_config"
+    ENV["PG_CONFIG"] = Formula["postgresql"].opt_bin/"pg_config"
 
     system "./configure"
+
     # workaround for https://github.com/Homebrew/legacy-homebrew/issues/49948
-    system "make", "libpq=-L#{postgresql.opt_lib} -lpq"
+    system "make", "libpq=-L#{Formula["postgresql"].opt_lib} -lpq"
 
     # Use stage directory to prevent installing to pg_config-defined dirs,
     # which would not be within this package's Cellar.
     mkdir "stage"
     system "make", "install", "DESTDIR=#{buildpath}/stage"
 
-    stage_path = File.join("stage", HOMEBREW_PREFIX)
-    lib.install (buildpath/stage_path/"lib").children
-    include.install (buildpath/stage_path/"include").children
-    share.install (buildpath/stage_path/"share").children
-
-    bin.install (buildpath/File.join("stage", postgresql.bin.realpath)).children
-  end
-
-  test do
-    pg_ctl = postgresql.opt_bin/"pg_ctl"
-    psql = postgresql.opt_bin/"psql"
-    port = free_port
-
-    system pg_ctl, "initdb", "-D", testpath/"test"
-    (testpath/"test/postgresql.conf").write <<~EOS, mode: "a+"
-
-      shared_preload_libraries = 'citus'
-      port = #{port}
-    EOS
-    system pg_ctl, "start", "-D", testpath/"test", "-l", testpath/"log"
-    begin
-      system psql, "-p", port.to_s, "-c", "CREATE EXTENSION \"citus\";", "postgres"
-    ensure
-      system pg_ctl, "stop", "-D", testpath/"test"
-    end
+    path = File.join("stage", HOMEBREW_PREFIX)
+    lib.install (buildpath/path/"lib").children
+    include.install (buildpath/path/"include").children
+    (share/"postgresql/extension").install (buildpath/path/"share/postgresql/extension").children
   end
 end

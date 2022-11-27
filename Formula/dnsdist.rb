@@ -1,8 +1,8 @@
 class Dnsdist < Formula
   desc "Highly DNS-, DoS- and abuse-aware loadbalancer"
   homepage "https://www.dnsdist.org/"
-  url "https://downloads.powerdns.com/releases/dnsdist-1.7.3.tar.bz2"
-  sha256 "7eaf6fac2f26565c5d8658d42a213799e05f4d3bc68e7c716e7174df41315886"
+  url "https://downloads.powerdns.com/releases/dnsdist-1.7.1.tar.bz2"
+  sha256 "273a8212be2ddfaf754f752bcda4c2abc671ca5d42f776263312eb4661ea2d66"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,14 +11,11 @@ class Dnsdist < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b2618d623a6a288fcbb58d54ec068917b7191e80a870f6accc0427bc3fe32384"
-    sha256 cellar: :any,                 arm64_monterey: "abfa99eee8c4be2d34e9ffd41a84c8e65c6587370da052b77e893b0210388d8a"
-    sha256 cellar: :any,                 arm64_big_sur:  "1525cbf43df195c3646f11dd414e9e1c406bd022745f10cbe0db89767cface3d"
-    sha256 cellar: :any,                 ventura:        "e808a27eaf447b30beb6bdf7df4966c8e689314f12fada22301ecd7111b271d6"
-    sha256 cellar: :any,                 monterey:       "d45fd758a8dc3aa9c5853dda842ac3d73f1b51a915dc23ff20787933b9d532c5"
-    sha256 cellar: :any,                 big_sur:        "ee36153f8036513e45a536cf0b5acf442707e42eb5800a430680d185cbd80cbe"
-    sha256 cellar: :any,                 catalina:       "3156bb8c2786805c491b7e8b0b9c5bfc241403edd546fbb86df0b70f3999dfc7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "601cad64e21633e94fac8e83de349e9306853496539863486c8b272fa03fedab"
+    sha256 arm64_monterey: "6c46c95fba614f390ed2b8babc6ccd3585e86137169d8a30c5bdfa1225ed2976"
+    sha256 arm64_big_sur:  "9b76afad5ceea4840e12dede69fac2226c825369457d6722ef789ce3e05b1b3d"
+    sha256 monterey:       "7ec9caaf52e21abd4f9d14e7abb684e6cecd33a56ac9c72cc2c4474f3e01bfd3"
+    sha256 big_sur:        "8b08c85b0b88f4d8e61c3d7898b62bf101fde8d05b2b28a1ac04478a0197979f"
+    sha256 catalina:       "3d8066131514affbb62ecf7683935fa29c83f3334c9dec5556e259024651c4ff"
   end
 
   depends_on "boost" => :build
@@ -27,18 +24,12 @@ class Dnsdist < Formula
   depends_on "fstrm"
   depends_on "h2o"
   depends_on "libsodium"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
   depends_on "openssl@1.1"
   depends_on "protobuf"
   depends_on "re2"
 
   uses_from_macos "libedit"
-
-  on_linux do
-    depends_on "linux-headers@5.16" => :build
-  end
-
-  fails_with gcc: "5"
 
   def install
     system "./configure", "--disable-dependency-tracking",

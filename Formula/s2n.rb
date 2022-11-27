@@ -1,8 +1,8 @@
 class S2n < Formula
   desc "Implementation of the TLS/SSL protocols"
   homepage "https://github.com/aws/s2n-tls"
-  url "https://github.com/aws/s2n-tls/archive/v1.3.28.tar.gz"
-  sha256 "51000747bece77f35df88b2a4157c0caf16e6a092ab6dc71cd6880bf47afa169"
+  url "https://github.com/aws/s2n-tls/archive/v1.3.12.tar.gz"
+  sha256 "2f71e4e430bc1a09f7d70042d7b6c53005c5bfb0a59128c80c5b038e13040d56"
   license "Apache-2.0"
   head "https://github.com/aws/s2n-tls.git", branch: "main"
 
@@ -12,27 +12,21 @@ class S2n < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cc920cc35329daa40c1db991d585047584c2b1fe0421e5f864fee60e94e581f9"
-    sha256 cellar: :any,                 arm64_monterey: "fd8d0fb9475239473397b2c3f43f30d1b03c0b5b1abef11236d1a78927c15c4e"
-    sha256 cellar: :any,                 arm64_big_sur:  "044e4839395939888bb13b06d8e7c3f43260e34b759643de6d649efd64d52efc"
-    sha256 cellar: :any,                 ventura:        "0fe984dbf0e42fc60ebf712b1e7da5e3d3a5ae93dccdb948c5f1ae9aaae8562e"
-    sha256 cellar: :any,                 monterey:       "efcc094a149f637e298d37802255fff72575baa04ef15df600b301a7f8e6aa0f"
-    sha256 cellar: :any,                 big_sur:        "9d1075067587fa1e0be980a38f95a13e70848937b7b3ebd8cbe29ab50e9d99f6"
-    sha256 cellar: :any,                 catalina:       "a94bce7eb76d0d4ea38112ff313d37dae79648df0090ca62e63ff3d0475d06e3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a69490eea3c84228fef454a436369381a1cfb703942f779dcda5f03018049418"
+    sha256 cellar: :any,                 arm64_monterey: "542763159c5167cfa58d604f4d0ee724975d0fe591a0ca93d73d973dc569ca81"
+    sha256 cellar: :any,                 arm64_big_sur:  "1cc231fabd2f624b4a5e5dd571a3cde85128a5b34faad188a7b7c591b9964398"
+    sha256 cellar: :any,                 monterey:       "fbd54cd786dc00193429b9794b33d4f7bcd991085bea0a74e4e22d0e867a5c1d"
+    sha256 cellar: :any,                 big_sur:        "ab5c32d818bbc502631aa51eecd8f7249acde9e1f8d0e5b7f359260f3b90649d"
+    sha256 cellar: :any,                 catalina:       "836c5798089493d733fc7c25a6deddbf6a5ccf7d2a1ada79f9bfae8847e450c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a7918d91fd61e401c9cb8ff83aac0255905df0cfb9dc0bcfde8f9b873fd3631"
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
-    system "cmake", "-S", ".", "-B", "build/static", *std_cmake_args, "-DBUILD_SHARED_LIBS=OFF"
-    system "cmake", "--build", "build/static"
-    system "cmake", "--install", "build/static"
-
-    system "cmake", "-S", ".", "-B", "build/shared", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
-    system "cmake", "--build", "build/shared"
-    system "cmake", "--install", "build/shared"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

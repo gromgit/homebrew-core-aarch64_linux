@@ -1,8 +1,8 @@
 class Rsyslog < Formula
   desc "Enhanced, multi-threaded syslogd"
   homepage "https://www.rsyslog.com/"
-  url "https://www.rsyslog.com/files/download/rsyslog/rsyslog-8.2210.0.tar.gz"
-  sha256 "643ee279139d694a07c9ff3ff10dc5213bdf874983d27d373525e95e05fa094d"
+  url "https://www.rsyslog.com/files/download/rsyslog/rsyslog-8.2204.1.tar.gz"
+  sha256 "a6d731e46ad3d64f6ad4b19bbf1bf56ca4760a44a24bb96823189dc2e71f7028"
   license all_of: ["Apache-2.0", "GPL-3.0-or-later", "LGPL-3.0-or-later"]
 
   livecheck do
@@ -11,18 +11,15 @@ class Rsyslog < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "c32e2a31cbe600635f19841453ac20c855ed65fee7516ece6a9276e016978a19"
-    sha256 arm64_monterey: "77a264afbd4cb7837928db2c5b26d9c766382d4d880e6d1ac9cf6559d91eab7d"
-    sha256 arm64_big_sur:  "c91d31f0086438b83a17f9e072974eb760717a6cbbf1e876454633d96affb340"
-    sha256 ventura:        "b121a92cc08dc9c6dfd7486b9f4a4011fbbae142e92a4c4557e4b8a15d3a5588"
-    sha256 monterey:       "9374aa6c63bc963454d2379affac8286f4ae04843c2e051752c653e8e0b0d0c8"
-    sha256 big_sur:        "4675d50ec60509f389554c3773f32d34c1b68dc565985c9057e9001e53d25c25"
-    sha256 catalina:       "8197c7d7f1c086a4c5473c65a069e2a7b335bcf76b48f531bc69262f7e9b0e8b"
-    sha256 x86_64_linux:   "29bb59016d7acf82f0816a49db21ed4fea2f4d16ec62369c12e3ec5b07b32c6a"
+    sha256 arm64_monterey: "5d15c96f760440aa5fe801557b5a725691baf405a8afafc2726995af214a16e8"
+    sha256 arm64_big_sur:  "ec3c3f95d2d963060f8e6ce3af78baa00daed34c3e0b6068835cd1b287651689"
+    sha256 monterey:       "51f4511a1f43d43ccd6078d45f8b5603ee38a4b3ddcc44b446b3a2e5c99d4de2"
+    sha256 big_sur:        "3d0423d8820c44a7537f7861f2491df4d32afa173e0ab463794b633ab7033121"
+    sha256 catalina:       "c975464697c4edc55f43408a3c4ab5d7a373d84516a94ecbdfbf78a7844f2177"
+    sha256 x86_64_linux:   "b1a80ac8bc85c0e25de38472907119ecb807aa4780ecb0962a13d6fc526f1828"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "gnutls"
   depends_on "libestr"
 
   uses_from_macos "curl"
@@ -49,8 +46,7 @@ class Rsyslog < Formula
                           "--enable-usertools",
                           "--enable-diagtools",
                           "--disable-uuid",
-                          "--disable-libgcrypt",
-                          "--enable-gnutls"
+                          "--disable-libgcrypt"
     system "make"
     system "make", "install"
 

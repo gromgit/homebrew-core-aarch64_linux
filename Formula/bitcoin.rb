@@ -1,8 +1,8 @@
 class Bitcoin < Formula
   desc "Decentralized, peer to peer payment network"
   homepage "https://bitcoincore.org/"
-  url "https://bitcoincore.org/bin/bitcoin-core-24.0/bitcoin-24.0.tar.gz"
-  sha256 "9cfa4a9f4acb5093e85b8b528392f0f05067f3f8fafacd4dcfe8a396158fd9f4"
+  url "https://bitcoincore.org/bin/bitcoin-core-23.0/bitcoin-23.0.tar.gz"
+  sha256 "26748bf49d6d6b4014d0fedccac46bf2bcca42e9d34b3acfd9e3467c415acc05"
   license "MIT"
   head "https://github.com/bitcoin/bitcoin.git", branch: "master"
 
@@ -12,43 +12,40 @@ class Bitcoin < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e56672fac2ad8156d7aea28336c2a04d494013e98d0b70eb610b8464992b5929"
-    sha256 cellar: :any,                 arm64_monterey: "e1a4c5decd6681167e3366a1b0b828a602f5284477d45882959b1494a80243ea"
-    sha256 cellar: :any,                 arm64_big_sur:  "259562fee9d95cb93899173e86086aea48eebec490d188912d134a35a1274629"
-    sha256 cellar: :any,                 ventura:        "3dbb3b0eb1d558f03166ad8b031d9a7f2747dfd600338310fe318b9b7b100da9"
-    sha256 cellar: :any,                 monterey:       "a83c6d1041da647995af5235fbcf12d3f548bf4a621d0cd660b7b910ecbc4e4b"
-    sha256 cellar: :any,                 big_sur:        "4c0c6526ec8eda4ec15e3767d7b56f322cfdd9392f103ea3ec3386246bab8f21"
-    sha256 cellar: :any,                 catalina:       "be76b3c20499a3ad4fc0318fc7875609162b77af95eb7798355296dc6884be63"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21d04d67d68a27ad0cada5606007b3c5089dfa4ef9e7439c36484351f4ef82fa"
+    sha256 cellar: :any,                 arm64_monterey: "b0704a6dc3a96f5bbb71d93a468b1a4881e747e90ddfa14d6ff0d97d5a23c6eb"
+    sha256 cellar: :any,                 arm64_big_sur:  "6c8caf0509daf986cd3af45eeea78789ccd4b0a8eb5aa1dfddaa624425e5b959"
+    sha256 cellar: :any,                 monterey:       "2859a13d7a48dad1a6701476d66ddb0b6940dcfe4b809b1c54512d78de247e26"
+    sha256 cellar: :any,                 big_sur:        "e8a1f3389faae4245c5f6a6ec8f179cb46e19af31f4e4637c6d3f24d55804b45"
+    sha256 cellar: :any,                 catalina:       "3279bd808f42d6ea608d04860ac276afda7c6ac2cf5d708469d4dc66672f210a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb60fb85781435dfb545cea0c7e08339a7b3e01d60df604ccf9cba830f148e36"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  # berkeley db should be kept at version 4
-  # https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
-  # https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
   depends_on "berkeley-db@4"
-  depends_on "boost"
+  depends_on "boost@1.76"
   depends_on "libevent"
   depends_on macos: :catalina
   depends_on "miniupnpc"
   depends_on "zeromq"
 
-  uses_from_macos "sqlite"
-
   on_linux do
     depends_on "util-linux" => :build # for `hexdump`
+    depends_on "gcc"
   end
 
   fails_with gcc: "5"
 
   def install
+    ENV.delete("SDKROOT") if MacOS.version == :el_capitan && MacOS::Xcode.version >= "8.0"
+
     system "./autogen.sh"
     system "./configure", *std_configure_args,
+                          "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--with-boost-libdir=#{Formula["boost"].opt_lib}"
+                          "--with-boost-libdir=#{Formula["boost@1.76"].opt_lib}"
     system "make", "install"
     pkgshare.install "share/rpcauth"
   end
@@ -59,15 +56,5 @@ class Bitcoin < Formula
 
   test do
     system "#{bin}/test_bitcoin"
-
-    # Test that we're using the right version of `berkeley-db`.
-    port = free_port
-    bitcoind = spawn bin/"bitcoind", "-regtest", "-rpcport=#{port}", "-listen=0", "-datadir=#{testpath}"
-    sleep 15
-    # This command will fail if we have too new a version.
-    system bin/"bitcoin-cli", "-regtest", "-datadir=#{testpath}", "-rpcport=#{port}",
-                              "createwallet", "test-wallet", "false", "false", "", "false", "false"
-  ensure
-    Process.kill "TERM", bitcoind
   end
 end

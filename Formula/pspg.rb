@@ -1,20 +1,18 @@
 class Pspg < Formula
   desc "Unix pager optimized for psql"
   homepage "https://github.com/okbob/pspg"
-  url "https://github.com/okbob/pspg/archive/5.5.13.tar.gz"
-  sha256 "a03f95b68ddf98675072770024f1bdc3e7738b577bc538c81549bba653cbc870"
+  url "https://github.com/okbob/pspg/archive/5.5.4.tar.gz"
+  sha256 "1ea5b0b8397a6ed169c6b33afbe617fe2c33820deff6395888c0c8ae2c115d30"
   license "BSD-2-Clause"
   head "https://github.com/okbob/pspg.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "efd3a9c7fe36dab943e27232fb564dfeb1648c6c2a2eef5fff851e3ecba10d78"
-    sha256 cellar: :any,                 arm64_monterey: "16d29a0ca9017030972f8129a117d5ee0fcfbd77a8192ffc19732c5f45af4163"
-    sha256 cellar: :any,                 arm64_big_sur:  "5549e87f41c29bb9fd81c454f1b42ad5522e4efd4057ff917c18b3c3e272d9cb"
-    sha256 cellar: :any,                 ventura:        "54985759b7f95202596f2b2704883d6fab11ddbff0c1b7e6625923a613e9d7bc"
-    sha256 cellar: :any,                 monterey:       "aa12ad9d2b5c6221acf3d2786ee91145212e99f92405d95cfcf5fb7954b25f2b"
-    sha256 cellar: :any,                 big_sur:        "fbdd46de96808d4bf235926dfe16dc3a951fbdf9fcbb955ce9f3699cc41784a1"
-    sha256 cellar: :any,                 catalina:       "905ca9b3dde143ebb6f8aae53c6feab6df37136fa94df17d0f8db83c8552a29c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dda8c37aa5d7e2316f66965731bf49c3058e28390de4eb0a581a30aff0d65a2b"
+    sha256 cellar: :any,                 arm64_monterey: "af6b601ae5462e37ca340e6c265694efc4c9f81b43c9c618451040d9dd8f487d"
+    sha256 cellar: :any,                 arm64_big_sur:  "d067f45f518b2dc28d1186277bf58a0d13f814a96ab533249d8f06ea83db61d4"
+    sha256 cellar: :any,                 monterey:       "f367861be235a8a156d191250bfa7307cf61f1c898c34a88e3f2357f251fd664"
+    sha256 cellar: :any,                 big_sur:        "60f754d4cc765ac873dbeb4ece81a59983a912a90064f606a3ac63fab402ccca"
+    sha256 cellar: :any,                 catalina:       "0da663231dea4165fabd3a39995adc3af4230c073d75875e3b9df8e716be8d05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f8152d13a23d3c931a362fac37043a2b2072b26ba42729d9972ccdd88d8609a"
   end
 
   depends_on "libpq"

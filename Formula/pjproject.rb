@@ -1,8 +1,8 @@
 class Pjproject < Formula
   desc "C library for multimedia protocols such as SIP, SDP, RTP and more"
   homepage "https://www.pjsip.org/"
-  url "https://github.com/pjsip/pjproject/archive/2.13.tar.gz"
-  sha256 "4178bb9f586299111463fc16ea04e461adca4a73e646f8ddef61ea53dafa92d9"
+  url "https://github.com/pjsip/pjproject/archive/2.11.1.tar.gz"
+  sha256 "45f6604372df3f49293749cd7c0b42cb21c4fb666c66f8ed9765de004d1eae38"
   license "GPL-2.0-or-later"
   head "https://github.com/pjsip/pjproject.git", branch: "master"
 
@@ -12,17 +12,16 @@ class Pjproject < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ccee5a9791d7286f541e9f59931f5c2193af1e0ca0ad189cb5dbe56826036ff5"
-    sha256 cellar: :any,                 arm64_monterey: "71ba504dd2255cfba6d1867d27add23f415a841c0dea2a96cced2f5868c0645a"
-    sha256 cellar: :any,                 arm64_big_sur:  "89e39245774453366e922ccca427a5ef2d70809a7fc952e89b095ba884830998"
-    sha256 cellar: :any,                 monterey:       "66b92f14f4d14a45e55bdf306311cb2bbd0fca3573e2aa03900d4c4b1d427e6d"
-    sha256 cellar: :any,                 big_sur:        "29ea64bce5012253aacc4ccf1cd43c8ec701ccf625739341817c6d452a9cc44e"
-    sha256 cellar: :any,                 catalina:       "7265ffaa44bdc67e47721c12d80cf7e7d213f47a393d8923ceadeaee9968e68e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "026e78e19b27cdba146d7e90399a0e696dde30c8854bebe031cfecf622126104"
+    sha256 cellar: :any,                 arm64_monterey: "ae7ac8144de063925b9ddcdfac52ec5cfa8286fc0e21255ef1cc11b36270b726"
+    sha256 cellar: :any,                 arm64_big_sur:  "ebe2c56bf87c397d2e2269acfbfc345b54f3a8b117515fad1827c20da620a227"
+    sha256 cellar: :any,                 monterey:       "dd65ff7722e647f5441aad3eba86a3493274f4850169b3332b7c2527ba38031d"
+    sha256 cellar: :any,                 big_sur:        "31319f83ddc57bc93650d5fc1890869b823ebc04f8584a9c280e23ab8d8e2caf"
+    sha256 cellar: :any,                 catalina:       "90b5e44910157070b4e1d9b494076c30cf16d9b1ef9790cfa080331348dfea89"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51fbe4542de05e29af4379cc48b8702560032197b829033806c85a0c70e04928"
   end
 
   depends_on macos: :high_sierra # Uses Security framework API enum cases introduced in 10.13.4
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     system "./configure", "--prefix=#{prefix}"
@@ -31,7 +30,7 @@ class Pjproject < Formula
     system "make"
     system "make", "install"
 
-    arch = (OS.mac? && Hardware::CPU.arm?) ? "arm" : Hardware::CPU.arch.to_s
+    arch = OS.mac? && Hardware::CPU.arm? ? "arm" : Hardware::CPU.arch.to_s
     target = OS.mac? ? "apple-darwin#{OS.kernel_version}" : "unknown-linux-gnu"
 
     bin.install "pjsip-apps/bin/pjsua-#{arch}-#{target}" => "pjsua"

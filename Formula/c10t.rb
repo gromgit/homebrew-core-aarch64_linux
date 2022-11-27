@@ -4,16 +4,16 @@ class C10t < Formula
   url "https://github.com/udoprog/c10t/archive/1.7.tar.gz"
   sha256 "0e5779d517105bfdd14944c849a395e1a8670bedba5bdab281a0165c3eb077dc"
   license "BSD-3-Clause"
-  revision 3
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a18abf440f06bf82f76feb72cd3d9586d9d1d0236590747776227e3c2bdaa6c6"
-    sha256 cellar: :any,                 arm64_monterey: "bb52335803ba6ede73c4108d60521408261467674625dcf300a847aed813fab3"
-    sha256 cellar: :any,                 arm64_big_sur:  "2ee23e4a9df8e49fea71796878b496e17fd85f708366cf7776706dcbcd7c5ffe"
-    sha256 cellar: :any,                 monterey:       "69fb50b752d67060a557c23274bb83bfe73ec3a76a09988cf78646371d6abbf2"
-    sha256 cellar: :any,                 big_sur:        "59e476e2c75735742d2147673a668bbf24e148383192b4ed8002f2e1222e90b6"
-    sha256 cellar: :any,                 catalina:       "412f8b7ad24cd8ed63c2812c1ca4332ac4b3c159784e5dea36462d0a5dc3c41e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5051fa40ffa44dce21c9707b05a027164b5b3747a514ae424f671ecc5461589c"
+    sha256 cellar: :any,                 arm64_big_sur: "f6c5c0fb2e066bc4c505d61eb9db21034a89223e5a9e47c3c2a08b17f5a431ed"
+    sha256 cellar: :any,                 big_sur:       "15eb238ecc210202a0aa3034005b3da3637f4d5b5a7c9e6904b151d47ece6d47"
+    sha256 cellar: :any,                 catalina:      "50bb289bc77fc39bd7fa248be991069cfa63419c8ad74329d3684a965469084d"
+    sha256 cellar: :any,                 mojave:        "1bdc623e16b1854d4865ce29e7fb6e0724262ea2b998111c6ab908b5dbd5af17"
+    sha256 cellar: :any,                 high_sierra:   "ad850802e7b161e55c19bcb89d2af5a10a536574bf25a1c45a2693299d6182d2"
+    sha256 cellar: :any,                 sierra:        "fbfab463dd8a2af17bb3b8d07d448d8411f9393d98b1b35f6862a7dc92da7c82"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69228725cf24304d0ec95c68cb498b88aa2bb00d194a6d030f69b74613e2494b"
   end
 
   depends_on "cmake" => :build
@@ -42,7 +42,6 @@ class C10t < Formula
   end
 
   def install
-    ENV.cxx11
     inreplace "test/CMakeLists.txt", "boost_unit_test_framework", "boost_unit_test_framework-mt"
     args = std_cmake_args
     unless OS.mac?

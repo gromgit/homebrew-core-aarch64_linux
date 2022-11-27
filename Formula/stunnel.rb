@@ -1,8 +1,8 @@
 class Stunnel < Formula
   desc "SSL tunneling program"
   homepage "https://www.stunnel.org/"
-  url "https://www.stunnel.org/downloads/stunnel-5.67.tar.gz"
-  sha256 "3086939ee6407516c59b0ba3fbf555338f9d52f459bcab6337c0f00e91ea8456"
+  url "https://www.stunnel.org/downloads/stunnel-5.64.tar.gz"
+  sha256 "eebe53ed116ba43b2e786762b0c2b91511e7b74857ad4765824e7199e6faf883"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,14 +11,12 @@ class Stunnel < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6b2e1a1f0cd77b6ba502eda29afd41ed4206923d98d9e49a9e12ff3dade2be61"
-    sha256 cellar: :any,                 arm64_monterey: "b6f21a7a7aae8934324cf27798f14dbe6e6d12fc33355dcc787bee438c67734e"
-    sha256 cellar: :any,                 arm64_big_sur:  "bd42513cfb34768bede1f403a525264792e9a0154371444bff812fe1240fad42"
-    sha256 cellar: :any,                 ventura:        "cca3b8088572dfdd24f3c2e9b28f3c87bc2e2485ee219d04520f743c6bba1fd8"
-    sha256 cellar: :any,                 monterey:       "ec23a90b002b6581abc3392fc1831ea1caaca2babaf325372dbb7a0f36a9cf6e"
-    sha256 cellar: :any,                 big_sur:        "17c6e31bdb6f96cf33b232654f401b60bf03eac5a2bf1b3874b36fa700bd961b"
-    sha256 cellar: :any,                 catalina:       "c568c4232dbbf3af31f3d93c15b9f8a4f8a1ff7df938b67f51809cde275689e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f443ea4d37bfee124aac63d4160632b313c56e322751dc2156545cf2354fb1f7"
+    sha256 cellar: :any,                 arm64_monterey: "661fb14a483558d6572ed459c085fb3456d60dc58dcced2caf2bf082ba074ba9"
+    sha256 cellar: :any,                 arm64_big_sur:  "324a76ed9a0567ccb8b5553be53d8273e24767a5258a5769b4d4ba59bc19a9ca"
+    sha256 cellar: :any,                 monterey:       "30b9d6e8dafd81b4cb5da4978f9abfb309f682884596a85e84c75ce1f248649a"
+    sha256 cellar: :any,                 big_sur:        "ea4d844c27669ad32c6166dc1b7f073be0e67aa9dbb832bacbc6a29a48ffec17"
+    sha256 cellar: :any,                 catalina:       "2d287f3838ee54b9296feb29aa4d79f5091bad04ebc079e1af5bb0ef94226783"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4189f6dfab60662d3a9747cc1323f34242fcff1f938f0c7ca50fb2eaf3597f0b"
   end
 
   depends_on "openssl@3"

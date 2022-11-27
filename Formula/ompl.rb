@@ -4,7 +4,7 @@ class Ompl < Formula
   url "https://github.com/ompl/ompl/archive/1.5.2.tar.gz"
   sha256 "db1665dd2163697437ef155668fdde6101109e064a2d1a04148e45b3747d5f98"
   license "BSD-3-Clause"
-  revision 3
+  revision 1
   head "https://github.com/ompl/ompl.git", branch: "main"
 
   # We check the first-party download page because the "latest" GitHub release
@@ -15,13 +15,12 @@ class Ompl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "843607614ddb38dad78f7995c2a1926ada94aad6eccf7756120977033d58003f"
-    sha256 cellar: :any,                 arm64_monterey: "30ee71e15b93d121ab4115219e73a518d64650a8bf557f8ec0074f13d746ac47"
-    sha256 cellar: :any,                 arm64_big_sur:  "d917e5fdf5c7d440fd91b82b258f675d47dfdd98f6dbf1666297063c97847da3"
-    sha256 cellar: :any,                 monterey:       "6df2084f25065baf411c8d8308e2e8794ec64710dc12892d86ecd03d7e2221dd"
-    sha256 cellar: :any,                 big_sur:        "21964e04b91b8246c5910fdedd6f038417f04b9d86c2c2fb79f6a06e00871f07"
-    sha256 cellar: :any,                 catalina:       "c9691b20bccb579326f24add8b6b4c377d4f7bdf2e656a7de44b8811f486c0ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fec9ac266afa86e2cf676cb6acd864146b6aa1932870bf7761299cab2727c88"
+    sha256 cellar: :any,                 arm64_monterey: "ffe47e64de3abc87d21742b2f91d8e82d15f452dfced450cae396800dfe8d3a7"
+    sha256 cellar: :any,                 arm64_big_sur:  "8ec7941715b61540fbefccf77957e10de0283fd5faa247d8b49081597fa35fd2"
+    sha256 cellar: :any,                 monterey:       "07b00d741d2b807ba8bd4a73663d75728cce63bee2060ef5c1c99010a2eb1833"
+    sha256 cellar: :any,                 big_sur:        "cf1c091ca7a9df020d37cacd7984237c1a495ffe82408e5c48561f3325704e29"
+    sha256 cellar: :any,                 catalina:       "dffc06c254246bdbc7dd21e078c22fb84efcb9ebf838edd848ad0624a1fd8b4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ee3b59b7370f80c621b2cad70bbbf6a487836b75951dcf0a1f056048fe8716b"
   end
 
   depends_on "cmake" => :build

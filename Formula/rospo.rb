@@ -3,18 +3,17 @@ require "language/node"
 class Rospo < Formula
   desc "🐸 Simple, reliable, persistent ssh tunnels with embedded ssh server"
   homepage "https://github.com/ferama/rospo"
-  url "https://github.com/ferama/rospo/archive/refs/tags/v0.10.1.tar.gz"
-  sha256 "757d196bec665e68fedbe9b61ef2022f39bebc58cf20166418303837e0f45551"
+  url "https://github.com/ferama/rospo/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "ed036506d58826f5494e7e67038c137e6735fa4ccc199cd18c9dae3da41a46b8"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "066fdcc114912b39154648543f094d1986a48201723ef5a74977672ba3d32304"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4bb0c5154ee5a58bf157a4e77db24481c146744da8582a7ce46c2bffe97dcbcf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4154b7c201fc4fd918699ee1c6b503383ea76263869e377976b1f60c5efc03c6"
-    sha256 cellar: :any_skip_relocation, monterey:       "37912d30d64d25b750e6538e307f22c90b263f9680df6648337a5f1e7b53a9f1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8f4ba0676ea61b26cc34aca44abd939b87cc77818b28c47037b0e6559dafa15c"
-    sha256 cellar: :any_skip_relocation, catalina:       "dcc71e0a9bdda3add8c1c46d0adb2f364fd43c9f94c64a85d3a7f490170408eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bb0b72e3d8e6c65f3221be110fd66650bd116a35f46d1a0d43576b8ef04423d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9adddb8ee7b857de6196943474bde44d46d8bd7c60afcd90d0ba52cba14f7702"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "313e82316427034a72fb87f93b1f4045019481556b9e5635b085c8cd345c3dea"
+    sha256 cellar: :any_skip_relocation, monterey:       "0e693d65891e867ba4a09096e648ad42475a3262443ac956ec3316effd0c02d4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b80f2dddb883c45e8d2b2bf92fa9cfd972bf17538b427648a0331811249618b3"
+    sha256 cellar: :any_skip_relocation, catalina:       "de2934639ee130f2fc2966fd522eb5ce419c4161d4478d51b48ce791b12e29c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c7f942f9c4ec3b14c7cfca348da2420d17145717ea5f27fbc23577e70e195c1"
   end
 
   depends_on "go" => :build
@@ -26,8 +25,6 @@ class Rospo < Formula
       system "npm", "run", "build"
     end
     system "go", "build", *std_go_args(ldflags: "-s -w -X 'github.com/ferama/rospo/cmd.Version=#{version}'")
-
-    generate_completions_from_executable(bin/"rospo", "completion")
   end
 
   test do

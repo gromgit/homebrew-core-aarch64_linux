@@ -1,42 +1,56 @@
 class Putty < Formula
   desc "Implementation of Telnet and SSH"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/putty/"
-  url "https://the.earth.li/~sgtatham/putty/0.78/putty-0.78.tar.gz"
-  sha256 "274e01bcac6bd155dfd647b2f18f791b4b17ff313753aa919fcae2e32d34614f"
+  url "https://the.earth.li/~sgtatham/putty/0.76/putty-0.76.tar.gz"
+  sha256 "547cd97a8daa87ef71037fab0773bceb54a8abccb2f825a49ef8eba5e045713f"
   license "MIT"
-  head "https://git.tartarus.org/simon/putty.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "73d76e3809e293c8a1822f810831234d5a428d8d0574f043d4394ea0ae22e4f6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "98350a82ed60a6d22d3ef1fad8dc3a5e2ce8d44f2fea51d6f853315fed7b2a9e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e6964cbe0895d4f3b6c832062c0bcb8654264115fc522d2cbb7f17932e37117"
-    sha256 cellar: :any_skip_relocation, ventura:        "171f040dd0cf286f69836bf1c17a6fbc148bee5ef6392c328ac0731635a79115"
-    sha256 cellar: :any_skip_relocation, monterey:       "ed3b2388437bbb394523ed1956cfbc6ab7283763b6c07edec255bb3e5d5d2496"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e84fd110e478867048f4f8a45c0b10e7f7414cb4a31f4e38ee46649e6ca9fdfb"
-    sha256 cellar: :any_skip_relocation, catalina:       "35e0f3246651376a6c47765375faf56747ab81a8c03f4ffeb3c02429530e609d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51f654755b631cb5d5fedb590f2510e1e1f689444a9624fe39eef42173f2b76b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d4ca114d39cb55f75ef0b71f496bb96acf2e3f97e10e66d3ea7de8a4c87dc51b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "adb57691d42b70e51a4336dc37126996c782f2bf66db5d0f05813ebd04178ebf"
+    sha256 cellar: :any_skip_relocation, monterey:       "ab3cc934eace1bfe68e8a8896888b1c1213a68d18c4591f59df3f9312e9fbb0a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "75e23ad8100002d5ade0acf3745f4f40a9add28a25ea4814caafd0cb37be7cb8"
+    sha256 cellar: :any_skip_relocation, catalina:       "ab58a1de02894bd5364c31e4a5b864acb81cbc0160814d048f98077bfe01a4b1"
+    sha256 cellar: :any_skip_relocation, mojave:         "4aab22d3d6867678be1d1be95edb5fe41fcd7d807892b00b83d0280b6f356f46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51689b0cb6c740349175dad1786ac7786b639e78f5e5b3765272ae83162009d4"
   end
 
-  depends_on "cmake" => :build
-  depends_on "halibut" => :build
+  head do
+    url "https://git.tartarus.org/simon/putty.git"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "halibut" => :build
+  end
+
   depends_on "pkg-config" => :build
 
-  uses_from_macos "perl" => :build
   uses_from_macos "expect" => :test
 
   conflicts_with "pssh", because: "both install `pscp` binaries"
 
   def install
-    build_version = build.head? ? "svn-#{version}" : version
+    if build.head?
+      system "./mkfiles.pl"
+      system "./mkauto.sh"
+      system "make", "-C", "doc"
+    end
 
-    args = std_cmake_args + %W[
-      -DRELEASE=#{build_version}
-      -DPUTTY_GTK_VERSION=NONE
+    args = std_configure_args + %w[
+      --disable-gtktest
+      --without-gtk
     ]
 
-    system "cmake", "-S", ".", "-B", "build", *args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "./configure", *args
+
+    build_version = build.head? ? "svn-#{version}" : version
+    system "make", "VER=-DRELEASE=#{build_version}"
+
+    bin.install %w[plink pscp psftp puttygen]
+
+    cd "doc" do
+      man1.install %w[plink.1 pscp.1 psftp.1 puttygen.1]
+    end
   end
 
   test do

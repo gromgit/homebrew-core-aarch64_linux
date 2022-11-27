@@ -1,19 +1,13 @@
 class Mmark < Formula
   desc "Powerful markdown processor in Go geared towards the IETF"
   homepage "https://mmark.miek.nl/"
-  url "https://github.com/mmarkdown/mmark/archive/v2.2.30.tar.gz"
-  sha256 "04c74baadb4c3cd4c32f9e488b4b4e048ddb1b32411429911c827c2817a9816f"
+  url "https://github.com/mmarkdown/mmark/archive/v2.2.25.tar.gz"
+  sha256 "dfc74c62cbb3c32ae1895ea8f067829752ece09e91c157811c699a840e6b2b94"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "00800bff20cfa2374563794b173f75f06f68330a03b588d961b9f3b9058b7934"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0cdb15b9f7cb1fba55cccd36032edb017d9ef23d20d53d796b96216281f17e5f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0cdb15b9f7cb1fba55cccd36032edb017d9ef23d20d53d796b96216281f17e5f"
-    sha256 cellar: :any_skip_relocation, ventura:        "2b40b9be63162e2fb3ed470a7faf0f3e5edcb853c9db96afc1f9e93537d60720"
-    sha256 cellar: :any_skip_relocation, monterey:       "4a1975b84425301a4c08cb1a71dc83f4ea4b6dbee3954a4d79b84fad517d10fc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4a1975b84425301a4c08cb1a71dc83f4ea4b6dbee3954a4d79b84fad517d10fc"
-    sha256 cellar: :any_skip_relocation, catalina:       "4a1975b84425301a4c08cb1a71dc83f4ea4b6dbee3954a4d79b84fad517d10fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59d6d0a37275771dde45bdb2f5ba5b89ad574b0eec359d2ebc1af0a840fc8333"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mmark"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1470b5be69a88212dbf7297efd4a1647bb32045abb79fcd01d4b38571b84cbf0"
   end
 
   depends_on "go" => :build

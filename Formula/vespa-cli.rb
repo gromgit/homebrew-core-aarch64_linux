@@ -1,8 +1,8 @@
 class VespaCli < Formula
   desc "Command-line tool for Vespa.ai"
   homepage "https://vespa.ai"
-  url "https://github.com/vespa-engine/vespa/archive/v8.89.6.tar.gz"
-  sha256 "fadb84f1eb46be070eee5adc8d09f0dd45d9836e00e7ec480bb56645c51a3e10"
+  url "https://github.com/vespa-engine/vespa/archive/v7.580.54.tar.gz"
+  sha256 "5820253d2582761f8e4dcf5df0e1a37f4a3152a33feeca9517676679f9daee3a"
   license "Apache-2.0"
 
   livecheck do
@@ -12,13 +12,8 @@ class VespaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4fe78972213ab15d42becebd8530b560d8f951379ebe3c72500953481377488b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9f0663b80ddb3efd46505b1e0e9527eb23b6ff8db1bdda96b1e561001a0d11c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "680b7da9a54aa3d78a17ebe1f576723ff5ab8f2b75b68723e4a0752a948395c8"
-    sha256 cellar: :any_skip_relocation, monterey:       "7fcfd0035ea3e7103a7b15dc742e20ec7a3b5f0de28f2a9a1f79fdc3c9dd5da5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8c979467f9f4fa6bb51eaf8ab4a0282e37551f51d4f3f5d55f2e368720b4fee2"
-    sha256 cellar: :any_skip_relocation, catalina:       "13cb7beb8d9104d9939e1ae6309ff80424ade84d89e600420eda1105d3b53568"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62b35c422af8a6e193ebdfc9cbb4429e63ea6f036dd6b1def563a805208feb58"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/vespa-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7094c252c2d45afd4054af11367a1140969077268c165653f7ce2a2f4cb8fd29"
   end
 
   depends_on "go" => :build
@@ -30,13 +25,15 @@ class VespaCli < Formula
       end
       bin.install "bin/vespa"
       man1.install Dir["share/man/man1/vespa*.1"]
-      generate_completions_from_executable(bin/"vespa", "completion", base_name: "vespa")
+      (bash_completion/"vespa").write Utils.safe_popen_read(bin/"vespa", "completion", "bash")
+      (fish_completion/"vespa.fish").write Utils.safe_popen_read(bin/"vespa", "completion", "fish")
+      (zsh_completion/"_vespa").write Utils.safe_popen_read(bin/"vespa", "completion", "zsh")
     end
   end
 
   test do
     ENV["VESPA_CLI_HOME"] = testpath
-    assert_match "Vespa CLI version #{version}", shell_output("#{bin}/vespa version")
+    assert_match "vespa version #{version}", shell_output("#{bin}/vespa version")
     doc_id = "id:mynamespace:music::a-head-full-of-dreams"
     assert_match "Error: Request failed", shell_output("#{bin}/vespa document get #{doc_id} 2>&1", 1)
     system "#{bin}/vespa", "config", "set", "target", "cloud"

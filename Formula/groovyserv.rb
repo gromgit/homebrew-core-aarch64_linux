@@ -3,7 +3,6 @@ class Groovyserv < Formula
   homepage "https://kobo.github.io/groovyserv/"
   url "https://bitbucket.org/kobo/groovyserv-mirror/downloads/groovyserv-1.2.0-src.zip"
   sha256 "235b38c6bb70721fa41b2c2cc6224eeaac09721e4d04b504148b83c40ea0bb27"
-  license "Apache-2.0"
 
   livecheck do
     url :stable
@@ -17,7 +16,7 @@ class Groovyserv < Formula
     sha256 cellar: :any_skip_relocation, el_capitan:  "51aef6e15608021ae127aaa93e2aa39bfaf52cfea688b45841d315b6a04b55aa"
   end
 
-  disable! date: "2022-07-31", because: :does_not_build
+  deprecate! date: "2020-11-13", because: :does_not_build
 
   depends_on "go" => :build
   depends_on "groovy"

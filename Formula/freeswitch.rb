@@ -5,7 +5,7 @@ class Freeswitch < Formula
       tag:      "v1.10.7",
       revision: "883d2cb662bed0316e157bd3beb9853e96c60d02"
   license "MPL-1.1"
-  revision 5
+  revision 4
   head "https://github.com/signalwire/freeswitch.git", branch: "master"
 
   livecheck do
@@ -14,14 +14,12 @@ class Freeswitch < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "5d548ddb3d91f4ebe5b9053f1036c80f9e0f5a70a10a6a8ec1477e7ea3a29b68"
-    sha256 arm64_monterey: "92c4fbe41ea20e17015b925bb7dacc9a1e390750d92828bdda8669512b5eb730"
-    sha256 arm64_big_sur:  "b9f5274cd30763c538687ee99d8127a82b158bd6dd040f7903cfebe11cd72635"
-    sha256 monterey:       "212d0a0c336d7d9664a11253a1e03346e61639c586415365747586729e049b43"
-    sha256 big_sur:        "0fa34380d2de422598e412f860b8d0e203f1b7d20e88e02eb4977440cd7db3ea"
-    sha256 catalina:       "c5d905de36a82f12b1c3bd923d991fac46cfd0a1eaf399fe20616e4e2ec23a0e"
-    sha256 x86_64_linux:   "97d3d76aa7658d3a4c86a714721afe7905f3ce1826bc5187af214fedd498a551"
+    sha256 arm64_monterey: "c6ea3203ace7bb14a093379a005634c2a1168c3ffc8e6180628b6d1d9ea144c7"
+    sha256 arm64_big_sur:  "d50a18774f5ebce104dd53843c20998c7af189d97a6f56c60a6db54876b36c64"
+    sha256 monterey:       "d2b30cb6927c79f42bcb500af86490ba9f16c6f3dbe67a237077b91e9f31cfc3"
+    sha256 big_sur:        "b63a67915cba8a3d1e6f1580a4c9c5595c3d61d1900580a6403e394eb525fec3"
+    sha256 catalina:       "33498f0826b57b350702e6de4966bae76975b4f31b6ef10fe70a3a29107e99a6"
+    sha256 x86_64_linux:   "413dbb409c33a4b2a5215934a26b5c308d0dbb11d3ae559f2eed61ce32561813"
   end
 
   depends_on "autoconf" => :build
@@ -31,7 +29,7 @@ class Freeswitch < Formula
   depends_on "pkg-config" => :build
   depends_on "yasm" => :build
   depends_on "ffmpeg@4"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "ldns"
   depends_on "libpq"
   depends_on "libsndfile"
@@ -50,6 +48,12 @@ class Freeswitch < Formula
   uses_from_macos "libedit"
   uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   # https://github.com/Homebrew/homebrew/issues/42865
 
@@ -136,15 +140,14 @@ class Freeswitch < Formula
       system "make"
       ENV.deparallelize { system "make", "install" }
 
-      ENV.append_path "PKG_CONFIG_PATH", libexec/"spandsp/lib/pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{libexec}/spandsp/lib/pkgconfig"
     end
 
     resource("libks").stage do
-      system "cmake", ".", *std_cmake_args(install_prefix: libexec/"libks")
-      system "cmake", "--build", "."
-      system "cmake", "--install", "."
+      system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_PREFIX=#{libexec}/libks"
+      system "make", "install"
 
-      ENV.append_path "PKG_CONFIG_PATH", libexec/"libks/lib/pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{libexec}/libks/lib/pkgconfig"
       ENV.append "CFLAGS", "-I#{libexec}/libks/include"
 
       # Add RPATH to libks.pc so libks.so can be found by freeswitch modules.
@@ -154,11 +157,10 @@ class Freeswitch < Formula
     end
 
     resource("signalwire-c").stage do
-      system "cmake", ".", *std_cmake_args(install_prefix: libexec/"signalwire-c")
-      system "cmake", "--build", "."
-      system "cmake", "--install", "."
+      system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_PREFIX=#{libexec}/signalwire-c"
+      system "make", "install"
 
-      ENV.append_path "PKG_CONFIG_PATH", libexec/"signalwire-c/lib/pkgconfig"
+      ENV.append_path "PKG_CONFIG_PATH", "#{libexec}/signalwire-c/lib/pkgconfig"
 
       # Add RPATH to signalwire_client.pc so libsignalwire_client.so
       # can be found by freeswitch modules.
@@ -169,7 +171,7 @@ class Freeswitch < Formula
 
     system "./bootstrap.sh", "-j"
 
-    args = %W[
+    args = std_configure_args + %W[
       --enable-shared
       --enable-static
       --exec_prefix=#{prefix}
@@ -177,8 +179,7 @@ class Freeswitch < Formula
     # Fails on ARM: https://github.com/signalwire/freeswitch/issues/1450
     args << "--disable-libvpx" if Hardware::CPU.arm?
 
-    ENV.append_to_cflags "-D_ANSI_SOURCE" if OS.linux?
-    system "./configure", *std_configure_args, *args
+    system "./configure", *args
     system "make", "all"
     system "make", "install"
 

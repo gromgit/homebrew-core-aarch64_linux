@@ -6,7 +6,6 @@ class Fprobe < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fc681a6b0978ce9f02ba8004055f444567398e689b8f453d2061f6f2f20d3bd3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "166c831373d123030545fa69b5fabbb0124fa9501ac1258e43c81a1b00222a1a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "83c78c439cf2ec7338b3033e9cd623d04f8d19064ad566d206fc290d375f5472"
     sha256 cellar: :any_skip_relocation, monterey:       "61a41b0da60f8b3a285216e847d25c25d95e457cb3da9c8f63bdfdaae4f8b8ae"
@@ -16,6 +15,7 @@ class Fprobe < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:    "31efd46250371cfd9ab386ff34cc41eb98d10758d550769ec72f8373ac1df800"
     sha256 cellar: :any_skip_relocation, sierra:         "fe38758d956c43b2a223734d426c990c63ee44ac643dc769c3d6a0cd4f07ef6b"
     sha256 cellar: :any_skip_relocation, el_capitan:     "9b06507a358024842b59c9f4d637b94b3681e720dbd3a1a8bc93d4d34f9a4442"
+    sha256 cellar: :any_skip_relocation, yosemite:       "18043cf3fcc930ee1690ee4bc74d92eed3c56a2424f85d58720c56a4b5bcad1d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e295fddc95d80d87b222455cca00e95aa3a429317c08daeee456aac1f3170732"
   end
 

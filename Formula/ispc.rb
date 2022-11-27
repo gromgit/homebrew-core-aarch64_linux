@@ -1,26 +1,29 @@
 class Ispc < Formula
   desc "Compiler for SIMD programming on the CPU"
   homepage "https://ispc.github.io"
-  url "https://github.com/ispc/ispc/archive/v1.18.1.tar.gz"
-  sha256 "5b004c121e7a39c8654bb61930a240e4bd3e432a80d851c6281fae49f9aca7b7"
+  url "https://github.com/ispc/ispc/archive/v1.18.0.tar.gz"
+  sha256 "81f2cc23b555c815faf53429e9eee37d1f2f16873ae7074e382ede94721ee042"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "fae2e3b3e49e198d644de5d41d1072b1eec914de46023f59cb193cc24611e8ef"
-    sha256 cellar: :any,                 arm64_monterey: "a4cfc73e0e1cef6223f187f27ce34a503ceaa71dbed5d1a7e19763af2781b4de"
-    sha256 cellar: :any,                 arm64_big_sur:  "1dd45f53ecf4aed0641eccf04c30c9369ce77748d4d243f0dce23cc166ef853c"
-    sha256 cellar: :any,                 ventura:        "0d27a32c440fa6a4f065573cc681ca72b5710f7bdc09795631211b868d3495e5"
-    sha256 cellar: :any,                 monterey:       "f692c4a3b61a4118bfbef17d689801b8e602bf18b8ee6ce4ad8cb1a1a45b37f6"
-    sha256 cellar: :any,                 big_sur:        "b34d180813b2dec88159f38354f74c773814c0828a24cc10f81e0cd03ca9ab29"
-    sha256 cellar: :any,                 catalina:       "0efb592a2b306bf3cc1da19e5ea4455230ef1cb3699b0eb50acd15fea111698d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a9d579f863fb0da48795d2dd53df68de831b149f43a1281f26298bd893fc08f"
+    sha256 cellar: :any,                 arm64_monterey: "c9cf8cf0b15d029f95bab589d6aec903d19df669fa39e8b844e413ceced5244c"
+    sha256 cellar: :any,                 arm64_big_sur:  "3b13624a6b741e413530b0ac1559b5a82f797af71f945aea54577c77ae2462ff"
+    sha256 cellar: :any,                 monterey:       "673087b8118571ed140a11b5dad66277eab33450cd8ce3fb02a15c35ef45f48c"
+    sha256 cellar: :any,                 big_sur:        "da6ef96870ff6afd9b719dfcf7316a9c207f0f137b4624469f26472a10fbb878"
+    sha256 cellar: :any,                 catalina:       "41beb9f2a721a680564bcd55e0a029c1f99231886ae96cb0d02884fbb2541a2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "864e22beac49f650331488c5ae56594b70f397c5f290f185e9636883793ec62a"
   end
 
   depends_on "bison" => :build
   depends_on "cmake" => :build
   depends_on "flex" => :build
   depends_on "python@3.10" => :build
-  depends_on "llvm@14"
+  depends_on "llvm" # Must be LLVM 13
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

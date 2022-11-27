@@ -9,28 +9,25 @@ class GitRemoteCodecommit < Formula
   head "https://github.com/aws/git-remote-codecommit.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aa3babcfd3c1322c57600ab40cf5f231c466c4b4efe40e789e5900182469681a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7a3e4159b111df2c478774b19092c6c526200abd7b3015097a8f0cb5e7af8673"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ced97705990d50c77851badbba049b5772c6c23d259bcc3ac3e36ca2d58b7b75"
-    sha256 cellar: :any_skip_relocation, ventura:        "c1cf2b611bbca3623840722e32c300fbd43bb8b66578312aef9e0d83e780c767"
-    sha256 cellar: :any_skip_relocation, monterey:       "a700c8e7bfa15993e44e389aa082981432cb2630b6a0fc2ee5ad7948ee8d1040"
-    sha256 cellar: :any_skip_relocation, big_sur:        "50d82f4816304ef6fd7a48399fe5019ca8c7eb85e9287c52cb23bfe5881ac017"
-    sha256 cellar: :any_skip_relocation, catalina:       "01f8a1c497bf2aa29a0bdbcf97ca326338ffe7a956dd0e2a697c3384f5ef0c2f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a00a72c0b27c905f7d2bd830dc6cb4feff9aacbbccc8039c9766943c4ca74ecf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a2d6ee445646a01d35fbf60f863066e1878e5ad7a9f1261bfeaac34559df003"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8640252e0a83ce8f0a7b76e858b66015df078a7b56b601a0aeb103cc76270b0e"
+    sha256 cellar: :any_skip_relocation, monterey:       "e39aceccb0187a96cd5ca3c91010255eda8aba9a02b23044bb559ed11498b2be"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d73f7e222480c99fe37d021f6df267ce5919f42ec72c697192647683c3e9d9d4"
+    sha256 cellar: :any_skip_relocation, catalina:       "ab62f6c49dee5df49161d0ea44ea61fd970149dd27ec7f59fd071d0441532243"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abbcbf451250f25604fb95dadd8a1b46d7208d8d8854a112ed0ec2cbb95e589d"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "six"
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/61/d0/864d19810c779c8f2cc4e64030414c2056178863c6a61d2f831ab031cc35/botocore-1.29.3.tar.gz"
-    sha256 "ac7986fefe1b9c6323d381c4fdee3845c67fa53eb6c9cf586a8e8a07270dbcfe"
+    url "https://files.pythonhosted.org/packages/ac/96/4d5434c7e5cc0ecb69cc129edd352c3c659bfc33e1228700afc48c7228a9/botocore-1.23.20.tar.gz"
+    sha256 "22e1c7b4b2b8b11d7001ca5ef2b41bda9a8be46fb3cb994a2948462666ac5ef1"
   end
 
   resource "jmespath" do
-    url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
-    sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+    url "https://files.pythonhosted.org/packages/3c/56/3f325b1eef9791759784aa5046a8f6a1aff8f7c898a2e34506771d3b99d8/jmespath-0.10.0.tar.gz"
+    sha256 "b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"
   end
 
   resource "python-dateutil" do
@@ -39,8 +36,8 @@ class GitRemoteCodecommit < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/80/be/3ee43b6c5757cabea19e75b8f46eaf05a2f5144107d7db48c7cf3a864f73/urllib3-1.26.7.tar.gz"
+    sha256 "4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece"
   end
 
   def install

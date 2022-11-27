@@ -1,19 +1,17 @@
 class Libofx < Formula
   desc "Library to support OFX command responses"
   homepage "https://github.com/libofx/libofx"
-  url "https://github.com/libofx/libofx/releases/download/0.10.9/libofx-0.10.9.tar.gz"
-  sha256 "1ca89ff7d681c9edad312172ac464231a8de686e653213612f9417492cef0d37"
+  url "https://github.com/libofx/libofx/releases/download/0.10.5/libofx-0.10.5.tar.gz"
+  sha256 "570ea744fb654750ed9c60456c771e7cbb035465f409e9ee1118f671b47b3bc3"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "4c2f9ec0e41e667c21b2a6c1fbe81d11e356e1d5d5afdf80b1f3e771a6da3183"
-    sha256 arm64_monterey: "c6e732fd8e3dac426fea0f2845c634af8542661058265f43886ef2f65828f95f"
-    sha256 arm64_big_sur:  "0cbb926e59cd1032c9db87a9c4b33747a45dc6f48b2e4a1c26fefd066401c8f5"
-    sha256 ventura:        "64a1c8fe606555249a4a3610912062525f0253c98f479f1246d7cd57355d185d"
-    sha256 monterey:       "aa32a1500793c8add1ae49017887b2288f5c0d921d4db3681c1150f854da1038"
-    sha256 big_sur:        "8e0d20d6e6f664a559e2e4cd665562b514b17ec491fe9a433bc8b85fb4ba221e"
-    sha256 catalina:       "08593e309b9133e1b534200b44ed4a87446fa305f63dfdc79e1de93a9ac22835"
-    sha256 x86_64_linux:   "88107478b5837f83a6f9f6f99279b3fa10c9465b7fca30fb52ff51a6b07f1271"
+    sha256 arm64_monterey: "8f7250faec67d50542f6f2cb045411b184ea422d36c4c6a1376d663cca3905ac"
+    sha256 arm64_big_sur:  "9fefe346a497717fd525530bf249796b796a7926ce8bd263d8c01c6e0cc08e8f"
+    sha256 monterey:       "8f8f85bc670a1e5c17114f5b49ff8f5fa0ba97d95ac00249fee652d46fadb55f"
+    sha256 big_sur:        "e4feea6f79cc945d1a62838655133c6fcd26e82fb9db49c2a12e94e2ec84b529"
+    sha256 catalina:       "b97732a6d64cecf91e711d3ce1d6539b4678ef57c4cbd08d51551bd869593b2c"
+    sha256 x86_64_linux:   "8cbdc7e82d067c3ee16993c3741cee5a84deb0621f9c5a28ab55bb260dc6c4f9"
   end
 
   head do

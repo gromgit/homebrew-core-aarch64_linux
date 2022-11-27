@@ -1,14 +1,13 @@
 class Asdf < Formula
   desc "Extendable version manager with support for Ruby, Node.js, Erlang & more"
   homepage "https://asdf-vm.com/"
-  url "https://github.com/asdf-vm/asdf/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "a097d40888c276cb20e1489a3da6573dd9d184d8e6518c5f8177d3c2c1066f57"
+  url "https://github.com/asdf-vm/asdf/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "02c9c00c048de3dd50634ce28c4038540bf9d8b3b6356d253236f84841a51e7c"
   license "MIT"
   head "https://github.com/asdf-vm/asdf.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "2098bd4ff1da95064d7d112e8287532c077b1e1bda0dcb91fd977f7bac65ba5e"
+    sha256 cellar: :any_skip_relocation, all: "4dbd25f3e341f9a51e9ca9e0ee8ddf33d3d002b0eb19148740abe6a1bdd2fcce"
   end
 
   depends_on "autoconf"
@@ -27,7 +26,12 @@ class Asdf < Formula
     libexec.install Dir["*"]
     touch libexec/"asdf_updates_disabled"
 
+    # TODO: Remove these placeholders on 31 August 2022
     bin.write_exec_script libexec/"bin/asdf"
+    (prefix/"asdf.sh").write ". #{libexec}/asdf.sh\n"
+    (prefix/"asdf.fish").write "source #{libexec}/asdf.fish\n"
+    (lib/"asdf.sh").write ". #{libexec}/lib/asdf.sh\n"
+    (lib/"asdf.fish").write "source #{libexec}/lib/asdf.fish\n"
   end
 
   def caveats

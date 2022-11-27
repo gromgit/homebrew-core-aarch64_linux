@@ -12,7 +12,6 @@ class GhcAT86 < Formula
 
   bottle do
     rebuild 1
-    sha256                               ventura:      "5b70e3709e04b715d5e9d1948d14b77d0417290dac3c9c99897cf6b36807c612"
     sha256                               monterey:     "5449cd08c2d622390a65332c3c817e6866c2a9f4fab45d56c5159231ba99a4df"
     sha256                               big_sur:      "ff771fbe5b187198b2a49df9db019468b77b01205b6fd26a275fb04bba9ea30b"
     sha256                               catalina:     "d3ddfea33754da6f983910a29b93e59c2419e2fef672fe3b850faf88d1da279e"
@@ -27,17 +26,17 @@ class GhcAT86 < Formula
   uses_from_macos "m4" => :build
   uses_from_macos "ncurses"
 
-  on_linux do
-    depends_on "gmp" => :build
-  end
-
-  resource "gmp" do
-    on_macos do
+  on_macos do
+    resource "gmp" do
       url "https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz"
       mirror "https://gmplib.org/download/gmp/gmp-6.1.2.tar.xz"
       mirror "https://ftpmirror.gnu.org/gmp/gmp-6.1.2.tar.xz"
       sha256 "87b565e89a9a684fe4ebeeddb8399dce2599f9c9049854ca8c0dfbdea0e21912"
     end
+  end
+
+  on_linux do
+    depends_on "gmp" => :build
   end
 
   # https://www.haskell.org/ghc/download_ghc_8_6_5#macosx_x86_64
@@ -49,8 +48,8 @@ class GhcAT86 < Formula
     end
 
     on_linux do
-      url "https://downloads.haskell.org/~ghc/8.6.5/ghc-8.6.5-x86_64-fedora27-linux.tar.xz"
-      sha256 "cf78b53eaf336083e7a05f4a3000afbae4abe5bbc77ef80cc40e09d04ac5b4a1"
+      url "https://downloads.haskell.org/~ghc/8.6.5/ghc-8.6.5-x86_64-deb8-linux.tar.xz"
+      sha256 "c419fd0aa9065fe4d2eb9a248e323860c696ddf3859749ca96a84938aee49107"
     end
   end
 
@@ -60,7 +59,7 @@ class GhcAT86 < Formula
   def install
     ENV["CC"] = ENV.cc
     ENV["LD"] = "ld"
-    ENV["PYTHON"] = which("python3.10")
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
 
     args = %w[--enable-numa=no]
     if OS.mac?

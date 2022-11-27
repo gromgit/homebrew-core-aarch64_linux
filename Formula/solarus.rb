@@ -5,18 +5,16 @@ class Solarus < Formula
       tag:      "v1.6.5",
       revision: "3aec70b0556a8d7aed7903d1a3e4d9a18c5d1649"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 1
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "20fbf5ecc4020956d8d4938b8e02e0451030e504fe2f0a3493044b55e53763ef"
-    sha256 cellar: :any,                 arm64_monterey: "1df04c516d36ec062f0ad18d10495aa879081a3564210dd264dd36e381410d23"
-    sha256 cellar: :any,                 arm64_big_sur:  "1f9369c5a18363ef3c9fae788c8834f22e501b3edc69c9559747386107a058e3"
-    sha256 cellar: :any,                 ventura:        "16c9bbe34ef0d45488c4406b2a94182784281810f54682dc5b08781476b2fbdb"
-    sha256 cellar: :any,                 monterey:       "6c33e0972e80bac278d3d4e2b2584032a20ca92256231b27c99fb9cb1ab61bb8"
-    sha256 cellar: :any,                 big_sur:        "a0c0902c8ec2ee91d806ac6f65526c76478cae5309dd335ef4fb47ef8d98b651"
-    sha256 cellar: :any,                 catalina:       "a2e50fcb5ead429c8f72c5a484dc45d1089f94f6d2e58420c9fd544057516226"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08b76ceebc80b02c8ae22dadf8d4b0f22827e8dca8254567951669575360c20f"
+    sha256 cellar: :any,                 arm64_monterey: "81f2b618280f6e3c1c4301a33c110fc693ec2db3f077290101bc35794971ffa3"
+    sha256 cellar: :any,                 arm64_big_sur:  "4fd02a38396ccef31a843c7d4172a1a8f3ba6e9f3573061433009922e08748ea"
+    sha256 cellar: :any,                 monterey:       "7a515dbb5fc12783533f6f702696001bd9d948d71108eb17ffbc51da6cd69e84"
+    sha256 cellar: :any,                 big_sur:        "7ef48a0cc8bf5a48ba41d78f0b2c950ded7e30dd53525e404d09af34f7df61cf"
+    sha256 cellar: :any,                 catalina:       "58399ecdec97de696ec39a3eab21cb3fe7c6d3c08dab321c95bc2c4567192db5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "977c7794f247a875af1e24d9be7c82b76c42a5a12bc717be7b3ea8fff3d9764b"
   end
 
   depends_on "cmake" => :build
@@ -24,13 +22,14 @@ class Solarus < Formula
   depends_on "libmodplug"
   depends_on "libogg"
   depends_on "libvorbis"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
   depends_on "physfs"
   depends_on "sdl2"
   depends_on "sdl2_image"
   depends_on "sdl2_ttf"
 
   on_linux do
+    depends_on "gcc"
     depends_on "mesa"
     depends_on "openal-soft"
   end

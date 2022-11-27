@@ -8,7 +8,6 @@ class Ucg < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 ventura:      "afbb657bc288953de91236ba95f3c609ba4e411e8602f0efda43770422436c43"
     sha256 cellar: :any,                 monterey:     "3ffc7fcd491433d72238d232acc46f48e08e1c85b40a147f67dabb7de8ec830d"
     sha256 cellar: :any,                 big_sur:      "ea472cd9d4ecff1791a8df22e8207387957cad4af9b367698887772b98f434ff"
     sha256 cellar: :any,                 catalina:     "2e18cfd35ea53d5326a69f3d21cf32c2e850cd864735e3e45cd645d85e350ec7"
@@ -23,7 +22,6 @@ class Ucg < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on arch: :x86_64 # https://github.com/gvansickle/ucg/issues/123
   depends_on "pcre2"
 
   on_macos do

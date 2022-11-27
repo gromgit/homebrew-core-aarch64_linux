@@ -1,8 +1,8 @@
 class Gtkmm3 < Formula
   desc "C++ interfaces for GTK+ and GNOME"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.7.tar.xz"
-  sha256 "1d7a35af9c5ceccacb244ee3c2deb9b245720d8510ac5c7e6f4b6f9947e6789c"
+  url "https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.5.tar.xz"
+  sha256 "856333de86689f6a81c123f2db15d85db9addc438bc3574c36f15736aeae22e6"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,14 +11,13 @@ class Gtkmm3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "9c5913ee79cab986ee26accb6bf5ce09609f0680656086a7f6e00a54caa92659"
-    sha256 cellar: :any, arm64_monterey: "808bfe18b6b0520ae339f1547226186e26d2921aec56a1a893e23d944a4c8526"
-    sha256 cellar: :any, arm64_big_sur:  "27b6d3262145f8603093b58ca8acb18f2ab85e0a7c278e5b07cf6af9da8e6095"
-    sha256 cellar: :any, ventura:        "0826ae1a46d4c9e3d26ca4cbcb00202f193e2ab7287bda7e2d0f4366b0f7bb75"
-    sha256 cellar: :any, monterey:       "0d993ae9c31063d3e051809dc39e5c519f757488d0dc2329cd55088676d0ee89"
-    sha256 cellar: :any, big_sur:        "d02cdf945b5d228921bd461fadffeb28e384e29166b4483760ee3be9f7ab2c9f"
-    sha256 cellar: :any, catalina:       "c482ea55a5f8d0eace78b24ce5b8337b355f47816cc3c3b71f2767af2ed5bdb1"
-    sha256               x86_64_linux:   "a13ec506b7a75317c847535caa40ab647b8ac562d306eee35a499030ab9594d2"
+    sha256 cellar: :any,                 arm64_monterey: "8896ebb10b53391116d24dfe7e69979a1906e415854ded46d83c71635e41c52d"
+    sha256 cellar: :any,                 arm64_big_sur:  "498012a6736839227f226c7ffa61c765af0c9b0a529c94ab29e4973038b7dec5"
+    sha256 cellar: :any,                 monterey:       "0da6543cbbb763482bb7294a975a06626b03aa374c4b07a4b49dfa438a69a20b"
+    sha256 cellar: :any,                 big_sur:        "8d16cc9c24d41df916fc4018cd1a678cd99612583dd15afe553baeda150d784e"
+    sha256 cellar: :any,                 catalina:       "a029910a18eb883a7e02551a5b0e35696497a6fcafd5df4c03e32ca4a9583f58"
+    sha256 cellar: :any,                 mojave:         "52e930043442ed8c29c081c111d4f8e645744c07c4ef8f29bdbec9b1bb512371"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e83a7fe760357a78fb5c90e22159ccb1dd3d0d69415ec68db996c046d24270a2"
   end
 
   depends_on "meson" => :build

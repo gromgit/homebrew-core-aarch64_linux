@@ -3,23 +3,23 @@ class Ptpython < Formula
 
   desc "Advanced Python REPL"
   homepage "https://github.com/prompt-toolkit/ptpython"
-  url "https://files.pythonhosted.org/packages/d5/95/1acee8aec7a8a683c03ced796217713aa649e370b621308f9c5e164124e3/ptpython-3.0.21.tar.gz"
-  sha256 "a57b9952eac4a12540a4dfb4ccd4a243403eceb27b0d13245b5e4144c8731d32"
+  url "https://files.pythonhosted.org/packages/00/df/223017f2565336078c872f700ebe1c893a051e4d7b472fd0b68289ab3acb/ptpython-3.0.20.tar.gz"
+  sha256 "eafd4ced27ca5dc370881d4358d1ab5041b32d88d31af8e3c24167fe4af64ed6"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/prompt-toolkit/ptpython.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aeed5663a32409d4304fe52f78209a626b541e3e526406d5a623bb02d57106eb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec295138817ebb7bd620d458841575494b925e4a7441f91e631f1d95d0a33691"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb5ca41cf2eb07ac7f9fafd0610ae7487a4614fd4aaaf44b2c3a1424a86486a8"
-    sha256 cellar: :any_skip_relocation, ventura:        "f90a827c2bc79b18a5f1e300cf6e383cc46c9d08e9e3601c76c615b2d4885546"
-    sha256 cellar: :any_skip_relocation, monterey:       "da67eebd48454f67723a483d93819fec01b035b18dd19eb52d4a02fdd0e5fc18"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bb03e83101a85159ed14bede937622fce3f20b2fb8fbf18b4b53920951203b0d"
-    sha256 cellar: :any_skip_relocation, catalina:       "bc8ec8fe589bb4cce90b5b5927cae33eba98a3dab4a059eeeade4dc23c75e2bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1937d9409ce35b1c7e01008f2d92282e8bc3113d826468b773687d3dc51befbd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ece3f47a0eaf377a1c1a088f74a86791eb636315ebfaed54b01f8be1c13a8761"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "438056e36eeefefdbe804d950c8861e9178db01fea6df670f83c506a8b7eb0c5"
+    sha256 cellar: :any_skip_relocation, monterey:       "54b237dc070385bbf7ab6fec1f1590440feb3d46ae506efd6cabfd9b048dbe37"
+    sha256 cellar: :any_skip_relocation, big_sur:        "916a01805966942286942293e9e3b77c23bd8db91be83803cdcd8c5c5c7a7b20"
+    sha256 cellar: :any_skip_relocation, catalina:       "3cbe9de5e60de6754eba2e1631759df14aa6e536e25b44d4665e16841124923e"
+    sha256 cellar: :any_skip_relocation, mojave:         "4b2f693efede4f086e5b9042d2a24b5f1bc691f79c7f63dda3f925402356c392"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5bddea40c1f3d5b943d062c90caf7888f381f2c51bef077dc6aee2d3f5f233c7"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "appdirs" do
     url "https://files.pythonhosted.org/packages/d7/d8/05696357e0311f5b5c316d7b95f46c669dd9c15aaeecbb48c7d0aeb88c40/appdirs-1.4.4.tar.gz"
@@ -27,23 +27,23 @@ class Ptpython < Formula
   end
 
   resource "jedi" do
-    url "https://files.pythonhosted.org/packages/15/02/afd43c5066de05f6b3188f3aa74136a3289e6c30e7a45f351546cab0928c/jedi-0.18.2.tar.gz"
-    sha256 "bae794c30d07f6d910d32a7048af09b5a39ed740918da923c6b780790ebac612"
+    url "https://files.pythonhosted.org/packages/ac/11/5c542bf206efbae974294a61febc61e09d74cb5d90d8488793909db92537/jedi-0.18.0.tar.gz"
+    sha256 "92550a404bad8afed881a137ec9a461fed49eca661414be45059329614ed0707"
   end
 
   resource "parso" do
-    url "https://files.pythonhosted.org/packages/a2/0e/41f0cca4b85a6ea74d66d2226a7cda8e41206a624f5b330b958ef48e2e52/parso-0.8.3.tar.gz"
-    sha256 "8c07be290bb59f03588915921e29e8a50002acaf2cdc5fa0e0114f91709fafa0"
+    url "https://files.pythonhosted.org/packages/5e/61/d119e2683138a934550e47fc8ec023eb7f11b194883e9085dca3af5d4951/parso-0.8.2.tar.gz"
+    sha256 "12b83492c6239ce32ff5eed6d3639d6a536170723c6f3f1506869f1ace413398"
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/c4/6e/6ff7938f47981305a801a4c5b8d8ed282b58a28c01c394d43c1fbcfc810b/prompt_toolkit-3.0.33.tar.gz"
-    sha256 "535c29c31216c77302877d5120aef6c94ff573748a5b5ca5b1b1f76f5e700c73"
+    url "https://files.pythonhosted.org/packages/b4/56/9ab5868f34ab2657fba7e2192f41316252ab04edbbeb2a8583759960a1a7/prompt_toolkit-3.0.20.tar.gz"
+    sha256 "eb71d5a6b72ce6db177af4a7d4d7085b99756bf656d98ffcc4fecd36850eea6c"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
+    url "https://files.pythonhosted.org/packages/b7/b3/5cba26637fe43500d4568d0ee7b7362de1fb29c0e158d50b4b69e9a40422/Pygments-2.10.0.tar.gz"
+    sha256 "f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6"
   end
 
   resource "wcwidth" do

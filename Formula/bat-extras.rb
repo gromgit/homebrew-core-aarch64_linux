@@ -1,8 +1,8 @@
 class BatExtras < Formula
   desc "Bash scripts that integrate bat with various command-line tools"
   homepage "https://github.com/eth-p/bat-extras"
-  url "https://github.com/eth-p/bat-extras/archive/refs/tags/v2022.07.27.tar.gz"
-  sha256 "ee6950c7478049646496af5463f9c4114db8938706c13d91ad41f4f16dd241ea"
+  url "https://github.com/eth-p/bat-extras/archive/refs/tags/v2021.08.21.tar.gz"
+  sha256 "15b5be9f33e2eba6ca8f27870a98ed6920a015281039bc418dafdba2a684d366"
   license "MIT"
 
   livecheck do
@@ -11,7 +11,8 @@ class BatExtras < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "717ad828da58e7d7aa1ce4a091c9bd6fbb26fefcf4ce4f67eea52a7001df5f92"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "c28c0829cd60e9550c340addade7ea8ce4aef1eff9b224225fb5695ead09567c"
   end
 
   depends_on "bat" => [:build, :test]

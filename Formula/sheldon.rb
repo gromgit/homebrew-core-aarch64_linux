@@ -1,20 +1,18 @@
 class Sheldon < Formula
   desc "Fast, configurable, shell plugin manager"
   homepage "https://sheldon.cli.rs"
-  url "https://github.com/rossmacarthur/sheldon/archive/0.7.1.tar.gz"
-  sha256 "22357b913483232623b8729820e157d826fd94a487a731b372dbdca1138ddf20"
+  url "https://github.com/rossmacarthur/sheldon/archive/0.6.6.tar.gz"
+  sha256 "9d6cdc8fe011c4defe65fbe1507e48a51f8efdeebb5d5b0b39fbde2c73566973"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/rossmacarthur/sheldon.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3da53db796890c0ac7f98174008145738e6344f354e8f25370d6e8a5eb90482a"
-    sha256 cellar: :any,                 arm64_monterey: "eb6155ac30d1322c493584964ab5b9678724a85c739dd1b9ec91c6b6afc4a1f6"
-    sha256 cellar: :any,                 arm64_big_sur:  "ab3bddd34e6be2812e919e497b39cb2df62de780890ccdfc0b18944f3696c30e"
-    sha256 cellar: :any,                 ventura:        "c11132d137cc60a285c7e86c88f93d1771e1bc1e93e066ef5c0dd21442e56223"
-    sha256 cellar: :any,                 monterey:       "871a65be7e795ae1ca1a0fb72460ad68ebfd1b7d6c80c1c81dac8abe183b0ec3"
-    sha256 cellar: :any,                 big_sur:        "690bfbafd4c66f64d31020acf62007d855be91b68db9f09b468080efb7ef2468"
-    sha256 cellar: :any,                 catalina:       "e1038bebc73009330146de1fdaaa2d604c356569beb096234cc50ca250e70b77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b5f09eb1d66328065559864f18b453060cda9843c8a98627e1208653bd7c6a61"
+    sha256 cellar: :any,                 arm64_monterey: "bea66f2f424e7d4d5ca7bc8a43f4f972e2d7fa0f7e96d6a529ddd9c7ec056941"
+    sha256 cellar: :any,                 arm64_big_sur:  "ea1ace82500b5f2cd0d8a9c7ce613246a054e7523991c90227caf76dfc5c2ad1"
+    sha256 cellar: :any,                 monterey:       "f4c691f11e4898193a2c9a203a3e3ed8bb543f719131f4de89aa43e762666662"
+    sha256 cellar: :any,                 big_sur:        "a8e57a37ac0645beb8672becca7a14e6d7559ba7270e171870454fb7ada91a6c"
+    sha256 cellar: :any,                 catalina:       "726a11a98a2756256c383072fa52f469dbd767e8fbe25eb0283dd1d8e1812c05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16e37b1849f9c60215c701bcd6c256955c96b4edb62a866b9d6c678ac105b0ec"
   end
 
   depends_on "rust" => :build
@@ -36,7 +34,7 @@ class Sheldon < Formula
 
   test do
     touch testpath/"plugins.toml"
-    system "#{bin}/sheldon", "--config-dir", testpath, "--data-dir", testpath, "lock"
+    system "#{bin}/sheldon", "--home", testpath, "--config-dir", testpath, "--data-dir", testpath, "lock"
     assert_predicate testpath/"plugins.lock", :exist?
   end
 end

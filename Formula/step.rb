@@ -1,27 +1,20 @@
 class Step < Formula
   desc "Crypto and x509 Swiss-Army-Knife"
   homepage "https://smallstep.com"
-  url "https://github.com/smallstep/cli/releases/download/v0.23.0/step_0.23.0.tar.gz"
-  sha256 "8056deefa22a2d5f5d60ceaf652346a3eb8e4ac2ccad535364b29de5e1830b4c"
+  url "https://github.com/smallstep/cli/releases/download/v0.19.0/step_0.19.0.tar.gz"
+  sha256 "2cef308e984f3369840e270e40cfc946a70555611aa46401df562c2e6321eb53"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2376d94d5422780ee76a67f826b0877ca3afd119177aed3b1bce9bec5d054ef2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9dce3736d1e84d91b450431f40a12a5ec0b8d1a59ad6992cc860dacb8132653"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28cd0adc2850d548a57e63bb90a6c1bd6b6c1e9bdc2772bd359b9641c200ea96"
-    sha256 cellar: :any_skip_relocation, ventura:        "d22b28c4e15dac838e353e6da178657d104051100517bd15b594cfcbb58d2895"
-    sha256 cellar: :any_skip_relocation, monterey:       "a4e404eea2a8271ec05e2fff69f9d2ba772aeb5385ed7007f726080e289c4505"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eddef193e03941ea9c0f97a198bb0730e096cdd355dea7f57e08575dcf4efc8f"
-    sha256 cellar: :any_skip_relocation, catalina:       "0186e7866573162f19822bb33cb3d2c14f77acf6236749fe2abbde2c2933324e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4def9aa0741bcf15c523b00628a6fcc7dbfed819fcf2c0834dc5c9cc5ac13397"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/step"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22c6ef214c8c48279c41953b99f5f160115e0fb3f313f5f3aa8b47a827e30161"
   end
 
   depends_on "go" => :build
 
   resource "certificates" do
-    url "https://github.com/smallstep/certificates/releases/download/v0.23.0/step-ca_0.23.0.tar.gz"
-    sha256 "fc727c35d5513e9b6eebd4d5c183944af165b3dbdf3a788fa6d122cb2f3fc676"
+    url "https://github.com/smallstep/certificates/releases/download/v0.19.0/step-ca_0.19.0.tar.gz"
+    sha256 "af2073671a5774a4fa9ae3038996976764a3040f999c38e38f0fa6c58134159f"
   end
 
   def install
@@ -83,7 +76,7 @@ class Step < Formula
     # certificate using the API.
     (testpath/"password.txt").write("password")
     steppath = "#{testpath}/.step"
-    mkdir_p(steppath)
+    Dir.mkdir(steppath) unless File.exist?(steppath)
     ENV["STEPPATH"] = steppath
     system "#{bin}/step", "ca", "init", "--address", "127.0.0.1:8081",
         "--dns", "127.0.0.1", "--password-file", "#{testpath}/password.txt",

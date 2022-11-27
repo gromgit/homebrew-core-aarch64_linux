@@ -1,8 +1,8 @@
 class Vapoursynth < Formula
   desc "Video processing framework with simplicity in mind"
   homepage "https://www.vapoursynth.com"
-  url "https://github.com/vapoursynth/vapoursynth/archive/R61.tar.gz"
-  sha256 "a5d4feeb056679dd1204153250d7c1d38e5a639e995d3c4e3a8e2e8fe1425b75"
+  url "https://github.com/vapoursynth/vapoursynth/archive/R58.tar.gz"
+  sha256 "19c1169eba61d7044354da3247a3a7c02a058220054ef2a8f501bfac5fed3bfc"
   license "LGPL-2.1-or-later"
   head "https://github.com/vapoursynth/vapoursynth.git", branch: "master"
 
@@ -12,14 +12,12 @@ class Vapoursynth < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4ec2c7527a8005b82010c2094f842db805276395c67aff3bdb077f3716712ad6"
-    sha256 cellar: :any,                 arm64_monterey: "cb2bac5759ef81702178c25a6be35bb14ed18e69ff4e0ef5c34911d67c013880"
-    sha256 cellar: :any,                 arm64_big_sur:  "532b4272e50d571934f18597e92113c6fefae1313201d05703fa3de021bad000"
-    sha256 cellar: :any,                 ventura:        "fda32be9017874a18d2564d9470c9aa92a65f92c0af29d0636cc6b37ae3ceb04"
-    sha256 cellar: :any,                 monterey:       "265216c789a54f780ada7d12ff6f53172cf24094cb653cff240e7b1100e44cdd"
-    sha256 cellar: :any,                 big_sur:        "2e8ea488f9152e0bca718d9a244cda426d1481c6a264f142f07e0748a18a0fdd"
-    sha256 cellar: :any,                 catalina:       "0a5d7d81c8f5a61293eb115a2f1874d019cfd472d34edc6f6ab2a4eae760a776"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1136401f6f7d77c52872cfbbcfda0ec1216c8ec0bcf302cca023f02ef21be19"
+    sha256 cellar: :any,                 arm64_monterey: "cd38fc1ce263ed72f76ab34db2717ab2be4bc691bbfe4599fdd9b3c4911749c8"
+    sha256 cellar: :any,                 arm64_big_sur:  "3fb908d387a892e45c760f6a30e4e85c0f0a5b7b87a1534a5513be7b08f0050c"
+    sha256 cellar: :any,                 monterey:       "bbc0b3589957c2adbb6670335645fab8c3faadbe569dc8fedbd50bc884d6027e"
+    sha256 cellar: :any,                 big_sur:        "84ad22f1eaec9772502f8261e1a3bc0bcafe38fd272e517c3739a1543ef08c84"
+    sha256 cellar: :any,                 catalina:       "f4475a32bd8660322e79d429add5b379dfac24bf647607b538919df1d500766b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce937cc5e5072bd15bafae2a7db5fe26357657b10fde9bffb0e9525f21d628a0"
   end
 
   depends_on "autoconf" => :build
@@ -28,8 +26,12 @@ class Vapoursynth < Formula
   depends_on "libtool" => :build
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "zimg"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
@@ -64,7 +66,7 @@ class Vapoursynth < Formula
   end
 
   test do
-    system Formula["python@3.10"].opt_bin/"python3.10", "-c", "import vapoursynth"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import vapoursynth"
     system bin/"vspipe", "--version"
   end
 end

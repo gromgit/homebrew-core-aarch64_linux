@@ -4,8 +4,8 @@ class Samba < Formula
   # option. The shared folder appears in the guest as "\\10.0.2.4\qemu".
   desc "SMB/CIFS file, print, and login server for UNIX"
   homepage "https://www.samba.org/"
-  url "https://download.samba.org/pub/samba/stable/samba-4.17.3.tar.gz"
-  sha256 "5d1c420cb31ec613c786f98537f959659081edc6be8373e68e87140868938e26"
+  url "https://download.samba.org/pub/samba/stable/samba-4.16.0.tar.gz"
+  sha256 "97c47de35915d1637b254f02643c3230c3e73617851700edc7a2a8c958a3310c"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -14,36 +14,22 @@ class Samba < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "354dd9490f7d7055cedf59adc308d2d21226b2b6920c38a7e3d4d7d4266f5a77"
-    sha256 arm64_monterey: "4ebd6944c4f508983288f15d3ee8671cdef88aa7db172b04c67bb11243900e70"
-    sha256 arm64_big_sur:  "2a34b98843287096f182d4463b84ebe5f90bb251d7624f92a7d7099da1429925"
-    sha256 ventura:        "1d00702ea54a87620810a3bab1030295d4e6f41b011a04f7cd1e0479f9da97eb"
-    sha256 monterey:       "57aae8a01b02e32f9c6650b917a8c963d57d0cd6eb0532f803c305160da984fe"
-    sha256 big_sur:        "3eeb8cd71e7e1b4ce1e019dd3c76e802f44a654fee1355ef72cc59336a5333e4"
-    sha256 catalina:       "c8ad47ead61945b6f07330d2a60b473b7ccbd0d8380421b78d9366b154e90fb1"
-    sha256 x86_64_linux:   "1ce64a275b2815df94f1de8076eec36d54790351c1e9891995ab91e9b00ede30"
+    sha256 arm64_monterey: "e0c50a59ab88a1d3a9d3be66880f2566622da03cf356a2df5e1d3f44e7ef438b"
+    sha256 arm64_big_sur:  "f721f9262e0cfd35e2648731f4c31ca006e35c68b6981dc456377f9a2e0ad072"
+    sha256 monterey:       "b7b5ef9cbb5d54be2c5633250cacf4877295b6bd86de7cd7ad08ab3a417c20f6"
+    sha256 big_sur:        "4090b62197888b5a7920d08ade7ef2654e1bab9bb939b401d75586332cbb7648"
+    sha256 catalina:       "414eaf8c4ad02fd972c1b8f1c7248fb6c3f18ea3faa38cdfaebcbd23d3800649"
+    sha256 x86_64_linux:   "f9f89ac1551ae5c28091fd97f904f20c0ed39e0e5dbccdb6cd0a9b2b524cabee"
   end
 
   # configure requires python3 binary to be present, even when --disable-python is set.
   depends_on "python@3.10" => :build
   depends_on "gnutls"
   depends_on "krb5"
-  depends_on "libtasn1"
-  depends_on "readline"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "perl" => :build
-  uses_from_macos "libxcrypt"
-  uses_from_macos "zlib"
-
-  on_macos do
-    depends_on "openssl@1.1"
-  end
-
-  on_linux do
-    depends_on "libtirpc"
-  end
 
   resource "Parse::Yapp" do
     url "https://cpan.metacpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz"
@@ -107,9 +93,9 @@ class Samba < Formula
 
   test do
     smbd = if OS.mac?
-      "#{sbin}/samba-dot-org-smbd"
-    else
       "#{sbin}/smbd"
+    else
+      "#{sbin}/samba-dot-org-smbd"
     end
 
     system smbd, "--build-options", "--configfile=/dev/null"

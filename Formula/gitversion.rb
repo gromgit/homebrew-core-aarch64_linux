@@ -1,19 +1,17 @@
 class Gitversion < Formula
   desc "Easy semantic versioning for projects using Git"
   homepage "https://gitversion.net"
-  url "https://github.com/GitTools/GitVersion/archive/5.11.1.tar.gz"
-  sha256 "98ed28bfb22fadde72da412634f309d81030a76997ca998e1b34edc39beff489"
+  url "https://github.com/GitTools/GitVersion/archive/5.10.1.tar.gz"
+  sha256 "3e65444ef3c017187d5f16f3d43f7ea07eec9bce9e73d69438e893136a8136be"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8d1dde8fde0eb649ccf639b0469090b6f7cf7daec5af586162be49b8ee3fbf9a"
-    sha256 cellar: :any,                 arm64_monterey: "c8493e7cb21aca7c941744c8a22b1485a1615c33bbce998a59991968132883c5"
-    sha256 cellar: :any,                 arm64_big_sur:  "b806eb80b7f7f4b81c69c56515c19149a06fe2b9b1e9753c22f54f6e6ff54745"
-    sha256 cellar: :any,                 ventura:        "5371269e21bb25ddc5b760b270448e2acc494b79ae81af985b72f1c06e81cb25"
-    sha256 cellar: :any,                 monterey:       "884e90c178d31d2441d17ca45154474cc0fe231f15df4e21a46486d9b768e85a"
-    sha256 cellar: :any,                 big_sur:        "34b1dc9dff977fb3680786dd8600793c1e4ee5bd5ac9251362279e59a6265fe7"
-    sha256 cellar: :any,                 catalina:       "975dbb602b2b4516df5028c5f270e2fdf96c4e2e4777eec37e2e1a9d39460a8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0a956ddf7ca501724e8a6335f54dcf47e931ec4d2585d71f483beb3f1609382"
+    sha256 cellar: :any,                 arm64_monterey: "e4b5f35ac7c8a3849f216a44d94deee0f7e4e6ec1b4dd4be0bf6dea29bd1fc25"
+    sha256 cellar: :any,                 arm64_big_sur:  "b8a8f5da513769bf0a24fdfec3096627711df2529e163e6c09754c20119b37c8"
+    sha256 cellar: :any,                 monterey:       "41d255127c87ae0e230504a1c8566b23b48c9da159f45d98e3b5e31cab677c66"
+    sha256 cellar: :any,                 big_sur:        "d129b46619dd7beec3998f535b75a14bbc830e0c5bfd23f8045fdb542b9c1678"
+    sha256 cellar: :any,                 catalina:       "a06a65c57f86567757fe58e96c31f9771dd9c370db4b0189f8f0582532ed0da4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b9f5183e6b87a58ea902a44881b1ff9795faa5609b862b13ae1bc5836934cc5"
   end
 
   depends_on "dotnet"
@@ -29,7 +27,6 @@ class Gitversion < Formula
       --runtime #{os}-#{arch}
       --no-self-contained
       -p:PublishSingleFile=true
-      -p:Version=#{version}
     ]
     args << "-p:OsxArm64=true" if OS.mac? && Hardware::CPU.arm?
 

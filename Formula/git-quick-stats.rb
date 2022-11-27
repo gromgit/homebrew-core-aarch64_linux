@@ -6,7 +6,8 @@ class GitQuickStats < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "479a05181d49dd93ca8da80c6dc995515071840a1ea6f633ea6700379445457d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/git-quick-stats"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "099d1bf51e7ad12c42d46b968f0908c681c58333d4994babe1aa85c1391d3964"
   end
 
   on_linux do

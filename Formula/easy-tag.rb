@@ -4,23 +4,18 @@ class EasyTag < Formula
   url "https://download.gnome.org/sources/easytag/2.4/easytag-2.4.3.tar.xz"
   sha256 "fc51ee92a705e3c5979dff1655f7496effb68b98f1ada0547e8cbbc033b67dd5"
   license "GPL-2.0-or-later"
-  revision 8
+  revision 6
 
   bottle do
-    sha256 arm64_ventura:  "72ce2bc677b377d13e8471b64419c8329325a01824e27a0830ea8c456c23006c"
-    sha256 arm64_monterey: "ca7de92bfc1f678e343fa737d0abe7d4cf1a160368be111b660ace255f1361ff"
-    sha256 arm64_big_sur:  "fd1e0926e653a9eaa1b63a161dbe7ae0eae3e171e620f950ddcde775ddf5bb3f"
-    sha256 ventura:        "e3b1222734bbb17b705ccb07a9c29072c0a5e1409668dc63ae74b36d6f1117e0"
-    sha256 monterey:       "e571ff28075c32f8000077ee72c8dc42e3c2f6672c49529f839654d714b1b2c5"
-    sha256 big_sur:        "8b8a031780716d40c2fe94d3aeb99af65cfc76332c2b84abbe0f8b605884f167"
-    sha256 catalina:       "ec5fc6eadc609d57416fc3dcdfe43bdc040d8551ff06d667ced1a3c75a84ba2e"
-    sha256 x86_64_linux:   "81469f87d139ffb0926e2ee2e296708d46cf9cfc3af77c2f28db80bfac9c0c14"
+    sha256 arm64_big_sur: "8a1cef2c91b3216179ce0eb8ace40e845c2956bb08602747d9c4b433b8c138e2"
+    sha256 big_sur:       "f10db53f7c6852dc2d83920c64b5166612b7ebfcfd8b8789228bcc2917b183c4"
+    sha256 catalina:      "cf12b241113c19be8fb1b91871d0428f29c9d4e39066c5fd0c197bba1f12088a"
   end
 
   depends_on "intltool" => :build
   depends_on "itstool" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.9" => :build
   depends_on "adwaita-icon-theme"
   depends_on "flac"
   depends_on "gtk+3"
@@ -33,17 +28,16 @@ class EasyTag < Formula
   depends_on "taglib"
   depends_on "wavpack"
 
-  uses_from_macos "perl" => :build
-
   # disable gtk-update-icon-cache
   patch :DATA
 
   def install
-    ENV.append_path "PYTHONPATH", Formula["libxml2"].opt_prefix/Language::Python.site_packages("python3")
-    ENV.prepend_path "PERL5LIB", Formula["intltool"].libexec/"lib/perl5" unless OS.mac?
-    ENV.append "LDFLAGS", "-lz"
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    ENV.append_path "PYTHONPATH", "#{Formula["libxml2"].opt_lib}/python#{xy}/site-packages"
 
-    system "./configure", *std_configure_args, "--disable-schemas-compile"
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
+                          "--disable-schemas-compile"
     system "make"
     ENV.deparallelize # make install fails in parallel
     system "make", "install"
@@ -55,10 +49,6 @@ class EasyTag < Formula
   end
 
   test do
-    # Disable test on Linux because it fails with:
-    # Gtk-WARNING **: 18:38:23.471: cannot open display
-    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
-
     system "#{bin}/easytag", "--version"
   end
 end

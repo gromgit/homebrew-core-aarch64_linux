@@ -3,23 +3,21 @@ class PythonMarkdown < Formula
 
   desc "Python implementation of Markdown"
   homepage "https://python-markdown.github.io"
-  url "https://files.pythonhosted.org/packages/85/7e/133e943e97a943d2f1d8bae0c5060f8ac50e6691754eb9dbe036b047a9bb/Markdown-3.4.1.tar.gz"
-  sha256 "3b809086bb6efad416156e00a0da66fe47618a5d6918dd688f53f40c8e4cfeff"
+  url "https://files.pythonhosted.org/packages/d6/58/79df20de6e67a83f0d0bbfe6c19bb82adf68cdf362885257eb01099f930a/Markdown-3.3.7.tar.gz"
+  sha256 "cbb516f16218e643d8e0a95b309f77eb118cb138d39a4f27851e6a63581db874"
   license "BSD-3-Clause"
   head "https://github.com/Python-Markdown/markdown.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3237d2dbf41e0291bef1fcc02d194d76706ca8db670386d9d1736f3f2271ceea"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f41ee4085d159af4cbd5a51fc12290dd682a7b6fba59398d9702f4519cb09529"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7644ec48efb17d9a826aba4aacfdb08ce5bba49b24daf8006f1ef697aa46f86e"
-    sha256 cellar: :any_skip_relocation, monterey:       "3eabeee2e6c92e05e8b6022103c3f52ad6892ab9a76427e027997101befe1b57"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0cbfab72f7a57af0433d1fcaa0e8c7be91d76db59f456c5b684c25fe9ae1eb9a"
-    sha256 cellar: :any_skip_relocation, catalina:       "47b4e7d7aabf71c2c879d855773ed72fab2e31bac5b3cdf65010f300d0b70b26"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf60875a580a8446afa3d4c7d95f4bb9811fbb39ce61890cd2703d6558802f7f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "28d3ac4ef942f4b316f5f7fc70fd5e84d2f11854d983fad86ffbf5088d9d52d5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ecf032f9bcd6c4951c8460933b5ce77929b9921aabcccdb902d89cd7947b5100"
+    sha256 cellar: :any_skip_relocation, monterey:       "7c0fc31fedf83687330b982bf5cc8a0f8ab37bdfe1237866832ba1794e90d0db"
+    sha256 cellar: :any_skip_relocation, big_sur:        "43cd65bb521ae69854123efe0c67581be69782b9f962ee66c31e95ac4ea943b6"
+    sha256 cellar: :any_skip_relocation, catalina:       "80bb1c032f4eb2c2c6321623f273ff90aa04d1ae6b9a32dce48b80678ef7ab88"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd8cf1bc63bd2effe8e6f4ae7ba0f6680e4f0d238c7e969b6fdf98994b83e67f"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     virtualenv_install_with_resources

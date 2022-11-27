@@ -1,25 +1,23 @@
 class DuoUnix < Formula
   desc "Two-factor authentication for SSH"
   homepage "https://www.duosecurity.com/docs/duounix"
-  url "https://github.com/duosecurity/duo_unix/archive/duo_unix-2.0.0.tar.gz"
-  sha256 "d1c761ce63eee0c35a57fc6b966096cac1fd52c9387c6112c6e56ec51ee1990b"
+  url "https://github.com/duosecurity/duo_unix/archive/duo_unix-1.12.0.tar.gz"
+  sha256 "a4479f893e036f38a5809d71ce47f69118f6ef61822cc1c66afccf143c5d71f8"
   license "GPL-2.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "a9f128f7fe11324bc828e24c2dee60bffd69ab9b50d2d678c55ef02fc35ccd87"
-    sha256 arm64_monterey: "08bce85c82251dead2bf052f6ce1fef322d1b6f7c2faf485625a2e5dcedc536b"
-    sha256 arm64_big_sur:  "2ab1b40f96e8b1e6f23b05e56f0f403b619c3e9888bf874f80e9fc5fc76a9574"
-    sha256 monterey:       "e55cb39233e2291cfc2470d3efb3e3e801d4ca60458c3cce4b29928689db7d54"
-    sha256 big_sur:        "85ccdfae0db6736bb4637065a1b94dbce891bac3fc1c0af87cd6a8f853ace742"
-    sha256 catalina:       "b1f3ab30a252a64d64301fb4d09b78d57702037b763015732ddeb5e62818c4e5"
-    sha256 x86_64_linux:   "54c6ffd4d7d342fe985ae8d39f0131444125f45b18c210e56501dd266f992160"
+    sha256 arm64_monterey: "d0a13ed5c65f4f57bde81d5145ade4c2940136462b5a0b4f3f43dced52966290"
+    sha256 arm64_big_sur:  "4b7eebf362ed0e9bd22ee9137d1b0effeda2e1cd21d9bdceedd71e7ee99bd0c9"
+    sha256 monterey:       "e4748bebacc4747803d83ab1805390e629600f5ad8afb68cb8a57d7f0b20c30b"
+    sha256 big_sur:        "919d2ef949347b5f4343c8c9cedfa7a9bce062c6c849e22220eef6ba276d4e28"
+    sha256 catalina:       "172d63fa9e99f36b6f407f5b8cec6b6e8e410588740cbdfd6e45c20837b4fee9"
+    sha256 x86_64_linux:   "18b8c94c610e131d0d1036bdc7f44380e2405c1e0aa3648cae9fc19b4a0126ab"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   on_linux do
     depends_on "linux-pam"
@@ -32,7 +30,7 @@ class DuoUnix < Formula
                           "--prefix=#{prefix}",
                           "--sysconfdir=#{etc}",
                           "--includedir=#{include}/duo",
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}",
                           "--with-pam=#{lib}/pam/"
     system "make", "install"
   end

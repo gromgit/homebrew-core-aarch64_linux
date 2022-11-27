@@ -1,9 +1,10 @@
 class Scummvm < Formula
   desc "Graphic adventure game interpreter"
   homepage "https://www.scummvm.org/"
-  url "https://downloads.scummvm.org/frs/scummvm/2.6.1/scummvm-2.6.1.tar.xz"
-  sha256 "8fafb9efabdd1bf8adfe39eeec3fc80b22de30ceddd1fadcde180e356cd317e9"
-  license "GPL-3.0-or-later"
+  url "https://downloads.scummvm.org/frs/scummvm/2.5.1/scummvm-2.5.1.tar.xz"
+  sha256 "9fd8db38e4456144bf8c34dacdf7f204e75f18e8e448ec01ce08ce826a035f01"
+  license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/scummvm/scummvm.git", branch: "master"
 
   livecheck do
@@ -12,14 +13,11 @@ class Scummvm < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "ff90407f9df7e87b88aa6c24b8a052a99dee66f5d6c36a7f7ae3de763a672648"
-    sha256 arm64_monterey: "2b3ba2c5ba922367591b4e79616599d2c2bf6d50c05bfe672513d9fcc90577bf"
-    sha256 arm64_big_sur:  "ad21aa5044d5b4d388e95792905568134d30bba5472ed44e4ecc35093a41ee2f"
-    sha256 ventura:        "071b7610cce26ea2f608d69d91c333d91c04e08b3f7d9a0c2d69d331322a3d43"
-    sha256 monterey:       "0ffb233ace83d6cb367e666bf613d470b517552a0a688c8f11beac58597c1261"
-    sha256 big_sur:        "ccab79afdd3bd4d89d7d67e8e466e5b779a4a2e920d68c1c8be97fcdb3189e7e"
-    sha256 catalina:       "7f638fae6f450586f19ddef3dc430ab0b5df62ec860de3da33b3d4a37ba111cc"
-    sha256 x86_64_linux:   "4c6b6f570d81285892dfedaeae74d7e9081da55d367d6eb6e82f8e188b62888a"
+    sha256 arm64_big_sur: "af380525ea154276ad0d373bf6118f3a6838113cbeb9968902ae338cd25cf3c4"
+    sha256 monterey:      "d05447bbd2eee2531f7adf1b37f52a70a839b306df931e2abddffb833918b534"
+    sha256 big_sur:       "64322552466bf84d7c908349c1d3b2a9033c0f296d654732fd23dc09e37ce556"
+    sha256 catalina:      "f4955d7d9be4be813bd81ae4e1895307f97f52cc8af5df8c99c61356cc42cb5a"
+    sha256 x86_64_linux:  "a84d8f59c66e8a3f8556909a6086e00a1afae1c1054b6b1bb7ede2e3b26189ce"
   end
 
   depends_on "a52dec"
@@ -49,6 +47,6 @@ class Scummvm < Formula
     # Test fails on headless CI: Could not initialize SDL: No available video device
     return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
-    system bin/"scummvm", "-v"
+    system "#{bin}/scummvm", "-v"
   end
 end

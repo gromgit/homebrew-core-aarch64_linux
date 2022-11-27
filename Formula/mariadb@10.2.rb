@@ -5,11 +5,26 @@ class MariadbAT102 < Formula
   sha256 "851de7accdbddd2fcf8c31e4ddd4957d3c5d61bcefed1f3efaa6625e8cf200cf"
   license "GPL-2.0-only"
 
+  # This uses a placeholder regex to satisfy the `PageMatch` strategy
+  # requirement. In the future, this will be updated to use a `Json` strategy
+  # and we can remove the unused regex at that time.
+  livecheck do
+    url "https://downloads.mariadb.org/rest-api/mariadb/all-releases/?olderReleases=false"
+    regex(/unused/i)
+    strategy :page_match do |page|
+      json = JSON.parse(page)
+      json["releases"]&.map do |release|
+        next unless release["release_number"]&.start_with?(version.major_minor)
+        next unless release["status"]&.include?("stable")
+
+        release["release_number"]
+      end
+    end
+  end
+
   bottle do
-    sha256 arm64_ventura:  "af470acdaec1b29f77458654f4a04eeef8cabc115e3eca498ccbb51d84442a79"
     sha256 arm64_monterey: "9f4d278e33ad437ff10bdb11dffdc756a3bc74d673ef625c4ed01340f352cf4f"
     sha256 arm64_big_sur:  "5614b538b3a13a3efb09db5b149ce0f553b4ec3801543f7ebbf25c1d7df6a481"
-    sha256 ventura:        "9c5746de6d14889a7577a54d13ce009aaa7cc417e2c75d4297ee9cc03792ce47"
     sha256 monterey:       "3dfd5f27858abc65f951b4d1fef36fe3c6364fa238e28dd8e8b83f00095483b9"
     sha256 big_sur:        "28a6f727baba55fd0cac1a06a4aa752ca51243bfc706bbb4a6b98652cea661b2"
     sha256 catalina:       "8cd264c77d0f1f2fd15f2ce49e8f545faaacf639c53534c3070837b72766322d"
@@ -35,6 +50,7 @@ class MariadbAT102 < Formula
   # This upstream commit was added for MariaDB 10.3+, but not 10.2. If it is not
   # added in the next release, we should open an upstream PR to do so.
   on_linux do
+    depends_on "gcc"
     depends_on "linux-pam"
   end
 

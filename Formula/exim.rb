@@ -1,10 +1,9 @@
 class Exim < Formula
   desc "Complete replacement for sendmail"
   homepage "https://exim.org"
-  url "https://ftp.exim.org/pub/exim/exim4/exim-4.96.tar.xz"
-  sha256 "299a56927b2eb3477daafd3c5bda02bc67e5c4e5898a7aeaf2740875278cf1a3"
+  url "https://ftp.exim.org/pub/exim/exim4/exim-4.95.tar.xz"
+  sha256 "cc9cb653fff2ea947c3702680b59c99ac0bd1bbf19976d37e22a463cd804f167"
   license "GPL-2.0-or-later"
-  revision 2
 
   # Maintenance releases are kept in a `fixes` subdirectory, so it's necessary
   # to check both the main `exim4` directory and the `fixes` subdirectory to
@@ -30,20 +29,18 @@ class Exim < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "02bbfd3d923e23dd8b9d605ff9f3079b9cbe29150b77c9ee10004c5d4de483ba"
-    sha256 arm64_monterey: "1dcfe9e8ff31d30c8c03c2f6db86d29199e3ad3884626e24a202dbf10da5b815"
-    sha256 arm64_big_sur:  "9a376535eb48485e2cf30910da5da8fbc422f20790639f643f60195a29ad4bba"
-    sha256 ventura:        "7d030fce1ff8c9326ce679d95f07c1ae1ad429e5b54c3363de23e3b207bf25db"
-    sha256 monterey:       "8212b900afb9970de0ea5a666d1fdf524d74f638d8233d3edf375ce13668678a"
-    sha256 big_sur:        "2380ffa1a08a087a4ccc85c776fabc661cc377f32cd3fba3ebf79d042ae53727"
-    sha256 catalina:       "e49195d49265f2e1941c71c39811d92a329ae04b5ea33c34116bdb1c0723307c"
-    sha256 x86_64_linux:   "c189cd50a88e4494a00520e2ce63066cea2bcbe8ed3fa1435fcadb73b0d11d29"
+    sha256 arm64_monterey: "52c643ce9c129aff859aabfb48764f73c48a6aafc1172e419f8736e6c5a736a1"
+    sha256 arm64_big_sur:  "c47a9b199a7c8d21242cc6155b96845d7da106d724a7f164e3e39a5eb9b919ea"
+    sha256 monterey:       "241e1812e4aed22a524827de26069100d895112616095bc2cedf2d94f5574477"
+    sha256 big_sur:        "d0f080aa74fcacedab9959c9971b8f5b215cf0eda29c93bcfab0fd79a3d8e0b7"
+    sha256 catalina:       "7568c4385faf5f74893b8c93f927b95ee16daa4467bfc0c5a31da1383657747b"
+    sha256 mojave:         "08261de0fa2fdecfbfd426247ca7d56fe95bad0d5e9410df69ce94bfbb789c61"
+    sha256 x86_64_linux:   "073483eb6602a0c563a66f8b999763e27deb6a53bf4018b0c2267a4eebe1cec6"
   end
 
-  depends_on "berkeley-db@5"
-  depends_on "openssl@3"
-  depends_on "pcre2"
-  uses_from_macos "libxcrypt"
+  depends_on "berkeley-db@4"
+  depends_on "openssl@1.1"
+  depends_on "pcre"
 
   def install
     cp "src/EDITME", "Local/Makefile"
@@ -68,15 +65,15 @@ class Exim < Formula
       s << "LOOKUP_LIBS=-L#{HOMEBREW_PREFIX}/lib\n"
     end
 
-    bdb5 = Formula["berkeley-db@5"]
+    bdb4 = Formula["berkeley-db@4"]
 
     cp "OS/unsupported/Makefile-Darwin", "OS/Makefile-Darwin"
     cp "OS/unsupported/os.h-Darwin", "OS/os.h-Darwin"
     inreplace "OS/Makefile-Darwin" do |s|
       s.remove_make_var! %w[CC CFLAGS]
-      # Add include and lib paths for BDB 5
-      s.gsub! "# Exim: OS-specific make file for Darwin (Mac OS X).", "INCLUDE=-I#{bdb5.include}"
-      s.gsub! "DBMLIB =", "DBMLIB=#{bdb5.lib}/libdb-5.dylib"
+      # Add include and lib paths for BDB 4
+      s.gsub! "# Exim: OS-specific make file for Darwin (Mac OS X).", "INCLUDE=-I#{bdb4.include}"
+      s.gsub! "DBMLIB =", "DBMLIB=#{bdb4.lib}/libdb-4.dylib"
     end
 
     # The compile script ignores CPPFLAGS

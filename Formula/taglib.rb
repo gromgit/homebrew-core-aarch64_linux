@@ -1,20 +1,19 @@
 class Taglib < Formula
   desc "Audio metadata library"
   homepage "https://taglib.org/"
-  url "https://taglib.github.io/releases/taglib-1.13.tar.gz"
-  sha256 "58f08b4db3dc31ed152c04896ee9172d22052bc7ef12888028c01d8b1d60ade0"
+  url "https://taglib.github.io/releases/taglib-1.12.tar.gz"
+  sha256 "7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703"
   license "LGPL-2.1"
   head "https://github.com/taglib/taglib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "296ce5ae39a55c3fc0ea418c848949dafc688c54b9979175cf6a861e3ded3190"
-    sha256 cellar: :any,                 arm64_monterey: "468e48c903a73adfdd4aed556791e20920ffced6148781e85ba17bed80276102"
-    sha256 cellar: :any,                 arm64_big_sur:  "922c49278c55189998db81aa9f43e4a894c81d608824dd99231450ec6a657e1f"
-    sha256 cellar: :any,                 ventura:        "6c6fb57e24337ce19713254391e91c5d3ce20d4b4c058ac2d55801fee52b0f80"
-    sha256 cellar: :any,                 monterey:       "e7324317ad232da4eccfb794cbf7d29fe105116932200b26ee1dfd1915eba6db"
-    sha256 cellar: :any,                 big_sur:        "456c785f52b5d19c621495e31fe4dde36168f6ef5b0ef377d866ba1867000c78"
-    sha256 cellar: :any,                 catalina:       "9a828d637c0f66c3ab0c5180b897e34d37ad671bcf1447d8b3c76436967a8b0f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72b61dd6278d2efbbfe344821c77907b39d8454349b371d4898443b1037e79fb"
+    sha256 cellar: :any,                 arm64_monterey: "d7da1273d1a9783afb09395ffd9ab622c2e889c16ec527257b47799fe7cffdb5"
+    sha256 cellar: :any,                 arm64_big_sur:  "e76adce741330b6648c33971004f1101b42fac129fc78303e83932c27cb38b2d"
+    sha256 cellar: :any,                 monterey:       "ec0c940b452bf46af5dbca8d88390c8d319c7c9b76d33d70740d87b6caac531b"
+    sha256 cellar: :any,                 big_sur:        "d24fee8c8c6f491a2c078a84fbcba5f36e0381bf230ff3c35893a46cfe3e3c70"
+    sha256 cellar: :any,                 catalina:       "766531146ab62a88352ad1718b14ec2461951d25feb3c1111a3005071b4c2e9a"
+    sha256 cellar: :any,                 mojave:         "f63f8ade1e478f04697481873468017fa06fb78fbe7a8fe42ba2a67533496f57"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "367b12ef8f720e08c4eb9af6e7603893fae239a3fd3f1da5e478df135a5aa496"
   end
 
   depends_on "cmake" => :build

@@ -4,22 +4,25 @@ class Field3d < Formula
   url "https://github.com/imageworks/Field3D/archive/v1.7.3.tar.gz"
   sha256 "b6168bc27abe0f5e9b8d01af7794b3268ae301ac72b753712df93125d51a0fd4"
   license "BSD-3-Clause"
-  revision 8
+  revision 6
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f721c232a04d8d2633c871053eab6b75531fbb65bde3ffc27090b3912610333c"
-    sha256 cellar: :any,                 arm64_monterey: "5ccab64a1d8a3f1a709b4efd84e47be950a28b468cf4315eaed9c332fc0dd0c0"
-    sha256 cellar: :any,                 arm64_big_sur:  "bdd3df3a156e09d0612b4266a4a7036baf3a8ebd99573c70fef4cb3fa3af595b"
-    sha256 cellar: :any,                 monterey:       "4c854331b625741ed631440767b90ceb8dae7c565b19c1b909a35068e9635c8e"
-    sha256 cellar: :any,                 big_sur:        "f7113a6ebab33c4591099ffa838d98cee8d72d8f0d2627a9e8a9c4783755fdc7"
-    sha256 cellar: :any,                 catalina:       "c74402ddc431e94001cf07efe110c4085aa486fd024a470dd2bd0d00454aba46"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37156c96c67dcf0b5fe46027c758e6172781503495dab9364b43cad3331dc28c"
+    sha256 cellar: :any,                 arm64_monterey: "9d35aa85a559bc4be3e770c12ff1163861def00ee5fd7390a4d117df3bd7364e"
+    sha256 cellar: :any,                 arm64_big_sur:  "8b93146f1cdd86071f2a3a9303253b98869710e910811fa787043fb8f283ee25"
+    sha256 cellar: :any,                 monterey:       "a05b25cb2693f8e14c7ac302dd109be334b01b5cf10048ce4c7cd676c2d354ca"
+    sha256 cellar: :any,                 big_sur:        "b121b972c65b471e1cf99f1b15788dc3b8b0e0e5542c07594893e3f6b35b292f"
+    sha256 cellar: :any,                 catalina:       "bf284af39db627f2c3396ebb39c4977719b8d615ef78d251e9d2a55cfe3ce4cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49f575e761aace6ff76d07ad1c9f046af77abb3bfdb16d3caf8d7259ebcde9cc"
   end
 
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "hdf5"
   depends_on "ilmbase"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
@@ -36,14 +39,13 @@ class Field3d < Formula
   end
 
   test do
-    system ENV.cxx, "-std=c++11", "-I#{include}",
-           pkgshare/"sample_code/create_and_write/main.cpp",
-           "-L#{lib}", "-lField3D",
+    system ENV.cxx, "-std=c++11", "-I#{include}", "-L#{lib}", "-lField3D",
            "-I#{Formula["boost"].opt_include}",
            "-L#{Formula["boost"].opt_lib}", "-lboost_system",
            "-I#{Formula["hdf5"].opt_include}",
            "-L#{Formula["hdf5"].opt_lib}", "-lhdf5",
            "-I#{Formula["ilmbase"].opt_include}",
+           pkgshare/"sample_code/create_and_write/main.cpp",
            "-o", "test"
     system "./test"
   end

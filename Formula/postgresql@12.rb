@@ -1,9 +1,10 @@
 class PostgresqlAT12 < Formula
   desc "Object-relational database system"
   homepage "https://www.postgresql.org/"
-  url "https://ftp.postgresql.org/pub/source/v12.13/postgresql-12.13.tar.bz2"
-  sha256 "b6c623046af4548f11a84b407934d675d11ed070c793d15b04683bf5f322e02d"
+  url "https://ftp.postgresql.org/pub/source/v12.10/postgresql-12.10.tar.bz2"
+  sha256 "83dd192e6034951192b9a86dc19cf3717a8b82120e2f11a0a36723c820d2b257"
   license "PostgreSQL"
+  revision 1
 
   livecheck do
     url "https://ftp.postgresql.org/pub/source/"
@@ -11,14 +12,12 @@ class PostgresqlAT12 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "753f8e5fb1c70fd2abfbb50b300f88711e041a207ca1c130c6e6249bbec47a7c"
-    sha256 arm64_monterey: "8e40b2e41b435e0cb385bf77ade57a27d340d9ad73f4fe855e71c72717d7f799"
-    sha256 arm64_big_sur:  "93ce80e729baeea13e881febea5f2d9ed08c4119aacc3f416839e541eec46485"
-    sha256 ventura:        "ce2ab239c8a115ef354d158aa61efa9a4ed2c4b94f6684df1a0545a60fb91689"
-    sha256 monterey:       "3a69ed6d00c1ae702bd145f52c12285b29f4f3c77adfa6599fe5d3764863fc69"
-    sha256 big_sur:        "1faf9da99915097187fdbc2f683716de6d1001fb02fc85cfe0d52a5fca665bdb"
-    sha256 catalina:       "5c2af9966d97e4ddc344277906e5de3110d5800ea7dc4f0ad5ed9a1e6114f7ac"
-    sha256 x86_64_linux:   "8323ba96ccb93fb59715e023daeb9e6205d96ea633aa07ed695f23cc56c5ea8f"
+    sha256 arm64_monterey: "fe13a3ce50bb04a5f5e311970e8168d0533f4f6af94cba6cdbfb1f50ec8962ba"
+    sha256 arm64_big_sur:  "9d03fc8e64c52febb674cb4e8a7de1972bfaf10e35dc284eb92a8c8543860f70"
+    sha256 monterey:       "3888856bcd5e43cefa10109bcaa4c9cc9f486d1cd1db2ae46046960a1a6a7db7"
+    sha256 big_sur:        "cd19635256726aeadcdb9e1a56ebf304d985c554ee224e00d69923e8f76a91b8"
+    sha256 catalina:       "b9885e34d64a6dcf52ea3fcdf34d2ce3c1d7ee448f12e2151717725d551dafb9"
+    sha256 x86_64_linux:   "1377749e8b92d89df27804734277bea4118111a4e95ee475e5f39a9f35cd458d"
   end
 
   keg_only :versioned_formula
@@ -87,9 +86,7 @@ class PostgresqlAT12 < Formula
     # in ./configure, but needs to be set here otherwise install prefixes containing
     # the string "postgres" will get an incorrect pkglibdir.
     # See https://github.com/Homebrew/homebrew-core/issues/62930#issuecomment-709411789
-    system "make", "pkglibdir=#{opt_lib}/postgresql",
-                   "pkgincludedir=#{opt_include}/postgresql",
-                   "includedir_server=#{opt_include}/postgresql/server"
+    system "make", "pkglibdir=#{lib}/postgresql"
     system "make", "install-world", "datadir=#{pkgshare}",
                                     "libdir=#{lib}",
                                     "pkglibdir=#{lib}/postgresql",
@@ -131,6 +128,10 @@ class PostgresqlAT12 < Formula
     var/"postgres"
   end
 
+  def postgresql_formula_present?
+    Formula["postgresql"].any_version_installed?
+  end
+
   # Figure out what version of PostgreSQL the old data dir is
   # using
   def old_postgresql_datadir_version
@@ -142,19 +143,36 @@ class PostgresqlAT12 < Formula
     caveats = ""
 
     # Extract the version from the formula name
-    pg_formula_version = version.major.to_s
+    pg_formula_version = name.split("@", 2).last
     # ... and check it against the old data dir postgres version number
     # to see if we need to print a warning re: data dir
     if old_postgresql_datadir_version == pg_formula_version
-      caveats += <<~EOS
-        Previous versions of postgresql shared the same data directory.
+      caveats += if postgresql_formula_present?
+        # Both PostgreSQL and PostgreSQL@12 are installed
+        <<~EOS
+          Previous versions of this formula used the same data directory as
+          the regular PostgreSQL formula. This causes a conflict if you
+          try to use both at the same time.
 
-        You can migrate to a versioned data directory by running:
-          mv -v "#{old_postgres_data_dir}" "#{postgresql_datadir}"
+          In order to avoid this conflict, you should make sure that the
+          #{name} data directory is located at:
+            #{postgresql_datadir}
 
-        (Make sure PostgreSQL is stopped before executing this command)
+        EOS
+      else
+        # Only PostgreSQL@12 is installed, not PostgreSQL
+        <<~EOS
+          Previous versions of #{name} used the same data directory as
+          the postgresql formula. This will cause a conflict if you
+          try to use both at the same time.
 
-      EOS
+          You can migrate to a versioned data directory by running:
+            mv -v "#{old_postgres_data_dir}" "#{postgresql_datadir}"
+
+          (Make sure PostgreSQL is stopped before executing this command)
+
+        EOS
+      end
     end
 
     caveats += <<~EOS
@@ -168,10 +186,10 @@ class PostgresqlAT12 < Formula
   end
 
   service do
-    run [opt_bin/"postgres", "-D", f.postgresql_datadir]
+    run [opt_bin/"postgres", "-D", var/"postgresql@12"]
     keep_alive true
-    log_path f.postgresql_log_path
-    error_log_path f.postgresql_log_path
+    log_path var/"log/postgresql@12.log"
+    error_log_path var/"log/postgresql@12.log"
     working_dir HOMEBREW_PREFIX
   end
 
@@ -179,8 +197,6 @@ class PostgresqlAT12 < Formula
     system "#{bin}/initdb", testpath/"test" unless ENV["HOMEBREW_GITHUB_ACTIONS"]
     assert_equal opt_pkgshare.to_s, shell_output("#{bin}/pg_config --sharedir").chomp
     assert_equal opt_lib.to_s, shell_output("#{bin}/pg_config --libdir").chomp
-    assert_equal (opt_lib/"postgresql").to_s, shell_output("#{bin}/pg_config --pkglibdir").chomp
-    assert_equal (opt_include/"postgresql").to_s, shell_output("#{bin}/pg_config --pkgincludedir").chomp
-    assert_equal (opt_include/"postgresql/server").to_s, shell_output("#{bin}/pg_config --includedir-server").chomp
+    assert_equal "#{lib}/postgresql", shell_output("#{bin}/pg_config --pkglibdir").chomp
   end
 end

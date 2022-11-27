@@ -1,22 +1,19 @@
 class Pdf2djvu < Formula
   desc "Create DjVu files from PDF files"
   homepage "https://jwilk.net/software/pdf2djvu"
-  url "https://github.com/jwilk/pdf2djvu/releases/download/0.9.19/pdf2djvu-0.9.19.tar.xz"
-  sha256 "eb45a480131594079f7fe84df30e4a5d0686f7a8049dc7084eebe22acc37aa9a"
+  url "https://github.com/jwilk/pdf2djvu/releases/download/0.9.18.2/pdf2djvu-0.9.18.2.tar.xz"
+  sha256 "9ea03f21d841a336808d89d65015713c0785e7295a6559d77771dc795333a9fa"
   license "GPL-2.0-only"
-  revision 1
+  revision 3
   head "https://github.com/jwilk/pdf2djvu.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "f60bfb170d218b54a85117c30758cb1ae76d330b75d7132495fd96919f956465"
-    sha256 arm64_monterey: "2feced1a60a2e914f09ea09f5dd013cc8c71f95c97fa377cf4c517fdcb279651"
-    sha256 arm64_big_sur:  "b9506ca83126c838596b699970d006a789f4356122ae52288082d2b1aa870d3b"
-    sha256 ventura:        "1885ee2a08c6c23e71fc547c225451e864d48b7024c19a05595a907c9e024cb6"
-    sha256 monterey:       "215e817755bcbf596a72a74e137d8c4092c45f20f644697cbef1ea83054d2401"
-    sha256 big_sur:        "640ce4e6ae86b6ef7138e34e4b7ac1eb80e5dabab1576c2bcef7a516a32fbb0d"
-    sha256 catalina:       "4dc8bb0f6bafdf5e3d5745e3d839928cb7945a6392c992099a49a850edb52de2"
-    sha256 x86_64_linux:   "9551231aa0f5970a4e6707253724e538f4a97c5001226568fde62ee2a92e7e06"
+    sha256 arm64_monterey: "8dbf106ac4c9dfe5289f0c7ee4fdaf070e316071d118f67dd71449d6e67eb780"
+    sha256 arm64_big_sur:  "fef8d14e81fc81cb6e26501ff1dce99536441dd17f56af303516d7e2fbd816ed"
+    sha256 monterey:       "ab9607fc7dff6ef420d536d9a4c4d566360e9e7b46255c1da4ba31c46445d9d8"
+    sha256 big_sur:        "49c458af3353f8e830cacb7419e4c7bf98d2f0364e9e42c7b04a7f73edd87955"
+    sha256 catalina:       "2fc2051eb0bc35eefe10a3142a834e964388b9dbfaa4763c560107c8953bb68f"
+    sha256 x86_64_linux:   "871a0c9204385f113ee5ce159b2cd0f371c2451fd9290a3fc624efd79bc68591"
   end
 
   depends_on "pkg-config" => :build
@@ -25,13 +22,36 @@ class Pdf2djvu < Formula
   depends_on "gettext"
   depends_on "poppler"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5" # poppler compiles with GCC
+
+  # poppler 22.04.0 compatibility, remove in next release
+  patch do
+    url "https://github.com/jwilk/pdf2djvu/commit/e170ad557d5f13daeeac047dfaa79347bbe5062f.patch?full_index=1"
+    sha256 "424c4fe330e01d9fbf33eb7bce638ea6d3788e1e1b8b3932364257631c867d8a"
+  end
+
+  # poppler 22.04.0 compatibility, remove in next release
+
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/e0c880b/pdf2djvu/main-use-pdf-link-Destination-copy-constructor.patch"
+    sha256 "3d1e9fc0d7f2861142721befff9e33b5c2665dacc78ac12b613af7b1e6fb0ce6"
+  end
+
+  # poppler 22.04.0 compatibility, remove in next release
+  patch do
+    url "https://github.com/jwilk/pdf2djvu/commit/956fedc7e0831126b9006efedad5519c14201c52.patch?full_index=1"
+    sha256 "4ab8d3ff7f8474b86949d4acf23da6f6ac77303e94feeb849fb3298358efd23f"
+  end
 
   def install
     ENV.append "CXXFLAGS", "-std=gnu++17" # poppler uses std::optional
     ENV.append "CXXFLAGS", "-D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR=1" if ENV.compiler == :clang
     system "./configure", "--prefix=#{prefix}"
-    system "make", "djvulibre_bindir=#{Formula["djvulibre"].opt_bin}"
+    system "make"
     system "make", "install"
   end
 

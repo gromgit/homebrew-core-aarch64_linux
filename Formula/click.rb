@@ -1,8 +1,8 @@
 class Click < Formula
   desc "Command-line interactive controller for Kubernetes"
   homepage "https://github.com/databricks/click"
-  url "https://github.com/databricks/click/archive/v0.6.2.tar.gz"
-  sha256 "8caa28e3dd3af40e0a8686e86457baa65d0c8cea2c8c530ad4834f44694c31e4"
+  url "https://github.com/databricks/click/archive/v0.6.1.tar.gz"
+  sha256 "2c424337fe760868ade72a96edf22113ad485cf0552f2c38f8259e80eb05e7ba"
   license "Apache-2.0"
   head "https://github.com/databricks/click.git", branch: "master"
 
@@ -12,13 +12,12 @@ class Click < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "378d469167903f2e710632b8772be7850479fb315328d8c54892358f59685409"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f76b66970956c90477e04413d87df51ff77b39017b0886de7ee26fc841aa8afa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57384e9bf27b21e149e8b94ce37db79dd687eb9b4fc9d5301e51c00f235858b3"
-    sha256 cellar: :any_skip_relocation, monterey:       "14c31910f9c5030803f8c8b4140b1a174a063af87f28838c47e97ad3b084a02c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f014b139f2e2257813d574fcad6c6b57a600bdf9f03282a686421ae0c81c21f1"
-    sha256 cellar: :any_skip_relocation, catalina:       "bdd7fca0a0fff94b6553d1090b200757aeb2d31755351abe273b88bc969598ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "264d7e5a1907af7c51239bbe05c3bf5b293edb22ba06ccdeddd883dab5e14ba9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6018a93852c7b6c6ae53f2a3455204097ebec31a91ca05dfffacb2225dedda0b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73605f74a8092b5f43b7586ac4378dd69171fd893d4b5beae6ccfdbe060774a7"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa42b7e95d2d152980c34fd99b97d4a3dcf6672eaf1637a4fb6bf0328d942317"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ac5c6c86904815ded47f80fe83eec3b45855be124440654bf6f0280f9debaf2e"
+    sha256 cellar: :any_skip_relocation, catalina:       "08087704f1006723aa1be837898c210715ff3399feef94b8138611a097858eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bbb77229d9f818ca7ba63e9a266caf69d2c745e8603acf03e52d88d3e0ce2e67"
   end
 
   depends_on "rust" => :build
@@ -27,7 +26,7 @@ class Click < Formula
 
   on_linux do
     depends_on "pkg-config" => :build
-    depends_on "openssl@3"
+    depends_on "openssl@1.1"
   end
 
   def install

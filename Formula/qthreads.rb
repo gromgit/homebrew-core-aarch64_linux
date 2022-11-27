@@ -1,28 +1,22 @@
 class Qthreads < Formula
   desc "Lightweight locality-aware user-level threading runtime"
   homepage "https://github.com/Qthreads/qthreads"
-  url "https://github.com/Qthreads/qthreads/archive/refs/tags/1.18.tar.gz"
-  sha256 "c2d1ba85533dc980ff61e422c9b7531417e8884c3a1a701d59229c0e6956594c"
+  url "https://github.com/Qthreads/qthreads/releases/download/1.17/qthread-1.17.tar.gz"
+  sha256 "619a89c29c9271eac119f8bdad0964cefdebe7f9276330e81e3a527e83d9e359"
   license "BSD-3-Clause"
   head "https://github.com/Qthreads/qthreads.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5d9d7bd839e5ea29c6e9907907d153388c37f6011242c241ca650f19a6b75e73"
-    sha256 cellar: :any,                 arm64_monterey: "20e1c3bfd839efc644db0d69c98d0d58a9fce71b4a2830d054d4792d5180fc92"
-    sha256 cellar: :any,                 arm64_big_sur:  "a584249b31c678d1a723e3c2dc78ce455a76275baef8e9d3c59e5d624f0f5369"
-    sha256 cellar: :any,                 ventura:        "847863371988e92cc7e6d1290db352f9dcdf7847c5baeca4fe18bf02d403be57"
-    sha256 cellar: :any,                 monterey:       "b60ec614ce7bd7cfc835a084e1aa371efa7bbf3790f84f8942e5933f4b77fd27"
-    sha256 cellar: :any,                 big_sur:        "0523493be01de6b4e4159ac430693ce59919d3970349643b8b9278bbe1fe6054"
-    sha256 cellar: :any,                 catalina:       "c4f9b57d8bd7fb1536aa668317d3fc5cff24ca3db5d78a8d52f26f80431277fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "083a3510caf257af5108d87e1d23cc036c5e65e3263487d68ee1afb41d6fa6bf"
+    sha256 cellar: :any, monterey: "c3e5ccea2cd274bcfd0a885b0a6144162e7a91c4219a73a8f88dc279d848ca55"
+    sha256 cellar: :any, big_sur:  "e0f9e60cb18bafc88477533ca65f3c78a821188a3cd2bb077e3a90ad886c2c3d"
+    sha256 cellar: :any, catalina: "0ee47db33538dfea98f384927d9b5e9c9d43b2c7391f6308fb47c740c62bec8c"
+    sha256 cellar: :any, mojave:   "0eb14aec995c438dab677dc3084bf772a5ff083812a5d3a0eac988ed08496a42"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  # https://github.com/Qthreads/qthreads/issues/83
+  depends_on arch: :x86_64
 
   def install
-    system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}",
                           "--libdir=#{lib}",
                           "--disable-dependency-tracking",
@@ -34,7 +28,7 @@ class Qthreads < Formula
   end
 
   test do
-    system ENV.cc, pkgshare/"examples/hello_world.c", "-o", "hello", "-I#{include}", "-L#{lib}", "-lqthread"
+    system ENV.cc, "-o", "hello", "-I#{include}", "-L#{lib}", "-lqthread", pkgshare/"examples/hello_world.c"
     assert_equal "Hello, world!", shell_output("./hello").chomp
   end
 end

@@ -3,19 +3,17 @@ require "language/node"
 class Apidoc < Formula
   desc "RESTful web API Documentation Generator"
   homepage "https://apidocjs.com"
-  url "https://github.com/apidoc/apidoc/archive/0.53.1.tar.gz"
-  sha256 "b9b69588bd11f475190ef57c4b30ba59986b46a5345b8792a2f1ff76d218d1c0"
+  url "https://github.com/apidoc/apidoc/archive/0.51.1.tar.gz"
+  sha256 "f2fe6bea7a43bc23936f7b15088fc1f33fa0728a46341bfaebea14096014ed7b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "91e59f29872ea0e20129bd1f5e8ee3eb88e181481fe66a858052be7e65d34f50"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "806df7048f9663c9b06ad2eca73c51b6ec86475dbac257fd2baa46c9e4105412"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "806df7048f9663c9b06ad2eca73c51b6ec86475dbac257fd2baa46c9e4105412"
-    sha256 cellar: :any_skip_relocation, ventura:        "0208d7dbd20f21eb5f0600923e24312528add42602b1645903b07c247d91ef74"
-    sha256 cellar: :any_skip_relocation, monterey:       "bb8507b7309e30fc857874614b55751301b22cbd2bbf1c8454605402230ab790"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bb8507b7309e30fc857874614b55751301b22cbd2bbf1c8454605402230ab790"
-    sha256 cellar: :any_skip_relocation, catalina:       "bb8507b7309e30fc857874614b55751301b22cbd2bbf1c8454605402230ab790"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3c01dd9fc2116c20b85a2568900ddd2c13dfc20c08a5bbf36e81c84f1d76443"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b74ba0c32abafffc3071d870c28afb905e98a5469dca9b28c97ea31ef4c52973"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b74ba0c32abafffc3071d870c28afb905e98a5469dca9b28c97ea31ef4c52973"
+    sha256 cellar: :any_skip_relocation, monterey:       "af4956028141ee14b32ab71020a659cddfc1fd15d9d0d4199761d111f9a50817"
+    sha256 cellar: :any_skip_relocation, big_sur:        "af4956028141ee14b32ab71020a659cddfc1fd15d9d0d4199761d111f9a50817"
+    sha256 cellar: :any_skip_relocation, catalina:       "af4956028141ee14b32ab71020a659cddfc1fd15d9d0d4199761d111f9a50817"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75039cedddf3ba8c7a056dcb1c5bc539628ac8b0b6d9ac9cc14e845f312dea9d"
   end
 
   depends_on "node"

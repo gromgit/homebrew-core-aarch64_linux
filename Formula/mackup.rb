@@ -3,24 +3,21 @@ class Mackup < Formula
 
   desc "Keep your Mac's application settings in sync"
   homepage "https://github.com/lra/mackup"
-  url "https://files.pythonhosted.org/packages/2d/f3/44d0c845a297a15c8a53c69bad2583ba7c18e005c774ed3c8d96285276d0/mackup-0.8.36.tar.gz"
-  sha256 "052d8a46b918d8711fd50f103ad905403466feed6bd3d6676fa9805e8c13661b"
+  url "https://files.pythonhosted.org/packages/8b/f7/cb156f968c953652abcf71e4b1b2776ab6075c7d54194409ffe962e2b0e4/mackup-0.8.33.tar.gz"
+  sha256 "41a45b336f99d7cc2ec4b6a9099efcf03d2cd891ff78f24cb65fe2376e8c8f20"
   license "GPL-3.0-or-later"
   head "https://github.com/lra/mackup.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6f92f02b53047b2864afddaac52227cef58b9f3b8a79853644a163ff24c755b4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f92f02b53047b2864afddaac52227cef58b9f3b8a79853644a163ff24c755b4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f92f02b53047b2864afddaac52227cef58b9f3b8a79853644a163ff24c755b4"
-    sha256 cellar: :any_skip_relocation, ventura:        "7b5262d630bd84750ef2ad8a23d7e64a2ca538337a74fe51729da07c614efb00"
-    sha256 cellar: :any_skip_relocation, monterey:       "7b5262d630bd84750ef2ad8a23d7e64a2ca538337a74fe51729da07c614efb00"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7b5262d630bd84750ef2ad8a23d7e64a2ca538337a74fe51729da07c614efb00"
-    sha256 cellar: :any_skip_relocation, catalina:       "7b5262d630bd84750ef2ad8a23d7e64a2ca538337a74fe51729da07c614efb00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9756b171cec55ef691222e4903182ac25593fa13c5e93be68505339682380c4c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2fbee02bbc97cb8cb3fa7f18820e1e3a773fb830d80375f4fdc5edff9d2755c3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2fbee02bbc97cb8cb3fa7f18820e1e3a773fb830d80375f4fdc5edff9d2755c3"
+    sha256 cellar: :any_skip_relocation, monterey:       "14aff8347df1a3a3cc7d2e787c1cc2b5f474a4b6392ac4fef129420fd4efaaee"
+    sha256 cellar: :any_skip_relocation, big_sur:        "14aff8347df1a3a3cc7d2e787c1cc2b5f474a4b6392ac4fef129420fd4efaaee"
+    sha256 cellar: :any_skip_relocation, catalina:       "14aff8347df1a3a3cc7d2e787c1cc2b5f474a4b6392ac4fef129420fd4efaaee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba4cdeab354afe203f8fe8a2d60a014233ef98be74d5a2f49d2e32e1409f4f73"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "six"
 
   resource "docopt" do

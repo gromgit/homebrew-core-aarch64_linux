@@ -1,8 +1,8 @@
 class R < Formula
   desc "Software environment for statistical computing"
   homepage "https://www.r-project.org/"
-  url "https://cran.r-project.org/src/base/R-4/R-4.2.2.tar.gz"
-  sha256 "0ff62b42ec51afa5713caee7c4fde7a0c45940ba39bef8c5c9487fef0c953df5"
+  url "https://cran.r-project.org/src/base/R-4/R-4.2.0.tar.gz"
+  sha256 "38eab7719b7ad095388f06aa090c5a2b202791945de60d3e2bb0eab1f5097488"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,19 +11,20 @@ class R < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "32060cdba120854319cb7579cafae3b523fba583076c2ef40648a42cedf79972"
-    sha256 arm64_big_sur:  "7b5fe92459406db1b0dd7fdb53313eb96c8871f83531b70d9b88494306757ae3"
-    sha256 monterey:       "c726e4e3b7715280ad8d96bbf9ad00f3d56a4c0e39243a51d8e208a5ed6800d6"
-    sha256 big_sur:        "1f8f337835f21d680b6dc6a9e53688b9f23f0ed07bf94be0804529d070fff596"
-    sha256 catalina:       "f29d499dff7863d78c246cb1f97250fb39b6d0b03f387cdcff56e7fbebbdb5e8"
-    sha256 x86_64_linux:   "fc34d5eb2983c399e195a2aff8988d32a0141ccb298afa7a8c91d82ce711fbe7"
+    sha256 arm64_monterey: "1204b8d876d6aef1104d294e43485ffb6bf7fdc0806c72f28f304a0e9df6e3ee"
+    sha256 arm64_big_sur:  "757ceaf387c83395c488b4a3085ae2dc8c583105a884a52352f68942132b2831"
+    sha256 monterey:       "3b78da431cfb87ad783ee196d41a4e0fdd5b63c084b038b8b054604daa95b6bd"
+    sha256 big_sur:        "a5c00f17343545f8646e512a99ad52b17a5b4ba0cf9f976b3d091e1f60090a1a"
+    sha256 catalina:       "a846d6b2d34064ca16e545e57d31a82ef6ddc36792fada118996ea06cff9caf1"
+    sha256 x86_64_linux:   "21df0e3519c96277f20f191c949c5781ab84d29f8f03f8f99ed24991d0a276cb"
   end
 
   depends_on "pkg-config" => :build
   depends_on "cairo"
   depends_on "gcc" # for gfortran
   depends_on "gettext"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
+  depends_on "libffi"
   depends_on "libpng"
   depends_on "openblas"
   depends_on "pcre2"
@@ -33,23 +34,17 @@ class R < Formula
 
   uses_from_macos "curl"
   uses_from_macos "icu4c"
-  uses_from_macos "libffi", since: :catalina
 
   on_linux do
+    depends_on "pango"
     depends_on "libice"
-    depends_on "libtirpc"
     depends_on "libx11"
     depends_on "libxt"
-    depends_on "pango"
+    depends_on "libtirpc"
   end
 
   # needed to preserve executable permissions on files without shebangs
   skip_clean "lib/R/bin", "lib/R/doc"
-
-  fails_with :gcc do
-    version "11"
-    cause "Unknown. FIXME."
-  end
 
   def install
     # BLAS detection fails with Xcode 12 due to missing prototype

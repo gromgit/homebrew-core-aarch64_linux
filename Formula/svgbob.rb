@@ -1,21 +1,18 @@
 class Svgbob < Formula
   desc "Convert your ascii diagram scribbles into happy little SVG"
   homepage "https://ivanceras.github.io/svgbob-editor/"
-  url "https://github.com/ivanceras/svgbob/archive/0.6.7.tar.gz"
-  sha256 "6f7a61dca076d7e2295e8ed5876cd5aff375b3f435ed03559b875f86a49a4a52"
+  url "https://github.com/ivanceras/svgbob/archive/0.6.6.tar.gz"
+  sha256 "f9698ee0600b6533ec7adf4fbe7c35389eb7bf6e72cb03d1d8b46e0e3b45916e"
   license "Apache-2.0"
   head "https://github.com/ivanceras/svgbob.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7069ee90b4e75610f0cd521bcdfc257005eb265f63a376a00f6b8d904731abb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d58f6a2a324e58304062a9dab476ed881beffc249e1086526cc121c18c36f4d6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6b937566a070a3a45a1fb2f251d10b82b082b39c44e1691c43f04cad423fa240"
-    sha256 cellar: :any_skip_relocation, ventura:        "5f7861ab6d7cff59709b775b2e9ad43ca167cf61957db951c6e5727fa80c6c0b"
-    sha256 cellar: :any_skip_relocation, monterey:       "6efe06b3835e4a9e9d330a2cbbda2e994853231f81f2c906ba84dda64f2f235e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3b3540039e243c64cfb3c1ee67355fa93c31e89ef3673414720239fd7f258672"
-    sha256 cellar: :any_skip_relocation, catalina:       "3ab6faf174e991e452ead5bb511e2c9d3526c0079f23acf48378d9473033579a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "776c0ccc59be86ca69e05272775d2bd1fe59a13dc15a17e4628bff07557c4918"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2443d5067fd38e94c885f65d5204e8e3335966eea9ed3846d9351366a2e6260d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3f3014ac10293974989cf739595cc4ee9b77582779b02a7b94cdd06184881e79"
+    sha256 cellar: :any_skip_relocation, monterey:       "a4eb89193a763ae7bedf422cdce031a0292e8691021f4fbeb93515fe7913caf4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2f8984bce1a18ad210d9a2b591136a5e0a527aca11df4ac6ea4b598546f412f9"
+    sha256 cellar: :any_skip_relocation, catalina:       "f1e0b4abfba05cf7b4a9f1f9741e1ff0f5a2bdc3306e02e1eb982a5e338df091"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aeaddd4070e0181a7cf669e562a49f4af3f6e75ab58858f7bbd4b58925bbf2ba"
   end
 
   depends_on "rust" => :build

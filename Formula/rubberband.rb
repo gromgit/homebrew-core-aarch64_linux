@@ -1,8 +1,8 @@
 class Rubberband < Formula
   desc "Audio time stretcher tool and library"
   homepage "https://breakfastquay.com/rubberband/"
-  url "https://breakfastquay.com/files/releases/rubberband-3.1.1.tar.bz2"
-  sha256 "a442551fe7d26fb4a54dd1c34178733dc9c76ac9ce051a02325f5cb35d154381"
+  url "https://breakfastquay.com/files/releases/rubberband-2.0.2.tar.bz2"
+  sha256 "b9eac027e797789ae99611c9eaeaf1c3a44cc804f9c8a0441a0d1d26f3d6bdf9"
   license "GPL-2.0-or-later"
   head "https://hg.sr.ht/~breakfastquay/rubberband", using: :hg
 
@@ -12,14 +12,12 @@ class Rubberband < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "39ed0d04fc654ebc89f2819510ac5cad990a5b5c7ea2657cb38813c3ed41ba30"
-    sha256 cellar: :any, arm64_monterey: "ac1818bde00e42888ea13d151de85e8b387d6c6107df617ac24edf53ca6a9ded"
-    sha256 cellar: :any, arm64_big_sur:  "31a26e4d2c2f37af5f5347dad63b7e1264d0e69d607639e559b1a8f45b554a93"
-    sha256 cellar: :any, ventura:        "36de6f9a470b303f83dfdfbfde201ff02f38bf499407aac23d7eeebab42c3c68"
-    sha256 cellar: :any, monterey:       "84b15332391d9e870603dd31300db0b639cbde59f891e3e78b943e2d03dde0c9"
-    sha256 cellar: :any, big_sur:        "39d08fc2a284ba173fdb2c97c93cb526b0c2ac17006cd84249c7389b6ee2c85b"
-    sha256 cellar: :any, catalina:       "5f22527cc4d85d7b29c55c3e923f097f36d231041507ba75ab7b9669aea57d17"
-    sha256               x86_64_linux:   "9e50f245e3e1f7434390faac68adb7c306bb498845a30218f744fd0fbd238c0f"
+    sha256 cellar: :any, arm64_monterey: "a70400b4694acfba6d59576c6854b083b1e1f7c80f9e849eb0266245ad1ff4cf"
+    sha256 cellar: :any, arm64_big_sur:  "91d25871f4588a70dc145fbbf92fa8fdb874e43d350001a66f235d537660ec4a"
+    sha256 cellar: :any, monterey:       "7b8eaf28f8ce6179e77651b04eba3e578d763e1ba1740381d5032f9f112ebee6"
+    sha256 cellar: :any, big_sur:        "ed69e5ffec5c5f5ebbe1557f020b57f188bb320d0c0ca1595f4eaead0f7cbf43"
+    sha256 cellar: :any, catalina:       "4f1fd0c9f7fd9870c502b8389f660819197a8b036570d70b16b06db0affd4443"
+    sha256               x86_64_linux:   "ab4a2484f146fb67825f2b37ce90c27829d754f854886dc7cf210425c5db9a5e"
   end
 
   depends_on "meson" => :build
@@ -30,17 +28,17 @@ class Rubberband < Formula
 
   on_linux do
     depends_on "fftw"
+    depends_on "gcc"
     depends_on "ladspa-sdk"
+    depends_on "openjdk"
     depends_on "vamp-plugin-sdk"
   end
 
   fails_with gcc: "5"
 
   def install
-    args = ["-Dresampler=libsamplerate"]
-    args << "-Dfft=fftw" if OS.linux?
     mkdir "build" do
-      system "meson", *std_meson_args, *args
+      system "meson", *std_meson_args
       system "ninja", "-v"
       system "ninja", "install", "-v"
     end

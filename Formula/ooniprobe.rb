@@ -1,8 +1,8 @@
 class Ooniprobe < Formula
   desc "Network interference detection tool"
   homepage "https://ooni.org/"
-  url "https://github.com/ooni/probe-cli/archive/v3.16.6.tar.gz"
-  sha256 "49efc61660e61f01e613b97f8cf39e92ae012c57ba9b10184263872315a63137"
+  url "https://github.com/ooni/probe-cli/archive/v3.14.2.tar.gz"
+  sha256 "a0b71089444c899ba99c7f63f9e05819cdbe964cfa17bb95ca5672343e6aec22"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,17 +11,16 @@ class Ooniprobe < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cbde54f799ce92e075015aac9369eb85b5b44d4677b54cdebcb18b509a04b11a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9afaa9b3929d1395dacff1839f9463cdaa1e9ebfde244f7139f0b7e61e351cc9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f6690cd176c774a9e9dcc89139454a5cf7350ee8a3ec09e14f8c833437e90e32"
-    sha256 cellar: :any_skip_relocation, ventura:        "4787f2a1ce0f5fc890d513c3de874a2704839b969454a58794ae0d854e2b967f"
-    sha256 cellar: :any_skip_relocation, monterey:       "287e841f1ab850f09f498a17d62048d53b6c5ec20f65aca7c60c682cc991a4b7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "487ff675456a4c7d2692bf01d7f57db1a5a28c0582f5f47f62c72c6794bdf171"
-    sha256 cellar: :any_skip_relocation, catalina:       "a3fd9e6eee9672b16e5bf1e8883617b966721a1cae576a02deda698b6209fc28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81be00242327253522b19fb14195db75f1c221af7634012229c84ac011279d0b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6175151c2c03b2ce67ee64b6e467b5a23805649bc4269261e02bf10704537c77"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "86d43020ae3046726ae70e6e846dfbd8abff179a0ac60ed0092e3175b5209563"
+    sha256 cellar: :any_skip_relocation, monterey:       "e4a8ee479c263c4fa720b61b75b8ebcd0053d6fd3e704d45ac4d154e79b3c724"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9db39adc27ca6f68798393d77658e5db77320e6ce8dbcd4eae0f667df70f2cfe"
+    sha256 cellar: :any_skip_relocation, catalina:       "26cc9170c9a9b3b92dc8617dd9ce94d71d032b864adee1b6899777ef88166d20"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6029598cdad5d2317cb9e6b0ca25c86d6c7aae00224950491e7ea6a1cc43d96"
   end
 
-  depends_on "go" => :build
+  # Bump to 1.18 on the next release, if possible.
+  depends_on "go@1.17" => :build
   depends_on "tor"
 
   def install
@@ -30,10 +29,6 @@ class Ooniprobe < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/ooniprobe version")
-    # failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 2048 kiB, got: 416 kiB).
-    return if OS.linux?
-
     (testpath/"config.json").write <<~EOS
       {
         "_version": 3,

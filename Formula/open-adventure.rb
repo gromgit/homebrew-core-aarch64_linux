@@ -1,4 +1,5 @@
 class OpenAdventure < Formula
+  include Language::Python::Virtualenv
   desc "Colossal Cave Adventure, the 1995 430-point version"
   homepage "http://www.catb.org/~esr/open-adventure/"
   url "http://www.catb.org/~esr/open-adventure/advent-1.11.tar.gz"
@@ -12,20 +13,16 @@ class OpenAdventure < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0e12500870339890aa4e38adb46743e8cd2459645749f98b985c126a039c26a9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e626a51cb92c97db9628a4dd4f3220b4aaa5fca24b044e9d84b1a27986597e47"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b775593afe027000123bb388f84553f5c2213a566cce24eff46be74e96f000c9"
-    sha256 cellar: :any_skip_relocation, ventura:        "45c2c8b7f32981e7c6be6b4be03c6f076c8fedb0c754f985cac236ceeefa5a04"
-    sha256 cellar: :any_skip_relocation, monterey:       "207d746678eb8bc2d241af54fcd33785cc25066037d4211669321304a6d9dfab"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bf645264db48637a2a60113fd80945feb3048e1b17d6e77bf1c6970bb6f621ba"
-    sha256 cellar: :any_skip_relocation, catalina:       "c49210129ed491e094473e663171f5f6a554b41c3ba319cafc4fdc7d25289c8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b12d65ac8f76be7b2393bff7eb8672582b840732e3228351e5d8e2fb5b13dafb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e931395590510f74d6bf59fa5c23c3dc1ec8c8fff3a7d155ff28b4e613e2f71"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c0d181283936bbf39d920d378514d7d458ef93a2467b6bd6a8f31670540fe98f"
+    sha256 cellar: :any_skip_relocation, monterey:       "2babb876201536cbcbd9a40a25f5ec0af425ff4fe6e5726f90252d56baded949"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4574d326ac02f5ecc8623577de5c6d563aab95c6c38daff5e3ce3044a7730f63"
+    sha256 cellar: :any_skip_relocation, catalina:       "9879361d26e9dbde8294dead6e8b98f795c0a09950a5a6e92a9a7b057a5dc38d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "32d275c1e16d3d76e8e57875dfae24e28618001f72c88f6f2b067b221badb5ed"
   end
 
   depends_on "asciidoc" => :build
   depends_on "python@3.10" => :build
-  depends_on "pyyaml" => :build
 
   uses_from_macos "libxml2" => :build
   uses_from_macos "libedit"
@@ -34,9 +31,15 @@ class OpenAdventure < Formula
     depends_on "pkg-config" => :build
   end
 
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+  end
+
   def install
-    python = Formula["python@3.10"].opt_bin/"python3.10"
-    system python, "./make_dungeon.py"
+    venv = virtualenv_create(libexec, "python3.10")
+    venv.pip_install resources
+    system libexec/"bin/python", "./make_dungeon.py"
     system "make"
     bin.install "advent"
     system "make", "advent.6"

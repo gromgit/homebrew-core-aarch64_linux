@@ -5,8 +5,8 @@ class Rfcstrip < Formula
   sha256 "bba42a64535f55bfd1eae0cf0b85f781dacf5f3ce323b16515f32cefff920c6b"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "30eac8c00df4eb27fa9c8b6bacf48ec6145e7bad5699832f56a38a4967501ecc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rfcstrip"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "924cdf02bf901bdd1c0b4029495f7f22c81204bee54aea811d95f110e6613181"
   end
 
   resource "rfc1149" do

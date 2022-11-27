@@ -1,25 +1,22 @@
 class Rover < Formula
   desc "CLI for managing and maintaining data graphs with Apollo Studio"
   homepage "https://www.apollographql.com/docs/rover/"
-  url "https://github.com/apollographql/rover/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "5132d1e1f4f5eb3c6e8b2254e7c75c638d35023992869185704e3ead2c99e2ff"
+  url "https://github.com/apollographql/rover/archive/v0.5.4.tar.gz"
+  sha256 "1728ee7eb5d87d9838972c1c441a7323315ded01c09d1edc7cf65c0e201a9fc9"
   license "MIT"
   head "https://github.com/apollographql/rover.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "22c6d424681c36f59cfe9587c21217ce407195a4166264033079eda86a0909a1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68af46f927616d0d0941ade763d91cbe29efbc22b48f7821bd0de73d700893e9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb65eec58656f668c8ed7464503b6557e0dd14bdf031bced4094f0e4252ae802"
-    sha256 cellar: :any_skip_relocation, ventura:        "18e9d9a70e83d20a17571e8de7316f1582814d1caca0af41ff765e7e087c258d"
-    sha256 cellar: :any_skip_relocation, monterey:       "33552815f7328ae64ad5219942211da72054d505e3b4dc28d73814a3f5a16daa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d4f7b3f9530e7d3a4e8d82f8835c1e136c78f11850d9980bb56d99d0f17a0cf2"
-    sha256 cellar: :any_skip_relocation, catalina:       "e9fea88f64256c9c5674376ad70030348844d944c1e2a456677d3485ddede5a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f743d47b1435b86eddd55b270a8146e8e93459aa251ebca6479e992d2b170659"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2e4635253dc0eaf1311a544234136a5276f28eb2fd15aceac15ec09e09b38aa6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "378c34c904ddcc0dd433e2a1987b847b0df7b8171611b75e3849a76fe0aa60b5"
+    sha256 cellar: :any_skip_relocation, monterey:       "ce829703de0145e4ec923df68684b6a5775d061fa8fbe1c3599c3dc7122f48bc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c7ec495c595db5d4a7f4759c4e3a64985ed3b977d7192c55d05b0180b25f53b7"
+    sha256 cellar: :any_skip_relocation, catalina:       "e59658b6fccd004d34959fb52343efeac830cdb2b34aec8f7c336fba49725479"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c05e7dcd2483815d2e8befcc2253c26b45101d12ac9eee4c5f6fcbd67f650a8b"
   end
 
   depends_on "rust" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "zlib"
 

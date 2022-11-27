@@ -9,23 +9,21 @@ class Khard < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1fc819763201a7c29c325be259fd5c28832d0a54719327f3eb5cccf3437560a0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "adec0c167f9673be452f1c695a832835f46da17700bba0df78b053c80db69c5a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28ed6dc0506b9f6434caae9cb9294f7fdbacfdba3d54483f6a0bd33a97bdb95a"
-    sha256 cellar: :any_skip_relocation, ventura:        "f70d695cf222879e763004ec96e0d0df0c6e38aa7f6d686c2823047c278305bc"
-    sha256 cellar: :any_skip_relocation, monterey:       "4926349ad3de43a969e15f153fd405f44600f7d728d36e67a3f553f583ced621"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3383947a6a566b663728df7b3a790941093b515fc38dea6fdd190e0c339bdd19"
-    sha256 cellar: :any_skip_relocation, catalina:       "8708b26b71a7cb95b39279b1a653ffcc3ea37f203dcf05dc3fd8fbb6893e3152"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb3831e654b813d9c219fc06d9cfa5094c0ff495e958b7326236ee05cd8558c2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe134a1ea2ef4d9a16d959cc5c7fde80fb4a9c8b94c501bf44fbe907fe0721dc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3fc28b1402c727ebec6e711fb708e60e323fe2b5c626123dea2bf4182fba2098"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9bc8806c6ce7690ca5ea73636d8768218de08f492590071fa8f56bda47d72fa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cbbe9d10dec73dfa9c431267ebac08bad479efbbf1b9df9a2e7b1265a7a0b3f8"
+    sha256 cellar: :any_skip_relocation, catalina:       "82627b07e76133d8cd6b96411fdbcc9d3be3e13554d81798a6054d9bc8d4161c"
+    sha256 cellar: :any_skip_relocation, mojave:         "64336ee4c660ff81770d274d905f236bd32b1dc9a01d9d1bc8ceffcdc3edff6e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23a3b6a9293dde85e044263c8c948d11df80a08d2afc7e88937bdc9762684c25"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "six"
 
   resource "atomicwrites" do
-    url "https://files.pythonhosted.org/packages/87/c6/53da25344e3e3a9c01095a89f16dbcda021c609ddb42dd6d7c0528236fb2/atomicwrites-1.4.1.tar.gz"
-    sha256 "81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11"
+    url "https://files.pythonhosted.org/packages/55/8d/74a75635f2c3c914ab5b3850112fd4b0c8039975ecb320e4449aa363ba54/atomicwrites-1.4.0.tar.gz"
+    sha256 "ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"
   end
 
   resource "configobj" do
@@ -39,13 +37,18 @@ class Khard < Formula
   end
 
   resource "ruamel.yaml" do
-    url "https://files.pythonhosted.org/packages/46/a9/6ed24832095b692a8cecc323230ce2ec3480015fbfa4b79941bd41b23a3c/ruamel.yaml-0.17.21.tar.gz"
-    sha256 "8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"
+    url "https://files.pythonhosted.org/packages/71/81/f597606e81f53eb69330e3f8287e9b5a3f7ed0481824036d550da705cd82/ruamel.yaml-0.17.16.tar.gz"
+    sha256 "1a771fc92d3823682b7f0893ad56cb5a5c87c48e62b5399d6f42c8759a583b33"
+  end
+
+  resource "ruamel.yaml.clib" do
+    url "https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz"
+    sha256 "4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"
   end
 
   resource "Unidecode" do
-    url "https://files.pythonhosted.org/packages/0b/25/37c77fc07821cd06592df3f18281f5e716bc891abd6822ddb9ff941f821e/Unidecode-1.3.6.tar.gz"
-    sha256 "fed09cf0be8cf415b391642c2a5addfc72194407caee4f98719e40ec2a72b830"
+    url "https://files.pythonhosted.org/packages/41/a6/93288318cfae2fa0ca978dfe6bb94b22b7e9a9e98b6149a4af00b1e76ee8/Unidecode-1.3.2.tar.gz"
+    sha256 "669898c1528912bcf07f9819dc60df18d057f7528271e31f8ec28cc88ef27504"
   end
 
   resource "vobject" do

@@ -1,19 +1,18 @@
 class XcbUtilCursor < Formula
   desc "XCB cursor library (replacement for libXcursor)"
   homepage "https://xcb.freedesktop.org"
-  url "https://xcb.freedesktop.org/dist/xcb-util-cursor-0.1.4.tar.xz"
-  sha256 "28dcfe90bcab7b3561abe0dd58eb6832aa9cc77cfe42fcdfa4ebe20d605231fb"
+  url "https://xcb.freedesktop.org/dist/xcb-util-cursor-0.1.3.tar.bz2"
+  sha256 "05a10a0706a1a789a078be297b5fb663f66a71fb7f7f1b99658264c35926394f"
   license "X11"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "7ff6f9cf0ced07af8e9aaf033d1cf4f5a7a159519ad19474c7a0ce312e76d9a5"
-    sha256 cellar: :any,                 arm64_monterey: "c1402a61728e938e9665a67b3d72204cfa71a8409b47dd94add8b92cb3d5557a"
-    sha256 cellar: :any,                 arm64_big_sur:  "44f48e787768de1996f21affe334da96d50bc2116c5e1162b9cea6281ca0353f"
-    sha256 cellar: :any,                 ventura:        "893c318c677f4b88ee58ed62d87265b6c9df26f9877f07bc2643360555fff40b"
-    sha256 cellar: :any,                 monterey:       "2452cdb2fcd3662a71ef8d0a30a1b6b194523d5be04a0d131bf567fb33b7c246"
-    sha256 cellar: :any,                 big_sur:        "84a77fb6318020f8fdde2c419f1f2d48568d026ca6af049e9ae42020e478b6b9"
-    sha256 cellar: :any,                 catalina:       "1b3275afacdc7c99e4888a4f64d1c57478fd883ab5d0b71a15bc46c7cec21bf2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "33e1dc7a4ba2663c341960faf21cb4e2f664e877f096dcb29ff3036f15dba730"
+    sha256 cellar: :any,                 arm64_monterey: "51612094fe8eda3e56745a5f97eb72cb92d64c39b4ff635def0ab9277dcc7ad8"
+    sha256 cellar: :any,                 arm64_big_sur:  "6fc14a705728b1de306bd923af2f36c103dc03da004b6074c5319af1ed8745a1"
+    sha256 cellar: :any,                 monterey:       "6d8bfa28662d6e3fa0bd2aae63ec20f290a3177d6c620d6b5200cd3695842433"
+    sha256 cellar: :any,                 big_sur:        "b9b3844d3e15c8c500ce203cc958a5b7ccc1967679b16b205f9256252776b206"
+    sha256 cellar: :any,                 catalina:       "7ed2fb722987ea7c6028969752d1b82df9db956bfeffbd05dfaa5689814a9b77"
+    sha256 cellar: :any,                 mojave:         "a2eea37585cc157739f19d770f3d921fb5eaf708bd74b0c7c2fb878e90761e8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6adb8895dcb03749055e92aff457e16eeda03a75246eb0b986b07b4759c8602f"
   end
 
   head do

@@ -1,10 +1,9 @@
 class PerconaServer < Formula
   desc "Drop-in MySQL replacement"
   homepage "https://www.percona.com"
-  url "https://downloads.percona.com/downloads/Percona-Server-8.0/Percona-Server-8.0.29-21/source/tarball/percona-server-8.0.29-21.tar.gz"
-  sha256 "a54c45b23719d4f6ba1e409bb2916c59dc0c9aaae98e24299ff26f150ad4f735"
+  url "https://downloads.percona.com/downloads/Percona-Server-8.0/Percona-Server-8.0.27-18/source/tarball/percona-server-8.0.27-18.tar.gz"
+  sha256 "91a7ad8fc0e3931f2d2bcb616bca8a55b6b7cac45f735aba4188c45edcf85da8"
   license "BSD-3-Clause"
-  revision 2
 
   livecheck do
     url "https://www.percona.com/downloads/Percona-Server-LATEST/"
@@ -12,21 +11,18 @@ class PerconaServer < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "1a61fec9e5d4003e9e0c5d9205091ce76f50bd821b0a4500a818593236d419c0"
-    sha256 arm64_monterey: "0133d8fe76dbc77d4d780e377b99ae220e5dd571edad87d421e5fbe2e757da1d"
-    sha256 arm64_big_sur:  "4da7726e3988cf850c41e7a796e6d734d6bf4e06e7829a9e0bf280976d304f3a"
-    sha256 ventura:        "cb4b17cbbc933936a14e16fc304bd5baaa537f7bdfb4fd7df0258b92ce312d66"
-    sha256 monterey:       "0828b310ec01954e21d01a2d1b1e63d168fe2d5f4ddb8252a1541607bc0839b0"
-    sha256 big_sur:        "336ecb45561368ce58b2591f54e52e212b2c2967b123f860e2366a1c6276f981"
-    sha256 catalina:       "6a8b7df8f17f928511a3a257895513f67f76c8916870c14499a0cecfe497d49a"
-    sha256 x86_64_linux:   "5fbb09fa511901a89990c5b87c4408723a7cb32e5766d3d55ddf8a73dde46ff2"
+    sha256 arm64_monterey: "b0e80bcf721b873ac57c0cc24b3747cba29ebabb87536ad9d8e5e6359aa1dbc1"
+    sha256 arm64_big_sur:  "a85083339696b0326137952676edd2a1e6cce7ae6a1f6741aebe1dc0943d01b7"
+    sha256 monterey:       "f37dd629634fb61a9f11b4ce744015aea18440d4e94dc0a7255e54105a5c7715"
+    sha256 big_sur:        "d2a42e17afcfe577c011acae65d74fd9f7a30980fdd3d90962d303bc0f72aeac"
+    sha256 catalina:       "7de452f8b76a3676ccdbd270c0200e3a92afc63c6a45c1b92ec9b86a461d81bf"
+    sha256 x86_64_linux:   "92eb0368c60792661cdb40027a6b3fd875f8a492720ed7f24486e7962c5a4a99"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "icu4c"
   depends_on "libevent"
-  depends_on "libfido2"
   depends_on "lz4"
   depends_on "openssl@1.1"
   depends_on "protobuf"
@@ -40,15 +36,15 @@ class PerconaServer < Formula
 
   on_linux do
     depends_on "patchelf" => :build
-    depends_on "libtirpc"
+    depends_on "gcc"
     depends_on "readline"
 
     # Fix build with OpenLDAP 2.5+, which merged libldap_r into libldap
     patch :DATA
   end
 
-  conflicts_with "mariadb", "mysql", because: "percona, mariadb, and mysql install the same binaries"
-  conflicts_with "percona-xtrabackup", because: "both install a `kmip.h`"
+  conflicts_with "mariadb", "mysql",
+    because: "percona, mariadb, and mysql install the same binaries"
 
   # https://bugs.mysql.com/bug.php?id=86711
   # https://github.com/Homebrew/homebrew-core/pull/20538
@@ -64,16 +60,15 @@ class PerconaServer < Formula
 
   # https://github.com/percona/percona-server/blob/Percona-Server-#{version}/cmake/boost.cmake
   resource "boost" do
-    url "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2"
-    sha256 "fc9f85fc030e233142908241af7a846e60630aa7388de9a5fafb1f3a26840854"
+    url "https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.bz2"
+    sha256 "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
   end
 
-  # Patch out check for Homebrew `boost`.
-  # This should not be necessary when building inside `brew`.
-  # https://github.com/Homebrew/homebrew-test-bot/pull/820
+  # Fix build on Monterey.
+  # Remove with 8.0.28.
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/030f7433e89376ffcff836bb68b3903ab90f9cdc/percona-server/boost-check.patch"
-    sha256 "3223f7eebd04b471de1c21104c46b2cdec3fe7b26e13535bdcd0d7b8fd341bde"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/fcbea58e245ea562fbb749bfe6e1ab178fd10025/mysql/monterey.diff"
+    sha256 "6709edb2393000bd89acf2d86ad0876bde3b84f46884d3cba7463cd346234f6f"
   end
 
   def install
@@ -105,7 +100,6 @@ class PerconaServer < Formula
       -DWITH_UNIT_TESTS=OFF
       -DWITH_SYSTEM_LIBS=ON
       -DWITH_EDITLINE=system
-      -DWITH_FIDO=system
       -DWITH_ICU=system
       -DWITH_LIBEVENT=system
       -DWITH_LZ4=system
@@ -140,6 +134,14 @@ class PerconaServer < Formula
       # Docker containers lack CAP_SYS_NICE capability by default.
       test_args << "--nowarnings" if OS.linux?
       system "./mysql-test-run.pl", "status", *test_args
+    end
+
+    if OS.mac?
+      # Remove libssl copies as the binaries use the keg anyway and they create problems for other applications
+      rm lib/"libssl.dylib"
+      rm lib/"libssl.1.1.dylib"
+      rm lib/"libcrypto.1.1.dylib"
+      rm lib/"libcrypto.dylib"
     end
 
     # Remove the tests directory

@@ -1,19 +1,18 @@
 class Futhark < Formula
   desc "Data-parallel functional programming language"
   homepage "https://futhark-lang.org/"
-  url "https://github.com/diku-dk/futhark/archive/v0.22.4.tar.gz"
-  sha256 "5edf79ed2076192ead64efb8a4d30d05b56b2c1ec5bdd0905c33d6099d312850"
+  url "https://github.com/diku-dk/futhark/archive/v0.21.11.tar.gz"
+  sha256 "7fda99198a1769465fd05cfcb0984016555f46894e856afcea362bf4e230f90c"
   license "ISC"
   head "https://github.com/diku-dk/futhark.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cde37b2d259338ddea47ffa9891ca146eb05c93fc0c17979b2387ae5b40ad35a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67bb3657770861d0cbd137d41d5cfe42996d3575f0a17568eba4582bd3da69bb"
-    sha256 cellar: :any_skip_relocation, ventura:        "d74907762132860969d642b075eb0e4d4053d3571118e282cdaed901ef311f8a"
-    sha256 cellar: :any_skip_relocation, monterey:       "931ddbd6c489218eb4930fe67ed975a329a1d0ee8d0bac6fba016008e77c7a9a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ad4a3d57b6c629c89b86662966d8c2fb473adea14b945775d2377583a770c32b"
-    sha256 cellar: :any_skip_relocation, catalina:       "831516499f46080702479c3c5f159a25910cadd10e9e68ca389e0b9f96f3779b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "50e2ef99b622e4fa78c70fc3156fa2825f00341c7ecfdc6c18d320f996b4b5e7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "087b5981a32590aee5202741cc8d015e423c1278d83b89c36dac52eb2d23b3c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ab24b601b3280e22066d54482a2f4670232b0a80845104fddc42c25554db6c35"
+    sha256 cellar: :any_skip_relocation, monterey:       "53c7766716e659d3e33564a90ff250c5c960104830c7aa24227c128ce10d8a9d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ea9d516c76b9b8442515efbccc11de98aaa0a668f4a2c162c22d103ac13e82f8"
+    sha256 cellar: :any_skip_relocation, catalina:       "647bcccf0bf6822f11295a4c64d9a3964ccce3668819ea22f30358e03cef0ad0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9070af75d216ce98f66a35cbe49ed322f7410f730e2f9da449a44a0f2d4d77da"
   end
 
   depends_on "cabal-install" => :build

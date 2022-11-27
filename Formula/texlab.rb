@@ -1,20 +1,18 @@
 class Texlab < Formula
   desc "Implementation of the Language Server Protocol for LaTeX"
   homepage "https://texlab.netlify.com/"
-  url "https://github.com/latex-lsp/texlab/archive/v4.3.2.tar.gz"
-  sha256 "166738741ad9873076d123ae86d7642060232f23d2674d59a2d38e1d03a6e06a"
+  url "https://github.com/latex-lsp/texlab/archive/v3.3.2.tar.gz"
+  sha256 "380395a37ee2ece590c0db04ac4898f5f430ee37d0ab0fa0801805167fff066a"
   license "GPL-3.0-only"
   head "https://github.com/latex-lsp/texlab.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "274614e944cbed724253142c4ba8397bcef074d90bc606f3b66c58b946cc7b7f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "08fc9377687658b1f19861744de2cd4d2cf0134c0e2125bcecbe9f0e9084d222"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6db4457aea70ae9be2d0f483ea3b3b0334a3eaadaaa62b39f16c1ca4faf0422c"
-    sha256 cellar: :any_skip_relocation, ventura:        "e43b6fb72e9af14ce9d42438ec07e3dbb4240a0e158e8da0b72a6e4a0366a282"
-    sha256 cellar: :any_skip_relocation, monterey:       "2432b6f38c8bff2bd0c99d35097ff179ad469169388c7422f410fec9274e7340"
-    sha256 cellar: :any_skip_relocation, big_sur:        "724f8a59f105f4bef5c8fecf66ea854a99fc261ab24e2ca719638142b5d15117"
-    sha256 cellar: :any_skip_relocation, catalina:       "e778b139f56e8737ea03f510bf8ef21d66e15dbb4e09a9fde62c1d18a646fc38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de6e530d2864e104da10f664cd4ee1d90ecf5a7edd2802d6b0ed8a0cbed5541b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1e6c6579f14b369215a26f8e05bbdeb4b245a6142df3c470e46430f8b517bb7b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aad770a9da7aa03b4a72a2156a3392c6a40759ce730a3aef80e78ccc81693efb"
+    sha256 cellar: :any_skip_relocation, monterey:       "0f19090f58cc85a63a1fea0c9039bc948c6bf56c78ce36c0452147d59119d5c5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a57291d25a1e5fb1a1de4f6aacfa25672044bb642a82cfe8e5cd0769f47c8c36"
+    sha256 cellar: :any_skip_relocation, catalina:       "ff9008fa28752508f19d90f04baf2b83220b1662d77baf48db571bcab3cb617e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0aaf981f93f011a183cd38d4d0adece290908735785d5196d2965c2de674cab5"
   end
 
   depends_on "rust" => :build
@@ -23,11 +21,13 @@ class Texlab < Formula
     system "cargo", "install", *std_cargo_args
   end
 
-  def rpc(json)
-    "Content-Length: #{json.size}\r\n\r\n#{json}"
-  end
-
   test do
+    def rpc(json)
+      "Content-Length: #{json.size}\r\n" \
+        "\r\n" \
+        "#{json}"
+    end
+
     input = rpc <<-EOF
     {
       "jsonrpc":"2.0",

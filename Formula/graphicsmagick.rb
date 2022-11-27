@@ -4,7 +4,6 @@ class Graphicsmagick < Formula
   url "https://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.38/GraphicsMagick-1.3.38.tar.xz"
   sha256 "d60cd9db59351d2b9cb19beb443170acaa28f073d13d258f67b3627635e32675"
   license "MIT"
-  revision 1
   head "http://hg.code.sf.net/p/graphicsmagick/code", using: :hg
 
   livecheck do
@@ -12,22 +11,18 @@ class Graphicsmagick < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "71e76fcef99e872bd2bf5968cc8637c814f840b0b3353a122883cd3dd279c0d1"
-    sha256 arm64_monterey: "6390e9b63683aca9a120458a05cd405a7c1c15337b5521fd7b4a8ca7d5c9be6c"
-    sha256 arm64_big_sur:  "ad3862da45b6d9a6cda022cbc8834d87c1ae1b04fceea068c0ec7da1683151c8"
-    sha256 ventura:        "56dc5d6fbed9d308a978aff1fdef69a3e7d2e90174a4ff4d380a7465f09f7d62"
-    sha256 monterey:       "261c7ec6b275953638a14ab215063ceff80a6623dd3e9de141b06bf26cfc8586"
-    sha256 big_sur:        "36c4193d99509ed03d316204042ba4c1225d62f625ca688917212c1dd3a8875d"
-    sha256 catalina:       "c4625be268d468bf4387b4091026df9c2b83a160e63c596ef96db7edd8c85d74"
-    sha256 x86_64_linux:   "7c4a3202d3ebb33933abfb9de51ece3e50960ce88b058cf4902279b6dc9a88d3"
+    sha256 arm64_monterey: "60a324b98f4e6a8015f0b304df612b70fb64b5f51ad2d43bfcddfb951257125d"
+    sha256 arm64_big_sur:  "17e64fd18bd459648e31e463e6765fc8a39496324c2df9b977ce7b6d27ba77b6"
+    sha256 monterey:       "4aabbd3fa3fb9a3dbdf111d2d06cc1b78bf8fdfb8f1ea9f440aeabd6f40e9627"
+    sha256 big_sur:        "357ff0c2523d8015ec3000ad3aeca4b474c5816cd055ed3ee2435200ba580deb"
+    sha256 catalina:       "a7138441a365f8cb115b325d30f462e5ee1e5c9ec4454240cadf6cc7172be8d7"
+    sha256 x86_64_linux:   "77642a448d7ce30d4324b45eb0ec62e710e2b9c6c813ad240d2a05a756360d81"
   end
 
   depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "jasper"
-  depends_on "jpeg-turbo"
-  depends_on "jpeg-xl"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libtool"
@@ -54,7 +49,6 @@ class Graphicsmagick < Formula
       --without-gslib
       --with-gs-font-dir=#{HOMEBREW_PREFIX}/share/ghostscript/fonts
       --without-wmf
-      --with-jxl
     ]
 
     # versioned stuff in main tree is pointless for us

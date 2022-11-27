@@ -1,19 +1,13 @@
 class Velero < Formula
   desc "Disaster recovery for Kubernetes resources and persistent volumes"
   homepage "https://github.com/vmware-tanzu/velero"
-  url "https://github.com/vmware-tanzu/velero/archive/v1.9.3.tar.gz"
-  sha256 "294f63c2382c5c6570c5db8b20087e8053e5572b5bef7b4ec1df5db3d565c08b"
+  url "https://github.com/vmware-tanzu/velero/archive/v1.8.1.tar.gz"
+  sha256 "675034d30d3539f9292ca5896e28df6159cdf1c6436d806795a79c61bfe37cd7"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9ac11ea8d9f84617c071b63c00b963a70aec238f0d665a75d99d227e54bafeb2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "749341bd92efcffcc90f2ba8361a36b772d1ff94b0f66bf39a9fc925cc72250f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4fb442951ee485f442c221904ca59591142e09ffea3edb687b8d630ee3b4771"
-    sha256 cellar: :any_skip_relocation, ventura:        "34cb83c792d234957508c52dd12b837ab702a0e5bb3dbd2191aac08bb4f2fb15"
-    sha256 cellar: :any_skip_relocation, monterey:       "cc2769d44cbd216728b996bcfc2fc4e27d5d18fb973d021187d6ec12c71a9882"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3ea7eebdbf751e2050bd5c212178ff864410cba435222db8036370119a6c54d9"
-    sha256 cellar: :any_skip_relocation, catalina:       "ce40dfce5c1a3488accf25794bc67dbde1799f2c48aaadada003fdfa41ca6c5a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e950c979ae5e82f9e0420cb7d6f070161f9346a880f3d88f985d1654e4729519"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/velero"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "372ea3b95b8a3831c868dfe7b94f397f3a37bb0a0544323eb6d91c0068c35daf"
   end
 
   depends_on "go" => :build
@@ -25,7 +19,17 @@ class Velero < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "-installsuffix", "static", "./cmd/velero"
 
-    generate_completions_from_executable(bin/"velero", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"velero", "completion", "bash")
+    (bash_completion/"velero").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"velero", "completion", "zsh")
+    (zsh_completion/"_velero").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"velero", "completion", "fish")
+    (fish_completion/"velero.fish").write output
   end
 
   test do

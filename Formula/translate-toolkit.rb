@@ -3,36 +3,31 @@ class TranslateToolkit < Formula
 
   desc "Toolkit for localization engineers"
   homepage "https://toolkit.translatehouse.org/"
-  url "https://files.pythonhosted.org/packages/14/be/e9c706549ebbd163a209bff1f4a191aad304b68e105757afc01eef1fcadb/translate-toolkit-3.7.4.tar.gz"
-  sha256 "5a8259ca6f735ba5068e80180256203a58ad11900faef3cd5e29dcae7a3fa312"
+  url "https://files.pythonhosted.org/packages/1b/c0/66d7c2deb7fd9072cbf886b6f35d796cf24a87f23e3033dfdc1f5d71ac7b/translate-toolkit-3.6.1.tar.gz"
+  sha256 "863483edbe51906e9baf9157c2ac22dd42ad07e740d58cc430db20175383da8a"
   license "GPL-2.0-or-later"
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "249e983b219e9698e2c041b66819d3d064faf40666a791d2cc6b7e3d2c150985"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "94b67704c25949fb2d86c43aed68401167653d10cc5d44a86ba8eba40ed8d053"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df2f57e90353e136aa2531ca2f05603e6c68d7e66a743f396ee691a3a5c58614"
-    sha256 cellar: :any_skip_relocation, ventura:        "f52a06e2546bd161e52f209f008f5a5d2e2093933cbbfaee5ecb55a96a09f515"
-    sha256 cellar: :any_skip_relocation, monterey:       "7936d18ec3104c8147d060abbe947ccaedb33bde7691860dbc777b3613e83738"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b484b8b038df210d2a0361beae2c586319f7aaca4bfaeb1c551be91f8461ac7a"
-    sha256 cellar: :any_skip_relocation, catalina:       "74693cf129197e81fd9a0675ce47e5af62faebe84c285e91e53dd1d031646269"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72ebf9aa3d60b1288969cb9535f79a1640cfa12fab6852c3b79c980db9635fd5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d65fe0e35406ef983e1adfc34c68b40133d751e2ab8ab07ab90bb71cccf8ae7f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b2759488f9335eca4293c82cf4ffe13ba9fc93621754ef0fdc9a12da1ee61b25"
+    sha256 cellar: :any_skip_relocation, monterey:       "a78cbc8ba3df0ba824db900d921759c6f025b8fbcbc815729de9d0f13f3956f2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "27252ab117f532fab7830af63eb7c8125619aaa242b576b9887d0ae9e6b5f427"
+    sha256 cellar: :any_skip_relocation, catalina:       "0ae171cc05f04437023441a5bf35f103f3b1c280fb8c29349ff5ae3a1405fb40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0d0d0c14997dec43f98fd9db13b864f1c735fa2864d8013f8ffc446359def09"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz"
-    sha256 "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
+    url "https://files.pythonhosted.org/packages/3b/94/e2b1b3bad91d15526c7e38918795883cee18b93f6785ea8ecf13f8ffa01e/lxml-4.8.0.tar.gz"
+    sha256 "f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"
   end
 
   def install
-    # Workaround to avoid creating libexec/bin/__pycache__ which gets linked to bin
-    ENV["PYTHONPYCACHEPREFIX"] = buildpath/"pycache"
-
     virtualenv_install_with_resources
   end
 

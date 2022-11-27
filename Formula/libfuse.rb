@@ -7,7 +7,8 @@ class Libfuse < Formula
   head "https://github.com/libfuse/libfuse.git", branch: "master"
 
   bottle do
-    sha256 x86_64_linux: "ea609a3093702c051c16f7bd0bc1140fecdfa51a81b854445335cc3d94aaeb75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libfuse"
+    sha256 aarch64_linux: "a1b2ed935be7e0d7da0447f781e5eb2128b8c96a93b0d472c9c68add0f5982f4"
   end
 
   depends_on "meson" => :build

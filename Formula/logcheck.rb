@@ -11,7 +11,8 @@ class Logcheck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "61e22e669355cf8f2e76bedc10668a0a4c6b96844727271de2855d27699fac2a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/logcheck"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c3ca42e7ca86373241209940ea3b02f6e8f065a3e84569f256bd6588613077dc"
   end
 
   def install

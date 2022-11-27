@@ -1,19 +1,17 @@
 class Libxc < Formula
   desc "Library of exchange and correlation functionals for codes"
   homepage "https://tddft.org/programs/libxc/"
-  url "https://gitlab.com/libxc/libxc/-/archive/6.0.0/libxc-6.0.0.tar.bz2"
-  sha256 "f182fac31ba7682e3483cb89837be090a266a3349593fafb147ab2e203f36a57"
+  url "https://gitlab.com/libxc/libxc/-/archive/5.2.2/libxc-5.2.2.tar.bz2"
+  sha256 "484115929674d7b85d9361f4f8a821e3d1c6024e31b8fa41df916c09799891a9"
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1592191d5c7338e37a0ea731effce5518f9ba99dbea83695b032bce2523551d3"
-    sha256 cellar: :any,                 arm64_monterey: "c79670f57d0b3a0d10876f02f50cf0061c530e97ddf6e412d0f17a0a6644f6ad"
-    sha256 cellar: :any,                 arm64_big_sur:  "e07b6d39d96b23c2f67fee2f93737414653141e62be76b20261173628f54edcb"
-    sha256 cellar: :any,                 ventura:        "b79350f6f492c8d7c001c82648b1b162c1d281eaa0013e54e7884d2129a9749a"
-    sha256 cellar: :any,                 monterey:       "981570c3575c0002c486b25ccbf162e6c212c5bd9dee5c9d5d685ed010942a82"
-    sha256 cellar: :any,                 big_sur:        "8ca05881128815959c1ba12d69e243fa9ec5396560b89d41dc3c99054b755913"
-    sha256 cellar: :any,                 catalina:       "3778d34932ecf2ea3df3dbe49f8c8732384b7d1fd7d8470c65cce7515cd30617"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba382f85ebaaf0c8c2e4b0b066d5b418968b5f50a6ac1b1b3e44c27704fb690f"
+    sha256 cellar: :any,                 arm64_monterey: "e5023e89f8acff465eba113360911e6b666c4487f9547271da78be13ccfb9c9d"
+    sha256 cellar: :any,                 arm64_big_sur:  "4e064d20223090cc16b6a9056bca6cbd98683408c42987b7a0050016bac46b41"
+    sha256 cellar: :any,                 monterey:       "1751dc87e5235aa9854442dea65fb1355f2f847157fdae990e315fb96b3d34b0"
+    sha256 cellar: :any,                 big_sur:        "4fb029189385ada09e3c4a167257bb1e39ff02fc3fa00c4d0e03c6b45dd5cafd"
+    sha256 cellar: :any,                 catalina:       "091fc935e2496b8132bfefc25372b496af7a1c9a93952ff6ff36dbc130445808"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41cf6427cdce0071ce177114d46b588fd24a75512b005b2da0b14d2c1cc1c503"
   end
 
   depends_on "autoconf" => :build

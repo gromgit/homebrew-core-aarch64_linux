@@ -1,46 +1,42 @@
 class Tvnamer < Formula
-  include Language::Python::Virtualenv
-
   desc "Automatic TV episode file renamer that uses data from thetvdb.com"
   homepage "https://github.com/dbr/tvnamer"
   url "https://files.pythonhosted.org/packages/7e/07/688dc96a86cf212ffdb291d2f012bc4a41ee78324a2eda4c98f05f5e3062/tvnamer-3.0.4.tar.gz"
   sha256 "dc2ea8188df6ac56439343630466b874c57756dd0b2538dd8e7905048f425f04"
   license "Unlicense"
-  revision 2
+  revision 1
   head "https://github.com/dbr/tvnamer.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "44bcd455f8e36aa40ab7e0d5a300752264520b18ffd739eefca7d760c2ae105a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea4e7305d39b4960cf73fbf8fa9767aad646e83bb9d4cb36ae4271aa2b2eba94"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44270b65aab543ed23b67d0e803ee8ed12b1053198fde809e8d09de945d91084"
-    sha256 cellar: :any_skip_relocation, ventura:        "426084e68945da49d1442a506117965f5c41ba4f1d337a94767e9855bb0ef8c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "94be19c99705477fdd53b7f05f1b4c00ea511897f522c5e32590c4a4fb86a98e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1a6f5ec60abccddfb3ab65731e70c579cee559d103a22609c8e002a71157412"
-    sha256 cellar: :any_skip_relocation, catalina:       "a4d03019f5357d1c4303d5a1efb3da25107ff401ed3051340173926b1177733b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e6cb2069465bae0cb33abe999cd1e2092394aab991d634adb2dea3bae6282dc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "04206c4b348fbd1bdaf7d6d59e5eb7af96ce9c58a5729dc26a1cfaf5e49106b7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "04206c4b348fbd1bdaf7d6d59e5eb7af96ce9c58a5729dc26a1cfaf5e49106b7"
+    sha256 cellar: :any_skip_relocation, monterey:       "e44a489cac20cfdd68199c79d58ac8c47f376b9919898a07a97ae31502bd3d6b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e44a489cac20cfdd68199c79d58ac8c47f376b9919898a07a97ae31502bd3d6b"
+    sha256 cellar: :any_skip_relocation, catalina:       "e44a489cac20cfdd68199c79d58ac8c47f376b9919898a07a97ae31502bd3d6b"
+    sha256 cellar: :any_skip_relocation, mojave:         "e44a489cac20cfdd68199c79d58ac8c47f376b9919898a07a97ae31502bd3d6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54803ea2259bd1d6f9643fe7e69cf42d20417fefa82b1e695ec0768ee3311760"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/06/a9/cd1fd8ee13f73a4d4f491ee219deeeae20afefa914dfb4c130cfc9dc397a/certifi-2020.12.5.tar.gz"
+    sha256 "1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c"
   end
 
-  resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+  resource "chardet" do
+    url "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz"
+    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
-    sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+    url "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz"
+    sha256 "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/6b/47/c14abc08432ab22dc18b9892252efaf005ab44066de871e72a38d6af464b/requests-2.25.1.tar.gz"
+    sha256 "27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804"
   end
 
   resource "requests-cache" do
@@ -54,12 +50,23 @@ class Tvnamer < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/cb/cf/871177f1fc795c6c10787bc0e1f27bb6cf7b81dbde399fd35860472cecbc/urllib3-1.26.4.tar.gz"
+    sha256 "e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"
   end
 
   def install
-    virtualenv_install_with_resources
+    xy = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{xy}/site-packages"
+    resources.each do |r|
+      r.stage do
+        system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+      end
+    end
+
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+    system "python3", *Language::Python.setup_install_args(libexec)
+    bin.install Dir["#{libexec}/bin/*"]
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do

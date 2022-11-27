@@ -1,8 +1,8 @@
 class Petsc < Formula
   desc "Portable, Extensible Toolkit for Scientific Computation (real)"
-  homepage "https://petsc.org/"
-  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.18.1.tar.gz"
-  sha256 "02f5979a22f5961bb775d527f8450db77bc6a8d2541f3b05fb586829b82e9bc8"
+  homepage "https://www.mcs.anl.gov/petsc/"
+  url "https://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.17.0.tar.gz"
+  sha256 "96d5aca684e1ce1425891a620d278773c25611cb144165a93b17531238eaaf8a"
   license "BSD-2-Clause"
 
   livecheck do
@@ -11,13 +11,12 @@ class Petsc < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0bccffb32dca92e00cf9338eb950c342dfca6424ff1c7dde638302a0f277ef4b"
-    sha256 arm64_monterey: "9a7c137dca516b8dfd02460a5cf3cc9eecfad8176f632057031d9fe88bbabaa3"
-    sha256 arm64_big_sur:  "bf6b25fbaf59fc904391546886f29e03aa72164b7cc5cf5d3aec50840f617d68"
-    sha256 monterey:       "8c70c6e76ca76c58c98c75b4f777d6a731a5867ebb45bf00220ff06698d1680c"
-    sha256 big_sur:        "28d117b4b39877db4ca40fd5f5ff811f25e70bc73bb5e19c69be041f78a9e40d"
-    sha256 catalina:       "399a02976662c5f981f91ebbc6a84aec7ca623e4e6b3f8a73d9998642938ba9b"
-    sha256 x86_64_linux:   "f63518c8c7dbe9a361e8b3d0d91c5932ae5295b87d4adef6c4a2b5b21e9e057f"
+    sha256 arm64_monterey: "b69278b067d677c75e1a9f35d6b263b5f5421bcc8104482ad51989e0aa51de98"
+    sha256 arm64_big_sur:  "124ad5b9d62cd4cf6f2c9e20a0e765f40cb4beccee9075036c5ea9ccabd3d0bb"
+    sha256 monterey:       "7dd782278decb04b07b3f8b3bdc9a5b86c093852845a9e4108eb67a90b165dba"
+    sha256 big_sur:        "29699391d5a79d5b64f3d02396da645b241455885a272efef68066ee61c1f2ec"
+    sha256 catalina:       "33a7b67b60b2e956276fb03d5e9f9a5fe178e186e07ae32db23e6ed27b1a534f"
+    sha256 x86_64_linux:   "de0b44bcde1ac345a2978db4193ecf031572848f2998cdfaeae7c6e3002d8d5a"
   end
 
   depends_on "hdf5"
@@ -28,8 +27,6 @@ class Petsc < Formula
   depends_on "openblas"
   depends_on "scalapack"
   depends_on "suite-sparse"
-
-  uses_from_macos "python" => :build
 
   conflicts_with "petsc-complex", because: "petsc must be installed with either real or complex support, not both"
 

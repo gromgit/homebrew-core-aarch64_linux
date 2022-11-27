@@ -4,6 +4,11 @@ class Tpp < Formula
   url "https://synflood.at/tpp/tpp-1.3.1.tar.gz"
   sha256 "68e3de94fbfb62bd91a6d635581bcf8671a306fffe615d00294d388ad91e1b5f"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?tpp[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, catalina:    "e2875a7547a670ff0b23af7c9c96db096c365d4ac57f4ec706d1d9453cef9076"
@@ -13,8 +18,7 @@ class Tpp < Formula
     sha256 cellar: :any_skip_relocation, el_capitan:  "25e92e9f229433131cc82cf48a3cec90d19a28a08a56fadcc095b1ecf4df2304"
   end
 
-  # Original deprecation date: 2022-04-14
-  disable! date: "2022-11-03", because: :unmaintained
+  deprecate! date: "2022-04-14", because: :unmaintained
 
   resource "ncurses-ruby" do
     url "https://downloads.sourceforge.net/project/ncurses-ruby.berlios/ncurses-ruby-1.3.1.tar.bz2"

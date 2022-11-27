@@ -1,8 +1,8 @@
 class RosaCli < Formula
   desc "RedHat OpenShift Service on AWS (ROSA) command-line interface"
   homepage "https://www.openshift.com/products/amazon-openshift"
-  url "https://github.com/openshift/rosa/archive/refs/tags/v1.2.8.tar.gz"
-  sha256 "d6e70db8760ac1a60bfe2e3db3759d8e48e4855d7779674fd6c16bf5f460dab5"
+  url "https://github.com/openshift/rosa/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "be19bb79e492426d622aa8e646230609929eab9d71c79bba70ad8aa655226fba"
   license "Apache-2.0"
   head "https://github.com/openshift/rosa.git", branch: "master"
 
@@ -13,13 +13,12 @@ class RosaCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3ab48083d8e10ca0b1312050b7b720c5ce6fa12d65fe4eacd421b74ea4fae716"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1805f114aa6d396ef9813b120a2231f4c173fb3aff0da02d1d32555f963ddde5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7fc138a56cdf89b68f2a161130916ae457243079b1a7b6814bd18b9a76e1216"
-    sha256 cellar: :any_skip_relocation, monterey:       "6202a3cb267dc952b42af16cf4ee3c148cea582fe5ef6d122be3448682b51c70"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c202759811b77c1e2a1d60a5e8218992804c8c11e5a2f7bf734b915d0b5260da"
-    sha256 cellar: :any_skip_relocation, catalina:       "33433e6ca7f7ecd75401408dbce133e5fb685e7dcbe77a40e4d6520697181d49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5519d16ae5ef922caa7b95e0d92a2df98c0ceeafbea97a4c9a392a16ccb5eb71"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5f113720c500c55c3c4523dbe7d94b22a7727e7cc71251e840a62c0472bd4d8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a5e2b5733c5c26b3d8a0c7903f0b911c6048dbb4b74067450e247ea02e6a5c21"
+    sha256 cellar: :any_skip_relocation, monterey:       "5b1ee2d2df0ad7ba8a60f3fb7a4120ba918af75dddfeeeceb26dc11bf98cc73d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "82743cf30dcae5ced3535d886e2927f34ec053bfe77c694a4167069a442fb1b2"
+    sha256 cellar: :any_skip_relocation, catalina:       "a0080268246b24da43ce8d09ac4e93341c1d6200e2db93b606f064eccee1daf8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8cceb41214e4a58bfa3cd55e0660f23f170caac0690dc38e1232cced36cc008b"
   end
 
   depends_on "go" => :build
@@ -27,7 +26,9 @@ class RosaCli < Formula
 
   def install
     system "go", "build", *std_go_args(output: bin/"rosa"), "./cmd/rosa"
-    generate_completions_from_executable(bin/"rosa", "completion", base_name: "rosa")
+    (bash_completion/"rosa").write Utils.safe_popen_read("#{bin}/rosa", "completion", "bash")
+    (zsh_completion/"_rosa").write Utils.safe_popen_read("#{bin}/rosa", "completion", "zsh")
+    (fish_completion/"rosa.fish").write Utils.safe_popen_read("#{bin}/rosa", "completion", "fish")
   end
 
   test do

@@ -1,24 +1,17 @@
 class Fio < Formula
   desc "I/O benchmark and stress test"
   homepage "https://github.com/axboe/fio"
-  url "https://github.com/axboe/fio/archive/fio-3.33.tar.gz"
-  sha256 "f48b2547313ffd1799c58c6a170175176131bbd42bc847b5650784eaf6d914b3"
+  url "https://github.com/axboe/fio/archive/fio-3.30.tar.gz"
+  sha256 "305647377527a2827223065582dd8a9269e69866426b341699d55bb4e4d3cc71"
   license "GPL-2.0-only"
 
-  livecheck do
-    url :stable
-    regex(/^fio[._-]v?(\d+(?:\.\d+)+)$/i)
-  end
-
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0a1cc6c30584e795685e8498f07d098e7d74bfbec6801f20740c444f370a7cdd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ad044da8f2320589df7222858fa2e5373f19352a6e013ae7578b94ceae2daaeb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3501b18fef99ff01487a05834b769d17b74bd107b91f5ef62cd14a3f8da81bd"
-    sha256 cellar: :any_skip_relocation, ventura:        "822b5d0009d642e86ef6a01e78f36a5679db304ffd14ba50d0b3c8a4b4361983"
-    sha256 cellar: :any_skip_relocation, monterey:       "c03af8fcce9c03638c6adeb76465edd30fd355ba214a0ccd57bc74ceb5810af5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "98a3dc8e453db4dbc71f0ed915aab6e073b21ddf128652ea14aa41d3cb0390d8"
-    sha256 cellar: :any_skip_relocation, catalina:       "162f653e5868da31cde97c737012d973bd4e3ce49efa251394c462e4cc4915ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fa668c1ca84aa8a4fcef741a42925533ac936a4e366ce4ae5fb20c91b827517"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1e6c68228927de946af436462430570baa8a76a1c671fb3164859dd40d645bc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "db7765c3d2e3f844d39f1856142e02e9805e733a66a6d7eee0e328a3f830744d"
+    sha256 cellar: :any_skip_relocation, monterey:       "73784fe2a10c41133ae795e2cefa5bb0abeb523caaa8094f03d0fdeeecea260b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "23f365e06226826d7721235d5854dda333ad4e6b958376fbf5164a18b67c42a1"
+    sha256 cellar: :any_skip_relocation, catalina:       "b0c3cc845dbebc6f7539cce887926876ea3bde736cb3fee0f50acd9c2f2f7680"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9081d3d0bcc57384a19805690d692cc35861e2f7b0dff788140964c9ab501e31"
   end
 
   uses_from_macos "zlib"

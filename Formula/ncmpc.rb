@@ -1,9 +1,10 @@
 class Ncmpc < Formula
   desc "Curses Music Player Daemon (MPD) client"
   homepage "https://www.musicpd.org/clients/ncmpc/"
-  url "https://www.musicpd.org/download/ncmpc/0/ncmpc-0.47.tar.xz"
-  sha256 "61da23b1bc6c7a593fdc28611932cd7a30fcf6803830e01764c29b8abed2249c"
+  url "https://www.musicpd.org/download/ncmpc/0/ncmpc-0.46.tar.xz"
+  sha256 "177f77cf09dd4ab914e8438be399cdd5d83c9aa992abc8d9abac006bb092934e"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://www.musicpd.org/download/ncmpc/0/"
@@ -11,15 +12,12 @@ class Ncmpc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "f024d36e56f90d76556c01365db7ba15312e1d60284869ea20ca87776496bb08"
-    sha256 arm64_monterey: "aec50d0abded66abe0782d7a3d0c94f007291d84b079403f6ca16c607d6a9664"
-    sha256 arm64_big_sur:  "e1a0648cf06fb9ba732c6497fb0cce1e0b96df792d6409dc8ee6e887a9b5d47a"
-    sha256 ventura:        "9927f4649cbf25350f9a9792985a5684f5a059c22e70c9f9af9699f8647f4285"
-    sha256 monterey:       "0ae2a4cb662029810c25445e6a366ae20f86fef1580cf234cea684623e6d913f"
-    sha256 big_sur:        "a77af252303f0924453a66abbec8bf257a680f7750b3c70d1cd6d5dae930efdd"
-    sha256 catalina:       "1eb81a8f44f8f16e2ecf7b9095933e348a814a9d6a043045c98c56b26a3135f5"
-    sha256 x86_64_linux:   "ffc6bd90510385423afec07c18847a2d5a6089333e7e8899d1814be90dcf8d73"
+    sha256 cellar: :any, arm64_monterey: "4eb2980aba45b5bf5fb6bf163339162bdac5ec8288ec6038c5d7f2943e86da6f"
+    sha256 cellar: :any, arm64_big_sur:  "e8c3093bbf5a5a74509de958d6360d1d2f7f0b84644478fff6dcf99c00991e4e"
+    sha256 cellar: :any, monterey:       "d7410a532844d96c9333e67ee2ffdb94d8b3cf8fb1e13fc410f9662ae8bee7e1"
+    sha256 cellar: :any, big_sur:        "60305f8697125534ad15dc71be02288fb4a2c2d156889ab04f1eb9d5a3bc72f9"
+    sha256 cellar: :any, catalina:       "b62c625ca3703f653837ffacbc98b4aa1a799ec39ce7992aae6a10d6da7bbb59"
+    sha256               x86_64_linux:   "2b3dd68e87e15a8794481b7a442fefe80c44525985eb2a447af3c5de998813c1"
   end
 
   depends_on "boost" => :build
@@ -30,12 +28,20 @@ class Ncmpc < Formula
   depends_on "libmpdclient"
   depends_on "pcre2"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
   def install
-    system "meson", "setup", "build", "-Dcolors=false", "-Dnls=enabled", "-Dregex=enabled", *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Dcolors=false",
+                                       "-Dnls=disabled",
+                                       "-Dregex=enabled",
+                                       ".."
+      system "ninja", "install"
+    end
   end
 
   test do

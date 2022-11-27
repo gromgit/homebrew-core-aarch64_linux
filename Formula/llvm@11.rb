@@ -7,8 +7,15 @@ class LlvmAT11 < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
   revision 4
 
+  # This should be removed when LLVM 13 is released, so we only check the
+  # current version (the `llvm` formula) and one major version before it
+  # (to catch any patch version that may appear, however uncommon).
+  livecheck do
+    url "https://releases.llvm.org/"
+    regex(/["'](11(?:\.\d+)+)["']/i)
+  end
+
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3b72fa109a152db3a77e9ae88228a03f0575c913a9d45b4a840c9ea5a01cf0e3"
     sha256 cellar: :any,                 arm64_monterey: "1f9a2e81762d314611a01ac17cafa7cd8b0c2fc92d697a5cec9555e9e1598497"
     sha256 cellar: :any,                 arm64_big_sur:  "64552a671357b02596313def4711086027b3e49079d65588dcca75572b87108d"
     sha256 cellar: :any,                 monterey:       "4a368a132b47fa0b3c9678927d59b5bb4fee1538d4fab9f049fc80cf83464830"
@@ -36,10 +43,10 @@ class LlvmAT11 < Formula
   uses_from_macos "zlib"
 
   on_linux do
+    depends_on "glibc" if Formula["glibc"].any_version_installed?
     depends_on "pkg-config" => :build
     depends_on "binutils" # needed for gold
     depends_on "elfutils" # openmp requires <gelf.h>
-    depends_on "glibc" if Formula["glibc"].any_version_installed?
   end
 
   patch do
@@ -81,9 +88,6 @@ class LlvmAT11 < Formula
     sha256 "744aaebcc8da875892a00cbe2ebc6bb16db97431808b49f134adf70e64cf0e91"
   end
 
-  # Fix build with GCC 11
-  patch :DATA
-
   def install
     projects = %w[
       clang
@@ -101,9 +105,8 @@ class LlvmAT11 < Formula
       libunwind
     ]
 
-    python3 = "python3.10"
-    py_ver = Language::Python.major_minor_version(python3)
-    site_packages = Language::Python.site_packages(python3).delete_prefix("lib/")
+    py_ver = Language::Python.major_minor_version("python3")
+    site_packages = Language::Python.site_packages("python3").delete_prefix("lib/")
 
     # Apple's libstdc++ is too old to build LLVM
     ENV.libcxx if ENV.compiler == :clang
@@ -412,17 +415,3 @@ class LlvmAT11 < Formula
     end
   end
 end
-
-__END__
-diff --git a/llvm/utils/benchmark/src/benchmark_register.h b/llvm/utils/benchmark/src/benchmark_register.h
-index 0705e219f2fa..4caa5ad4da07 100644
---- a/llvm/utils/benchmark/src/benchmark_register.h
-+++ b/llvm/utils/benchmark/src/benchmark_register.h
-@@ -1,6 +1,7 @@
- #ifndef BENCHMARK_REGISTER_H
- #define BENCHMARK_REGISTER_H
-
-+#include <limits>
- #include <vector>
-
- #include "check.h"

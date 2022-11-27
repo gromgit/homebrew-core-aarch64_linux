@@ -10,22 +10,20 @@ class Pydocstyle < Formula
   head "https://github.com/PyCQA/pydocstyle.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "11591f3472ce083fd8f56068da5a7441954d66f4afad42500b6650b2a3814d9b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "79d16bee35a3b67c8953b524bc40924a9ae6f362116d9c8716d73c5816574b76"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f3596d75b4c7799708e2af41e2e55202ee09554b74e535e0be90f946a88c710"
-    sha256 cellar: :any_skip_relocation, ventura:        "4191bca163eb8ced72cacb8fde273314ca8be9ccfb03d8115500a04ed1563093"
-    sha256 cellar: :any_skip_relocation, monterey:       "f36bd57c1c1b64bea7d05f66c93150c897a9c49fb4923d50d847b25856e2a0dd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af34d12a6df41fb57f8cbe3f75b41c001300fca417a40a5e3a3a34524cb9479d"
-    sha256 cellar: :any_skip_relocation, catalina:       "efe358f510174eb6d12b900d692e54b740425f85dbd1390db3d57b618e8278b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71a9fce6d97ce3168628b5316a0f398cbad89deb2e1069e3f2f2b3f9dd8797a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b6bdedcab8085ebba46a6c61be194777ed70a2ad0a59b28f482292a499430bf9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f484ef39a1a165ec192fafe7f6d76c1ebf5fa97d7499d729cf1de98c6444edef"
+    sha256 cellar: :any_skip_relocation, monterey:       "ac2eec2c0826c7923fbfe279c1cc587eff79ce1dd2b4c8e32daafa0f155ae01c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6a454e42222a31a0437d0d33197b068b952c5a48011fe107f0d0f14f707e36f1"
+    sha256 cellar: :any_skip_relocation, catalina:       "a4091b17676b23f645aec6684939a19a2a5c05f991b25e9d4ebbf09c90764084"
+    sha256 cellar: :any_skip_relocation, mojave:         "84a68e5f7328a5a2127b50254e52f13a3f68f8bc718dd8ef84ceae59461a3bbd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a656c93ee9ed3bc8572cc415b93081e8ce24870a14ab6569b5ea08ffeb17fbf0"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "snowballstemmer" do
-    url "https://files.pythonhosted.org/packages/44/7b/af302bebf22c749c56c9c3e8ae13190b5b5db37a33d9068652e8f73b7089/snowballstemmer-2.2.0.tar.gz"
-    sha256 "09b16deb8547d3412ad7b590689584cd0fe25ec8db3be37788be3810cbf19cb1"
+    url "https://files.pythonhosted.org/packages/a3/3d/d305c9112f35df6efb51e5acd0db7009b74d86f35580e033451b5994a0a9/snowballstemmer-2.1.0.tar.gz"
+    sha256 "e997baa4f2e9139951b6f4c631bad912dfd3c792467e2f03d7239464af90e914"
   end
 
   resource "toml" do

@@ -1,9 +1,10 @@
 class Efl < Formula
   desc "Enlightenment Foundation Libraries"
   homepage "https://www.enlightenment.org"
-  url "https://download.enlightenment.org/rel/libs/efl/efl-1.26.3.tar.xz"
-  sha256 "d9f83aa0fd9334f44deeb4e4952dc0e5144683afac786feebce6030951617d15"
+  url "https://download.enlightenment.org/rel/libs/efl/efl-1.26.2.tar.xz"
+  sha256 "2979cfbc728a1a1f72ad86c2467d861ed91e664d3f17ef03190fb5c5f405301c"
   license all_of: ["GPL-2.0-only", "LGPL-2.1-only", "BSD-2-Clause", "FTL", "zlib-acknowledgement"]
+  revision 2
 
   livecheck do
     url "https://download.enlightenment.org/rel/libs/efl/"
@@ -11,13 +12,12 @@ class Efl < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "64b0e809a08b9f6f4b513008673d37eabd0912253e228d66162f37e1134c063c"
-    sha256 arm64_monterey: "da52c5d9b7efa7e3254e2fa4d0648362453794af527548062d8cdb5c459a6f82"
-    sha256 arm64_big_sur:  "6c467014094ffefb7488a6033326db7fb42a31f26b20e4e0ad2d8b7071f4c06a"
-    sha256 monterey:       "644f71c3c546f95f81a0a0de87fe0a55bf4b1ac0b40f55e3a74ebe5c3248eae9"
-    sha256 big_sur:        "f8ebfb27a77a471f78b098ecf404190323f1c590851a9c27cc0da44298a4c0a8"
-    sha256 catalina:       "62383e2614ad992aaf6216908e4af05918afb6c87c73fca8af5cc2709d9d8a1c"
-    sha256 x86_64_linux:   "7d5e6e19ddadfe16b4403653a7087628979c73df345ace0ff5e83245a18f3b47"
+    sha256 arm64_monterey: "a28fed0a6a904981625fcf9b4273154dadcc14d65ef09866540e5f9bebe1f954"
+    sha256 arm64_big_sur:  "3e8df373fdfc7ba95631cf9c13fa761a9a52e2cba3a4eed55212db50246b8c33"
+    sha256 monterey:       "63f286d93d9508d31d4f349b14b5e408fffef1fba070c11cd2a4d6fcb59cb6bc"
+    sha256 big_sur:        "fd211587cd2494877f504790c7f22edf1e8933956bff9158646d7016b2454e09"
+    sha256 catalina:       "fba40bd5bd9cf29748ad6710ad518c59ed6cfa7685c9e251bb6f5b55db2e300c"
+    sha256 x86_64_linux:   "5f7c7fd4c934ef677d1d71e3d3254306f5c3272bd67d12ab9274375db6efc707"
   end
 
   depends_on "meson" => :build
@@ -33,29 +33,34 @@ class Efl < Formula
   depends_on "glib"
   depends_on "gst-plugins-good"
   depends_on "gstreamer"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libraw"
   depends_on "librsvg"
   depends_on "libsndfile"
   depends_on "libspectre"
   depends_on "libtiff"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
   depends_on "lz4"
   depends_on "openssl@1.1"
   depends_on "poppler"
   depends_on "pulseaudio"
   depends_on "shared-mime-info"
-  depends_on "webp"
 
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5" # poppler is built with GCC
 
   # Remove LuaJIT 2.0 linker args -pagezero_size and -image_base
   # to fix ARM build using LuaJIT 2.1+ via `luajit-openresty`
   patch :DATA
 
   def install
-    args = %w[
+    args = std_meson_args + %w[
       -Davahi=false
       -Dbuild-examples=false
       -Dbuild-tests=false
@@ -76,9 +81,11 @@ class Efl < Formula
     inreplace "dbus-services/meson.build", "dep.get_pkgconfig_variable('session_bus_services_dir')",
                                            "'#{share}/dbus-1/services'"
 
-    system "meson", *std_meson_args, "build", *args
-    system "meson", "compile", "-C", "build", "-v"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   def post_install

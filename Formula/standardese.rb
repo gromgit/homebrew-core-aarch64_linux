@@ -2,32 +2,20 @@ class Standardese < Formula
   desc "Next-gen documentation generator for C++"
   homepage "https://standardese.github.io"
   # TODO: use resource blocks for vendored deps
+  url "https://github.com/standardese/standardese.git",
+      tag:      "0.5.2",
+      revision: "0b23537e235690e01ba7f8362a22d45125e7b675"
   license "MIT"
-  revision 10
+  revision 4
   head "https://github.com/standardese/standardese.git", branch: "master"
 
-  # Remove stable block when patch is no longer needed.
-  stable do
-    url "https://github.com/standardese/standardese.git",
-        tag:      "0.5.2",
-        revision: "0b23537e235690e01ba7f8362a22d45125e7b675"
-
-    # Fix build with new GCC.
-    # https://github.com/standardese/standardese/pull/233
-    patch do
-      url "https://github.com/standardese/standardese/commit/15e05be2301fe43d1e209b2f749c99a95c356e04.patch?full_index=1"
-      sha256 "e5f03ea321572dd52b9241c2a01838dfe7e6df7e363a8d19bfeac5861baf5d3f"
-    end
-  end
-
   bottle do
-    sha256                               arm64_ventura:  "3c21d596c13c86252cc69b90efb5de68a6fb05648645a63e10e31fbdcb72c3ab"
-    sha256                               arm64_monterey: "8a9420dfe7f92d5ff6b42663d9ca9cbe18f1cdc2fbfa7cc0da00df2b69f51b5b"
-    sha256                               arm64_big_sur:  "4ddb4194ad6401b17afd0a065f14690ac278133a4283af12777180b2248b0bd0"
-    sha256                               monterey:       "08ac5d869d07b7b9eaf070e9578dbedf2033afeae565a2b80885cd8258b5b92f"
-    sha256                               big_sur:        "a50d516519620ce56e2b4d6e296eeb334285a1a6ba3120cd749b2faf95b060b9"
-    sha256                               catalina:       "21ec40aac0d1f0cc6a93ee6c2e318e34375531d583337a58b2e5583109a7897f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "269038dee98f12e710183e8bfac7bfc6c1c9e208365784ba07296ca97a211eb8"
+    sha256                               arm64_monterey: "2f2630b76ad5dafc35df35e35f966ee5a729ded210053a7bf2f13477f11b3441"
+    sha256                               arm64_big_sur:  "1ceba491385026c6a96cebf9b9c86d08d2dc6ac55cbf39b26aae35100196c47e"
+    sha256                               monterey:       "a4526615e78ba7361004daae63b0be173e6b942905f3d4f238ef2bbbf0e78bd1"
+    sha256                               big_sur:        "e8d20ae0ab2a8aec93368edee0318a1de1add389af915a6fc54bbb0ca3259838"
+    sha256                               catalina:       "b9f7ff2a1859d52cd4d621faec96264a0c25b03271b0a75bc47f521329ea604f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17a0edfb39d66170d406445c6ee1522bb1325c34bc395ae3a6464c4839feb1a7"
   end
 
   depends_on "cmake" => :build
@@ -41,12 +29,10 @@ class Standardese < Formula
     # Don't build shared libraries to avoid having to manually install and relocate
     # libstandardese, libtiny-process-library, and libcppast. These libraries belong
     # to no install targets and are not used elsewhere.
-    # Disable building test objects because they use an outdated vendored version of catch2.
     system "cmake", "-S", ".", "-B", "build",
                     "-DBUILD_SHARED_LIBS=OFF",
                     "-DCMARK_LIBRARY=#{Formula["cmark-gfm"].opt_lib/shared_library("libcmark-gfm")}",
                     "-DCMARK_INCLUDE_DIR=#{Formula["cmark-gfm"].opt_include}",
-                    "-DSTANDARDESE_BUILD_TEST=OFF",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

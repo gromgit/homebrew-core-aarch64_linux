@@ -1,11 +1,10 @@
 class Imapsync < Formula
   desc "Migrate or backup IMAP mail accounts"
   homepage "https://imapsync.lamiral.info/"
-  url "https://imapsync.lamiral.info/dist2/imapsync-2.229.tgz"
+  url "https://imapsync.lamiral.info/dist2/imapsync-2.200.tgz"
   # NOTE: The mirror will return 404 until the version becomes outdated.
-  sha256 "553ce6d6535b954987a859fa0c3c74da446df74157d398ab09159c7f8ed8043d"
+  sha256 "115f3e3be2ec5fd5235501240292c5f15bd289d47e39f7581da861b92bca5be5"
   license "NLPL"
-  revision 1
   head "https://github.com/imapsync/imapsync.git", branch: "master"
 
   livecheck do
@@ -14,14 +13,12 @@ class Imapsync < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "74d91189843fd80348a4c934962a1fb622edea57ff439abc4757d14b1f65cab6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b5c95f09e1cc6660aa7885567f6170a5d16e98b077949b42de9fe8331526460"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d05561847d9721ab0fc85de4e73393dbc50228533946df8033297b24ebf46f4d"
-    sha256 cellar: :any_skip_relocation, ventura:        "7561f0c572dda9f4cdb2cf91214b33aad955e0ce705610045686e937d80f1f84"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f033299713beb002954a98b66442b27c2cb59dc5142d910010025ed0242f226"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3ada5a5214478fcc0dee5dd7eabaeb84beedc4145fe7dca0ce5af0fded86b2b9"
-    sha256 cellar: :any_skip_relocation, catalina:       "b586245299d6146f1ae7e7066b675e540f5a862de7389b394537cdadcd24791d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4476fe8162bf3f4a56b22e855461ec934a8652056249a640d30641c02fcbb92"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d13a9bda6f684909de20e10c65430836bac345c6bed1ea1d0d37a0f655eb258d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "583aef334a783f9efed892bb52fc8916ba4b219843dd359557984fddcecc9bf8"
+    sha256 cellar: :any_skip_relocation, monterey:       "eeb5fb8230ad6f55a2fc61e76fc35cefc510a6bdc5d46f6c1f542c45c6a29778"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c0d4e602efe6f502e4138f718a951af32c56676a6c304bbd0b2cbb55feff8c55"
+    sha256 cellar: :any_skip_relocation, catalina:       "54546bcbf94e9bb504cb330c816d59ca087f9e8ed2825ff022574c6d5a9f0edb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9f9b3065ad3cf7a8e4eb4000403ef859d65999cc97160c82259d130a0ae9f8d"
   end
 
   depends_on "pod2man" => :build
@@ -80,13 +77,6 @@ class Imapsync < Formula
     end
   end
 
-  resource "Module::Build" do
-    on_system :linux, macos: :catalina_or_older do
-      url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4231.tar.gz"
-      sha256 "7e0f4c692c1740c1ac84ea14d7ea3d8bc798b2fb26c09877229e04f430b2b717"
-    end
-  end
-
   resource "Encode::IMAPUTF7" do
     url "https://cpan.metacpan.org/authors/id/P/PM/PMAKHOLM/Encode-IMAPUTF7-1.05.tar.gz"
     sha256 "470305ddc37483cfe8d3c16d13770a28011f600bf557acb8c3e07739997c37e1"
@@ -123,13 +113,20 @@ class Imapsync < Formula
   end
 
   resource "JSON" do
-    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.09.tar.gz"
-    sha256 "6780a51f438c0932eec0534fc9cd2b1ad0d64817eda4add8ede5ec77d6d2c991"
+    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.03.tar.gz"
+    sha256 "e41f8761a5e7b9b27af26fe5780d44550d7a6a66bf3078e337d676d07a699941"
   end
 
   resource "Test::MockObject" do
     url "https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/Test-MockObject-1.20200122.tar.gz"
     sha256 "2b7f80da87f5a6fe0360d9ee521051053017442c3a26e85db68dfac9f8307623"
+  end
+
+  if MacOS.version <= :catalina
+    resource "Module::Build" do
+      url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4231.tar.gz"
+      sha256 "7e0f4c692c1740c1ac84ea14d7ea3d8bc798b2fb26c09877229e04f430b2b717"
+    end
   end
 
   resource "JSON::WebToken" do

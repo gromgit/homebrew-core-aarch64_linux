@@ -1,8 +1,8 @@
 class Lighttpd < Formula
   desc "Small memory footprint, flexible web-server"
   homepage "https://www.lighttpd.net/"
-  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.67.tar.xz"
-  sha256 "7e04d767f51a8d824b32e2483ef2950982920d427d1272ef4667f49d6f89f358"
+  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.64.tar.xz"
+  sha256 "e1489d9fa7496fbf2e071c338b593b2300d38c23f1e5967e52c9ef482e1b0e26"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,14 +11,12 @@ class Lighttpd < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "cb599254c185916c4d3be91b735af9fe0b9553f7b0cd0ec9602d5ef588b26104"
-    sha256 arm64_monterey: "44407e4dd4021ff95f7f2600f2b3ee588f882ef63c8964be34fa494fc11d9fb6"
-    sha256 arm64_big_sur:  "9f96876d812006781086e73a334bac6d9be27c8b07080548f479f49e1bdf942c"
-    sha256 ventura:        "c29b293d3ac804bc18085255a5d51a9347db2e10c81927fecfe851228a538a14"
-    sha256 monterey:       "b767d41ed5cbdba5ae2b2cc46edeeed2ff48d99f79a646d993e5ed0b23592112"
-    sha256 big_sur:        "43f1ac2cebffd57f6f0d25f0175972d57055ba5c517f93fcc7045ef6e4daeff5"
-    sha256 catalina:       "fc11c0e4faff6db25521b9fc27b9f72fe599564c1b2f2d4d64276f746ca8808a"
-    sha256 x86_64_linux:   "1aab21c024ce995eb10b83c02b68d007247f15068f8fc2998e69cef6cc3c84df"
+    sha256 arm64_monterey: "bcf37fd9c04f41481779f01bcc6a99b70ad92c3ce1a0b1e7420498d425fc4811"
+    sha256 arm64_big_sur:  "75560ba16722115eb40465408ad2c6e98e4045c30f57e45d0f8814652c402fc6"
+    sha256 monterey:       "e512bab9a55d348cdc6ed051c065c02cc7ba75f09c164b6d62069ae1db39ea3c"
+    sha256 big_sur:        "1f8d5019d3a0106da00e13c4ae817bf52536d7a2722b195cd79c6f2d91b36c56"
+    sha256 catalina:       "d1b54887a11604f8c36440248b50ff961f35c166b075d86c84b90e1708f9fd3d"
+    sha256 x86_64_linux:   "aa4bf269c6d1e357f4c07236e9a9c4053bd67803029aba23bf2ddfbcb0e81b65"
   end
 
   depends_on "autoconf" => :build
@@ -28,8 +26,6 @@ class Lighttpd < Formula
   depends_on "openldap"
   depends_on "openssl@1.1"
   depends_on "pcre2"
-
-  uses_from_macos "libxcrypt"
 
   # default max. file descriptors; this option will be ignored if the server is not started as root
   MAX_FDS = 512

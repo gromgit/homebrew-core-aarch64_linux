@@ -3,25 +3,24 @@ require "language/node"
 class FirebaseCli < Formula
   desc "Firebase command-line tools"
   homepage "https://firebase.google.com/docs/cli/"
-  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-11.16.1.tgz"
-  sha256 "149f5f241172b78933dbbe6ce3b8e054ccec31fcf8f824315feb341b21b6af87"
+  url "https://registry.npmjs.org/firebase-tools/-/firebase-tools-10.8.0.tgz"
+  sha256 "1591537a361b3f70767d9f25d2bef2f42163c6f8914a8a6eed547d74859aee92"
   license "MIT"
   head "https://github.com/firebase/firebase-tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "17a163496a015ced51f8190d39869a10cdfde46b741d77c372b4aaad45268617"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "17a163496a015ced51f8190d39869a10cdfde46b741d77c372b4aaad45268617"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17a163496a015ced51f8190d39869a10cdfde46b741d77c372b4aaad45268617"
-    sha256 cellar: :any_skip_relocation, ventura:        "d64391f082d399da0b822ced8b3e5b6cdab2b7a829c0fd3c75696113ac8586de"
-    sha256 cellar: :any_skip_relocation, monterey:       "fc9c67c38a7757e2894e8dc175c0baa789b30c8e1c29a473d0e54547456d50ef"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fc9c67c38a7757e2894e8dc175c0baa789b30c8e1c29a473d0e54547456d50ef"
-    sha256 cellar: :any_skip_relocation, catalina:       "fc9c67c38a7757e2894e8dc175c0baa789b30c8e1c29a473d0e54547456d50ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf08f72d54ad8d00688fea6b111d84b7a8e5eba5dcb4c50fb700f1bd4528649b"
+    sha256                               arm64_monterey: "ea71085f8fc435ed1957be6a99002c30741517d3f23898ea5236a48d2216e7dc"
+    sha256                               arm64_big_sur:  "b420795116eefe3e39e075e176439e59939ae880c3d90f93e37a0fe4f13a1e0e"
+    sha256                               monterey:       "64901ec38d116901bd6337b41adce85c46fecd1c9069304c1139d6bb460c137e"
+    sha256                               big_sur:        "0703878a4795f18bb2ce90753b355b5941a93fb28a32a8d8aaa78ddc5d9bb638"
+    sha256                               catalina:       "fc7d010834bfae4680318233c57f632c018dab2f3c1fa1ab0b072a69def0ea60"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a50e499fe55580bc11f3f40e9bd9af51e5decebabf250c027ae185d5ec4770e1"
   end
 
   depends_on "node"
 
   uses_from_macos "expect" => :test
+
   on_macos do
     depends_on "macos-term-size"
   end

@@ -9,7 +9,6 @@ class Lilypond < Formula
     :public_domain,
     "MIT",
   ]
-  revision 1
 
   stable do
     url "https://lilypond.org/download/sources/v2.22/lilypond-2.22.2.tar.gz"
@@ -29,15 +28,10 @@ class Lilypond < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "ce6c92b231356bae757f2ee4d3df6e0ca42f869d4b66058294b66e04bdba7488"
-    sha256 arm64_monterey: "90d9c931ef38b4f20bfc1228b753fe00e563e45f02c22b4aca1e59b802594c06"
-    sha256 arm64_big_sur:  "2d02e4a99bfe749ae2ab24976f015ec1a38db76aa55146f441575dda15a0d2bd"
-    sha256 ventura:        "e9b7cb2f475610a72a818c9007da47c805a485079caff1af676dbc256e76db4c"
-    sha256 monterey:       "55c985abb54a13e8dfaab1bbf0deb6f5fdb6c960a7147e5c99134c7e763b6837"
-    sha256 big_sur:        "634c7aec2ac85a6fe1e04099e0b92b54e7fac31c2a586e9ca270403ddcd7d1a9"
-    sha256 catalina:       "fb23cd0100e20cdcc2de2333e8f470b3a1cd354322a7bcd257b37682c7ef4727"
-    sha256 x86_64_linux:   "1b351578a95058c9fab5f774a44ec960daf27ed498ac0546235c30da6b698fbe"
+    sha256 arm64_big_sur: "1bf9fc2843e2909c2de3e326d20bbf7e7ca4a6e26b55218d804517c7f1aecfad"
+    sha256 big_sur:       "06a0837a35cb89309a5e725e178db7de41711ae3a914a3136feb56576fa22c97"
+    sha256 catalina:      "dc9a0bb669aca02fe3d4b5ba2375120c4056b2202b43e6988eb555fffc1a86bd"
+    sha256 x86_64_linux:  "119d632c47f32b8f7ea9d7edfd6532d18c29302ae5a7f1d74f972bad9d8371ba"
   end
 
   head do
@@ -59,7 +53,7 @@ class Lilypond < Formula
   depends_on "ghostscript"
   depends_on "guile@2"
   depends_on "pango"
-  depends_on "python@3.11"
+  depends_on "python@3.9"
 
   uses_from_macos "flex" => :build
   uses_from_macos "perl" => :build

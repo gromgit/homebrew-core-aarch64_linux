@@ -6,8 +6,10 @@ class Libtirpc < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "26371c5e683f16a4b2ebf4475150672f76d45e3d43583c942fcb0e916be77dc3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtirpc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0cd2302439acfaeff16e2c9ef83c2c6bce6da1e760675f8cf855d4948924a7a5"
   end
+
 
   depends_on "krb5"
   depends_on :linux

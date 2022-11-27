@@ -8,7 +8,6 @@ class GitterCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2ded7d2d1699591044372318358e80ddded859348b17be44bbe8692c886ab286"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8333cdaf2d1896ef53257664f5fe6433433772632c19e0fc3aa4784714ba308c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "db56401085f8c41a3892d4fed62af37b1a0b02bb435956a2ecc7b385c6d77ec7"
     sha256 cellar: :any_skip_relocation, monterey:       "ac8a05d52db25a2cc9fa56988285e33d890802e5372c815ff7d5603c744e0279"
@@ -18,6 +17,7 @@ class GitterCli < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:    "8a9a8bea2541bd954d589f4195665c8f2a36090fba16a6b652f88337a029c117"
     sha256 cellar: :any_skip_relocation, sierra:         "6b0c1af334ab94692271f4e88b3f3b44adb8f2e7738cd68cdc20719dbb4f315f"
     sha256 cellar: :any_skip_relocation, el_capitan:     "4503b65ec4122d7cb51e8173168dc41dc4e57f978f4246697f9a3bf768f8c9cb"
+    sha256 cellar: :any_skip_relocation, yosemite:       "d4b1a539db31e5a04e05fc982c6b9961bde7eae94de06d1addc2dc4346f696e9"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "313ac86a0ec749fb863bce7e6f3aa789d4172cb04b294361508258053bf66af9"
   end
 

@@ -1,19 +1,17 @@
 class Bupstash < Formula
   desc "Easy and efficient encrypted backups"
   homepage "https://bupstash.io"
-  url "https://github.com/andrewchambers/bupstash/releases/download/v0.12.0/bupstash-v0.12.0-src+deps.tar.gz"
-  sha256 "e3054c03b0d57ba718bd2cab8c24df13153369dea311e5a595d586ad24865793"
+  url "https://github.com/andrewchambers/bupstash/releases/download/v0.11.0/bupstash-v0.11.0-src+deps.tar.gz"
+  sha256 "b763b71aad87e7ae8e9dec06c5de54796ad3cc6e59859374b9eef066d7f2f941"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a454d4cc3ee169b4a120d858d27b622a4fdd4115029e0d3e1e4eeb4201ee2874"
-    sha256 cellar: :any,                 arm64_monterey: "e0c0fb31abb504c253430639b0696097d1fa383d34ebad8b29c072a32159031d"
-    sha256 cellar: :any,                 arm64_big_sur:  "723d0b64009392264d64cd0368c6d7ae256eb121a7343776b284a74c87cd9143"
-    sha256 cellar: :any,                 ventura:        "32f5b7c2b59eabf50fa186bd5a6f0b8f729d8567bdb19e8e22405aaec55e824d"
-    sha256 cellar: :any,                 monterey:       "18d6b61b755aa59d3a6d3c02052a122f746ab8ec8a74af39cd8f6ac000e53f0e"
-    sha256 cellar: :any,                 big_sur:        "4715e7d817e328362ebe2ce4cc56eec49a7b9b39d8531b3ca8ba3d21c8626206"
-    sha256 cellar: :any,                 catalina:       "b9c6707655d96ef1504957795a9b534ec4913a6919742f53533885762310c430"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "45d12691a3dfd70fff9be32cbeffa18233ea789211e1f20142cde85f06777f74"
+    sha256 cellar: :any,                 arm64_monterey: "c2b3bfbd7075c0a64304667421815bb529183f9eb9bde61ecaf79923d2925f1d"
+    sha256 cellar: :any,                 arm64_big_sur:  "65104ae3ea862bc86dae1ce07a1c067ea45d88e75bea5926796faddfcbe6b5ab"
+    sha256 cellar: :any,                 monterey:       "e99ed02f65489c64106daee7952490084ac1e3093b45fb99da915be587028db1"
+    sha256 cellar: :any,                 big_sur:        "522831b729f52716a33cb2937453912dbd0c5c88edd962d120eae4ab7afa50f6"
+    sha256 cellar: :any,                 catalina:       "281410e6ef86bf6645d4f31c7bb8a97ce60f47ac5ab5e16537ce4fd355324e2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a9b5ee63438c71becbe6899c64b79ab78110fb0782a9185f9108bc78071f478"
   end
 
   depends_on "pkg-config" => :build
@@ -21,8 +19,8 @@ class Bupstash < Formula
   depends_on "libsodium"
 
   resource "man" do
-    url "https://github.com/andrewchambers/bupstash/releases/download/v0.12.0/bupstash-v0.12.0-man.tar.gz"
-    sha256 "bffe4a9e7c79f03af0255638acfa13fb9f74ed5d6f8987954db1d3164f431629"
+    url "https://github.com/andrewchambers/bupstash/releases/download/v0.11.0/bupstash-v0.11.0-man.tar.gz"
+    sha256 "74645f4a243f786261123667e1849085cc2eda095bf3ebbb792cb0195adeeae9"
   end
 
   def install

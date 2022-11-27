@@ -1,9 +1,9 @@
 class Mpich < Formula
   desc "Implementation of the MPI Message Passing Interface standard"
   homepage "https://www.mpich.org/"
-  url "https://www.mpich.org/static/downloads/4.0.3/mpich-4.0.3.tar.gz"
-  mirror "https://fossies.org/linux/misc/mpich-4.0.3.tar.gz"
-  sha256 "17406ea90a6ed4ecd5be39c9ddcbfac9343e6ab4f77ac4e8c5ebe4a3e3b6c501"
+  url "https://www.mpich.org/static/downloads/4.0.2/mpich-4.0.2.tar.gz"
+  mirror "https://fossies.org/linux/misc/mpich-4.0.2.tar.gz"
+  sha256 "5a42f1a889d4a2d996c26e48cbf9c595cbf4316c6814f7c181e3320d21dedd42"
   license "mpich2"
 
   livecheck do
@@ -12,14 +12,12 @@ class Mpich < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3c99cd7ecd50e25a9f6ccb2579376a7aec8709c5752e25e49737e10c29e4ad3f"
-    sha256 cellar: :any,                 arm64_monterey: "7eed76ddb0d62be4221f1ac364d64908ae516ea15e0355fadf225359d2711c91"
-    sha256 cellar: :any,                 arm64_big_sur:  "4b4ec61f4fe50eca769214f8af6dacd7a1490028e106c1569b2f2bdec60c728b"
-    sha256 cellar: :any,                 ventura:        "5680789c31f437df44d463e4107bcf480816570b7757eb9aa0d29c69a5a3416b"
-    sha256 cellar: :any,                 monterey:       "ee2e6de58b6d62320f2a11c81cf02a7a7a9c13f20b773f00362b95b13beb8bcb"
-    sha256 cellar: :any,                 big_sur:        "2645e5ce868792c38f89d349808ce54b0d350dbc8f94d3922b971299fa574ff4"
-    sha256 cellar: :any,                 catalina:       "5d0d4a2f258cc3f6de9bee169e993be158b1e64fad2eb474666cee5c2e5353d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "823398e970d089080dcf33143f5d0e1467fa7e01304e8ddc439320d1bb3c3720"
+    sha256 cellar: :any,                 arm64_monterey: "407945b2f63e8bb8aa71c435ec43a23927d4c46404808ccc13d857b2919ad3da"
+    sha256 cellar: :any,                 arm64_big_sur:  "86597150d3f922c6752b8ac985f091bdd99cf918fc1d15734a1afcacd343012b"
+    sha256 cellar: :any,                 monterey:       "17efc3ead6fa899bf9abc11f5f670bdcf672b1a2e9b370188037ae0b41abe928"
+    sha256 cellar: :any,                 big_sur:        "7e7b189db2a693edab05d39c1ddaf60702c52285316da30dd6c4879bedee99e7"
+    sha256 cellar: :any,                 catalina:       "daa5d28140ac17df92ee6468be59c3f25570120670c239e8867c7ed559370b42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd1075a93bb075ccde26a130249d3786275d96d72088d93452b57f2524e94a82"
   end
 
   head do
@@ -32,7 +30,6 @@ class Mpich < Formula
 
   depends_on "gcc" # for gfortran
   depends_on "hwloc"
-  uses_from_macos "python" => :build
 
   on_macos do
     conflicts_with "libfabric", because: "both install `fabric.h`"

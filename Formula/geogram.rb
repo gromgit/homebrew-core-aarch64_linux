@@ -1,23 +1,15 @@
 class Geogram < Formula
   desc "Programming library of geometric algorithms"
-  homepage "https://brunolevy.github.io/geogram/"
-  url "https://brunolevy.github.io/geogram/Releases/geogram_1.8.0.tar.gz"
-  sha256 "7e59db5176ca22580055a5c48862d6fd50399f33551ab9bc20c80a4cc0adeb9e"
+  homepage "http://alice.loria.fr/software/geogram/doc/html/index.html"
+  url "https://members.loria.fr/BLevy/PACKAGES/geogram_1.7.8.tar.gz"
+  sha256 "28e70b353705faec555700d8a7b7b9d703687702f46866bad09e033f86a96faf"
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
-  head "https://github.com/BrunoLevy/geogram.git", branch: "main"
-
-  livecheck do
-    url "https://brunolevy.github.io/geogram/Releases/"
-    regex(/href=.*?geogram[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "68878fb9bea83c3c49294f8eba28763c739c3fab9a69a7dfeeb9dc712362929c"
-    sha256 cellar: :any,                 arm64_big_sur:  "6e074cfbe89f210ee31944d0f28d479110072036d0f9e1a82eb80bbbeaee2bff"
-    sha256 cellar: :any,                 monterey:       "7e45ba031704d12d3ae114d063755c8c9977bdad41a2893b3a101b93ada74fe3"
-    sha256 cellar: :any,                 big_sur:        "4f6fec4a8880e11fa600ebf7bee5456471e60a3e764012a67b2e28593075c13e"
-    sha256 cellar: :any,                 catalina:       "1944cf02f77aae7134804276ee78052cdccf06532a2039a32e44d33d9cbd5997"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02cf25788c6614a20b1a33347605d8bd4d6e7653e99d8f420b43b7fb7b053d24"
+    sha256 cellar: :any,                 monterey:     "14eae5569bb7755822db7dd6db76569ff6b3a9ec14d52ebcd32a01d859209db8"
+    sha256 cellar: :any,                 big_sur:      "c02fbf13cac94ee730282f326322b9ccc78a9b2747fea1ec31c937cafa543725"
+    sha256 cellar: :any,                 catalina:     "ef86799ac68bfd1f5e982acd10e991acf2f4b74f5c7623ac54b30a4af9a90bc5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "15a4143539e68a38f813fdf87b4d2123fd68e304f3aa53c36ceca7d12f2be907"
   end
 
   depends_on "cmake" => :build

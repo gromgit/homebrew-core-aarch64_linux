@@ -1,38 +1,41 @@
 class Pushpin < Formula
   desc "Reverse proxy for realtime web services"
   homepage "https://pushpin.org/"
-  url "https://github.com/fanout/pushpin/releases/download/v1.36.0/pushpin-1.36.0.tar.bz2"
-  sha256 "9f8243e9b4052a4ddc26fed5e46a74fefc39f0497e5f363d9f097985e8250f8e"
+  url "https://github.com/fanout/pushpin/releases/download/v1.35.0/pushpin-1.35.0.tar.bz2"
+  sha256 "62fbf32d75818b08fd8bce077035de85da47a06c07753e5ba10201a5dd35ca5e"
   license "AGPL-3.0-or-later"
   head "https://github.com/fanout/pushpin.git", branch: "master"
 
   bottle do
-    sha256 monterey:     "f8f10a253ee4924c2c567262947ae94a9be9375329c7a5d3d8bc3f24a1d8d093"
-    sha256 big_sur:      "b9bd3866895d340453cf9d45dfef6cd60eace67d54fb4dcea1b90078461419ba"
-    sha256 catalina:     "ae9302317756f34243ed218a0c16a5576085ac4a537415e82d88ce95d91b30b8"
-    sha256 x86_64_linux: "db4a5f53106cbf72d01112736058598b87611614eaaaed32eaf5cb910dcefbe9"
+    sha256 monterey:     "2dd88fcce86708d3f04a2edd543ab64fba6b4c854abf7d3eb457d30686800253"
+    sha256 big_sur:      "252f709d3a8426b95aa5bc8b05bb19da6d8b3c2cd1895d685da3334db5218eb1"
+    sha256 catalina:     "0386eefc82559327ab180105434304d277d69a9c475b8b46c32ca0ab68b662bd"
+    sha256 x86_64_linux: "a5a4fc23e636fe92bd409f910aeb27a1d4060c25f8a4a3db2522986a1edb9b60"
   end
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "condure"
   depends_on "mongrel2"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "qt@5"
   depends_on "zeromq"
   depends_on "zurl"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
   def install
-    args = %W[
-      --configdir=#{etc}
-      --rundir=#{var}/run
-      --logdir=#{var}/log
-    ]
-    args << "--extraconf=QMAKE_MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}" if OS.mac?
+    args = *std_configure_args + ["--configdir=#{etc}",
+                                  "--rundir=#{var}/run",
+                                  "--logdir=#{var}/log"]
 
-    system "./configure", *std_configure_args, *args
+    args << "--extraconf=QMAKE_MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}" if OS.mac?
+    system "./configure", *args
+
     system "make"
     system "make", "install"
   end
@@ -91,7 +94,7 @@ class Pushpin < Formula
 
     begin
       sleep 3 # make sure pushpin processes have started
-      system Formula["python@3.10"].opt_bin/"python3.10", runfile
+      system Formula["python@3.9"].opt_bin/"python3", runfile
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)

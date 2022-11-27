@@ -18,7 +18,7 @@ class ConjureUp < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "941ffccefb435bdb64de4f993b6c946383ef5fb79b399deae3ea76038fb027f7"
   end
 
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2021-04-15", because: :repo_archived
 
   depends_on "awscli"
   depends_on "jq"
@@ -274,7 +274,7 @@ class ConjureUp < Formula
     inreplace "conjureup/juju.py", "os.environ['JUJU']", "\"#{Formula["juju"].opt_bin}/juju\""
     inreplace "conjureup/juju.py", "os.environ['JUJU_WAIT']", "\"#{Formula["juju-wait"].opt_bin}/juju-wait\""
 
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3")
     venv.pip_install resource("cffi") # needs to be installed prior to bcrypt
     res = resources.map(&:name).to_set - ["cffi"]
 

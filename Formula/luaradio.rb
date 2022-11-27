@@ -1,28 +1,43 @@
 class Luaradio < Formula
   desc "Lightweight, embeddable flow graph signal processing framework for SDR"
   homepage "https://luaradio.io/"
-  url "https://github.com/vsergeev/luaradio/archive/v0.11.0.tar.gz"
-  sha256 "abd6077d32a2e83ec9e4bbda1f84ccb540c9d5195d30d7a8ebeb12676e33eb2e"
+  url "https://github.com/vsergeev/luaradio/archive/v0.10.0.tar.gz"
+  sha256 "d540aac3363255c4a1f47313888d9133b037cc5d1edca0d428499a272710b992"
   license "MIT"
   head "https://github.com/vsergeev/luaradio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2425ad1e4cc63d76223da8d3b4d3c7ce2d13eada579b4c9fb33e52714fa3d2cc"
-    sha256 cellar: :any,                 arm64_monterey: "ea3c5a2a64239596ddbcedca7bf98f38a2c3e7142c0bb9e15e371394a8bc3f48"
-    sha256 cellar: :any,                 arm64_big_sur:  "d8a8170a23202d459a0bc42f7f128d98bbc5ca0c683245703193250aa971663e"
-    sha256 cellar: :any,                 monterey:       "19dafaaeba49dfb959160cbe219045edcb4cf3b23accc5a024a09522c63d820a"
-    sha256 cellar: :any,                 big_sur:        "0eb6b7bb4b742724c4edc84caec47e2409a0eeb0543d61ac4b9dc69b9e341ae7"
-    sha256 cellar: :any,                 catalina:       "a4d29caa526850bfc74f55efe829e10279d840986183c2f8ff1a80a97bd6b0c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d7cf352a29e4917fb03b64ced6278562518ec30fec3a189f3e75b869f560150"
+    sha256 cellar: :any,                 arm64_big_sur: "b04641f0b463cd38e257f954a7b2fb49a5b4fe3ee671a5faa09f9603023f7ed2"
+    sha256 cellar: :any,                 monterey:      "2789e761aa3eb0ff47516350e8e38357086cded52f1e77644ce268171fb32cec"
+    sha256 cellar: :any,                 big_sur:       "765bcff473c15da215a2c162c3247c12b3a12a6a088ff324103de2e05510e973"
+    sha256 cellar: :any,                 catalina:      "e0de1690d1a42741722374cc61a8966a51c9ff8219b46d5e361e06fdcf11e4b4"
+    sha256 cellar: :any,                 mojave:        "535aa76ad7c009e4ffa918eb910462d861081a7516f17a2210275bb6e619ad9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3172d2fc3864696ad84bab32d36c8fb60f262a71986003b43b5a55f87fa25a7c"
   end
 
   depends_on "pkg-config" => :build
   depends_on "fftw"
   depends_on "liquid-dsp"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
 
   def install
-    system "make", "-C", "embed", "PREFIX=#{prefix}", "INSTALL_CMOD=#{lib}/lua/5.1", "install"
+    cd "embed" do
+      # Ensure file placement is compatible with HOMEBREW_SANDBOX.
+      inreplace "Makefile" do |s|
+        s.gsub! "install -d $(DESTDIR)$(INSTALL_CMOD)",
+                "install -d $(PREFIX)/lib/lua/5.1"
+        s.gsub! "$(DESTDIR)$(INSTALL_CMOD)/radio.so",
+                "$(PREFIX)/lib/lua/5.1/radio.so"
+      end
+      system "make", "install", "PREFIX=#{prefix}"
+    end
+
+    env = {
+      PATH:      "#{Formula["luajit-openresty"].opt_bin}:$PATH",
+      LUA_CPATH: "#{lib}/lua/5.1/?.so${LUA_CPATH:+;$LUA_CPATH};;",
+    }
+
+    bin.env_script_all_files libexec/"bin", env
   end
 
   test do

@@ -1,33 +1,38 @@
 class Minizinc < Formula
   desc "Medium-level constraint modeling language"
   homepage "https://www.minizinc.org/"
-  url "https://github.com/MiniZinc/libminizinc/archive/2.6.4.tar.gz"
-  sha256 "f1f5adba23c749ddfdb2420e797d7ff46e72b843850529978f867583dbc599ca"
+  url "https://github.com/MiniZinc/libminizinc/archive/2.6.3.tar.gz"
+  sha256 "740884d4eb8e7acf366efaad82efa0ca46dc4342afa5a6ecc1d749fcc4f96dd4"
   license "MPL-2.0"
   head "https://github.com/MiniZinc/libminizinc.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "1193b0a0333c98a90e740e7b83494bd2b2c594cdf58f78c330daee0ee5827206"
-    sha256 cellar: :any,                 arm64_monterey: "1e9b22bedeac1d802335797e45a482806b607aa20b1a38e406f10fcb0d933473"
-    sha256 cellar: :any,                 arm64_big_sur:  "4543525b1036daa085faff48d9ea158bcb029683f2b207be1f4c86832d1169b0"
-    sha256 cellar: :any,                 ventura:        "9fc9fde36a396fde4644334ae7a7f65d05febe1ba2162c7ae97768cd3b7b4fe9"
-    sha256 cellar: :any,                 monterey:       "08544ad457361b71dd8bb8b223d22e4c4ccbcb9dd544d5f706a50a177414ef8e"
-    sha256 cellar: :any,                 big_sur:        "90d6a2c51750101f1efc1797de6a0f127b797dda2f502e3673ac23c5ed012e76"
-    sha256 cellar: :any,                 catalina:       "8a9e1de8f0b12cda3283b4113ca6e948ef6ccfa1c70a422c009169c0291cf1f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bb570bd601da0bc9530ae31a44b3bb5817b00726813eaa6f13a75699227cbca"
+    sha256 cellar: :any,                 arm64_monterey: "b55a016f4865ac6a319b6f52b3b2a7fa3ae4aa90b6d9931a9a6304dbe5c538f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "bc02b6889bbc11f528678cf89ce6a92e3cecdcf8479988407211d9bc65b2d016"
+    sha256 cellar: :any,                 monterey:       "1995a81599adbd8ef24889b3518d9f5a9d51a6f7cce730195ec36d12d813e460"
+    sha256 cellar: :any,                 big_sur:        "69198098a3ce3e1d63e632eea9710241269ad6aef086c9382815f81235a2e8ec"
+    sha256 cellar: :any,                 catalina:       "56ef2b32d0e0d47b52587a1116285fa773978b57289caa8636c9cf5a6280ed59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4676ea1ccfc234dc032dda36e071f4fddaaeff6aacd12f07b6e6c69cce990a44"
   end
 
   depends_on "cmake" => :build
   depends_on "cbc"
   depends_on "gecode"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
+  # Workaround for https://github.com/MiniZinc/libminizinc/issues/546 by undoing commit
+  # 894d2d97b5d7c9a24a1b87d71f4c27f9e6a5f0e7, as suggested by a comment there.  Remove
+  # this patch when upstream resolves that issue.
   fails_with gcc: "5"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "cmake", "--build", ".", "--target", "install"
+    end
   end
 
   test do

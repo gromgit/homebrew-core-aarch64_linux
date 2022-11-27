@@ -7,8 +7,10 @@ class NlohmannJson < Formula
   head "https://github.com/nlohmann/json.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9ca4704d40b8e80ae9405d98e64c89922ace4de66ededabe63b65d73d14d8bc8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nlohmann-json"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "138187e21617c1879cd5aa58eda4821fde1638c57aba321fbd420d590addcb2e"
   end
+
 
   depends_on "cmake" => :build
 

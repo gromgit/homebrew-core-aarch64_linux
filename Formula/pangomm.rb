@@ -1,19 +1,17 @@
 class Pangomm < Formula
   desc "C++ interface to Pango"
   homepage "https://www.pango.org/"
-  url "https://download.gnome.org/sources/pangomm/2.50/pangomm-2.50.1.tar.xz"
-  sha256 "ccc9923413e408c2bff637df663248327d72822f11e394b423e1c5652b7d9214"
+  url "https://download.gnome.org/sources/pangomm/2.50/pangomm-2.50.0.tar.xz"
+  sha256 "a27aa77e017b9afce9e751d85bd1cf890abbb3a58bf59d0fac917eef82db3b5b"
   license "LGPL-2.1-only"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "240d818a0f389065c06f1b6cb55a7a65b28181717dd4ee5017d93bf7e8575608"
-    sha256 cellar: :any, arm64_monterey: "cd508f02963834ff60dc5b02ccd2f6516373c6f63698b153bae6f5521b6fbe56"
-    sha256 cellar: :any, arm64_big_sur:  "8133d833f805dcf72e25e766fe02feecd52ba937bc5ea6fd9a49cedad914fc41"
-    sha256 cellar: :any, ventura:        "3243026755b4a058991bb6bcdbbe8a2504255e3c324eafc2c55a538c2ac6e7d8"
-    sha256 cellar: :any, monterey:       "e460a123e6a56d4ceea894435fa9ac65acc3f9875708f9d24b0f5a75e11d43b2"
-    sha256 cellar: :any, big_sur:        "9044bfea7d53b7916e7e5ba23da64b71b4a3b01e505553af8b07760a889b4f47"
-    sha256 cellar: :any, catalina:       "72142eb96fbd86564dabeab768e93a0e7b271c328a25ed9288eb129779e983d1"
-    sha256               x86_64_linux:   "50fbc4de8c8a95af450e0ee638e02e8a20ac5ace7cb15a2d334143b1bade658d"
+    sha256 cellar: :any,                 arm64_monterey: "a21f7c630199d45ac1b8cf9878cf82aaaac75561407e0d239f4308a7ce8b64c5"
+    sha256 cellar: :any,                 arm64_big_sur:  "e7103018de987f68f1760f9e63784ba4ec048efa0f125e488e21bd0a604a40f9"
+    sha256 cellar: :any,                 monterey:       "eb0528f025413ada3a409fbc9bf893062fc37af65d1071a414ca319fe9cdd3d5"
+    sha256 cellar: :any,                 big_sur:        "01d08e7417d287fa932a966c4f6c763c699f33dbb416529ff9f12229e14a182c"
+    sha256 cellar: :any,                 catalina:       "006118a2224607e8bcacc9118a92d82625f8d9f4edcfd502e1b6278fff29a852"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9411ad0f8933a13794ca70d8b4f4e6fde004e627f49e67190203d9fa1c22828c"
   end
 
   depends_on "meson" => :build
@@ -22,6 +20,10 @@ class Pangomm < Formula
   depends_on "cairomm"
   depends_on "glibmm"
   depends_on "pango"
+
+  on_linux do
+    depends_on "gcc" => :build
+  end
 
   fails_with gcc: "5"
 

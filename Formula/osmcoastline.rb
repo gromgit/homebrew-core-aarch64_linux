@@ -4,18 +4,15 @@ class Osmcoastline < Formula
   url "https://github.com/osmcode/osmcoastline/archive/v2.3.1.tar.gz"
   sha256 "ab4a94b9bc5a5ab37b14ac4e9cbdf113d5fcf2d5a040a4eed958ffbc6cc1aa63"
   license "GPL-3.0-or-later"
-  revision 5
+  revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "dee7428e8242ab7e6028d63fd15f3319c2edfa6c6774b489a74e589d285865c0"
-    sha256 cellar: :any,                 arm64_monterey: "8cf2013bade4dab5cfac258a2dc3f8f45d81a5426b7e3d43ffea2f23a6cc88b2"
-    sha256 cellar: :any,                 arm64_big_sur:  "2d66f5eb8a2c12d2e05874d877ecdf65f01a850b8539c2374cf49398d21414bf"
-    sha256 cellar: :any,                 ventura:        "115dc6aba6fb4be6528ffbd80c5f157be6dc37ebbc04ad510c7d20e1fc917e50"
-    sha256 cellar: :any,                 monterey:       "532b6f87af7c10219e791e5fb1ee6be1fb3b4cdb3e72ae0bb7e9aa82c246c8e4"
-    sha256 cellar: :any,                 big_sur:        "91fb5971b1f93694ceea006794ad55cd56be046355e0bae1b7f4200d508b8585"
-    sha256 cellar: :any,                 catalina:       "126abf7580ab4ae6aae425218176ddd9b0b44a6554d7ab06c6a0f47fd8c752d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fd71a1becdab054689376a0d5c7c14bcfc557d1346818afe51fe76753171163"
+    sha256 cellar: :any,                 arm64_monterey: "a4a1308b8b9800389d18c4bee83847da6b96175148f3e24d4a147349216da5da"
+    sha256 cellar: :any,                 arm64_big_sur:  "d4ea887639727da1386fe1cf96aa457b5763a0d7efdeea8f92687e737a6dccc5"
+    sha256 cellar: :any,                 monterey:       "39616d8539d2852880da3337a58608bb18d36d4146106790ec19c7a666ece4f3"
+    sha256 cellar: :any,                 big_sur:        "2ff36b87287f9d07f05f930b09311c7885bed51d9389173e72273b51f7a636d5"
+    sha256 cellar: :any,                 catalina:       "b64b4333a29538181379adcf123a948d4aa8643a14a4afbeda3475c1a95c175c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "93c920545c2abb9745b211f14188a6b75a1245780b5b75d8754b032a170accb0"
   end
 
   depends_on "cmake" => :build
@@ -27,6 +24,10 @@ class Osmcoastline < Formula
 
   uses_from_macos "sqlite"
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

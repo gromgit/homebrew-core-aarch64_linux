@@ -11,7 +11,8 @@ class UsbIds < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3a244b475632d3f94cf4197b3dee71d1fd685e9c1bfaa8843e237a1d3f31a066"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/usb.ids"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4be1bc6a2bd0a5daec408eb5a3efe5984a47c128e50c9e79498108d375059ef5"
   end
 
   def install

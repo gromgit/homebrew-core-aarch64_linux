@@ -1,19 +1,13 @@
 class JfrogCli < Formula
   desc "Command-line interface for JFrog products"
   homepage "https://www.jfrog.com/confluence/display/CLI/JFrog+CLI"
-  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.30.0.tar.gz"
-  sha256 "3b3274c4ebb6c729461c86253d4493afaa5ddefdbf86546d2368db979e7ff196"
+  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.16.3.tar.gz"
+  sha256 "3ab0927d0cbabfc6eac88033edbb1ad7c328cd5b2110ac1b0b0a986fbcc9b593"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "35240f69f21aad7f5b1245e2a6da60ce8bfb2c2d94527917c16653e31b777786"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "eef271e6f6a62ea79701577985bd80742f4305e0e3b70930051389664abf0479"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f398b186cf3a6ba4228acda4201eba5295505fb2cde74e70c0857abda072b2f9"
-    sha256 cellar: :any_skip_relocation, ventura:        "12309e08eee064ca99b5f4257cdd1c9179cf7f719d1787723ca5e462c5dbe0bc"
-    sha256 cellar: :any_skip_relocation, monterey:       "f3c59cd9997bca0a8da08ace18e4e1c3200b88bae9d056f4f8d8954b62a910ab"
-    sha256 cellar: :any_skip_relocation, big_sur:        "012dec2dfbaf54dcead2ce7aaaaddc1fb0541cf75b2c9586c12239222c3fd644"
-    sha256 cellar: :any_skip_relocation, catalina:       "1be086039baebc25f82ec163a3e615dcce47138961be67d75c5964cf6cae2992"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "83ddc98dacad6a1c2b7ad8fc0d08300f8f799e8b3d0164ce25bf4ed81f6a8dc9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jfrog-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "98e2af0b21b9da4f42fbe37ba3be2e8c591d3db62ba3c60ebcca97a8f157d039"
   end
 
   depends_on "go" => :build
@@ -22,7 +16,17 @@ class JfrogCli < Formula
     system "go", "build", *std_go_args(ldflags: "-s -w -extldflags '-static'", output: bin/"jf")
     bin.install_symlink "jf" => "jfrog"
 
-    generate_completions_from_executable(bin/"jf", "completion", base_name: "jf")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"jf", "completion", "bash")
+    (bash_completion/"jf").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"jf", "completion", "zsh")
+    (zsh_completion/"_jf").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"jf", "completion", "fish")
+    (fish_completion/"jf.fish").write output
   end
 
   test do

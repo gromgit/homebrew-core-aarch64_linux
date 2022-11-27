@@ -1,8 +1,8 @@
 class Composer < Formula
   desc "Dependency Manager for PHP"
   homepage "https://getcomposer.org/"
-  url "https://getcomposer.org/download/2.4.4/composer.phar"
-  sha256 "c252c2a2219956f88089ffc242b42c8cb9300a368fd3890d63940e4fc9652345"
+  url "https://getcomposer.org/download/2.3.5/composer.phar"
+  sha256 "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4"
   license "MIT"
 
   livecheck do
@@ -11,23 +11,19 @@ class Composer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4ae9fc450838971810a7978f450eb102a16a6ee06506ed58547248660e17eebf"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ae9fc450838971810a7978f450eb102a16a6ee06506ed58547248660e17eebf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ae9fc450838971810a7978f450eb102a16a6ee06506ed58547248660e17eebf"
-    sha256 cellar: :any_skip_relocation, ventura:        "96e8cbaa4b420f4c36cd853966e6f6684e5da8fce319901ee44f1a56c6eb92f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "96e8cbaa4b420f4c36cd853966e6f6684e5da8fce319901ee44f1a56c6eb92f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "96e8cbaa4b420f4c36cd853966e6f6684e5da8fce319901ee44f1a56c6eb92f5"
-    sha256 cellar: :any_skip_relocation, catalina:       "96e8cbaa4b420f4c36cd853966e6f6684e5da8fce319901ee44f1a56c6eb92f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ae9fc450838971810a7978f450eb102a16a6ee06506ed58547248660e17eebf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f0d482df0a891ca88403b06183fd62084196d7360990c64d97ca0cb0c479bcbb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f0d482df0a891ca88403b06183fd62084196d7360990c64d97ca0cb0c479bcbb"
+    sha256 cellar: :any_skip_relocation, monterey:       "0eec2b01f0467d56df93fcfef0e9751a951c4bdcd8598f6a688fc95d68588d8e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0eec2b01f0467d56df93fcfef0e9751a951c4bdcd8598f6a688fc95d68588d8e"
+    sha256 cellar: :any_skip_relocation, catalina:       "0eec2b01f0467d56df93fcfef0e9751a951c4bdcd8598f6a688fc95d68588d8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0d482df0a891ca88403b06183fd62084196d7360990c64d97ca0cb0c479bcbb"
   end
 
   depends_on "php"
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
   on_macos do
-    on_intel do
-      pour_bottle? only_if: :default_prefix
-    end
+    pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
   end
 
   def install

@@ -1,8 +1,8 @@
 class Dps8m < Formula
   desc "Simulator for the Multics dps-8/m mainframe"
   homepage "https://ringzero.wikidot.com/"
-  url "https://gitlab.com/dps8m/dps8m/-/archive/R3.0.0/dps8m-R3.0.0.tar.gz"
-  sha256 "cee3cc0942ceb929d267c4989551526ff50e777706f62bfc449e16d1428a1d2e"
+  url "https://gitlab.com/dps8m/dps8m/-/archive/R2.0/dps8m-R2.0.tar.gz"
+  sha256 "bb0106d0419afd75bc615006bd9e3f1ff93e12649346feb19820b73c92d06f0d"
   head "https://gitlab.com/dps8m/dps8m.git", branch: "master"
 
   livecheck do
@@ -11,13 +11,12 @@ class Dps8m < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "da7b5be87b8f69e613145c28839ed308547823dfdb49ec6b1ab2b7e460217b6a"
-    sha256 cellar: :any,                 arm64_monterey: "c3a543790a54d7c89b2406543d12031d65358b0a6d628dab3e2e91fab93c8738"
-    sha256 cellar: :any,                 arm64_big_sur:  "fb6d8befa480a17d4cf80f6389a2f06d6005304098120e8e79b158589860cc51"
-    sha256 cellar: :any,                 monterey:       "6d003d8c6626ebfbf6a2efe18bfd1f9c2b860eb442372dcb31de0a6040f64f72"
-    sha256 cellar: :any,                 big_sur:        "776bf405ac9a2e1d04f4770f4faeb8d7b1ab816cdbf88922b616073a41844301"
-    sha256 cellar: :any,                 catalina:       "75ed3b37ef4b1e869adc41e931a0b810312f0634085cf60255a461c8235cb96e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "382ab8f05a7161e6895075d7e263a8324e507415ede94d40cacdf47f324382bb"
+    sha256 cellar: :any,                 arm64_big_sur: "7b6df2db14bb9e099eb1b2003c0ba410e62d4bd81046e425f6db437894938e0c"
+    sha256 cellar: :any,                 big_sur:       "a8f615026cb8660c2d7684387b17d1f39e9b93c547a18adf125a88610d5466d8"
+    sha256 cellar: :any,                 catalina:      "d9d967a0c7dad0b63ea6327102cb5d83345ff6b0bcdbf754398c1a5cdb0b0916"
+    sha256 cellar: :any,                 mojave:        "2c148e6bcd3a83e91b6b327d285bcfbb6490a3f7d8f08c4d904a6b907fbe61cf"
+    sha256 cellar: :any,                 high_sierra:   "600be3242396b61b2e807ed850cd65fc30a4676993c44c5171488954be496ce4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "68382b2ed447d527096d1d3e796233859940e423b3d6263821f6454dee91c52c"
   end
 
   depends_on "libuv"

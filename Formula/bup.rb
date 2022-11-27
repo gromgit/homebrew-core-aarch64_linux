@@ -1,29 +1,28 @@
 class Bup < Formula
   desc "Backup tool"
   homepage "https://bup.github.io/"
-  url "https://github.com/bup/bup/archive/0.33.tar.gz"
-  sha256 "2c21b25ab0ab845e1490cf20781bdb46e93b9c06f0c6df4ace760afc07a63fe9"
+  url "https://github.com/bup/bup/archive/0.32.tar.gz"
+  sha256 "a894cfa96c44b9ef48003b2c2104dc5fa6361dd2f4d519261a93178984a51259"
   license all_of: ["BSD-2-Clause", "LGPL-2.0-only"]
+  revision 1
   head "https://github.com/bup/bup.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "fa27d1e7d41e432cd8e92a4bef4a0f40baec7aa017409bca0afbaea7600ae837"
-    sha256 cellar: :any,                 arm64_big_sur:  "c4ecfafadc9a7a307b0e0b1d3affadd69a96307ba577abd257d7819d19780916"
-    sha256 cellar: :any,                 ventura:        "5a22f269e8ab196be9724bfa63adfac2596178a50cc65bcb06a4f916f35c87de"
-    sha256 cellar: :any,                 monterey:       "8f3aafa9e04c8ae9948e636212512b21b9ef56ed7a98d7ac7fa2a81de9c57ec8"
-    sha256 cellar: :any,                 big_sur:        "949abf70c0e25dfc73f42ee8cf3d8a5fde1451f1ee1a3c0751857cd63bbd5e10"
-    sha256 cellar: :any,                 catalina:       "f3a2efd0a2b4c434677b736a0f59e5dc2be8fbd9352c90e7a818ff78af60d9ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76efebc4d38d833aaf7b0d9052ea73191b2d6deff579fe64bb5b25e9d246d27a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c16e4a2f85d1e3eebbe77b466955cf0bba468a41fa6336b4f5889cdf708c5e1c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c27f726b938b0d5958310ac1c068797759d883787d50233182290704690c4e07"
+    sha256 cellar: :any_skip_relocation, monterey:       "38791642448b41961ae0d08bb42b06cdafb87f61c10796886f8f8f1df5085862"
+    sha256 cellar: :any_skip_relocation, big_sur:        "86326ccc67782f09e5d4d83c848c6027609a394ae2de9456d74d5d192942c023"
+    sha256 cellar: :any_skip_relocation, catalina:       "0440daa882d222be41e6817735e5df52bbc8154c49623862a2f7fa1deaff8f73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d458aeba96d14ee8b561d58130951dbae1fea8e69e7c131ddaa5319d01fb750"
   end
 
   depends_on "pandoc" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
-    python3 = "python3.11"
-    ENV["BUP_PYTHON_CONFIG"] = "#{python3}-config"
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
+
     system "make", "PREFIX=#{prefix}", "install"
   end
 

@@ -1,20 +1,19 @@
 class Stormlib < Formula
   desc "Library for handling Blizzard MPQ archives"
   homepage "http://www.zezula.net/en/mpq/stormlib.html"
-  url "https://github.com/ladislav-zezula/StormLib/archive/v9.24.tar.gz"
-  sha256 "33e43788f53a9f36ff107a501caaa744fd239f38bb5c6d6af2c845b87c8a2ee1"
+  url "https://github.com/ladislav-zezula/StormLib/archive/v9.23.tar.gz"
+  sha256 "d62ba42f1e02efcb2cbaa03bd2e20fbd18c45499ef5fe65ffb89ee52a7bd9c92"
   license "MIT"
   head "https://github.com/ladislav-zezula/StormLib.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "634532f2ce69034249154aa8064c267903f37cde59b020de400edbc6b1a015f9"
-    sha256 cellar: :any,                 arm64_monterey: "eb49ee0d868f90645193babd489badae79d5d00ca7ede13013f1e59060bbc770"
-    sha256 cellar: :any,                 arm64_big_sur:  "339ba3a797c4e4e778605cf162ac730bec7800efb83559a9d8c2869334ffe6ef"
-    sha256 cellar: :any,                 ventura:        "751559e18674e8b1b8a3b27bbe2f6ab309bf719a0f07697d2e30b8bb9859d974"
-    sha256 cellar: :any,                 monterey:       "f259e5472e2b4dc860b0d56070b9ef65a9c5da60af9f456470e47632a9e1e156"
-    sha256 cellar: :any,                 big_sur:        "bc0569b5bf83746075a6c732e88ea256297b99f2b1e87763eafc2f988c5b953a"
-    sha256 cellar: :any,                 catalina:       "d40db23bd0e88f802e8971544de7ac57599a150df3debf2fb2032104a0599d30"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fbc2be72468c6fdef29cc7130f26bd3d7c606e58b02ee41a3d952a2a754c51c"
+    sha256 cellar: :any,                 arm64_monterey: "e53d414b82a05e0b533e487c2f6af493dc19d76e06c43e43c1fe8da18b18f765"
+    sha256 cellar: :any,                 arm64_big_sur:  "16d13a201008b0f6c145e80d28ced76f29af97dfcfce05d1bc2dac84ac0dba33"
+    sha256 cellar: :any,                 monterey:       "86406682d4f63e431c8239e885b72410a9b5d25e01e8fe6022f33ed62446aa95"
+    sha256 cellar: :any,                 big_sur:        "12177d76e3bac8c67baba52c812a855642e780624d7a75f1e826b10811de35b4"
+    sha256 cellar: :any,                 catalina:       "686a27d3793a4a80858f442d1feda9d5880e21e687c152067136b4bb27c6fa50"
+    sha256 cellar: :any,                 mojave:         "0270b8a31bf89afd8a81a0b8e36f3a967e196f024a3900fdf24ef5ab1b26a422"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "14d33ffa96557afdff6f9b3476005b83c6dbcd51994d0b7fed03d2af0484d263"
   end
 
   depends_on "cmake" => :build
@@ -26,6 +25,10 @@ class Stormlib < Formula
   patch :DATA
 
   def install
+    # remove in the next release
+    inreplace "src/StormLib.h", "dwCompressionNext = MPQ_COMPRESSION_NEXT_SAME",
+                                  "dwCompressionNext"
+
     system "cmake", ".", *std_cmake_args
     system "make", "install"
     system "cmake", ".", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
@@ -49,10 +52,10 @@ end
 
 __END__
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 9cf1050..b33e544 100644
+index bd8d336..927a47d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -340,7 +340,6 @@ if(BUILD_SHARED_LIBS)
+@@ -314,7 +314,6 @@ if(BUILD_SHARED_LIBS)
      message(STATUS "Linking against dependent libraries dynamically")
 
      if(APPLE)
@@ -60,3 +63,14 @@ index 9cf1050..b33e544 100644
          set_target_properties(${LIBRARY_NAME} PROPERTIES LINK_FLAGS "-framework Carbon")
      endif()
      if(UNIX)
+diff --git a/src/StormLib.h b/src/StormLib.h
+index f254290..43fefb8 100644
+--- a/src/StormLib.h
++++ b/src/StormLib.h
+@@ -480,7 +480,9 @@ typedef void (WINAPI * SFILE_ADDFILE_CALLBACK)(void * pvUserData, DWORD dwBytesW
+ typedef void (WINAPI * SFILE_COMPACT_CALLBACK)(void * pvUserData, DWORD dwWorkType, ULONGLONG BytesProcessed, ULONGLONG TotalBytes);
+
+ struct TFileStream;
++typedef struct TFileStream TFileStream;
+ struct TMPQBits;
++typedef struct TMPQBits TMPQBits;

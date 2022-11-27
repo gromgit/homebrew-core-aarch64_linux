@@ -3,25 +3,22 @@ class AwsSsoUtil < Formula
 
   desc "Smooth out the rough edges of AWS SSO (temporarily, until AWS makes it better)"
   homepage "https://github.com/benkehoe/aws-sso-util"
-  url "https://files.pythonhosted.org/packages/6b/ea/2241ca0f8f3b2033a283ef06b9a03164559388d7cc1af9d20048d50cd578/aws-sso-util-4.30.0.tar.gz"
-  sha256 "cfdca8877e7ab0a2dd9e360af45e9cb11420f7f8c31cec2c3b12f41d0a4f7f3a"
+  url "https://files.pythonhosted.org/packages/b4/c3/917e6858249056e5d0bba19f52813e726fba29da456c2db7952053048529/aws-sso-util-4.28.0.tar.gz"
+  sha256 "2300079d57aec85f7ed4e8c01548b5c8ea49e6f838b8532701bf91c975dbba1d"
   license "Apache-2.0"
   head "https://github.com/benkehoe/aws-sso-util.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5ee64d6ce2c9bcce10cac77cbd246a3fe168a501c47a616a1ac4bfff035bc44b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8ebd9914aed8e905b7bf9ed44549a024fbe4462c7864ab5342ef54f431f4171d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9598cbfc4f2ba0a2e55e92bbe00fc30b56e23c6fe818c4bdaad996caebf57d5"
-    sha256 cellar: :any_skip_relocation, ventura:        "811a4b990cabe68d12153a6b4f3fb797dd0e7091c6fe2636c359f0fcd97678c8"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ba43e1d940391131a43c2d38bbb4f256734ef715868f97ca2bc33a503bf7979"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8962218a8e7655acda0006cd913b042861a6731f65b2c277203ec36c22dad68d"
-    sha256 cellar: :any_skip_relocation, catalina:       "39f15e6e93021787716c54a07585c4f75cca9f8cce62dc05059680513ee17bed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "062c08c1ed6b2f3a901b39774699d2da83a259345bb7fa2f6e811b254e3c8652"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ecc87ced39eeb0ffea608a1aa1f65b33a9c59ea5f686c1f4444dace7bab0f04"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4bd1163d683521c6d31176a2203da75e77d17739f7e50bb626946d1dcb2c7e61"
+    sha256 cellar: :any_skip_relocation, monterey:       "2e99ea27c0eebd572ddb25e791f9e64f9c3b6de7d4a1a39cf289ba73b53e27a2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fc9dc6b86ede00e83d73aa468f80824ea503ba5e8694caa413df2cbc62d7bf6a"
+    sha256 cellar: :any_skip_relocation, catalina:       "f6ef6edfc745ae47fdb957b550b3c7a200baaac65753e6f075c57319d62b0b6d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97afb108783e55104408d42e17af12cc79a7c4cdda706994128f53cf3ea62a37"
   end
 
   depends_on "rust" => :build
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "six"
 
   on_linux do
@@ -29,8 +26,8 @@ class AwsSsoUtil < Formula
   end
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+    url "https://files.pythonhosted.org/packages/d7/77/ebb15fc26d0f815839ecd897b919ed6d85c050feeb83e100e020df9153d2/attrs-21.4.0.tar.gz"
+    sha256 "626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"
   end
 
   resource "aws-error-utils" do
@@ -39,28 +36,28 @@ class AwsSsoUtil < Formula
   end
 
   resource "aws-sso-lib" do
-    url "https://files.pythonhosted.org/packages/73/d3/8e8c24d0c7b6ee6861cc00aab33c3aa5736b4038a809d36f254b77e06a39/aws-sso-lib-1.13.0.tar.gz"
-    sha256 "809ec5dcdcd84d62141ade6490ced369836ea237d5bcb2a69aac1dd93e15c49f"
+    url "https://files.pythonhosted.org/packages/64/97/f2c08a8a1b60d42d8083392669962a2218cdf4ed7e4d62f961a89f4a4375/aws-sso-lib-1.11.0.tar.gz"
+    sha256 "ec95a1a690e618961b9304554c647c933aeb17e2ef5bad290a83e554bea24008"
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/df/e4/893fc4af6ee0c801725b48ba4d3120705126edab71e0fe84f8eb4850c427/boto3-1.26.4.tar.gz"
-    sha256 "244fd0776fc1f69c3ed34f359db7a90a6108372486abc999ce8515a79bbfc86e"
+    url "https://files.pythonhosted.org/packages/fd/2f/fe2b44be11e97d8056f56e6881666d2e215ab3ed1aa18e6f9d4da56f6326/boto3-1.21.29.tar.gz"
+    sha256 "127ebdf58c8825b53f1eff111e08c49ffffeb1f6d7a5665c9907ce8128fe14b1"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/32/c1/3a3cbbdc58a71c1dfafbeeb79dd09b68a030ff5c52df7ad8e87d5ed57c10/botocore-1.29.4.tar.gz"
-    sha256 "fa86747f5092723c0dc7f201a48cdfac3ad8d03dd6cb7abc189abc708be43269"
+    url "https://files.pythonhosted.org/packages/72/c2/beeb5b9efbd2bf9353898ad07968acc443d7bb376b02d8193b93d2590ede/botocore-1.24.29.tar.gz"
+    sha256 "b467d64cd773dc4d49ef31b18a8dded554f284f799720bd12e989fe2138fd5b8"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
+    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
+    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
   end
 
   resource "click" do
@@ -69,13 +66,13 @@ class AwsSsoUtil < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
-    sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+    url "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz"
+    sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
   end
 
   resource "jmespath" do
-    url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
-    sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+    url "https://files.pythonhosted.org/packages/06/7e/44686b986ef9ca6069db224651baaa8300b93af2a085a5b135997bf659b3/jmespath-1.0.0.tar.gz"
+    sha256 "a490e280edd1f57d6de88636992d05b71e97d69a26a19f058ecf7d304474bf5e"
   end
 
   resource "jsonschema" do
@@ -84,8 +81,8 @@ class AwsSsoUtil < Formula
   end
 
   resource "pyrsistent" do
-    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
-    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
+    url "https://files.pythonhosted.org/packages/42/ac/455fdc7294acc4d4154b904e80d964cc9aae75b087bbf486be04df9f2abd/pyrsistent-0.18.1.tar.gz"
+    sha256 "d4d61f8b993a7255ba714df3aca52700f8125289f84f704cf80916517c46eb96"
   end
 
   resource "python-dateutil" do
@@ -99,18 +96,18 @@ class AwsSsoUtil < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
+    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/e1/eb/e57c93d5cd5edf8c1d124c831ef916601540db70acd96fa21fe60cef1365/s3transfer-0.6.0.tar.gz"
-    sha256 "2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"
+    url "https://files.pythonhosted.org/packages/7e/19/f82e4af435a19b28bdbfba63f338ea20a264f4df4beaf8f2ab9bfa34072b/s3transfer-0.5.2.tar.gz"
+    sha256 "95c58c194ce657a5f4fb0b9e60a84968c808888aed628cd98ab8771fe1db98ed"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
+    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
   end
 
   def install
@@ -118,10 +115,10 @@ class AwsSsoUtil < Formula
   end
 
   test do
-    cmd = "#{bin}/aws-sso-util configure profile invalid " \
-          "--sso-start-url https://example.com/start --sso-region eu-west-1 " \
-          "--account-id 000000000000 --role-name InvalidRole " \
-          "--region eu-west-1 --non-interactive"
+    cmd = "#{bin}/aws-sso-util configure profile invalid"\
+          " --sso-start-url https://example.com/start --sso-region eu-west-1" \
+          " --account-id 000000000000 --role-name InvalidRole" \
+          " --region eu-west-1 --non-interactive"
 
     assert_empty shell_output "AWS_CONFIG_FILE=#{testpath}/config #{cmd}"
 

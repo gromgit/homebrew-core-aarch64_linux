@@ -4,7 +4,7 @@ class Libgxps < Formula
   url "https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.2.tar.xz"
   sha256 "6d27867256a35ccf9b69253eb2a88a32baca3b97d5f4ef7f82e3667fa435251c"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 1
   head "https://gitlab.gnome.org/GNOME/libgxps.git", branch: "master"
 
   livecheck do
@@ -13,15 +13,13 @@ class Libgxps < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura:  "0f524e3a24c4939c08d93f3f66af34994bd9ec0a5a2c54323baaba2cfbdd8048"
-    sha256 cellar: :any, arm64_monterey: "1ace22f9a74c47c9c4a80c6d0f489e3200a3987257641440e14bb0974a6fd89c"
-    sha256 cellar: :any, arm64_big_sur:  "56e4ad2dad8df91707bdb77445b2e0c4b020b9f02aaebd6a667e639546ad91eb"
-    sha256 cellar: :any, ventura:        "938519d7611202c22f11ed787bda5055ae7420db034caf2c76e27d19943b99e4"
-    sha256 cellar: :any, monterey:       "9806279d50f73693dbad71dd0b4c185196584a9187ee5daaae66882d4f9b7682"
-    sha256 cellar: :any, big_sur:        "772f8f4ba58385b382de4e88e2f68e706f3a8fd20e1c5a64a33b154bd1112227"
-    sha256 cellar: :any, catalina:       "81189357b4d118895c1994c005bb9265a2a77a71e7fd3d386f3f06113abd541b"
-    sha256               x86_64_linux:   "c79ca4a9d50d6447a84b532636d8f9e758667e8284bfb485f6384e146bb4d2f0"
+    sha256 cellar: :any, arm64_monterey: "2e78b1e36e2e6095af5cbf6f86e1d544d3225402474164aa1d667fbeb97a6e91"
+    sha256 cellar: :any, arm64_big_sur:  "0243fa2f8e5b1559b417e47e5aea3b6ab8745164f397963c2ac94952c3915324"
+    sha256 cellar: :any, monterey:       "acb2b38e9fa9925dc00c2b8497e9e0c98e38a279d81dd3b2ca6946017bff8367"
+    sha256 cellar: :any, big_sur:        "6ad3b9179f42d68083b2b8bf54fe2d36433ed45d51e8ee13af392638e1b07174"
+    sha256 cellar: :any, catalina:       "52dc9223c583d315cc9b6edd29e696ac4e8dab1fe5d4d452c9ac3f20af185412"
+    sha256 cellar: :any, mojave:         "e113e3685b5f6a000d1e23f2bf67cb78e67c5bba58562156d5a78311ee28c05c"
+    sha256               x86_64_linux:   "5c4da3716214bcc70b6a4cfe2b3dd0c5b624e74a34cc2f72f2e3ac00f7211258"
   end
 
   keg_only "it conflicts with `ghostscript`"
@@ -30,11 +28,9 @@ class Libgxps < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "cairo"
   depends_on "glib"
-  depends_on "jpeg-turbo"
+  depends_on "gtk+3"
   depends_on "libarchive"
-  depends_on "libtiff"
   depends_on "little-cms2"
 
   uses_from_macos "zip" => :test
@@ -44,10 +40,11 @@ class Libgxps < Formula
     # Tell meson to search for brewed zlib before host zlib on Linux.
     # This is not the same variable as setting LD_LIBRARY_PATH!
     ENV.append "LIBRARY_PATH", Formula["zlib"].opt_lib unless OS.mac?
-
-    system "meson", *std_meson_args, "build", "-Denable-test=false"
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   def caveats

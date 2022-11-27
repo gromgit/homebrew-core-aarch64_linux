@@ -9,7 +9,6 @@ class Launchdns < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "480788e6d0135672b26a62c84111d1d6cc1e3f8407da7338cd1ea334767679bd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "76976e31629220e8697a50b0e52d080cef29a6b761a987175b07438d35225ff8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b7e3e37f394c83c8957c6c2253260805a3abcbb843890c90208d7d743da3328"
     sha256 cellar: :any_skip_relocation, monterey:       "7883b009f177ae1ede81bc9d27706e26fc8d8bde4cd3e1c45c5cd8f4021cbafd"
@@ -17,8 +16,6 @@ class Launchdns < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "ebae3446c46a7a6662c3e9b95d61bbee372f1f277a07a4beea1eafc00d64570a"
     sha256 cellar: :any_skip_relocation, mojave:         "38ad8be46847983774ec6b50896560517bb027b6fe5e5543395f168e489c9c27"
   end
-
-  depends_on :macos # uses launchd, a component of macOS
 
   def install
     ENV["PREFIX"] = prefix
@@ -31,11 +28,41 @@ class Launchdns < Formula
     EOS
   end
 
-  service do
-    run [opt_bin/"launchdns", "--socket=Listeners", "--timeout=30"]
-    error_log_path var/"log/launchdns.log"
-    log_path var/"log/launchdns.log"
-    sockets "tcp://127.0.0.1:55353"
+  plist_options manual: "launchdns"
+
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+        <dict>
+          <key>Label</key>
+          <string>#{plist_name}</string>
+          <key>ProgramArguments</key>
+          <array>
+            <string>#{opt_bin}/launchdns</string>
+            <string>--socket=Listeners</string>
+            <string>--timeout=30</string>
+          </array>
+          <key>Sockets</key>
+          <dict>
+            <key>Listeners</key>
+            <dict>
+              <key>SockType</key>
+              <string>dgram</string>
+              <key>SockNodeName</key>
+              <string>127.0.0.1</string>
+              <key>SockServiceName</key>
+              <string>55353</string>
+            </dict>
+          </dict>
+          <key>StandardErrorPath</key>
+          <string>#{var}/log/launchdns.log</string>
+          <key>StandardOutPath</key>
+          <string>#{var}/log/launchdns.log</string>
+        </dict>
+      </plist>
+    EOS
   end
 
   test do

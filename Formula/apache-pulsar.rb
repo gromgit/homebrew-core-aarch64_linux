@@ -1,18 +1,17 @@
 class ApachePulsar < Formula
   desc "Cloud-native distributed messaging and streaming platform"
   homepage "https://pulsar.apache.org/"
-  url "https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=pulsar/pulsar-2.10.2/apache-pulsar-2.10.2-src.tar.gz"
-  mirror "https://archive.apache.org/dist/pulsar/pulsar-2.10.2/apache-pulsar-2.10.2-src.tar.gz"
-  sha256 "20e367b120db9d7daacfe5f26b4b5a1d84958933a2448dfa01f731998ddd369a"
+  url "https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=pulsar/pulsar-2.10.0/apache-pulsar-2.10.0-src.tar.gz"
+  mirror "https://archive.apache.org/dist/pulsar/pulsar-2.10.0/apache-pulsar-2.10.0-src.tar.gz"
+  sha256 "fadf27077c5a15852791bea45f34191de1edc25799ecd6e2730a9ff656789c0b"
   license "Apache-2.0"
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, ventura:      "affabf6e195e874f11c0ae7e87a49ae164ba95964b32b02596b4b9afd73cbeb8"
-    sha256 cellar: :any_skip_relocation, monterey:     "265bcbfb605f91cd333a8558a8d2889f8249b409b3110235796a10a33a43794c"
-    sha256 cellar: :any_skip_relocation, big_sur:      "8be561a9f0e660f85d7923269cdf9739f3c162040cc52507f4a50d6dc21ccac9"
-    sha256 cellar: :any_skip_relocation, catalina:     "e84214120c05b9b6ede37c8a9ee4349638c3df2bff7a4ae73fa81c71edc315c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "77f96251b1f71005ce48d7d182b6f752f3eba22be5f81c125b901a739eb4ddec"
+    sha256 cellar: :any_skip_relocation, monterey:     "957c2fa40cd1b7867dc4463ba65fb613ba3e67b672294ede255d6920881af932"
+    sha256 cellar: :any_skip_relocation, big_sur:      "4badd3eebc91259b2e8e0654b66e1a775c56c915529e10ee8bd90ed87d51feb7"
+    sha256 cellar: :any_skip_relocation, catalina:     "a1af20becc06d2d7984ba32906a35f12c9ff988fe8c5eff4381027ecf4e72f98"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "72fc6caf2b5ad176ca9345befa61173e13f72fa11bed603b5ce0f757e5aa2f78"
   end
 
   depends_on "autoconf" => :build
@@ -23,10 +22,10 @@ class ApachePulsar < Formula
   depends_on "pkg-config" => :build
   depends_on "protobuf" => :build
   depends_on arch: :x86_64
-  depends_on "openjdk@17"
+  depends_on "openjdk@11"
 
   def install
-    with_env("TMPDIR" => buildpath, **Language::Java.java_home_env("17")) do
+    with_env("TMPDIR" => buildpath, **Language::Java.java_home_env("11")) do
       system "mvn", "-X", "clean", "package", "-DskipTests", "-Pcore-modules"
     end
 
@@ -48,7 +47,7 @@ class ApachePulsar < Formula
     libexec.glob("bin/*") do |path|
       if !path.fnmatch?("*common.sh") && !path.directory?
         bin_name = path.basename
-        (bin/bin_name).write_env_script libexec/"bin"/bin_name, Language::Java.java_home_env("17")
+        (bin/bin_name).write_env_script libexec/"bin"/bin_name, Language::Java.java_home_env("11")
       end
     end
   end

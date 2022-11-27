@@ -10,21 +10,18 @@ class Theharvester < Formula
   head "https://github.com/laramies/theHarvester.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fc2f580aadda06fe21bbff1e4d6bdadb3a3e2ce387e3a5d0734d7dcfad7caa9b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5aeb6ebc484b8ec6f6cd8d25b345b7dd61979a3d395ae60ef627a00c65384431"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b3d55094a7c3c2e0423ac03a8588cb85b04cacfd3edd8364c457abfc0211219"
-    sha256 cellar: :any_skip_relocation, monterey:       "16a38f063f78745f63521e10daf3f2a24d7c99ba18f641f999359f5c95823d54"
-    sha256 cellar: :any_skip_relocation, big_sur:        "48843806879452db791a77da4b6ced55cff656b7c5e3af0d27c8a1c6bf905cba"
-    sha256 cellar: :any_skip_relocation, catalina:       "065cdc0a1a0261a6ed952ea8485aab7d5588bc690cab505df932910570ab2942"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "11996c3442077a0cf712a6044643cf4cbdf411163a28ad5c2b73dd4b7b3b6416"
+    sha256 cellar: :any,                 arm64_monterey: "c01d75b9afd1cc9d8276e4d6c8abd7067e1ef6a67f9be8c7d0a6a4023dfa3920"
+    sha256 cellar: :any,                 arm64_big_sur:  "dc44a2ca9c42e9e1871cf137dcdf1197964be70d88d3893c6a4d05927b15cca8"
+    sha256 cellar: :any,                 monterey:       "1b65e4ba8faac81b34b25ebb6d3ff06a96f493b1c44c81d7df0f344993fd20b9"
+    sha256 cellar: :any,                 big_sur:        "19bd48d157841ef1ee9abd55541bbefabf6107aaa1b5be6da2d2bb1a739c9f96"
+    sha256 cellar: :any,                 catalina:       "ed2bd4cddadf322c1311b016a8dd0cb1a7c41bb64dfdb50eb107aa0b6b626e9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fefa2c447aad1c51561b75d1707da6a6eed83ef070fd12590ab93b0ef37f5c71"
   end
 
   depends_on "maturin" => :build
   depends_on "rust" => :build
-  depends_on "python-typing-extensions"
+  depends_on "libyaml"
   depends_on "python@3.10"
-  depends_on "pyyaml"
   depends_on "six"
 
   uses_from_macos "libxml2"
@@ -250,6 +247,11 @@ class Theharvester < Formula
     sha256 "4621bb890e54f43dce84f5139ea4d484a62886be1903c2fcb393af607943538f"
   end
 
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+  end
+
   resource "redis" do
     url "https://files.pythonhosted.org/packages/b3/17/1e567ff78c83854e16b98694411fe6e08c3426af866ad11397cddceb80d3/redis-3.5.3.tar.gz"
     sha256 "0e7e0cfca8660dea8b7d5cd8c4f6c5e29e11f31158c0b0ae91a397f00e5a05a2"
@@ -313,6 +315,11 @@ class Theharvester < Formula
   resource "tqdm" do
     url "https://files.pythonhosted.org/packages/e3/c1/b3e42d5b659ca598508e2a9ef315d5eef0a970f874ef9d3b38d4578765bd/tqdm-4.62.3.tar.gz"
     sha256 "d359de7217506c9851b7869f3708d8ee53ed70a1b8edbba4dbcb47442592920d"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0d/4a/60ba3706797b878016f16edc5fbaf1e222109e38d0fa4d7d9312cb53f8dd/typing_extensions-4.0.1.tar.gz"
+    sha256 "4ca091dea149f945ec56afb48dae714f21e8692ef22a395223bcd328961b6a0e"
   end
 
   resource "typing-inspect" do

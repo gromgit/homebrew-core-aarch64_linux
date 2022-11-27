@@ -1,8 +1,8 @@
 class Pyoxidizer < Formula
   desc "Modern Python application packaging and distribution tool"
   homepage "https://github.com/indygreg/PyOxidizer"
-  url "https://github.com/indygreg/PyOxidizer/archive/pyoxidizer/0.23.0.tar.gz"
-  sha256 "d96c4747d37686c052ef5a064fda59ac0b175085589cd7cdd4e277906136f8a7"
+  url "https://github.com/indygreg/PyOxidizer/archive/pyoxidizer/0.20.0.tar.gz"
+  sha256 "11baf7bac8f869d6458b5aee2cb8ecd7f2d7f170211ee97f979abb62eea22bc4"
   license "MPL-2.0"
   head "https://github.com/indygreg/PyOxidizer.git", branch: "main"
 
@@ -12,21 +12,18 @@ class Pyoxidizer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a438770a4ce6bb1ea06f3d23d1c0cf505f93383de2ff27d99b22d5d5b34c9f51"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb62cb641b9b69e0995c19c288a051a5f59e11de3a174aceb4c67daf48332b4c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2dbd06e01ecb46b93bb3250bd0d5e349295ba6c56b77622d29c64676ed17e3e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "80d2014e88d9937d1a88b99da5a8d035e8ac42ccc4df7480512e020e6ee30fb6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e9aa0d494c359e0f8b16c8c3ae31159d8f540f3f9d7946ca4bdc20bc6a83fe10"
-    sha256 cellar: :any_skip_relocation, catalina:       "3d1bc85db1bcbb5f69c8dba9c294d65ef9b674d217f6eab670ccc6eb4dedf812"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8de042e72b4759060bdfd5fac56d50594614f7c0cab901b8ccf70955a4191191"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "673b3f77fdd82c6fbde009da7461c759d8f6cf2d6090cb76359ee9001b25249f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a636c6b8142fc459301f010519b9fb7085da25940063ed5ecd15dd06d28c499"
+    sha256 cellar: :any_skip_relocation, monterey:       "5449fa05218b1d985cfb7bd09e619f2403896732a80446f6599d73c42c9adac9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "71b0ac60092c72ab35389de12abecd0ca258ede50f36a83768930b94c6718d9b"
+    sha256 cellar: :any_skip_relocation, catalina:       "e3a603c9950e3d8105359b2be8fca39a318a0215353c411bfa22f3eb1f6344ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b7d2be825e2393086f57e9e3e043166e0559c2de3e1170782ca9c6030dfd787"
   end
 
   depends_on "rust" => :build
   # Currently needs macOS 11 SDK due to checking for DeploymentTargetSettingName
   # Remove when issue is fixed: https://github.com/indygreg/PyOxidizer/issues/431
-  on_catalina :or_older do
-    depends_on xcode: "12.2"
-  end
+  depends_on xcode: "12.2" if MacOS.version <= :catalina
 
   def install
     system "cargo", "install", *std_cargo_args(path: "pyoxidizer")

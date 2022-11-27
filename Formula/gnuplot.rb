@@ -1,19 +1,18 @@
 class Gnuplot < Formula
   desc "Command-driven, interactive function plotting"
   homepage "http://www.gnuplot.info/"
-  url "https://downloads.sourceforge.net/project/gnuplot/gnuplot/5.4.5/gnuplot-5.4.5.tar.gz"
-  sha256 "66f679115dd30559e110498fc94d926949d4d370b4999a042e724b8e910ee478"
+  url "https://downloads.sourceforge.net/project/gnuplot/gnuplot/5.4.3/gnuplot-5.4.3.tar.gz"
+  sha256 "51f89bbab90f96d3543f95235368d188eb1e26eda296912256abcd3535bd4d84"
   license "gnuplot"
+  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "c246651856ca531f7d8363b9ad595860c7c4d8147921b7b7c4331c52b6e603fb"
-    sha256 arm64_monterey: "51ecb988ca7a8ce2ef5dbcb62216c3bcb3ad1e1d5a5f9e2ff96cc8fa0a4df545"
-    sha256 arm64_big_sur:  "c3daac6fbc91bec92a684618c0d09748d4ce8839a11174022796834d9328b649"
-    sha256 ventura:        "b2fc809c4c735e51ba9619c1db049f647d1d577e862e73710569a006660554e1"
-    sha256 monterey:       "3da9430c2b26efc609638ccaa705894287f60525fdb5e801386a0eaf05718aaa"
-    sha256 big_sur:        "f818709ded2f6eb3cb14beb9e20dbe31ff7be2d4e8655ee3dff9f81339499474"
-    sha256 catalina:       "b348f93e05234b05ccd399be81bde105eee3a06c7a675de2092156982f7edf03"
-    sha256 x86_64_linux:   "3ccc8649fe2dcde51f217fe74d4b033a2024d6dd23b904665214e86d89d4b7c7"
+    sha256 arm64_monterey: "8434d860865ab948c40b82e8ed9cfc20697e153f1018c747df82f21ec71ffc70"
+    sha256 arm64_big_sur:  "c528b21b25c7c35f67cae3e71ea9f555112cd61f0add956d76e57a6f4cc6870b"
+    sha256 monterey:       "5d66c5093a628fc3169e1d844a818710e63fe959258a51d25aee2ebad7b2724a"
+    sha256 big_sur:        "355caca1944918dc774073f8cbbe96355f04b2731cb73d2d0f0664a646404183"
+    sha256 catalina:       "b0dc5bf8e5b3c703e0a3b590d130a9105849639f622189d9f49a7b4ad33619c9"
+    sha256 x86_64_linux:   "5171dbbb1add97ec81e2540392b89d9c271af07c1f6f5922376e6110319ef792"
   end
 
   head do
@@ -31,6 +30,10 @@ class Gnuplot < Formula
   depends_on "pango"
   depends_on "qt@5"
   depends_on "readline"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

@@ -1,18 +1,18 @@
 class SoundTouch < Formula
   desc "Audio processing library"
   homepage "https://www.surina.net/soundtouch/"
-  url "https://codeberg.org/soundtouch/soundtouch/archive/2.3.2.tar.gz"
-  sha256 "ed714f84a3e748de87b24f385ec69d3bdc51ca47b7f4710d2048b84b2761e7ff"
+  url "https://codeberg.org/soundtouch/soundtouch/archive/2.3.1.tar.gz"
+  sha256 "42633774f372d8cb0a33333a0ea3b30f357c548626526ac9f6ce018c94042692"
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3b8ab96643afdd0e29cb1c3ca87081de1e24a9fa71cf523f54d59700cfd89568"
-    sha256 cellar: :any,                 arm64_monterey: "33ab05d5f4717eae082846a06976e7b01e9f29ce9a9b8281211d05ba63ee0d8f"
-    sha256 cellar: :any,                 arm64_big_sur:  "c0470a1734cd05a4d9a944d35395af68dbcea9887292f2c27898b961537ab9e8"
-    sha256 cellar: :any,                 monterey:       "bc814a3a96c7410dc2a07fb3abed06539fa8d124a7e2c5bb0d66ab8db14decce"
-    sha256 cellar: :any,                 big_sur:        "774514a15a2e3426d4aec5c4c6e423ac6fa86589967fcd224103aca3ffd30c33"
-    sha256 cellar: :any,                 catalina:       "af6a0cc123d0d5aa72770a890c3d5bebe60109670e99098d1950af5dd4591c94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f734328dd552d6aaa65193e5c33a2e46fca6189780325fa77dd7d0b4c888f902"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "0d340cfb0bf1d17b2eea238b756e58cd0559a4e394394b0f5e2031114e75506e"
+    sha256 cellar: :any,                 arm64_big_sur:  "1ccbe6750451a745654c3b00c8f14e1706381074254136278bb4cc1f7b88e009"
+    sha256 cellar: :any,                 monterey:       "ecf1be5a1ff7d41f7346f32c238ae3f30f965e58252e994082c4f2c7dd7d2784"
+    sha256 cellar: :any,                 big_sur:        "cbc1dd06e73d9712e1b1fa21c4767967f122a40e2cd92097c912084f002cc4d5"
+    sha256 cellar: :any,                 catalina:       "650c953db2306d78bd309a24206c014037584c08a490e05a89ac5294cef36df4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af9833833154ab73181849ccdb563b1f4146848f69fd3cc4b386c9e46a31d8b8"
   end
 
   depends_on "autoconf" => :build

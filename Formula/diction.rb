@@ -7,7 +7,6 @@ class Diction < Formula
   license "GPL-3.0"
 
   bottle do
-    sha256 arm64_ventura:  "9a0b3b7dd6f41245ff193e2bb23cb351d0378fe4aab1bf5bc2be56e123c39f14"
     sha256 arm64_monterey: "183609551d3baeef5692cfffda8251eda4e2586d5ce26db40a1c0c1a9d6e8a14"
     sha256 arm64_big_sur:  "88a87488f8e893dc86f30e8736cf9cbdc2459976da13d899cb91daf8abdfe23e"
     sha256 monterey:       "3ac10ac27b2fd8d0c961b256577a52eeb6bf5a8afce04afdc9c39d5a1403ae32"
@@ -17,6 +16,7 @@ class Diction < Formula
     sha256 high_sierra:    "194a52459b3bfd3e4f38f8e19ea9f4d371d2bf3b005d3e36b8aa5519c5afaf2d"
     sha256 sierra:         "70dbde26567eb6b0093d897f9ceafb212eaf51d23028a925d39c0f53b803b5b9"
     sha256 el_capitan:     "858b8312ef527a7745a02b3bf40cd483c0212216e3342ac7eaddbfe6045893dd"
+    sha256 yosemite:       "ce2b0d6b0f7184596753de94a3cbd171f5236c947f47536d3bf5be806c8ef804"
     sha256 x86_64_linux:   "fa36156d5d431720a8bc0c8b05a1681e9231cfce822b2b012c602fa1a8e3e159"
   end
 

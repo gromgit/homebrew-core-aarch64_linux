@@ -1,8 +1,8 @@
 class Carla < Formula
   desc "Audio plugin host supporting LADSPA, LV2, VST2/3, SF2 and more"
   homepage "https://kxstudio.linuxaudio.org/Applications:Carla"
-  url "https://github.com/falkTX/Carla/archive/v2.5.2.tar.gz"
-  sha256 "e93c5d169538c991e1598c7de34a80f2e53af3cd063bb672fa020ba8e7dae140"
+  url "https://github.com/falkTX/Carla/archive/v2.4.3.tar.gz"
+  sha256 "0092926e5167f3a5eb592f0055e5491803354ae42947e706db0dc548d9e786d3"
   license "GPL-2.0-or-later"
   head "https://github.com/falkTX/Carla.git", branch: "main"
 
@@ -12,13 +12,10 @@ class Carla < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2672ee00fb83b4be388a0b38b0ef14a1f3ffd05aeb204b5338740ac1930ab428"
-    sha256 cellar: :any,                 arm64_monterey: "9efe2e3573a58e18f7382854f260928ba7625cb9f530df5602648cd0a8cb847f"
-    sha256 cellar: :any,                 arm64_big_sur:  "ac156cbb38fd2b0bf26d7985253694ccba290111865ec3541e176ca9024a2ea7"
-    sha256 cellar: :any,                 monterey:       "11f18c56494fec6baf11ac6750b1d082e125637b69bdaf1b4c13aacf8ac991df"
-    sha256 cellar: :any,                 big_sur:        "e358b46e69f3cfb2270a029c65561b228e87876b5c7c1fe5d86a193219619143"
-    sha256 cellar: :any,                 catalina:       "e713bfef7d6515848366229e3e798894ce7a5bbc062d8980a7815b12c2d675dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97b01b6e7b785876a494ce3b43a2b3b124d38b1223138897db651496277e4832"
+    sha256 cellar: :any,                 arm64_big_sur: "1640e2ca5e75448074727b3bc28f01057676877712fbf4b3cfdbeac9a6a6d2e8"
+    sha256 cellar: :any,                 big_sur:       "2f38b8ec4582c16d3c19b61c10dd1bbb6668bef05284edda5c18e6defbb4a07b"
+    sha256 cellar: :any,                 catalina:      "ef913d5eaaba882d6e0911524755c4fc3684be537bb224267dbd8a8c2f1d3efa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "348ca755162c5d4e1ae23c2e6afed1cc81fc17b24ab80335a2cf6f3c442f7b0d"
   end
 
   depends_on "pkg-config" => :build
@@ -26,7 +23,11 @@ class Carla < Formula
   depends_on "liblo"
   depends_on "libmagic"
   depends_on "pyqt@5"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
@@ -35,7 +36,7 @@ class Carla < Formula
     system "make", "install", "PREFIX=#{prefix}"
 
     inreplace bin/"carla", "PYTHON=$(which python3 2>/dev/null)",
-                           "PYTHON=#{Formula["python@3.10"].opt_bin}/python3.10"
+                           "PYTHON=#{Formula["python@3.9"].opt_bin}/python3"
   end
 
   test do

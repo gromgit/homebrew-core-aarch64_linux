@@ -1,10 +1,9 @@
 class Kubie < Formula
   desc "Much more powerful alternative to kubectx and kubens"
   homepage "https://blog.sbstp.ca/introducing-kubie/"
-  url "https://github.com/sbstp/kubie/archive/v0.19.1.tar.gz"
-  sha256 "b52f0410ba123939c3b3a3b93b24ab42c1dd9308214725650d2f85cfd2f7f088"
+  url "https://github.com/sbstp/kubie/archive/v0.16.0.tar.gz"
+  sha256 "0c43848d201ee36c11ddb082a9d16604435c6190ac72f293e9f8f1ce62d20fa6"
   license "Zlib"
-  head "https://github.com/sbstp/kubie.git", branch: "master"
 
   livecheck do
     url :stable
@@ -12,14 +11,12 @@ class Kubie < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6ea5bad2c8f2b4b67c933805890bbcb0b8bc67865222f7ad92c812f4bd8c3bd8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd07420f0ac297a74d0e76e7cdb7863c53523b31667335c8e769aed6ae1da958"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb3ad3e70fe36aaaa745a68692bcd375bce688a3309d65dfa7c32ec8bae2a825"
-    sha256 cellar: :any_skip_relocation, ventura:        "4a84ec83cc955c56216784e857d2c50cc5c81ca16dbb2eeeb42f9a6a07d99c09"
-    sha256 cellar: :any_skip_relocation, monterey:       "d7f8a6a868b4333ff440881d15d960d1225ae507eb7e47b1ea47bd36929c5b4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f35a14d4bd3333ce20a81bdfe4adf1aaea9be0e2d5adab668b8256e23c15835e"
-    sha256 cellar: :any_skip_relocation, catalina:       "ce0e93aa80eda7ff518c0a44b015f4cebae48492d83bd43d5181dced1900123b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f386285ccf2df22e623bfa036d1f1fd328a28aa686cc6a3894fba770f39580b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "53d190ca715f75e49c9263e321affe72e8bd6af5519eb63fd9619dd97a230811"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9b259fbad773ba552bd0a89165085bdb63cd3fce450760aebccf9e5aa9636608"
+    sha256 cellar: :any_skip_relocation, monterey:       "d9a4abcc8ac31fbffb012211975ef64ffd8c022afc916899c1ee9788b12bf99f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "03762ab9517cc8ce3b7711608eefa92443dfd7f59f0ead356c78130fa5b6d1a9"
+    sha256 cellar: :any_skip_relocation, catalina:       "5b1745bd373e76bbc6098aadc55c20e5da118e14bcd8f7f33fc8a80cbfbd0bb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49ac2a0fee8f007c3c5bdf5ffbec01c22264b6843ac87bc0b840489ea0f2840d"
   end
 
   depends_on "rust" => :build
@@ -28,10 +25,10 @@ class Kubie < Formula
   def install
     system "cargo", "install", *std_cargo_args
     bash_completion.install "./completion/kubie.bash"
-    fish_completion.install "./completion/kubie.fish"
   end
 
   test do
+    mkdir_p testpath/".kube"
     (testpath/".kube/kubie-test.yaml").write <<~EOS
       apiVersion: v1
       clusters:
@@ -51,6 +48,8 @@ class Kubie < Formula
       - user:
         name: kubie-test-user
     EOS
+
+    assert_match "kubie #{version}", shell_output("#{bin}/kubie --version")
 
     assert_match "The connection to the server 0.0.0.0 was refused - did you specify the right host or port?",
       shell_output("#{bin}/kubie exec kubie-test kubie-test-namespace kubectl get pod 2>&1")

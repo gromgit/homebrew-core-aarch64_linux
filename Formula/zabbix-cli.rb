@@ -3,9 +3,10 @@ class ZabbixCli < Formula
 
   desc "CLI tool for interacting with Zabbix monitoring system"
   homepage "https://github.com/unioslo/zabbix-cli/"
-  url "https://github.com/unioslo/zabbix-cli/archive/2.3.1.tar.gz"
-  sha256 "1d6de0486a5cd6b4fdd53c35810bd14e423ed039ed7ad0865ea08f6082309564"
+  url "https://github.com/unioslo/zabbix-cli/archive/2.2.1.tar.gz"
+  sha256 "884ecd2a4a4c7f68a080bb7e0936dd208c813284ec3ed60b948ce90a1be7c828"
   license "GPL-3.0-or-later"
+  revision 2
   head "https://github.com/unioslo/zabbix-cli.git", branch: "master"
 
   livecheck do
@@ -14,41 +15,55 @@ class ZabbixCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "54d0f8f076a88e46ce0c7a46a95f7916208320b25acdd9d53c5cc883bb404d78"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a17c1846fbb86ed35ff45fe93afa0d68be89ba302bd95692223f9a5734b865d2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d50c80e8d4f1850ee8e4588404ad6e018fe538ee328a14b3f0567e2e08ff7109"
-    sha256 cellar: :any_skip_relocation, ventura:        "74f0c543d6a4d5510a844e44f8775da8386b5be5eb72cf15e896b3f10dd8ab44"
-    sha256 cellar: :any_skip_relocation, monterey:       "eb09b94bf7ae3692ee2bb80f2d6f9ee22e383895deccc56ba59c9930ff4386a9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eee58916c80f877ca81f7f978f8ef3d4db59f90437ced3dedf8dde77a1bf443b"
-    sha256 cellar: :any_skip_relocation, catalina:       "e695321a2879cd0a7169048c64bdea06c0c761d5dfc8bdbbfcfd565ea0747253"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1671d0a1d45f24959021a3df47fa01a2f62c7b6122df466d72805c063b4122a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "60b0cdb24333cf77e677f4a4c67e528a27138cdf0b24ea77b5474ab57ee18f73"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "60b0cdb24333cf77e677f4a4c67e528a27138cdf0b24ea77b5474ab57ee18f73"
+    sha256 cellar: :any_skip_relocation, monterey:       "76e5471117d67eb54bd07a336bbdd6a5781fe7330d3952af4464275d96b2467a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "76e5471117d67eb54bd07a336bbdd6a5781fe7330d3952af4464275d96b2467a"
+    sha256 cellar: :any_skip_relocation, catalina:       "76e5471117d67eb54bd07a336bbdd6a5781fe7330d3952af4464275d96b2467a"
+    sha256 cellar: :any_skip_relocation, mojave:         "76e5471117d67eb54bd07a336bbdd6a5781fe7330d3952af4464275d96b2467a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "724826e93d6e144ba29f7a406b6cf312337dbbf412f550918c2c4174c1b583e3"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
-  end
+  ## direct dependencies
 
-  resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
-  end
-
-  resource "idna" do
-    url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
-    sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+  resource "docutils" do
+    url "https://files.pythonhosted.org/packages/93/22/953e071b589b0b1fee420ab06a0d15e5aa0c7470eb9966d60393ce58ad61/docutils-0.15.2.tar.gz"
+    sha256 "a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/f5/4f/280162d4bd4d8aad241a21aecff7a6e46891b905a4341e7ab549ebaf7915/requests-2.23.0.tar.gz"
+    sha256 "b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"
+  end
+
+  ## indirect dependencies
+
+  resource "certifi" do
+    url "https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz"
+    sha256 "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"
+  end
+
+  resource "chardet" do
+    url "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz"
+    sha256 "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
+  end
+
+  resource "idna" do
+    url "https://files.pythonhosted.org/packages/cb/19/57503b5de719ee45e83472f339f617b0c01ad75cba44aba1e4c97c2b0abd/idna-2.9.tar.gz"
+    sha256 "7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/09/06/3bc5b100fe7e878d3dee8f807a4febff1a40c213d2783e3246edde1f3419/urllib3-1.25.8.tar.gz"
+    sha256 "87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
+  end
+
+  # Support python@3.10, remove with next release
+  patch do
+    url "https://github.com/unioslo/zabbix-cli/commit/656fdbbd6c4415b52f7ad42a29124b15387458de.patch?full_index=1"
+    sha256 "21d574e0d2500d140591c494e513d81552d5f7e259cc0084cc9fa0488532a55c"
   end
 
   def install
@@ -63,6 +78,6 @@ class ZabbixCli < Formula
     system bin/"zabbix-cli-init", "-z", "https://homebrew-test.example.com/"
     config = testpath/".zabbix-cli/zabbix-cli.conf"
     assert_predicate config, :exist?
-    assert_match "homebrew-test.example.com", config.read
+    assert_match "homebrew-test.example.com", File.read(config)
   end
 end

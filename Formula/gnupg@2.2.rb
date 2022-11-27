@@ -1,8 +1,8 @@
 class GnupgAT22 < Formula
   desc "GNU Pretty Good Privacy (PGP) package"
   homepage "https://gnupg.org/"
-  url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.40.tar.bz2"
-  sha256 "1164b29a75e8ab93ea15033300149e1872a7ef6bdda3d7c78229a735f8204c28"
+  url "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.34.tar.bz2"
+  sha256 "562a3350dcf66cb67c5825c67ff2c2904db1e30ec8e1d353adc14efba9abf43f"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,14 +11,12 @@ class GnupgAT22 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "29e32b17f03c4b318cdb346869fa1afb75cfce6a194f1fee12923707349aa913"
-    sha256 arm64_monterey: "2fc972a6690b60a0b7da63177cda161fd0eb97ee09fcbb9ed01909f704e506b5"
-    sha256 arm64_big_sur:  "5a393aaae5a88526982f86c300049bacadef7b66d0bb4d984ff0c2be8a5f1ae5"
-    sha256 ventura:        "3eaadc3d36c89b17e7a346ad3a3aee13d8c89f7bf21b4c7837b2acb5102551b2"
-    sha256 monterey:       "75731410dc3b38057fe2f62f5be5f6d7f1aef3cb17fbeeafb35ad9bdffa52a07"
-    sha256 big_sur:        "36c80b6ef3ce0c3ed6b5bfc65a8019effc0302ace77ced88a31cf463d755961a"
-    sha256 catalina:       "fef3446aee27be7a788e1047b442b3a084abd811471cf9ac94c82641f0703de7"
-    sha256 x86_64_linux:   "0bc244f7c6e2b63e13d34590910e564f2efccf350d9f75afee3c2362ab34d892"
+    sha256 arm64_monterey: "53ab35b6a092a7846d0fa8409f540f712d5b6d7044e0b0d8b762087e6c640ced"
+    sha256 arm64_big_sur:  "2037c66b74dfb1a2d7c6e30df4b19c10b7da5e8f338fd0bc5b433512dc6ac306"
+    sha256 monterey:       "0d476bc63d4f8defb02dc2b9b33f4112ef4fd16e3c19ac86ca9208cc74abc13b"
+    sha256 big_sur:        "e541cba8dac2fd43727e0119a7e0f6dd04c2a28888a791454cf44dddd1884c32"
+    sha256 catalina:       "84775ab011fd99aa15ceb4bee9f202307f3a40c340deec2e928ddcb18eec275b"
+    sha256 x86_64_linux:   "b6d822a10eacd0895226707ce62f5e2ddc9880a6ee618f46559c7ec452215933"
   end
 
   keg_only :versioned_formula
@@ -38,14 +36,6 @@ class GnupgAT22 < Formula
 
   on_linux do
     depends_on "libidn"
-  end
-
-  # Fixes a build failure without ldap.
-  # Committed upstream, will be in the next release.
-  # https://dev.gnupg.org/T6239
-  patch do
-    url "https://dev.gnupg.org/rGa5c3821664886ffffbe6a83aac088a6e0088a607?diff=1"
-    sha256 "41c633362f599fdc5a3d3b49f70831854ac881273aafbbc568ae4e87f4121782"
   end
 
   def install

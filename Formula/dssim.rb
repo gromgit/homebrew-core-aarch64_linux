@@ -1,18 +1,17 @@
 class Dssim < Formula
   desc "RGBA Structural Similarity Rust implementation"
   homepage "https://github.com/kornelski/dssim"
-  url "https://github.com/kornelski/dssim/archive/3.2.4.tar.gz"
-  sha256 "f58d834876ebcc8e5f21e94e0db42b173d2bea600642cbbbb6dab16a6b5d7537"
+  url "https://github.com/kornelski/dssim/archive/3.2.0.tar.gz"
+  sha256 "b671aec5b117adb6f9c636ef70ecafbd671caacf8b110098565c01bf5171118f"
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d4a216f56df26aff08e84ea6b81ec7761a79ccfd8ab140f0dd6fe62f389a183d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "152c13927b088e6f0ad1733e4540a6197a32dab7d674659cb966a95bda94316f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc115c42134e98b2b9fa537715a9af7b44bfc22de71cad41df6c3ae104be80bd"
-    sha256 cellar: :any_skip_relocation, monterey:       "3026cc94e32968aa407186fbb3406f844228e82fb5c84d20b6a58753c1d943f3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "20defb82713908472254c03c45b25e4eb224fd703e1bed428809d930cfe5c138"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1c5fdc878cf1eb50c934e1741ef86ddc70036bc389b01dd179a0ca339ce79d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b6adec880587fce1266c753dc41af3f237eddf9709d225b9dc36184d9474f8a1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "68ea1d7e64e07cbe5ffdcc22a38ac57d5552a32c79c52564f5e448dc9cc6b8aa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "967ad98b4e362da00167cad1d9091a1e3c74025f31fd373cd0be113066fdb6ef"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd24773eadbe47ca46c88e1afc73d1159eb29b165d315306e713bc2861dbae32"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2954d9685913deaedaf0e377952c884744c70067ae59d4ded16b787c499a475d"
+    sha256 cellar: :any_skip_relocation, catalina:       "7bb8eab77f3ee40640a4a324ce8e3d20b56af1bab91710b14ceaad8182fe9837"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81d4e2afdf0ac2eca9a9fff75d309c658d66b705155e0b951920d1d56b9f7e58"
   end
 
   depends_on "nasm" => :build

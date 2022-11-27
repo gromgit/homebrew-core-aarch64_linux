@@ -12,7 +12,6 @@ class Mp3unicode < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c9cab3295e2f0715c8427c98d17f8dc4384fe50c30cde51046623de82a32739c"
     sha256 cellar: :any,                 arm64_monterey: "e2f6b5eef63cc1163c65a34fe790a49d41293a35c5f693fd853f982b423141fb"
     sha256 cellar: :any,                 arm64_big_sur:  "a8e60d07b3170593185a88afd02c48bbef315ddcbae9cbfa0ef52541eea5348e"
     sha256 cellar: :any,                 monterey:       "01066562450ecbd024f9b326cdb22041a4e52205cef900bb6c8107f67253d422"
@@ -22,6 +21,7 @@ class Mp3unicode < Formula
     sha256 cellar: :any,                 high_sierra:    "5d288104d6bf3c0bdce26b509f29b49adba281ebcf1eb713a578298cec4b1305"
     sha256 cellar: :any,                 sierra:         "4d8a82928bc851fc314a6c8f57a3897d6f75df65aad84e79b451783d217ebd1d"
     sha256 cellar: :any,                 el_capitan:     "e9db3c9529d5358f83bb67d5966c6b508851f27a3bc61d5212b674d620a03a7e"
+    sha256 cellar: :any,                 yosemite:       "56c77d872d7adda53f68661145a5b372ecf64ef0284181a7ecd9b56997f14c74"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "35961520ec6d4a22ed9a64bfa6b8878f8d6a991870fd5fa2a2e4a79ffd1fc13d"
   end
 

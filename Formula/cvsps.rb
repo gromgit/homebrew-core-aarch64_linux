@@ -3,7 +3,6 @@ class Cvsps < Formula
   homepage "http://www.catb.org/~esr/cvsps/"
   url "http://www.catb.org/~esr/cvsps/cvsps-3.13.tar.gz"
   sha256 "5f078a6e02c394f663893751f128caf643fe00a30b559e87db6f45190c623799"
-  license "GPL-2.0-only"
 
   bottle do
     rebuild 1
@@ -18,7 +17,7 @@ class Cvsps < Formula
 
   # http://www.catb.org/~esr/cvsps/
   # Deprecation warning: this code has been end-of-lifed by its maintainer. Use cvs-fast-export instead.
-  disable! date: "2022-07-31", because: :deprecated_upstream
+  deprecate! date: "2013-12-11", because: :deprecated_upstream
 
   depends_on "asciidoc"
   depends_on "docbook"

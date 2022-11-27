@@ -1,20 +1,18 @@
 class Xh < Formula
   desc "Friendly and fast tool for sending HTTP requests"
   homepage "https://github.com/ducaale/xh"
-  url "https://github.com/ducaale/xh/archive/refs/tags/v0.17.0.tar.gz"
-  sha256 "31a944b1932fb785a191932944ff662a33ad99724cb5bc260acdaf821fb2e088"
+  url "https://github.com/ducaale/xh/archive/refs/tags/v0.16.0.tar.gz"
+  sha256 "d6ec84977da567dd36a4c59d624dc1e2b1c77a21e2b0a10e463216120be8112d"
   license "MIT"
   head "https://github.com/ducaale/xh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c132e2860dc243963d76084a6239efaa4e9b6223fe66fb585829fb8a91025d5a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d61902a6895bbeae9b9c2a3dcb8d1c8d4b06dfaebe4944489560c0b849b742d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "479a24e7e0e1da17ea1748bbbbd06ac80f6c676df39ed4267bfe50ab370bd4ca"
-    sha256 cellar: :any_skip_relocation, ventura:        "fa9120582a5726dd651a67ba937c8be974a60f06223c253d1d387ccda1b8c10d"
-    sha256 cellar: :any_skip_relocation, monterey:       "bb41f5acdc9aa1803405415cd9899db8f463c854e4b4cca2a7a8b3a4fe0d25aa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b5c1ad60fca17aa9b6629cef945f00da342dd4d837c9e866ddaea5ac51e1b3b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "bfddbb660e997acea4a4185b75b00474e0cf30bbb1b3f7f6c287263f9ced8986"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a7459afd19edcd704db82dae3c3acef47df8236fa7d49865cb857abec4e37aa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0249aacec0f8c4a1e8d8b72d674356ed12b603a26602a92b77b542aa825615b7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "235db6cadf881787e40e64b0da0addcd4f374bc6fd51b571f3121a6cd171f8f3"
+    sha256 cellar: :any_skip_relocation, monterey:       "c1f302ed2adad8f0ae61c16721ac39593515423c1c54ebcdfbeece58b167a0cd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e709d9d7f99ec917202995b0f8942153a0ac9c0ace4ba91dfa919885efa01f90"
+    sha256 cellar: :any_skip_relocation, catalina:       "58964f23fb620c8fd182a007ffa987cb9329c33c0823ff18d32224e374f369f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d32b0bd2e304c6895ccd2295823a8f1ce4189f436a2a931721f50b96a7915ff"
   end
 
   depends_on "rust" => :build

@@ -1,12 +1,14 @@
 class Jmxterm < Formula
   desc "Open source, command-line based interactive JMX client"
   homepage "https://docs.cyclopsgroup.org/jmxterm"
-  url "https://github.com/jiaqi/jmxterm/releases/download/v1.0.4/jmxterm-1.0.4-uber.jar"
-  sha256 "ce3e78c732a8632f084f8114d50ca5022cef4a69d68a74b45f5007d34349872b"
+  url "https://github.com/jiaqi/jmxterm/releases/download/v1.0.2/jmxterm-1.0.2-uber.jar"
+  sha256 "3a8a7cf99d89a3f46fcf3bcfe9bb4838d7778a10730e0983a258edc765fede5c"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "afe466c4ad8752e59e66da6b83f02c7d772aca26a5f0fcd4d1c5df2a27e92c70"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "be1cdf19cb1f7ca3fe0b5a19b41622e57eda0e4e2343c0468ea7cfb88ce628d3"
   end
 
   depends_on "openjdk"

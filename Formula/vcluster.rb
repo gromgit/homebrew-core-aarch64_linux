@@ -2,20 +2,18 @@ class Vcluster < Formula
   desc "Creates fully functional virtual k8s cluster inside host k8s cluster's namespace"
   homepage "https://www.vcluster.com"
   url "https://github.com/loft-sh/vcluster.git",
-      tag:      "v0.12.3",
-      revision: "397d9942f6f05ba7ca1dc9d507f26c8e33cd36b4"
+      tag:      "v0.7.1",
+      revision: "dc0ff6f96e9c96fe2caa77e79c2dffc921b4fd49"
   license "Apache-2.0"
   head "https://github.com/loft-sh/vcluster.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7b66ddb35fbfbd3748bc579a6e7bcc150a46191561250ef618a88ed794b87b84"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "80d8611bed2c1ca5794bcee585d2af2d585215c52508a6238db48a6ea9d86160"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "38251ee9876db32b10d763dcdd86f24bbe15ba21ca3f27222bae74de7082f422"
-    sha256 cellar: :any_skip_relocation, ventura:        "803a68f9afc5cbf0dc81c02e6d0dbfa2f45669877f505ed4438ab2d91eb94d39"
-    sha256 cellar: :any_skip_relocation, monterey:       "5641eb19d7854cb75d3aff26603e51721f920e3811ea97e1cebbe48d0e5afea7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c02f8ea6b39e314844a0c2d643725fc666ecd43b553f6fb0aa8a6291f1e9aa51"
-    sha256 cellar: :any_skip_relocation, catalina:       "6939a5da214b63d733649678a4d4c208c8d2be0bca82bda16b6918a8c57a3a92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "105bbdb3025ef4cb23f27510788bc5ea5081733f72cc5faa5d2ceacb33ec8fa0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c27bd7a4c291f49c80d1e1aed409d5d0def7661006f3dfeec65f43e82c6ee7a4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46e19e4c7cb6f7f2d202372e8940b5c5c5634aafde2d7329daea81b4d44c7ec8"
+    sha256                               monterey:       "c240fe5ede657520c3399e857c584ea1dbbce3fab3bd172a487b86a53a33c1e5"
+    sha256                               big_sur:        "ac23160dd80a21a808c25ea429b8267ccbb31b5ff5e1d36cbc8086992a3ef52b"
+    sha256                               catalina:       "014767796058fff1733ddef7c376078f5e9a7bafe498dd30afa263025f5fa40d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c4bf886db30e223f4314abbb4f2192da961fb817cde8d008af3addb66309be39"
   end
 
   depends_on "go" => :build
@@ -30,17 +28,18 @@ class Vcluster < Formula
       -X main.version=#{version}
     ]
     system "go", "build", "-mod", "vendor", *std_go_args(ldflags: ldflags), "./cmd/vclusterctl/main.go"
-    generate_completions_from_executable(bin/"vcluster", "completion")
+    (zsh_completion/"_vcluster").write Utils.safe_popen_read(bin/"vcluster", "completion", "zsh")
+    (bash_completion/"vcluster").write Utils.safe_popen_read(bin/"vcluster", "completion", "bash")
   end
 
   test do
     help_output = "vcluster root command"
     assert_match help_output, shell_output("#{bin}/vcluster --help")
 
-    create_output = "there is an error loading your current kube config " \
-                    "(invalid configuration: no configuration has been provided, " \
-                    "try setting KUBERNETES_MASTER environment variable), " \
-                    "please make sure you have access to a kubernetes cluster and the command " \
+    create_output = "there is an error loading your current kube config "\
+                    "(invalid configuration: no configuration has been provided, "\
+                    "try setting KUBERNETES_MASTER environment variable), "\
+                    "please make sure you have access to a kubernetes cluster and the command "\
                     "`kubectl get namespaces` is working"
     assert_match create_output, shell_output("#{bin}/vcluster create vcluster -n vcluster --create-namespace", 1)
   end

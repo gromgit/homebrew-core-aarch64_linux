@@ -1,20 +1,14 @@
 class Kind < Formula
   desc "Run local Kubernetes cluster in Docker"
   homepage "https://kind.sigs.k8s.io/"
-  url "https://github.com/kubernetes-sigs/kind/archive/v0.17.0.tar.gz"
-  sha256 "056171a47e6fa0e7f52d009dd52bdeac30c517566921807f83b3f6ce47fe3be4"
+  url "https://github.com/kubernetes-sigs/kind/archive/v0.12.0.tar.gz"
+  sha256 "cd1d09921b3c8a0f58c6423e5706be0c6e556f0c3d2b9e62f42be59263b209bb"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/kind.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b1d3e59049dfd7a6ab5e8ef7baf6ccd9f93dd3bd5492a80e560a16d338e1d340"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "af67631ffd2e24b85a73435b216f32cc5e3906e81b075d2a54946b56ac579d91"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "19503a9164ee7c76337818c5d8e6fd96c961db7a7e6b8af4b8ed05b0d8208cf7"
-    sha256 cellar: :any_skip_relocation, ventura:        "de12182aba6efb376d26c3bcfb42763004d03378db8f4473a5ecf33c17e16a67"
-    sha256 cellar: :any_skip_relocation, monterey:       "f91bf1e4ff9baf086f7f0f851e93cf9dbbb24361f38e26572bb889daaee0378f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "20675a8cfd76846dd9d17ee88f4ac522eb5d145cde782f9a952e096b9a921c74"
-    sha256 cellar: :any_skip_relocation, catalina:       "d66b9a9eb2a952af2c7782ae545dc4917a2f20bada059aa1200a50126c36c1ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67799fa122f7044f4501e50da12d83b27016e43a26c5ee77c516931d1ab754d7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kind"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f365441d709ef1897246ae69126631f2534556b2d3de77cedf169015fb3c3d03"
   end
 
   depends_on "go" => :build
@@ -23,7 +17,17 @@ class Kind < Formula
   def install
     system "go", "build", *std_go_args
 
-    generate_completions_from_executable(bin/"kind", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read("#{bin}/kind", "completion", "bash")
+    (bash_completion/"kind").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read("#{bin}/kind", "completion", "zsh")
+    (zsh_completion/"_kind").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read("#{bin}/kind", "completion", "fish")
+    (fish_completion/"kind.fish").write output
   end
 
   test do

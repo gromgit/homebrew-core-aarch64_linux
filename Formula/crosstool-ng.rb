@@ -12,10 +12,8 @@ class CrosstoolNg < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f6223cf7c6803e398858cc426bb25480e679517180d9d98f27621bc4e07e2fbd"
     sha256 cellar: :any,                 arm64_monterey: "3ed8b07aa9c0250edf408d7fd4dc79c02b7cd40a847730f4bd9eb152779d6385"
     sha256 cellar: :any,                 arm64_big_sur:  "652c574f396d1be709de7ac74bc39943d173a9a69992004e0c1f84c0694a4347"
-    sha256 cellar: :any,                 ventura:        "8889a40fdd9de06b65ebdf84954ab81c04ef1912f852a9832a12c661c6e24fba"
     sha256 cellar: :any,                 monterey:       "fc72ddfe1f31d0de37248f49686ddc6ef4caef94c0574367c0fae00cf65189f0"
     sha256 cellar: :any,                 big_sur:        "be3beb87b1beabdf57468e41cb7604fd22b3623c27e2d027af02a68dc1a78b7f"
     sha256 cellar: :any,                 catalina:       "4b0bb05c4f7770ebe17085b4e34c45125989daa01e734ef6fc1d9269e0e6eb38"
@@ -38,6 +36,7 @@ class CrosstoolNg < Formula
 
   uses_from_macos "flex" => :build
   uses_from_macos "gperf" => :build
+  uses_from_macos "texinfo" => :build
   uses_from_macos "unzip" => :build
 
   on_macos do
@@ -49,23 +48,15 @@ class CrosstoolNg < Formula
     depends_on "make"
   end
 
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
-
   def install
     system "./bootstrap" if build.head?
 
     ENV["BISON"] = Formula["bison"].opt_bin/"bison"
     ENV["M4"] = Formula["m4"].opt_bin/"m4"
-    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3.10"
-
-    if OS.mac?
-      ENV["MAKE"] = Formula["make"].opt_bin/"gmake"
-      ENV.append "LDFLAGS", "-lintl"
-    else
-      ENV.append "CFLAGS", "-I#{Formula["ncurses"].include}/ncursesw"
-    end
+    ENV["MAKE"] = Formula["make"].opt_bin/"gmake" if OS.mac?
+    ENV["PYTHON"] = Formula["python@3.10"].opt_bin/"python3"
+    ENV.append "LDFLAGS", "-lintl" if OS.mac?
+    ENV.append "CFLAGS", "-I#{Formula["ncurses"].include}/ncursesw" unless OS.mac?
 
     system "./configure", "--prefix=#{prefix}"
 
@@ -73,7 +64,11 @@ class CrosstoolNg < Formula
     system "make"
     system "make", "install"
 
-    inreplace [bin/"ct-ng", pkgshare/"paths.sh"], Superenv.shims_path/"make", "make" unless OS.mac?
+    unless OS.mac?
+      [bin/"ct-ng", pkgshare/"paths.sh"].each do |file|
+        inreplace file, Superenv.shims_path/"make", "make"
+      end
+    end
   end
 
   test do

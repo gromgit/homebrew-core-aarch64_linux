@@ -6,7 +6,8 @@ class Cromwell < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2aacb5acac2682c8437112b65935980ead16dfe5344ad0a02395ed9fe7484ce7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cromwell"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b9ffe10209897cc8bf8ea9d8693592b114745892812b9e50fffe3111929fab2b"
   end
 
   head do

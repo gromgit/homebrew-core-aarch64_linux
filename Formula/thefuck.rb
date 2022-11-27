@@ -9,38 +9,39 @@ class Thefuck < Formula
   head "https://github.com/nvbn/thefuck.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c0de3ebd0766c538d124f74270a91730c8e3e083656e61f09b6e3edb837caf0b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b3c20013e623b39c5bca1fd71e44b200f7e31a2d7f5a377bc92b4593f806aff9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d94b1731b44013b526e005137ce28d06484966c41b99e20003d5d40fbbc753a1"
-    sha256 cellar: :any_skip_relocation, ventura:        "27254159fefb93d553c8f2941396061950c946354350bbac1d98396fb5771ad7"
-    sha256 cellar: :any_skip_relocation, monterey:       "ac8a42c8a3f407106e49da365beaa4f03337e025907bcb69812d28cf1c66850e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "788c8f21aec08c8df7cf09ca2be2b5069657af6e9dd1476b7d3b675451549976"
-    sha256 cellar: :any_skip_relocation, catalina:       "125e506e6b470358180f6fe49cb45aa99617442a1649fb7a9db18c8aafbd0c89"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa50d5f202ecb6c751b1f8da9c2e943992bfc182bb6dfaa8b4ffdb46514e0225"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f9fa76d74a44429573406c73c980758fe04ce61aa5f63db02e6ef96a328d377"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90a50f2fc6f42e39f50cbcc80f9aee8dbdcbc723a5ffddd4056f13a81116a17b"
+    sha256 cellar: :any_skip_relocation, monterey:       "a78a2680cfd6bc2e7f37c85df30be3fd205114e2a5aeb053694b6a548f3e9cdf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bc619209e5299d1484a4206bcb94b2f06b694ab8d4d87e33e1a76375f1f15094"
+    sha256 cellar: :any_skip_relocation, catalina:       "67e58d863f81a0bfdca5f0cb851fe14973b907929bafa6daeff298a26839af14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "974acef3f4f486b3f173d0b3b2823f64d6155b1d097c48e5278b487cbacd42ca"
   end
 
-  depends_on "python@3.11"
-  depends_on "six"
+  depends_on "python@3.10"
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
-    sha256 "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
+    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
   end
 
   resource "decorator" do
-    url "https://files.pythonhosted.org/packages/66/0c/8d907af351aa16b42caae42f9d6aa37b900c67308052d10fdce809f8d952/decorator-5.1.1.tar.gz"
-    sha256 "637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330"
+    url "https://files.pythonhosted.org/packages/92/3c/34f8448b61809968052882b830f7d8d9a8e1c07048f70deb039ae599f73c/decorator-5.1.0.tar.gz"
+    sha256 "e59913af105b9860aa2c8d3272d9de5a56a4e608db9a2f167a8480b323d529a7"
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/de/eb/1c01a34c86ee3b058c556e407ce5b07cb7d186ebe47b3e69d6f152ca5cc5/psutil-5.9.3.tar.gz"
-    sha256 "7ccfcdfea4fc4b0a02ca2c31de7fcd186beb9cff8207800e14ab66f79c773af6"
+    url "https://files.pythonhosted.org/packages/47/b6/ea8a7728f096a597f0032564e8013b705aa992a0990becd773dcc4d7b4a7/psutil-5.9.0.tar.gz"
+    sha256 "869842dbd66bb80c3217158e629d6fceaecc3a3166d3d1faee515b05dd26ca25"
   end
 
   resource "pyte" do
-    url "https://files.pythonhosted.org/packages/9f/60/442cdc1cba83710770672ef61e186be8746f419a12b2c84ba36e9a96276d/pyte-0.8.1.tar.gz"
-    sha256 "b9bfd1b781759e7572a6e553c010cc93eef58a19d8d1590446d84c19b1b097b0"
+    url "https://files.pythonhosted.org/packages/66/37/6fed89b484c8012a0343117f085c92df8447a18af4966d25599861cd5aa0/pyte-0.8.0.tar.gz"
+    sha256 "7e71d03e972d6f262cbe8704ff70039855f05ee6f7ad9d7129df9c977b5a88c5"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "wcwidth" do

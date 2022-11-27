@@ -1,20 +1,19 @@
 class Srt < Formula
   desc "Secure Reliable Transport"
   homepage "https://www.srtalliance.org/"
-  url "https://github.com/Haivision/srt/archive/v1.5.1.tar.gz"
-  sha256 "af891e7a7ffab61aa76b296982038b3159da690f69ade7c119f445d924b3cf53"
+  url "https://github.com/Haivision/srt/archive/v1.4.4.tar.gz"
+  sha256 "93f5f3715bd5bd522b8d65fc0d086ef2ad49db6a41ad2d7b35df2e8bd7094114"
   license "MPL-2.0"
   head "https://github.com/Haivision/srt.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a8f0a85c0e017f661d07dda9b6a039e67ae213fdb73837cc0d075d1f83ff10a7"
-    sha256 cellar: :any,                 arm64_monterey: "53f96b0133e3829e7ed06a5221facff13b9a0b6f0aa785e96e5a124dec83802e"
-    sha256 cellar: :any,                 arm64_big_sur:  "2cf874a22d85df40da98de8fb6ce690511ff68071043784d6088ade342b9d9cf"
-    sha256 cellar: :any,                 ventura:        "0ac312b97e03d8c6e6df9715e8a798db08767b2491b65a8c689573ffb5d58494"
-    sha256 cellar: :any,                 monterey:       "9cb143f5b2a095225e6d7901f9cd65636024c0800fc6fb42c5d3879d6fb2459d"
-    sha256 cellar: :any,                 big_sur:        "1ed0443edb116e2592a431640dbace7c1db78dab82abbc3a90a8a5a20f2b89d8"
-    sha256 cellar: :any,                 catalina:       "c53d6c05a25606cda6d7f9ca670a84c7e4700fa072b20e70ddcf375a97761d6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88bce985d54b923213427ced84cf5e2b6f6d87eb243505107b101b19f93e3b0d"
+    sha256 cellar: :any,                 arm64_monterey: "c4abdf93a43db5fc8be19f44e921dd28c249bdc560fcd9321b41616de8c20617"
+    sha256 cellar: :any,                 arm64_big_sur:  "7f19f11cb0131e7fe95bf612906b40e00fc8c941f80d294eac2f80850c88ced9"
+    sha256 cellar: :any,                 monterey:       "7531eebaf81a48b44393a5f4e90142db3b560636d5490deb4eedcd79591f108e"
+    sha256 cellar: :any,                 big_sur:        "1feec9a3449db0914403420eddd731dc17bd2df8fce2b0471227c79e8e7688f9"
+    sha256 cellar: :any,                 catalina:       "078b246649eed71dc3eed9d8d3e2d71b2ce025ecf5933fdc33956f6582251b96"
+    sha256 cellar: :any,                 mojave:         "7308578774fd1cdfed6c250044bf013e2b188c19d866ba114fe02c505ae92303"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84d86cd1b27fe5f6dd097e29ceb63d83aec156c2358e2b21cf00c48435d96a96"
   end
 
   depends_on "cmake" => :build

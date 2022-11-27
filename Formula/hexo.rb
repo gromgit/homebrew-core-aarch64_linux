@@ -3,19 +3,18 @@ require "language/node"
 class Hexo < Formula
   desc "Fast, simple & powerful blog framework"
   homepage "https://hexo.io/"
-  url "https://registry.npmjs.org/hexo/-/hexo-6.3.0.tgz"
-  sha256 "133c1b7ce9a9b0f703da7bd0201d0ec4ad49f5f610c9b008da6df2ec30f3f4ba"
+  url "https://registry.npmjs.org/hexo/-/hexo-6.1.0.tgz"
+  sha256 "c3cbaa3a4d72ccadf1125762895c2714e8474099c9da73c60bd766f17f92fac4"
   license "MIT"
   head "https://github.com/hexojs/hexo.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6910c3128a0ffdcb7239a1fe6aeb9344e6b6ea8d9a8500291fa5423179ae45f7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e8c8eb3ef1a60934230d70b1195c6bf1d708be8ae1fb7f1922f31d3e8796cf35"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e8c8eb3ef1a60934230d70b1195c6bf1d708be8ae1fb7f1922f31d3e8796cf35"
-    sha256 cellar: :any_skip_relocation, monterey:       "a5daf9b48cf25528279debdd2b1ad37baaa6d08cfd6e18e212a60a68dc3f35ef"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a5daf9b48cf25528279debdd2b1ad37baaa6d08cfd6e18e212a60a68dc3f35ef"
-    sha256 cellar: :any_skip_relocation, catalina:       "a5daf9b48cf25528279debdd2b1ad37baaa6d08cfd6e18e212a60a68dc3f35ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95e726055fa242838fa081dce26d2ff0441d1aeef2ddd6b5065b04961441d625"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "51cfa7221ff46fb99c3251d5404b883624f8bb05208a62c50dd08201c47bf6c9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "51cfa7221ff46fb99c3251d5404b883624f8bb05208a62c50dd08201c47bf6c9"
+    sha256 cellar: :any_skip_relocation, monterey:       "bed14d2c4ad5ef76e1f88ee2442aaedab6637f5eab782ec31d7d40df1938ae97"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bed14d2c4ad5ef76e1f88ee2442aaedab6637f5eab782ec31d7d40df1938ae97"
+    sha256 cellar: :any_skip_relocation, catalina:       "bed14d2c4ad5ef76e1f88ee2442aaedab6637f5eab782ec31d7d40df1938ae97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3eeee251eac6927419ca643102c4faccaa1091360cc9dd6f6f190c39ff6913e"
   end
 
   depends_on "node"

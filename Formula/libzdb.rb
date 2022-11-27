@@ -1,9 +1,10 @@
 class Libzdb < Formula
   desc "Database connection pool library"
   homepage "https://tildeslash.com/libzdb/"
-  url "https://tildeslash.com/libzdb/dist/libzdb-3.2.3.tar.gz"
-  sha256 "a1957826fab7725484fc5b74780a6a7d0d8b7f5e2e54d26e106b399e0a86beb0"
+  url "https://tildeslash.com/libzdb/dist/libzdb-3.2.2.tar.gz"
+  sha256 "d51e4e21ee1ee84ac8763de91bf485360cd76860b951ca998e891824c4f195ae"
   license "GPL-3.0-only"
+  revision 2
 
   livecheck do
     url :homepage
@@ -11,23 +12,31 @@ class Libzdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "d9a1e85054f21d735dc85853908b1685df18539775bcc7be208ed089b68e7715"
-    sha256 cellar: :any,                 arm64_monterey: "e8e69ee7caa822faeefbbd3beb5e42d60796daae8e9865d351b35a09d30eab23"
-    sha256 cellar: :any,                 arm64_big_sur:  "bd1c26eb89919f26a72458310340981f2360444facb8a06007f831cdde8969c3"
-    sha256 cellar: :any,                 ventura:        "4f337503e65d099fee98d7cccf111ab51d45bbaf9ea8ad4bd7ee8f39adf59a2b"
-    sha256 cellar: :any,                 monterey:       "fb27c254646707f49b4c220493a904d52c166b8432e29ac89df1c2c0bdb1842a"
-    sha256 cellar: :any,                 big_sur:        "503b5ac11a438ee0ce95b4a905575061f6710948e1fbb0d25e8c1a2b555d1bb8"
-    sha256 cellar: :any,                 catalina:       "9de6c1b21c609053ff01c54f5595dcc7185d9b7a6b6ecf8d65076ef7c9f93d3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6dcf7be43843a73041a75abfbb79fa2cdb72a82d3356e7413fd9b12ab40ac3ea"
+    sha256 cellar: :any,                 arm64_monterey: "a984ed34d47824121c308a122c397e06429fa80db31c5511de5dbd38a5a12ed7"
+    sha256 cellar: :any,                 arm64_big_sur:  "82e9b70755a848d0d9386c42ff2e771a2acdad6d2497251d6dd9d0b96a26edf9"
+    sha256 cellar: :any,                 monterey:       "406b423b65940127d9d6ba6c7d20c5926be12a1445539e40e376e746e19323e5"
+    sha256 cellar: :any,                 big_sur:        "75c8ff67e93358dc8733bc0505b7a2a7f18be1da23bdbf1c19e97de60c03cf08"
+    sha256 cellar: :any,                 catalina:       "4ae11691a08964b1c88aaded3dc7d9c7b5ac47cf2389fa790e76aa48c874497e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abb34c1e09a5fbac337d3eaa3b722bf51824ae2a811712e29b2f2dfc01444f52"
   end
 
-  depends_on "libpq"
   depends_on macos: :high_sierra # C++ 17 is required
   depends_on "mysql-client"
   depends_on "openssl@1.1"
+  depends_on "postgresql"
   depends_on "sqlite"
 
-  fails_with gcc: "5" # C++ 17 is required
+  on_linux do
+    depends_on "gcc" # C++ 17 is required
+  end
+
+  fails_with gcc: "5"
+
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
 
   def install
     system "./configure", *std_configure_args

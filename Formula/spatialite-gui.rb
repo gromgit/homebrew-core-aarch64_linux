@@ -4,7 +4,6 @@ class SpatialiteGui < Formula
   url "https://www.gaia-gis.it/gaia-sins/spatialite-gui-sources/spatialite_gui-2.1.0-beta1.tar.gz"
   sha256 "ba48d96df18cebc3ff23f69797207ae1582cce62f4596b69bae300ca3c23db33"
   license "GPL-3.0-or-later"
-  revision 1
 
   livecheck do
     url "https://www.gaia-gis.it/gaia-sins/spatialite-gui-sources/"
@@ -12,14 +11,12 @@ class SpatialiteGui < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cb7ec546fad4b883d21d24a13aff2b7d8d942d0a5ecb76f90256b2f869981a79"
-    sha256 cellar: :any,                 arm64_monterey: "73f1e25197c6c4827cbf233a4632b8085ef0058979a750d80aef5c11eca76f80"
-    sha256 cellar: :any,                 arm64_big_sur:  "5918728fd8b0d18f0ea692111483c0d661a7dab1dca4af8e8d5c6ec2434cbf0b"
-    sha256 cellar: :any,                 ventura:        "c3ae66f5b32065a16d659c67d051acb16533252c62722b4b651d7d56a4d9e71d"
-    sha256 cellar: :any,                 monterey:       "004c0a7798340bb9481e79d4370c33534c2ddd557c191ebb26c141bf8e878636"
-    sha256 cellar: :any,                 big_sur:        "a42be0d23841e5886582fbe07ea770d3e8b21feab1ffe3aedf46f651b7ae3ed0"
-    sha256 cellar: :any,                 catalina:       "65e8e797b4af25572ee1e8ddba79ca07bdc8f6c7498c58a35e40ac1d0164e870"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c89aa8042df193ac0f017adc0eb54e043c4c5c338b5a09b2f270054a52e76dc1"
+    sha256 cellar: :any,                 arm64_monterey: "188f81b97802e6efecab2e732286bb55a4921583f9530b23d5704018af066163"
+    sha256 cellar: :any,                 arm64_big_sur:  "9e93bc5d9e5abb0b4ee0014b8bcb31e9c53c061275b67ba8f3a7b2154bf7874f"
+    sha256 cellar: :any,                 monterey:       "53a54a20347a6ed3187ab6fe828e2fb18db29b46a47e01eb2927d373592541da"
+    sha256 cellar: :any,                 big_sur:        "00a4e76ad5042b7ed6585f3d04c257a2cc5d99dbd03be3cee9dffd5d2bd762e3"
+    sha256 cellar: :any,                 catalina:       "b92d965c653a495c1f98f69a69630311ea0cca6ec2fbd3f48fef844b5b8a70f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6bbb4df133233357685337ce89840274ea01d61da52c8af8f91732417a356ee"
   end
 
   depends_on "pkg-config" => :build
@@ -38,7 +35,7 @@ class SpatialiteGui < Formula
   depends_on "sqlite"
   depends_on "virtualpg"
   depends_on "webp"
-  depends_on "wxwidgets"
+  depends_on "wxwidgets@3.0"
   depends_on "xz"
   depends_on "zstd"
 
@@ -47,6 +44,8 @@ class SpatialiteGui < Formula
   uses_from_macos "zlib"
 
   def install
+    wxwidgets = Formula["wxwidgets@3.0"]
+
     # Link flags for sqlite don't seem to get passed to make, which
     # causes builds to fatally error out on linking.
     # https://github.com/Homebrew/homebrew/issues/44003
@@ -55,7 +54,7 @@ class SpatialiteGui < Formula
     ENV.prepend "CFLAGS", "-I#{sqlite.opt_include}"
 
     system "./configure", "--prefix=#{prefix}",
-                          "--with-wxconfig=#{Formula["wxwidgets"].opt_bin}/wx-config"
+           "--with-wxconfig=#{wxwidgets.opt_bin}/wx-config-#{wxwidgets.version.major_minor}"
     system "make", "install"
   end
 end

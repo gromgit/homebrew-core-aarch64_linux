@@ -1,43 +1,42 @@
 class GeocodeGlib < Formula
   desc "GNOME library for gecoding and reverse geocoding"
-  homepage "https://gitlab.gnome.org/GNOME/geocode-glib"
-  url "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz"
-  sha256 "2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa"
+  homepage "https://developer.gnome.org/geocode-glib"
+  url "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz"
+  sha256 "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "810645cd7021c31a2b79a367a46341a119235b6edd9762d520f2e4742d85a152"
-    sha256 cellar: :any, arm64_monterey: "cd7f32a773538d43539177540e21bee914a32fab1ac0497e9867cf49bc7926fe"
-    sha256 cellar: :any, arm64_big_sur:  "a87fb2ae45e7bc56fd06e61f0260217506aaa6fadd4040305b424fbc3e292ac8"
-    sha256 cellar: :any, monterey:       "657fcab9602371c260494510436cecf83e37f7526e2d96fd9ee87b133fd73547"
-    sha256 cellar: :any, big_sur:        "46f8b7fb5ae054a58b11bf54b7869335fa7b29b82875dbe4f14b9aa50b43c7cb"
-    sha256 cellar: :any, catalina:       "f4715dbb2ed9bb363a61f0e40c885f3218262d87bf1a22a1f341c6acdab3cf56"
-    sha256               x86_64_linux:   "705672b2c649c9dad5061d9d010d6faa106f67a278e90eab7c6b6a7a8f66e9ca"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "21cca31313c96d334bf20a5db535619d0114128474f2f38bb09e4bbf422b721d"
+    sha256 cellar: :any,                 monterey:      "d25cc02e785d8f10bedca31db01bf00c1cf0f2553f8ab4cac8266ad02fc7ed9e"
+    sha256 cellar: :any,                 big_sur:       "41432c280b4a1244a1a55466059170cd470d5e86fddf1cf3ca7bc4f5f7d14960"
+    sha256 cellar: :any,                 catalina:      "a0bdd13a694d1f4ee94de206de6fc03ad01df82ce3ca7ea7850e274eb86772b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5087451ab0d29991b1760b263802a81a2497f5a157f40ac931570c2146de42a8"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "pkg-config" => [:build, :test]
-  depends_on "glib"
+  depends_on "pkg-config" => :build
   depends_on "gtk+3"
   depends_on "json-glib"
-  depends_on "libsoup"
+  depends_on "libsoup@2"
 
   def install
+    ENV.prepend_path "PKG_CONFIG_PATH", Formula["libsoup@2"].opt_lib/"pkgconfig"
+    ENV.prepend_path "XDG_DATA_DIRS", Formula["libsoup@2"].opt_share
     ENV.prepend_path "XDG_DATA_DIRS", HOMEBREW_PREFIX/"share"
 
-    system "meson", *std_meson_args, "build",
-                    "-Denable-installed-tests=false",
-                    "-Denable-gtk-doc=false",
-                    "-Dsoup2=false"
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Denable-installed-tests=false", "-Denable-gtk-doc=false", ".."
+      system "ninja"
+      system "ninja", "install"
+    end
   end
 
   def post_install
-    system Formula["gtk+3"].opt_bin/"gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
+    system Formula["gtk+3"].opt_bin/"gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/gnome"
   end
 
   test do
@@ -49,8 +48,24 @@ class GeocodeGlib < Formula
         return 0;
       }
     EOS
-    pkg_config_flags = shell_output("pkg-config --cflags --libs geocode-glib-2.0").chomp.split
-    system ENV.cc, "test.c", "-o", "test", *pkg_config_flags
+    gettext = Formula["gettext"]
+    glib = Formula["glib"]
+    flags = %W[
+      -I#{gettext.opt_include}
+      -I#{glib.opt_include}/glib-2.0
+      -I#{glib.opt_lib}/glib-2.0/include
+      -I#{include}/geocode-glib-1.0
+      -D_REENTRANT
+      -L#{gettext.opt_lib}
+      -L#{glib.opt_lib}
+      -L#{lib}
+      -lgeocode-glib
+      -lgio-2.0
+      -lglib-2.0
+      -lgobject-2.0
+    ]
+    flags << "-lintl" if OS.mac?
+    system ENV.cc, "test.c", "-o", "test", *flags
     system "./test"
   end
 end

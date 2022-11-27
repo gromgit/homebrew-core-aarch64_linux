@@ -7,15 +7,11 @@ class Rpg < Formula
   head "https://github.com/rtomayko/rpg.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "47a98b77d2c445d34d87f93b109634f195e50b3261ffe367b61536e5d97c806f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "2ba9343282027a7a1d3c6422920bf0a52c4e78fd11698781228c6f01a07eba9e"
-    sha256 cellar: :any_skip_relocation, catalina:      "d1d4031e3e641523f759f3c2dc69fed0cffdfa537639c1f9686ddc7763b93df9"
-    sha256 cellar: :any_skip_relocation, mojave:        "fab3d032e629a4d20add14e9693919a074286990a16eb6fa8772180fc60730ee"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "f1c7e5d997a1f0ceb1cca6b1067408912ff8e14522fb411530649f0689f9d042"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rpg"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "24e1ca4e723408127ac9032dcb7098d6154790c54de410e6e433807513056205"
   end
 
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2017-11-08", because: :repo_archived
 
   def install
     system "./configure", "--prefix=#{prefix}"

@@ -4,17 +4,16 @@ class Pcl < Formula
   url "https://github.com/PointCloudLibrary/pcl/archive/pcl-1.12.1.tar.gz"
   sha256 "dc0ac26f094eafa7b26c3653838494cc0a012bd1bdc1f1b0dc79b16c2de0125a"
   license "BSD-3-Clause"
-  revision 5
+  revision 2
   head "https://github.com/PointCloudLibrary/pcl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "db905e5caafb02202bad4040e6eddc68ac05161bfdc0b70087cbcb494ce5ce4c"
-    sha256 cellar: :any,                 arm64_monterey: "6687c8dac6bdd6faa881976ed214ec152b3a0beff80e6ca319593e48596f5b60"
-    sha256 cellar: :any,                 arm64_big_sur:  "53c0306e754ba84f17baaa7f0678fb1fb12526a1b14e8a67e375bcf4adf2217f"
-    sha256 cellar: :any,                 monterey:       "40865069b9e57ca4e94ac7942de14d9e24cc1c579d8615ffd0fd3ea1790093f0"
-    sha256 cellar: :any,                 big_sur:        "8503e59c81bd03b92fd071230055056bf0c0a00176df9f578083cbd0ae58de14"
-    sha256 cellar: :any,                 catalina:       "0f48589d767fe05f68541af49177d24b4db69477ad1e3903182f3be7cd761c1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "348fb05442ac71557463d3b8f56de4607ed2ae982c244506983856cf607e0b3e"
+    sha256 cellar: :any,                 arm64_monterey: "506ae8aa44c231fee8cf4d066ea8e887d79c715061b3350c77d1525821e156b9"
+    sha256 cellar: :any,                 arm64_big_sur:  "70314d35cc85b9cc971a03c8e7b24c3ce5fd15034863aada8b43516243523151"
+    sha256 cellar: :any,                 monterey:       "30ab2097f58b8eb99de71640a110776d519339bc636de51d2b9f9ac083ff50b1"
+    sha256 cellar: :any,                 big_sur:        "d2bf3b0c51fb5214f079f1816f86bf944472c689a5ce7383277f67d05f178a04"
+    sha256 cellar: :any,                 catalina:       "f4f7c9ae6c3d46c43af1b56454a75a5ae293edd628bb7d841efc6a15512f59f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad772e3f05d40a6314c6d6539036b0ba0e92a2719e4e5ec676e94ee897b19b2b"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -24,22 +23,18 @@ class Pcl < Formula
   depends_on "eigen"
   depends_on "flann"
   depends_on "glew"
+  depends_on "libomp"
   depends_on "libpcap"
   depends_on "libusb"
   depends_on "qhull"
   depends_on "qt@5"
   depends_on "vtk"
 
-  on_macos do
-    depends_on "libomp"
+  on_linux do
+    depends_on "gcc"
   end
 
   fails_with gcc: "5" # qt@5 is built with GCC
-
-  patch do
-    url "https://github.com/PointCloudLibrary/pcl/commit/e964409b4accfd9070093dbc3c9cf5fb216cd877.patch?full_index=1"
-    sha256 "78c77388e6c82105d028d5e42662a37c497c35982622a6f8bc875b1c411ab375"
-  end
 
   def install
     args = std_cmake_args + %w[
@@ -57,7 +52,6 @@ class Pcl < Formula
       -DWITH_CUDA:BOOL=OFF
       -DWITH_DOCS:BOOL=OFF
       -DWITH_TUTORIALS:BOOL=OFF
-      -DBoost_USE_DEBUG_RUNTIME:BOOL=OFF
     ]
 
     args << if build.head?
@@ -118,9 +112,8 @@ class Pcl < Formula
       # revision without bumping this formula's revision as well
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["eigen"].opt_share/"pkgconfig"
       ENV.delete "CPATH" # `error: no member named 'signbit' in the global namespace`
-      args = std_cmake_args + ["-DQt5_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5"]
-      args << "-DCMAKE_BUILD_RPATH=#{lib}" if OS.linux?
-      system "cmake", "..", *args
+      system "cmake", "..", "-DQt5_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5",
+                            *std_cmake_args
       system "make"
       system "./pcd_write"
       assert_predicate (testpath/"build/test_pcd.pcd"), :exist?

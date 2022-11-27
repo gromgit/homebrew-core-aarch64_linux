@@ -1,21 +1,17 @@
 class Sonobuoy < Formula
   desc "Kubernetes component that generates reports on cluster conformance"
   homepage "https://github.com/vmware-tanzu/sonobuoy"
-  url "https://github.com/vmware-tanzu/sonobuoy/archive/v0.56.12.tar.gz"
-  sha256 "feab53ede72d71f96c3934b85e64cc0a2a490bd5772de1cdd4166ff52a0c95bb"
+  url "https://github.com/vmware-tanzu/sonobuoy/archive/v0.56.4.tar.gz"
+  sha256 "5c3175d3aca408ff8e4e77b716b95ca0be0859fe600912919d3897cdbbf77bb2"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d08df0e55fcc88ed437ce6984a10b379d9623be7b16c38a13aea29a29265ecf3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "56c1907194cc55fb13076301ce76a6d64eae68a84fce6cb3195d2c2eb380bd3e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00bde29adcfc21151c2424374027f5fa8e659deabaae96fac2893b317a48322a"
-    sha256 cellar: :any_skip_relocation, monterey:       "909e55c0ac2c65eb5daaf3806bd0643379ed093e2811b95ffb4a7ed1a8397bee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a5ced62a636e877be78b28ed7eaaf081e93b88f0a24e908614f8e824e03a0b43"
-    sha256 cellar: :any_skip_relocation, catalina:       "ad6ca3e70a9b6d183972bdfc45d1612e1969e34c38dabcf3237eaefe33ebcf96"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4f644c3bff042b99f076d3b590ab44f2e14ed89ab93c0571d29583afedee5e6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sonobuoy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "943c84876c45961db7b694b77069863e0c8669a58376824385bfab7afc270334"
   end
 
-  depends_on "go" => :build
+  # Segfaults on Go 1.18 - try test it again when updating this formula.
+  depends_on "go@1.17" => :build
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/vmware-tanzu/sonobuoy/pkg/buildinfo.Version=v#{version}")

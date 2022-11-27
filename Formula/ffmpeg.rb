@@ -1,8 +1,8 @@
 class Ffmpeg < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.xz"
-  sha256 "619e706d662c8420859832ddc259cd4d4096a48a2ce1eefd052db9e440eef3dc"
+  url "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
+  sha256 "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   license "GPL-2.0-or-later"
@@ -14,16 +14,15 @@ class Ffmpeg < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "28ac4fc1f2e7a38d5729e391586ac5f2f20af6f11c1322d152e762810878717c"
-    sha256 arm64_monterey: "68649bcac737113215191cf50a564c3fe3ed63648cdad397677095ebdecee2cf"
-    sha256 arm64_big_sur:  "11b544745ec71743bf524ccc23c32413c982462bc34f81b78cbf931eaaf005bf"
-    sha256 ventura:        "6cebf1863c6728c7a35e4bff989d1a50339592acc79a542d4a5962f7e56fa1e0"
-    sha256 monterey:       "79dc05514d77053ced330da6826bb8b6fb9b447b891587844e586b968b0fa451"
-    sha256 big_sur:        "2ef35dd30b1687b0abc1443bcfb8d9b661391fb2ef43f78003c0c26f299f54ae"
-    sha256 catalina:       "28e56206623d22a4bc589793f0462a9d95ad021fc1567a1eb9c5357f394615ab"
-    sha256 x86_64_linux:   "ea00042bb37e8657093e10b9798d0ccacd02c0660069d301d9e61a92d505a682"
+    sha256 arm64_monterey: "766f68ee9b87731b8b2b9a67140af5b7a4178542c83c2aa4790b3ec4d66951db"
+    sha256 arm64_big_sur:  "76abad2fdf37c88c02e6ff3c7c5dc5131f2cb1261e62f41903f10f9b93312932"
+    sha256 monterey:       "7f44e9040938f7b74484ceb8dca79bd8f31d30844255f074ae84ca905ce3d745"
+    sha256 big_sur:        "ab8be194324b7326c384f1db87f1687aaf6424ca9d69cdffcd227a385c66fca3"
+    sha256 catalina:       "f371c60da0c9aea8d818d9523dbf770088baa4bd98f4afd5bdace00689f5e2db"
+    sha256 x86_64_linux:   "4f032e8c0d38e0c1259ee3881682ececad8d3e74d99a75c3694f4afc1b54b1c5"
   end
 
+  depends_on "nasm" => :build
   depends_on "pkg-config" => :build
   depends_on "aom"
   depends_on "dav1d"
@@ -64,12 +63,8 @@ class Ffmpeg < Formula
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "alsa-lib"
     depends_on "libxv"
-  end
-
-  on_intel do
-    depends_on "nasm" => :build
+    depends_on "gcc" # because rubbernand is compiled with gcc
   end
 
   fails_with gcc: "5"
@@ -126,6 +121,15 @@ class Ffmpeg < Formula
     # Needs corefoundation, coremedia, corevideo
     args << "--enable-videotoolbox" if OS.mac?
     args << "--enable-neon" if Hardware::CPU.arm?
+
+    # Replace hardcoded default VMAF model path
+    unless build.head?
+      %w[doc/filters.texi libavfilter/vf_libvmaf.c].each do |f|
+        inreplace f, "/usr/local/share/model", HOMEBREW_PREFIX/"share/libvmaf/model"
+        # Since libvmaf v2.0.0, `.pkl` model files have been deprecated in favor of `.json` model files.
+        inreplace f, "vmaf_v0.6.1.pkl", "vmaf_v0.6.1.json"
+      end
+    end
 
     system "./configure", *args
     system "make", "install"

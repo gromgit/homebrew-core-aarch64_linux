@@ -1,9 +1,10 @@
 class Imake < Formula
   desc "Build automation system written for X11"
   homepage "https://xorg.freedesktop.org"
-  url "https://xorg.freedesktop.org/releases/individual/util/imake-1.0.9.tar.xz"
-  sha256 "72de9d278f74d95d320ec7b0d745296f582264799eab908260dbea0ce8e08f83"
+  url "https://xorg.freedesktop.org/releases/individual/util/imake-1.0.8.tar.bz2"
+  sha256 "b8d2e416b3f29cd6482bcffaaf19286d32917a164d07102a0e531ccd41a2a702"
   license "MIT"
+  revision 4
 
   livecheck do
     url "https://xorg.freedesktop.org/releases/individual/util/"
@@ -11,18 +12,18 @@ class Imake < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "9cd2947492b3f29a500e1a45bd3721de23944ac43f3deb7fdb8ae5a9931a9acf"
-    sha256 arm64_monterey: "0cd31c02ff18e5ce5561bebaea0096b04a78f7b761f2994f022c65bbbb4379dd"
-    sha256 arm64_big_sur:  "9238c3ea5a96d566c6b531637cae7c07d2aca46f7bbaba67ffcd8421bbd5fe6f"
-    sha256 monterey:       "90ec4cbb2593c65b1ed2ae3908f610e864581a634d20e78874354e408f7f8c63"
-    sha256 big_sur:        "61f4aa90ea524c8d5891213400075ebd496462f48aa1caf1b8e7ec3279504f6f"
-    sha256 catalina:       "c3ec401e08a4ed98d9d36b9536964db97f9073dc73b77148ff12ac2239e3a6da"
-    sha256 x86_64_linux:   "fc7e1e0901a6cfa77aef555b843df784aeaff81ebdd27a5cd866b3818389f1ec"
+    sha256 arm64_monterey: "0e07192ab4d74a10ada2e6e1e7fbeabaa6c8d719fc9011841e421def7159e013"
+    sha256 arm64_big_sur:  "5e76cebc3734d39273587f3d2d286b15bd1e869b03af84589987f9236062a1b3"
+    sha256 monterey:       "0ed72c99749bdad72126577b8a8b09bc48a36757a12ba52834953af3636cba32"
+    sha256 big_sur:        "13f4455b0065bdd06ef93f2be612884dbe9c2196834c0a9ad7d6c67d350759de"
+    sha256 catalina:       "3baa9a70823b7b57ba43df65e54baf7dbd99e6b1615d7b15e22ac8af8746794f"
+    sha256 mojave:         "f71005738d8026816e0407da56a98f06ac96f1ab7dc5e28b155b6a4b39942f46"
+    sha256 x86_64_linux:   "d7d3a81f1cc361af9ad5e8408eb7592d346886eca0a6f81eeec80087131e6151"
   end
 
   depends_on "pkg-config" => :build
   depends_on "xorgproto" => :build
-  depends_on "tradcpp"
+  depends_on "gcc"
 
   resource "xorg-cf-files" do
     url "https://xorg.freedesktop.org/releases/individual/util/xorg-cf-files-1.0.6.tar.bz2"
@@ -33,7 +34,8 @@ class Imake < Formula
     ENV.deparallelize
 
     # imake runtime is broken when used with clang's cpp
-    cpp_program = Formula["tradcpp"].opt_bin/"tradcpp"
+    gcc_major_ver = Formula["gcc"].any_installed_version.major
+    cpp_program = Formula["gcc"].opt_bin/"cpp-#{gcc_major_ver}"
     (buildpath/"imakemdep.h").append_lines [
       "#define DEFAULT_CPP \"#{cpp_program}\"",
       "#undef USE_CC_E",
@@ -59,6 +61,7 @@ class Imake < Formula
   test do
     # Use pipe_output because the return code is unimportant here.
     output = pipe_output("#{bin}/imake -v -s/dev/null -f/dev/null -T/dev/null 2>&1")
-    assert_match "#{Formula["tradcpp"].opt_bin}/tradcpp", output
+    gcc_major_ver = Formula["gcc"].any_installed_version.major
+    assert_match "#{Formula["gcc"].opt_bin}/cpp-#{gcc_major_ver}", output
   end
 end

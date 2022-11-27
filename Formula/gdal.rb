@@ -1,9 +1,10 @@
 class Gdal < Formula
   desc "Geospatial Data Abstraction Library"
   homepage "https://www.gdal.org/"
-  url "http://download.osgeo.org/gdal/3.5.3/gdal-3.5.3.tar.xz"
-  sha256 "d32223ddf145aafbbaec5ccfa5dbc164147fb3348a3413057f9b1600bb5b3890"
+  url "https://download.osgeo.org/gdal/3.4.3/gdal-3.4.3.tar.xz"
+  sha256 "02a27b35899e1c4c3bcb6007da900128ddd7e8ab7cd6ccfecf338a301eadad5a"
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://download.osgeo.org/gdal/CURRENT/"
@@ -11,14 +12,12 @@ class Gdal < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "5fe9853e5738e720137daa5367ad9a5adc309c26e4b69540a392cddac724ef51"
-    sha256 arm64_monterey: "0645f21547eb53b2de3971170c3dd49419df63231550c7883c947b98823f382b"
-    sha256 arm64_big_sur:  "47a1269b914e32d1dbc0cafdd1fc8cd80edfdee77038b5be1e6f120b7b4e3dcf"
-    sha256 ventura:        "73544c529a28a7898455e7529b7921384a81d3529dd3e315894ab5396ee9026a"
-    sha256 monterey:       "5795c03eea68f75a099211e57f60f0329d7f2529feb00b0c6571af7d20456504"
-    sha256 big_sur:        "27a15e477e70f85c42634e9ddb70ca8029fbb77c0b2288a63af96eda75cbdc87"
-    sha256 catalina:       "7e1ca068bd95ed4dc7bd340859e2f8ff561e5e3b0cef8dea63cda33d878351e7"
-    sha256 x86_64_linux:   "d0db8531157df4d93d2f3366c7059e70b6eeb3ab75c498ca72e763fbd7501deb"
+    sha256 arm64_monterey: "78aec6224fd17b55b733c900c9c188c5ec66fb55c801528af80565f6e26dca72"
+    sha256 arm64_big_sur:  "16e08308265036cab56d1616cf9e927bc2fa8b67be7697ca69894bae98cce762"
+    sha256 monterey:       "f3109664e495afedc8463a20efc5517c321d2da599ff21e9c75f69854dc19cd4"
+    sha256 big_sur:        "80043980b1a1d64b4e341dc7685dd2d2f31a0d628b018209b1d863aadda3dad1"
+    sha256 catalina:       "31683c809d2aff41cba686b93c4f71390dda75c4a30c40533f29b3a00fa885f4"
+    sha256 x86_64_linux:   "c6b4edb2b444fad196debf16417346e7022306cbdccd1ff66081e785ae8cc5d3"
   end
 
   head do
@@ -34,7 +33,7 @@ class Gdal < Formula
   depends_on "geos"
   depends_on "giflib"
   depends_on "hdf5"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "json-c"
   depends_on "libdap"
   depends_on "libgeotiff"
@@ -47,9 +46,9 @@ class Gdal < Formula
   depends_on "numpy"
   depends_on "openjpeg"
   depends_on "pcre2"
-  depends_on "poppler"
+  depends_on "poppler-qt5"
   depends_on "proj"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "sqlite"
   depends_on "unixodbc"
   depends_on "webp"
@@ -61,16 +60,13 @@ class Gdal < Formula
 
   on_linux do
     depends_on "util-linux"
+    depends_on "gcc"
   end
 
   conflicts_with "avce00", because: "both install a cpl_conv.h header"
   conflicts_with "cpl", because: "both install cpl_error.h"
 
   fails_with gcc: "5"
-
-  def python3
-    "python3.10"
-  end
 
   def install
     args = [
@@ -93,7 +89,7 @@ class Gdal < Formula
       "--with-geos=#{Formula["geos"].opt_prefix}/bin/geos-config",
       "--with-geotiff=#{Formula["libgeotiff"].opt_prefix}",
       "--with-gif=#{Formula["giflib"].opt_prefix}",
-      "--with-jpeg=#{Formula["jpeg-turbo"].opt_prefix}",
+      "--with-jpeg=#{Formula["jpeg"].opt_prefix}",
       "--with-libjson-c=#{Formula["json-c"].opt_prefix}",
       "--with-libtiff=#{Formula["libtiff"].opt_prefix}",
       "--with-pg=yes",
@@ -152,7 +148,7 @@ class Gdal < Formula
 
     if OS.mac?
       args << "--with-curl=/usr/bin/curl-config"
-      args << (Hardware::CPU.arm? ? "--without-opencl" : "--with-opencl")
+      args << "--with-opencl"
     else
       args << "--with-curl=#{Formula["curl"].opt_bin}/curl-config"
 
@@ -162,28 +158,29 @@ class Gdal < Formula
       ENV.append "CFLAGS", "-I#{buildpath}/gnm"
     end
 
+    ENV.append "CXXFLAGS", "-std=c++17" # poppler-qt5 uses std::optional
     system "./configure", *args
     system "make"
     system "make", "install"
 
     # Build Python bindings
     cd "swig/python" do
-      system python3, *Language::Python.setup_install_args(prefix, python3)
+      system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
     end
-    bin.install buildpath.glob("swig/python/scripts/*.py")
+    bin.install Dir["swig/python/scripts/*.py"]
 
     system "make", "man" if build.head?
     # Force man installation dir: https://trac.osgeo.org/gdal/ticket/5092
     system "make", "install-man", "INST_MAN=#{man}"
     # Clean up any stray doxygen files
-    bin.glob("*.dox").map(&:unlink)
+    Dir.glob("#{bin}/*.dox") { |p| rm p }
   end
 
   test do
     # basic tests to see if third-party dylibs are loading OK
-    system bin/"gdalinfo", "--formats"
-    system bin/"ogrinfo", "--formats"
+    system "#{bin}/gdalinfo", "--formats"
+    system "#{bin}/ogrinfo", "--formats"
     # Changed Python package name from "gdal" to "osgeo.gdal" in 3.2.0.
-    system python3, "-c", "import osgeo.gdal"
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import osgeo.gdal"
   end
 end

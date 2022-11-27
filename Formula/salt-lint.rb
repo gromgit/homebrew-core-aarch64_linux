@@ -8,23 +8,24 @@ class SaltLint < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "87fc6f52e39cca360c96a70a329080dae9beed83737c8b6f9127962bde43ae25"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5854dd0330baaf0f6d0d26fe4e0910932164de550fc5759b1d2832f6aa646a51"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a9f38d3c5d28634fb1543ba4ba6f61c1e97719e2bed569132968d532260cbf44"
-    sha256 cellar: :any_skip_relocation, ventura:        "d22336a46b4e08fbb17f7220a5bbf145c5429ecd59fafe29b42c216770878a61"
-    sha256 cellar: :any_skip_relocation, monterey:       "23df453884270f756913358f4b7e1d9fc6b08a92e72d180a9646060e0458376e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "05150cd861ee2d091d7a006e2026adec3a08c6d4f0b35515916ee911c9853acb"
-    sha256 cellar: :any_skip_relocation, catalina:       "74394670e09ff7757149be51d66049b0d0b3d8cb2f2dfe3c8fe2cbb9f517911f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "68913a999bbfa7d99438aa023989b8d453e8f32ebba446075261372bf98e06d6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "964a0f02571d42456a49e09084f75a3b090d5645f531996f9017e60af5322ca9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c18cb846fbbe635871412c188b4dad2d5c762591c318ac474515f40e1d4718e7"
+    sha256 cellar: :any_skip_relocation, monterey:       "7d39c07a2ef7d773021b00361df48ed58a427f4beaf69c8581611a0fa518dc4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e38a29094410d7174a601a95e06f0f03804f29f668bdde7eaac4fb983777a76e"
+    sha256 cellar: :any_skip_relocation, catalina:       "eb2c0c1dd65e120575a0e7fd0240bd9276da4ecbb3f30a80514ee19e8579f4b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7095f4b7a420845d908dd64fd6748faa10db2f85d5fce66b79ffd62d807afefe"
   end
 
-  depends_on "python@3.11"
-  depends_on "pyyaml"
+  depends_on "python@3.10"
 
   resource "pathspec" do
-    url "https://files.pythonhosted.org/packages/24/9f/a9ae1e6efa11992dba2c4727d94602bd2f6ee5f0dedc29ee2d5d572c20f7/pathspec-0.10.1.tar.gz"
-    sha256 "7ace6161b621d31e7902eb6b5ae148d12cfd23f4a249b9ffb6b9fee12084323d"
+    url "https://files.pythonhosted.org/packages/f6/33/436c5cb94e9f8902e59d1d544eb298b83c84b9ec37b5b769c5a0ad6edb19/pathspec-0.9.0.tar.gz"
+    sha256 "e564499435a2673d586f6b2130bb5b95f04a3ba06f81b8f895b651a3c76aabb1"
+  end
+
+  resource "PyYAML" do
+    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
+    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
   end
 
   def install

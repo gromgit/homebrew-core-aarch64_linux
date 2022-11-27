@@ -1,53 +1,61 @@
 class BulkExtractor < Formula
   desc "Stream-based forensics tool"
   homepage "https://github.com/simsong/bulk_extractor/wiki"
+  url "https://downloads.digitalcorpora.org/downloads/bulk_extractor/bulk_extractor-1.5.5.tar.gz"
+  sha256 "297a57808c12b81b8e0d82222cf57245ad988804ab467eb0a70cf8669594e8ed"
   license "MIT"
-
-  stable do
-    url "https://github.com/simsong/bulk_extractor/releases/download/v2.0.0/bulk_extractor-2.0.0.tar.gz"
-    sha256 "6b3c7d36217dd9e374f4bb305e27cbed0eb98735b979ad0a899f80444f91c687"
-
-    # Fix --disable-rar build. Remove in the next release.
-    patch do
-      url "https://github.com/simsong/bulk_extractor/commit/1a9fde225aad0fe2ffd634bdc741b4c65586297c.patch?full_index=1"
-      sha256 "1c3cd2c87bae46d3163fe526def879d0e057fb700b3909362b8356be2ba2318e"
-    end
-  end
+  revision 3
 
   livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url "https://downloads.digitalcorpora.org/downloads/bulk_extractor/"
+    regex(/href=.*?bulk_extractor[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "0e4c5fa631e3536a5cda7b5b2a477e8dd84b622ef253012afbb82fc22cac5165"
-    sha256 cellar: :any,                 arm64_monterey: "32ae091e7841c49c69054b14641d8f15b7491a756e551cb55fc869987e33456f"
-    sha256 cellar: :any,                 arm64_big_sur:  "d42fc09b77698d26fe4a35f20351eb36198f00137ea2061759416e2c45c79d99"
-    sha256 cellar: :any,                 ventura:        "1cd9cafb5452a5898174407298a736715c765b22bd7dab81883411d4e2f1ab68"
-    sha256 cellar: :any,                 monterey:       "e68a559ff002d7db26b525160507f1378b8138b6105b8e37490d6cb51f29dda3"
-    sha256 cellar: :any,                 big_sur:        "078510f412106492ddc667f09790e97bd3970e8957bf68b55f3c287c840bf1fb"
-    sha256 cellar: :any,                 catalina:       "7c59c4f7040000abbd02e67eaa7d5cf26bed57105505312bbe8820357f479c4a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c522598f34ceb123e976e75a994f5ba2c05ac05729c025c021f6ee10a1dba0b3"
+    sha256 cellar: :any, arm64_monterey: "827ffd8be9d94c8d73eafee14be12527f55502fcc17177cc2388b57da50bcdef"
+    sha256 cellar: :any, arm64_big_sur:  "0d798b0a0ab7796d05d91a2fbbda7b959d76026a1360c69e9d360ead265a3ac1"
+    sha256               monterey:       "e16b6e0276beff6059f39035e15d42a38343dba8cd157138c3a1495372e4f86f"
+    sha256               big_sur:        "4207941ab88e766e1a0fd55031585c52cea1c27ac528b7db1496a714fbeda5c4"
+    sha256               catalina:       "6acada1995761f484993f407f33014260f8c16596381172b405fe84eef206e06"
+    sha256               mojave:         "da01b2d5208c362fa10baa1a3b1d7fd018f4886eddb068107b9786c36bbff480"
+    sha256               high_sierra:    "621af8efc0671cd2905f4f077c9cfef8ac2493cf65421fb2973228c2b651c24e"
   end
 
-  head do
-    url "https://github.com/simsong/bulk_extractor.git", branch: "main"
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+  depends_on "boost"
+  depends_on "openssl@1.1"
+
+  # Upstream commits for OpenSSL 1.1 compatibility in dfxm:
+  # https://github.com/simsong/dfxml/commits/master/src/hash_t.h
+  # Three commits are picked:
+  #   - https://github.com/simsong/dfxml/commit/8198685d
+  #   - https://github.com/simsong/dfxml/commit/f2482de7
+  #   - https://github.com/simsong/dfxml/commit/c3122462
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/78bb67a8/bulk_extractor/openssl-1.1.diff"
+    sha256 "996fd9b3a8d1d77a1b22f2dbb9d0e5c501298d2fd95ad84a7ea3234d51e3ebe2"
   end
-
-  depends_on "openssl@3"
-
-  uses_from_macos "flex" => :build
-  uses_from_macos "expat"
-  uses_from_macos "ncurses"
-  uses_from_macos "zlib"
 
   def install
-    system "./bootstrap.sh" if build.head?
-    # Disable RAR to avoid problematic UnRAR license
-    system "./configure", *std_configure_args, "--disable-rar", "--disable-silent-rules"
+    # Source contains to copies of dfxml, keep them in sync
+    # (because of the patch). Remove in next version.
+    rm_rf "plugins/dfxml"
+    cp_r "src/dfxml", "plugins"
+
+    # Regenerate configure after applying the patch.
+    # Remove in next version.
+    system "autoreconf", "-f"
+
+    # configure cannot find boost libs on Apple Silicon without them being specified
+    args = %W[
+      --disable-dependency-tracking
+      --prefix=#{prefix}
+      --with-boost=#{Formula["boost"].opt_prefix}
+    ]
+
+    system "./configure", *args
     system "make"
     system "make", "install"
 
@@ -62,7 +70,7 @@ class BulkExtractor < Formula
     input_file.write "https://brew.sh\n(201)555-1212\n"
 
     output_dir = testpath/"output"
-    system bin/"bulk_extractor", "-o", output_dir, input_file
+    system "#{bin}/bulk_extractor", "-o", output_dir, input_file
 
     assert_match "https://brew.sh", (output_dir/"url.txt").read
     assert_match "(201)555-1212", (output_dir/"telephone.txt").read

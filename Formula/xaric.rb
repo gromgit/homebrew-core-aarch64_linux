@@ -11,36 +11,22 @@ class Xaric < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "38088b4ae12add10906e733b77f6fc7c7ce0482af1bbd71e6e03db6351c934b7"
-    sha256 arm64_monterey: "448f66a8156857d38d4050fc9f062d8a6bc9f9267b85a063acc776095635bc19"
-    sha256 arm64_big_sur:  "9f38a153d2c80701856c14b0bbdc776c9d50ab1f0930b668f2e3f7c377b4ecac"
-    sha256 ventura:        "b46f72b6bad580eeb6583455155d8427e8c2812a5e87fe88975fdf5261e10982"
-    sha256 monterey:       "d71030b64a334132691fae5896e5924428138fa2de5bed1634cbcf22d625bedf"
-    sha256 big_sur:        "98a7bcefda0b4262da3bfbb45fe6985fae25db911cc60ea33b503be4e4598bed"
-    sha256 catalina:       "74bf2f31d52f8057a22fd38858314668cd62b89adad5a299209890a717718856"
-    sha256 x86_64_linux:   "633be739d85e31a8d4e7af822a11a8c07f30c0491035fb76cd68f3b81145940b"
+    sha256 arm64_monterey: "0679cb45a723581f21bd4295225c92e01a303155e772e07ad598303d8d3acff0"
+    sha256 arm64_big_sur:  "9f89bb7adc21f31a7721a5b3cc0586820cc59e50e82f6316ef74f2dbce1c512f"
+    sha256 monterey:       "914abc6071ee13379b8238fac06093d1e35277d1b36365ad346bc75dc7ee688c"
+    sha256 big_sur:        "4c9e9e9d0ef2e7f5c8bb8996ef72220f2315e756e1a4c9c8e23869b8e0abc84e"
+    sha256 catalina:       "5438f46156ba60b6658275aefdda7617296691d949f7dd0f85dcdac1225d254e"
+    sha256 mojave:         "e8c40aad03fec80e9566a1bb9c7100cbb3a4e0fca3dbc9f79f65271d3e29631f"
+    sha256 x86_64_linux:   "407b5776d290e11fa9dc958d03d7035c623ff5876bc2f2fa37de4462f9f6547d"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   uses_from_macos "ncurses"
 
-  # Fix ODR violations (waiting for the PR accepted)
-  patch do
-    url "https://github.com/laeos/xaric/commit/a6fa3936918098fd00ebcfb845360a6110ac4505.patch?full_index=1"
-    sha256 "353ef73a5a408a876f99d4884a7d5c74d06759c60a786ef7c041ca7d8e0abcd3"
-  end
-
-  # Fix ODR violations pt.2 (waiting for the PR accepted)
-  patch do
-    url "https://github.com/laeos/xaric/commit/c365b700a5525cf0a38091c833096c179ee2e40f.patch?full_index=1"
-    sha256 "9e82b5df90b96b096a3556afc3520e7b3e8d649eed4b8b42be622bc428f0ca73"
-  end
-
   def install
     system "./configure", *std_configure_args,
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}"
+                          "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}"
     system "make", "install"
   end
 

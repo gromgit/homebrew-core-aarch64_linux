@@ -1,21 +1,18 @@
 class Weggli < Formula
   desc "Fast and robust semantic search tool for C and C++ codebases"
   homepage "https://github.com/googleprojectzero/weggli"
-  url "https://github.com/googleprojectzero/weggli/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "12fde9a0dca2852d5f819eeb9de85c4d11c5c384822f93ac66b2b7b166c3af78"
+  url "https://github.com/googleprojectzero/weggli/archive/refs/tags/v0.2.3.tar.gz"
+  sha256 "240ccf2914533d7c2114901792240b95a6b632432ddd91d1fe3bbb060e010322"
   license "Apache-2.0"
   head "https://github.com/googleprojectzero/weggli.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b85863bb8393ee053190a070ec0fcc44d7d7c78709df4f50e4811301edcf7652"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1d71e7a726a9745ad22a4a7db9beec29730d0147b49088614a4dda3ad16da59f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7035dc61b7193c31af0c5e50e655b73b219e67accb597eb937f8bcada03e770b"
-    sha256 cellar: :any_skip_relocation, ventura:        "b2ec4a783dad5f1169dc0b1f70ecb6038632297e82ffea4e70c94d07ec1a1c7f"
-    sha256 cellar: :any_skip_relocation, monterey:       "58fd6b690d5a4a5a92660d701c2e6627e9e9076a5c935e24298d2123227ce723"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f4f54dbc53220583652199f660a9cf93abcb084042b5e6a9744cd6fe5fdefb95"
-    sha256 cellar: :any_skip_relocation, catalina:       "7b448b48f07b5666060ac479e17315929c0cac62da574a9a0807728e189231ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "070a5c12e89cdbd218bb7a07903f58718bbd83abeb6dfeb58f6b8d7cdd1077ff"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0944ab09e4cac0f09bfe25748caa10d83d99de52d1379fc30d64d7c22b87a08e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "39e53596e47f0ea171008c7f8c12de2f8e14ae134425cfcbbb1d1ae75698b778"
+    sha256 cellar: :any_skip_relocation, monterey:       "95c818831ee4ef72ada7b4b316454cb46d4345809a2501ef985472508765888f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2269a1b9996695a50e8c494018a424bb9ceb9cfd060610bd30feb1b7b8fa92a3"
+    sha256 cellar: :any_skip_relocation, catalina:       "a9b54765d5adda4ac03351babe93312e959212b7ebf38987f788855cbae73503"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8a29e869828ffb19877f1c760a308b53b58fa81e6a62aea80f9dbc0b23fc106"
   end
 
   depends_on "rust" => :build

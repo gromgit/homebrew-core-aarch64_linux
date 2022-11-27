@@ -1,10 +1,9 @@
 class Ldc < Formula
   desc "Portable D programming language compiler"
   homepage "https://wiki.dlang.org/LDC"
-  url "https://github.com/ldc-developers/ldc/releases/download/v1.30.0/ldc-1.30.0-src.tar.gz"
-  sha256 "fdbb376f08242d917922a6a22a773980217fafa310046fc5d6459490af23dacd"
+  url "https://github.com/ldc-developers/ldc/releases/download/v1.29.0/ldc-1.29.0-src.tar.gz"
+  sha256 "d0c066eb965467625d9c5e75c00c583451b9ffa363601f9e37275ca8a8aea140"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/ldc-developers/ldc.git", branch: "master"
 
   livecheck do
@@ -13,38 +12,31 @@ class Ldc < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "83bf917f2b4222fd6fac4714e70d1be4386af4f39056105dd9931d119ae8c5e8"
-    sha256 arm64_monterey: "51fa3cac2b7a1cf24ccd2513ac717558bad15ab0bf372d77f9e533a6e206a5e6"
-    sha256 arm64_big_sur:  "44edf489e8c3cc251e5aaaa54500b68048f403a8bcf921ab15e1a08a309d14e9"
-    sha256 ventura:        "62396546a21e87c04fa42a24868add3d998cbca969ee2641af2c14f7db30754e"
-    sha256 monterey:       "06b057c83bfc5915fdf4ce3e5ce0c9769324a2540616174adde6b39b5840c43a"
-    sha256 big_sur:        "ec17a74f6430156728ecc45e79c51ff3537b95cb124b1ca33713a15bf634c250"
-    sha256 catalina:       "68722090b10934b81b4852cee6b24e634cbf0af948fb525423e03ca787f952f3"
-    sha256 x86_64_linux:   "8360bdaac2d2910dcfda59757142a9d429631db654e8d8df2478e89d1570a4c7"
+    sha256 arm64_monterey: "73cf7c5d2fef44f20d1572eb6df3404d3e5669e3218a573b96ec77b987aa76c1"
+    sha256 arm64_big_sur:  "f5e4db7df43b34689898bd2dbed85f0db1097c3b9c79995427006a3bc6076747"
+    sha256 monterey:       "14e7af742428839eb82d45281862b44ccf71010d5d93bceb1ae0c4f8955c33f8"
+    sha256 big_sur:        "b9004c94ca080627d484d680a78de4d91d85ecab38e992a7f66e9f34455b7c26"
+    sha256 catalina:       "00e5907a5628b93578a61f81730e90923666353fc108012c1a6b58f2f4c60c48"
+    sha256 x86_64_linux:   "efd8dd1c816d77b608944563d037efaadca7a3ba51414dc211a29cadc3e647e3"
   end
 
   depends_on "cmake" => :build
   depends_on "libconfig" => :build
   depends_on "pkg-config" => :build
-  depends_on "llvm@14"
+  depends_on "llvm@12"
 
   uses_from_macos "libxml2" => :build
-
-  on_linux do
-    # Superenv does not support building with a versioned LLVM.
-    depends_on "llvm" => [:build, :test]
-  end
+  # CompilerSelectionError: ldc cannot be built with any available compilers.
+  uses_from_macos "llvm" => [:build, :test]
 
   fails_with :gcc
 
   resource "ldc-bootstrap" do
     on_macos do
-      on_intel do
+      if Hardware::CPU.intel?
         url "https://github.com/ldc-developers/ldc/releases/download/v1.28.1/ldc2-1.28.1-osx-x86_64.tar.xz"
         sha256 "9aa43e84d94378f3865f69b08041331c688e031dd2c5f340eb1f3e30bdea626c"
-      end
-
-      on_arm do
+      else
         url "https://github.com/ldc-developers/ldc/releases/download/v1.28.1/ldc2-1.28.1-osx-arm64.tar.xz"
         sha256 "9bddeb1b2c277019cf116b2572b5ee1819d9f99fe63602c869ebe42ffb813aed"
       end
@@ -68,20 +60,17 @@ class Ldc < Formula
     ENV.cxx11
     (buildpath/"ldc-bootstrap").install resource("ldc-bootstrap")
 
+    # Fix ldc-bootstrap/bin/ldmd2: error while loading shared libraries: libxml2.so.2
+    ENV.prepend_path "LD_LIBRARY_PATH", Formula["libxml2"].lib if OS.linux?
+
     args = %W[
       -DLLVM_ROOT_DIR=#{llvm.opt_prefix}
       -DINCLUDE_INSTALL_DIR=#{include}/dlang/ldc
       -DD_COMPILER=#{buildpath}/ldc-bootstrap/bin/ldmd2
     ]
+    args << "-DCMAKE_INSTALL_RPATH=#{rpath};@loader_path/#{llvm.opt_lib.relative_path_from(lib)}" if OS.mac?
 
-    args += if OS.mac?
-      ["-DCMAKE_INSTALL_RPATH=#{rpath};#{rpath(source: lib, target: llvm.opt_lib)}"]
-    else
-      # Fix ldc-bootstrap/bin/ldmd2: error while loading shared libraries: libxml2.so.2
-      ENV.prepend_path "LD_LIBRARY_PATH", Formula["libxml2"].opt_lib
-    end
-
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

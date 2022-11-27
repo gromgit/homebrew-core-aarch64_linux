@@ -12,14 +12,14 @@ class Exa < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "621d5ce8d5e8f9841a6191e3246fda50ca4d98fb3a108969157293e4454baa21"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97b6bf5ce5591c1dc5c320ac857c3d977caf2547579d0d9145655ad9c2d9e255"
-    sha256 cellar: :any_skip_relocation, ventura:        "147163a28ff48a30792fef4fb3566f7fa2d1bb59b85cf84b84ac784026115287"
-    sha256 cellar: :any_skip_relocation, monterey:       "269e359b76de3e1084ccf276342a134cc752737bb5a83a6178b019940d0270f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9b6b6a3c852c14ee92aa8c601cf0b81b79fe7be1f14d84e2fa0a21ead58fdeb1"
-    sha256 cellar: :any_skip_relocation, catalina:       "d021fd5bc69c223104b5bebc176d9212074cb24154f37d54125d81bfdb847b44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dd62a17077ea9a775ae6b83f9a574e165ddc9a59a32e2e3a0dfd5d1802514989"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d0565b8b078c0af60f359c273f8fb2b5bd4832f66f9ba2cce6ac1e6a3a6782c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2b9cc70621644245ce1ab1b682e28efae4b8acdbf3bf4da9cf91ddbd786b8787"
+    sha256 cellar: :any_skip_relocation, monterey:       "116ebfabdd5f5a06725dcd563c1bb05f723b3543f5204985a3f7dc7089a5d765"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d0c809ae7a8d3a43e0c907854b46725f5ad6bb14fa40a9857ff4e74f15c0b961"
+    sha256 cellar: :any_skip_relocation, catalina:       "dc183942b94bac912f4e0a6ca5c8859fa755a95de2808bd978dde3911690f0ae"
+    sha256 cellar: :any_skip_relocation, mojave:         "62fac977958ef8a9856e7a28fceac53d4f6e327e11764d1a077fb34ac83aced0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fad8013ab85b04c039c1b1be716bd621370dfcf810e3eb714e53711701b9aa45"
   end
 
   depends_on "pandoc" => :build

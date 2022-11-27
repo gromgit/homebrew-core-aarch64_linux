@@ -1,20 +1,19 @@
 class Drill < Formula
   desc "HTTP load testing application written in Rust"
   homepage "https://github.com/fcsonline/drill"
-  url "https://github.com/fcsonline/drill/archive/0.8.1.tar.gz"
-  sha256 "8e31aa4d11898c801b6a47a6808b1545f1145520670971e4d12445ac624ff1af"
+  url "https://github.com/fcsonline/drill/archive/0.7.2.tar.gz"
+  sha256 "cc33f5e214cf8c9c975bd2b912b87541eab2ceb34689fdc1f4882b332ad4ee44"
   license "GPL-3.0-or-later"
   head "https://github.com/fcsonline/drill.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "61ab629d780af9ec0e8e6cdd2642f50d6e5c39e51eaa0e8ad65eb280f217c377"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e4f1a4918a076dc1b7a9c2503f76075dc6e66db028d4db7dded71b9454d6b03"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5328f14dddd1d0f0808ad64034794275643cf902690c745d7a6b11ba73d4008a"
-    sha256 cellar: :any_skip_relocation, monterey:       "94fed7fc60d7554579a78aee13749bf309481b6c35a79a41816438a6db832f07"
-    sha256 cellar: :any_skip_relocation, big_sur:        "37611f137324359d6e8329b520a027468265a225bde909b33bc748a5e72217b8"
-    sha256 cellar: :any_skip_relocation, catalina:       "6f93fbffcef67c34e531975dc653fe45a71a62f020d63265ea069f3c41fc5908"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cdde246989361f99943e1a64bffce747174f54efd654d0f52e6e5a8e59d08956"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "904576a345557bad10f8d58dd20e009b055893d55a43049db32808ddd82a3c64"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efc0e6a7ec33157683ee61e732ae5ddf6d8fa790192ed3c68403771cdc47803a"
+    sha256 cellar: :any_skip_relocation, monterey:       "6113d7ea668ecf53bd2e8a60eef51dc48eaf1e0ae5ef8b6e4b17625ade71803a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9a08286617629a63ebefc288604007facab0d3cd5a3a5b6c9caacf02db5f3452"
+    sha256 cellar: :any_skip_relocation, catalina:       "3db1f9e4e0d25d84e5aa26e2801ea399f9328b50e32c85fa198894d5e5b54c3e"
+    sha256 cellar: :any_skip_relocation, mojave:         "57509a9c9172333d4aebcc18d21476f835bb7fe240ca117c0df75b3901dda663"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e2f5a4899c09e528fa4a45bead1d9a36f344a8c012f27dd6e5aea26a13c8fa7"
   end
 
   depends_on "rust" => :build

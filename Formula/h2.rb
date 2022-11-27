@@ -7,7 +7,8 @@ class H2 < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "fa5d5febd18e101ce73f94cab8a2c41d126dd0acbfd6386de14a85ed0b40671b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/h2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5c7ad12a5b9b6ac59db1a48c62e5151f17a332fccf3ad9ae95dabc649cab6d6c"
   end
 
   depends_on "openjdk"

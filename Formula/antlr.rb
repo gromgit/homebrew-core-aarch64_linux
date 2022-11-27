@@ -11,8 +11,10 @@ class Antlr < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9e5d18110040bd130207bfa3daab67bf83f66042e3feed715676c5e7b4adee18"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/antlr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a4fb945b177428c3f5a37f111b51d03617573934b655f9a9e6952c3572fd63bc"
   end
+
 
   depends_on "openjdk"
 

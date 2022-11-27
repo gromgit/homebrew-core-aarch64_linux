@@ -4,17 +4,17 @@ class Minetest < Formula
   license "LGPL-2.1-or-later"
 
   stable do
-    url "https://github.com/minetest/minetest/archive/5.6.1.tar.gz"
-    sha256 "1440603e19dca70e2691e86a74c822ee2c4a36fceee32b2d85ae74772149e9a3"
+    url "https://github.com/minetest/minetest/archive/5.5.0.tar.gz"
+    sha256 "8b9bef6054c8895cc3329ae6d05cb355eef9c7830600d82dc9eaa4664f87c8f9"
 
     resource "irrlichtmt" do
-      url "https://github.com/minetest/irrlicht/archive/refs/tags/1.9.0mt8.tar.gz"
-      sha256 "27594242da8c7cc1e5ef45922e1dfdd130c37d77719b5d927359eb47992051e0"
+      url "https://github.com/minetest/irrlicht/archive/1.9.0mt4.tar.gz"
+      sha256 "a0e2e5239ebca804adf54400ccaacaf228ec09223cfb2e1daddc9bf2694176e6"
     end
 
     resource "minetest_game" do
-      url "https://github.com/minetest/minetest_game/archive/refs/tags/5.6.1.tar.gz"
-      sha256 "5dc857003d24bb489f126865fcd6bf0d9c0cb146ca4c1c733570699d15abd0e3"
+      url "https://github.com/minetest/minetest_game/archive/5.5.0.tar.gz"
+      sha256 "1e87252e26d6b1d3efe7720e3e097d489339dea4dd25980a828d5da212b01aaa"
     end
   end
 
@@ -24,18 +24,16 @@ class Minetest < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "9e2ac2626be9b51ccc399acf6015e5fe5c1145ed39b3f87054c3aa3b8ed30c3c"
-    sha256 cellar: :any, arm64_monterey: "44204d306faf6661f5cca1b9fa31ab19bb6dbe95843acdaad989029cfd3a0a11"
-    sha256 cellar: :any, arm64_big_sur:  "7f9985b9a6437dd26301c72b8a0315309e7be24eef7a55378cf4d118d4471b45"
-    sha256 cellar: :any, ventura:        "a9ba0a5ec4d8a0a2f3fded68567ed3987034991e55292b5dabb6937b5009554c"
-    sha256 cellar: :any, monterey:       "2797dece689806632a0c7015e336a21155bb367555afa77c5b5890b61ae7110d"
-    sha256 cellar: :any, big_sur:        "7a85c4ffc2d2a3460c6e4f2ce000cafe69b75530c24741bf77f16474e7ba0d96"
-    sha256 cellar: :any, catalina:       "6778f81afea196d5c31727cee99a5498d012ba6c3dfb54f1b658cd4e1ddce543"
-    sha256               x86_64_linux:   "fb6eb17f2af2e32de0c32588d93336cba026324ed12890c444411faf0b34c75f"
+    sha256 cellar: :any, arm64_monterey: "7ae662c02845d061ae3efd1ebea19ca1319a26b87d7a4b206b7d5c10e9bf865f"
+    sha256 cellar: :any, arm64_big_sur:  "3293cd8cf8082620c1e4a647b17223b16c4ae2e48cf2cc284605b0dd53892d3e"
+    sha256 cellar: :any, monterey:       "06973ea4cb6a18bad91f6823f20686a8eacdd5951ac29f183a15ff5764ec6fab"
+    sha256 cellar: :any, big_sur:        "8131b2a151f439d881c92426a1070a6f5f456b4b3f482eaf7ec1539425d83f53"
+    sha256 cellar: :any, catalina:       "7703d602ceccff373ae0711a76e43b63d354797cd33fb7156dc0197f9ee60815"
+    sha256               x86_64_linux:   "daf32846d6a215f138af8a6322d01a13b5b367e260364863d710cb852b133bde"
   end
 
   head do
-    url "https://github.com/minetest/minetest.git", branch: "master"
+    url "https://github.com/minetest/minetest.git"
 
     resource "irrlichtmt" do
       url "https://github.com/minetest/irrlicht.git", branch: "master"
@@ -50,12 +48,12 @@ class Minetest < Formula
   depends_on "gettext" => :build
   depends_on "freetype"
   depends_on "gmp"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "jsoncpp"
   depends_on "libogg"
   depends_on "libpng"
   depends_on "libvorbis"
-  depends_on "luajit"
+  depends_on "luajit-openresty"
   depends_on "zstd"
 
   uses_from_macos "curl"
@@ -68,7 +66,6 @@ class Minetest < Formula
     depends_on "libxxf86vm"
     depends_on "mesa"
     depends_on "openal-soft"
-    depends_on "xinput"
   end
 
   def install
@@ -100,12 +97,22 @@ class Minetest < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+  end
 
-    bin.write_exec_script prefix/"minetest.app/Contents/MacOS/minetest" if OS.mac?
+  def caveats
+    <<~EOS
+      Put additional subgames and mods into "games" and "mods" folders under
+      "~/Library/Application Support/minetest/", respectively (you may have
+      to create those folders first).
+
+      If you would like to start the Minetest server from a terminal, run
+      "#{prefix}/minetest.app/Contents/MacOS/minetest --server".
+    EOS
   end
 
   test do
-    output = shell_output("#{bin}/minetest --version")
+    minetest = OS.mac? ? prefix/"minetest.app/Contents/MacOS/minetest" : bin/"minetest"
+    output = shell_output("#{minetest} --version")
     assert_match "USE_CURL=1", output
     assert_match "USE_GETTEXT=1", output
     assert_match "USE_SOUND=1", output

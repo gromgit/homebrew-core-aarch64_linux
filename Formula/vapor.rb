@@ -1,25 +1,23 @@
 class Vapor < Formula
   desc "Command-line tool for Vapor (Server-side Swift web framework)"
   homepage "https://vapor.codes"
-  url "https://github.com/vapor/toolbox/archive/18.6.0.tar.gz"
-  sha256 "fa41a5ef847fcb86ce9f2a9837adc9d80ba99839519d230115f2b00ff7a64156"
+  url "https://github.com/vapor/toolbox/archive/18.3.6.tar.gz"
+  sha256 "67efb2d454564be007e520afb582b9d1d3bf2ac93b49e3ecdec5495df724c2cf"
   license "MIT"
-  revision 1
   head "https://github.com/vapor/toolbox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fb51000f032c2cccc9173d690edf7f1cbfb547bc8dbba40161e2849ee50b035e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "299bc502a158f6254414065522c3bbcf452f2cf80a943a607651b53c7492cae8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d0222d5620acd09dc93c48f0d0075e982f000ee73aea00048827f1d9c52caf8"
-    sha256 cellar: :any_skip_relocation, ventura:        "72cb4b5d035df04d2792d41a3334bcb6cbc1c417d6341cb2f601ada4bb1fe75d"
-    sha256 cellar: :any_skip_relocation, monterey:       "cdcf8e6879d872e58d28333a059e86dbd2d61ddbad066bcc73248473668a44a0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a7fb64d81ca7c5d495bed3d621c3a2d403b19eac0cdb0c826f73eb8c7c443975"
-    sha256                               x86_64_linux:   "c387415dafc0eba81409dfd847786ec3c56284308f7289c0280b4b9cc8cc6b22"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e0192858bca261ff3690cf1097896eaa5a9866a5d2d692410fdb7e8971238c7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "617785d6e88b734dafb4e2bd0c4fbca219d28f8dbce88a14befe8a8405579d1b"
+    sha256 cellar: :any_skip_relocation, monterey:       "7a6b32eb224796649a9e2024e7a430124bdebaf4253c42ca90a755aa3fe4690b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a2488d72900dbcd7147ef0b1c756baea6c69c3a976a63cdfc4f7537764a244ef"
+    sha256 cellar: :any_skip_relocation, catalina:       "0622f5ae31e2f4be566727425b0fce7cc8b5d79b60d80fb54a7abc9c86d51e1b"
+    sha256                               x86_64_linux:   "56ae58ee4fc87aedec745769bc1a1e19bc9efd01f91a2d203d3e2e3f7ad3eb1c"
   end
 
   depends_on xcode: "11.4"
 
-  uses_from_macos "swift", since: :big_sur
+  uses_from_macos "swift"
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "-Xswiftc", \

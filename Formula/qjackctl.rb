@@ -1,8 +1,8 @@
 class Qjackctl < Formula
   desc "Simple Qt application to control the JACK sound server daemon"
   homepage "https://qjackctl.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.8/qjackctl-0.9.8.tar.gz"
-  sha256 "07cd9f0a876ac7b73c3b6e4ec08aae48652a81a771f0cbbef267af755a7f7de7"
+  url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.7/qjackctl-0.9.7.tar.gz"
+  sha256 "524843618152070c90a40a18d0e9a16e784424ce54231aff5c0ced12f2769080"
   license "GPL-2.0-or-later"
   head "https://git.code.sf.net/p/qjackctl/code.git", branch: "master"
 
@@ -12,19 +12,21 @@ class Qjackctl < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "611ddb4bce1209b10b53dbc2e898be56c298ef4eb364c02ca3c4b86f97e4ccfa"
-    sha256 arm64_monterey: "ae0dc29135764e483923c8b68ab2bc591e90dcf75e468bc46536871d561f58da"
-    sha256 arm64_big_sur:  "269e87d8ad4089315682ae72712c5237894308262179420977b6f7ab1dafce56"
-    sha256 ventura:        "1da8253aebc2b4e92e86e708573f4a9a373e398b902288597bf9d2ba573f4ead"
-    sha256 monterey:       "1c10210499c4fdc95ec7c68c1faa8d58102015ee31122a2c5901c31b7250c020"
-    sha256 big_sur:        "b0485a54fb9dcc3ffca4e775ea51af05772c929a62fbaae61df42774fe949e03"
-    sha256 catalina:       "b0ac3dc4132c0c4c018256dde8a01ab7e61d56d635b9e1801264571b314e4a86"
-    sha256 x86_64_linux:   "1ec75ff8b04ff01df9b479060dc69f8879282b1ecdb3e9ec1210fedccd840eae"
+    sha256 arm64_monterey: "dd6daea0d11b6c62f41505f22fe826c7d46937268dff2f185d3d853ee1890a8e"
+    sha256 arm64_big_sur:  "855c74c10b3ab077e0951da608b86676b382478deb722069f1150241a9f7dc94"
+    sha256 monterey:       "04e9744e207ad9fe2606ade63c5a29ac409272c16a94f2da27485d213bcfbda3"
+    sha256 big_sur:        "32d70991bbeddfe94caf896714e472465c4ace052e83853351dceb8256a92641"
+    sha256 catalina:       "342d2cff1bad3ab3424bb7bbc8b6e4844313d3c9f2de6112a0dcdcde226ea8f1"
+    sha256 x86_64_linux:   "0850fa38920a8dbec901ef6552966f1f5d166c5089b202cafa0c11e4ecafd9ac"
   end
 
   depends_on "cmake" => :build
   depends_on "jack"
   depends_on "qt"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

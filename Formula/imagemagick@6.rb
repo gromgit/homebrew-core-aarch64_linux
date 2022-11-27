@@ -1,25 +1,23 @@
 class ImagemagickAT6 < Formula
   desc "Tools and libraries to manipulate images in many formats"
   homepage "https://legacy.imagemagick.org/"
-  url "https://imagemagick.org/archive/releases/ImageMagick-6.9.12-67.tar.xz"
-  sha256 "62a0c8bed8f29691bd142fa2c7956738e2ca96f6dd55cd9173337f79d21d7fd0"
+  url "https://www.imagemagick.org/download/releases/ImageMagick-6.9.12-48.tar.xz"
+  sha256 "8bf31cb269a8a26ad1cfd537ffabe55819ff719b7d269f1387a6164b93722323"
   license "ImageMagick"
   head "https://github.com/imagemagick/imagemagick6.git", branch: "main"
 
   livecheck do
-    url "https://imagemagick.org/archive/"
-    regex(/href=.*?ImageMagick[._-]v?(6(?:[.-]\d+)+)\.t/i)
+    url "https://download.imagemagick.org/ImageMagick/download/"
+    regex(/href=.*?ImageMagick[._-]v?(6(?:\.\d+)+(?:-\d+)?)\.t/i)
   end
 
   bottle do
-    sha256 arm64_ventura:  "b807e4b339e59640a3873673ecc1c067402c73f0a4e6505c6e28860f9f482553"
-    sha256 arm64_monterey: "f2f1e6da2a334fe588bc6c923a3be4e90d79ac86fccb8385224447b9df7b05f3"
-    sha256 arm64_big_sur:  "a9cb917ef28ef20eedb33209370dbdfa2d9b398e06f75d119d9d2d16a1d34e95"
-    sha256 ventura:        "74f25d6908651bb9b8a81853b13ff1f92490086134a1b8bf72e575c7b7e58acf"
-    sha256 monterey:       "4d6e66f1d958d9603adb1ae38ab08209aabae2b6daa9f1a8e1b5cdff56e02dca"
-    sha256 big_sur:        "7bde40414133cfb90b079bfed897a3551c1b93d857a67e4a074f91f3c32c2e1f"
-    sha256 catalina:       "12f0c6e9c78fb0bab94987fb5e623045822cceefe494c3fd2bc1cfd64fdc3b25"
-    sha256 x86_64_linux:   "287caaadba954cfcf02c78d7db0690a450e43c3925089eb134045614c76410b9"
+    sha256 arm64_monterey: "46834b7632a03ae11d47e0177067edad99a862ad196b0c840364421373f21f6d"
+    sha256 arm64_big_sur:  "b056a194ee5cc3927e5beb373beb6f386478732a031f799b66c777618f0793df"
+    sha256 monterey:       "cba3fba0ac99eca8b127eaf0b00688d9d662002212cfac62cbd8c6cffca843fc"
+    sha256 big_sur:        "0e1b64f6ed9e9918ebbbb6b3a054970de03398a30c36beb54aa76380a92d4040"
+    sha256 catalina:       "161b53bcd2f9e3ebb599ca3a2c919b4625a1c962556c358d57f757b87f6707cf"
+    sha256 x86_64_linux:   "e7771fd50a95d0cb798566984c7c1cce57d2cabf02ca17ddfa6870bc55c6b22b"
   end
 
   keg_only :versioned_formula
@@ -28,7 +26,7 @@ class ImagemagickAT6 < Formula
 
   depends_on "freetype"
   depends_on "ghostscript"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libtool"

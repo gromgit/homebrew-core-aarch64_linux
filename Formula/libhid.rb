@@ -5,9 +5,13 @@ class Libhid < Formula
   sha256 "f6809ab3b9c907cbb05ceba9ee6ca23a705f85fd71588518e14b3a7d9f2550e5"
   license "GPL-2.0"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?libhid[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "7438d29931c8f30d894d323b710a5149bb320aa2945aeb9967fd7b46d7edb194"
     sha256 cellar: :any,                 arm64_monterey: "b69b1ff4ecd6f24b292da9085e8aa30694f24081c5183bdcb6c95d7f535c55dc"
     sha256 cellar: :any,                 arm64_big_sur:  "01170cf4863c640d89c02c1c8d10759aa9ab7b16a0ab88bccdefdf10c5174620"
     sha256 cellar: :any,                 monterey:       "d1a311d2e981c50f68ecb636a98659ff67894b30309942ad1258f96b66d017aa"
@@ -17,10 +21,9 @@ class Libhid < Formula
     sha256 cellar: :any,                 high_sierra:    "b2949cef974f368856304506aecea44d3daca81b2d8c798bc141ef376723eded"
     sha256 cellar: :any,                 sierra:         "b92f274a981788b3092927223099f4f3220877417c766ec8e8bd63171e9a9849"
     sha256 cellar: :any,                 el_capitan:     "a22388fc2ac89d99ed04449c590b035308a81c8f1a2e80ee68ca64a7e10ced7e"
+    sha256 cellar: :any,                 yosemite:       "4920ff4278cbc288fc8c84ef9b3137d99010ba047d6f072b9a6eccf07588721a"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb334329832a5847225997b9b7bb0f54a0e26c69636f34cd3b1af77475eef922"
   end
-
-  deprecate! date: "2022-06-22", because: :unmaintained
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

@@ -2,9 +2,9 @@ class Vgmstream < Formula
   desc "Library for playing streamed audio formats from video games"
   homepage "https://vgmstream.org"
   url "https://github.com/vgmstream/vgmstream.git",
-      tag:      "r1800",
-      revision: "49af2cea7d6265a6e063f5d4e09e34df8f861998"
-  version "r1800"
+      tag:      "r1745",
+      revision: "72eb0e6b6fe2863be24650414a34ad504f56f2f8"
+  version "r1745"
   license "ISC"
   version_scheme 1
   head "https://github.com/vgmstream/vgmstream.git", branch: "master"
@@ -16,13 +16,12 @@ class Vgmstream < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1b5843a752472e42d9328df4087de07923eb21aa537574742e434d2505026a97"
-    sha256 cellar: :any,                 arm64_monterey: "8e63e83518e1174e109141fa7b9f200b1efed1986d9fdd18ef10721b810db14c"
-    sha256 cellar: :any,                 arm64_big_sur:  "bb0ede7d7cdd10921fd8508ffbdbb1dc09b669c6d0b61e1c992a41d6d7330079"
-    sha256 cellar: :any,                 monterey:       "10a4c614a6ce5c77d695bc6f2bfc87ffaaab8d07d5eb03985cd3af58de2f6b4e"
-    sha256 cellar: :any,                 big_sur:        "763234332e1ea9ffe3e2da2e4ccf3127ac2817040e47134bbd654055d510fcc4"
-    sha256 cellar: :any,                 catalina:       "e14bdacae7a9672a0991b8decc17b2843f4d72b357b1e762b8ae0eaad24dd8cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1680a96900e3902ac9a4987e9f7aed3847ab42771cdd890f00a1941ca10a6fe5"
+    sha256 cellar: :any,                 arm64_monterey: "f57ddf0e086737b2ca84e5f07940a2cc5e70abe8e1e0d53e757211165a8f8598"
+    sha256 cellar: :any,                 arm64_big_sur:  "e6a1df2a246d2cd9bfba5fad07bbe16375c8bf532e4d02c1d4aa44afc4fd6d45"
+    sha256 cellar: :any,                 monterey:       "ca9659ab9397511f0ba33662d599152cbed0c6aa0f510b1de5ef30c6532b0442"
+    sha256 cellar: :any,                 big_sur:        "cda923350cb2ad199ebcb69d4a8af3a0512b766f58b575bf97dfbbc346617b73"
+    sha256 cellar: :any,                 catalina:       "f9646009f868b5a338740f2aab8e8f7deccb0c2bd6009998f4427ba0349639c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c08aeb195df59c70f044381afb8527686204eac958b21fb3a8761887bdd83466"
   end
 
   depends_on "autoconf" => :build

@@ -1,20 +1,18 @@
 class MinizipNg < Formula
   desc "Zip file manipulation library with minizip 1.x compatibility layer"
   homepage "https://github.com/zlib-ng/minizip-ng"
-  url "https://github.com/zlib-ng/minizip-ng/archive/3.0.7.tar.gz"
-  sha256 "39981a0db1bb6da504909bce63d7493286c5e50825c056564544c990d15c55cf"
+  url "https://github.com/zlib-ng/minizip-ng/archive/3.0.6.tar.gz"
+  sha256 "383fa1bdc28c482828a8a8db53f758dbd44291b641182724fda5df5b59cce543"
   license "Zlib"
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0bf1f6011ec571018194f3467e7539a3af75388303f21671ed1d32fed5a0365c"
-    sha256 cellar: :any,                 arm64_monterey: "22207f2d5149735853ae60463b0e866eded5a09b6743de04709012b23d2f113e"
-    sha256 cellar: :any,                 arm64_big_sur:  "e9a0ca63e9ce8e1e4cb83561d7ff483c93944b9c538f307c765702b194f4bfb7"
-    sha256 cellar: :any,                 ventura:        "d9645e1552f9ec3e8ba81a0a9a1e47ef79d2298240c2490c00d7b03e83ee4553"
-    sha256 cellar: :any,                 monterey:       "02eb5bca48457f3975a9ca01a1ba0023cb043cabebc2424b47701080c6537b66"
-    sha256 cellar: :any,                 big_sur:        "13c046389aa939f40a1c24f734d2afa42cf6a763d661091322cad1789f79de33"
-    sha256 cellar: :any,                 catalina:       "d14fd2c6da4a462e2836705bbf6bf61052768f1926547700d2db5490af40243f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c6fbc6ab323c90915ead5f48ea5fba2053b74310256eab10d9c2da1784a153d"
+    sha256 cellar: :any,                 arm64_monterey: "3b1a7fa90dae23cd69a27d16199279ea53d72d92eb96d59a1c4a6e888ccb89d4"
+    sha256 cellar: :any,                 arm64_big_sur:  "a61b06c3cd78bafd1a1f89fd6c59b6ee4fb600f4c69eed324c41a720e1129c8c"
+    sha256 cellar: :any,                 monterey:       "9ad34a5621f4f7da367f3ab215330236c4330e4620950da57530a98832918f2e"
+    sha256 cellar: :any,                 big_sur:        "f3b8970f1b0a42acc3993f3c898a6bc15ed454cbea4b0f13dacc71ce3f64d48d"
+    sha256 cellar: :any,                 catalina:       "a0afd89b7407ebe56deee2492654f24b76d5d9de9a10261a9e4429b82198ecb0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba63cc8cc80ef8527b37ab6cc5b82471adef4d7cf2dedc33a6d4d74aab9adaba"
   end
 
   depends_on "cmake" => :build
@@ -29,22 +27,24 @@ class MinizipNg < Formula
     depends_on "openssl@1.1"
   end
 
-  conflicts_with "minizip", because: "both install a `libminizip.a` library"
-  conflicts_with "libtcod", "libzip", because: "libtcod, libzip and minizip-ng install a `zip.h` header"
+  conflicts_with "minizip",
+    because: "both install a `libminizip.a` library"
+  conflicts_with "libtcod", "libzip",
+    because: "libtcod, libzip and minizip-ng install a `zip.h` header"
 
   def install
+    system "cmake", "-S", ".", "-B", "build/static",
+                    "-DMZ_FETCH_LIBS=OFF",
+                    *std_cmake_args
+    system "cmake", "--build", "build/static"
+    system "cmake", "--install", "build/static"
+
     system "cmake", "-S", ".", "-B", "build/shared",
                     "-DMZ_FETCH_LIBS=OFF",
                     "-DBUILD_SHARED_LIBS=ON",
                     *std_cmake_args
     system "cmake", "--build", "build/shared"
     system "cmake", "--install", "build/shared"
-
-    system "cmake", "-S", ".", "-B", "build/static",
-                    "-DMZ_FETCH_LIBS=OFF",
-                    *std_cmake_args
-    system "cmake", "--build", "build/static"
-    lib.install "build/static/libminizip.a"
   end
 
   test do
@@ -61,7 +61,24 @@ class MinizipNg < Formula
       }
     EOS
 
-    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lminizip", "-o", "test"
+    lib_flags = if OS.mac?
+      %W[
+        -lz -lbz2 -liconv -lcompression
+        -L#{Formula["zstd"].opt_lib} -lzstd
+        -L#{Formula["xz"].opt_lib} -llzma
+        -framework CoreFoundation -framework Security
+      ]
+    else
+      %W[
+        -L#{Formula["zlib"].opt_lib} -lz
+        -L#{Formula["bzip2"].opt_lib} -lbz2
+        -L#{Formula["zstd"].opt_lib} -lzstd
+        -L#{Formula["xz"].opt_lib} -llzma
+      ]
+    end
+
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}",
+                   "-lminizip", *lib_flags, "-o", "test"
     system "./test"
   end
 end

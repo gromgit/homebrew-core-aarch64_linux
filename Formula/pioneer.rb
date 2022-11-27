@@ -7,14 +7,11 @@ class Pioneer < Formula
   head "https://github.com/pioneerspacesim/pioneer.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "027d68852763a927f369c9b0a500fcc0ffb221bbea1bda39b3ad8700851cb07f"
-    sha256 arm64_monterey: "b2e190f79505cc823854dcb3c46b333994fb15f065e95dc77934d4b27119aa8d"
-    sha256 arm64_big_sur:  "0ca5b9a984198c3e3d60e3e02c8f3ccc046d2082900627a9bf970610c6260d95"
-    sha256 monterey:       "0bb70eb1bb53b649bafb3ae3a52d4743fdaf690274a3e9ee0288e03fc26bc427"
-    sha256 big_sur:        "310a48a34c8a19d9cb66bb7aa4f9a231d4519f636cfe1f3f2ecc219236ddbf1f"
-    sha256 catalina:       "9b4bf989c69c7d9c24093aa728351b2558ccaf3770891c65f3c8d28da9778bfa"
-    sha256 x86_64_linux:   "35b337ad69a13c8be0a0dc16281be604220cc3d26b247fdf90947ce51c93675a"
+    sha256 arm64_monterey: "5577df2b19b517a48ee396f4845017b72ea189d5df6438f8386c81a1f4e33432"
+    sha256 arm64_big_sur:  "706079cb77f9fe77b3e93898d898891b7469b9a7e27cb69122d251c0b947df42"
+    sha256 monterey:       "b73fcfc1fe6b1c8976ed07b8ac0e82a390d972854483b2503437c04653a3dc95"
+    sha256 big_sur:        "f725756669261a1fee10c39fec3a79bdbe4a4aaed5bbcb4680d2cf3de86241ef"
+    sha256 catalina:       "45938119b01299002a7152f09472dc89afeba39473af90eb03b155c6b6b469f3"
   end
 
   depends_on "cmake" => :build
@@ -27,8 +24,6 @@ class Pioneer < Formula
   depends_on "libvorbis"
   depends_on "sdl2"
   depends_on "sdl2_image"
-
-  fails_with gcc: "5"
 
   def install
     ENV.cxx11

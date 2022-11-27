@@ -2,21 +2,19 @@ class Graphviz < Formula
   desc "Graph visualization software from AT&T and Bell Labs"
   homepage "https://www.graphviz.org/"
   url "https://gitlab.com/graphviz/graphviz.git",
-      tag:      "7.0.2",
-      revision: "d0d7dfca5824e1ba0f62cfe9a3c07447cabad921"
+      tag:      "3.0.0",
+      revision: "24cf7232bb8728823466e0ef536862013893e567"
   license "EPL-1.0"
   version_scheme 1
   head "https://gitlab.com/graphviz/graphviz.git", branch: "main"
 
   bottle do
-    sha256 arm64_ventura:  "ebbdea8bb6330188f8cb3d5c0038c09f09eb2e7fd091cae7c57552cb39b50160"
-    sha256 arm64_monterey: "fda7e74339989992cf4d4fca89647c7f73bb18861f570477327939cfa0ae4e26"
-    sha256 arm64_big_sur:  "7ac6fbdc80251654bff4b1653431db90966dcf529157465602d0e00bd01331cc"
-    sha256 ventura:        "f464ea71e11380af5a2faba634274648f57a6db0ee08f20963f5303f5bf2b244"
-    sha256 monterey:       "ab35ba2102ca64802900db9967d2cd88db2de69c3263250a2b3579ac6207e6cf"
-    sha256 big_sur:        "58d30f6a792cfe812197b5610edb126ba3659578fd7617868a6d189def4f5c73"
-    sha256 catalina:       "64ead4239a24b0eb7a7b663e10083e369d21f21a801a320070342b5a11ac04b7"
-    sha256 x86_64_linux:   "18df558ca8b319f722a924af9e9e7a93450ca380f906b27e358d136b1b789bb7"
+    sha256 arm64_monterey: "c3735f9c7a06e03d883a330fc7bf0cb997c2041d86a358f793fe2f0fcd967ade"
+    sha256 arm64_big_sur:  "f43ff5e042bb74b1e5a5f005d2ecb7ed731886884d5c897b9a3f89881d68e511"
+    sha256 monterey:       "1111378fa7618775b3263c211789f4995f07f02252a4464ed2ceb3c01708213c"
+    sha256 big_sur:        "59ab5de4deaad4b07149471b7013500e7595c9f6bdff0074e2339d3087aa78ed"
+    sha256 catalina:       "8bfb00c8e472b66a72f1c69ddc21abb8ba4891388d3c94b23000a3c0744704a0"
+    sha256 x86_64_linux:   "293374d97d2af3bfb5a2d6cc6d21438b356943980f791bf0391c5d1db84bfb20"
   end
 
   depends_on "autoconf" => :build
@@ -31,7 +29,6 @@ class Graphviz < Formula
   depends_on "pango"
 
   uses_from_macos "flex" => :build
-  uses_from_macos "python" => :build
 
   on_linux do
     depends_on "byacc" => :build

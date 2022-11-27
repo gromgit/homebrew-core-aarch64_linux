@@ -1,19 +1,19 @@
 class AppstreamGlib < Formula
   desc "Helper library for reading and writing AppStream metadata"
   homepage "https://github.com/hughsie/appstream-glib"
-  url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_8_1.tar.gz"
-  sha256 "b0a4ab7fb9ce98805930a5f1fe5b54452cbac63e953ef5022b410d380a2fefc8"
+  url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_18.tar.gz"
+  sha256 "73b8c10273c4cdd8f6de03c2524fedad64e34ccae08ee847dba804bb15461f6e"
   license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "e89effd859f2dfc558e32b29897f1fd57887b1b944c5a561797317f13e46c53c"
-    sha256 cellar: :any, arm64_monterey: "92eacc99e95ac535ab156128e6580614155752b44b238b8f3554dd3a029efe1f"
-    sha256 cellar: :any, arm64_big_sur:  "1417693c475e34dc3ee212d6ba7a97941aef25fa04c7739215b30b633e885a98"
-    sha256 cellar: :any, ventura:        "1799f373a3f6551034441e6f5f317c5f556b2ebe0455bd2bc82ee05fcfa39e3c"
-    sha256 cellar: :any, monterey:       "b6cc141d0ea886375b91af04a25c7fcbcb760235ec09fed5da27f2115788604a"
-    sha256 cellar: :any, big_sur:        "5dae28e5a4cefbf03c60c5dfd9b29ef38ddd500dab3df2a8abb0308dd940815f"
-    sha256 cellar: :any, catalina:       "ce622e678145aee0f5125727b0ddd3d710327a427490d8d05fa5d351e01b24fa"
-    sha256               x86_64_linux:   "fd872f77e5aa1bbf1410271f19503f9159de058bfa30b2380aface9577cfcd88"
+    rebuild 1
+    sha256 cellar: :any, arm64_monterey: "8e8bc17a4e8db65f27b2021ec044bed07fe3230cf7418669b245b855e40f3a52"
+    sha256 cellar: :any, arm64_big_sur:  "7389aa5d3dc05124ddab77a39fcde0b5b44c74b4ef6bb283f652cfc1f1de5175"
+    sha256 cellar: :any, monterey:       "53220b9e712d6a473fd09d9a82df67c7d7b93b9eb171978f0e8180055166ebb5"
+    sha256 cellar: :any, big_sur:        "1aded5fd6345ce3337cea5141bded4945f481392bf8686532f211d8b5bb2a777"
+    sha256 cellar: :any, catalina:       "2382482db7b4ef8f7b3682014498eb1e49ec626a88d9baa6e3bc71d9ad23c13b"
+    sha256               x86_64_linux:   "c9a65c92ae6b80096abf132de339721f0c5e709310105fa47313b1c2d6b0eed1"
   end
 
   depends_on "docbook" => :build
@@ -26,13 +26,8 @@ class AppstreamGlib < Formula
   depends_on "glib"
   depends_on "json-glib"
   depends_on "libarchive"
-
-  uses_from_macos "gperf" => :build
-  uses_from_macos "curl"
-
-  on_linux do
-    depends_on "util-linux"
-  end
+  depends_on "libsoup@2"
+  depends_on "util-linux"
 
   # see https://github.com/hughsie/appstream-glib/issues/258
   patch :DATA
@@ -41,9 +36,11 @@ class AppstreamGlib < Formula
     # Find our docbook catalog
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
 
-    system "meson", *std_meson_args, "build", "-Dbuilder=false", "-Drpm=false", "-Ddep11=false", "-Dstemmer=false"
-    system "meson", "compile", "-C", "build", "--verbose"
-    system "meson", "install", "-C", "build"
+    mkdir "build" do
+      system "meson", *std_meson_args, "-Dbuilder=false", "-Drpm=false", "-Ddep11=false", "-Dstemmer=false", ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
   end
 
   test do

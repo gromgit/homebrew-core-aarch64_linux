@@ -4,7 +4,6 @@ class Clazy < Formula
   url "https://download.kde.org/stable/clazy/1.11/src/clazy-1.11.tar.xz"
   sha256 "66165df33be8785218720c8947aa9099bae6d06c90b1501953d9f95fdfa0120a"
   license "LGPL-2.0-or-later"
-  revision 2
   head "https://invent.kde.org/sdk/clazy.git", branch: "master"
 
   livecheck do
@@ -13,24 +12,26 @@ class Clazy < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a716670d3c6a16f67ac39d82813c7fd054761f4d026255f904b10457f67791fb"
-    sha256 cellar: :any,                 arm64_monterey: "e5401775aff4f1e6fad0fd459ae01f492c0398101457ffc1d6d0381d4ceb8828"
-    sha256 cellar: :any,                 arm64_big_sur:  "d022ef65ffa388d2b6db61b16077dc08a5d5b29185a2723bb631914a4da1fa75"
-    sha256 cellar: :any,                 ventura:        "5938ca0a911bb8031870f91b12915eb359eceb0f92f07bc9d5d97996be9bc952"
-    sha256 cellar: :any,                 monterey:       "90ef44a60aff61eeb80c8a14ce55954b8d952da25a632c72f255d365c03cfc11"
-    sha256 cellar: :any,                 big_sur:        "5237f20d2a267e396777e6afabd0bf7eab77ff174ce05d771aef96d5e5ce62ac"
-    sha256 cellar: :any,                 catalina:       "ca761dbfa90f36a5880bf962e68b22d44f8449c5e74083d35dd79ae2d379b4fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f358bdb38ce2bebd90cb2fe9a59dfb8e4a65531a72488f37e0f2473b0ba6bb6c"
+    sha256 cellar: :any,                 arm64_monterey: "fad1df33efebf700d5329eddce6ad261c667e8e4b73b0a27d8a0db33e31ffd28"
+    sha256 cellar: :any,                 arm64_big_sur:  "79ef1923f1d400cdb819e2b981e6fd6cb9632c16cce36de504e985f723ff3138"
+    sha256 cellar: :any,                 monterey:       "0f460acc6eff9ab586f4bc43b41247147fad62bc1dc4e59c6aec738f8f70c737"
+    sha256 cellar: :any,                 big_sur:        "e5534a8dca79cc95ea78e7a45f496187eb731f109be790df6bf1974334eb8475"
+    sha256 cellar: :any,                 catalina:       "f8829bbea066fec01afe36746ef08a4f35e021ad699bdb5c1aac6b8edd1ccb29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "449e65447d16635d47941364ea2ddd274e314893774e798becfb24e232f82ca5"
   end
 
   depends_on "cmake"   => [:build, :test]
   depends_on "qt"      => :test
   depends_on "coreutils"
-  depends_on "llvm@14"
+  depends_on "llvm"
 
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5" # C++17
 
@@ -42,6 +43,8 @@ class Clazy < Formula
   end
 
   test do
+    gcc_version = Formula["gcc"].version.major unless OS.mac?
+
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION #{Formula["cmake"].version})
 
@@ -49,6 +52,12 @@ class Clazy < Formula
 
       set(CMAKE_CXX_STANDARD 17)
       set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+      if (UNIX AND NOT APPLE)
+        include_directories(#{Formula["gcc"].opt_include}/c++/#{gcc_version})
+        include_directories(#{Formula["gcc"].opt_include}/c++/#{gcc_version}/x86_64-pc-linux-gnu)
+        link_directories(#{Formula["gcc"].opt_lib}/gcc/#{gcc_version})
+      endif()
 
       set(CMAKE_AUTOMOC ON)
       set(CMAKE_AUTORCC ON)
@@ -73,8 +82,7 @@ class Clazy < Formula
       int main() { return 0; }
     EOS
 
-    llvm = deps.map(&:to_formula).find { |f| f.name.match?(/^llvm(@\d+(\.\d+)*)?$/) }
-    ENV["CLANGXX"] = llvm.opt_bin/"clang++"
+    ENV["CLANGXX"] = Formula["llvm"].opt_bin/"clang++"
     system "cmake", "-DCMAKE_CXX_COMPILER=#{bin}/clazy", "."
     assert_match "warning: qgetenv().isEmpty() allocates. Use qEnvironmentVariableIsEmpty() instead",
       shell_output("make VERBOSE=1 2>&1")

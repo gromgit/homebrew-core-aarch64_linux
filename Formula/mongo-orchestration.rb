@@ -6,27 +6,24 @@ class MongoOrchestration < Formula
   url "https://files.pythonhosted.org/packages/7a/df/245a0f19b54dbd8852b29f53d3448fd89df5283165eb9fe90a83bf59708e/mongo-orchestration-0.7.0.tar.gz"
   sha256 "f297a1fb81d742ab8397257da5b1cf1fd43153afcc2261c66801126b78973982"
   license "Apache-2.0"
-  revision 2
+  revision 1
   head "https://github.com/10gen/mongo-orchestration.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "405127e453e31ede09efe2d9f227f1c3eb73284d83acfdfd6b7e8f933cf98ae5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d23d95a71adb37e14c4e38e026d7e764af41480dd90841d74a7a2422f7f1f0d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90a4581f44b9dbdeb3acd2178844740b9c972d9ab482012fd621e0298fd2f2e6"
-    sha256 cellar: :any_skip_relocation, ventura:        "2ae530fa702c4b5ab68fe65c83ce5311fc4196685fc406b824c29368c55468ce"
-    sha256 cellar: :any_skip_relocation, monterey:       "9cd9b0ad3bfdda51c34bf4ae6fb0a8389b8d0eb2706f0bd08225d5ee8e0c66ed"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ba9a03b8247ec1bdb1beb5dcc3ba9ec4d92950af2e1a15db1eefc9f2b4d802f9"
-    sha256 cellar: :any_skip_relocation, catalina:       "6653fea0b774f6007ac75652a1a90c4719c3e913d8b35f3af9e0616baa7fc46c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b7a67022d7990bbe34724e0ebc0b5ffb3b5f7833f4b89bfb0ffb3614750264c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dd965e6c5f77a0d14a7eb917db11b60268677ce338fa303c50f69eda3cd0bab3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3be3d4d3361c13dd72c358ec25226486237b0669b3518dc27094ebb9b5cde0b7"
+    sha256 cellar: :any_skip_relocation, monterey:       "0818aea805f4196c41de20ecc0edbb222cd740229c673e7599e8203d6a0cce92"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d2042e1ea1f997f23c01dc88bc5e8cecb2fa08c58e5c641035d8d58c2d013be5"
+    sha256 cellar: :any_skip_relocation, catalina:       "24d106d1c9511112ce1a7c91664ea001d9d8dd074e303afd71b139fdfca6b14d"
+    sha256 cellar: :any_skip_relocation, mojave:         "80b35759af83e1a7effb496027d247cc856363fdad9d34238bf7c58f49b32ff9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02eb4bd1c6fcd120628f289d72e5caf2e3f7efb20611f44cecb0059eb847b7ef"
   end
 
-  depends_on "python@3.11"
-  depends_on "six"
+  depends_on "python@3.10"
 
   resource "bottle" do
-    url "https://files.pythonhosted.org/packages/7c/58/75f3765b0a3f86ef0b6e0b23d0503920936752ca6e0fc27efce7403b01bd/bottle-0.12.23.tar.gz"
-    sha256 "683de3aa399fb26e87b274dbcf70b1a651385d459131716387abdc3792e04167"
+    url "https://files.pythonhosted.org/packages/ea/80/3d2dca1562ffa1929017c74635b4cb3645a352588de89e90d0bb53af3317/bottle-0.12.19.tar.gz"
+    sha256 "a9d73ffcbc6a1345ca2d7949638db46349f5b2b77dac65d6494d45c23628da2c"
   end
 
   resource "CherryPy" do
@@ -35,8 +32,13 @@ class MongoOrchestration < Formula
   end
 
   resource "pymongo" do
-    url "https://files.pythonhosted.org/packages/ec/ff/9b08f29b57384e1f55080d15a12ba4908d93d46cd7fe83c5c562fdcd3400/pymongo-3.13.0.tar.gz"
-    sha256 "e22d6cf5802cd09b674c307cc9e03870b8c37c503ebec3d25b86f2ce8c535dc7"
+    url "https://files.pythonhosted.org/packages/72/82/e7196f2f69318dd206db26db68fcfa0ff821d88fbca6d0f0c7b678ba0353/pymongo-3.11.3.tar.gz"
+    sha256 "db5098587f58fbf8582d9bda2462762b367207246d3e19623782fb449c3c5fcc"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
+    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
   end
 
   def install

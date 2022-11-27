@@ -1,8 +1,8 @@
 class Makedepend < Formula
   desc "Creates dependencies in makefiles"
   homepage "https://x.org/"
-  url "https://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.7.tar.xz"
-  sha256 "a729cfd3c0f4e16c0db1da351e7f53335222e058e3434e84f91251fd6d407065"
+  url "https://xorg.freedesktop.org/releases/individual/util/makedepend-1.0.6.tar.bz2"
+  sha256 "d558a52e8017d984ee59596a9582c8d699a1962391b632bec3bb6804bf4d501c"
   license "MIT"
 
   livecheck do
@@ -11,24 +11,51 @@ class Makedepend < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7db435d623d3f12d3664338ef9f32c445438260054ec10593d24645d8018105"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "632a49fb2a96ada364872848c82d4de60ac2847eecefc43b5e9d0a7f16af20e8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3f3ad09b4aa6533501515ba172cae3bffca8dfb7076c080332b27a1ae997f676"
-    sha256 cellar: :any_skip_relocation, ventura:        "8c870cae96f96a20adbfcff8c4dc347148b73c1d27f8cfffe8dd1155cbc50dd2"
-    sha256 cellar: :any_skip_relocation, monterey:       "86aa1e7c97901369724cbba722ec3e44e47596a6f99f43925515bddda3cdb55c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "40d75eb41d75585be1db186162d1cfad4d2d1e5ba16564ce89d1945395531013"
-    sha256 cellar: :any_skip_relocation, catalina:       "1819aa4bd7a1afaf0f19658019b655f1390ee17bd524fe8de8424d7599d85e17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3dbe095db8dcc3ea6f2de966ca23b3950d01e4b740479b897af2a7d4d8ba8e8f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3ba9a11afac0d23fff0d1e79cb26213a90fa4bc2d07cc1405ec7f1f514bf18a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be8d84dee070f1d7da53aa291443b056136e67906ff29368ba56366d00b5dfc2"
+    sha256 cellar: :any_skip_relocation, monterey:       "dc6729e97faabd935de5a8356c00307a39a20c3f037cf67cf09cce9819b392fd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8be31010fad5fc4f86055643bfd592123dbd68ebb4780458dbc40004709504a8"
+    sha256 cellar: :any_skip_relocation, catalina:       "afe76789b5f01ccfee8cc0d4ffa308015fb5d8791a1d7ce6b2dc1ee4bf2a020f"
+    sha256 cellar: :any_skip_relocation, mojave:         "a25fb9fd3ce11f6b98da2c53fad8f046174697087f5f34664999afb9df5f41de"
+    sha256 cellar: :any_skip_relocation, high_sierra:    "0f463e197923867ff9387b2ccd1461d4b410e89205bd3896ae98c5d52679c4c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "740fb92a5e60c325afab7552e81f4b738a833bddf75f11c0efc5f9cda2ca492f"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "util-macros"
-  depends_on "xorgproto"
+
+  resource "xproto" do
+    url "https://xorg.freedesktop.org/releases/individual/proto/xproto-7.0.31.tar.gz"
+    mirror "http://xorg.mirrors.pair.com/individual/proto/xproto-7.0.31.tar.gz"
+    sha256 "6d755eaae27b45c5cc75529a12855fed5de5969b367ed05003944cf901ed43c7"
+  end
+
+  resource "xorg-macros" do
+    url "https://xorg.freedesktop.org/releases/individual/util/util-macros-1.19.2.tar.bz2"
+    mirror "http://xorg.mirrors.pair.com/individual/util/util-macros-1.19.2.tar.bz2"
+    sha256 "d7e43376ad220411499a79735020f9d145fdc159284867e99467e0d771f3e712"
+  end
 
   def install
+    resource("xproto").stage do
+      system "./configure", "--disable-dependency-tracking",
+                            "--disable-silent-rules",
+                            "--prefix=#{buildpath}/xproto"
+
+      # https://github.com/spack/spack/issues/4805#issuecomment-316130729 build fix for xproto
+      ENV.deparallelize { system "make", "install" }
+    end
+
+    resource("xorg-macros").stage do
+      system "./configure", "--prefix=#{buildpath}/xorg-macros"
+      system "make", "install"
+    end
+
+    ENV.append_path "PKG_CONFIG_PATH", "#{buildpath}/xproto/lib/pkgconfig"
+    ENV.append_path "PKG_CONFIG_PATH", "#{buildpath}/xorg-macros/share/pkgconfig"
+
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          *std_configure_args
+                          "--prefix=#{prefix}"
     system "make", "install"
   end
 

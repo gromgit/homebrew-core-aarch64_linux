@@ -11,7 +11,8 @@ class Libunwind < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "12c878018ce1adf39c49dd1bd14f4f82785f601b908fc2051ad7cbfb7f0bf65f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libunwind"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4be046923d0a9b075f1f21fd0c7722bf8346711d3a1c0b798182d36b14e19708"
   end
 
   keg_only "libunwind conflicts with LLVM"

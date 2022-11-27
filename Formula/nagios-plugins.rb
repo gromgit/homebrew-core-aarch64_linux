@@ -1,20 +1,18 @@
 class NagiosPlugins < Formula
   desc "Plugins for the nagios network monitoring system"
   homepage "https://www.nagios-plugins.org/"
-  url "https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.2/nagios-plugins-2.4.2.tar.gz"
-  sha256 "5b2769ae3d05559ea76ee296e73cf6e99e7175ad1e7ab3a7582c4a36d4ae3f47"
+  url "https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.0/nagios-plugins-2.4.0.tar.gz"
+  sha256 "fb8a5a633295d437464f4e23bc7b7d8d9412cf5c8debe8d70e5c030c6d6ba406"
   license "GPL-3.0-or-later"
   head "https://github.com/nagios-plugins/nagios-plugins.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "f2729b87cb23d5ad37af39e0b4696dd818c9520507b2d1528d42649ca06fb44d"
-    sha256 cellar: :any, arm64_monterey: "c0fe6bd13cc6fa25c154597a0bb66d245bae9a31c0b7d3f049dedd6d862fe5a6"
-    sha256 cellar: :any, arm64_big_sur:  "04f19ceb18f70237980d02e1147c03388a3e84e963427bba51f7c4437b1ed265"
-    sha256 cellar: :any, ventura:        "c040f9db0325edfac6fc13f7f9ac08acd96f3a4592fe6006b93bf74e8e802e3f"
-    sha256 cellar: :any, monterey:       "7106bc2245c818a345caff133b70650336ce8024859986852874b3b539d1c3fe"
-    sha256 cellar: :any, big_sur:        "9f5eba9244658bf95874d96c807f1a6f1decc7e201a8be8f8ba247fbcef4688a"
-    sha256 cellar: :any, catalina:       "48b56d823d578b7e7076dfb5c9c58dc58d5f9a1147b8ba6ae8937f0142d504fe"
-    sha256               x86_64_linux:   "3eb6d87ae49cde9604837cf5479f36237364c92a1d10e9ee78175398934795bf"
+    sha256 cellar: :any, arm64_monterey: "d5ebcdf7a2abc41073faad4119cb90ed9904d3ff63a34afd9344e7450191e167"
+    sha256 cellar: :any, arm64_big_sur:  "478ec656ea9dd695625484f0461ed2dffd7d71e705a9497beffee5b54c7e8682"
+    sha256 cellar: :any, monterey:       "1b4d1d845b23f4c69680da927484216c7b7a22ce25275202d4331407ff3b0163"
+    sha256 cellar: :any, big_sur:        "13337b2c683d9a06a857db2390beaa4f3b673fe9fa68149159f864b4d9d1c54e"
+    sha256 cellar: :any, catalina:       "6b1f5362dfeef40c945f9d90f03ed741ca0c851ebd69770dd0f9a5716cd09aa3"
+    sha256               x86_64_linux:   "c24c8f309d1bec9a929db7c544218865341035ab10cb7fc8ecc961655e0aac10"
   end
 
   depends_on "autoconf" => :build

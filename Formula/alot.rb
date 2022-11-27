@@ -3,19 +3,20 @@ class Alot < Formula
 
   desc "Text mode MUA using notmuch mail"
   homepage "https://github.com/pazz/alot"
-  url "https://github.com/pazz/alot/archive/0.10.tar.gz"
-  sha256 "71f382aa751fb90fde1a06a0a4ba43628ee6aa6d41b5cd53c8701fd7c5ab6e6e"
+  url "https://github.com/pazz/alot/archive/0.9.1.tar.gz"
+  sha256 "ee2c1ab1b43d022a8fe2078820ed57d8d72aec260a7d750776dac4ee841d1de4"
   license "GPL-3.0-only"
   revision 2
   head "https://github.com/pazz/alot.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a0ae5aed969d45e939f646c90119fd440e19b179e569ec937ac88611ebccc5a7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "62e87074af09ebeddef08123d59b8ccbf13abc2e896bb3350e37e76900a9cfe6"
-    sha256 cellar: :any_skip_relocation, monterey:       "cdc22fc59e24c7c2f1ff306f3a2e6d6f71666d7b03f07f4f29950b31c7cfb461"
-    sha256 cellar: :any_skip_relocation, big_sur:        "791bb9dcebb72f6a9eec467ed697a362aafc3f1e611be077c2a115c4cf2da35a"
-    sha256 cellar: :any_skip_relocation, catalina:       "b2a3fc9bf1323700553e37941f2d3c2db4d00de34d815fc949072331c0f8c98f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67b829bcff2abe5428d6dbb11a6a59a0d3c81ff3f1e7b522cb11d847a08031da"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3c79ff668ad0dbd660487733211ac380e97ae7e67cf211ef559be687c07f027d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f9ba3f7cc0858982386261853661c35eeaf4f0ecf928033345f5cf84005dcc7"
+    sha256 cellar: :any_skip_relocation, monterey:       "4ae10d58fe370c3f27a5002c2a08c9aecbd107561ea8b302b2e75eefdc618a42"
+    sha256 cellar: :any_skip_relocation, big_sur:        "96603eb0e2c1ff9195d760a15a5892f8b325b05ef504874ebc2c477d06bf4e99"
+    sha256 cellar: :any_skip_relocation, catalina:       "9957fe31c30e665b47efd1150e90288fc91f9a00fd0298d1a8e0e0d7dcfaffbe"
+    sha256 cellar: :any_skip_relocation, mojave:         "182143fbad21974b42e94c8432c80e395e53eeb7f0bbccffd36e687b67081c54"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b19f738d69314b171068f4318f1516c7351e76a9ce11f06156af0e49db6b4de0"
   end
 
   depends_on "sphinx-doc" => :build
@@ -23,18 +24,26 @@ class Alot < Formula
   depends_on "gpgme"
   depends_on "libmagic"
   depends_on "notmuch"
-  depends_on "python-typing-extensions"
-  depends_on "python@3.11"
-  depends_on "six"
+  depends_on "python@3.9"
 
-  resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+  resource "wheel" do
+    url "https://files.pythonhosted.org/packages/ed/46/e298a50dde405e1c202e316fa6a3015ff9288423661d7ea5e8f22f589071/wheel-0.36.2.tar.gz"
+    sha256 "e11eefd162658ea59a60a0f6c7d493a7190ea4b9a85e335b33489d9f17e0245e"
   end
 
   resource "Automat" do
-    url "https://files.pythonhosted.org/packages/7a/7b/9c3d26d8a0416eefbc0428f168241b32657ca260fb7ef507596ff5c2f6c4/Automat-22.10.0.tar.gz"
-    sha256 "e56beb84edad19dcc11d30e8d9b895f75deeb5ef5e96b84a467066b3b84bb04e"
+    url "https://files.pythonhosted.org/packages/80/c5/82c63bad570f4ef745cc5c2f0713c8eddcd07153b4bee7f72a8dc9f9384b/Automat-20.2.0.tar.gz"
+    sha256 "7979803c74610e11ef0c0d68a2942b152df52da55336e0c9d58daf1831cbdf33"
+  end
+
+  resource "Twisted" do
+    url "https://files.pythonhosted.org/packages/c2/41/3f30da0f7025480eff8feb9ef0927c6db6bbbf6e64985cac77ee0210a903/Twisted-21.2.0.tar.gz"
+    sha256 "77544a8945cf69b98d2946689bbe0c75de7d145cdf11f391dd487eae8fc95a12"
+  end
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/f0/cb/80a4a274df7da7b8baf083249b0890a0579374c3d74b5ac0ee9291f912dc/attrs-20.3.0.tar.gz"
+    sha256 "832aa3cde19744e49938b91fea06d69ecb9e649c93ba974535d08ad92164f700"
   end
 
   resource "configobj" do
@@ -53,13 +62,13 @@ class Alot < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
-    sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+    url "https://files.pythonhosted.org/packages/9f/24/1444ee2c9aee531783c031072a273182109c6800320868ab87675d147a05/idna-3.1.tar.gz"
+    sha256 "c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1"
   end
 
   resource "incremental" do
-    url "https://files.pythonhosted.org/packages/86/42/9e87f04fa2cd40e3016f27a4b4572290e95899c6dce317e2cdb580f3ff09/incremental-22.10.0.tar.gz"
-    sha256 "912feeb5e0f7e0188e6f42241d2f450002e11bbc0937c65865045854c24c0bd0"
+    url "https://files.pythonhosted.org/packages/4f/c5/430765c697afc217c8491785de321a21fa4d983dda14bcd82feb965b0593/incremental-21.3.0.tar.gz"
+    sha256 "02f5de5aff48f6b9f665d99d48bfc7ec03b6e3943210de7cfc88856d755d6f57"
   end
 
   resource "mock" do
@@ -68,13 +77,13 @@ class Alot < Formula
   end
 
   resource "python-magic" do
-    url "https://files.pythonhosted.org/packages/da/db/0b3e28ac047452d079d375ec6798bf76a036a08182dbb39ed38116a49130/python-magic-0.4.27.tar.gz"
-    sha256 "c1ba14b08e4a5f5c31a302b7721239695b2f0f058d125bd5ce1ee36b9d9d3c3b"
+    url "https://files.pythonhosted.org/packages/26/60/6d45e0e7043f5a7bf15238ca451256a78d3c5fe02cd372f0ed6d888a16d5/python-magic-0.4.22.tar.gz"
+    sha256 "ca884349f2c92ce830e3f498c5b7c7051fe2942c3ee4332f65213b8ebff15a62"
   end
 
-  resource "Twisted" do
-    url "https://files.pythonhosted.org/packages/b2/ce/cbb56597127b1d51905b0cddcc3f314cc769769efc5e9a8a67f4617f7bca/Twisted-22.10.0.tar.gz"
-    sha256 "32acbd40a94f5f46e7b42c109bfae2b302250945561783a8b7a059048f2d4d31"
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
+    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
   end
 
   resource "urwid" do
@@ -88,19 +97,13 @@ class Alot < Formula
   end
 
   resource "zope.interface" do
-    url "https://files.pythonhosted.org/packages/38/6f/fbfb7dde38be7e5644bb342c4c7cdc444cd5e2ffbd70d091263b3858a8cb/zope.interface-5.5.2.tar.gz"
-    sha256 "bfee1f3ff62143819499e348f5b8a7f3aa0259f9aca5e0ddae7391d059dce671"
+    url "https://files.pythonhosted.org/packages/ae/58/e0877f58daa69126a5fb325d6df92b20b77431cd281e189c5ec42b722f58/zope.interface-5.4.0.tar.gz"
+    sha256 "5dba5f530fec3f0988d83b78cc591b58c0b6eb8431a85edd1569a0539a8a5a0e"
   end
 
   def install
     virtualenv_install_with_resources
-
-    # Add path configuration file to use notmuch CFFI bindings
-    site_packages = Language::Python.site_packages("python3.11")
-    pth_contents = "import site; site.addsitedir('#{Formula["notmuch"].opt_libexec/site_packages}')\n"
-    (libexec/site_packages/"homebrew-notmuch2.pth").write pth_contents
-
-    pkgshare.install Pathname("extra").children - [Pathname("extra/completion")]
+    pkgshare.install Dir["extra/*"] - %w[extra/completion]
     zsh_completion.install "extra/completion/alot-completion.zsh" => "_alot"
 
     ENV["LC_ALL"] = "en_US.UTF-8"
@@ -109,25 +112,32 @@ class Alot < Formula
       system "make", "pickle"
       system "make", "man", "html"
       man1.install "build/man/alot.1"
-      doc.install Pathname("build/html").children
+      doc.install Dir["build/html/*"]
     end
   end
 
   test do
-    (testpath/".notmuch-config").write <<~EOS
-      [database]
-      path=#{testpath}/Mail
-    EOS
+    (testpath/".notmuch-config").write "[database]\npath=#{testpath}/Mail"
     (testpath/"Mail").mkpath
     system Formula["notmuch"].bin/"notmuch", "new"
 
-    require "pty"
-    PTY.spawn(bin/"alot", "--logfile", testpath/"out.log") do |_r, _w, pid|
+    begin
+      pid = fork do
+        $stdout.reopen("/dev/null")
+        $stdin.reopen("/dev/null")
+        on_macos do
+          exec "script", "-q", "/dev/null", bin/"alot", "--logfile", testpath/"out.log"
+        end
+        on_linux do
+          exec "script", "-q", "/dev/null", "-e", "-c", "#{bin}/alot --logfile #{testpath}/out.log"
+        end
+      end
       sleep 10
+    ensure
       Process.kill 9, pid
     end
 
     assert_predicate testpath/"out.log", :exist?, "out.log file should exist"
-    assert_match "setup gui", (testpath/"out.log").read
+    assert_match "setup gui", File.read(testpath/"out.log")
   end
 end

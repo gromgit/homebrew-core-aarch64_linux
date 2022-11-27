@@ -3,7 +3,7 @@ class Pktanon < Formula
   homepage "https://www.tm.uka.de/software/pktanon/index.html"
   url "https://www.tm.uka.de/software/pktanon/download/pktanon-1.4.0-dev.tar.gz"
   sha256 "db3f437bcb8ddb40323ddef7a9de25a465c5f6b4cce078202060f661d4b97ba3"
-  revision 4
+  revision 2
 
   # The regex below matches development versions, as a stable version isn't yet
   # available. If stable versions appear in the future, we should modify the
@@ -14,18 +14,23 @@ class Pktanon < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "786ffbd6c138d0d1f9ecac03e3638a681b539d81c3d03a98ec18c397937a748e"
-    sha256 cellar: :any,                 arm64_monterey: "7bce2aef63a3a786500090ec47feeee781f3ea815c1e290138df41a8d44663f6"
-    sha256 cellar: :any,                 arm64_big_sur:  "36905bed56897e7151f048047b5696c36d7cdc2ef8ee310568daf29022e9b2ec"
-    sha256 cellar: :any,                 ventura:        "63600257c413f301e3f82c2714c8e1e4daae6e05f07f8f51a3ccced2522d77b8"
-    sha256 cellar: :any,                 monterey:       "077c0faf136fd7ec5a0d5596fb84e720d376dfce83d85563ceb74bfcae48f61e"
-    sha256 cellar: :any,                 big_sur:        "1cb761204f479937cb389f2754dbb1bd4227a6759fa4b9c9ca3d8011e3fbcd22"
-    sha256 cellar: :any,                 catalina:       "52761b594fd6ade559756d25174e5ce53fa6db21db5d1795e750a58c6ef85b10"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54a53776fa3c529c82d9f1ae3725b9a5a82fe6ff9c35cae2133859f7245f161e"
+    sha256 cellar: :any,                 arm64_monterey: "34f86daad9ee0cbe10577e421315d43764f4e72f1935554563b12287ac4b9ac7"
+    sha256 cellar: :any,                 arm64_big_sur:  "e853faa62dd62e2663e5d9b551e79cd492927baab2b472aca01d981a6ef7913c"
+    sha256 cellar: :any,                 monterey:       "47690d89590d3fe50b3797fb7a75fa4d9b035bb4b6ef8b7a227465b66367543a"
+    sha256 cellar: :any,                 big_sur:        "53338eaa0e9e00d44d1084d7aee1aacfd498b568c5a145edc8da2da4b7054177"
+    sha256 cellar: :any,                 catalina:       "a8509ba2a13056c218fca682edf990df133b67e2b471eb561aac0d49d446bc7e"
+    sha256 cellar: :any,                 mojave:         "8d5bb1d5ac9f2cc9bcf73d45b22a0c724e42da26ac0dccc6c66c2e2a4e8a024d"
+    sha256 cellar: :any,                 high_sierra:    "5a3c101ebf3a3bb948c6005977367da0f72fa17fe2ffc3c410b8428325a140f8"
+    sha256 cellar: :any,                 sierra:         "20773e51330880065df3de1c5e80107f1f20cfe53c4735be80b39d9e1d0cca41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e572f713027ec32a5f98ff0c55a6fd10d8ea70254277c897d9648fa106498de1"
   end
 
   depends_on "boost"
   depends_on "xerces-c"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

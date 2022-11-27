@@ -1,22 +1,21 @@
 class TtyShare < Formula
   desc "Terminal sharing over the Internet"
   homepage "https://tty-share.com/"
-  url "https://github.com/elisescu/tty-share/archive/v2.4.0.tar.gz"
-  sha256 "90e566cd4c064a1c0b31a418c149a1766f158dd01b3563e7501c98dafd8c244f"
+  url "https://github.com/elisescu/tty-share/archive/v2.2.1.tar.gz"
+  sha256 "c42119dff70eb2ec861463ed7d1d60de44c0c93d83c10a88873c11393decfbc2"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c0a7c784ad44fcdd0d90dc72c0f755ced57104118bd40a592616598054ee748e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cbcd192686b309a7ac1464e8d5ad9f08629b7111a1d6df176d0035f8f96c9bb2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7466e5d42ceb6f8e44a88277a35a3da363fc4c045bdf5387356cd57be25be60"
-    sha256 cellar: :any_skip_relocation, ventura:        "e93c0812427d8ca2598bed21d0edf709f81c480b5a847a4a83ce20697d129436"
-    sha256 cellar: :any_skip_relocation, monterey:       "a026b1cc81ea6aabcbdaa66d4b1dec583346db66cefe5d2c69828aada3b37f93"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c443d3f7c93183efb992b8ea9eae1998228d9a2193d70c217a1c5840c9487be0"
-    sha256 cellar: :any_skip_relocation, catalina:       "0e202c44071ec49a25c615c91e4ea5ed41924b74a092dd7a911a0004ef953397"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c88800f33577a7a9ef4e603a809a1c2355b9a3476a34d3f4cd7d98daf693dc0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8da0dd00a1b06776e05e9092a215f77bf8d6b1cb071d75a0a548900c9f5f18ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "71120808d4909fdfdea8596392bf7bb50936ac1c0b329b13c60bdd061902d9a3"
+    sha256 cellar: :any_skip_relocation, monterey:       "4510766c5cc29ed7b67080cee39e59710445d6fd5e904c706a3a681d9720386d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e104200b09c5acd6bba873cd07e41b322ca7fed316fb3c74cb5eabbfe773ba5d"
+    sha256 cellar: :any_skip_relocation, catalina:       "1ab51ccd10571a99fadd713b01def94aa1afc9e433d372b78612859b863995d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fb65f718d04bf4102ae9453766f769f4770612c367b99d55b6b610dfaf075fc"
   end
 
-  depends_on "go" => :build
+  # Bump to 1.18 on the next release, if possible.
+  depends_on "go@1.17" => :build
 
   def install
     ldflags = "-s -w -X main.version=#{version}"

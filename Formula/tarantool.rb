@@ -1,8 +1,8 @@
 class Tarantool < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://download.tarantool.org/tarantool/src/tarantool-2.10.4.tar.gz"
-  sha256 "cb4a99c1d6c61f1a7a6665f583447c4402ca83920ee27d7e2728f86cce865ded"
+  url "https://download.tarantool.org/tarantool/2.8/src/tarantool-2.8.4.0.tar.gz"
+  sha256 "6fc0b70aedd00c2328aa49dbb0ae9320eabf7266927f5e0790ff1a2ca67aa988"
   license "BSD-2-Clause"
   version_scheme 1
   head "https://github.com/tarantool/tarantool.git", branch: "master"
@@ -13,20 +13,18 @@ class Tarantool < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "277c3dc7437f49867ffb50037f91ad49e5dd7c2495aa9a2c5757ef89dca29192"
-    sha256 cellar: :any,                 arm64_monterey: "b2a4ac6e78b1e84a894c1e45c9289c57666865240934b489247b7fd7ab7d85d3"
-    sha256 cellar: :any,                 arm64_big_sur:  "f2ea0ced740c5bba580c224ed9837f8d1538afefede7b850685f238a1782ad70"
-    sha256 cellar: :any,                 ventura:        "8f1faad2cc53e8f9aaea442e89ce435da4ea5e44ae2695ca7b96f1e499b2d322"
-    sha256 cellar: :any,                 monterey:       "aea440bec58225251e671777b02f5ef1611a8abfc3ec9b5f24b614be760e57f7"
-    sha256 cellar: :any,                 big_sur:        "56b453622ec9b100e63413cca4302fb553465f24add9d9d74fd8440efff7c244"
-    sha256 cellar: :any,                 catalina:       "a3fc168c0c97c82368f4e9a10e40620e2022903d4f9dda2d8d5a3f979d53556c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91a47695fada66efdbca21d0506860883167d170daa51e817380cca7f4de7ee9"
+    sha256 cellar: :any,                 arm64_monterey: "fa79d91a265eaadd770342ed9a3276b53c516da511215a11871bb79dc3eddf33"
+    sha256 cellar: :any,                 arm64_big_sur:  "dd4db0ad19a1c866a78c7ffb5cd2d87cfdc95b8a211fc4dc428834a435adf212"
+    sha256                               monterey:       "19ee9ea24c9a5a6a6dd2b11b6aba159bc3895a926f8572fe171e300ad429c06b"
+    sha256                               big_sur:        "ad4032bfd88b4dc363b177db6dce6523985af9c5cebda4fdf0b60285387f9447"
+    sha256                               catalina:       "1121a774b704ed8dd5d8ccd5f430fbbcafb91edd848e2a7dab8e44a734dc0741"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0c5a7a2dfa937156ba3a2b0ef8fc0c833e2a1eda4862d9714f3fd3873e36a1e"
   end
 
   depends_on "cmake" => :build
   depends_on "icu4c"
   depends_on "libyaml"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
   depends_on "readline"
   depends_on "zstd"
 
@@ -36,7 +34,7 @@ class Tarantool < Formula
   def install
     # Avoid keeping references to Homebrew's clang/clang++ shims
     inreplace "src/trivia/config.h.cmake",
-              "#define COMPILER_INFO \"@CMAKE_C_COMPILER_ID@-@CMAKE_C_COMPILER_VERSION@\"",
+              "#define COMPILER_INFO \"@CMAKE_C_COMPILER@ @CMAKE_CXX_COMPILER@\"",
               "#define COMPILER_INFO \"/usr/bin/clang /usr/bin/clang++\""
 
     args = std_cmake_args

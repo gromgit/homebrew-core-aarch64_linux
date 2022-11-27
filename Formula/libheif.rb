@@ -1,31 +1,38 @@
 class Libheif < Formula
   desc "ISO/IEC 23008-12:2017 HEIF file format decoder and encoder"
   homepage "https://www.libde265.org/"
-  url "https://github.com/strukturag/libheif/releases/download/v1.14.0/libheif-1.14.0.tar.gz"
-  sha256 "9a2b969d827e162fa9eba582ebd0c9f6891f16e426ef608d089b1f24962295b5"
+  url "https://github.com/strukturag/libheif/releases/download/v1.12.0/libheif-1.12.0.tar.gz"
+  sha256 "e1ac2abb354fdc8ccdca71363ebad7503ad731c84022cf460837f0839e171718"
   license "LGPL-3.0-only"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4f362e38b103cad94a9efa4262954f1eaf131d27aad0d2945b40140d3d707a24"
-    sha256 cellar: :any,                 arm64_monterey: "961e0481b2ff19bc463963a9dd4e22dfcc9e896e84847b6e1e8164105c865b7c"
-    sha256 cellar: :any,                 arm64_big_sur:  "42305ca6707b470406c80fcb42a90acb70be48e665469c67bc3b69b1c86cc816"
-    sha256 cellar: :any,                 ventura:        "aa5bc96c47487d389139d68a7bc678e37cf1c29fab739091dcefa808630a2be8"
-    sha256 cellar: :any,                 monterey:       "d52187177201c577e2a148c2f9d99f71dc42156a65ed553446cbe0a98975586b"
-    sha256 cellar: :any,                 big_sur:        "a3ab4023b5ff07677f2d24c31dd16a9e0bc2285ed3e592b43a743d5c950dfa61"
-    sha256 cellar: :any,                 catalina:       "b6a7ff7511e118258ff8a733c4322886db2ce8dde501fb7332d33af71b26f2c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1d44004038b86971f43edbd42ce6f6ed1daaf48ae64c1d1ad1eacbdc6406847"
+    sha256 cellar: :any,                 arm64_monterey: "6285488bd07d49e996a1be0dfe7296051ade71cc2078ecbaa2243afd05afe560"
+    sha256 cellar: :any,                 arm64_big_sur:  "ccf8a9fecc4629a5ae7b7cdb2db8e86c74cf70ab345f960d513e45b57f646174"
+    sha256 cellar: :any,                 monterey:       "b2cadb8ecf0985f007340e54853ffa685f57fd4dba8cae4bae37499119a9fe04"
+    sha256 cellar: :any,                 big_sur:        "6a82cb078278ee9e6240b6c738308974ca3a4ef545c30016f8395967bb6f4959"
+    sha256 cellar: :any,                 catalina:       "9ed1d527c347fa67d346d5d638b1760177693819d167c7dc549ebabcaabc428c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6382a34a85ddc5cb1a8359de883c18867340294b2f662e84650b287f04324484"
   end
 
   depends_on "pkg-config" => :build
   depends_on "aom"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libde265"
   depends_on "libpng"
   depends_on "shared-mime-info"
   depends_on "x265"
 
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
+
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
     system "make", "install"
     pkgshare.install "examples/example.heic"
     pkgshare.install "examples/example.avif"
@@ -44,7 +51,7 @@ class Libheif < Formula
     assert_predicate testpath/"exampleheic-1.jpg", :exist?
     assert_predicate testpath/"exampleheic-2.jpg", :exist?
 
-    output = "File contains 1 image"
+    output = "File contains 1 images"
     example = pkgshare/"example.avif"
     exout = testpath/"exampleavif.jpg"
 

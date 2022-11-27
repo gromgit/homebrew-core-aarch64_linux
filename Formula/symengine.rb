@@ -4,21 +4,17 @@ class Symengine < Formula
   url "https://github.com/symengine/symengine/releases/download/v0.9.0/symengine-0.9.0.tar.gz"
   sha256 "dcf174ac708ed2acea46691f6e78b9eb946d8a2ba62f75e87cf3bf4f0d651724"
   license "MIT"
-  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5e9da40908b2b1a4dd09e1d150db04c1fea72ede228e5df81cb4ba7fd699b48c"
-    sha256 cellar: :any,                 arm64_monterey: "a21f1ecb176e2381decdbc6571f59541f496d6a0e051830e30580efec1243a48"
-    sha256 cellar: :any,                 arm64_big_sur:  "5761bf631464fe6891de913a4f96804a5b40a90bbe419dc3887b25d9f155c58e"
-    sha256 cellar: :any,                 ventura:        "e653de90c0bf275adcdfe257ba6dd4891c226eff6a1782bf6ef4d25ca007b446"
-    sha256 cellar: :any,                 monterey:       "8af8b961cbd4dec429440094b7dc5dea18ff766682f013b915d2688497ccc626"
-    sha256 cellar: :any,                 big_sur:        "db330d18c95e408e3ad4ae1496cedc00313218fe08a11c8f5590e27d9016af81"
-    sha256 cellar: :any,                 catalina:       "6a0483496434c4d7205a05295db8862d068c92c2e6c7c92cb0dbafeb147d3fc7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f113390949772bbe3514e1a7e49c78a29c9e3f2fae7dbac59415b06bf5b2a58b"
+    sha256 cellar: :any,                 arm64_monterey: "5e75924cfebfe29c1ad56a211302098274dc7829e837d97ecce628998cc45012"
+    sha256 cellar: :any,                 arm64_big_sur:  "d9aa2cf7d7fed7aa4fe3576e19e53dd595f3e43fe695c824a402487c0c56c82e"
+    sha256 cellar: :any,                 monterey:       "cfdf4eceacd418168d86460b734e4af2f90d8a06a2b98a02610e2332637ab467"
+    sha256 cellar: :any,                 big_sur:        "3b70d8cb61920a7d883af6f5c6d4f9ac90d0c2b7199d3f0499c3dd8c85790bf6"
+    sha256 cellar: :any,                 catalina:       "846fa41a78303f48bc01a6f050b1af6a248ef6787d9d586994f4407747d32fe0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1728871d0ef9a14dea0a3478ea370f3cd2550a8738a95da7157919bbdc4d93f8"
   end
 
   depends_on "cmake" => :build
-  depends_on "cereal"
   depends_on "flint"
   depends_on "gmp"
   depends_on "libmpc"
@@ -26,15 +22,6 @@ class Symengine < Formula
   depends_on "mpfr"
 
   fails_with gcc: "5"
-
-  # Avoid static linkage with LLVM. The static libraries contain
-  # LTOed objects which causes errors with Apple's `ld`.
-  # An alternative workaround is to use `lld` with `-fuse-ld=lld`.
-  # TODO(carlocab): Upstream a version of this patch.
-  patch do
-    url "https://gitweb.gentoo.org/repo/gentoo.git/plain/sci-libs/symengine/files/symengine-0.8.1-fix_llvm.patch?id=83ab9587be9f89e667506b861208d613a2f016e5"
-    sha256 "c654ea7c4ee44c689433e87f71c7ae78e6c04968e7dfe89be5e4ba4c8c53713b"
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build",
@@ -47,7 +34,6 @@ class Symengine < Formula
                     "-DWITH_COTIRE=OFF",
                     "-DLLVM_DIR=#{Formula["llvm"].opt_lib}/cmake/llvm",
                     "-DWITH_SYMENGINE_THREAD_SAFE=ON",
-                    "-DWITH_SYSTEM_CEREAL=ON",
                     *std_cmake_args
 
     system "cmake", "--build", "build"

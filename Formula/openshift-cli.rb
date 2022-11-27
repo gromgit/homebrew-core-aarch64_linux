@@ -1,11 +1,14 @@
 class OpenshiftCli < Formula
   desc "OpenShift command-line interface tools"
   homepage "https://www.openshift.com/"
-  url "https://github.com/openshift/oc.git",
-      tag:      "openshift-clients-4.12.0-202208031327",
-      revision: "3c85519af6c4979c02ebb1886f45b366bbccbf55"
   license "Apache-2.0"
   head "https://github.com/openshift/oc.git", branch: "master"
+
+  stable do
+    url "https://github.com/openshift/oc.git",
+        tag:      "openshift-clients-4.11.0-202204020828",
+        revision: "f1f09a392fd18029f681c06c3bd0c44420684efa"
+  end
 
   livecheck do
     url :stable
@@ -13,19 +16,18 @@ class OpenshiftCli < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ba1ac3cb97607da7dca52fe1056b68801f37d69ce49a9f6087ef25a2060725c6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f71b7163b12605d316693a1a1659475fdf4d267db5c4242bbf9cfd5601c898ed"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "96f681bea44c8e059e016df6ceedcbaeea5643d3a9b6a1c03898a28ee2f3f585"
-    sha256 cellar: :any_skip_relocation, ventura:        "978b46d713dc8f49e9b5e44de94decfb9cf27f6bde217d24de31494a80e90102"
-    sha256 cellar: :any_skip_relocation, monterey:       "12f220767a0aa3c37413c81ac447b3fa7cbe739125b065b7a87fd75cb62872bd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5102fc4a9bd788b0ebfc4df3fa2f4f68568be929db6bc933bd4418fe72ae80c0"
-    sha256 cellar: :any_skip_relocation, catalina:       "d29f854a807e9b77c658ffdea377fcedb0ace532eae1c99c09a8e43787712e49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55eb4b18cc17eead8458ec3492dc7c4e788f6346f786220ea0aa48f47b194cae"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8867063efd49d665866b2c6f64ec115f4469c08f90e2949b9b0b5b89cf5ab6d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f977ed51222df9a313f867141a568c2c6ce914fc599d71f758802ab1c3f68dd5"
+    sha256 cellar: :any_skip_relocation, monterey:       "e5b18766f67d10b16b519ada978371026ee4685cbbd975f7ffe29affd3073b37"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e17bae8eb69b676aadc58a4b2fcc2d10491270f8a138c447bd8fdae2fee462fb"
+    sha256 cellar: :any_skip_relocation, catalina:       "c6111d9e409c22734dd9bd841a80be4dd5c448f30e6928d0edc9a3cb3685c0cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0663c5b9780e503ba3eec7c23e3d8dd27f2485bcbc86a84701371ae3ebf1b3f"
   end
 
   depends_on "coreutils" => :build
-  depends_on "go" => :build
+  # Bump to 1.18 on the next release.
+  depends_on "go@1.17" => :build
+  depends_on "heimdal" => :build
   depends_on "socat"
 
   uses_from_macos "krb5"
@@ -37,7 +39,15 @@ class OpenshiftCli < Formula
     # See https://github.com/golang/go/issues/26487
     ENV.O0 if OS.linux?
 
-    system "make", "cross-build-#{os}-#{arch}", "OS_GIT_VERSION=#{version}", "SHELL=/bin/bash"
+    args = ["cross-build-#{os}-#{arch}"]
+    args << if build.stable?
+      "WHAT=cmd/oc"
+    else
+      "WHAT=staging/src/github.com/openshift/oc/cmd/oc"
+    end
+    args << "SHELL=/bin/bash" if OS.linux?
+
+    system "make", *args
     bin.install "_output/bin/#{os}_#{arch}/oc"
 
     bash_completion.install "contrib/completions/bash/oc"

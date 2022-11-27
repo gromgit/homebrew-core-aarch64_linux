@@ -1,19 +1,22 @@
 class Sdl2 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
   homepage "https://www.libsdl.org/"
-  url "https://github.com/libsdl-org/SDL/releases/download/release-2.26.0/SDL2-2.26.0.tar.gz"
-  sha256 "8000d7169febce93c84b6bdf376631f8179132fd69f7015d4dadb8b9c2bdb295"
+  url "https://libsdl.org/release/SDL2-2.0.22.tar.gz"
+  sha256 "fe7cbf3127882e3fc7259a75a0cb585620272c51745d3852ab9dd87960697f2e"
   license "Zlib"
 
+  livecheck do
+    url "https://www.libsdl.org/download-2.0.php"
+    regex(/href=.*?SDL2[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c0d6ef9850408f81f07078c413227a322f6f65166c631a18cbbc2c6f230cb087"
-    sha256 cellar: :any,                 arm64_monterey: "7a77adb962ca34b43371e732ae23921e8c20b14c9ec453efc77cbeac9cae96ee"
-    sha256 cellar: :any,                 arm64_big_sur:  "160b90bf0d2cfbdab6ef6ce0671b30991c5eb1b44f742ec623e20f3c9648b366"
-    sha256 cellar: :any,                 ventura:        "7462b8e90f5a68ef273e35352d9aacce062fd2b5d0fb2f6dfa3e9930580a4d8d"
-    sha256 cellar: :any,                 monterey:       "68e219bec783fe43fac0bdf2224d71e295b7d102f59fcce76c181689d59c6b09"
-    sha256 cellar: :any,                 big_sur:        "0e476c1ac1b42f2997e7a04ee7816be50bfc03a4db8edb6572895816736433d9"
-    sha256 cellar: :any,                 catalina:       "dba32a7de53794fb1f2473f4b94b22795a63546cd6d3a1e1e0c4249c74c0d632"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42c7f1d928883ea2661a259209252512f413809b0effde7c6dffa120e8cff83e"
+    sha256 cellar: :any,                 arm64_monterey: "d299f67194020898fa457130d11ecc89beab6020d2d8ed6cb6c546ca91858f03"
+    sha256 cellar: :any,                 arm64_big_sur:  "77512d6fc260326313d7c02d8442a967740d4b7e616a6995e87844dcf7a2f523"
+    sha256 cellar: :any,                 monterey:       "eac3c4de97e453a8e26e142fae4f960b81685a6278193af27d9ab231a975c41c"
+    sha256 cellar: :any,                 big_sur:        "cb7bd018480f11182cf123add9d2f409b2de0013eb40fc08ac94f79e5b8c4848"
+    sha256 cellar: :any,                 catalina:       "fd1311f75f9b584bd8621ec419deb05a63f29de0e5ae8fd88b737186d5bd2e97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3522d4ffdbae2fd6e413dd10027d7c645a87ea19ecd4443423fba7cf316c4d2"
   end
 
   head do
@@ -30,15 +33,15 @@ class Sdl2 < Formula
     depends_on "libxcursor"
     depends_on "libxscrnsaver"
     depends_on "libxxf86vm"
-    depends_on "pulseaudio"
     depends_on "xinput"
+    depends_on "pulseaudio"
   end
 
   def install
     # We have to do this because most build scripts assume that all SDL modules
     # are installed to the same prefix. Consequently SDL stuff cannot be
     # keg-only but I doubt that will be needed.
-    inreplace "sdl2.pc.in", "@prefix@", HOMEBREW_PREFIX
+    inreplace %w[sdl2.pc.in sdl2-config.in], "@prefix@", HOMEBREW_PREFIX
 
     system "./autogen.sh" if build.head?
 

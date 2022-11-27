@@ -1,8 +1,9 @@
 class BoostMpi < Formula
   desc "C++ library for C++/MPI interoperability"
   homepage "https://www.boost.org/"
-  url "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.bz2"
-  sha256 "1e19565d82e43bc59209a168f5ac899d3ba471d55c7610c677d4ccf2c9c500c0"
+  # Please add to synced_versions_formulae.json once version synced with boost
+  url "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2"
+  sha256 "8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc"
   license "BSL-1.0"
   head "https://github.com/boostorg/boost.git", branch: "master"
 
@@ -11,13 +12,12 @@ class BoostMpi < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "ef79f5ee09830e830df2100cad32f1231fbcfae40ba6d4359cdae15b3b5db54f"
-    sha256                               arm64_monterey: "9c1be1173c1e34c1e88220da18605adb756f777f2c6048013eea7e864fef0ae7"
-    sha256                               arm64_big_sur:  "0cf455d731681d626f0e080710576d41639492572acba0d61c3edfdffc6b98c1"
-    sha256                               monterey:       "c5195f93adc7fe885d7344184f76b709c2e3e99f7bd7c48db8eb78689fb2add2"
-    sha256                               big_sur:        "3245f5c5284d901b402b326115f7925c422821f1e5b46a4db337c27a21ce24a8"
-    sha256                               catalina:       "d7837d66fce06bff98c00b0f3904ef1729321864aaef63b142a4520ea955bdc2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4610f966edd12b60607eff47ad6d912b7b4eb6857d21d25b35e93973eee98eba"
+    sha256                               arm64_monterey: "b0de85ec447e59dfb2916736f591b1d36de0047d925a483681234a7116e4d5c6"
+    sha256                               arm64_big_sur:  "fb52afb9037e1740fabc4a1d75de4ce5db82f0651e7052668adafb75de1a73aa"
+    sha256                               monterey:       "50cbe0dfbca9e77cfb7936af7f62e02528bcfa5e13580e8edf453b7f0eaff362"
+    sha256                               big_sur:        "d9ee7034172764690b5af59878614dcaa65089ad24523dbfe8046ebc9a505acf"
+    sha256                               catalina:       "3e74dda3dc390f98e5636e5092f66a4719f6159680fc53b895867498aab59ccb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19180c1f9be0556eda38d175b21818191f3698b0454811f5a0ef6e7e3d78524e"
   end
 
   # Test with cmake to avoid issues like:

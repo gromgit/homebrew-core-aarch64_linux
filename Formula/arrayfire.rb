@@ -1,17 +1,17 @@
 class Arrayfire < Formula
   desc "General purpose GPU library"
   homepage "https://arrayfire.com"
-  url "https://github.com/arrayfire/arrayfire/releases/download/v3.8.2/arrayfire-full-3.8.2.tar.bz2"
-  sha256 "2d01b35adade2433078f57e2233844679aabfdb06a41e6992a6b27c65302d3fe"
+  url "https://github.com/arrayfire/arrayfire/releases/download/v3.8.1/arrayfire-full-3.8.1.tar.bz2"
+  sha256 "13edaeb329826e7ca51b5db2d39b8dbdb9edffb6f5b88aef375e115443155668"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "cdcb0b0c204907ca8e6fd03438cdb5ced7596edac21e91c61c4230c762b7abe8"
-    sha256 cellar: :any,                 arm64_big_sur:  "b64a38b084b3aacbc05b5cd0a047d2db3d105c6ee0daabd98154687d5b7b5ed1"
-    sha256 cellar: :any,                 monterey:       "14baef69a6ab743f9c77d4be0626b61381e321efb19a5c8fdc50108b4ce8f432"
-    sha256 cellar: :any,                 big_sur:        "d1e74ce111fe56acca627edaedde4e64831f3b9541c663d98d741ff18429413c"
-    sha256 cellar: :any,                 catalina:       "0bb39b21995aa1c327d52be9dcb259523977b318e79e6ee984e50aca54f01c94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9291a3d4728f18c57f9f5beadeedf526e0963f7d0cc09fa1110d66a91b05c9d"
+    sha256 cellar: :any,                 arm64_monterey: "c91188803bdb170202adc8fcc0b26294057e119e0bdefa1843ab158602ddd0b9"
+    sha256 cellar: :any,                 arm64_big_sur:  "3b7d5567de48d187d18c4e5a12d7a292d0c4dfebb9e181222ef4030a9b7115fc"
+    sha256 cellar: :any,                 monterey:       "2e28ca14205729d079b08b01eeb91d6c090d9c50caa7321a2fb7fa55a8bfd376"
+    sha256 cellar: :any,                 big_sur:        "4b59cd0db04eaf807b459f872b4fe2e6401cc5c9ae3675bdafb7af52f742ca3e"
+    sha256 cellar: :any,                 catalina:       "81f15373fb946ee09ed96d57731a07c06d85a522db953ed131b2de747f18fe0f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a34242e438745f4309147b5b0adbc2440ee9d1292dbadc2b7dff2707eb61a217"
   end
 
   depends_on "boost" => :build
@@ -21,23 +21,23 @@ class Arrayfire < Formula
   depends_on "freeimage"
   depends_on "openblas"
 
+  on_linux do
+    depends_on "gcc"
+  end
+
   fails_with gcc: "5"
 
   def install
     # Fix for: `ArrayFire couldn't locate any backends.`
-    # We cannot use `CMAKE_INSTALL_RPATH` since upstream override this:
-    #   https://github.com/arrayfire/arrayfire/blob/590267d2/CMakeModules/InternalUtils.cmake#L181
-    linker_flags = [
-      rpath(source: lib, target: Formula["fftw"].opt_lib),
-      rpath(source: lib, target: Formula["openblas"].opt_lib),
-      rpath(source: lib, target: HOMEBREW_PREFIX/"lib"),
-    ]
-    linker_flags.map! { |path| "-Wl,-rpath,#{path}" }
+    if OS.mac?
+      ENV.append "LDFLAGS", "-Wl,-rpath,@loader_path/#{Formula["fftw"].opt_lib.relative_path_from(lib)}"
+      ENV.append "LDFLAGS", "-Wl,-rpath,@loader_path/#{Formula["openblas"].opt_lib.relative_path_from(lib)}"
+      ENV.append "LDFLAGS", "-Wl,-rpath,@loader_path/#{(HOMEBREW_PREFIX/"lib").relative_path_from(lib)}"
+    end
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DAF_BUILD_CUDA=OFF",
                     "-DAF_COMPUTE_LIBRARY=FFTW/LAPACK/BLAS",
-                    "-DCMAKE_SHARED_LINKER_FLAGS=#{linker_flags.join(" ")}",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

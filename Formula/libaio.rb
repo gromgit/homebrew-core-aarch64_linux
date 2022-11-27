@@ -18,7 +18,8 @@ class Libaio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "780180556365b75239ec9086fb73b2f77bd5c9350e9ed6d0fbd222ce758c6dcc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libaio"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c5b2da5dc30f616b98d6c8f030a7bcc75325b0570b3b570bf1aa4fbc6452950b"
   end
 
   depends_on :linux

@@ -5,7 +5,6 @@ class FlowTools < Formula
   sha256 "80bbd3791b59198f0d20184761d96ba500386b0a71ea613c214a50aa017a1f67"
 
   bottle do
-    sha256 arm64_ventura:  "9b3c31e16ad744d7bf46bb4f19592fde2ba528679c14da62b6cfefc45d7c16df"
     sha256 arm64_monterey: "f777ff9ec4f45fac84b06bad2fce24a144fd7c0df2b83490852139edf12b4977"
     sha256 arm64_big_sur:  "81f57d2bc6154643b3836e02200b77573cfda8f16abe9d6c7575f24f35c74048"
     sha256 monterey:       "f6118db5b348d619d01bafffe2f6f71d962b66f3a926ed77a6998da0dc327018"
@@ -15,6 +14,7 @@ class FlowTools < Formula
     sha256 high_sierra:    "be6a9b7233b78e61df362ab06916a1912b1ac197f39849081cd3d9ca4cda5c31"
     sha256 sierra:         "47ae55656be935936a5d3aa505f510c337818bd3c9d1a7fb028044523382dd8b"
     sha256 el_capitan:     "2b41c1415b50e7123c5268dce7c656aba825a16c061691ee8eaf06e39d622cec"
+    sha256 yosemite:       "0d3814f50d6bc8d06c808176bc0b6f725f429b231a21eabe49fadf6729a7d27b"
     sha256 x86_64_linux:   "64da4b6f7a1bb388ab05c1d258e2083f5e6601ad3e93b2330313abb8a5b2b72b"
   end
 

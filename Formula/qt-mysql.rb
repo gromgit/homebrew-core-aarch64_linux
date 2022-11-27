@@ -1,8 +1,8 @@
 class QtMysql < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.4/6.4.0/submodules/qtbase-everywhere-src-6.4.0.tar.xz"
-  sha256 "cb6475a0bd8567c49f7ffbb072a05516ee6671171bed55db75b22b94ead9b37d"
+  url "https://download.qt.io/official_releases/qt/6.2/6.2.3/submodules/qtbase-everywhere-src-6.2.3.tar.xz"
+  sha256 "34d6d0072e197241463c417ad72610c3d44e2efd6062868e9a95283103d75df4"
   license all_of: ["LGPL-2.1-only", "LGPL-3.0-only"]
 
   livecheck do
@@ -10,13 +10,11 @@ class QtMysql < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "079661fd6d4a2e8790adf0987db4e8af69ae476a827546fd7646c21f4763129e"
-    sha256 cellar: :any,                 arm64_monterey: "ed655e593a0f04f1f2ef4a6e69c9850b5e8230e491f487fe9daa0949832603f2"
-    sha256 cellar: :any,                 arm64_big_sur:  "09296c51249c4bbcd2e8287d6804397924bd4267c1e367f3d64402ef88cf1d84"
-    sha256 cellar: :any,                 monterey:       "e94c38f53df5002b3e07ab4f6721bacb2a1cca934340c25fcf317a3b0a42acef"
-    sha256 cellar: :any,                 big_sur:        "8281d5cab2a3b8ae8f61e1c70dd6df12c44c1df325b9a68af7e80abb1fa942ca"
-    sha256 cellar: :any,                 catalina:       "bc724307260c2f2a4d08342a2f504c86ee60acf8a15289b178b4f57409bc7b74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae67e4feef6ec568db061d4c0691f3e9a878ff68b94c6aabc80060515aab8c90"
+    sha256 cellar: :any, arm64_monterey: "75880354a5f7aa68811e267b7ce072ef18089a8197f504dfbc76524cea09926e"
+    sha256 cellar: :any, arm64_big_sur:  "288d1dcf84eb4eb2b15bd5a6e7edd4828d212a052d23659d1d80bd719fa313d6"
+    sha256 cellar: :any, monterey:       "7deef3efa3b634ddfee9f64d2e2e6e4be9a310e54d2d36b2d854c0d7cbac5c66"
+    sha256 cellar: :any, big_sur:        "7eba9a7832cd385dfe38f73dfeb3c02814ac39ec3dfd6b0cdf5c20639f8a3ff1"
+    sha256 cellar: :any, catalina:       "aef61d6a926e67e44997b86ea07bdf32ef9e93a3ab9f03e25b9b2d463ba34181"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -26,8 +24,6 @@ class QtMysql < Formula
 
   conflicts_with "qt-mariadb", "qt-percona-server",
     because: "qt-mysql, qt-mariadb, and qt-percona-server install the same binaries"
-
-  fails_with gcc: "5"
 
   def install
     args = std_cmake_args + %W[
@@ -80,7 +76,6 @@ class QtMysql < Formula
       #include <cassert>
       int main(int argc, char *argv[])
       {
-        QCoreApplication::addLibraryPath("#{share}/qt/plugins");
         QCoreApplication a(argc, argv);
         QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
         assert(db.isValid());

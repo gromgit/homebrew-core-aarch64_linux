@@ -1,8 +1,8 @@
 class Kops < Formula
   desc "Production Grade K8s Installation, Upgrades, and Management"
   homepage "https://kops.sigs.k8s.io/"
-  url "https://github.com/kubernetes/kops/archive/v1.25.3.tar.gz"
-  sha256 "7ecd4eb7dc109d34fcd13930d0660342ec5945d0456a63ef4ace2955f556d450"
+  url "https://github.com/kubernetes/kops/archive/v1.23.1.tar.gz"
+  sha256 "4bef36390f9ca2f77c8910e969c7236cea7608f211fe46f844d791955e46f49a"
   license "Apache-2.0"
   head "https://github.com/kubernetes/kops.git", branch: "master"
 
@@ -12,24 +12,36 @@ class Kops < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2ab459b3293cbcd8d6b0827d4b23af8449a3810b38d0bc0c4c821e66f7b3a9e8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8ebbebc2f36d16b1b9987d57fd18d4134e0a697c737235799bf9f5eeb81a2430"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6c77aef751e0bf2972508f0b087b5817cd21307090072d5724e112d710e2b60"
-    sha256 cellar: :any_skip_relocation, ventura:        "2fa275955609bdaf8ddf700254b6c9742c24e375906eeedd2bd534e9cd864670"
-    sha256 cellar: :any_skip_relocation, monterey:       "9745c086b5a923336a992c2acf92d0a1f8462a3462a55f31e1bfe6526ba6bbe1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d42775fb0cf3d22ae072d933ade1efad35ec6fdc8b58d5fdde13f598af24933a"
-    sha256 cellar: :any_skip_relocation, catalina:       "07096057856cfb9620419a150bede943dc961d9f53bf8f9e82cca6d4db797382"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abd9a621067522b14e18e3c5ad67209b897c56723176259d6a61a3f8dce38b0e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8fd2207b2a1dbbbe19da1b7879207a24c1dd2a414e9281081cfb2dab47beb1ea"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "757ede732a275ac79be47dd332717331f7b81548b0a819c1e4621b8b4bd2bfcb"
+    sha256 cellar: :any_skip_relocation, monterey:       "8b04413cb9d2f6ce258e13cd686555015e451af48cf8771af50d10490c0adf00"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4aecac727c23a9a90eb280d73d3a1fb67d281cc49972e41b3c002542e294fc12"
+    sha256 cellar: :any_skip_relocation, catalina:       "087affa15b16aaf0cdd56eb30073f54f6d2f7a6e711075798ebe86a6a7075efa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e828fac606b18b171bcde63c6e6a1c3b4a5d23a8b3bd5725209679f8008b5d1"
   end
 
   depends_on "go" => :build
   depends_on "kubernetes-cli"
 
   def install
-    ldflags = "-s -w -X k8s.io/kops.Version=#{version}"
-    system "go", "build", *std_go_args(ldflags: ldflags), "k8s.io/kops/cmd/kops"
+    ENV["VERSION"] = version unless build.head?
+    ENV["GOPATH"] = buildpath
+    kopspath = buildpath/"src/k8s.io/kops"
+    kopspath.install Dir["*"]
+    system "make", "-C", kopspath
+    bin.install "bin/kops"
 
-    generate_completions_from_executable(bin/"kops", "completion")
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"kops", "completion", "bash")
+    (bash_completion/"kops").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"kops", "completion", "zsh")
+    (zsh_completion/"_kops").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"kops", "completion", "fish")
+    (fish_completion/"kops.fish").write output
   end
 
   test do

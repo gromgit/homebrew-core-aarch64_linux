@@ -4,7 +4,7 @@ class Caffe < Formula
   url "https://github.com/BVLC/caffe/archive/1.0.tar.gz"
   sha256 "71d3c9eb8a183150f965a465824d01fe82826c22505f7aa314f700ace03fa77f"
   license "BSD-2-Clause"
-  revision 42
+  revision 38
 
   livecheck do
     url :stable
@@ -12,13 +12,12 @@ class Caffe < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6c1ec8636767f4ffc987a93905ba78f66ed830f2c15f1704f89952e966bb1eaa"
-    sha256 cellar: :any,                 arm64_monterey: "51f87ecef8a5e4ec2709a35a446c637cad13a265f486bf2ee6e401fd117e5308"
-    sha256 cellar: :any,                 arm64_big_sur:  "8293f75f81d7a30159edd0cf1f36c009e13b6ab5b381965fc009694746285a91"
-    sha256 cellar: :any,                 monterey:       "f7624395484ebdb8b1c2313bb28c0914dd2cf3bafed69958b868e2dab356adac"
-    sha256 cellar: :any,                 big_sur:        "283c78e3999df58ee224deb2ab8c230bbff0dbf3740c2cab99d5a07bf97761df"
-    sha256 cellar: :any,                 catalina:       "f0e7a6c067904aab5384c5d944ca011081dced065f35916ccde199f16aecc800"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a0e6899388068cf5a2697a562ed367a4d7c466df4b2a261a61c6032df0fe7d8"
+    sha256 cellar: :any,                 arm64_monterey: "e1ff10490d3319714c13dc90cebc17dd545bb7dd34fb5745294abeb0f25cd607"
+    sha256 cellar: :any,                 arm64_big_sur:  "2b0c210d2307aa2c52ebf5975a5d552ee5734b472f700f129a06b5b6b7ab6fec"
+    sha256 cellar: :any,                 monterey:       "b3d275a6e61267d377de63ebd32f2f9b38b1db5d18fbe3d38166fefb28d1da61"
+    sha256 cellar: :any,                 big_sur:        "0dc47d8b122659d527ffb131d58ed92222c80ba69848467150cb138f70767408"
+    sha256 cellar: :any,                 catalina:       "fc743dcb1ad7c5d8d8beb3b2425782699135d2d83206e46e5f4d8183c80f946c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a0f55d6ae8fa0c619bcc6a3396d93ad83ca5d2cfc480fa0928e58b9832ad823"
   end
 
   depends_on "cmake" => :build
@@ -34,8 +33,11 @@ class Caffe < Formula
   depends_on "snappy"
 
   on_linux do
+    depends_on "gcc"
     depends_on "openblas"
   end
+
+  fails_with gcc: "5" # opencv is compiled with GCC
 
   resource "homebrew-test_model" do
     url "https://github.com/nandahkrishna/CaffeMNIST/archive/2483b0ba9b04728041f7d75a3b3cf428cb8edb12.tar.gz"
@@ -59,7 +61,7 @@ class Caffe < Formula
   def install
     ENV.cxx11
 
-    args = %w[
+    args = std_cmake_args + %w[
       -DALLOW_LMDB_NOLOCK=OFF
       -DBUILD_SHARED_LIBS=ON
       -DBUILD_docs=OFF
@@ -75,16 +77,16 @@ class Caffe < Formula
     ]
     args << "-DBLAS=Open" if OS.linux?
 
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", *args
+    system "make", "install"
     pkgshare.install "models"
   end
 
   test do
     resource("homebrew-test_model").stage do
-      system bin/"caffe", "test", "-model", "lenet_train_test.prototxt",
-                                  "-weights", "lenet_iter_10000.caffemodel"
+      system "#{bin}/caffe", "test",
+             "-model", "lenet_train_test.prototxt",
+             "-weights", "lenet_iter_10000.caffemodel"
     end
   end
 end

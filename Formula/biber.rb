@@ -4,17 +4,15 @@ class Biber < Formula
   url "https://github.com/plk/biber/archive/refs/tags/v2.17.tar.gz"
   sha256 "1ee7efdd8343e982046f2301c1b0dcf09e1f9a997ac86ed1018dcb41d04c9e88"
   license "Artistic-2.0"
-  revision 2
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a2c83db51b9605d5f1db3d1dc8b7b96a265df34f221adfe892877b142b11ad55"
-    sha256 cellar: :any,                 arm64_monterey: "a879a966a62c17a8a2b136dada68b2a30350f42ff66c470dd6ee76ffcab12fe8"
-    sha256 cellar: :any,                 arm64_big_sur:  "12452426c592e0bdff304dc61c7c1329557e875be3d71a145563773128c2733b"
-    sha256 cellar: :any,                 ventura:        "a896b309dbc1914ac3377e26a23c8b36787f06caf181db4a7c8d3e77271c6464"
-    sha256 cellar: :any,                 monterey:       "1e3a38acf7a0a4e4cf19539b0ddb461cf3e8d45e37cd8b0344d7f402c95344f4"
-    sha256 cellar: :any,                 big_sur:        "e8882142cef7e0e9fb4f0d7a5b5e056f13fef904c6f0d5e78017c2e7774b39d5"
-    sha256 cellar: :any,                 catalina:       "4890288756a20842b0aeb8c9c4375fa7e672e3ab43a81dd5ed9a83ddf1929f95"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35a84101695871ef736814e0a60e0cb6c62439f27a5f8cbf91168e30f021e5f9"
+    sha256 cellar: :any,                 arm64_monterey: "f35f6be9f3e6ad82ace58f3cdd49717f6fad197f2ca783fd7367ccc47e4fd74e"
+    sha256 cellar: :any,                 arm64_big_sur:  "2f7c036d7cbd21b0f12874032d3417953fd91bbff4f59315ad8cebb3175f36ed"
+    sha256 cellar: :any,                 monterey:       "66d7d16f6adab843313f54ebde6cc18e2d97c9bc9d9a1730acfc09402dab0d5b"
+    sha256 cellar: :any,                 big_sur:        "770c78fba24df599a30105c093ec796519b2eb0acaae190eec22ed29298c0782"
+    sha256 cellar: :any,                 catalina:       "5676d01ffbc46b053f04bf74889852c16031954d75ed7da6183112a5166f18bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "283427c168ec790e3cb2bfecbcb2b1859fdd32ef0bec611d3ef3e955bfd58f0b"
   end
 
   depends_on "pkg-config" => :build
@@ -508,13 +506,9 @@ class Biber < Formula
     url "https://cpan.metacpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz"
     sha256 "2d99975685242980d0a9904f639144c059d6ece15899efde4acb742d3253f105"
   end
-
-  # Fix Perl 5.36.0 compatibility
-  # Remove in the next release
-  # See https://github.com/plk/biber/pull/411
-  patch do
-    url "https://github.com/plk/biber/commit/760e6e4ec08a3097f7e6136331541a7b8c1c9df7.patch?full_index=1"
-    sha256 "68586264731e1583331ada69151026333a48b53ab90786f43c36ecac0807d32e"
+  resource "test.bcf" do
+    url "https://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/testfiles/test.bcf"
+    sha256 "7239ac502a8fc6d90fcaf9e9630d939a21e28456312ee7e041f6627ebb8fed24"
   end
 
   def install
@@ -524,6 +518,8 @@ class Biber < Formula
     ENV["OPENSSL_PREFIX"] = Formula["openssl@1.1"].opt_prefix
 
     resources.each do |r|
+      next if r.name == "test.bcf"
+
       r.stage do
         # fix libbtparse.so linkage failure on Linux
         if r.name == "Text::BibTeX" && OS.linux?
@@ -544,27 +540,30 @@ class Biber < Formula
       end
     end
 
-    bin_before = Dir[libexec/"bin/*"].to_set
     system "perl", "Build.PL", "--install_base", libexec
     system "./Build"
     system "./Build", "install"
-    bin_after = Dir[libexec/"bin/*"].to_set
-    (bin_after - bin_before).each do |file|
-      basename = Pathname(file).basename
-      (bin/basename).write_env_script file, PERL5LIB: ENV["PERL5LIB"]
-    end
+
+    bin.install Dir[libexec/"bin/*"]
+    bin.env_script_all_files(libexec/"bin", PERL5LIB: ENV["PERL5LIB"])
     man1.install libexec/"man/man1/biber.1"
-    (pkgshare/"test").install "t/tdata/annotations.bcf", "t/tdata/annotations.bib"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/biber --version")
 
-    cp (pkgshare/"test").children, testpath
-    output = shell_output("#{bin}/biber --validate-control --convert-control annotations")
-    assert_match "Output to annotations.bbl", output
-    assert_predicate testpath/"annotations.bcf.html", :exist?
-    assert_predicate testpath/"annotations.blg", :exist?
-    assert_predicate testpath/"annotations.bbl", :exist?
+    resource("test.bcf").stage testpath
+    (testpath/"test.bib").write <<~EOS
+      @BOOK{test1,
+        AUTHOR = {Terrence Test},
+        TITLE = {Testing is Trying and Troubling},
+        YEAR = {1987},
+      }
+    EOS
+
+    assert_match "Output to test.bbl", shell_output("#{bin}/biber --validate-control --convert-control test")
+    assert_predicate testpath/"test.bcf.html", :exist?
+    assert_predicate testpath/"test.blg", :exist?
+    assert_predicate testpath/"test.bbl", :exist?
   end
 end

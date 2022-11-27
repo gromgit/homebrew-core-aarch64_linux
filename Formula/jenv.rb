@@ -8,7 +8,8 @@ class Jenv < Formula
   head "https://github.com/jenv/jenv.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e27ff89af1af1cbcbfd3b46d99f1c97f1badbbb9a76cbca22a4400ede1e5acb0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jenv"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e72e70c56047fcb7e27b2e90162540fe3581bf2ee3a0b82f8314edccac840998"
   end
 
   def install

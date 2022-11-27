@@ -12,12 +12,7 @@ class Swimat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "35cb1383fd73f70e1beff4de16dff980252d17116e1234086498046edb6c8cb9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5474723b7d13050f04c03a9ba5dc7bf0d962b13ff384f82fd9cf5f47754fdb7a"
-    sha256 cellar: :any_skip_relocation, monterey:       "f1c27fb8765ea9c959dea5030c7172c390ccc97f76e2b7f7f47a0e75a5962a92"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f4099d895297155fe34b95ff66e214c31fcf2990e03aeaad8e1680061fb580a9"
-    sha256 cellar: :any_skip_relocation, catalina:       "6ee6f59882dcec7188ef4684fcada0d22edf68470023fffb73b610f2dbe44112"
-    sha256 cellar: :any_skip_relocation, mojave:         "6b9a5174b6050250d0dfe5721102c5455997f2abcef1f2dc6a82686af11117fd"
+    sha256 aarch64_linux: "45492fb95de6a5adad25722737543da5f5b1b1b0a26c1816138fb9b43673ab37" # fake aarch64_linux
   end
 
   depends_on xcode: ["10.2", :build]

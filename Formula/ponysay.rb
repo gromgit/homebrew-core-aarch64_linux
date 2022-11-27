@@ -17,10 +17,8 @@ class Ponysay < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57179206e3a4a0b5941e872ec6bc17c942eca54f9b9c53e91017171c727fd975"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bf1695638d599e7bca5b59a6a1d15e4a9555fef2a64a8b57a680af46a578fbdd"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15d31809c411d0af2a1aa8d1d2590e061ab4cb9b9de0397e97be2ebbb01e1fc8"
-    sha256 cellar: :any_skip_relocation, ventura:        "304b8e189c94aa8122f7f2878185a0c9cd2869d7ff35857855256170296abc49"
     sha256 cellar: :any_skip_relocation, monterey:       "919db1ea7b08a3bf90d2950e428bb845b0a490803b336c15aa55ee7470405897"
     sha256 cellar: :any_skip_relocation, big_sur:        "bde757a6e76ce24cf5f8b163e3c6046032ea486c25b707140c8eb0e117fe2148"
     sha256 cellar: :any_skip_relocation, catalina:       "599a4e15aa4b45a57a2a49a1dd961ab92ea763fd176552ffa278a7f0f4908a92"
@@ -32,9 +30,7 @@ class Ponysay < Formula
   depends_on "coreutils"
   depends_on "python@3.10"
 
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
+  uses_from_macos "texinfo" => :build
 
   def install
     system "./setup.py",
@@ -42,7 +38,7 @@ class Ponysay < Formula
            "--prefix=#{prefix}",
            "--cache-dir=#{prefix}/var/cache",
            "--sysconf-dir=#{prefix}/etc",
-           "--with-custom-env-python=#{Formula["python@3.10"].opt_bin}/python3.10",
+           "--with-custom-env-python=#{Formula["python@3.10"].opt_bin}/python3",
            "install"
   end
 

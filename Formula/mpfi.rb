@@ -1,25 +1,24 @@
 class Mpfi < Formula
   desc "Multiple precision interval arithmetic library"
   homepage "https://perso.ens-lyon.fr/nathalie.revol/software.html"
-  url "http://perso.ens-lyon.fr/nathalie.revol/softwares/mpfi-1.5.4.tar.bz2"
-  sha256 "d20ba56a8d57d0816f028be8b18a4aa909a068efcb9a260e69577939e4199752"
+  url "https://gforge.inria.fr/frs/download.php/file/37331/mpfi-1.5.3.tar.bz2"
+  sha256 "2383d457b208c6cd3cf2e66b69c4ce47477b2a0db31fbec0cd4b1ebaa247192f"
   license all_of: ["GPL-3.0-or-later", "LGPL-2.1-or-later"]
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?mpfi[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  bottle do
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "294ebea233e52a6a0153e535a031e3bbea8bd4b36c4323c9d715512d77defc41"
+    sha256 cellar: :any,                 big_sur:       "fa207c29103a5e5d770b7235edf6b8c40b301ba8fbd19856c1793f787b9b1dfc"
+    sha256 cellar: :any,                 catalina:      "950fb479ad3748345f0410a7ce02d70527d9757d0c20ea1ed73d8f3f4e1c512c"
+    sha256 cellar: :any,                 mojave:        "55d8819c0310e6b8bc66742f7ab5881b9b552a9c60eaf940595ed08e8a320a56"
+    sha256 cellar: :any,                 high_sierra:   "d4464bdbbb2861861fa92e471f75e1b658e7c5f5814028a6c57f74c76092b013"
+    sha256 cellar: :any,                 sierra:        "50d3b78c1ef6837198a0320dbbe0852ad524f83bc2e12460bfbdc188bd1da76a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5bc5ac4e71fcaf3e978ef82410d544f274e4652899bcb06bf2685d9df6a63bed"
   end
 
-  bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "7401897771e7e1714d9bdf79ca0a384af06d756b2ce331a727c4253b93cae7fc"
-    sha256 cellar: :any,                 arm64_monterey: "da4f0c1a2da5779a03ca4dd3c813bd6134c23687418ff5cf1f98687f0561ccb8"
-    sha256 cellar: :any,                 arm64_big_sur:  "46e169bc50fe8357a928fd829d26b7879ce942d60cab5d809df75e847d5ed0e4"
-    sha256 cellar: :any,                 ventura:        "f938d6da70993c3fc9ad71483ee1daf875122e87a07dcf8322f125af6ee51f9b"
-    sha256 cellar: :any,                 monterey:       "a46d41cbd8e5eb649b6f33ec56eeafe79a75ec89ba7652c426e661340249a128"
-    sha256 cellar: :any,                 big_sur:        "4c9a07e8889087a34c932c567b4e5f256d7d146f76206d3d62b5e2aa128f8689"
-    sha256 cellar: :any,                 catalina:       "4cfd2197c9eed1b74d9518b0054d69556942e5ed7b0d3b8a6d93fffc50e95726"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43395ab987d381a3f22eb91b2ce74c8a7d39623e0eac8a78f95d2e50b644b1cd"
-  end
+  # Formula does not build, https://gforge.inria.fr/tracker/index.php?func=detail&aid=21721&group_id=157&atid=709
+  # and upstream is not actively maintaining (last commit was on 2019-08-01)
+  deprecate! date: "2021-08-15", because: :unmaintained
 
   depends_on "gmp"
   depends_on "mpfr"
@@ -27,6 +26,7 @@ class Mpfi < Formula
   def install
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make"
+    system "make", "check"
     system "make", "install"
   end
 

@@ -2,8 +2,8 @@ class Flux < Formula
   desc "Lightweight scripting language for querying databases"
   homepage "https://www.influxdata.com/products/flux/"
   url "https://github.com/influxdata/flux.git",
-      tag:      "v0.191.0",
-      revision: "b9d6eb68390c18de9f4e33f176337656babfc8cf"
+      tag:      "v0.165.0",
+      revision: "ead736ee677d08df1df73a4aba097f28ae126022"
   license "MIT"
   head "https://github.com/influxdata/flux.git", branch: "master"
 
@@ -13,14 +13,12 @@ class Flux < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0cddab0ca727689538c2bc2b4e4ddf89a7d7969dbca45f1651323bf0b5148756"
-    sha256 cellar: :any,                 arm64_monterey: "67a6871ed6d551fcce1aff292e32d81eb77366de330b23f18ae113b374c04c62"
-    sha256 cellar: :any,                 arm64_big_sur:  "41a55889deb832edf1aa16597b41f5d661d6d466776462d5a76e7e0dce624b6a"
-    sha256 cellar: :any,                 ventura:        "dd1671d27a302bb6bf76209dd6f82f185dfd90409217e70ee60fd9b784efe4e8"
-    sha256 cellar: :any,                 monterey:       "c0fdf7c2d0d7983faf4746132eab29ce4417e4825a88b5b2417a50ddb8d414ac"
-    sha256 cellar: :any,                 big_sur:        "b9bf48060d62101dd49a45ca78d10c02e4fbcd066e9c1a0163da293f31fbdfbb"
-    sha256 cellar: :any,                 catalina:       "d4f054e77c15e141fed3c1c8f9ed31b6f92dce18f76f6f3bb0df30fb1a2033fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2907ae7ca3ec9d49abb5b7e41ecb2cbb647845c3a748471b389bc2f7ef89e43"
+    sha256 cellar: :any,                 arm64_monterey: "021104fb92832ba2623d1e14790da682c0688c6baf106707dc007c53a52963e4"
+    sha256 cellar: :any,                 arm64_big_sur:  "08d15d09fff3db3121966746d8bac527383cf89c7ea33e36d66e9171fd1a65bf"
+    sha256 cellar: :any,                 monterey:       "084302e7e5e47d46f1ee2f809161b94acf7d32fbea9035ccddcc7dae6b5bb0a0"
+    sha256 cellar: :any,                 big_sur:        "d2258d96206bc121b6cf4a55376ffce267121286ddb339aa0065497c131ef42d"
+    sha256 cellar: :any,                 catalina:       "ab35744d4222863b814fb8795cec8c4dcc59468a17692fbb7b33fe799b24c92c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7e93e9b4d34742c8ae3329b07874d7dfb1b2f16a003e71cdab358e16b93761e"
   end
 
   depends_on "go" => :build

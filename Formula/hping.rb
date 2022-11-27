@@ -17,7 +17,6 @@ class Hping < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b23828f90e57c611c07a089da338937e42b24d5637595976c0d5d6214069cc4a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b2befbdc5f1ae3a5ed4f402bc0b0271dc557e05e82853f56da94d15f467c624d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "93622fae40adc4978f6578951ac5c7695701733abba5e543e2205355043df0f7"
     sha256 cellar: :any_skip_relocation, monterey:       "87aba50699a65dc41e05d3a5ff68836a2482983b3ec854db0f897cfea712573f"
@@ -27,10 +26,8 @@ class Hping < Formula
     sha256 cellar: :any_skip_relocation, high_sierra:    "088413e9a62fe7b67627f41b91d762c2b639ca6b5598175002616ceb234fe93a"
     sha256 cellar: :any_skip_relocation, sierra:         "e6b7a8ef4527b282da33e75fc9484dee752f365b34498849fd251146948f0e80"
     sha256 cellar: :any_skip_relocation, el_capitan:     "9644e041cb830ebd121c224cef3727e20c5bf4dcca918fd91135d74e10eb2123"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc0ad4627c731e75ac2b5358822f39a75d64cbb0a84e963a58c22dc7d9bfd3a4"
+    sha256 cellar: :any_skip_relocation, yosemite:       "95f5fabc90cdd2e8ca9b10189f69a2057019b35ac1f6cb2e7e4afa7bea1221d5"
   end
-
-  uses_from_macos "libpcap"
 
   patch :DATA
 
@@ -60,10 +57,6 @@ class Hping < Formula
   end
 
   def install
-    # The net directory has been renamed to pcap in libpcap.
-    # Submitted upstream in https://github.com/antirez/hping/pull/13.
-    inreplace "libpcap_stuff.c", "net/bpf.h", "pcap/bpf.h" unless OS.mac?
-
     # Compile fails with tcl support; TCL on macOS is 32-bit only
     system "./configure", "--no-tcl"
 
@@ -71,7 +64,7 @@ class Hping < Formula
     sbin.mkpath
     man8.mkpath
     system "make", "CC=#{ENV.cc}",
-                   "COMPILE_TIME=-D__LITTLE_ENDIAN__",
+                   "COMPILE_TIME=#{ENV.cflags}",
                    "INSTALL_PATH=#{prefix}",
                    "INSTALL_MANPATH=#{man}",
                    "install"

@@ -4,7 +4,7 @@ class Monkeysphere < Formula
   url "https://deb.debian.org/debian/pool/main/m/monkeysphere/monkeysphere_0.44.orig.tar.gz"
   sha256 "6ac6979fa1a4a0332cbea39e408b9f981452d092ff2b14ed3549be94918707aa"
   license "GPL-3.0-or-later"
-  revision 5
+  revision 4
 
   livecheck do
     url "https://deb.debian.org/debian/pool/main/m/monkeysphere/"
@@ -12,14 +12,13 @@ class Monkeysphere < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "df5ff731a2d651eac23affb218b0dc5c5abab13913a2c004dadbc168a1abd5f5"
-    sha256 cellar: :any,                 arm64_monterey: "397adb93474f514c346b827cd929079b24ca642441a4147d89be6dfe6da70ebf"
-    sha256 cellar: :any,                 arm64_big_sur:  "ac722287373eebc6e390985d7a81a96d5e6c0bc7c291c79b22cd316bb4811ab8"
-    sha256 cellar: :any,                 ventura:        "28b7e49490b7e74058d3d171e1eab5c086c9dfb23c6fbec2fb9a043c9695ebae"
-    sha256 cellar: :any,                 monterey:       "aa86925d811df3182feabfd23e97134c1abdf5f25da2111d133a05b582e38627"
-    sha256 cellar: :any,                 big_sur:        "6ede4524a1a0d9e217a2c7912f7fe8b0a8f9a4af414894f16d8783fe23180299"
-    sha256 cellar: :any,                 catalina:       "05369ef69e30fc4dab35c09df091295be97e6b653dc882a9806f9b60991213a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "535b82abeb5f95380cecca0af8ed2e99768afab1f0e50a138388327cffd8078b"
+    sha256 cellar: :any,                 arm64_monterey: "3bd12fd46a4c71a6192363e3fcf693be27644a294e4f79d5161fcc6682408595"
+    sha256 cellar: :any,                 arm64_big_sur:  "9a63b22184c6039b5e97ce75d7f9aa6168817a6762871636041be765f1f78302"
+    sha256 cellar: :any,                 monterey:       "f7b88043cb09a0c5d318b021448d591f8fcdb4a87d142327eda4a40ff2e36ce2"
+    sha256 cellar: :any,                 big_sur:        "f6d43ab1186cc4e12533ec7c7cad460bac24c260a933dde10bc19a4f2f4c625c"
+    sha256 cellar: :any,                 catalina:       "072b5372d6b15f27c2330751004f9da2922547eba1944f881412a8b7ded8b8b5"
+    sha256 cellar: :any,                 mojave:         "2c2dfe55c8fa2b30e16808c5100379eb1380b3bb8295cb8ba24f515eb02063f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5f694d15b5b01613728b59bc539d1a8896b7e326287f22fe23d40ef2b3b6bab"
   end
 
   depends_on "gnu-sed" => :build
@@ -31,8 +30,8 @@ class Monkeysphere < Formula
 
   uses_from_macos "perl"
 
-  resource "Crypt::OpenSSL::Guess" do
-    on_linux do
+  on_linux do
+    resource "Crypt::OpenSSL::Guess" do
       url "https://cpan.metacpan.org/authors/id/A/AK/AKIYM/Crypt-OpenSSL-Guess-0.13.tar.gz"
       sha256 "87c1dd7f0f80fcd3d1396bce9fd9962e7791e748dc0584802f8d10cc9585e743"
     end

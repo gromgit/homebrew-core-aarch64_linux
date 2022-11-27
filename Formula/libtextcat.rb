@@ -13,7 +13,6 @@ class Libtextcat < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "e5d60db841a6a8bd707de17b8e6e67f7113a9c8b54a1a614342f77797cbb041b"
     sha256 cellar: :any,                 arm64_monterey: "af621f1b2cfa2e6463bad63f3b7dbb77c928881dee5e41425489687c4849ceb0"
     sha256 cellar: :any,                 arm64_big_sur:  "a7d4587c077074798e16772f893cea69a90a99ff89b6071690a9980083b55e93"
     sha256 cellar: :any,                 monterey:       "6fc8d211fac04b40a803243f2d00e55c830a2f8cc12c9a2006f91efc0fdf7b62"
@@ -23,6 +22,7 @@ class Libtextcat < Formula
     sha256 cellar: :any,                 high_sierra:    "7997ea512b672f165e1e53e941147e9a520a9ab5d71b8b22e4a71622690e7cdb"
     sha256 cellar: :any,                 sierra:         "24fe8791549204d8ef6e596fc327fbd3a645c729b440ba31ef47cf545f6f5b30"
     sha256 cellar: :any,                 el_capitan:     "afa51f83d0a3c96ffc6f6c35011c864347f31d2c3aea987102c59f0257177072"
+    sha256 cellar: :any,                 yosemite:       "1a63f24b16949843f6a3f6c17d9467208a471cfa6bf1b193738fa94c2d320f02"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2104f4e2ec57f7f63de0e6f68d7b2dae82c6912146c17908f4fc1625a17bc7c5"
   end
 

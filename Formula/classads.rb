@@ -10,48 +10,21 @@ class Classads < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "0eab6257d1140e45a9de7be3672d4d78e62a639348cc30b00fab1f68048b5e84"
-    sha256 cellar: :any,                 arm64_monterey: "7f4e50e3dc7c4c163e872815a050edb28feca33f5a56998023a187f11da1fcae"
-    sha256 cellar: :any,                 arm64_big_sur:  "86c8c701a789392ad203154ec4dc6a7cd41401bdd0e667ce2c830c171f94bfd5"
-    sha256 cellar: :any,                 ventura:        "ea9ce2a0d341634d85367e39140f3e3aa7921e94830cdfe9c9f748acb35d857b"
-    sha256 cellar: :any,                 monterey:       "3543be5b0a443e9600bab626a336244bdee95bf7a79856def626e740e6d0a0f8"
-    sha256 cellar: :any,                 big_sur:        "738e16888e4030668b0bf2b7fe190b559b4c1d92dfcd09f95f190cef8deddcfb"
-    sha256 cellar: :any,                 catalina:       "6217077882b497726e1b05407038fcff6ae512cabe8580f35731c5c3a3523538"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21874caebbec12fa4ee41c6f4830146dc725dfec2658b8c08eb02dc7d2585583"
+    rebuild 1
+    sha256 cellar: :any,                 big_sur:      "dcc6e15e209b41868d0e328ca0d65aac6416c923b494f53f1259ed97b64f4b33"
+    sha256 cellar: :any,                 catalina:     "9803231cebf936ef95bd86c820a7f3ba832c56109ad8a527ac5786d1d6150234"
+    sha256 cellar: :any,                 mojave:       "2c2987f20d62b7c0926071bfe5c2c9825b30b4c6dba4dd20e2d2f34c5369ef44"
+    sha256 cellar: :any,                 high_sierra:  "febef9dc12fdea8d1dbd1687f835ac8a58d8a7534ce2a0735d6102872058ec59"
+    sha256 cellar: :any,                 sierra:       "d51471a725a552974a309b8add05ca731264f7a0fbaedee1c85b97475c204cb7"
+    sha256 cellar: :any,                 el_capitan:   "52bd3bb21e7a2491ad96f01988b802ab183c5e93d3123e9cc57b75e1a0076171"
+    sha256 cellar: :any,                 yosemite:     "2ec01b2285391e8c1a696c783db281dc69c05e0f2c483792129799b8ad304d7e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d6f5ea31c00944afcd4c2e3d78457d9f630ae17a4a58a161321c7c4c6b4046a3"
   end
 
   depends_on "pcre"
 
-  on_macos do
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
-  # Allow compilation on ARM, where finite() is not availalbe.
-  # Reported by email on 2022-11-10
-  patch :DATA
-
   def install
-    # Run autoreconf on macOS to rebuild configure script so that it doesn't try
-    # to build with a flat namespace.
-    system "autoreconf", "--force", "--verbose", "--install" if OS.mac?
     system "./configure", "--enable-namespace", "--prefix=#{prefix}"
     system "make", "install"
   end
 end
-
-__END__
-diff -pur classads-1.0.10/util.cpp classads-1.0.10-new/util.cpp
---- classads-1.0.10/util.cpp	2011-04-09 01:36:36
-+++ classads-1.0.10-new/util.cpp	2022-11-10 11:16:47
-@@ -430,7 +430,7 @@ int classad_isinf(double x) 
- #endif
- int classad_isinf(double x) 
- { 
--    if (finite(x) || x != x) {
-+    if (isfinite(x) || x != x) {
-         return 0;
-     } else if (x > 0) {
-         return 1;

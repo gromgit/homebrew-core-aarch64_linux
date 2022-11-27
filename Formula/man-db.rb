@@ -1,9 +1,9 @@
 class ManDb < Formula
   desc "Unix documentation system"
   homepage "https://www.nongnu.org/man-db/"
-  url "https://download.savannah.gnu.org/releases/man-db/man-db-2.11.1.tar.xz"
-  mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.11.1.tar.xz"
-  sha256 "2eabaa5251349847de9c9e43c634d986cbcc6f87642d1d9cb8608ec18487b6cc"
+  url "https://download.savannah.gnu.org/releases/man-db/man-db-2.10.2.tar.xz"
+  mirror "https://download-mirror.savannah.gnu.org/releases/man-db/man-db-2.10.2.tar.xz"
+  sha256 "ee97954d492a13731903c9d0727b9b01e5089edbd695f0cdb58d405a5af5514d"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -12,14 +12,12 @@ class ManDb < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "cdcde7118e97b5f3c887c428de68a2028a26cc452de78971dbcf48cc0608b7a9"
-    sha256 arm64_monterey: "091ef85f9ead9918704ed11dafb1e47c75353e2ad2cc9fb0734778d2af77257a"
-    sha256 arm64_big_sur:  "2813a0a078e8f7bfa54ede44e7b7ac78b52ad9985bb176d1e8ff3201f3b7c13f"
-    sha256 ventura:        "cb41bceffbded2f753f8a5a244db5dc19b1b2410ebec867e0f0de995c0cfbb9b"
-    sha256 monterey:       "8a153ba7e269e34ce36ffe7e9fe2c9b6d5587dfa00232472a9154bf770f375c3"
-    sha256 big_sur:        "f9ed6e200a6d53908c5cdfbcb17da39de9286bca99faf9b5e89d698c7c7d7cd6"
-    sha256 catalina:       "56bf6723559d403435f3e1c6c28e7969115e78650bdc07f95c60d3955e9b55eb"
-    sha256 x86_64_linux:   "2d5b3235fc825e788d7285d652b1bf6bb6adb3839d3e48abac9a98c649e0e1bd"
+    sha256 arm64_monterey: "a981901cd2341fa8b062d30ad8ce33e93d8d244307b61bb8dbbe795e8381fa7d"
+    sha256 arm64_big_sur:  "9b8c9d4933d144a1efed248b7a26790225d900c533cf5f87ba2662ac2867a015"
+    sha256 monterey:       "05e657d34074c4076ca2f07d401a331d9c5349052b46cbd78de41ad24b20755b"
+    sha256 big_sur:        "068eb7bbbad5a8e6eac3cd5d1a95f3d1975dea8fed52f7a347b486b3a0cb879d"
+    sha256 catalina:       "07b99f008c2c747276e1d995086a95c44a1a8458160afcd70ac8eba9320fd0a0"
+    sha256 x86_64_linux:   "88ddaf0f8afe906218f0888aa5209c2e8fc07d734518854bc8aea2b82a00886c"
   end
 
   depends_on "pkg-config" => :build
@@ -33,24 +31,22 @@ class ManDb < Formula
   end
 
   def install
-    man_db_conf = etc/"man_db.conf"
     args = %W[
+      --disable-dependency-tracking
       --disable-silent-rules
+      --prefix=#{prefix}
       --disable-cache-owner
       --disable-setuid
       --disable-nls
       --program-prefix=g
-      --localstatedir=#{var}
-      --with-config-file=#{man_db_conf}
+      --with-config-file=#{etc}/man_db.conf
       --with-systemdtmpfilesdir=#{etc}/tmpfiles.d
       --with-systemdsystemunitdir=#{etc}/systemd/system
     ]
 
-    system "./configure", *args, *std_configure_args
-    system "make", "install"
+    system "./configure", *args
 
-    # Use Homebrew's `var` directory instead of `/var`.
-    inreplace man_db_conf, "/var", var
+    system "make", "install"
 
     # Symlink commands without 'g' prefix into libexec/bin and
     # man pages into libexec/man
@@ -89,14 +85,13 @@ class ManDb < Formula
 
   test do
     ENV["PAGER"] = "cat"
+    output = shell_output("#{bin}/gman true")
     if OS.mac?
-      output = shell_output("#{bin}/gman true")
       assert_match "BSD General Commands Manual", output
-      assert_match(/The true utility always returns with (an )?exit code (of )?zero/, output)
+      assert_match "The true utility always returns with exit code zero", output
     else
-      output = shell_output("#{bin}/gman gman")
-      assert_match "gman - an interface to the system reference manuals", output
-      assert_match "https://savannah.nongnu.org/bugs/?group=man-db", output
+      assert_match "true - do nothing, successfully", output
+      assert_match "GNU coreutils online help: <http://www.gnu.org/software/coreutils/", output
     end
   end
 end

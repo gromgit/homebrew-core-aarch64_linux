@@ -5,21 +5,20 @@ class Cedille < Formula
       tag:      "v1.1.2",
       revision: "4d8a343a8d3f0b318e3c1b3209d216912dbc06ee"
   license "MIT"
-  revision 5
+  revision 4
   head "https://github.com/cedille/cedille.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2318e5ad7d619a967f30b26760b65b1dfd7048068b5e503c0188ed5dab39611b"
-    sha256 cellar: :any,                 arm64_big_sur:  "41f57c5915cba1a95fc1b3cbeee9cef65fb2e904c38ff4a177fb1d79afe3ae77"
-    sha256 cellar: :any,                 ventura:        "0bc436c470c761ff9c17178736140e6f635ac3513a6bf3d5a1d6112ab7a1ff1e"
-    sha256 cellar: :any,                 monterey:       "cc7b9b167a8b0cdbd89e252d5d9f3c512f0118ebc9f55d2f62dab1c853fe96d9"
-    sha256 cellar: :any,                 big_sur:        "013c15005c3d4af904552a1dc93476e227950604440855d7f5bc7ada73f5846d"
-    sha256 cellar: :any,                 catalina:       "0a38e0707fa92d31747e2e53bc9e2b4ad6b771c66ba698386e2f96d024ec9469"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19ddb3fc4a207d0db02e7c3c661568379821a38c998d784e99344a094f0e1fa2"
+    sha256 cellar: :any,                 arm64_monterey: "a49d286082a5d3ea1bc7fd8aee7083cee2d4781411efd2bf340e683feb5f0835"
+    sha256 cellar: :any,                 arm64_big_sur:  "6623450409aa88704591d4e37e79706c49e339a86522c80fabe28aaa2ff3f371"
+    sha256 cellar: :any,                 monterey:       "69a46bf138fbbd7bd38d0e32eb379f3d60592af5e640a21617bc81822fd87112"
+    sha256 cellar: :any,                 big_sur:        "07b814c44f0479af4f9397b2f8f58bec7fa89a8aca1b7febb206f66269fddd68"
+    sha256 cellar: :any,                 catalina:       "3461a6fb6fac42f6b8127fb63664fa8bb11e8a7de2ea0905faa14a9d8b96eeb2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91bb84bb30f83f200a24377e0c6c692d0dd3d09aa6a105bf932a0f26365aabe5"
   end
 
   depends_on "haskell-stack" => :build
-  depends_on "ghc@8.10"
+  depends_on "ghc"
 
   # needed to build with agda 2.6.1
   # taken from https://github.com/cedille/cedille/pull/144/files
@@ -31,7 +30,7 @@ class Cedille < Formula
   def install
     inreplace "stack.yaml", "resolver: lts-12.26", <<~EOS
       resolver: lts-16.12
-      compiler: ghc-#{Formula["ghc@8.10"].version}
+      compiler: ghc-#{Formula["ghc"].version}
       compiler-check: newer-minor
       allow-newer: true
       system-ghc: true

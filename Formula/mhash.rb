@@ -10,10 +10,8 @@ class Mhash < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "63173c41e68e4510a36b6c3301d8f556a5c15010bff40258853f4ec735c74c68"
     sha256 cellar: :any,                 arm64_monterey: "f4f6e0a5a12cde078c2397874e309565d84a5599cbad4d5772ee13131deba98e"
     sha256 cellar: :any,                 arm64_big_sur:  "4f7da0cd859fc828d90946d6c6b80d80a60a85ffe4f82f9dd299ff1b8ba1bb54"
-    sha256 cellar: :any,                 ventura:        "751e17fd25843aebabf5c229d75476f6e854041c4a233329a7147b02e7050d87"
     sha256 cellar: :any,                 monterey:       "a8dbb4a5d3b15a10104683fdea162c85714cc0f4ef6f313c06aab7ddd0d1d42a"
     sha256 cellar: :any,                 big_sur:        "4553e5e48c17e06ad3290dd6ceabb6c9fee21be5b70194c03dd03d7bda873209"
     sha256 cellar: :any,                 catalina:       "d7d0a96656fbae5b279223d120bfe456c775a0c751090049bcf3ffffb2231761"
@@ -21,6 +19,7 @@ class Mhash < Formula
     sha256 cellar: :any,                 high_sierra:    "82f39af8037f070fafcad0280b151dc58e1b5b8c3ea1fb75f4ee372256d3ad2b"
     sha256 cellar: :any,                 sierra:         "f630165dd7f7a0f8e5b710e0e0af5ebca6ca0edc98cd46a01b617a3e16bff7ea"
     sha256 cellar: :any,                 el_capitan:     "8817cea2b724d7ea00fd1efb348aa8bdb5d93ca155cb9ccf8eb316f76b42941b"
+    sha256 cellar: :any,                 yosemite:       "fb03873f042a16fd2db5ae2a7eb62e970927b75a9dff92decbb3fd035a2bd41f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "32a5e81c29e8407754448e5aa7f1f8ea2328bc5ce266ab5f3b350e3174373900"
   end
 

@@ -4,7 +4,7 @@ class Redex < Formula
   desc "Bytecode optimizer for Android apps"
   homepage "https://fbredex.com"
   license "MIT"
-  revision 10
+  revision 8
   head "https://github.com/facebook/redex.git", branch: "master"
 
   stable do
@@ -17,20 +17,6 @@ class Redex < Formula
       sha256 "dccc41146688448ea2d99dd04d4d41fdaf7e174ae1888d3abb10eb2dfa6ed1da"
     end
 
-    # Apply upstream fixes for GCC 11
-    patch do
-      url "https://github.com/facebook/redex/commit/70a82b873da269e7dd46611c73cfcdf7f84efa1a.patch?full_index=1"
-      sha256 "44ce35ca93922f59fb4d0fd1885d24cce8a08d73b509e1fd2675557948464f1d"
-    end
-    patch do
-      url "https://github.com/facebook/redex/commit/e81dda3f26144a9c94816c12237698ef2addf864.patch?full_index=1"
-      sha256 "523ad3d7841a6716ac973b467be3ea8b6b7e332089f23e4788e1f679fd6f53f5"
-    end
-    patch do
-      url "https://github.com/facebook/redex/commit/253b77159d6783786c8814168d1ff2b783d3a531.patch?full_index=1"
-      sha256 "ed69a6230506704ca4cc7a52418b3af70a6182bd96abdb5874fab02f6b1a7c99"
-    end
-
     # Fix compilation on High Sierra
     # Fix boost issue (https://github.com/facebook/redex/pull/564)
     # Remove for next release
@@ -38,13 +24,12 @@ class Redex < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6cabce85f406715881eff64761cc37403708c045dc12a4560ead729fdd7adabe"
-    sha256 cellar: :any,                 arm64_monterey: "57f1b1dbdcfb11cc7be567585e03be4d18447fd62dc16034e760d8a8deec953b"
-    sha256 cellar: :any,                 arm64_big_sur:  "9e71e3e44041091e69fbec81fc7d44175b6ee4b2cd557f1ca02791dcd85e6a03"
-    sha256 cellar: :any,                 monterey:       "7daf7985fe65c3b64225ab66a90a6eba481c83f2b3c053a81d6068b54eff8184"
-    sha256 cellar: :any,                 big_sur:        "607440410a36514ec409e5d95527ca0686e6447b1eb4016325acbdaa5645c743"
-    sha256 cellar: :any,                 catalina:       "34404258648e99e63d7f64ea732d658beb1d2b971d93cf9ddcc25b74cdfa10cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31b6e3691c62ff5de9087e25886f3e5bbc3a135b9d377fe1aff6f8284f65ddc2"
+    sha256 cellar: :any,                 arm64_monterey: "a163d4757ff1c42ac50de19779a2b5d50c17ef4be5bc0be4c0fad6daaa267af9"
+    sha256 cellar: :any,                 arm64_big_sur:  "ae66fa7a064e03be1b6547e0f922ecb192674697df74472c24f981f551c022cb"
+    sha256 cellar: :any,                 monterey:       "b7cdcc65eb07f62e1483cf9ed47d2002d8bc315207f4071388444ec511dd0938"
+    sha256 cellar: :any,                 big_sur:        "00629b3e7e7018c6695fe2d6a8db1c26d543662a3c30db8de461c98525076542"
+    sha256 cellar: :any,                 catalina:       "9d1e529b8d4645e7d0daeedb4b16d84e9f22e14c52b91c87430e53d863688329"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f1fb9e4c3b69e8f063212416c6f6b99c6b9a877bd4d8837296fbdeaf5ff0942"
   end
 
   depends_on "autoconf" => :build

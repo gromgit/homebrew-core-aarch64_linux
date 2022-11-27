@@ -1,23 +1,15 @@
 class Nodeenv < Formula
-  include Language::Python::Shebang
-
   desc "Node.js virtual environment builder"
   homepage "https://github.com/ekalinin/nodeenv"
-  url "https://github.com/ekalinin/nodeenv/archive/1.7.0.tar.gz"
-  sha256 "a9e9e36e1be6439e877c53e7f27ce068f75b82cc08201f2c68471687199cfd7b"
+  url "https://github.com/ekalinin/nodeenv/archive/1.6.0.tar.gz"
+  sha256 "87b04b0832d38bd825e004e7c8ed82d75524efaa6b8a72e3a55088d93e4e17f7"
   license "BSD-3-Clause"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "dfbd40ce1e67ad9d87f4f4fbcee25019bf49957456d5fa6b41e2e9493a6c43a0"
+    sha256 cellar: :any_skip_relocation, all: "1e5b23648954dc4570499e605ed8ea5d3eb6124b1cc776b98ee9b4601872aec7"
   end
 
-  uses_from_macos "python"
-
   def install
-    if OS.linux? || MacOS.version >= :catalina
-      rewrite_shebang detected_python_shebang(use_python_from_path: true), "nodeenv.py"
-    end
     bin.install "nodeenv.py" => "nodeenv"
   end
 

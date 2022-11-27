@@ -14,15 +14,10 @@ class Mlton < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "47153e8fe8add04e420f69b4d5b1062ac2fa9abc1106cda2e5d0d0893ed0ca79"
-    sha256 cellar: :any,                 arm64_monterey: "b63990802ceb1eab45673ca135e32aa1329a051fdd2ac3ca28c703d691e2f854"
-    sha256 cellar: :any,                 arm64_big_sur:  "13f277d7115052ab34efd1cbea436bb9dec5227a09cc1f1e7c07a9f0670f7405"
-    sha256 cellar: :any,                 ventura:        "fbea833f5eb02f0c9a3ff0a0f494eae2dc24232672900deb1863de117d2b1904"
-    sha256 cellar: :any,                 monterey:       "67242137af80b4ecae138c139ee1e169d8ee04a1928ae0e40cbd339c2846d349"
-    sha256 cellar: :any,                 big_sur:        "1a78dc22f29209bd9d2b3acc9b4d67655443a07adda31e421ccd748ae82cf50d"
-    sha256 cellar: :any,                 catalina:       "049702ba52a30d7d5e4f005f68e35460ed9a9f18cc2af5d1ae66ca6c2d8fd5e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8dd855cfe0427e16f22c83f52f19999fa184cbac12853431fac1444c34565ff4"
+    sha256 cellar: :any, monterey: "ae1960f379bae7ffc49962c1d30a8eeb1110063f7c8a136605cb06e49549a308"
+    sha256 cellar: :any, big_sur:  "be6a6d599390e1182ab91f99c8e4cbeb20ed10cbd472d7a7fda790cbb9e60b88"
+    sha256 cellar: :any, catalina: "9690c5e07e46081d3f771797ea92f8ddef37fb79e3104263794f8c7473170f18"
+    sha256 cellar: :any, mojave:   "e6fdecbf689992c25e1429e2f33d5cd66c5bdee500ec1fe07759ac8d53593fdf"
   end
 
   depends_on "autoconf" => :build
@@ -32,24 +27,16 @@ class Mlton < Formula
   # The corresponding upstream binary release used to bootstrap.
   resource "bootstrap" do
     on_macos do
-      # See https://projects.laas.fr/tina/howto-arm64-darwin.html and
-      # https://projects.laas.fr/tina/software.php
-      on_arm do
-        url "https://projects.laas.fr/tina/software/mlton-20210117-1.arm64-darwin-21.6-gmp-static.tgz"
-        sha256 "5d8cc4046f502ca7d98670d53915e3a1973ec0826e4c4c23e25d483fa657c1e8"
-      end
       # https://github.com/Homebrew/homebrew-core/pull/58438#issuecomment-665375929
       # new `mlton-20210117-1.amd64-darwin-17.7.gmp-static.tgz` artifact
       # used here for bootstrapping all homebrew versions
-      on_intel do
-        url "https://downloads.sourceforge.net/project/mlton/mlton/20210117/mlton-20210117-1.amd64-darwin-19.6.gmp-static.tgz"
-        sha256 "5bea9f60136ea6847890c5f4e45d7126a32ef14fd46a2303cab875ca95c8cd76"
-      end
+      url "https://downloads.sourceforge.net/project/mlton/mlton/20210117/mlton-20210117-1.amd64-darwin-19.6.gmp-static.tgz"
+      sha256 "5bea9f60136ea6847890c5f4e45d7126a32ef14fd46a2303cab875ca95c8cd76"
     end
 
     on_linux do
-      url "https://downloads.sourceforge.net/project/mlton/mlton/20210117/mlton-20210117-1.amd64-linux-glibc2.23.tgz"
-      sha256 "5ac30fe415dd9bf727327980391df2556fed3f8422e36624db1ce0e9f7fba1e5"
+      url "https://downloads.sourceforge.net/project/mlton/mlton/20210117/mlton-20210117-1.amd64-linux.tgz"
+      sha256 "25876b075e95b0e70677bd5eeebb791a871629376044f358b908678b8f9b605d"
     end
   end
 
@@ -74,7 +61,6 @@ class Mlton < Formula
       PREFIX=#{prefix}
       MAN_PREFIX_EXTRA=/share
     ]
-    args << "OLD_MLTON_COMPILE_ARGS=-link-opt '-no-pie'" if OS.linux?
     system "make", *(args + ["all"])
     system "make", *(args + ["install"])
   end

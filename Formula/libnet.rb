@@ -1,15 +1,13 @@
 class Libnet < Formula
   desc "C library for creating IP packets"
-  homepage "https://github.com/libnet/libnet"
+  homepage "https://github.com/sam-github/libnet"
   url "https://github.com/libnet/libnet/releases/download/v1.2/libnet-1.2.tar.gz"
   sha256 "caa4868157d9e5f32e9c7eac9461efeff30cb28357f7f6bf07e73933fb4edaa7"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a723fce072aa1d71f2d9f3af1fe647e40348ae679705a902e6fe884c6650d3d0"
     sha256 cellar: :any,                 arm64_monterey: "e35635f157e1fa140f454b451ef60d5dadc60f0f7513fbcd82399193d4ab9155"
     sha256 cellar: :any,                 arm64_big_sur:  "bc8839eea92ce445c790f503ec9342bbc254fba52751a3ac0ed90b5d13bed2f6"
-    sha256 cellar: :any,                 ventura:        "938743e30a5f50726f54c9b2cbcd1e72e6897c4964259ee692dab300d9628738"
     sha256 cellar: :any,                 monterey:       "8fbd2bdf18193db957bf4312cf8b3d90ded8a141831430350a9e60f13d421e40"
     sha256 cellar: :any,                 big_sur:        "9ecd86c12061ee31384cc784031ee4b0fb05e3ae79ff6c4c6b3f2e61690e8ad4"
     sha256 cellar: :any,                 catalina:       "0ecfbf2539a6e051ca8aa5962c0ee7cb57ffd173cf654b0eec8152c1a3fbf133"

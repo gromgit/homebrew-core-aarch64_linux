@@ -4,11 +4,10 @@ class Libmarpa < Formula
   url "https://github.com/jeffreykegler/libmarpa/archive/refs/tags/v8.6.2.tar.gz"
   sha256 "b7eb539143959c406ced4a3afdb56419cc5836e679f4094630697e7dd2b7f55a"
   license "MIT"
-  head "https://github.com/jeffreykegler/libmarpa.git", branch: "tested"
+  head "https://github.com/jeffreykegler/libmarpa.git", branch: "master"
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "9bc5bbe1c61e54086b834a72bcc4998db8ed1e284a104346dfb2414044d27548"
     sha256 cellar: :any,                 arm64_monterey: "a2a018c3e68558b814af011edfd63e2e436b004ec922f421238069000df676fa"
     sha256 cellar: :any,                 arm64_big_sur:  "a76c00de9a82a60bdd16866d768707b067a234bb02ba3fc697b96bcf4565c186"
     sha256 cellar: :any,                 monterey:       "7689fe94c88bfbad0797889ab2294d3537768135812bbf4babe9292edbd01a6e"
@@ -20,15 +19,15 @@ class Libmarpa < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "cmake" => :build
-  depends_on "emacs" => :build
   depends_on "libtool" => :build
-  depends_on "texinfo" => :build
   depends_on "texlive" => :build
+
+  uses_from_macos "texinfo" => :build
 
   def install
     ENV.deparallelize
     inreplace "work/etc/libmarpa.pc.in", "prefix=\".\"", "prefix=\"#{prefix}\"" if build.head?
-    system "make", build.head? ? "dist" : "dists"
+    system "make", "dists"
     system "cmake", "-S", "cm_dist", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

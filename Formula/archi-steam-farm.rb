@@ -2,8 +2,8 @@ class ArchiSteamFarm < Formula
   desc "Application for idling Steam cards from multiple accounts simultaneously"
   homepage "https://github.com/JustArchiNET/ArchiSteamFarm"
   url "https://github.com/JustArchiNET/ArchiSteamFarm.git",
-      tag:      "5.3.2.4",
-      revision: "bce0649822fab55dee8c16edad24f3e97cab2790"
+      tag:      "5.2.4.2",
+      revision: "aea7c7640c4b39e7de187a68d1a413c8460874ae"
   license "Apache-2.0"
   head "https://github.com/JustArchiNET/ArchiSteamFarm.git", branch: "main"
 
@@ -13,14 +13,12 @@ class ArchiSteamFarm < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b6d753ac8aa090d33f08b44415773b313587a855ba7e311a21dcef852533fafa"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "00a3f918e5ade9b72897435a6473a31166ca341af0b930c666dec42d345a7a9f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "976988e1a6a46be753bc392b90820a8230d05a3f3537ca09a9c32b5123b97284"
-    sha256 cellar: :any_skip_relocation, ventura:        "24d0cd729c9b1323c6fa011d02ef80f289d803c283fa9cde9b8e0d18f41b82be"
-    sha256 cellar: :any_skip_relocation, monterey:       "a31b819a8478784b1560a8510ce8c24bf973b87d8fae13cfec508cde7636cbb0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aaa0c1cd1b7ee9aa5919e956b3d32b0e6edddb9786287bf6c703fa4086ab18b0"
-    sha256 cellar: :any_skip_relocation, catalina:       "47a4d4619c94f2ff2083e3b12cb957c25ba3fed74200d34bbfee2855dbafb700"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ac082fa8b2e5290f6ca0ba0559cb078b08a1b45879d47b7a4a4e9bea03a7cdc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f1accef4e592ff0d817b56cdfd2e0a5d8e50cb2026ba5a2563a8603eb61b65f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f1accef4e592ff0d817b56cdfd2e0a5d8e50cb2026ba5a2563a8603eb61b65f8"
+    sha256 cellar: :any_skip_relocation, monterey:       "b13a21c309a475840bf326bf2218982ad86b0797e4c342d705607d0a7c1a3c4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b13a21c309a475840bf326bf2218982ad86b0797e4c342d705607d0a7c1a3c4b"
+    sha256 cellar: :any_skip_relocation, catalina:       "efb1d8af377e14d0ff4bc482e37e59e219dc18fa7874018a8b01d9df5d9214ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b5253ef3735381e38e0a20e4f6de09344f96495ef2aac29b2656ecdca108e166"
   end
 
   depends_on "dotnet"

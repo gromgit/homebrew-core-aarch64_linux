@@ -16,7 +16,7 @@ class GccAT49 < Formula
   pour_bottle? only_if: :clt_installed
 
   # https://gcc.gnu.org/gcc-4.9/
-  disable! date: "2022-07-31", because: :deprecated_upstream
+  deprecate! date: "2021-04-11", because: :deprecated_upstream
 
   depends_on maximum_macos: [:high_sierra, :build]
 
@@ -79,8 +79,8 @@ class GccAT49 < Formula
   end
 
   # Fix issues with macOS 10.13 headers and parallel build on APFS
-  patch do
-    on_high_sierra do
+  if MacOS.version == :high_sierra
+    patch do
       url "https://raw.githubusercontent.com/Homebrew/formula-patches/b7c7883d/gcc%404.9/high_sierra_2.patch"
       sha256 "c7bcad4657292f6939b7322eb5e821c4a110c4f326fd5844890f0e9a85da8cae"
     end

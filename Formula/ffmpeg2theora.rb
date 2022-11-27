@@ -12,14 +12,11 @@ class Ffmpeg2theora < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "ed8a59898f63352760fda9707681ac0f4ef597ffbb5ec145a01649845d5e28b7"
-    sha256 cellar: :any,                 arm64_monterey: "4e5863d4eeb81f57e4a2517beba074e4a9bb560ad14965e5e2b3a1f9f71048e9"
-    sha256 cellar: :any,                 arm64_big_sur:  "cf6ce000803f27ce6e818c8636f1252407ed32cd5ca0e5767a156db20414a07d"
-    sha256 cellar: :any,                 monterey:       "1151e536437a26d846bd7abd608dd60ee80f81bcbbeca84afd1d6739c5d1373c"
-    sha256 cellar: :any,                 big_sur:        "6ae499a21d16ad1de2cc39c39180bd6fe0c96864227147480c1bec7c218201f9"
-    sha256 cellar: :any,                 catalina:       "f07b22467dc83816cf815408371d7d78f73f3bcaeef43c0c6bf50339d3c94c4a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3ef3694734992a098accb3e46e9f5c4222b16733af0ec708a8ac2a6dac48360"
+    sha256 cellar: :any, arm64_monterey: "fda3d3ece47a930bb675a3bfcf9bb9f9565ee64ffb8249ec1b282dc52d886b15"
+    sha256 cellar: :any, arm64_big_sur:  "821bc4ec0b0900b41bc8236edfba9087b0637ddccbb58b60bf393f96177d6858"
+    sha256 cellar: :any, monterey:       "c1da252c4ada9b2dc39ae83a1af5d1d2a449191173a35a2fb05c1667224fada9"
+    sha256 cellar: :any, big_sur:        "83c525d0923c3b2b550e00b78dd6257dc4ff4ed9639464e6d360ed6784b9d09e"
+    sha256 cellar: :any, catalina:       "33be387b709b49ebd87f07c95f396b24aabbe09dc4ee74d71067b08ae13978a9"
   end
 
   depends_on "pkg-config" => :build
@@ -29,6 +26,12 @@ class Ffmpeg2theora < Formula
   depends_on "libogg"
   depends_on "libvorbis"
   depends_on "theora"
+
+  on_linux do
+    depends_on "gcc"
+  end
+
+  fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   # Use python3 print()
   patch do
@@ -50,13 +53,7 @@ class Ffmpeg2theora < Formula
       "prefix=#{prefix}",
       "mandir=PREFIX/share/man",
     ]
-    if OS.mac?
-      args << "APPEND_LINKFLAGS=-headerpad_max_install_names"
-    else
-      gcc_version = Formula["gcc"].version.major
-      rpaths = "-Wl,-rpath,#{HOMEBREW_PREFIX}/lib -Wl,-rpath,#{Formula["ffmpeg@4"].opt_lib}"
-      args << "APPEND_LINKFLAGS=-L#{Formula["gcc"].opt_lib}/gcc/#{gcc_version} -lstdc++ #{rpaths}"
-    end
+    args << "APPEND_LINKFLAGS=-headerpad_max_install_names" if OS.mac?
     system "scons", "install", *args
   end
 

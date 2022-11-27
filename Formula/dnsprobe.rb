@@ -7,18 +7,12 @@ class Dnsprobe < Formula
   head "https://github.com/projectdiscovery/dnsprobe.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a164e0990055bf9c9a0007ad586e2fe71da6123ce295f9a28380dca030694fd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "740bcb0256a1da0e2d89d8a61e82e30eaecef7ac9766ab69b48cc2d5b678858e"
-    sha256 cellar: :any_skip_relocation, monterey:       "24250ee959e96336d7f4100605345459abfbaddb1c0483c50e17a793c8259507"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4753d6e37449dcf0f823edd0b557526ca8bf9c65da3359d73fef9307e774e6b2"
-    sha256 cellar: :any_skip_relocation, catalina:       "e2980ba58e116e7c9029c9255451dd97b65da09a885373afe86c9e860d493650"
-    sha256 cellar: :any_skip_relocation, mojave:         "3cf8604d9869f22c722dfa8f0742f12124ba84a160579f0e7964ff7e697631f0"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "f6c2b6edb0f8c482488b325400f1d712687a369c8b8fd7fb9e0d0cba1def2273"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "badafaac8f8da8392fc966e9339ef5989e851bef8901655705de1cdd4e45e740"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dnsprobe"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "582bb03565f8149974b7242858c47b066efd48fc3405ed1ef4ced79c77d49d5b"
   end
 
   # repo deprecated in favor of `projectdiscovery/dnsx`
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2020-11-13", because: :repo_archived
 
   depends_on "go" => :build
 

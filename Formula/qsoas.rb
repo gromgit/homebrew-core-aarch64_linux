@@ -1,9 +1,10 @@
 class Qsoas < Formula
   desc "Versatile software for data analysis"
   homepage "https://bip.cnrs.fr/groups/bip06/software/"
-  url "https://bip.cnrs.fr/wp-content/uploads/qsoas/qsoas-3.1.tar.gz"
-  sha256 "0c8f013fef6746b833dc59477aa476eeb10f53c9dcb2e0f960c86122892f6c15"
+  url "https://bip.cnrs.fr/wp-content/uploads/qsoas/qsoas-3.0.tar.gz"
+  sha256 "54b54f54363f69a9845b3e9aa4da7dae9ceb7bb0f3ed59ba92ffa3b408163850"
   license "GPL-2.0-only"
+  revision 2
 
   livecheck do
     url "https://github.com/fourmond/QSoas.git"
@@ -11,13 +12,12 @@ class Qsoas < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6f116ab05d4d3623c399962c72528fc9e8f97a61abab2014ccd18c78a1e235fe"
-    sha256 cellar: :any,                 arm64_monterey: "49f6b58cb6d42a6ccae90d8e04eb6dccc0a57ff0bb11e192bdd6d31fd37c80f1"
-    sha256 cellar: :any,                 arm64_big_sur:  "fd49438c3fc4171cbeef6e1a9d1366be8782e6417adcd4333566c479d77e6644"
-    sha256 cellar: :any,                 monterey:       "51804fe94d9b83e9c203a3a9f7ec9ec8f3a187fb664723e3abdf89b339d0be79"
-    sha256 cellar: :any,                 big_sur:        "0df6dacf4c5af50ca05e7fa848ea85478e67f8e6b1f811a99a3b2f7697b45949"
-    sha256 cellar: :any,                 catalina:       "374f332ee48449e930b83e2b8b6149546029893fdb049b9e85366b732a79f21e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5537096857b3863d160c8c051e59cb2d86c932a37103b542e974aeeb62cf99f4"
+    sha256 cellar: :any,                 arm64_monterey: "13d591fadbb428a0fbef8090685b5d93489a5d1ea8b7414c1353ba2ff6ba0ecb"
+    sha256 cellar: :any,                 arm64_big_sur:  "025ebba3b2548d8bff4df22b14531d39ce5f43b21fb0a8ce726d0ac29f30f7fb"
+    sha256 cellar: :any,                 monterey:       "2f98550e8aa3740ef339886368cc4934a75418a4e6dfae36c72993d8e74dfaa4"
+    sha256 cellar: :any,                 big_sur:        "36f444f910ab011d56e9d109c9e1526be465efec24be4ecccf75f1232e9d115e"
+    sha256 cellar: :any,                 catalina:       "c6fac9f46c8365e23ecc2dee06c29272724039c58ebe347339da1bee9eeae149"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2385f9ae773e2c991ed4b1802d0fdb895f26136ad5ba1780c1c664828ab5544"
   end
 
   depends_on "bison" => :build
@@ -25,6 +25,10 @@ class Qsoas < Formula
   depends_on "qt@5"
 
   uses_from_macos "ruby"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 

@@ -1,9 +1,9 @@
 class Nagios < Formula
   desc "Network monitoring and management system"
   homepage "https://www.nagios.org/"
-  url "https://downloads.sourceforge.net/project/nagios/nagios-4.x/nagios-4.4.9/nagios-4.4.9.tar.gz"
-  sha256 "0e793f3f3654f10961db34950a0c129240cc80222119175552d7e322a9ba4334"
-  license "GPL-2.0-only"
+  url "https://downloads.sourceforge.net/project/nagios/nagios-4.x/nagios-4.4.7/nagios-4.4.7.tar.gz"
+  sha256 "6429d93cc7db688bc529519a020cad648dc55b5eff7e258994f21c83fbf16c4d"
+  license "GPL-2.0"
 
   livecheck do
     url :stable
@@ -11,14 +11,12 @@ class Nagios < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0637ec5ac33730cfe9e01e8796ff24bf4ba69aa8487bde4c457999e9958ce61d"
-    sha256 arm64_monterey: "689b180a922aa24bce6cd47e85bd7e09f415217b94b93619b90078677e131088"
-    sha256 arm64_big_sur:  "b285d96affcdae36672b789bb3e6fb5d6e8155d34cd500542e4e4196e4452973"
-    sha256 ventura:        "43cae1695d0d079a4935db9baef3409b0746cadef009a36e359ccc10af6ecddb"
-    sha256 monterey:       "8c0d9035ed0a74b33d2d33f1448e3b0393afce8d1d80b2a91188367ff2e8ea0c"
-    sha256 big_sur:        "a6a423daa32f7a08789b904d83bec0673d2574ee8c891b422974e131fc69f6ea"
-    sha256 catalina:       "cc3e0037b069eee5e7819d32861872dad58869cae36939fe546b6624e321fb0c"
-    sha256 x86_64_linux:   "ed8a37f74ff55e3e0cf1d5d454b5966d51d07408181588aa6f774b58710e4bc6"
+    sha256 arm64_monterey: "0cf6b15c9ae411bb833a5e3a02f00cf79dfe848f96f263a76b13ff6aa95b8c08"
+    sha256 arm64_big_sur:  "27ef33f3fdeb9434d286ab412dde3a6b5b8c25cefba533320681f1daf136a7dc"
+    sha256 monterey:       "28aee4339d0c5a399ed695f66bedef3fa16dcd3779d500ed4a9ca919b8f19297"
+    sha256 big_sur:        "c6e08e7b0dccc9b77167145ec7dba514bb907eaadd7d2c7b4e15a73818d29649"
+    sha256 catalina:       "382d4b6be1a3a45eac3f573cb2c6454f83ee6cf6befb4a4473ff43dbaef69551"
+    sha256 x86_64_linux:   "ee38e8425334de22a988b6c8dd67baff99df1c131296b62a27333e9154714e17"
   end
 
   depends_on "gd"
@@ -53,7 +51,7 @@ class Nagios < Formula
   end
 
   def install
-    args = [
+    args = std_configure_args + [
       "--sbindir=#{nagios_sbin}",
       "--sysconfdir=#{nagios_etc}",
       "--localstatedir=#{nagios_var}",
@@ -70,7 +68,7 @@ class Nagios < Formula
     ]
     args << "--with-command-group=_www" if OS.mac?
 
-    system "./configure", *std_configure_args, *args
+    system "./configure", *args
     system "make", "all"
     system "make", "install"
 
@@ -83,10 +81,10 @@ class Nagios < Formula
     (var/"lib/nagios/rw").mkpath
 
     config = etc/"nagios/nagios.cfg"
-    return unless config.exist?
-    return if config.read.include?("nagios_user=#{ENV["USER"]}")
+    return unless File.exist?(config)
+    return if File.read(config).include?(ENV["USER"])
 
-    inreplace config, /^nagios_user=.*/, "nagios_user=#{ENV["USER"]}"
+    inreplace config, "brew", ENV["USER"]
   end
 
   def caveats

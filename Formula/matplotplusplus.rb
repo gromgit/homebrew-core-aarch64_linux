@@ -4,30 +4,29 @@ class Matplotplusplus < Formula
   url "https://github.com/alandefreitas/matplotplusplus/archive/v1.1.0.tar.gz"
   sha256 "5c3a1bdfee12f5c11fd194361040fe4760f57e334523ac125ec22b2cb03f27bb"
   license "MIT"
-  revision 3
+  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "09f1065112d8fab2b6b7a4505de70b8e8f72cf3f165bfb779b4e5aa0bd6b75cb"
-    sha256 cellar: :any,                 arm64_monterey: "bf944af3d150c4d06d0d5ba4c4005a36c263fa4ff63d0b6048612970bab99b39"
-    sha256 cellar: :any,                 arm64_big_sur:  "49ed10a408488bc95f3d3efddd435ef858b910b046f36615461db38efd3a04c4"
-    sha256 cellar: :any,                 ventura:        "a04c9052fd35660c346bcf9d122eac5378d63f97b4fcb8846921b36fdd46225f"
-    sha256 cellar: :any,                 monterey:       "3325d540aad16f1d48eddbe316a95f7bbe0948e36644dbd3839d25df5d647ef4"
-    sha256 cellar: :any,                 big_sur:        "b57950328175d4dbfd5c46c5f2e587227d11d5031f06eb3a31df781d425570d3"
-    sha256 cellar: :any,                 catalina:       "a0830f3c946d045384f6b91511688baafc0ea91b3e1e7f34f4c6c10173179efe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7231dfcdab4f21ff3fa9303b76a4b9b1a820a3d8debf54ac1607fc190071dd7"
+    sha256 cellar: :any,                 arm64_monterey: "da37512436dab0d5d57a352a3af69cfd93408afbcda7b81e91dc16f299981c90"
+    sha256 cellar: :any,                 arm64_big_sur:  "74d1140f6be97349816d42070c8e3846ac64be9798c0b3e2e72e8906f117baf1"
+    sha256 cellar: :any,                 monterey:       "c44a46d9b834941888f3e3c6cae35d544659012620d68d20bc2a2a79e72c3c61"
+    sha256 cellar: :any,                 big_sur:        "8803e7a64e17c43e5dfb22dd6286b3693477e28be948817afda4c51e9cbdba2c"
+    sha256 cellar: :any,                 catalina:       "6662b7fbec4d171db186c4dbf1d64648a15a718a24a3ab0c59bdd635b401c578"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac10208b0596edfca04508461d1a620813b432b7a5a8a0182c12a5f53e8b70ed"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "fftw"
   depends_on "gnuplot"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "openexr"
 
-  uses_from_macos "zlib"
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with :clang do
     build 1100
@@ -37,11 +36,11 @@ class Matplotplusplus < Formula
   fails_with gcc: "5"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DBUILD_EXAMPLES=OFF"
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON", "-DBUILD_EXAMPLES=OFF"
+      system "make"
+      system "make", "install"
+    end
     pkgshare.install "examples"
   end
 

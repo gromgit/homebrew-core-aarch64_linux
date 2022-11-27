@@ -1,29 +1,24 @@
 class StorjUplink < Formula
   desc "Uplink CLI for the Storj network"
   homepage "https://storj.io"
-  url "https://github.com/storj/storj/archive/refs/tags/v1.67.3.tar.gz"
-  sha256 "10d1a0cc310a83ee50bd9af6a6d3866a5c483de814e340b32d27c81daaf89a7a"
+  url "https://github.com/storj/storj/archive/refs/tags/v1.50.4.tar.gz"
+  sha256 "8f507ffa4bf70eeeb3cf9dc5c4e7794c9913354495d497bdd1d1cdb2b8453fe5"
   license "AGPL-3.0-only"
 
   livecheck do
     url :stable
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9711161a44fc5951ec94e36ef6596f446f0a8e967fc40c94b1e46a8d4bfb2468"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "252720d84696221338c3da72aed4dae4678aa1b1310ce6711f870c40485c8bc0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "670cd86cb148767eac1a29e86fef5b4453af58b78d496422c669b2c99e6c10a6"
-    sha256 cellar: :any_skip_relocation, monterey:       "503f800928a00260e6f0a91afdfda553a17ba942cbbc13c945a338adeb67b753"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ea4ac354f01971d979d6dd3df3a4b10ba8444175e9fa5a6bfb185cee794d68bd"
-    sha256 cellar: :any_skip_relocation, catalina:       "8032f679b9557b2b12ca8c0cfad03c7d470509488a72b23a957d30570588b23f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a4b015e84854a504ba887bc534e741de43e4467c8b98b78f53f0c22a383fbb8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/storj-uplink"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "07380acaa998a16a656495c189aec53aa13f7a0f368a0d37f70d98b83a0b5db4"
   end
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(output: bin/"uplink"), "./cmd/uplink"
+    system "go", "build", *std_go_args, "-o", bin/"uplink", "./cmd/uplink"
   end
 
   test do

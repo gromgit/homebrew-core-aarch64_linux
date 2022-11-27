@@ -1,34 +1,30 @@
 class Uriparser < Formula
   desc "URI parsing library (strictly RFC 3986 compliant)"
   homepage "https://uriparser.github.io/"
-  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.7/uriparser-0.9.7.tar.bz2"
-  sha256 "d27dea0c8b6f6fb9798f07caedef1cd96a6e3fc5c6189596774e19afa7ddded7"
+  url "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.6/uriparser-0.9.6.tar.bz2"
+  sha256 "9ce4c3f151e78579f23937b44abecb428126863ad02e594e115e882353de905b"
   license "BSD-3-Clause"
   head "https://github.com/uriparser/uriparser.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e49771d86df067a567d44348b7c3778381346cccf8770fec3f47ea8b98257928"
-    sha256 cellar: :any,                 arm64_monterey: "c246c0448bc8325163156ffc6f2978da545bb42724ba9cb9b17038292d1797e1"
-    sha256 cellar: :any,                 arm64_big_sur:  "5a8a8595cee32186f8e6d180a183ffc63a0d105563b7ec3a32b5ba2fb95e8562"
-    sha256 cellar: :any,                 ventura:        "4a9e68259e098e8b50c4d4f0c9966ec995803435138298e540e52b24a400c580"
-    sha256 cellar: :any,                 monterey:       "24922aed78fc01f1b93cec54a5d7590689439128d18498131a327895bed353b0"
-    sha256 cellar: :any,                 big_sur:        "71253e72c359702d184f83b86c9d1e8c0acd123e37e9c86fdc783e79d81149b3"
-    sha256 cellar: :any,                 catalina:       "ca0d40acafadaf72bcbef19b7e44e3351a3fd0c552e9b066316779bd5b8abc4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ef786e370707bf3b8d646737116b723fc11fef8ecf8f2720bf107897c40ba33"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_monterey: "8ed697813938a18193dfd1a3a048cf3b237429ae6dadabc943cd419c2e948dde"
+    sha256 cellar: :any,                 arm64_big_sur:  "c6e0c16982bf15a531e8e2d60abb7d104407b0b7e01aac9b59e817cf1890bfba"
+    sha256 cellar: :any,                 monterey:       "687b043d447e68967f63077a08053b18fd9791f33645781ffb17eae9c7bde984"
+    sha256 cellar: :any,                 big_sur:        "f34888412c2e45eeb6e3cccb5a6d73064c2e8f52a000790828d907d63a48a90a"
+    sha256 cellar: :any,                 catalina:       "646001e197cd645dbf99ed8036d21289056bca546dcfab074e7031af5c7cc4db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fa1c9ef128411497b8e7ac7689cfb730571281c6ac071173ef961383ed6dd4f"
   end
 
   depends_on "cmake" => :build
 
   def install
-    args = %W[
-      -DURIPARSER_BUILD_TESTS=OFF
-      -DURIPARSER_BUILD_DOCS=OFF
-      -DCMAKE_INSTALL_RPATH=#{rpath}
-    ]
-
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
-    system "cmake", "--build", "build"
-    system "cmake", "--install", "build"
+    system "cmake", ".", "-DURIPARSER_BUILD_TESTS=OFF",
+                         "-DURIPARSER_BUILD_DOCS=OFF",
+                         "-DCMAKE_INSTALL_RPATH=#{rpath}",
+                         *std_cmake_args
+    system "make"
+    system "make", "install"
   end
 
   test do

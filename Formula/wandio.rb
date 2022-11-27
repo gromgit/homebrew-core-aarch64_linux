@@ -12,13 +12,8 @@ class Wandio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "4063de66b208d6aeae0276d957b51ed674e89289e959a21153bbdcd76cf96468"
-    sha256 cellar: :any,                 arm64_big_sur:  "561c437e4a6521dca50fddd9a0099be26e0b4382c208866514a9fd921d10b76e"
-    sha256 cellar: :any,                 monterey:       "0862761eff6d46c4f9e829d0a39d6e573bfb1a0ae6156ab3012d2b70d4635815"
-    sha256 cellar: :any,                 big_sur:        "5ebf117a69a7e0fdb352d3b9ec31d1c58c775f9554ae1c8aad536d791a001e52"
-    sha256 cellar: :any,                 catalina:       "2315e97da8b41e130ce44790da94a692b7125b4feede7d6becec880b68178b21"
-    sha256 cellar: :any,                 mojave:         "fe2c352b368e3e440f5ddfdbce45002c849a7446d056dfe4f542a28cd06c1aab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee249f1f58477936bc3e6b87cf9a41eed6f28dac996a5482b13e6f9f63aac0ff"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/wandio"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4f1048e22f1581b8042b54925d0a8b378726bc3bfa7306c2b9de58f8061e3d0b"
   end
 
   depends_on "lz4"

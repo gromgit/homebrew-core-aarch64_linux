@@ -1,20 +1,17 @@
 class Tio < Formula
   desc "Simple TTY terminal I/O application"
   homepage "https://tio.github.io"
-  url "https://github.com/tio/tio/releases/download/v2.3/tio-2.3.tar.xz"
-  sha256 "77b485aafa3aa8e01fc2976ac547e7769c1c338bac41eeb7c1ec6fc0cc7ee5cd"
+  url "https://github.com/tio/tio/releases/download/v1.37/tio-1.37.tar.xz"
+  sha256 "a54cd09baeaabd306fdea486b8161eea6ea75bb970b27cae0e8e407fb2dd7181"
   license "GPL-2.0-or-later"
-  head "https://github.com/tio/tio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0361e1b49050bbf4fbfde6cb7fc25b07bcd3b4179e1e2f408f047525d489d897"
-    sha256 cellar: :any,                 arm64_monterey: "76721af8c30562c7d06181c2415fdb8d50786acbb6917b565a1c3128fed4e065"
-    sha256 cellar: :any,                 arm64_big_sur:  "e0552f02e79c7854bd662c9963e8f3a7c1ab430fbde31d55a897b59d6189872b"
-    sha256 cellar: :any,                 ventura:        "6d305b137300afba7c4ac88192bd0c2f47c35a9c35a5ec85bfe0bf496089d5e5"
-    sha256 cellar: :any,                 monterey:       "7d03260ad27a4e06f326390acb97d5181566c2b4fcd2b66adfea39e5e71e7de0"
-    sha256 cellar: :any,                 big_sur:        "75e54dd13513d37a8de837d76229ec2915747f2313d5c1ea79a5b9a41549ce46"
-    sha256 cellar: :any,                 catalina:       "65d6b3cf2a69c7f27678492e71e968abeab4048cd0671435692c6dea3d7bf4e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cee1d51f36f1d51a91c1b1fed61a9639f64db923dacad697e18de3a24ccd8e22"
+    sha256 cellar: :any, arm64_monterey: "86b3ea95b85f3e8d833026c4f12920822683f78418c997cbbc634d9cd9ae97ac"
+    sha256 cellar: :any, arm64_big_sur:  "f1a58b0db83d70d16cb762bab607b273e18405da5acb57ce6cb6a32a6fc05139"
+    sha256 cellar: :any, monterey:       "6e52fa8b8f95a4117fde4607d28839965dcdf510fab7f3335bb1f8f3790b70fd"
+    sha256 cellar: :any, big_sur:        "98e16d3bd13972b3c219d6bf3b06cd0df4ca3bf5c2b1f28093a07f393de9537c"
+    sha256 cellar: :any, catalina:       "96b24ccbf28fc0664a6651948d9fe10166667a8d11d105b5474e34cd18cc2ba6"
+    sha256               x86_64_linux:   "5b58bd33e112c74a0261ebd2841959a00ba89fc640397a905b9eb7570add5436"
   end
 
   depends_on "meson" => :build

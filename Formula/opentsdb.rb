@@ -1,8 +1,8 @@
 class Opentsdb < Formula
   desc "Scalable, distributed Time Series Database"
   homepage "http://opentsdb.net/"
-  url "https://github.com/OpenTSDB/opentsdb/archive/refs/tags/v2.4.1.tar.gz"
-  sha256 "70456fa8b33a9f0855105422f944d6ef14d077c4b4c9c26f8e4a86f329b247a0"
+  url "https://github.com/OpenTSDB/opentsdb/releases/download/v2.4.0/opentsdb-2.4.0.tar.gz"
+  sha256 "a2d6a34369612b3f91bf81bfab24ec573ab4118127dc1c0f0ed6fc57318d102c"
   license "LGPL-2.1"
 
   livecheck do
@@ -11,41 +11,35 @@ class Opentsdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey: "98c4251b26aaa0d592c976615aa53d4d4ff0a464b342421e91354a4138dcd208"
-    sha256 cellar: :any_skip_relocation, big_sur:  "e29c00cec680bfc711c31d40aa5f04e5c62ebf9219c3adddcc84dff74b1922cc"
-    sha256 cellar: :any_skip_relocation, catalina: "61cd7a6e22f917bd544d427d77e7236c82735406ea384134ba0551a70ce10b27"
+    sha256 cellar: :any_skip_relocation, catalina:    "31e57ba38c568eb7a41a6129a55aac5a9b443301578475702cdab5fb891faaa2"
+    sha256 cellar: :any_skip_relocation, mojave:      "ec077c13211eac9912661ff0e3e1165162f251c3408fdf36b709e0e98af34aa2"
+    sha256 cellar: :any_skip_relocation, high_sierra: "5bcdc828069e124c16e1e6c8b2eb6732d0ef88533c27f60fcbb0bec369aca375"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "openjdk@8" => :build
-  depends_on "python@3.10" => :build
+  deprecate! date: "2020-11-13", because: :does_not_build
+
   depends_on "gnuplot"
   depends_on "hbase"
   depends_on "lzo"
-  depends_on "openjdk@11"
+  depends_on "openjdk@8"
 
   def install
-    with_env(JAVA_HOME: Language::Java.java_home("1.8")) do
-      ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
-      system "autoreconf", "--force", "--install", "--verbose"
-      system "./configure", "--disable-silent-rules",
-                            "--prefix=#{prefix}",
-                            "--mandir=#{man}",
-                            "--sysconfdir=#{etc}",
-                            "--localstatedir=#{var}/opentsdb"
-      system "make"
-      bin.mkpath
-      (pkgshare/"static/gwt/opentsdb/images/ie6").mkpath
-      system "make", "install"
-    end
+    system "./configure",
+           "--disable-silent-rules",
+           "--prefix=#{prefix}",
+           "--mandir=#{man}",
+           "--sysconfdir=#{etc}",
+           "--localstatedir=#{var}/opentsdb"
+    system "make"
+    bin.mkpath
+    (pkgshare/"static/gwt/opentsdb/images/ie6").mkpath
+    system "make", "install"
 
-    env = Language::Java.java_home_env("11")
-    env["PATH"] = "$JAVA_HOME/bin:$PATH"
-    env["HBASE_HOME"] = Formula["hbase"].opt_libexec
-    # We weren't able to get HBase native LZO compression working in Monterey
-    env["COMPRESSION"] = (MacOS.version >= :monterey) ? "NONE" : "LZO"
-
+    env = {
+      HBASE_HOME:  Formula["hbase"].opt_libexec,
+      COMPRESSION: "LZO",
+    }
+    env = Language::Java.java_home_env("1.8").merge(env)
     create_table = pkgshare/"tools/create_table_with_env.sh"
     create_table.write_env_script pkgshare/"tools/create_table.sh", env
     create_table.chmod 0755

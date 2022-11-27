@@ -1,18 +1,18 @@
 class LibgrapeLite < Formula
   desc "C++ library for parallel graph processing"
   homepage "https://github.com/alibaba/libgrape-lite"
-  url "https://github.com/alibaba/libgrape-lite/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "54edc90a3116e0c1e91dd0027c6d9a1c9f95d1d0c8ded8ca9219b3c16d3a2f5d"
+  url "https://github.com/alibaba/libgrape-lite/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "aafc8e5e9b122c4bde4370ee3f2ab8afb043f2a1547cacc062991ad420e3b9a4"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "7e9a16ae49c12c40204931af6c8969025c3ca9e7bbce69cf1d6e6c5e154abde0"
-    sha256 cellar: :any, arm64_monterey: "af672badfe3e04b4e6d3117a11e02eca3629a9dc5dd9f29a6bf229f71d0c4825"
-    sha256 cellar: :any, arm64_big_sur:  "4974c03558cf474c41fe23fd5f35133a495d0147313dd5e53fcf3ebc0594ab40"
-    sha256 cellar: :any, monterey:       "d5c9311ae450e25c00c791038108065ef84266e7dad87a8a76158c286892fc99"
-    sha256 cellar: :any, big_sur:        "83cb22f7db289f77fa844ed5ebdb914bc5cb5697b5282bd0346a96469ea8b042"
-    sha256 cellar: :any, catalina:       "7737aa0fb767697039141e37f276d0cdbdedc328d431b80bb0d0c2c97a74ed74"
-    sha256               x86_64_linux:   "7688bf1df0466784f1cd798c9cf363226cb0611f5e82496eceacf090decdbc8c"
+    sha256 cellar: :any,                 arm64_monterey: "ed50fa273a04b369892e2bcb127cb9104a7f24c699adffde0df014f0cbed7a6d"
+    sha256 cellar: :any,                 arm64_big_sur:  "81ba4ead0d61e360b73d125f6ec426f539c412608731659aaf0f34a9a808fd45"
+    sha256 cellar: :any,                 monterey:       "71c99960740542e6033ce9055d05107e8823b7632a78a0a8c0df7fdf7e08eab2"
+    sha256 cellar: :any,                 big_sur:        "c3fee8aa45339ea0ebd06096d2cda7cdcbf81fb5dc3798e63696b56af43fe606"
+    sha256 cellar: :any,                 catalina:       "531e59c654f3470fb9d01f576355e1da3cbf31ce33bc810244f606b88c733535"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96d9b222820202b5d107502a4ede041d20839a0c01befa93b1f5a306af54c2c6"
   end
 
   depends_on "cmake" => :build

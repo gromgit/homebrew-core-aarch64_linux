@@ -3,19 +3,18 @@ require "language/node"
 class Alexjs < Formula
   desc "Catch insensitive, inconsiderate writing"
   homepage "https://alexjs.com"
-  url "https://github.com/get-alex/alex/archive/11.0.0.tar.gz"
-  sha256 "a7ee0de4cdb8a651a377537e495799fbf77a316c817df0ce33b7836794eca618"
+  url "https://github.com/get-alex/alex/archive/10.0.0.tar.gz"
+  sha256 "2498ce4818463c6191e7120040426a8e8e883ea4b97b632907483e21e3494d2c"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3d7a81d455214f06a5760072bb542743abe908b4a334231f48465002cf732f7d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4a23b144193badd2a84c6d596051f17bd31c1174af959d78ad4e043e29a1f53e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a23b144193badd2a84c6d596051f17bd31c1174af959d78ad4e043e29a1f53e"
-    sha256 cellar: :any_skip_relocation, ventura:        "85cb9eb7f7ec9659c9a1242c6e2033854bde87e3cc147b3a0a0f4a9fd709dd03"
-    sha256 cellar: :any_skip_relocation, monterey:       "cacb216ea94fd6e7b20fa41cbabeb44e26a965429f06f8f1ce33e9428175b35e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cacb216ea94fd6e7b20fa41cbabeb44e26a965429f06f8f1ce33e9428175b35e"
-    sha256 cellar: :any_skip_relocation, catalina:       "cacb216ea94fd6e7b20fa41cbabeb44e26a965429f06f8f1ce33e9428175b35e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a23b144193badd2a84c6d596051f17bd31c1174af959d78ad4e043e29a1f53e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7ee77cee577f024ebae4e2a14d86fc0d20ae844acc4fe706f488de9ae2c240f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "970a9f5d0d22e0934ebe287c7d64c0e79a745a139dcbaf7ce6e643ee84184b43"
+    sha256 cellar: :any_skip_relocation, monterey:       "b89880688913298cb886a915f9a0756ba92f1c6570a87c4859496beb3d4f66bb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a616902bfd0d0d1205eca973d30ad3657246e2d88dff8a6f5c7e98c70375b60d"
+    sha256 cellar: :any_skip_relocation, catalina:       "a616902bfd0d0d1205eca973d30ad3657246e2d88dff8a6f5c7e98c70375b60d"
+    sha256 cellar: :any_skip_relocation, mojave:         "a616902bfd0d0d1205eca973d30ad3657246e2d88dff8a6f5c7e98c70375b60d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "970a9f5d0d22e0934ebe287c7d64c0e79a745a139dcbaf7ce6e643ee84184b43"
   end
 
   depends_on "node"

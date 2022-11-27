@@ -1,19 +1,19 @@
 class Vtk < Formula
   desc "Toolkit for 3D computer graphics, image processing, and visualization"
   homepage "https://www.vtk.org/"
-  url "https://www.vtk.org/files/release/9.2/VTK-9.2.2.tar.gz"
-  sha256 "1c5b0a2be71fac96ff4831af69e350f7a0ea3168981f790c000709dcf9121075"
+  url "https://www.vtk.org/files/release/9.1/VTK-9.1.0.tar.gz"
+  sha256 "8fed42f4f8f1eb8083107b68eaa9ad71da07110161a3116ad807f43e5ca5ce96"
   license "BSD-3-Clause"
-  head "https://gitlab.kitware.com/vtk/vtk.git", branch: "master"
+  revision 4
+  head "https://github.com/Kitware/VTK.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "55507cdffa7dd541f060a7c6d0fafdb97d8ec1afd893bec446eb431cdc310c15"
-    sha256 cellar: :any,                 arm64_monterey: "fd8b5266a33f0cf2d967df1ef522ed2c56aec78ce371669496343c98ed1f65f0"
-    sha256 cellar: :any,                 arm64_big_sur:  "ce4d4f25b956014b0b45a96da8361ae053931ae9548b7da83056c9d27c5f7669"
-    sha256 cellar: :any,                 monterey:       "8183b6b8fc6b8df5639e47027f62cab729aa7ff79e2aac19d2b15ccd44e8ec68"
-    sha256 cellar: :any,                 big_sur:        "b447d02c13ee4127382316c24e10d2551c5e2faa6234db005c73c5342477b66e"
-    sha256 cellar: :any,                 catalina:       "e370593ac5ec40f462bd8212db0cd940b5add11061aba88fe82f65d79f58027c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2aa435ad572edb96b633065c2174b319c44c0f3d145f0b707d2d4847c9816db9"
+    sha256                               arm64_monterey: "235a62257e18547893acd654ab41187e3f8389744b8d291897661c314a35933f"
+    sha256                               arm64_big_sur:  "31e54d21af04cafe66a614ad8e76e490109e4fb49e0fdaf4a3973786b0768862"
+    sha256                               monterey:       "58ba5d2739518e799603193899e9205d10cca25e074d968c95869fb90b735af5"
+    sha256                               big_sur:        "77c0746012492581c64d845aac3557bedb8111c32353b2157fe7992ac39910ce"
+    sha256                               catalina:       "438508b242067e11fb241204b4d0fa09478654f0406344edc864197d39a71c07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "398378770eb7afc3c2c4c9fd01ada2ce9b938e82d7b3e7c16398ab36ec3a147a"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -24,7 +24,7 @@ class Vtk < Formula
   depends_on "gl2ps"
   depends_on "glew"
   depends_on "hdf5"
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "jsoncpp"
   depends_on "libogg"
   depends_on "libpng"
@@ -33,7 +33,7 @@ class Vtk < Formula
   depends_on "netcdf"
   depends_on "pugixml"
   depends_on "pyqt@5"
-  depends_on "python@3.10"
+  depends_on "python@3.9"
   depends_on "qt@5"
   depends_on "sqlite"
   depends_on "theora"
@@ -50,6 +50,7 @@ class Vtk < Formula
   end
 
   on_linux do
+    depends_on "gcc"
     depends_on "libaec"
     depends_on "mesa-glu"
   end
@@ -62,10 +63,14 @@ class Vtk < Formula
   fails_with :clang if DevelopmentTools.clang_build_version == 1316 && Hardware::CPU.arm?
 
   def install
-    ENV.llvm_clang if DevelopmentTools.clang_build_version == 1316 && Hardware::CPU.arm?
+    if DevelopmentTools.clang_build_version == 1316 && Hardware::CPU.arm?
+      ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
+      ENV.llvm_clang
+    end
 
     args = %W[
       -DBUILD_SHARED_LIBS:BOOL=ON
+      -DBUILD_TESTING:BOOL=OFF
       -DCMAKE_INSTALL_NAME_DIR:STRING=#{opt_lib}
       -DCMAKE_INSTALL_RPATH:STRING=#{rpath}
       -DCMAKE_DISABLE_FIND_PACKAGE_ICU:BOOL=ON
@@ -95,7 +100,7 @@ class Vtk < Formula
       -DVTK_MODULE_USE_EXTERNAL_VTK_tiff:BOOL=ON
       -DVTK_MODULE_USE_EXTERNAL_VTK_utf8:BOOL=ON
       -DVTK_MODULE_USE_EXTERNAL_VTK_zlib:BOOL=ON
-      -DPython3_EXECUTABLE:FILEPATH=#{which("python3.10")}
+      -DPython3_EXECUTABLE:FILEPATH=#{Formula["python@3.9"].opt_bin}/python3
       -DVTK_GROUP_ENABLE_Qt:STRING=YES
       -DVTK_QT_VERSION:STRING=5
     ]
@@ -113,10 +118,6 @@ class Vtk < Formula
   test do
     # Force use of Apple Clang on macOS that needs LLVM to build
     ENV.clang if DevelopmentTools.clang_build_version == 1316 && Hardware::CPU.arm?
-
-    vtk_dir = lib/"cmake/vtk-#{version.major_minor}"
-    vtk_cmake_module = vtk_dir/"VTK-vtk-module-find-packages.cmake"
-    assert_match Formula["boost"].version.to_s, vtk_cmake_module.read, "VTK needs to be rebuilt against Boost!"
 
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
@@ -137,7 +138,9 @@ class Vtk < Formula
       }
     EOS
 
-    system "cmake", ".", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_VERBOSE_MAKEFILE=ON", "-DVTK_DIR=#{vtk_dir}"
+    vtk_dir = Dir[opt_lib/"cmake/vtk-*"].first
+    system "cmake", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_VERBOSE_MAKEFILE=ON",
+      "-DVTK_DIR=#{vtk_dir}", "."
     system "make"
     system "./Distance2BetweenPoints"
 

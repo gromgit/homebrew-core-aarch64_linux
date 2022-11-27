@@ -1,21 +1,18 @@
 class Rhit < Formula
   desc "Nginx log explorer"
   homepage "https://dystroy.org/rhit/"
-  url "https://github.com/Canop/rhit/archive/refs/tags/v1.7.1.tar.gz"
-  sha256 "51cec0ec3addaeb69904e5929ff4d3f8421f4b8630ec772151ef3a475c0a7aa8"
+  url "https://github.com/Canop/rhit/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "23f26ffd517949b70f7bc27955f2f219d744dca2bb44a3948ef09206478c678f"
   license "MIT"
   head "https://github.com/Canop/rhit.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2dfde40e1010bed71f65705183f02c82d6123d3396cbe415ea2005d0dc077606"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "acc2568759d68ee8fe6f6025d9ba6aa862c82ef7e3998d6721eac3659896f780"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d726e22f8e9d5f4a015415b5cc62ceefca2323f12b2b5d664711dfeb93791730"
-    sha256 cellar: :any_skip_relocation, ventura:        "2b634462bcf0f8b21c7beb4936081403636d128f532cbc6b0628b4e32ed05c29"
-    sha256 cellar: :any_skip_relocation, monterey:       "fed23fc40c646b81ffb88646b4db108c9fa8a12c172d8511c5675380a9760189"
-    sha256 cellar: :any_skip_relocation, big_sur:        "065efb5cce2cbfabccc0229aec870d3456740c89e4c1516e50237337afcb05ef"
-    sha256 cellar: :any_skip_relocation, catalina:       "d2c6a293442c7270de27df91fc562f2f49a4c3ed681faa0cc1bea60b85a37285"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd3b5255f4ae00a70c62a93017ae41a2147892d002a1a774070f4708012c7cd3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ee8537637917b3736c10f64b06f636d82ae2c0bbfcc8d16136090afcf9b8983"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1c725915f80e5bdb5aceb7c7c4baa0fba4e8635aea1a24bd9812f23d4f060fb"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe7acd4571c268c8ff198541e8543a262be824f91e751bbc7f63300ce7373785"
+    sha256 cellar: :any_skip_relocation, big_sur:        "83e682e5ad0398b86b5c8baae511d6b80112d6a7ef521a673c2543c66e549f00"
+    sha256 cellar: :any_skip_relocation, catalina:       "c4c3b42d3dc89abe8fa79c574db51f4f61e5d3dfe02123d69ae974e180e072c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47affaa22c777826881f7f32e55dfcc8abb983b76104debc84b46258b76728b2"
   end
 
   depends_on "rust" => :build

@@ -1,19 +1,13 @@
 class Moar < Formula
   desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moar"
-  url "https://github.com/walles/moar/archive/refs/tags/v1.11.0.tar.gz"
-  sha256 "d85617fe10eb5228ee1fdddf92e1df3ae554b0b7e6f93c0ef03f77e0daec86f2"
+  url "https://github.com/walles/moar/archive/refs/tags/v1.9.3.tar.gz"
+  sha256 "17e527fc18ff25c590ff8790c32322e9c9c5e036ccf279ca2ed63be870889182"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "96e9647fa1c9772e6208afcc775b3a6f6ef99816cfe52b50ab15a16fbce6446c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96e9647fa1c9772e6208afcc775b3a6f6ef99816cfe52b50ab15a16fbce6446c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "96e9647fa1c9772e6208afcc775b3a6f6ef99816cfe52b50ab15a16fbce6446c"
-    sha256 cellar: :any_skip_relocation, ventura:        "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, monterey:       "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, big_sur:        "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, catalina:       "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86a28b1299d9994988b575160773d0536e4b3611478568b18b4abbdbea860fcb"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/moar"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "73873ba955e9e7685750ac7fb6fe65adf380509f6b17c56a460a0f39d83d72e1"
   end
 
   depends_on "go" => :build
@@ -21,7 +15,6 @@ class Moar < Formula
   def install
     ldflags = "-s -w -X main.versionString=v#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags)
-    man1.install "moar.1"
   end
 
   test do

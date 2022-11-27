@@ -1,20 +1,18 @@
 class Atkmm < Formula
   desc "Official C++ interface for the ATK accessibility toolkit library"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/atkmm/2.36/atkmm-2.36.2.tar.xz"
-  sha256 "6f62dd99f746985e573605937577ccfc944368f606a71ca46342d70e1cdae079"
+  url "https://download.gnome.org/sources/atkmm/2.36/atkmm-2.36.1.tar.xz"
+  sha256 "e11324bfed1b6e330a02db25cecc145dca03fb0dff47f0710c85e317687da458"
   license "LGPL-2.1-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura:  "00058c5e0579838d818c89064001c7389e0df4a0b92148a33cf354cc662eff24"
-    sha256 cellar: :any, arm64_monterey: "84e99c11a87b16554bf8a6f3682cad91fe3538afce18acc63cda1fdb8f374f38"
-    sha256 cellar: :any, arm64_big_sur:  "87202974bb4c7d0e5c7c8ecd3cf049113de10bf2a4df1c76c43effc72b1be682"
-    sha256 cellar: :any, ventura:        "970d410522bd804a3a2a9c846edb941a18a2afee480338ba553461ca380d86da"
-    sha256 cellar: :any, monterey:       "7f98497f232811faec23f3535d1dbb059f8eb6629c83286a72cc0073ffb09d75"
-    sha256 cellar: :any, big_sur:        "c87d7feef3d12d582873fe0acf9b419dde0d218684b4d9e3a407f8279cd15e43"
-    sha256 cellar: :any, catalina:       "b1fd80ccf96230f38a8faf3dd67cdf97bb359a075dbb4b48b016c08d7563e5f5"
-    sha256               x86_64_linux:   "5a473139c858d0c2be2d2a97751a095c5091dafad3cd8a44ac5e56223ca506e9"
+    sha256 cellar: :any,                 arm64_monterey: "62a52bf13cb3e8ae0f3de2c22fe5eb99c82e2bfcf70562e7299b81e3b0eb46ab"
+    sha256 cellar: :any,                 arm64_big_sur:  "82e89f908e2a3cc349c8478eef60d7b755f968d3523f037b8b78ea4edc4031ba"
+    sha256 cellar: :any,                 monterey:       "8d00072e06cb6fa4748cad51217427499ace42f1177e0f1d6bfbb00363329378"
+    sha256 cellar: :any,                 big_sur:        "4b147e97566fe8f13c6e72e1d350da5c8bbabe3abb6f4966eec44f227c9fa807"
+    sha256 cellar: :any,                 catalina:       "09b0e72f5d9fd8e2a3328202d8c2b8fc7f896cdd208ab51fa75bb87c79eee53d"
+    sha256 cellar: :any,                 mojave:         "a3ed94c51be9ae22f3a3c1d6650ade4037748f2c8602db9b647effd71b4d5108"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2e8f09c113ecfd68cac31cc2e96daecc200a4260a076ef5c58bf852774fbdc1"
   end
 
   depends_on "meson" => :build
@@ -22,6 +20,10 @@ class Atkmm < Formula
   depends_on "pkg-config" => :build
   depends_on "atk"
   depends_on "glibmm"
+
+  on_linux do
+    depends_on "gcc" => :build
+  end
 
   fails_with gcc: "5"
 

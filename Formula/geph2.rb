@@ -6,17 +6,12 @@ class Geph2 < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d18b805c6d02c073780a49837ec72db79fd6fd310df826197036d684c727df1e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3b6f54e3938d4362d85d4dda831ffce4ada5635433d490e1fb762fae70fce42"
-    sha256 cellar: :any_skip_relocation, monterey:       "5576fc9fa6870e5b33cdf3dd448b067533d6806993a597e2f65c2c9a4d70feea"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7d6622ad8567fda7a73bd85ae3ca5229bd83c6289d3e56aa2b7c6aa67eb0c621"
-    sha256 cellar: :any_skip_relocation, catalina:       "c289cb8558247b38814c51298da6ba86ed16ab0f9ee49eeb097464aee5702189"
-    sha256 cellar: :any_skip_relocation, mojave:         "8133f7174bdd1218ad3799543b85d2e932ffab60b89181ce209b314c57847c9d"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "392a4199771a8ff4c5aa1c45bd3225640d9949aa1e2a9af915e488093fe84ff9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/geph2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6f31cbd9a55203002b76e40a433e52b4035fa60ce9d9fcd30cfefec71367b776"
   end
 
   # Geph has been rewritten in Rust: https://github.com/geph-official/geph4
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2020-04-24", because: :repo_archived
 
   depends_on "go" => :build
 

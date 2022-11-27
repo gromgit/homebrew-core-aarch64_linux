@@ -1,9 +1,18 @@
 class Imageworsener < Formula
   desc "Utility and library for image scaling and processing"
   homepage "https://entropymine.com/imageworsener/"
-  url "https://entropymine.com/imageworsener/imageworsener-1.3.5.tar.gz"
-  sha256 "a7fbb65c5ade67d9ebc32e52c58988a4f986bacc008c9021fe36b598466d5c8d"
   license "MIT"
+
+  stable do
+    url "https://entropymine.com/imageworsener/imageworsener-1.3.4.tar.gz"
+    sha256 "bae0b2bb35e565133dd804a6f4af303992527f53068cd67b03e5d9961d8512b6"
+
+    # Fix -flat_namespace being used on Big Sur and later.
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+      sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+    end
+  end
 
   livecheck do
     url :homepage
@@ -11,13 +20,13 @@ class Imageworsener < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "14a343a159b3410196cc3ed40b0e674b4bed5f8ee7b2760b49b1317e1a09811a"
-    sha256 cellar: :any,                 arm64_monterey: "0d8c2dab98fa032f871df63f93ae33d4d1a989fe7c97f185d976d976f243134a"
-    sha256 cellar: :any,                 arm64_big_sur:  "50063cbefef7614047703983639adaee5836d68c02f673aed62c38fea1c4418d"
-    sha256 cellar: :any,                 monterey:       "443be530e6d93e197026cf8ec457817446c38c94d84b39a3ca76e7a2282225ae"
-    sha256 cellar: :any,                 big_sur:        "7ce254b5dfb0dcd52e39b682cfd21ea665601cd14e9a2a5ab0c923e185ad5261"
-    sha256 cellar: :any,                 catalina:       "7301d5557860b7402e3d624c77a208c1e3eb1ed69479d6d3d3f1158a3e3ea079"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffeb2d98cb08aca5974ca2ece5a40a42b5bd6e0c2422f0a3013455d00793883d"
+    sha256 cellar: :any,                 arm64_monterey: "59a3ec8b38b32f1dd73a0e68ed6b04143f5f017c8e2f67104f1c4b04581a9a91"
+    sha256 cellar: :any,                 arm64_big_sur:  "0ee5c5f12bf988c164ce3ea06ce3c6a22af96427edaf241fb68f91c3e951d2de"
+    sha256 cellar: :any,                 monterey:       "daad4e7c113aba1f302eddedf9953ca54f2565698f7338dc0118d5e4978388d4"
+    sha256 cellar: :any,                 big_sur:        "6e6ec999be6238848bc4c39f7e39419b39d060dc925273ddbaaa500d63a29f92"
+    sha256 cellar: :any,                 catalina:       "a2c33e599d1b1aa2500593919cdc4a9771f5afe71a7f6011a98b125dbfbd9c60"
+    sha256 cellar: :any,                 mojave:         "a529b6264397516c763640015683f35632d46befd85fb07a3433ff2ebf2fcd95"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9018d0001a824d65d6e4205cffe1f745248df78b2341a0922e8a5254849bc672"
   end
 
   head do
@@ -27,10 +36,8 @@ class Imageworsener < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on "jpeg-turbo"
+  depends_on "jpeg"
   depends_on "libpng"
-
-  uses_from_macos "zlib"
 
   def install
     if build.head?
@@ -38,7 +45,8 @@ class Imageworsener < Formula
       system "./scripts/autogen.sh"
     end
 
-    system "./configure", *std_configure_args, "--without-webp"
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}", "--without-webp"
     system "make", "install"
     pkgshare.install "tests"
   end

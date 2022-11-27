@@ -9,27 +9,25 @@ class VpnSlice < Formula
   head "https://github.com/dlenski/vpn-slice.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7798a26686d124c506967ff63713b888fc36cadbee332330a5260ea925837b28"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "03c28ff89eec7cc5e56ef7daf5ac634527b5cdc5c7203fa2a55aad4c13eeef05"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "891ccb3aa60a9a987136f616f5037c1cb8b58835042b96f7d71bc66b29ae9c38"
-    sha256 cellar: :any_skip_relocation, ventura:        "ad37647e9afbd689a2dbba1beabe018dc5c4cd26476d2dab30fbbd60554bf9da"
-    sha256 cellar: :any_skip_relocation, monterey:       "0fed89c47a9cd556d276233a55b54d7ef21ac683e7d8054827f51bf3adb699ee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "63f4dec62b148f81d1de93cd938363ef9f51f542974f172b3ada0e317c391875"
-    sha256 cellar: :any_skip_relocation, catalina:       "37659888aa845fa2726e77c5973109b9b2552d4bea491f3b84e3d7c1d6eaa9ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6e0387688208ea25eb4f1a3ebbe358ebb9b00d530714c1dcd6b01b4152493a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aae94aed3962341c977427f891a4ccddd31c0b1407eff0c1c12a6606d14e2f19"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7de4b4741ae6d747906f85e981e0162e2cc5f46592460d9ecd3c79175a22f04c"
+    sha256 cellar: :any_skip_relocation, monterey:       "163bb051600b95199aa4678a820c76e8d1051f2095417a0bba81514b771cb99f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "936ca7b20b1f2bcd20459851659634af28afabfcaf5cfa372f90b72f18306db7"
+    sha256 cellar: :any_skip_relocation, catalina:       "69eb21d92d73b5f03a9f01daefb72875a4ed73d96bce2f571b6a515bb46771f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd3cc586853e2afcfc1618dd333520882f9c9248c7d7ae8c7cd7ce99068ab0ca"
   end
 
-  depends_on "python@3.11"
+  depends_on "rust" => :build # for cryptography, can remove if dnspython has new release
+  depends_on "python@3.10"
 
   resource "dnspython" do
-    url "https://files.pythonhosted.org/packages/99/fb/e7cd35bba24295ad41abfdff30f6b4c271fd6ac70d20132fa503c3e768e0/dnspython-2.2.1.tar.gz"
-    sha256 "0f7569a4a6ff151958b64304071d370daa3243d15941a7beedf0c9fe5105603e"
+    url "https://files.pythonhosted.org/packages/13/27/5277de856f605f3429d752a39af3588e29d10181a3aa2e2ee471d817485a/dnspython-2.1.0.zip"
+    sha256 "e4a87f0b573201a0f3727fa18a516b055fd1107e0e5477cded4a2de497df1dd4"
   end
 
   resource "setproctitle" do
-    url "https://files.pythonhosted.org/packages/b5/47/ac709629ddb9779fee29b7d10ae9580f60a4b37e49bce72360ddf9a79cdc/setproctitle-1.3.2.tar.gz"
-    sha256 "b9fb97907c830d260fa0658ed58afd48a86b2b88aac521135c352ff7fd3477fd"
+    url "https://files.pythonhosted.org/packages/a1/7f/a1d4f4c7b66f0fc02f35dc5c85f45a8b4e4a7988357a29e61c14e725ef86/setproctitle-1.2.2.tar.gz"
+    sha256 "7dfb472c8852403d34007e01d6e3c68c57eb66433fb8a5c77b13b89a160d97df"
   end
 
   def install

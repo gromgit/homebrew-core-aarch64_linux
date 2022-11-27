@@ -7,19 +7,13 @@ class CstoreFdw < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "e8891a0d34043f651e21e61d5f896bad2f36eed0a3a4f8bac49c453924bd8dee"
-    sha256 cellar: :any,                 arm64_monterey: "f4b421e5d9ee59a760ff188d0b695a8ec266b65e7503085d59c4f89f73326fe2"
-    sha256 cellar: :any,                 arm64_big_sur:  "221261761221ba1a3aa0d12bbd6c7c1e9710a942d4cf0bda373cda3128aa71e6"
-    sha256 cellar: :any,                 ventura:        "b82c1097d8986d273ecf37720a6ceec797403ae1b18f6786d9e5697ae225575e"
-    sha256 cellar: :any,                 monterey:       "f9632c66ce3e68c0f377f4579de7a702de40de6c0a5870effae2af492fe635a7"
-    sha256 cellar: :any,                 big_sur:        "70e37b3984b6b0bfde28ed9db0049226b781ddec35c6bb9f7e4f677780bd6bc6"
-    sha256 cellar: :any,                 catalina:       "cf773b6ddb214688cad1505cc01f4e3f6a4ddea8139d67d6c3d5fe2a7f8d8cd3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1b7a165d961b4025065b2b2e9a0088ea19f02973d705d3427633a7544f5b056"
+    sha256 cellar: :any,                 arm64_monterey: "78cba62624a4f42f39f50b059cc400802e9bf9f75083a6582ac3a0c9e43e538f"
+    sha256 cellar: :any,                 arm64_big_sur:  "7150e6ca48f68acdc46dcb2db908fa6ffbfa6e9924bd1a6aef9873beb308522e"
+    sha256 cellar: :any,                 monterey:       "8475a654cb0aff0f9c355b4334b862b78ff7cf6222c04847e1346dc70979f636"
+    sha256 cellar: :any,                 big_sur:        "72fadeff938269dc37235e25917196ecb67a2d645c106adc1310d09841e599cb"
+    sha256 cellar: :any,                 catalina:       "dbb68dd9be281e6731f6dc33305a7be86b77c47910cc0534126bba63cd5068ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3dce4b860d7534d3701d8f78c0b4ba73ad48cbefa3b996b03e572c6469133ae5"
   end
-
-  # https://www.citusdata.com/blog/2021/03/06/citus-10-columnar-compression-for-postgres/
-  deprecate! date: "2021-03-06", because: "cstore_fdw has been integrated into Citus"
 
   depends_on "postgresql@13"
   depends_on "protobuf-c"
@@ -51,10 +45,13 @@ class CstoreFdw < Formula
     mkdir "stage"
     system "make", "install", "DESTDIR=#{buildpath}/stage"
 
-    pgsql_prefix = Formula["postgresql@13"].prefix
+    pgsql_prefix = Formula["postgresql@13"].prefix.realpath
     pgsql_stage_path = File.join("stage", pgsql_prefix)
     (lib/"postgresql@13").install (buildpath/pgsql_stage_path/"lib/postgresql").children
-    share.install (buildpath/pgsql_stage_path/"share").children
+
+    pgsql_opt_prefix = Formula["postgresql@13"].prefix
+    pgsql_opt_stage_path = File.join("stage", pgsql_opt_prefix)
+    share.install (buildpath/pgsql_opt_stage_path/"share").children
   end
 
   test do

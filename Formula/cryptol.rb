@@ -1,19 +1,17 @@
 class Cryptol < Formula
   desc "Domain-specific language for specifying cryptographic algorithms"
   homepage "https://www.cryptol.net/"
-  url "https://hackage.haskell.org/package/cryptol-2.13.0/cryptol-2.13.0.tar.gz"
-  sha256 "5c5b7ad0b290c506836dbbad886ae43ce7d690dd86e2f2a9124564c2f5602b83"
+  url "https://hackage.haskell.org/package/cryptol-2.12.0/cryptol-2.12.0.tar.gz"
+  sha256 "1746b1ca1fa27d127bbb9f3a50956f1c04e99d2b42a1ddb0347d40dc4d5b058e"
   license "BSD-3-Clause"
   head "https://github.com/GaloisInc/cryptol.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "21bf30e80d822a11359a5edada042837a294a82e9a2375e39e19fb059957e1b8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "091eca3d557fc8f34f9f08734731c70d4235c701238fec389e8746b0c9875a97"
-    sha256 cellar: :any_skip_relocation, ventura:        "6e5819a8ca3426c7c22c8af2d4f0a63e67209d3c4f7e6b5b4ac182f4f3316986"
-    sha256 cellar: :any_skip_relocation, monterey:       "2c2d695b1976a46096f711490a0fde3d036cee5eea965e0eaa431fe43764a77e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "649566c85d028a8affea145c1c4236f9462f8fd17daf7d649e894d4d54d191ae"
-    sha256 cellar: :any_skip_relocation, catalina:       "45e33fc7108b2f070b587b040fb16e0bb6dbd107871cbff0a1dc92d49c190c94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "336e42866d31ad32f2e965623aec255851d42cdf926435d00ce06992fa058bb1"
+    sha256 cellar: :any_skip_relocation, monterey:     "91082565f7096f7eac147693c74f80ec9f661a67bfef7a07c9361c82b32596df"
+    sha256 cellar: :any_skip_relocation, big_sur:      "035bb1a575c63a3992a28e2f9adbcbf452ed423704089da835bc4f2b4241eba7"
+    sha256 cellar: :any_skip_relocation, catalina:     "fc1c9ccb7aa2fa185a319e1bcf0de1bd7d45cf3a90234b50cb04c1db0f25aec0"
+    sha256 cellar: :any_skip_relocation, mojave:       "472d4f5548696c9b0e7c3d512e6630111d7db23f0e37ac21d6193192eda135c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2ccacef5fd7f740050414d006cd5f3d3719b74c434fdd6fceadea501168b5412"
   end
 
   depends_on "cabal-install" => :build

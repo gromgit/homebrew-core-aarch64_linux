@@ -12,10 +12,8 @@ class Redland < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "16c721b39acf16e65892930227303d74673ce56ddaf252ca867da9391de7bad3"
     sha256 arm64_monterey: "25dd020d5d83642dd83c56583dd742dc549fcc32efbec67958faeebed4e1a849"
     sha256 arm64_big_sur:  "f54c731eecd682be899b7b8b5ab3424db134a1a48fe7076f0113deedb9a7f057"
-    sha256 ventura:        "2c9931ba94fa4e8c4cd3b1983fdf55afa01838c3e6556664126733a7743c1575"
     sha256 monterey:       "f0b6b4b55556c730bb0eb720bcca0d4efd9ede0b13e15f39758fe2a193ce4933"
     sha256 big_sur:        "60ddb8775dfdff43901aac1138929c688b07e744304e24e1cd3d6183000620bf"
     sha256 catalina:       "f30068d691ac2748619a288912235236e905f672b1f80a974e95425c5f102a10"
@@ -23,6 +21,7 @@ class Redland < Formula
     sha256 high_sierra:    "407f9f1bd2a8682684660826fce445077c33fe3e7f1bfb05e7c0e265e2edacfe"
     sha256 sierra:         "0ed03c897836946cbadf2e390bd25c79eeb6ad34ea1144ef69d8bf1dfbfaf2eb"
     sha256 el_capitan:     "38eac3bae25aa65cbb7b688ecfaae91ab79c0c292e7505596ffc3b409bc8ca3b"
+    sha256 yosemite:       "6047842b51137c968df4787bbfcf2080b4f32b73bb9d3412fa117ee9c1ff22d2"
     sha256 x86_64_linux:   "5439aed60715d12f7bce18e9292ce3301fc93b89cdb2eae2bd072a0a59a5fc6b"
   end
 

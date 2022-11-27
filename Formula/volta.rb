@@ -1,10 +1,10 @@
 class Volta < Formula
   desc "JavaScript toolchain manager for reproducible environments"
   homepage "https://volta.sh"
-  url "https://github.com/volta-cli/volta/archive/v1.1.0.tar.gz"
-  sha256 "3328f10c1e1aec8d6c46d22a202872addd83c6b4aec4f24e5548f3048e4a26c3"
+  url "https://github.com/volta-cli/volta.git",
+      tag:      "v1.0.7",
+      revision: "b7ed23325d2825143471962cf94b722e1305e615"
   license "BSD-2-Clause"
-  head "https://github.com/volta-cli/volta.git", branch: "main"
 
   livecheck do
     url :stable
@@ -12,31 +12,35 @@ class Volta < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "41b905e65535685a0a5767e2ed489fd521a6f39141b55bcebbe47d2b7cc1ac4f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f48361ce44cae44b7b8dcf74c500a68f744424ba01ad8751f8feb03b8fc4fee"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f9bae6017de090181d64b9e1dd8412d56530ef50d7ea7f0d8eaa1413e7a3b50"
-    sha256 cellar: :any_skip_relocation, ventura:        "aa62e71126ac6d833a570eb4a498a5d04574ef6c31a284a7b7a0128b6e911cf0"
-    sha256 cellar: :any_skip_relocation, monterey:       "2163fe8879bec9626851943ad524c8d3699e40dd37ad9d74e97c45a18160e98e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f5338e015a21ded1b71ef17b2b8b1bef9b03facb658b19e0866f1b3b11d1889a"
-    sha256 cellar: :any_skip_relocation, catalina:       "ee71be23a8d9615093ad9b0879e78e9b00f1505fb0097c1c0040358c642f9bc5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8193e721fbc7c73e0bde8589f9fbd25da07eaee0bd9bfa583f96b08583ae758c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fbd2a2900d4c3378471fc9af3937c2a2d2c193d053746c6f161d21dcba6b5236"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c0e0b710ec8670028919a716d7e71e0487248d318aaed2badf85cf9767e8648d"
+    sha256 cellar: :any_skip_relocation, monterey:       "2dc96b13b56511f5c5783612ccae0a7fd709935d8fb609b1b4a622cfcae1c4b8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c4227315745d14339d2e8e47c095e67ea635e09737d709073e8c48dee0621ef3"
+    sha256 cellar: :any_skip_relocation, catalina:       "37dc03ed643e31211b497c658f2f2378db09db52f336bbf41d1a3c8b876ab3f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6a99343ba6983fae8aa7db38702d9ba6c17ef1d9c99b2b677d1be2a6fe530b2"
   end
 
   depends_on "rust" => :build
 
   on_linux do
     depends_on "pkg-config" => :build
+    depends_on "openssl@1.1" # Uses Secure Transport on macOS
   end
 
   def install
     system "cargo", "install", *std_cargo_args
 
-    generate_completions_from_executable(bin/"volta", "completions")
+    bash_output = Utils.safe_popen_read("#{bin}/volta", "completions", "bash")
+    (bash_completion/"volta").write bash_output
+    zsh_output = Utils.safe_popen_read("#{bin}/volta", "completions", "zsh")
+    (zsh_completion/"_volta").write zsh_output
+    fish_output = Utils.safe_popen_read("#{bin}/volta", "completions", "fish")
+    (fish_completion/"volta.fish").write fish_output
   end
 
   test do
-    system bin/"volta", "install", "node@19.0.1"
+    system "#{bin}/volta", "install", "node@12.16.1"
     node = shell_output("#{bin}/volta which node").chomp
-    assert_match "19.0.1", shell_output("#{node} --version")
+    assert_match "12.16.1", shell_output("#{node} --version")
   end
 end

@@ -1,8 +1,8 @@
 class Homebank < Formula
   desc "Manage your personal accounts at home"
   homepage "http://homebank.free.fr"
-  url "http://homebank.free.fr/public/homebank-5.5.8.tar.gz"
-  sha256 "507a5bb3ceea230780f11206728b061daac00f654b52e782aab875ab71abcf85"
+  url "http://homebank.free.fr/public/homebank-5.5.5.tar.gz"
+  sha256 "bece05ecb52392147424aa1e5a179389777b82bf468abebd73eb70b2af9c9e67"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,14 +11,12 @@ class Homebank < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "d541e37e9bbdff2443a1070106e3f5c3ca56fb239d606676e997496ecbbc774d"
-    sha256 arm64_monterey: "214e609aefe8a8793ae0f8757ab971685526d2a078e9e69026458684054924be"
-    sha256 arm64_big_sur:  "70ed29226013af9eba03840ddc08c903864ee7dea75ab45329c54e12bccc680d"
-    sha256 ventura:        "348c2b54ceba6f881d8b068618a60a2b8a188cf8c8570e31e81e26e67139b5be"
-    sha256 monterey:       "e0244641f0d8c8bc24acf0b6fe603557cb30bef7912286a0d9e18ec31a1c98e9"
-    sha256 big_sur:        "e9ccec7c7bb765b8655db66b42397639da7c62d7dbd287176565e895e005dc5f"
-    sha256 catalina:       "e1db723e3f8c67cb74de784597fb17ba0a07861a1e67b58752057040b759b4c6"
-    sha256 x86_64_linux:   "c42d840ecdc2bef16bd974d304ab61dfa80cc9109d867a81d0a85d6287713a1f"
+    sha256 arm64_monterey: "97df3402f51f1c1edc03d6d086aae9d9f1dad08be0cdf8705db52382458b3889"
+    sha256 arm64_big_sur:  "c8cf6d6a3ee32b8207793f2dd76f0c00f5c09f8a693bb2f5983460532f35c9a7"
+    sha256 monterey:       "34554948850e7c882dafe8d0ac8f3c48a7e9b61ba940eeca3a2a6d02714a071e"
+    sha256 big_sur:        "36fc5288291f211475e8662b7fa95f9863176f8e728bbac4fcdc4ad670ccc3a4"
+    sha256 catalina:       "04a41b0a632e90416fc6746998e5787d55d22414f77c5caf142759d70bb49e7e"
+    sha256 x86_64_linux:   "4188b2b9f658735982c223e1893b254a090da26eefbd06e43b1df5f05cb57036"
   end
 
   depends_on "intltool" => :build

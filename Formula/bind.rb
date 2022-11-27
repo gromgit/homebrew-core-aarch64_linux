@@ -8,8 +8,8 @@ class Bind < Formula
   # "version_scheme" because someone upgraded to 9.15.0, and required a
   # downgrade.
 
-  url "https://downloads.isc.org/isc/bind9/9.18.9/bind-9.18.9.tar.xz"
-  sha256 "6a9665998d568604460df0918fc8ccfad7d29388d4d842560c056cc211cbb243"
+  url "https://downloads.isc.org/isc/bind9/9.18.2/bind-9.18.2.tar.xz"
+  sha256 "2e4b38779bba0a23ee634fdf7c525fd9794c41d692bfd83cda25823a2a3ed969"
   license "MPL-2.0"
   version_scheme 1
   head "https://gitlab.isc.org/isc-projects/bind9.git", branch: "main"
@@ -22,14 +22,12 @@ class Bind < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "5e7a6e2e590c19a687aad9b217c2d987751ec945ce667f0edc2b889022b0c2e7"
-    sha256 arm64_monterey: "47f658f0ebf02ee8e31eee9ed1bd95309816866b76286c49dec37f03a935248b"
-    sha256 arm64_big_sur:  "f5bc92fe3851ff3847ca64196db9ed5968c29542e032b32524d510e746504c47"
-    sha256 ventura:        "c09cc95f6ed895c104f275aaab252b402fdf064d7fd43f4f498c53d3c4ff5b62"
-    sha256 monterey:       "a7e50c40847023932279096047a2ceb3aa170d3f5b9a8a44c00b3c8e479f3acb"
-    sha256 big_sur:        "3a01235a7915353bbd5701d00e67eb0df782a47689f17993d544f2a51c867c94"
-    sha256 catalina:       "6204de414f9a25229c051b5feac73b5834e0d9bf6b5cc158b26c30ecc9630479"
-    sha256 x86_64_linux:   "b42f82b55d55aa492a454492c6099fd7b22f44305de9fcd6cead321ffd85e679"
+    sha256 arm64_monterey: "b3166c0dd911a03d58c912c431fde1f908cd8c71fda1cfd6926b18a0c3f880d7"
+    sha256 arm64_big_sur:  "00cddc836c5b487701433cd5760e97eb3611f094a20fd360a8e083525c360157"
+    sha256 monterey:       "8c7d011a72f5a4bd7f8982f31f7429b246748a5c7b527b63d511b5022ce52a33"
+    sha256 big_sur:        "915d8ac26a52b8ee32b3814acb09e4c19eeadbd1fd563159b771aa7321d604e9"
+    sha256 catalina:       "40d77a092ea26f90a7175714791a52de5cbcdee78b89a61db26830b84ef60fe1"
+    sha256 x86_64_linux:   "867daf07548c0b63963b98e9eb15f371e899899e2f78f4b29e60ffc25518c532"
   end
 
   depends_on "pkg-config" => :build
@@ -37,7 +35,7 @@ class Bind < Formula
   depends_on "libidn2"
   depends_on "libnghttp2"
   depends_on "libuv"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     args = [
@@ -46,7 +44,7 @@ class Bind < Formula
       "--localstatedir=#{var}",
       "--with-json-c",
       "--with-libidn2=#{Formula["libidn2"].opt_prefix}",
-      "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+      "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}",
       "--without-lmdb",
     ]
     args << "--disable-linux-caps" if OS.linux?

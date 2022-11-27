@@ -7,18 +7,12 @@ class C14Cli < Formula
   head "https://github.com/scaleway/c14-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "be959caf78dfb802e870bf852573fc68a6059acf8c9126abe0c4ff3056d10124"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46d65ade1ad6406be53f136729cbeca6892dd53f6958dfd7417e3773ac9d2041"
-    sha256 cellar: :any_skip_relocation, monterey:       "0afdbb28cf73d92ce3d609f52705c34d71a8a6d0b27a5a088f135da0f8f6938f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ad34da8ecf1f0563fb208247b904bc64c11ff98c681dc87744ea32e9093b5d19"
-    sha256 cellar: :any_skip_relocation, catalina:       "137f585fd6aef342e9ac97ce6ffe819d30641727e7f9d621fa6d0124afeb46f5"
-    sha256 cellar: :any_skip_relocation, mojave:         "245dc470e7883100e9b8d3dd229a5fbf2e0960993c7432be11e31ba7ef887f71"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "6b3262c0d209f01dd93a491c541ee7f9fedca9f6ff03203487394e0e4f5cdecf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a98a3f97b5f0d1429be76532f76c3a27b2d5c9d70330f8dd15320ea39ae480ba"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/c14-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1081843302b74daa5ae37f29b54747581aa02353d14352ccb91d367782e1ac79"
   end
 
   # "C14 Classic has been discontinued"
-  disable! date: "2022-07-31", because: :repo_archived
+  deprecate! date: "2020-12-01", because: :repo_archived
 
   depends_on "go" => :build
 

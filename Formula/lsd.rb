@@ -1,19 +1,18 @@
 class Lsd < Formula
   desc "Clone of ls with colorful output, file type icons, and more"
   homepage "https://github.com/Peltoche/lsd"
-  url "https://github.com/Peltoche/lsd/archive/0.23.1.tar.gz"
-  sha256 "9698919689178cc095f39dcb6a8a41ce32d5a1283e6fe62755e9a861232c307d"
+  url "https://github.com/Peltoche/lsd/archive/0.21.0.tar.gz"
+  sha256 "f500c18221f9c3fd45f88f6f764001e99cf9d6d74af9172cbb9a9ff32f3e5c7d"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "12f7c0889cf4a5c18fd04f0dda7dac2af7a7c6aafc2a16ce2af4a76d28fc50b2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "657141d387cf3185c8e33a5730c13bf4ff600c35dc2b4ed7bb0c5d6bdd99501c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fb9f63aab186e0d6b231eae5cb7800976a06d4f44265b415b082b6996c1f0c38"
-    sha256 cellar: :any_skip_relocation, ventura:        "603348a70cb1484053c8732ecfffc96920177770dbb84f791e9ac3be23e26cf2"
-    sha256 cellar: :any_skip_relocation, monterey:       "0303125c2efa21b60105d8d576d032b2248e14deb7198b5bcb55a2bd5e58d4c8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0cb90516594836c18243d8e799e88339e420735d2fb5c8182a4e3b78c83103cf"
-    sha256 cellar: :any_skip_relocation, catalina:       "5f105e34087e96b5fad8f62d69fb8b212f03501a526420415871fa2326a5f570"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20fc3d18113e6fe56c387d1d3443d8b6dbf6888e07f53b90c9d8266e0048680d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb1ae021488b265d2f05e71b9c1b79ffa6113c2cac1f77e7287b9525315add2b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "706fdc3ceb41d2ad2ebdbc11b3930d87c5546d109331c9b965cb7d29875bd100"
+    sha256 cellar: :any_skip_relocation, monterey:       "1b8a883d68c3ea85695a5e33602e99b3d6f8866f34444eeedbb4d9131112af90"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d14efa8c804908f25d88f0cea0ecea253d6a059d971de1f630ffb29af2f691d8"
+    sha256 cellar: :any_skip_relocation, catalina:       "b42295c9884214ecf4e6afc90aca429d739cd509f72f54e8ee590e6afc26aed4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90f92d5c4d38f5c3e84c13bc171c3bdae04f50da02a7fc2bd6680ea82368f3fe"
   end
 
   depends_on "rust" => :build

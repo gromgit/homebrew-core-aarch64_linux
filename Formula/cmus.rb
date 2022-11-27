@@ -1,21 +1,19 @@
 class Cmus < Formula
   desc "Music player with an ncurses based interface"
   homepage "https://cmus.github.io/"
-  url "https://github.com/cmus/cmus/archive/v2.10.0.tar.gz"
-  sha256 "ff40068574810a7de3990f4f69c9c47ef49e37bd31d298d372e8bcdafb973fff"
+  url "https://github.com/cmus/cmus/archive/v2.9.1.tar.gz"
+  sha256 "6fb799cae60db9324f03922bbb2e322107fd386ab429c0271996985294e2ef44"
   license "GPL-2.0-or-later"
   revision 1
   head "https://github.com/cmus/cmus.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "2a596cc72904648bf33093b295bcffe9c35b6218ef7d07786ad2810ffe417c0c"
-    sha256 arm64_monterey: "4d9a04e3f219777e94ee43abbc36a08a308a4b038349b8421bb050fea197dcdc"
-    sha256 arm64_big_sur:  "1da2b55446e9adbc6d72b4b22d91530ae4e8c07b8d5658b33622ec64313198a9"
-    sha256 ventura:        "c155a740631ccf005e52301acfb1488e5c7c0686370d91f74c83a5df3b714e57"
-    sha256 monterey:       "36f976d5db181233588ec371ad862f91725aed2d0797a53d96eb1dc99908a2b6"
-    sha256 big_sur:        "1a2494a1a8ba3cdbe59c06617fd9fc1f1bb2f36b1126ce425e1b9d9f9fe34adf"
-    sha256 catalina:       "965774a8170b4d6f194974736f4ac8d188a15da9bb75469a7ce915d4bbf93da0"
-    sha256 x86_64_linux:   "1a95494ac6bbf9215e929bb5b51723eea1f5b08e15eeb66492544c2bf9df8778"
+    sha256 arm64_monterey: "c8442ac4518d870f91a68e917251fb9050ba7f477fce412597eabd4ab68c8008"
+    sha256 arm64_big_sur:  "e9bf47dcc8350d948fc841f18c0b5b68d72299f488338a68d0df2e52245f62aa"
+    sha256 monterey:       "d993861d232ff31bf395af15846d39e6d5872c6b0d075ae227983b3296e4841c"
+    sha256 big_sur:        "6704b64f4bd2e163be11e1146e076252ec6af54f6eaff80cb54bcce7b2047214"
+    sha256 catalina:       "185a420e4b5b7ac9a88232f0fe74d1110483ea682a1b9198335e9cd8b733d3a8"
+    sha256 x86_64_linux:   "8b51575dd6d4de96abb655cccd3bccbcb77018b15b2383172aac3d465e0e2fa6"
   end
 
   depends_on "pkg-config" => :build
@@ -28,10 +26,6 @@ class Cmus < Formula
   depends_on "mad"
   depends_on "mp4v2"
   depends_on "opusfile"
-
-  on_linux do
-    depends_on "alsa-lib"
-  end
 
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 

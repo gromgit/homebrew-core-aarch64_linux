@@ -1,20 +1,19 @@
 class Inetutils < Formula
   desc "GNU utilities for networking"
   homepage "https://www.gnu.org/software/inetutils/"
-  url "https://ftp.gnu.org/gnu/inetutils/inetutils-2.4.tar.xz"
-  mirror "https://ftpmirror.gnu.org/inetutils/inetutils-2.4.tar.xz"
-  sha256 "1789d6b1b1a57dfe2a7ab7b533ee9f5dfd9cbf5b59bb1bb3c2612ed08d0f68b2"
+  url "https://ftp.gnu.org/gnu/inetutils/inetutils-2.2.tar.xz"
+  mirror "https://ftpmirror.gnu.org/inetutils/inetutils-2.2.tar.xz"
+  sha256 "d547f69172df73afef691a0f7886280fd781acea28def4ff4b4b212086a89d80"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "872275661200b6f4372aee795840075b23dd2c4862ded07f4000d706ba37409e"
-    sha256 arm64_monterey: "b9ffd46bc37271e9c1f57a333d39af249ef131fa68a89565bcf06fcf0cb7e4da"
-    sha256 arm64_big_sur:  "02e7db5f94d356b61cf55ba51c85df000ddce5df9fd9925c81d415fa15b6aa5e"
-    sha256 ventura:        "8c34d17dd5c58955e33eb77b68dc06a43e1c8f193bf3f12c314f0fa45efd9404"
-    sha256 monterey:       "538573e4777f6f7ba4d5ab5ec8546b3e614a219dfedcfdb08c968210a4f012de"
-    sha256 big_sur:        "f6e3c7e2ae01a7d3e7801122bf93b525bd353dc995724e25a719d7b6362167bd"
-    sha256 catalina:       "0b8cb0db259708450273e70e7d037a6806137c09ab16a6fc53d4a5093f2aa46a"
-    sha256 x86_64_linux:   "f1dfc69baed24c9608d2f5ecf54a650960780de44fced9a712bb91a4e52e3fac"
+    sha256 arm64_monterey: "719ffa2f0f2ceb20e2f7ee047e5118bcba46040aabd7b46b319d266ff02843f6"
+    sha256 arm64_big_sur:  "06e1b871cd18130d4f71efc57d01c2e876fc9d511c1ea2b2249366e4f8d15afe"
+    sha256 monterey:       "606878e0fbf9d8b4afbb29a89a60fa21307b6568a58a72b7f696199d79a36dd5"
+    sha256 big_sur:        "f55a13bc58c0ac46ef7494774785e11d01da80eecde7fbc70a1b4ced5f09aa43"
+    sha256 catalina:       "f0f4d878a515dc35778a55fe360338831179c86f0cf2312cec2e73c6a963da7c"
+    sha256 x86_64_linux:   "e746cfe4e95d27e755cde821e3e4973005e065e36da2b70259f38e76885bc634"
   end
 
   depends_on "libidn2"
@@ -32,9 +31,7 @@ class Inetutils < Formula
   def noshadow
     # List of binaries that do not shadow macOS utils
     list = %w[dnsdomainname rcp rexec rlogin rsh]
-    on_high_sierra :or_newer do
-      list += %w[ftp telnet]
-    end
+    list += %w[ftp telnet] if MacOS.version >= :high_sierra
     list
   end
 
