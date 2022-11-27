@@ -2,28 +2,42 @@ class Skaffold < Formula
   desc "Easy and Repeatable Kubernetes Development"
   homepage "https://skaffold.dev/"
   url "https://github.com/GoogleContainerTools/skaffold.git",
-      tag:      "v2.0.2",
-      revision: "d45fee5c7f7441d551aeed9c90750a1ff4fe1cbc"
+      tag:      "v1.38.0",
+      revision: "89b789ddcfe00d2fe7626fd86ef39a3eb6b455c5"
   license "Apache-2.0"
   head "https://github.com/GoogleContainerTools/skaffold.git", branch: "main"
 
-  bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8ea43e909503fbe6e5a95caca8112727cf449e42b9c8ce7fe673ed62cf9783b0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "05b1c63ebe358b491bab8d7b5e2b04e6dd3abdf02ee14ff747a332f57e4ccaae"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23f4b7a79cdb0a8f95c7dcefb0721505cd08042dd67ecb1e53fe02ac77c94921"
-    sha256 cellar: :any_skip_relocation, monterey:       "301f41ea3f4cbb2f737182f209fc9dc2b23d996faf9a251fcc7d7f12b46894ad"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d37088d5844ebf17ef77bd69a8d4f3979e8cf52e481229c113221f87b6f23a82"
-    sha256 cellar: :any_skip_relocation, catalina:       "fb6c9289cba84196cee69c7d535421bb2cf62576bc56ad21f285018b37ab15d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "45c8dcb0090d53a495d348ebe76b116913f37a7f1ab84c28ec80c195b348b8e8"
+  # The `strategy` code below can be removed if/when this software exceeds
+  # version 2.2.3. Until then, it's used to omit an older tag that would always
+  # be treated as newest.
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :git do |tags, regex|
+      malformed_tags = ["v2.2.3"].freeze
+      tags.map do |tag|
+        next if malformed_tags.include?(tag)
+
+        tag[regex, 1]
+      end
+    end
   end
 
-  depends_on "go" => :build
+  bottle do
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/skaffold"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c5d1ae201243a9e1ab21f7865ce6517b9653b51bcdc440986db9d67b8d0d2308"
+  end
+
+  # Bump to 1.18 on the next release, if possible.
+  depends_on "go@1.17" => :build
 
   def install
     system "make"
     bin.install "out/skaffold"
-    generate_completions_from_executable(bin/"skaffold", "completion", shells: [:bash, :zsh])
+    output = Utils.safe_popen_read("#{bin}/skaffold", "completion", "bash")
+    (bash_completion/"skaffold").write output
+    output = Utils.safe_popen_read("#{bin}/skaffold", "completion", "zsh")
+    (zsh_completion/"_skaffold").write output
   end
 
   test do
