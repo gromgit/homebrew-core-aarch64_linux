@@ -1,61 +1,31 @@
 class Devd < Formula
   desc "Local webserver for developers"
   homepage "https://github.com/cortesi/devd"
+  url "https://github.com/cortesi/devd/archive/v0.9.tar.gz"
+  sha256 "5aee062c49ffba1e596713c0c32d88340360744f57619f95809d01c59bff071f"
   license "MIT"
   head "https://github.com/cortesi/devd.git", branch: "master"
 
-  stable do
-    url "https://github.com/cortesi/devd/archive/v0.9.tar.gz"
-    sha256 "5aee062c49ffba1e596713c0c32d88340360744f57619f95809d01c59bff071f"
-
-    # Get go.mod and go.sum from commit after v0.9 release.
-    # Ref: https://github.com/cortesi/devd/commit/4ab3fc9061542fd35b5544627354e5755fa74c1c
-    # TODO: Remove in the next release.
-    resource "go.mod" do
-      url "https://raw.githubusercontent.com/cortesi/devd/4ab3fc9061542fd35b5544627354e5755fa74c1c/go.mod"
-      sha256 "483b4294205cf2dea2d68b8f99aefcf95aadac229abc2a299f4d1303f645e6b0"
-    end
-    resource "go.sum" do
-      url "https://raw.githubusercontent.com/cortesi/devd/4ab3fc9061542fd35b5544627354e5755fa74c1c/go.sum"
-      sha256 "3fb5d8aa8edfefd635db6de1fda8ca079328b6af62fea704993e06868cfb3199"
-    end
-  end
-
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "13847da393a2fc68810f987451c78f751fd9a3ea4fc2e07a00b01464f3eed02c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "82d937b6bcf0f37755df12694e934a8032ce155fc2895ec227f4887b2662d9c2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47f06f9c6157c81eaf52040448e5f131a6a660f96e78186146ab469345e6ea96"
-    sha256 cellar: :any_skip_relocation, monterey:       "e815c896205297337741c856016809aa6603547c4a4302acb0ad307f3c91f10c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "446557dc47076e2e0f4d93d6e33ecdac80721f4da9c391af29154509c425dd57"
-    sha256 cellar: :any_skip_relocation, catalina:       "0bfc6ccb8402282c4c3b3bf375cc3be882deba31f35a627801f3009456bf62f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c82a9adb431d63c5ac65d04c6f27592e6fe23a3ffa0e5a118fd34a113d32af4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/devd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "01f2099621274321673b9019ba8d6a1edeb4f432c21ca6c2ae94c03d787ed2f1"
   end
 
-  # Current release is from 2019-01-20 and needs deprecated `dep` to build.
-  # We backported upstream support for Go modules, but have not received
-  # a response on request for a new release since 2021-01-21.
-  # Issue ref: https://github.com/cortesi/devd/issues/115
-  deprecate! date: "2022-09-21", because: :unmaintained
-
+  depends_on "dep" => :build
   depends_on "go" => :build
 
+  # Support go 1.17, remove when upstream patch is merged/released
+  # Patch is the `dep` equivalent of https://github.com/cortesi/devd/pull/117
+  patch :DATA
+
   def install
-    if build.stable?
-      buildpath.install resource("go.mod")
-      buildpath.install resource("go.sum")
-
-      # Update x/sys to support go 1.17.
-      # PR ref: https://github.com/cortesi/devd/pull/117
-      inreplace "go.mod", "golang.org/x/sys v0.0.0-20181221143128-b4a75ba826a6",
-                          "golang.org/x/sys v0.0.0-20210819135213-f52c844e1c1c"
-      (buildpath/"go.sum").append_lines <<~EOS
-        golang.org/x/sys v0.0.0-20210819135213-f52c844e1c1c h1:Lyn7+CqXIiC+LOR9aHD6jDK+hPcmAuCfuXztd1v4w1Q=
-        golang.org/x/sys v0.0.0-20210819135213-f52c844e1c1c/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
-      EOS
+    ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "auto"
+    (buildpath/"src/github.com/cortesi/devd").install buildpath.children
+    cd "src/github.com/cortesi/devd" do
+      system "dep", "ensure", "-vendor-only"
+      system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/devd"
     end
-
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/devd"
   end
 
   test do
@@ -71,3 +41,27 @@ class Devd < Formula
     assert_equal "Hello World!\n", output
   end
 end
+
+__END__
+diff --git a/Gopkg.lock b/Gopkg.lock
+index 437a8b5..257a307 100644
+--- a/Gopkg.lock
++++ b/Gopkg.lock
+@@ -172,14 +172,15 @@
+
+ [[projects]]
+   branch = "master"
+-  digest = "1:e6d1805ead5b8f2439808f76187f54042ed35ee26eb9ca63127259a0e612b119"
++  digest = "1:d5b479606f9456b8e3200dbe988b32e211f824d6a612c4cfac46c1a31458d568"
+   name = "golang.org/x/sys"
+   packages = [
++    "internal/unsafeheader",
+     "unix",
+     "windows",
+   ]
+   pruneopts = ""
+-  revision = "b4a75ba826a64a70990f11a225237acd6ef35c9f"
++  revision = "63515b42dcdf9544f4e6a02fd7632793fde2f72d"
+
+ [[projects]]
+   digest = "1:15d017551627c8bb091bde628215b2861bed128855343fdd570c62d08871f6e1"
