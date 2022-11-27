@@ -6,24 +6,22 @@ class XcbProto < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "7aff8671654c8a9bde8b257cff31f05a6f09a322f35c16c5d985eb525faae8f2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xcb-proto"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "34a98d61fb41dca2c313ea7ea2384a288446363bc2f3221d443674d57419fcfd"
   end
 
   depends_on "pkg-config" => [:build, :test]
-  depends_on "python@3.11" => [:build, :test]
-
-  def python3
-    "python3.11"
-  end
+  depends_on "python@3.10" => :build
 
   def install
+    python = "python3.10"
+
     args = %W[
       --prefix=#{prefix}
       --sysconfdir=#{etc}
       --localstatedir=#{var}
       --disable-silent-rules
-      PYTHON=#{python3}
+      PYTHON=#{python}
     ]
 
     system "./configure", *args
@@ -33,10 +31,5 @@ class XcbProto < Formula
 
   test do
     assert_match "#{share}/xcb", shell_output("pkg-config --variable=xcbincludedir xcb-proto").chomp
-    system python3, "-c", <<~EOS
-      import collections
-      output = collections.defaultdict(int)
-      from xcbgen import xtypes
-    EOS
   end
 end
