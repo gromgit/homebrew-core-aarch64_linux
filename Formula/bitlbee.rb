@@ -15,15 +15,8 @@ class Bitlbee < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "d5abbf75f2d71752b48051f6072394422a338650a187b53f0bcb528981da9e3a"
-    sha256 arm64_monterey: "6c291e3c2ef13b1e766bbfa75f7732f273cacdd6eb98bfdd474db446a8ae0137"
-    sha256 arm64_big_sur:  "664ce4fbb775206950ec7b0786bcefc43c43ead3631a33024061dd139b59ecfe"
-    sha256 ventura:        "e74d65e09581d5e67cb6e7f495e7070bae95d4a51e5449f86b5fb9b44af6aa9c"
-    sha256 monterey:       "58b2fb9b50a1c3ed78f9b8945abb8aa883da058170cd0255a44f01681c660f6c"
-    sha256 big_sur:        "3d4a68524f64b5abca2cdb3cca9eb60fe6ab30c98bd12cddf4f736fb3c1dda54"
-    sha256 catalina:       "c7280a6ea53c3336f710b12617c2fa68bd4b75829962728002f72006e3163ffc"
-    sha256 x86_64_linux:   "046736bbc9acefad55c69d5acbe77d4f96123d6a1ab49db0179d95f5cb72eec6"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bitlbee"
+    sha256 aarch64_linux: "9a0329147cb7bc3e88a37069bcdc1919ddf454a28e27e9d6078defe2ce5a8399"
   end
 
   depends_on "pkg-config" => :build
@@ -60,9 +53,48 @@ class Bitlbee < Formula
     (var/"bitlbee/lib").mkpath
   end
 
-  service do
-    run opt_sbin/"bitlbee"
-    sockets "tcp://127.0.0.1:6667"
+  plist_options manual: "bitlbee -D"
+
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>#{plist_name}</string>
+        <key>OnDemand</key>
+        <true/>
+        <key>ProgramArguments</key>
+        <array>
+          <string>#{opt_sbin}/bitlbee</string>
+        </array>
+        <key>ServiceDescription</key>
+        <string>bitlbee irc-im proxy</string>
+        <key>Sockets</key>
+        <dict>
+          <key>Listener</key>
+          <dict>
+            <key>SockFamily</key>
+            <string>IPv4</string>
+            <key>SockProtocol</key>
+            <string>TCP</string>
+            <key>SockNodeName</key>
+            <string>127.0.0.1</string>
+            <key>SockServiceName</key>
+            <string>6667</string>
+            <key>SockType</key>
+            <string>stream</string>
+          </dict>
+        </dict>
+        <key>inetdCompatibility</key>
+        <dict>
+          <key>Wait</key>
+          <false/>
+        </dict>
+      </dict>
+      </plist>
+    EOS
   end
 
   test do
