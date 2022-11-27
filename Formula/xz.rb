@@ -4,11 +4,11 @@ class Xz < Formula
   desc "General-purpose data compression with high compression ratio"
   homepage "https://tukaani.org/xz/"
   # The archive.org mirror below needs to be manually created at `archive.org`.
-  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.2.7.tar.gz"
-  mirror "https://tukaani.org/xz/xz-5.2.7.tar.gz"
-  mirror "https://archive.org/download/xz-5.2.7/xz-5.2.7.tar.gz"
-  mirror "http://archive.org/download/xz-5.2.7/xz-5.2.7.tar.gz"
-  sha256 "06327c2ddc81e126a6d9a78b0be5014b976a2c0832f492dcfc4755d7facf6d33"
+  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.2.6.tar.gz"
+  mirror "https://tukaani.org/xz/xz-5.2.6.tar.gz"
+  mirror "https://archive.org/download/xz-5.2.6/xz-5.2.6.tar.gz"
+  mirror "http://archive.org/download/xz-5.2.6/xz-5.2.6.tar.gz"
+  sha256 "a2105abee17bcd2ebd15ced31b4f5eda6e17efd6b10f921a01cda4a44c91b3a0"
   license all_of: [
     :public_domain,
     "LGPL-2.1-or-later",
@@ -17,14 +17,8 @@ class Xz < Formula
   ]
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "eba036dbf118e9d568f0e16a9a88c4b957a9f296434c23bf3b77e0ea81fe44c9"
-    sha256 cellar: :any, arm64_monterey: "b3e7a5b4f97b75c5c00915acaa4f2a2bad2349e481cdf943c88caf2f9dbc8776"
-    sha256 cellar: :any, arm64_big_sur:  "25f809e0aebb715870b36acfa6ef04be488b0b351521cb7a372c26c28363ea4e"
-    sha256 cellar: :any, ventura:        "07954af8750100bf0f0bc48ae24557f1bd298dc7cd3873f395142759b2d7493b"
-    sha256 cellar: :any, monterey:       "02ed422191f81ca5c476f82264b6662a1ebcf95b90fb3ee10b52462cccdc55a8"
-    sha256 cellar: :any, big_sur:        "caab4b755676f1dd4dd3e84da8ad0e86a302768d53af9bbe75dc9b72413e29a9"
-    sha256 cellar: :any, catalina:       "769a180d3e9ea3d792f9cb166a4439a9d6f08154a38cd47cc43e08390d50f2f1"
-    sha256               x86_64_linux:   "dda25f66145c180884d0550a36d68491abd648011b9ac91566773961a1d921aa"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xz"
+    sha256 aarch64_linux: "6b23443653a1240c033979b56dcb8315f1cfbaa15c31c88932ebedc48e410b5f"
   end
 
   def install
