@@ -1,8 +1,8 @@
 class Luit < Formula
   desc "Filter run between arbitrary application and UTF-8 terminal emulator"
   homepage "https://invisible-island.net/luit/"
-  url "https://invisible-mirror.net/archives/luit/luit-20221028.tgz"
-  sha256 "ef78b3a64a697cb70a881558abb8251e4b30748ceefb8d44adbd8ea797bcfca6"
+  url "https://invisible-mirror.net/archives/luit/luit-20220111.tgz"
+  sha256 "86c07a4ff2d4374a655a1eef2ec7504582d42bba5971c79b111364e2b26ed468"
   license "MIT"
 
   livecheck do
@@ -11,14 +11,8 @@ class Luit < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cafdcdbb1bf2aee513f735f786592a23c83bec40fbee45bbcc2665500964abfb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "132aa18b60949dd628c7a8476df562c4fa04f88ead32f08cec54182add165a5e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "91e3b521424f647de71dff1b4159a7fb841a94e733d784e39945998006ddb987"
-    sha256 cellar: :any_skip_relocation, ventura:        "e24f9f095e0853835493f0f2886170b52ed5a7dba31747da653d1e15a1b7c8fe"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f72da9571d474cecb82bc3f14041f2488be3821a2a1ed025aa22c6e35ae802c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7945436cd68b2d7af9deed97cbf27c4a885f0340e7816e92c005774b6074de32"
-    sha256 cellar: :any_skip_relocation, catalina:       "ca3df4772b8b9726d45906983fedd72464dcc04f884c9e1315b5982f3efac4f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d7f340c3f56ce265dfbcd8fdaa0824f4dc3e73e8baee2c8e3c634cd551acd67"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luit"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "090af471cc82f2ce5fc5d41c3112f15da6f2ecd84cb974ad9324c85947293d75"
   end
 
   uses_from_macos "zlib"
