@@ -11,11 +11,15 @@ class Cimg < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "48c62f62b212950f3e1d57e3acfdf342334b90fabb4978da800a5d7988c06b1f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cimg"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "29a689859543dc50f59f77ea8c5fe34f63732a724fc5b0bab7d90262c8ca6a91"
   end
 
-  fails_with gcc: "5" # C++ 17 is required
+  on_linux do
+    depends_on "gcc" # C++ 17 is required
+  end
+
+  fails_with gcc: "5"
 
   def install
     include.install "CImg.h"
