@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk19u/archive/refs/tags/jdk-19.0.1-ga.tar.gz"
-  sha256 "26ebf4d182a0d4bba7a0387a931af576a538745a98ef6eb2c70e22655e846a45"
+  url "https://github.com/openjdk/jdk18u/archive/jdk-18.0.2.1-ga.tar.gz"
+  sha256 "06fad73665af281e36e1cc5fb0c8ed5e88e1e821989f1421539cb012065d7722"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -11,47 +11,31 @@ class Openjdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "1948f03bd44e133b30b83319a930e653edac721e5550530564def773c7eb0f30"
-    sha256 cellar: :any, arm64_monterey: "6d02a30983f979ac7bd32ff4001b50cd4afe8b10c4a566009dcee918a4114a05"
-    sha256 cellar: :any, arm64_big_sur:  "b7beaa228901b28811563e24225f176571b2f960f50eea025761fcc2d1b96dca"
-    sha256 cellar: :any, ventura:        "f63e517af005631b82432bcd15549d1291eb1d59e01b484332e3e880eb49690d"
-    sha256 cellar: :any, monterey:       "7aa6e5b03157684305c3712718d95e487e258bfc9689a436e568510365086251"
-    sha256 cellar: :any, big_sur:        "ff55a2d6082d2e440f55532ea332c45f192643ce3ac0a4dc3d4823b9515fdb7f"
-    sha256 cellar: :any, catalina:       "242e5cf8253bdece0d4e9b5e3841ddf24b34c713b7ce96daa6b1bada7d4433fe"
-    sha256               x86_64_linux:   "b040105b3f8e64514e9b87ab70ffbca01138860f571f3e6f53b6274748ebe063"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk"
+    sha256 aarch64_linux: "e087014251cfe69c695e808cc879868adfe1c43b50621a57e2187850f739e7bd"
   end
 
   keg_only :shadowed_by_macos
 
   depends_on "autoconf" => :build
-  depends_on "pkg-config" => :build
   depends_on xcode: :build
-  depends_on "giflib"
-  depends_on "harfbuzz"
-  depends_on "jpeg-turbo"
-  depends_on "libpng"
-  depends_on "little-cms2"
   depends_on macos: :catalina
 
-  uses_from_macos "cups"
-  uses_from_macos "unzip"
-  uses_from_macos "zip"
-  uses_from_macos "zlib"
-
   on_linux do
+    depends_on "pkg-config" => :build
     depends_on "alsa-lib"
+    depends_on "cups"
     depends_on "fontconfig"
-    depends_on "freetype"
+    depends_on "gcc"
     depends_on "libx11"
     depends_on "libxext"
     depends_on "libxrandr"
     depends_on "libxrender"
     depends_on "libxt"
     depends_on "libxtst"
+    depends_on "unzip"
+    depends_on "zip"
 
-    # FIXME: This should not be needed because of the `-rpath` flag
-    #        we set in `--with-extra-ldflags`, but this configuration
-    #        does not appear to have made it to the linker.
     ignore_missing_libraries "libjvm.so"
   end
 
@@ -61,38 +45,28 @@ class Openjdk < Formula
   resource "boot-jdk" do
     on_macos do
       on_arm do
-        url "https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_macos-aarch64_bin.tar.gz"
-        sha256 "c05aec589f55517b8bedd01463deeba80f666da3fb193be024490c9d293097a8"
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-aarch64_bin.tar.gz"
+        sha256 "602d7de72526368bb3f80d95c4427696ea639d2e0cc40455f53ff0bbb18c27c8"
       end
       on_intel do
-        url "https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_macos-x64_bin.tar.gz"
-        sha256 "604ba4b3ccb594973a3a73779a367363c53dd91e5a9de743f4fbfae89798f93a"
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-x64_bin.tar.gz"
+        sha256 "b85c4aaf7b141825ad3a0ea34b965e45c15d5963677e9b27235aa05f65c6df06"
       end
     end
     on_linux do
       on_arm do
-        url "https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_linux-aarch64_bin.tar.gz"
-        sha256 "79900237a5912045f8c9f1065b5204a474803cbbb4d075ab9620650fb75dfc1b"
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz"
+        sha256 "13bfd976acf8803f862e82c7113fb0e9311ca5458b1decaef8a09ffd91119fa4"
       end
       on_intel do
-        url "https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_linux-x64_bin.tar.gz"
-        sha256 "3bfdb59fc38884672677cebca9a216902d87fe867563182ae8bc3373a65a2ebd"
+        url "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
+        sha256 "0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44"
       end
     end
   end
 
-  # Fix build failure on Monterey with Clang 14+ due to function warning attribute.
-  # Remove if backported to JDK 19.
-  patch do
-    url "https://github.com/openjdk/jdk/commit/0599a05f8c7e26d4acae0b2cc805a65bdd6c6f67.patch?full_index=1"
-    sha256 "6a645cedccb54b4409f4226ba672b50687e18a3f5dfa0485ce1db6f5bc35f3d0"
-  end
-
-  # Patch to restore build on macOS 13
-  patch :DATA
-
   def install
-    boot_jdk = buildpath/"boot-jdk"
+    boot_jdk = Pathname.pwd/"boot-jdk"
     resource("boot-jdk").stage boot_jdk
     boot_jdk /= "Contents/Home" if OS.mac?
     java_options = ENV.delete("_JAVA_OPTIONS")
@@ -112,20 +86,12 @@ class Openjdk < Formula
       --with-version-build=#{revision}
       --without-version-opt
       --without-version-pre
-      --with-giflib=system
-      --with-harfbuzz=system
-      --with-lcms=system
-      --with-libjpeg=system
-      --with-libpng=system
-      --with-zlib=system
     ]
 
-    ldflags = ["-Wl,-rpath,#{loader_path}/server"]
     args += if OS.mac?
-      ldflags << "-headerpad_max_install_names"
-
       %W[
         --enable-dtrace
+        --with-extra-ldflags=-headerpad_max_install_names
         --with-sysroot=#{MacOS.sdk_path}
       ]
     else
@@ -133,29 +99,30 @@ class Openjdk < Formula
         --with-x=#{HOMEBREW_PREFIX}
         --with-cups=#{HOMEBREW_PREFIX}
         --with-fontconfig=#{HOMEBREW_PREFIX}
-        --with-freetype=system
-        --with-stdc++lib=dynamic
       ]
     end
-    args << "--with-extra-ldflags=#{ldflags.join(" ")}"
 
-    system "bash", "configure", *args
+    chmod 0755, "configure"
+    system "./configure", *args
 
     ENV["MAKEFLAGS"] = "JOBS=#{ENV.make_jobs}"
     system "make", "images"
 
-    jdk = libexec
     if OS.mac?
-      libexec.install Dir["build/*/images/jdk-bundle/*"].first => "openjdk.jdk"
-      jdk /= "openjdk.jdk/Contents/Home"
+      jdk = Dir["build/*/images/jdk-bundle/*"].first
+      libexec.install jdk => "openjdk.jdk"
+      bin.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/bin/*"]
+      include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/*.h"]
+      include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/darwin/*.h"]
+      man1.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/man/man1/*"]
     else
-      libexec.install Dir["build/linux-*-server-release/images/jdk/*"]
+      jdk = Dir["build/*/images/jdk"].first
+      libexec.install Dir["#{jdk}/*"]
+      bin.install_symlink Dir[libexec/"bin/*"]
+      include.install_symlink Dir[libexec/"include/*.h"]
+      include.install_symlink Dir[libexec/"include/linux/*.h"]
+      man1.install_symlink Dir[libexec/"man/man1/*"]
     end
-
-    bin.install_symlink Dir[jdk/"bin/*"]
-    include.install_symlink Dir[jdk/"include/*.h"]
-    include.install_symlink Dir[jdk/"include"/OS.kernel_name.downcase/"*.h"]
-    man1.install_symlink Dir[jdk/"man/man1/*"]
   end
 
   def caveats
@@ -181,19 +148,3 @@ class Openjdk < Formula
     assert_match "Hello, world!", shell_output("#{bin}/java HelloWorld")
   end
 end
-
-__END__
-diff -pur a/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c b/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c
---- a/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c	2022-08-12 22:24:53.000000000 +0200
-+++ b/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c	2022-10-24 18:27:36.000000000 +0200
-@@ -29,9 +29,9 @@
- #include <unistd.h>
- 
- #include <jni.h>
--#include <netinet/tcp.h>
- 
- #define __APPLE_USE_RFC_3542
-+#include <netinet/tcp.h>
- #include <netinet/in.h>
- 
- #ifndef IP_DONTFRAG
