@@ -14,14 +14,8 @@ class Softhsm < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_ventura:  "d41a143c3d5e8ea1b7f932c41cea27dbb64341d7e28bfb4c61af68aa68499b77"
-    sha256 arm64_monterey: "c4912791b41e00485fc4b07abf4a9f5ffd0e75d613dd3e316b15f837e4fcc95d"
-    sha256 arm64_big_sur:  "42a2031bb207ba74def4b64a1594c3827c6f2329995b52b7d84a16495c8d18df"
-    sha256 monterey:       "320f44fb1c860b9953b29260ca75fa947c728db78fea1a72c6796d5ea537624d"
-    sha256 big_sur:        "ceaa2a468dd99798cb775406dbeaf169565b35517d36b06fdd2abba6ed9d754a"
-    sha256 catalina:       "f18b5f1c33b98f07f14233e90e412900a22d79f4b04946bdd1fdd28a04dbda01"
-    sha256 x86_64_linux:   "87b3b85891df32b03e9b362ed76ed435095c6c72d40d460df18986869d701ee5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/softhsm"
+    sha256 aarch64_linux: "ba78ca4b182709fcdde9a5c4ad788373db42e442905b95570dc03468c1ed4b36"
   end
 
   head do
@@ -33,7 +27,7 @@ class Softhsm < Formula
     depends_on "pkg-config" => :build
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
 
   def install
     system "sh", "./autogen.sh" if build.head?
@@ -43,7 +37,7 @@ class Softhsm < Formula
                           "--sysconfdir=#{etc}/softhsm",
                           "--localstatedir=#{var}",
                           "--with-crypto-backend=openssl",
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-openssl=#{Formula["openssl@1.1"].opt_prefix}",
                           "--disable-gost"
     system "make", "install"
   end
