@@ -6,24 +6,17 @@ class EvernoteBackup < Formula
   url "https://files.pythonhosted.org/packages/c6/2e/28f97f59b92edde07895d6c95596b99313bb1a2cd0296ac2fd36f8954cb4/evernote-backup-1.9.2.tar.gz"
   sha256 "ec21025d614ec68ed5dc8d2028f2f856630a36b3b84f135952660bec7bdf70ad"
   license "MIT"
-  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b76e54f1c2f698bd68db99e2c078605ce6af30700fd309ecd4268c49212dcf5e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "490db89546b505aaabfc75327164fd5638a1d4adffc26ce855739bdf97af0b0d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c23da7a40480c521b2eeb27b804b36453f04c46c97be2f5edef0dd7e4567fc4"
-    sha256 cellar: :any_skip_relocation, monterey:       "ddf15a2fd9c7517fd16395641eef479693b742697e175fdf0edc502177398525"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f85d5955f5c67c95c09e24392f6b5068429a4591ee36e7ae9be216723a18fd90"
-    sha256 cellar: :any_skip_relocation, catalina:       "45725b29e41173d4d60abcf0b343f5fe9222733b4132ba39ad7af25a8915bc3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "052a0dab499eda59902a15783f835478cb56145159d55a442c5e7c64f4f5cc75"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/evernote-backup"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0201dd0c436467538b2c7b712b3bc61d8c8aa198fb72f659efcbd64b5adb1b11"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
+    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
   end
 
   resource "charset-normalizer" do
@@ -37,8 +30,8 @@ class EvernoteBackup < Formula
   end
 
   resource "click-option-group" do
-    url "https://files.pythonhosted.org/packages/4c/29/ff7cd69825b5bfb48e39853b75d5dc2e98a581730f2b6c9c014188730755/click-option-group-0.5.5.tar.gz"
-    sha256 "78ee474f07a0ca0ef6c0317bb3ebe79387aafb0c4a1e03b1d8b2b0be1e42fc78"
+    url "https://files.pythonhosted.org/packages/3c/86/5de6d909d9dcc85627a178788ec3e8c3ef81cda175badb48ad0bb582628d/click-option-group-0.5.3.tar.gz"
+    sha256 "a6e924f3c46b657feb5b72679f7e930f8e5b224b766ab35c91ae4019b4e0615e"
   end
 
   resource "evernote3" do
@@ -47,13 +40,13 @@ class EvernoteBackup < Formula
   end
 
   resource "httplib2" do
-    url "https://files.pythonhosted.org/packages/c2/37/a093aaa902f6b2301f0f2cff5285548dbc4ab9b9a29215eb440381cbb32b/httplib2-0.21.0.tar.gz"
-    sha256 "fc144f091c7286b82bec71bdbd9b27323ba709cc612568d3000893bfd9cb4b34"
+    url "https://files.pythonhosted.org/packages/9c/65/57ad964eb8d45cc3d1316ce5ada2632f74e35863a0e57a52398416a182a1/httplib2-0.20.4.tar.gz"
+    sha256 "58a98e45b4b1a48273073f905d2961666ecf0fbac4250ea5b47aef259eb5c585"
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
-    sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+    url "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz"
+    sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
   end
 
   resource "oauth2" do
@@ -62,8 +55,8 @@ class EvernoteBackup < Formula
   end
 
   resource "oauthlib" do
-    url "https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz"
-    sha256 "9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918"
+    url "https://files.pythonhosted.org/packages/6e/7e/a43cec8b2df28b6494a865324f0ac4be213cb2edcf1e2a717547a93279b0/oauthlib-3.2.0.tar.gz"
+    sha256 "23a8208d75b902797ea29fd31fa80a15ed9dc2c6c16fe73f5d346f83f6fa27a2"
   end
 
   resource "pyparsing" do
