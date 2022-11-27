@@ -8,15 +8,8 @@ class GnuTar < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "828558d1246976fe4ea4f2d5e7395b2e768c7b1874e42c959a4416f424dfc991"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d30acbafc1fafafd0e20b926fae992e246c8eb7f833ef349b9af330ca1c104f6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "984b478a4567b7435d3e5ccda4adecea05b076f7d906a5e38a2941b125cf9182"
-    sha256 cellar: :any_skip_relocation, ventura:        "35530248d44c4d449cd1945e94db2a659455927a41ee40628b92e19e5908b8ac"
-    sha256 cellar: :any_skip_relocation, monterey:       "50e95002e10bc01900248602282baf407d2984ee0037bce5ae7aa179c052e393"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2c70eed37ee410279978ea44a4444e8116ddb303626c592545ebf50fd65ae423"
-    sha256 cellar: :any_skip_relocation, catalina:       "1db42ebdaa7724d0fb55e861a4e2ac59b0736f9c4d183bd628c658b70c395e92"
-    sha256                               x86_64_linux:   "f23b93a35c0a48f57fd6e2f8eb6edb7688b6e13ab7d8124d6053422738a16229"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-tar"
+    sha256 aarch64_linux: "08acfabc0efc8c17aa6447ff05d102c32565452527609860503142510bddf46b"
   end
 
   head do
@@ -32,6 +25,14 @@ class GnuTar < Formula
   end
 
   def install
+    # Work around unremovable, nested dirs bug that affects lots of
+    # GNU projects. See:
+    # https://github.com/Homebrew/homebrew/issues/45273
+    # https://github.com/Homebrew/homebrew/issues/44993
+    # This is thought to be an el_capitan bug:
+    # https://lists.gnu.org/archive/html/bug-tar/2015-10/msg00017.html
+    ENV["gl_cv_func_getcwd_abort_bug"] = "no" if MacOS.version == :el_capitan
+
     args = %W[
       --prefix=#{prefix}
       --mandir=#{man}
