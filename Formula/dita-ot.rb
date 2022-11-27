@@ -1,8 +1,8 @@
 class DitaOt < Formula
   desc "DITA Open Toolkit is an implementation of the OASIS DITA specification"
   homepage "https://www.dita-ot.org/"
-  url "https://github.com/dita-ot/dita-ot/releases/download/4.0/dita-ot-4.0.zip"
-  sha256 "750245693b2b6acd581f81e1174b0339bd9e79d665fa2c237c1d7d90fdec3206"
+  url "https://github.com/dita-ot/dita-ot/releases/download/3.7.2/dita-ot-3.7.2.zip"
+  sha256 "4f65e9cc471758d72c5b1640ea2c2d9875c5cb82780c500c97bf244dd20e5bd9"
   license "Apache-2.0"
 
   livecheck do
@@ -11,14 +11,8 @@ class DitaOt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2361421d2b853418338733a22c50d4f9e7507057bf79285390f60813231af1b9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2361421d2b853418338733a22c50d4f9e7507057bf79285390f60813231af1b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2361421d2b853418338733a22c50d4f9e7507057bf79285390f60813231af1b9"
-    sha256 cellar: :any_skip_relocation, ventura:        "2b793e6f1f7505dfd698491511a90485cfdc9ae25c061c7f447b0b42966f3128"
-    sha256 cellar: :any_skip_relocation, monterey:       "2b793e6f1f7505dfd698491511a90485cfdc9ae25c061c7f447b0b42966f3128"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b793e6f1f7505dfd698491511a90485cfdc9ae25c061c7f447b0b42966f3128"
-    sha256 cellar: :any_skip_relocation, catalina:       "2b793e6f1f7505dfd698491511a90485cfdc9ae25c061c7f447b0b42966f3128"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "103b12c9d4aee01b67f9db36f0751037186a37bffbbadbec1e81bc9b8bc67916"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dita-ot"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4d907392718fa0534786fbc31a48ece0ec52f7b411d61bcb9f8814024128a7e5"
   end
 
   depends_on "openjdk"
