@@ -7,17 +7,12 @@ class ClangFormat < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/llvm-15.0.5.src.tar.xz"
-    sha256 "4428688b567ab1c9911aa9e13cb44c9bc1b14431713c14de491e10369f2b0370"
+    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/llvm-14.0.6.src.tar.xz"
+    sha256 "050922ecaaca5781fdf6631ea92bc715183f202f9d2f15147226f023414f619a"
 
     resource "clang" do
-      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/clang-15.0.5.src.tar.xz"
-      sha256 "3737d1d81253bc7608443661ac616bdc06f8833d313f4c3e22ed0eecc55b1238"
-    end
-
-    resource "cmake" do
-      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/cmake-15.0.5.src.tar.xz"
-      sha256 "61a9757f2fb7dd4c992522732531eb58b2bb031a2ca68848ff1cfda1fc07b7b3"
+      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/clang-14.0.6.src.tar.xz"
+      sha256 "2b5847b6a63118b9efe5c85548363c81ffe096b66c3b3675e953e26342ae4031"
     end
   end
 
@@ -28,14 +23,8 @@ class ClangFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8440d45e0d4fc5a8e1a71d8363f730a02877494b4a992b7e7882653bf659dc37"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8d9838547a6eae654e7b9b844ee68ec098ee68a6375256ddd94d1a7417de1f7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0d832123d1eaec83e9ea215f30583c6507f989a8863f4f53093a431cdb87c75"
-    sha256 cellar: :any_skip_relocation, ventura:        "61a18a2858f21ba7864a29aa91a4d05ea9952af907c8facb6bbc06236e1c0549"
-    sha256 cellar: :any_skip_relocation, monterey:       "836b73c2885e669bc5246a503ee428cac13a48036f9c2bc10d83b4e0a30943c8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af1b727ec326c353fee089fd0115a5657aec0933ab6a5d37a80cbec833124da9"
-    sha256 cellar: :any_skip_relocation, catalina:       "b09f4a2d5c6b8d1bb5067ae094187c8f162d89b9809405b89a76038a0ceba84d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25cd6402256e3b3dc0dd668fd11cdb73253873d3e5cfd32316069e56aab6d1a9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clang-format"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a8e0dee93ff39c435b43fef26444dc98550dc9a9f05f9fc0c7a019aa4e22123"
   end
 
   depends_on "cmake" => :build
@@ -55,11 +44,11 @@ class ClangFormat < Formula
 
       buildpath/"llvm"
     else
-      (buildpath/"src").install buildpath.children
-      (buildpath/"src/tools/clang").install resource("clang")
-      (buildpath/"cmake").install resource("cmake")
+      resource("clang").stage do |r|
+        (buildpath/"llvm-#{version}.src/tools/clang").install Pathname("clang-#{r.version}.src").children
+      end
 
-      buildpath/"src"
+      buildpath/"llvm-#{version}.src"
     end
 
     system "cmake", "-S", llvmpath, "-B", "build",
@@ -68,8 +57,10 @@ class ClangFormat < Formula
                     *std_cmake_args
     system "cmake", "--build", "build", "--target", "clang-format"
 
-    bin.install "build/bin/clang-format"
-    bin.install llvmpath/"tools/clang/tools/clang-format/git-clang-format"
+    git_clang_format = llvmpath/"tools/clang/tools/clang-format/git-clang-format"
+    inreplace git_clang_format, %r{^#!/usr/bin/env python$}, "#!/usr/bin/env python3"
+
+    bin.install "build/bin/clang-format", git_clang_format
     (share/"clang").install llvmpath.glob("tools/clang/tools/clang-format/clang-format*")
   end
 
@@ -87,6 +78,6 @@ class ClangFormat < Formula
         shell_output("#{bin}/clang-format -style=Google test.c")
 
     ENV.prepend_path "PATH", bin
-    assert_match "test.c", shell_output("git clang-format", 1)
+    assert_match "test.c", shell_output("git clang-format")
   end
 end
