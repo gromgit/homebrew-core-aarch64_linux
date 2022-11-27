@@ -6,14 +6,8 @@ class Delve < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8677b21ea08fad3ec382c08feaad3c6624c0fea4a02b3fe776a9b507f2a6ef45"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ceffaae98f8e76c57657d101d3f68fbf1c4388a4ef9ffa771b40860f10645cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b59faf3121f887d24d3990b72ff9ad6dd068f37108a2f85d2b907c788b1b9e14"
-    sha256 cellar: :any_skip_relocation, ventura:        "d5d1692d06b953ca015a2b5c733a2a2aac8b5bd66eaff1a4b847d0ed580cbead"
-    sha256 cellar: :any_skip_relocation, monterey:       "602d51e02775aa33db10a763881e9e2264d620f2a0e4d85bfb1b2b5309abbc10"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cea395ed8a2f54f80345f7919215e9d91cf8d1d55a03461f26700b284626b9dc"
-    sha256 cellar: :any_skip_relocation, catalina:       "fbcb931a825234eb1f070184043a072f064a5c6c7c9540e5cd4a34da14becc7b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "876ea706f995773c05c1d269ea4d6b565b6208291e1697b44cc0ec754fca1175"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/delve"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "066cce0b4fbd527efdb1b6c4d144ec6f02ee9993d0945401faf19f82b7d9f6d2"
   end
 
   depends_on "go" => :build
