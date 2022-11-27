@@ -7,10 +7,9 @@ class RubyInstall < Formula
   head "https://github.com/postmodern/ruby-install.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e0fe47d5a5ca9f84ffe59b40d48981341a0ab937342069d7f79c51dd4b95af0e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby-install"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fbf7c2aafd7ef1bfef3dcc68441c43926a6c16666f3876c6c8aa32d29e296700"
   end
-
-  depends_on "xz"
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
