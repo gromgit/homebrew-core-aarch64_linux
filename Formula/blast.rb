@@ -12,12 +12,8 @@ class Blast < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_big_sur: "78881b3e87d3fb5d3fa1aef2a25d8390097432de3a5d10521ca5fb4e7ca56496"
-    sha256 monterey:      "e144139a12c6f56996071cb3efcb57b552f937d0dfef61d577f12f9436cf8775"
-    sha256 big_sur:       "9d406671f65bb9271f1564d6dcd3dcb7adfda11304c856632c30338b282e5891"
-    sha256 catalina:      "9e06f6116d53ee375d166487ffa8dff40a7083dc2fdc70e4f4f2b9a49e96ca11"
-    sha256 x86_64_linux:  "3313233f45a9a7cdde4867c98404ea0bf5b10f7827a188b935599a24885a01e1"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/blast"
+    sha256 aarch64_linux: "2dbe83354a34795fb0d82ef9eea1deb885a2a6b625e22e84bfeeba780d887d69"
   end
 
   depends_on "lmdb"
@@ -28,6 +24,10 @@ class Blast < Formula
 
   on_macos do
     depends_on "libomp"
+  end
+
+  on_linux do
+    depends_on "gcc"
   end
 
   conflicts_with "proj", because: "both install a `libproj.a` library"
