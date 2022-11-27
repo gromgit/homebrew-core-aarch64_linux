@@ -8,7 +8,7 @@ class Asciiquarium < Formula
   url "https://robobunny.com/projects/asciiquarium/asciiquarium_1.1.tar.gz"
   sha256 "1b08c6613525e75e87546f4e8984ab3b33f1e922080268c749f1777d56c9d361"
   license "GPL-2.0-or-later"
-  revision 4
+  revision 3
 
   livecheck do
     url "https://robobunny.com/projects/asciiquarium/"
@@ -16,14 +16,8 @@ class Asciiquarium < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "eaeef5f718e5346acce2ce6680d3970a3d8e7e7f6ee0ea0a4a58ca0e4b2d0c60"
-    sha256 cellar: :any,                 arm64_monterey: "bffaf8931358ce91194a050df4d70785d1675ae86a13abf16039a6633961e59c"
-    sha256 cellar: :any,                 arm64_big_sur:  "054f9401007de6e17d4ed642bb4c38490fcbf72713e6357b0269ee0f3e538e36"
-    sha256 cellar: :any,                 ventura:        "4d723f7505af54bf515aa127a673d5a700e1f04573214826b43f7fb323c7c816"
-    sha256 cellar: :any,                 monterey:       "6dd99c8969cd14a6ab694d9fc3df4ce29bd6b262aefc04af71714e26e081577b"
-    sha256 cellar: :any,                 big_sur:        "3328f27bbb4cecfb62236e12fcac7f0f101c21d3843533d9d687f1d8892ebe73"
-    sha256 cellar: :any,                 catalina:       "20b7a67f26033299553cbcc66e01f75510ee16f384d670a92546c282349865b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c6e8ffdf5b6f3578234c833129b28cdefe9055980c391ca069aa9d69c85f7dd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/asciiquarium"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6efc7636a3b14e42c33710a241ac85923b9103a0f34110a3693f38037dfa38c4"
   end
 
   depends_on "ncurses"
