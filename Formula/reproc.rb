@@ -7,18 +7,15 @@ class Reproc < Formula
   head "https://github.com/DaanDeMeyer/reproc.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "92dfc69a9bdaf3fe24d6a0e9614991fb7d76555b11744ff1a486fa153c4af70b"
-    sha256 cellar: :any,                 arm64_monterey: "1d50813532d791a9709b50e885a5624d1df39fb9c37661472859c3a26670a2a6"
-    sha256 cellar: :any,                 arm64_big_sur:  "38e7d2580d04f3d0929c6e60ef97cf19da2dd084f920d26a6a11e10c811de7ae"
-    sha256 cellar: :any,                 ventura:        "bd24d6a297d490c2f97bf9e81ef43ca13da3a431268a4601ba103e1d25802578"
-    sha256 cellar: :any,                 monterey:       "46ee83678708da249ff86807ae8d1c325a1f45c433adf4b2a9b2fe978406f133"
-    sha256 cellar: :any,                 big_sur:        "eca3bef688c4b569bdfc5553518d9e5fb943d03d4d3e84ac8efb7fc4dd780db8"
-    sha256 cellar: :any,                 catalina:       "c4d326f594531cea94259af9fe79a1e0efd8f1aafa1b9293b5ba536673308f00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bba935ec5f089ca4705e6402d440eaef6c64eaaac73b6fa95baa68af69fc826"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/reproc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "68994eff2e3509e927bd16afe2aa7ed67a29fadca8f8ab156545201d251b4d8e"
   end
 
   depends_on "cmake" => :build
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
