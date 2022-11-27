@@ -7,19 +7,20 @@ class S3ql < Formula
   sha256 "d4731ebaacadca38a677bb18a99446c19d4f5b573628d55371f715acace11c4c"
   license "GPL-3.0"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b8cbd4e1467afc2b01ee93e45bed64baca9a0cd9915b57873e647bcf6927a99a"
-  end
-
-  deprecate! date: "2022-11-07", because: :repo_archived
-
   depends_on "pkg-config" => :build
-  depends_on "rust" => :build
-  depends_on "libffi"
-  depends_on "libfuse"
-  depends_on :linux # on macOS, requires closed-source macFUSE
   depends_on "openssl@1.1"
   depends_on "python@3.9"
+
+  uses_from_macos "libffi"
+
+  on_macos do
+    disable! date: "2021-04-08", because: "requires closed-source macFUSE"
+  end
+
+  on_linux do
+    depends_on "rust" => :build
+    depends_on "libfuse"
+  end
 
   resource "apsw" do
     url "https://github.com/rogerbinns/apsw/archive/refs/tags/3.38.1-r1.tar.gz"
@@ -120,6 +121,18 @@ class S3ql < Formula
 
     system libexec/"bin/python3", "setup.py", "build_ext", "--inplace"
     venv.pip_install_and_link buildpath
+  end
+
+  def caveats
+    on_macos do
+      <<~EOS
+        The reasons for disabling this formula can be found here:
+          https://github.com/Homebrew/homebrew-core/pull/64491
+
+        An external tap may provide a replacement formula. See:
+          https://docs.brew.sh/Interesting-Taps-and-Forks
+      EOS
+    end
   end
 
   test do
