@@ -12,6 +12,7 @@ class Packetbeat < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "4f7b3d4ad70dd7b56ff5d8f04264b0c476a3c301524f2c1de446c50feb172e34"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "23bc80fe449ae51751e5b0fc9ffde2e6af8ee09728126bf148cdec630fcfe81a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6263a8a0c39ca036986bcf6a6d1f952bcc81317533d0fb0c87c2ec6ce954524"
+    sha256 cellar: :any_skip_relocation, ventura:        "4b649191bfe7d35dbb4c3c0d3cbbb2714d149844d4646ba7e27f571cae230736"
     sha256 cellar: :any_skip_relocation, monterey:       "3af025ec417fb1636b53ec5e14e83bd289e61c35ed48f9179df8d29b183cd947"
     sha256 cellar: :any_skip_relocation, big_sur:        "2b16f0186b9c3d4997eef8ee538bef406bb5ada28a061374353272de30f134dd"
     sha256 cellar: :any_skip_relocation, catalina:       "f26c1e805096f5ac1f1ac00905f6b4ced600d673313148167338d169a502589b"
