@@ -4,17 +4,12 @@ class Apngasm < Formula
   url "https://github.com/apngasm/apngasm/archive/3.1.10.tar.gz"
   sha256 "8171e2c1d37ab231a2061320cb1e5d15cee37642e3ce78e8ab0b8dfc45b80f6c"
   license "Zlib"
-  revision 3
+  revision 2
   head "https://github.com/apngasm/apngasm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1506e2e15b8e46ec9a3f69da98f44cb106748572385cf9dde544f1241e808fb4"
-    sha256 cellar: :any,                 arm64_monterey: "c177663cbe53b8e95df7f58e4ae29d474ad6d6a783fa06759d29873a36c92a41"
-    sha256 cellar: :any,                 arm64_big_sur:  "c292d029d6a70e1232f30423690b71be59baa2738bf2f025ac9e7d4c3513f734"
-    sha256 cellar: :any,                 monterey:       "b2beca474fc168a54f16fabe8800ebb73fc3928409bb8dc04f6367bceb9909c4"
-    sha256 cellar: :any,                 big_sur:        "41ad219c9048cca6c303833ec301f50924a0cafc190ef5425f93544f2d56fc13"
-    sha256 cellar: :any,                 catalina:       "406db22f6432af40fd166975ac9050ad7d2152ea95cd62c4124c67e1eca1b76f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f3921b1583e8912557caa117dfe36ff7f63083d1969743373a11684768ba6b5"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/apngasm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "47be0a277503d9e57f9b7f9e558d6f46d6ac902a5381fdf70415be8e6bd96791"
   end
 
   depends_on "cmake" => :build
@@ -23,6 +18,10 @@ class Apngasm < Formula
   depends_on "libpng"
   depends_on "lzlib"
   depends_on macos: :catalina
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with :gcc do
     version "7"
