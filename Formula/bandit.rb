@@ -13,6 +13,7 @@ class Bandit < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "915f962f89f0cf0ae432a4fc72901c4529a66a280b22a6d44306efcdc716ff80"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b1e17670712be6fee6d21317c108098e3d5144708d133f218deeeaa797c9d98b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43bd465a694df50d4c6d305d947ee3df3b9d011629a6070ea4960af73a0aa991"
+    sha256 cellar: :any_skip_relocation, ventura:        "c94f859d5644ac37a62613030f07da6b73865b993ece6a0501d7692e87be8906"
     sha256 cellar: :any_skip_relocation, monterey:       "058d08e4c08317f2516696e3ab71e4145ab8d48106a26edb84be0a2e9c066ba0"
     sha256 cellar: :any_skip_relocation, big_sur:        "d9abf0e13a3b93ee4711cb3524b8e404a5e0dc17ed1c17174477a888218e85eb"
     sha256 cellar: :any_skip_relocation, catalina:       "c4d190831b21b6110bb3eab21f79406e94b196a57188a744fa137b45fcc00552"
