@@ -1,20 +1,14 @@
 class Oak < Formula
   desc "Expressive, simple, dynamic programming language"
   homepage "https://oaklang.org/"
-  url "https://github.com/thesephist/oak/archive/v0.3.tar.gz"
-  sha256 "05bc1c09da8f8d199d169e5a5c5ab2f2923bad6fac624f497f5ea365f378e38a"
+  url "https://github.com/thesephist/oak/archive/v0.2.tar.gz"
+  sha256 "d06ba53f88490f5d8f70f45515afaf6ee8e4119c8ab477e3b4de8ef3cc7a2c05"
   license "MIT"
   head "https://github.com/thesephist/oak.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e49abb41ea0758574abb99e97cfae07adeedb324060114815b4c0ead6cbbc674"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c258ac6aacad5e27decb196cb329fc4cb8339950fa110ee1540712872a0ddc4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cbae1b116dcccc5199d3af3e8deb66246c39be3afb5156209b814f83a946599a"
-    sha256 cellar: :any_skip_relocation, ventura:        "472a8b58caef8874e3cd7a0a43780a0a3b5fca519815d2646b2fb6488b049e32"
-    sha256 cellar: :any_skip_relocation, monterey:       "538fdce9778c8c182d6c369356f02c0d8cd0ba120168eaa204d9ea5d6e423fe6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "50e687e3532068bd0948b8760e0bdcf136a6f357600ab1abc5c2089f0d372436"
-    sha256 cellar: :any_skip_relocation, catalina:       "c206c1cb5f34b507830290b8e273cf65d2c76f08ce5f014a17fd8653a63cce0e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c902712d736c06e8f065b2046ad172b66c7ae075a2ccdd3c19c859616577fe50"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/oak"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "173824ce05709fbc423f6765dc197114b063b0b19397ca563dfac8fa6e649da8"
   end
 
   depends_on "go" => :build
