@@ -1,8 +1,9 @@
 class Pod2man < Formula
   desc "Perl documentation generator"
   homepage "https://www.eyrie.org/~eagle/software/podlators/"
-  url "https://archives.eyrie.org/software/perl/podlators-5.00.tar.xz"
-  sha256 "e0988b10795c75c50e5d04eba928b5500cf979e231f2c80d21ddf5f9d4c491ba"
+  url "https://archives.eyrie.org/software/perl/podlators-4.14.tar.xz"
+  sha256 "e504c3d9772b538d7ea31ce2c5e7a562d64a5b7f7c26277b1d7a0de1f6acfdf4"
+  revision 3
 
   livecheck do
     url "https://archives.eyrie.org/software/perl/"
@@ -10,21 +11,15 @@ class Pod2man < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57e6c0e470b8138e4c14d74072a2a2fd18e6a1fd2cf5de274cbb6883b5e74c20"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "57e6c0e470b8138e4c14d74072a2a2fd18e6a1fd2cf5de274cbb6883b5e74c20"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acfffaf34dca9ea5dabfc050f169fc1448361c0177cf80c97a6930dddd785789"
-    sha256 cellar: :any_skip_relocation, ventura:        "90cd0485e9d729fb4064e7e470c098e8a781d833d999a9b5ef7624106005f40d"
-    sha256 cellar: :any_skip_relocation, monterey:       "90cd0485e9d729fb4064e7e470c098e8a781d833d999a9b5ef7624106005f40d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f8e5c75883dca82a09d5c38e211a0e28f7a427d575de78a59093249b8fed53d4"
-    sha256 cellar: :any_skip_relocation, catalina:       "0e3dbd2c66fde6944e6493ca208720d45c55fe79ae271fb3dbc63e96f19871a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59fe8c67d225d8f1761783c2981fe0637045963897230875120f31fa01f0f155"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pod2man"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d27c0824a27e7e08fb1fc5e04b0ff4cecc03a8ec18e7e433f9bdf7e3feb47731"
   end
 
   keg_only "perl ships with pod2man"
 
   resource "Pod::Simple" do
-    url "https://cpan.metacpan.org/authors/id/K/KH/KHW/Pod-Simple-3.43.tar.gz"
-    sha256 "65abe3f5363fa4cdc108f5ad9ce5ce91e7a39186a1b297bb7a06fa1b0f45d377"
+    url "https://cpan.metacpan.org/authors/id/K/KH/KHW/Pod-Simple-3.42.tar.gz"
+    sha256 "a9fceb2e0318e3786525e6bf205e3e143f0cf3622740819cab5f058e657e8ac5"
   end
 
   def install
