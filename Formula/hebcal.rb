@@ -1,25 +1,23 @@
 class Hebcal < Formula
   desc "Perpetual Jewish calendar for the command-line"
   homepage "https://github.com/hebcal/hebcal"
-  url "https://github.com/hebcal/hebcal/archive/v5.4.4.tar.gz"
-  sha256 "c7ba623990bd092a2cdc2c15390172d8f111c30a80f7d1c126fba28db74915d5"
+  url "https://github.com/hebcal/hebcal/archive/v4.31.tar.gz"
+  sha256 "0a083aa0f4e561987f15914c1d6807a5107eb7e7f2e981aef5725130a36893cd"
   license "GPL-2.0-or-later"
-  head "https://github.com/hebcal/hebcal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2f70e12e06e3bc460418ba47744b5b01b04ff3870b1b2ae84108911e40375eac"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f70e12e06e3bc460418ba47744b5b01b04ff3870b1b2ae84108911e40375eac"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f70e12e06e3bc460418ba47744b5b01b04ff3870b1b2ae84108911e40375eac"
-    sha256 cellar: :any_skip_relocation, monterey:       "7ef8114b08b581cc9473336f90c52674267ad123c8c6dcfae325f6c81bb9be92"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7ef8114b08b581cc9473336f90c52674267ad123c8c6dcfae325f6c81bb9be92"
-    sha256 cellar: :any_skip_relocation, catalina:       "7ef8114b08b581cc9473336f90c52674267ad123c8c6dcfae325f6c81bb9be92"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ddacd7d0b43fee32b4f161686f46a45c334701888f255106ad3339027b0085c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hebcal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "93631e267ade3988ffd5d8860f3cd3c839e4a4836b27dbab4c72a220a00ffcdc"
   end
 
-  depends_on "go" => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  uses_from_macos "gperf" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "autoreconf", "-fiv"
+    system "./configure", "--prefix=#{prefix}", "ACLOCAL=aclocal", "AUTOMAKE=automake"
+    system "make", "install"
   end
 
   test do
