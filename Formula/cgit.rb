@@ -4,7 +4,6 @@ class Cgit < Formula
   url "https://git.zx2c4.com/cgit/snapshot/cgit-1.2.3.tar.xz"
   sha256 "5a5f12d2f66bd3629c8bc103ec8ec2301b292e97155d30a9a61884ea414a6da4"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url "https://git.zx2c4.com/cgit/refs/tags"
@@ -12,25 +11,12 @@ class Cgit < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "8435a3e97f7d97b0a81af4d65387edba8da214f8d348cac06a0200dfd861ca83"
-    sha256 arm64_monterey: "3e517a8b04d86f340eeba6bdd52d3a187db3e604137b5d0cc3f5a0a5547d65b3"
-    sha256 arm64_big_sur:  "27b3ceaddc63451dd3b57c153dc9f4810326884929e4839ef430d43d2b39d197"
-    sha256 ventura:        "2f2b6641da929056912b8999d35801a707380714abc20dc56d5c38445f017066"
-    sha256 monterey:       "3e955c47ed5c722d9124b1a2efc90b7ac46e5cc89c0bf8772b2dd9061bb54a56"
-    sha256 big_sur:        "9e0084dfe5c75d91bf5b6494f6e15534cff838ac52a866e4c8667062dcdd2eb2"
-    sha256 catalina:       "787b27262a5998a5dba017d0f75bfa3dadef68b7e3730d87719b1ab48536814d"
-    sha256 x86_64_linux:   "472e74b2dec4db2de6714623b092f441e17d9806e5316c3597895329fde2abc3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cgit"
+    sha256 aarch64_linux: "2e8b72166d04e5a8057188c93a413c0d50d5ef16d94bdb92d86edb0b02591a48"
   end
 
-  uses_from_macos "zlib"
-
-  on_macos do
-    depends_on "gettext"
-  end
-
-  on_linux do
-    depends_on "openssl@3" => :build # Uses CommonCrypto on macOS
-  end
+  depends_on "gettext"
+  depends_on "openssl@1.1"
 
   # git version is mandated by cgit: see GIT_VER variable in Makefile
   # https://git.zx2c4.com/cgit/tree/Makefile?h=v1.2#n17
