@@ -8,6 +8,7 @@ class Gibbslda < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "6495fc8734f25a5e3a40658a5dd0b4683ad3014bc1943dc0aa2fc2845e61a4ce"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "61e1f465b8ebfe185fcd5b335723cca3ec6ccfb5bb7fe2c411e91c22c0277501"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8ef52ad690cdbeaaf7b4a148dc97b730585f491335aae782c2d1fbda0149e868"
+    sha256 cellar: :any_skip_relocation, ventura:        "7b142fad1e04fe47487d8c5b446bf096baf6277c4567c56898d62322fad3a7d8"
     sha256 cellar: :any_skip_relocation, monterey:       "6be2191e470aa1530264d2af8c872f2324de2e7fecaf225385edcccffa27eb6d"
     sha256 cellar: :any_skip_relocation, big_sur:        "4e088fd9bf4de22483a82b36f48fbe0f2ea8ecb16e08f2fb2cbfd6a68e0dc274"
     sha256 cellar: :any_skip_relocation, catalina:       "1531c6a6f324f3639ad798d9ae63b461812aecf0a0f3e5a4ad3ea786997c1e5d"
