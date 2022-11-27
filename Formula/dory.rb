@@ -1,18 +1,13 @@
 class Dory < Formula
   desc "Development proxy for docker"
   homepage "https://github.com/freedomben/dory"
-  url "https://github.com/FreedomBen/dory/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "8c385d898aed2de82f7d0ab5c776561ffe801dd4b222a07e25e5837953355b81"
+  url "https://github.com/FreedomBen/dory/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "1571e54dab39bc7884523aabeedde71921e64a11ef25b9c59a7b63282f97a237"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "baf1bf19aae6f4be3df208ba5cf524cb9d4179fd8d2e11ffc74d4f676033e670"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "baf1bf19aae6f4be3df208ba5cf524cb9d4179fd8d2e11ffc74d4f676033e670"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "baf1bf19aae6f4be3df208ba5cf524cb9d4179fd8d2e11ffc74d4f676033e670"
-    sha256 cellar: :any_skip_relocation, monterey:       "2b997c97ef0977274fc7cf99d73c7685d641f7f512c48fc96067dcff3fe6e138"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2b997c97ef0977274fc7cf99d73c7685d641f7f512c48fc96067dcff3fe6e138"
-    sha256 cellar: :any_skip_relocation, catalina:       "2b997c97ef0977274fc7cf99d73c7685d641f7f512c48fc96067dcff3fe6e138"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc25156512dc5b729b7b732d58752f4d7b17d19c884f1f5c6db21e42db9244f2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dory"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d65c174f584ea6dc2175b35a46978526e05067367986a47e57ed5d0f0948654b"
   end
 
   depends_on "ruby@2.7"
