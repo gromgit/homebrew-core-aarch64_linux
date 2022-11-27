@@ -2,8 +2,8 @@ class ArduinoCli < Formula
   desc "Arduino command-line interface"
   homepage "https://github.com/arduino/arduino-cli"
   url "https://github.com/arduino/arduino-cli.git",
-      tag:      "0.29.0",
-      revision: "76251df9241a7e09108bbc681d7455a024bccd13"
+      tag:      "0.22.0",
+      revision: "65f662a782780f9e410a3c327b213e55163f4de9"
   license "GPL-3.0-only"
   head "https://github.com/arduino/arduino-cli.git", branch: "master"
 
@@ -13,14 +13,8 @@ class ArduinoCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8bcc50cdd22e2597174fd83fd7b409680f426074f0535b96d3f52c7787a31f94"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5aa6eedb692eaa54e9e786af32eea78cd5989ca4e59e3cf499ae4697b7518b7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7cc0936a702963ac99e131f967cd161122517b549259edab23274a2fa699a45f"
-    sha256 cellar: :any_skip_relocation, ventura:        "9ca09d782af2788ef0518e3482655dd2e97daf510411c2ec859bd640f11c23e3"
-    sha256 cellar: :any_skip_relocation, monterey:       "8bdbd9e026ae143bb3e76866daf6ff9014246e0c909611a17e602c3ce2bf0483"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9651f74409036ca8ae29a80b102aaf3cd2950c0061a887a17ff1c3b0f7e61783"
-    sha256 cellar: :any_skip_relocation, catalina:       "e3975ad2f65997a43ce17adcf9f6f4ce548369893851e8604a21c57eb1a130c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4262d86f48752b81f86f3c75bef24a1ed2381a3b56b1402d643119ac4e1d9733"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/arduino-cli"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5608debc06d787cd10e758274697d0e051a9b8a2a62245c2cd3d7a810cdda136"
   end
 
   depends_on "go" => :build
@@ -34,7 +28,14 @@ class ArduinoCli < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags)
 
-    generate_completions_from_executable(bin/"arduino-cli", "completion")
+    output = Utils.safe_popen_read(bin/"arduino-cli", "completion", "bash")
+    (bash_completion/"arduino-cli").write output
+
+    output = Utils.safe_popen_read(bin/"arduino-cli", "completion", "zsh")
+    (zsh_completion/"_arduino-cli").write output
+
+    output = Utils.safe_popen_read(bin/"arduino-cli", "completion", "fish")
+    (fish_completion/"arduino-cli.fish").write output
   end
 
   test do
