@@ -5,17 +5,6 @@ class Mmtabbarview < Formula
   sha256 "a5b79f1b50f6cabe97558f4c24a6317c448c534f15655309b6b29a532590e976"
   license "BSD-3-Clause"
 
-  bottle do
-    sha256 cellar: :any, arm64_ventura:  "ec634de2a8f60f6d6d09c88cc8ce9293fd94ee07ba2181a7b07a3ee2f29d99ac"
-    sha256 cellar: :any, arm64_monterey: "8d752b1a6566f010c2a3c42c7248e56e15ea8c55b80a7cd6b7fc571b67f81912"
-    sha256 cellar: :any, arm64_big_sur:  "10a139efa381ffffb4b38609246914c123559b80ceaf16baa96135ae4687ba5b"
-    sha256 cellar: :any, ventura:        "d7029d1e75a1a3e9fe45c92c67203ac9de958bc22b52193753db670484d31540"
-    sha256 cellar: :any, monterey:       "83aa65e0eaa1ee040131cda4ec9f9c1447ebd06124b7680c754a6c6ed8786d01"
-    sha256 cellar: :any, big_sur:        "a16676e466f896888d2e90cc703dd95919b242bcff90ae84d4c5be05eee3b881"
-    sha256 cellar: :any, catalina:       "3ef5d2b3664b7ba3def8ba27c4b3c2e5d94af4f5da6aee0400fd148b091e955c"
-    sha256 cellar: :any, mojave:         "6ce9ac264e1e62f9ee98dd08e6837def238b99c3a5506cc0c470be4c5442ba3e"
-  end
-
   depends_on xcode: :build
   depends_on :macos
 
