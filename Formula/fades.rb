@@ -7,19 +7,23 @@ class Fades < Formula
   head "https://github.com/PyAr/fades.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "e009e6e6a1d5e75f5b873d7004746bec274a2ebfad1389271dc5640e7831c9b0"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fades"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3a84ac19afdd0473797e0478efad6925737b6c9cc7907e452264e9a53539d747"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
-    python3 = "python3.11"
-    system python3, *Language::Python.setup_install_args(prefix, python3)
+    python3 = "python3.10"
+    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
+    system python3, *Language::Python.setup_install_args(libexec, python3)
+
+    bin.install Dir[libexec/"bin/*"]
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
     (testpath/"test.py").write("print('it works')")
-    system bin/"fades", testpath/"test.py"
+    system "#{bin}/fades", testpath/"test.py"
   end
 end
