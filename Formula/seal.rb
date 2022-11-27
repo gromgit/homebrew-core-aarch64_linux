@@ -6,15 +6,8 @@ class Seal < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "0dd23ba22353615762f25747bb49e2b7b01b68fe1bee34fa1aa2db56a64bbb02"
-    sha256 cellar: :any,                 arm64_monterey: "d7777ee9fe71f92c9900365ca44547b539c371d64b6c60719e39577f8393eb89"
-    sha256 cellar: :any,                 arm64_big_sur:  "edf57735aa66bfabe77f812f343eda0e8cef6ab82ab8f485e1c99ae85197dcb1"
-    sha256 cellar: :any,                 ventura:        "ef8b46670dd9780f5490a276e52bfb4f04ebcf5da2cfbbc36f7c12e28eda9a84"
-    sha256 cellar: :any,                 monterey:       "27af2b9d7c694e1cc8e78036698a64bd2ebac7c0b3ed51392b8b601cd27ea961"
-    sha256 cellar: :any,                 big_sur:        "0894b4b4a67025a78aa99fb4a3e1403582c0150612b309a92cf0717fbb84475f"
-    sha256 cellar: :any,                 catalina:       "bbe794b1b0316b97c4a1024cfbbde2012dbb52b4684696ba2795f221a99ccd4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72fb7e142c831ee8615d16e01cc981dc51d001b50b6726a0c3d6084a360983f4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/seal"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "005ed804f723d5e3d572e3efcf11c9caeefcc49871adfef16acbd6423f20ab4f"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -22,6 +15,10 @@ class Seal < Formula
   depends_on "zstd"
 
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5"
 
