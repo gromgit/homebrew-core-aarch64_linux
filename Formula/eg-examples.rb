@@ -9,18 +9,11 @@ class EgExamples < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c998d2ecb20e008e38511d86247d6d7c5d01b8def623c77508ea62cb15870add"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c998d2ecb20e008e38511d86247d6d7c5d01b8def623c77508ea62cb15870add"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c998d2ecb20e008e38511d86247d6d7c5d01b8def623c77508ea62cb15870add"
-    sha256 cellar: :any_skip_relocation, ventura:        "aa47a39ac7fa11e465914020ee475b3b9b5fbd22bbb32c9dedb515d8b0dbf8b5"
-    sha256 cellar: :any_skip_relocation, monterey:       "aa47a39ac7fa11e465914020ee475b3b9b5fbd22bbb32c9dedb515d8b0dbf8b5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aa47a39ac7fa11e465914020ee475b3b9b5fbd22bbb32c9dedb515d8b0dbf8b5"
-    sha256 cellar: :any_skip_relocation, catalina:       "aa47a39ac7fa11e465914020ee475b3b9b5fbd22bbb32c9dedb515d8b0dbf8b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aae0fe8abd670208bea20796e5854d315f26eb35a886677efe1976e5d7a00e04"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/eg-examples"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f87688ce2ed660ee7ec67849390cbc0f925fc10d22cd5107063b43cc25502f16"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     virtualenv_install_with_resources
