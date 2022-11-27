@@ -1,10 +1,28 @@
 class Ddclient < Formula
   desc "Update dynamic DNS entries"
   homepage "https://ddclient.net/"
-  url "https://github.com/ddclient/ddclient/archive/v3.10.0.tar.gz"
-  sha256 "34b6d9a946290af0927e27460a965ad018a7c525625063b0f380cbddffc01c1b"
   license "GPL-2.0-or-later"
-  head "https://github.com/ddclient/ddclient.git", branch: "develop"
+
+  # Remove `stable` block when resources are no longer needed.
+  stable do
+    url "https://github.com/ddclient/ddclient/archive/v3.9.1.tar.gz"
+    sha256 "e4969e15cc491fc52bdcd649d4c2b0e4b1bf0c9f9dba23471c634871acc52470"
+
+    on_linux do
+      # Dependency of Data::Validate::IP. Remove at next release.
+      resource "NetAddr::IP" do
+        url "https://cpan.metacpan.org/authors/id/M/MI/MIKER/NetAddr-IP-4.079.tar.gz"
+        sha256 "ec5a82dfb7028bcd28bb3d569f95d87dd4166cc19867f2184ed3a59f6d6ca0e7"
+      end
+    end
+
+    # TODO: Remove in next release. See:
+    # https://github.com/ddclient/ddclient/blob/v3.10.0_1/ChangeLog.md#compatibility-and-dependency-changes
+    resource "Data::Validate::IP" do
+      url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.27.tar.gz"
+      sha256 "e1aa92235dcb9c6fd9b6c8cda184d1af73537cc77f4f83a0f88207a8bfbfb7d6"
+    end
+  end
 
   livecheck do
     url :stable
@@ -12,45 +30,66 @@ class Ddclient < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3a0a4ceb683ea6e8513a35882976dc58f7664708f054a32027320938e2257ae7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ddclient"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4d54a13431166334f029c3d7d82582da3d8ff67a48313f50c94f3e15c65e3d32"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  head do
+    url "https://github.com/ddclient/ddclient.git", branch: "develop"
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+  end
+
   uses_from_macos "perl"
 
   def install
-    system "./autogen"
-    system "./configure", *std_configure_args, "--sysconfdir=#{etc}", "--localstatedir=#{var}", "CURL=curl"
-    system "make", "install", "CURL=curl"
+    ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5" if resources.present?
+
+    resources.each do |r|
+      r.stage do
+        system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}"
+        system "make"
+        system "make", "install"
+      end
+    end
+
+    if build.head?
+      system "./autogen"
+      system "./configure", *std_configure_args, "--sysconfdir=#{etc}", "--localstatedir=#{var}", "CURL=curl"
+      system "make", "install", "CURL=curl"
+    else
+      # Adjust default paths in script
+      inreplace "ddclient" do |s|
+        s.gsub! "/etc/ddclient", "#{etc}/ddclient"
+        s.gsub! "/var/cache/ddclient", "#{var}/run/ddclient"
+      end
+
+      sbin.install "ddclient"
+      sbin.env_script_all_files(libexec/"sbin", PERL5LIB: ENV["PERL5LIB"])
+    end
 
     # Install sample files
     inreplace "sample-ddclient-wrapper.sh", "/etc/ddclient", "#{etc}/ddclient"
-    inreplace "sample-etc_cron.d_ddclient", "/usr/bin/ddclient", "#{opt_bin}/ddclient"
+    inreplace "sample-etc_cron.d_ddclient", %r{/usr/s?bin/ddclient}, "#{sbin}/ddclient"
+    inreplace "sample-etc_ddclient.conf", "/var/run/ddclient.pid", "#{var}/run/ddclient/pid"
 
-    doc.install %w[sample-ddclient-wrapper.sh sample-etc_cron.d_ddclient]
+    doc.install %w[
+      sample-ddclient-wrapper.sh
+      sample-etc_cron.d_ddclient
+      sample-etc_ddclient.conf
+    ]
   end
 
   def post_install
-    (var/"run").mkpath
-    chmod "go-r", etc/"ddclient.conf"
-
-    # Migrate old configuration files to the new location that `ddclient` checks.
-    # Remove on 31/12/2023.
-    old_config_file = pkgetc/"ddclient.conf"
-    return unless old_config_file.exist?
-
-    new_config_file = etc/"ddclient.conf"
-    ohai "Migrating `#{old_config_file}` to `#{new_config_file}`..."
-    etc.install new_config_file => "ddclient.conf.default" if new_config_file.exist?
-    etc.install old_config_file
-    pkgetc.rmtree if pkgetc.empty?
+    (etc/"ddclient").mkpath
+    (var/"run/ddclient").mkpath
   end
 
   def caveats
     <<~EOS
-      For ddclient to work, you will need to customise the configuration
-      file at `#{etc}/ddclient.conf`.
+      For ddclient to work, you will need to create a configuration file
+      in #{etc}/ddclient. A sample configuration can be found in
+      #{opt_share}/doc/ddclient.
 
       Note: don't enable daemon mode in the configuration file; see
       additional information below.
@@ -65,7 +104,7 @@ class Ddclient < Formula
   plist_options startup: true
 
   service do
-    run [opt_bin/"ddclient", "-file", etc/"ddclient.conf"]
+    run [opt_sbin/"ddclient", "-file", etc/"ddclient/ddclient.conf"]
     run_type :interval
     interval 300
     working_dir etc/"ddclient"
@@ -74,7 +113,7 @@ class Ddclient < Formula
   test do
     begin
       pid = fork do
-        exec bin/"ddclient", "-file", etc/"ddclient.conf", "-debug", "-verbose", "-noquiet"
+        exec sbin/"ddclient", "-file", doc/"sample-etc_ddclient.conf", "-debug", "-verbose", "-noquiet"
       end
       sleep 1
     ensure
