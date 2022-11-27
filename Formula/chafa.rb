@@ -14,6 +14,7 @@ class Chafa < Formula
     sha256 cellar: :any,                 arm64_ventura:  "e9e61c049319056809071982e07fc37ee6c9495d91605e8e455bb6782117bf90"
     sha256 cellar: :any,                 arm64_monterey: "6f3bf8f30a123adc09b2d53dd9b92dcd7bc2e7a3e16ca66a47ce0cdaa40617fd"
     sha256 cellar: :any,                 arm64_big_sur:  "4a8789a498a01827699e09562c0def700b35f56b3c7935f7e2a2776bbf495edc"
+    sha256 cellar: :any,                 ventura:        "753db66f6e50f9831e461eaa8c9ae5705d65c3b002116d01e2393dc52e6c5c72"
     sha256 cellar: :any,                 monterey:       "fcd32b538bf15dc50dd92e1235dcc858db73aa926f9a25e10dea705f4d790a6c"
     sha256 cellar: :any,                 big_sur:        "24c38006264a9197a776a27e61926614e22e2fd2115a63652a07cc908bbae621"
     sha256 cellar: :any,                 catalina:       "55e780b5b847d8856514efbaa2324e954bf8851cb691226c022dc79ca239b8bb"
