@@ -8,16 +8,15 @@ class Twoping < Formula
   head "https://github.com/rfinnie/2ping.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "4a8be32ba927a46659b03b82082dfe5477e5e84ae24b7a1185330ca5a6ac0b34"
+    sha256 cellar: :any_skip_relocation, all: "e1847c704c33620ee0aa48c1c9d9dd7cbe5adad99acbbe440daecc8ad8b1444d"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
-    python3 = "python3.11"
-    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
-    system python3, *Language::Python.setup_install_args(libexec, python3)
+    pyver = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{pyver}/site-packages"
+    system "python3", *Language::Python.setup_install_args(libexec)
     man1.install "doc/2ping.1"
     man1.install_symlink "2ping.1" => "2ping6.1"
     bin.install Dir["#{libexec}/bin/*"]
@@ -35,7 +34,7 @@ class Twoping < Formula
 
   test do
     assert_match "OK 2PING", shell_output(
-      "#{bin}/2ping --count=10 --interval=0.2 --port=-1 --interface-address=127.0.0.1 " \
+      "#{bin}/2ping --count=10 --interval=0.2 --port=-1 --interface-address=127.0.0.1 "\
       "--listen --nagios=1000,5%,1000,5% 127.0.0.1",
     )
   end
