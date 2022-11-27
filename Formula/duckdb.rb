@@ -2,30 +2,23 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v0.6.0",
-      revision: "2213f9c946073a6df1242aa1bc339ee46bd45716"
+      tag:      "v0.3.4",
+      revision: "662041e2b43283bfcfeed984af7c3eaa85fb4996"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8ae40f7aa990a7a52e6d230555285d4d174a5bb7535ddd7e54e18e82804a8081"
-    sha256 cellar: :any,                 arm64_monterey: "70e3ec7d1d9ea967a8fc345e83bc53966bccea15b24d63f81498e7e0ec6e3f0c"
-    sha256 cellar: :any,                 arm64_big_sur:  "c802d1302a8e0d6c33fda447db102bafbecab74e2508f78fe6cc59448378b4f2"
-    sha256 cellar: :any,                 ventura:        "0b2ebf6385dbfd682eafb2edc35ae538f32bce73609e188ece2f3e4af801c628"
-    sha256 cellar: :any,                 monterey:       "0cd2ea482fb01ea4aab3bd35e01169895ae31ba82f5947a4b24e9b20a22bae99"
-    sha256 cellar: :any,                 big_sur:        "9a7b99c6588586d0e9aa4c1388af49e84b67bcb09b65d94ea7f1f654514dca46"
-    sha256 cellar: :any,                 catalina:       "1c010a0e17e7f22ba3fadb32b4271b99e97b8489b6a16786087a8f47104df4b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d8b16c2a57cd0b0fab42fa573c863b6ade263725a94f93887552b26757055fe"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/duckdb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3926358da0100771a69369d67a38b8c5b297e1ed87053a2b0a73991435e9f4a5"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.11" => :build
+  depends_on "python@3.10" => :build
 
   def install
     ENV.deparallelize if OS.linux? # amalgamation builds take GBs of RAM
     mkdir "build/amalgamation"
-    python3 = "python3.11"
-    system python3, "scripts/amalgamation.py", "--extended"
-    system python3, "scripts/parquet_amalgamation.py"
+    system Formula["python@3.10"].opt_bin/"python3", "scripts/amalgamation.py", "--extended"
+    system Formula["python@3.10"].opt_bin/"python3", "scripts/parquet_amalgamation.py"
     cd "src/amalgamation" do
       system "cmake", "../..", *std_cmake_args
       system "make"
@@ -48,9 +41,8 @@ class Duckdb < Formula
     expected_output = <<~EOS
       ┌─────────────┐
       │ avg("temp") │
-      │   double    │
       ├─────────────┤
-      │        45.0 │
+      │ 45.0        │
       └─────────────┘
     EOS
 
