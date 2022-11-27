@@ -7,14 +7,8 @@ class Alp < Formula
   head "https://github.com/tkuchiki/alp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d79a6e1374f64c0cdd5eaad9153c9149a23f01d4821b0c1706cc3d3743fd4977"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "33275215bbb389a501355137dad8f4ec4ad2a6eae61e019fae7c5aa5f3909d82"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6690ae8f1da8ddfa6f63d08ded015fcdee942fd4f03dd6f75985293394830603"
-    sha256 cellar: :any_skip_relocation, ventura:        "9a22777557141203c21a40ab2b78310620e6438697160f9bf62dae9ee85df8d2"
-    sha256 cellar: :any_skip_relocation, monterey:       "a62c5786804ab1159618834453570f07b221e2988470adadd7c221bfc7163c38"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c290641a54c5eff3f5b46374bd2bcd779c15a4c39a013b04fd3ff563d9f616fb"
-    sha256 cellar: :any_skip_relocation, catalina:       "ba7a5d3564a69a7f82df753d4728df98e83d00223ec3556de7867a4bcf3e0525"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d72452d6a5d15c2a91186957f3d1febb2236303d7536eb2586c6153deb8d412f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/alp"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "879aba4c5d5279dae49e2673caf6f6fc904cf4edae32cda428c449ed53e3b34a"
   end
 
   depends_on "go" => :build
