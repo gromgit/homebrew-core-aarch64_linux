@@ -10,11 +10,10 @@ class SpeedtestCli < Formula
   head "https://github.com/sivel/speedtest-cli.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "dbe544f6837c7157450533ffc8a0e40166790b7b8c79f24e9aa759fd66888c23"
+    sha256 cellar: :any_skip_relocation, all: "2d2cca62a6eb5be9d4ce296f89a390dfee285c2999aed6843172a658fadfdd97"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   # Support Python 3.10, remove on next release
   patch do
@@ -30,9 +29,6 @@ class SpeedtestCli < Formula
   end
 
   test do
-    assert_match "speedtest-cli",
-                 shell_output(bin/"speedtest --version")
-    assert_match "Command line interface for testing internet bandwidth using speedtest.net",
-                 shell_output(bin/"speedtest --help")
+    system bin/"speedtest"
   end
 end
