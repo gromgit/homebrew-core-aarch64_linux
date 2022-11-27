@@ -7,14 +7,8 @@ class Fetch < Formula
   head "https://github.com/gruntwork-io/fetch.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e553d2f05c680a1c412ff3bd0df98fc1f4c25a3dab7b44203e8c3bbe8a68f322"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "24c8ec351ec9dbc8f71b679e94e1d8930c761b21b3bf4168be0b8d9aab32be0e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f10cdef839a155b13ae6ade9db0033303a0651e94958ff950d7585ef76d70b3"
-    sha256 cellar: :any_skip_relocation, ventura:        "484b25a8a74dcedaea5d234a8a45e87a40451a07a010bedfa5dbb6718e92863b"
-    sha256 cellar: :any_skip_relocation, monterey:       "52f270c33fb1323e965aef897c8067ad993723ce1ab2269df630fc29badef701"
-    sha256 cellar: :any_skip_relocation, big_sur:        "121acdd239dfbde5c29565b6719974acfd6bf0793f163773374740a64f243f3a"
-    sha256 cellar: :any_skip_relocation, catalina:       "2e13409b0cfbfae80a0aba1f012163529e978090b8eb39dae2feb349e5063201"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35d3950442bc4c81b649a7563b2047b991aa13121b42dc47140d915f85ce4420"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fetch"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "53482fa335d9ee50f7a702cfefde09da24f9337ea6e0a2f2fe56f692d3a6d8a8"
   end
 
   depends_on "go" => :build
