@@ -10,6 +10,7 @@ class Recutils < Formula
     sha256 cellar: :any, arm64_ventura:  "6556b10f353cbae8cc5d69cc48cb0662eaf85060794e0d29ae25950dbe02749e"
     sha256 cellar: :any, arm64_monterey: "09a875626acf4c73036fc8048bf3e0e5bb7beff7fd60e1e96faa1b1d92888638"
     sha256 cellar: :any, arm64_big_sur:  "c2da94eb14db7fdd4f6376cd3d6546ff8cebddd64f4290fe265161f21d3fdff8"
+    sha256 cellar: :any, ventura:        "50252c2587e2e32f0513c9cc71fd49c5786400f6c0d6e95891da4b43a0f873fa"
     sha256 cellar: :any, monterey:       "feac0920394addceefb8a23fc38a7406fed04b71bde433d14dfa703b852c5089"
     sha256 cellar: :any, big_sur:        "8bd10813a8870b76fdac43c99062d3449bd4275ae54af0410c85c69ba3f9ab08"
     sha256 cellar: :any, catalina:       "d92195d721c086a0f14fa0dcdd8014869af600d43e31749a8b8af580f49fafba"
