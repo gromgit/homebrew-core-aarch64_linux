@@ -11,15 +11,8 @@ class AwsVault < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d3c89b705062010d9f6667bccf0fff48fd5f4d8ed1a285a2a5d3f5071fe6bd07"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b4e2c997cfd3b046c6f59f8c44c9238b0366f3def9af6e072d1d61e873b22b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2e2b8fd4d15fb66317a03419359508261edaed5bb01d050b245908b9267c33c"
-    sha256 cellar: :any_skip_relocation, ventura:        "103be27e74361dc49cfef28552ba619741ac25c1559fde0334f9de394abfa308"
-    sha256 cellar: :any_skip_relocation, monterey:       "91b9630e814878adc85e7357dde03cf5d6753f943a736c1697a1044ec65cc0f0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e1e4af96ac99a2d4774d3dc30bccea11c8bb9eb8c93bbc60a069ca98106c617f"
-    sha256 cellar: :any_skip_relocation, catalina:       "92a1a53fc9431d199ed2ca1f7767e20cb93177141af52e80dbeb1c3b7afe4716"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e6a22003f48ddf6c493440af96839477efd25ca8e966437a8f8cac25e651c2a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aws-vault"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c21ebe6a19bc339cc9649d4a98a121dba9613739c9c752963ebb5dc2185fa102"
   end
 
   depends_on "go" => :build
@@ -36,7 +29,6 @@ class AwsVault < Formula
 
     zsh_completion.install "contrib/completions/zsh/aws-vault.zsh"
     bash_completion.install "contrib/completions/bash/aws-vault.bash"
-    fish_completion.install "contrib/completions/fish/aws-vault.fish"
   end
 
   test do
