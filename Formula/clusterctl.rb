@@ -2,30 +2,25 @@ class Clusterctl < Formula
   desc "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle"
   homepage "https://cluster-api.sigs.k8s.io"
   url "https://github.com/kubernetes-sigs/cluster-api.git",
-      tag:      "v1.2.6",
-      revision: "6f61373d9f32c32e62def4140bfc6becee46732b"
+      tag:      "v1.1.3",
+      revision: "31146bd17a220ef6214c4c7a21f1aa57380b6b1f"
   license "Apache-2.0"
-  head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "main"
+  head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "master"
 
   # Upstream creates releases on GitHub for the two most recent major/minor
   # versions (e.g., 0.3.x, 0.4.x), so the "latest" release can be incorrect. We
-  # don't check the Git tags for this project because a version may not be
-  # considered released until the GitHub release is created.
+  # don't check the Git tags because, for this project, a version may not be
+  # considered released until the GitHub release is created. The first-party
+  # website doesn't clearly list the latest version and we have to isolate it
+  # from a GitHub URL used in a curl command in the installation instructions.
   livecheck do
-    url "https://github.com/kubernetes-sigs/cluster-api/releases?q=prerelease%3Afalse"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
-    strategy :page_match
+    url "https://cluster-api.sigs.k8s.io/user/quick-start.html"
+    regex(%r{/cluster-api/releases/download/v?(\d+(?:\.\d+)+)/}i)
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1db2c828388b1c43797f13b8ab0e4aa75349af81fb574c9f00dc530d384a9f1f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "81d1235770e53aaf369dc98319779168b2cba56be5f62aa18e636bd692fd7fac"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "830138be249aff359e0b60c3b2aa554959c2a265d2d7a4be3d3291c99983ff3a"
-    sha256 cellar: :any_skip_relocation, ventura:        "f7018c934e2b2c42c58d6fbbccb63e8b7e0ceb82861d134fb9e2e505d43842c7"
-    sha256 cellar: :any_skip_relocation, monterey:       "ed0fa5adf93827a92a3dc2ede38aa103a4af08a6485807820ed73e82b0fd3bbe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f5cf460f43ca5b18f1afd03b257ac195b21404ea88fe6f564efb7cf9fc82db39"
-    sha256 cellar: :any_skip_relocation, catalina:       "6f2404305477abdf75d1bc34209f55a601603a38e7f1e392d30ad4a72c68a765"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a27b4adaddae82415462db1bced6304a86342d118e0357585e86ec00209772ed"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clusterctl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b984d475ca7f5be1a51707441672462d035fa36e39feafa76d29f80c0d2aa6c8"
   end
 
   depends_on "go" => :build
@@ -37,7 +32,11 @@ class Clusterctl < Formula
     system "make", "clusterctl"
     prefix.install "bin"
 
-    generate_completions_from_executable(bin/"clusterctl", "completion", shells: [:bash, :zsh])
+    bash_output = Utils.safe_popen_read(bin/"clusterctl", "completion", "bash")
+    (bash_completion/"clusterctl").write bash_output
+
+    zsh_output = Utils.safe_popen_read(bin/"clusterctl", "completion", "zsh")
+    (zsh_completion/"_clusterctl").write zsh_output
   end
 
   test do
