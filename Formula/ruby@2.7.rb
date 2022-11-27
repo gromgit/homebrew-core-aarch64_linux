@@ -4,7 +4,6 @@ class RubyAT27 < Formula
   url "https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.xz"
   sha256 "54dcd3044726c4ab75a9d4604720501442b229a3aed6a55fe909567da8807f24"
   license "Ruby"
-  revision 1
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
@@ -12,14 +11,8 @@ class RubyAT27 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "63652846305a3c589f8b1b8f1819d249bcb31a29b3a898803e435df48ddd15bc"
-    sha256 arm64_monterey: "237aeac2e06332bd465ad0b42eb3d26a47f72815b2754e0075b78fde46a64f52"
-    sha256 arm64_big_sur:  "e5d50df59a95baaa2013eab397ffd5c5411f1e966d70953a1543a7acc8001394"
-    sha256 monterey:       "187263481b345c2bf0e916e8eeb85ee55916a71664ab9fd43d970ff1aea1e128"
-    sha256 big_sur:        "08c32aaf8d5b78d4d6162f1264623ab31e0a58814264f21d6c4f0a652976d4eb"
-    sha256 catalina:       "4fc8a87ef88aef94219b4606c97ae73151cdb6257b725f45ca62e6e01aeaa2c0"
-    sha256 x86_64_linux:   "7ed46a9ad3d6da67d3e9d6aa3caff70ea4d506e013ecf6b5a7c6b1db1bb86515"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby@2.7"
+    sha256 aarch64_linux: "46a2c958a8377818a26f534a31e7224a31afe48a69b42398690eeb43f0a74a66"
   end
 
   keg_only :versioned_formula
@@ -29,7 +22,6 @@ class RubyAT27 < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
 
-  uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
   # Should be updated only when Ruby is updated (if an update is available).
