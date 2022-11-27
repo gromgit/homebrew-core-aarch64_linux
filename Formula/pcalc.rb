@@ -9,6 +9,7 @@ class Pcalc < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f23cc9bbef0d1fd5f473167e18c400d84383f419ed470f30c0de3e2764395702"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "799c6f87ae31666765e9bf3b08553b5d51e9b76c54208e679e0f03ee94250f1e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fab09fa817c8bff8e571344a16b1c6be62c76fb21afc4db76617b6c1fc4b15f0"
+    sha256 cellar: :any_skip_relocation, ventura:        "7416bbe3fa8df57ade664665e1271b9bd525fd222d68f334a1362dea51aac0a9"
     sha256 cellar: :any_skip_relocation, monterey:       "71efc7e3060ea9a4fc3e5a9e9e519d72bb51de179302f1d815de0f7994f169b9"
     sha256 cellar: :any_skip_relocation, big_sur:        "78d3f7309704b06f355e6712f1d2e4062bf5aff75aa84dbc740e27fe54c37467"
     sha256 cellar: :any_skip_relocation, catalina:       "582fae9a802ad376f792180263277acb57a63167980156bb68f1689bf923e033"
