@@ -3,21 +3,20 @@ class Ddgr < Formula
 
   desc "DuckDuckGo from the terminal"
   homepage "https://github.com/jarun/ddgr"
-  url "https://github.com/jarun/ddgr/archive/v2.1.tar.gz"
-  sha256 "fb6601ad533f2925d2d6299ab9e6dd48da0b75e99ef9ed9068f37e516380b5e6"
+  url "https://github.com/jarun/ddgr/archive/v2.0.tar.gz"
+  sha256 "7e46430b0a8c479a5feca832adb73f2f09804bf603dedc50f4cf2e1da4c75f88"
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "19ece8c05b5b538dd4f3dff9b379fb29a77afab06f916393dcb273a19583cde8"
+    sha256 cellar: :any_skip_relocation, all: "07a4fd32509977d6693b129ed28e24a20e52dd44548e9060c28f5e588afbfa40"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
     rewrite_shebang detected_python_shebang, "ddgr"
     system "make", "install", "PREFIX=#{prefix}"
-    bash_completion.install "auto-completion/bash/ddgr-completion.bash" => "ddgr"
+    bash_completion.install "auto-completion/bash/ddgr-completion.bash"
     fish_completion.install "auto-completion/fish/ddgr.fish"
     zsh_completion.install "auto-completion/zsh/_ddgr"
   end
