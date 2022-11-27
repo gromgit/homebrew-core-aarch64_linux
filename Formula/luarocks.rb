@@ -12,19 +12,13 @@ class Luarocks < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "965d32fb05b950400ddfa6586c208d6b108fefafbd82aac77f423961447df7ec"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c2fcf803a9a182998eb4e0a674edc53fb98b75725fb390aa112b33bfab40298"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c2fcf803a9a182998eb4e0a674edc53fb98b75725fb390aa112b33bfab40298"
-    sha256 cellar: :any_skip_relocation, ventura:        "cd97356f99bb752439b21a7c5188bc61e9f9c0cbf46e09c82e8c110f9cf54765"
-    sha256 cellar: :any_skip_relocation, monterey:       "da96512ca94b72a6fb60859da82fd31f1428d5a2e016e082982a284d1873ba5b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "da96512ca94b72a6fb60859da82fd31f1428d5a2e016e082982a284d1873ba5b"
-    sha256 cellar: :any_skip_relocation, catalina:       "da96512ca94b72a6fb60859da82fd31f1428d5a2e016e082982a284d1873ba5b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c2fcf803a9a182998eb4e0a674edc53fb98b75725fb390aa112b33bfab40298"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luarocks"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1a13afb8acbe5db89df110ccec0abe24e56f0131102a5ccdfee487d2c3a82089"
   end
 
   depends_on "lua@5.1" => :test
   depends_on "lua@5.3" => :test
-  depends_on "luajit" => :test
+  depends_on "luajit-openresty" => :test
   depends_on "lua"
 
   uses_from_macos "unzip"
@@ -79,7 +73,7 @@ class Luarocks < Formula
 
         # LuaJIT is compatible with lua5.1, so we can also test it here
         rmdir testpath/"blank_space"
-        system Formula["luajit"].bin/"luajit", "lfs_#{luaversion}test.lua"
+        system "#{Formula["luajit-openresty"].bin}/luajit", "lfs_#{luaversion}test.lua"
         assert_predicate testpath/"blank_space", :directory?,
           "Luafilesystem failed to create the expected directory"
       else
