@@ -1,25 +1,44 @@
 class S3Backer < Formula
   desc "FUSE-based single file backing store via Amazon S3"
   homepage "https://github.com/archiecobbs/s3backer"
-  # Release distributions listed at https://github.com/archiecobbs/s3backer/wiki/Downloads
-  url "https://s3.amazonaws.com/archie-public/s3backer/s3backer-2.0.2.tar.gz"
-  sha256 "0b2432f08e9b986364e35674f39dd11afc1670be382b23cdb7375e86ce132a02"
+  url "https://github.com/archiecobbs/s3backer/archive/refs/tags/2.0.1.tar.gz"
+  sha256 "16fa56e9d126abf56f9ba610a5e8d487f95907bdd937b00610ff3f4b5ce11153"
   license "GPL-2.0-or-later"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5c8f5e8a937e4838c0bada7dcbd98727e6e9d73d5558652b75d0a7a1b8657b0c"
-  end
-
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "curl"
-  depends_on "expat"
-  depends_on "libfuse@2"
-  depends_on :linux # on macOS, requires closed-source macFUSE
   depends_on "openssl@1.1"
 
+  uses_from_macos "curl"
+  uses_from_macos "expat"
+
+  on_macos do
+    disable! date: "2021-04-08", because: "requires closed-source macFUSE"
+  end
+
+  on_linux do
+    depends_on "libfuse@2"
+  end
+
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "./autogen.sh"
+    inreplace "configure", "-lfuse", "-losxfuse" if OS.mac?
+    system "./configure", "--prefix=#{prefix}"
     system "make", "install"
+  end
+
+  def caveats
+    on_macos do
+      <<~EOS
+        The reasons for disabling this formula can be found here:
+          https://github.com/Homebrew/homebrew-core/pull/64491
+
+        An external tap may provide a replacement formula. See:
+          https://docs.brew.sh/Interesting-Taps-and-Forks
+      EOS
+    end
   end
 
   test do
