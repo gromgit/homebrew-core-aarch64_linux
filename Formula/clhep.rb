@@ -1,8 +1,8 @@
 class Clhep < Formula
   desc "Class Library for High Energy Physics"
   homepage "https://proj-clhep.web.cern.ch/proj-clhep/"
-  url "https://proj-clhep.web.cern.ch/proj-clhep/dist1/clhep-2.4.6.0.tgz"
-  sha256 "e8d16debb84ced28e40e9ae84789cf5a0adad45f9213fbac3ce7583e06caa7b1"
+  url "https://proj-clhep.web.cern.ch/proj-clhep/dist1/clhep-2.4.5.3.tgz"
+  sha256 "45f63eeb097f02fe67b86a7dadbf10d409b401c28a1a3e172db36252c3097c13"
   license "GPL-3.0-only"
   head "https://gitlab.cern.ch/CLHEP/CLHEP.git", branch: "develop"
 
@@ -12,14 +12,8 @@ class Clhep < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "fcecbd0ad5cf2f4efdb117f4766c247c6fa0c257b66f8e066392bc0723450d30"
-    sha256 cellar: :any,                 arm64_monterey: "c7407a03055e1207f9051fdde09916256edb04a84654228c2aea7945381fb0a4"
-    sha256 cellar: :any,                 arm64_big_sur:  "70be57bfdee2c6db3aac6cf9d219aeb71ccc333ff725bc4686f1facb3df632eb"
-    sha256 cellar: :any,                 ventura:        "33e9d9f16df292121b1c25ecaf26a85ff31814f70b7765d84a0bf6e5ff9c28f5"
-    sha256 cellar: :any,                 monterey:       "ea047e3fe0a24855e12d9b7b2b48edf72694e2efba17387ef5141a3e2bb8bdc7"
-    sha256 cellar: :any,                 big_sur:        "5798f6ea7540f4e07f340cbc138786768c9eab676042beb6c89871aa0a92001e"
-    sha256 cellar: :any,                 catalina:       "db57d799c9af8397ad4175cd59ab0e75407bc88385ed595ea57b7cf690a862a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a2baac370a6e9b05ee01e4629f45b918f9d33a2df5de5a1f93cb1e0442eb806"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/clhep"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9d98835929dd22c07aed5f38d6dc73ab36b853a82ff201306932e28d458f07a2"
   end
 
   depends_on "cmake" => :build
