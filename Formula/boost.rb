@@ -1,9 +1,10 @@
 class Boost < Formula
   desc "Collection of portable C++ source libraries"
   homepage "https://www.boost.org/"
-  url "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.bz2"
-  sha256 "1e19565d82e43bc59209a168f5ac899d3ba471d55c7610c677d4ccf2c9c500c0"
+  url "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.bz2"
+  sha256 "475d589d51a7f8b3ba2ba4eda022b170e562ca3b760ee922c146b6c65856ef39"
   license "BSL-1.0"
+  revision 2
   head "https://github.com/boostorg/boost.git", branch: "master"
 
   livecheck do
@@ -15,14 +16,8 @@ class Boost < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "aa3d546bc5fd86a73ed3019e7dd1b04bda025798bd43d99e643f1114cbfef558"
-    sha256 cellar: :any,                 arm64_monterey: "147b71e637f2ab396c580f62f8a16917010efa4494be26d6ec4a3339f980087f"
-    sha256 cellar: :any,                 arm64_big_sur:  "572093eec4c68d13f95b3682e2c673a2610097bae1912ab4d6e2b2b857ef9122"
-    sha256 cellar: :any,                 ventura:        "9fd4dfa222b28d6972ef3c60648972122e9491c4e4c74b436871bb0646a670d7"
-    sha256 cellar: :any,                 monterey:       "cc487497f5beaa3726ed3e8772e8066e968ad494917b35c58c94f9e5febc7944"
-    sha256 cellar: :any,                 big_sur:        "35c01f163d0d54afc7cdf2b492245fb34d64faf42ac410d1c77d211f00789f14"
-    sha256 cellar: :any,                 catalina:       "a75afcf9ab1eee0eecb59282070b0559c56b7a00d5b3ab29c6a2d52c9b51b8a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d54fe09e3343863c9b2e7ba034ad2eaa2fce83651cc338da59e2895bbea0034"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9debbf74e6bd30ab42a82c3a22d8fdc730d0f74f701ce79c3ce870eba06d8bcd"
   end
 
   depends_on "icu4c"
