@@ -10,6 +10,7 @@ class Gemgen < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a129ec247cbe122db92d70316a6fc144f7a282c36fbe4a69b4b1b3ca2d958897"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "784c371394fa6476daea9391ef69a942f02e0a7086cf0daaeacea8ceaca8eae4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c36ace2b3b409206241e66b32567762ab6c448d89a8e050cf26f419f5ef0bd6"
+    sha256 cellar: :any_skip_relocation, ventura:        "e6785bdc094268929208e829ebd282c9b25c53ddf5ff10819df53a7f083ffa7f"
     sha256 cellar: :any_skip_relocation, monterey:       "8fd891edc0e50292ca76deb0a63696d1c06b231cebaa067e99ce99bad886c96c"
     sha256 cellar: :any_skip_relocation, big_sur:        "6f780a553c7050f67c43216d76d06d041d3a341bf5cc67a2072810c912ae6a96"
     sha256 cellar: :any_skip_relocation, catalina:       "0857a312379268423766b69c2874172e716a92c22d6e63d3ce7fa6430c06a9b9"
