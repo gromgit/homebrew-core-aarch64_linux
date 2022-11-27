@@ -1,6 +1,4 @@
 class Honcho < Formula
-  include Language::Python::Virtualenv
-
   desc "Python clone of Foreman, for managing Procfile-based applications"
   homepage "https://github.com/nickstenning/honcho"
   url "https://files.pythonhosted.org/packages/0e/7c/c0aa47711b5ada100273cbe190b33cc12297065ce559989699fd6c1ec0cb/honcho-1.1.0.tar.gz"
@@ -9,21 +7,18 @@ class Honcho < Formula
   head "https://github.com/nickstenning/honcho.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "746b94c6cffbacc10ce88ddc5052262342cc26d729acfc4e2201a2208e08bb97"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "746b94c6cffbacc10ce88ddc5052262342cc26d729acfc4e2201a2208e08bb97"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "746b94c6cffbacc10ce88ddc5052262342cc26d729acfc4e2201a2208e08bb97"
-    sha256 cellar: :any_skip_relocation, ventura:        "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
-    sha256 cellar: :any_skip_relocation, monterey:       "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
-    sha256 cellar: :any_skip_relocation, catalina:       "670036cac190b715c641d71635a8c54d0ae18d2173e3d27df712e10c13082dcf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57f996e71e6519ada288e46a31eea25d58fac4feab9f9742feaba3f24190d163"
+    sha256 cellar: :any_skip_relocation, all: "3dada63778e9ed2ba5ea8afb8a0946f886f378539b5ee07164016026452a4ecf"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def install
-    virtualenv_install_with_resources
+    xy = Language::Python.major_minor_version "python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+    system "python3", *Language::Python.setup_install_args(libexec)
+
+    bin.install Dir[libexec/"bin/*"]
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
