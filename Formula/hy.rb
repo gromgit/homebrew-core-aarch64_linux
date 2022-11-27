@@ -3,30 +3,25 @@ class Hy < Formula
 
   desc "Dialect of Lisp that's embedded in Python"
   homepage "https://github.com/hylang/hy"
-  url "https://files.pythonhosted.org/packages/fc/d1/95dac7cb3e3a483cf53a8c18f529f50c619e6a4ee42b299802ca769dc174/hy-0.25.0.tar.gz"
-  sha256 "50ed88834b03a33fc25b85d8897bbe15b7846b84d324630ace8d052f7d48327b"
+  url "https://files.pythonhosted.org/packages/68/bb/8f852a2a9591d53c083384f6cd95d9e857b2802668f922fa0b50468a280b/hy-0.24.0.tar.gz"
+  sha256 "de3928ff7f97893bb825e59f17f3cd19e4b59beecb71c38039b8f349ca8dfe1d"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b7df14b72e77baf89aa3deb363b57e23f37dafa5dcbf2ff5fba5a8b9c9858ff"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e15ed91dc5c45758d18a02bf06cc2765714ae2f54cfb683a1c9d5fc3e36fe086"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d5f9f99c934ff6947f9037b65ebc32579005c265fb3be5c976087e5bcafa4531"
-    sha256 cellar: :any_skip_relocation, monterey:       "deda1c0fbdac60c70a30b9dada539dd8b92c2daf0a05e2fd9c24e255bab2115e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b96dd8de1b784c10c4c3545f9890fb44bbf5fab5f1843abae67cd5ad0210e91c"
-    sha256 cellar: :any_skip_relocation, catalina:       "0f0b54ba6b6e93b0b884c22148f8c269d9bfdf1707817b7f5558cc2988581386"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02e03489269cbb7c289c7bf00dc324e01cccdcb72b1c53788feafea3fde0fb77"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e6c2a7078f651595675e2742599ee683404824f9f957165374bed65175633ec0"
   end
 
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
-    sha256 "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+    url "https://files.pythonhosted.org/packages/2b/65/24d033a9325ce42ccbfa3ca2d0866c7e89cc68e5b9d92ecaba9feef631df/colorama-0.4.5.tar.gz"
+    sha256 "e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"
   end
 
   resource "funcparserlib" do
-    url "https://files.pythonhosted.org/packages/93/44/a21dfd9c45ad6909257e5186378a4fedaf41406824ce1ec06bc2a6c168e7/funcparserlib-1.0.1.tar.gz"
-    sha256 "a2c4a0d7942f7a0e7635c369d921066c8d4cae7f8b5bf7914466bec3c69837f4"
+    url "https://files.pythonhosted.org/packages/53/6b/02fcfd2e46261684dcd696acec85ef6c244b73cd31c2a5f2008fbfb434e7/funcparserlib-1.0.0.tar.gz"
+    sha256 "7dd33dd4299fc55cbdbf4b9fdfb3abc54d3b5ed0c694b83fb38e9e3e8ac38b6b"
   end
 
   def install
@@ -34,12 +29,12 @@ class Hy < Formula
   end
 
   test do
-    python3 = "python3.11"
-    ENV.prepend_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
+    site_packages = libexec/Language::Python.site_packages(Formula["python@3.10"].opt_bin/"python3")
+    ENV.prepend_path "PYTHONPATH", site_packages
 
     (testpath/"test.hy").write "(print (+ 2 2))"
     assert_match "4", shell_output("#{bin}/hy test.hy")
     (testpath/"test.py").write shell_output("#{bin}/hy2py test.hy")
-    assert_match "4", shell_output("#{python3} test.py")
+    assert_match "4", shell_output("#{Formula["python@3.10"].bin}/python3 test.py")
   end
 end
