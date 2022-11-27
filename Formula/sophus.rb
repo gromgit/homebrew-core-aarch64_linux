@@ -1,20 +1,23 @@
 class Sophus < Formula
   desc "C++ implementation of Lie Groups using Eigen"
   homepage "https://strasdat.github.io/Sophus/"
-  url "https://github.com/strasdat/Sophus/archive/refs/tags/v22.10.tar.gz"
-  sha256 "270709b83696da179447cf743357e36a8b9bc8eed5ff4b9d66d33fe691010bad"
+  url "https://github.com/strasdat/Sophus/archive/refs/tags/v22.04.1.tar.gz"
+  sha256 "635dc536e7768c91e89d537608226b344eef901b51fbc51c9f220c95feaa0b54"
   license "MIT"
-  revision 1
   head "https://github.com/strasdat/Sophus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5c03acef1a12656ea660610b57869d2df2ac38655fa4e783e2a959e5a65fa008"
+    sha256 cellar: :any_skip_relocation, all: "dfe43682c321e12b9fa343d74f4e9c4649f6fe362365ed1552a3c4f79c2c1a9c"
   end
 
   depends_on "cmake" => [:build, :test]
   depends_on "ceres-solver"
   depends_on "eigen"
   depends_on "fmt"
+
+  on_linux do
+    depends_on "gcc"
+  end
 
   fails_with gcc: "5" # C++17 (ceres-solver dependency)
 
