@@ -1,20 +1,15 @@
 class Seaweedfs < Formula
   desc "Fast distributed storage system"
-  homepage "https://github.com/seaweedfs/seaweedfs"
-  url "https://github.com/seaweedfs/seaweedfs.git",
-      tag:      "3.35",
-      revision: "b1d7963e57ca2013fe9d11c4336c51e8c1c022e6"
+  homepage "https://github.com/chrislusf/seaweedfs"
+  url "https://github.com/chrislusf/seaweedfs.git",
+      tag:      "3.02",
+      revision: "a4ca3ed1f0c2bcde1d36bb48f81dedc3e1924679"
   license "Apache-2.0"
-  head "https://github.com/seaweedfs/seaweedfs.git", branch: "master"
+  head "https://github.com/chrislusf/seaweedfs.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7c469c04245023156493d833322a2718908be46807bde98328aaa4209ec12196"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f629f0109dc823f50a919bd77302087efc468b57d8f7c4e8afd372cdc95f4320"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aeff54cf4b8b3213411054e9c5cf3e3cc512a4d14dd3775abe03a23a099ae868"
-    sha256 cellar: :any_skip_relocation, monterey:       "4eef19fb10dbc0ffbf5eb623f6fab2266f8ee2f8b320a977fb742d76e83a79e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "70b1412aa2f5c372a85c7c3634cb04c4061a41e8f4cc81dd3b8716cbe0b7e62f"
-    sha256 cellar: :any_skip_relocation, catalina:       "6621ad1ccd0cc99994de6218380b69d43ea74a75bd1f5c3dc6304165b0ec73ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d009c162a8c58ab58605a3c607f3f5b7f788d56bd6c5f37a2765fec4a9efd78f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/seaweedfs"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7baeccf7d968d0370dbd7e382034973342fe596bc05c888fc393f4406c790d51"
   end
 
   depends_on "go" => :build
@@ -22,7 +17,7 @@ class Seaweedfs < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/seaweedfs/seaweedfs/weed/util.COMMIT=#{Utils.git_head}
+      -X github.com/chrislusf/seaweedfs/weed/util.COMMIT=#{Utils.git_head}
     ]
     system "go", "build", *std_go_args(output: bin/"weed", ldflags: ldflags), "./weed"
   end
