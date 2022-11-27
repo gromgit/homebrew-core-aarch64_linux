@@ -10,6 +10,7 @@ class Ns3 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "41366faa65418e3a2bc4edcf8205ef8c255584dc41dd3e474ffb043810e3348c"
     sha256 cellar: :any,                 arm64_monterey: "3d489bfd184d65cc26ccb3b09ca005e6ddf41ce6ca15abce25c59d9a9ae95ca5"
     sha256 cellar: :any,                 arm64_big_sur:  "68aac9355130e2cc027c95b9255d150c10c817d4f9aefa94708543ecc0b20a64"
+    sha256 cellar: :any,                 ventura:        "daaa6ae7d3053f5370aa7955dc1e7548dd1925706e4da43d89e4511936de2729"
     sha256 cellar: :any,                 monterey:       "3cae5abbf94429cdcef4d13f8b51ef34e16204761c29e9551332b5859854f740"
     sha256 cellar: :any,                 big_sur:        "5a88644764053c9a4852adaa074b0bcf503b1616129821afa689e7fadd5d2bb3"
     sha256 cellar: :any,                 catalina:       "5167dc9662ae8e1998bcd132c9af32b235dd848321cd357f3532d072427e763c"
