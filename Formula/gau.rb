@@ -7,13 +7,8 @@ class Gau < Formula
   head "https://github.com/lc/gau.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ff3c4dfa76c55fb3d9f4aca25dd7311e32a8cf68c3eef0a59730ba93b01242d0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "69fa3291ac27be667e85c304dc09bb66375c51baeb5fcee0611a370aa0880c0b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c6825916653f661d5a7ef5179185d2d68315c8bd08a34b0c788abbf05574e2e"
-    sha256 cellar: :any_skip_relocation, monterey:       "fbfb406d2af502acf270b0907466ae1c8a94172ef8e22c87f5bdb3b7ca6f1cec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f27a77b5321b456b1fb37e7ec396a5fa449e7f26938804f68d378dce8cef196a"
-    sha256 cellar: :any_skip_relocation, catalina:       "461ac21a199fa8435f68129edc6c9cb3f52d716026a373e978adcf4a0d52c533"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2673a688e06d00163439668c054944ab1965078c36be3dac11fa000dd8a2a888"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gau"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "906efaea8894c2f27eaa72f213b6b62df4ae4f61900866056c0e605a64f96093"
   end
 
   depends_on "go" => :build
