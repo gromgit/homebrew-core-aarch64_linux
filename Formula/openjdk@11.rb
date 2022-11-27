@@ -4,7 +4,6 @@ class OpenjdkAT11 < Formula
   url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.16.1-ga.tar.gz"
   sha256 "3008e50e258a5e9a488a814df2998b9823b6c2959d6a5a85221d333534d2f24c"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url :stable
@@ -12,14 +11,8 @@ class OpenjdkAT11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ec9827ab4a3895ddb6739939af6dc3426fd09995a805af69daccf099ac4301ab"
-    sha256 cellar: :any,                 arm64_monterey: "81eccbbd81a405f07a1ac2bb0f3ccaef70d2f586a26f6c9b5326a4deb9d30404"
-    sha256 cellar: :any,                 arm64_big_sur:  "ef1efd7cb78ff5d788dabcef4ff376b214f422584d9b50ae086965ebe4c2e607"
-    sha256 cellar: :any,                 ventura:        "4157114f6dd128b93d0732559787f191678d2d496476e19855a03d0f226aa50c"
-    sha256 cellar: :any,                 monterey:       "938120ca00af5d30d606a37576fe11394511bfe1ac9d36817e8d4da4c662e92b"
-    sha256 cellar: :any,                 big_sur:        "a0943ce186432e16eab04996b743f4a52c1d4eb365a4f0fb9d2283d6554fc810"
-    sha256 cellar: :any,                 catalina:       "bdbb96550f521b4c79ffe9c8651c97b5a28fdf75061a3aff84c2ae57b2ad95dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aef7857996800a12b2441c499e46b80695eb090efef5e4b7e3f9c44ae89620d7"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk@11"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fadc29186d44e83f2dc2d4bc66a8362e5ff53f605a4fc1ef66b4196991c9bdef"
   end
 
   keg_only :versioned_formula
@@ -40,9 +33,6 @@ class OpenjdkAT11 < Formula
     depends_on "unzip"
     depends_on "zip"
 
-    # FIXME: This should not be needed because of the `-rpath` flag
-    #        we set in `--with-extra-ldflags`, but this configuration
-    #        does not appear to have made it to the linker.
     ignore_missing_libraries "libjvm.so"
   end
 
@@ -58,10 +48,17 @@ class OpenjdkAT11 < Formula
       end
     end
     on_linux do
-      url "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz"
-      sha256 "f3b26abc9990a0b8929781310e14a339a7542adfd6596afb842fa0dd7e3848b2"
+      on_arm do
+        url "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz"
+        sha256 "2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8"
+      end
+      on_intel do
+        url "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz"
+        sha256 "f3b26abc9990a0b8929781310e14a339a7542adfd6596afb842fa0dd7e3848b2"
+      end
     end
   end
+
 
   def install
     boot_jdk = Pathname.pwd/"boot-jdk"
@@ -88,13 +85,11 @@ class OpenjdkAT11 < Formula
       --without-version-pre
     ]
 
-    ldflags = ["-Wl,-rpath,#{loader_path}/server"]
     args += if OS.mac?
-      ldflags << "-headerpad_max_install_names"
-
       %W[
-        --enable-dtrace
         --with-sysroot=#{MacOS.sdk_path}
+        --enable-dtrace=auto
+        --with-extra-ldflags=-headerpad_max_install_names
       ]
     else
       %W[
@@ -103,7 +98,6 @@ class OpenjdkAT11 < Formula
         --with-fontconfig=#{HOMEBREW_PREFIX}
       ]
     end
-    args << "--with-extra-ldflags=#{ldflags.join(" ")}"
 
     chmod 0755, "configure"
     system "./configure", *args
