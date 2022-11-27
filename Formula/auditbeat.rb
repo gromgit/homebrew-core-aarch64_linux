@@ -11,6 +11,7 @@ class Auditbeat < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "15c1f728206dae8fc41add8b930d68ae3cf10992dd7b500ff724adb38fec719d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "76b4fe47ef81cca19203f6a5cb13402a0fad41bdbb01bfd92e6ef0ed1d21b971"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b9146904a3368fd1940ad0fb30812618f0e21e690cab07382339801f9ed42e8"
+    sha256 cellar: :any_skip_relocation, ventura:        "c8090d3794e7a6797fec1842338bf642ec2595aff952a6c917d51c4bbc822e7e"
     sha256 cellar: :any_skip_relocation, monterey:       "20d0d8c361b1c2cfd9528b914c48208e9965310cd03142b5ee2a34a77621f7ef"
     sha256 cellar: :any_skip_relocation, big_sur:        "55e0c1fa48285daa885761491159fa1fd2c470b28321d0ac490a1a9521e192ff"
     sha256 cellar: :any_skip_relocation, catalina:       "08d80b272677de4e6c0aea32f83d5fde416967fefbccafab0739d8f7935baf35"
