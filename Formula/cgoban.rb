@@ -11,6 +11,7 @@ class Cgoban < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8de4642f1e0840a1d2b01d4006902d44e98e90937f3db0e7decec37e775beb82"
   end
 
+
   depends_on "libice"
   depends_on "libsm"
   depends_on "libx11"

@@ -11,6 +11,7 @@ class Libtasn1 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "aa9fe62fe807f60df312f356c9ba5846b32c2fff53068c206d1503328562bca6"
   end
 
+
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-dependency-tracking",
                           "--disable-silent-rules"

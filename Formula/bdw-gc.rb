@@ -15,6 +15,7 @@ class BdwGc < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "85b27104ac20492b7b5ada546aa896e525dbd4842a317d3775e53d3d72f013ed"
   end
 
+
   head do
     url "https://github.com/ivmai/bdwgc.git", branch: "master"
     depends_on "autoconf" => :build

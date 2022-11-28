@@ -16,6 +16,7 @@ class CaCertificates < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "17355c04dbc65097af9ee50757c022cdb6f4c803a361e3302bb644cca55ddf99"
   end
 
+
   def install
     pkgshare.install "cacert-#{version}.pem" => "cacert.pem"
   end

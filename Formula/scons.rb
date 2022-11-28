@@ -12,6 +12,7 @@ class Scons < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "190d0846f22a0ad3841a7ce2b13c5f3cf985026dccda6ecc40b23d530cd9b895"
   end
 
+
   depends_on "python@3.10"
 
   def install

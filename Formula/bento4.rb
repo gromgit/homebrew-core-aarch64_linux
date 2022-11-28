@@ -17,6 +17,7 @@ class Bento4 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "3bd250d0960c29f1b6cc0c564402e9db94d5d94ca2bd2839e78827e570147c87"
   end
 
+
   depends_on "cmake" => :build
   depends_on "python@3.10"
 

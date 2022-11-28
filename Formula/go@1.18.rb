@@ -16,6 +16,7 @@ class GoAT118 < Formula
     sha256 aarch64_linux: "56a6556aa21832c9a8532d632b0e546608db0bc26c6b4db38cb5617e95c4ef6d"
   end
 
+
   keg_only :versioned_formula
 
   # Don't update this unless this version cannot bootstrap the new version.

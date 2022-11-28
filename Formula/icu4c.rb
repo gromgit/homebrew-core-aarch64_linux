@@ -19,6 +19,7 @@ class Icu4c < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4807f897f9671c384f4a8f6ddeba0bd6b50b40ef263837023e92cbe8daa725e3"
   end
 
+
   keg_only :provided_by_macos, "macOS provides libicucore.dylib (but nothing else)"
 
   def install

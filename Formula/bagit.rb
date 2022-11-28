@@ -20,6 +20,7 @@ class Bagit < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4fc42d3a3005d39d12d5a92b66c73809fcee8ff5ed0c8e0d45a6e34efad49a8c"
   end
 
+
   depends_on "python@3.10"
 
   def install

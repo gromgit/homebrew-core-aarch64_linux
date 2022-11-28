@@ -12,6 +12,7 @@ class Choose < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a4038101edb76ee57ddbea27b32bcefcb6950a135dca5a10bfb8ddd7ff3177eb"
   end
 
+
   depends_on "python@3.10"
 
   conflicts_with "choose-gui", because: "both install a `choose` binary"

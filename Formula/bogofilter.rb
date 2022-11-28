@@ -9,6 +9,7 @@ class Bogofilter < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "5a152ea0f9d204bebc05ec9fbd90423b79f57e9345e3ea2dd6452ed8d9fd33a8"
   end
 
+
   depends_on "berkeley-db"
 
   def install

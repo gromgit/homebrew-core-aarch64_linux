@@ -10,6 +10,7 @@ class Cjson < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c08aa214f269e81cc812f5331692a5e637c7031d89f0516ea43a846fc7fdead6"
   end
 
+
   depends_on "cmake" => :build
 
   def install

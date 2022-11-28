@@ -12,6 +12,7 @@ class Censys < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "2e3cbece25c5e88b53a9c7cb220e74e184916ef5f280f94505bfdaec4c7bd3b6"
   end
 
+
   depends_on "python@3.10"
 
   resource "backoff" do

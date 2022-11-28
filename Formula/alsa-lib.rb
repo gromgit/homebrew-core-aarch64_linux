@@ -15,6 +15,7 @@ class AlsaLib < Formula
     sha256 aarch64_linux: "2c2a0924315246839f944d65f587a614d40eeb6bba5f13b69b688df4cf39db4f"
   end
 
+
   depends_on :linux
 
   def install

@@ -15,6 +15,7 @@ class Pcre2 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4bb6d88589bdd74cf438a8407793e2060e9edf0fb6b55857d28127b90b6176e1"
   end
 
+
   head do
     url "https://github.com/PCRE2Project/pcre2.git", branch: "master"
 

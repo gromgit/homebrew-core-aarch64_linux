@@ -16,6 +16,7 @@ class Gnutls < Formula
     sha256 aarch64_linux: "4e3b25e7d8cb939e46cedc6e555ef0bc7a451accba62ccb68443574e9c0a53b4"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "ca-certificates"
   depends_on "gmp"

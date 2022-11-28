@@ -10,6 +10,7 @@ class Libxcursor < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "b6e59fe05ec831e869e8b61949219d9905aef1a65ddbf03809a6f1f3e0cf093e"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "libx11"

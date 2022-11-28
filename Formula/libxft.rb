@@ -10,6 +10,7 @@ class Libxft < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4e43c6e8ec4c85cb54c37e2cf02dda6c72781a9edab2e33cd49a3da012b8b63e"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "fontconfig"
   depends_on "libxrender"

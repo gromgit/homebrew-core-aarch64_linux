@@ -20,6 +20,7 @@ class Jbig2dec < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "ac7122d60c77b3407a5873779efb5eace356dc55a9da000c4dac63670423c984"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

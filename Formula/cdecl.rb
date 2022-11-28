@@ -9,6 +9,7 @@ class Cdecl < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "1820a04f75091632830cf50df74f7944ef68fec9c02bdd9c1bf96cd83cbc9116"
   end
 
+
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
 

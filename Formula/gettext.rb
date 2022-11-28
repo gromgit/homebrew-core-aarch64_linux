@@ -12,6 +12,7 @@ class Gettext < Formula
     sha256 aarch64_linux: "6c63e419b7282e6df63a0592bebf2fa71a1cddac52d624427a775d80b0b9ef33"
   end
 
+
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
 

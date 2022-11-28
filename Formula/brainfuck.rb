@@ -11,6 +11,7 @@ class Brainfuck < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "55be42dafc5fdb53a5b24e7231cb166ae08593278f53bb81f719f5780d9fc1ab"
   end
 
+
   depends_on "cmake" => :build
 
   uses_from_macos "libedit"

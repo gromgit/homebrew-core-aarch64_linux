@@ -16,6 +16,7 @@ class Nim < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "2d3e3668b1de5a370084fe4b003b5eed4b0787056b4e1b826eab7b020113a4b0"
   end
 
+
   depends_on "help2man" => :build
 
   def install

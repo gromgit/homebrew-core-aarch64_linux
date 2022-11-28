@@ -11,6 +11,7 @@ class BwmNg < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "158eb65a5e6abd27d1421a9345f822fd84a578bb2974997f13757f15dffed745"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 

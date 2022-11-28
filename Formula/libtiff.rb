@@ -17,6 +17,7 @@ class Libtiff < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "34189120891e00ed370975d28598648085cc11f53b318791cc44d592d354bf9f"
   end
 
+
   depends_on "jpeg-turbo"
 
   uses_from_macos "zlib"

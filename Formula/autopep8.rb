@@ -12,6 +12,7 @@ class Autopep8 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "39f297deec47c898795e034890b610d9d725ce9a0694cfbdbd387bbe41d8d69b"
   end
 
+
   depends_on "python@3.10"
 
   resource "pycodestyle" do

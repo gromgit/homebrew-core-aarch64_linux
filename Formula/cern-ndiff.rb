@@ -16,6 +16,7 @@ class CernNdiff < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c37f2c43d72b4b4f9784b2213ad884f657b3019b1f58faa65c95381aef035fe0"
   end
 
+
   depends_on "cmake" => :build
 
   def install

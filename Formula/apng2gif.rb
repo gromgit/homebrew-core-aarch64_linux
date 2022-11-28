@@ -9,6 +9,7 @@ class Apng2gif < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "e6107ca05d461d9d2e51b363b61fcdf1e53c6b964ff0946dea700746a2d6d8a6"
   end
 
+
   depends_on "libpng"
 
   def install

@@ -12,6 +12,7 @@ class AllRepos < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "b5458f0b0d4d9fe79e98d7b221a3a057120e6ed020bcb9f8da9701fe18676896"
   end
 
+
   depends_on "python@3.10"
 
   resource "identify" do

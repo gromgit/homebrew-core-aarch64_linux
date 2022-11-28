@@ -10,6 +10,7 @@ class Libxscrnsaver < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "bf5c3cd12df33bcc6187d0f51e842d7048f1114199cd717d2d83e470725ef424"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"

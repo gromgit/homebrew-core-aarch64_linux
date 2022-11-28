@@ -15,6 +15,7 @@ class Fontconfig < Formula
     sha256 aarch64_linux: "0be548f6b750243a63cfd401df354b3833306487ebfc2fe13ba8ed0c42a3238e"
   end
 
+
   head do
     url "https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
 

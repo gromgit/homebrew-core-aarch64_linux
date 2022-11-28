@@ -10,6 +10,7 @@ class Libxpm < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "3cc0082ecdad9dde5e5d28275fbb1b67f97d10e9125b3c7328b8198f5dcfa5b7"
   end
 
+
   depends_on "gettext" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"

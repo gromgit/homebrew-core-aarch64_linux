@@ -16,6 +16,7 @@ class Acpica < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "7913cdb7e9f54b37e19fedb9be14a0de6e04ea57836b3fc885679f30ef4c108d"
   end
 
+
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "m4" => :build

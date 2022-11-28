@@ -11,6 +11,7 @@ class Meson < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "013802b655ed04ff632182f399d5aa87fd535972624ed6276ab6debeb2047944"
   end
 
+
   depends_on "ninja"
   depends_on "python@3.10"
 

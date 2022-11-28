@@ -10,6 +10,7 @@ class Celero < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "80c98141ce48b12aa06284c4b61fce178f92c9e44febe10a2c1a221e3c918f8a"
   end
 
+
   depends_on "cmake" => :build
 
   def install

@@ -11,6 +11,7 @@ class ApacheOpennlp < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "09c10aa48f2d9911efe249bf3a6e64fbb275fa9913d0a44f47d3a3da3f681989"
   end
 
+
   depends_on "openjdk"
 
   def install

@@ -10,6 +10,7 @@ class Librsync < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8c618502aa0a0fb327d157b3a9cc93d7d618b1b92d3f6e4143a6cfd382a4f6c8"
   end
 
+
   depends_on "cmake" => :build
   depends_on "popt"
 

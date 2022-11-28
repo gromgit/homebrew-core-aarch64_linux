@@ -18,6 +18,7 @@ class Cups < Formula
     sha256 aarch64_linux: "5f1eee0883e8a0d924b8065ac8dd8ab5b1e83f28de63e1cbe112bdd3f8afcd27"
   end
 
+
   keg_only :provided_by_macos
 
   uses_from_macos "krb5"

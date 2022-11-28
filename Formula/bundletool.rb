@@ -10,6 +10,7 @@ class Bundletool < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "bf9b690e5d975870c95da2765276a4fdee7459c799ba5a64de73ee340f256f81"
   end
 
+
   depends_on "openjdk"
 
   resource "homebrew-test-bundle" do

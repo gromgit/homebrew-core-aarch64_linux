@@ -17,6 +17,7 @@ class UniversalCtags < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8bfbb7ff897801a50600f79126f9d2a32c40e4f6f305c5d22aa5f34ab66c8f3e"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "docutils" => :build

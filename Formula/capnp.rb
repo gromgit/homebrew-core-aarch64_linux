@@ -16,6 +16,7 @@ class Capnp < Formula
     sha256 aarch64_linux: "16ff5895e7108c2429ccd9146680a5c07629a355345c87151d7a701a6c14650d"
   end
 
+
   depends_on "cmake" => :build
 
   def install

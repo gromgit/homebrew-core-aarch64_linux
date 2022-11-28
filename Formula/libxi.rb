@@ -10,6 +10,7 @@ class Libxi < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "02b64786e8f5addd2845c5993017309dc0e11dd7ab4b5255c971471b2270f130"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"

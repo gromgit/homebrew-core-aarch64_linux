@@ -11,6 +11,7 @@ class AutoconfArchive < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8ea208fca421ae5900b2bed1bd093e11f2a154a07e7356365b27b2fffa3d6e54"
   end
 
+
   # autoconf-archive is useless without autoconf
   depends_on "autoconf"
 

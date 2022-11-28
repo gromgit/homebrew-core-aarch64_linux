@@ -14,6 +14,7 @@ class Awslogs < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "890985d57fafc652aed2713993255cf3baaceab5c0eda1ca26e2ca9bed4546f4"
   end
 
+
   depends_on "python@3.10"
 
   uses_from_macos "zlib"

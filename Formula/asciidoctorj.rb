@@ -15,6 +15,7 @@ class Asciidoctorj < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "ee8e0d3688b19b4eb35bfabdd468d4676211d7615f09d6e4e1e17ba237be5d8d"
   end
 
+
   depends_on "openjdk"
 
   def install

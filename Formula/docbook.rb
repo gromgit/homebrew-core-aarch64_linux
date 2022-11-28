@@ -16,6 +16,7 @@ class Docbook < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "1fb8156c775546296a654fbbf91abcc77718a0a70f22203175f3928e64f0c760"
   end
 
+
   uses_from_macos "libxml2"
 
   resource "xml412" do

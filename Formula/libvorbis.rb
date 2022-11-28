@@ -16,6 +16,7 @@ class Libvorbis < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "9d53ff63feff2362a032fff6818bde400893c9c9efd3f52298a851cf3dec03b7"
   end
 
+
   head do
     url "https://gitlab.xiph.org/xiph/vorbis.git"
 

@@ -16,6 +16,7 @@ class PythonAT310 < Formula
     sha256 aarch64_linux: "4f37ecf9df5c551ad98b07b13c3630238e65a73b2f0247d1b23109139209f0a9"
   end
 
+
   # setuptools remembers the build flags python is built with and uses them to
   # build packages later. Xcode-only systems need different flags.
   pour_bottle? only_if: :clt_installed

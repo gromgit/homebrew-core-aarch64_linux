@@ -16,6 +16,7 @@ class OpenalSoft < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "312f22ee1acecf8231843c7ee10a0d627bb80ed0d06138d4b00f235352d4c01d"
   end
 
+
   keg_only :shadowed_by_macos, "macOS provides OpenAL.framework"
 
   depends_on "cmake" => :build

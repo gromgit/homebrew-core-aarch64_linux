@@ -16,6 +16,7 @@ class Ninja < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "3881dab04cc9421e6865c551b32f9ea2d73c6573bd594e8dc51fc2a93173192e"
   end
 
+
   # Ninja only needs Python for some non-core functionality.
   depends_on "python@3.10" => [:build, :test]
 

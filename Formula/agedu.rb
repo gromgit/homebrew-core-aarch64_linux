@@ -17,6 +17,7 @@ class Agedu < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8bca51ea26bf700f91b0179f431b27f1361600eb85e73bcf19e65e8ebb390721"
   end
 
+
   depends_on "cmake" => :build
 
   def install

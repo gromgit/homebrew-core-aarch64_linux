@@ -12,6 +12,7 @@ class Archey4 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f75022ee3e46e93c7cacb33c2b3ceb2b8b4617180a40deb1665231ac31501bf8"
   end
 
+
   depends_on "python@3.10"
 
   conflicts_with "archey", because: "both install `archey` binaries"

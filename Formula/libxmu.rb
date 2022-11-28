@@ -10,6 +10,7 @@ class Libxmu < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "d1905e5efb50b32f8a6ef318af316452fb5df4bba86adb8392a701c8801c792b"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libxext"
   depends_on "libxt"

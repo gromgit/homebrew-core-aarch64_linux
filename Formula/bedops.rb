@@ -10,6 +10,7 @@ class Bedops < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "ba933a550166b0877437ccd3f51b5e5561bb7fa4a94a6064ee978e326354d29b"
   end
 
+
   def install
     system "make"
     system "make", "install", "BINDIR=#{bin}"

@@ -11,6 +11,7 @@ class Blitz < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a9b005618325f5e4f9eb329a9699bec772f25cc10da0d800e1eebaea2caf8c15"
   end
 
+
   depends_on "cmake" => :build
 
   def install

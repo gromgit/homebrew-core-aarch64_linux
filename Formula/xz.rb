@@ -21,6 +21,7 @@ class Xz < Formula
     sha256 aarch64_linux: "6b23443653a1240c033979b56dcb8315f1cfbaa15c31c88932ebedc48e410b5f"
   end
 
+
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",

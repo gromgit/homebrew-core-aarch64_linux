@@ -16,6 +16,7 @@ class Bgpq4 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4e209b1e93d212871a744310a1e34196343d2c2145ab9f47ad142bea93efc13f"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

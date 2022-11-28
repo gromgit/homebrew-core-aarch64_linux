@@ -16,6 +16,7 @@ class Basex < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "e9a381be86e57e929c82341c429e3c1099f94ba88e1d6f2f98bcc96ade1230f6"
   end
 
+
   depends_on "openjdk"
 
   def install

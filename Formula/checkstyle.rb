@@ -10,6 +10,7 @@ class Checkstyle < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c59677e38ce766ecfe40d801c4b4d042d2e8ba0f6403d1fb9a76142840f75c0a"
   end
 
+
   depends_on "openjdk"
 
   def install

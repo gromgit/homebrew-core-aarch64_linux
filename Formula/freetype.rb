@@ -16,6 +16,7 @@ class Freetype < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4370070b8bf114a2c6f179b51ec8b6a23d9e8d09117a94576d8d21412a8730a5"
   end
 
+
   depends_on "libpng"
 
   uses_from_macos "bzip2"

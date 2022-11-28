@@ -19,6 +19,7 @@ class Unbound < Formula
     sha256 aarch64_linux: "4b1b25acf9e17d09f017f29f98e67e29fbd93e2a17081be7bba2c82095d8f49b"
   end
 
+
   depends_on "libevent"
   depends_on "libnghttp2"
   depends_on "openssl@1.1"

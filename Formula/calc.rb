@@ -10,6 +10,7 @@ class Calc < Formula
     sha256 aarch64_linux: "865139fbef38c4772c8f4a8a24e22174f54ee4d8eaa068a40f7378c95ba43c84"
   end
 
+
   depends_on "readline"
 
   on_linux do

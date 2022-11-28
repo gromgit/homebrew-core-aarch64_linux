@@ -17,6 +17,7 @@ class Openldap < Formula
     sha256 aarch64_linux: "0fc26aeea4071c4cca31f1614e1f4a70fbe0e65e654b9cf209f2c2902ceafb46"
   end
 
+
   keg_only :provided_by_macos
 
   depends_on "openssl@1.1"

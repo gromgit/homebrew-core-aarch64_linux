@@ -13,6 +13,7 @@ class Bandit < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a11d590f1c8d8d20b1b0ce452738aca17a7ffcf5693a744877ea6ba3132c29b3"
   end
 
+
   depends_on "python@3.10"
 
   resource "gitdb" do

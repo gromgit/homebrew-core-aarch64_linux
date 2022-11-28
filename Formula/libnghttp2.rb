@@ -16,6 +16,7 @@ class Libnghttp2 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "e076779e29fefe23ce62e518458e43a47f2f0c1bf19e24c5f8faadb0c8c9ad11"
   end
 
+
   head do
     url "https://github.com/nghttp2/nghttp2.git", branch: "master"
 

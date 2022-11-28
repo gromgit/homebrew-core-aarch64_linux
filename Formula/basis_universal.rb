@@ -10,6 +10,7 @@ class BasisUniversal < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a5ca17e5f0a0bd37697e5e613b773867d3d1f695d41d0dea19ee8029f7c81dce"
   end
 
+
   depends_on "cmake" => :build
 
   def install

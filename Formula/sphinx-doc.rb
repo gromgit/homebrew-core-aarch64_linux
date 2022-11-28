@@ -12,6 +12,7 @@ class SphinxDoc < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "0fb3e639cd0e1ecf4939b5e41ab921b6cf4a836c4b1c7033f10e6c6e0eb61f67"
   end
 
+
   keg_only <<~EOS
     this formula is mainly used internally by other formulae.
     Users are advised to use `pip` to install sphinx-doc

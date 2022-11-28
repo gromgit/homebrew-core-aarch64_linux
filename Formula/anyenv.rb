@@ -10,6 +10,7 @@ class Anyenv < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c234cba8a8456c97c8491b7aac3556ffde2719e86e3e467db7d4d458b5944e1c"
   end
 
+
   def install
     prefix.install %w[bin completions libexec]
   end

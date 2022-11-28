@@ -16,6 +16,7 @@ class Augeas < Formula
     sha256 aarch64_linux: "c8683e7d2ba6cdc6f61639a2b13c5767db78fda8979dd128410e1f945bef8915"
   end
 
+
   head do
     url "https://github.com/hercules-team/augeas.git"
   end

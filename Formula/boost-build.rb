@@ -17,6 +17,7 @@ class BoostBuild < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "6a1df9683ba65ba508f248b0961d16368e62f7dbceb9412c07c9dde7dfa4943c"
   end
 
+
   conflicts_with "b2-tools", because: "both install `b2` binaries"
 
   def install

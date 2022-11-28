@@ -14,6 +14,7 @@ class Metis < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "eb2151e3d243c170b7d029fc6ed3d19821ba418a51ca499854b66d4818834d45"
   end
 
+
   depends_on "cmake" => :build
 
   def install

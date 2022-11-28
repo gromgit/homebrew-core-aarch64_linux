@@ -11,6 +11,7 @@ class Arb < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "339d99fcc4e839b4d8a3a7e02b0bab31810d9302d1b1664f4a80648974750626"
   end
 
+
   depends_on "cmake" => :build
   depends_on "flint"
   depends_on "gmp"

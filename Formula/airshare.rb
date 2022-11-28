@@ -13,6 +13,7 @@ class Airshare < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8536b64855ae061079a81b6fb40f021b584a98a182d53fc55c2929bb03cec4d8"
   end
 
+
   depends_on "python@3.10"
 
   resource "aiohttp" do

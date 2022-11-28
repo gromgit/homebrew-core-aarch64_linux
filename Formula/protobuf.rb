@@ -15,6 +15,7 @@ class Protobuf < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a46f71f968f429d44d360cee08684d493ce92b5dbcf3d26395b2e86e6b5d12ea"
   end
 
+
   head do
     url "https://github.com/protocolbuffers/protobuf.git", branch: "main"
 

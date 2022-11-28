@@ -15,6 +15,7 @@ class Bumpversion < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "9bcd463dceb8d27ef7de3d146f1a67846c0bc48391813c8ac48fd4173fd6703f"
   end
 
+
   depends_on "python@3.10"
 
   def install

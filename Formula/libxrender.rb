@@ -10,6 +10,7 @@ class Libxrender < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "0ff149debcb33615e07620b3e729b7c398d827b7866cbe9718b15a4562c5543b"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "xorgproto"

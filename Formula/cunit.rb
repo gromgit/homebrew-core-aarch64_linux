@@ -9,6 +9,7 @@ class Cunit < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "9d5ea8873eef9c1a8b59b6200aec2608abea53c7195b8b0627131253b7e8f009"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

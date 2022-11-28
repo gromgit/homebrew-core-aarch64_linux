@@ -10,6 +10,7 @@ class CBlosc < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "01df13590f40016c22d919b7da3ddeff53627e169fe5e56ddb25df4502a77c72"
   end
 
+
   depends_on "cmake" => :build
 
   def install

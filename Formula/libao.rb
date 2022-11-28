@@ -11,6 +11,7 @@ class Libao < Formula
     sha256 aarch64_linux: "79a4770cf01c8f1b63d157c64fe06617131c953b72635ca9f919164e2288ebce"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

@@ -13,6 +13,7 @@ class AwsShell < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "495235d541dcde783979b5d5d16ae7ea7750c956ceae850646d410e0606e7a12"
   end
 
+
   depends_on "python@3.10"
 
   resource "awscli" do

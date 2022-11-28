@@ -18,6 +18,7 @@ class Curl < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "840ccb6930b9165214223fc90bd5f49aa6741e24f8ba9854d7cce467ed2807ed"
   end
 
+
   head do
     url "https://github.com/curl/curl.git"
 

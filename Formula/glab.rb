@@ -18,7 +18,7 @@ class Glab < Formula
 
     system "make", "GLAB_VERSION=#{version}"
     bin.install "bin/glab"
-    generate_completions_from_executable(bin/"glab", "completion", shell_parameter_format: :arg)
+    generate_completions_from_executable(bin/"glab", "completion", "--shell")
   end
 
   test do

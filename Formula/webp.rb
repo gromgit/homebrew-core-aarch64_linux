@@ -10,6 +10,7 @@ class Webp < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "52afc151179638fc326c1962b178c3b97fd55bd4457dd957c15f700fd7ba0e0f"
   end
 
+
   head do
     url "https://chromium.googlesource.com/webm/libwebp.git", branch: "main"
     depends_on "autoconf" => :build

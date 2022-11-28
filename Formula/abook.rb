@@ -16,6 +16,7 @@ class Abook < Formula
     sha256 aarch64_linux: "06f7445cc7a69c8d8cabfc5c82b216bd85e70ef9eb27137a692f6d62e5767784"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "gettext"

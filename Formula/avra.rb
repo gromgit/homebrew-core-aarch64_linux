@@ -10,6 +10,7 @@ class Avra < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "090d8ab01d821bf225c7abdf6b6c6a7d5c98ceebc3a9d4d4b10370b8e506be15"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 

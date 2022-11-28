@@ -14,6 +14,7 @@ class AutoconfAT269 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "9feba07679807c361265ec20d6f90376a776c54dbb0ef68947bbaa9ce39bf2a6"
   end
 
+
   keg_only :versioned_formula
 
   depends_on "m4"

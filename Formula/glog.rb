@@ -11,6 +11,7 @@ class Glog < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c3635dfdae70e767a69cb332979ca0b821d221bd2e09bcd46930be5e5414f019"
   end
 
+
   depends_on "cmake" => :build
   depends_on "gflags"
 

@@ -11,6 +11,7 @@ class Nettle < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "5a4a94937adead40600fd6168e9e1a1f3ef7f9c47298f10775bfdf7c5f3476a5"
   end
 
+
   depends_on "gmp"
 
   uses_from_macos "m4" => :build
@@ -26,7 +27,9 @@ class Nettle < Formula
     end
 
     args = []
-    args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if OS.mac? && Hardware::CPU.arm?
+    on_macos do
+      args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm?
+    end
 
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",

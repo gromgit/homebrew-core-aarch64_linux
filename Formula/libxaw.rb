@@ -10,6 +10,7 @@ class Libxaw < Formula
     sha256 aarch64_linux: "f8a17dc2b481119c78150c8ab527743046c24389ea2887f605441cd30b90dbac"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"

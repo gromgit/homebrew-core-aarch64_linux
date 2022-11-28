@@ -16,6 +16,7 @@ class Rlwrap < Formula
     sha256 aarch64_linux: "70d87ce5642df392a24618e7bb13fd8d3bfc4824a341cfe430f12305433c655b"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "readline"

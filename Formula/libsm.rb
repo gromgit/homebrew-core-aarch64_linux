@@ -10,6 +10,7 @@ class Libsm < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8fa6bf8dcd9095024fb3650a3f9f72496e1155e493fe939187196dcff4eb4a85"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "xtrans" => :build
   depends_on "libice"

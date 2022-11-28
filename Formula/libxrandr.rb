@@ -10,6 +10,7 @@ class Libxrandr < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "d9658216d814b51816ccd5617245d2f647d051ce28a813be806a104893fb11c5"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"

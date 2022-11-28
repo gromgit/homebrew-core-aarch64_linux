@@ -10,6 +10,7 @@ class Libxtst < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8a99be04069a2b60de7f9182bb95969e6d1f33704e3144a60934e1fbac18d4b2"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "util-macros" => :build
   depends_on "libxi"

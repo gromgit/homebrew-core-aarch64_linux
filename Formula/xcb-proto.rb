@@ -10,6 +10,7 @@ class XcbProto < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "34a98d61fb41dca2c313ea7ea2384a288446363bc2f3221d443674d57419fcfd"
   end
 
+
   depends_on "pkg-config" => [:build, :test]
   depends_on "python@3.10" => :build
 

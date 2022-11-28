@@ -15,6 +15,7 @@ class Calceph < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "b51d9fdbc7690342d4194e2152c5cb9da4b3ec20e88d3fe4b6d4f9310d621dcb"
   end
 
+
   depends_on "gcc" # for gfortran
 
   # Fix -flat_namespace being used on Big Sur and later.

@@ -10,6 +10,7 @@ class Libice < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "836322ee9e8959e26345b0f9c3860c642e0c8ab2ae64b4b2ae6f647c87d7da65"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "xtrans" => :build
   depends_on "libx11"=> :test

@@ -10,6 +10,7 @@ class Asyncplusplus < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f7f2057eb3131a154a51c2887b2e60d7008c54c53e56a5988a69720ba8fb491b"
   end
 
+
   depends_on "cmake" => :build
 
   def install

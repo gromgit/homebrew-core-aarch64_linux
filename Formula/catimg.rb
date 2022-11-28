@@ -11,6 +11,7 @@ class Catimg < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "6e25be406f0cfad8787d238e385d21a30488224415ed5b704a4b452fa5ff7ab1"
   end
 
+
   depends_on "cmake" => :build
 
   def install

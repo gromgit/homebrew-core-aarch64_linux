@@ -21,6 +21,7 @@ class OpensslAT11 < Formula
     sha256 aarch64_linux: "eefdc8d31a3e6d4b954ce31b612f38160f081aeeff086a071ac1c47a4f5e2904"
   end
 
+
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
 
   depends_on "ca-certificates"

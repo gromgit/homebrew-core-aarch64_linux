@@ -11,6 +11,7 @@ class Bullet < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "6bf5b351d561da71e5869141991a9b12497530dd1c466be5ae56da60131ba1bf"
   end
 
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => :build

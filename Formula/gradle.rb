@@ -15,6 +15,7 @@ class Gradle < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f8677a4ded381e7b35bcadc8562eec5e553d3337b6c0a1a68812af4086347f10"
   end
 
+
   depends_on "openjdk"
 
   def install

@@ -16,6 +16,7 @@ class Alure < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "20b107471600f85d9ef002c1574abcb3a8dc35856947e79358c318ee24c7f839"
   end
 
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
 

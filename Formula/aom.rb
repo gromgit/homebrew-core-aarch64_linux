@@ -11,6 +11,7 @@ class Aom < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "69c6160d1305857ef1665cb91b06b372cd130a1f87dbce3567c7e4079f3313a1"
   end
 
+
   depends_on "cmake" => :build
   depends_on "yasm" => :build
 

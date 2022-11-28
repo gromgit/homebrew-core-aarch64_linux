@@ -10,6 +10,7 @@ class Intltool < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a40c6a3adb88e7f99c1d2279f588e4013770da9be7f6586bdb774088055094fb"
   end
 
+
   on_linux do
     depends_on "expat"
     depends_on "perl"

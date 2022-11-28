@@ -15,6 +15,7 @@ class Abcmidi < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "ac27dfbd03cbe6c4939ca65fa900920f0d4f271b3cebd86dbd570dc78b66259a"
   end
 
+
   def install
     system "./configure", "--disable-debug",
                           "--prefix=#{prefix}",

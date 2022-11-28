@@ -16,6 +16,7 @@ class Libpcap < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "a4815a8faa42a7d679ce75fcdbf11ca79ee4c9bf8fbaa4cc1576fbc4b90672c0"
   end
 
+
   keg_only :provided_by_macos
 
   uses_from_macos "bison" => :build

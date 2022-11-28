@@ -15,6 +15,7 @@ class Allure < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f78ea7c1b2acce0e5aabe6fc3f6270f67cf1687c32fc60a931ed4a3e37bf11a0"
   end
 
+
   depends_on "openjdk"
 
   def install

@@ -10,6 +10,7 @@ class Bee < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "896b635d45b0fd891b0394a1e218b13c2f9955af064c55c92f473ed711be4d9d"
   end
 
+
   depends_on "openjdk"
 
   def install

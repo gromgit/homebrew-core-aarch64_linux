@@ -10,6 +10,7 @@ class BaculaFd < Formula
     sha256 aarch64_linux: "b33c9bacb6edfa06929c93046e3e025faeabf25b1a6f24a9bc0e3f21489e9481"
   end
 
+
   depends_on "openssl@1.1"
   depends_on "readline"
 

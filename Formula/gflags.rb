@@ -10,6 +10,7 @@ class Gflags < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "962dba75dc70c93beca414f1eb7a4050ccb4fa3ae6ec1a40e006dca0022318de"
   end
 
+
   depends_on "cmake" => :build
 
   def install

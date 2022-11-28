@@ -23,6 +23,7 @@ class Burp < Formula
     sha256 aarch64_linux: "e418024d0c50eb67ed54e62bc81773e5260e8c70c2958f65c6022c5c5b43c00b"
   end
 
+
   head do
     url "https://github.com/grke/burp.git", branch: "master"
 

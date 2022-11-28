@@ -20,6 +20,7 @@ class CAres < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "2cab0be79ba8fd9fed24a0fa52af2ea6679490c36a3421830c96a5082973b103"
   end
 
+
   depends_on "cmake" => :build
 
   def install

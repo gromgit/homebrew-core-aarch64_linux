@@ -18,6 +18,7 @@ class Black < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "92df973d1c327035da5714dbbcdad4b75645862b7813e370a569cb8b680d0222"
   end
 
+
   depends_on "python@3.10"
 
   resource "aiohttp" do

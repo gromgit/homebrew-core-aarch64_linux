@@ -31,7 +31,9 @@ class Kyverno < Formula
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/cli/kubectl-kyverno"
 
-    generate_completions_from_executable(bin/"kyverno", "completion")
+    (bash_completion/"kyverno").write Utils.safe_popen_read(bin/"kyverno", "completion", "bash")
+    (zsh_completion/"_kyverno").write Utils.safe_popen_read(bin/"kyverno", "completion", "zsh")
+    (fish_completion/"kyverno.fish").write Utils.safe_popen_read(bin/"kyverno", "completion", "fish")
   end
 
   test do

@@ -12,6 +12,7 @@ class Borgmatic < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "b5bec67991c7bdc02bd920e35747e1abcbc7fc3a0fe3642636e3b2608cae9350"
   end
 
+
   depends_on "python@3.10"
 
   resource "attrs" do

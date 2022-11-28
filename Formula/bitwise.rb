@@ -10,6 +10,7 @@ class Bitwise < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "670fc64be0e4de8c437b7758fad90526aef6675262c94b92efc16f00a1445943"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "readline"

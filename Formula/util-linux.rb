@@ -18,6 +18,7 @@ class UtilLinux < Formula
     sha256 aarch64_linux: "b570a0756cb26f8b3f1f5cd6d67158e98301a25c6f549732e9c23df1f5f1afb4"
   end
 
+
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
 
   depends_on "asciidoctor" => :build

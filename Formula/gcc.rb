@@ -27,6 +27,7 @@ class Gcc < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4980beda02e3629ce9bcdaf1c7e4b1a43ad308279b1463d357f3295990bf9351"
   end
 
+
   # The bottles are built on systems with the CLT installed, and do not work
   # out of the box on Xcode-only systems due to an incorrect sysroot.
   pour_bottle? only_if: :clt_installed

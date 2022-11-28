@@ -11,6 +11,7 @@ class JpegTurbo < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "e4e4fcc1945f39efcf2f8ce35d6bc92c45fccc51d9768576cf849c698debbc91"
   end
 
+
   depends_on "cmake" => :build
 
   on_intel do

@@ -18,6 +18,7 @@ class DocbookXsl < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f0ebd465e4631104c3df8e42496848af5567e9667ac6d99dd7ec14e3ad4e73db"
   end
 
+
   depends_on "docbook"
 
   resource "ns" do

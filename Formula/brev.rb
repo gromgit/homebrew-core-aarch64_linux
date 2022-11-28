@@ -15,6 +15,7 @@ class Brev < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "ddb254a4d6cc2c169fe760ba24d3eb171aed476ef7496dabf00f306480f547d7"
   end
 
+
   # Required latest gvisor.dev/gvisor/pkg/gohacks instead of inet.af/netstack/gohacks
   # Try to switch to the latest go on the next release
   depends_on "go@1.18" => :build

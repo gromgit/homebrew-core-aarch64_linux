@@ -11,6 +11,7 @@ class Snappy < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "d159b9ed6f89e6f80ed2b7e9d0112e7d05ec5bccc98c96fa6d871d12e893e670"
   end
 
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
 

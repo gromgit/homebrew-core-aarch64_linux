@@ -15,6 +15,7 @@ class Bmake < Formula
     sha256 aarch64_linux: "a838dd653016f30cbbef9558f102d18e0423fe6895180f702b69c27da699e43a"
   end
 
+
   def install
     # Don't pre-roff cat pages.
     inreplace "mk/man.mk", "MANTARGET?", "MANTARGET"

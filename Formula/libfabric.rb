@@ -11,6 +11,7 @@ class Libfabric < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "20444485f28185799e4323d0045f55bff7300377eba79283a7c091ee6b61b246"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool"  => :build

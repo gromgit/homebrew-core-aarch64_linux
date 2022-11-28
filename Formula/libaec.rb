@@ -11,6 +11,7 @@ class Libaec < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "1234ea7352afe99702283eb256bfeb9f61332552988c2dc620e46cec72e0f091"
   end
 
+
   depends_on "cmake" => :build
 
   # These may have been linked by `szip` before keg_only change

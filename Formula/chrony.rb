@@ -15,6 +15,7 @@ class Chrony < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "b0c1d4153fe2c575d42e1392f08a90082d029684162b4a3305fbaa2180d03a83"
   end
 
+
   depends_on "nettle"
 
   uses_from_macos "libedit"

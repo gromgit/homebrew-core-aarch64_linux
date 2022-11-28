@@ -18,6 +18,7 @@ class Lz4 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c730d3ed7bdac1b27c22a1ff61b5958f5a8331b6766587176d1538ace277ceb4"
   end
 
+
   def install
     system "make", "install", "PREFIX=#{prefix}"
   end

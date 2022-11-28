@@ -15,6 +15,7 @@ class Aarch64ElfBinutils < Formula
     sha256 aarch64_linux: "3bfaad2ae71628722a97dbd244c75be4c1e02007e00bd2a4c0409fbe9bee25c1"
   end
 
+
   uses_from_macos "texinfo"
 
   def install

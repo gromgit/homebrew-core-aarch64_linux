@@ -11,6 +11,7 @@ class Cddlib < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "db1b7ac4f2da03c3df575c529c6dbc7169533b36f34ac299786b2a5224696bdf"
   end
 
+
   # Regenerate `configure` to avoid `-flat_namespace` bug.
   # None of our usual patches apply.
   depends_on "autoconf" => :build

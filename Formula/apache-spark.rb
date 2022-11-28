@@ -13,6 +13,7 @@ class ApacheSpark < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "db8c95913d1bcbe16812fbead0e6a4afb75dc17b1c593a71522665f757d4e6a3"
   end
 
+
   depends_on "openjdk"
 
   def install

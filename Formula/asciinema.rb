@@ -13,6 +13,7 @@ class Asciinema < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "00f7536a18d7bee688ceba80d5093ff0b50b79b8203c7e827994034473931d92"
   end
 
+
   depends_on "python@3.10"
 
   def install

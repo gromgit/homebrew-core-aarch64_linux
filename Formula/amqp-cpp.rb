@@ -16,6 +16,7 @@ class AmqpCpp < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f3e6fa2b069bf18801ae21d7453f6cc9accbde6a39b99f35769be80e4849ff75"
   end
 
+
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
 

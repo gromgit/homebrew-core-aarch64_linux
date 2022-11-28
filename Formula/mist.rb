@@ -1,14 +1,13 @@
 class Mist < Formula
-  desc "Mac command-line tool that automatically downloads macOS Firmwares / Installers"
-  homepage "https://github.com/ninxsoft/mist-cli"
-  url "https://github.com/ninxsoft/mist-cli/archive/refs/tags/v1.8.tar.gz"
-  sha256 "a5d21721b74c9f506ba0d84683c12f2e706621451e7718d3a1ce0797e1ca64a5"
+  desc "Mac command-line tool that automatically downloads macOS Installers / Firmwares"
+  homepage "https://github.com/ninxsoft/Mist"
+  url "https://github.com/ninxsoft/Mist/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "49a362396014460847b7b04c2f6347c10da73e2d0348543ac26d78ac30cd9f6e"
   license "MIT"
-  head "https://github.com/ninxsoft/mist-cli.git", branch: "main"
+  head "https://github.com/ninxsoft/Mist.git", branch: "main"
 
   # Mist requires Swift 5.5
   depends_on xcode: ["13.1", :build]
-  depends_on :macos
   uses_from_macos "swift"
 
   def install
@@ -22,7 +21,7 @@ class Mist < Formula
 
     # check we can export the output list
     out = testpath/"out.json"
-    system bin/"mist", "list", "firmware", "--quiet", "--export=#{out}", "--output-type=json"
+    shell_output("#{bin}/mist list --quiet --export #{out} --output-type json").strip
     assert_predicate out, :exist?
 
     # check that it's parseable JSON in the format we expect

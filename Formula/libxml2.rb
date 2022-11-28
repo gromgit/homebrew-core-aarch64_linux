@@ -18,6 +18,7 @@ class Libxml2 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "be89c1b7d25be8cbca1badc910d93125067ff3b11e5e492a69b1dd7490219bb2"
   end
 
+
   head do
     url "https://gitlab.gnome.org/GNOME/libxml2.git", branch: "master"
 

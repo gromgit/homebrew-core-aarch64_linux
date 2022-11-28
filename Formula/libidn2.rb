@@ -17,6 +17,7 @@ class Libidn2 < Formula
     sha256 aarch64_linux: "f9411128d68af6caa97f4e1da2bd7ae188a8eca4ff33cc9770df71fc129f86d9"
   end
 
+
   head do
     url "https://gitlab.com/libidn/libidn2.git"
 

@@ -20,6 +20,7 @@ class Boost < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "9debbf74e6bd30ab42a82c3a22d8fdc730d0f74f701ce79c3ce870eba06d8bcd"
   end
 
+
   depends_on "icu4c"
   depends_on "xz"
   depends_on "zstd"

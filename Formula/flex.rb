@@ -20,6 +20,7 @@ class Flex < Formula
     sha256 aarch64_linux: "ae632ea3ffdfb5adba884ff0d8521bce25859683c14a435a7ad08417c08d5745"
   end
 
+
   head do
     url "https://github.com/westes/flex.git", branch: "master"
 

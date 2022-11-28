@@ -16,6 +16,7 @@ class Libgit2 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "6ca7b5b214ceec6306f0107549bae90abe00c2a6b6714acfef67545c838f385a"
   end
 
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "libssh2"

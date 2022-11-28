@@ -1,12 +1,11 @@
 class Mockolo < Formula
   desc "Efficient Mock Generator for Swift"
   homepage "https://github.com/uber/mockolo"
-  url "https://github.com/uber/mockolo/archive/1.7.1.tar.gz"
-  sha256 "0ea108672945eade97d78ec07e193611b180279215fc2e3399bc87a881559964"
+  url "https://github.com/uber/mockolo/archive/1.7.0.tar.gz"
+  sha256 "b36c49d835895b643e631c5cba3c9048f0628f68d37c5adf739a30de93677304"
   license "Apache-2.0"
 
   depends_on xcode: ["12.5", :build]
-  depends_on :macos # depends on os.signpost, which is macOS-only.
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"

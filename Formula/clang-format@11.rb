@@ -10,6 +10,7 @@ class ClangFormatAT11 < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8555cc3e062f9a2581e883b431112a795ec665b5378f55d14c2c729a98999c0b"
   end
 
+
   depends_on "cmake" => :build
 
   uses_from_macos "ncurses"

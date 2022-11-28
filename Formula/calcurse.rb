@@ -15,6 +15,7 @@ class Calcurse < Formula
     sha256 aarch64_linux: "c43ef30acfa3888b73369f83ced9f6fbc1a740cf6e134c3ecb4dfd60165416c5"
   end
 
+
   head do
     url "https://git.calcurse.org/calcurse.git"
 

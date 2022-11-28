@@ -10,6 +10,7 @@ class Libxxf86vm < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "08b02565b1c8a6db7faa92be702524affccdcced043d92bde520b1b0316cc920"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"

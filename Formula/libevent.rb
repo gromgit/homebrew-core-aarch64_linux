@@ -15,6 +15,7 @@ class Libevent < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "45669389f687b6f3cf515a01fd87ae6936768af4ba66561d28cb36727b6f2529"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

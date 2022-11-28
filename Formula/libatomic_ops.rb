@@ -15,6 +15,7 @@ class LibatomicOps < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "e27e8ccbec5b11d18cb2d924a9ebd4183e7fc90c7bdff41283afaa998c623938"
   end
 
+
   def install
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
     system "make"

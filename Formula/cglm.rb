@@ -10,6 +10,7 @@ class Cglm < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "5b2d2dbaadca7e90a26a96fa415e11ac5495b3dc856ae532400efe3525c34fc0"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

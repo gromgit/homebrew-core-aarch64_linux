@@ -10,6 +10,7 @@ class Libxfixes < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "b878875c610e146217a9f5793a596648afa50fdb915bc307a376f46276fd7c78"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "xorgproto"

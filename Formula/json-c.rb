@@ -17,6 +17,7 @@ class JsonC < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "723fe799b9cbbd9e4c7998fb7362bf9fe4cb495c61872039d7c4e9b24df92de4"
   end
 
+
   depends_on "cmake" => :build
 
   def install

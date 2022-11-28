@@ -10,6 +10,7 @@ class Libcbor < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "55ae6745cdce6e08d925b5920b5797d654999090aef10a725d539e90a54f9a91"
   end
 
+
   depends_on "cmake" => :build
 
   def install

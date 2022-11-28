@@ -15,6 +15,7 @@ class Hwloc < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "6fd7ed300927d8bf814bf8de106d3175f16017f0e16bcf44a0acdc0a6397c251"
   end
 
+
   head do
     url "https://github.com/open-mpi/hwloc.git", branch: "master"
     depends_on "autoconf" => :build

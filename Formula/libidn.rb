@@ -11,6 +11,7 @@ class Libidn < Formula
     sha256 aarch64_linux: "5d31c9adecba628b47ec689e84aada9de34f2ac7f502fbee549716636f99bb72"
   end
 
+
   depends_on "pkg-config" => :build
 
   def install

@@ -10,6 +10,7 @@ class Imath < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "2b511d9b6c2fcdcd568375ce43567daf9f547f33b246361c776b124037d506b5"
   end
 
+
   depends_on "cmake" => :build
 
   # These used to be provided by `ilmbase`

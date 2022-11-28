@@ -10,6 +10,7 @@ class Asciidoctor < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "d4485e0e7b70fc2e1829e4688e13026f5e690aac0bdead12625f026155430c4c"
   end
 
+
   uses_from_macos "ruby", since: :catalina
 
   # All of these resources are for the asciidoctor-pdf, coderay and rouge gems. To update the asciidoctor-pdf

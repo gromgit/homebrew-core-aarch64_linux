@@ -12,6 +12,7 @@ class Autojump < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "559e7aff017ad7452c17fe29da768ca15865c58254ff70652af968161a47aacb"
   end
 
+
   depends_on "python@3.10"
 
   def install

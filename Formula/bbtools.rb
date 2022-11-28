@@ -10,6 +10,7 @@ class Bbtools < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "ef62554c203653c46d2be5d9ea66717aa9be3811702a34bfe1d3228b2860864d"
   end
 
+
   depends_on "openjdk"
 
   def install

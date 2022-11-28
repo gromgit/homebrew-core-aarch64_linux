@@ -10,6 +10,7 @@ class Bedtools < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "1c039e6a9ea115f23111b9d12841a460d8457702b78429c0dee560bfc47b32b9"
   end
 
+
   depends_on "python@3.10" => :build
   depends_on "xz"
 

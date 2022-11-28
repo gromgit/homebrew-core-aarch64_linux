@@ -15,6 +15,7 @@ class Cgit < Formula
     sha256 aarch64_linux: "2e8b72166d04e5a8057188c93a413c0d50d5ef16d94bdb92d86edb0b02591a48"
   end
 
+
   depends_on "gettext"
   depends_on "openssl@1.1"
 

@@ -11,6 +11,7 @@ class Chaiscript < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4a76af12bcac01e84dec745bb8e1d93b0659daa5975da354cd3350a4089918c1"
   end
 
+
   depends_on "cmake" => :build
 
   def install

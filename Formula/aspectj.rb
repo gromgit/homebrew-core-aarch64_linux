@@ -15,6 +15,7 @@ class Aspectj < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c34c2d420a4e4987d250ecc9b9672ee16a46579f21013f941e27dd80d3a5dbb8"
   end
 
+
   depends_on "openjdk"
 
   def install

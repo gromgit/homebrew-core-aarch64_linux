@@ -15,6 +15,7 @@ class Dialog < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "7f1b8aa7fb0afc42a7580be90940fd750b827a021b7c3652db3920ddcac553d3"
   end
 
+
   uses_from_macos "ncurses"
 
   def install

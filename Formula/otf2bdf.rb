@@ -16,8 +16,8 @@ class Otf2bdf < Formula
 
   depends_on "freetype"
 
-  resource "test-font" do
-    on_linux do
+  on_linux do
+    resource "test-font" do
       url "https://raw.githubusercontent.com/paddykontschak/finder/master/fonts/LucidaGrande.ttc"
       sha256 "e188b3f32f5b2d15dbf01e9b4480fed899605e287516d7c0de6809d8e7368934"
     end

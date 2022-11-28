@@ -11,6 +11,7 @@ class Braid < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "657995fa12cbe556a328adb8ff4642ef17f9a9b930c1fe9c372400249b584997"
   end
 
+
   uses_from_macos "ruby", since: :high_sierra
 
   resource "arrayfields" do

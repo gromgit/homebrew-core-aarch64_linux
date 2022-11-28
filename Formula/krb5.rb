@@ -15,6 +15,7 @@ class Krb5 < Formula
     sha256 aarch64_linux: "1f4471619ec317806f815a4e69cad0bf7c76e65eaa108cd32dd5cc00b66f9fb8"
   end
 
+
   keg_only :provided_by_macos
 
   depends_on "openssl@1.1"

@@ -16,6 +16,7 @@ class Flint < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "15152212a891ef7c78d45e76a54a0f76b8d5b79f25ee7033d5c5ca314bde1193"
   end
 
+
   depends_on "gmp"
   depends_on "mpfr"
   depends_on "ntl"

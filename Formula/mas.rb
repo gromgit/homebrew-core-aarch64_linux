@@ -8,10 +8,9 @@ class Mas < Formula
   head "https://github.com/mas-cli/mas.git", branch: "main"
 
   depends_on :macos
-  on_arm do
+  if Hardware::CPU.arm?
     depends_on xcode: ["12.2", :build]
-  end
-  on_intel do
+  else
     depends_on xcode: ["12.0", :build]
   end
 

@@ -11,6 +11,7 @@ class Texinfo < Formula
     sha256 aarch64_linux: "5337150936a3942c980042d22c66c4ef9f3c304de8a0527e63b700973c8ba254"
   end
 
+
   keg_only :provided_by_macos
 
   uses_from_macos "ncurses"

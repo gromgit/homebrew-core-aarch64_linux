@@ -11,6 +11,7 @@ class Fmt < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "0d973d3048985e91122569a22ca5eec18790b876fb0ae48ed802aa19431b72dd"
   end
 
+
   depends_on "cmake" => :build
 
   def install

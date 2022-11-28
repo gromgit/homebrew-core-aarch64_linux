@@ -16,6 +16,7 @@ class Xterm < Formula
     sha256 aarch64_linux: "813c84f44fdcc7917e0cab938b9973feed8698b4c3a5d91874256315373d5456"
   end
 
+
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "libice"

@@ -10,6 +10,7 @@ class Advancecomp < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "fb0dd077d00b507d1c0aaf2d18d05a7a8adbc10b1c815456e252932daf0ee8c4"
   end
 
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build

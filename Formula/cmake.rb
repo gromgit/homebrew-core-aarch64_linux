@@ -20,6 +20,7 @@ class Cmake < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "703b692ea82a5781c6b7fc1417d53cf55baabdb716fa106ab2418088a668a957"
   end
 
+
   uses_from_macos "ncurses"
 
   on_linux do

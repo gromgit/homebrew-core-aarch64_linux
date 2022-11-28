@@ -12,6 +12,7 @@ class Docutils < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "324ec31f46967c746e1b0daf30766144369c097df1870c1fa1acbf2a1c454756"
   end
 
+
   depends_on "python@3.10"
 
   def install

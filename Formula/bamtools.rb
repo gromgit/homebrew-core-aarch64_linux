@@ -11,6 +11,7 @@ class Bamtools < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "c3c3076af676aaa39ea0e56f3afbc9a0c66e26030acdf502ce5fef52c3f04eda"
   end
 
+
   depends_on "cmake" => :build
   uses_from_macos "zlib"
 

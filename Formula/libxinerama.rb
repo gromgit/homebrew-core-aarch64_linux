@@ -10,6 +10,7 @@ class Libxinerama < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "4ab0937d4cd7c11b2bb1182797b57eca07e9f71b47c928b595c0c2baced536df"
   end
 
+
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"

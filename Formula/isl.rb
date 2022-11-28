@@ -30,6 +30,7 @@ class Isl < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8fed68c1bfa87e3036a0f8193a6edab96830e4f47e07da08280b932e1dac242e"
   end
 
+
   head do
     url "https://repo.or.cz/isl.git"
 

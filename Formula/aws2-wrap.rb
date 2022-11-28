@@ -12,6 +12,7 @@ class Aws2Wrap < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "cc50a75190ea3d89da8c6d92698e453b9234eca77b0ea3c74a374b7c26eb2553"
   end
 
+
   depends_on "python@3.10"
 
   resource "psutil" do

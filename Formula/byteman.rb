@@ -16,6 +16,7 @@ class Byteman < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "8ebeb6d18035c8b6e27b1f8a4d133104e3dd92fd59bb83358014c9a3240d12d9"
   end
 
+
   depends_on "openjdk"
 
   def install

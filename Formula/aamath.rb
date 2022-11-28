@@ -15,6 +15,7 @@ class Aamath < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "1581e65363247bbfaad463f63fe66ec02cb78a7c5ed6d60c18d673eaccee0e87"
   end
 
+
   uses_from_macos "bison" => :build # for yacc
   uses_from_macos "flex" => :build
 

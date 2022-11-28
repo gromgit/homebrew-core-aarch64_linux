@@ -11,6 +11,7 @@ class AvroC < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "03ccf3cf6073ac02af5dc66da4f6bde183c01a581b20e695da7447f94a36c721"
   end
 
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "jansson"

@@ -24,7 +24,9 @@ class Tygo < Formula
 
     system "go", "build", *std_go_args(ldflags: ldflags)
 
-    generate_completions_from_executable(bin/"tygo", "completion")
+    (zsh_completion/"_tygo").write Utils.safe_popen_read(bin/"tygo", "completion", "zsh")
+    (bash_completion/"tygo").write Utils.safe_popen_read(bin/"tygo", "completion", "bash")
+    (fish_completion/"tygo.fish").write Utils.safe_popen_read(bin/"tygo", "completion", "fish")
     pkgshare.install "examples"
   end
 

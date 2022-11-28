@@ -18,6 +18,7 @@ class Aften < Formula
     sha256 cellar: :any_skip_relocation, aarch64_linux: "f343c15ec89b6a437b83792cf46a9a4ba96ee61d9f71e556b1e8190d44349eff"
   end
 
+
   depends_on "cmake" => :build
 
   resource "sample_wav" do
