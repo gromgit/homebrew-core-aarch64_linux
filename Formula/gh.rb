@@ -14,7 +14,7 @@ class Gh < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gh"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1067388c00ed563e5b7b30b63dc9357c194e53c94aece836b53a603cf331c2a8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bc009bd32dc62c2085ab1605ac2bcd0cd8d8aea33fefb6fb42bfd4d1ea26b197"
   end
 
   depends_on "go" => :build
