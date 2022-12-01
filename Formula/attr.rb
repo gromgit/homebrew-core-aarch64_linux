@@ -13,9 +13,8 @@ class Attr < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/attr"
-    sha256 aarch64_linux: "40fbc6955492b5f4b6b43814c153a1b204789a9d98a14612166e073a7b985e8f"
+    sha256 aarch64_linux: "41fbde7590e41f341399daca28715828a00cbb12756c24f36d28535b8206a641"
   end
-
 
   depends_on "gettext" => :build
   depends_on :linux
