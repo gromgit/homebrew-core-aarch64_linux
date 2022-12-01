@@ -14,7 +14,7 @@ class Openldap < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openldap"
-    sha256 aarch64_linux: "0fc26aeea4071c4cca31f1614e1f4a70fbe0e65e654b9cf209f2c2902ceafb46"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a6fd9d1022f8e46ed1487835884f02e945b9208851011457c4b21a8c74213bff"
   end
 
 
