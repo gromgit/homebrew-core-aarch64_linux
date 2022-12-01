@@ -14,7 +14,7 @@ class Go < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go"
-    sha256 aarch64_linux: "189254a8510958d770a6f6c7f1c8d2339b40a6785594bb421613080b2f993676"
+    sha256 aarch64_linux: "d49c6873cbf9000a4432f30333722469d37cf0f72d44b1de1c2065ec59bd011e"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
