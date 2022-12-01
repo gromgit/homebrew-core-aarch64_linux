@@ -7,8 +7,8 @@ class Coreutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/coreutils"
-    sha256 aarch64_linux: "fa964d281b430dc2711e85507b29b16b34a23f0ec57faf2c2e929a10652e4c36"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/coreutils-9.1"
+    sha256 aarch64_linux: "45aad7183d36b1e8f8416a7dbec1fbffbe4e6a63ad3bc703d7279fc451a1cde2"
   end
 
   head do
