@@ -13,7 +13,7 @@ class PythonAT39 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/python@3.9"
-    sha256 aarch64_linux: "10417c9eee21b7ed051bfded17754ac5ad42a15b91ceb4b8ca75eaeb27eec9db"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8c2dd99c1a169bb82fb64a777eac781b718ff2d226d5cdadb2d0aa31d3daab23"
   end
 
 
