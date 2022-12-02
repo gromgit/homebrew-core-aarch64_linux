@@ -13,7 +13,7 @@ class Cairo < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cairo"
-    sha256 aarch64_linux: "8fb863aee69d35b2600580488abf83be1272c4756bb430e8acedcb3a3e0a4ef9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fb66798547f90b8f7f3f2a502a0da88d1181502bad2d7235e1abca5529fac72d"
   end
 
   head do
