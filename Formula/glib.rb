@@ -10,7 +10,7 @@ class Glib < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glib"
-    sha256 aarch64_linux: "889ae1f5f6d423ec0d8f2ee50f9340bf328e4d4934c7e1952a42ee393742875c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0da91af6e0faa94ef0131fad60da1a0ee41b963fb95f063a0e963aa47da1e40c"
   end
 
   depends_on "meson" => :build
