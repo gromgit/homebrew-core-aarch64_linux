@@ -13,7 +13,7 @@ class Ninja < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ninja"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3881dab04cc9421e6865c551b32f9ea2d73c6573bd594e8dc51fc2a93173192e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "efd035b69870037b507307f2de681927a6dd9c0bf7e068c96ddd19d071c5f4c3"
   end
 
 
