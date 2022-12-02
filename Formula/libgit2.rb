@@ -13,7 +13,7 @@ class Libgit2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libgit2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "6ca7b5b214ceec6306f0107549bae90abe00c2a6b6714acfef67545c838f385a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c2456aad149d5f3399a4ed445db5e43a12a36ec3e0069667c09792ab8ca0856"
   end
 
 
