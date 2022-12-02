@@ -14,7 +14,7 @@ class TclTk < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tcl-tk"
-    sha256 aarch64_linux: "983abbed2d3e7da45620b8b1812e36fb84118315fe350e6e0a39a90ffb8032c6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "090ecef33ea74a227d809ff00411c6e2c6562cbf3c4edb3dc7cb1ab7dcbf4caa"
   end
 
   keg_only :provided_by_macos
