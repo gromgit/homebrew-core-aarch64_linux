@@ -15,7 +15,7 @@ class Curl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/curl"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "adc6355dda21ff172f06d2a15cf0b6e5b159794d01e65a336a26c903d4890748"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7e162fd9cbb93c74d29f8926e232a8ad195fbd1984240017f6d7113eb00545ee"
   end
 
 
