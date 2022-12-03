@@ -12,7 +12,7 @@ class Pcre2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pcre2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4bb6d88589bdd74cf438a8407793e2060e9edf0fb6b55857d28127b90b6176e1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "605531b421568e1b0cd2c14681f3e63c48b1889b3eaef0aa8fdd6360384b59bb"
   end
 
 
