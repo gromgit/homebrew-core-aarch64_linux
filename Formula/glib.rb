@@ -3,21 +3,20 @@ class Glib < Formula
 
   desc "Core application library for C"
   homepage "https://developer.gnome.org/glib/"
-  url "https://download.gnome.org/sources/glib/2.72/glib-2.72.3.tar.xz"
-  sha256 "4a39a2f624b8512d500d5840173eda7fa85f51c109052eae806acece85d345f0"
+  url "https://download.gnome.org/sources/glib/2.74/glib-2.74.0.tar.xz"
+  sha256 "3652c7f072d7b031a6b5edd623f77ebc5dcd2ae698598abcc89ff39ca75add30"
   license "LGPL-2.1-or-later"
-  revision 1
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glib"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0da91af6e0faa94ef0131fad60da1a0ee41b963fb95f063a0e963aa47da1e40c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e0bb2d22fd5622c6524985f916d9579d47a2b70798f3c363d15eee4fb698dd43"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
-  depends_on "pcre"
+  depends_on "pcre2"
 
   uses_from_macos "libffi", since: :catalina
   uses_from_macos "python", since: :catalina
