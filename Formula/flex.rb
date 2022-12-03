@@ -17,7 +17,7 @@ class Flex < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flex"
-    sha256 aarch64_linux: "ae632ea3ffdfb5adba884ff0d8521bce25859683c14a435a7ad08417c08d5745"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "321363b1d04c164bb53302273d7eb9e9997816f14d1e7c69e5a44efc9ba828ed"
   end
 
 
