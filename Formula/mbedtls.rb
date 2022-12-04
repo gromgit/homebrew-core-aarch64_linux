@@ -14,7 +14,7 @@ class Mbedtls < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mbedtls"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "5a82121f37b7a29dcaed241bc8dcef59a07489ecf62d0ca7f7657d0311e99536"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8ec768d1c61c105c5b140edd15d5b9ae7993d6f292d7ab384087d4dd53f53c6e"
   end
 
   depends_on "cmake" => :build
