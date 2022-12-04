@@ -6,12 +6,8 @@ class Libvmaf < Formula
   license "BSD-2-Clause-Patent"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "780fe80d3941971968a0dfe1f8384fc5fc240e9994b09da41175a7d5fc56b513"
-    sha256 cellar: :any,                 arm64_big_sur:  "76b4b46c07bde41001d5dd6660de656c369b1cf9653638538348e97ffaeec55f"
-    sha256 cellar: :any,                 monterey:       "a30aaf6bd5878809c3dec5f47d643e4adbda5811a13f5a20d21a3472d5151e2a"
-    sha256 cellar: :any,                 big_sur:        "60fb7784b39ae2aff9a836f08190637e9c7f2ac32755ed24ec3f5ddbac916c64"
-    sha256 cellar: :any,                 catalina:       "99db9a406ddacb8ca0c157dbea53eb12a29ced66091f2af820ae8bf9bc9802cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6697226f2c628ce462531ad546f8152b264f29151710cdb064659ac321cb92a4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libvmaf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "446d32752c3fcbb9222f8c12b0274466250ac85e691893e0cb8262dc7483c4c8"
   end
 
   depends_on "meson" => :build
