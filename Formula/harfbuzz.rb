@@ -1,26 +1,25 @@
 class Harfbuzz < Formula
   desc "OpenType text shaping engine"
   homepage "https://github.com/harfbuzz/harfbuzz"
-  url "https://github.com/harfbuzz/harfbuzz/archive/4.2.1.tar.gz"
-  sha256 "99fcd30e2f4c66d05af3d61ad4cdba2abc2a51ecabb7eb6dc222520a892b50b0"
+  url "https://github.com/harfbuzz/harfbuzz/archive/5.1.0.tar.gz"
+  sha256 "5352ff2eec538ea9a63a485cf01ad8332a3f63aa79921c5a2e301cef185caea1"
   license "MIT"
+  revision 1
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "0d08283d719f92e249e8839539642c0e56b4b92ca945ef4fed0d639e526e6020"
-    sha256 cellar: :any, arm64_big_sur:  "2bc8f1102a78a60e59d24146ace859c2dff2e78d3181374ad90a4a738f28fd77"
-    sha256 cellar: :any, monterey:       "5bdd586cefe1c6cac66ca14783918bdc4d82927923958ed3b64bb2a4e36a1481"
-    sha256 cellar: :any, big_sur:        "d6a5c5591e176cbc1702387678cb8a1ba9ab3f50a0407de6e196dfd6241925c3"
-    sha256 cellar: :any, catalina:       "5d5da7a6cadb6183c709d5cfa504f331a1d05eb1abbdb7107240aaf3b252f79c"
-    sha256               x86_64_linux:   "6dd16ab7c63f64b035fe1d1b33cbe3e6094fddc0e160c2d6a75b284e0c7ed6b9"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/harfbuzz"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3bbf849e12301288f0d390c153da479dc6a415fdd1a213e8e2e11fa7d004d656"
   end
 
+  depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
+  depends_on "python@3.10" => [:build, :test]
+  depends_on "pygobject3" => :test
   depends_on "cairo"
   depends_on "freetype"
   depends_on "glib"
-  depends_on "gobject-introspection"
   depends_on "graphite2"
   depends_on "icu4c"
 
@@ -42,11 +41,9 @@ class Harfbuzz < Formula
       -Dintrospection=enabled
     ]
 
-    mkdir "build" do
-      system "meson", *std_meson_args, *args, ".."
-      system "ninja"
-      system "ninja", "install"
-    end
+    system "meson", "setup", "build", *std_meson_args, *args
+    system "meson", "compile", "-C", "build"
+    system "meson", "install", "-C", "build"
   end
 
   test do
@@ -54,5 +51,6 @@ class Harfbuzz < Formula
       shape = `echo 'സ്റ്റ്' | #{bin}/hb-shape 270b89df543a7e48e206a2d830c0e10e5265c630.ttf`.chomp
       assert_equal "[glyph201=0+1183|U0D4D=0+0]", shape
     end
+    system Formula["python@3.10"].opt_bin/"python3", "-c", "from gi.repository import HarfBuzz"
   end
 end
