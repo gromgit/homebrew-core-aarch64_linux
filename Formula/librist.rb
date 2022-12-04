@@ -12,12 +12,8 @@ class Librist < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "401d0c3cde4ce87ba50676c7235ff523540906436a16fb8194d7cf52a942e2d6"
-    sha256 cellar: :any,                 arm64_big_sur:  "9d822e2949f0db5e4127008c166026bfb2be021219dec45bcb0f48ef3c1724ad"
-    sha256 cellar: :any,                 monterey:       "459881be00dd1e4ab5f0c26fe876d9436fff26331aee9b6cd9c3a9f461ec41f3"
-    sha256 cellar: :any,                 big_sur:        "611f5337f0af96982bfa6248d812854019397f23aeff9989332d13b1f7548883"
-    sha256 cellar: :any,                 catalina:       "3dfe38c829c8b88b5af0d1180e644afa7ae1c560b0a3d3eedec86eafa793221b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "489462998d673e7f21a2d3b3195435d4d72b23c0badd33df21f46e5a8eb3de07"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/librist"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c74aa368d38ec3d1f14aa133fcb062bdce296d83c6b7fa632800fed1a1aa804"
   end
 
   depends_on "meson" => :build
