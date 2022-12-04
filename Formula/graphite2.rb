@@ -8,7 +8,7 @@ class Graphite2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/graphite2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "26cb921dde480af7741e8d4f36601adb38f22d0bac9fbe42caf6ca50fa95d544"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b18afdd43e0f182d1ffc317420c5e49db049ee4f149acf38648fb79dffeac625"
   end
 
   depends_on "cmake" => :build
