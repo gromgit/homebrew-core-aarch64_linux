@@ -7,7 +7,7 @@ class Webp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/webp"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "52afc151179638fc326c1962b178c3b97fd55bd4457dd957c15f700fd7ba0e0f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1007fab882f52f6795f9d100e150dd8ef56eb10ddfc789b7fa81eda080106673"
   end
 
 
