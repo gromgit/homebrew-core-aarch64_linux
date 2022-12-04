@@ -6,12 +6,8 @@ class Libraqm < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "069e6e0f6bab066c06811c7abd7578404b9eb9ee6833629a2bec9ab2a1f1b743"
-    sha256 cellar: :any, arm64_big_sur:  "118bb1b1daaa4360a1399e265463b806a76b34abff36b28b83a27f376347f32b"
-    sha256 cellar: :any, monterey:       "958471b39a56ede02728876c421330cb14a112901d436f5f9cc9a2f4fdd2bb9e"
-    sha256 cellar: :any, big_sur:        "7d6f5ad30c91463733eedb4db44df068b1265a5e0c03b5254d35ef33a2197a8c"
-    sha256 cellar: :any, catalina:       "8b67c3c8fc0ad8885727fae09c08f44ee0764b976527161688db80838b625ec4"
-    sha256               x86_64_linux:   "d9a54ed8657f519f1644544b5867b079903768c27e9db8abf7f4355a3fc1b839"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libraqm"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "92c88d2290445781a0d1bbafbac1c9462d2ab73e661edeb50cd50248583561b6"
   end
 
   depends_on "meson" => :build
