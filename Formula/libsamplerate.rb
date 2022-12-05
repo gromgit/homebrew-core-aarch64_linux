@@ -12,17 +12,13 @@ class Libsamplerate < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "5ef2feb5aa853f321b4b87fc7cde27d2fd34c2a012ca6c46b433dde006f3561b"
-    sha256 cellar: :any,                 arm64_big_sur:  "15a9996d530a20df675b808e5cd2d90c506f419c083f0deeb7c361cb6776733d"
-    sha256 cellar: :any,                 monterey:       "a4e347a4bcb4b62abc7e33110e8f3fea56e621d26d98e254c17d6e7e61049a81"
-    sha256 cellar: :any,                 big_sur:        "1181186b50d4232509d88f4f8f7fe8e016adb220cc529c5cc84b6d91abaef08c"
-    sha256 cellar: :any,                 catalina:       "36215e2af706686ca333a685a08121d4516d831d0ab99e4188002b7ceb5886c9"
-    sha256 cellar: :any,                 mojave:         "cf0ae6a23af23ce858c7c4301e3c487013d46bca1859cf2b5642068a3b7da861"
-    sha256 cellar: :any,                 high_sierra:    "6003a546793b85dcba886124b962a3ea332ea35cacce64a1cb1af9af94437807"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc57fd09a0d20d887a9c12042d5c0ba395e801a8f4fe7e5faba121f0cfc2a84b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsamplerate"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b049e5debb5b595abfc6fd43117161caaed18881fed5df3543a7089c01036c2c"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "libsndfile"
 
@@ -32,6 +28,8 @@ class Libsamplerate < Formula
   patch :DATA
 
   def install
+    system "autoupdate", "-f", "-v"
+    system "autoreconf", "-f", "-i", "-v"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make", "install"
