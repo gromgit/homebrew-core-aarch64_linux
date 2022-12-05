@@ -24,7 +24,7 @@ class Gcc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4980beda02e3629ce9bcdaf1c7e4b1a43ad308279b1463d357f3295990bf9351"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ba3a59f4d1be0a2542f3d99e36574aa4c884ad4f2b14bbfe1afa7b8b790af866"
   end
 
 
@@ -102,8 +102,14 @@ class Gcc < Formula
 
       # Change the default directory name for 64-bit libraries to `lib`
       # https://stackoverflow.com/a/54038769
-      Dir["gcc/config/*/t-linux64"].each do |f|
-        inreplace f, "m64=../lib64", "m64="
+      cfg_files = Dir["gcc/config/*/t-linux64"]
+      cfg_key = "m64"
+      if Hardware::CPU.arm?
+        cfg_files = Dir["gcc/config/*/t-aarch64-linux"]
+        cfg_key = "lp64"
+      end
+      cfg_files.each do |f|
+        inreplace f, "#{cfg_key}=../lib64", "#{cfg_key}="
       end
     end
 
