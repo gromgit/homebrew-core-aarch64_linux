@@ -12,7 +12,7 @@ class Flac < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flac"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "d461e4eeec4cf1c23e11cca6b45dda203d3cdc3baee324407e93ac8247ab6835"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "952f6cc15aa2743b0339621c4c58b9006717dfcb7ae536a136464caccd35170a"
   end
 
   head do
