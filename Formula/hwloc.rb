@@ -12,7 +12,7 @@ class Hwloc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hwloc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "6fd7ed300927d8bf814bf8de106d3175f16017f0e16bcf44a0acdc0a6397c251"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6d8f9a721f62c62970cc3817b783684b1edbfdaf32d1d2d1fc42ecbbd8ce97f9"
   end
 
 
