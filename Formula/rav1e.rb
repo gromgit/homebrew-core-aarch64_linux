@@ -12,12 +12,8 @@ class Rav1e < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9d48bd483e2d92e70f329a6adf29c93d67af0d6510c3d7163e49000067be4a26"
-    sha256 cellar: :any,                 arm64_big_sur:  "f87657ce277bf69054832d9e628edd18a4f4ea39df298a2e81db0a85f5da0e56"
-    sha256 cellar: :any,                 monterey:       "4cc9765faec8aeca62be987bbcd113fd6227f4ed027dcc64e9b197ec52663c23"
-    sha256 cellar: :any,                 big_sur:        "4464e4eec498522d840e1ef3b919bba86ca7a2eb04d12a9b939005382437b201"
-    sha256 cellar: :any,                 catalina:       "9ce2a8b3dff9374e3a9603fc51e5b26bee38450ad91df06681fcb02f2844f5cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e3d6e1b0f3b5e7c1b2a8936eeeb59a24257fa0c71f6c8f70aaf647b4c694cfc"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rav1e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c61c87c8a20dbdcb900ada1e28ad8e110bf71fd70d89175cfb7b9d94a7d1df46"
   end
 
   depends_on "cargo-c" => :build
