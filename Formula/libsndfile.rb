@@ -12,7 +12,7 @@ class Libsndfile < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsndfile"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c61d3782bad3de98cbbc02a93183618252b1dd0e0fb05f7c0a64000644af1570"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0d6c39a937455e658a25939dea8b7557f3a8c826ed7942691bebace7db6cadcc"
   end
 
   depends_on "autoconf" => :build
