@@ -14,7 +14,7 @@ class Dbus < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dbus"
-    sha256 aarch64_linux: "2f76d7bf5730318c4ecbc6c7e9a76597c5e49b84d4d83b57a583c6f1828246fc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ba43831f1b68a50833bc4054e9e4796c09ec73189ecbf2d031a2da2c086147aa"
   end
 
   head do
