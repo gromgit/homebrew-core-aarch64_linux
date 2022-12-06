@@ -7,7 +7,7 @@ class GnuGetopt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-getopt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "9674852286b9327adcfd6c58470839c10596f0b01c6a7282758fa5f535a5f0de"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "28ce4923816d7dc7664c003a269f81b4ac5eb47315b953e2c5ab52f67f39a5b0"
   end
 
   keg_only :provided_by_macos
