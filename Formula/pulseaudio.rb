@@ -22,7 +22,7 @@ class Pulseaudio < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pulseaudio"
-    sha256 aarch64_linux: "b05d5e1efa25bd67e7a29bf368bd83949bcc7335d51fd56012872b7ffc9a8919"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "39b1794eba88869e8e69261e46967426366245f828a60c2aa1bdc4dd8f82a6b0"
   end
 
   head do
