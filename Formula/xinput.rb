@@ -7,7 +7,7 @@ class Xinput < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xinput"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3bfae7b3fafc6d9511af35e639192120ec71f641101e05bcd83f6e7b4ee31c1f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4cc03d762bfc6989dee945a8364f61b1642624db9a937e94ebba6670411d2899"
   end
 
   depends_on "pkg-config" => :build
