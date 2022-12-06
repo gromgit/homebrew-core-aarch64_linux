@@ -12,7 +12,7 @@ class Xmlto < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xmlto"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "bc8cb79d9a2a6b76e111a485a495d4389dc9a17181a1825abb394a081a7bebfa"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e8326d6e200e8503b5321444517eadbc85e5e0e32c5d2373a805b593e1da479c"
   end
 
   depends_on "docbook"
