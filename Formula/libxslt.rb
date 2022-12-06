@@ -24,7 +24,7 @@ class Libxslt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxslt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7e1943805c172681781d365d6a8e70205b3050862ab2c9ca128da0aa91047607"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa1469750fd701e3a31ed67540ccc86d103160a7c27935fc75b1d55b44e63b1f"
   end
 
   head do
