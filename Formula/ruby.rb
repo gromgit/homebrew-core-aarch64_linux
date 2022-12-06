@@ -12,7 +12,7 @@ class Ruby < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ruby"
-    sha256 aarch64_linux: "8aa861ac7573975f35e788b78e9a2fb8f6e4d0e3bda31bfe95dc2a32f49bf8b0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "24941ea2f5e66356c4ed52df0e4d2bce657f4542f234739e0e59da7c434e0e4b"
   end
 
   head do
