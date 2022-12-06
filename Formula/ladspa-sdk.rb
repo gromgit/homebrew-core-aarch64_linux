@@ -11,7 +11,8 @@ class LadspaSdk < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "72ba7e13eb469fb95d31f484047e2cef71faf60a965b91f8e2bdd6239db6c358"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ladspa-sdk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6e354e4e628c62d8c28dc289c3290d1580cc949c6eab35d6f1ecb8306bc9fb8a"
   end
 
   depends_on "libsndfile"
