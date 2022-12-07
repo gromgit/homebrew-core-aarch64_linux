@@ -13,7 +13,7 @@ class SourceHighlight < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/source-highlight"
-    sha256 aarch64_linux: "433da6cae1617978324ef4db0712ff44bdc4b4369b0b93e0fc369f9de746160e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "41109f1aaf2a176881997ef3285bcee08379193acbc1b80ef2fa05bc1a9ab331"
   end
 
   depends_on "boost"
