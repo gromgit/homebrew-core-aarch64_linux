@@ -15,7 +15,7 @@ class Lz4 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lz4"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c730d3ed7bdac1b27c22a1ff61b5958f5a8331b6766587176d1538ace277ceb4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1be08a0037740447540de05b67b6b85867c14935853175adc7b58617698a852c"
   end
 
 
