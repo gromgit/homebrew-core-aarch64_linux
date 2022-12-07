@@ -14,7 +14,7 @@ class Rsync < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rsync"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "18af2c8e3eae39fc22d14c0c9096a9b05edc0e0b880fa337523dd8b3d2f136c8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "728edf0814e3c580e1c2319b4476558f0eb4be92d5dad57f25580391b4a73ac0"
   end
 
   depends_on "lz4"
