@@ -12,7 +12,7 @@ class Libarchive < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libarchive"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e2db76b97e7cc990207c57056f50c81faf27e0937a3d5653f371f264c2ad91f1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "87bac55af18daca9de462c96afe55a4d8740f5151d9b34bc67aefe37715ab649"
   end
 
   keg_only :provided_by_macos
