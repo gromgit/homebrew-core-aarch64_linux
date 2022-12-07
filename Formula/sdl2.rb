@@ -1,22 +1,13 @@
 class Sdl2 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
   homepage "https://www.libsdl.org/"
-  url "https://libsdl.org/release/SDL2-2.0.22.tar.gz"
-  sha256 "fe7cbf3127882e3fc7259a75a0cb585620272c51745d3852ab9dd87960697f2e"
+  url "https://github.com/libsdl-org/SDL/releases/download/release-2.26.0/SDL2-2.26.0.tar.gz"
+  sha256 "8000d7169febce93c84b6bdf376631f8179132fd69f7015d4dadb8b9c2bdb295"
   license "Zlib"
 
-  livecheck do
-    url "https://www.libsdl.org/download-2.0.php"
-    regex(/href=.*?SDL2[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "d299f67194020898fa457130d11ecc89beab6020d2d8ed6cb6c546ca91858f03"
-    sha256 cellar: :any,                 arm64_big_sur:  "77512d6fc260326313d7c02d8442a967740d4b7e616a6995e87844dcf7a2f523"
-    sha256 cellar: :any,                 monterey:       "eac3c4de97e453a8e26e142fae4f960b81685a6278193af27d9ab231a975c41c"
-    sha256 cellar: :any,                 big_sur:        "cb7bd018480f11182cf123add9d2f409b2de0013eb40fc08ac94f79e5b8c4848"
-    sha256 cellar: :any,                 catalina:       "fd1311f75f9b584bd8621ec419deb05a63f29de0e5ae8fd88b737186d5bd2e97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3522d4ffdbae2fd6e413dd10027d7c645a87ea19ecd4443423fba7cf316c4d2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sdl2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "df273d8dd6c6ef2bfe6de7807d25afe81419e50cd132b6bcc05f35fe973d69f4"
   end
 
   head do
@@ -33,15 +24,15 @@ class Sdl2 < Formula
     depends_on "libxcursor"
     depends_on "libxscrnsaver"
     depends_on "libxxf86vm"
-    depends_on "xinput"
     depends_on "pulseaudio"
+    depends_on "xinput"
   end
 
   def install
     # We have to do this because most build scripts assume that all SDL modules
     # are installed to the same prefix. Consequently SDL stuff cannot be
     # keg-only but I doubt that will be needed.
-    inreplace %w[sdl2.pc.in sdl2-config.in], "@prefix@", HOMEBREW_PREFIX
+    inreplace "sdl2.pc.in", "@prefix@", HOMEBREW_PREFIX
 
     system "./autogen.sh" if build.head?
 
