@@ -11,12 +11,8 @@ class Libusb < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ab90516396d8dc99f96d31615bcbddfcfd2082fcc7494dabb9d22b275628e800"
-    sha256 cellar: :any,                 arm64_big_sur:  "d9121e56c7dbfad640c9f8e3c3cc621d88404dc1047a4a7b7c82fe06193bca1f"
-    sha256 cellar: :any,                 monterey:       "e79be7d4c611f0017567172771761b1df62d140e79ffa6d2538577eb24a48e44"
-    sha256 cellar: :any,                 big_sur:        "963720057ac56afd38f8d4f801f036231f08f5cf7db36cb470814cbc1b38e49c"
-    sha256 cellar: :any,                 catalina:       "72ed40aec0356157f3d5071ecb28c481b3f3502985a320ec1848cdc8cf8483c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cae18b6a0315f7e3d8fa8039fd18d6d20fd7f8a0dbb9399e63c95ae0c52fb9d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libusb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "afcd9eb1450fc7af1e21b21a21d01859a4aa432581db0ff6e028fadfada320cf"
   end
 
   head do
