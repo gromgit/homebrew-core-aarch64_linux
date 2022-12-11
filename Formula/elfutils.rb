@@ -12,7 +12,7 @@ class Elfutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/elfutils"
-    sha256 aarch64_linux: "42375a30e740fbe9c617e9937cbceb5d9211022791e795bc01d1e493a4c6615c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "90002cb9f57d7bd61085f3a61c8ba67fcacfc1ece4a81a586b7a4bcd349ab52c"
   end
 
   depends_on "m4" => :build
