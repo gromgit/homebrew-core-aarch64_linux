@@ -26,7 +26,7 @@ class Ocaml < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ocaml"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1d8372e6966024d2949989105b5a45ae30240f73d71342a0273a368b1fb943a2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3eb568f2b8228f022f7852eb769f53b5d344e016fb429f98868cd14c82718c09"
   end
 
   # The ocaml compilers embed prefix information in weird ways that the default
