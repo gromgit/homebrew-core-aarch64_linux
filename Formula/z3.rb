@@ -14,7 +14,7 @@ class Z3 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/z3"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "72367c7d1e9b1692632a727be7a6e43cb057467363ba38040fb5ba58faf1ab51"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7ba23089383424ff3159ca80a4372b2bc48214cd678b7b72666efd9ea83aebc6"
   end
 
   # Has Python bindings but are supplementary to the main library
