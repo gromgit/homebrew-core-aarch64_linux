@@ -7,7 +7,7 @@ class Swig < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/swig"
-    sha256 aarch64_linux: "13e2c03166fc7cb065b2e6eedfd5a878153782a4551dbf2e05345a8a8edfb435"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a20b125517a561a09d1015615ad43d846f68bda050af68612ce0cff1fc4a165"
   end
 
   head do
