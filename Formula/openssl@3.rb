@@ -13,7 +13,7 @@ class OpensslAT3 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openssl@3"
-    sha256 aarch64_linux: "5e34e67dc2b54716544d0855be0221b6cc2fcb56ead294d166cece63c7867f9a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9dd4e44c6b2f841710e203ff50e15ccdaecb31995d80b62973d145680f67c37f"
   end
 
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
