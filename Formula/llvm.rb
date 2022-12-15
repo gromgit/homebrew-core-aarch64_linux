@@ -15,7 +15,7 @@ class Llvm < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/llvm"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "89f50284e1c8a160abd9e872f7675a02d761fbc3b4ef6c33fb5e3d966620be2a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f2b15c1d048fd79ee365d7cc9fca9cdedb3f2dd3185b5dd58c3c33e8f1d9e345"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
