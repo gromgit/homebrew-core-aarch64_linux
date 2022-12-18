@@ -1,10 +1,9 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v18.8.0/node-v18.8.0.tar.xz"
-  sha256 "2b5d9825d05ede6614f1668a8d97d774fe92ebc81088ec5fdf58184dce3c86b9"
+  url "https://nodejs.org/dist/v19.1.0/node-v19.1.0.tar.xz"
+  sha256 "4ea9ba1f992815fb823b022a62b61f536121f970fe88c6395c7e3af4e9cf46a0"
   license "MIT"
-  revision 1
   head "https://github.com/nodejs/node.git", branch: "main"
 
   livecheck do
@@ -14,7 +13,7 @@ class Node < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/node"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "06e29bca641f46a5f38d3fe086fecf1146826d68e7bc333c02c08d4f6f31eecf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3222c079c376fb7d942884ed1662f7b47378bb3fecb4944afe097c675eb73927"
   end
 
   depends_on "pkg-config" => :build
@@ -33,10 +32,6 @@ class Node < Formula
     depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1100
   end
 
-  on_linux do
-    depends_on "gcc"
-  end
-
   fails_with :clang do
     build 1100
     cause <<~EOS
@@ -49,16 +44,15 @@ class Node < Formula
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-8.18.0.tgz"
-    sha256 "552a46197d331cef2823d01ff19bc0b7ae2680e1d49afd6b91811215e6d29baa"
+    url "https://registry.npmjs.org/npm/-/npm-8.19.3.tgz"
+    sha256 "634bf4e0dc87be771ebf48a058629960e979a209c20a51ebdbc4897ca6a25260"
   end
 
   def install
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
     # make sure subprocesses spawned by make are using our Python 3
-    ENV["PYTHON"] = which("python3")
+    ENV["PYTHON"] = which("python3.10")
 
     # Never install the bundled "npm", always prefer our
     # installation from tarball for better packaging control.
