@@ -17,7 +17,7 @@ class CAres < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/c-ares"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2cab0be79ba8fd9fed24a0fa52af2ea6679490c36a3421830c96a5082973b103"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3d5fa9a1551264becb748b984080f0e1d1ff4fd0f47c701120ec4e3f4ca66c0b"
   end
 
 
