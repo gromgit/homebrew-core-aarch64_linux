@@ -1,13 +1,13 @@
 class DartSdk < Formula
   desc "Dart Language SDK, including the VM, dart2js, core libraries, and more"
   homepage "https://dart.dev"
-  url "https://github.com/dart-lang/sdk/archive/refs/tags/2.18.0.tar.gz"
-  sha256 "600ac3fb8276a164ec8ae33f55b3c67816a9a4cbe30cf8b0173634763e536936"
+  url "https://github.com/dart-lang/sdk/archive/refs/tags/2.18.5.tar.gz"
+  sha256 "81bbc28a148fe147676a8dde1dae4579cd7e760be60c332c2dfd3dcfbade0a93"
   license "BSD-3-Clause"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dart-sdk"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c4db624fd9026c80aaa0d06d2ae87d86ccb77347ae6bab4be9d58016411723ac"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f3b3de8dd9276e9fba7a3e50be9a448dfb1bb7b6755504b7e19f52ee84b5dc23"
   end
 
   depends_on "ninja" => :build
@@ -19,7 +19,7 @@ class DartSdk < Formula
 
   resource "depot-tools" do
     url "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
-        revision: "138bff2823590b3f3db440425bf712392defb7de"
+        revision: "6fde0fbe9226ae3fc9f5c709adb93249924e5c49"
   end
 
   def install
