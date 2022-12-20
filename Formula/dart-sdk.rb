@@ -7,7 +7,7 @@ class DartSdk < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dart-sdk"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "caa9a31a6c11992406c2a74fe8cbf637a2f5e5808359d7c714683cc4a793b342"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a1a4d7c832154e1df3cea6d860a26de690b8c534f357a4918a2834e896c0b74c"
   end
 
   depends_on "ninja" => :build
@@ -28,12 +28,12 @@ class DartSdk < Formula
 
       ENV.append_path "PATH", "#{buildpath}/depot-tools"
       system "fetch", "--no-history", "dart"
+      arch = Hardware::CPU.arm? ? "arm64" : "x64"
       chdir "sdk" do
-        arch = Hardware::CPU.arm? ? "arm64" : "x64"
         system "./tools/build.py", "--no-goma", "--mode=release", "--arch=#{arch}", "create_sdk"
-        out = OS.linux? ? "out" : "xcodebuild"
-        libexec.install Dir["#{out}/Release#{arch.capitalize}/dart-sdk/*"]
       end
+      out = OS.linux? ? "out" : "xcodebuild"
+      libexec.install Dir["#{out}/Release#{arch.capitalize}/dart-sdk/*"]
     end
     bin.install_symlink libexec/"bin/dart"
   end
