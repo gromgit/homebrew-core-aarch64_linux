@@ -13,7 +13,7 @@ class Mpg123 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mpg123"
-    sha256 aarch64_linux: "5fc435fac02f9b7cab1fdf3aa89ad73d9d43cb693f4d7f176704ac3f64a402ea"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7b1145f0193a1e95af07289d9e533277f300da0bc28ff9b3b4b22a534ce8ddb6"
   end
 
   def install
