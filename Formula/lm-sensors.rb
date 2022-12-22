@@ -8,7 +8,7 @@ class LmSensors < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lm-sensors"
-    sha256 aarch64_linux: "d1b0702359d90f82f8d921ae6fcf97edf6374684de8ebd01cf13a5e2a9324eb4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a58a7bfb0cbe1750ac1a8f57caf7bf1eaf0f9461f36bd59aa3ebdcb2ed05e890"
   end
 
   depends_on "bison" => :build
