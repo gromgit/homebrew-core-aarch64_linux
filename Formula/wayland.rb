@@ -12,7 +12,7 @@ class Wayland < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/wayland"
-    sha256 aarch64_linux: "47c0fe645ce5afe67f8c7f76be9e0395b45b8f8288ed2fbf561e78ba1f2693b9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "41509eaa9a0fd7e220b0f71b62d47634cd1a7c6dc7c7bad9b498c0453076cf36"
   end
 
   depends_on "meson" => :build
