@@ -7,13 +7,8 @@ class Portmidi < Formula
   version_scheme 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "9f36b2b3dfcc7e4ef4e8770b4fbf65ef56153c74d9e59f5ad8c4d575ea150aed"
-    sha256 cellar: :any,                 arm64_big_sur:  "9d427fa7b46931a71ab8d0b4c4439860cfe10dc58aeac76716687e8592809df9"
-    sha256 cellar: :any,                 monterey:       "d71bf72668045657cf5bde48294205957ee4a01f5ba2165183b13a8608a1211b"
-    sha256 cellar: :any,                 big_sur:        "5de1c249c9bb53e5a5481c9dcbd7817108b51a7f3803067b49d7a76cb6c0cb0b"
-    sha256 cellar: :any,                 catalina:       "f8e118bd15493c94e49b6c8e8c7e1c8368e42b34d9c442d08dcd6d8361e517d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52b02493f0f5566f3c37278c10db9c0bdecd3324193aaeaa2fcff7b04a2f03ef"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/portmidi"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bd4326afc5e6c175c49d11328338a4a56e54eeba535ce440df7b1950f91e4d2c"
   end
 
   depends_on "cmake" => :build
