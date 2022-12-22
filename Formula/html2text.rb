@@ -8,7 +8,7 @@ class Html2text < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/html2text"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e6df4678bbedbf0fc55491a529d94515e9ac4b9850b9d7f656bb7b01bfac88f9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cb30fa42f3c3b7f2d606c16f523d7ef266121bfe799b74d253b0a9e0121d20de"
   end
 
   def install
