@@ -13,7 +13,7 @@ class Glslang < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glslang"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "fe7b53e16f324b36966f8c2c94db8ef344fd3b25c336264db8ae1c0965f60907"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5c200fa42866a166a4470d88cd6ba4a0efb14ce5d8c4ed03ae565834501ebbfe"
   end
 
   depends_on "cmake" => :build
