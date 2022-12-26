@@ -12,7 +12,7 @@ class Fontconfig < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fontconfig"
-    sha256 aarch64_linux: "0be548f6b750243a63cfd401df354b3833306487ebfc2fe13ba8ed0c42a3238e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7ea03187306bc45e9d723cb22031334d520f2d1dcfa4591665af5cdbd4cc72da"
   end
 
 
