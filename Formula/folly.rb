@@ -1,19 +1,14 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
-  url "https://github.com/facebook/folly/archive/v2022.03.21.00.tar.gz"
-  sha256 "d7286d63db9ce10d41bdc65bcf6f44b953dbb69fcb0387e9d5752ef93fc507a0"
+  url "https://github.com/facebook/folly/archive/v2022.09.05.00.tar.gz"
+  sha256 "17a3804dd9aacd8a2440b3e0235cdfc2659f880c439b9a7533555d7061702f64"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/facebook/folly.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "77d72d8addf9fce8ff33c0a5d7b2d036d66117534b7c61cce815d57e6155a49b"
-    sha256 cellar: :any,                 arm64_big_sur:  "033262f11e55bec68e4a4ce1da46849dbc65de83b1ec042f621bc75afadac883"
-    sha256 cellar: :any,                 monterey:       "cc233916eb2a4bf4d762a4f232540b3b29ccd8ad2017ae72113182f2c826db2a"
-    sha256 cellar: :any,                 big_sur:        "685a7995266e51b58d05eb29abb2457b0c243f073d082abe0f78464ab0231928"
-    sha256 cellar: :any,                 catalina:       "e66720025e7981d4c12f72d997c96fb963853ea7820fb6b7f69ed85da5007437"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1d058af95ae602872bff74942e4be33c10c9274e26d48d3e82fed705efee6cd"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/folly"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c6c3f7902c06241a315284c9f958517991d8aad87f02f00e310364d4a5dea4c"
   end
 
   depends_on "cmake" => :build
@@ -49,15 +44,11 @@ class Folly < Formula
 
   fails_with gcc: "5"
 
-  patch do
-    url "https://github.com/facebook/folly/commit/53637452d07ff8c24a77d3f5f73bbe79af501ba3.patch?full_index=1"
-    sha256 "e8111e2a4dd8fe3dcf7c84c0db0b962c0df1caeb4ad4c425df546dde24c0af50"
-  end
-
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
-    args = std_cmake_args + %w[
+    args = std_cmake_args + %W[
+      -DCMAKE_LIBRARY_ARCHITECTURE=#{Hardware::CPU.arch}
       -DFOLLY_USE_JEMALLOC=OFF
     ]
 
