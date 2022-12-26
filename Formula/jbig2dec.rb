@@ -17,7 +17,7 @@ class Jbig2dec < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jbig2dec"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ac7122d60c77b3407a5873779efb5eace356dc55a9da000c4dac63670423c984"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4b5e326faf8141e9f35e61002ae8941ed3a44a5969b2d28c3ccb0d0318e4db5a"
   end
 
 
