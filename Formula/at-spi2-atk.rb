@@ -6,7 +6,8 @@ class AtSpi2Atk < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 x86_64_linux: "f68be9dbb59804bc1f6de1615def3c73bf3b7d994e94844e521806cd5331686d"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/at-spi2-atk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f52711a0c3c4d3132e41b1f8b2cb0ea737b4abbe544430c3eb74559e7778e17d"
   end
 
   depends_on "meson" => :build
