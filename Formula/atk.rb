@@ -6,12 +6,8 @@ class Atk < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_monterey: "078fba0fd9c27175313b3232fdf2fe36e72a19e1efdef97a3c622d23869313c4"
-    sha256 cellar: :any, arm64_big_sur:  "97a4d14824805cdd1c6b9bdee415e3420bfd54beab814d343648395fcc684f69"
-    sha256 cellar: :any, monterey:       "faca1ff938b34b23e284321d8037673f270030aae0c7ea8b44f8a4088c8e9ab5"
-    sha256 cellar: :any, big_sur:        "254605e7c9a5f95f7e1aaec2d58e60c8cdaf4fde910e92a0a032938cb98efc57"
-    sha256 cellar: :any, catalina:       "048076e890b1b184892bd58f1059f701a1665ac378f5e1431ae681210ae28b0c"
-    sha256               x86_64_linux:   "4ffb42482b22fe9150193395fc3fc0a41d1f92e3a8c0aa7e9dd17aaef8ff6f7c"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/atk"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f5a98bfd750bdaea1f8c36a44639d8abf842eeff0afd784265e62a6b5f1e466c"
   end
 
   depends_on "gobject-introspection" => :build
