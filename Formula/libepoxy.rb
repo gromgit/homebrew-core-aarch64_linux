@@ -13,12 +13,8 @@ class Libepoxy < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "a5164efc11c9f11adaba87595c6a12cadf12671e860e9b38d11fa3081c7b2c1c"
-    sha256 cellar: :any,                 arm64_big_sur:  "839cc3388516586debdc98d72a3fb4b8237ee432a5be7262e8c835367093f29d"
-    sha256 cellar: :any,                 monterey:       "9ec0246218c3d31cfce70e1a492f7cdc03884f638d9986be28bec0b769d6648b"
-    sha256 cellar: :any,                 big_sur:        "c398ece0b10339f409d48d3b06866285f7a58294a3dca6d9c88e798a35af6b36"
-    sha256 cellar: :any,                 catalina:       "2b5537e288b18b6545d0cf78229d5c2b695d0d2e51b627e21e77573c88217b42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8798e1682f355df0c5009b8b968ecb2b9bd447f32683ad21f10e68ea60320819"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libepoxy"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "603df999f1d6f12c1c060dcf51b40a87104797051bd4c333ac4efff2a06d97d2"
   end
 
   depends_on "meson" => :build
