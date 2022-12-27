@@ -6,12 +6,8 @@ class GsettingsDesktopSchemas < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "20d3476344356c605545eb88740d06692e630cb59c90561a43ec15e8cc775ec9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "20d3476344356c605545eb88740d06692e630cb59c90561a43ec15e8cc775ec9"
-    sha256 cellar: :any_skip_relocation, monterey:       "20d3476344356c605545eb88740d06692e630cb59c90561a43ec15e8cc775ec9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "20d3476344356c605545eb88740d06692e630cb59c90561a43ec15e8cc775ec9"
-    sha256 cellar: :any_skip_relocation, catalina:       "20d3476344356c605545eb88740d06692e630cb59c90561a43ec15e8cc775ec9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff08511c0988eec4bbe0c5a37bbbcbc7070ead8581d9e7ffa49fbe842d6bd562"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gsettings-desktop-schemas"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "829978940769478dba7f9f7009ee790f59105f8d8f83ea1089f15d78d59e4f6e"
   end
 
   depends_on "gobject-introspection" => :build
