@@ -1,8 +1,8 @@
 class IsoCodes < Formula
   desc "Provides lists of various ISO standards"
   homepage "https://salsa.debian.org/iso-codes-team/iso-codes"
-  url "https://deb.debian.org/debian/pool/main/i/iso-codes/iso-codes_4.9.0.orig.tar.xz"
-  sha256 "d090112a529dbe37a0a1b46b8246cc1cfca92e0281ba27239426a2b693e28967"
+  url "https://deb.debian.org/debian/pool/main/i/iso-codes/iso-codes_4.12.0.orig.tar.xz"
+  sha256 "650f050c3553adbf727e5ac74bd52a04ddc6b9f1bac79f1c041c02e581e209ad"
   license "LGPL-2.1-or-later"
   head "https://salsa.debian.org/iso-codes-team/iso-codes.git", branch: "main"
 
@@ -12,7 +12,8 @@ class IsoCodes < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "eec87541cb08d1862596b5768b2ee076259475a2b3d3d966acffdaf91d0f3388"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/iso-codes"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a9409008033bf8bc52b6f19881079e4eb5a4dd3a38bf0c2bd36d55d2c1e45ce7"
   end
 
   depends_on "gettext" => :build
