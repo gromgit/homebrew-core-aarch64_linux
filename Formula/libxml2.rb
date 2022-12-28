@@ -15,7 +15,7 @@ class Libxml2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxml2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "be89c1b7d25be8cbca1badc910d93125067ff3b11e5e492a69b1dd7490219bb2"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e8244e2318814cd95fa707715787c1fbffade8391254c3e5570a8ecd7a32212b"
   end
 
 
