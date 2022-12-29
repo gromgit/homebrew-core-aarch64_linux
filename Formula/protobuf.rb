@@ -12,7 +12,7 @@ class Protobuf < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/protobuf"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a46f71f968f429d44d360cee08684d493ce92b5dbcf3d26395b2e86e6b5d12ea"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "464bf7fa4cfff77ad02535331e13f35baa4e8d1686a61c26e28d61afe4332e9d"
   end
 
 
