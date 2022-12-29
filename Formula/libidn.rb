@@ -8,7 +8,7 @@ class Libidn < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libidn"
-    sha256 aarch64_linux: "5d31c9adecba628b47ec689e84aada9de34f2ac7f502fbee549716636f99bb72"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b0de87831aad49af29e35e754f7c5ac547d93859b5bf69c7ccc715bd7887b28e"
   end
 
 
