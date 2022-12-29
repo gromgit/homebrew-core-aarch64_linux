@@ -13,12 +13,8 @@ class Grpc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "793db28c3754c650a34994d04e7d076c15a350a1c913766b12582b4290e31d20"
-    sha256 cellar: :any,                 arm64_big_sur:  "e65fb0ab67fedc9e786d86fa756d6168e554cf7e7cc6d0f14ff23a6d10effa58"
-    sha256 cellar: :any,                 monterey:       "7324e681b5c911aba2a5494150ab3b8c0bca5b68ca6fc40922f63089d97a251e"
-    sha256 cellar: :any,                 big_sur:        "441915049b27fac9d8d41731ef7058341b534832ce7d6ac3ebf6a620854b226e"
-    sha256 cellar: :any,                 catalina:       "3e635a24855026d5505d663942d26e26d6f41ce447addaf8d25c7abdc0feece3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3953a0f93aec43874638feb42e0c5e3005d379e8a2def0e050b9c65f39b5073"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grpc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c08f3e5f48202578c79f5dc8c4ec6f84eea8c9663a57184f20cf9d3ea4baeeb6"
   end
 
   depends_on "autoconf" => :build
