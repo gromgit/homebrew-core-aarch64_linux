@@ -8,7 +8,7 @@ class Guile < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/guile"
-    sha256 aarch64_linux: "ec3de377b5fd05c39107e978bc480e6add14162d814840dd811598ffa05c3ab6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8db16c9376dcfd5842858f204a2507a2196cd0386a08fedafc6a411355cd3db7"
   end
 
 
