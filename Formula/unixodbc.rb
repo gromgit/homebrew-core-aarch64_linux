@@ -13,7 +13,7 @@ class Unixodbc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/unixodbc"
-    sha256 aarch64_linux: "095afd07150463fc7fc519ff70c744708297e9ac8ecb0960222a036249af6751"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0d888fe74eaa8c609a36c8bc6f82bc5c00f168480095dfd3c57f3610bead5b18"
   end
 
   depends_on "libtool"
