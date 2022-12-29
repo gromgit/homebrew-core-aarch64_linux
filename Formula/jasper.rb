@@ -13,7 +13,7 @@ class Jasper < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jasper"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2fa793ff895ce807e93032d0244ccb6fd2a40f219ae00b3435266f0bf36ddcbd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "11bf5b81acb4055f003a3db46c402991f5d4c5c34218aaaf13b493aae2aa4cd2"
   end
 
   depends_on "cmake" => :build
