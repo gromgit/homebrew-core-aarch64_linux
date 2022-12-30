@@ -17,7 +17,7 @@ class Netpbm < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/netpbm"
-    sha256 aarch64_linux: "ef0a007c6d2ece0a9930f0529607f3cecef08db712f22891eb9740e141280196"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "74939c8208f665af584d4d25ebf100a0740e23d679b719184ad26cc733c2896a"
   end
 
   depends_on "jasper"
