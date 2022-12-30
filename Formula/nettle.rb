@@ -8,7 +8,7 @@ class Nettle < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nettle"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "5a4a94937adead40600fd6168e9e1a1f3ef7f9c47298f10775bfdf7c5f3476a5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c726a52036cbc89d9c12a004e906ba3ab4a48b3140a325156528eb4f320febbf"
   end
 
 
