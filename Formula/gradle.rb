@@ -12,7 +12,7 @@ class Gradle < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gradle"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f8677a4ded381e7b35bcadc8562eec5e553d3337b6c0a1a68812af4086347f10"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5ffc66494fbcccff11b8ae56c7463bc0949493473712712325b059eef4ce5f76"
   end
 
 
