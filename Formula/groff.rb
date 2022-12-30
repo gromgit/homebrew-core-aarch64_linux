@@ -9,7 +9,7 @@ class Groff < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/groff"
-    sha256 aarch64_linux: "c3a7655e69c3ec946f1e5e4c3af3622d62d1800595fa3abc8f1eb1cce9c55ae0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "35d1eb951799565eeb71d1980078b679e240ab27827ab6eadf30d6a4012f5e7e"
   end
 
   depends_on "pkg-config" => :build
