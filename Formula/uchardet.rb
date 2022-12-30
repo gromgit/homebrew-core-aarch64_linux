@@ -7,7 +7,7 @@ class Uchardet < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/uchardet"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "fc29c804932dac1ccf2c35dc4b35f8e2f4978786baab13dd3de335c7109c88ac"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "78de8a51a87253769a3b39c4d4e9f3258ba1fab0f2eb6e7f57ce4ee71a0fe300"
   end
 
   depends_on "cmake" => :build
