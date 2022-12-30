@@ -16,7 +16,7 @@ class Unbound < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/unbound"
-    sha256 aarch64_linux: "4b1b25acf9e17d09f017f29f98e67e29fbd93e2a17081be7bba2c82095d8f49b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2a2b2f44013989b783cd5fc251fa50d705b5c0290af66fdb980d7427a81c1789"
   end
 
 
