@@ -8,7 +8,7 @@ class FontUtil < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/font-util"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "46bef7f9c3d49e43817ac729479fcce0adf8c0d34317eb076de636aba757b953"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "11253675d8d1a831c37f5742fa807d564d9d78beb6fbfab611f996f84f330af4"
   end
 
   depends_on "pkg-config" => [:build, :test]
