@@ -15,7 +15,7 @@ class Cups < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cups"
-    sha256 aarch64_linux: "5f1eee0883e8a0d924b8065ac8dd8ab5b1e83f28de63e1cbe112bdd3f8afcd27"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a7b513aca57247d280836d25a6693e27dae30dc1d08aefee868e35c8ab288daf"
   end
 
 
