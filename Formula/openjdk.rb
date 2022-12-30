@@ -12,7 +12,7 @@ class Openjdk < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openjdk"
-    sha256 aarch64_linux: "e087014251cfe69c695e808cc879868adfe1c43b50621a57e2187850f739e7bd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4118f483529c5481843805f437c863ae5d7b2d0532ff2c9e30118c359e4160b4"
   end
 
   keg_only :shadowed_by_macos
