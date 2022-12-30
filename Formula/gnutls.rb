@@ -13,7 +13,7 @@ class Gnutls < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnutls"
-    sha256 aarch64_linux: "4e3b25e7d8cb939e46cedc6e555ef0bc7a451accba62ccb68443574e9c0a53b4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f7811d83a8dd508d87e2622c8a62c0545aca6be92d10283deb8605bddc18b7a9"
   end
 
 
