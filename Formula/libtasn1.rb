@@ -8,7 +8,7 @@ class Libtasn1 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtasn1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa9fe62fe807f60df312f356c9ba5846b32c2fff53068c206d1503328562bca6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5a3872cf85ad2e27280a652a034a86b5ed313468868e3193282b69b44f1616eb"
   end
 
 
