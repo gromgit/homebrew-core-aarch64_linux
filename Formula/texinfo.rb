@@ -8,7 +8,7 @@ class Texinfo < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/texinfo"
-    sha256 aarch64_linux: "5337150936a3942c980042d22c66c4ef9f3c304de8a0527e63b700973c8ba254"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "710fed0c24d967649f06ae7fdcaf4432d49d95657076c8fa282e9f417270395d"
   end
 
 
