@@ -17,7 +17,7 @@ class Subversion < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/subversion"
-    sha256 aarch64_linux: "708acc1055dc5e5b5590b1ac24321329075db6828a9f591a33ecb03332c861d5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e7388cce8c545cf306951550c0eb91318e0506a42a485ba41984bec8e07873b6"
   end
 
   head do
