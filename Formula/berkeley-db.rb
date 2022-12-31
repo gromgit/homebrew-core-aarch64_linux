@@ -14,7 +14,7 @@ class BerkeleyDb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/berkeley-db"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1ca9bfedcb28f6550f1cda98f52c5e42589e376f62085c54a6c4b463c33b8fce"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "90233fb74a9ac05173826e4788773840659700460451d3bdfe23803c0613d1e1"
   end
 
   keg_only :provided_by_macos
