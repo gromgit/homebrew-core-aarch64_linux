@@ -1,10 +1,21 @@
 class Perl < Formula
   desc "Highly capable, feature-rich programming language"
   homepage "https://www.perl.org/"
-  url "https://www.cpan.org/src/5.0/perl-5.34.0.tar.xz"
-  sha256 "82c2e5e5c71b0e10487a80d79140469ab1f8056349ca8545140a224dbbed7ded"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   head "https://github.com/perl/perl5.git", branch: "blead"
+
+  stable do
+    url "https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz"
+    sha256 "0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0"
+
+    # Apply upstream commit to remove nsl from libswanted:
+    # https://github.com/Perl/perl5/commit/7e19816aa8661ce0e984742e2df11dd20dcdff18
+    # Remove with next tagged release that includes the change.
+    patch do
+      url "https://github.com/Perl/perl5/commit/7e19816aa8661ce0e984742e2df11dd20dcdff18.patch?full_index=1"
+      sha256 "03f64cf62b9b519cefdf76a120a6e505cf9dc4add863b9ad795862c071b05613"
+    end
+  end
 
   livecheck do
     url "https://www.cpan.org/src/"
@@ -13,13 +24,14 @@ class Perl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/perl"
-    sha256 aarch64_linux: "4c4241cd33ea8b6fcfa9c07d279a7dc81c096d295059b3b6dc41a4dc194eebc8"
+    sha256 aarch64_linux: "3db5d6af1b304b651ab406798629bbe391a19745559ec59af786046c449ff863"
   end
 
   depends_on "berkeley-db"
   depends_on "gdbm"
 
   uses_from_macos "expat"
+  uses_from_macos "libxcrypt"
 
   # Prevent site_perl directories from being removed
   skip_clean "lib/perl5/site_perl"
@@ -27,32 +39,30 @@ class Perl < Formula
   def install
     args = %W[
       -des
-      -Dprefix=#{prefix}
-      -Dprivlib=#{lib}/perl5/#{version}
-      -Dsitelib=#{lib}/perl5/site_perl/#{version}
-      -Dotherlibdirs=#{HOMEBREW_PREFIX}/lib/perl5/site_perl/#{version}
+      -Dinstallstyle=lib/perl5
+      -Dinstallprefix=#{prefix}
+      -Dprefix=#{opt_prefix}
+      -Dprivlib=#{opt_lib}/perl5/#{version.major_minor}
+      -Dsitelib=#{opt_lib}/perl5/site_perl/#{version.major_minor}
+      -Dotherlibdirs=#{HOMEBREW_PREFIX}/lib/perl5/site_perl/#{version.major_minor}
       -Dperlpath=#{opt_bin}/perl
       -Dstartperl=#!#{opt_bin}/perl
-      -Dman1dir=#{man1}
-      -Dman3dir=#{man3}
+      -Dman1dir=#{opt_share}/man/man1
+      -Dman3dir=#{opt_share}/man/man3
       -Duseshrplib
       -Duselargefiles
       -Dusethreads
     ]
-    args << "-Dsed=/usr/bin/sed" if OS.mac?
-
     args << "-Dusedevel" if build.head?
 
     system "./Configure", *args
-
     system "make"
-
     system "make", "install"
   end
 
   def post_install
     if OS.linux?
-      perl_archlib = Utils.safe_popen_read("perl", "-MConfig", "-e", "print $Config{archlib}")
+      perl_archlib = Utils.safe_popen_read(bin/"perl", "-MConfig", "-e", "print $Config{archlib}")
       perl_core = Pathname.new(perl_archlib)/"CORE"
       if File.readlines("#{perl_core}/perl.h").grep(/include <xlocale.h>/).any? &&
          (OS::Linux::Glibc.system_version >= "2.26" ||
