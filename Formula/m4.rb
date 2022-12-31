@@ -9,7 +9,7 @@ class M4 < Formula
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/m4"
     rebuild 1
-    sha256 aarch64_linux: "f49a17c5dfefad7423e9817d11ffd113ff228078dc8dd558d2c1e7dcda8f03e2"
+    sha256 aarch64_linux: "6f47a12e8b04c1d86ac983e9999fe84dd4e615fe7164cee76327368b767f9a45"
   end
 
   keg_only :provided_by_macos
