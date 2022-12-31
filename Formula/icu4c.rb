@@ -15,8 +15,8 @@ class Icu4c < Formula
   end
 
   bottle do
-    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icu4c"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4807f897f9671c384f4a8f6ddeba0bd6b50b40ef263837023e92cbe8daa725e3"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icu4c-71.1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4ed62181f124a0128b72d235325a84d0e8540c5ce1995f8a1d433bfee04faeb4"
   end
 
 
