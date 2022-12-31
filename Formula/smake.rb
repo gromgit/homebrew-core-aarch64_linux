@@ -7,7 +7,7 @@ class Smake < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/smake"
-    sha256 aarch64_linux: "6b9f73efbcf9f3a28337aa200d756c45997aaeeaae151ffc48e87912111dfebd"
+    sha256 aarch64_linux: "50df7c0455053d4d59ad091bf98812d8fffd65efe4460d58e8f2c18f2a9216eb"
   end
 
   def install
