@@ -12,7 +12,7 @@ class Krb5 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/krb5"
-    sha256 aarch64_linux: "1f4471619ec317806f815a4e69cad0bf7c76e65eaa108cd32dd5cc00b66f9fb8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "78e17c966e4917a0bd7c2e59ae8907f5e73c2435031229789f54dc9b4283248c"
   end
 
 
