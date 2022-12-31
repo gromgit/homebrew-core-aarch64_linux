@@ -10,7 +10,7 @@ class Ncurses < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ncurses"
-    sha256 aarch64_linux: "92f2e280a9e11e28a705410ff13ae4176b12a0b925e47517d59831a38d35b32d"
+    sha256 aarch64_linux: "1f4f8a7ddc5f14c745f1b85e3c8b71c0fdbefb4b562df3741bdfe0eb5c96f522"
   end
 
   keg_only :provided_by_macos
