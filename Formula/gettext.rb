@@ -9,7 +9,7 @@ class Gettext < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gettext"
-    sha256 aarch64_linux: "6c63e419b7282e6df63a0592bebf2fa71a1cddac52d624427a775d80b0b9ef33"
+    sha256 aarch64_linux: "a8fb55e1ec1d3731d2c7552daf8f03db53e5b2f55a59dc1e727ce9eb0d0ecca8"
   end
 
 
