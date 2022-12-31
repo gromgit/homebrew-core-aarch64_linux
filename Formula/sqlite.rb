@@ -16,7 +16,7 @@ class Sqlite < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sqlite"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "84ba528856a25f2b7acf9f8cc597c0eb352f3dbbc569d43c89d299f2ea954dd5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9e132ed517fd7097288b1206609662d34042fa00927bf04efa207727d053e90d"
   end
 
 
