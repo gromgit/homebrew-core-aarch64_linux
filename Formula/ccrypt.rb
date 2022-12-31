@@ -7,7 +7,13 @@ class Ccrypt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ccrypt"
-    sha256 aarch64_linux: "e6fecc438990bab9f27ae9c6f1653cf6fc023ff61f9e12aa2f8376e1fc33c184"
+    sha256 aarch64_linux: "ea4485878075bcf972034e0b90dfaa7393c3a67bc011c31d924a9b6980dae495"
+  end
+
+  on_linux do
+    on_arm do
+      depends_on "libxcrypt"
+    end
   end
 
   conflicts_with "ccat", because: "both install `ccat` binaries"
