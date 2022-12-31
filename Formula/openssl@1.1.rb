@@ -18,7 +18,7 @@ class OpensslAT11 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openssl@1.1"
-    sha256 aarch64_linux: "eefdc8d31a3e6d4b954ce31b612f38160f081aeeff086a071ac1c47a4f5e2904"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "24a5ee9c0ad1444c81213221102a7b9f83afe0ae7d36c1d59ada5a69da9030c2"
   end
 
 
