@@ -12,7 +12,7 @@ class Cntlm < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cntlm"
-    sha256 aarch64_linux: "80923af8198cfe2e8673c082f7492e4c018ad3aebef513a0da77cfbdec7aa021"
+    sha256 aarch64_linux: "ffa47f45d5283d59da01484ce69aee97f454e82e3030dc530c9ed4e167b90686"
   end
 
   def install
