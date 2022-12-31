@@ -18,7 +18,7 @@ class Xz < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xz"
-    sha256 aarch64_linux: "6b23443653a1240c033979b56dcb8315f1cfbaa15c31c88932ebedc48e410b5f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a12864dc3a69d3e1092387e5caab6582f155ddc3c2ad0c2aceceba7ae7e92fb6"
   end
 
 
