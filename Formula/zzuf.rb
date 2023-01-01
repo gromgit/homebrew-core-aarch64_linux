@@ -7,7 +7,7 @@ class Zzuf < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zzuf"
-    sha256 aarch64_linux: "7d249fa889b1b2158306565d56dbb1d1269d9117dd0044f54919765824b1c21a"
+    sha256 aarch64_linux: "24cef5081f601173074b9a0a882878c092f2fe8a0889bb690fbc1af9ef09efb8"
   end
 
   head do
