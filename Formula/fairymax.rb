@@ -9,7 +9,7 @@ class Fairymax < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fairymax"
-    sha256 aarch64_linux: "0ffebfc2cad8c068fcc91f2a0c8ab5857e0c4372e36adc4b1854f58462ca4f37"
+    sha256 aarch64_linux: "773c41e06f1e391c3a5a88ac2a9e4b6a078028416502813cd57b8dbd6cfe006d"
   end
 
   def install
