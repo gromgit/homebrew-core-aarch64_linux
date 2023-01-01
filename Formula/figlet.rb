@@ -13,7 +13,7 @@ class Figlet < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/figlet"
-    sha256 aarch64_linux: "477bb210ceb5d8262ae5ad42b5ba00fb64d0acbcf4ae009b40c67d776d4e5959"
+    sha256 aarch64_linux: "b21f4bf52aaf038be7fbbf45f8f6b9a59d925635406e10199c82625e03c5355b"
   end
 
   resource "contrib" do
