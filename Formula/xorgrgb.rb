@@ -7,7 +7,7 @@ class Xorgrgb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xorgrgb"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "040c4342e8c884607ec123b87a1a8ea63334342552fd50ed42e3301ce7b2a1eb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5848fea1152f4902525d45c1f4738cdf6ff04412a82b5a678022cfcaac906010"
   end
 
   depends_on "pkg-config" => :build
