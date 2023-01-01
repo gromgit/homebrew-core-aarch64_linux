@@ -7,7 +7,7 @@ class Atf < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/atf"
-    sha256 aarch64_linux: "2c4d97bd91e5ce7938093ef2d54812410fea00f3e5148ca27e68969f258a121d"
+    sha256 aarch64_linux: "427ed223f0754c691479df60744c8cb808a3b3b94300aed478ff820023daf9f2"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
