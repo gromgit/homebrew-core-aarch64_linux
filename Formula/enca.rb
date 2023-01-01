@@ -13,7 +13,7 @@ class Enca < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/enca"
-    sha256 aarch64_linux: "9bf0827b64db6a76a3f7cab25f36a08e6437551945493869df068e9fc20f032c"
+    sha256 aarch64_linux: "418a97863c8a5639c3c6681cd20230c1e78daffdc34d69b39106cc901bcded3b"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
