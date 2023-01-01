@@ -12,7 +12,7 @@ class Icoutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icoutils"
-    sha256 aarch64_linux: "829ebe288d14029d400b1ad0a280ddfcedfaf6cc25989eb13f8cef0c1154e72d"
+    sha256 aarch64_linux: "bb986f62d5427df44a040140c455ab6115885e6e1e1d76ca7875d5fc3a1db960"
   end
 
   depends_on "libpng"
