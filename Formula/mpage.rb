@@ -6,7 +6,7 @@ class Mpage < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mpage"
-    sha256 aarch64_linux: "7f574face07119a9c49a95e13a2baf2ece4ce547e7285d49cb1c733e8e3e1d7f"
+    sha256 aarch64_linux: "ce2c97608cd9dc8ed18895b7df201a1b8e3288ea7b6b90e621bdddc894faea03"
   end
 
   def install
