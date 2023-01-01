@@ -12,7 +12,7 @@ class KyotoCabinet < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/kyoto-cabinet"
-    sha256 aarch64_linux: "82924850db3b859b50129de7182cd48e2bc171b96c645c02034e9c68eb2bbdbb"
+    sha256 aarch64_linux: "3d6ffc45866cc5ba94ffc3d4dcbcecb71d3a65fd0aed193da87a6410e4f5d26c"
   end
 
   uses_from_macos "zlib"
