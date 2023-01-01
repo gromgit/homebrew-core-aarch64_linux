@@ -8,7 +8,7 @@ class Direvent < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/direvent"
-    sha256 aarch64_linux: "5d506312cc95f1dff2f1153be7dcc5f7a1764a7f44cf347a0d057085304d7601"
+    sha256 aarch64_linux: "7e440cc2a9387810eb50d22a17d83eb03090296340cf4cda79cfff66ce9a5876"
   end
 
   def install
