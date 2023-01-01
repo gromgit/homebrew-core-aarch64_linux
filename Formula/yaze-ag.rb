@@ -12,7 +12,7 @@ class YazeAg < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/yaze-ag"
-    sha256 aarch64_linux: "350c15018e0cd6214287b0455f88685deb8c0019317bf6299d71755a298f5cf7"
+    sha256 aarch64_linux: "a288c1138faa5bd604dcb6090b52f18cb6592dce0d85a50d64b0dad5906cedc9"
   end
 
   def install
