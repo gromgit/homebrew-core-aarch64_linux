@@ -13,7 +13,7 @@ class Ocamlbuild < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ocamlbuild"
-    sha256 aarch64_linux: "7033f78f0292ec48927c5ebcd9b62d7ae892e04fdf02fc9b9e0603ccc4dfc475"
+    sha256 aarch64_linux: "84ab8443be169e839aae91120a9cfff8ac8d7bacc1e2b50a06e9217728c3db75"
   end
 
   depends_on "ocaml"
