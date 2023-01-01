@@ -12,7 +12,7 @@ class Fortune < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fortune"
-    sha256 aarch64_linux: "36b68ce86099430ff0fd92970f211d10eef4df930951f7833ae0cb87c6e1aa87"
+    sha256 aarch64_linux: "975c912098f2015f3078a7e2d9e901ec6ca2f4db343161bb34a573d7b6e9f4c4"
   end
 
   def install
