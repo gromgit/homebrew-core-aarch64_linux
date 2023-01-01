@@ -8,7 +8,7 @@ class Geoip < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/geoip"
-    sha256 aarch64_linux: "dfaf9c47b2fd357ed7e5319018f354c1e3fd9ee53db96f08a9d1b9f5fa254bf2"
+    sha256 aarch64_linux: "09a5fed010b2b7207bc44c64f2d902f084b0ca17dd246d766247990e73f04d2b"
   end
 
   resource "database" do
