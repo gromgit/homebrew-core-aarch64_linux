@@ -7,7 +7,7 @@ class Ploticus < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ploticus"
-    sha256 aarch64_linux: "6bfb32785dab5da9330b209925f918cb559d87c38c6331ae8221e8d33a109bc6"
+    sha256 aarch64_linux: "0b0b2179a72e505e5c23b10a37111dafae1dfd29caaa1023e25d8c493430c22f"
   end
 
   depends_on "libpng"
