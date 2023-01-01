@@ -13,7 +13,7 @@ class WirouterKeyrec < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/wirouter_keyrec"
-    sha256 aarch64_linux: "16ded2e8987a5c2fa9c3c042de0782bc4d1c69afb0efa4b3e0ff7faa2c7a5e91"
+    sha256 aarch64_linux: "5d347d7a97e486ec1db3068504549ee2185d6c5e222ce51b2c76d4e3da3224fb"
   end
 
   def install
