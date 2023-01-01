@@ -8,7 +8,7 @@ class Sng < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sng"
-    sha256 aarch64_linux: "e432e9da2cc69ec7a5a64a7ffb2ad90e80fd96d9d7a10b694919206391362076"
+    sha256 aarch64_linux: "eb4bfc81ec049127289983dc5760b212754d4a253b6ab18aba5bd17a82f06def"
   end
 
   depends_on "libpng"
