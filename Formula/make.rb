@@ -8,7 +8,7 @@ class Make < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/make"
-    sha256 aarch64_linux: "fba40b6322fff11c491a756818f8fdc619c3eae2ca0d62d058e07978832048ba"
+    sha256 aarch64_linux: "1dc264fa2b7007a26092565441af5a71e684c6bf185f65d5e3bf408d4461060d"
   end
 
   conflicts_with "remake", because: "both install texinfo files for make"
