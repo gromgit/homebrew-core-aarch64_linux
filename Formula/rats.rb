@@ -7,7 +7,7 @@ class Rats < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rats"
-    sha256 aarch64_linux: "9998a1aafaed88b26b1a1d2e8014004b985107336a81398498a5c50984060351"
+    sha256 aarch64_linux: "59d15d847ffaa990963320327097ad0f7c9c31fc1231b36ba16d8d72b3194b5d"
   end
 
   uses_from_macos "expat"
