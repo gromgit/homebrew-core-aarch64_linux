@@ -8,7 +8,7 @@ class ProxychainsNg < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/proxychains-ng"
-    sha256 aarch64_linux: "c54bbcc0a47ab8aa8802c6cb95acdda5e2e430545d06a879aa42fe2c96672109"
+    sha256 aarch64_linux: "2ad5be65eda36481e77162ec6300777311172082c78d9affb4765f29c621afe1"
   end
 
   def install
