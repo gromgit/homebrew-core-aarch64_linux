@@ -12,7 +12,7 @@ class Latex2rtf < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/latex2rtf"
-    sha256 aarch64_linux: "52ef03b6ae9d30b7157edbf6f7b8ec50bfbe09d3509ec7900a61529a747da1ec"
+    sha256 aarch64_linux: "6fbcb7184e195c68b97549f0766c11bd6c86a81f1cc7558e858ae8111b10009b"
   end
 
   def install
