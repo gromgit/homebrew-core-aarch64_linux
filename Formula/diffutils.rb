@@ -8,7 +8,7 @@ class Diffutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/diffutils"
-    sha256 aarch64_linux: "5ca1e7727b8ec2e37124e07ef921ba50508ecfeb75923d7ae170d8f7d87eacd0"
+    sha256 aarch64_linux: "2b680e9597e72d610384b699b0dec26a254472d6fdf23edaad2c2630be8ee576"
   end
 
   def install
