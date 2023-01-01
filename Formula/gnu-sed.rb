@@ -8,7 +8,7 @@ class GnuSed < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-sed"
-    sha256 aarch64_linux: "94bd943935cd206ff922bc631f4015f091580248afb557b549d34d1ba2c6ff85"
+    sha256 aarch64_linux: "774c3d16e5051d3bf2af2f47d1df0dd8c74da3514ba293872bda714753d0270b"
   end
 
   conflicts_with "ssed", because: "both install share/info/sed.info"
