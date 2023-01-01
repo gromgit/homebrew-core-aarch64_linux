@@ -10,9 +10,15 @@ class John < Formula
     regex(/href=.*?john[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  on_linux do
+    on_arm do
+      depends_on "libxcrypt"
+    end
+  end
+
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/john"
-    sha256 aarch64_linux: "d419619b19cf64ecf0ab866c85cc7ebdf001dcf2c295c766fd827843f3349953"
+    sha256 aarch64_linux: "a829719988febaeccfa3e0b6aca16c46dd04ca3e3fd3cd1eda7a4e7014c5a279"
   end
 
   conflicts_with "john-jumbo", because: "both install the same binaries"
@@ -35,7 +41,11 @@ class John < Formula
     target = if OS.mac?
       "macosx-x86-64"
     else
-      "linux-x86-64"
+      if Hardware::CPU.arm?
+        "linux-arm64le"
+      else
+        "linux-x86-64"
+      end
     end
 
     system "make", "-C", "src", "clean", "CC=#{ENV.cc}", target
