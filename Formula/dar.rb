@@ -12,7 +12,7 @@ class Dar < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dar"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f28c67380d877a4d5e8cc042de4a2ec1d24d1c47fbe147d84b037a6cfb6387d0"
+    sha256 aarch64_linux: "eae75dbab577bd1107f34cb716f60be28a91f1b46f1359e1e502676d358ce02f"
   end
 
   depends_on "libgcrypt"
