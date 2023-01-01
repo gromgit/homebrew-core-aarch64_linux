@@ -8,7 +8,7 @@ class Polyml < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/polyml"
-    sha256 aarch64_linux: "03f48cd91967a9d0af67cf2fd03885d8c2b0e63171b49aab843ae9f51387cc9e"
+    sha256 aarch64_linux: "e1f51b3a7216fc11cc10edf767be151805c2b76da6a3ac9389a4920c2c527003"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
