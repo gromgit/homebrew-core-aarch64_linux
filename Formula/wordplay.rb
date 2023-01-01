@@ -16,7 +16,7 @@ class Wordplay < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/wordplay"
-    sha256 aarch64_linux: "c34c4aa637b661c06c35105f81936a45dc8658e632aba4ade2a7ed1a7e7bca96"
+    sha256 aarch64_linux: "2f3244b225213985c263475e1f740b3ab514cff088e787f6a9d0da503d0b10f6"
   end
 
   # Fixes compiler warnings on Darwin, via MacPorts.
