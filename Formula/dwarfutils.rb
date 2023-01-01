@@ -13,7 +13,7 @@ class Dwarfutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dwarfutils"
-    sha256 aarch64_linux: "2c63ca201f3d84a3f49c56bd8953e1966de74b860352078aa6e511024eaccd9d"
+    sha256 aarch64_linux: "50eb7ad2f1b9157b5d4faeeece4b0c92cbf20970abd2c4a648d7098deae81da2"
   end
 
   head do
