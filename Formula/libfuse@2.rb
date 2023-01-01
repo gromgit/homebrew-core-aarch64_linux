@@ -7,7 +7,7 @@ class LibfuseAT2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libfuse@2"
-    sha256 aarch64_linux: "7d69afb648136e44c6306944eb7c41c52d594d8773f209c470816d6823f8ebd5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "df3a670ca4f0a10f03af9a6497e000c7ab9b3f640c738cd543e69a52f2c790bb"
   end
 
   keg_only :versioned_formula
