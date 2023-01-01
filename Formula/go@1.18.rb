@@ -13,7 +13,7 @@ class GoAT118 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go@1.18"
-    sha256 aarch64_linux: "56a6556aa21832c9a8532d632b0e546608db0bc26c6b4db38cb5617e95c4ef6d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9fe325a8de996d18aa4d22f0437620110c7cf62e2e04224ede8594172c27a6d3"
   end
 
 
