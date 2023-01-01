@@ -13,7 +13,7 @@ class Log4c < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/log4c"
-    sha256 aarch64_linux: "5d5a68b6de762ff77a1895ae8563ab8fe2d20edf183b158e46ff81cb6d9b52aa"
+    sha256 aarch64_linux: "aaff3e15ecfdcc515af584d03af88f54de69167253ee1b903455c9c7039134d1"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
