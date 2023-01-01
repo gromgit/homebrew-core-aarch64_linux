@@ -13,7 +13,7 @@ class TokyoCabinet < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/tokyo-cabinet"
-    sha256 aarch64_linux: "56ca319ba63a8b6dce714e0c3128bef13a0de834c9081d34b20cb1dfe7391e97"
+    sha256 aarch64_linux: "5333de3e1982365eb94267bce57ecb8a873bca16b8b592ccca48afd80a1bf5df"
   end
 
   uses_from_macos "bzip2"
