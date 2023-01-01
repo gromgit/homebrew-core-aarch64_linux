@@ -12,7 +12,7 @@ class Valgrind < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/valgrind"
-    sha256 aarch64_linux: "1fb21c5aa58bca41033c32d14b6b3127d6349c49ca3c86795b7390fb4a340c2f"
+    sha256 aarch64_linux: "5b3d55095c52e9e8cfcc0dc0c23ad1cd5545dabcb62d467224d6b2900ed82112"
   end
 
   head do
