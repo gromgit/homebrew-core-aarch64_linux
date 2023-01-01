@@ -12,7 +12,7 @@ class Antiword < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/antiword"
-    sha256 aarch64_linux: "3f66b127c179c9f8614b8e05b587c9097f26896cc7b2722936516747048f2e74"
+    sha256 aarch64_linux: "c9d70bf2ff4f48d672326433ee2dde04db2982704b353dac0608c73a434bdd7a"
   end
 
   resource "testdoc.doc" do
