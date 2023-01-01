@@ -12,7 +12,7 @@ class S6 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/s6"
-    sha256 aarch64_linux: "888012c5572813b6639657b9f8fd2ca2f3c13d507526321e6e45fd46984e357b"
+    sha256 aarch64_linux: "1bd27d992de8946f731f34c3aa940c9e4271e417d8450ddcf08f75b075809179"
   end
 
   resource "skalibs" do
