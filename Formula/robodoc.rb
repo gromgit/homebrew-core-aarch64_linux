@@ -12,7 +12,7 @@ class Robodoc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/robodoc"
-    sha256 aarch64_linux: "df0f35977a0ed329a115f3665e082e4adf40779c616f45d3a79be640240c9e29"
+    sha256 aarch64_linux: "942311d7cf3f2606df4de002ef4537bf341e514ee4ff1ad1e2eda30a39005d55"
   end
 
   head do
