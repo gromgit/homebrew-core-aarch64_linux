@@ -8,7 +8,7 @@ class Goplus < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/goplus"
-    sha256 aarch64_linux: "0bec0f444a1bb8e66755f0f25eadba86802e78dda520d077b8364b796833f138"
+    sha256 aarch64_linux: "9d2b11c4a159574ac93865a8f730ca0c0baec12babdb92ff72cb638c1a505c90"
   end
 
   depends_on "go"
