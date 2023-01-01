@@ -12,7 +12,7 @@ class Libmagic < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libmagic"
-    sha256 aarch64_linux: "35f2f7344d278cba0bee8040d73d3403a184594c5aec116a46eec5c632334ea7"
+    sha256 aarch64_linux: "a3c560818027628d9b72e6a2767d0e8cc9253bbfada15e5686d1d1a4db50cc84"
   end
 
   uses_from_macos "zlib"
