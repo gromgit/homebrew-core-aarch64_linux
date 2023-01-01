@@ -11,7 +11,7 @@ class Runit < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/runit"
-    sha256 aarch64_linux: "830c0692f59763c2f5e174050bb06855c27120a3ffae968a526942c598dcac56"
+    sha256 aarch64_linux: "7fcb79de9e099627b4834437d08150031083794846a3db8a7ab709c14130079d"
   end
 
   def install
