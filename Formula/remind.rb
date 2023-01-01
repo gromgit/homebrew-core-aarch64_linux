@@ -13,7 +13,7 @@ class Remind < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/remind"
-    sha256 aarch64_linux: "6a2ecb3347497f659c65965627c793ca9534951dad89f0eaf72deb89fb750039"
+    sha256 aarch64_linux: "9b7303365a1f7f93f5c947b8b4f1ef02abd7fe632f9f6a9dbc1bd53fec266417"
   end
 
   conflicts_with "rem", because: "both install `rem` binaries"
