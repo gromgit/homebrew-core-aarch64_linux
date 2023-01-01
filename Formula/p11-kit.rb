@@ -7,7 +7,7 @@ class P11Kit < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/p11-kit"
-    sha256 aarch64_linux: "fa262f6392eb01ef69610859c077d4e86d52c0aeb74f1f0ba795a367471054bf"
+    sha256 aarch64_linux: "dd165aa2d88336bff29bead96254d97d0693a2d656d3294f85c7c90d6b35dd53"
   end
 
   head do
