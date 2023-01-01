@@ -8,7 +8,7 @@ class Sysstat < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sysstat"
-    sha256 aarch64_linux: "8e8cf17ea4aee56f8854e613c3a2dd0cd7db9b152e4e320d4bf243ae58d3c8e0"
+    sha256 aarch64_linux: "e0069084b0cf1da9ee49423280cf7686a6a318c156dec03e223fabb814245f4a"
   end
 
   depends_on :linux
