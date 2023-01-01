@@ -12,7 +12,7 @@ class Sword < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sword"
-    sha256 aarch64_linux: "4b276c553d85f64b2a5ef7669faa5342b087e2fff36afc0e54563d239da2ddfa"
+    sha256 aarch64_linux: "569a8d21f99e311113a8ddc80d38092fe530e4ba0f2b64c3f2a6cc99f8c2c31e"
   end
 
   uses_from_macos "zlib"
