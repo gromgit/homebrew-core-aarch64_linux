@@ -7,7 +7,7 @@ class Lout < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lout"
-    sha256 aarch64_linux: "cd10127215070160ec620ca3c3d8161a5e17724b18a66011753ccf07695e7ab3"
+    sha256 aarch64_linux: "3c33797e2647c16ce08557a4a94ef8b4086f43a4075e31b7c8b5fa7d79566150"
   end
 
   def install
