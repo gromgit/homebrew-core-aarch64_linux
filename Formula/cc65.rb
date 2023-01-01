@@ -8,7 +8,7 @@ class Cc65 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cc65"
-    sha256 aarch64_linux: "d0bf44b83b04d4880121c1f30411852bb4663c50963971dba212dbb077fe2780"
+    sha256 aarch64_linux: "73ad8bce374cf71afea5a57c52e571ecc47e25256e2d5d5ec0b664de688a74dc"
   end
 
   conflicts_with "grc", because: "both install `grc` binaries"
