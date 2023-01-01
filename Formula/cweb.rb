@@ -13,7 +13,7 @@ class Cweb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cweb"
-    sha256 aarch64_linux: "bb6b18a83b690c62f063b3701a590c54a4ef04f3981d849ca28efecfc64379b0"
+    sha256 aarch64_linux: "ee2501e751e8da59f555993024b2b8822ea245d386ac39c3f9021c4bd2ca4f45"
   end
 
   conflicts_with "texlive", because: "both install `cweb` binaries"
