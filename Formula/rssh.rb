@@ -6,7 +6,7 @@ class Rssh < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rssh"
-    sha256 aarch64_linux: "bcec3d6051691591336c28501b0ce68288b8fbe58dcc080b8facea3d71483845"
+    sha256 aarch64_linux: "21ea87e39ca9521eef8a9531e15a3febdaf6724ec1f9b7873609472b3c8e2803"
   end
 
   deprecate! date: "2021-01-22", because: :unmaintained
