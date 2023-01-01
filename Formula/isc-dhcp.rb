@@ -12,7 +12,7 @@ class IscDhcp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/isc-dhcp"
-    sha256 aarch64_linux: "35ab35c6aad74e6968b822619db014c5e6bf4286184e61d996590f01242801d8"
+    sha256 aarch64_linux: "753797131a342acbe73fa8e03cd05062cdfb32e4deb8a8f87295f635b584a4da"
   end
 
   def install
