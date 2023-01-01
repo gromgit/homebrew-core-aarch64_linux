@@ -13,7 +13,7 @@ class Radare2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/radare2"
-    sha256 aarch64_linux: "c599142ffb26b6a046e93a8525e2e0eda301f8f3bfdaffee11311e41d10e78a8"
+    sha256 aarch64_linux: "0559cafe71a90618a23b535c6fdf784c67dab531d799764582ec6b4799ef0c13"
   end
 
   def install
