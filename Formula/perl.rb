@@ -24,7 +24,7 @@ class Perl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/perl"
-    sha256 aarch64_linux: "3db5d6af1b304b651ab406798629bbe391a19745559ec59af786046c449ff863"
+    sha256 aarch64_linux: "17bd8200693bd31a6c5ef9a04dafc896775892d000cb43b844c97adfb62a37fe"
   end
 
   depends_on "berkeley-db"
