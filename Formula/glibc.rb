@@ -53,7 +53,7 @@ class Glibc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/glibc"
-    sha256 aarch64_linux: "d1cf8e38f3cdcb8ad75fd175e5422f8842abb1c5fa2a1f726e85c20cb65740dc"
+    sha256 aarch64_linux: "6110270d9ca332d823756fef31596d15a76620d35d1c7e143442fecc9dcc3e1b"
   end
 
   depends_on "linux-headers@5.15" => :build
