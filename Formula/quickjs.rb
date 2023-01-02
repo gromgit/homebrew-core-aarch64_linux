@@ -12,7 +12,7 @@ class Quickjs < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/quickjs"
-    sha256 aarch64_linux: "911fa6a7dae26e86b4200681bc0569b092b0d6f8b6c74c37fe7e2992f5fcc5e7"
+    sha256 aarch64_linux: "0e92aa7641bbcc056bb317582540a56b6dc4505caacf8c3f747b83874e4604e3"
   end
 
   def install
