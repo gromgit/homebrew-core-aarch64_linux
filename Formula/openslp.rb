@@ -6,7 +6,7 @@ class Openslp < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openslp"
-    sha256 aarch64_linux: "dc90e2007f497073d398da6cb6e2d95a4f0967dc9470bc5188c443325813bf94"
+    sha256 aarch64_linux: "45fcd6b8903c7210d432724b15ea41fd17782be1cf1c0f154e63bcd8c1ebea74"
   end
 
   # Fix -flat_namespace being used on Big Sur and later.
