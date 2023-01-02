@@ -12,7 +12,7 @@ class Gputils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gputils"
-    sha256 aarch64_linux: "fc5c322d38595d068412d089c22a5a7401a5988112cbcaaa7cb4df7d816b75e6"
+    sha256 aarch64_linux: "573dac8f78e0c4de5a16dd067c5b9b04ae20baae4806e4bb37045c19f42f38db"
   end
 
   def install
