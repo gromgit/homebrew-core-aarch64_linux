@@ -13,7 +13,7 @@ class ChibiScheme < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chibi-scheme"
-    sha256 aarch64_linux: "37bf762ff47ee825f37d9abfbfcdb192d77ae3dec954d97a363fbf560f1bbf9c"
+    sha256 aarch64_linux: "0fdfc77e97a2c6a6c1316786a8f31f9f89e5aae330ba842871461c310be582fa"
   end
 
   def install
