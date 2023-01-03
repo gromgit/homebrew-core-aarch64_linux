@@ -14,7 +14,7 @@ class Cdrtools < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cdrtools"
-    sha256 aarch64_linux: "2b0e4add2ddf34a5404a762b8fa8e00241def4d327bf55352072a183266f5dc6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "781a4e2eff84a56c6c3184d95adb049340bd38f5fabaf9eafd9985d7569dd1d6"
   end
 
   depends_on "smake" => :build
