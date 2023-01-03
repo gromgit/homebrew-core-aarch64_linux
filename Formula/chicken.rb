@@ -13,7 +13,7 @@ class Chicken < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/chicken"
-    sha256 aarch64_linux: "b6db1f5a845cbff9cb04940e1e0db54bbf4dc7bb54c4787af6df1aebb39f9713"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "857105f7050a05bda7149537a4d7b87c75854a620cc1003eda1a3ec6f099e3d5"
   end
 
   def install
