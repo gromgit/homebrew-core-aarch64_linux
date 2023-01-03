@@ -12,7 +12,7 @@ class AircrackNg < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/aircrack-ng"
-    sha256 aarch64_linux: "5425a86165483d92d7214d133826ed1cbe8c51e9eca2c6f16b9d2181609d0c1c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0771c76cda644a17088a0cbdd3494c82a9de9612eefb584aab416e64c0749ce0"
   end
 
   depends_on "autoconf" => :build
