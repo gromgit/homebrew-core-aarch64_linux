@@ -14,7 +14,7 @@ class AflFuzz < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/afl-fuzz"
-    sha256 aarch64_linux: "4b51841f36e99afeda889bea500134139ec93c7006b84d62d6a051f7b3976d68"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6c4a52c1b1d78ec13984b8aebfae8d33be7ccfbb78d2ad4a37e232b5445813ce"
   end
 
   def install
