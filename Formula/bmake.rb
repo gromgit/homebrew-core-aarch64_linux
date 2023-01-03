@@ -12,7 +12,7 @@ class Bmake < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bmake"
-    sha256 aarch64_linux: "ccae94dcf5a763240d687dd090b0d282e3a45f376320d040aa788b267c03a88f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee49053ae27e2e31ec4eb77ceadd5b9d72ace3ac9081df202b9fbb8e3f1416fc"
   end
 
 
