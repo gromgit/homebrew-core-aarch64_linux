@@ -7,7 +7,7 @@ class Confuse < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/confuse"
-    sha256 aarch64_linux: "f7c05700bcea89a14e4d604fee42b94de56a6b7f393843eab0c4fc9961282084"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f7c8f26de4ad9566eb67b4a24eb431fdb5699ec14cdc52540f11609fb460b5cb"
   end
 
   depends_on "pkg-config" => :build
