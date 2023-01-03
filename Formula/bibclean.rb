@@ -12,7 +12,7 @@ class Bibclean < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bibclean"
-    sha256 aarch64_linux: "b8830d3370cea6f374e92db4a6715577d4a3873538e2bb243b5fc5d8ccf35981"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b89be0fea519f3ad4b1c338a4307782d4ac24e403d6f9f947a706264caa1e774"
   end
 
   def install
