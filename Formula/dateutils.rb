@@ -7,7 +7,7 @@ class Dateutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dateutils"
-    sha256 aarch64_linux: "ec5097d90cbcade39e0bed945a6b49a02bebfdac48eda22c9a8dc222f1817360"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f8125df0104af03e974cbc0a723871ac3e601cb1e15c27c5dcee2fea301f0718"
   end
 
   head do
