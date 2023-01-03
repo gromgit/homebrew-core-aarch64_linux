@@ -7,7 +7,7 @@ class Ccrypt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ccrypt"
-    sha256 aarch64_linux: "ea4485878075bcf972034e0b90dfaa7393c3a67bc011c31d924a9b6980dae495"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "669be22607f026765ab2f0379febbebfd3f3d217b90be85e23e3ed0e6db8fc07"
   end
 
   on_linux do
