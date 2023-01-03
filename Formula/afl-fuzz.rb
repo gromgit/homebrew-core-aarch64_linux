@@ -7,15 +7,9 @@ class AflFuzz < Formula
   license "Apache-2.0"
   revision 1
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+b?)$/i)
-  end
+  deprecate! date: "2022-09-17", because: :repo_archived
 
-  bottle do
-    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/afl-fuzz"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "6c4a52c1b1d78ec13984b8aebfae8d33be7ccfbb78d2ad4a37e232b5445813ce"
-  end
+  depends_on arch: :x86_64
 
   def install
     system "make", "PREFIX=#{prefix}", "AFL_NO_X86=1"
