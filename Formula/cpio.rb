@@ -9,7 +9,7 @@ class Cpio < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cpio"
-    sha256 aarch64_linux: "533522060b4cdbd8444464a47b706781c9450b3757b6a73dfbd47a90990715ef"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "be8b2873c456e317626b5d67d783cd25a3034f1e8f814ea8a6df3da658eb4c46"
   end
 
   keg_only :shadowed_by_macos, "macOS provides cpio"
