@@ -7,7 +7,7 @@ class BibTool < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bib-tool"
-    sha256 aarch64_linux: "50f160f4bfe21900862de5604e70c98cc0c0fc17f994f8845cea52fce95c9c3b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "212d04a74c3d9324a95b69e79a7653ca26c4f2b780933c5b3bccd300d4caf7d4"
   end
 
   def install
