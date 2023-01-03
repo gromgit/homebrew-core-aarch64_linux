@@ -8,7 +8,7 @@ class Bsdconv < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/bsdconv"
-    sha256 aarch64_linux: "67f8c8beaf526ad672e1242b4ebe8d23e62d0c31bcad8340dedd4462d2ffdb42"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ca5f416dbab1741a9129f804dbe7c3b7f7034a7367a283805a71b8aa2246cd5c"
   end
 
   def install
