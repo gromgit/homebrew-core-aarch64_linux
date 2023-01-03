@@ -12,7 +12,7 @@ class LibgpgError < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libgpg-error"
-    sha256 aarch64_linux: "a83011e834d527e39fa12005e79ee46ed5cfd001a8a573f40ea7336ddc5c8556"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "38b622e7d6e18cd3e27f355455a53a4055f9de52d17f3ca73a25812e003622ae"
   end
 
   def install
