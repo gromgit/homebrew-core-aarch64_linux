@@ -7,7 +7,7 @@ class Abcm2ps < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/abcm2ps"
-    sha256 aarch64_linux: "bcf3a90245e61b7314c3400a7e8bf1540de688c74f05db3e1455b5d405e4693e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0550bc4e526225da57339287edd88b87507a3c103c20445d9429daffb8612504"
   end
 
   depends_on "pkg-config" => :build
