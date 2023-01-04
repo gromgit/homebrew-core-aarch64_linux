@@ -1,16 +1,29 @@
 class Guile < Formula
   desc "GNU Ubiquitous Intelligent Language for Extensions"
   homepage "https://www.gnu.org/software/guile/"
-  url "https://ftp.gnu.org/gnu/guile/guile-3.0.8.tar.xz"
-  mirror "https://ftpmirror.gnu.org/guile/guile-3.0.8.tar.xz"
-  sha256 "daa7060a56f2804e9b74c8d7e7fe8beed12b43aab2789a38585183fcc17b8a13"
   license "LGPL-3.0-or-later"
+  revision 3
+
+  stable do
+    url "https://ftp.gnu.org/gnu/guile/guile-3.0.8.tar.xz"
+    mirror "https://ftpmirror.gnu.org/guile/guile-3.0.8.tar.xz"
+    sha256 "daa7060a56f2804e9b74c8d7e7fe8beed12b43aab2789a38585183fcc17b8a13"
+
+    patch do
+      # A patch to fix JIT on Apple Silicon is embedded below, this fixes:
+      #   https://debbugs.gnu.org/cgi/bugreport.cgi?bug=44505
+      # We should remove it from here once Guile 3.0.9 is released.
+      on_macos do
+        url "https://git.savannah.gnu.org/cgit/guile.git/patch/?id=3bdcc3668fd8f9a5b6c9a313ff8d70acb32b2a52"
+        sha256 "3deeb4c01059615df97081e53056c76bcc465030aaaaf01f5941fbea4d16cb6f"
+      end
+    end
+  end
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/guile"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "8db16c9376dcfd5842858f204a2507a2196cd0386a08fedafc6a411355cd3db7"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "573c8daeb17b6f52bafe62abe140b699e9fb5c86c31cd4d2972cff785949d0a6"
   end
-
 
   head do
     url "https://git.savannah.gnu.org/git/guile.git", branch: "main"
@@ -21,16 +34,25 @@ class Guile < Formula
     uses_from_macos "flex" => :build
   end
 
+  # Remove with Guile 3.0.9 release.
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "gettext" => :build
+
   depends_on "gnu-sed" => :build
   depends_on "bdw-gc"
   depends_on "gmp"
-  depends_on "libffi"
   depends_on "libtool"
   depends_on "libunistring"
   depends_on "pkg-config" # guile-config is a wrapper around pkg-config.
   depends_on "readline"
 
+  # Remove with Guile 3.0.9 release.
+  uses_from_macos "flex" => :build
+
   uses_from_macos "gperf"
+  uses_from_macos "libffi", since: :catalina
+  uses_from_macos "libxcrypt"
 
   def install
     # Avoid superenv shim
@@ -38,16 +60,13 @@ class Guile < Formula
 
     system "./autogen.sh" unless build.stable?
 
-    # Disable JIT on Apple Silicon, as it is not yet supported
-    # https://debbugs.gnu.org/cgi/bugreport.cgi?bug=44505
-    extra_args = []
-    extra_args << "--enable-jit=no" if Hardware::CPU.arm?
+    # Remove with Guile 3.0.9 release.
+    system "autoreconf", "-vif" if OS.mac? && build.stable?
 
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
+    system "./configure", *std_configure_args,
                           "--with-libreadline-prefix=#{Formula["readline"].opt_prefix}",
                           "--with-libgmp-prefix=#{Formula["gmp"].opt_prefix}",
-                          *extra_args
+                          "--disable-nls"
     system "make", "install"
 
     # A really messed up workaround required on macOS --mkhl
@@ -61,7 +80,7 @@ class Guile < Formula
     # of opt_prefix usage everywhere.
     inreplace lib/"pkgconfig/guile-3.0.pc" do |s|
       s.gsub! Formula["bdw-gc"].prefix.realpath, Formula["bdw-gc"].opt_prefix
-      s.gsub! Formula["libffi"].prefix.realpath, Formula["libffi"].opt_prefix
+      s.gsub! Formula["libffi"].prefix.realpath, Formula["libffi"].opt_prefix if MacOS.version < :catalina
     end
 
     (share/"gdb/auto-load").install Dir["#{lib}/*-gdb.scm"]
