@@ -4,11 +4,11 @@ class Xz < Formula
   desc "General-purpose data compression with high compression ratio"
   homepage "https://tukaani.org/xz/"
   # The archive.org mirror below needs to be manually created at `archive.org`.
-  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.2.6.tar.gz"
-  mirror "https://tukaani.org/xz/xz-5.2.6.tar.gz"
-  mirror "https://archive.org/download/xz-5.2.6/xz-5.2.6.tar.gz"
-  mirror "http://archive.org/download/xz-5.2.6/xz-5.2.6.tar.gz"
-  sha256 "a2105abee17bcd2ebd15ced31b4f5eda6e17efd6b10f921a01cda4a44c91b3a0"
+  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.4.0.tar.gz"
+  mirror "https://tukaani.org/xz/xz-5.4.0.tar.gz"
+  mirror "https://archive.org/download/xz-5.4.0/xz-5.4.0.tar.gz"
+  mirror "http://archive.org/download/xz-5.4.0/xz-5.4.0.tar.gz"
+  sha256 "7471ef5991f690268a8f2be019acec2e0564b7b233ca40035f339fe9a07f830b"
   license all_of: [
     :public_domain,
     "LGPL-2.1-or-later",
@@ -18,9 +18,8 @@ class Xz < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xz"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a12864dc3a69d3e1092387e5caab6582f155ddc3c2ad0c2aceceba7ae7e92fb6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cf3b1390d88e1d0d4abfd59b099dec54c7bea0e74127fbdd9a3afc19209fbf49"
   end
-
 
   def install
     system "./configure", "--disable-debug",
