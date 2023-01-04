@@ -1,6 +1,6 @@
 class Icu4c < Formula
   desc "C/C++ and Java libraries for Unicode and globalization"
-  homepage "https://site.icu-project.org/home"
+  homepage "https://icu.unicode.org/home"
   url "https://github.com/unicode-org/icu/releases/download/release-71-1/icu4c-71_1-src.tgz"
   version "71.1"
   sha256 "67a7e6e51f61faf1306b6935333e13b2c48abd8da6d2f46ce6adca24b1e21ebf"
@@ -15,10 +15,9 @@ class Icu4c < Formula
   end
 
   bottle do
-    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icu4c-71.1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4ed62181f124a0128b72d235325a84d0e8540c5ce1995f8a1d433bfee04faeb4"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/icu4c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d273c1b6700730c28ac0385aa2f639d09a496d3b7e1223339de00c58e4b3c277"
   end
-
 
   keg_only :provided_by_macos, "macOS provides libicucore.dylib (but nothing else)"
 
