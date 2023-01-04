@@ -7,8 +7,8 @@ class Coreutils < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/coreutils-9.1"
-    sha256 aarch64_linux: "45aad7183d36b1e8f8416a7dbec1fbffbe4e6a63ad3bc703d7279fc451a1cde2"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/coreutils"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22a8a45f4fb6e8df29f0fd638fb38dae048b1ba79bb05b129ccba39e78cd5efe"
   end
 
   head do
@@ -34,7 +34,6 @@ class Coreutils < Formula
   conflicts_with "b2sum", because: "both install `b2sum` binaries"
   conflicts_with "ganglia", because: "both install `gstat` binaries"
   conflicts_with "gdu", because: "both install `gdu` binaries"
-  conflicts_with "gegl", because: "both install `gcut` binaries"
   conflicts_with "idutils", because: "both install `gid` and `gid.1`"
   conflicts_with "md5sha1sum", because: "both install `md5sum` and `sha1sum` binaries"
   conflicts_with "truncate", because: "both install `truncate` binaries"
