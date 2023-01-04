@@ -1,23 +1,25 @@
 class Expat < Formula
   desc "XML 1.0 parser"
   homepage "https://libexpat.github.io/"
-  url "https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.xz"
-  sha256 "f79b8f904b749e3e0d20afeadecf8249c55b2e32d4ebb089ae378df479dcaf25"
+  url "https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.xz"
+  sha256 "ef2420f0232c087801abf705e89ae65f6257df6b7931d37846a193ef2e8cdcbe"
   license "MIT"
 
   livecheck do
     url :stable
-    strategy :github_latest
-    regex(/href=.*?expat[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(%r{href=["']?[^"' >]*?/tag/\D*?(\d+(?:[._]\d+)*)["' >]}i)
+    strategy :github_latest do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
   end
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/expat"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "539c0a5c3ed92c1ddedf9a71a39781da030ff93af17291b8aa9559a18287f364"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2cf4f2b664896aa92ede3ac6f69916d119a457eeb79924d8c24fafd877f2ba57"
   end
 
   head do
-    url "https://github.com/libexpat/libexpat.git"
+    url "https://github.com/libexpat/libexpat.git", branch: "master"
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "docbook2x" => :build
