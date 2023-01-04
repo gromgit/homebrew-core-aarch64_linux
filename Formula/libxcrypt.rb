@@ -1,22 +1,19 @@
 class Libxcrypt < Formula
   desc "Extended crypt library for descrypt, md5crypt, bcrypt, and others"
   homepage "https://github.com/besser82/libxcrypt"
-  url "https://github.com/besser82/libxcrypt/releases/download/v4.4.28/libxcrypt-4.4.28.tar.xz"
-  sha256 "9e936811f9fad11dbca33ca19bd97c55c52eb3ca15901f27ade046cc79e69e87"
+  url "https://github.com/besser82/libxcrypt/releases/download/v4.4.33/libxcrypt-4.4.33.tar.xz"
+  sha256 "e87acf9c652c573a4713d5582159f98f305d56ed5f754ce64f57d4194d6b3a6f"
   license "LGPL-2.1-or-later"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxcrypt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3d85fe1e4f17d9369169dd496d0c78a4e85d88b836322d9ecbaaa20eabd9de3a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "77386134f96259778a49db41e39f35e09f2282d49a55a1846434a684171d063f"
   end
 
   keg_only :provided_by_macos
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
+  link_overwrite "include/crypt.h"
+  link_overwrite "lib/libcrypt.so"
 
   def install
     system "./configure", *std_configure_args,
