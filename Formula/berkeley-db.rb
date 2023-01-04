@@ -9,12 +9,12 @@ class BerkeleyDb < Formula
 
   livecheck do
     url "https://www.oracle.com/database/technologies/related/berkeleydb-downloads.html"
-    regex(%r{href=.*?/berkeley-db/db[._-]v?(\d+(?:\.\d+)+)\.t}i)
+    regex(/Berkeley\s*DB[^(]*?\(\s*v?(\d+(?:\.\d+)+)\s*\)/i)
   end
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/berkeley-db"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "90233fb74a9ac05173826e4788773840659700460451d3bdfe23803c0613d1e1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2f9e69af77824e149d451dbff1758d6f48ac8703125aff7bcbf7e58b4800644f"
   end
 
   keg_only :provided_by_macos
