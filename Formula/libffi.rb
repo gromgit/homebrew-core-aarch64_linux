@@ -1,17 +1,17 @@
 class Libffi < Formula
   desc "Portable Foreign Function Interface library"
   homepage "https://sourceware.org/libffi/"
-  url "https://github.com/libffi/libffi/releases/download/v3.4.2/libffi-3.4.2.tar.gz"
-  sha256 "540fb721619a6aba3bdeef7d940d8e9e0e6d2c193595bc243241b77ff9e93620"
+  url "https://github.com/libffi/libffi/releases/download/v3.4.4/libffi-3.4.4.tar.gz"
+  sha256 "d66c56ad259a82cf2a9dfc408b32bf5da52371500b84745f7fb8b645712df676"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libffi"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "efa9d41efb20c43077332b2eb001116605ce0f10c079c7c15cef1c04c53cdeb9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8e40e523748e1ceaf141e762667d201fc8f415e09a68fd68135e402575d9f549"
   end
 
   head do
-    url "https://github.com/libffi/libffi.git"
+    url "https://github.com/libffi/libffi.git", branch: "master"
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
