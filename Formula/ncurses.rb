@@ -1,16 +1,16 @@
 class Ncurses < Formula
   desc "Text-based UI library"
   homepage "https://invisible-island.net/ncurses/announce.html"
-  url "https://ftp.gnu.org/gnu/ncurses/ncurses-6.3.tar.gz"
-  mirror "https://invisible-mirror.net/archives/ncurses/ncurses-6.3.tar.gz"
-  mirror "ftp://ftp.invisible-island.net/ncurses/ncurses-6.3.tar.gz"
-  mirror "https://ftpmirror.gnu.org/ncurses/ncurses-6.3.tar.gz"
-  sha256 "97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059"
+  url "https://ftp.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz"
+  mirror "https://invisible-mirror.net/archives/ncurses/ncurses-6.4.tar.gz"
+  mirror "ftp://ftp.invisible-island.net/ncurses/ncurses-6.4.tar.gz"
+  mirror "https://ftpmirror.gnu.org/ncurses/ncurses-6.4.tar.gz"
+  sha256 "6931283d9ac87c5073f30b6290c4c75f21632bb4fc3603ac8100812bed248159"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/ncurses"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "aff29e86e67084f52340c343cae4f715834ee6a26c24f20dae9b636bf9ec9e10"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3ac2c03f8c7d62c4bf47f677c773f2acff8ca99ee0d5c6a87659d37b3fe98280"
   end
 
   keg_only :provided_by_macos
@@ -91,8 +91,6 @@ class Ncurses < Formula
                                     "--with-curses-dir=#{prefix}"
     system "make", "install"
 
-    system testpath/"test/bin/keynames"
-    system testpath/"test/bin/test_arrays"
-    system testpath/"test/bin/test_vidputs"
+    system testpath/"test/bin/ncurses-examples"
   end
 end
