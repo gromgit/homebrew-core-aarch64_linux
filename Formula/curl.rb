@@ -1,11 +1,11 @@
 class Curl < Formula
   desc "Get a file from an HTTP, HTTPS or FTP server"
   homepage "https://curl.se"
-  url "https://curl.se/download/curl-7.85.0.tar.bz2"
-  mirror "https://github.com/curl/curl/releases/download/curl-7_84_0/curl-7.85.0.tar.bz2"
-  mirror "http://fresh-center.net/linux/www/curl-7.85.0.tar.bz2"
-  mirror "http://fresh-center.net/linux/www/legacy/curl-7.85.0.tar.bz2"
-  sha256 "21a7e83628ee96164ac2b36ff6bf99d467c7b0b621c1f7e317d8f0d96011539c"
+  url "https://curl.se/download/curl-7.87.0.tar.bz2"
+  mirror "https://github.com/curl/curl/releases/download/curl-7_84_0/curl-7.87.0.tar.bz2"
+  mirror "http://fresh-center.net/linux/www/curl-7.87.0.tar.bz2"
+  mirror "http://fresh-center.net/linux/www/legacy/curl-7.87.0.tar.bz2"
+  sha256 "5d6e128761b7110946d1276aff6f0f266f2b726f5e619f7e0a057a474155f307"
   license "curl"
 
   livecheck do
@@ -15,12 +15,11 @@ class Curl < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/curl"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7e162fd9cbb93c74d29f8926e232a8ad195fbd1984240017f6d7113eb00545ee"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3d3ff178ecdbd02f039ade399111c0f35e7a6ddc1ff0d227e36875762e6f9ad7"
   end
 
-
   head do
-    url "https://github.com/curl/curl.git"
+    url "https://github.com/curl/curl.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
