@@ -16,7 +16,7 @@ class Rtmpdump < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rtmpdump"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee3b08e7bdb5287fdeb95e1f7ea2beba00cede5d1532b711652502e701b8319d"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "556cb3793ee9d6fb110356836294da8ca8908efd8847a4e394e3434541c18700"
   end
 
   depends_on "openssl@1.1"
