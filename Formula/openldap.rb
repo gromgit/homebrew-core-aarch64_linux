@@ -14,9 +14,8 @@ class Openldap < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openldap"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a6fd9d1022f8e46ed1487835884f02e945b9208851011457c4b21a8c74213bff"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d2feba4db6058232317aab63a4609cb8cbf656708a34f2db5b92d55b6fef0532"
   end
-
 
   keg_only :provided_by_macos
 
@@ -56,15 +55,15 @@ class Openldap < Formula
       --enable-translucent
       --enable-unique
       --enable-valsort
+      --without-systemd
     ]
 
-    if OS.linux?
-      args << "--without-systemd"
-
+    if OS.linux? || MacOS.version >= :ventura
       # Disable manpage generation, because it requires groff which has a huge
-      # dependency tree on Linux
+      # dependency tree on Linux and isn't included on macOS since Ventura.
       inreplace "Makefile.in" do |s|
-        s.change_make_var! "SUBDIRS", "include libraries clients servers"
+        subdirs = s.get_make_var("SUBDIRS").split - ["doc"]
+        s.change_make_var! "SUBDIRS", subdirs.join(" ")
       end
     end
 
