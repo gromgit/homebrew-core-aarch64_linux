@@ -10,7 +10,7 @@ class Brotli < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/brotli"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "90c42367cf01d1797bcd6186c37498a9421e826780ad66b1d1f0a46b4dc99322"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "34a1de58d617322251c0a7bdaf2951164bdbf892698c333c5bc6db3d8a897bf2"
   end
 
   depends_on "cmake" => :build
