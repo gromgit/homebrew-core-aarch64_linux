@@ -1,10 +1,10 @@
 class Cmake < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
-  url "https://github.com/Kitware/CMake/releases/download/v3.24.1/cmake-3.24.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/cmake-3.24.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.24.1.tar.gz"
-  sha256 "4931e277a4db1a805f13baa7013a7757a0cbfe5b7932882925c7061d9d1fa82b"
+  url "https://github.com/Kitware/CMake/releases/download/v3.25.1/cmake-3.25.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/cmake-3.25.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.25.1.tar.gz"
+  sha256 "1c511d09516af493694ed9baf13c55947a36389674d657a2d5e0ccedc6b291d8"
   license "BSD-3-Clause"
   head "https://gitlab.kitware.com/cmake/cmake.git", branch: "master"
 
@@ -17,14 +17,13 @@ class Cmake < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cmake"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "703b692ea82a5781c6b7fc1417d53cf55baabdb716fa106ab2418088a668a957"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "47538701c7d6d6ac78b86ecc35b0c3efb8ebb8d8789f94b6da7d996c84248023"
   end
-
 
   uses_from_macos "ncurses"
 
   on_linux do
-    depends_on "openssl@1.1"
+    depends_on "openssl@3"
   end
 
   # The completions were removed because of problems with system bash
