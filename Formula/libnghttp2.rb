@@ -1,10 +1,10 @@
 class Libnghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
-  url "https://github.com/nghttp2/nghttp2/releases/download/v1.49.0/nghttp2-1.49.0.tar.gz"
-  mirror "http://fresh-center.net/linux/www/nghttp2-1.49.0.tar.gz"
-  mirror "http://fresh-center.net/linux/www/legacy/nghttp2-1.49.0.tar.gz"
-  sha256 "14dd5654e369227afebfba5198793a1788a0af9d30cddb19af3ec275d110a7a6"
+  url "https://github.com/nghttp2/nghttp2/releases/download/v1.51.0/nghttp2-1.51.0.tar.gz"
+  mirror "http://fresh-center.net/linux/www/nghttp2-1.51.0.tar.gz"
+  mirror "http://fresh-center.net/linux/www/legacy/nghttp2-1.51.0.tar.gz"
+  sha256 "2a0bef286f65b35c24250432e7ec042441a8157a5b93519412d9055169d9ce54"
   license "MIT"
 
   livecheck do
@@ -13,9 +13,8 @@ class Libnghttp2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libnghttp2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e076779e29fefe23ce62e518458e43a47f2f0c1bf19e24c5f8faadb0c8c9ad11"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5e42f105cf112a15dc2b254afc38c84b0403f521edf88ebf5e41adab6f909473"
   end
-
 
   head do
     url "https://github.com/nghttp2/nghttp2.git", branch: "master"
