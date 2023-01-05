@@ -15,20 +15,16 @@ class UtilLinux < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/util-linux"
-    sha256 aarch64_linux: "b570a0756cb26f8b3f1f5cd6d67158e98301a25c6f549732e9c23df1f5f1afb4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d775b7c37f6f278e440c643695c2860017163e4d0c0b43c6e84c0ecb7452fd33"
   end
 
-
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
-
-  depends_on "asciidoctor" => :build
-  depends_on "gettext"
 
   uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
-  # Everything in following macOS block is for temporary patches
+  # Everything in following macOS block is for temporary patches other than `gettext`.
   # TODO: Remove in the next release.
   on_macos do
     depends_on "autoconf" => :build
@@ -36,6 +32,7 @@ class UtilLinux < Formula
     depends_on "gtk-doc" => :build
     depends_on "libtool" => :build
     depends_on "pkg-config" => :build
+    depends_on "gettext" # for libintl
 
     # Fix lib/procfs.c:9:10: fatal error: 'sys/vfs.h' file not found
     patch do
@@ -45,6 +42,8 @@ class UtilLinux < Formula
   end
 
   on_linux do
+    depends_on "readline"
+
     conflicts_with "bash-completion", because: "both install `mount`, `rfkill`, and `rtcwake` completions"
     conflicts_with "rename", because: "both install `rename` binaries"
   end
@@ -53,7 +52,7 @@ class UtilLinux < Formula
     # Temporary work around for patches. Remove in the next release.
     system "autoreconf", "--force", "--install", "--verbose" if OS.mac?
 
-    args = %w[--disable-silent-rules]
+    args = %w[--disable-silent-rules --disable-asciidoc]
 
     if OS.mac?
       args << "--disable-ipcs" # does not build on macOS
@@ -64,7 +63,6 @@ class UtilLinux < Formula
     else
       args << "--disable-use-tty-group" # Fix chgrp: changing group of 'wall': Operation not permitted
       args << "--disable-kill" # Conflicts with coreutils.
-      args << "--disable-cal" # Conflicts with bsdmainutils
       args << "--without-systemd" # Do not install systemd files
       args << "--with-bashcompletiondir=#{bash_completion}"
       args << "--disable-chfn-chsh"
