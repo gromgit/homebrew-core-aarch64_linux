@@ -3,7 +3,7 @@ class Libgcrypt < Formula
   homepage "https://gnupg.org/related_software/libgcrypt/"
   url "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.1.tar.bz2"
   sha256 "ef14ae546b0084cd84259f61a55e07a38c3b53afc0f546bffcef2f01baffe9de"
-  license "GPL-2.0-only"
+  license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   livecheck do
     url "https://gnupg.org/ftp/gcrypt/libgcrypt/"
@@ -12,7 +12,7 @@ class Libgcrypt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libgcrypt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2f71a0c58e60fbdb66d9d99b4e337ec37acfe0366fc96c98e9c10d0207f456d7"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c769edf8656cfd0977127e649cb985491f549c77e1db8be00f5034b8f6a502c"
   end
 
   depends_on "libgpg-error"
