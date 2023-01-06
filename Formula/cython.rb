@@ -8,7 +8,7 @@ class Cython < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cython"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "04f7303c2bf72e26ab671c8cff537c8e738ff3f7c1c652a9ad8c938811934896"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "af08d4845039eef12a7a904b9a90b9d017bf03ec1246e72b0790a5eb1b1cedb8"
   end
 
   keg_only <<~EOS
@@ -16,10 +16,10 @@ class Cython < Formula
     Users are advised to use `pip` to install cython
   EOS
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
-    python = "python3.10"
+    python = "python3.11"
     ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python)
     system python, *Language::Python.setup_install_args(libexec, python)
 
@@ -28,7 +28,7 @@ class Cython < Formula
   end
 
   test do
-    python = Formula["python@3.10"].opt_bin/"python3.10"
+    python = Formula["python@3.11"].opt_bin/"python3.11"
     ENV.prepend_path "PYTHONPATH", libexec/Language::Python.site_packages(python)
 
     phrase = "You are using Homebrew"
