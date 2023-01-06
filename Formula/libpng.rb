@@ -1,9 +1,9 @@
 class Libpng < Formula
   desc "Library for manipulating PNG images"
   homepage "http://www.libpng.org/pub/png/libpng.html"
-  url "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.37/libpng-1.6.37.tar.xz"
-  mirror "https://sourceforge.mirrorservice.org/l/li/libpng/libpng16/1.6.37/libpng-1.6.37.tar.xz"
-  sha256 "505e70834d35383537b6491e7ae8641f1a4bed1876dbfe361201fc80868d88ca"
+  url "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.39/libpng-1.6.39.tar.xz"
+  mirror "https://sourceforge.mirrorservice.org/l/li/libpng/libpng16/1.6.39/libpng-1.6.39.tar.xz"
+  sha256 "1f4696ce70b4ee5f85f1e1623dc1229b210029fa4b7aee573df3e2ba7b036937"
   license "libpng-2.0"
 
   livecheck do
@@ -13,11 +13,11 @@ class Libpng < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libpng"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f1c31d697c1a4cab940173d9e665dc0f2d6816db792b165a6bdec4bace187967"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e23d11be90962f73878e30736d2e17a7606d5dbabcf94e95c4e96dc6e72df677"
   end
 
   head do
-    url "https://github.com/glennrp/libpng.git"
+    url "https://github.com/glennrp/libpng.git", branch: "libpng16"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
