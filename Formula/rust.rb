@@ -4,20 +4,20 @@ class Rust < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   stable do
-    url "https://static.rust-lang.org/dist/rustc-1.63.0-src.tar.gz"
-    sha256 "1f9580295642ef5da7e475a8da2397d65153d3f2cb92849dbd08ed0effca99d0"
+    url "https://static.rust-lang.org/dist/rustc-1.66.0-src.tar.gz"
+    sha256 "3b3cd3ea5a82a266e75d0b35f0b54c16021576d9eb78d384052175a772935a48"
 
     # From https://github.com/rust-lang/rust/tree/#{version}/src/tools
     resource "cargo" do
       url "https://github.com/rust-lang/cargo.git",
-          tag:      "0.64.0",
-          revision: "fd9c4297ccbee36d39e9a79067edab0b614edb5a"
+          tag:      "0.67.0",
+          revision: "d65d197ad5c6c09234369f219f943e291d4f04b9"
     end
   end
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rust"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e0a04e84526abc84d0a5eca26f057cb6aac6c176b76b3d08e83500e89c4d0716"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "53f33516ff086b2b04477d379595b6cb0b42551cbae45ce2d9ef7585a0216604"
   end
 
   head do
@@ -30,7 +30,7 @@ class Rust < Formula
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "libssh2"
   depends_on "openssl@1.1"
   depends_on "pkg-config"
@@ -42,30 +42,30 @@ class Rust < Formula
     on_macos do
       # From https://github.com/rust-lang/rust/blob/#{version}/src/stage0.json
       on_arm do
-        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-aarch64-apple-darwin.tar.gz"
-        sha256 "8a4c0f52491382d537753531a51a45355135e0b19f85f20588785d604f1eff2b"
+        url "https://static.rust-lang.org/dist/2022-11-03/cargo-1.65.0-aarch64-apple-darwin.tar.gz"
+        sha256 "40858f3078b277165c191b6478c2aba7bf0010162273e28e9964404993eba188"
       end
       on_intel do
-        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-x86_64-apple-darwin.tar.gz"
-        sha256 "4957c596cc5327921be523fb1de935b1072caa12f9cedaa68cff3e85898fd09a"
+        url "https://static.rust-lang.org/dist/2022-11-03/cargo-1.65.0-x86_64-apple-darwin.tar.gz"
+        sha256 "40cbbd62013130d5208435dc45d6c91703eb6a469b6d8eacf746eedc6974ccc0"
       end
     end
 
     on_linux do
-      # From: https://github.com/rust-lang/rust/blob/#{version}/src/stage0.json
       on_arm do
-        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-aarch64-unknown-linux-gnu.tar.gz"
-        sha256 "2b55f7073846cd269a2c0b002800699de89ed7ed38852457cf2dbae35f5e73fa"
+        # From: https://github.com/rust-lang/rust/blob/#{version}/src/stage0.json
+        url "https://static.rust-lang.org/dist/2022-11-03/cargo-1.65.0-aarch64-unknown-linux-gnu.tar.gz"
+        sha256 "406d244def7ea78ed75ca4852498a1b632360626fb5fec69a8442b14ef04aee8"
       end
       on_intel do
-        url "https://static.rust-lang.org/dist/2022-06-30/cargo-1.62.0-x86_64-unknown-linux-gnu.tar.gz"
-        sha256 "fb0141db9fdea4606beb106ca10494548f24866b39a10bde8d1e162f653e94d8"
+        url "https://static.rust-lang.org/dist/2022-11-03/cargo-1.65.0-x86_64-unknown-linux-gnu.tar.gz"
+        sha256 "f7d67cf3b34a7d82fa2b22d42ad2aed20ee8f4be95ab97f88b8bf03a397217c2"
       end
     end
   end
 
   def install
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.11"].opt_libexec/"bin"
 
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
