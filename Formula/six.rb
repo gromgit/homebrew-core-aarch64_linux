@@ -4,15 +4,15 @@ class Six < Formula
   url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
   sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   license "MIT"
-  revision 2
+  revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "560f73cafaea617d44f93beffdac91ac3b93095b1b64ff3877c5c4903f1cb001"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/six"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "57c587424e56e02eb03a76b8d56ffe05e3954cd1a0ea2aa08552d022826c6694"
   end
 
   depends_on "python@3.10" => [:build, :test]
-  depends_on "python@3.8" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "python@3.9" => [:build, :test]
 
   def pythons
@@ -21,7 +21,8 @@ class Six < Formula
 
   def install
     pythons.each do |python|
-      system python.opt_bin/"python3", *Language::Python.setup_install_args(prefix)
+      python_exe = python.opt_libexec/"bin/python"
+      system python_exe, *Language::Python.setup_install_args(prefix, python_exe)
     end
   end
 
@@ -38,7 +39,7 @@ class Six < Formula
 
   test do
     pythons.each do |python|
-      system python.opt_bin/"python3", "-c", <<~EOS
+      system python.opt_libexec/"bin/python", "-c", <<~EOS
         import six
         assert not six.PY2
         assert six.PY3
