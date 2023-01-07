@@ -14,21 +14,21 @@ class Libtiff < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libtiff"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "34189120891e00ed370975d28598648085cc11f53b318791cc44d592d354bf9f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "403c7cd633930fccf24f15395480b0ff8632164b8826806179e0f4f7f8fd200a"
   end
 
-
   depends_on "jpeg-turbo"
+  depends_on "zstd"
 
   uses_from_macos "zlib"
 
   def install
     args = %W[
       --prefix=#{prefix}
+      --enable-zstd
       --disable-dependency-tracking
       --disable-lzma
       --disable-webp
-      --disable-zstd
       --with-jpeg-include-dir=#{Formula["jpeg-turbo"].opt_include}
       --with-jpeg-lib-dir=#{Formula["jpeg-turbo"].opt_lib}
       --without-x
