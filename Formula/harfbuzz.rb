@@ -1,21 +1,21 @@
 class Harfbuzz < Formula
   desc "OpenType text shaping engine"
   homepage "https://github.com/harfbuzz/harfbuzz"
-  url "https://github.com/harfbuzz/harfbuzz/archive/5.1.0.tar.gz"
-  sha256 "5352ff2eec538ea9a63a485cf01ad8332a3f63aa79921c5a2e301cef185caea1"
+  url "https://github.com/harfbuzz/harfbuzz/archive/6.0.0.tar.gz"
+  sha256 "6d753948587db3c7c3ba8cc4f8e6bf83f5c448d2591a9f7ec306467f3a4fe4fa"
   license "MIT"
-  revision 1
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/harfbuzz"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3bbf849e12301288f0d390c153da479dc6a415fdd1a213e8e2e11fa7d004d656"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5af12051a9b1ffa6f02a6fac170ee1b9dd1aade1d0d5b3c7ace247eb9e9a0e1c"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.10" => [:build, :test]
+  depends_on "pkg-config" => :build
+  depends_on "python@3.11" => [:build, :test]
   depends_on "pygobject3" => :test
   depends_on "cairo"
   depends_on "freetype"
@@ -39,18 +39,19 @@ class Harfbuzz < Formula
       -Dgraphite=enabled
       -Dicu=enabled
       -Dintrospection=enabled
+      -Dtests=disabled
     ]
 
     system "meson", "setup", "build", *std_meson_args, *args
-    system "meson", "compile", "-C", "build"
+    system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end
 
   test do
     resource("homebrew-test-ttf").stage do
-      shape = `echo 'സ്റ്റ്' | #{bin}/hb-shape 270b89df543a7e48e206a2d830c0e10e5265c630.ttf`.chomp
+      shape = pipe_output("#{bin}/hb-shape 270b89df543a7e48e206a2d830c0e10e5265c630.ttf", "സ്റ്റ്").chomp
       assert_equal "[glyph201=0+1183|U0D4D=0+0]", shape
     end
-    system Formula["python@3.10"].opt_bin/"python3", "-c", "from gi.repository import HarfBuzz"
+    system "python3.11", "-c", "from gi.repository import HarfBuzz"
   end
 end
