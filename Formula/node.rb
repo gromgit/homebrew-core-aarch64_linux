@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v19.1.0/node-v19.1.0.tar.xz"
-  sha256 "4ea9ba1f992815fb823b022a62b61f536121f970fe88c6395c7e3af4e9cf46a0"
+  url "https://nodejs.org/dist/v19.3.0/node-v19.3.0.tar.xz"
+  sha256 "d3189574ef9849c713822e7f31de7a1b9dd8a2c6b5fc78ddb811aaa259a22b1e"
   license "MIT"
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -13,11 +13,11 @@ class Node < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/node"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3222c079c376fb7d942884ed1662f7b47378bb3fecb4944afe097c675eb73927"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e80cd8c37241ea5e2d3057933f020151ed74c434cb83f6c51bdf38bdc330d5f1"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "icu4c"
@@ -44,15 +44,15 @@ class Node < Formula
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-8.19.3.tgz"
-    sha256 "634bf4e0dc87be771ebf48a058629960e979a209c20a51ebdbc4897ca6a25260"
+    url "https://registry.npmjs.org/npm/-/npm-9.2.0.tgz"
+    sha256 "e2574f7da94665dd2f717f8e67bd1874134c4b301f8781dabceecdfc3d685071"
   end
 
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
 
     # make sure subprocesses spawned by make are using our Python 3
-    ENV["PYTHON"] = which("python3.10")
+    ENV["PYTHON"] = which("python3.11")
 
     # Never install the bundled "npm", always prefer our
     # installation from tarball for better packaging control.
