@@ -4,10 +4,11 @@ class P11Kit < Formula
   url "https://github.com/p11-glue/p11-kit/releases/download/0.24.1/p11-kit-0.24.1.tar.xz"
   sha256 "d8be783efd5cd4ae534cee4132338e3f40f182c3205d23b200094ec85faaaef8"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/p11-kit"
-    sha256 aarch64_linux: "dd165aa2d88336bff29bead96254d97d0693a2d656d3294f85c7c90d6b35dd53"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "02fa2ef2360cae46b7a24ade2a0bd000157b06a94ee1494ab07da17c7d5755e5"
   end
 
   head do
@@ -21,8 +22,9 @@ class P11Kit < Formula
 
   depends_on "pkg-config" => :build
   depends_on "ca-certificates"
-  depends_on "libffi"
   depends_on "libtasn1"
+
+  uses_from_macos "libffi", since: :catalina
 
   def install
     # https://bugs.freedesktop.org/show_bug.cgi?id=91602#c1
