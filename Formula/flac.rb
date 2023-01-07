@@ -1,9 +1,18 @@
 class Flac < Formula
   desc "Free lossless audio codec"
   homepage "https://xiph.org/flac/"
-  url "https://downloads.xiph.org/releases/flac/flac-1.3.4.tar.xz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.3.4.tar.xz"
-  sha256 "8ff0607e75a322dd7cd6ec48f4f225471404ae2730d0ea945127b1355155e737"
+  url "https://downloads.xiph.org/releases/flac/flac-1.4.2.tar.xz", using: :homebrew_curl
+  mirror "https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.4.2.tar.xz"
+  sha256 "e322d58a1f48d23d9dd38f432672865f6f79e73a6f9cc5a5f57fcaa83eb5a8e4"
+  license all_of: [
+    "BSD-3-Clause",
+    "GPL-2.0-or-later",
+    "ISC",
+    "LGPL-2.0-or-later",
+    "LGPL-2.1-or-later",
+    :public_domain,
+    any_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"],
+  ]
 
   livecheck do
     url "https://ftp.osuosl.org/pub/xiph/releases/flac/?C=M&O=D"
@@ -12,7 +21,7 @@ class Flac < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/flac"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "952f6cc15aa2743b0339621c4c58b9006717dfcb7ae536a136464caccd35170a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0cab9016a180072948ede54e8c42432890abc0b33ca7cc67291e13528eda6efc"
   end
 
   head do
