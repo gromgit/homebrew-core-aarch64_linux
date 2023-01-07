@@ -24,9 +24,8 @@ class Gcc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ba3a59f4d1be0a2542f3d99e36574aa4c884ad4f2b14bbfe1afa7b8b790af866"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c7dcfa98042aac091240444b7da0263bdf850257cc8901a155750fb15bc128c4"
   end
-
 
   # The bottles are built on systems with the CLT installed, and do not work
   # out of the box on Xcode-only systems due to an incorrect sysroot.
@@ -100,17 +99,12 @@ class Gcc < Formula
       # Fix Linux error: gnu/stubs-32.h: No such file or directory.
       args << "--disable-multilib"
 
+      # Enable to PIE by default to match what the host GCC uses
+      args << "--enable-default-pie"
+
       # Change the default directory name for 64-bit libraries to `lib`
       # https://stackoverflow.com/a/54038769
-      cfg_files = Dir["gcc/config/*/t-linux64"]
-      cfg_key = "m64"
-      if Hardware::CPU.arm?
-        cfg_files = Dir["gcc/config/*/t-aarch64-linux"]
-        cfg_key = "lp64"
-      end
-      cfg_files.each do |f|
-        inreplace f, "#{cfg_key}=../lib64", "#{cfg_key}="
-      end
+      inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
     end
 
     mkdir "build" do
@@ -208,8 +202,8 @@ class Gcc < Formula
       #   * `-idirafter <dir>` instructs gcc to search system header
       #     files after gcc internal header files.
       # For libraries:
-      #   * `-nostdlib -L#{libgcc}` instructs gcc to use brewed glibc
-      #     if applied.
+      #   * `-nostdlib -L#{libgcc} -L#{glibc.opt_lib}` instructs gcc to use
+      #     brewed glibc if applied.
       #   * `-L#{libdir}` instructs gcc to find the corresponding gcc
       #     libraries. It is essential if there are multiple brewed gcc
       #     with different versions installed.
@@ -223,7 +217,7 @@ class Gcc < Formula
         + -isysroot #{HOMEBREW_PREFIX}/nonexistent #{system_header_dirs.map { |p| "-idirafter #{p}" }.join(" ")}
 
         *link_libgcc:
-        #{glibc_installed ? "-nostdlib -L#{libgcc}" : "+"} -L#{libdir} -L#{HOMEBREW_PREFIX}/lib
+        #{glibc_installed ? "-nostdlib -L#{libgcc} -L#{glibc.opt_lib}" : "+"} -L#{libdir} -L#{HOMEBREW_PREFIX}/lib
 
         *link:
         + --dynamic-linker #{HOMEBREW_PREFIX}/lib/ld.so -rpath #{libdir}
