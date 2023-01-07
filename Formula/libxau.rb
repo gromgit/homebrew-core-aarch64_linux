@@ -1,13 +1,13 @@
 class Libxau < Formula
   desc "X.Org: A Sample Authorization Protocol for X"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXau-1.0.10.tar.xz"
-  sha256 "8be6f292334d2f87e5b919c001e149a9fdc27005d6b3e053862ac6ebbf1a0c0a"
+  url "https://www.x.org/archive/individual/lib/libXau-1.0.11.tar.xz"
+  sha256 "f3fa3282f5570c3f6bd620244438dbfbdd580fc80f02f549587a0f8ab329bbeb"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxau"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4ec4dab26126f8127a31f358dfacc25b3f12ff245179df622a93a7868790b7d3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cf6c81f618154f96f1b1507bfa876f091e1d31df63e0c5386afdb91418ecc4a1"
   end
 
   depends_on "pkg-config" => :build
