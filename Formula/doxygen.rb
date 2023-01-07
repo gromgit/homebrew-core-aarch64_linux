@@ -1,9 +1,9 @@
 class Doxygen < Formula
   desc "Generate documentation for several programming languages"
   homepage "https://www.doxygen.nl/"
-  url "https://doxygen.nl/files/doxygen-1.9.5.src.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.5/doxygen-1.9.5.src.tar.gz"
-  sha256 "55b454b35d998229a96f3d5485d57a0a517ce2b78d025efb79d57b5a2e4b2eec"
+  url "https://doxygen.nl/files/doxygen-1.9.6.src.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.6/doxygen-1.9.6.src.tar.gz"
+  sha256 "297f8ba484265ed3ebd3ff3fe7734eb349a77e4f95c8be52ed9977f51dea49df"
   license "GPL-2.0-only"
   head "https://github.com/doxygen/doxygen.git", branch: "master"
 
@@ -14,24 +14,24 @@ class Doxygen < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/doxygen"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e25c7e8641c2d018e9c92197771471ddca26a87b3fe9dbf510ba277a2c88fc66"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a354a2420c510ae6cc9245677fb55f517e97a346ac10950c97fd017e32d71c64"
   end
 
   depends_on "bison" => :build
   depends_on "cmake" => :build
-  depends_on "python@3.10" => :build # Fails to build with macOS Python3
-  uses_from_macos "flex" => :build, since: :big_sur
 
-  on_linux do
-    depends_on "gcc"
+  uses_from_macos "flex" => :build, since: :big_sur
+  uses_from_macos "python" => :build
+
+  fails_with :gcc do
+    version "6"
+    cause "Need gcc>=7.2. See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=66297"
   end
 
-  # Need gcc>=7.2. See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=66297
-  fails_with gcc: "5"
-  fails_with gcc: "6"
-
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DPYTHON_EXECUTABLE=#{which("python3") || which("python")}",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
