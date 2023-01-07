@@ -1,9 +1,9 @@
 class Gnutls < Formula
   desc "GNU Transport Layer Security (TLS) Library"
   homepage "https://gnutls.org/"
-  url "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.7.tar.xz"
-  mirror "https://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/gnutls/v3.7/gnutls-3.7.7.tar.xz"
-  sha256 "be9143d0d58eab64dba9b77114aaafac529b6c0d7e81de6bdf1c9b59027d2106"
+  url "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz"
+  mirror "https://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz"
+  sha256 "c58ad39af0670efe6a8aee5e3a8b2331a1200418b64b7c51977fb396d4617114"
   license all_of: ["LGPL-2.1-or-later", "GPL-3.0-only"]
 
   livecheck do
@@ -13,9 +13,8 @@ class Gnutls < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnutls"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f7811d83a8dd508d87e2622c8a62c0545aca6be92d10283deb8605bddc18b7a9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "155aa21b822af12f5d9f87f51426a66b41b9f2f03fe35764df5ce88fd9497b78"
   end
-
 
   depends_on "pkg-config" => :build
   depends_on "ca-certificates"
@@ -27,6 +26,8 @@ class Gnutls < Formula
   depends_on "nettle"
   depends_on "p11-kit"
   depends_on "unbound"
+
+  uses_from_macos "zlib"
 
   def install
     args = %W[
