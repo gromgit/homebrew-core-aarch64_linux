@@ -1,13 +1,13 @@
 class Libx11 < Formula
   desc "X.Org: Core X11 protocol client library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libX11-1.8.1.tar.gz"
-  sha256 "d52f0a7c02a45449f37b0831d99ff936d92eb4ce8b4c97dc17a63cea79ce5a76"
+  url "https://www.x.org/archive/individual/lib/libX11-1.8.3.tar.gz"
+  sha256 "5a55945b7da86ce94733faf229342f75867e9c1090685f47f4d82b7f88602a14"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libx11"
-    sha256 aarch64_linux: "577e360740de1c9a66cba510dd77a0d1d2016c0cd1d5af50574a0ebc62a8b89c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "830e811732ef83e77fc251c05edb0c8cfc6e7f0968eb29b300f2473430d57da1"
   end
 
   depends_on "pkg-config" => :build
