@@ -8,10 +8,16 @@ class Libvpx < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libvpx"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "21505329d6f3d71cd1c45d898f727e36c22cd988d076099fb32fe5a208490498"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "fdbd6fbe2cb48a3c5f3bcc93f638ecb5cd4ed990c0edd209b12f3ba955497ba0"
   end
 
-  depends_on "yasm" => :build
+  on_intel do
+    depends_on "yasm" => :build
+  end
+
+  # Patch for macOS Ventura
+  # Reported upstream: https://groups.google.com/a/webmproject.org/g/codec-devel/c/ofpypqweL5U
+  patch :DATA
 
   def install
     args = %W[
@@ -23,10 +29,6 @@ class Libvpx < Formula
       --enable-shared
       --enable-vp9-highbitdepth
     ]
-
-    # `configure` misdetects Monterey as `generic-gnu`.
-    # Reported via email to https://groups.google.com/a/webmproject.org/group/codec-devel
-    args << "--target=#{Hardware::CPU.arch}-darwin20-gcc" if OS.mac? && MacOS.version >= :monterey
 
     if Hardware::CPU.intel?
       ENV.runtime_cpu_detection
@@ -43,3 +45,47 @@ class Libvpx < Formula
     system "ar", "-x", "#{lib}/libvpx.a"
   end
 end
+
+__END__
+diff --git a/build/make/configure.sh b/build/make/configure.sh
+index 581042e38..fac9ea57b 100644
+--- a/build/make/configure.sh
++++ b/build/make/configure.sh
+@@ -791,7 +791,7 @@ process_common_toolchain() {
+         tgt_isa=x86_64
+         tgt_os=`echo $gcctarget | sed 's/.*\(darwin1[0-9]\).*/\1/'`
+         ;;
+-      *darwin2[0-1]*)
++      *darwin2[0-9]*)
+         tgt_isa=`uname -m`
+         tgt_os=`echo $gcctarget | sed 's/.*\(darwin2[0-9]\).*/\1/'`
+         ;;
+@@ -940,7 +940,7 @@ process_common_toolchain() {
+       add_cflags  "-mmacosx-version-min=10.15"
+       add_ldflags "-mmacosx-version-min=10.15"
+       ;;
+-    *-darwin2[0-1]-*)
++    *-darwin2[0-9]-*)
+       add_cflags  "-arch ${toolchain%%-*}"
+       add_ldflags "-arch ${toolchain%%-*}"
+       ;;
+diff --git a/configure b/configure
+index 1b850b5e0..bf92e1ad1 100755
+--- a/configure
++++ b/configure
+@@ -101,6 +101,7 @@ all_platforms="${all_platforms} arm64-android-gcc"
+ all_platforms="${all_platforms} arm64-darwin-gcc"
+ all_platforms="${all_platforms} arm64-darwin20-gcc"
+ all_platforms="${all_platforms} arm64-darwin21-gcc"
++all_platforms="${all_platforms} arm64-darwin22-gcc"
+ all_platforms="${all_platforms} arm64-linux-gcc"
+ all_platforms="${all_platforms} arm64-win64-gcc"
+ all_platforms="${all_platforms} arm64-win64-vs15"
+@@ -157,6 +158,7 @@ all_platforms="${all_platforms} x86_64-darwin18-gcc"
+ all_platforms="${all_platforms} x86_64-darwin19-gcc"
+ all_platforms="${all_platforms} x86_64-darwin20-gcc"
+ all_platforms="${all_platforms} x86_64-darwin21-gcc"
++all_platforms="${all_platforms} x86_64-darwin22-gcc"
+ all_platforms="${all_platforms} x86_64-iphonesimulator-gcc"
+ all_platforms="${all_platforms} x86_64-linux-gcc"
+ all_platforms="${all_platforms} x86_64-linux-icc"
