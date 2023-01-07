@@ -8,7 +8,7 @@ class JpegTurbo < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/jpeg-turbo"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "e4e4fcc1945f39efcf2f8ce35d6bc92c45fccc51d9768576cf849c698debbc91"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "95600482fdd4efb1401f07ee04dd905650b2a41edc76e307e82f2aa675b1dbf5"
   end
 
 
