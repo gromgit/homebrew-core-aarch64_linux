@@ -7,12 +7,15 @@ class Libvmaf < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libvmaf"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "446d32752c3fcbb9222f8c12b0274466250ac85e691893e0cb8262dc7483c4c8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "776b0393fe51b80a3e59942ab96474f45c9a75d3271712f82bf14924a815e563"
   end
 
   depends_on "meson" => :build
-  depends_on "nasm" => :build
   depends_on "ninja" => :build
+
+  on_intel do
+    depends_on "nasm" => :build
+  end
 
   def install
     Dir.chdir("libvmaf") do
