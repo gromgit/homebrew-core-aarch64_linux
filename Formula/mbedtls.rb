@@ -1,8 +1,8 @@
 class Mbedtls < Formula
   desc "Cryptographic & SSL/TLS library"
   homepage "https://tls.mbed.org/"
-  url "https://github.com/Mbed-TLS/mbedtls/archive/mbedtls-3.2.1.tar.gz"
-  sha256 "5850089672560eeaca03dc36678ee8573bb48ef6e38c94f5ce349af60c16da33"
+  url "https://github.com/Mbed-TLS/mbedtls/archive/mbedtls-3.3.0.tar.gz"
+  sha256 "a22ff38512697b9cd8472faa2ea2d35e320657f6d268def3a64765548b81c3ec"
   license "Apache-2.0"
   head "https://github.com/Mbed-TLS/mbedtls.git", branch: "development"
 
@@ -14,11 +14,11 @@ class Mbedtls < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/mbedtls"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "8ec768d1c61c105c5b140edd15d5b9ae7993d6f292d7ab384087d4dd53f53c6e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0a60739394aaf6c5dfc9b4e662dd08cc4bda92d5f469732ec7309e5ca2d6c7ab"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
 
   def install
     inreplace "include/mbedtls/mbedtls_config.h" do |s|
@@ -30,7 +30,7 @@ class Mbedtls < Formula
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DUSE_SHARED_MBEDTLS_LIBRARY=On",
-                    "-DPython3_EXECUTABLE=#{which("python3")}",
+                    "-DPython3_EXECUTABLE=#{which("python3.11")}",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",
                     "-DGEN_FILES=OFF",
                     *std_cmake_args
