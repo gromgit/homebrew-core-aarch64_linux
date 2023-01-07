@@ -3,8 +3,8 @@ class LittleCms2 < Formula
   homepage "https://www.littlecms.com/"
   # Ensure release is announced at https://www.littlecms.com/categories/releases/
   # (or https://www.littlecms.com/blog/)
-  url "https://downloads.sourceforge.net/project/lcms/lcms/2.13/lcms2-2.13.1.tar.gz"
-  sha256 "d473e796e7b27c5af01bd6d1552d42b45b43457e7182ce9903f38bb748203b88"
+  url "https://downloads.sourceforge.net/project/lcms/lcms/2.14/lcms2-2.14.tar.gz"
+  sha256 "28474ea6f6591c4d4cee972123587001a4e6e353412a41b3e9e82219818d5740"
   license "MIT"
   version_scheme 1
 
@@ -19,16 +19,14 @@ class LittleCms2 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/little-cms2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "381af755c4733e93b1748cfe10cfe80dede1d41bd1cfe01d69fc07ccf72a069f"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b58535e55d8d7ce81a9e1928f5cea645cbc4b44512c1219dafaac1d5ad1c4f22"
   end
 
-  depends_on "jpeg"
+  depends_on "jpeg-turbo"
   depends_on "libtiff"
 
   def install
-    args = %W[--disable-dependency-tracking --prefix=#{prefix}]
-
-    system "./configure", *args
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
