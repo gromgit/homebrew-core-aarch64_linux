@@ -1,31 +1,35 @@
 class Libass < Formula
   desc "Subtitle renderer for the ASS/SSA subtitle format"
   homepage "https://github.com/libass/libass"
-  url "https://github.com/libass/libass/releases/download/0.16.0/libass-0.16.0.tar.xz"
-  sha256 "5dbde9e22339119cf8eed59eea6c623a0746ef5a90b689e68a090109078e3c08"
+  url "https://github.com/libass/libass/releases/download/0.17.0/libass-0.17.0.tar.xz"
+  sha256 "971e2e1db59d440f88516dcd1187108419a370e64863f70687da599fdf66cc1a"
   license "ISC"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libass"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "deeb47cf142f937ae59553d35f0fe09f9aa2cb912f8f920a85e2a69e0e00d9fc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "00b9e73b47e397781468ca3359ffcd83f61065705570097a0e45628664d66f29"
   end
 
   head do
-    url "https://github.com/libass/libass.git"
+    url "https://github.com/libass/libass.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
   end
 
-  depends_on "nasm" => :build
   depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "fribidi"
   depends_on "harfbuzz"
+  depends_on "libunibreak"
 
   on_linux do
     depends_on "fontconfig"
+  end
+
+  on_intel do
+    depends_on "nasm" => :build
   end
 
   def install
