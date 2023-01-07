@@ -4,6 +4,7 @@ class Librist < Formula
   url "https://code.videolan.org/rist/librist/-/archive/v0.2.7/librist-v0.2.7.tar.gz"
   sha256 "7e2507fdef7b57c87b461d0f2515771b70699a02c8675b51785a73400b3c53a1"
   license "BSD-2-Clause"
+  revision 2
   head "https://code.videolan.org/rist/librist.git", branch: "master"
 
   livecheck do
@@ -13,7 +14,7 @@ class Librist < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/librist"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3c74aa368d38ec3d1f14aa133fcb062bdce296d83c6b7fa632800fed1a1aa804"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "21e6c7d2e5142050aecc0e1806fbe60f8b67748f932819ddd89d1631e73d8e20"
   end
 
   depends_on "meson" => :build
@@ -24,8 +25,10 @@ class Librist < Formula
 
   def install
     ENV.append "LDFLAGS", "-Wl,-rpath,#{rpath}"
-    system "meson", *std_meson_args, "build", ".", "--default-library", "both"
-    system "ninja", "install", "-C", "build"
+
+    system "meson", "setup", "--default-library", "both", "-Dfallback_builtin=false", *std_meson_args, "build", "."
+    system "meson", "compile", "-C", "build"
+    system "meson", "install", "-C", "build"
   end
 
   test do
