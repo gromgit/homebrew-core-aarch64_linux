@@ -1,8 +1,8 @@
 class Unbound < Formula
   desc "Validating, recursive, caching DNS resolver"
   homepage "https://www.unbound.net"
-  url "https://nlnetlabs.nl/downloads/unbound/unbound-1.16.2.tar.gz"
-  sha256 "2e32f283820c24c51ca1dd8afecfdb747c7385a137abe865c99db4b257403581"
+  url "https://nlnetlabs.nl/downloads/unbound/unbound-1.17.0.tar.gz"
+  sha256 "dcbc95d7891d9f910c66e4edc9f1f2fde4dea2eec18e3af9f75aed44a02f1341"
   license "BSD-3-Clause"
   head "https://github.com/NLnetLabs/unbound.git", branch: "master"
 
@@ -16,9 +16,8 @@ class Unbound < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/unbound"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "2a2b2f44013989b783cd5fc251fa50d705b5c0290af66fdb980d7427a81c1789"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "472aa8e2f7972af670dc0f0bf4d738805afb7de43f9903c44e14277a107545d3"
   end
-
 
   depends_on "libevent"
   depends_on "libnghttp2"
@@ -56,10 +55,10 @@ class Unbound < Formula
                     "username: \"#{ENV["USER"]}\""
   end
 
-  plist_options startup: true
   service do
     run [opt_sbin/"unbound", "-d", "-c", etc/"unbound/unbound.conf"]
     keep_alive true
+    require_root true
   end
 
   test do
