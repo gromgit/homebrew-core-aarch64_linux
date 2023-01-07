@@ -8,9 +8,8 @@ class Nettle < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nettle"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c726a52036cbc89d9c12a004e906ba3ab4a48b3140a325156528eb4f320febbf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "cd4fc5d92427de20537d815e5602c3d469a176139928c5e2fa6f34f2546ec8d2"
   end
-
 
   depends_on "gmp"
 
@@ -27,9 +26,7 @@ class Nettle < Formula
     end
 
     args = []
-    on_macos do
-      args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm?
-    end
+    args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if Hardware::CPU.arm? && OS.mac?
 
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
