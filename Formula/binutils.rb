@@ -9,10 +9,10 @@ class Binutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/binutils"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "25cee5c00c58aa50a4b3e0a91df5e13688bdd023cf36a406b703b96711124153"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2bb39251a5dd12c0464b0ff7904eb3391c19872541da1001376be2ee384e4535"
   end
 
-  keg_only :shadowed_by_macos, "Apple's CLT provides the same tools"
+  keg_only "it shadows the host toolchain"
 
   uses_from_macos "bison" => :build
   uses_from_macos "zlib"
@@ -22,7 +22,6 @@ class Binutils < Formula
   link_overwrite "bin/dwp"
 
   def install
-    ENV.deparallelize if OS.linux? && Hardware::CPU.arm?
     # Workaround https://sourceware.org/bugzilla/show_bug.cgi?id=28909
     touch "gas/doc/.dirstamp", mtime: Time.utc(2022, 1, 1)
     make_args = OS.mac? ? [] : ["MAKEINFO=true"] # for gprofng
