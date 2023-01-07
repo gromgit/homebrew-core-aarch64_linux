@@ -1,8 +1,8 @@
 class Libsndfile < Formula
   desc "C library for files containing sampled sound"
   homepage "https://libsndfile.github.io/libsndfile/"
-  url "https://github.com/libsndfile/libsndfile/releases/download/1.1.0/libsndfile-1.1.0.tar.xz"
-  sha256 "0f98e101c0f7c850a71225fb5feaf33b106227b3d331333ddc9bacee190bcf41"
+  url "https://github.com/libsndfile/libsndfile/releases/download/1.2.0/libsndfile-1.2.0.tar.xz"
+  sha256 "0e30e7072f83dc84863e2e55f299175c7e04a5902ae79cfb99d4249ee8f6d60a"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -12,7 +12,7 @@ class Libsndfile < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsndfile"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "0d6c39a937455e658a25939dea8b7557f3a8c826ed7942691bebace7db6cadcc"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ef998c9e5087d5aaea278f557b2dec3ccebcab6f1a9797e0fef8c4156080b992"
   end
 
   depends_on "autoconf" => :build
@@ -20,21 +20,17 @@ class Libsndfile < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "flac"
+  depends_on "lame"
   depends_on "libogg"
   depends_on "libvorbis"
+  depends_on "mpg123"
   depends_on "opus"
 
-  # Fix unsubstituted variable @EXTERNAL_MPEG_LIBS@ in sndfile.pc
-  # PR ref: https://github.com/libsndfile/libsndfile/pull/828
-  # Remove in the next release.
-  patch do
-    url "https://github.com/libsndfile/libsndfile/commit/e4fdaeefddd39bae1db27d48ccb7db7733e0c009.patch?full_index=1"
-    sha256 "af1e9faf1b7f414ff81ef3f1641e2e37f3502f0febd17f70f0db6ecdd02dc910"
-  end
+  uses_from_macos "python" => :build
 
   def install
     system "autoreconf", "-fvi"
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
