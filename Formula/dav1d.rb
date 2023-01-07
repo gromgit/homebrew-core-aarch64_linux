@@ -7,12 +7,15 @@ class Dav1d < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/dav1d"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "cab94d19ba9c478eb68878f6868a940de8936c7f912b89daf244d84fa2ac899a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "22c17addd66f0df394b98e3ac48b1c5af5caabb9b655bbff273eab4362cdde36"
   end
 
   depends_on "meson" => :build
-  depends_on "nasm" => :build
   depends_on "ninja" => :build
+
+  on_intel do
+    depends_on "nasm" => :build
+  end
 
   resource "00000000.ivf" do
     url "https://code.videolan.org/videolan/dav1d-test-data/raw/1.0.0/8-bit/data/00000000.ivf"
