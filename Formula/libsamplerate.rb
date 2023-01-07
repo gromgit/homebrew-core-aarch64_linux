@@ -13,11 +13,9 @@ class Libsamplerate < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsamplerate"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "b049e5debb5b595abfc6fd43117161caaed18881fed5df3543a7089c01036c2c"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3823130ee5cf979c66f0422a6c556cf6be1864a598d74e0fc6e50215e99e23d0"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "libsndfile"
@@ -28,8 +26,7 @@ class Libsamplerate < Formula
   patch :DATA
 
   def install
-    system "autoupdate", "-f", "-v"
-    system "autoreconf", "-f", "-i", "-v"
+    cp Dir["#{Formula["libtool"].opt_pkgshare}/*/config.{guess,sub}"], buildpath/"Cfg"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make", "install"
