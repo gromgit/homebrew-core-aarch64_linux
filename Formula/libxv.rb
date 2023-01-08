@@ -1,13 +1,13 @@
 class Libxv < Formula
   desc "X.Org: X Video (Xv) extension"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXv-1.0.11.tar.bz2"
-  sha256 "d26c13eac99ac4504c532e8e76a1c8e4bd526471eb8a0a4ff2a88db60cb0b088"
+  url "https://www.x.org/archive/individual/lib/libXv-1.0.12.tar.xz"
+  sha256 "aaf7fa09f689f7a2000fe493c0d64d1487a1210db154053e9e2336b860c63848"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxv"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "cfda2292c71395f5fdf4cc65bd9a3c82fec575e717819e81cb330181b75f39a5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "35ec4593a6008dbb22074c0c60eefff82e15927ac76c72b75f52f402c54ac75a"
   end
 
   depends_on "pkg-config" => :build
