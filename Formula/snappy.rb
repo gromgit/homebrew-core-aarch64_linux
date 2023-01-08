@@ -1,6 +1,7 @@
 class Snappy < Formula
   desc "Compression/decompression library aiming for high speed"
   homepage "https://google.github.io/snappy/"
+  # TODO: Remove `ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib` at rebuild.
   url "https://github.com/google/snappy/archive/1.1.9.tar.gz"
   sha256 "75c1fbb3d618dd3a0483bff0e26d0a92b495bbe5059c8b4f1c962b478b6e06e7"
   license "BSD-3-Clause"
@@ -8,9 +9,8 @@ class Snappy < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/snappy"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "d159b9ed6f89e6f80ed2b7e9d0112e7d05ec5bccc98c96fa6d871d12e893e670"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5a1dc3cf21646e611c34c02154c8dcc83c7aea5e48d4c081d09b1c4bd4e3625a"
   end
-
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -20,12 +20,12 @@ class Snappy < Formula
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1100
   end
 
-  # Fix for build failure. Remove with next release.
   fails_with :clang do
     build 1100
     cause "error: invalid output constraint '=@ccz' in asm"
   end
 
+  # Fix for build failure. Remove with next release.
   patch do
     on_linux do
       url "https://github.com/google/snappy/commit/0c716d435abe65250100c2caea0e5126ac4e14bd.patch?full_index=1"
