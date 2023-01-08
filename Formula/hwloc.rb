@@ -1,8 +1,8 @@
 class Hwloc < Formula
   desc "Portable abstraction of the hierarchical topology of modern architectures"
   homepage "https://www.open-mpi.org/projects/hwloc/"
-  url "https://download.open-mpi.org/release/hwloc/v2.8/hwloc-2.8.0.tar.bz2"
-  sha256 "348a72fcd48c32a823ee1da149ae992203e7ad033549e64aed6ea6eeb01f42c1"
+  url "https://download.open-mpi.org/release/hwloc/v2.9/hwloc-2.9.0.tar.bz2"
+  sha256 "2070e963596a2421b9af8eca43bdec113ee1107aaf7ccb475d4d3767a8856887"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,9 +12,8 @@ class Hwloc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hwloc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "6d8f9a721f62c62970cc3817b783684b1edbfdaf32d1d2d1fc42ecbbd8ce97f9"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8f366e0a810736d9540ddbbfdbc2e6a019fde2db43ede93b49d6da11b1fb3bac"
   end
-
 
   head do
     url "https://github.com/open-mpi/hwloc.git", branch: "master"
