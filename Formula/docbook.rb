@@ -13,9 +13,8 @@ class Docbook < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docbook"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1fb8156c775546296a654fbbf91abcc77718a0a70f22203175f3928e64f0c760"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "75fba1ededa89673e588cd83bbb9bfbad307de58a06f666e6523368c5bb922e6"
   end
-
 
   uses_from_macos "libxml2"
 
@@ -79,16 +78,19 @@ class Docbook < Formula
     etc_catalog = etc/"xml/catalog"
     ENV["XML_CATALOG_FILES"] = etc_catalog
 
+    # We use `/usr/bin/xmlcatalog` on macOS, but libxml2's `xmlcatalog` on Linux.
+    xmlcatalog = DevelopmentTools.locate("xmlcatalog")
+
     # only create catalog file if it doesn't exist already to avoid content added
     # by other formulae to be removed
-    system "xmlcatalog", "--noout", "--create", etc_catalog unless File.file?(etc_catalog)
+    system xmlcatalog, "--noout", "--create", etc_catalog unless etc_catalog.file?
 
     %w[4.2 4.1.2 4.3 4.4 4.5 5.0 5.1].each do |version|
       catalog = opt_prefix/"docbook/xml/#{version}/catalog.xml"
 
-      system "xmlcatalog", "--noout", "--del",
+      system xmlcatalog, "--noout", "--del",
              "file://#{catalog}", etc_catalog
-      system "xmlcatalog", "--noout", "--add", "nextCatalog",
+      system xmlcatalog, "--noout", "--add", "nextCatalog",
              "", "file://#{catalog}", etc_catalog
     end
   end
