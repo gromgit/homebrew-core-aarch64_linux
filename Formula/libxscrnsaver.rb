@@ -1,15 +1,14 @@
 class Libxscrnsaver < Formula
   desc "X.Org: X11 Screen Saver extension client library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXScrnSaver-1.2.3.tar.bz2"
-  sha256 "f917075a1b7b5a38d67a8b0238eaab14acd2557679835b154cf2bca576e89bf8"
+  url "https://www.x.org/archive/individual/lib/libXScrnSaver-1.2.4.tar.xz"
+  sha256 "75cd2859f38e207a090cac980d76bc71e9da99d48d09703584e00585abc920fe"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxscrnsaver"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "bf5c3cd12df33bcc6187d0f51e842d7048f1114199cd717d2d83e470725ef424"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5d862b859003331213ff6e0ab8ea092ebdd9c3bfc9d78e018ee392e24f84a714"
   end
-
 
   depends_on "pkg-config" => :build
   depends_on "libx11"
