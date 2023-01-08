@@ -4,6 +4,7 @@ class Leptonica < Formula
   url "http://www.leptonica.org/source/leptonica-1.82.0.tar.gz"
   sha256 "155302ee914668c27b6fe3ca9ff2da63b245f6d62f3061c8f27563774b8ae2d6"
   license "BSD-2-Clause"
+  revision 1
 
   livecheck do
     url "http://www.leptonica.org/download.html"
@@ -12,26 +13,21 @@ class Leptonica < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/leptonica"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "67027fa6d90e847fe64d299dc10dc7d085b8afe92ea4e05e5d7eb07028bbda79"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "add82322800410429a3ab0789d8d1216bdab45dd3e0df8af4f19ac53c13e9b29"
   end
 
   depends_on "pkg-config" => :build
   depends_on "giflib"
-  depends_on "jpeg"
+  depends_on "jpeg-turbo"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "openjpeg"
   depends_on "webp"
 
   def install
-    args = %W[
-      --disable-dependency-tracking
-      --prefix=#{prefix}
-      --with-libwebp
-      --with-libopenjpeg
-    ]
-
-    system "./configure", *args
+    system "./configure", *std_configure_args,
+                          "--with-libwebp",
+                          "--with-libopenjpeg"
     system "make", "install"
   end
 
