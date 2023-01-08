@@ -1,13 +1,19 @@
 class Sdl2 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
   homepage "https://www.libsdl.org/"
-  url "https://github.com/libsdl-org/SDL/releases/download/release-2.26.0/SDL2-2.26.0.tar.gz"
-  sha256 "8000d7169febce93c84b6bdf376631f8179132fd69f7015d4dadb8b9c2bdb295"
+  url "https://github.com/libsdl-org/SDL/releases/download/release-2.26.1/SDL2-2.26.1.tar.gz"
+  sha256 "02537cc7ebd74071631038b237ec4bfbb3f4830ba019e569434da33f42373e04"
   license "Zlib"
+
+  livecheck do
+    url :stable
+    regex(%r{href=["']?[^"' >]*?/tag/release[._-](\d+(?:\.\d+)+)["' >]}i)
+    strategy :github_latest
+  end
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/sdl2"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "df273d8dd6c6ef2bfe6de7807d25afe81419e50cd132b6bcc05f35fe973d69f4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "db8dfa3908db68b18b60bee6e2e5d6c13412e2290c56f538fbf668a2c0e0b11b"
   end
 
   head do
