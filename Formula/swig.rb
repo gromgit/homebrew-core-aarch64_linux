@@ -1,23 +1,23 @@
 class Swig < Formula
   desc "Generate scripting interfaces to C/C++ code"
   homepage "http://www.swig.org/"
-  url "https://downloads.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz"
-  sha256 "d53be9730d8d58a16bf0cbd1f8ac0c0c3e1090573168bfa151b01eb47fa906fc"
+  url "https://downloads.sourceforge.net/project/swig/swig/swig-4.1.1/swig-4.1.1.tar.gz"
+  sha256 "2af08aced8fcd65cdb5cc62426768914bedc735b1c250325203716f78e39ac9b"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/swig"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a20b125517a561a09d1015615ad43d846f68bda050af68612ce0cff1fc4a165"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b5b95d1659fffb0d8ef357c99e9dee708c73dc52b39024030851f9e3c076741d"
   end
 
   head do
-    url "https://github.com/swig/swig.git"
+    url "https://github.com/swig/swig.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
   end
 
-  depends_on "pcre"
+  depends_on "pcre2"
 
   uses_from_macos "ruby" => :test
 
