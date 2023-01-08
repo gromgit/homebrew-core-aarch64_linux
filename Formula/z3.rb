@@ -4,7 +4,8 @@ class Z3 < Formula
   url "https://github.com/Z3Prover/z3/archive/z3-4.11.2.tar.gz"
   sha256 "e3a82431b95412408a9c994466fad7252135c8ed3f719c986cd75c8c5f234c7e"
   license "MIT"
-  head "https://github.com/Z3Prover/z3.git", branch: "develop"
+  revision 1
+  head "https://github.com/Z3Prover/z3.git", branch: "master"
 
   livecheck do
     url :stable
@@ -14,31 +15,42 @@ class Z3 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/z3"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7ba23089383424ff3159ca80a4372b2bc48214cd678b7b72666efd9ea83aebc6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "797835107c96fa438f8c56e976602ec182b2a739f3204f4a72619d1b6c23de7c"
   end
 
+  depends_on "cmake" => :build
   # Has Python bindings but are supplementary to the main library
   # which does not need Python.
-  depends_on "python@3.10" => :build
-
-  on_linux do
-    depends_on "gcc" # For C++17
-  end
+  depends_on "python@3.11" => [:build, :test]
 
   fails_with gcc: "5"
 
-  def install
-    python3 = Formula["python@3.10"].opt_bin/"python3.10"
-    system python3, "scripts/mk_make.py",
-                     "--prefix=#{prefix}",
-                     "--python",
-                     "--pypkgdir=#{prefix/Language::Python.site_packages(python3)}",
-                     "--staticlib"
+  def python3
+    which("python3.11")
+  end
 
-    cd "build" do
-      system "make"
-      system "make", "install"
-    end
+  def install
+    # LTO on Intel Monterey produces segfaults.
+    # https://github.com/Z3Prover/z3/issues/6414
+    do_lto = MacOS.version < :monterey || Hardware::CPU.arm?
+    args = %W[
+      -DZ3_LINK_TIME_OPTIMIZATION=#{do_lto ? "ON" : "OFF"}
+      -DZ3_INCLUDE_GIT_DESCRIBE=OFF
+      -DZ3_INCLUDE_GIT_HASH=OFF
+      -DZ3_INSTALL_PYTHON_BINDINGS=ON
+      -DZ3_BUILD_EXECUTABLE=ON
+      -DZ3_BUILD_TEST_EXECUTABLES=OFF
+      -DZ3_BUILD_PYTHON_BINDINGS=ON
+      -DZ3_BUILD_DOTNET_BINDINGS=OFF
+      -DZ3_BUILD_JAVA_BINDINGS=OFF
+      -DZ3_USE_LIB_GMP=OFF
+      -DPYTHON_EXECUTABLE=#{python3}
+      -DCMAKE_INSTALL_PYTHON_PKG_DIR=#{Language::Python.site_packages(python3)}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
     system "make", "-C", "contrib/qprofdiff"
     bin.install "contrib/qprofdiff/qprofdiff"
@@ -47,8 +59,9 @@ class Z3 < Formula
   end
 
   test do
-    system ENV.cc, "-I#{include}", "-L#{lib}", "-lz3",
-           pkgshare/"examples/c/test_capi.c", "-o", testpath/"test"
+    system ENV.cc, pkgshare/"examples/c/test_capi.c", "-I#{include}",
+                   "-L#{lib}", "-lz3", "-o", testpath/"test"
     system "./test"
+    assert_equal version.to_s, shell_output("#{python3} -c 'import z3; print(z3.get_version_string())'").strip
   end
 end
