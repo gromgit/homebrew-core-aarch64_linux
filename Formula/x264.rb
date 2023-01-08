@@ -40,13 +40,15 @@ class X264 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/x264"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "9d2cd013c221edd5962814b97ed3dfcff40789ba153e6f831b05e32c396e0bde"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a2fec1014e6c4fdc20bd7c1b4be01c4a76aafdbbf5fa8a99f81465ab0885f097"
   end
-
-  depends_on "nasm" => :build
 
   on_macos do
     depends_on "gcc" if DevelopmentTools.clang_build_version <= 902
+  end
+
+  on_intel do
+    depends_on "nasm" => :build
   end
 
   # https://code.videolan.org/videolan/x264/-/commit/b5bc5d69c580429ff716bafcd43655e855c31b02
