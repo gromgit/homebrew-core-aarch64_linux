@@ -13,11 +13,11 @@ class Libsodium < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libsodium"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "556ad3b4417d07d949930b427e235442ed9162bde67fc9cd0b230e075c03776e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "793f2a6a8e7fed199c062b28548ef3740b10ba882b85f610c932298adc1a564e"
   end
 
   head do
-    url "https://github.com/jedisct1/libsodium.git"
+    url "https://github.com/jedisct1/libsodium.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
