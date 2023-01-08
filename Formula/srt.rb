@@ -1,14 +1,14 @@
 class Srt < Formula
   desc "Secure Reliable Transport"
   homepage "https://www.srtalliance.org/"
-  url "https://github.com/Haivision/srt/archive/v1.5.0.tar.gz"
-  sha256 "99e3625a6285b3b429af26abb1ec0a4bd0072db144bc4d617a83154d99a5dd1e"
+  url "https://github.com/Haivision/srt/archive/v1.5.1.tar.gz"
+  sha256 "af891e7a7ffab61aa76b296982038b3159da690f69ade7c119f445d924b3cf53"
   license "MPL-2.0"
   head "https://github.com/Haivision/srt.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/srt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "6ddf35244718f03516b76ae96fbeba2eafcf638b4e4e3d28f1f4193729ca9ebe"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "041219793c02441a166ea889c58502c6b8b3cbb88fc993c734f918d915b323cd"
   end
 
   depends_on "cmake" => :build
