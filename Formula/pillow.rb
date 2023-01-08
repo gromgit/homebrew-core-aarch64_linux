@@ -1,21 +1,19 @@
 class Pillow < Formula
   desc "Friendly PIL fork (Python Imaging Library)"
   homepage "https://python-pillow.org"
-  url "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz"
-  sha256 "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
+  url "https://files.pythonhosted.org/packages/bc/07/830784e061fb94d67649f3e438ff63cfb902dec6d48ac75aeaaac7c7c30e/Pillow-9.4.0.tar.gz"
+  sha256 "a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e"
   license "HPND"
-  revision 1
   head "https://github.com/python-pillow/Pillow.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pillow"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "30bd21bcf47a16c7cc1daa4dad3157fb63ee5924158145cb3d77d8beb8b63d99"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "50b5c94806e962803441c020197e6c3dd331eb3441f224630cb9a17f5d9bef32"
   end
 
   depends_on "pkg-config" => :build
   depends_on "python@3.10" => [:build, :test]
-  depends_on "python@3.8" => [:build, :test]
-  depends_on "python@3.9" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "jpeg-turbo"
   depends_on "libimagequant"
   depends_on "libraqm"
