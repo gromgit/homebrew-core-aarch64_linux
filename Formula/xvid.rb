@@ -12,12 +12,13 @@ class Xvid < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xvid"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "afe0c793e34ae991ebcd08e35203d65e8acbc7faf3db87976948fbb676b3ff91"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "491436779f55d05aaf4c0461b6bf4242f6f612150e1a211fe47f2c9cf5eca261"
   end
 
   def install
     cd "build/generic" do
       system "./configure", "--disable-assembly", "--prefix=#{prefix}"
+      ENV.deparallelize # Work around error: install: mkdir =build: File exists
       system "make"
       system "make", "install"
     end
