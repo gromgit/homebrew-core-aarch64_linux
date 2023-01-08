@@ -1,10 +1,9 @@
 class Boost < Formula
   desc "Collection of portable C++ source libraries"
   homepage "https://www.boost.org/"
-  url "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.bz2"
-  sha256 "475d589d51a7f8b3ba2ba4eda022b170e562ca3b760ee922c146b6c65856ef39"
+  url "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.bz2"
+  sha256 "1e19565d82e43bc59209a168f5ac899d3ba471d55c7610c677d4ccf2c9c500c0"
   license "BSL-1.0"
-  revision 2
   head "https://github.com/boostorg/boost.git", branch: "master"
 
   livecheck do
@@ -17,9 +16,8 @@ class Boost < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/boost"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "9debbf74e6bd30ab42a82c3a22d8fdc730d0f74f701ce79c3ce870eba06d8bcd"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9a30c72acd844a9b280dcf1a2fd1200e2e67342e4b4fce3482836f3046204fc8"
   end
-
 
   depends_on "icu4c"
   depends_on "xz"
