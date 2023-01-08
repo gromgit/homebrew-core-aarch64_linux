@@ -4,6 +4,7 @@ class SourceHighlight < Formula
   url "https://ftp.gnu.org/gnu/src-highlite/source-highlight-3.1.9.tar.gz"
   mirror "https://ftpmirror.gnu.org/src-highlite/source-highlight-3.1.9.tar.gz"
   sha256 "3a7fd28378cb5416f8de2c9e77196ec915145d44e30ff4e0ee8beb3fe6211c91"
+  license "GPL-3.0-or-later"
   revision 5
 
   livecheck do
@@ -13,7 +14,7 @@ class SourceHighlight < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/source-highlight"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "41109f1aaf2a176881997ef3285bcee08379193acbc1b80ef2fa05bc1a9ab331"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5f64986aa19b99b25136c135e703fe365f0ac1c8289980397b9d1065fa2199ab"
   end
 
   depends_on "boost"
