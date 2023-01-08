@@ -1,20 +1,20 @@
 class Numpy < Formula
   desc "Package for scientific computing with Python"
   homepage "https://www.numpy.org/"
-  url "https://files.pythonhosted.org/packages/f4/66/17b8e95770478436bf968353c89683ce6f9e14d92e0d4fb3111c09ba18d2/numpy-1.23.2.tar.gz"
-  sha256 "b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01"
+  url "https://files.pythonhosted.org/packages/ce/b8/c170db50ec49d5845bd771bc5549fe734ee73083c5c52791915f95d8e2bc/numpy-1.24.1.tar.gz"
+  sha256 "2386da9a471cc00a1f47845e27d916d5ec5346ae9696e01a8a34760858fe9dd2"
   license "BSD-3-Clause"
   head "https://github.com/numpy/numpy.git", branch: "main"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/numpy"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "76d3a0b9d48e53928793786583a67a2948c0fbdf547c873350ad738a94e2d5ad"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5d75c06ae468b8e246f84f93ce55248c2b89cae1e69d201cb5ca29f049acde09"
   end
 
   depends_on "gcc" => :build # for gfortran
   depends_on "libcython" => :build
   depends_on "python@3.10" => [:build, :test]
-  depends_on "python@3.9" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "openblas"
 
   fails_with gcc: "5"
