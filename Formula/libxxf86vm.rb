@@ -1,26 +1,19 @@
 class Libxxf86vm < Formula
   desc "X.Org: XFree86-VidMode X extension"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXxf86vm-1.1.4.tar.bz2"
-  sha256 "afee27f93c5f31c0ad582852c0fb36d50e4de7cd585fcf655e278a633d85cd57"
+  url "https://www.x.org/archive/individual/lib/libXxf86vm-1.1.5.tar.gz"
+  sha256 "f3f1c29fef8accb0adbd854900c03c6c42f1804f2bc1e4f3ad7b2e1f3b878128"
   license "MIT"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libxxf86vm"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "08b02565b1c8a6db7faa92be702524affccdcced043d92bde520b1b0316cc920"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c8ac561d8f544293c5a93e0bd21fb110c00d46bb54433604b6b638e9c13e34e9"
   end
-
 
   depends_on "pkg-config" => :build
   depends_on "libx11"
   depends_on "libxext"
   depends_on "xorgproto"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
-    sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
-  end
 
   def install
     args = %W[
