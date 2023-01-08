@@ -12,11 +12,11 @@ class Zeromq < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/zeromq"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "02054132e9f29f00ed62e9fd891d2ebcf1a3a4434ad91fa3eb9f911ad38efc8a"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f37d76ee0ef58aa3073edd18e874c3389285f4cfdac2ad6c18ef7835ae8a0aee"
   end
 
   head do
-    url "https://github.com/zeromq/libzmq.git"
+    url "https://github.com/zeromq/libzmq.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
