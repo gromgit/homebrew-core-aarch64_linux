@@ -1,15 +1,14 @@
 class Systemd < Formula
   desc "System and service manager"
   homepage "https://wiki.freedesktop.org/www/Software/systemd/"
-  url "https://github.com/systemd/systemd/archive/v251.tar.gz"
-  sha256 "0ecc8bb28d3062c8e58a64699a9b16534554bb6a01efb8d5507c893db39f8d51"
+  url "https://github.com/systemd/systemd/archive/v252.tar.gz"
+  sha256 "113a9342ddf89618a17c4056c2dd72c4b20b28af8da135786d7e9b4f1d18acfb"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 1
   head "https://github.com/systemd/systemd.git", branch: "main"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/systemd"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "181e38b7e5b047290253e70531a2f9aebd7452b6e59176c0acf583e573176936"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5827959fcf7c6a847676106fd4d5398ecca6c8a9e179925595409b060b176321"
   end
 
   depends_on "coreutils" => :build
@@ -25,7 +24,7 @@ class Systemd < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "rsync" => :build
   depends_on "expat"
   depends_on "libcap"
@@ -39,16 +38,17 @@ class Systemd < Formula
   uses_from_macos "libxcrypt"
 
   def install
-    ENV["PYTHONPATH"] = Formula["jinja2-cli"].opt_libexec/Language::Python.site_packages("python3")
+    ENV["PYTHONPATH"] = Formula["jinja2-cli"].opt_libexec/Language::Python.site_packages("python3.11")
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/systemd"
 
-    args = *std_meson_args + %W[
+    args = std_meson_args + %W[
       --sysconfdir=#{etc}
       --localstatedir=#{var}
       -Drootprefix=#{prefix}
       -Dsysvinit-path=#{etc}/init.d
       -Dsysvrcnd-path=#{etc}/rc.d
       -Dpamconfdir=#{etc}/pam.d
+      -Dbashcompletiondir=#{bash_completion}
       -Dcreate-log-dirs=false
       -Dhwdb=false
       -Dlz4=true
