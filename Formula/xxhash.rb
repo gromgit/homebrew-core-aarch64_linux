@@ -3,7 +3,10 @@ class Xxhash < Formula
   homepage "https://github.com/Cyan4973/xxHash"
   url "https://github.com/Cyan4973/xxHash/archive/v0.8.1.tar.gz"
   sha256 "3bb6b7d6f30c591dd65aaaff1c8b7a5b94d81687998ca9400082c739a690436c"
-  license "BSD-2-Clause"
+  license all_of: [
+    "BSD-2-Clause", # library
+    "GPL-2.0-or-later", # `xxhsum` command line utility
+  ]
 
   livecheck do
     url :stable
@@ -12,12 +15,13 @@ class Xxhash < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xxhash"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c4be461f27a4f6cef331c733ba364e91cd5f4b42852b77f2db540c7030b34ae1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a3684829bff5811bc862575361a7d2757a756e9944cdbededb47fa93c280f7a7"
   end
 
   def install
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
+    prefix.install "cli/COPYING"
   end
 
   test do
