@@ -2,8 +2,8 @@ class Llvm < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
   # NOTE: `ccls` will need rebuilding on every version bump.
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/llvm-project-15.0.5.src.tar.xz"
-  sha256 "9c4278a6b8884eb7f4ae7dfe3c8e5445019824885e47cfdf1392563c47316fd6"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.6/llvm-project-15.0.6.src.tar.xz"
+  sha256 "9d53ad04dc60cb7b30e810faf64c5ab8157dadef46c8766f67f286238256ff92"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
@@ -15,7 +15,7 @@ class Llvm < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/llvm"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f2b15c1d048fd79ee365d7cc9fca9cdedb3f2dd3185b5dd58c3c33e8f1d9e345"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d22e4d73e2eac4ff30d9c71191e7a4d47cebbd5eb679970fedad83dabd66dca1"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
