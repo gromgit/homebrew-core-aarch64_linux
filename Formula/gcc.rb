@@ -24,7 +24,7 @@ class Gcc < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gcc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c7dcfa98042aac091240444b7da0263bdf850257cc8901a155750fb15bc128c4"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bc8ad440904ea4ecd81c60355ae78496b9f4ecbda177908fe63cde1c092e6950"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -104,7 +104,11 @@ class Gcc < Formula
 
       # Change the default directory name for 64-bit libraries to `lib`
       # https://stackoverflow.com/a/54038769
-      inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
+      if Hardware::CPU.arm?
+        inreplace "gcc/config/aarch64/t-aarch64-linux", "lp64=../lib64", "lp64="
+      else
+        inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
+      end
     end
 
     mkdir "build" do
