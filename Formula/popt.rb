@@ -1,9 +1,9 @@
 class Popt < Formula
   desc "Library like getopt(3) with a number of enhancements"
   homepage "https://github.com/rpm-software-management/popt"
-  url "http://ftp.rpm.org/popt/releases/popt-1.x/popt-1.18.tar.gz"
-  mirror "https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-1.18.tar.gz"
-  sha256 "5159bc03a20b28ce363aa96765f37df99ea4d8850b1ece17d1e6ad5c24fdc5d1"
+  url "http://ftp.rpm.org/popt/releases/popt-1.x/popt-1.19.tar.gz"
+  mirror "https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-1.19.tar.gz"
+  sha256 "c25a4838fc8e4c1c8aacb8bd620edb3084a3d63bf8987fdad3ca2758c63240f9"
   license "MIT"
 
   # The stable archive is found at https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/
@@ -17,7 +17,7 @@ class Popt < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/popt"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "aa7b294c040e4b5d54fd9c87bd8a86ca1d0df13246c3b22cde74231667f4ca88"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8443d3a8910d17bc41048d2bdcb70b068ad42a248f22990a20134d9e53258ef6"
   end
 
   def install
