@@ -1,8 +1,8 @@
 class Rubberband < Formula
   desc "Audio time stretcher tool and library"
   homepage "https://breakfastquay.com/rubberband/"
-  url "https://breakfastquay.com/files/releases/rubberband-3.0.0.tar.bz2"
-  sha256 "df6530b403c8300a23973df22f36f3c263f010d53792063e411f633cebb9ed85"
+  url "https://breakfastquay.com/files/releases/rubberband-3.1.2.tar.bz2"
+  sha256 "dda7e257b14c59a1f59c5ccc4d6f19412039f77834275955aa0ff511779b98d2"
   license "GPL-2.0-or-later"
   head "https://hg.sr.ht/~breakfastquay/rubberband", using: :hg
 
@@ -13,7 +13,7 @@ class Rubberband < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rubberband"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7bb658fbbb5699db9eee686bdc5c893ec6606375992beb3e028c08d46455ac36"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "1c05bc87a1182db9ffa63ba3e0cdd283b9fcfe077b2450fdd065908385619a5e"
   end
 
   depends_on "meson" => :build
@@ -24,7 +24,6 @@ class Rubberband < Formula
 
   on_linux do
     depends_on "fftw"
-    depends_on "gcc"
     depends_on "ladspa-sdk"
     depends_on "vamp-plugin-sdk"
   end
