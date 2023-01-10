@@ -1,10 +1,10 @@
 class Rsync < Formula
   desc "Utility that provides fast incremental file transfer"
   homepage "https://rsync.samba.org/"
-  url "https://rsync.samba.org/ftp/rsync/rsync-3.2.5.tar.gz"
-  mirror "https://mirrors.kernel.org/gentoo/distfiles/rsync-3.2.5.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-3.2.5.tar.gz"
-  sha256 "2ac4d21635cdf791867bc377c35ca6dda7f50d919a58be45057fd51600c69aba"
+  url "https://rsync.samba.org/ftp/rsync/rsync-3.2.7.tar.gz"
+  mirror "https://mirrors.kernel.org/gentoo/distfiles/rsync-3.2.7.tar.gz"
+  mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-3.2.7.tar.gz"
+  sha256 "4e7d9d3f6ed10878c58c5fb724a67dacf4b6aac7340b13e488fb2dc41346f2bb"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -14,11 +14,11 @@ class Rsync < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/rsync"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "728edf0814e3c580e1c2319b4476558f0eb4be92d5dad57f25580391b4a73ac0"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "aeb48a8690f99959bce493abe38b3e0e306f4e51b4608e24e03dca9b1b7dac35"
   end
 
   depends_on "lz4"
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
   depends_on "popt"
   depends_on "xxhash"
   depends_on "zstd"
@@ -26,11 +26,11 @@ class Rsync < Formula
   uses_from_macos "zlib"
 
   # hfs-compression.diff has been marked by upstream as broken since 3.1.3
-  # and has not been reported fixed as of 3.2.4
+  # and has not been reported fixed as of 3.2.6
   patch do
-    url "https://download.samba.org/pub/rsync/src/rsync-patches-3.2.4.tar.gz"
-    mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-patches-3.2.4.tar.gz"
-    sha256 "70a597590af6c61cf3d05d663429ff9f60ffe24e44f9c73a4cdc69ebdc1322a4"
+    url "https://download.samba.org/pub/rsync/src/rsync-patches-3.2.6.tar.gz"
+    mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-patches-3.2.6.tar.gz"
+    sha256 "c3d13132b560f456fd8fc9fdf9f59377e91adf0dfc8117e33800d14b483d1a85"
     apply "patches/fileflags.diff"
   end
 
