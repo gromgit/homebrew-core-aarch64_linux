@@ -4,6 +4,7 @@ class Fftw < Formula
   url "https://fftw.org/fftw-3.3.10.tar.gz"
   sha256 "56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467"
   license all_of: ["GPL-2.0-or-later", "BSD-2-Clause"]
+  revision 1
 
   livecheck do
     url :homepage
@@ -12,7 +13,7 @@ class Fftw < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/fftw"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "487448da71917f9d37d4250503baa3c3caa95419e79488eb848a83e804c0c8e7"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d4a1485ba2e12ed5e2f4f4efc9106c3b67f496a24516b81cc4c5ed76665b7ed6"
   end
 
   depends_on "open-mpi"
