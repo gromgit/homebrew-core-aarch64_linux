@@ -4,12 +4,12 @@ class Intltool < Formula
   url "https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz"
   sha256 "67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/intltool"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "a40c6a3adb88e7f99c1d2279f588e4013770da9be7f6586bdb774088055094fb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "ce38ef3224fb857d2e8a852f1fcf3a8dd5595804d4f7f5322f3bbbb043131847"
   end
-
 
   on_linux do
     depends_on "expat"
