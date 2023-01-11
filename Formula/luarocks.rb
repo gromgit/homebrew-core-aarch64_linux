@@ -13,12 +13,12 @@ class Luarocks < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luarocks"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1a13afb8acbe5db89df110ccec0abe24e56f0131102a5ccdfee487d2c3a82089"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "b008c8b37277e658c3d2f8f246f95b8ec62c0539af76f2c5f01b96f452703057"
   end
 
   depends_on "lua@5.1" => :test
   depends_on "lua@5.3" => :test
-  depends_on "luajit-openresty" => :test
+  depends_on "luajit" => :test
   depends_on "lua"
 
   uses_from_macos "unzip"
@@ -73,7 +73,7 @@ class Luarocks < Formula
 
         # LuaJIT is compatible with lua5.1, so we can also test it here
         rmdir testpath/"blank_space"
-        system "#{Formula["luajit-openresty"].bin}/luajit", "lfs_#{luaversion}test.lua"
+        system Formula["luajit"].bin/"luajit", "lfs_#{luaversion}test.lua"
         assert_predicate testpath/"blank_space", :directory?,
           "Luafilesystem failed to create the expected directory"
       else
