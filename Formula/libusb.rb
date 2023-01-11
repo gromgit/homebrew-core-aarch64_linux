@@ -12,11 +12,11 @@ class Libusb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libusb"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "afcd9eb1450fc7af1e21b21a21d01859a4aa432581db0ff6e028fadfada320cf"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e5108458ed42c013442ae454d1c337088c26c63b26258b6ea303e4f97987d770"
   end
 
   head do
-    url "https://github.com/libusb/libusb.git"
+    url "https://github.com/libusb/libusb.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
