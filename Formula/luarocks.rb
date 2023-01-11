@@ -13,7 +13,7 @@ class Luarocks < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/luarocks"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "b008c8b37277e658c3d2f8f246f95b8ec62c0539af76f2c5f01b96f452703057"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "01725b6c0ff71a1b3b0f862a6e1884305880413338621979107a73795bf49ff6"
   end
 
   depends_on "lua@5.1" => :test
