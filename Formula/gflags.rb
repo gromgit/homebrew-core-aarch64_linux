@@ -7,15 +7,15 @@ class Gflags < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gflags"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "962dba75dc70c93beca414f1eb7a4050ccb4fa3ae6ec1a40e006dca0022318de"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "6a258371e8615a6314ef15538f9a6f4e9ed5dcb7c5df093ee13f85515353af1e"
   end
 
-
-  depends_on "cmake" => :build
+  depends_on "cmake" => [:build, :test]
 
   def install
     mkdir "buildroot" do
-      system "cmake", "..", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON"
+      system "cmake", "..", *std_cmake_args, "-DBUILD_SHARED_LIBS=ON", "-DBUILD_STATIC_LIBS=ON",
+                                             "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"
       system "make", "install"
     end
   end
@@ -48,5 +48,16 @@ class Gflags < Formula
     system ENV.cxx, "test.cpp", "-L#{lib}", "-lgflags", "-o", "test"
     assert_match "Hello world!", shell_output("./test")
     assert_match "Foo bar!", shell_output("./test --message='Foo bar!'")
+
+    (testpath/"CMakeLists.txt").write <<~EOS
+      cmake_minimum_required(VERSION 2.8)
+      project(cmake_test)
+      add_executable(${PROJECT_NAME} test.cpp)
+      find_package(gflags REQUIRED COMPONENTS static)
+      target_link_libraries(${PROJECT_NAME} PRIVATE ${GFLAGS_LIBRARIES})
+    EOS
+    system "cmake", testpath.to_s
+    system "cmake", "--build", testpath.to_s
+    assert_match "Hello world!", shell_output("./cmake_test")
   end
 end
