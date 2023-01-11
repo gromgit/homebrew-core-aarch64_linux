@@ -16,11 +16,11 @@ class Gperftools < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gperftools"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "fd963e3b9757d12e37894e0e25b86ce1937840c1e54ed9a693fab2e332cd7fdb"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a63ac55a8d51922d8fbeb3b58cfbaa75a5d952896f5f782693125ecbbcad36c6"
   end
 
   head do
-    url "https://github.com/gperftools/gperftools.git"
+    url "https://github.com/gperftools/gperftools.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
