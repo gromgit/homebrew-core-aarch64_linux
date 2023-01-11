@@ -7,7 +7,7 @@ class Leveldb < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/leveldb"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "95bd6bcaedb6dd16941af973e2904809a9706b0907759a6cd05f26b6af8c98fa"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "a3935b34e3ae2b3f11a0684a398b38c61b30d8ebbb5e3602ccbe8d773d5cbe21"
   end
 
   depends_on "cmake" => :build
