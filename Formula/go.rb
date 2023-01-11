@@ -1,9 +1,9 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.19.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.19.src.tar.gz"
-  sha256 "9419cc70dc5a2523f29a77053cafff658ed21ef3561d9b6b020280ebceab28b9"
+  url "https://go.dev/dl/go1.19.4.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.19.4.src.tar.gz"
+  sha256 "eda74db4ac494800a3e66ee784e495bfbb9b8e535df924a8b01b1a8028b7f368"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/go.git", branch: "master"
 
@@ -14,7 +14,7 @@ class Go < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/go"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "73c27110869ae0232cfaf09d50dcdbef556cdd252525021606d1792709bbd64b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f52d395963eb6ccd4e9f035ef6e6365a99c0d24cbd174cad7c1d35c36448fd70"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.
@@ -63,7 +63,6 @@ class Go < Formula
     # Remove useless files.
     # Breaks patchelf because folder contains weird debug/test files
     (libexec/"src/debug/elf/testdata").rmtree
-    (libexec/"src/debug/dwarf/testdata").rmtree if OS.linux? && Hardware::CPU.arm?
     # Binaries built for an incompatible architecture
     (libexec/"src/runtime/pprof/testdata").rmtree
   end
