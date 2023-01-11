@@ -13,10 +13,14 @@ class Lua < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "7a205ea2822e0889f26217a56995fb85ba98bcdb818cf1225e3456d4c9b65f29"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4453aee193c253f936eeb339acfc0f5409a4720c751fd3da07843e1fb856d657"
   end
 
   uses_from_macos "unzip" => :build
+
+  on_linux do
+    depends_on "readline"
+  end
 
   # Be sure to build a dylib, or else runtime modules will pull in another static copy of liblua = crashy
   # See: https://github.com/Homebrew/legacy-homebrew/pull/5043
