@@ -10,10 +10,11 @@ class LuaAT51 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua@5.1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "8bb7d745c921e42b3ab69e9edc7d7d4e4bcf7ac31de3caa184f2800c5d2e4058"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "84a3f65e04ae74ab1444fde0283be04f7d4b847876358fa57334414e312d4ed2"
   end
 
-  deprecate! date: "2012-02-17", because: :unsupported
+  # Commented out while this formula still has dependents.
+  # deprecate! date: "2012-02-17", because: :unsupported
 
   uses_from_macos "unzip"
 
