@@ -12,7 +12,7 @@ class LuaAT53 < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lua@5.3"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "4d72b66e2525a0fe3a1f2597fd51d7883e547d904b92be999444e267267af09b"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3ea15c02792f5c6e4c0206ccce34c24817730b39b91ae88dfbd04a1eb372c235"
   end
 
   keg_only :versioned_formula
