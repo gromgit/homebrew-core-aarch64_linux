@@ -12,11 +12,11 @@ class Less < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/less"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "bee7da5c98c6b75c0f3336b03c4e85f7604230fd07cf19935717b93cbaa9caaa"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "19c5c25ae3119a333f47c53582380c68be2d6c28db454d988ef512d1a11ba683"
   end
 
   head do
-    url "https://github.com/gwsw/less.git"
+    url "https://github.com/gwsw/less.git", branch: "master"
     depends_on "autoconf" => :build
     uses_from_macos "perl" => :build
   end
