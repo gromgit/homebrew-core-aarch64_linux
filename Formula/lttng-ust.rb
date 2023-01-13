@@ -1,8 +1,8 @@
 class LttngUst < Formula
   desc "Linux Trace Toolkit Next Generation Userspace Tracer"
   homepage "https://lttng.org/"
-  url "https://lttng.org/files/lttng-ust/lttng-ust-2.13.2.tar.bz2"
-  sha256 "08679a1dfc2c9428885273861628aa5d828972f389a38bb08fdce39adee589b7"
+  url "https://lttng.org/files/lttng-ust/lttng-ust-2.13.5.tar.bz2"
+  sha256 "f1d7bb4984a3dc5dacd3b7bcb4c10c04b041b0eecd7cba1fef3d8f86aff02bd6"
   license all_of: ["LGPL-2.1-only", "MIT", "GPL-2.0-only", "BSD-3-Clause", "BSD-2-Clause", "GPL-3.0-or-later"]
 
   livecheck do
@@ -12,7 +12,7 @@ class LttngUst < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/lttng-ust"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "03e7fc67cc5ed19617596b1e887609e0ba9b644c0bcd78a8e776e6bd8464e0c8"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "e82982c31e863f89f64f4e33731752732f7b0cf2f36fe2c74f964ff1eb534d19"
   end
 
   depends_on "pkg-config" => :build
