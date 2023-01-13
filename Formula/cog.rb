@@ -8,7 +8,7 @@ class Cog < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/cog"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "f43ac2899b6ea7b3db8c0019666e41a62d828f960c338837fa38ce4a54f71d46"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d362992f08d301121240300606ed6fd21d7980b2ad05d4df09263160212e37bd"
   end
 
   depends_on "go" => :build
