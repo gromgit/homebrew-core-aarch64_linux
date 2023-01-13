@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-7.0.0.tar.gz"
-  sha256 "284d8bd1fd85d6a55a05ee4e7c31c31977ad56cbf344ed83790beeb148baa720"
+  url "https://download.redis.io/releases/redis-7.0.7.tar.gz"
+  sha256 "8d327d7e887d1bb308fc37aaf717a0bf79f58129e3739069aaeeae88955ac586"
   license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", branch: "unstable"
 
@@ -13,7 +13,7 @@ class Redis < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/redis"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ebf1f2e0ff6e61966f494e7b7dc481f7f30d4b1593baecdb5720a0ff3ec21043"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "f8b065978570dd00541ec3487c6002d027d9720053fae020f6780dee5c21380c"
   end
 
   depends_on "openssl@1.1"
