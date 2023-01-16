@@ -4,9 +4,9 @@ class Thrift < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://www.apache.org/dyn/closer.lua?path=thrift/0.16.0/thrift-0.16.0.tar.gz"
-    mirror "https://archive.apache.org/dist/thrift/0.16.0/thrift-0.16.0.tar.gz"
-    sha256 "f460b5c1ca30d8918ff95ea3eb6291b3951cf518553566088f3f2be8981f6209"
+    url "https://www.apache.org/dyn/closer.lua?path=thrift/0.17.0/thrift-0.17.0.tar.gz"
+    mirror "https://archive.apache.org/dist/thrift/0.17.0/thrift-0.17.0.tar.gz"
+    sha256 "b272c1788bb165d99521a2599b31b97fa69e5931d099015d91ae107a0b0cc58f"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
@@ -16,16 +16,12 @@ class Thrift < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "336a02980f29f8d9ba7366ea0d3122a50b6e95384593061ee533f42f8a217f06"
-    sha256 cellar: :any,                 arm64_big_sur:  "78b97e148edf641a56cde92eaa218f44da8847baea8570e1acb40ebf21f2051f"
-    sha256 cellar: :any,                 monterey:       "1647c15f977509a0aedfe566ab08b444c4e027c7a78b5c43c1656a57d14279ad"
-    sha256 cellar: :any,                 big_sur:        "79bd37d9c191dd5396db03069bb679cab6698a34436229ee718b3ec7320cba16"
-    sha256 cellar: :any,                 catalina:       "7689fdacaed0365203163376d884230cc5a19d9ebfb5c65959fb71d1c02bae9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9682093d80cd96998537979152707c57c56550a14617e3f3d0650b6d3ccde62"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/thrift"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "81711dab2d0db552befd00ac4c9c4fb03c44219cc50ebf66aeeeca26aef1c353"
   end
 
   head do
-    url "https://github.com/apache/thrift.git"
+    url "https://github.com/apache/thrift.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
