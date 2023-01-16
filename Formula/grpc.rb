@@ -2,19 +2,24 @@ class Grpc < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   url "https://github.com/grpc/grpc.git",
-      tag:      "v1.46.0",
-      revision: "0da56bcc0e42a9e288d7511ed8426b9831ffbfb5"
+      tag:      "v1.51.1",
+      revision: "0a82c02a9b817a53574994374dcff53f2e961df2"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/grpc/grpc.git", branch: "master"
 
+  # The "latest" release on GitHub is sometimes for an older major/minor and
+  # there's sometimes a notable gap between when a version is tagged and
+  # released, so we have to check the releases page instead.
   livecheck do
-    url :stable
-    strategy :github_latest
+    url "https://github.com/grpc/grpc/releases?q=prerelease%3Afalse"
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
   end
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/grpc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "c08f3e5f48202578c79f5dc8c4ec6f84eea8c9663a57184f20cf9d3ea4baeeb6"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4e05c77c5b01e116a77b3931a46d3488a819dafb18fa3795815f6716150fcc6d"
   end
 
   depends_on "autoconf" => :build
@@ -31,13 +36,7 @@ class Grpc < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    # This shouldn't be needed for `:test`, but there's a bug in `brew`:
-    # CompilerSelectionError: pdnsrec cannot be built with any available compilers.
-    depends_on "llvm" => [:build, :test] if DevelopmentTools.clang_build_version <= 1100
-  end
-
-  on_linux do
-    depends_on "gcc"
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1100
   end
 
   fails_with :clang do
@@ -48,7 +47,6 @@ class Grpc < Formula
   fails_with gcc: "5" # C++17
 
   def install
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
     mkdir "cmake/build" do
       args = %W[
@@ -90,9 +88,6 @@ class Grpc < Formula
   end
 
   test do
-    # Force use of system clang on Mojave
-    ENV.clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
-
     (testpath/"test.cpp").write <<~EOS
       #include <grpc/grpc.h>
       int main() {
