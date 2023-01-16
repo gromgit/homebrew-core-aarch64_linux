@@ -8,14 +8,10 @@ class Abseil < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/abseil"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ee25405e8e2dc018c717cd76bb3e393b6d4712c230cc2b927ae0a53258eab180"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "8b5e3e963360e98613e319b8c8f1cd1f70f18e073f97807f8e02ed7042748874"
   end
 
   depends_on "cmake" => :build
-
-  on_linux do
-    depends_on "gcc"
-  end
 
   fails_with gcc: "5" # C++17
 
