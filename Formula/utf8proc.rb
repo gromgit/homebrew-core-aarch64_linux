@@ -1,13 +1,13 @@
 class Utf8proc < Formula
   desc "Clean C library for processing UTF-8 Unicode data"
   homepage "https://juliastrings.github.io/utf8proc/"
-  url "https://github.com/JuliaStrings/utf8proc/archive/v2.7.0.tar.gz"
-  sha256 "4bb121e297293c0fd55f08f83afab6d35d48f0af4ecc07523ad8ec99aa2b12a1"
+  url "https://github.com/JuliaStrings/utf8proc/archive/v2.8.0.tar.gz"
+  sha256 "a0a60a79fe6f6d54e7d411facbfcc867a6e198608f2cd992490e46f04b1bcecc"
   license all_of: ["MIT", "Unicode-DFS-2015"]
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/utf8proc"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "917f33e92738f90e721d9f1648d49d10ba6d6c507456fbd574fd8911c65c2743"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "5755a60e895f09de22cd9a5b9c857783b39572ed5db5593b3ce9578ec83b9d74"
   end
 
   def install
