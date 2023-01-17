@@ -10,19 +10,15 @@ class Freexl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "f2f26c1449a3f79a89ec85deb5cd22507ee4715827afdf31469fd605c8a31b7f"
-    sha256 cellar: :any,                 arm64_big_sur:  "57d5fc25946a587bfebb8724bff578688f605edcabba8cd80b9ebbf5840616d0"
-    sha256 cellar: :any,                 monterey:       "0dc034f726d2ad3850742e7f9a1676d67c14c48fd9735470fd3691a3c080182c"
-    sha256 cellar: :any,                 big_sur:        "a20523355d18f1ed2259ae198b45c5aa93080fbd4926e0eb6969d2919b7a97ac"
-    sha256 cellar: :any,                 catalina:       "1bab8437de88ce5564702dcc3e30a9c2f9491aa9358e767aa3d8ec62ba76922d"
-    sha256 cellar: :any,                 mojave:         "003e9d848f354e7f12232f85240f4892f21e6136cd657022fbbc51b3bd286225"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2059ac999e20b72d31a6e586174327431066c01e10c25fca93c80ef5d10f5b4b"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/freexl"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d4cb42da93e4e05a06115eeac7422b5e6e75126c8a02920bdd90ca0e41204c78"
   end
 
   depends_on "doxygen" => :build
+  depends_on "libtool" => :build
 
   def install
+    cp Dir["#{Formula["libtool"].opt_pkgshare}/*/config.{guess,sub}"], buildpath
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}",
                           "--disable-silent-rules"
 
