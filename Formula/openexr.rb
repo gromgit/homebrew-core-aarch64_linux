@@ -7,12 +7,8 @@ class Openexr < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "633811a87f2087ee77e05aeb3bdbaea9cede0c010c0e4ddf5212b1f7dc773369"
-    sha256 cellar: :any,                 arm64_big_sur:  "a86f1c3252e421bb3c511fd17d02031eb62d19fc35be4e332835ef8023bc6903"
-    sha256 cellar: :any,                 monterey:       "7b5eac70a2b63764fe1dc4efa787b04f65f7566413b2727a3f5366256b007723"
-    sha256 cellar: :any,                 big_sur:        "db79b777e18b0c58f9b9d856e681a62e54ce91e54c8a1a5faaf4a6a98e515871"
-    sha256 cellar: :any,                 catalina:       "264da60466034171be1337d9b18f9293122ad82c364de5d037e7fab468525196"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37824df7fbc74d4e2f2b9837e14917b707fffdc94bbec39fe0babda17d0c9781"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/openexr"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7170d68c013b5ce2bee9e95a6ac0e50f6717b0d360d95924f9029a6645049aa7"
   end
 
   depends_on "cmake" => :build
