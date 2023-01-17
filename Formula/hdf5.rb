@@ -4,6 +4,7 @@ class Hdf5 < Formula
   url "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.2/src/hdf5-1.12.2.tar.bz2"
   sha256 "1a88bbe36213a2cea0c8397201a459643e7155c9dc91e062675b3fb07ee38afe"
   license "BSD-3-Clause"
+  revision 2
   version_scheme 1
 
   # This regex isn't matching filenames within href attributes (as we normally
@@ -15,12 +16,8 @@ class Hdf5 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "ef569e1536a1ee2051380aed7d89284a1baace5b1c0b66280e7905fa852a7992"
-    sha256 cellar: :any,                 arm64_big_sur:  "7ffeb068662160d8f844154198a257f0f545c1972b76f16cf8fdcbfc3c44e4f4"
-    sha256 cellar: :any,                 monterey:       "42715c0074ee5c1afc370a70bb669ed01a384b40f26a2b97661cb94e0e6d8702"
-    sha256 cellar: :any,                 big_sur:        "75b6c8d5fd1c1e296e31b6a41d2c3c0e0b1de08632d4b6bce6b6b50adb25c6f3"
-    sha256 cellar: :any,                 catalina:       "fcd9f1dfc408887eb131a56c2fa9963f64edf756f620d58e2d8ad071f29eb9f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce1e43594ac459f4eaaafe9a979d7109d1003f613efc22d5e0571a93ce477a1a"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/hdf5"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "2b9353fae2da2085cab7f0aa3f530857c435ed7c61b7fc061743b42dc736d51d"
   end
 
   depends_on "autoconf" => :build
