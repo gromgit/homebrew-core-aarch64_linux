@@ -8,7 +8,7 @@ class Libaec < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libaec"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "1234ea7352afe99702283eb256bfeb9f61332552988c2dc620e46cec72e0f091"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "9e9abbbef277922db64482a2ab7f4d5b6481ecc89656fa4fa2b66653580a31bc"
   end
 
 
