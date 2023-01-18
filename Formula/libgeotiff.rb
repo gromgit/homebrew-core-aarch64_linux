@@ -2,7 +2,7 @@ class Libgeotiff < Formula
   desc "Library and tools for dealing with GeoTIFF"
   homepage "https://github.com/OSGeo/libgeotiff"
   license "MIT"
-  revision 1
+  revision 2
 
   stable do
     url "https://github.com/OSGeo/libgeotiff/releases/download/1.7.1/libgeotiff-1.7.1.tar.gz"
@@ -21,32 +21,25 @@ class Libgeotiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "615f768061ab2ac581ccb0e574d9f7fdde6bbe16e22b4ee8062d25b48410f967"
-    sha256 cellar: :any,                 arm64_big_sur:  "d8442fb7541204b9ede5e102c854baf3157cc4813e8fa9975b9a8e13052f59c5"
-    sha256 cellar: :any,                 monterey:       "90a3a8ab11c000fd87ea68a11a110175aa38053c6ef3e8a11be68bf9ffc67814"
-    sha256 cellar: :any,                 big_sur:        "05347cfdc6122b60956c631a067fadc51f07c6d8362edf26aaa0c073895292f9"
-    sha256 cellar: :any,                 catalina:       "bbdddfdbecc383bdac026cb0769c7148ef34f921accfe83d0b29bce17c44829b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a84070c619a3a8cfb9cec0960d5431cb83570713999462fbd4d8a0d15857e32f"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libgeotiff"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "0809b736e6ead5aeae713e0667888e9a7574ce9b812ae26b94e4eeb187f4e08b"
   end
 
   head do
-    url "https://github.com/OSGeo/libgeotiff.git"
+    url "https://github.com/OSGeo/libgeotiff.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
   end
 
-  depends_on "jpeg"
+  depends_on "jpeg-turbo"
   depends_on "libtiff"
   depends_on "proj"
 
   def install
     system "./autogen.sh" if build.head?
-
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--with-jpeg"
+    system "./configure", *std_configure_args, "--with-jpeg"
     system "make" # Separate steps or install fails
     system "make", "install"
   end
@@ -84,6 +77,6 @@ class Libgeotiff < Formula
                    "-L#{Formula["libtiff"].opt_lib}", "-ltiff", "-o", "test"
     system "./test", "test.tif"
     output = shell_output("#{bin}/listgeo test.tif")
-    assert_match(/GeogInvFlatteningGeoKey.*123.456/, output)
+    assert_match(/GeogInvFlatteningGeoKey.*123\.456/, output)
   end
 end
