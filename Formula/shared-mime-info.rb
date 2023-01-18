@@ -4,6 +4,7 @@ class SharedMimeInfo < Formula
   url "https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.2/shared-mime-info-2.2.tar.bz2"
   sha256 "418c480019d9865f67f922dfb88de00e9f38bf971205d55cdffab50432919e61"
   license "GPL-2.0-only"
+  head "https://gitlab.freedesktop.org/xdg/shared-mime-info.git", branch: "master"
 
   livecheck do
     url "https://gitlab.freedesktop.org/api/v4/projects/1205/releases"
@@ -12,29 +13,21 @@ class SharedMimeInfo < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/shared-mime-info"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "cc9f0f4a8fb885669b0d918f8d2713554bd10e9bdd127e23927e821ba661b008"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "07022ac03c96a23dee5d089f8dfa4acc3b7d92ac1f1f220a20339e3baaad790e"
   end
 
-  head do
-    url "https://gitlab.freedesktop.org/xdg/shared-mime-info.git"
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "intltool" => :build
-  end
-
-  depends_on "intltool" => :build
+  depends_on "gettext" => :build
   depends_on "itstool" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "gettext"
+  depends_on "xmlto" => :build
   depends_on "glib"
-  depends_on "xmlto"
 
   uses_from_macos "libxml2"
 
   def install
-    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+    ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
     # Disable the post-install update-mimedb due to crash
     mkdir "build" do
       system "meson", *std_meson_args, ".."
