@@ -1,20 +1,14 @@
 class Proj < Formula
   desc "Cartographic Projections Library"
   homepage "https://proj.org/"
-  url "https://github.com/OSGeo/PROJ/releases/download/9.0.0/proj-9.0.0.tar.gz"
-  sha256 "0620aa01b812de00b54d6c23e7c5cc843ae2cd129b24fabe411800302172b989"
+  url "https://github.com/OSGeo/PROJ/releases/download/9.1.1/proj-9.1.1.tar.gz"
+  sha256 "003cd4010e52bb5eb8f7de1c143753aa830c8902b6ed01209f294846e40e6d39"
   license "MIT"
-  revision 1
   head "https://github.com/OSGeo/proj.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "8c4301de72f3d6e0706711196b1870a9b95554edce4c2e4defb46c309f8dcbdb"
-    sha256 arm64_big_sur:  "b5c1ccf9cc88e87594b6fb2cd3a23dce86b2a6e41011032d6ffd2e6422c624da"
-    sha256 monterey:       "6b0fc38c196c5cd32acc94a2b7092d56547f9515fcede56553081b0fb5232ed5"
-    sha256 big_sur:        "8cf517b1a686968b7d29b39b154c856a3a1aa9c6164d4031469e7168f245053d"
-    sha256 catalina:       "53e3acc54f9c9a5a25a90fc248b568cac4d622bc0fabdbd4908efd800b2325fa"
-    sha256 x86_64_linux:   "a81bbc9e93aa641b0bf30094af3ba85ef066394b6c2d25192d9cc3b61e92134e"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/proj"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "52980d3c8936f1fce013d761a8ce7cdceebcee31e1e0b156a8d3c39fe85b4f57"
   end
 
   depends_on "cmake" => :build
@@ -31,8 +25,8 @@ class Proj < Formula
 
   # The datum grid files are required to support datum shifting
   resource "proj-data" do
-    url "https://download.osgeo.org/proj/proj-data-1.9.zip"
-    sha256 "6880bfe2c4f6bc69fec398e9b356f50a05d559a59ab05bd65401bf45f4a4b6da"
+    url "https://download.osgeo.org/proj/proj-data-1.11.tar.gz"
+    sha256 "a67b7ce4622c30be6bce3a43461e8d848da153c3b171beebbbea28f64d4ef363"
   end
 
   def install
