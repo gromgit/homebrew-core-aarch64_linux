@@ -1,9 +1,9 @@
 class Minizip < Formula
   desc "C library for zip/unzip via zLib"
   homepage "https://www.winimage.com/zLibDll/minizip.html"
-  url "https://zlib.net/zlib-1.2.12.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.12/zlib-1.2.12.tar.gz"
-  sha256 "91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9"
+  url "https://zlib.net/zlib-1.2.13.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.13/zlib-1.2.13.tar.gz"
+  sha256 "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30"
   license "Zlib"
 
   livecheck do
@@ -12,7 +12,7 @@ class Minizip < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minizip"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "ef7fb01c424a815def8852e850bd3b46bcac31e750fd9fc4833c67a6146c0dad"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "3ebe00ba01d014ead2a1f5510c15beb69082cb5f736885d41bf3d555eed366df"
   end
 
   depends_on "autoconf" => :build
@@ -23,13 +23,6 @@ class Minizip < Formula
 
   conflicts_with "minizip-ng",
     because: "both install a `libminizip.a` library"
-
-  # Patch for configure issue
-  # https://github.com/madler/zlib/pull/607
-  patch do
-    url "https://github.com/madler/zlib/commit/05796d3d8d5546cf1b4dfe2cd72ab746afae505d.patch?full_index=1"
-    sha256 "68573842f1619bb8de1fa92071e38e6e51b8df71371e139e4e96be19dd7e9694"
-  end
 
   def install
     system "./configure", "--prefix=#{prefix}"
