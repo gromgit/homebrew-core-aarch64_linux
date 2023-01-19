@@ -1,21 +1,18 @@
 class Libpq < Formula
   desc "Postgres C API library"
   homepage "https://www.postgresql.org/docs/14/libpq.html"
-  url "https://ftp.postgresql.org/pub/source/v14.2/postgresql-14.2.tar.bz2"
-  sha256 "2cf78b2e468912f8101d695db5340cf313c2e9f68a612fb71427524e8c9a977a"
+  url "https://ftp.postgresql.org/pub/source/v15.1/postgresql-15.1.tar.bz2"
+  sha256 "64fdf23d734afad0dfe4077daca96ac51dcd697e68ae2d3d4ca6c45cb14e21ae"
   license "PostgreSQL"
 
   livecheck do
-    formula "postgresql"
+    url "https://ftp.postgresql.org/pub/source/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   bottle do
-    sha256 arm64_monterey: "36b074f07ded99c1945dbcc26f54e45abeba0dbf34d16e63fb6ab16d371158ee"
-    sha256 arm64_big_sur:  "a3fff4783cf1f60544db79e6476a3adb6b6d3398a558e6be62c4cb9f07977725"
-    sha256 monterey:       "9f7a628d2ca6f3ef1613b1ca4f754cb270e18a28ca5f7bed30001f4a51fdd9f2"
-    sha256 big_sur:        "a85a1932a49c8cbba9cf90f9d1f1af30190a8effabda965ce2a4b9a618a26fd3"
-    sha256 catalina:       "b4263f4a513e3e97f0735de8d5919af8a1aa574101e8fcb9db414f1cc2173583"
-    sha256 x86_64_linux:   "2e935bd76326ff8254db26eb04256a672e75604b1ddcf8505ad3a6aee6f8d5ec"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libpq"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "017b39873b856e621e727ed589e2c2a8e49952b8bf746cf6777bb1d70029c726"
   end
 
   keg_only "conflicts with postgres formula"
@@ -26,9 +23,13 @@ class Libpq < Formula
 
   depends_on "openssl@1.1"
 
+  uses_from_macos "zlib"
+
   on_linux do
     depends_on "readline"
   end
+
+  env :std
 
   def install
     system "./configure", "--disable-debug",
