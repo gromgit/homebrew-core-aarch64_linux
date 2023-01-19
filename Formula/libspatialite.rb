@@ -23,21 +23,17 @@ class Libspatialite < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "8dc0901eff2763a59d1ddc22f3ed19ef1a1b706ba2d4069a092e1c86e730db91"
-    sha256 cellar: :any,                 arm64_big_sur:  "bdc286c42eb9dcead8e145ae385f4764cc6b081b4284388749b3e0ee270b4431"
-    sha256 cellar: :any,                 monterey:       "87c4d5eedbd6657e5bbb5f02c64f82dd9d7de502c57fecd44a2059cdff476724"
-    sha256 cellar: :any,                 big_sur:        "001ef9d46fb1b508459bf5a1aac259643def005b8fb808663dd32e49c89cff5a"
-    sha256 cellar: :any,                 catalina:       "d403ece87a9d8349fc2bad142f52b1c44c423cc17fbc7da5ee3f2a2a168dd796"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7936163e48b970c168ccd0b53d917b47364d91b4698aed7cd1199858d0e30b8"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/libspatialite"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7dfdb41cded4fa3c31248eab9a2b68ad21addbb56cdea1d17ae4f56e5e902747"
   end
 
   head do
     url "https://www.gaia-gis.it/fossil/libspatialite", using: :fossil
     depends_on "autoconf" => :build
     depends_on "automake" => :build
-    depends_on "libtool" => :build
   end
 
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "freexl"
   depends_on "geos"
@@ -48,7 +44,11 @@ class Libspatialite < Formula
   depends_on "sqlite"
 
   def install
-    system "autoreconf", "-fi" if build.head?
+    if build.head?
+      system "autoreconf", "-fi"
+    else
+      cp Dir["#{Formula["libtool"].opt_share}/libtool/*/config.{guess,sub}"], buildpath
+    end
 
     # New SQLite3 extension won't load via SELECT load_extension("mod_spatialite");
     # unless named mod_spatialite.dylib (should actually be mod_spatialite.bundle)
