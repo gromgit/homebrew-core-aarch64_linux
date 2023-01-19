@@ -1,8 +1,8 @@
 class Nspr < Formula
   desc "Platform-neutral API for system-level and libc-like functions"
   homepage "https://hg.mozilla.org/projects/nspr"
-  url "https://archive.mozilla.org/pub/nspr/releases/v4.34.1/src/nspr-4.34.1.tar.gz"
-  sha256 "c5b8354c48b632b8f4c1970628146c0e0c0ca8f32c7315d7d5736c002e03774f"
+  url "https://archive.mozilla.org/pub/nspr/releases/v4.35/src/nspr-4.35.tar.gz"
+  sha256 "7ea3297ea5969b5d25a5dd8d47f2443cda88e9ee746301f6e1e1426f8a6abc8f"
   license "MPL-2.0"
 
   livecheck do
@@ -12,7 +12,7 @@ class Nspr < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/nspr"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "40882ec539d8c553f0e890414ce9c9c4f414257cef3db56ce5262b55ac389b8e"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "7af9d2db9314b43f5c0a2fb62b6bc649c5c66480c311733c6744b0be6ceb1fb3"
   end
 
   def install
