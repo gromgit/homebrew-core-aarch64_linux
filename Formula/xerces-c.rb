@@ -1,14 +1,14 @@
 class XercesC < Formula
   desc "Validating XML parser"
   homepage "https://xerces.apache.org/xerces-c/"
-  url "https://www.apache.org/dyn/closer.lua?path=xerces/c/3/sources/xerces-c-3.2.3.tar.gz"
-  mirror "https://archive.apache.org/dist/xerces/c/3/sources/xerces-c-3.2.3.tar.gz"
-  sha256 "fb96fc49b1fb892d1e64e53a6ada8accf6f0e6d30ce0937956ec68d39bd72c7e"
+  url "https://www.apache.org/dyn/closer.lua?path=xerces/c/3/sources/xerces-c-3.2.4.tar.gz"
+  mirror "https://archive.apache.org/dist/xerces/c/3/sources/xerces-c-3.2.4.tar.gz"
+  sha256 "3d8ec1c7f94e38fee0e4ca5ad1e1d9db23cbf3a10bba626f6b4afa2dedafe5ab"
   license "Apache-2.0"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/xerces-c"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "76efd599f281b3c0f0ab4cf2c9a18ec44c7884aff03fd96ba4426d7c3dc9b432"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "bd637f67eef610390411c7d153af86e106db8ee60f8c4abd8c5834462468042e"
   end
 
   depends_on "cmake" => :build
