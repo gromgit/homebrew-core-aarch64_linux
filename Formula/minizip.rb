@@ -12,7 +12,7 @@ class Minizip < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/minizip"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "3ebe00ba01d014ead2a1f5510c15beb69082cb5f736885d41bf3d555eed366df"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "679f697ab74e530f4bae9d685b566e15e1d2a595ffcc4a7a7b0f525db09b1f79"
   end
 
   depends_on "autoconf" => :build
