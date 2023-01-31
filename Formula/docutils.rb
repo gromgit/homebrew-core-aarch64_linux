@@ -1,6 +1,4 @@
 class Docutils < Formula
-  include Language::Python::Virtualenv
-
   desc "Text processing system for reStructuredText"
   homepage "https://docutils.sourceforge.io"
   url "https://downloads.sourceforge.net/project/docutils/docutils/0.19/docutils-0.19.tar.gz"
@@ -9,21 +7,22 @@ class Docutils < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/docutils"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "324ec31f46967c746e1b0daf30766144369c097df1870c1fa1acbf2a1c454756"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "83c51f433224b85ab0635f91566a5c11df09f6b13b6f8a6678420db65986ab53"
   end
 
-
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
-    virtualenv_install_with_resources
+    python3 = "python3.11"
+    system python3, *Language::Python.setup_install_args(prefix, python3)
 
-    Dir.glob("#{libexec}/bin/*.py") do |f|
-      bin.install_symlink f => File.basename(f, ".py")
+    bin.glob("*.py") do |f|
+      bin.install_symlink f => f.basename(".py")
     end
   end
 
   test do
-    system "#{bin}/rst2man.py", "#{prefix}/HISTORY.txt"
+    system bin/"rst2man.py", prefix/"HISTORY.txt"
+    system bin/"rst2man", prefix/"HISTORY.txt"
   end
 end
