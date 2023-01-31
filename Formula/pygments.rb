@@ -3,15 +3,14 @@ class Pygments < Formula
 
   desc "Generic syntax highlighter"
   homepage "https://pygments.org/"
-  url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-  sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
+  url "https://files.pythonhosted.org/packages/da/6a/c427c06913204e24de28de5300d3f0e809933f376e0b7df95194b2bb3f71/Pygments-2.14.0.tar.gz"
+  sha256 "b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"
   license "BSD-2-Clause"
-  revision 1
   head "https://github.com/pygments/pygments.git", branch: "master"
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/pygments"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "eac3127126eaed166d2e6799a38cacc40fbe70eaae2e4bc8119d64b75aafc7e3"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "c0c3d10f1ee17834f61964d5e41399540f1dda5e9063d4a18350d5b5d5edd7a1"
   end
 
   depends_on "python@3.10" => [:build, :test]
