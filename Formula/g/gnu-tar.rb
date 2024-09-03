@@ -8,7 +8,8 @@ class GnuTar < Formula
 
   bottle do
     root_url "https://github.com/gromgit/homebrew-core/releases/download/gnu-tar-1.35"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "83ef8ba466c84d5045fc67fbb30341fa392b38610ac08d759015c8b497ab5a98"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "d0b10bdbe30360bb0fcdef4537577106a7b72a618275ae16c4421990898f7017"
   end
 
   head do
