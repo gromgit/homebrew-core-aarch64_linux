@@ -7,8 +7,8 @@ class Liquidprompt < Formula
   head "https://github.com/liquidprompt/liquidprompt.git", branch: "master"
 
   bottle do
-    root_url "https://github.com/homebrew/homebrew-core/releases/download/liquidprompt-2.2.1"
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "d5e9f3eb6ed09c6742952d4cbace1805362823f68fab5faa98e32939215ea6bf"
+    root_url "https://github.com/gromgit/homebrew-core/releases/download/liquidprompt-2.2.1"
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "abc36b618732f2cf11019da3475b9dca39bdcd2803c99c87ac069de680dd92e9"
   end
 
   def install
