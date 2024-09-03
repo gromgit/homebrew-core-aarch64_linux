@@ -7,9 +7,9 @@ class GnuTar < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/gromgit/homebrew-core/releases/download/gnu-tar-1.35"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, aarch64_linux: "d0b10bdbe30360bb0fcdef4537577106a7b72a618275ae16c4421990898f7017"
+    root_url "https://github.com/gromgit/homebrew-core-aarch64_linux/releases/download/gnu-tar-1.35"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, aarch64_linux: "4503dc2c9884cc3376be8a89c5956a26eda2ec131dc52394652744eb5708ff15"
   end
 
   head do
